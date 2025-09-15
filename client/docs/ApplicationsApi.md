@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetNetworkInsightApplicationHealthByTime
 
-> []InlineResponse200109 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> []InlineResponse200111 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Get application health by time
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationsApi.GetNetworkInsightApplicationHealthByTime``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse200109
+    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse200111
     fmt.Fprintf(os.Stdout, "Response from `ApplicationsApi.GetNetworkInsightApplicationHealthByTime`: %v\n", resp)
 }
 ```
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200109**](InlineResponse200109.md)
+[**[]InlineResponse200111**](InlineResponse200111.md)
 
 ### Authorization
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightApplications
 
-> []InlineResponse200293 GetOrganizationInsightApplications(ctx, organizationId).Execute()
+> []InlineResponse200295 GetOrganizationInsightApplications(ctx, organizationId).Execute()
 
 List all Insight tracked applications
 
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationsApi.GetOrganizationInsightApplications``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightApplications`: []InlineResponse200293
+    // response from `GetOrganizationInsightApplications`: []InlineResponse200295
     fmt.Fprintf(os.Stdout, "Response from `ApplicationsApi.GetOrganizationInsightApplications`: %v\n", resp)
 }
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200293**](InlineResponse200293.md)
+[**[]InlineResponse200295**](InlineResponse200295.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopApplicationsByUsage
 
-> []InlineResponse200330 GetOrganizationSummaryTopApplicationsByUsage(ctx, organizationId).NetworkTag(networkTag).Device(device).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200333 GetOrganizationSummaryTopApplicationsByUsage(ctx, organizationId).NetworkTag(networkTag).Device(device).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top applications sorted by data usage over given time range
 
@@ -187,7 +187,7 @@ func main() {
     networkTag := "networkTag_example" // string | Match result to an exact network tag (optional)
     device := "device_example" // string | Match result to an exact device tag (optional)
     networkId := "networkId_example" // string | Match result to an exact network id (optional)
-    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. (optional)
+    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. Maximum is 50 (optional)
     ssidName := "ssidName_example" // string | Filter results by ssid name (optional)
     usageUplink := "usageUplink_example" // string | Filter results by usage uplink (optional)
     t0 := "t0_example" // string | The beginning of the timespan for the data. (optional)
@@ -201,7 +201,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationsApi.GetOrganizationSummaryTopApplicationsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopApplicationsByUsage`: []InlineResponse200330
+    // response from `GetOrganizationSummaryTopApplicationsByUsage`: []InlineResponse200333
     fmt.Fprintf(os.Stdout, "Response from `ApplicationsApi.GetOrganizationSummaryTopApplicationsByUsage`: %v\n", resp)
 }
 ```
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
  **networkTag** | **string** | Match result to an exact network tag | 
  **device** | **string** | Match result to an exact device tag | 
  **networkId** | **string** | Match result to an exact network id | 
- **quantity** | **int32** | Set number of desired results to return. Default is 10. | 
+ **quantity** | **int32** | Set number of desired results to return. Default is 10. Maximum is 50 | 
  **ssidName** | **string** | Filter results by ssid name | 
  **usageUplink** | **string** | Filter results by usage uplink | 
  **t0** | **string** | The beginning of the timespan for the data. | 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200330**](InlineResponse200330.md)
+[**[]InlineResponse200333**](InlineResponse200333.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopApplicationsCategoriesByUsage
 
-> []InlineResponse200331 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200334 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top application categories sorted by data usage over given time range
 
@@ -275,7 +275,7 @@ func main() {
     networkTag := "networkTag_example" // string | Match result to an exact network tag (optional)
     deviceTag := "deviceTag_example" // string | Match result to an exact device tag (optional)
     networkId := "networkId_example" // string | Match result to an exact network id (optional)
-    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. (optional)
+    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. Maximum is 50 (optional)
     ssidName := "ssidName_example" // string | Filter results by ssid name (optional)
     usageUplink := "usageUplink_example" // string | Filter results by usage uplink (optional)
     t0 := "t0_example" // string | The beginning of the timespan for the data. (optional)
@@ -289,7 +289,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationsApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200331
+    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200334
     fmt.Fprintf(os.Stdout, "Response from `ApplicationsApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage`: %v\n", resp)
 }
 ```
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
  **networkTag** | **string** | Match result to an exact network tag | 
  **deviceTag** | **string** | Match result to an exact device tag | 
  **networkId** | **string** | Match result to an exact network id | 
- **quantity** | **int32** | Set number of desired results to return. Default is 10. | 
+ **quantity** | **int32** | Set number of desired results to return. Default is 10. Maximum is 50 | 
  **ssidName** | **string** | Filter results by ssid name | 
  **usageUplink** | **string** | Filter results by usage uplink | 
  **t0** | **string** | The beginning of the timespan for the data. | 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200331**](InlineResponse200331.md)
+[**[]InlineResponse200334**](InlineResponse200334.md)
 
 ### Authorization
 

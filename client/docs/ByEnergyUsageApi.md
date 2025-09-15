@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSummaryTopSwitchesByEnergyUsage
 
-> []InlineResponse200338 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200341 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 switches by energy usage over given time range
 
@@ -32,7 +32,7 @@ func main() {
     organizationId := "organizationId_example" // string | Organization ID
     networkTag := "networkTag_example" // string | Match result to an exact network tag (optional)
     deviceTag := "deviceTag_example" // string | Match result to an exact device tag (optional)
-    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. (optional)
+    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. Maximum is 50 (optional)
     ssidName := "ssidName_example" // string | Filter results by ssid name (optional)
     usageUplink := "usageUplink_example" // string | Filter results by usage uplink (optional)
     t0 := "t0_example" // string | The beginning of the timespan for the data. (optional)
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByEnergyUsageApi.GetOrganizationSummaryTopSwitchesByEnergyUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200338
+    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200341
     fmt.Fprintf(os.Stdout, "Response from `ByEnergyUsageApi.GetOrganizationSummaryTopSwitchesByEnergyUsage`: %v\n", resp)
 }
 ```
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
  **networkTag** | **string** | Match result to an exact network tag | 
  **deviceTag** | **string** | Match result to an exact device tag | 
- **quantity** | **int32** | Set number of desired results to return. Default is 10. | 
+ **quantity** | **int32** | Set number of desired results to return. Default is 10. Maximum is 50 | 
  **ssidName** | **string** | Filter results by ssid name | 
  **usageUplink** | **string** | Filter results by usage uplink | 
  **t0** | **string** | The beginning of the timespan for the data. | 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200338**](InlineResponse200338.md)
+[**[]InlineResponse200341**](InlineResponse200341.md)
 
 ### Authorization
 

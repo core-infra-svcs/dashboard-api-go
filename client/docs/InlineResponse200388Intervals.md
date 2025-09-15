@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **string** | The start time of the query range with iso8601 format | [optional] 
-**EndTs** | Pointer to **string** | The end time of the query range  with iso8601 format | [optional] 
+**StartTs** | Pointer to **string** | The start time interval snapshots of the query range with iso8601 format | [optional] 
+**EndTs** | Pointer to **string** | The end time interval snapshots of the query range with iso8601 format | [optional] 
 **Overall** | Pointer to [**InlineResponse200388Overall**](InlineResponse200388Overall.md) |  | [optional] 
-**ByCore** | Pointer to [**[]InlineResponse200388ByCore**](InlineResponse200388ByCore.md) | The CPU usage per core of the wireless LAN controller | [optional] 
+**ByInterface** | Pointer to [**[]InlineResponse200388ByInterface**](InlineResponse200388ByInterface.md) | The usage data on the interfaces of the wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -103,30 +103,30 @@ SetOverall sets Overall field to given value.
 
 HasOverall returns a boolean if a field has been set.
 
-### GetByCore
+### GetByInterface
 
-`func (o *InlineResponse200388Intervals) GetByCore() []InlineResponse200388ByCore`
+`func (o *InlineResponse200388Intervals) GetByInterface() []InlineResponse200388ByInterface`
 
-GetByCore returns the ByCore field if non-nil, zero value otherwise.
+GetByInterface returns the ByInterface field if non-nil, zero value otherwise.
 
-### GetByCoreOk
+### GetByInterfaceOk
 
-`func (o *InlineResponse200388Intervals) GetByCoreOk() (*[]InlineResponse200388ByCore, bool)`
+`func (o *InlineResponse200388Intervals) GetByInterfaceOk() (*[]InlineResponse200388ByInterface, bool)`
 
-GetByCoreOk returns a tuple with the ByCore field if it's non-nil, zero value otherwise
+GetByInterfaceOk returns a tuple with the ByInterface field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByCore
+### SetByInterface
 
-`func (o *InlineResponse200388Intervals) SetByCore(v []InlineResponse200388ByCore)`
+`func (o *InlineResponse200388Intervals) SetByInterface(v []InlineResponse200388ByInterface)`
 
-SetByCore sets ByCore field to given value.
+SetByInterface sets ByInterface field to given value.
 
-### HasByCore
+### HasByInterface
 
-`func (o *InlineResponse200388Intervals) HasByCore() bool`
+`func (o *InlineResponse200388Intervals) HasByInterface() bool`
 
-HasByCore returns a boolean if a field has been set.
+HasByInterface returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

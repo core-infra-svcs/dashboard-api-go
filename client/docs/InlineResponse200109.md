@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
-**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
-**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
-**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
-**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
-**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
-**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
-**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
-**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
-**NumClients** | Pointer to **int32** | Number of clients | [optional] 
+**GroupPolicyId** | Pointer to **string** | The ID of the group policy | [optional] 
+**Scheduling** | Pointer to [**NetworksNetworkIdGroupPoliciesScheduling**](NetworksNetworkIdGroupPoliciesScheduling.md) |  | [optional] 
+**Bandwidth** | Pointer to [**NetworksNetworkIdGroupPoliciesBandwidth**](NetworksNetworkIdGroupPoliciesBandwidth.md) |  | [optional] 
+**FirewallAndTrafficShaping** | Pointer to [**NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping.md) |  | [optional] 
+**ContentFiltering** | Pointer to [**NetworksNetworkIdGroupPoliciesContentFiltering**](NetworksNetworkIdGroupPoliciesContentFiltering.md) |  | [optional] 
+**SplashAuthSettings** | Pointer to **string** | Whether clients bound to your policy will bypass splash authorization or behave according to the network&#39;s rules. Can be one of &#39;network default&#39; or &#39;bypass&#39;. Only available if your network has a wireless configuration. | [optional] 
+**VlanTagging** | Pointer to [**NetworksNetworkIdGroupPoliciesVlanTagging**](NetworksNetworkIdGroupPoliciesVlanTagging.md) |  | [optional] 
+**BonjourForwarding** | Pointer to [**NetworksNetworkIdGroupPoliciesBonjourForwarding**](NetworksNetworkIdGroupPoliciesBonjourForwarding.md) |  | [optional] 
 
 ## Methods
 
@@ -36,305 +32,205 @@ NewInlineResponse200109WithDefaults instantiates a new InlineResponse200109 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetGroupPolicyId
 
-`func (o *InlineResponse200109) GetStartTs() time.Time`
+`func (o *InlineResponse200109) GetGroupPolicyId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse200109) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200109) GetGroupPolicyIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetGroupPolicyId
 
-`func (o *InlineResponse200109) SetStartTs(v time.Time)`
+`func (o *InlineResponse200109) SetGroupPolicyId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasStartTs
+### HasGroupPolicyId
 
-`func (o *InlineResponse200109) HasStartTs() bool`
+`func (o *InlineResponse200109) HasGroupPolicyId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetScheduling
 
-`func (o *InlineResponse200109) GetEndTs() time.Time`
+`func (o *InlineResponse200109) GetScheduling() NetworksNetworkIdGroupPoliciesScheduling`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetScheduling returns the Scheduling field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetSchedulingOk
 
-`func (o *InlineResponse200109) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200109) GetSchedulingOk() (*NetworksNetworkIdGroupPoliciesScheduling, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetSchedulingOk returns a tuple with the Scheduling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetScheduling
 
-`func (o *InlineResponse200109) SetEndTs(v time.Time)`
+`func (o *InlineResponse200109) SetScheduling(v NetworksNetworkIdGroupPoliciesScheduling)`
 
-SetEndTs sets EndTs field to given value.
+SetScheduling sets Scheduling field to given value.
 
-### HasEndTs
+### HasScheduling
 
-`func (o *InlineResponse200109) HasEndTs() bool`
+`func (o *InlineResponse200109) HasScheduling() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasScheduling returns a boolean if a field has been set.
 
-### GetWanGoodput
+### GetBandwidth
 
-`func (o *InlineResponse200109) GetWanGoodput() int32`
+`func (o *InlineResponse200109) GetBandwidth() NetworksNetworkIdGroupPoliciesBandwidth`
 
-GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
+GetBandwidth returns the Bandwidth field if non-nil, zero value otherwise.
 
-### GetWanGoodputOk
+### GetBandwidthOk
 
-`func (o *InlineResponse200109) GetWanGoodputOk() (*int32, bool)`
+`func (o *InlineResponse200109) GetBandwidthOk() (*NetworksNetworkIdGroupPoliciesBandwidth, bool)`
 
-GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
+GetBandwidthOk returns a tuple with the Bandwidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanGoodput
+### SetBandwidth
 
-`func (o *InlineResponse200109) SetWanGoodput(v int32)`
+`func (o *InlineResponse200109) SetBandwidth(v NetworksNetworkIdGroupPoliciesBandwidth)`
 
-SetWanGoodput sets WanGoodput field to given value.
+SetBandwidth sets Bandwidth field to given value.
 
-### HasWanGoodput
+### HasBandwidth
 
-`func (o *InlineResponse200109) HasWanGoodput() bool`
+`func (o *InlineResponse200109) HasBandwidth() bool`
 
-HasWanGoodput returns a boolean if a field has been set.
+HasBandwidth returns a boolean if a field has been set.
 
-### GetLanGoodput
+### GetFirewallAndTrafficShaping
 
-`func (o *InlineResponse200109) GetLanGoodput() int32`
+`func (o *InlineResponse200109) GetFirewallAndTrafficShaping() NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping`
 
-GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
+GetFirewallAndTrafficShaping returns the FirewallAndTrafficShaping field if non-nil, zero value otherwise.
 
-### GetLanGoodputOk
+### GetFirewallAndTrafficShapingOk
 
-`func (o *InlineResponse200109) GetLanGoodputOk() (*int32, bool)`
+`func (o *InlineResponse200109) GetFirewallAndTrafficShapingOk() (*NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping, bool)`
 
-GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
+GetFirewallAndTrafficShapingOk returns a tuple with the FirewallAndTrafficShaping field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLanGoodput
+### SetFirewallAndTrafficShaping
 
-`func (o *InlineResponse200109) SetLanGoodput(v int32)`
+`func (o *InlineResponse200109) SetFirewallAndTrafficShaping(v NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping)`
 
-SetLanGoodput sets LanGoodput field to given value.
+SetFirewallAndTrafficShaping sets FirewallAndTrafficShaping field to given value.
 
-### HasLanGoodput
+### HasFirewallAndTrafficShaping
 
-`func (o *InlineResponse200109) HasLanGoodput() bool`
+`func (o *InlineResponse200109) HasFirewallAndTrafficShaping() bool`
 
-HasLanGoodput returns a boolean if a field has been set.
+HasFirewallAndTrafficShaping returns a boolean if a field has been set.
 
-### GetWanLatencyMs
+### GetContentFiltering
 
-`func (o *InlineResponse200109) GetWanLatencyMs() float32`
+`func (o *InlineResponse200109) GetContentFiltering() NetworksNetworkIdGroupPoliciesContentFiltering`
 
-GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
+GetContentFiltering returns the ContentFiltering field if non-nil, zero value otherwise.
 
-### GetWanLatencyMsOk
+### GetContentFilteringOk
 
-`func (o *InlineResponse200109) GetWanLatencyMsOk() (*float32, bool)`
+`func (o *InlineResponse200109) GetContentFilteringOk() (*NetworksNetworkIdGroupPoliciesContentFiltering, bool)`
 
-GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
+GetContentFilteringOk returns a tuple with the ContentFiltering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanLatencyMs
+### SetContentFiltering
 
-`func (o *InlineResponse200109) SetWanLatencyMs(v float32)`
+`func (o *InlineResponse200109) SetContentFiltering(v NetworksNetworkIdGroupPoliciesContentFiltering)`
 
-SetWanLatencyMs sets WanLatencyMs field to given value.
+SetContentFiltering sets ContentFiltering field to given value.
 
-### HasWanLatencyMs
+### HasContentFiltering
 
-`func (o *InlineResponse200109) HasWanLatencyMs() bool`
+`func (o *InlineResponse200109) HasContentFiltering() bool`
 
-HasWanLatencyMs returns a boolean if a field has been set.
+HasContentFiltering returns a boolean if a field has been set.
 
-### GetLanLatencyMs
+### GetSplashAuthSettings
 
-`func (o *InlineResponse200109) GetLanLatencyMs() float32`
+`func (o *InlineResponse200109) GetSplashAuthSettings() string`
 
-GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
+GetSplashAuthSettings returns the SplashAuthSettings field if non-nil, zero value otherwise.
 
-### GetLanLatencyMsOk
+### GetSplashAuthSettingsOk
 
-`func (o *InlineResponse200109) GetLanLatencyMsOk() (*float32, bool)`
+`func (o *InlineResponse200109) GetSplashAuthSettingsOk() (*string, bool)`
 
-GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
+GetSplashAuthSettingsOk returns a tuple with the SplashAuthSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLanLatencyMs
+### SetSplashAuthSettings
 
-`func (o *InlineResponse200109) SetLanLatencyMs(v float32)`
+`func (o *InlineResponse200109) SetSplashAuthSettings(v string)`
 
-SetLanLatencyMs sets LanLatencyMs field to given value.
+SetSplashAuthSettings sets SplashAuthSettings field to given value.
 
-### HasLanLatencyMs
+### HasSplashAuthSettings
 
-`func (o *InlineResponse200109) HasLanLatencyMs() bool`
+`func (o *InlineResponse200109) HasSplashAuthSettings() bool`
 
-HasLanLatencyMs returns a boolean if a field has been set.
+HasSplashAuthSettings returns a boolean if a field has been set.
 
-### GetWanLossPercent
+### GetVlanTagging
 
-`func (o *InlineResponse200109) GetWanLossPercent() float32`
+`func (o *InlineResponse200109) GetVlanTagging() NetworksNetworkIdGroupPoliciesVlanTagging`
 
-GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
+GetVlanTagging returns the VlanTagging field if non-nil, zero value otherwise.
 
-### GetWanLossPercentOk
+### GetVlanTaggingOk
 
-`func (o *InlineResponse200109) GetWanLossPercentOk() (*float32, bool)`
+`func (o *InlineResponse200109) GetVlanTaggingOk() (*NetworksNetworkIdGroupPoliciesVlanTagging, bool)`
 
-GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
+GetVlanTaggingOk returns a tuple with the VlanTagging field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanLossPercent
+### SetVlanTagging
 
-`func (o *InlineResponse200109) SetWanLossPercent(v float32)`
+`func (o *InlineResponse200109) SetVlanTagging(v NetworksNetworkIdGroupPoliciesVlanTagging)`
 
-SetWanLossPercent sets WanLossPercent field to given value.
+SetVlanTagging sets VlanTagging field to given value.
 
-### HasWanLossPercent
+### HasVlanTagging
 
-`func (o *InlineResponse200109) HasWanLossPercent() bool`
+`func (o *InlineResponse200109) HasVlanTagging() bool`
 
-HasWanLossPercent returns a boolean if a field has been set.
+HasVlanTagging returns a boolean if a field has been set.
 
-### GetLanLossPercent
+### GetBonjourForwarding
 
-`func (o *InlineResponse200109) GetLanLossPercent() float32`
+`func (o *InlineResponse200109) GetBonjourForwarding() NetworksNetworkIdGroupPoliciesBonjourForwarding`
 
-GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
+GetBonjourForwarding returns the BonjourForwarding field if non-nil, zero value otherwise.
 
-### GetLanLossPercentOk
+### GetBonjourForwardingOk
 
-`func (o *InlineResponse200109) GetLanLossPercentOk() (*float32, bool)`
+`func (o *InlineResponse200109) GetBonjourForwardingOk() (*NetworksNetworkIdGroupPoliciesBonjourForwarding, bool)`
 
-GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
+GetBonjourForwardingOk returns a tuple with the BonjourForwarding field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLanLossPercent
+### SetBonjourForwarding
 
-`func (o *InlineResponse200109) SetLanLossPercent(v float32)`
+`func (o *InlineResponse200109) SetBonjourForwarding(v NetworksNetworkIdGroupPoliciesBonjourForwarding)`
 
-SetLanLossPercent sets LanLossPercent field to given value.
+SetBonjourForwarding sets BonjourForwarding field to given value.
 
-### HasLanLossPercent
+### HasBonjourForwarding
 
-`func (o *InlineResponse200109) HasLanLossPercent() bool`
+`func (o *InlineResponse200109) HasBonjourForwarding() bool`
 
-HasLanLossPercent returns a boolean if a field has been set.
-
-### GetResponseDuration
-
-`func (o *InlineResponse200109) GetResponseDuration() int32`
-
-GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
-
-### GetResponseDurationOk
-
-`func (o *InlineResponse200109) GetResponseDurationOk() (*int32, bool)`
-
-GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseDuration
-
-`func (o *InlineResponse200109) SetResponseDuration(v int32)`
-
-SetResponseDuration sets ResponseDuration field to given value.
-
-### HasResponseDuration
-
-`func (o *InlineResponse200109) HasResponseDuration() bool`
-
-HasResponseDuration returns a boolean if a field has been set.
-
-### GetSent
-
-`func (o *InlineResponse200109) GetSent() int32`
-
-GetSent returns the Sent field if non-nil, zero value otherwise.
-
-### GetSentOk
-
-`func (o *InlineResponse200109) GetSentOk() (*int32, bool)`
-
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSent
-
-`func (o *InlineResponse200109) SetSent(v int32)`
-
-SetSent sets Sent field to given value.
-
-### HasSent
-
-`func (o *InlineResponse200109) HasSent() bool`
-
-HasSent returns a boolean if a field has been set.
-
-### GetRecv
-
-`func (o *InlineResponse200109) GetRecv() int32`
-
-GetRecv returns the Recv field if non-nil, zero value otherwise.
-
-### GetRecvOk
-
-`func (o *InlineResponse200109) GetRecvOk() (*int32, bool)`
-
-GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecv
-
-`func (o *InlineResponse200109) SetRecv(v int32)`
-
-SetRecv sets Recv field to given value.
-
-### HasRecv
-
-`func (o *InlineResponse200109) HasRecv() bool`
-
-HasRecv returns a boolean if a field has been set.
-
-### GetNumClients
-
-`func (o *InlineResponse200109) GetNumClients() int32`
-
-GetNumClients returns the NumClients field if non-nil, zero value otherwise.
-
-### GetNumClientsOk
-
-`func (o *InlineResponse200109) GetNumClientsOk() (*int32, bool)`
-
-GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNumClients
-
-`func (o *InlineResponse200109) SetNumClients(v int32)`
-
-SetNumClients sets NumClients field to given value.
-
-### HasNumClients
-
-`func (o *InlineResponse200109) HasNumClients() bool`
-
-HasNumClients returns a boolean if a field has been set.
+HasBonjourForwarding returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

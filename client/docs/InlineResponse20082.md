@@ -4,11 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the camera wireless profile. | [optional] 
-**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
-**AppliedDeviceCount** | Pointer to **int32** | The count of the applied devices. | [optional] 
-**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
-**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of the client | [optional] 
+**Mac** | Pointer to **string** | MAC address of the client | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Name of the client | [optional] 
+**DeviceName** | Pointer to **string** | Bluetooth device name | [optional] 
+**Manufacturer** | Pointer to **string** | Name of the manufacturer | [optional] 
+**LastSeen** | Pointer to **int32** | Epoch timestamp of the device&#39;s last appearance | [optional] 
+**SeenByDeviceMac** | Pointer to **string** | Seen by device MAC | [optional] 
+**InSightAlert** | Pointer to **bool** | Device in sight alert | [optional] 
+**OutOfSightAlert** | Pointer to **bool** | Device out of sight alert | [optional] 
+**Tags** | Pointer to **[]string** | A list of tags applied to the device | [optional] 
 
 ## Methods
 
@@ -54,6 +60,56 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### GetMac
+
+`func (o *InlineResponse20082) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse20082) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse20082) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse20082) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse20082) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse20082) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse20082) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse20082) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
 ### GetName
 
 `func (o *InlineResponse20082) GetName() string`
@@ -79,80 +135,180 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetAppliedDeviceCount
+### GetDeviceName
 
-`func (o *InlineResponse20082) GetAppliedDeviceCount() int32`
+`func (o *InlineResponse20082) GetDeviceName() string`
 
-GetAppliedDeviceCount returns the AppliedDeviceCount field if non-nil, zero value otherwise.
+GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
 
-### GetAppliedDeviceCountOk
+### GetDeviceNameOk
 
-`func (o *InlineResponse20082) GetAppliedDeviceCountOk() (*int32, bool)`
+`func (o *InlineResponse20082) GetDeviceNameOk() (*string, bool)`
 
-GetAppliedDeviceCountOk returns a tuple with the AppliedDeviceCount field if it's non-nil, zero value otherwise
+GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedDeviceCount
+### SetDeviceName
 
-`func (o *InlineResponse20082) SetAppliedDeviceCount(v int32)`
+`func (o *InlineResponse20082) SetDeviceName(v string)`
 
-SetAppliedDeviceCount sets AppliedDeviceCount field to given value.
+SetDeviceName sets DeviceName field to given value.
 
-### HasAppliedDeviceCount
+### HasDeviceName
 
-`func (o *InlineResponse20082) HasAppliedDeviceCount() bool`
+`func (o *InlineResponse20082) HasDeviceName() bool`
 
-HasAppliedDeviceCount returns a boolean if a field has been set.
+HasDeviceName returns a boolean if a field has been set.
 
-### GetSsid
+### GetManufacturer
 
-`func (o *InlineResponse20082) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
+`func (o *InlineResponse20082) GetManufacturer() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetManufacturerOk
 
-`func (o *InlineResponse20082) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
+`func (o *InlineResponse20082) GetManufacturerOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetManufacturer
 
-`func (o *InlineResponse20082) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
+`func (o *InlineResponse20082) SetManufacturer(v string)`
 
-SetSsid sets Ssid field to given value.
+SetManufacturer sets Manufacturer field to given value.
 
-### HasSsid
+### HasManufacturer
 
-`func (o *InlineResponse20082) HasSsid() bool`
+`func (o *InlineResponse20082) HasManufacturer() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasManufacturer returns a boolean if a field has been set.
 
-### GetIdentity
+### GetLastSeen
 
-`func (o *InlineResponse20082) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+`func (o *InlineResponse20082) GetLastSeen() int32`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetLastSeenOk
 
-`func (o *InlineResponse20082) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+`func (o *InlineResponse20082) GetLastSeenOk() (*int32, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetLastSeen
 
-`func (o *InlineResponse20082) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+`func (o *InlineResponse20082) SetLastSeen(v int32)`
 
-SetIdentity sets Identity field to given value.
+SetLastSeen sets LastSeen field to given value.
 
-### HasIdentity
+### HasLastSeen
 
-`func (o *InlineResponse20082) HasIdentity() bool`
+`func (o *InlineResponse20082) HasLastSeen() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasLastSeen returns a boolean if a field has been set.
+
+### GetSeenByDeviceMac
+
+`func (o *InlineResponse20082) GetSeenByDeviceMac() string`
+
+GetSeenByDeviceMac returns the SeenByDeviceMac field if non-nil, zero value otherwise.
+
+### GetSeenByDeviceMacOk
+
+`func (o *InlineResponse20082) GetSeenByDeviceMacOk() (*string, bool)`
+
+GetSeenByDeviceMacOk returns a tuple with the SeenByDeviceMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeenByDeviceMac
+
+`func (o *InlineResponse20082) SetSeenByDeviceMac(v string)`
+
+SetSeenByDeviceMac sets SeenByDeviceMac field to given value.
+
+### HasSeenByDeviceMac
+
+`func (o *InlineResponse20082) HasSeenByDeviceMac() bool`
+
+HasSeenByDeviceMac returns a boolean if a field has been set.
+
+### GetInSightAlert
+
+`func (o *InlineResponse20082) GetInSightAlert() bool`
+
+GetInSightAlert returns the InSightAlert field if non-nil, zero value otherwise.
+
+### GetInSightAlertOk
+
+`func (o *InlineResponse20082) GetInSightAlertOk() (*bool, bool)`
+
+GetInSightAlertOk returns a tuple with the InSightAlert field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInSightAlert
+
+`func (o *InlineResponse20082) SetInSightAlert(v bool)`
+
+SetInSightAlert sets InSightAlert field to given value.
+
+### HasInSightAlert
+
+`func (o *InlineResponse20082) HasInSightAlert() bool`
+
+HasInSightAlert returns a boolean if a field has been set.
+
+### GetOutOfSightAlert
+
+`func (o *InlineResponse20082) GetOutOfSightAlert() bool`
+
+GetOutOfSightAlert returns the OutOfSightAlert field if non-nil, zero value otherwise.
+
+### GetOutOfSightAlertOk
+
+`func (o *InlineResponse20082) GetOutOfSightAlertOk() (*bool, bool)`
+
+GetOutOfSightAlertOk returns a tuple with the OutOfSightAlert field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOutOfSightAlert
+
+`func (o *InlineResponse20082) SetOutOfSightAlert(v bool)`
+
+SetOutOfSightAlert sets OutOfSightAlert field to given value.
+
+### HasOutOfSightAlert
+
+`func (o *InlineResponse20082) HasOutOfSightAlert() bool`
+
+HasOutOfSightAlert returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse20082) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse20082) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse20082) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse20082) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

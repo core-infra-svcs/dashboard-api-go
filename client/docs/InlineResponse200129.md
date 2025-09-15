@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the devices. | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
+**NewNetwork** | Pointer to **string** | The network to which the devices was moved. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200129WithDefaults instantiates a new InlineResponse200129 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetIds
 
-`func (o *InlineResponse200129) GetId() string`
+`func (o *InlineResponse200129) GetIds() []string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetIdsOk
 
-`func (o *InlineResponse200129) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200129) GetIdsOk() (*[]string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIds
 
-`func (o *InlineResponse200129) SetId(v string)`
+`func (o *InlineResponse200129) SetIds(v []string)`
 
-SetId sets Id field to given value.
+SetIds sets Ids field to given value.
 
-### HasId
+### HasIds
 
-`func (o *InlineResponse200129) HasId() bool`
+`func (o *InlineResponse200129) HasIds() bool`
 
-HasId returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
+
+### GetNewNetwork
+
+`func (o *InlineResponse200129) GetNewNetwork() string`
+
+GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
+
+### GetNewNetworkOk
+
+`func (o *InlineResponse200129) GetNewNetworkOk() (*string, bool)`
+
+GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNewNetwork
+
+`func (o *InlineResponse200129) SetNewNetwork(v string)`
+
+SetNewNetwork sets NewNetwork field to given value.
+
+### HasNewNetwork
+
+`func (o *InlineResponse200129) HasNewNetwork() bool`
+
+HasNewNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

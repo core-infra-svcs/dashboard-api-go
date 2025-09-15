@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
-**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
-**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
-**Iname** | **string** | IName of the profile | 
+**RetainConfigs** | Pointer to **bool** | Optional boolean to retain all the current configs given by the template. | [optional] 
 
 ## Methods
 
 ### NewInlineObject171
 
-`func NewInlineObject171(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, iname string, ) *InlineObject171`
+`func NewInlineObject171() *InlineObject171`
 
 NewInlineObject171 instantiates a new InlineObject171 object
 This constructor will assign default values to properties that have it defined,
@@ -28,85 +25,30 @@ NewInlineObject171WithDefaults instantiates a new InlineObject171 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRetainConfigs
 
-`func (o *InlineObject171) GetName() string`
+`func (o *InlineObject171) GetRetainConfigs() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRetainConfigs returns the RetainConfigs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRetainConfigsOk
 
-`func (o *InlineObject171) GetNameOk() (*string, bool)`
+`func (o *InlineObject171) GetRetainConfigsOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRetainConfigsOk returns a tuple with the RetainConfigs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRetainConfigs
 
-`func (o *InlineObject171) SetName(v string)`
+`func (o *InlineObject171) SetRetainConfigs(v bool)`
 
-SetName sets Name field to given value.
+SetRetainConfigs sets RetainConfigs field to given value.
 
+### HasRetainConfigs
 
-### GetVlanNames
+`func (o *InlineObject171) HasRetainConfigs() bool`
 
-`func (o *InlineObject171) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
-
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
-
-### GetVlanNamesOk
-
-`func (o *InlineObject171) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
-
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanNames
-
-`func (o *InlineObject171) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
-
-SetVlanNames sets VlanNames field to given value.
-
-
-### GetVlanGroups
-
-`func (o *InlineObject171) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineObject171) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineObject171) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-
-### GetIname
-
-`func (o *InlineObject171) GetIname() string`
-
-GetIname returns the Iname field if non-nil, zero value otherwise.
-
-### GetInameOk
-
-`func (o *InlineObject171) GetInameOk() (*string, bool)`
-
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIname
-
-`func (o *InlineObject171) SetIname(v string)`
-
-SetIname sets Iname field to given value.
-
+HasRetainConfigs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

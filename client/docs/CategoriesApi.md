@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsTaxonomyCategories
 
-> []InlineResponse200245 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
+> []InlineResponse200247 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
 
 Return a list of Category Types
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CategoriesApi.GetOrganizationAssuranceAlertsTaxonomyCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200245
+    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200247
     fmt.Fprintf(os.Stdout, "Response from `CategoriesApi.GetOrganizationAssuranceAlertsTaxonomyCategories`: %v\n", resp)
 }
 ```
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200245**](InlineResponse200245.md)
+[**[]InlineResponse200247**](InlineResponse200247.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopApplicationsCategoriesByUsage
 
-> []InlineResponse200331 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200334 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top application categories sorted by data usage over given time range
 
@@ -175,7 +175,7 @@ func main() {
     networkTag := "networkTag_example" // string | Match result to an exact network tag (optional)
     deviceTag := "deviceTag_example" // string | Match result to an exact device tag (optional)
     networkId := "networkId_example" // string | Match result to an exact network id (optional)
-    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. (optional)
+    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. Maximum is 50 (optional)
     ssidName := "ssidName_example" // string | Filter results by ssid name (optional)
     usageUplink := "usageUplink_example" // string | Filter results by usage uplink (optional)
     t0 := "t0_example" // string | The beginning of the timespan for the data. (optional)
@@ -189,7 +189,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CategoriesApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200331
+    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200334
     fmt.Fprintf(os.Stdout, "Response from `CategoriesApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage`: %v\n", resp)
 }
 ```
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
  **networkTag** | **string** | Match result to an exact network tag | 
  **deviceTag** | **string** | Match result to an exact device tag | 
  **networkId** | **string** | Match result to an exact network id | 
- **quantity** | **int32** | Set number of desired results to return. Default is 10. | 
+ **quantity** | **int32** | Set number of desired results to return. Default is 10. Maximum is 50 | 
  **ssidName** | **string** | Filter results by ssid name | 
  **usageUplink** | **string** | Filter results by usage uplink | 
  **t0** | **string** | The beginning of the timespan for the data. | 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200331**](InlineResponse200331.md)
+[**[]InlineResponse200334**](InlineResponse200334.md)
 
 ### Authorization
 

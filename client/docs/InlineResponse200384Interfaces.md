@@ -5,7 +5,17 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the wireless LAN controller interface | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200384Readings**](InlineResponse200384Readings.md) | The status of packets counter on the interfaces of the wireless LAN controller | [optional] 
+**Description** | Pointer to **string** | The description of the wireless LAN controller interface | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the wireless LAN controller interface | [optional] 
+**Status** | Pointer to **string** | The status of the wireless LAN controller interface | [optional] 
+**Speed** | Pointer to **string** | The current data transfer rate which the interface is operating at. enum &#x3D; [1 Gbps, 2 Gbps, 5 Gbps, 10 Gbps, 20 Gbps, 40 Gbps, 100 Gbps] | [optional] 
+**Addresses** | Pointer to [**[]InlineResponse200384Addresses**](InlineResponse200384Addresses.md) | Available addresses for the interface. | [optional] 
+**Vrf** | Pointer to [**InlineResponse200384Vrf**](InlineResponse200384Vrf.md) |  | [optional] 
+**IsUplink** | Pointer to **bool** | Indicate whether the interface is uplink | [optional] 
+**Vlan** | Pointer to **int32** | The VLAN of the switch port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
+**LinkNegotiation** | Pointer to **string** | The interface negotiation mode | [optional] 
+**ChannelGroup** | Pointer to [**InlineResponse200381ChannelGroup**](InlineResponse200381ChannelGroup.md) |  | [optional] 
+**Module** | Pointer to [**InlineResponse200381Module**](InlineResponse200381Module.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +61,280 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetReadings
+### GetDescription
 
-`func (o *InlineResponse200384Interfaces) GetReadings() []InlineResponse200384Readings`
+`func (o *InlineResponse200384Interfaces) GetDescription() string`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200384Interfaces) GetReadingsOk() (*[]InlineResponse200384Readings, bool)`
+`func (o *InlineResponse200384Interfaces) GetDescriptionOk() (*string, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetDescription
 
-`func (o *InlineResponse200384Interfaces) SetReadings(v []InlineResponse200384Readings)`
+`func (o *InlineResponse200384Interfaces) SetDescription(v string)`
 
-SetReadings sets Readings field to given value.
+SetDescription sets Description field to given value.
 
-### HasReadings
+### HasDescription
 
-`func (o *InlineResponse200384Interfaces) HasReadings() bool`
+`func (o *InlineResponse200384Interfaces) HasDescription() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200384Interfaces) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200384Interfaces) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200384Interfaces) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200384Interfaces) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse200384Interfaces) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200384Interfaces) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200384Interfaces) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200384Interfaces) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetSpeed
+
+`func (o *InlineResponse200384Interfaces) GetSpeed() string`
+
+GetSpeed returns the Speed field if non-nil, zero value otherwise.
+
+### GetSpeedOk
+
+`func (o *InlineResponse200384Interfaces) GetSpeedOk() (*string, bool)`
+
+GetSpeedOk returns a tuple with the Speed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpeed
+
+`func (o *InlineResponse200384Interfaces) SetSpeed(v string)`
+
+SetSpeed sets Speed field to given value.
+
+### HasSpeed
+
+`func (o *InlineResponse200384Interfaces) HasSpeed() bool`
+
+HasSpeed returns a boolean if a field has been set.
+
+### GetAddresses
+
+`func (o *InlineResponse200384Interfaces) GetAddresses() []InlineResponse200384Addresses`
+
+GetAddresses returns the Addresses field if non-nil, zero value otherwise.
+
+### GetAddressesOk
+
+`func (o *InlineResponse200384Interfaces) GetAddressesOk() (*[]InlineResponse200384Addresses, bool)`
+
+GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAddresses
+
+`func (o *InlineResponse200384Interfaces) SetAddresses(v []InlineResponse200384Addresses)`
+
+SetAddresses sets Addresses field to given value.
+
+### HasAddresses
+
+`func (o *InlineResponse200384Interfaces) HasAddresses() bool`
+
+HasAddresses returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineResponse200384Interfaces) GetVrf() InlineResponse200384Vrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineResponse200384Interfaces) GetVrfOk() (*InlineResponse200384Vrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineResponse200384Interfaces) SetVrf(v InlineResponse200384Vrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineResponse200384Interfaces) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
+
+### GetIsUplink
+
+`func (o *InlineResponse200384Interfaces) GetIsUplink() bool`
+
+GetIsUplink returns the IsUplink field if non-nil, zero value otherwise.
+
+### GetIsUplinkOk
+
+`func (o *InlineResponse200384Interfaces) GetIsUplinkOk() (*bool, bool)`
+
+GetIsUplinkOk returns a tuple with the IsUplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsUplink
+
+`func (o *InlineResponse200384Interfaces) SetIsUplink(v bool)`
+
+SetIsUplink sets IsUplink field to given value.
+
+### HasIsUplink
+
+`func (o *InlineResponse200384Interfaces) HasIsUplink() bool`
+
+HasIsUplink returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse200384Interfaces) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse200384Interfaces) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse200384Interfaces) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse200384Interfaces) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetLinkNegotiation
+
+`func (o *InlineResponse200384Interfaces) GetLinkNegotiation() string`
+
+GetLinkNegotiation returns the LinkNegotiation field if non-nil, zero value otherwise.
+
+### GetLinkNegotiationOk
+
+`func (o *InlineResponse200384Interfaces) GetLinkNegotiationOk() (*string, bool)`
+
+GetLinkNegotiationOk returns a tuple with the LinkNegotiation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLinkNegotiation
+
+`func (o *InlineResponse200384Interfaces) SetLinkNegotiation(v string)`
+
+SetLinkNegotiation sets LinkNegotiation field to given value.
+
+### HasLinkNegotiation
+
+`func (o *InlineResponse200384Interfaces) HasLinkNegotiation() bool`
+
+HasLinkNegotiation returns a boolean if a field has been set.
+
+### GetChannelGroup
+
+`func (o *InlineResponse200384Interfaces) GetChannelGroup() InlineResponse200381ChannelGroup`
+
+GetChannelGroup returns the ChannelGroup field if non-nil, zero value otherwise.
+
+### GetChannelGroupOk
+
+`func (o *InlineResponse200384Interfaces) GetChannelGroupOk() (*InlineResponse200381ChannelGroup, bool)`
+
+GetChannelGroupOk returns a tuple with the ChannelGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChannelGroup
+
+`func (o *InlineResponse200384Interfaces) SetChannelGroup(v InlineResponse200381ChannelGroup)`
+
+SetChannelGroup sets ChannelGroup field to given value.
+
+### HasChannelGroup
+
+`func (o *InlineResponse200384Interfaces) HasChannelGroup() bool`
+
+HasChannelGroup returns a boolean if a field has been set.
+
+### GetModule
+
+`func (o *InlineResponse200384Interfaces) GetModule() InlineResponse200381Module`
+
+GetModule returns the Module field if non-nil, zero value otherwise.
+
+### GetModuleOk
+
+`func (o *InlineResponse200384Interfaces) GetModuleOk() (*InlineResponse200381Module, bool)`
+
+GetModuleOk returns a tuple with the Module field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModule
+
+`func (o *InlineResponse200384Interfaces) SetModule(v InlineResponse200381Module)`
+
+SetModule sets Module field to given value.
+
+### HasModule
+
+`func (o *InlineResponse200384Interfaces) HasModule() bool`
+
+HasModule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

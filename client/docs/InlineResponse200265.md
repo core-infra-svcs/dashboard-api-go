@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200265Usage**](InlineResponse200265Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200265Counts**](InlineResponse200265Counts.md) |  | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
+**Licenses** | Pointer to [**[]InlineResponse200265Licenses**](InlineResponse200265Licenses.md) | The licenses claimed | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200265WithDefaults instantiates a new InlineResponse200265 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetOrders
 
-`func (o *InlineResponse200265) GetUsage() InlineResponse200265Usage`
+`func (o *InlineResponse200265) GetOrders() []string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetOrdersOk
 
-`func (o *InlineResponse200265) GetUsageOk() (*InlineResponse200265Usage, bool)`
+`func (o *InlineResponse200265) GetOrdersOk() (*[]string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetOrders
 
-`func (o *InlineResponse200265) SetUsage(v InlineResponse200265Usage)`
+`func (o *InlineResponse200265) SetOrders(v []string)`
 
-SetUsage sets Usage field to given value.
+SetOrders sets Orders field to given value.
 
-### HasUsage
+### HasOrders
 
-`func (o *InlineResponse200265) HasUsage() bool`
+`func (o *InlineResponse200265) HasOrders() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
 
-### GetCounts
+### GetSerials
 
-`func (o *InlineResponse200265) GetCounts() InlineResponse200265Counts`
+`func (o *InlineResponse200265) GetSerials() []string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetSerialsOk
 
-`func (o *InlineResponse200265) GetCountsOk() (*InlineResponse200265Counts, bool)`
+`func (o *InlineResponse200265) GetSerialsOk() (*[]string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetSerials
 
-`func (o *InlineResponse200265) SetCounts(v InlineResponse200265Counts)`
+`func (o *InlineResponse200265) SetSerials(v []string)`
 
-SetCounts sets Counts field to given value.
+SetSerials sets Serials field to given value.
 
-### HasCounts
+### HasSerials
 
-`func (o *InlineResponse200265) HasCounts() bool`
+`func (o *InlineResponse200265) HasSerials() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetLicenses
+
+`func (o *InlineResponse200265) GetLicenses() []InlineResponse200265Licenses`
+
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+
+### GetLicensesOk
+
+`func (o *InlineResponse200265) GetLicensesOk() (*[]InlineResponse200265Licenses, bool)`
+
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenses
+
+`func (o *InlineResponse200265) SetLicenses(v []InlineResponse200265Licenses)`
+
+SetLicenses sets Licenses field to given value.
+
+### HasLicenses
+
+`func (o *InlineResponse200265) HasLicenses() bool`
+
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

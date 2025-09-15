@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSummaryTopNetworksByStatus
 
-> []InlineResponse200336 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200339 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the client and status overview information for the networks in an organization
 
@@ -32,7 +32,7 @@ func main() {
     organizationId := "organizationId_example" // string | Organization ID
     networkTag := "networkTag_example" // string | Match result to an exact network tag (optional)
     deviceTag := "deviceTag_example" // string | Match result to an exact device tag (optional)
-    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. (optional)
+    quantity := int32(56) // int32 | Set number of desired results to return. Default is 10. Maximum is 50 (optional)
     ssidName := "ssidName_example" // string | Filter results by ssid name (optional)
     usageUplink := "usageUplink_example" // string | Filter results by usage uplink (optional)
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 5000. (optional)
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByStatusApi.GetOrganizationSummaryTopNetworksByStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200336
+    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200339
     fmt.Fprintf(os.Stdout, "Response from `ByStatusApi.GetOrganizationSummaryTopNetworksByStatus`: %v\n", resp)
 }
 ```
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
  **networkTag** | **string** | Match result to an exact network tag | 
  **deviceTag** | **string** | Match result to an exact device tag | 
- **quantity** | **int32** | Set number of desired results to return. Default is 10. | 
+ **quantity** | **int32** | Set number of desired results to return. Default is 10. Maximum is 50 | 
  **ssidName** | **string** | Filter results by ssid name | 
  **usageUplink** | **string** | Filter results by usage uplink | 
  **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 5000. | 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200336**](InlineResponse200336.md)
+[**[]InlineResponse200339**](InlineResponse200339.md)
 
 ### Authorization
 

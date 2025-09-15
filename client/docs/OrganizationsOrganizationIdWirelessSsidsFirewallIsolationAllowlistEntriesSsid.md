@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Number** | Pointer to **int32** | The number of SSID | [optional] 
+**Number** | **int32** | The number of SSID | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid
 
-`func NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid() *OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
+`func NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid(number int32, ) *OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
 
 NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid instantiates a new OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetNumber sets Number field to given value.
 
-### HasNumber
-
-`func (o *OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid) HasNumber() bool`
-
-HasNumber returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

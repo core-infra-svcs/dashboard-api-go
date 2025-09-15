@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ImportId** | Pointer to **string** | Database ID for the new entity entry. | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice.md) |  | [optional] 
+**Networks** | Pointer to [**[]InlineResponse200297Items**](InlineResponse200297Items.md) | List of networks that have XDR enabled | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200299WithDefaults instantiates a new InlineResponse200299 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetImportId
+### GetNetworks
 
-`func (o *InlineResponse200299) GetImportId() string`
+`func (o *InlineResponse200299) GetNetworks() []InlineResponse200297Items`
 
-GetImportId returns the ImportId field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetImportIdOk
+### GetNetworksOk
 
-`func (o *InlineResponse200299) GetImportIdOk() (*string, bool)`
+`func (o *InlineResponse200299) GetNetworksOk() (*[]InlineResponse200297Items, bool)`
 
-GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImportId
+### SetNetworks
 
-`func (o *InlineResponse200299) SetImportId(v string)`
+`func (o *InlineResponse200299) SetNetworks(v []InlineResponse200297Items)`
 
-SetImportId sets ImportId field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasImportId
+### HasNetworks
 
-`func (o *InlineResponse200299) HasImportId() bool`
+`func (o *InlineResponse200299) HasNetworks() bool`
 
-HasImportId returns a boolean if a field has been set.
-
-### GetDevice
-
-`func (o *InlineResponse200299) GetDevice() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice`
-
-GetDevice returns the Device field if non-nil, zero value otherwise.
-
-### GetDeviceOk
-
-`func (o *InlineResponse200299) GetDeviceOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevice
-
-`func (o *InlineResponse200299) SetDevice(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice)`
-
-SetDevice sets Device field to given value.
-
-### HasDevice
-
-`func (o *InlineResponse200299) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
-**Hubs** | Pointer to [**[]InlineResponse20077Hubs**](InlineResponse20077Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
-**Subnets** | Pointer to [**[]InlineResponse20077Subnets**](InlineResponse20077Subnets.md) | The list of subnets and their VPN presence. | [optional] 
-**Subnet** | Pointer to [**InlineResponse20077Subnet**](InlineResponse20077Subnet.md) |  | [optional] 
+**VlansEnabled** | Pointer to **bool** | Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse20077WithDefaults instantiates a new InlineResponse20077 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetVlansEnabled
 
-`func (o *InlineResponse20077) GetMode() string`
+`func (o *InlineResponse20077) GetVlansEnabled() bool`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetVlansEnabledOk
 
-`func (o *InlineResponse20077) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20077) GetVlansEnabledOk() (*bool, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetVlansEnabled
 
-`func (o *InlineResponse20077) SetMode(v string)`
+`func (o *InlineResponse20077) SetVlansEnabled(v bool)`
 
-SetMode sets Mode field to given value.
+SetVlansEnabled sets VlansEnabled field to given value.
 
-### HasMode
+### HasVlansEnabled
 
-`func (o *InlineResponse20077) HasMode() bool`
+`func (o *InlineResponse20077) HasVlansEnabled() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetHubs
-
-`func (o *InlineResponse20077) GetHubs() []InlineResponse20077Hubs`
-
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
-
-### GetHubsOk
-
-`func (o *InlineResponse20077) GetHubsOk() (*[]InlineResponse20077Hubs, bool)`
-
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHubs
-
-`func (o *InlineResponse20077) SetHubs(v []InlineResponse20077Hubs)`
-
-SetHubs sets Hubs field to given value.
-
-### HasHubs
-
-`func (o *InlineResponse20077) HasHubs() bool`
-
-HasHubs returns a boolean if a field has been set.
-
-### GetSubnets
-
-`func (o *InlineResponse20077) GetSubnets() []InlineResponse20077Subnets`
-
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
-
-### GetSubnetsOk
-
-`func (o *InlineResponse20077) GetSubnetsOk() (*[]InlineResponse20077Subnets, bool)`
-
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnets
-
-`func (o *InlineResponse20077) SetSubnets(v []InlineResponse20077Subnets)`
-
-SetSubnets sets Subnets field to given value.
-
-### HasSubnets
-
-`func (o *InlineResponse20077) HasSubnets() bool`
-
-HasSubnets returns a boolean if a field has been set.
-
-### GetSubnet
-
-`func (o *InlineResponse20077) GetSubnet() InlineResponse20077Subnet`
-
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
-
-### GetSubnetOk
-
-`func (o *InlineResponse20077) GetSubnetOk() (*InlineResponse20077Subnet, bool)`
-
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnet
-
-`func (o *InlineResponse20077) SetSubnet(v InlineResponse20077Subnet)`
-
-SetSubnet sets Subnet field to given value.
-
-### HasSubnet
-
-`func (o *InlineResponse20077) HasSubnet() bool`
-
-HasSubnet returns a boolean if a field has been set.
+HasVlansEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

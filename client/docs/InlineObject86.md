@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the cluster | [optional] 
-**Uplinks** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks**](NetworksNetworkIdCampusGatewayClustersClusterIdUplinks.md) | Uplink interface settings of the cluster | [optional] 
-**Tunnels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels**](NetworksNetworkIdCampusGatewayClustersClusterIdTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | [optional] 
-**Nameservers** | Pointer to [**NetworksNetworkIdCampusGatewayClustersNameservers**](NetworksNetworkIdCampusGatewayClustersNameservers.md) |  | [optional] 
-**PortChannels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels**](NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels.md) | Port channel settings of the cluster | [optional] 
-**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices**](NetworksNetworkIdCampusGatewayClustersClusterIdDevices.md) | Devices in the cluster | [optional] 
+**Name** | **string** | Name of the new cluster | 
+**Uplinks** | [**[]NetworksNetworkIdCampusGatewayClustersUplinks**](NetworksNetworkIdCampusGatewayClustersUplinks.md) | Uplink interface settings of the cluster | 
+**Tunnels** | [**[]NetworksNetworkIdCampusGatewayClustersTunnels**](NetworksNetworkIdCampusGatewayClustersTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | 
+**Nameservers** | [**NetworksNetworkIdCampusGatewayClustersNameservers**](NetworksNetworkIdCampusGatewayClustersNameservers.md) |  | 
+**PortChannels** | [**[]NetworksNetworkIdCampusGatewayClustersPortChannels**](NetworksNetworkIdCampusGatewayClustersPortChannels.md) | Port channel settings of the cluster | 
+**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersDevices**](NetworksNetworkIdCampusGatewayClustersDevices.md) | Devices to be added to the cluster | [optional] 
 **Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
 
 ## Methods
 
 ### NewInlineObject86
 
-`func NewInlineObject86() *InlineObject86`
+`func NewInlineObject86(name string, uplinks []NetworksNetworkIdCampusGatewayClustersUplinks, tunnels []NetworksNetworkIdCampusGatewayClustersTunnels, nameservers NetworksNetworkIdCampusGatewayClustersNameservers, portChannels []NetworksNetworkIdCampusGatewayClustersPortChannels, ) *InlineObject86`
 
 NewInlineObject86 instantiates a new InlineObject86 object
 This constructor will assign default values to properties that have it defined,
@@ -50,61 +50,46 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject86) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetUplinks
 
-`func (o *InlineObject86) GetUplinks() []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks`
+`func (o *InlineObject86) GetUplinks() []NetworksNetworkIdCampusGatewayClustersUplinks`
 
 GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
 ### GetUplinksOk
 
-`func (o *InlineObject86) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks, bool)`
+`func (o *InlineObject86) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersUplinks, bool)`
 
 GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUplinks
 
-`func (o *InlineObject86) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks)`
+`func (o *InlineObject86) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersUplinks)`
 
 SetUplinks sets Uplinks field to given value.
 
-### HasUplinks
-
-`func (o *InlineObject86) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
 
 ### GetTunnels
 
-`func (o *InlineObject86) GetTunnels() []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels`
+`func (o *InlineObject86) GetTunnels() []NetworksNetworkIdCampusGatewayClustersTunnels`
 
 GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
 
 ### GetTunnelsOk
 
-`func (o *InlineObject86) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels, bool)`
+`func (o *InlineObject86) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersTunnels, bool)`
 
 GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTunnels
 
-`func (o *InlineObject86) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels)`
+`func (o *InlineObject86) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersTunnels)`
 
 SetTunnels sets Tunnels field to given value.
 
-### HasTunnels
-
-`func (o *InlineObject86) HasTunnels() bool`
-
-HasTunnels returns a boolean if a field has been set.
 
 ### GetNameservers
 
@@ -125,53 +110,43 @@ and a boolean to check if the value has been set.
 
 SetNameservers sets Nameservers field to given value.
 
-### HasNameservers
-
-`func (o *InlineObject86) HasNameservers() bool`
-
-HasNameservers returns a boolean if a field has been set.
 
 ### GetPortChannels
 
-`func (o *InlineObject86) GetPortChannels() []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels`
+`func (o *InlineObject86) GetPortChannels() []NetworksNetworkIdCampusGatewayClustersPortChannels`
 
 GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
 
 ### GetPortChannelsOk
 
-`func (o *InlineObject86) GetPortChannelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels, bool)`
+`func (o *InlineObject86) GetPortChannelsOk() (*[]NetworksNetworkIdCampusGatewayClustersPortChannels, bool)`
 
 GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPortChannels
 
-`func (o *InlineObject86) SetPortChannels(v []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels)`
+`func (o *InlineObject86) SetPortChannels(v []NetworksNetworkIdCampusGatewayClustersPortChannels)`
 
 SetPortChannels sets PortChannels field to given value.
 
-### HasPortChannels
-
-`func (o *InlineObject86) HasPortChannels() bool`
-
-HasPortChannels returns a boolean if a field has been set.
 
 ### GetDevices
 
-`func (o *InlineObject86) GetDevices() []NetworksNetworkIdCampusGatewayClustersClusterIdDevices`
+`func (o *InlineObject86) GetDevices() []NetworksNetworkIdCampusGatewayClustersDevices`
 
 GetDevices returns the Devices field if non-nil, zero value otherwise.
 
 ### GetDevicesOk
 
-`func (o *InlineObject86) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices, bool)`
+`func (o *InlineObject86) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersDevices, bool)`
 
 GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDevices
 
-`func (o *InlineObject86) SetDevices(v []NetworksNetworkIdCampusGatewayClustersClusterIdDevices)`
+`func (o *InlineObject86) SetDevices(v []NetworksNetworkIdCampusGatewayClustersDevices)`
 
 SetDevices sets Devices field to given value.
 

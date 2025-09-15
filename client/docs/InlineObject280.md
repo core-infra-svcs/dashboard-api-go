@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
-**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
+**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
+**LicenseId** | **string** | The ID of the SM license to move the seats from | 
+**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject280
 
-`func NewInlineObject280(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject280`
+`func NewInlineObject280(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject280`
 
 NewInlineObject280 instantiates a new InlineObject280 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +27,64 @@ NewInlineObject280WithDefaults instantiates a new InlineObject280 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseIdToRenew
+### GetDestOrganizationId
 
-`func (o *InlineObject280) GetLicenseIdToRenew() string`
+`func (o *InlineObject280) GetDestOrganizationId() string`
 
-GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetLicenseIdToRenewOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject280) GetLicenseIdToRenewOk() (*string, bool)`
+`func (o *InlineObject280) GetDestOrganizationIdOk() (*string, bool)`
 
-GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIdToRenew
+### SetDestOrganizationId
 
-`func (o *InlineObject280) SetLicenseIdToRenew(v string)`
+`func (o *InlineObject280) SetDestOrganizationId(v string)`
 
-SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
 
-### GetUnusedLicenseId
+### GetLicenseId
 
-`func (o *InlineObject280) GetUnusedLicenseId() string`
+`func (o *InlineObject280) GetLicenseId() string`
 
-GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetUnusedLicenseIdOk
+### GetLicenseIdOk
 
-`func (o *InlineObject280) GetUnusedLicenseIdOk() (*string, bool)`
+`func (o *InlineObject280) GetLicenseIdOk() (*string, bool)`
 
-GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnusedLicenseId
+### SetLicenseId
 
-`func (o *InlineObject280) SetUnusedLicenseId(v string)`
+`func (o *InlineObject280) SetLicenseId(v string)`
 
-SetUnusedLicenseId sets UnusedLicenseId field to given value.
+SetLicenseId sets LicenseId field to given value.
+
+
+### GetSeatCount
+
+`func (o *InlineObject280) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineObject280) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineObject280) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
 
 
 

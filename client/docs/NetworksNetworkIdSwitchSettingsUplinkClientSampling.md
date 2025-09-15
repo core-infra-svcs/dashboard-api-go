@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Enable uplink client sampling | [optional] 
+**Enabled** | **bool** | Enable uplink client sampling | 
 
 ## Methods
 
 ### NewNetworksNetworkIdSwitchSettingsUplinkClientSampling
 
-`func NewNetworksNetworkIdSwitchSettingsUplinkClientSampling() *NetworksNetworkIdSwitchSettingsUplinkClientSampling`
+`func NewNetworksNetworkIdSwitchSettingsUplinkClientSampling(enabled bool, ) *NetworksNetworkIdSwitchSettingsUplinkClientSampling`
 
 NewNetworksNetworkIdSwitchSettingsUplinkClientSampling instantiates a new NetworksNetworkIdSwitchSettingsUplinkClientSampling object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
-
-`func (o *NetworksNetworkIdSwitchSettingsUplinkClientSampling) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

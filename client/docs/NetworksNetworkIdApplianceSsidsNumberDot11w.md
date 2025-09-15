@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether 802.11w is enabled or not. | [optional] 
+**Enabled** | **bool** | Whether 802.11w is enabled or not. | 
 **Required** | Pointer to **bool** | (Optional) Whether 802.11w is required or not. | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdApplianceSsidsNumberDot11w
 
-`func NewNetworksNetworkIdApplianceSsidsNumberDot11w() *NetworksNetworkIdApplianceSsidsNumberDot11w`
+`func NewNetworksNetworkIdApplianceSsidsNumberDot11w(enabled bool, ) *NetworksNetworkIdApplianceSsidsNumberDot11w`
 
 NewNetworksNetworkIdApplianceSsidsNumberDot11w instantiates a new NetworksNetworkIdApplianceSsidsNumberDot11w object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
-
-`func (o *NetworksNetworkIdApplianceSsidsNumberDot11w) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 ### GetRequired
 

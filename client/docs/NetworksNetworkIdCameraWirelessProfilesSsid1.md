@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the SSID. | [optional] 
-**AuthMode** | Pointer to **string** | The auth mode of the SSID. It can be set to (&#39;psk&#39;, &#39;8021x-radius&#39;). | [optional] 
+**Name** | **string** | The name of the SSID. | 
+**AuthMode** | **string** | The auth mode of the SSID. It can be set to (&#39;psk&#39;, &#39;8021x-radius&#39;). | 
 **EncryptionMode** | Pointer to **string** | The encryption mode of the SSID. It can be set to (&#39;wpa&#39;, &#39;wpa-eap&#39;). With &#39;wpa&#39; mode, the authMode should be &#39;psk&#39; and with &#39;wpa-eap&#39; the authMode should be &#39;8021x-radius&#39; | [optional] 
 **Psk** | Pointer to **string** | The pre-shared key of the SSID. | [optional] 
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewNetworksNetworkIdCameraWirelessProfilesSsid1
 
-`func NewNetworksNetworkIdCameraWirelessProfilesSsid1() *NetworksNetworkIdCameraWirelessProfilesSsid1`
+`func NewNetworksNetworkIdCameraWirelessProfilesSsid1(name string, authMode string, ) *NetworksNetworkIdCameraWirelessProfilesSsid1`
 
 NewNetworksNetworkIdCameraWirelessProfilesSsid1 instantiates a new NetworksNetworkIdCameraWirelessProfilesSsid1 object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *NetworksNetworkIdCameraWirelessProfilesSsid1) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetAuthMode
 
@@ -72,11 +67,6 @@ and a boolean to check if the value has been set.
 
 SetAuthMode sets AuthMode field to given value.
 
-### HasAuthMode
-
-`func (o *NetworksNetworkIdCameraWirelessProfilesSsid1) HasAuthMode() bool`
-
-HasAuthMode returns a boolean if a field has been set.
 
 ### GetEncryptionMode
 

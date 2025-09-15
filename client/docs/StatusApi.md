@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceWirelessStatus
 
-> InlineResponse20047 GetDeviceWirelessStatus(ctx, serial).Execute()
+> InlineResponse20048 GetDeviceWirelessStatus(ctx, serial).Execute()
 
 Return the SSID statuses of an access point
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusApi.GetDeviceWirelessStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessStatus`: InlineResponse20047
+    // response from `GetDeviceWirelessStatus`: InlineResponse20048
     fmt.Fprintf(os.Stdout, "Response from `StatusApi.GetDeviceWirelessStatus`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSpacesIntegrateStatus
 
-> InlineResponse200324 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
+> InlineResponse200327 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
 
 Get the status of the Spaces integration in Meraki
 
@@ -109,7 +109,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusApi.GetOrganizationSpacesIntegrateStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200324
+    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200327
     fmt.Fprintf(os.Stdout, "Response from `StatusApi.GetOrganizationSpacesIntegrateStatus`: %v\n", resp)
 }
 ```
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200324**](InlineResponse200324.md)
+[**InlineResponse200327**](InlineResponse200327.md)
 
 ### Authorization
 

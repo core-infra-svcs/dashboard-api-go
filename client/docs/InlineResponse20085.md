@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandwidthLimits** | Pointer to [**InlineResponse20085BandwidthLimits**](InlineResponse20085BandwidthLimits.md) |  | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG in the network. | [optional] 
+**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG in the network. | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | List of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39;. | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20085WithDefaults instantiates a new InlineResponse20085 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBandwidthLimits
+### GetDhcpLeaseTime
 
-`func (o *InlineResponse20085) GetBandwidthLimits() InlineResponse20085BandwidthLimits`
+`func (o *InlineResponse20085) GetDhcpLeaseTime() string`
 
-GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetBandwidthLimitsOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineResponse20085) GetBandwidthLimitsOk() (*InlineResponse20085BandwidthLimits, bool)`
+`func (o *InlineResponse20085) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidthLimits
+### SetDhcpLeaseTime
 
-`func (o *InlineResponse20085) SetBandwidthLimits(v InlineResponse20085BandwidthLimits)`
+`func (o *InlineResponse20085) SetDhcpLeaseTime(v string)`
 
-SetBandwidthLimits sets BandwidthLimits field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
-### HasBandwidthLimits
+### HasDhcpLeaseTime
 
-`func (o *InlineResponse20085) HasBandwidthLimits() bool`
+`func (o *InlineResponse20085) HasDhcpLeaseTime() bool`
 
-HasBandwidthLimits returns a boolean if a field has been set.
+HasDhcpLeaseTime returns a boolean if a field has been set.
+
+### GetDnsNameservers
+
+`func (o *InlineResponse20085) GetDnsNameservers() string`
+
+GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+
+### GetDnsNameserversOk
+
+`func (o *InlineResponse20085) GetDnsNameserversOk() (*string, bool)`
+
+GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsNameservers
+
+`func (o *InlineResponse20085) SetDnsNameservers(v string)`
+
+SetDnsNameservers sets DnsNameservers field to given value.
+
+### HasDnsNameservers
+
+`func (o *InlineResponse20085) HasDnsNameservers() bool`
+
+HasDnsNameservers returns a boolean if a field has been set.
+
+### GetDnsCustomNameservers
+
+`func (o *InlineResponse20085) GetDnsCustomNameservers() []string`
+
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+
+### GetDnsCustomNameserversOk
+
+`func (o *InlineResponse20085) GetDnsCustomNameserversOk() (*[]string, bool)`
+
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsCustomNameservers
+
+`func (o *InlineResponse20085) SetDnsCustomNameservers(v []string)`
+
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+
+### HasDnsCustomNameservers
+
+`func (o *InlineResponse20085) HasDnsCustomNameservers() bool`
+
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

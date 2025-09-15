@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Sku** | Pointer to **string** | SKU of the required product | [optional] 
-**WebOrderLineId** | Pointer to **string** | Web order line ID | [optional] 
 **Seats** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsSeats**](AdministeredLicensingSubscriptionSubscriptionsSeats.md) |  | [optional] 
 
 ## Methods
@@ -51,31 +50,6 @@ SetSku sets Sku field to given value.
 `func (o *AdministeredLicensingSubscriptionSubscriptionsEntitlements) HasSku() bool`
 
 HasSku returns a boolean if a field has been set.
-
-### GetWebOrderLineId
-
-`func (o *AdministeredLicensingSubscriptionSubscriptionsEntitlements) GetWebOrderLineId() string`
-
-GetWebOrderLineId returns the WebOrderLineId field if non-nil, zero value otherwise.
-
-### GetWebOrderLineIdOk
-
-`func (o *AdministeredLicensingSubscriptionSubscriptionsEntitlements) GetWebOrderLineIdOk() (*string, bool)`
-
-GetWebOrderLineIdOk returns a tuple with the WebOrderLineId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWebOrderLineId
-
-`func (o *AdministeredLicensingSubscriptionSubscriptionsEntitlements) SetWebOrderLineId(v string)`
-
-SetWebOrderLineId sets WebOrderLineId field to given value.
-
-### HasWebOrderLineId
-
-`func (o *AdministeredLicensingSubscriptionSubscriptionsEntitlements) HasWebOrderLineId() bool`
-
-HasWebOrderLineId returns a boolean if a field has been set.
 
 ### GetSeats
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Status of attempt to update device floorplan assignments | [optional] 
+**Success** | Pointer to **bool** | Status of attempt to publish auto locate job | [optional] 
 
 ## Methods
 

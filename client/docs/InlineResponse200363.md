@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
-**Status** | Pointer to **string** | The status of the Certificate Authority | [optional] 
-**Contents** | Pointer to **string** | The PEM encoded contents of the Certificate Authority - with newlines as \&quot; \&quot;. Contents can be null, if the cert has not yet been generated. | [optional] 
+**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
+**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200363WithDefaults instantiates a new InlineResponse200363 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificateAuthorityId
+### GetDownstream
 
-`func (o *InlineResponse200363) GetCertificateAuthorityId() string`
+`func (o *InlineResponse200363) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200363) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineResponse200363) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetDownstream
 
-`func (o *InlineResponse200363) SetCertificateAuthorityId(v string)`
+`func (o *InlineResponse200363) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasCertificateAuthorityId
+### HasDownstream
 
-`func (o *InlineResponse200363) HasCertificateAuthorityId() bool`
+`func (o *InlineResponse200363) HasDownstream() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
-### GetStatus
+### GetUpstream
 
-`func (o *InlineResponse200363) GetStatus() string`
+`func (o *InlineResponse200363) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200363) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200363) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetUpstream
 
-`func (o *InlineResponse200363) SetStatus(v string)`
+`func (o *InlineResponse200363) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
 
-SetStatus sets Status field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasStatus
+### HasUpstream
 
-`func (o *InlineResponse200363) HasStatus() bool`
+`func (o *InlineResponse200363) HasUpstream() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetContents
+### GetNetwork
 
-`func (o *InlineResponse200363) GetContents() string`
+`func (o *InlineResponse200363) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
 
-GetContents returns the Contents field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetContentsOk
+### GetNetworkOk
 
-`func (o *InlineResponse200363) GetContentsOk() (*string, bool)`
+`func (o *InlineResponse200363) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
 
-GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetContents
+### SetNetwork
 
-`func (o *InlineResponse200363) SetContents(v string)`
+`func (o *InlineResponse200363) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
 
-SetContents sets Contents field to given value.
+SetNetwork sets Network field to given value.
 
-### HasContents
+### HasNetwork
 
-`func (o *InlineResponse200363) HasContents() bool`
+`func (o *InlineResponse200363) HasNetwork() bool`
 
-HasContents returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

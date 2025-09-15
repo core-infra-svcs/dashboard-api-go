@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**InlineResponse200155Alerts**](InlineResponse200155Alerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**InlineResponse200155ArpInspection**](InlineResponse200155ArpInspection.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]InlineResponse200155Switches**](InlineResponse200155Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200155WithDefaults instantiates a new InlineResponse200155 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetEnabled
 
-`func (o *InlineResponse200155) GetAlerts() InlineResponse200155Alerts`
+`func (o *InlineResponse200155) GetEnabled() bool`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200155) GetAlertsOk() (*InlineResponse200155Alerts, bool)`
+`func (o *InlineResponse200155) GetEnabledOk() (*bool, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetEnabled
 
-`func (o *InlineResponse200155) SetAlerts(v InlineResponse200155Alerts)`
+`func (o *InlineResponse200155) SetEnabled(v bool)`
 
-SetAlerts sets Alerts field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAlerts
+### HasEnabled
 
-`func (o *InlineResponse200155) HasAlerts() bool`
+`func (o *InlineResponse200155) HasEnabled() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetVlanId
 
-`func (o *InlineResponse200155) GetDefaultPolicy() string`
+`func (o *InlineResponse200155) GetVlanId() int32`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetVlanIdOk
 
-`func (o *InlineResponse200155) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse200155) GetVlanIdOk() (*int32, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetVlanId
 
-`func (o *InlineResponse200155) SetDefaultPolicy(v string)`
+`func (o *InlineResponse200155) SetVlanId(v int32)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasDefaultPolicy
+### HasVlanId
 
-`func (o *InlineResponse200155) HasDefaultPolicy() bool`
+`func (o *InlineResponse200155) HasVlanId() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetBlockedServers
+### GetProtocols
 
-`func (o *InlineResponse200155) GetBlockedServers() []string`
+`func (o *InlineResponse200155) GetProtocols() []string`
 
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetBlockedServersOk
+### GetProtocolsOk
 
-`func (o *InlineResponse200155) GetBlockedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200155) GetProtocolsOk() (*[]string, bool)`
 
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedServers
+### SetProtocols
 
-`func (o *InlineResponse200155) SetBlockedServers(v []string)`
+`func (o *InlineResponse200155) SetProtocols(v []string)`
 
-SetBlockedServers sets BlockedServers field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasBlockedServers
+### HasProtocols
 
-`func (o *InlineResponse200155) HasBlockedServers() bool`
+`func (o *InlineResponse200155) HasProtocols() bool`
 
-HasBlockedServers returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetSwitches
 
-`func (o *InlineResponse200155) GetAllowedServers() []string`
+`func (o *InlineResponse200155) GetSwitches() []InlineResponse200155Switches`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetSwitchesOk
 
-`func (o *InlineResponse200155) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200155) GetSwitchesOk() (*[]InlineResponse200155Switches, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetSwitches
 
-`func (o *InlineResponse200155) SetAllowedServers(v []string)`
+`func (o *InlineResponse200155) SetSwitches(v []InlineResponse200155Switches)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetSwitches sets Switches field to given value.
 
-### HasAllowedServers
+### HasSwitches
 
-`func (o *InlineResponse200155) HasAllowedServers() bool`
+`func (o *InlineResponse200155) HasSwitches() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
-
-### GetArpInspection
-
-`func (o *InlineResponse200155) GetArpInspection() InlineResponse200155ArpInspection`
-
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
-
-### GetArpInspectionOk
-
-`func (o *InlineResponse200155) GetArpInspectionOk() (*InlineResponse200155ArpInspection, bool)`
-
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetArpInspection
-
-`func (o *InlineResponse200155) SetArpInspection(v InlineResponse200155ArpInspection)`
-
-SetArpInspection sets ArpInspection field to given value.
-
-### HasArpInspection
-
-`func (o *InlineResponse200155) HasArpInspection() bool`
-
-HasArpInspection returns a boolean if a field has been set.
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

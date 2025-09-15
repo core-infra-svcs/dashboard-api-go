@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG in the network. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG in the network. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | List of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39;. | [optional] 
+**Id** | Pointer to **string** | Schedule id | [optional] 
+**Name** | Pointer to **string** | Schedule name | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20083WithDefaults instantiates a new InlineResponse20083 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetId
 
-`func (o *InlineResponse20083) GetDhcpLeaseTime() string`
+`func (o *InlineResponse20083) GetId() string`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetIdOk
 
-`func (o *InlineResponse20083) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineResponse20083) GetIdOk() (*string, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetId
 
-`func (o *InlineResponse20083) SetDhcpLeaseTime(v string)`
+`func (o *InlineResponse20083) SetId(v string)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetId sets Id field to given value.
 
-### HasDhcpLeaseTime
+### HasId
 
-`func (o *InlineResponse20083) HasDhcpLeaseTime() bool`
+`func (o *InlineResponse20083) HasId() bool`
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDnsNameservers
+### GetName
 
-`func (o *InlineResponse20083) GetDnsNameservers() string`
+`func (o *InlineResponse20083) GetName() string`
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDnsNameserversOk
+### GetNameOk
 
-`func (o *InlineResponse20083) GetDnsNameserversOk() (*string, bool)`
+`func (o *InlineResponse20083) GetNameOk() (*string, bool)`
 
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetName
 
-`func (o *InlineResponse20083) SetDnsNameservers(v string)`
+`func (o *InlineResponse20083) SetName(v string)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetName sets Name field to given value.
 
-### HasDnsNameservers
+### HasName
 
-`func (o *InlineResponse20083) HasDnsNameservers() bool`
+`func (o *InlineResponse20083) HasName() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
-
-### GetDnsCustomNameservers
-
-`func (o *InlineResponse20083) GetDnsCustomNameservers() []string`
-
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
-
-### GetDnsCustomNameserversOk
-
-`func (o *InlineResponse20083) GetDnsCustomNameserversOk() (*[]string, bool)`
-
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDnsCustomNameservers
-
-`func (o *InlineResponse20083) SetDnsCustomNameservers(v []string)`
-
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
-
-### HasDnsCustomNameservers
-
-`func (o *InlineResponse20083) HasDnsCustomNameservers() bool`
-
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IgmpSnoopingEnabled** | Pointer to **bool** | IGMP snooping setting for entire network | [optional] 
-**FloodUnknownMulticastTrafficEnabled** | Pointer to **bool** | Flood unknown multicast traffic setting for entire network | [optional] 
+**IgmpSnoopingEnabled** | **bool** | IGMP snooping setting for entire network | 
+**FloodUnknownMulticastTrafficEnabled** | **bool** | Flood unknown multicast traffic setting for entire network | 
 
 ## Methods
 
 ### NewNetworksNetworkIdSwitchRoutingMulticastDefaultSettings
 
-`func NewNetworksNetworkIdSwitchRoutingMulticastDefaultSettings() *NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
+`func NewNetworksNetworkIdSwitchRoutingMulticastDefaultSettings(igmpSnoopingEnabled bool, floodUnknownMulticastTrafficEnabled bool, ) *NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
 
 NewNetworksNetworkIdSwitchRoutingMulticastDefaultSettings instantiates a new NetworksNetworkIdSwitchRoutingMulticastDefaultSettings object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetIgmpSnoopingEnabled sets IgmpSnoopingEnabled field to given value.
 
-### HasIgmpSnoopingEnabled
-
-`func (o *NetworksNetworkIdSwitchRoutingMulticastDefaultSettings) HasIgmpSnoopingEnabled() bool`
-
-HasIgmpSnoopingEnabled returns a boolean if a field has been set.
 
 ### GetFloodUnknownMulticastTrafficEnabled
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetFloodUnknownMulticastTrafficEnabled sets FloodUnknownMulticastTrafficEnabled field to given value.
 
-### HasFloodUnknownMulticastTrafficEnabled
-
-`func (o *NetworksNetworkIdSwitchRoutingMulticastDefaultSettings) HasFloodUnknownMulticastTrafficEnabled() bool`
-
-HasFloodUnknownMulticastTrafficEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

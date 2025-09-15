@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse20116Network**](InlineResponse20116Network.md) |  | [optional] 
-**Enabled** | Pointer to **bool** | If Zigbee is enabled for the network | [optional] 
-**IotController** | Pointer to [**InlineResponse20116IotController**](InlineResponse20116IotController.md) |  | [optional] 
-**LockManagement** | Pointer to [**InlineResponse20116LockManagement**](InlineResponse20116LockManagement.md) |  | [optional] 
-**Defaults** | Pointer to [**InlineResponse20116Defaults**](InlineResponse20116Defaults.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of updated AP serials | [optional] 
+**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20116WithDefaults instantiates a new InlineResponse20116 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetSerials
 
-`func (o *InlineResponse20116) GetNetwork() InlineResponse20116Network`
+`func (o *InlineResponse20116) GetSerials() []string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetSerialsOk
 
-`func (o *InlineResponse20116) GetNetworkOk() (*InlineResponse20116Network, bool)`
+`func (o *InlineResponse20116) GetSerialsOk() (*[]string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetSerials
 
-`func (o *InlineResponse20116) SetNetwork(v InlineResponse20116Network)`
+`func (o *InlineResponse20116) SetSerials(v []string)`
 
-SetNetwork sets Network field to given value.
+SetSerials sets Serials field to given value.
 
-### HasNetwork
+### HasSerials
 
-`func (o *InlineResponse20116) HasNetwork() bool`
+`func (o *InlineResponse20116) HasSerials() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetEnabled
+### GetProfileId
 
-`func (o *InlineResponse20116) GetEnabled() bool`
+`func (o *InlineResponse20116) GetProfileId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetProfileIdOk
 
-`func (o *InlineResponse20116) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20116) GetProfileIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetProfileId
 
-`func (o *InlineResponse20116) SetEnabled(v bool)`
+`func (o *InlineResponse20116) SetProfileId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasEnabled
+### HasProfileId
 
-`func (o *InlineResponse20116) HasEnabled() bool`
+`func (o *InlineResponse20116) HasProfileId() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetIotController
-
-`func (o *InlineResponse20116) GetIotController() InlineResponse20116IotController`
-
-GetIotController returns the IotController field if non-nil, zero value otherwise.
-
-### GetIotControllerOk
-
-`func (o *InlineResponse20116) GetIotControllerOk() (*InlineResponse20116IotController, bool)`
-
-GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIotController
-
-`func (o *InlineResponse20116) SetIotController(v InlineResponse20116IotController)`
-
-SetIotController sets IotController field to given value.
-
-### HasIotController
-
-`func (o *InlineResponse20116) HasIotController() bool`
-
-HasIotController returns a boolean if a field has been set.
-
-### GetLockManagement
-
-`func (o *InlineResponse20116) GetLockManagement() InlineResponse20116LockManagement`
-
-GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
-
-### GetLockManagementOk
-
-`func (o *InlineResponse20116) GetLockManagementOk() (*InlineResponse20116LockManagement, bool)`
-
-GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLockManagement
-
-`func (o *InlineResponse20116) SetLockManagement(v InlineResponse20116LockManagement)`
-
-SetLockManagement sets LockManagement field to given value.
-
-### HasLockManagement
-
-`func (o *InlineResponse20116) HasLockManagement() bool`
-
-HasLockManagement returns a boolean if a field has been set.
-
-### GetDefaults
-
-`func (o *InlineResponse20116) GetDefaults() InlineResponse20116Defaults`
-
-GetDefaults returns the Defaults field if non-nil, zero value otherwise.
-
-### GetDefaultsOk
-
-`func (o *InlineResponse20116) GetDefaultsOk() (*InlineResponse20116Defaults, bool)`
-
-GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaults
-
-`func (o *InlineResponse20116) SetDefaults(v InlineResponse20116Defaults)`
-
-SetDefaults sets Defaults field to given value.
-
-### HasDefaults
-
-`func (o *InlineResponse20116) HasDefaults() bool`
-
-HasDefaults returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

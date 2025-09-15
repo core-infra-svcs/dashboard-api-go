@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Is the warm spare enabled | [optional] 
-**PrimarySerial** | Pointer to **string** | Serial number of the primary appliance | [optional] 
-**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
-**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
-**Wan1** | Pointer to [**InlineResponse20078Wan1**](InlineResponse20078Wan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse20078Wan2**](InlineResponse20078Wan2.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
+**AsNumber** | Pointer to **int32** | The number of the Autonomous System to which the appliance belongs | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
+**Neighbors** | Pointer to [**[]InlineResponse20078Neighbors**](InlineResponse20078Neighbors.md) | List of eBGP neighbor configurations | [optional] 
 
 ## Methods
 
@@ -55,130 +53,80 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetPrimarySerial
+### GetAsNumber
 
-`func (o *InlineResponse20078) GetPrimarySerial() string`
+`func (o *InlineResponse20078) GetAsNumber() int32`
 
-GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetPrimarySerialOk
+### GetAsNumberOk
 
-`func (o *InlineResponse20078) GetPrimarySerialOk() (*string, bool)`
+`func (o *InlineResponse20078) GetAsNumberOk() (*int32, bool)`
 
-GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrimarySerial
+### SetAsNumber
 
-`func (o *InlineResponse20078) SetPrimarySerial(v string)`
+`func (o *InlineResponse20078) SetAsNumber(v int32)`
 
-SetPrimarySerial sets PrimarySerial field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasPrimarySerial
+### HasAsNumber
 
-`func (o *InlineResponse20078) HasPrimarySerial() bool`
+`func (o *InlineResponse20078) HasAsNumber() bool`
 
-HasPrimarySerial returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetSpareSerial
+### GetIbgpHoldTimer
 
-`func (o *InlineResponse20078) GetSpareSerial() string`
+`func (o *InlineResponse20078) GetIbgpHoldTimer() int32`
 
-GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetSpareSerialOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineResponse20078) GetSpareSerialOk() (*string, bool)`
+`func (o *InlineResponse20078) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpareSerial
+### SetIbgpHoldTimer
 
-`func (o *InlineResponse20078) SetSpareSerial(v string)`
+`func (o *InlineResponse20078) SetIbgpHoldTimer(v int32)`
 
-SetSpareSerial sets SpareSerial field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasSpareSerial
+### HasIbgpHoldTimer
 
-`func (o *InlineResponse20078) HasSpareSerial() bool`
+`func (o *InlineResponse20078) HasIbgpHoldTimer() bool`
 
-HasSpareSerial returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
 
-### GetUplinkMode
+### GetNeighbors
 
-`func (o *InlineResponse20078) GetUplinkMode() string`
+`func (o *InlineResponse20078) GetNeighbors() []InlineResponse20078Neighbors`
 
-GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
 
-### GetUplinkModeOk
+### GetNeighborsOk
 
-`func (o *InlineResponse20078) GetUplinkModeOk() (*string, bool)`
+`func (o *InlineResponse20078) GetNeighborsOk() (*[]InlineResponse20078Neighbors, bool)`
 
-GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkMode
+### SetNeighbors
 
-`func (o *InlineResponse20078) SetUplinkMode(v string)`
+`func (o *InlineResponse20078) SetNeighbors(v []InlineResponse20078Neighbors)`
 
-SetUplinkMode sets UplinkMode field to given value.
+SetNeighbors sets Neighbors field to given value.
 
-### HasUplinkMode
+### HasNeighbors
 
-`func (o *InlineResponse20078) HasUplinkMode() bool`
+`func (o *InlineResponse20078) HasNeighbors() bool`
 
-HasUplinkMode returns a boolean if a field has been set.
-
-### GetWan1
-
-`func (o *InlineResponse20078) GetWan1() InlineResponse20078Wan1`
-
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
-
-### GetWan1Ok
-
-`func (o *InlineResponse20078) GetWan1Ok() (*InlineResponse20078Wan1, bool)`
-
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWan1
-
-`func (o *InlineResponse20078) SetWan1(v InlineResponse20078Wan1)`
-
-SetWan1 sets Wan1 field to given value.
-
-### HasWan1
-
-`func (o *InlineResponse20078) HasWan1() bool`
-
-HasWan1 returns a boolean if a field has been set.
-
-### GetWan2
-
-`func (o *InlineResponse20078) GetWan2() InlineResponse20078Wan2`
-
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
-
-### GetWan2Ok
-
-`func (o *InlineResponse20078) GetWan2Ok() (*InlineResponse20078Wan2, bool)`
-
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWan2
-
-`func (o *InlineResponse20078) SetWan2(v InlineResponse20078Wan2)`
-
-SetWan2 sets Wan2 field to given value.
-
-### HasWan2
-
-`func (o *InlineResponse20078) HasWan2() bool`
-
-HasWan2 returns a boolean if a field has been set.
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

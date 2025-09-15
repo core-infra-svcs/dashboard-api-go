@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceWirelessZigbeeEnrollment
 
-> InlineResponse2019 CreateDeviceWirelessZigbeeEnrollment(ctx, serial).Execute()
+> InlineResponse20110 CreateDeviceWirelessZigbeeEnrollment(ctx, serial).Execute()
 
 Enqueue a job to start enrolling door locks on zigbee configured wireless devices
 
@@ -47,7 +47,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.CreateDeviceWirelessZigbeeEnrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceWirelessZigbeeEnrollment`: InlineResponse2019
+    // response from `CreateDeviceWirelessZigbeeEnrollment`: InlineResponse20110
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.CreateDeviceWirelessZigbeeEnrollment`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2019**](InlineResponse2019.md)
+[**InlineResponse20110**](InlineResponse20110.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationWirelessZigbeeDisenrollment
 
-> InlineResponse20123 CreateOrganizationWirelessZigbeeDisenrollment(ctx, organizationId).CreateOrganizationWirelessZigbeeDisenrollment(createOrganizationWirelessZigbeeDisenrollment).Execute()
+> InlineResponse20124 CreateOrganizationWirelessZigbeeDisenrollment(ctx, organizationId).CreateOrganizationWirelessZigbeeDisenrollment(createOrganizationWirelessZigbeeDisenrollment).Execute()
 
 Enqueue a job to start disenrolling door locks on zigbee configured wireless devices
 
@@ -109,7 +109,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationWirelessZigbeeDisenrollment := *openapiclient.NewInlineObject309() // InlineObject309 |  (optional)
+    createOrganizationWirelessZigbeeDisenrollment := *openapiclient.NewInlineObject310() // InlineObject310 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.CreateOrganizationWirelessZigbeeDisenrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationWirelessZigbeeDisenrollment`: InlineResponse20123
+    // response from `CreateOrganizationWirelessZigbeeDisenrollment`: InlineResponse20124
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.CreateOrganizationWirelessZigbeeDisenrollment`: %v\n", resp)
 }
 ```
@@ -139,11 +139,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationWirelessZigbeeDisenrollment** | [**InlineObject309**](InlineObject309.md) |  | 
+ **createOrganizationWirelessZigbeeDisenrollment** | [**InlineObject310**](InlineObject310.md) |  | 
 
 ### Return type
 
-[**InlineResponse20123**](InlineResponse20123.md)
+[**InlineResponse20124**](InlineResponse20124.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceWirelessZigbeeEnrollment
 
-> InlineResponse20048 GetDeviceWirelessZigbeeEnrollment(ctx, serial, enrollmentId).Execute()
+> InlineResponse20049 GetDeviceWirelessZigbeeEnrollment(ctx, serial, enrollmentId).Execute()
 
 Return an enrollment
 
@@ -190,7 +190,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.GetDeviceWirelessZigbeeEnrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessZigbeeEnrollment`: InlineResponse20048
+    // response from `GetDeviceWirelessZigbeeEnrollment`: InlineResponse20049
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.GetDeviceWirelessZigbeeEnrollment`: %v\n", resp)
 }
 ```
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20048**](InlineResponse20048.md)
+[**InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeByNetwork
 
-> []InlineResponse20116 GetOrganizationWirelessZigbeeByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse20117 GetOrganizationWirelessZigbeeByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Return list of Zigbee configs
 
@@ -266,7 +266,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.GetOrganizationWirelessZigbeeByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeByNetwork`: []InlineResponse20116
+    // response from `GetOrganizationWirelessZigbeeByNetwork`: []InlineResponse20117
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.GetOrganizationWirelessZigbeeByNetwork`: %v\n", resp)
 }
 ```
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20116**](InlineResponse20116.md)
+[**[]InlineResponse20117**](InlineResponse20117.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeDevices
 
-> []InlineResponse200373 GetOrganizationWirelessZigbeeDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IsEnrolled(isEnrolled).Search(search).Execute()
+> []InlineResponse200376 GetOrganizationWirelessZigbeeDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IsEnrolled(isEnrolled).Search(search).Execute()
 
 List the Zigbee wireless devices for an organization or the supplied network(s)
 
@@ -346,7 +346,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.GetOrganizationWirelessZigbeeDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDevices`: []InlineResponse200373
+    // response from `GetOrganizationWirelessZigbeeDevices`: []InlineResponse200376
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.GetOrganizationWirelessZigbeeDevices`: %v\n", resp)
 }
 ```
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200373**](InlineResponse200373.md)
+[**[]InlineResponse200376**](InlineResponse200376.md)
 
 ### Authorization
 
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeDisenrollment
 
-> InlineResponse200374 GetOrganizationWirelessZigbeeDisenrollment(ctx, organizationId, disenrollmentId).Execute()
+> InlineResponse200377 GetOrganizationWirelessZigbeeDisenrollment(ctx, organizationId, disenrollmentId).Execute()
 
 Return a disenrollment
 
@@ -423,7 +423,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.GetOrganizationWirelessZigbeeDisenrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDisenrollment`: InlineResponse200374
+    // response from `GetOrganizationWirelessZigbeeDisenrollment`: InlineResponse200377
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.GetOrganizationWirelessZigbeeDisenrollment`: %v\n", resp)
 }
 ```
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200374**](InlineResponse200374.md)
+[**InlineResponse200377**](InlineResponse200377.md)
 
 ### Authorization
 
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeDoorLocks
 
-> []InlineResponse20048DoorLocks GetOrganizationWirelessZigbeeDoorLocks(ctx, organizationId).NetworkIds(networkIds).Serial(serial).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20049DoorLocks GetOrganizationWirelessZigbeeDoorLocks(ctx, organizationId).NetworkIds(networkIds).Serial(serial).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the list of door locks for a network
 
@@ -500,7 +500,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.GetOrganizationWirelessZigbeeDoorLocks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDoorLocks`: []InlineResponse20048DoorLocks
+    // response from `GetOrganizationWirelessZigbeeDoorLocks`: []InlineResponse20049DoorLocks
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.GetOrganizationWirelessZigbeeDoorLocks`: %v\n", resp)
 }
 ```
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20048DoorLocks**](InlineResponse20048DoorLocks.md)
+[**[]InlineResponse20049DoorLocks**](InlineResponse20049DoorLocks.md)
 
 ### Authorization
 
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessZigbee
 
-> InlineResponse20116 UpdateNetworkWirelessZigbee(ctx, networkId).UpdateNetworkWirelessZigbee(updateNetworkWirelessZigbee).Execute()
+> InlineResponse20117 UpdateNetworkWirelessZigbee(ctx, networkId).UpdateNetworkWirelessZigbee(updateNetworkWirelessZigbee).Execute()
 
 Update Zigbee Configs for specified network
 
@@ -567,7 +567,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessZigbee := *openapiclient.NewInlineObject207() // InlineObject207 |  (optional)
+    updateNetworkWirelessZigbee := *openapiclient.NewInlineObject208() // InlineObject208 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -576,7 +576,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.UpdateNetworkWirelessZigbee``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessZigbee`: InlineResponse20116
+    // response from `UpdateNetworkWirelessZigbee`: InlineResponse20117
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.UpdateNetworkWirelessZigbee`: %v\n", resp)
 }
 ```
@@ -597,11 +597,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessZigbe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessZigbee** | [**InlineObject207**](InlineObject207.md) |  | 
+ **updateNetworkWirelessZigbee** | [**InlineObject208**](InlineObject208.md) |  | 
 
 ### Return type
 
-[**InlineResponse20116**](InlineResponse20116.md)
+[**InlineResponse20117**](InlineResponse20117.md)
 
 ### Authorization
 
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessZigbeeDevice
 
-> InlineResponse200373 UpdateOrganizationWirelessZigbeeDevice(ctx, organizationId, id).UpdateOrganizationWirelessZigbeeDevice(updateOrganizationWirelessZigbeeDevice).Execute()
+> InlineResponse200376 UpdateOrganizationWirelessZigbeeDevice(ctx, organizationId, id).UpdateOrganizationWirelessZigbeeDevice(updateOrganizationWirelessZigbeeDevice).Execute()
 
 Endpoint to update zigbee gateways
 
@@ -640,7 +640,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationWirelessZigbeeDevice := *openapiclient.NewInlineObject308(false) // InlineObject308 | 
+    updateOrganizationWirelessZigbeeDevice := *openapiclient.NewInlineObject309(false) // InlineObject309 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -649,7 +649,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.UpdateOrganizationWirelessZigbeeDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessZigbeeDevice`: InlineResponse200373
+    // response from `UpdateOrganizationWirelessZigbeeDevice`: InlineResponse200376
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.UpdateOrganizationWirelessZigbeeDevice`: %v\n", resp)
 }
 ```
@@ -672,11 +672,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessZigbeeDevice** | [**InlineObject308**](InlineObject308.md) |  | 
+ **updateOrganizationWirelessZigbeeDevice** | [**InlineObject309**](InlineObject309.md) |  | 
 
 ### Return type
 
-[**InlineResponse200373**](InlineResponse200373.md)
+[**InlineResponse200376**](InlineResponse200376.md)
 
 ### Authorization
 
@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessZigbeeDoorLock
 
-> InlineResponse20048DoorLocks UpdateOrganizationWirelessZigbeeDoorLock(ctx, organizationId, doorLockId).UpdateOrganizationWirelessZigbeeDoorLock(updateOrganizationWirelessZigbeeDoorLock).Execute()
+> InlineResponse20049DoorLocks UpdateOrganizationWirelessZigbeeDoorLock(ctx, organizationId, doorLockId).UpdateOrganizationWirelessZigbeeDoorLock(updateOrganizationWirelessZigbeeDoorLock).Execute()
 
 Endpoint to batch update door locks params
 
@@ -715,7 +715,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     doorLockId := "doorLockId_example" // string | Door lock ID
-    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject310() // InlineObject310 |  (optional)
+    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject311() // InlineObject311 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -724,7 +724,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.UpdateOrganizationWirelessZigbeeDoorLock``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessZigbeeDoorLock`: InlineResponse20048DoorLocks
+    // response from `UpdateOrganizationWirelessZigbeeDoorLock`: InlineResponse20049DoorLocks
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.UpdateOrganizationWirelessZigbeeDoorLock`: %v\n", resp)
 }
 ```
@@ -747,11 +747,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject310**](InlineObject310.md) |  | 
+ **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject311**](InlineObject311.md) |  | 
 
 ### Return type
 
-[**InlineResponse20048DoorLocks**](InlineResponse20048DoorLocks.md)
+[**InlineResponse20049DoorLocks**](InlineResponse20049DoorLocks.md)
 
 ### Authorization
 

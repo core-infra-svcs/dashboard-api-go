@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | The index of network | 
-**Name** | Pointer to **string** | The name of network | [optional] 
+**Id** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Network Name | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200371Network
 
-`func NewInlineResponse200371Network(id string, ) *InlineResponse200371Network`
+`func NewInlineResponse200371Network() *InlineResponse200371Network`
 
 NewInlineResponse200371Network instantiates a new InlineResponse200371Network object
 This constructor will assign default values to properties that have it defined,
@@ -45,6 +45,11 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
+### HasId
+
+`func (o *InlineResponse200371Network) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetName
 

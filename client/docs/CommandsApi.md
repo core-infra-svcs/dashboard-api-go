@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceSensorCommand
 
-> InlineResponse20033 CreateDeviceSensorCommand(ctx, serial).CreateDeviceSensorCommand(createDeviceSensorCommand).Execute()
+> InlineResponse20034 CreateDeviceSensorCommand(ctx, serial).CreateDeviceSensorCommand(createDeviceSensorCommand).Execute()
 
 Sends a command to a sensor
 
@@ -32,7 +32,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceSensorCommand := *openapiclient.NewInlineObject25("Operation_example") // InlineObject25 | 
+    createDeviceSensorCommand := *openapiclient.NewInlineObject26("Operation_example") // InlineObject26 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CommandsApi.CreateDeviceSensorCommand``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceSensorCommand`: InlineResponse20033
+    // response from `CreateDeviceSensorCommand`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `CommandsApi.CreateDeviceSensorCommand`: %v\n", resp)
 }
 ```
@@ -62,11 +62,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceSensorCommandR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceSensorCommand** | [**InlineObject25**](InlineObject25.md) |  | 
+ **createDeviceSensorCommand** | [**InlineObject26**](InlineObject26.md) |  | 
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSensorCommand
 
-> InlineResponse20033 GetDeviceSensorCommand(ctx, serial, commandId).Execute()
+> InlineResponse20034 GetDeviceSensorCommand(ctx, serial, commandId).Execute()
 
 Returns information about the command's execution, including the status
 
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CommandsApi.GetDeviceSensorCommand``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSensorCommand`: InlineResponse20033
+    // response from `GetDeviceSensorCommand`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `CommandsApi.GetDeviceSensorCommand`: %v\n", resp)
 }
 ```
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSensorCommands
 
-> []InlineResponse20033 GetDeviceSensorCommands(ctx, serial).Operations(operations).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse20034 GetDeviceSensorCommands(ctx, serial).Operations(operations).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns a historical log of all commands
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CommandsApi.GetDeviceSensorCommands``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSensorCommands`: []InlineResponse20033
+    // response from `GetDeviceSensorCommands`: []InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `CommandsApi.GetDeviceSensorCommands`: %v\n", resp)
 }
 ```
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20033**](InlineResponse20033.md)
+[**[]InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 

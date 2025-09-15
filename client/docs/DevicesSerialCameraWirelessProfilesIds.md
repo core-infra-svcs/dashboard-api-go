@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Primary** | Pointer to **string** | The id of the primary wireless profile | [optional] 
-**Secondary** | Pointer to **string** | The id of the secondary wireless profile | [optional] 
+**Primary** | **string** | The id of the primary wireless profile | 
+**Secondary** | **string** | The id of the secondary wireless profile | 
 **Backup** | Pointer to **string** | The id of the backup wireless profile | [optional] 
 
 ## Methods
 
 ### NewDevicesSerialCameraWirelessProfilesIds
 
-`func NewDevicesSerialCameraWirelessProfilesIds() *DevicesSerialCameraWirelessProfilesIds`
+`func NewDevicesSerialCameraWirelessProfilesIds(primary string, secondary string, ) *DevicesSerialCameraWirelessProfilesIds`
 
 NewDevicesSerialCameraWirelessProfilesIds instantiates a new DevicesSerialCameraWirelessProfilesIds object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetPrimary sets Primary field to given value.
 
-### HasPrimary
-
-`func (o *DevicesSerialCameraWirelessProfilesIds) HasPrimary() bool`
-
-HasPrimary returns a boolean if a field has been set.
 
 ### GetSecondary
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetSecondary sets Secondary field to given value.
 
-### HasSecondary
-
-`func (o *DevicesSerialCameraWirelessProfilesIds) HasSecondary() bool`
-
-HasSecondary returns a boolean if a field has been set.
 
 ### GetBackup
 

@@ -4,14 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | device ID | [optional] 
-**Name** | Pointer to **string** | device name | [optional] 
-**SystemType** | Pointer to **string** | system type | [optional] 
-**Mac** | Pointer to **string** | mac address | [optional] 
-**Username** | Pointer to **string** | username | [optional] 
-**Email** | Pointer to **string** | user email | [optional] 
-**Tags** | Pointer to **[]string** | device tags | [optional] 
-**TrustedAccessConnections** | Pointer to [**[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections**](NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections.md) | Array of trusted access configs | [optional] 
+**Id** | Pointer to **string** | The ID of this target group. | [optional] 
+**Name** | Pointer to **string** | The name of this target group. | [optional] 
+**Scope** | Pointer to **string** | The scope of the target group. | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the target group. | [optional] 
 
 ## Methods
 
@@ -82,105 +78,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSystemType
+### GetScope
 
-`func (o *InlineResponse200146) GetSystemType() string`
+`func (o *InlineResponse200146) GetScope() string`
 
-GetSystemType returns the SystemType field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetSystemTypeOk
+### GetScopeOk
 
-`func (o *InlineResponse200146) GetSystemTypeOk() (*string, bool)`
+`func (o *InlineResponse200146) GetScopeOk() (*string, bool)`
 
-GetSystemTypeOk returns a tuple with the SystemType field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSystemType
+### SetScope
 
-`func (o *InlineResponse200146) SetSystemType(v string)`
+`func (o *InlineResponse200146) SetScope(v string)`
 
-SetSystemType sets SystemType field to given value.
+SetScope sets Scope field to given value.
 
-### HasSystemType
+### HasScope
 
-`func (o *InlineResponse200146) HasSystemType() bool`
+`func (o *InlineResponse200146) HasScope() bool`
 
-HasSystemType returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200146) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200146) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200146) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200146) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetUsername
-
-`func (o *InlineResponse200146) GetUsername() string`
-
-GetUsername returns the Username field if non-nil, zero value otherwise.
-
-### GetUsernameOk
-
-`func (o *InlineResponse200146) GetUsernameOk() (*string, bool)`
-
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsername
-
-`func (o *InlineResponse200146) SetUsername(v string)`
-
-SetUsername sets Username field to given value.
-
-### HasUsername
-
-`func (o *InlineResponse200146) HasUsername() bool`
-
-HasUsername returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200146) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200146) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200146) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200146) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 ### GetTags
 
@@ -206,31 +127,6 @@ SetTags sets Tags field to given value.
 `func (o *InlineResponse200146) HasTags() bool`
 
 HasTags returns a boolean if a field has been set.
-
-### GetTrustedAccessConnections
-
-`func (o *InlineResponse200146) GetTrustedAccessConnections() []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections`
-
-GetTrustedAccessConnections returns the TrustedAccessConnections field if non-nil, zero value otherwise.
-
-### GetTrustedAccessConnectionsOk
-
-`func (o *InlineResponse200146) GetTrustedAccessConnectionsOk() (*[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections, bool)`
-
-GetTrustedAccessConnectionsOk returns a tuple with the TrustedAccessConnections field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTrustedAccessConnections
-
-`func (o *InlineResponse200146) SetTrustedAccessConnections(v []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections)`
-
-SetTrustedAccessConnections sets TrustedAccessConnections field to given value.
-
-### HasTrustedAccessConnections
-
-`func (o *InlineResponse200146) HasTrustedAccessConnections() bool`
-
-HasTrustedAccessConnections returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

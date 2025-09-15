@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of devices that will participate if an auto locate job is started | [optional] 
+**Total** | Pointer to **int32** | The total number of devices supporting AP Auto Locate that will participate if an auto locate job is started | [optional] 
 
 ## Methods
 

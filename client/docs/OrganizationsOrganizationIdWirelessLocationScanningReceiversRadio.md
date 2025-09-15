@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | Radio Type whether WiFi or Bluetooth | [optional] 
+**Type** | **string** | Radio Type whether WiFi or Bluetooth | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdWirelessLocationScanningReceiversRadio
 
-`func NewOrganizationsOrganizationIdWirelessLocationScanningReceiversRadio() *OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
+`func NewOrganizationsOrganizationIdWirelessLocationScanningReceiversRadio(type_ string, ) *OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
 
 NewOrganizationsOrganizationIdWirelessLocationScanningReceiversRadio instantiates a new OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

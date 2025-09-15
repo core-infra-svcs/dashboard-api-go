@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**InlineResponse200122LocalStatusPage**](InlineResponse200122LocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse200122SecurePort**](InlineResponse200122SecurePort.md) |  | [optional] 
-**Fips** | Pointer to [**InlineResponse200122Fips**](InlineResponse200122Fips.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse200122NamedVlans**](InlineResponse200122NamedVlans.md) |  | [optional] 
+**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
+**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineResponse200122WithDefaults instantiates a new InlineResponse200122 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetMqttBrokerId
 
-`func (o *InlineResponse200122) GetLocalStatusPageEnabled() bool`
+`func (o *InlineResponse200122) GetMqttBrokerId() string`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetMqttBrokerIdOk
 
-`func (o *InlineResponse200122) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200122) GetMqttBrokerIdOk() (*string, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetMqttBrokerId
 
-`func (o *InlineResponse200122) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineResponse200122) SetMqttBrokerId(v string)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetMqttBrokerId sets MqttBrokerId field to given value.
 
-### HasLocalStatusPageEnabled
+### HasMqttBrokerId
 
-`func (o *InlineResponse200122) HasLocalStatusPageEnabled() bool`
+`func (o *InlineResponse200122) HasMqttBrokerId() bool`
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+HasMqttBrokerId returns a boolean if a field has been set.
 
-### GetRemoteStatusPageEnabled
+### GetEnabled
 
-`func (o *InlineResponse200122) GetRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse200122) GetEnabled() bool`
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRemoteStatusPageEnabledOk
+### GetEnabledOk
 
-`func (o *InlineResponse200122) GetRemoteStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200122) GetEnabledOk() (*bool, bool)`
 
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetEnabled
 
-`func (o *InlineResponse200122) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineResponse200122) SetEnabled(v bool)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasEnabled
 
-`func (o *InlineResponse200122) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse200122) HasEnabled() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
-
-### GetLocalStatusPage
-
-`func (o *InlineResponse200122) GetLocalStatusPage() InlineResponse200122LocalStatusPage`
-
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
-
-### GetLocalStatusPageOk
-
-`func (o *InlineResponse200122) GetLocalStatusPageOk() (*InlineResponse200122LocalStatusPage, bool)`
-
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocalStatusPage
-
-`func (o *InlineResponse200122) SetLocalStatusPage(v InlineResponse200122LocalStatusPage)`
-
-SetLocalStatusPage sets LocalStatusPage field to given value.
-
-### HasLocalStatusPage
-
-`func (o *InlineResponse200122) HasLocalStatusPage() bool`
-
-HasLocalStatusPage returns a boolean if a field has been set.
-
-### GetSecurePort
-
-`func (o *InlineResponse200122) GetSecurePort() InlineResponse200122SecurePort`
-
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
-
-### GetSecurePortOk
-
-`func (o *InlineResponse200122) GetSecurePortOk() (*InlineResponse200122SecurePort, bool)`
-
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecurePort
-
-`func (o *InlineResponse200122) SetSecurePort(v InlineResponse200122SecurePort)`
-
-SetSecurePort sets SecurePort field to given value.
-
-### HasSecurePort
-
-`func (o *InlineResponse200122) HasSecurePort() bool`
-
-HasSecurePort returns a boolean if a field has been set.
-
-### GetFips
-
-`func (o *InlineResponse200122) GetFips() InlineResponse200122Fips`
-
-GetFips returns the Fips field if non-nil, zero value otherwise.
-
-### GetFipsOk
-
-`func (o *InlineResponse200122) GetFipsOk() (*InlineResponse200122Fips, bool)`
-
-GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFips
-
-`func (o *InlineResponse200122) SetFips(v InlineResponse200122Fips)`
-
-SetFips sets Fips field to given value.
-
-### HasFips
-
-`func (o *InlineResponse200122) HasFips() bool`
-
-HasFips returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineResponse200122) GetNamedVlans() InlineResponse200122NamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineResponse200122) GetNamedVlansOk() (*InlineResponse200122NamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineResponse200122) SetNamedVlans(v InlineResponse200122NamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineResponse200122) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

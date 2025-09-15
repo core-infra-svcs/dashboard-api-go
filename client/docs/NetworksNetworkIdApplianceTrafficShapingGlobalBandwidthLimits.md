@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LimitUp** | Pointer to **int32** | The upload bandwidth limit in Kbps. (0 represents no limit.) | [optional] 
-**LimitDown** | Pointer to **int32** | The download bandwidth limit in Kbps. (0 represents no limit.) | [optional] 
+**LimitUp** | **int32** | The upload bandwidth limit in Kbps. (0 represents no limit.) | 
+**LimitDown** | **int32** | The download bandwidth limit in Kbps. (0 represents no limit.) | 
 
 ## Methods
 
 ### NewNetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits
 
-`func NewNetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits() *NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits`
+`func NewNetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits(limitUp int32, limitDown int32, ) *NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits`
 
 NewNetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits instantiates a new NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetLimitUp sets LimitUp field to given value.
 
-### HasLimitUp
-
-`func (o *NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits) HasLimitUp() bool`
-
-HasLimitUp returns a boolean if a field has been set.
 
 ### GetLimitDown
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetLimitDown sets LimitDown field to given value.
 
-### HasLimitDown
-
-`func (o *NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits) HasLimitDown() bool`
-
-HasLimitDown returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RoleId** | Pointer to **string** | The Id of the limited access role | [optional] 
-**Name** | Pointer to **string** | The name of the limited access role | [optional] 
-**Scope** | Pointer to **string** | The scope of the limited access role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the limited access role | [optional] 
+**LastReportedAt** | **time.Time** | Time, in ISO8601 format, when RSSI was last reported for the sensor and gateway pair. | 
+**LastConnectedAt** | Pointer to **time.Time** | Time, in ISO8601 format, when the sensor and gateway pair last connected. | [optional] 
+**Rssi** | **int32** | Last reported RSSI value. | 
+**Network** | [**InlineResponse200318Network**](InlineResponse200318Network.md) |  | 
+**Sensor** | [**InlineResponse200318Sensor**](InlineResponse200318Sensor.md) |  | 
+**Gateway** | [**InlineResponse200318Gateway**](InlineResponse200318Gateway.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200318Items
 
-`func NewInlineResponse200318Items() *InlineResponse200318Items`
+`func NewInlineResponse200318Items(lastReportedAt time.Time, rssi int32, network InlineResponse200318Network, sensor InlineResponse200318Sensor, gateway InlineResponse200318Gateway, ) *InlineResponse200318Items`
 
 NewInlineResponse200318Items instantiates a new InlineResponse200318Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +30,130 @@ NewInlineResponse200318ItemsWithDefaults instantiates a new InlineResponse200318
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRoleId
+### GetLastReportedAt
 
-`func (o *InlineResponse200318Items) GetRoleId() string`
+`func (o *InlineResponse200318Items) GetLastReportedAt() time.Time`
 
-GetRoleId returns the RoleId field if non-nil, zero value otherwise.
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
 
-### GetRoleIdOk
+### GetLastReportedAtOk
 
-`func (o *InlineResponse200318Items) GetRoleIdOk() (*string, bool)`
+`func (o *InlineResponse200318Items) GetLastReportedAtOk() (*time.Time, bool)`
 
-GetRoleIdOk returns a tuple with the RoleId field if it's non-nil, zero value otherwise
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRoleId
+### SetLastReportedAt
 
-`func (o *InlineResponse200318Items) SetRoleId(v string)`
+`func (o *InlineResponse200318Items) SetLastReportedAt(v time.Time)`
 
-SetRoleId sets RoleId field to given value.
+SetLastReportedAt sets LastReportedAt field to given value.
 
-### HasRoleId
 
-`func (o *InlineResponse200318Items) HasRoleId() bool`
+### GetLastConnectedAt
 
-HasRoleId returns a boolean if a field has been set.
+`func (o *InlineResponse200318Items) GetLastConnectedAt() time.Time`
 
-### GetName
+GetLastConnectedAt returns the LastConnectedAt field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200318Items) GetName() string`
+### GetLastConnectedAtOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200318Items) GetLastConnectedAtOk() (*time.Time, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200318Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLastConnectedAtOk returns a tuple with the LastConnectedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLastConnectedAt
 
-`func (o *InlineResponse200318Items) SetName(v string)`
+`func (o *InlineResponse200318Items) SetLastConnectedAt(v time.Time)`
 
-SetName sets Name field to given value.
+SetLastConnectedAt sets LastConnectedAt field to given value.
 
-### HasName
+### HasLastConnectedAt
 
-`func (o *InlineResponse200318Items) HasName() bool`
+`func (o *InlineResponse200318Items) HasLastConnectedAt() bool`
 
-HasName returns a boolean if a field has been set.
+HasLastConnectedAt returns a boolean if a field has been set.
 
-### GetScope
+### GetRssi
 
-`func (o *InlineResponse200318Items) GetScope() string`
+`func (o *InlineResponse200318Items) GetRssi() int32`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetRssi returns the Rssi field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetRssiOk
 
-`func (o *InlineResponse200318Items) GetScopeOk() (*string, bool)`
+`func (o *InlineResponse200318Items) GetRssiOk() (*int32, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetRssi
 
-`func (o *InlineResponse200318Items) SetScope(v string)`
+`func (o *InlineResponse200318Items) SetRssi(v int32)`
 
-SetScope sets Scope field to given value.
+SetRssi sets Rssi field to given value.
 
-### HasScope
 
-`func (o *InlineResponse200318Items) HasScope() bool`
+### GetNetwork
 
-HasScope returns a boolean if a field has been set.
+`func (o *InlineResponse200318Items) GetNetwork() InlineResponse200318Network`
 
-### GetTags
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200318Items) GetTags() []string`
+### GetNetworkOk
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+`func (o *InlineResponse200318Items) GetNetworkOk() (*InlineResponse200318Network, bool)`
 
-### GetTagsOk
-
-`func (o *InlineResponse200318Items) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetNetwork
 
-`func (o *InlineResponse200318Items) SetTags(v []string)`
+`func (o *InlineResponse200318Items) SetNetwork(v InlineResponse200318Network)`
 
-SetTags sets Tags field to given value.
+SetNetwork sets Network field to given value.
 
-### HasTags
 
-`func (o *InlineResponse200318Items) HasTags() bool`
+### GetSensor
 
-HasTags returns a boolean if a field has been set.
+`func (o *InlineResponse200318Items) GetSensor() InlineResponse200318Sensor`
+
+GetSensor returns the Sensor field if non-nil, zero value otherwise.
+
+### GetSensorOk
+
+`func (o *InlineResponse200318Items) GetSensorOk() (*InlineResponse200318Sensor, bool)`
+
+GetSensorOk returns a tuple with the Sensor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSensor
+
+`func (o *InlineResponse200318Items) SetSensor(v InlineResponse200318Sensor)`
+
+SetSensor sets Sensor field to given value.
+
+
+### GetGateway
+
+`func (o *InlineResponse200318Items) GetGateway() InlineResponse200318Gateway`
+
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
+
+### GetGatewayOk
+
+`func (o *InlineResponse200318Items) GetGatewayOk() (*InlineResponse200318Gateway, bool)`
+
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGateway
+
+`func (o *InlineResponse200318Items) SetGateway(v InlineResponse200318Gateway)`
+
+SetGateway sets Gateway field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

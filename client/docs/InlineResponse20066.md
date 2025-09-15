@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN | [optional] 
-**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the single LAN | [optional] 
-**MandatoryDhcp** | Pointer to [**InlineResponse20066MandatoryDhcp**](InlineResponse20066MandatoryDhcp.md) |  | [optional] 
-**Ipv6** | Pointer to [**InlineResponse20066Ipv6**](InlineResponse20066Ipv6.md) |  | [optional] 
+**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
+**AllowedUrls** | Pointer to [**[]InlineResponse20066AllowedUrls**](InlineResponse20066AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
+**AllowedFiles** | Pointer to [**[]InlineResponse20066AllowedFiles**](InlineResponse20066AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse20066WithDefaults instantiates a new InlineResponse20066 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetMode
 
-`func (o *InlineResponse20066) GetSubnet() string`
+`func (o *InlineResponse20066) GetMode() string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetModeOk
 
-`func (o *InlineResponse20066) GetSubnetOk() (*string, bool)`
+`func (o *InlineResponse20066) GetModeOk() (*string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetMode
 
-`func (o *InlineResponse20066) SetSubnet(v string)`
+`func (o *InlineResponse20066) SetMode(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetMode sets Mode field to given value.
 
-### HasSubnet
+### HasMode
 
-`func (o *InlineResponse20066) HasSubnet() bool`
+`func (o *InlineResponse20066) HasMode() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetAllowedUrls
 
-`func (o *InlineResponse20066) GetApplianceIp() string`
+`func (o *InlineResponse20066) GetAllowedUrls() []InlineResponse20066AllowedUrls`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetAllowedUrlsOk
 
-`func (o *InlineResponse20066) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineResponse20066) GetAllowedUrlsOk() (*[]InlineResponse20066AllowedUrls, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetAllowedUrls
 
-`func (o *InlineResponse20066) SetApplianceIp(v string)`
+`func (o *InlineResponse20066) SetAllowedUrls(v []InlineResponse20066AllowedUrls)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasApplianceIp
+### HasAllowedUrls
 
-`func (o *InlineResponse20066) HasApplianceIp() bool`
+`func (o *InlineResponse20066) HasAllowedUrls() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetMandatoryDhcp
+### GetAllowedFiles
 
-`func (o *InlineResponse20066) GetMandatoryDhcp() InlineResponse20066MandatoryDhcp`
+`func (o *InlineResponse20066) GetAllowedFiles() []InlineResponse20066AllowedFiles`
 
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetMandatoryDhcpOk
+### GetAllowedFilesOk
 
-`func (o *InlineResponse20066) GetMandatoryDhcpOk() (*InlineResponse20066MandatoryDhcp, bool)`
+`func (o *InlineResponse20066) GetAllowedFilesOk() (*[]InlineResponse20066AllowedFiles, bool)`
 
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMandatoryDhcp
+### SetAllowedFiles
 
-`func (o *InlineResponse20066) SetMandatoryDhcp(v InlineResponse20066MandatoryDhcp)`
+`func (o *InlineResponse20066) SetAllowedFiles(v []InlineResponse20066AllowedFiles)`
 
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasMandatoryDhcp
+### HasAllowedFiles
 
-`func (o *InlineResponse20066) HasMandatoryDhcp() bool`
+`func (o *InlineResponse20066) HasAllowedFiles() bool`
 
-HasMandatoryDhcp returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineResponse20066) GetIpv6() InlineResponse20066Ipv6`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineResponse20066) GetIpv6Ok() (*InlineResponse20066Ipv6, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineResponse20066) SetIpv6(v InlineResponse20066Ipv6)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineResponse20066) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

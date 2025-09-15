@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Address** | Pointer to **string** | The IPv4 address of the trusted server being added | [optional] 
+**Address** | **string** | The IPv4 address of the trusted server being added | 
 
 ## Methods
 
 ### NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41
 
-`func NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41() *NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41`
+`func NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41(address string, ) *NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41`
 
 NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41 instantiates a new NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41 object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetAddress sets Address field to given value.
 
-### HasAddress
-
-`func (o *NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41) HasAddress() bool`
-
-HasAddress returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

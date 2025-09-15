@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Immediate** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediate**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediate.md) |  | [optional] 
+**Immediate** | [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediate**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediate.md) |  | 
 
 ## Methods
 
 ### NewNetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback
 
-`func NewNetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback() *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback`
+`func NewNetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback(immediate NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediate, ) *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback`
 
 NewNetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback instantiates a new NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetImmediate sets Immediate field to given value.
 
-### HasImmediate
-
-`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback) HasImmediate() bool`
-
-HasImmediate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

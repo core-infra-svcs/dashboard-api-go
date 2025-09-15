@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Service provider name | [optional] 
+**Name** | **string** | Service provider name | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1
 
-`func NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1() *OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
+`func NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1(name string, ) *OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
 
 NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1 instantiates a new OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1 object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

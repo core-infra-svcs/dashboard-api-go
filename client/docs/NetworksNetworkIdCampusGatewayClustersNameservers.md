@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Addresses** | Pointer to **[]string** | Addresses of the nameservers | [optional] 
+**Addresses** | **[]string** | Addresses of the nameservers | 
 
 ## Methods
 
 ### NewNetworksNetworkIdCampusGatewayClustersNameservers
 
-`func NewNetworksNetworkIdCampusGatewayClustersNameservers() *NetworksNetworkIdCampusGatewayClustersNameservers`
+`func NewNetworksNetworkIdCampusGatewayClustersNameservers(addresses []string, ) *NetworksNetworkIdCampusGatewayClustersNameservers`
 
 NewNetworksNetworkIdCampusGatewayClustersNameservers instantiates a new NetworksNetworkIdCampusGatewayClustersNameservers object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetAddresses sets Addresses field to given value.
 
-### HasAddresses
-
-`func (o *NetworksNetworkIdCampusGatewayClustersNameservers) HasAddresses() bool`
-
-HasAddresses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

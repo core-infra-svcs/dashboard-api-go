@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**ClientId** | Pointer to **string** | ID of client | [optional] 
+**Mac** | Pointer to **string** | MAC address of client | [optional] 
+**NetworkId** | Pointer to **string** | NetworkID | [optional] 
+**Assigned** | Pointer to [**[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned**](OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned.md) | Assigned policies | [optional] 
 
 ## Methods
 
@@ -25,30 +29,130 @@ NewInlineResponse200312WithDefaults instantiates a new InlineResponse200312 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineResponse200312) GetEnabled() bool`
+`func (o *InlineResponse200312) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineResponse200312) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200312) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineResponse200312) SetEnabled(v bool)`
+`func (o *InlineResponse200312) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineResponse200312) HasEnabled() bool`
+`func (o *InlineResponse200312) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetClientId
+
+`func (o *InlineResponse200312) GetClientId() string`
+
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
+
+### GetClientIdOk
+
+`func (o *InlineResponse200312) GetClientIdOk() (*string, bool)`
+
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientId
+
+`func (o *InlineResponse200312) SetClientId(v string)`
+
+SetClientId sets ClientId field to given value.
+
+### HasClientId
+
+`func (o *InlineResponse200312) HasClientId() bool`
+
+HasClientId returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200312) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200312) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200312) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200312) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse200312) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200312) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200312) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200312) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetAssigned
+
+`func (o *InlineResponse200312) GetAssigned() []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned`
+
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+
+### GetAssignedOk
+
+`func (o *InlineResponse200312) GetAssignedOk() (*[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned, bool)`
+
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssigned
+
+`func (o *InlineResponse200312) SetAssigned(v []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned)`
+
+SetAssigned sets Assigned field to given value.
+
+### HasAssigned
+
+`func (o *InlineResponse200312) HasAssigned() bool`
+
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

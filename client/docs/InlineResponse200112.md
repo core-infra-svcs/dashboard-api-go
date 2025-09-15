@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
-**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
-**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
-**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
-**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
@@ -29,130 +31,180 @@ NewInlineResponse200112WithDefaults instantiates a new InlineResponse200112 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReportingEnabled
+### GetId
 
-`func (o *InlineResponse200112) GetReportingEnabled() bool`
+`func (o *InlineResponse200112) GetId() string`
 
-GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetReportingEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse200112) GetReportingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200112) GetIdOk() (*string, bool)`
 
-GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReportingEnabled
+### SetId
 
-`func (o *InlineResponse200112) SetReportingEnabled(v bool)`
+`func (o *InlineResponse200112) SetId(v string)`
 
-SetReportingEnabled sets ReportingEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasReportingEnabled
+### HasId
 
-`func (o *InlineResponse200112) HasReportingEnabled() bool`
+`func (o *InlineResponse200112) HasId() bool`
 
-HasReportingEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCollectorIp
+### GetEmail
 
-`func (o *InlineResponse200112) GetCollectorIp() string`
+`func (o *InlineResponse200112) GetEmail() string`
 
-GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetCollectorIpOk
+### GetEmailOk
 
-`func (o *InlineResponse200112) GetCollectorIpOk() (*string, bool)`
+`func (o *InlineResponse200112) GetEmailOk() (*string, bool)`
 
-GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCollectorIp
+### SetEmail
 
-`func (o *InlineResponse200112) SetCollectorIp(v string)`
+`func (o *InlineResponse200112) SetEmail(v string)`
 
-SetCollectorIp sets CollectorIp field to given value.
+SetEmail sets Email field to given value.
 
-### HasCollectorIp
+### HasEmail
 
-`func (o *InlineResponse200112) HasCollectorIp() bool`
+`func (o *InlineResponse200112) HasEmail() bool`
 
-HasCollectorIp returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetCollectorPort
+### GetName
 
-`func (o *InlineResponse200112) GetCollectorPort() int32`
+`func (o *InlineResponse200112) GetName() string`
 
-GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCollectorPortOk
+### GetNameOk
 
-`func (o *InlineResponse200112) GetCollectorPortOk() (*int32, bool)`
+`func (o *InlineResponse200112) GetNameOk() (*string, bool)`
 
-GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCollectorPort
+### SetName
 
-`func (o *InlineResponse200112) SetCollectorPort(v int32)`
+`func (o *InlineResponse200112) SetName(v string)`
 
-SetCollectorPort sets CollectorPort field to given value.
+SetName sets Name field to given value.
 
-### HasCollectorPort
+### HasName
 
-`func (o *InlineResponse200112) HasCollectorPort() bool`
+`func (o *InlineResponse200112) HasName() bool`
 
-HasCollectorPort returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetEtaEnabled
+### GetCreatedAt
 
-`func (o *InlineResponse200112) GetEtaEnabled() bool`
+`func (o *InlineResponse200112) GetCreatedAt() time.Time`
 
-GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetEtaEnabledOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200112) GetEtaEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200112) GetCreatedAtOk() (*time.Time, bool)`
 
-GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEtaEnabled
+### SetCreatedAt
 
-`func (o *InlineResponse200112) SetEtaEnabled(v bool)`
+`func (o *InlineResponse200112) SetCreatedAt(v time.Time)`
 
-SetEtaEnabled sets EtaEnabled field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasEtaEnabled
+### HasCreatedAt
 
-`func (o *InlineResponse200112) HasEtaEnabled() bool`
+`func (o *InlineResponse200112) HasCreatedAt() bool`
 
-HasEtaEnabled returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetEtaDstPort
+### GetAccountType
 
-`func (o *InlineResponse200112) GetEtaDstPort() int32`
+`func (o *InlineResponse200112) GetAccountType() string`
 
-GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetEtaDstPortOk
+### GetAccountTypeOk
 
-`func (o *InlineResponse200112) GetEtaDstPortOk() (*int32, bool)`
+`func (o *InlineResponse200112) GetAccountTypeOk() (*string, bool)`
 
-GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEtaDstPort
+### SetAccountType
 
-`func (o *InlineResponse200112) SetEtaDstPort(v int32)`
+`func (o *InlineResponse200112) SetAccountType(v string)`
 
-SetEtaDstPort sets EtaDstPort field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasEtaDstPort
+### HasAccountType
 
-`func (o *InlineResponse200112) HasEtaDstPort() bool`
+`func (o *InlineResponse200112) HasAccountType() bool`
 
-HasEtaDstPort returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
+
+### GetIsAdmin
+
+`func (o *InlineResponse200112) GetIsAdmin() bool`
+
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+
+### GetIsAdminOk
+
+`func (o *InlineResponse200112) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsAdmin
+
+`func (o *InlineResponse200112) SetIsAdmin(v bool)`
+
+SetIsAdmin sets IsAdmin field to given value.
+
+### HasIsAdmin
+
+`func (o *InlineResponse200112) HasIsAdmin() bool`
+
+HasIsAdmin returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineResponse200112) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineResponse200112) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineResponse200112) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
+
+SetAuthorizations sets Authorizations field to given value.
+
+### HasAuthorizations
+
+`func (o *InlineResponse200112) HasAuthorizations() bool`
+
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

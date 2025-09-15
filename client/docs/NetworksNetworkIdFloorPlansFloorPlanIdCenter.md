@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Lat** | Pointer to **float32** | Latitude | [optional] 
-**Lng** | Pointer to **float32** | Longitude | [optional] 
+**Lat** | **float32** | Latitude | 
+**Lng** | **float32** | Longitude | 
 
 ## Methods
 
 ### NewNetworksNetworkIdFloorPlansFloorPlanIdCenter
 
-`func NewNetworksNetworkIdFloorPlansFloorPlanIdCenter() *NetworksNetworkIdFloorPlansFloorPlanIdCenter`
+`func NewNetworksNetworkIdFloorPlansFloorPlanIdCenter(lat float32, lng float32, ) *NetworksNetworkIdFloorPlansFloorPlanIdCenter`
 
 NewNetworksNetworkIdFloorPlansFloorPlanIdCenter instantiates a new NetworksNetworkIdFloorPlansFloorPlanIdCenter object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetLat sets Lat field to given value.
 
-### HasLat
-
-`func (o *NetworksNetworkIdFloorPlansFloorPlanIdCenter) HasLat() bool`
-
-HasLat returns a boolean if a field has been set.
 
 ### GetLng
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetLng sets Lng field to given value.
 
-### HasLng
-
-`func (o *NetworksNetworkIdFloorPlansFloorPlanIdCenter) HasLng() bool`
-
-HasLng returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

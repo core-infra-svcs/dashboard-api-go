@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | theme id | [optional] 
-**Name** | Pointer to **string** | theme name | [optional] 
-**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**States** | Pointer to **[]string** | The set of different states on the spaces integration process | [optional] 
+**Email** | Pointer to **string** | The meraki user who attempts the spaces integration | [optional] 
+**AccountName** | Pointer to **string** | The spaces dashboard account name created in spaces integration | [optional] 
+**AccountType** | Pointer to **string** | The spaces dashboard account type created in spaces integration | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200327WithDefaults instantiates a new InlineResponse200327 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStatus
 
-`func (o *InlineResponse200327) GetId() string`
+`func (o *InlineResponse200327) GetStatus() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStatusOk
 
-`func (o *InlineResponse200327) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200327) GetStatusOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStatus
 
-`func (o *InlineResponse200327) SetId(v string)`
+`func (o *InlineResponse200327) SetStatus(v bool)`
 
-SetId sets Id field to given value.
+SetStatus sets Status field to given value.
 
-### HasId
+### HasStatus
 
-`func (o *InlineResponse200327) HasId() bool`
+`func (o *InlineResponse200327) HasStatus() bool`
 
-HasId returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetName
+### GetStates
 
-`func (o *InlineResponse200327) GetName() string`
+`func (o *InlineResponse200327) GetStates() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStates returns the States field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStatesOk
 
-`func (o *InlineResponse200327) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200327) GetStatesOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStates
 
-`func (o *InlineResponse200327) SetName(v string)`
+`func (o *InlineResponse200327) SetStates(v []string)`
 
-SetName sets Name field to given value.
+SetStates sets States field to given value.
 
-### HasName
+### HasStates
 
-`func (o *InlineResponse200327) HasName() bool`
+`func (o *InlineResponse200327) HasStates() bool`
 
-HasName returns a boolean if a field has been set.
+HasStates returns a boolean if a field has been set.
 
-### GetThemeAssets
+### GetEmail
 
-`func (o *InlineResponse200327) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
+`func (o *InlineResponse200327) GetEmail() string`
 
-GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetThemeAssetsOk
+### GetEmailOk
 
-`func (o *InlineResponse200327) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
+`func (o *InlineResponse200327) GetEmailOk() (*string, bool)`
 
-GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThemeAssets
+### SetEmail
 
-`func (o *InlineResponse200327) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
+`func (o *InlineResponse200327) SetEmail(v string)`
 
-SetThemeAssets sets ThemeAssets field to given value.
+SetEmail sets Email field to given value.
 
-### HasThemeAssets
+### HasEmail
 
-`func (o *InlineResponse200327) HasThemeAssets() bool`
+`func (o *InlineResponse200327) HasEmail() bool`
 
-HasThemeAssets returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
+
+### GetAccountName
+
+`func (o *InlineResponse200327) GetAccountName() string`
+
+GetAccountName returns the AccountName field if non-nil, zero value otherwise.
+
+### GetAccountNameOk
+
+`func (o *InlineResponse200327) GetAccountNameOk() (*string, bool)`
+
+GetAccountNameOk returns a tuple with the AccountName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountName
+
+`func (o *InlineResponse200327) SetAccountName(v string)`
+
+SetAccountName sets AccountName field to given value.
+
+### HasAccountName
+
+`func (o *InlineResponse200327) HasAccountName() bool`
+
+HasAccountName returns a boolean if a field has been set.
+
+### GetAccountType
+
+`func (o *InlineResponse200327) GetAccountType() string`
+
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+
+### GetAccountTypeOk
+
+`func (o *InlineResponse200327) GetAccountTypeOk() (*string, bool)`
+
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountType
+
+`func (o *InlineResponse200327) SetAccountType(v string)`
+
+SetAccountType sets AccountType field to given value.
+
+### HasAccountType
+
+`func (o *InlineResponse200327) HasAccountType() bool`
+
+HasAccountType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

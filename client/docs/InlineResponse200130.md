@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
-**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
-**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of endpoints. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200130WithDefaults instantiates a new InlineResponse200130 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetIds
 
-`func (o *InlineResponse200130) GetReceived() float32`
+`func (o *InlineResponse200130) GetIds() []string`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetIdsOk
 
-`func (o *InlineResponse200130) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse200130) GetIdsOk() (*[]string, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetIds
 
-`func (o *InlineResponse200130) SetReceived(v float32)`
+`func (o *InlineResponse200130) SetIds(v []string)`
 
-SetReceived sets Received field to given value.
+SetIds sets Ids field to given value.
 
-### HasReceived
+### HasIds
 
-`func (o *InlineResponse200130) HasReceived() bool`
+`func (o *InlineResponse200130) HasIds() bool`
 
-HasReceived returns a boolean if a field has been set.
-
-### GetSent
-
-`func (o *InlineResponse200130) GetSent() float32`
-
-GetSent returns the Sent field if non-nil, zero value otherwise.
-
-### GetSentOk
-
-`func (o *InlineResponse200130) GetSentOk() (*float32, bool)`
-
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSent
-
-`func (o *InlineResponse200130) SetSent(v float32)`
-
-SetSent sets Sent field to given value.
-
-### HasSent
-
-`func (o *InlineResponse200130) HasSent() bool`
-
-HasSent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200130) GetTs() string`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200130) GetTsOk() (*string, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200130) SetTs(v string)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200130) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

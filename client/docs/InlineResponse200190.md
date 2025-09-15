@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
-**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
-**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
+**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
+**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
+**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200190WithDefaults instantiates a new InlineResponse200190 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetT0
 
-`func (o *InlineResponse200190) GetStartTs() time.Time`
+`func (o *InlineResponse200190) GetT0() int32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetT0 returns the T0 field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetT0Ok
 
-`func (o *InlineResponse200190) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200190) GetT0Ok() (*int32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetT0
 
-`func (o *InlineResponse200190) SetStartTs(v time.Time)`
+`func (o *InlineResponse200190) SetT0(v int32)`
 
-SetStartTs sets StartTs field to given value.
+SetT0 sets T0 field to given value.
 
-### HasStartTs
+### HasT0
 
-`func (o *InlineResponse200190) HasStartTs() bool`
+`func (o *InlineResponse200190) HasT0() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasT0 returns a boolean if a field has been set.
 
-### GetEndTs
+### GetT1
 
-`func (o *InlineResponse200190) GetEndTs() time.Time`
+`func (o *InlineResponse200190) GetT1() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetT1 returns the T1 field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetT1Ok
 
-`func (o *InlineResponse200190) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200190) GetT1Ok() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetT1
 
-`func (o *InlineResponse200190) SetEndTs(v time.Time)`
+`func (o *InlineResponse200190) SetT1(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetT1 sets T1 field to given value.
 
-### HasEndTs
+### HasT1
 
-`func (o *InlineResponse200190) HasEndTs() bool`
+`func (o *InlineResponse200190) HasT1() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasT1 returns a boolean if a field has been set.
 
-### GetAverageKbps
+### GetLatencyBinsByCategory
 
-`func (o *InlineResponse200190) GetAverageKbps() int32`
+`func (o *InlineResponse200190) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
 
-GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
+GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
 
-### GetAverageKbpsOk
+### GetLatencyBinsByCategoryOk
 
-`func (o *InlineResponse200190) GetAverageKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200190) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
 
-GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
+GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAverageKbps
+### SetLatencyBinsByCategory
 
-`func (o *InlineResponse200190) SetAverageKbps(v int32)`
+`func (o *InlineResponse200190) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
 
-SetAverageKbps sets AverageKbps field to given value.
+SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
 
-### HasAverageKbps
+### HasLatencyBinsByCategory
 
-`func (o *InlineResponse200190) HasAverageKbps() bool`
+`func (o *InlineResponse200190) HasLatencyBinsByCategory() bool`
 
-HasAverageKbps returns a boolean if a field has been set.
-
-### GetDownloadKbps
-
-`func (o *InlineResponse200190) GetDownloadKbps() int32`
-
-GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
-
-### GetDownloadKbpsOk
-
-`func (o *InlineResponse200190) GetDownloadKbpsOk() (*int32, bool)`
-
-GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownloadKbps
-
-`func (o *InlineResponse200190) SetDownloadKbps(v int32)`
-
-SetDownloadKbps sets DownloadKbps field to given value.
-
-### HasDownloadKbps
-
-`func (o *InlineResponse200190) HasDownloadKbps() bool`
-
-HasDownloadKbps returns a boolean if a field has been set.
-
-### GetUploadKbps
-
-`func (o *InlineResponse200190) GetUploadKbps() int32`
-
-GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
-
-### GetUploadKbpsOk
-
-`func (o *InlineResponse200190) GetUploadKbpsOk() (*int32, bool)`
-
-GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadKbps
-
-`func (o *InlineResponse200190) SetUploadKbps(v int32)`
-
-SetUploadKbps sets UploadKbps field to given value.
-
-### HasUploadKbps
-
-`func (o *InlineResponse200190) HasUploadKbps() bool`
-
-HasUploadKbps returns a boolean if a field has been set.
+HasLatencyBinsByCategory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

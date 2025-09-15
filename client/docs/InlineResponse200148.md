@@ -4,9 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
-**CommunityString** | Pointer to **string** | SNMP community string if access is &#39;community&#39;. | [optional] 
-**Users** | Pointer to [**[]InlineResponse200148Users**](InlineResponse200148Users.md) | SNMP settings if access is &#39;users&#39;. | [optional] 
+**Id** | Pointer to **string** | device ID | [optional] 
+**Name** | Pointer to **string** | device name | [optional] 
+**SystemType** | Pointer to **string** | system type | [optional] 
+**Mac** | Pointer to **string** | mac address | [optional] 
+**Username** | Pointer to **string** | username | [optional] 
+**Email** | Pointer to **string** | user email | [optional] 
+**Tags** | Pointer to **[]string** | device tags | [optional] 
+**TrustedAccessConnections** | Pointer to [**[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections**](NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections.md) | Array of trusted access configs | [optional] 
 
 ## Methods
 
@@ -27,80 +32,205 @@ NewInlineResponse200148WithDefaults instantiates a new InlineResponse200148 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccess
+### GetId
 
-`func (o *InlineResponse200148) GetAccess() string`
+`func (o *InlineResponse200148) GetId() string`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetIdOk
 
-`func (o *InlineResponse200148) GetAccessOk() (*string, bool)`
+`func (o *InlineResponse200148) GetIdOk() (*string, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetId
 
-`func (o *InlineResponse200148) SetAccess(v string)`
+`func (o *InlineResponse200148) SetId(v string)`
 
-SetAccess sets Access field to given value.
+SetId sets Id field to given value.
 
-### HasAccess
+### HasId
 
-`func (o *InlineResponse200148) HasAccess() bool`
+`func (o *InlineResponse200148) HasId() bool`
 
-HasAccess returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCommunityString
+### GetName
 
-`func (o *InlineResponse200148) GetCommunityString() string`
+`func (o *InlineResponse200148) GetName() string`
 
-GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCommunityStringOk
+### GetNameOk
 
-`func (o *InlineResponse200148) GetCommunityStringOk() (*string, bool)`
+`func (o *InlineResponse200148) GetNameOk() (*string, bool)`
 
-GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCommunityString
+### SetName
 
-`func (o *InlineResponse200148) SetCommunityString(v string)`
+`func (o *InlineResponse200148) SetName(v string)`
 
-SetCommunityString sets CommunityString field to given value.
+SetName sets Name field to given value.
 
-### HasCommunityString
+### HasName
 
-`func (o *InlineResponse200148) HasCommunityString() bool`
+`func (o *InlineResponse200148) HasName() bool`
 
-HasCommunityString returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUsers
+### GetSystemType
 
-`func (o *InlineResponse200148) GetUsers() []InlineResponse200148Users`
+`func (o *InlineResponse200148) GetSystemType() string`
 
-GetUsers returns the Users field if non-nil, zero value otherwise.
+GetSystemType returns the SystemType field if non-nil, zero value otherwise.
 
-### GetUsersOk
+### GetSystemTypeOk
 
-`func (o *InlineResponse200148) GetUsersOk() (*[]InlineResponse200148Users, bool)`
+`func (o *InlineResponse200148) GetSystemTypeOk() (*string, bool)`
 
-GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
+GetSystemTypeOk returns a tuple with the SystemType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsers
+### SetSystemType
 
-`func (o *InlineResponse200148) SetUsers(v []InlineResponse200148Users)`
+`func (o *InlineResponse200148) SetSystemType(v string)`
 
-SetUsers sets Users field to given value.
+SetSystemType sets SystemType field to given value.
 
-### HasUsers
+### HasSystemType
 
-`func (o *InlineResponse200148) HasUsers() bool`
+`func (o *InlineResponse200148) HasSystemType() bool`
 
-HasUsers returns a boolean if a field has been set.
+HasSystemType returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200148) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200148) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200148) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200148) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetUsername
+
+`func (o *InlineResponse200148) GetUsername() string`
+
+GetUsername returns the Username field if non-nil, zero value otherwise.
+
+### GetUsernameOk
+
+`func (o *InlineResponse200148) GetUsernameOk() (*string, bool)`
+
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsername
+
+`func (o *InlineResponse200148) SetUsername(v string)`
+
+SetUsername sets Username field to given value.
+
+### HasUsername
+
+`func (o *InlineResponse200148) HasUsername() bool`
+
+HasUsername returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse200148) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse200148) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse200148) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse200148) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200148) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200148) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200148) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200148) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetTrustedAccessConnections
+
+`func (o *InlineResponse200148) GetTrustedAccessConnections() []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections`
+
+GetTrustedAccessConnections returns the TrustedAccessConnections field if non-nil, zero value otherwise.
+
+### GetTrustedAccessConnectionsOk
+
+`func (o *InlineResponse200148) GetTrustedAccessConnectionsOk() (*[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections, bool)`
+
+GetTrustedAccessConnectionsOk returns a tuple with the TrustedAccessConnections field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTrustedAccessConnections
+
+`func (o *InlineResponse200148) SetTrustedAccessConnections(v []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections)`
+
+SetTrustedAccessConnections sets TrustedAccessConnections field to given value.
+
+### HasTrustedAccessConnections
+
+`func (o *InlineResponse200148) HasTrustedAccessConnections() bool`
+
+HasTrustedAccessConnections returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

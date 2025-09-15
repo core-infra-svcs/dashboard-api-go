@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the organization | 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
+**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject208
 
-`func NewInlineObject208(name string, ) *InlineObject208`
+`func NewInlineObject208() *InlineObject208`
 
 NewInlineObject208 instantiates a new InlineObject208 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +28,105 @@ NewInlineObject208WithDefaults instantiates a new InlineObject208 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject208) GetName() string`
+`func (o *InlineObject208) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject208) GetNameOk() (*string, bool)`
+`func (o *InlineObject208) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject208) SetName(v string)`
+`func (o *InlineObject208) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetManagement
+`func (o *InlineObject208) HasEnabled() bool`
 
-`func (o *InlineObject208) GetManagement() OrganizationsManagement1`
+HasEnabled returns a boolean if a field has been set.
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+### GetIotController
 
-### GetManagementOk
+`func (o *InlineObject208) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
 
-`func (o *InlineObject208) GetManagementOk() (*OrganizationsManagement1, bool)`
+GetIotController returns the IotController field if non-nil, zero value otherwise.
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+### GetIotControllerOk
+
+`func (o *InlineObject208) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
+
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetIotController
 
-`func (o *InlineObject208) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject208) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
 
-SetManagement sets Management field to given value.
+SetIotController sets IotController field to given value.
 
-### HasManagement
+### HasIotController
 
-`func (o *InlineObject208) HasManagement() bool`
+`func (o *InlineObject208) HasIotController() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasIotController returns a boolean if a field has been set.
+
+### GetLockManagement
+
+`func (o *InlineObject208) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
+
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+
+### GetLockManagementOk
+
+`func (o *InlineObject208) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
+
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLockManagement
+
+`func (o *InlineObject208) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
+
+SetLockManagement sets LockManagement field to given value.
+
+### HasLockManagement
+
+`func (o *InlineObject208) HasLockManagement() bool`
+
+HasLockManagement returns a boolean if a field has been set.
+
+### GetDefaults
+
+`func (o *InlineObject208) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
+
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
+
+### GetDefaultsOk
+
+`func (o *InlineObject208) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
+
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaults
+
+`func (o *InlineObject208) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
+
+SetDefaults sets Defaults field to given value.
+
+### HasDefaults
+
+`func (o *InlineObject208) HasDefaults() bool`
+
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be modified. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be modified. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be modified. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified. | [optional] 
-**Tags** | **[]string** | The tags to be added, deleted, or updated. | 
-**UpdateAction** | **string** | One of add, delete, or update. Only devices that have been modified will be returned. | 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be locked. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be locked. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be locked. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be locked. | [optional] 
+**Pin** | Pointer to **int32** | The pin number for locking macOS devices (a six digit number). Required only for macOS devices. | [optional] 
 
 ## Methods
 
 ### NewInlineObject127
 
-`func NewInlineObject127(tags []string, updateAction string, ) *InlineObject127`
+`func NewInlineObject127() *InlineObject127`
 
 NewInlineObject127 instantiates a new InlineObject127 object
 This constructor will assign default values to properties that have it defined,
@@ -130,45 +129,30 @@ SetScope sets Scope field to given value.
 
 HasScope returns a boolean if a field has been set.
 
-### GetTags
+### GetPin
 
-`func (o *InlineObject127) GetTags() []string`
+`func (o *InlineObject127) GetPin() int32`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetPin returns the Pin field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetPinOk
 
-`func (o *InlineObject127) GetTagsOk() (*[]string, bool)`
+`func (o *InlineObject127) GetPinOk() (*int32, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetPin
 
-`func (o *InlineObject127) SetTags(v []string)`
+`func (o *InlineObject127) SetPin(v int32)`
 
-SetTags sets Tags field to given value.
+SetPin sets Pin field to given value.
 
+### HasPin
 
-### GetUpdateAction
+`func (o *InlineObject127) HasPin() bool`
 
-`func (o *InlineObject127) GetUpdateAction() string`
-
-GetUpdateAction returns the UpdateAction field if non-nil, zero value otherwise.
-
-### GetUpdateActionOk
-
-`func (o *InlineObject127) GetUpdateActionOk() (*string, bool)`
-
-GetUpdateActionOk returns a tuple with the UpdateAction field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdateAction
-
-`func (o *InlineObject127) SetUpdateAction(v string)`
-
-SetUpdateAction sets UpdateAction field to given value.
-
+HasPin returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

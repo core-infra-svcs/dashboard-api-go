@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Average** | Pointer to [**InlineResponse200388UsageAverage**](InlineResponse200388UsageAverage.md) |  | [optional] 
+**Total** | Pointer to **int32** | The total usage on the interface during the interval, unit is bit/sec | [optional] 
+**Recv** | Pointer to **int32** | The received usage on the interface during the interval, unit is bit/sec | [optional] 
+**Send** | Pointer to **int32** | The sent usage on the interface during the interval, unit is bit/sec | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200388UsageWithDefaults instantiates a new InlineResponse200388
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAverage
+### GetTotal
 
-`func (o *InlineResponse200388Usage) GetAverage() InlineResponse200388UsageAverage`
+`func (o *InlineResponse200388Usage) GetTotal() int32`
 
-GetAverage returns the Average field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetAverageOk
+### GetTotalOk
 
-`func (o *InlineResponse200388Usage) GetAverageOk() (*InlineResponse200388UsageAverage, bool)`
+`func (o *InlineResponse200388Usage) GetTotalOk() (*int32, bool)`
 
-GetAverageOk returns a tuple with the Average field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAverage
+### SetTotal
 
-`func (o *InlineResponse200388Usage) SetAverage(v InlineResponse200388UsageAverage)`
+`func (o *InlineResponse200388Usage) SetTotal(v int32)`
 
-SetAverage sets Average field to given value.
+SetTotal sets Total field to given value.
 
-### HasAverage
+### HasTotal
 
-`func (o *InlineResponse200388Usage) HasAverage() bool`
+`func (o *InlineResponse200388Usage) HasTotal() bool`
 
-HasAverage returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse200388Usage) GetRecv() int32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse200388Usage) GetRecvOk() (*int32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse200388Usage) SetRecv(v int32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse200388Usage) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetSend
+
+`func (o *InlineResponse200388Usage) GetSend() int32`
+
+GetSend returns the Send field if non-nil, zero value otherwise.
+
+### GetSendOk
+
+`func (o *InlineResponse200388Usage) GetSendOk() (*int32, bool)`
+
+GetSendOk returns a tuple with the Send field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSend
+
+`func (o *InlineResponse200388Usage) SetSend(v int32)`
+
+SetSend sets Send field to given value.
+
+### HasSend
+
+`func (o *InlineResponse200388Usage) HasSend() bool`
+
+HasSend returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

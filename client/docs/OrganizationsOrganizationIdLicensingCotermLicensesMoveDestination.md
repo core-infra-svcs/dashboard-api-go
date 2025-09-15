@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrganizationId** | Pointer to **string** | The organization to move the license to | [optional] 
-**Mode** | Pointer to **string** | The claim mode of the moved license | [optional] 
+**OrganizationId** | **string** | The organization to move the license to | 
+**Mode** | **string** | The claim mode of the moved license | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination
 
-`func NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination() *OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
+`func NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(organizationId string, mode string, ) *OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
 
 NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination instantiates a new OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetOrganizationId sets OrganizationId field to given value.
 
-### HasOrganizationId
-
-`func (o *OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
 
 ### GetMode
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetMode sets Mode field to given value.
 
-### HasMode
-
-`func (o *OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination) HasMode() bool`
-
-HasMode returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

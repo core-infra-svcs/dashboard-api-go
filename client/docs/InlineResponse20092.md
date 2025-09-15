@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | Usage received by the client on a given day | [optional] 
-**Sent** | Pointer to **float32** | Usage sent by the client on a given day | [optional] 
-**Ts** | Pointer to **time.Time** | The day&#39;s timestamp | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
+**PoliciesBySsid** | Pointer to [**[]InlineResponse20092PoliciesBySsid**](InlineResponse20092PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetMac
 
-`func (o *InlineResponse20092) GetReceived() float32`
+`func (o *InlineResponse20092) GetMac() string`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetMacOk
 
-`func (o *InlineResponse20092) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse20092) GetMacOk() (*string, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetMac
 
-`func (o *InlineResponse20092) SetReceived(v float32)`
+`func (o *InlineResponse20092) SetMac(v string)`
 
-SetReceived sets Received field to given value.
+SetMac sets Mac field to given value.
 
-### HasReceived
+### HasMac
 
-`func (o *InlineResponse20092) HasReceived() bool`
+`func (o *InlineResponse20092) HasMac() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetSent
+### GetDevicePolicy
 
-`func (o *InlineResponse20092) GetSent() float32`
+`func (o *InlineResponse20092) GetDevicePolicy() string`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetDevicePolicyOk
 
-`func (o *InlineResponse20092) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse20092) GetDevicePolicyOk() (*string, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetDevicePolicy
 
-`func (o *InlineResponse20092) SetSent(v float32)`
+`func (o *InlineResponse20092) SetDevicePolicy(v string)`
 
-SetSent sets Sent field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasSent
+### HasDevicePolicy
 
-`func (o *InlineResponse20092) HasSent() bool`
+`func (o *InlineResponse20092) HasDevicePolicy() bool`
 
-HasSent returns a boolean if a field has been set.
+HasDevicePolicy returns a boolean if a field has been set.
 
-### GetTs
+### GetGroupPolicyId
 
-`func (o *InlineResponse20092) GetTs() time.Time`
+`func (o *InlineResponse20092) GetGroupPolicyId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse20092) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20092) GetGroupPolicyIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetGroupPolicyId
 
-`func (o *InlineResponse20092) SetTs(v time.Time)`
+`func (o *InlineResponse20092) SetGroupPolicyId(v string)`
 
-SetTs sets Ts field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasTs
+### HasGroupPolicyId
 
-`func (o *InlineResponse20092) HasTs() bool`
+`func (o *InlineResponse20092) HasGroupPolicyId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetPoliciesBySsid
+
+`func (o *InlineResponse20092) GetPoliciesBySsid() []InlineResponse20092PoliciesBySsid`
+
+GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+
+### GetPoliciesBySsidOk
+
+`func (o *InlineResponse20092) GetPoliciesBySsidOk() (*[]InlineResponse20092PoliciesBySsid, bool)`
+
+GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySsid
+
+`func (o *InlineResponse20092) SetPoliciesBySsid(v []InlineResponse20092PoliciesBySsid)`
+
+SetPoliciesBySsid sets PoliciesBySsid field to given value.
+
+### HasPoliciesBySsid
+
+`func (o *InlineResponse20092) HasPoliciesBySsid() bool`
+
+HasPoliciesBySsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

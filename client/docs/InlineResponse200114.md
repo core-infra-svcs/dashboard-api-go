@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Macs** | Pointer to **[]string** | List of mac addresses | [optional] 
-**Emails** | Pointer to **[]string** | List of email addresses | [optional] 
-**Usernames** | Pointer to **[]string** | List of usernames | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials | [optional] 
-**Imeis** | Pointer to **[]string** | List of IMEIs | [optional] 
-**BluetoothMacs** | Pointer to **[]string** | List of bluetooth mac addresses | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse200114WithDefaults instantiates a new InlineResponse200114 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMacs
+### GetReportingEnabled
 
-`func (o *InlineResponse200114) GetMacs() []string`
+`func (o *InlineResponse200114) GetReportingEnabled() bool`
 
-GetMacs returns the Macs field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetMacsOk
+### GetReportingEnabledOk
 
-`func (o *InlineResponse200114) GetMacsOk() (*[]string, bool)`
+`func (o *InlineResponse200114) GetReportingEnabledOk() (*bool, bool)`
 
-GetMacsOk returns a tuple with the Macs field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMacs
+### SetReportingEnabled
 
-`func (o *InlineResponse200114) SetMacs(v []string)`
+`func (o *InlineResponse200114) SetReportingEnabled(v bool)`
 
-SetMacs sets Macs field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasMacs
+### HasReportingEnabled
 
-`func (o *InlineResponse200114) HasMacs() bool`
+`func (o *InlineResponse200114) HasReportingEnabled() bool`
 
-HasMacs returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetEmails
+### GetCollectorIp
 
-`func (o *InlineResponse200114) GetEmails() []string`
+`func (o *InlineResponse200114) GetCollectorIp() string`
 
-GetEmails returns the Emails field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetEmailsOk
+### GetCollectorIpOk
 
-`func (o *InlineResponse200114) GetEmailsOk() (*[]string, bool)`
+`func (o *InlineResponse200114) GetCollectorIpOk() (*string, bool)`
 
-GetEmailsOk returns a tuple with the Emails field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmails
+### SetCollectorIp
 
-`func (o *InlineResponse200114) SetEmails(v []string)`
+`func (o *InlineResponse200114) SetCollectorIp(v string)`
 
-SetEmails sets Emails field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasEmails
+### HasCollectorIp
 
-`func (o *InlineResponse200114) HasEmails() bool`
+`func (o *InlineResponse200114) HasCollectorIp() bool`
 
-HasEmails returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetUsernames
+### GetCollectorPort
 
-`func (o *InlineResponse200114) GetUsernames() []string`
+`func (o *InlineResponse200114) GetCollectorPort() int32`
 
-GetUsernames returns the Usernames field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetUsernamesOk
+### GetCollectorPortOk
 
-`func (o *InlineResponse200114) GetUsernamesOk() (*[]string, bool)`
+`func (o *InlineResponse200114) GetCollectorPortOk() (*int32, bool)`
 
-GetUsernamesOk returns a tuple with the Usernames field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsernames
+### SetCollectorPort
 
-`func (o *InlineResponse200114) SetUsernames(v []string)`
+`func (o *InlineResponse200114) SetCollectorPort(v int32)`
 
-SetUsernames sets Usernames field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
-### HasUsernames
+### HasCollectorPort
 
-`func (o *InlineResponse200114) HasUsernames() bool`
+`func (o *InlineResponse200114) HasCollectorPort() bool`
 
-HasUsernames returns a boolean if a field has been set.
+HasCollectorPort returns a boolean if a field has been set.
 
-### GetSerials
+### GetEtaEnabled
 
-`func (o *InlineResponse200114) GetSerials() []string`
+`func (o *InlineResponse200114) GetEtaEnabled() bool`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetEtaEnabledOk
 
-`func (o *InlineResponse200114) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200114) GetEtaEnabledOk() (*bool, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetEtaEnabled
 
-`func (o *InlineResponse200114) SetSerials(v []string)`
+`func (o *InlineResponse200114) SetEtaEnabled(v bool)`
 
-SetSerials sets Serials field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasSerials
+### HasEtaEnabled
 
-`func (o *InlineResponse200114) HasSerials() bool`
+`func (o *InlineResponse200114) HasEtaEnabled() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
 
-### GetImeis
+### GetEtaDstPort
 
-`func (o *InlineResponse200114) GetImeis() []string`
+`func (o *InlineResponse200114) GetEtaDstPort() int32`
 
-GetImeis returns the Imeis field if non-nil, zero value otherwise.
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
 
-### GetImeisOk
+### GetEtaDstPortOk
 
-`func (o *InlineResponse200114) GetImeisOk() (*[]string, bool)`
+`func (o *InlineResponse200114) GetEtaDstPortOk() (*int32, bool)`
 
-GetImeisOk returns a tuple with the Imeis field if it's non-nil, zero value otherwise
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImeis
+### SetEtaDstPort
 
-`func (o *InlineResponse200114) SetImeis(v []string)`
+`func (o *InlineResponse200114) SetEtaDstPort(v int32)`
 
-SetImeis sets Imeis field to given value.
+SetEtaDstPort sets EtaDstPort field to given value.
 
-### HasImeis
+### HasEtaDstPort
 
-`func (o *InlineResponse200114) HasImeis() bool`
+`func (o *InlineResponse200114) HasEtaDstPort() bool`
 
-HasImeis returns a boolean if a field has been set.
-
-### GetBluetoothMacs
-
-`func (o *InlineResponse200114) GetBluetoothMacs() []string`
-
-GetBluetoothMacs returns the BluetoothMacs field if non-nil, zero value otherwise.
-
-### GetBluetoothMacsOk
-
-`func (o *InlineResponse200114) GetBluetoothMacsOk() (*[]string, bool)`
-
-GetBluetoothMacsOk returns a tuple with the BluetoothMacs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBluetoothMacs
-
-`func (o *InlineResponse200114) SetBluetoothMacs(v []string)`
-
-SetBluetoothMacs sets BluetoothMacs field to given value.
-
-### HasBluetoothMacs
-
-`func (o *InlineResponse200114) HasBluetoothMacs() bool`
-
-HasBluetoothMacs returns a boolean if a field has been set.
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

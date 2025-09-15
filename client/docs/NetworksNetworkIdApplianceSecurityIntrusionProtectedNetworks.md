@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UseDefault** | Pointer to **bool** | true/false whether to use special IPv4 addresses: https://tools.ietf.org/html/rfc5735 (required). Default value is true if none currently saved | [optional] 
+**UseDefault** | **bool** | true/false whether to use special IPv4 addresses: https://tools.ietf.org/html/rfc5735 (required). Default value is true if none currently saved | 
 **IncludedCidr** | Pointer to **[]string** | list of IP addresses or subnets being protected (required if &#39;useDefault&#39; is false) | [optional] 
 **ExcludedCidr** | Pointer to **[]string** | list of IP addresses or subnets being excluded from protection (required if &#39;useDefault&#39; is false) | [optional] 
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewNetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks
 
-`func NewNetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks() *NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks`
+`func NewNetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks(useDefault bool, ) *NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks`
 
 NewNetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks instantiates a new NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetUseDefault sets UseDefault field to given value.
 
-### HasUseDefault
-
-`func (o *NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks) HasUseDefault() bool`
-
-HasUseDefault returns a boolean if a field has been set.
 
 ### GetIncludedCidr
 

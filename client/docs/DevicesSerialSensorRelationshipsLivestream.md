@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RelatedDevices** | Pointer to [**[]DevicesSerialSensorRelationshipsLivestreamRelatedDevices**](DevicesSerialSensorRelationshipsLivestreamRelatedDevices.md) | An array of the related devices for the role | [optional] 
+**RelatedDevices** | [**[]DevicesSerialSensorRelationshipsLivestreamRelatedDevices**](DevicesSerialSensorRelationshipsLivestreamRelatedDevices.md) | An array of the related devices for the role | 
 
 ## Methods
 
 ### NewDevicesSerialSensorRelationshipsLivestream
 
-`func NewDevicesSerialSensorRelationshipsLivestream() *DevicesSerialSensorRelationshipsLivestream`
+`func NewDevicesSerialSensorRelationshipsLivestream(relatedDevices []DevicesSerialSensorRelationshipsLivestreamRelatedDevices, ) *DevicesSerialSensorRelationshipsLivestream`
 
 NewDevicesSerialSensorRelationshipsLivestream instantiates a new DevicesSerialSensorRelationshipsLivestream object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetRelatedDevices sets RelatedDevices field to given value.
 
-### HasRelatedDevices
-
-`func (o *DevicesSerialSensorRelationshipsLivestream) HasRelatedDevices() bool`
-
-HasRelatedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

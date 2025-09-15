@@ -4,7 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences.md) | policies with respective traffic filters for an MX network | [optional] 
+**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
+**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
+**Description** | Pointer to **string** | Identifying description for the prefix. | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
 
 ## Methods
 
@@ -25,30 +30,155 @@ NewInlineResponse20062WithDefaults instantiates a new InlineResponse20062 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWanTrafficUplinkPreferences
+### GetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20062) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences`
+`func (o *InlineResponse20062) GetStaticDelegatedPrefixId() string`
 
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
 
-### GetWanTrafficUplinkPreferencesOk
+### GetStaticDelegatedPrefixIdOk
 
-`func (o *InlineResponse20062) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences, bool)`
+`func (o *InlineResponse20062) GetStaticDelegatedPrefixIdOk() (*string, bool)`
 
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanTrafficUplinkPreferences
+### SetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20062) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences)`
+`func (o *InlineResponse20062) SetStaticDelegatedPrefixId(v string)`
 
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
 
-### HasWanTrafficUplinkPreferences
+### HasStaticDelegatedPrefixId
 
-`func (o *InlineResponse20062) HasWanTrafficUplinkPreferences() bool`
+`func (o *InlineResponse20062) HasStaticDelegatedPrefixId() bool`
 
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+HasStaticDelegatedPrefixId returns a boolean if a field has been set.
+
+### GetPrefix
+
+`func (o *InlineResponse20062) GetPrefix() string`
+
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+
+### GetPrefixOk
+
+`func (o *InlineResponse20062) GetPrefixOk() (*string, bool)`
+
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrefix
+
+`func (o *InlineResponse20062) SetPrefix(v string)`
+
+SetPrefix sets Prefix field to given value.
+
+### HasPrefix
+
+`func (o *InlineResponse20062) HasPrefix() bool`
+
+HasPrefix returns a boolean if a field has been set.
+
+### GetOrigin
+
+`func (o *InlineResponse20062) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
+
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
+
+### GetOriginOk
+
+`func (o *InlineResponse20062) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
+
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrigin
+
+`func (o *InlineResponse20062) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
+
+SetOrigin sets Origin field to given value.
+
+### HasOrigin
+
+`func (o *InlineResponse20062) HasOrigin() bool`
+
+HasOrigin returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse20062) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse20062) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse20062) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse20062) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse20062) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse20062) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse20062) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse20062) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse20062) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse20062) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse20062) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse20062) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

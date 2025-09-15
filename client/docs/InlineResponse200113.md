@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial | [optional] 
-**Model** | Pointer to **string** | Device model. | [optional] 
-**Tags** | Pointer to **string** | Device tags. | [optional] 
-**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
-**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
+**Id** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
+**Name** | Pointer to **string** | Name of the MQTT Broker. | [optional] 
+**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
+**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
+**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
+**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication**](NetworksNetworkIdMqttBrokersAuthentication.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200113WithDefaults instantiates a new InlineResponse200113 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetId
 
-`func (o *InlineResponse200113) GetSerial() string`
+`func (o *InlineResponse200113) GetId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetIdOk
 
-`func (o *InlineResponse200113) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200113) GetIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetId
 
-`func (o *InlineResponse200113) SetSerial(v string)`
+`func (o *InlineResponse200113) SetId(v string)`
 
-SetSerial sets Serial field to given value.
+SetId sets Id field to given value.
 
-### HasSerial
+### HasId
 
-`func (o *InlineResponse200113) HasSerial() bool`
+`func (o *InlineResponse200113) HasId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetModel
+### GetName
 
-`func (o *InlineResponse200113) GetModel() string`
+`func (o *InlineResponse200113) GetName() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetNameOk
 
-`func (o *InlineResponse200113) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200113) GetNameOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetName
 
-`func (o *InlineResponse200113) SetModel(v string)`
+`func (o *InlineResponse200113) SetName(v string)`
 
-SetModel sets Model field to given value.
+SetName sets Name field to given value.
 
-### HasModel
+### HasName
 
-`func (o *InlineResponse200113) HasModel() bool`
+`func (o *InlineResponse200113) HasName() bool`
 
-HasModel returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetTags
+### GetHost
 
-`func (o *InlineResponse200113) GetTags() string`
+`func (o *InlineResponse200113) GetHost() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetHostOk
 
-`func (o *InlineResponse200113) GetTagsOk() (*string, bool)`
+`func (o *InlineResponse200113) GetHostOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetHost
 
-`func (o *InlineResponse200113) SetTags(v string)`
+`func (o *InlineResponse200113) SetHost(v string)`
 
-SetTags sets Tags field to given value.
+SetHost sets Host field to given value.
 
-### HasTags
+### HasHost
 
-`func (o *InlineResponse200113) HasTags() bool`
+`func (o *InlineResponse200113) HasHost() bool`
 
-HasTags returns a boolean if a field has been set.
+HasHost returns a boolean if a field has been set.
 
-### GetWifi0
+### GetPort
 
-`func (o *InlineResponse200113) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200113) GetPort() int32`
 
-GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetWifi0Ok
+### GetPortOk
 
-`func (o *InlineResponse200113) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200113) GetPortOk() (*int32, bool)`
 
-GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi0
+### SetPort
 
-`func (o *InlineResponse200113) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200113) SetPort(v int32)`
 
-SetWifi0 sets Wifi0 field to given value.
+SetPort sets Port field to given value.
 
-### HasWifi0
+### HasPort
 
-`func (o *InlineResponse200113) HasWifi0() bool`
+`func (o *InlineResponse200113) HasPort() bool`
 
-HasWifi0 returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
-### GetWifi1
+### GetSecurity
 
-`func (o *InlineResponse200113) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200113) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
 
-GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+GetSecurity returns the Security field if non-nil, zero value otherwise.
 
-### GetWifi1Ok
+### GetSecurityOk
 
-`func (o *InlineResponse200113) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200113) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
 
-GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi1
+### SetSecurity
 
-`func (o *InlineResponse200113) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200113) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
 
-SetWifi1 sets Wifi1 field to given value.
+SetSecurity sets Security field to given value.
 
-### HasWifi1
+### HasSecurity
 
-`func (o *InlineResponse200113) HasWifi1() bool`
+`func (o *InlineResponse200113) HasSecurity() bool`
 
-HasWifi1 returns a boolean if a field has been set.
+HasSecurity returns a boolean if a field has been set.
+
+### GetAuthentication
+
+`func (o *InlineResponse200113) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication`
+
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+
+### GetAuthenticationOk
+
+`func (o *InlineResponse200113) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication, bool)`
+
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthentication
+
+`func (o *InlineResponse200113) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication)`
+
+SetAuthentication sets Authentication field to given value.
+
+### HasAuthentication
+
+`func (o *InlineResponse200113) HasAuthentication() bool`
+
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20123Request**](InlineResponse20123Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
+**Message** | Pointer to **string** | Message related to whether or not the device was found and can be imported. | [optional] 
+**Udi** | Pointer to **string** | Device UDI certificate | [optional] 
+**DeviceId** | Pointer to **string** | Import ID from the Import operation | [optional] 
+**Status** | Pointer to **string** | The import status of the device | [optional] 
+**ConfigParams** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams.md) |  | [optional] 
 
 ## Methods
 
@@ -28,80 +29,80 @@ NewInlineResponse20123WithDefaults instantiates a new InlineResponse20123 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetMessage
 
-`func (o *InlineResponse20123) GetDisenrollmentId() string`
+`func (o *InlineResponse20123) GetMessage() string`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetMessageOk
 
-`func (o *InlineResponse20123) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse20123) GetMessageOk() (*string, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetMessage
 
-`func (o *InlineResponse20123) SetDisenrollmentId(v string)`
+`func (o *InlineResponse20123) SetMessage(v string)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetMessage sets Message field to given value.
 
-### HasDisenrollmentId
+### HasMessage
 
-`func (o *InlineResponse20123) HasDisenrollmentId() bool`
+`func (o *InlineResponse20123) HasMessage() bool`
 
-HasDisenrollmentId returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
-### GetUrl
+### GetUdi
 
-`func (o *InlineResponse20123) GetUrl() string`
+`func (o *InlineResponse20123) GetUdi() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetUdi returns the Udi field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetUdiOk
 
-`func (o *InlineResponse20123) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20123) GetUdiOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetUdiOk returns a tuple with the Udi field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetUdi
 
-`func (o *InlineResponse20123) SetUrl(v string)`
+`func (o *InlineResponse20123) SetUdi(v string)`
 
-SetUrl sets Url field to given value.
+SetUdi sets Udi field to given value.
 
-### HasUrl
+### HasUdi
 
-`func (o *InlineResponse20123) HasUrl() bool`
+`func (o *InlineResponse20123) HasUdi() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasUdi returns a boolean if a field has been set.
 
-### GetRequest
+### GetDeviceId
 
-`func (o *InlineResponse20123) GetRequest() InlineResponse20123Request`
+`func (o *InlineResponse20123) GetDeviceId() string`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetDeviceIdOk
 
-`func (o *InlineResponse20123) GetRequestOk() (*InlineResponse20123Request, bool)`
+`func (o *InlineResponse20123) GetDeviceIdOk() (*string, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetDeviceId
 
-`func (o *InlineResponse20123) SetRequest(v InlineResponse20123Request)`
+`func (o *InlineResponse20123) SetDeviceId(v string)`
 
-SetRequest sets Request field to given value.
+SetDeviceId sets DeviceId field to given value.
 
-### HasRequest
+### HasDeviceId
 
-`func (o *InlineResponse20123) HasRequest() bool`
+`func (o *InlineResponse20123) HasDeviceId() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasDeviceId returns a boolean if a field has been set.
 
 ### GetStatus
 
@@ -127,6 +128,31 @@ SetStatus sets Status field to given value.
 `func (o *InlineResponse20123) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
+
+### GetConfigParams
+
+`func (o *InlineResponse20123) GetConfigParams() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams`
+
+GetConfigParams returns the ConfigParams field if non-nil, zero value otherwise.
+
+### GetConfigParamsOk
+
+`func (o *InlineResponse20123) GetConfigParamsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams, bool)`
+
+GetConfigParamsOk returns a tuple with the ConfigParams field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfigParams
+
+`func (o *InlineResponse20123) SetConfigParams(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams)`
+
+SetConfigParams sets ConfigParams field to given value.
+
+### HasConfigParams
+
+`func (o *InlineResponse20123) HasConfigParams() bool`
+
+HasConfigParams returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

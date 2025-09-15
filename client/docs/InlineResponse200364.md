@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200364Items**](InlineResponse200364Items.md) | List of CRLs for the specified CAs | [optional] 
-**Meta** | Pointer to [**InlineResponse200364Meta**](InlineResponse200364Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200364Items**](InlineResponse200364Items.md) | The top-level property containing all power mode data. | [optional] 
 
 ## Methods
 
@@ -50,31 +49,6 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200364) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200364) GetMeta() InlineResponse200364Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200364) GetMetaOk() (*InlineResponse200364Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200364) SetMeta(v InlineResponse200364Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200364) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

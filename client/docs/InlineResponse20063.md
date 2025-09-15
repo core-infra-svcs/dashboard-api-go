@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
-**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
-**ProtectedNetworks** | Pointer to [**InlineResponse20063ProtectedNetworks**](InlineResponse20063ProtectedNetworks.md) |  | [optional] 
+**Assigned** | Pointer to [**[]InlineResponse20063Assigned**](InlineResponse20063Assigned.md) | RF Profiles | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20063WithDefaults instantiates a new InlineResponse20063 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetAssigned
 
-`func (o *InlineResponse20063) GetMode() string`
+`func (o *InlineResponse20063) GetAssigned() []InlineResponse20063Assigned`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetAssignedOk
 
-`func (o *InlineResponse20063) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20063) GetAssignedOk() (*[]InlineResponse20063Assigned, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetAssigned
 
-`func (o *InlineResponse20063) SetMode(v string)`
+`func (o *InlineResponse20063) SetAssigned(v []InlineResponse20063Assigned)`
 
-SetMode sets Mode field to given value.
+SetAssigned sets Assigned field to given value.
 
-### HasMode
+### HasAssigned
 
-`func (o *InlineResponse20063) HasMode() bool`
+`func (o *InlineResponse20063) HasAssigned() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetIdsRulesets
-
-`func (o *InlineResponse20063) GetIdsRulesets() string`
-
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
-
-### GetIdsRulesetsOk
-
-`func (o *InlineResponse20063) GetIdsRulesetsOk() (*string, bool)`
-
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdsRulesets
-
-`func (o *InlineResponse20063) SetIdsRulesets(v string)`
-
-SetIdsRulesets sets IdsRulesets field to given value.
-
-### HasIdsRulesets
-
-`func (o *InlineResponse20063) HasIdsRulesets() bool`
-
-HasIdsRulesets returns a boolean if a field has been set.
-
-### GetProtectedNetworks
-
-`func (o *InlineResponse20063) GetProtectedNetworks() InlineResponse20063ProtectedNetworks`
-
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
-
-### GetProtectedNetworksOk
-
-`func (o *InlineResponse20063) GetProtectedNetworksOk() (*InlineResponse20063ProtectedNetworks, bool)`
-
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtectedNetworks
-
-`func (o *InlineResponse20063) SetProtectedNetworks(v InlineResponse20063ProtectedNetworks)`
-
-SetProtectedNetworks sets ProtectedNetworks field to given value.
-
-### HasProtectedNetworks
-
-`func (o *InlineResponse20063) HasProtectedNetworks() bool`
-
-HasProtectedNetworks returns a boolean if a field has been set.
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

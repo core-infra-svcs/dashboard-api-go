@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Jobs** | Pointer to [**[]InlineResponse200103Jobs**](InlineResponse200103Jobs.md) | The newly created jobs | [optional] 
+**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200103WithDefaults instantiates a new InlineResponse200103 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJobs
+### GetGroup
 
-`func (o *InlineResponse200103) GetJobs() []InlineResponse200103Jobs`
+`func (o *InlineResponse200103) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
 
-GetJobs returns the Jobs field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetJobsOk
+### GetGroupOk
 
-`func (o *InlineResponse200103) GetJobsOk() (*[]InlineResponse200103Jobs, bool)`
+`func (o *InlineResponse200103) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
 
-GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJobs
+### SetGroup
 
-`func (o *InlineResponse200103) SetJobs(v []InlineResponse200103Jobs)`
+`func (o *InlineResponse200103) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
 
-SetJobs sets Jobs field to given value.
+SetGroup sets Group field to given value.
 
-### HasJobs
+### HasGroup
 
-`func (o *InlineResponse200103) HasJobs() bool`
+`func (o *InlineResponse200103) HasGroup() bool`
 
-HasJobs returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

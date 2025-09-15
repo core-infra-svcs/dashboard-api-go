@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeploymentMode** | Pointer to **string** | Deployment mode for the cellular gateways in the network. (Passthrough/Routed) | [optional] 
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
-**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
-**Subnets** | Pointer to [**[]InlineResponse20084Subnets**](InlineResponse20084Subnets.md) | List of subnets of all MGs in this network. | [optional] 
+**Id** | Pointer to **string** | The ID of the camera wireless profile. | [optional] 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**AppliedDeviceCount** | Pointer to **int32** | The count of the applied devices. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse20084WithDefaults instantiates a new InlineResponse20084 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeploymentMode
+### GetId
 
-`func (o *InlineResponse20084) GetDeploymentMode() string`
+`func (o *InlineResponse20084) GetId() string`
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDeploymentModeOk
+### GetIdOk
 
-`func (o *InlineResponse20084) GetDeploymentModeOk() (*string, bool)`
+`func (o *InlineResponse20084) GetIdOk() (*string, bool)`
 
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetId
 
-`func (o *InlineResponse20084) SetDeploymentMode(v string)`
+`func (o *InlineResponse20084) SetId(v string)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetId sets Id field to given value.
 
-### HasDeploymentMode
+### HasId
 
-`func (o *InlineResponse20084) HasDeploymentMode() bool`
+`func (o *InlineResponse20084) HasId() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCidr
+### GetName
 
-`func (o *InlineResponse20084) GetCidr() string`
+`func (o *InlineResponse20084) GetName() string`
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCidrOk
+### GetNameOk
 
-`func (o *InlineResponse20084) GetCidrOk() (*string, bool)`
+`func (o *InlineResponse20084) GetNameOk() (*string, bool)`
 
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetName
 
-`func (o *InlineResponse20084) SetCidr(v string)`
+`func (o *InlineResponse20084) SetName(v string)`
 
-SetCidr sets Cidr field to given value.
+SetName sets Name field to given value.
 
-### HasCidr
+### HasName
 
-`func (o *InlineResponse20084) HasCidr() bool`
+`func (o *InlineResponse20084) HasName() bool`
 
-HasCidr returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMask
+### GetAppliedDeviceCount
 
-`func (o *InlineResponse20084) GetMask() int32`
+`func (o *InlineResponse20084) GetAppliedDeviceCount() int32`
 
-GetMask returns the Mask field if non-nil, zero value otherwise.
+GetAppliedDeviceCount returns the AppliedDeviceCount field if non-nil, zero value otherwise.
 
-### GetMaskOk
+### GetAppliedDeviceCountOk
 
-`func (o *InlineResponse20084) GetMaskOk() (*int32, bool)`
+`func (o *InlineResponse20084) GetAppliedDeviceCountOk() (*int32, bool)`
 
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+GetAppliedDeviceCountOk returns a tuple with the AppliedDeviceCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMask
+### SetAppliedDeviceCount
 
-`func (o *InlineResponse20084) SetMask(v int32)`
+`func (o *InlineResponse20084) SetAppliedDeviceCount(v int32)`
 
-SetMask sets Mask field to given value.
+SetAppliedDeviceCount sets AppliedDeviceCount field to given value.
 
-### HasMask
+### HasAppliedDeviceCount
 
-`func (o *InlineResponse20084) HasMask() bool`
+`func (o *InlineResponse20084) HasAppliedDeviceCount() bool`
 
-HasMask returns a boolean if a field has been set.
+HasAppliedDeviceCount returns a boolean if a field has been set.
 
-### GetSubnets
+### GetSsid
 
-`func (o *InlineResponse20084) GetSubnets() []InlineResponse20084Subnets`
+`func (o *InlineResponse20084) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
 
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetSubnetsOk
+### GetSsidOk
 
-`func (o *InlineResponse20084) GetSubnetsOk() (*[]InlineResponse20084Subnets, bool)`
+`func (o *InlineResponse20084) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
 
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnets
+### SetSsid
 
-`func (o *InlineResponse20084) SetSubnets(v []InlineResponse20084Subnets)`
+`func (o *InlineResponse20084) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
 
-SetSubnets sets Subnets field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasSubnets
+### HasSsid
 
-`func (o *InlineResponse20084) HasSubnets() bool`
+`func (o *InlineResponse20084) HasSsid() bool`
 
-HasSubnets returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineResponse20084) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineResponse20084) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineResponse20084) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineResponse20084) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

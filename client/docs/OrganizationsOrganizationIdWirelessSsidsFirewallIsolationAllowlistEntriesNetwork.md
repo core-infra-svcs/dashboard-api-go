@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of network | [optional] 
+**Id** | **string** | The ID of network | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork
 
-`func NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork() *OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
+`func NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork(id string, ) *OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
 
 NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork instantiates a new OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

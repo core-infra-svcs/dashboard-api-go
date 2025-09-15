@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**CustomPerformanceClassId** | Pointer to **string** | ID of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**Number** | Pointer to **int32** | The number of the SSID. | [optional] 
+**Name** | Pointer to **string** | The name of the SSID. | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
+**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. | [optional] 
+**AuthMode** | Pointer to **string** | The association control method for the SSID. | [optional] 
+**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsRadiusServers**](NetworksNetworkIdApplianceSsidsRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. | [optional] 
+**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID. | [optional] 
+**WpaEncryptionMode** | Pointer to **string** | WPA encryption mode for the SSID. | [optional] 
+**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
 
 ## Methods
 
@@ -28,6 +32,31 @@ will change when the set of required properties is changed
 NewInlineResponse20069WithDefaults instantiates a new InlineResponse20069 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetNumber
+
+`func (o *InlineResponse20069) GetNumber() int32`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse20069) GetNumberOk() (*int32, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse20069) SetNumber(v int32)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse20069) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
 
 ### GetName
 
@@ -54,105 +83,180 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetCustomPerformanceClassId
+### GetEnabled
 
-`func (o *InlineResponse20069) GetCustomPerformanceClassId() string`
+`func (o *InlineResponse20069) GetEnabled() bool`
 
-GetCustomPerformanceClassId returns the CustomPerformanceClassId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetCustomPerformanceClassIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20069) GetCustomPerformanceClassIdOk() (*string, bool)`
+`func (o *InlineResponse20069) GetEnabledOk() (*bool, bool)`
 
-GetCustomPerformanceClassIdOk returns a tuple with the CustomPerformanceClassId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPerformanceClassId
+### SetEnabled
 
-`func (o *InlineResponse20069) SetCustomPerformanceClassId(v string)`
+`func (o *InlineResponse20069) SetEnabled(v bool)`
 
-SetCustomPerformanceClassId sets CustomPerformanceClassId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasCustomPerformanceClassId
+### HasEnabled
 
-`func (o *InlineResponse20069) HasCustomPerformanceClassId() bool`
+`func (o *InlineResponse20069) HasEnabled() bool`
 
-HasCustomPerformanceClassId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMaxLatency
+### GetDefaultVlanId
 
-`func (o *InlineResponse20069) GetMaxLatency() int32`
+`func (o *InlineResponse20069) GetDefaultVlanId() int32`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetDefaultVlanIdOk
 
-`func (o *InlineResponse20069) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineResponse20069) GetDefaultVlanIdOk() (*int32, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetDefaultVlanId
 
-`func (o *InlineResponse20069) SetMaxLatency(v int32)`
+`func (o *InlineResponse20069) SetDefaultVlanId(v int32)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetDefaultVlanId sets DefaultVlanId field to given value.
 
-### HasMaxLatency
+### HasDefaultVlanId
 
-`func (o *InlineResponse20069) HasMaxLatency() bool`
+`func (o *InlineResponse20069) HasDefaultVlanId() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasDefaultVlanId returns a boolean if a field has been set.
 
-### GetMaxJitter
+### GetAuthMode
 
-`func (o *InlineResponse20069) GetMaxJitter() int32`
+`func (o *InlineResponse20069) GetAuthMode() string`
 
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
 
-### GetMaxJitterOk
+### GetAuthModeOk
 
-`func (o *InlineResponse20069) GetMaxJitterOk() (*int32, bool)`
+`func (o *InlineResponse20069) GetAuthModeOk() (*string, bool)`
 
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetAuthMode
 
-`func (o *InlineResponse20069) SetMaxJitter(v int32)`
+`func (o *InlineResponse20069) SetAuthMode(v string)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetAuthMode sets AuthMode field to given value.
 
-### HasMaxJitter
+### HasAuthMode
 
-`func (o *InlineResponse20069) HasMaxJitter() bool`
+`func (o *InlineResponse20069) HasAuthMode() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
+HasAuthMode returns a boolean if a field has been set.
 
-### GetMaxLossPercentage
+### GetRadiusServers
 
-`func (o *InlineResponse20069) GetMaxLossPercentage() int32`
+`func (o *InlineResponse20069) GetRadiusServers() []NetworksNetworkIdApplianceSsidsRadiusServers`
 
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
 
-### GetMaxLossPercentageOk
+### GetRadiusServersOk
 
-`func (o *InlineResponse20069) GetMaxLossPercentageOk() (*int32, bool)`
+`func (o *InlineResponse20069) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsRadiusServers, bool)`
 
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLossPercentage
+### SetRadiusServers
 
-`func (o *InlineResponse20069) SetMaxLossPercentage(v int32)`
+`func (o *InlineResponse20069) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsRadiusServers)`
 
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
+SetRadiusServers sets RadiusServers field to given value.
 
-### HasMaxLossPercentage
+### HasRadiusServers
 
-`func (o *InlineResponse20069) HasMaxLossPercentage() bool`
+`func (o *InlineResponse20069) HasRadiusServers() bool`
 
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasRadiusServers returns a boolean if a field has been set.
+
+### GetEncryptionMode
+
+`func (o *InlineResponse20069) GetEncryptionMode() string`
+
+GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
+
+### GetEncryptionModeOk
+
+`func (o *InlineResponse20069) GetEncryptionModeOk() (*string, bool)`
+
+GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEncryptionMode
+
+`func (o *InlineResponse20069) SetEncryptionMode(v string)`
+
+SetEncryptionMode sets EncryptionMode field to given value.
+
+### HasEncryptionMode
+
+`func (o *InlineResponse20069) HasEncryptionMode() bool`
+
+HasEncryptionMode returns a boolean if a field has been set.
+
+### GetWpaEncryptionMode
+
+`func (o *InlineResponse20069) GetWpaEncryptionMode() string`
+
+GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
+
+### GetWpaEncryptionModeOk
+
+`func (o *InlineResponse20069) GetWpaEncryptionModeOk() (*string, bool)`
+
+GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWpaEncryptionMode
+
+`func (o *InlineResponse20069) SetWpaEncryptionMode(v string)`
+
+SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
+
+### HasWpaEncryptionMode
+
+`func (o *InlineResponse20069) HasWpaEncryptionMode() bool`
+
+HasWpaEncryptionMode returns a boolean if a field has been set.
+
+### GetVisible
+
+`func (o *InlineResponse20069) GetVisible() bool`
+
+GetVisible returns the Visible field if non-nil, zero value otherwise.
+
+### GetVisibleOk
+
+`func (o *InlineResponse20069) GetVisibleOk() (*bool, bool)`
+
+GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisible
+
+`func (o *InlineResponse20069) SetVisible(v bool)`
+
+SetVisible sets Visible field to given value.
+
+### HasVisible
+
+`func (o *InlineResponse20069) HasVisible() bool`
+
+HasVisible returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

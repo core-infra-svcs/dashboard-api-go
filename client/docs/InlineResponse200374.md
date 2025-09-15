@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20123Request**](InlineResponse20123Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
-**DoorLocks** | Pointer to [**[]InlineResponse200374DoorLocks**](InlineResponse200374DoorLocks.md) | Door locks | [optional] 
+**Items** | Pointer to [**[]InlineResponse200374Items**](InlineResponse200374Items.md) | L2 isolation allowlist items | [optional] 
+**Meta** | Pointer to [**InlineResponse200226Meta**](InlineResponse200226Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200374WithDefaults instantiates a new InlineResponse200374 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetItems
 
-`func (o *InlineResponse200374) GetDisenrollmentId() string`
+`func (o *InlineResponse200374) GetItems() []InlineResponse200374Items`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200374) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse200374) GetItemsOk() (*[]InlineResponse200374Items, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetItems
 
-`func (o *InlineResponse200374) SetDisenrollmentId(v string)`
+`func (o *InlineResponse200374) SetItems(v []InlineResponse200374Items)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetItems sets Items field to given value.
 
-### HasDisenrollmentId
+### HasItems
 
-`func (o *InlineResponse200374) HasDisenrollmentId() bool`
+`func (o *InlineResponse200374) HasItems() bool`
 
-HasDisenrollmentId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetUrl
+### GetMeta
 
-`func (o *InlineResponse200374) GetUrl() string`
+`func (o *InlineResponse200374) GetMeta() InlineResponse200226Meta`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetMetaOk
 
-`func (o *InlineResponse200374) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200374) GetMetaOk() (*InlineResponse200226Meta, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetMeta
 
-`func (o *InlineResponse200374) SetUrl(v string)`
+`func (o *InlineResponse200374) SetMeta(v InlineResponse200226Meta)`
 
-SetUrl sets Url field to given value.
+SetMeta sets Meta field to given value.
 
-### HasUrl
+### HasMeta
 
-`func (o *InlineResponse200374) HasUrl() bool`
+`func (o *InlineResponse200374) HasMeta() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineResponse200374) GetRequest() InlineResponse20123Request`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineResponse200374) GetRequestOk() (*InlineResponse20123Request, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineResponse200374) SetRequest(v InlineResponse20123Request)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineResponse200374) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200374) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200374) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200374) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200374) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetDoorLocks
-
-`func (o *InlineResponse200374) GetDoorLocks() []InlineResponse200374DoorLocks`
-
-GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
-
-### GetDoorLocksOk
-
-`func (o *InlineResponse200374) GetDoorLocksOk() (*[]InlineResponse200374DoorLocks, bool)`
-
-GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDoorLocks
-
-`func (o *InlineResponse200374) SetDoorLocks(v []InlineResponse200374DoorLocks)`
-
-SetDoorLocks sets DoorLocks field to given value.
-
-### HasDoorLocks
-
-`func (o *InlineResponse200374) HasDoorLocks() bool`
-
-HasDoorLocks returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

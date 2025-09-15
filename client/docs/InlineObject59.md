@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences.md) | policies with respective traffic filters for an MX network | [optional] 
+**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
+**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
+**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineObject59WithDefaults instantiates a new InlineObject59 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWanTrafficUplinkPreferences
+### GetName
 
-`func (o *InlineObject59) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences`
+`func (o *InlineObject59) GetName() string`
 
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWanTrafficUplinkPreferencesOk
+### GetNameOk
 
-`func (o *InlineObject59) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences, bool)`
+`func (o *InlineObject59) GetNameOk() (*string, bool)`
 
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanTrafficUplinkPreferences
+### SetName
 
-`func (o *InlineObject59) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences)`
+`func (o *InlineObject59) SetName(v string)`
 
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+SetName sets Name field to given value.
 
-### HasWanTrafficUplinkPreferences
+### HasName
 
-`func (o *InlineObject59) HasWanTrafficUplinkPreferences() bool`
+`func (o *InlineObject59) HasName() bool`
 
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetTwoFourGhzSettings
+
+`func (o *InlineObject59) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings`
+
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+
+### GetTwoFourGhzSettingsOk
+
+`func (o *InlineObject59) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
+
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTwoFourGhzSettings
+
+`func (o *InlineObject59) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings)`
+
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+
+### HasTwoFourGhzSettings
+
+`func (o *InlineObject59) HasTwoFourGhzSettings() bool`
+
+HasTwoFourGhzSettings returns a boolean if a field has been set.
+
+### GetFiveGhzSettings
+
+`func (o *InlineObject59) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings`
+
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+
+### GetFiveGhzSettingsOk
+
+`func (o *InlineObject59) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings, bool)`
+
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFiveGhzSettings
+
+`func (o *InlineObject59) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings)`
+
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
+
+### HasFiveGhzSettings
+
+`func (o *InlineObject59) HasFiveGhzSettings() bool`
+
+HasFiveGhzSettings returns a boolean if a field has been set.
+
+### GetPerSsidSettings
+
+`func (o *InlineObject59) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
+
+GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
+
+### GetPerSsidSettingsOk
+
+`func (o *InlineObject59) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
+
+GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPerSsidSettings
+
+`func (o *InlineObject59) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
+
+SetPerSsidSettings sets PerSsidSettings field to given value.
+
+### HasPerSsidSettings
+
+`func (o *InlineObject59) HasPerSsidSettings() bool`
+
+HasPerSsidSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

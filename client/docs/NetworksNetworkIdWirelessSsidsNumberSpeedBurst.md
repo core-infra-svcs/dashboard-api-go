@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time. | [optional] 
+**Enabled** | **bool** | Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time. | 
 
 ## Methods
 
 ### NewNetworksNetworkIdWirelessSsidsNumberSpeedBurst
 
-`func NewNetworksNetworkIdWirelessSsidsNumberSpeedBurst() *NetworksNetworkIdWirelessSsidsNumberSpeedBurst`
+`func NewNetworksNetworkIdWirelessSsidsNumberSpeedBurst(enabled bool, ) *NetworksNetworkIdWirelessSsidsNumberSpeedBurst`
 
 NewNetworksNetworkIdWirelessSsidsNumberSpeedBurst instantiates a new NetworksNetworkIdWirelessSsidsNumberSpeedBurst object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
-
-`func (o *NetworksNetworkIdWirelessSsidsNumberSpeedBurst) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

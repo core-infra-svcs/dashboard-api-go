@@ -4,12 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Device** | Pointer to [**InlineResponse200256Device**](InlineResponse200256Device.md) |  | [optional] 
-**Active** | Pointer to **bool** | Whether eSIM is currently active SIM on Device | [optional] 
-**Eid** | Pointer to **string** | eSIM EID | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Last update of eSIM | [optional] 
 **Network** | Pointer to [**InlineResponse200256Network**](InlineResponse200256Network.md) |  | [optional] 
-**Profiles** | Pointer to [**[]InlineResponse200256Profiles**](InlineResponse200256Profiles.md) | eSIM Profile Information | [optional] 
+**ClusterId** | Pointer to **string** | ID of the cluster | [optional] 
+**Name** | Pointer to **string** | Name of the cluster | [optional] 
+**Uplinks** | Pointer to [**[]InlineResponse20112Uplinks**](InlineResponse20112Uplinks.md) | Uplink settings of the cluster | [optional] 
+**Tunnels** | Pointer to [**[]InlineResponse20112Tunnels**](InlineResponse20112Tunnels.md) | Tunnel settings of the cluster | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20112Nameservers**](InlineResponse20112Nameservers.md) |  | [optional] 
+**PortChannels** | Pointer to [**[]InlineResponse20112PortChannels**](InlineResponse20112PortChannels.md) | Port channel settings of the cluster | [optional] 
+**Devices** | Pointer to [**[]InlineResponse20112Devices**](InlineResponse20112Devices.md) | Devices in the cluster | [optional] 
+**Notes** | Pointer to **string** | Notes about cluster | [optional] 
+**Url** | Pointer to **string** | URL to display cluster details | [optional] 
 
 ## Methods
 
@@ -29,106 +33,6 @@ will change when the set of required properties is changed
 NewInlineResponse200256ItemsWithDefaults instantiates a new InlineResponse200256Items object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetDevice
-
-`func (o *InlineResponse200256Items) GetDevice() InlineResponse200256Device`
-
-GetDevice returns the Device field if non-nil, zero value otherwise.
-
-### GetDeviceOk
-
-`func (o *InlineResponse200256Items) GetDeviceOk() (*InlineResponse200256Device, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevice
-
-`func (o *InlineResponse200256Items) SetDevice(v InlineResponse200256Device)`
-
-SetDevice sets Device field to given value.
-
-### HasDevice
-
-`func (o *InlineResponse200256Items) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
-
-### GetActive
-
-`func (o *InlineResponse200256Items) GetActive() bool`
-
-GetActive returns the Active field if non-nil, zero value otherwise.
-
-### GetActiveOk
-
-`func (o *InlineResponse200256Items) GetActiveOk() (*bool, bool)`
-
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActive
-
-`func (o *InlineResponse200256Items) SetActive(v bool)`
-
-SetActive sets Active field to given value.
-
-### HasActive
-
-`func (o *InlineResponse200256Items) HasActive() bool`
-
-HasActive returns a boolean if a field has been set.
-
-### GetEid
-
-`func (o *InlineResponse200256Items) GetEid() string`
-
-GetEid returns the Eid field if non-nil, zero value otherwise.
-
-### GetEidOk
-
-`func (o *InlineResponse200256Items) GetEidOk() (*string, bool)`
-
-GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEid
-
-`func (o *InlineResponse200256Items) SetEid(v string)`
-
-SetEid sets Eid field to given value.
-
-### HasEid
-
-`func (o *InlineResponse200256Items) HasEid() bool`
-
-HasEid returns a boolean if a field has been set.
-
-### GetLastUpdatedAt
-
-`func (o *InlineResponse200256Items) GetLastUpdatedAt() string`
-
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
-
-### GetLastUpdatedAtOk
-
-`func (o *InlineResponse200256Items) GetLastUpdatedAtOk() (*string, bool)`
-
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastUpdatedAt
-
-`func (o *InlineResponse200256Items) SetLastUpdatedAt(v string)`
-
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
-
-### HasLastUpdatedAt
-
-`func (o *InlineResponse200256Items) HasLastUpdatedAt() bool`
-
-HasLastUpdatedAt returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -155,30 +59,230 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetProfiles
+### GetClusterId
 
-`func (o *InlineResponse200256Items) GetProfiles() []InlineResponse200256Profiles`
+`func (o *InlineResponse200256Items) GetClusterId() string`
 
-GetProfiles returns the Profiles field if non-nil, zero value otherwise.
+GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
 
-### GetProfilesOk
+### GetClusterIdOk
 
-`func (o *InlineResponse200256Items) GetProfilesOk() (*[]InlineResponse200256Profiles, bool)`
+`func (o *InlineResponse200256Items) GetClusterIdOk() (*string, bool)`
 
-GetProfilesOk returns a tuple with the Profiles field if it's non-nil, zero value otherwise
+GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfiles
+### SetClusterId
 
-`func (o *InlineResponse200256Items) SetProfiles(v []InlineResponse200256Profiles)`
+`func (o *InlineResponse200256Items) SetClusterId(v string)`
 
-SetProfiles sets Profiles field to given value.
+SetClusterId sets ClusterId field to given value.
 
-### HasProfiles
+### HasClusterId
 
-`func (o *InlineResponse200256Items) HasProfiles() bool`
+`func (o *InlineResponse200256Items) HasClusterId() bool`
 
-HasProfiles returns a boolean if a field has been set.
+HasClusterId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200256Items) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200256Items) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200256Items) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200256Items) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200256Items) GetUplinks() []InlineResponse20112Uplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200256Items) GetUplinksOk() (*[]InlineResponse20112Uplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200256Items) SetUplinks(v []InlineResponse20112Uplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200256Items) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
+
+### GetTunnels
+
+`func (o *InlineResponse200256Items) GetTunnels() []InlineResponse20112Tunnels`
+
+GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
+
+### GetTunnelsOk
+
+`func (o *InlineResponse200256Items) GetTunnelsOk() (*[]InlineResponse20112Tunnels, bool)`
+
+GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTunnels
+
+`func (o *InlineResponse200256Items) SetTunnels(v []InlineResponse20112Tunnels)`
+
+SetTunnels sets Tunnels field to given value.
+
+### HasTunnels
+
+`func (o *InlineResponse200256Items) HasTunnels() bool`
+
+HasTunnels returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *InlineResponse200256Items) GetNameservers() InlineResponse20112Nameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineResponse200256Items) GetNameserversOk() (*InlineResponse20112Nameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineResponse200256Items) SetNameservers(v InlineResponse20112Nameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *InlineResponse200256Items) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
+
+### GetPortChannels
+
+`func (o *InlineResponse200256Items) GetPortChannels() []InlineResponse20112PortChannels`
+
+GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
+
+### GetPortChannelsOk
+
+`func (o *InlineResponse200256Items) GetPortChannelsOk() (*[]InlineResponse20112PortChannels, bool)`
+
+GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannels
+
+`func (o *InlineResponse200256Items) SetPortChannels(v []InlineResponse20112PortChannels)`
+
+SetPortChannels sets PortChannels field to given value.
+
+### HasPortChannels
+
+`func (o *InlineResponse200256Items) HasPortChannels() bool`
+
+HasPortChannels returns a boolean if a field has been set.
+
+### GetDevices
+
+`func (o *InlineResponse200256Items) GetDevices() []InlineResponse20112Devices`
+
+GetDevices returns the Devices field if non-nil, zero value otherwise.
+
+### GetDevicesOk
+
+`func (o *InlineResponse200256Items) GetDevicesOk() (*[]InlineResponse20112Devices, bool)`
+
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevices
+
+`func (o *InlineResponse200256Items) SetDevices(v []InlineResponse20112Devices)`
+
+SetDevices sets Devices field to given value.
+
+### HasDevices
+
+`func (o *InlineResponse200256Items) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse200256Items) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse200256Items) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse200256Items) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse200256Items) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200256Items) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200256Items) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200256Items) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200256Items) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

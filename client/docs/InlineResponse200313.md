@@ -4,10 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
-**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Id** | Pointer to **string** | Policy object ID | [optional] 
+**Name** | Pointer to **string** | Name of policy object (alphanumeric, space, dash, or underscore characters only). | [optional] 
+**Category** | Pointer to **string** | Category of a policy object (one of: adaptivePolicy, network) | [optional] 
+**Type** | Pointer to **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to. | [optional] 
+**NetworkIds** | Pointer to **[]string** | The IDs of the networks that use the policy object. | [optional] 
 
 ## Methods
 
@@ -28,105 +33,230 @@ NewInlineResponse200313WithDefaults instantiates a new InlineResponse200313 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdpId
+### GetId
 
-`func (o *InlineResponse200313) GetIdpId() string`
+`func (o *InlineResponse200313) GetId() string`
 
-GetIdpId returns the IdpId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetIdpIdOk
+### GetIdOk
 
-`func (o *InlineResponse200313) GetIdpIdOk() (*string, bool)`
+`func (o *InlineResponse200313) GetIdOk() (*string, bool)`
 
-GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdpId
+### SetId
 
-`func (o *InlineResponse200313) SetIdpId(v string)`
+`func (o *InlineResponse200313) SetId(v string)`
 
-SetIdpId sets IdpId field to given value.
+SetId sets Id field to given value.
 
-### HasIdpId
+### HasId
 
-`func (o *InlineResponse200313) HasIdpId() bool`
+`func (o *InlineResponse200313) HasId() bool`
 
-HasIdpId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetConsumerUrl
+### GetName
 
-`func (o *InlineResponse200313) GetConsumerUrl() string`
+`func (o *InlineResponse200313) GetName() string`
 
-GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConsumerUrlOk
+### GetNameOk
 
-`func (o *InlineResponse200313) GetConsumerUrlOk() (*string, bool)`
+`func (o *InlineResponse200313) GetNameOk() (*string, bool)`
 
-GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConsumerUrl
+### SetName
 
-`func (o *InlineResponse200313) SetConsumerUrl(v string)`
+`func (o *InlineResponse200313) SetName(v string)`
 
-SetConsumerUrl sets ConsumerUrl field to given value.
+SetName sets Name field to given value.
 
-### HasConsumerUrl
+### HasName
 
-`func (o *InlineResponse200313) HasConsumerUrl() bool`
+`func (o *InlineResponse200313) HasName() bool`
 
-HasConsumerUrl returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetX509certSha1Fingerprint
+### GetCategory
 
-`func (o *InlineResponse200313) GetX509certSha1Fingerprint() string`
+`func (o *InlineResponse200313) GetCategory() string`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetCategoryOk
 
-`func (o *InlineResponse200313) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineResponse200313) GetCategoryOk() (*string, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetCategory
 
-`func (o *InlineResponse200313) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineResponse200313) SetCategory(v string)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetCategory sets Category field to given value.
 
-### HasX509certSha1Fingerprint
+### HasCategory
 
-`func (o *InlineResponse200313) HasX509certSha1Fingerprint() bool`
+`func (o *InlineResponse200313) HasCategory() bool`
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetSloLogoutUrl
+### GetType
 
-`func (o *InlineResponse200313) GetSloLogoutUrl() string`
+`func (o *InlineResponse200313) GetType() string`
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetSloLogoutUrlOk
+### GetTypeOk
 
-`func (o *InlineResponse200313) GetSloLogoutUrlOk() (*string, bool)`
+`func (o *InlineResponse200313) GetTypeOk() (*string, bool)`
 
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetType
 
-`func (o *InlineResponse200313) SetSloLogoutUrl(v string)`
+`func (o *InlineResponse200313) SetType(v string)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetType sets Type field to given value.
 
-### HasSloLogoutUrl
+### HasType
 
-`func (o *InlineResponse200313) HasSloLogoutUrl() bool`
+`func (o *InlineResponse200313) HasType() bool`
 
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetCidr
+
+`func (o *InlineResponse200313) GetCidr() string`
+
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
+
+### GetCidrOk
+
+`func (o *InlineResponse200313) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCidr
+
+`func (o *InlineResponse200313) SetCidr(v string)`
+
+SetCidr sets Cidr field to given value.
+
+### HasCidr
+
+`func (o *InlineResponse200313) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200313) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200313) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200313) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200313) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200313) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200313) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200313) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200313) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineResponse200313) GetGroupIds() []string`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineResponse200313) GetGroupIdsOk() (*[]string, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineResponse200313) SetGroupIds(v []string)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineResponse200313) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
+
+### GetNetworkIds
+
+`func (o *InlineResponse200313) GetNetworkIds() []string`
+
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+
+### GetNetworkIdsOk
+
+`func (o *InlineResponse200313) GetNetworkIdsOk() (*[]string, bool)`
+
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkIds
+
+`func (o *InlineResponse200313) SetNetworkIds(v []string)`
+
+SetNetworkIds sets NetworkIds field to given value.
+
+### HasNetworkIds
+
+`func (o *InlineResponse200313) HasNetworkIds() bool`
+
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

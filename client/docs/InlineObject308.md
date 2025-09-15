@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Description** | Pointer to **string** | The description of mac address | [optional] 
+**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject308
 
-`func NewInlineObject308(enrolled bool, ) *InlineObject308`
+`func NewInlineObject308() *InlineObject308`
 
 NewInlineObject308 instantiates a new InlineObject308 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject308WithDefaults instantiates a new InlineObject308 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetDescription
 
-`func (o *InlineObject308) GetEnrolled() bool`
+`func (o *InlineObject308) GetDescription() string`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetDescriptionOk
 
-`func (o *InlineObject308) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject308) GetDescriptionOk() (*string, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetDescription
 
-`func (o *InlineObject308) SetEnrolled(v bool)`
+`func (o *InlineObject308) SetDescription(v string)`
 
-SetEnrolled sets Enrolled field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
 
-### GetChannel
+`func (o *InlineObject308) HasDescription() bool`
 
-`func (o *InlineObject308) GetChannel() string`
+HasDescription returns a boolean if a field has been set.
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+### GetClient
 
-### GetChannelOk
+`func (o *InlineObject308) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
 
-`func (o *InlineObject308) GetChannelOk() (*string, bool)`
+GetClient returns the Client field if non-nil, zero value otherwise.
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+### GetClientOk
+
+`func (o *InlineObject308) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetClient
 
-`func (o *InlineObject308) SetChannel(v string)`
+`func (o *InlineObject308) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
 
-SetChannel sets Channel field to given value.
+SetClient sets Client field to given value.
 
-### HasChannel
+### HasClient
 
-`func (o *InlineObject308) HasChannel() bool`
+`func (o *InlineObject308) HasClient() bool`
 
-HasChannel returns a boolean if a field has been set.
+HasClient returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200388Intervals**](InlineResponse200388Intervals.md) | Time interval snapshots of CPU usage data of the wireless LAN controller | [optional] 
+**Intervals** | Pointer to [**[]InlineResponse200388Intervals**](InlineResponse200388Intervals.md) | Time interval snapshots of interfaces usage data of the wireless LAN controller | [optional] 
 
 ## Methods
 

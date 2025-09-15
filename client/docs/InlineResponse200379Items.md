@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse200379Interfaces**](InlineResponse200379Interfaces.md) | layer 2 interfaces belongs to the wireless LAN controller | [optional] 
+**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
+**Network** | Pointer to [**InlineResponse200379Network**](InlineResponse200379Network.md) |  | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200379Readings**](InlineResponse200379Readings.md) | Overview history of a wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetNetwork
 
-`func (o *InlineResponse200379Items) GetInterfaces() []InlineResponse200379Interfaces`
+`func (o *InlineResponse200379Items) GetNetwork() InlineResponse200379Network`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetNetworkOk
 
-`func (o *InlineResponse200379Items) GetInterfacesOk() (*[]InlineResponse200379Interfaces, bool)`
+`func (o *InlineResponse200379Items) GetNetworkOk() (*InlineResponse200379Network, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetNetwork
 
-`func (o *InlineResponse200379Items) SetInterfaces(v []InlineResponse200379Interfaces)`
+`func (o *InlineResponse200379Items) SetNetwork(v InlineResponse200379Network)`
 
-SetInterfaces sets Interfaces field to given value.
+SetNetwork sets Network field to given value.
 
-### HasInterfaces
+### HasNetwork
 
-`func (o *InlineResponse200379Items) HasInterfaces() bool`
+`func (o *InlineResponse200379Items) HasNetwork() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
+
+### GetReadings
+
+`func (o *InlineResponse200379Items) GetReadings() []InlineResponse200379Readings`
+
+GetReadings returns the Readings field if non-nil, zero value otherwise.
+
+### GetReadingsOk
+
+`func (o *InlineResponse200379Items) GetReadingsOk() (*[]InlineResponse200379Readings, bool)`
+
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReadings
+
+`func (o *InlineResponse200379Items) SetReadings(v []InlineResponse200379Readings)`
+
+SetReadings sets Readings field to given value.
+
+### HasReadings
+
+`func (o *InlineResponse200379Items) HasReadings() bool`
+
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

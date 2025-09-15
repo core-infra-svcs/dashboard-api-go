@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether 802.11r is enabled or not. | [optional] 
+**Enabled** | **bool** | Whether 802.11r is enabled or not. | 
 **Adaptive** | Pointer to **bool** | (Optional) Whether 802.11r is adaptive or not. | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdWirelessSsidsNumberDot11r
 
-`func NewNetworksNetworkIdWirelessSsidsNumberDot11r() *NetworksNetworkIdWirelessSsidsNumberDot11r`
+`func NewNetworksNetworkIdWirelessSsidsNumberDot11r(enabled bool, ) *NetworksNetworkIdWirelessSsidsNumberDot11r`
 
 NewNetworksNetworkIdWirelessSsidsNumberDot11r instantiates a new NetworksNetworkIdWirelessSsidsNumberDot11r object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
-
-`func (o *NetworksNetworkIdWirelessSsidsNumberDot11r) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 ### GetAdaptive
 

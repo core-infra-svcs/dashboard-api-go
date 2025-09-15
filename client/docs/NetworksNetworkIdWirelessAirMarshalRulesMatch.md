@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | The type of match. | [optional] 
-**String** | Pointer to **string** | The string used to match. | [optional] 
+**Type** | **string** | The type of match. | 
+**String** | **string** | The string used to match. | 
 
 ## Methods
 
 ### NewNetworksNetworkIdWirelessAirMarshalRulesMatch
 
-`func NewNetworksNetworkIdWirelessAirMarshalRulesMatch() *NetworksNetworkIdWirelessAirMarshalRulesMatch`
+`func NewNetworksNetworkIdWirelessAirMarshalRulesMatch(type_ string, string_ string, ) *NetworksNetworkIdWirelessAirMarshalRulesMatch`
 
 NewNetworksNetworkIdWirelessAirMarshalRulesMatch instantiates a new NetworksNetworkIdWirelessAirMarshalRulesMatch object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *NetworksNetworkIdWirelessAirMarshalRulesMatch) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetString
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetString sets String field to given value.
 
-### HasString
-
-`func (o *NetworksNetworkIdWirelessAirMarshalRulesMatch) HasString() bool`
-
-HasString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

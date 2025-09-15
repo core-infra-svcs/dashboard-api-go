@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse20072**](InlineResponse20072.md) | VPN exclusion rules by network | [optional] 
+**Items** | Pointer to [**[]InlineResponse200226Items**](InlineResponse200226Items.md) | List of split DNS profile assignment | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200231) GetItems() []InlineResponse20072`
+`func (o *InlineResponse200231) GetItems() []InlineResponse200226Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200231) GetItemsOk() (*[]InlineResponse20072, bool)`
+`func (o *InlineResponse200231) GetItemsOk() (*[]InlineResponse200226Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200231) SetItems(v []InlineResponse20072)`
+`func (o *InlineResponse200231) SetItems(v []InlineResponse200226Items)`
 
 SetItems sets Items field to given value.
 

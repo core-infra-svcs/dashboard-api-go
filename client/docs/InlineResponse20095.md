@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
-**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
-**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
-**Events** | Pointer to [**[]InlineResponse20095Events**](InlineResponse20095Events.md) | An array of events that took place in the network. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
+**Errors** | Pointer to [**[]InlineResponse20095Errors**](InlineResponse20095Errors.md) | Errors for devices that were not added | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse20095WithDefaults instantiates a new InlineResponse20095 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetSerials
 
-`func (o *InlineResponse20095) GetMessage() string`
+`func (o *InlineResponse20095) GetSerials() []string`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetSerialsOk
 
-`func (o *InlineResponse20095) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse20095) GetSerialsOk() (*[]string, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetSerials
 
-`func (o *InlineResponse20095) SetMessage(v string)`
+`func (o *InlineResponse20095) SetSerials(v []string)`
 
-SetMessage sets Message field to given value.
+SetSerials sets Serials field to given value.
 
-### HasMessage
+### HasSerials
 
-`func (o *InlineResponse20095) HasMessage() bool`
+`func (o *InlineResponse20095) HasSerials() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetPageStartAt
+### GetErrors
 
-`func (o *InlineResponse20095) GetPageStartAt() string`
+`func (o *InlineResponse20095) GetErrors() []InlineResponse20095Errors`
 
-GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetPageStartAtOk
+### GetErrorsOk
 
-`func (o *InlineResponse20095) GetPageStartAtOk() (*string, bool)`
+`func (o *InlineResponse20095) GetErrorsOk() (*[]InlineResponse20095Errors, bool)`
 
-GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageStartAt
+### SetErrors
 
-`func (o *InlineResponse20095) SetPageStartAt(v string)`
+`func (o *InlineResponse20095) SetErrors(v []InlineResponse20095Errors)`
 
-SetPageStartAt sets PageStartAt field to given value.
+SetErrors sets Errors field to given value.
 
-### HasPageStartAt
+### HasErrors
 
-`func (o *InlineResponse20095) HasPageStartAt() bool`
+`func (o *InlineResponse20095) HasErrors() bool`
 
-HasPageStartAt returns a boolean if a field has been set.
-
-### GetPageEndAt
-
-`func (o *InlineResponse20095) GetPageEndAt() string`
-
-GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
-
-### GetPageEndAtOk
-
-`func (o *InlineResponse20095) GetPageEndAtOk() (*string, bool)`
-
-GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPageEndAt
-
-`func (o *InlineResponse20095) SetPageEndAt(v string)`
-
-SetPageEndAt sets PageEndAt field to given value.
-
-### HasPageEndAt
-
-`func (o *InlineResponse20095) HasPageEndAt() bool`
-
-HasPageEndAt returns a boolean if a field has been set.
-
-### GetEvents
-
-`func (o *InlineResponse20095) GetEvents() []InlineResponse20095Events`
-
-GetEvents returns the Events field if non-nil, zero value otherwise.
-
-### GetEventsOk
-
-`func (o *InlineResponse20095) GetEventsOk() (*[]InlineResponse20095Events, bool)`
-
-GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEvents
-
-`func (o *InlineResponse20095) SetEvents(v []InlineResponse20095Events)`
-
-SetEvents sets Events field to given value.
-
-### HasEvents
-
-`func (o *InlineResponse20095) HasEvents() bool`
-
-HasEvents returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

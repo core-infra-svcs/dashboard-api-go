@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Network ID for this eSIM | [optional] 
+**Id** | Pointer to **string** | Network ID | [optional] 
 
 ## Methods
 

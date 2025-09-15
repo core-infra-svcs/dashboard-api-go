@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
-**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
-**PowerExceptions** | Pointer to [**[]InlineResponse200167PowerExceptions**](InlineResponse200167PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
-**UplinkClientSampling** | Pointer to [**InlineResponse200167UplinkClientSampling**](InlineResponse200167UplinkClientSampling.md) |  | [optional] 
-**MacBlocklist** | Pointer to [**InlineResponse200167MacBlocklist**](InlineResponse200167MacBlocklist.md) |  | [optional] 
+**RendezvousPointId** | Pointer to **string** | The id. | [optional] 
+**Serial** | Pointer to **string** | The serial. | [optional] 
+**InterfaceName** | Pointer to **string** | The name of the interface to use. | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address of the interface to use. | [optional] 
+**MulticastGroup** | Pointer to **string** | &#39;Any&#39;, or the IP address of a multicast group. | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200167WithDefaults instantiates a new InlineResponse200167 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlan
+### GetRendezvousPointId
 
-`func (o *InlineResponse200167) GetVlan() int32`
+`func (o *InlineResponse200167) GetRendezvousPointId() string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetRendezvousPointId returns the RendezvousPointId field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetRendezvousPointIdOk
 
-`func (o *InlineResponse200167) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200167) GetRendezvousPointIdOk() (*string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetRendezvousPointIdOk returns a tuple with the RendezvousPointId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetRendezvousPointId
 
-`func (o *InlineResponse200167) SetVlan(v int32)`
+`func (o *InlineResponse200167) SetRendezvousPointId(v string)`
 
-SetVlan sets Vlan field to given value.
+SetRendezvousPointId sets RendezvousPointId field to given value.
 
-### HasVlan
+### HasRendezvousPointId
 
-`func (o *InlineResponse200167) HasVlan() bool`
+`func (o *InlineResponse200167) HasRendezvousPointId() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasRendezvousPointId returns a boolean if a field has been set.
 
-### GetUseCombinedPower
+### GetSerial
 
-`func (o *InlineResponse200167) GetUseCombinedPower() bool`
+`func (o *InlineResponse200167) GetSerial() string`
 
-GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetUseCombinedPowerOk
+### GetSerialOk
 
-`func (o *InlineResponse200167) GetUseCombinedPowerOk() (*bool, bool)`
+`func (o *InlineResponse200167) GetSerialOk() (*string, bool)`
 
-GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseCombinedPower
+### SetSerial
 
-`func (o *InlineResponse200167) SetUseCombinedPower(v bool)`
+`func (o *InlineResponse200167) SetSerial(v string)`
 
-SetUseCombinedPower sets UseCombinedPower field to given value.
+SetSerial sets Serial field to given value.
 
-### HasUseCombinedPower
+### HasSerial
 
-`func (o *InlineResponse200167) HasUseCombinedPower() bool`
+`func (o *InlineResponse200167) HasSerial() bool`
 
-HasUseCombinedPower returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetPowerExceptions
+### GetInterfaceName
 
-`func (o *InlineResponse200167) GetPowerExceptions() []InlineResponse200167PowerExceptions`
+`func (o *InlineResponse200167) GetInterfaceName() string`
 
-GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
+GetInterfaceName returns the InterfaceName field if non-nil, zero value otherwise.
 
-### GetPowerExceptionsOk
+### GetInterfaceNameOk
 
-`func (o *InlineResponse200167) GetPowerExceptionsOk() (*[]InlineResponse200167PowerExceptions, bool)`
+`func (o *InlineResponse200167) GetInterfaceNameOk() (*string, bool)`
 
-GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
+GetInterfaceNameOk returns a tuple with the InterfaceName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPowerExceptions
+### SetInterfaceName
 
-`func (o *InlineResponse200167) SetPowerExceptions(v []InlineResponse200167PowerExceptions)`
+`func (o *InlineResponse200167) SetInterfaceName(v string)`
 
-SetPowerExceptions sets PowerExceptions field to given value.
+SetInterfaceName sets InterfaceName field to given value.
 
-### HasPowerExceptions
+### HasInterfaceName
 
-`func (o *InlineResponse200167) HasPowerExceptions() bool`
+`func (o *InlineResponse200167) HasInterfaceName() bool`
 
-HasPowerExceptions returns a boolean if a field has been set.
+HasInterfaceName returns a boolean if a field has been set.
 
-### GetUplinkClientSampling
+### GetInterfaceIp
 
-`func (o *InlineResponse200167) GetUplinkClientSampling() InlineResponse200167UplinkClientSampling`
+`func (o *InlineResponse200167) GetInterfaceIp() string`
 
-GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetUplinkClientSamplingOk
+### GetInterfaceIpOk
 
-`func (o *InlineResponse200167) GetUplinkClientSamplingOk() (*InlineResponse200167UplinkClientSampling, bool)`
+`func (o *InlineResponse200167) GetInterfaceIpOk() (*string, bool)`
 
-GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkClientSampling
+### SetInterfaceIp
 
-`func (o *InlineResponse200167) SetUplinkClientSampling(v InlineResponse200167UplinkClientSampling)`
+`func (o *InlineResponse200167) SetInterfaceIp(v string)`
 
-SetUplinkClientSampling sets UplinkClientSampling field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasUplinkClientSampling
+### HasInterfaceIp
 
-`func (o *InlineResponse200167) HasUplinkClientSampling() bool`
+`func (o *InlineResponse200167) HasInterfaceIp() bool`
 
-HasUplinkClientSampling returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
 
-### GetMacBlocklist
+### GetMulticastGroup
 
-`func (o *InlineResponse200167) GetMacBlocklist() InlineResponse200167MacBlocklist`
+`func (o *InlineResponse200167) GetMulticastGroup() string`
 
-GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
 
-### GetMacBlocklistOk
+### GetMulticastGroupOk
 
-`func (o *InlineResponse200167) GetMacBlocklistOk() (*InlineResponse200167MacBlocklist, bool)`
+`func (o *InlineResponse200167) GetMulticastGroupOk() (*string, bool)`
 
-GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMacBlocklist
+### SetMulticastGroup
 
-`func (o *InlineResponse200167) SetMacBlocklist(v InlineResponse200167MacBlocklist)`
+`func (o *InlineResponse200167) SetMulticastGroup(v string)`
 
-SetMacBlocklist sets MacBlocklist field to given value.
+SetMulticastGroup sets MulticastGroup field to given value.
 
-### HasMacBlocklist
+### HasMulticastGroup
 
-`func (o *InlineResponse200167) HasMacBlocklist() bool`
+`func (o *InlineResponse200167) HasMulticastGroup() bool`
 
-HasMacBlocklist returns a boolean if a field has been set.
+HasMulticastGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

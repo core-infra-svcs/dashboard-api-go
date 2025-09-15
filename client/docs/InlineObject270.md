@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks.md) | List containing the network ID and the product type to enable XDR on | 
+**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks.md) | List containing the network ID and the product type to disable XDR on | 
 
 ## Methods
 
 ### NewInlineObject270
 
-`func NewInlineObject270(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, ) *InlineObject270`
+`func NewInlineObject270(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, ) *InlineObject270`
 
 NewInlineObject270 instantiates a new InlineObject270 object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNetworks
 
-`func (o *InlineObject270) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks`
+`func (o *InlineObject270) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks`
 
 GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
 ### GetNetworksOk
 
-`func (o *InlineObject270) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, bool)`
+`func (o *InlineObject270) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, bool)`
 
 GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetworks
 
-`func (o *InlineObject270) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks)`
+`func (o *InlineObject270) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks)`
 
 SetNetworks sets Networks field to given value.
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | Type of the origin | [optional] 
+**Type** | **string** | Type of the origin | 
 **Interfaces** | Pointer to **[]string** | Interfaces associated with the prefix | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1
 
-`func NewNetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1() *NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
+`func NewNetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1(type_ string, ) *NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
 
 NewNetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1 instantiates a new NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetInterfaces
 

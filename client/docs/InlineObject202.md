@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**ExpiresAt** | Pointer to **NullableTime** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject202
 
-`func NewInlineObject202() *InlineObject202`
+`func NewInlineObject202(name string, groupPolicyId string, ) *InlineObject202`
 
 NewInlineObject202 instantiates a new InlineObject202 object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject202) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetPassphrase
 
@@ -97,11 +92,6 @@ and a boolean to check if the value has been set.
 
 SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasGroupPolicyId
-
-`func (o *InlineObject202) HasGroupPolicyId() bool`
-
-HasGroupPolicyId returns a boolean if a field has been set.
 
 ### GetExpiresAt
 
@@ -128,16 +118,6 @@ SetExpiresAt sets ExpiresAt field to given value.
 
 HasExpiresAt returns a boolean if a field has been set.
 
-### SetExpiresAtNil
-
-`func (o *InlineObject202) SetExpiresAtNil(b bool)`
-
- SetExpiresAtNil sets the value for ExpiresAt to be an explicit nil
-
-### UnsetExpiresAt
-`func (o *InlineObject202) UnsetExpiresAt()`
-
-UnsetExpiresAt ensures that no value is present for ExpiresAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

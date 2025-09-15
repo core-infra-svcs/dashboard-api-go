@@ -4,13 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlansEnabled** | Pointer to **bool** | Boolean indicating whether to enable (true) or disable (false) VLANs for the network | [optional] 
+**Id** | **string** | The VLAN ID of the new VLAN (must be between 1 and 4094) | 
+**Name** | **string** | The name of the new VLAN | 
+**Subnet** | Pointer to **string** | The subnet of the VLAN | [optional] 
+**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the VLAN | [optional] 
+**GroupPolicyId** | Pointer to **NullableString** | The id of the desired group policy to apply to the VLAN | [optional] 
+**TemplateVlanType** | Pointer to **string** | Type of subnetting of the VLAN. Applicable only for template network. | [optional] [default to "same"]
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
+**DhcpHandling** | Pointer to **string** | The appliance&#39;s handling of DHCP requests on this VLAN. One of: &#39;Run a DHCP server&#39;, &#39;Relay DHCP to another server&#39; or &#39;Do not respond to DHCP requests&#39; | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39; | [optional] 
+**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
+**DhcpBootOptionsEnabled** | Pointer to **bool** | Use DHCP boot options specified in other properties | [optional] 
+**DhcpOptions** | Pointer to [**[]NetworksNetworkIdApplianceVlansDhcpOptions**](NetworksNetworkIdApplianceVlansDhcpOptions.md) | The list of DHCP options that will be included in DHCP responses. Each object in the list should have \&quot;code\&quot;, \&quot;type\&quot;, and \&quot;value\&quot; properties. | [optional] 
 
 ## Methods
 
 ### NewInlineObject75
 
-`func NewInlineObject75() *InlineObject75`
+`func NewInlineObject75(id string, name string, ) *InlineObject75`
 
 NewInlineObject75 instantiates a new InlineObject75 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +38,355 @@ NewInlineObject75WithDefaults instantiates a new InlineObject75 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlansEnabled
+### GetId
 
-`func (o *InlineObject75) GetVlansEnabled() bool`
+`func (o *InlineObject75) GetId() string`
 
-GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetVlansEnabledOk
+### GetIdOk
 
-`func (o *InlineObject75) GetVlansEnabledOk() (*bool, bool)`
+`func (o *InlineObject75) GetIdOk() (*string, bool)`
 
-GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlansEnabled
+### SetId
 
-`func (o *InlineObject75) SetVlansEnabled(v bool)`
+`func (o *InlineObject75) SetId(v string)`
 
-SetVlansEnabled sets VlansEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasVlansEnabled
 
-`func (o *InlineObject75) HasVlansEnabled() bool`
+### GetName
 
-HasVlansEnabled returns a boolean if a field has been set.
+`func (o *InlineObject75) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineObject75) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineObject75) SetName(v string)`
+
+SetName sets Name field to given value.
+
+
+### GetSubnet
+
+`func (o *InlineObject75) GetSubnet() string`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineObject75) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineObject75) SetSubnet(v string)`
+
+SetSubnet sets Subnet field to given value.
+
+### HasSubnet
+
+`func (o *InlineObject75) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### GetApplianceIp
+
+`func (o *InlineObject75) GetApplianceIp() string`
+
+GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+
+### GetApplianceIpOk
+
+`func (o *InlineObject75) GetApplianceIpOk() (*string, bool)`
+
+GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplianceIp
+
+`func (o *InlineObject75) SetApplianceIp(v string)`
+
+SetApplianceIp sets ApplianceIp field to given value.
+
+### HasApplianceIp
+
+`func (o *InlineObject75) HasApplianceIp() bool`
+
+HasApplianceIp returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineObject75) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject75) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject75) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineObject75) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### SetGroupPolicyIdNil
+
+`func (o *InlineObject75) SetGroupPolicyIdNil(b bool)`
+
+ SetGroupPolicyIdNil sets the value for GroupPolicyId to be an explicit nil
+
+### UnsetGroupPolicyId
+`func (o *InlineObject75) UnsetGroupPolicyId()`
+
+UnsetGroupPolicyId ensures that no value is present for GroupPolicyId, not even an explicit nil
+### GetTemplateVlanType
+
+`func (o *InlineObject75) GetTemplateVlanType() string`
+
+GetTemplateVlanType returns the TemplateVlanType field if non-nil, zero value otherwise.
+
+### GetTemplateVlanTypeOk
+
+`func (o *InlineObject75) GetTemplateVlanTypeOk() (*string, bool)`
+
+GetTemplateVlanTypeOk returns a tuple with the TemplateVlanType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTemplateVlanType
+
+`func (o *InlineObject75) SetTemplateVlanType(v string)`
+
+SetTemplateVlanType sets TemplateVlanType field to given value.
+
+### HasTemplateVlanType
+
+`func (o *InlineObject75) HasTemplateVlanType() bool`
+
+HasTemplateVlanType returns a boolean if a field has been set.
+
+### GetCidr
+
+`func (o *InlineObject75) GetCidr() string`
+
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
+
+### GetCidrOk
+
+`func (o *InlineObject75) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCidr
+
+`func (o *InlineObject75) SetCidr(v string)`
+
+SetCidr sets Cidr field to given value.
+
+### HasCidr
+
+`func (o *InlineObject75) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
+
+### GetMask
+
+`func (o *InlineObject75) GetMask() int32`
+
+GetMask returns the Mask field if non-nil, zero value otherwise.
+
+### GetMaskOk
+
+`func (o *InlineObject75) GetMaskOk() (*int32, bool)`
+
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMask
+
+`func (o *InlineObject75) SetMask(v int32)`
+
+SetMask sets Mask field to given value.
+
+### HasMask
+
+`func (o *InlineObject75) HasMask() bool`
+
+HasMask returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineObject75) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineObject75) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineObject75) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineObject75) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
+
+### GetDhcpHandling
+
+`func (o *InlineObject75) GetDhcpHandling() string`
+
+GetDhcpHandling returns the DhcpHandling field if non-nil, zero value otherwise.
+
+### GetDhcpHandlingOk
+
+`func (o *InlineObject75) GetDhcpHandlingOk() (*string, bool)`
+
+GetDhcpHandlingOk returns a tuple with the DhcpHandling field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpHandling
+
+`func (o *InlineObject75) SetDhcpHandling(v string)`
+
+SetDhcpHandling sets DhcpHandling field to given value.
+
+### HasDhcpHandling
+
+`func (o *InlineObject75) HasDhcpHandling() bool`
+
+HasDhcpHandling returns a boolean if a field has been set.
+
+### GetDhcpLeaseTime
+
+`func (o *InlineObject75) GetDhcpLeaseTime() string`
+
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+
+### GetDhcpLeaseTimeOk
+
+`func (o *InlineObject75) GetDhcpLeaseTimeOk() (*string, bool)`
+
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpLeaseTime
+
+`func (o *InlineObject75) SetDhcpLeaseTime(v string)`
+
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+
+### HasDhcpLeaseTime
+
+`func (o *InlineObject75) HasDhcpLeaseTime() bool`
+
+HasDhcpLeaseTime returns a boolean if a field has been set.
+
+### GetMandatoryDhcp
+
+`func (o *InlineObject75) GetMandatoryDhcp() NetworksNetworkIdApplianceVlansMandatoryDhcp`
+
+GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+
+### GetMandatoryDhcpOk
+
+`func (o *InlineObject75) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceVlansMandatoryDhcp, bool)`
+
+GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMandatoryDhcp
+
+`func (o *InlineObject75) SetMandatoryDhcp(v NetworksNetworkIdApplianceVlansMandatoryDhcp)`
+
+SetMandatoryDhcp sets MandatoryDhcp field to given value.
+
+### HasMandatoryDhcp
+
+`func (o *InlineObject75) HasMandatoryDhcp() bool`
+
+HasMandatoryDhcp returns a boolean if a field has been set.
+
+### GetDhcpBootOptionsEnabled
+
+`func (o *InlineObject75) GetDhcpBootOptionsEnabled() bool`
+
+GetDhcpBootOptionsEnabled returns the DhcpBootOptionsEnabled field if non-nil, zero value otherwise.
+
+### GetDhcpBootOptionsEnabledOk
+
+`func (o *InlineObject75) GetDhcpBootOptionsEnabledOk() (*bool, bool)`
+
+GetDhcpBootOptionsEnabledOk returns a tuple with the DhcpBootOptionsEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpBootOptionsEnabled
+
+`func (o *InlineObject75) SetDhcpBootOptionsEnabled(v bool)`
+
+SetDhcpBootOptionsEnabled sets DhcpBootOptionsEnabled field to given value.
+
+### HasDhcpBootOptionsEnabled
+
+`func (o *InlineObject75) HasDhcpBootOptionsEnabled() bool`
+
+HasDhcpBootOptionsEnabled returns a boolean if a field has been set.
+
+### GetDhcpOptions
+
+`func (o *InlineObject75) GetDhcpOptions() []NetworksNetworkIdApplianceVlansDhcpOptions`
+
+GetDhcpOptions returns the DhcpOptions field if non-nil, zero value otherwise.
+
+### GetDhcpOptionsOk
+
+`func (o *InlineObject75) GetDhcpOptionsOk() (*[]NetworksNetworkIdApplianceVlansDhcpOptions, bool)`
+
+GetDhcpOptionsOk returns a tuple with the DhcpOptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpOptions
+
+`func (o *InlineObject75) SetDhcpOptions(v []NetworksNetworkIdApplianceVlansDhcpOptions)`
+
+SetDhcpOptions sets DhcpOptions field to given value.
+
+### HasDhcpOptions
+
+`func (o *InlineObject75) HasDhcpOptions() bool`
+
+HasDhcpOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

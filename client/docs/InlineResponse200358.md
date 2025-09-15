@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
+**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
 
 ## Methods
 
@@ -28,97 +30,122 @@ NewInlineResponse200358WithDefaults instantiates a new InlineResponse200358 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetStartTs
 
-`func (o *InlineResponse200358) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200358) GetStartTs() time.Time`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetStartTsOk
 
-`func (o *InlineResponse200358) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200358) GetStartTsOk() (*time.Time, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetStartTs
 
-`func (o *InlineResponse200358) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200358) SetStartTs(v time.Time)`
 
-SetDownstream sets Downstream field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasDownstream
+### HasStartTs
 
-`func (o *InlineResponse200358) HasDownstream() bool`
+`func (o *InlineResponse200358) HasStartTs() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetUpstream
+### GetEndTs
 
-`func (o *InlineResponse200358) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200358) GetEndTs() time.Time`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetEndTsOk
 
-`func (o *InlineResponse200358) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200358) GetEndTsOk() (*time.Time, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetEndTs
 
-`func (o *InlineResponse200358) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200358) SetEndTs(v time.Time)`
 
-SetUpstream sets Upstream field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasUpstream
+### HasEndTs
 
-`func (o *InlineResponse200358) HasUpstream() bool`
+`func (o *InlineResponse200358) HasEndTs() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetClient
+### GetSerial
 
-`func (o *InlineResponse200358) GetClient() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient`
+`func (o *InlineResponse200358) GetSerial() string`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetSerialOk
 
-`func (o *InlineResponse200358) GetClientOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient, bool)`
+`func (o *InlineResponse200358) GetSerialOk() (*string, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetSerial
 
-`func (o *InlineResponse200358) SetClient(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient)`
+`func (o *InlineResponse200358) SetSerial(v string)`
 
-SetClient sets Client field to given value.
+SetSerial sets Serial field to given value.
 
-### HasClient
+### HasSerial
 
-`func (o *InlineResponse200358) HasClient() bool`
+`func (o *InlineResponse200358) HasSerial() bool`
 
-HasClient returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200358) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200358) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200358) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200358) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
 
 ### GetNetwork
 
-`func (o *InlineResponse200358) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200358) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200358) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200358) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200358) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200358) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
 
 SetNetwork sets Network field to given value.
 
@@ -127,6 +154,31 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200358) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
+
+### GetByBand
+
+`func (o *InlineResponse200358) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+
+GetByBand returns the ByBand field if non-nil, zero value otherwise.
+
+### GetByBandOk
+
+`func (o *InlineResponse200358) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+
+GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetByBand
+
+`func (o *InlineResponse200358) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+
+SetByBand sets ByBand field to given value.
+
+### HasByBand
+
+`func (o *InlineResponse200358) HasByBand() bool`
+
+HasByBand returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

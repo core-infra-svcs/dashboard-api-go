@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**MulticastRoutingId** | Pointer to **string** | ID of the Multicast routing request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your Multicast routing request. | [optional] 
 **Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Status** | Pointer to **string** | Status of the Multicast routing request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -29,30 +29,30 @@ NewInlineResponse2015WithDefaults instantiates a new InlineResponse2015 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetMulticastRoutingId
 
-`func (o *InlineResponse2015) GetPingId() string`
+`func (o *InlineResponse2015) GetMulticastRoutingId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetMulticastRoutingId returns the MulticastRoutingId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetMulticastRoutingIdOk
 
-`func (o *InlineResponse2015) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse2015) GetMulticastRoutingIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetMulticastRoutingIdOk returns a tuple with the MulticastRoutingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetMulticastRoutingId
 
-`func (o *InlineResponse2015) SetPingId(v string)`
+`func (o *InlineResponse2015) SetMulticastRoutingId(v string)`
 
-SetPingId sets PingId field to given value.
+SetMulticastRoutingId sets MulticastRoutingId field to given value.
 
-### HasPingId
+### HasMulticastRoutingId
 
-`func (o *InlineResponse2015) HasPingId() bool`
+`func (o *InlineResponse2015) HasMulticastRoutingId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasMulticastRoutingId returns a boolean if a field has been set.
 
 ### GetUrl
 

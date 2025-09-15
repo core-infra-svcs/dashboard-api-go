@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Enable MAC blocklist | [optional] 
+**Enabled** | **bool** | Enable MAC blocklist | 
 
 ## Methods
 
 ### NewNetworksNetworkIdSwitchSettingsMacBlocklist
 
-`func NewNetworksNetworkIdSwitchSettingsMacBlocklist() *NetworksNetworkIdSwitchSettingsMacBlocklist`
+`func NewNetworksNetworkIdSwitchSettingsMacBlocklist(enabled bool, ) *NetworksNetworkIdSwitchSettingsMacBlocklist`
 
 NewNetworksNetworkIdSwitchSettingsMacBlocklist instantiates a new NetworksNetworkIdSwitchSettingsMacBlocklist object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
-
-`func (o *NetworksNetworkIdSwitchSettingsMacBlocklist) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

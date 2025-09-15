@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to update | 
-**Details** | [**[]NetworksNetworkIdDevicesClaimDetails**](NetworksNetworkIdDevicesClaimDetails.md) | An array of details | 
+**Serials** | **[]string** | A list of Meraki Serials to migrate | 
+**Target** | **string** | The controller or management mode to which the devices will be migrated | 
 
 ## Methods
 
 ### NewInlineObject256
 
-`func NewInlineObject256(serials []string, details []NetworksNetworkIdDevicesClaimDetails, ) *InlineObject256`
+`func NewInlineObject256(serials []string, target string, ) *InlineObject256`
 
 NewInlineObject256 instantiates a new InlineObject256 object
 This constructor will assign default values to properties that have it defined,
@@ -46,24 +46,24 @@ and a boolean to check if the value has been set.
 SetSerials sets Serials field to given value.
 
 
-### GetDetails
+### GetTarget
 
-`func (o *InlineObject256) GetDetails() []NetworksNetworkIdDevicesClaimDetails`
+`func (o *InlineObject256) GetTarget() string`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetTarget returns the Target field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetTargetOk
 
-`func (o *InlineObject256) GetDetailsOk() (*[]NetworksNetworkIdDevicesClaimDetails, bool)`
+`func (o *InlineObject256) GetTargetOk() (*string, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetTarget
 
-`func (o *InlineObject256) SetDetails(v []NetworksNetworkIdDevicesClaimDetails)`
+`func (o *InlineObject256) SetTarget(v string)`
 
-SetDetails sets Details field to given value.
+SetTarget sets Target field to given value.
 
 
 

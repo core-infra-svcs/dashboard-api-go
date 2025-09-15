@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | [optional] 
+**Name** | **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | 
+**Mode** | Pointer to **string** | L3 Interface mode, can be one of &#39;vlan&#39;, &#39;routed&#39; or &#39;loopback&#39;. Default is &#39;vlan&#39;. CS 17.18 or higher is required for &#39;routed&#39; mode. | [optional] 
 **Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
 **SwitchPortId** | Pointer to **NullableString** | Switch Port ID when in Routed mode (CS 17.18 or higher required) | [optional] 
 **InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
@@ -20,7 +21,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject30
 
-`func NewInlineObject30() *InlineObject30`
+`func NewInlineObject30(name string, ) *InlineObject30`
 
 NewInlineObject30 instantiates a new InlineObject30 object
 This constructor will assign default values to properties that have it defined,
@@ -54,11 +55,31 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject30) HasName() bool`
+### GetMode
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject30) GetMode() string`
+
+GetMode returns the Mode field if non-nil, zero value otherwise.
+
+### GetModeOk
+
+`func (o *InlineObject30) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMode
+
+`func (o *InlineObject30) SetMode(v string)`
+
+SetMode sets Mode field to given value.
+
+### HasMode
+
+`func (o *InlineObject30) HasMode() bool`
+
+HasMode returns a boolean if a field has been set.
 
 ### GetSubnet
 

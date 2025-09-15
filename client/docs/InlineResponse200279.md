@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpdatedPriorities** | Pointer to [**[]InlineResponse200279UpdatedPriorities**](InlineResponse200279UpdatedPriorities.md) | List of updated priorities | [optional] 
+**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
+**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
+**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200279WithDefaults instantiates a new InlineResponse200279 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpdatedPriorities
+### GetCaptureId
 
-`func (o *InlineResponse200279) GetUpdatedPriorities() []InlineResponse200279UpdatedPriorities`
+`func (o *InlineResponse200279) GetCaptureId() string`
 
-GetUpdatedPriorities returns the UpdatedPriorities field if non-nil, zero value otherwise.
+GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
 
-### GetUpdatedPrioritiesOk
+### GetCaptureIdOk
 
-`func (o *InlineResponse200279) GetUpdatedPrioritiesOk() (*[]InlineResponse200279UpdatedPriorities, bool)`
+`func (o *InlineResponse200279) GetCaptureIdOk() (*string, bool)`
 
-GetUpdatedPrioritiesOk returns a tuple with the UpdatedPriorities field if it's non-nil, zero value otherwise
+GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedPriorities
+### SetCaptureId
 
-`func (o *InlineResponse200279) SetUpdatedPriorities(v []InlineResponse200279UpdatedPriorities)`
+`func (o *InlineResponse200279) SetCaptureId(v string)`
 
-SetUpdatedPriorities sets UpdatedPriorities field to given value.
+SetCaptureId sets CaptureId field to given value.
 
-### HasUpdatedPriorities
+### HasCaptureId
 
-`func (o *InlineResponse200279) HasUpdatedPriorities() bool`
+`func (o *InlineResponse200279) HasCaptureId() bool`
 
-HasUpdatedPriorities returns a boolean if a field has been set.
+HasCaptureId returns a boolean if a field has been set.
+
+### GetDownloadUrl
+
+`func (o *InlineResponse200279) GetDownloadUrl() string`
+
+GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
+
+### GetDownloadUrlOk
+
+`func (o *InlineResponse200279) GetDownloadUrlOk() (*string, bool)`
+
+GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownloadUrl
+
+`func (o *InlineResponse200279) SetDownloadUrl(v string)`
+
+SetDownloadUrl sets DownloadUrl field to given value.
+
+### HasDownloadUrl
+
+`func (o *InlineResponse200279) HasDownloadUrl() bool`
+
+HasDownloadUrl returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200279) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200279) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200279) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200279) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
