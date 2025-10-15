@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Door lock name to update | [optional] 
+**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject311WithDefaults instantiates a new InlineObject311 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDoorLockIds
 
-`func (o *InlineObject311) GetName() string`
+`func (o *InlineObject311) GetDoorLockIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDoorLockIdsOk
 
-`func (o *InlineObject311) GetNameOk() (*string, bool)`
+`func (o *InlineObject311) GetDoorLockIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDoorLockIds
 
-`func (o *InlineObject311) SetName(v string)`
+`func (o *InlineObject311) SetDoorLockIds(v []string)`
 
-SetName sets Name field to given value.
+SetDoorLockIds sets DoorLockIds field to given value.
 
-### HasName
+### HasDoorLockIds
 
-`func (o *InlineObject311) HasName() bool`
+`func (o *InlineObject311) HasDoorLockIds() bool`
 
-HasName returns a boolean if a field has been set.
+HasDoorLockIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

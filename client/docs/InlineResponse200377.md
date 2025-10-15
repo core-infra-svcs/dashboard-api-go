@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20124Request**](InlineResponse20124Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
-**DoorLocks** | Pointer to [**[]InlineResponse200377DoorLocks**](InlineResponse200377DoorLocks.md) | Door locks | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork**](OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork.md) |  | [optional] 
+**PanId** | Pointer to **string** | Unique id for the zigbee device node | [optional] 
+**Channel** | Pointer to **string** | Channel the zigbee node will communicate on either auto or between 11-25 | [optional] 
+**TransmitPowerLevel** | Pointer to **int32** | Power level for the zigbee devices will be a int between 10-20 | [optional] 
+**Enrolled** | Pointer to **bool** | Whether this zigbee node is enrolled or not | [optional] 
+**Status** | Pointer to **string** | The node status, either online or offline | [optional] 
+**Gateway** | Pointer to [**OrganizationsOrganizationIdWirelessZigbeeDevicesGateway**](OrganizationsOrganizationIdWirelessZigbeeDevicesGateway.md) |  | [optional] 
+**Counts** | Pointer to [**OrganizationsOrganizationIdWirelessZigbeeDevicesCounts**](OrganizationsOrganizationIdWirelessZigbeeDevicesCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -29,80 +32,130 @@ NewInlineResponse200377WithDefaults instantiates a new InlineResponse200377 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetNetwork
 
-`func (o *InlineResponse200377) GetDisenrollmentId() string`
+`func (o *InlineResponse200377) GetNetwork() OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200377) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse200377) GetNetworkOk() (*OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetNetwork
 
-`func (o *InlineResponse200377) SetDisenrollmentId(v string)`
+`func (o *InlineResponse200377) SetNetwork(v OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasDisenrollmentId
+### HasNetwork
 
-`func (o *InlineResponse200377) HasDisenrollmentId() bool`
+`func (o *InlineResponse200377) HasNetwork() bool`
 
-HasDisenrollmentId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetUrl
+### GetPanId
 
-`func (o *InlineResponse200377) GetUrl() string`
+`func (o *InlineResponse200377) GetPanId() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetPanId returns the PanId field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetPanIdOk
 
-`func (o *InlineResponse200377) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200377) GetPanIdOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetPanIdOk returns a tuple with the PanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetPanId
 
-`func (o *InlineResponse200377) SetUrl(v string)`
+`func (o *InlineResponse200377) SetPanId(v string)`
 
-SetUrl sets Url field to given value.
+SetPanId sets PanId field to given value.
 
-### HasUrl
+### HasPanId
 
-`func (o *InlineResponse200377) HasUrl() bool`
+`func (o *InlineResponse200377) HasPanId() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasPanId returns a boolean if a field has been set.
 
-### GetRequest
+### GetChannel
 
-`func (o *InlineResponse200377) GetRequest() InlineResponse20124Request`
+`func (o *InlineResponse200377) GetChannel() string`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetChannel returns the Channel field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetChannelOk
 
-`func (o *InlineResponse200377) GetRequestOk() (*InlineResponse20124Request, bool)`
+`func (o *InlineResponse200377) GetChannelOk() (*string, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetChannel
 
-`func (o *InlineResponse200377) SetRequest(v InlineResponse20124Request)`
+`func (o *InlineResponse200377) SetChannel(v string)`
 
-SetRequest sets Request field to given value.
+SetChannel sets Channel field to given value.
 
-### HasRequest
+### HasChannel
 
-`func (o *InlineResponse200377) HasRequest() bool`
+`func (o *InlineResponse200377) HasChannel() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasChannel returns a boolean if a field has been set.
+
+### GetTransmitPowerLevel
+
+`func (o *InlineResponse200377) GetTransmitPowerLevel() int32`
+
+GetTransmitPowerLevel returns the TransmitPowerLevel field if non-nil, zero value otherwise.
+
+### GetTransmitPowerLevelOk
+
+`func (o *InlineResponse200377) GetTransmitPowerLevelOk() (*int32, bool)`
+
+GetTransmitPowerLevelOk returns a tuple with the TransmitPowerLevel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTransmitPowerLevel
+
+`func (o *InlineResponse200377) SetTransmitPowerLevel(v int32)`
+
+SetTransmitPowerLevel sets TransmitPowerLevel field to given value.
+
+### HasTransmitPowerLevel
+
+`func (o *InlineResponse200377) HasTransmitPowerLevel() bool`
+
+HasTransmitPowerLevel returns a boolean if a field has been set.
+
+### GetEnrolled
+
+`func (o *InlineResponse200377) GetEnrolled() bool`
+
+GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+
+### GetEnrolledOk
+
+`func (o *InlineResponse200377) GetEnrolledOk() (*bool, bool)`
+
+GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnrolled
+
+`func (o *InlineResponse200377) SetEnrolled(v bool)`
+
+SetEnrolled sets Enrolled field to given value.
+
+### HasEnrolled
+
+`func (o *InlineResponse200377) HasEnrolled() bool`
+
+HasEnrolled returns a boolean if a field has been set.
 
 ### GetStatus
 
@@ -129,30 +182,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetDoorLocks
+### GetGateway
 
-`func (o *InlineResponse200377) GetDoorLocks() []InlineResponse200377DoorLocks`
+`func (o *InlineResponse200377) GetGateway() OrganizationsOrganizationIdWirelessZigbeeDevicesGateway`
 
-GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
 
-### GetDoorLocksOk
+### GetGatewayOk
 
-`func (o *InlineResponse200377) GetDoorLocksOk() (*[]InlineResponse200377DoorLocks, bool)`
+`func (o *InlineResponse200377) GetGatewayOk() (*OrganizationsOrganizationIdWirelessZigbeeDevicesGateway, bool)`
 
-GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLocks
+### SetGateway
 
-`func (o *InlineResponse200377) SetDoorLocks(v []InlineResponse200377DoorLocks)`
+`func (o *InlineResponse200377) SetGateway(v OrganizationsOrganizationIdWirelessZigbeeDevicesGateway)`
 
-SetDoorLocks sets DoorLocks field to given value.
+SetGateway sets Gateway field to given value.
 
-### HasDoorLocks
+### HasGateway
 
-`func (o *InlineResponse200377) HasDoorLocks() bool`
+`func (o *InlineResponse200377) HasGateway() bool`
 
-HasDoorLocks returns a boolean if a field has been set.
+HasGateway returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200377) GetCounts() OrganizationsOrganizationIdWirelessZigbeeDevicesCounts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200377) GetCountsOk() (*OrganizationsOrganizationIdWirelessZigbeeDevicesCounts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200377) SetCounts(v OrganizationsOrganizationIdWirelessZigbeeDevicesCounts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200377) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200388Intervals**](InlineResponse200388Intervals.md) | Time interval snapshots of interfaces usage data of the wireless LAN controller | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse200388Interfaces**](InlineResponse200388Interfaces.md) | Interfaces belongs to the wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetIntervals
+### GetInterfaces
 
-`func (o *InlineResponse200388Items) GetIntervals() []InlineResponse200388Intervals`
+`func (o *InlineResponse200388Items) GetInterfaces() []InlineResponse200388Interfaces`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetInterfacesOk
 
-`func (o *InlineResponse200388Items) GetIntervalsOk() (*[]InlineResponse200388Intervals, bool)`
+`func (o *InlineResponse200388Items) GetInterfacesOk() (*[]InlineResponse200388Interfaces, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetInterfaces
 
-`func (o *InlineResponse200388Items) SetIntervals(v []InlineResponse200388Intervals)`
+`func (o *InlineResponse200388Items) SetInterfaces(v []InlineResponse200388Interfaces)`
 
-SetIntervals sets Intervals field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasIntervals
+### HasInterfaces
 
-`func (o *InlineResponse200388Items) HasIntervals() bool`
+`func (o *InlineResponse200388Items) HasInterfaces() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

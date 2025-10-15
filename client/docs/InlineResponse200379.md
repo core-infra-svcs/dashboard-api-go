@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200379Items**](InlineResponse200379Items.md) | Overview history of wireless LAN controllers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200379Items**](InlineResponse200379Items.md) | Wireless LAN controller connectivity information | [optional] 
 **Meta** | Pointer to [**InlineResponse200226Meta**](InlineResponse200226Meta.md) |  | [optional] 
 
 ## Methods

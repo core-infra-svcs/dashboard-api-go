@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Access points cloud ID | [optional] 
-**Controller** | Pointer to [**InlineResponse200380Controller**](InlineResponse200380Controller.md) |  | [optional] 
+**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
 **Network** | Pointer to [**InlineResponse200380Network**](InlineResponse200380Network.md) |  | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200380Readings**](InlineResponse200380Readings.md) | Overview history of a wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -52,31 +52,6 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetController
-
-`func (o *InlineResponse200380Items) GetController() InlineResponse200380Controller`
-
-GetController returns the Controller field if non-nil, zero value otherwise.
-
-### GetControllerOk
-
-`func (o *InlineResponse200380Items) GetControllerOk() (*InlineResponse200380Controller, bool)`
-
-GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetController
-
-`func (o *InlineResponse200380Items) SetController(v InlineResponse200380Controller)`
-
-SetController sets Controller field to given value.
-
-### HasController
-
-`func (o *InlineResponse200380Items) HasController() bool`
-
-HasController returns a boolean if a field has been set.
-
 ### GetNetwork
 
 `func (o *InlineResponse200380Items) GetNetwork() InlineResponse200380Network`
@@ -101,6 +76,31 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200380Items) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
+
+### GetReadings
+
+`func (o *InlineResponse200380Items) GetReadings() []InlineResponse200380Readings`
+
+GetReadings returns the Readings field if non-nil, zero value otherwise.
+
+### GetReadingsOk
+
+`func (o *InlineResponse200380Items) GetReadingsOk() (*[]InlineResponse200380Readings, bool)`
+
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReadings
+
+`func (o *InlineResponse200380Items) SetReadings(v []InlineResponse200380Readings)`
+
+SetReadings sets Readings field to given value.
+
+### HasReadings
+
+`func (o *InlineResponse200380Items) HasReadings() bool`
+
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

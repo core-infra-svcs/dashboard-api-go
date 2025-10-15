@@ -7,6 +7,10 @@ Name | Type | Description | Notes
 **DataVlanId** | Pointer to **int32** | VLAN that clients who use data will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
 **VoiceVlanId** | Pointer to **int32** | VLAN that clients who use voice will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
 **SuspendPortBounce** | Pointer to **bool** | Disable port bounce when RADIUS servers are unreachable | [optional] 
+**DataGroupPolicyId** | Pointer to **string** | Group policy Number for data VLAN (Requires MS 18 or higher) | [optional] 
+**VoiceGroupPolicyId** | Pointer to **string** | Group policy Number for voice VLAN (Requires MS 18 or higher) | [optional] 
+**DataSgtId** | Pointer to **int32** | Security Group Tag ID for data VLAN (Requires MS 18 or higher) | [optional] 
+**VoiceSgtId** | Pointer to **int32** | Security Group Tag ID for voice VLAN (Requires MS 18 or higher) | [optional] 
 
 ## Methods
 
@@ -101,6 +105,106 @@ SetSuspendPortBounce sets SuspendPortBounce field to given value.
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) HasSuspendPortBounce() bool`
 
 HasSuspendPortBounce returns a boolean if a field has been set.
+
+### GetDataGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetDataGroupPolicyId() string`
+
+GetDataGroupPolicyId returns the DataGroupPolicyId field if non-nil, zero value otherwise.
+
+### GetDataGroupPolicyIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetDataGroupPolicyIdOk() (*string, bool)`
+
+GetDataGroupPolicyIdOk returns a tuple with the DataGroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDataGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) SetDataGroupPolicyId(v string)`
+
+SetDataGroupPolicyId sets DataGroupPolicyId field to given value.
+
+### HasDataGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) HasDataGroupPolicyId() bool`
+
+HasDataGroupPolicyId returns a boolean if a field has been set.
+
+### GetVoiceGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetVoiceGroupPolicyId() string`
+
+GetVoiceGroupPolicyId returns the VoiceGroupPolicyId field if non-nil, zero value otherwise.
+
+### GetVoiceGroupPolicyIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetVoiceGroupPolicyIdOk() (*string, bool)`
+
+GetVoiceGroupPolicyIdOk returns a tuple with the VoiceGroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoiceGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) SetVoiceGroupPolicyId(v string)`
+
+SetVoiceGroupPolicyId sets VoiceGroupPolicyId field to given value.
+
+### HasVoiceGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) HasVoiceGroupPolicyId() bool`
+
+HasVoiceGroupPolicyId returns a boolean if a field has been set.
+
+### GetDataSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetDataSgtId() int32`
+
+GetDataSgtId returns the DataSgtId field if non-nil, zero value otherwise.
+
+### GetDataSgtIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetDataSgtIdOk() (*int32, bool)`
+
+GetDataSgtIdOk returns a tuple with the DataSgtId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDataSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) SetDataSgtId(v int32)`
+
+SetDataSgtId sets DataSgtId field to given value.
+
+### HasDataSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) HasDataSgtId() bool`
+
+HasDataSgtId returns a boolean if a field has been set.
+
+### GetVoiceSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetVoiceSgtId() int32`
+
+GetVoiceSgtId returns the VoiceSgtId field if non-nil, zero value otherwise.
+
+### GetVoiceSgtIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetVoiceSgtIdOk() (*int32, bool)`
+
+GetVoiceSgtIdOk returns a tuple with the VoiceSgtId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoiceSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) SetVoiceSgtId(v int32)`
+
+SetVoiceSgtId sets VoiceSgtId field to given value.
+
+### HasVoiceSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) HasVoiceSgtId() bool`
+
+HasVoiceSgtId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

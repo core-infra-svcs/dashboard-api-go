@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
+**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
+**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
 
 ## Methods
 
 ### NewInlineObject310
 
-`func NewInlineObject310() *InlineObject310`
+`func NewInlineObject310(enrolled bool, ) *InlineObject310`
 
 NewInlineObject310 instantiates a new InlineObject310 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,50 @@ NewInlineObject310WithDefaults instantiates a new InlineObject310 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDoorLockIds
+### GetEnrolled
 
-`func (o *InlineObject310) GetDoorLockIds() []string`
+`func (o *InlineObject310) GetEnrolled() bool`
 
-GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
+GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
 
-### GetDoorLockIdsOk
+### GetEnrolledOk
 
-`func (o *InlineObject310) GetDoorLockIdsOk() (*[]string, bool)`
+`func (o *InlineObject310) GetEnrolledOk() (*bool, bool)`
 
-GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
+GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLockIds
+### SetEnrolled
 
-`func (o *InlineObject310) SetDoorLockIds(v []string)`
+`func (o *InlineObject310) SetEnrolled(v bool)`
 
-SetDoorLockIds sets DoorLockIds field to given value.
+SetEnrolled sets Enrolled field to given value.
 
-### HasDoorLockIds
 
-`func (o *InlineObject310) HasDoorLockIds() bool`
+### GetChannel
 
-HasDoorLockIds returns a boolean if a field has been set.
+`func (o *InlineObject310) GetChannel() string`
+
+GetChannel returns the Channel field if non-nil, zero value otherwise.
+
+### GetChannelOk
+
+`func (o *InlineObject310) GetChannelOk() (*string, bool)`
+
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChannel
+
+`func (o *InlineObject310) SetChannel(v string)`
+
+SetChannel sets Channel field to given value.
+
+### HasChannel
+
+`func (o *InlineObject310) HasChannel() bool`
+
+HasChannel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

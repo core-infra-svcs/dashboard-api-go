@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200383Items**](InlineResponse200383Items.md) | Wireless LAN controller layer 2 interfaces usage | [optional] 
+**Items** | Pointer to [**[]InlineResponse200383Items**](InlineResponse200383Items.md) | Wireless LAN controller layer 2 interfaces historical status | [optional] 
 **Meta** | Pointer to [**InlineResponse200226Meta**](InlineResponse200226Meta.md) |  | [optional] 
 
 ## Methods

@@ -6,9 +6,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CriticalAuth** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth**](NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth.md) |  | [optional] 
 **FailedAuthVlanId** | Pointer to **int32** | VLAN that clients will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
+**FailedAuthGroupPolicyId** | Pointer to **string** | Group policy Number for failed authentication group policy (Requires MS 18 or higher) | [optional] 
+**FailedAuthSgtId** | Pointer to **int32** | Security Group Tag ID for failed authentication group policy (Requires MS 18 or higher) | [optional] 
 **ReAuthenticationInterval** | Pointer to **int32** | Re-authentication period in seconds. Will be null if hostMode is Multi-Auth | [optional] 
 **Cache** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCache**](NetworksNetworkIdSwitchAccessPoliciesRadiusCache.md) |  | [optional] 
-**Authentication** | Pointer to **map[string]interface{}** | Object for authentication mode settings | [optional] 
+**Authentication** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication**](NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication.md) |  | [optional] 
+**PreAuthenticationGroupPolicyId** | Pointer to **string** | Group policy Number for pre-authentication group policy (Requires MS 18 or higher) | [optional] 
 
 ## Methods
 
@@ -79,6 +82,56 @@ SetFailedAuthVlanId sets FailedAuthVlanId field to given value.
 
 HasFailedAuthVlanId returns a boolean if a field has been set.
 
+### GetFailedAuthGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetFailedAuthGroupPolicyId() string`
+
+GetFailedAuthGroupPolicyId returns the FailedAuthGroupPolicyId field if non-nil, zero value otherwise.
+
+### GetFailedAuthGroupPolicyIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetFailedAuthGroupPolicyIdOk() (*string, bool)`
+
+GetFailedAuthGroupPolicyIdOk returns a tuple with the FailedAuthGroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailedAuthGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetFailedAuthGroupPolicyId(v string)`
+
+SetFailedAuthGroupPolicyId sets FailedAuthGroupPolicyId field to given value.
+
+### HasFailedAuthGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasFailedAuthGroupPolicyId() bool`
+
+HasFailedAuthGroupPolicyId returns a boolean if a field has been set.
+
+### GetFailedAuthSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetFailedAuthSgtId() int32`
+
+GetFailedAuthSgtId returns the FailedAuthSgtId field if non-nil, zero value otherwise.
+
+### GetFailedAuthSgtIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetFailedAuthSgtIdOk() (*int32, bool)`
+
+GetFailedAuthSgtIdOk returns a tuple with the FailedAuthSgtId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailedAuthSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetFailedAuthSgtId(v int32)`
+
+SetFailedAuthSgtId sets FailedAuthSgtId field to given value.
+
+### HasFailedAuthSgtId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasFailedAuthSgtId() bool`
+
+HasFailedAuthSgtId returns a boolean if a field has been set.
+
 ### GetReAuthenticationInterval
 
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetReAuthenticationInterval() int32`
@@ -131,20 +184,20 @@ HasCache returns a boolean if a field has been set.
 
 ### GetAuthentication
 
-`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetAuthentication() map[string]interface{}`
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetAuthentication() NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication`
 
 GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
 ### GetAuthenticationOk
 
-`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetAuthenticationOk() (*map[string]interface{}, bool)`
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetAuthenticationOk() (*NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication, bool)`
 
 GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAuthentication
 
-`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetAuthentication(v map[string]interface{})`
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetAuthentication(v NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication)`
 
 SetAuthentication sets Authentication field to given value.
 
@@ -153,6 +206,31 @@ SetAuthentication sets Authentication field to given value.
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasAuthentication() bool`
 
 HasAuthentication returns a boolean if a field has been set.
+
+### GetPreAuthenticationGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetPreAuthenticationGroupPolicyId() string`
+
+GetPreAuthenticationGroupPolicyId returns the PreAuthenticationGroupPolicyId field if non-nil, zero value otherwise.
+
+### GetPreAuthenticationGroupPolicyIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetPreAuthenticationGroupPolicyIdOk() (*string, bool)`
+
+GetPreAuthenticationGroupPolicyIdOk returns a tuple with the PreAuthenticationGroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreAuthenticationGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetPreAuthenticationGroupPolicyId(v string)`
+
+SetPreAuthenticationGroupPolicyId sets PreAuthenticationGroupPolicyId field to given value.
+
+### HasPreAuthenticationGroupPolicyId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasPreAuthenticationGroupPolicyId() bool`
+
+HasPreAuthenticationGroupPolicyId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

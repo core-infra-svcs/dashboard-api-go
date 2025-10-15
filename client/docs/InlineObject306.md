@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
+**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
+**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
+**Ble** | Pointer to [**InlineResponse200372Ble**](InlineResponse200372Ble.md) |  | [optional] 
+**Wifi** | Pointer to [**InlineResponse200372Wifi**](InlineResponse200372Wifi.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject306
 
-`func NewInlineObject306(networkIds []string, ) *InlineObject306`
+`func NewInlineObject306(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject306`
 
 NewInlineObject306 instantiates a new InlineObject306 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +28,95 @@ NewInlineObject306WithDefaults instantiates a new InlineObject306 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetNetwork
 
-`func (o *InlineObject306) GetNetworkIds() []string`
+`func (o *InlineObject306) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetNetworkOk
 
-`func (o *InlineObject306) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject306) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetNetwork
 
-`func (o *InlineObject306) SetNetworkIds(v []string)`
+`func (o *InlineObject306) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetNetwork sets Network field to given value.
 
+
+### GetMqtt
+
+`func (o *InlineObject306) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
+
+GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+
+### GetMqttOk
+
+`func (o *InlineObject306) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
+
+GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMqtt
+
+`func (o *InlineObject306) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
+
+SetMqtt sets Mqtt field to given value.
+
+
+### GetBle
+
+`func (o *InlineObject306) GetBle() InlineResponse200372Ble`
+
+GetBle returns the Ble field if non-nil, zero value otherwise.
+
+### GetBleOk
+
+`func (o *InlineObject306) GetBleOk() (*InlineResponse200372Ble, bool)`
+
+GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBle
+
+`func (o *InlineObject306) SetBle(v InlineResponse200372Ble)`
+
+SetBle sets Ble field to given value.
+
+### HasBle
+
+`func (o *InlineObject306) HasBle() bool`
+
+HasBle returns a boolean if a field has been set.
+
+### GetWifi
+
+`func (o *InlineObject306) GetWifi() InlineResponse200372Wifi`
+
+GetWifi returns the Wifi field if non-nil, zero value otherwise.
+
+### GetWifiOk
+
+`func (o *InlineObject306) GetWifiOk() (*InlineResponse200372Wifi, bool)`
+
+GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi
+
+`func (o *InlineObject306) SetWifi(v InlineResponse200372Wifi)`
+
+SetWifi sets Wifi field to given value.
+
+### HasWifi
+
+`func (o *InlineObject306) HasWifi() bool`
+
+HasWifi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

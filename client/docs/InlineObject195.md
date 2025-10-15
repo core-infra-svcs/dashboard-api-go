@@ -66,6 +66,7 @@ Name | Type | Description | Notes
 **SpeedBurst** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSpeedBurst**](NetworksNetworkIdWirelessSsidsNumberSpeedBurst.md) |  | [optional] 
 **NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberNamedVlans**](NetworksNetworkIdWirelessSsidsNumberNamedVlans.md) |  | [optional] 
 **LocalAuthFallback** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback**](NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback.md) |  | [optional] 
+**RadiusAccountingStartDelay** | Pointer to **int32** | The delay (in seconds) before sending the first RADIUS accounting start message. Must be between 0 and 59 seconds. | [optional] 
 
 ## Methods
 
@@ -1635,6 +1636,31 @@ SetLocalAuthFallback sets LocalAuthFallback field to given value.
 `func (o *InlineObject195) HasLocalAuthFallback() bool`
 
 HasLocalAuthFallback returns a boolean if a field has been set.
+
+### GetRadiusAccountingStartDelay
+
+`func (o *InlineObject195) GetRadiusAccountingStartDelay() int32`
+
+GetRadiusAccountingStartDelay returns the RadiusAccountingStartDelay field if non-nil, zero value otherwise.
+
+### GetRadiusAccountingStartDelayOk
+
+`func (o *InlineObject195) GetRadiusAccountingStartDelayOk() (*int32, bool)`
+
+GetRadiusAccountingStartDelayOk returns a tuple with the RadiusAccountingStartDelay field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusAccountingStartDelay
+
+`func (o *InlineObject195) SetRadiusAccountingStartDelay(v int32)`
+
+SetRadiusAccountingStartDelay sets RadiusAccountingStartDelay field to given value.
+
+### HasRadiusAccountingStartDelay
+
+`func (o *InlineObject195) HasRadiusAccountingStartDelay() bool`
+
+HasRadiusAccountingStartDelay returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

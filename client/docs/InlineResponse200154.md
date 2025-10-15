@@ -24,6 +24,8 @@ Name | Type | Description | Notes
 **UrlRedirectWalledGardenEnabled** | Pointer to **bool** | Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication | [optional] 
 **UrlRedirectWalledGardenRanges** | Pointer to **[]string** | IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication | [optional] 
 **Counts** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesCounts**](NetworksNetworkIdSwitchAccessPoliciesCounts.md) |  | [optional] 
+**GuestGroupPolicyId** | Pointer to **string** | Group policy Number for guest group policy (Requires MS 18 or higher) | [optional] 
+**GuestSgtId** | Pointer to **int32** | Security Group Tag ID for guest group policy (Requires MS 18 or higher) | [optional] 
 
 ## Methods
 
@@ -543,6 +545,56 @@ SetCounts sets Counts field to given value.
 `func (o *InlineResponse200154) HasCounts() bool`
 
 HasCounts returns a boolean if a field has been set.
+
+### GetGuestGroupPolicyId
+
+`func (o *InlineResponse200154) GetGuestGroupPolicyId() string`
+
+GetGuestGroupPolicyId returns the GuestGroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGuestGroupPolicyIdOk
+
+`func (o *InlineResponse200154) GetGuestGroupPolicyIdOk() (*string, bool)`
+
+GetGuestGroupPolicyIdOk returns a tuple with the GuestGroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGuestGroupPolicyId
+
+`func (o *InlineResponse200154) SetGuestGroupPolicyId(v string)`
+
+SetGuestGroupPolicyId sets GuestGroupPolicyId field to given value.
+
+### HasGuestGroupPolicyId
+
+`func (o *InlineResponse200154) HasGuestGroupPolicyId() bool`
+
+HasGuestGroupPolicyId returns a boolean if a field has been set.
+
+### GetGuestSgtId
+
+`func (o *InlineResponse200154) GetGuestSgtId() int32`
+
+GetGuestSgtId returns the GuestSgtId field if non-nil, zero value otherwise.
+
+### GetGuestSgtIdOk
+
+`func (o *InlineResponse200154) GetGuestSgtIdOk() (*int32, bool)`
+
+GetGuestSgtIdOk returns a tuple with the GuestSgtId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGuestSgtId
+
+`func (o *InlineResponse200154) SetGuestSgtId(v int32)`
+
+SetGuestSgtId sets GuestSgtId field to given value.
+
+### HasGuestSgtId
+
+`func (o *InlineResponse200154) HasGuestSgtId() bool`
+
+HasGuestSgtId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -8,18 +8,18 @@ Name | Type | Description | Notes
 **RadiusServers** | [**[]NetworksNetworkIdSwitchAccessPoliciesRadiusServers1**](NetworksNetworkIdSwitchAccessPoliciesRadiusServers1.md) | List of RADIUS servers to require connecting devices to authenticate against before granting network access | 
 **Radius** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadius1**](NetworksNetworkIdSwitchAccessPoliciesRadius1.md) |  | [optional] 
 **GuestPortBouncing** | Pointer to **bool** | If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers | [optional] 
-**RadiusTestingEnabled** | **bool** | If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers | 
-**RadiusCoaSupportEnabled** | **bool** | Change of authentication for RADIUS re-authentication and disconnection | 
+**RadiusTestingEnabled** | Pointer to **bool** | If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers | [optional] 
+**RadiusCoaSupportEnabled** | Pointer to **bool** | Change of authentication for RADIUS re-authentication and disconnection | [optional] 
 **RadiusAccountingEnabled** | **bool** | Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients | 
 **RadiusAccountingServers** | Pointer to [**[]NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1**](NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1.md) | List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access | [optional] 
 **RadiusGroupAttribute** | Pointer to **string** | Acceptable values are &#x60;\&quot;\&quot;&#x60; for None, or &#x60;\&quot;11\&quot;&#x60; for Group Policies ACL | [optional] 
-**HostMode** | **string** | Choose the Host Mode for the access policy. | 
+**HostMode** | Pointer to **string** | Choose the Host Mode for the access policy. | [optional] 
 **AccessPolicyType** | Pointer to **string** | Access Type of the policy. Automatically &#39;Hybrid authentication&#39; when hostMode is &#39;Multi-Domain&#39;. | [optional] 
 **IncreaseAccessSpeed** | Pointer to **bool** | Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is &#39;Hybrid Authentication. | [optional] 
 **GuestVlanId** | Pointer to **NullableInt32** | ID for the guest VLAN allow unauthorized devices access to limited network resources | [optional] 
 **Dot1x** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesDot1x**](NetworksNetworkIdSwitchAccessPoliciesDot1x.md) |  | [optional] 
 **VoiceVlanClients** | Pointer to **bool** | CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is &#39;Multi-Domain&#39;. | [optional] 
-**UrlRedirectWalledGardenEnabled** | **bool** | Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication | 
+**UrlRedirectWalledGardenEnabled** | Pointer to **bool** | Enable to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication | [optional] 
 **UrlRedirectWalledGardenRanges** | Pointer to **[]string** | IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication | [optional] 
 **GuestGroupPolicyId** | Pointer to **NullableString** | Group policy Number for guest group policy | [optional] 
 **GuestSgtId** | Pointer to **NullableInt32** | Security Group Tag ID for guest group policy | [optional] 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject139
 
-`func NewInlineObject139(name string, radiusServers []NetworksNetworkIdSwitchAccessPoliciesRadiusServers1, radiusTestingEnabled bool, radiusCoaSupportEnabled bool, radiusAccountingEnabled bool, hostMode string, urlRedirectWalledGardenEnabled bool, ) *InlineObject139`
+`func NewInlineObject139(name string, radiusServers []NetworksNetworkIdSwitchAccessPoliciesRadiusServers1, radiusAccountingEnabled bool, ) *InlineObject139`
 
 NewInlineObject139 instantiates a new InlineObject139 object
 This constructor will assign default values to properties that have it defined,
@@ -152,6 +152,11 @@ and a boolean to check if the value has been set.
 
 SetRadiusTestingEnabled sets RadiusTestingEnabled field to given value.
 
+### HasRadiusTestingEnabled
+
+`func (o *InlineObject139) HasRadiusTestingEnabled() bool`
+
+HasRadiusTestingEnabled returns a boolean if a field has been set.
 
 ### GetRadiusCoaSupportEnabled
 
@@ -172,6 +177,11 @@ and a boolean to check if the value has been set.
 
 SetRadiusCoaSupportEnabled sets RadiusCoaSupportEnabled field to given value.
 
+### HasRadiusCoaSupportEnabled
+
+`func (o *InlineObject139) HasRadiusCoaSupportEnabled() bool`
+
+HasRadiusCoaSupportEnabled returns a boolean if a field has been set.
 
 ### GetRadiusAccountingEnabled
 
@@ -262,6 +272,11 @@ and a boolean to check if the value has been set.
 
 SetHostMode sets HostMode field to given value.
 
+### HasHostMode
+
+`func (o *InlineObject139) HasHostMode() bool`
+
+HasHostMode returns a boolean if a field has been set.
 
 ### GetAccessPolicyType
 
@@ -417,6 +432,11 @@ and a boolean to check if the value has been set.
 
 SetUrlRedirectWalledGardenEnabled sets UrlRedirectWalledGardenEnabled field to given value.
 
+### HasUrlRedirectWalledGardenEnabled
+
+`func (o *InlineObject139) HasUrlRedirectWalledGardenEnabled() bool`
+
+HasUrlRedirectWalledGardenEnabled returns a boolean if a field has been set.
 
 ### GetUrlRedirectWalledGardenRanges
 
