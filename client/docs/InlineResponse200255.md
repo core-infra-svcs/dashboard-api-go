@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Permission scope id | [optional] 
-**Name** | Pointer to **string** | Name of permission scope | [optional] 
-**Level** | Pointer to **string** | Permission scope level | [optional] 
+**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
+**Type** | Pointer to **string** | The boundary type | [optional] 
+**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200255WithDefaults instantiates a new InlineResponse200255 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetBoundaryId
 
-`func (o *InlineResponse200255) GetId() string`
+`func (o *InlineResponse200255) GetBoundaryId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetBoundaryIdOk
 
-`func (o *InlineResponse200255) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200255) GetBoundaryIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetBoundaryId
 
-`func (o *InlineResponse200255) SetId(v string)`
+`func (o *InlineResponse200255) SetBoundaryId(v string)`
 
-SetId sets Id field to given value.
+SetBoundaryId sets BoundaryId field to given value.
 
-### HasId
+### HasBoundaryId
 
-`func (o *InlineResponse200255) HasId() bool`
+`func (o *InlineResponse200255) HasBoundaryId() bool`
 
-HasId returns a boolean if a field has been set.
+HasBoundaryId returns a boolean if a field has been set.
 
-### GetName
+### GetType
 
-`func (o *InlineResponse200255) GetName() string`
+`func (o *InlineResponse200255) GetType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTypeOk
 
-`func (o *InlineResponse200255) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200255) GetTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetType
 
-`func (o *InlineResponse200255) SetName(v string)`
+`func (o *InlineResponse200255) SetType(v string)`
 
-SetName sets Name field to given value.
+SetType sets Type field to given value.
 
-### HasName
+### HasType
 
-`func (o *InlineResponse200255) HasName() bool`
+`func (o *InlineResponse200255) HasType() bool`
 
-HasName returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetLevel
+### GetResults
 
-`func (o *InlineResponse200255) GetLevel() string`
+`func (o *InlineResponse200255) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
 
-GetLevel returns the Level field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetLevelOk
+### GetResultsOk
 
-`func (o *InlineResponse200255) GetLevelOk() (*string, bool)`
+`func (o *InlineResponse200255) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
 
-GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLevel
+### SetResults
 
-`func (o *InlineResponse200255) SetLevel(v string)`
+`func (o *InlineResponse200255) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
 
-SetLevel sets Level field to given value.
+SetResults sets Results field to given value.
 
-### HasLevel
+### HasResults
 
-`func (o *InlineResponse200255) HasLevel() bool`
+`func (o *InlineResponse200255) HasResults() bool`
 
-HasLevel returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

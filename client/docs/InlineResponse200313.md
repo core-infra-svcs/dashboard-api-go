@@ -4,15 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Policy object ID | [optional] 
-**Name** | Pointer to **string** | Name of policy object (alphanumeric, space, dash, or underscore characters only). | [optional] 
-**Category** | Pointer to **string** | Category of a policy object (one of: adaptivePolicy, network) | [optional] 
-**Type** | Pointer to **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask) | [optional] 
-**Cidr** | Pointer to **string** | CIDR Value of a policy object | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
-**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to. | [optional] 
-**NetworkIds** | Pointer to **[]string** | The IDs of the networks that use the policy object. | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**ClientId** | Pointer to **string** | ID of client | [optional] 
+**Mac** | Pointer to **string** | MAC address of client | [optional] 
+**NetworkId** | Pointer to **string** | NetworkID | [optional] 
+**Assigned** | Pointer to [**[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned**](OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned.md) | Assigned policies | [optional] 
 
 ## Methods
 
@@ -32,31 +28,6 @@ will change when the set of required properties is changed
 NewInlineResponse200313WithDefaults instantiates a new InlineResponse200313 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineResponse200313) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200313) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200313) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200313) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -83,180 +54,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetCategory
+### GetClientId
 
-`func (o *InlineResponse200313) GetCategory() string`
+`func (o *InlineResponse200313) GetClientId() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetClientIdOk
 
-`func (o *InlineResponse200313) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200313) GetClientIdOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetClientId
 
-`func (o *InlineResponse200313) SetCategory(v string)`
+`func (o *InlineResponse200313) SetClientId(v string)`
 
-SetCategory sets Category field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasCategory
+### HasClientId
 
-`func (o *InlineResponse200313) HasCategory() bool`
+`func (o *InlineResponse200313) HasClientId() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetType
+### GetMac
 
-`func (o *InlineResponse200313) GetType() string`
+`func (o *InlineResponse200313) GetMac() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetMacOk
 
-`func (o *InlineResponse200313) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200313) GetMacOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetMac
 
-`func (o *InlineResponse200313) SetType(v string)`
+`func (o *InlineResponse200313) SetMac(v string)`
 
-SetType sets Type field to given value.
+SetMac sets Mac field to given value.
 
-### HasType
+### HasMac
 
-`func (o *InlineResponse200313) HasType() bool`
+`func (o *InlineResponse200313) HasMac() bool`
 
-HasType returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetCidr
+### GetNetworkId
 
-`func (o *InlineResponse200313) GetCidr() string`
+`func (o *InlineResponse200313) GetNetworkId() string`
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetCidrOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200313) GetCidrOk() (*string, bool)`
+`func (o *InlineResponse200313) GetNetworkIdOk() (*string, bool)`
 
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetNetworkId
 
-`func (o *InlineResponse200313) SetCidr(v string)`
+`func (o *InlineResponse200313) SetNetworkId(v string)`
 
-SetCidr sets Cidr field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasCidr
+### HasNetworkId
 
-`func (o *InlineResponse200313) HasCidr() bool`
+`func (o *InlineResponse200313) HasNetworkId() bool`
 
-HasCidr returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetAssigned
 
-`func (o *InlineResponse200313) GetCreatedAt() time.Time`
+`func (o *InlineResponse200313) GetAssigned() []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetAssignedOk
 
-`func (o *InlineResponse200313) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200313) GetAssignedOk() (*[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetAssigned
 
-`func (o *InlineResponse200313) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200313) SetAssigned(v []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetAssigned sets Assigned field to given value.
 
-### HasCreatedAt
+### HasAssigned
 
-`func (o *InlineResponse200313) HasCreatedAt() bool`
+`func (o *InlineResponse200313) HasAssigned() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200313) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200313) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200313) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200313) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
-
-### GetGroupIds
-
-`func (o *InlineResponse200313) GetGroupIds() []string`
-
-GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
-
-### GetGroupIdsOk
-
-`func (o *InlineResponse200313) GetGroupIdsOk() (*[]string, bool)`
-
-GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupIds
-
-`func (o *InlineResponse200313) SetGroupIds(v []string)`
-
-SetGroupIds sets GroupIds field to given value.
-
-### HasGroupIds
-
-`func (o *InlineResponse200313) HasGroupIds() bool`
-
-HasGroupIds returns a boolean if a field has been set.
-
-### GetNetworkIds
-
-`func (o *InlineResponse200313) GetNetworkIds() []string`
-
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
-
-### GetNetworkIdsOk
-
-`func (o *InlineResponse200313) GetNetworkIdsOk() (*[]string, bool)`
-
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkIds
-
-`func (o *InlineResponse200313) SetNetworkIds(v []string)`
-
-SetNetworkIds sets NetworkIds field to given value.
-
-### HasNetworkIds
-
-`func (o *InlineResponse200313) HasNetworkIds() bool`
-
-HasNetworkIds returns a boolean if a field has been set.
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

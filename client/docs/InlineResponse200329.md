@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Splash theme asset id | [optional] 
-**Name** | Pointer to **string** | Splash theme asset name | [optional] 
-**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**Message** | Pointer to **string** | The error message of the API | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200329WithDefaults instantiates a new InlineResponse200329 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStatus
 
-`func (o *InlineResponse200329) GetId() string`
+`func (o *InlineResponse200329) GetStatus() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStatusOk
 
-`func (o *InlineResponse200329) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200329) GetStatusOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStatus
 
-`func (o *InlineResponse200329) SetId(v string)`
+`func (o *InlineResponse200329) SetStatus(v bool)`
 
-SetId sets Id field to given value.
+SetStatus sets Status field to given value.
 
-### HasId
+### HasStatus
 
-`func (o *InlineResponse200329) HasId() bool`
+`func (o *InlineResponse200329) HasStatus() bool`
 
-HasId returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetName
+### GetMessage
 
-`func (o *InlineResponse200329) GetName() string`
+`func (o *InlineResponse200329) GetMessage() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMessageOk
 
-`func (o *InlineResponse200329) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200329) GetMessageOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMessage
 
-`func (o *InlineResponse200329) SetName(v string)`
+`func (o *InlineResponse200329) SetMessage(v string)`
 
-SetName sets Name field to given value.
+SetMessage sets Message field to given value.
 
-### HasName
+### HasMessage
 
-`func (o *InlineResponse200329) HasName() bool`
+`func (o *InlineResponse200329) HasMessage() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetFileData
-
-`func (o *InlineResponse200329) GetFileData() string`
-
-GetFileData returns the FileData field if non-nil, zero value otherwise.
-
-### GetFileDataOk
-
-`func (o *InlineResponse200329) GetFileDataOk() (*string, bool)`
-
-GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFileData
-
-`func (o *InlineResponse200329) SetFileData(v string)`
-
-SetFileData sets FileData field to given value.
-
-### HasFileData
-
-`func (o *InlineResponse200329) HasFileData() bool`
-
-HasFileData returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
-**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
-**Ble** | Pointer to [**InlineResponse200372Ble**](InlineResponse200372Ble.md) |  | [optional] 
-**Wifi** | Pointer to [**InlineResponse200372Wifi**](InlineResponse200372Wifi.md) |  | [optional] 
+**Url** | Pointer to **string** | Receiver Url | [optional] 
+**Version** | Pointer to **string** | Scanning API Version | [optional] 
+**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject306
 
-`func NewInlineObject306(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject306`
+`func NewInlineObject306() *InlineObject306`
 
 NewInlineObject306 instantiates a new InlineObject306 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,80 @@ NewInlineObject306WithDefaults instantiates a new InlineObject306 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetUrl
 
-`func (o *InlineObject306) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
+`func (o *InlineObject306) GetUrl() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetUrlOk
 
-`func (o *InlineObject306) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
+`func (o *InlineObject306) GetUrlOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetUrl
 
-`func (o *InlineObject306) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
+`func (o *InlineObject306) SetUrl(v string)`
 
-SetNetwork sets Network field to given value.
+SetUrl sets Url field to given value.
 
+### HasUrl
 
-### GetMqtt
+`func (o *InlineObject306) HasUrl() bool`
 
-`func (o *InlineObject306) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
+HasUrl returns a boolean if a field has been set.
 
-GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+### GetVersion
 
-### GetMqttOk
+`func (o *InlineObject306) GetVersion() string`
 
-`func (o *InlineObject306) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
+GetVersion returns the Version field if non-nil, zero value otherwise.
 
-GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+### GetVersionOk
+
+`func (o *InlineObject306) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqtt
+### SetVersion
 
-`func (o *InlineObject306) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
+`func (o *InlineObject306) SetVersion(v string)`
 
-SetMqtt sets Mqtt field to given value.
+SetVersion sets Version field to given value.
 
+### HasVersion
 
-### GetBle
+`func (o *InlineObject306) HasVersion() bool`
 
-`func (o *InlineObject306) GetBle() InlineResponse200372Ble`
+HasVersion returns a boolean if a field has been set.
 
-GetBle returns the Ble field if non-nil, zero value otherwise.
+### GetRadio
 
-### GetBleOk
+`func (o *InlineObject306) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
 
-`func (o *InlineObject306) GetBleOk() (*InlineResponse200372Ble, bool)`
+GetRadio returns the Radio field if non-nil, zero value otherwise.
 
-GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+### GetRadioOk
+
+`func (o *InlineObject306) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBle
+### SetRadio
 
-`func (o *InlineObject306) SetBle(v InlineResponse200372Ble)`
+`func (o *InlineObject306) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
 
-SetBle sets Ble field to given value.
+SetRadio sets Radio field to given value.
 
-### HasBle
+### HasRadio
 
-`func (o *InlineObject306) HasBle() bool`
+`func (o *InlineObject306) HasRadio() bool`
 
-HasBle returns a boolean if a field has been set.
-
-### GetWifi
-
-`func (o *InlineObject306) GetWifi() InlineResponse200372Wifi`
-
-GetWifi returns the Wifi field if non-nil, zero value otherwise.
-
-### GetWifiOk
-
-`func (o *InlineObject306) GetWifiOk() (*InlineResponse200372Wifi, bool)`
-
-GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifi
-
-`func (o *InlineObject306) SetWifi(v InlineResponse200372Wifi)`
-
-SetWifi sets Wifi field to given value.
-
-### HasWifi
-
-`func (o *InlineObject306) HasWifi() bool`
-
-HasWifi returns a boolean if a field has been set.
+HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

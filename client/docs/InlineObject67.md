@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | Name of the route | [optional] 
 **Subnet** | Pointer to **string** | Subnet of the route | [optional] 
 **GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
-**GatewayVlanId** | Pointer to **string** | Gateway VLAN ID | [optional] 
+**GatewayVlanId** | Pointer to **NullableString** | Gateway VLAN ID | [optional] 
 **Enabled** | Pointer to **bool** | Whether the route should be enabled or not | [optional] 
 **FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
 **ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
@@ -131,6 +131,16 @@ SetGatewayVlanId sets GatewayVlanId field to given value.
 
 HasGatewayVlanId returns a boolean if a field has been set.
 
+### SetGatewayVlanIdNil
+
+`func (o *InlineObject67) SetGatewayVlanIdNil(b bool)`
+
+ SetGatewayVlanIdNil sets the value for GatewayVlanId to be an explicit nil
+
+### UnsetGatewayVlanId
+`func (o *InlineObject67) UnsetGatewayVlanId()`
+
+UnsetGatewayVlanId ensures that no value is present for GatewayVlanId, not even an explicit nil
 ### GetEnabled
 
 `func (o *InlineObject67) GetEnabled() bool`

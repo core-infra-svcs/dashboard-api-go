@@ -4,22 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of the device | [optional] 
-**Name** | Pointer to **string** | Name assigned to the device | [optional] 
-**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
-**CheckinFinishedAt** | Pointer to **time.Time** | The time the device checkin finished | [optional] 
-**CheckinStartedAt** | Pointer to **time.Time** | The time the device checkin started | [optional] 
-**DetailedStatus** | Pointer to **string** | The detailed status of the device upgrade | [optional] 
-**DownloadFinishedAt** | Pointer to **time.Time** | The time the device upgrade download finished | [optional] 
-**DownloadStartedAt** | Pointer to **time.Time** | The time the device upgrade download started | [optional] 
-**DownloadStatus** | Pointer to **string** | The status of the device upgrade download | [optional] 
-**InstallFinishedAt** | Pointer to **time.Time** | The time the device upgrade install finished | [optional] 
-**InstallStartedAt** | Pointer to **time.Time** | The time the device upgrade install started | [optional] 
-**InstallStatus** | Pointer to **string** | The status of the device upgrade install | [optional] 
-**VerifyFinishedAt** | Pointer to **time.Time** | The time the device upgrade verification finished | [optional] 
-**VerifyStartedAt** | Pointer to **time.Time** | The time the device upgrade verification started | [optional] 
-**VerifyStatus** | Pointer to **string** | The status of the device upgrade verification | [optional] 
-**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
+**UpgradeId** | Pointer to **string** | The upgrade | [optional] 
+**UpgradeBatchId** | Pointer to **string** | The upgrade batch | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesNetwork**](OrganizationsOrganizationIdFirmwareUpgradesNetwork.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of upgrade event: [Cancelled, Completed] | [optional] 
+**Time** | Pointer to **time.Time** | Scheduled start time | [optional] 
+**CompletedAt** | Pointer to **string** | Timestamp when upgrade completed. Null if status pending. | [optional] 
+**ProductTypes** | Pointer to **string** | product upgraded [wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor] | [optional] 
+**ToVersion** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesToVersion**](OrganizationsOrganizationIdFirmwareUpgradesToVersion.md) |  | [optional] 
+**FromVersion** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesFromVersion**](OrganizationsOrganizationIdFirmwareUpgradesFromVersion.md) |  | [optional] 
 
 ## Methods
 
@@ -40,405 +33,230 @@ NewInlineResponse200292WithDefaults instantiates a new InlineResponse200292 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetUpgradeId
 
-`func (o *InlineResponse200292) GetSerial() string`
+`func (o *InlineResponse200292) GetUpgradeId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetUpgradeId returns the UpgradeId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetUpgradeIdOk
 
-`func (o *InlineResponse200292) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200292) GetUpgradeIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetUpgradeIdOk returns a tuple with the UpgradeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetUpgradeId
 
-`func (o *InlineResponse200292) SetSerial(v string)`
+`func (o *InlineResponse200292) SetUpgradeId(v string)`
 
-SetSerial sets Serial field to given value.
+SetUpgradeId sets UpgradeId field to given value.
 
-### HasSerial
+### HasUpgradeId
 
-`func (o *InlineResponse200292) HasSerial() bool`
+`func (o *InlineResponse200292) HasUpgradeId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasUpgradeId returns a boolean if a field has been set.
 
-### GetName
+### GetUpgradeBatchId
 
-`func (o *InlineResponse200292) GetName() string`
+`func (o *InlineResponse200292) GetUpgradeBatchId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUpgradeBatchId returns the UpgradeBatchId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUpgradeBatchIdOk
 
-`func (o *InlineResponse200292) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200292) GetUpgradeBatchIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUpgradeBatchIdOk returns a tuple with the UpgradeBatchId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUpgradeBatchId
 
-`func (o *InlineResponse200292) SetName(v string)`
+`func (o *InlineResponse200292) SetUpgradeBatchId(v string)`
 
-SetName sets Name field to given value.
+SetUpgradeBatchId sets UpgradeBatchId field to given value.
 
-### HasName
+### HasUpgradeBatchId
 
-`func (o *InlineResponse200292) HasName() bool`
+`func (o *InlineResponse200292) HasUpgradeBatchId() bool`
 
-HasName returns a boolean if a field has been set.
+HasUpgradeBatchId returns a boolean if a field has been set.
 
-### GetDeviceStatus
+### GetNetwork
 
-`func (o *InlineResponse200292) GetDeviceStatus() string`
+`func (o *InlineResponse200292) GetNetwork() OrganizationsOrganizationIdFirmwareUpgradesNetwork`
 
-GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetDeviceStatusOk
+### GetNetworkOk
 
-`func (o *InlineResponse200292) GetDeviceStatusOk() (*string, bool)`
+`func (o *InlineResponse200292) GetNetworkOk() (*OrganizationsOrganizationIdFirmwareUpgradesNetwork, bool)`
 
-GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceStatus
+### SetNetwork
 
-`func (o *InlineResponse200292) SetDeviceStatus(v string)`
+`func (o *InlineResponse200292) SetNetwork(v OrganizationsOrganizationIdFirmwareUpgradesNetwork)`
 
-SetDeviceStatus sets DeviceStatus field to given value.
+SetNetwork sets Network field to given value.
 
-### HasDeviceStatus
+### HasNetwork
 
-`func (o *InlineResponse200292) HasDeviceStatus() bool`
+`func (o *InlineResponse200292) HasNetwork() bool`
 
-HasDeviceStatus returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetCheckinFinishedAt
+### GetStatus
 
-`func (o *InlineResponse200292) GetCheckinFinishedAt() time.Time`
+`func (o *InlineResponse200292) GetStatus() string`
 
-GetCheckinFinishedAt returns the CheckinFinishedAt field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetCheckinFinishedAtOk
+### GetStatusOk
 
-`func (o *InlineResponse200292) GetCheckinFinishedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200292) GetStatusOk() (*string, bool)`
 
-GetCheckinFinishedAtOk returns a tuple with the CheckinFinishedAt field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCheckinFinishedAt
+### SetStatus
 
-`func (o *InlineResponse200292) SetCheckinFinishedAt(v time.Time)`
+`func (o *InlineResponse200292) SetStatus(v string)`
 
-SetCheckinFinishedAt sets CheckinFinishedAt field to given value.
+SetStatus sets Status field to given value.
 
-### HasCheckinFinishedAt
+### HasStatus
 
-`func (o *InlineResponse200292) HasCheckinFinishedAt() bool`
+`func (o *InlineResponse200292) HasStatus() bool`
 
-HasCheckinFinishedAt returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetCheckinStartedAt
+### GetTime
 
-`func (o *InlineResponse200292) GetCheckinStartedAt() time.Time`
+`func (o *InlineResponse200292) GetTime() time.Time`
 
-GetCheckinStartedAt returns the CheckinStartedAt field if non-nil, zero value otherwise.
+GetTime returns the Time field if non-nil, zero value otherwise.
 
-### GetCheckinStartedAtOk
+### GetTimeOk
 
-`func (o *InlineResponse200292) GetCheckinStartedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200292) GetTimeOk() (*time.Time, bool)`
 
-GetCheckinStartedAtOk returns a tuple with the CheckinStartedAt field if it's non-nil, zero value otherwise
+GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCheckinStartedAt
+### SetTime
 
-`func (o *InlineResponse200292) SetCheckinStartedAt(v time.Time)`
+`func (o *InlineResponse200292) SetTime(v time.Time)`
 
-SetCheckinStartedAt sets CheckinStartedAt field to given value.
+SetTime sets Time field to given value.
 
-### HasCheckinStartedAt
+### HasTime
 
-`func (o *InlineResponse200292) HasCheckinStartedAt() bool`
+`func (o *InlineResponse200292) HasTime() bool`
 
-HasCheckinStartedAt returns a boolean if a field has been set.
+HasTime returns a boolean if a field has been set.
 
-### GetDetailedStatus
+### GetCompletedAt
 
-`func (o *InlineResponse200292) GetDetailedStatus() string`
+`func (o *InlineResponse200292) GetCompletedAt() string`
 
-GetDetailedStatus returns the DetailedStatus field if non-nil, zero value otherwise.
+GetCompletedAt returns the CompletedAt field if non-nil, zero value otherwise.
 
-### GetDetailedStatusOk
+### GetCompletedAtOk
 
-`func (o *InlineResponse200292) GetDetailedStatusOk() (*string, bool)`
+`func (o *InlineResponse200292) GetCompletedAtOk() (*string, bool)`
 
-GetDetailedStatusOk returns a tuple with the DetailedStatus field if it's non-nil, zero value otherwise
+GetCompletedAtOk returns a tuple with the CompletedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetailedStatus
+### SetCompletedAt
 
-`func (o *InlineResponse200292) SetDetailedStatus(v string)`
+`func (o *InlineResponse200292) SetCompletedAt(v string)`
 
-SetDetailedStatus sets DetailedStatus field to given value.
+SetCompletedAt sets CompletedAt field to given value.
 
-### HasDetailedStatus
+### HasCompletedAt
 
-`func (o *InlineResponse200292) HasDetailedStatus() bool`
+`func (o *InlineResponse200292) HasCompletedAt() bool`
 
-HasDetailedStatus returns a boolean if a field has been set.
+HasCompletedAt returns a boolean if a field has been set.
 
-### GetDownloadFinishedAt
+### GetProductTypes
 
-`func (o *InlineResponse200292) GetDownloadFinishedAt() time.Time`
+`func (o *InlineResponse200292) GetProductTypes() string`
 
-GetDownloadFinishedAt returns the DownloadFinishedAt field if non-nil, zero value otherwise.
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-### GetDownloadFinishedAtOk
+### GetProductTypesOk
 
-`func (o *InlineResponse200292) GetDownloadFinishedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200292) GetProductTypesOk() (*string, bool)`
 
-GetDownloadFinishedAtOk returns a tuple with the DownloadFinishedAt field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadFinishedAt
+### SetProductTypes
 
-`func (o *InlineResponse200292) SetDownloadFinishedAt(v time.Time)`
+`func (o *InlineResponse200292) SetProductTypes(v string)`
 
-SetDownloadFinishedAt sets DownloadFinishedAt field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasDownloadFinishedAt
+### HasProductTypes
 
-`func (o *InlineResponse200292) HasDownloadFinishedAt() bool`
+`func (o *InlineResponse200292) HasProductTypes() bool`
 
-HasDownloadFinishedAt returns a boolean if a field has been set.
+HasProductTypes returns a boolean if a field has been set.
 
-### GetDownloadStartedAt
+### GetToVersion
 
-`func (o *InlineResponse200292) GetDownloadStartedAt() time.Time`
+`func (o *InlineResponse200292) GetToVersion() OrganizationsOrganizationIdFirmwareUpgradesToVersion`
 
-GetDownloadStartedAt returns the DownloadStartedAt field if non-nil, zero value otherwise.
+GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
 
-### GetDownloadStartedAtOk
+### GetToVersionOk
 
-`func (o *InlineResponse200292) GetDownloadStartedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200292) GetToVersionOk() (*OrganizationsOrganizationIdFirmwareUpgradesToVersion, bool)`
 
-GetDownloadStartedAtOk returns a tuple with the DownloadStartedAt field if it's non-nil, zero value otherwise
+GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadStartedAt
+### SetToVersion
 
-`func (o *InlineResponse200292) SetDownloadStartedAt(v time.Time)`
+`func (o *InlineResponse200292) SetToVersion(v OrganizationsOrganizationIdFirmwareUpgradesToVersion)`
 
-SetDownloadStartedAt sets DownloadStartedAt field to given value.
+SetToVersion sets ToVersion field to given value.
 
-### HasDownloadStartedAt
+### HasToVersion
 
-`func (o *InlineResponse200292) HasDownloadStartedAt() bool`
+`func (o *InlineResponse200292) HasToVersion() bool`
 
-HasDownloadStartedAt returns a boolean if a field has been set.
+HasToVersion returns a boolean if a field has been set.
 
-### GetDownloadStatus
+### GetFromVersion
 
-`func (o *InlineResponse200292) GetDownloadStatus() string`
+`func (o *InlineResponse200292) GetFromVersion() OrganizationsOrganizationIdFirmwareUpgradesFromVersion`
 
-GetDownloadStatus returns the DownloadStatus field if non-nil, zero value otherwise.
+GetFromVersion returns the FromVersion field if non-nil, zero value otherwise.
 
-### GetDownloadStatusOk
+### GetFromVersionOk
 
-`func (o *InlineResponse200292) GetDownloadStatusOk() (*string, bool)`
+`func (o *InlineResponse200292) GetFromVersionOk() (*OrganizationsOrganizationIdFirmwareUpgradesFromVersion, bool)`
 
-GetDownloadStatusOk returns a tuple with the DownloadStatus field if it's non-nil, zero value otherwise
+GetFromVersionOk returns a tuple with the FromVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadStatus
+### SetFromVersion
 
-`func (o *InlineResponse200292) SetDownloadStatus(v string)`
+`func (o *InlineResponse200292) SetFromVersion(v OrganizationsOrganizationIdFirmwareUpgradesFromVersion)`
 
-SetDownloadStatus sets DownloadStatus field to given value.
+SetFromVersion sets FromVersion field to given value.
 
-### HasDownloadStatus
+### HasFromVersion
 
-`func (o *InlineResponse200292) HasDownloadStatus() bool`
+`func (o *InlineResponse200292) HasFromVersion() bool`
 
-HasDownloadStatus returns a boolean if a field has been set.
-
-### GetInstallFinishedAt
-
-`func (o *InlineResponse200292) GetInstallFinishedAt() time.Time`
-
-GetInstallFinishedAt returns the InstallFinishedAt field if non-nil, zero value otherwise.
-
-### GetInstallFinishedAtOk
-
-`func (o *InlineResponse200292) GetInstallFinishedAtOk() (*time.Time, bool)`
-
-GetInstallFinishedAtOk returns a tuple with the InstallFinishedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInstallFinishedAt
-
-`func (o *InlineResponse200292) SetInstallFinishedAt(v time.Time)`
-
-SetInstallFinishedAt sets InstallFinishedAt field to given value.
-
-### HasInstallFinishedAt
-
-`func (o *InlineResponse200292) HasInstallFinishedAt() bool`
-
-HasInstallFinishedAt returns a boolean if a field has been set.
-
-### GetInstallStartedAt
-
-`func (o *InlineResponse200292) GetInstallStartedAt() time.Time`
-
-GetInstallStartedAt returns the InstallStartedAt field if non-nil, zero value otherwise.
-
-### GetInstallStartedAtOk
-
-`func (o *InlineResponse200292) GetInstallStartedAtOk() (*time.Time, bool)`
-
-GetInstallStartedAtOk returns a tuple with the InstallStartedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInstallStartedAt
-
-`func (o *InlineResponse200292) SetInstallStartedAt(v time.Time)`
-
-SetInstallStartedAt sets InstallStartedAt field to given value.
-
-### HasInstallStartedAt
-
-`func (o *InlineResponse200292) HasInstallStartedAt() bool`
-
-HasInstallStartedAt returns a boolean if a field has been set.
-
-### GetInstallStatus
-
-`func (o *InlineResponse200292) GetInstallStatus() string`
-
-GetInstallStatus returns the InstallStatus field if non-nil, zero value otherwise.
-
-### GetInstallStatusOk
-
-`func (o *InlineResponse200292) GetInstallStatusOk() (*string, bool)`
-
-GetInstallStatusOk returns a tuple with the InstallStatus field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInstallStatus
-
-`func (o *InlineResponse200292) SetInstallStatus(v string)`
-
-SetInstallStatus sets InstallStatus field to given value.
-
-### HasInstallStatus
-
-`func (o *InlineResponse200292) HasInstallStatus() bool`
-
-HasInstallStatus returns a boolean if a field has been set.
-
-### GetVerifyFinishedAt
-
-`func (o *InlineResponse200292) GetVerifyFinishedAt() time.Time`
-
-GetVerifyFinishedAt returns the VerifyFinishedAt field if non-nil, zero value otherwise.
-
-### GetVerifyFinishedAtOk
-
-`func (o *InlineResponse200292) GetVerifyFinishedAtOk() (*time.Time, bool)`
-
-GetVerifyFinishedAtOk returns a tuple with the VerifyFinishedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVerifyFinishedAt
-
-`func (o *InlineResponse200292) SetVerifyFinishedAt(v time.Time)`
-
-SetVerifyFinishedAt sets VerifyFinishedAt field to given value.
-
-### HasVerifyFinishedAt
-
-`func (o *InlineResponse200292) HasVerifyFinishedAt() bool`
-
-HasVerifyFinishedAt returns a boolean if a field has been set.
-
-### GetVerifyStartedAt
-
-`func (o *InlineResponse200292) GetVerifyStartedAt() time.Time`
-
-GetVerifyStartedAt returns the VerifyStartedAt field if non-nil, zero value otherwise.
-
-### GetVerifyStartedAtOk
-
-`func (o *InlineResponse200292) GetVerifyStartedAtOk() (*time.Time, bool)`
-
-GetVerifyStartedAtOk returns a tuple with the VerifyStartedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVerifyStartedAt
-
-`func (o *InlineResponse200292) SetVerifyStartedAt(v time.Time)`
-
-SetVerifyStartedAt sets VerifyStartedAt field to given value.
-
-### HasVerifyStartedAt
-
-`func (o *InlineResponse200292) HasVerifyStartedAt() bool`
-
-HasVerifyStartedAt returns a boolean if a field has been set.
-
-### GetVerifyStatus
-
-`func (o *InlineResponse200292) GetVerifyStatus() string`
-
-GetVerifyStatus returns the VerifyStatus field if non-nil, zero value otherwise.
-
-### GetVerifyStatusOk
-
-`func (o *InlineResponse200292) GetVerifyStatusOk() (*string, bool)`
-
-GetVerifyStatusOk returns a tuple with the VerifyStatus field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVerifyStatus
-
-`func (o *InlineResponse200292) SetVerifyStatus(v string)`
-
-SetVerifyStatus sets VerifyStatus field to given value.
-
-### HasVerifyStatus
-
-`func (o *InlineResponse200292) HasVerifyStatus() bool`
-
-HasVerifyStatus returns a boolean if a field has been set.
-
-### GetUpgrade
-
-`func (o *InlineResponse200292) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
-
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
-
-### GetUpgradeOk
-
-`func (o *InlineResponse200292) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
-
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpgrade
-
-`func (o *InlineResponse200292) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
-
-SetUpgrade sets Upgrade field to given value.
-
-### HasUpgrade
-
-`func (o *InlineResponse200292) HasUpgrade() bool`
-
-HasUpgrade returns a boolean if a field has been set.
+HasFromVersion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
-**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
-**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200290LimitScopeToNetworks**](InlineResponse200290LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
-**OptOutEligibility** | Pointer to [**InlineResponse200290OptOutEligibility**](InlineResponse200290OptOutEligibility.md) |  | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
+**ShortName** | Pointer to **string** | Short name of the early access feature | [optional] 
+**Name** | Pointer to **string** | Name of the early access feature | [optional] 
+**Descriptions** | Pointer to [**OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions**](OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions.md) |  | [optional] 
+**Topic** | Pointer to **string** | Topic of the early access feature | [optional] 
+**IsOrgScopedOnly** | Pointer to **bool** | If this early access feature can only be opted in for the entire organization | [optional] 
+**DocumentationLink** | Pointer to **string** | Link to the documentation of this early access feature | [optional] 
+**SupportLink** | Pointer to **string** | Link to get support for this early access feature | [optional] 
+**PrivacyLink** | Pointer to **string** | Link to the privacy policy for this early access feature | [optional] 
 
 ## Methods
 
@@ -28,31 +31,6 @@ will change when the set of required properties is changed
 NewInlineResponse200290WithDefaults instantiates a new InlineResponse200290 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineResponse200290) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200290) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200290) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200290) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetShortName
 
@@ -79,80 +57,180 @@ SetShortName sets ShortName field to given value.
 
 HasShortName returns a boolean if a field has been set.
 
-### GetLimitScopeToNetworks
+### GetName
 
-`func (o *InlineResponse200290) GetLimitScopeToNetworks() []InlineResponse200290LimitScopeToNetworks`
+`func (o *InlineResponse200290) GetName() string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetNameOk
 
-`func (o *InlineResponse200290) GetLimitScopeToNetworksOk() (*[]InlineResponse200290LimitScopeToNetworks, bool)`
+`func (o *InlineResponse200290) GetNameOk() (*string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetName
 
-`func (o *InlineResponse200290) SetLimitScopeToNetworks(v []InlineResponse200290LimitScopeToNetworks)`
+`func (o *InlineResponse200290) SetName(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetName sets Name field to given value.
 
-### HasLimitScopeToNetworks
+### HasName
 
-`func (o *InlineResponse200290) HasLimitScopeToNetworks() bool`
+`func (o *InlineResponse200290) HasName() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetOptOutEligibility
+### GetDescriptions
 
-`func (o *InlineResponse200290) GetOptOutEligibility() InlineResponse200290OptOutEligibility`
+`func (o *InlineResponse200290) GetDescriptions() OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions`
 
-GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
+GetDescriptions returns the Descriptions field if non-nil, zero value otherwise.
 
-### GetOptOutEligibilityOk
+### GetDescriptionsOk
 
-`func (o *InlineResponse200290) GetOptOutEligibilityOk() (*InlineResponse200290OptOutEligibility, bool)`
+`func (o *InlineResponse200290) GetDescriptionsOk() (*OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions, bool)`
 
-GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
+GetDescriptionsOk returns a tuple with the Descriptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOptOutEligibility
+### SetDescriptions
 
-`func (o *InlineResponse200290) SetOptOutEligibility(v InlineResponse200290OptOutEligibility)`
+`func (o *InlineResponse200290) SetDescriptions(v OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions)`
 
-SetOptOutEligibility sets OptOutEligibility field to given value.
+SetDescriptions sets Descriptions field to given value.
 
-### HasOptOutEligibility
+### HasDescriptions
 
-`func (o *InlineResponse200290) HasOptOutEligibility() bool`
+`func (o *InlineResponse200290) HasDescriptions() bool`
 
-HasOptOutEligibility returns a boolean if a field has been set.
+HasDescriptions returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetTopic
 
-`func (o *InlineResponse200290) GetCreatedAt() time.Time`
+`func (o *InlineResponse200290) GetTopic() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetTopic returns the Topic field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetTopicOk
 
-`func (o *InlineResponse200290) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200290) GetTopicOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetTopicOk returns a tuple with the Topic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetTopic
 
-`func (o *InlineResponse200290) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200290) SetTopic(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetTopic sets Topic field to given value.
 
-### HasCreatedAt
+### HasTopic
 
-`func (o *InlineResponse200290) HasCreatedAt() bool`
+`func (o *InlineResponse200290) HasTopic() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasTopic returns a boolean if a field has been set.
+
+### GetIsOrgScopedOnly
+
+`func (o *InlineResponse200290) GetIsOrgScopedOnly() bool`
+
+GetIsOrgScopedOnly returns the IsOrgScopedOnly field if non-nil, zero value otherwise.
+
+### GetIsOrgScopedOnlyOk
+
+`func (o *InlineResponse200290) GetIsOrgScopedOnlyOk() (*bool, bool)`
+
+GetIsOrgScopedOnlyOk returns a tuple with the IsOrgScopedOnly field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsOrgScopedOnly
+
+`func (o *InlineResponse200290) SetIsOrgScopedOnly(v bool)`
+
+SetIsOrgScopedOnly sets IsOrgScopedOnly field to given value.
+
+### HasIsOrgScopedOnly
+
+`func (o *InlineResponse200290) HasIsOrgScopedOnly() bool`
+
+HasIsOrgScopedOnly returns a boolean if a field has been set.
+
+### GetDocumentationLink
+
+`func (o *InlineResponse200290) GetDocumentationLink() string`
+
+GetDocumentationLink returns the DocumentationLink field if non-nil, zero value otherwise.
+
+### GetDocumentationLinkOk
+
+`func (o *InlineResponse200290) GetDocumentationLinkOk() (*string, bool)`
+
+GetDocumentationLinkOk returns a tuple with the DocumentationLink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDocumentationLink
+
+`func (o *InlineResponse200290) SetDocumentationLink(v string)`
+
+SetDocumentationLink sets DocumentationLink field to given value.
+
+### HasDocumentationLink
+
+`func (o *InlineResponse200290) HasDocumentationLink() bool`
+
+HasDocumentationLink returns a boolean if a field has been set.
+
+### GetSupportLink
+
+`func (o *InlineResponse200290) GetSupportLink() string`
+
+GetSupportLink returns the SupportLink field if non-nil, zero value otherwise.
+
+### GetSupportLinkOk
+
+`func (o *InlineResponse200290) GetSupportLinkOk() (*string, bool)`
+
+GetSupportLinkOk returns a tuple with the SupportLink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportLink
+
+`func (o *InlineResponse200290) SetSupportLink(v string)`
+
+SetSupportLink sets SupportLink field to given value.
+
+### HasSupportLink
+
+`func (o *InlineResponse200290) HasSupportLink() bool`
+
+HasSupportLink returns a boolean if a field has been set.
+
+### GetPrivacyLink
+
+`func (o *InlineResponse200290) GetPrivacyLink() string`
+
+GetPrivacyLink returns the PrivacyLink field if non-nil, zero value otherwise.
+
+### GetPrivacyLinkOk
+
+`func (o *InlineResponse200290) GetPrivacyLinkOk() (*string, bool)`
+
+GetPrivacyLinkOk returns a tuple with the PrivacyLink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrivacyLink
+
+`func (o *InlineResponse200290) SetPrivacyLink(v string)`
+
+SetPrivacyLink sets PrivacyLink field to given value.
+
+### HasPrivacyLink
+
+`func (o *InlineResponse200290) HasPrivacyLink() bool`
+
+HasPrivacyLink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**X509certSha1Fingerprint** | **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | 
+**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
 **SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
 ### NewInlineObject293
 
-`func NewInlineObject293() *InlineObject293`
+`func NewInlineObject293(x509certSha1Fingerprint string, ) *InlineObject293`
 
 NewInlineObject293 instantiates a new InlineObject293 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +46,31 @@ and a boolean to check if the value has been set.
 
 SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasX509certSha1Fingerprint
 
-`func (o *InlineObject293) HasX509certSha1Fingerprint() bool`
+### GetSsoLoginUrl
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+`func (o *InlineObject293) GetSsoLoginUrl() string`
+
+GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
+
+### GetSsoLoginUrlOk
+
+`func (o *InlineObject293) GetSsoLoginUrlOk() (*string, bool)`
+
+GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsoLoginUrl
+
+`func (o *InlineObject293) SetSsoLoginUrl(v string)`
+
+SetSsoLoginUrl sets SsoLoginUrl field to given value.
+
+### HasSsoLoginUrl
+
+`func (o *InlineObject293) HasSsoLoginUrl() bool`
+
+HasSsoLoginUrl returns a boolean if a field has been set.
 
 ### GetSloLogoutUrl
 

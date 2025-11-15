@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
-**LicenseId** | **string** | The ID of the SM license to move the seats from | 
-**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
+**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
+**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
 
 ## Methods
 
 ### NewInlineObject280
 
-`func NewInlineObject280(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject280`
+`func NewInlineObject280(destOrganizationId string, licenseIds []string, ) *InlineObject280`
 
 NewInlineObject280 instantiates a new InlineObject280 object
 This constructor will assign default values to properties that have it defined,
@@ -47,44 +46,24 @@ and a boolean to check if the value has been set.
 SetDestOrganizationId sets DestOrganizationId field to given value.
 
 
-### GetLicenseId
+### GetLicenseIds
 
-`func (o *InlineObject280) GetLicenseId() string`
+`func (o *InlineObject280) GetLicenseIds() []string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetLicenseIdsOk
 
-`func (o *InlineObject280) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject280) GetLicenseIdsOk() (*[]string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetLicenseIds
 
-`func (o *InlineObject280) SetLicenseId(v string)`
+`func (o *InlineObject280) SetLicenseIds(v []string)`
 
-SetLicenseId sets LicenseId field to given value.
-
-
-### GetSeatCount
-
-`func (o *InlineObject280) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject280) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject280) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
+SetLicenseIds sets LicenseIds field to given value.
 
 
 

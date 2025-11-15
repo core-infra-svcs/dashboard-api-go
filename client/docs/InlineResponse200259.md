@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200259Items**](InlineResponse200259Items.md) | List Cellular Service Providers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200259Items**](InlineResponse200259Items.md) | List of eSIM Devices | [optional] 
 **Meta** | Pointer to [**InlineResponse200259Meta**](InlineResponse200259Meta.md) |  | [optional] 
 
 ## Methods

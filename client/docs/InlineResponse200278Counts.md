@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Packets** | Pointer to [**InlineResponse200278CountsPackets**](InlineResponse200278CountsPackets.md) |  | [optional] 
+**Model** | Pointer to **string** | Device model | [optional] 
+**Total** | Pointer to **int32** | Total number of devices for the model | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200278CountsWithDefaults instantiates a new InlineResponse20027
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPackets
+### GetModel
 
-`func (o *InlineResponse200278Counts) GetPackets() InlineResponse200278CountsPackets`
+`func (o *InlineResponse200278Counts) GetModel() string`
 
-GetPackets returns the Packets field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetPacketsOk
+### GetModelOk
 
-`func (o *InlineResponse200278Counts) GetPacketsOk() (*InlineResponse200278CountsPackets, bool)`
+`func (o *InlineResponse200278Counts) GetModelOk() (*string, bool)`
 
-GetPacketsOk returns a tuple with the Packets field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPackets
+### SetModel
 
-`func (o *InlineResponse200278Counts) SetPackets(v InlineResponse200278CountsPackets)`
+`func (o *InlineResponse200278Counts) SetModel(v string)`
 
-SetPackets sets Packets field to given value.
+SetModel sets Model field to given value.
 
-### HasPackets
+### HasModel
 
-`func (o *InlineResponse200278Counts) HasPackets() bool`
+`func (o *InlineResponse200278Counts) HasModel() bool`
 
-HasPackets returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetTotal
+
+`func (o *InlineResponse200278Counts) GetTotal() int32`
+
+GetTotal returns the Total field if non-nil, zero value otherwise.
+
+### GetTotalOk
+
+`func (o *InlineResponse200278Counts) GetTotalOk() (*int32, bool)`
+
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTotal
+
+`func (o *InlineResponse200278Counts) SetTotal(v int32)`
+
+SetTotal sets Total field to given value.
+
+### HasTotal
+
+`func (o *InlineResponse200278Counts) HasTotal() bool`
+
+HasTotal returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

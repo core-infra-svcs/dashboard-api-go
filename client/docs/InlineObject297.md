@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
+**Name** | **string** | The name of the Limited Access Role | 
 **Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
 **Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject297
 
-`func NewInlineObject297() *InlineObject297`
+`func NewInlineObject297(name string, ) *InlineObject297`
 
 NewInlineObject297 instantiates a new InlineObject297 object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject297) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetScope
 

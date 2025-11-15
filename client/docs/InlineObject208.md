@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
-**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
-**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
-**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject208WithDefaults instantiates a new InlineObject208 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetConcentrator
 
-`func (o *InlineObject208) GetEnabled() bool`
+`func (o *InlineObject208) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetConcentratorOk
 
-`func (o *InlineObject208) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject208) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetConcentrator
 
-`func (o *InlineObject208) SetEnabled(v bool)`
+`func (o *InlineObject208) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetEnabled sets Enabled field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasEnabled
+### HasConcentrator
 
-`func (o *InlineObject208) HasEnabled() bool`
+`func (o *InlineObject208) HasConcentrator() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetIotController
+### GetSplitTunnel
 
-`func (o *InlineObject208) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
+`func (o *InlineObject208) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetIotController returns the IotController field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetIotControllerOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject208) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
+`func (o *InlineObject208) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIotController
+### SetSplitTunnel
 
-`func (o *InlineObject208) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
+`func (o *InlineObject208) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetIotController sets IotController field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasIotController
+### HasSplitTunnel
 
-`func (o *InlineObject208) HasIotController() bool`
+`func (o *InlineObject208) HasSplitTunnel() bool`
 
-HasIotController returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
-### GetLockManagement
+### GetFailover
 
-`func (o *InlineObject208) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
+`func (o *InlineObject208) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
 
-GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetLockManagementOk
+### GetFailoverOk
 
-`func (o *InlineObject208) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
+`func (o *InlineObject208) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
 
-GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLockManagement
+### SetFailover
 
-`func (o *InlineObject208) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
+`func (o *InlineObject208) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
 
-SetLockManagement sets LockManagement field to given value.
+SetFailover sets Failover field to given value.
 
-### HasLockManagement
+### HasFailover
 
-`func (o *InlineObject208) HasLockManagement() bool`
+`func (o *InlineObject208) HasFailover() bool`
 
-HasLockManagement returns a boolean if a field has been set.
-
-### GetDefaults
-
-`func (o *InlineObject208) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
-
-GetDefaults returns the Defaults field if non-nil, zero value otherwise.
-
-### GetDefaultsOk
-
-`func (o *InlineObject208) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
-
-GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaults
-
-`func (o *InlineObject208) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
-
-SetDefaults sets Defaults field to given value.
-
-### HasDefaults
-
-`func (o *InlineObject208) HasDefaults() bool`
-
-HasDefaults returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

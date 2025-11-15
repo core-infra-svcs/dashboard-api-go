@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **BandSelectionType** | **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. This param is required on creation. | 
 **ApBandSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesApBandSettings**](NetworksNetworkIdWirelessRfProfilesApBandSettings.md) |  | [optional] 
 **TwoFourGhzSettings** | Pointer to [**InlineResponse200200TwoFourGhzSettings**](InlineResponse200200TwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**InlineResponse200200FiveGhzSettings**](InlineResponse200200FiveGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesFiveGhzSettings**](NetworksNetworkIdWirelessRfProfilesFiveGhzSettings.md) |  | [optional] 
 **SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesSixGhzSettings.md) |  | [optional] 
 **Transmission** | Pointer to [**InlineResponse200200Transmission**](InlineResponse200200Transmission.md) |  | [optional] 
 **PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
@@ -177,20 +177,20 @@ HasTwoFourGhzSettings returns a boolean if a field has been set.
 
 ### GetFiveGhzSettings
 
-`func (o *InlineObject192) GetFiveGhzSettings() InlineResponse200200FiveGhzSettings`
+`func (o *InlineObject192) GetFiveGhzSettings() NetworksNetworkIdWirelessRfProfilesFiveGhzSettings`
 
 GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
 ### GetFiveGhzSettingsOk
 
-`func (o *InlineObject192) GetFiveGhzSettingsOk() (*InlineResponse200200FiveGhzSettings, bool)`
+`func (o *InlineObject192) GetFiveGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesFiveGhzSettings, bool)`
 
 GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFiveGhzSettings
 
-`func (o *InlineObject192) SetFiveGhzSettings(v InlineResponse200200FiveGhzSettings)`
+`func (o *InlineObject192) SetFiveGhzSettings(v NetworksNetworkIdWirelessRfProfilesFiveGhzSettings)`
 
 SetFiveGhzSettings sets FiveGhzSettings field to given value.
 

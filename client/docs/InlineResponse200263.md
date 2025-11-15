@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Eid** | **string** | eSIM EID | 
-**Iccid** | **string** | eSIM ICCID | 
-**Status** | **string** | Swap status | 
+**Items** | Pointer to [**[]InlineResponse200263Items**](InlineResponse200263Items.md) | List of Cellular Service Provider Rate Plans | [optional] 
+**Meta** | Pointer to [**InlineResponse200263Meta**](InlineResponse200263Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200263
 
-`func NewInlineResponse200263(eid string, iccid string, status string, ) *InlineResponse200263`
+`func NewInlineResponse200263() *InlineResponse200263`
 
 NewInlineResponse200263 instantiates a new InlineResponse200263 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +26,55 @@ NewInlineResponse200263WithDefaults instantiates a new InlineResponse200263 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEid
+### GetItems
 
-`func (o *InlineResponse200263) GetEid() string`
+`func (o *InlineResponse200263) GetItems() []InlineResponse200263Items`
 
-GetEid returns the Eid field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEidOk
+### GetItemsOk
 
-`func (o *InlineResponse200263) GetEidOk() (*string, bool)`
+`func (o *InlineResponse200263) GetItemsOk() (*[]InlineResponse200263Items, bool)`
 
-GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEid
+### SetItems
 
-`func (o *InlineResponse200263) SetEid(v string)`
+`func (o *InlineResponse200263) SetItems(v []InlineResponse200263Items)`
 
-SetEid sets Eid field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
 
-### GetIccid
+`func (o *InlineResponse200263) HasItems() bool`
 
-`func (o *InlineResponse200263) GetIccid() string`
+HasItems returns a boolean if a field has been set.
 
-GetIccid returns the Iccid field if non-nil, zero value otherwise.
+### GetMeta
 
-### GetIccidOk
+`func (o *InlineResponse200263) GetMeta() InlineResponse200263Meta`
 
-`func (o *InlineResponse200263) GetIccidOk() (*string, bool)`
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-GetIccidOk returns a tuple with the Iccid field if it's non-nil, zero value otherwise
+### GetMetaOk
+
+`func (o *InlineResponse200263) GetMetaOk() (*InlineResponse200263Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIccid
+### SetMeta
 
-`func (o *InlineResponse200263) SetIccid(v string)`
+`func (o *InlineResponse200263) SetMeta(v InlineResponse200263Meta)`
 
-SetIccid sets Iccid field to given value.
+SetMeta sets Meta field to given value.
 
+### HasMeta
 
-### GetStatus
+`func (o *InlineResponse200263) HasMeta() bool`
 
-`func (o *InlineResponse200263) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200263) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200263) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

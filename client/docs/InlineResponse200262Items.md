@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AccountId** | Pointer to **string** | Account ID of plans to be fetched | [optional] 
-**Name** | Pointer to **string** | Rate plan name | [optional] 
+**Apns** | Pointer to [**[]InlineResponse200262Apns**](InlineResponse200262Apns.md) | Available APNs | [optional] 
+**Name** | Pointer to **string** | Communication plan name | [optional] 
 
 ## Methods
 
@@ -50,6 +51,31 @@ SetAccountId sets AccountId field to given value.
 `func (o *InlineResponse200262Items) HasAccountId() bool`
 
 HasAccountId returns a boolean if a field has been set.
+
+### GetApns
+
+`func (o *InlineResponse200262Items) GetApns() []InlineResponse200262Apns`
+
+GetApns returns the Apns field if non-nil, zero value otherwise.
+
+### GetApnsOk
+
+`func (o *InlineResponse200262Items) GetApnsOk() (*[]InlineResponse200262Apns, bool)`
+
+GetApnsOk returns a tuple with the Apns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApns
+
+`func (o *InlineResponse200262Items) SetApns(v []InlineResponse200262Apns)`
+
+SetApns sets Apns field to given value.
+
+### HasApns
+
+`func (o *InlineResponse200262Items) HasApns() bool`
+
+HasApns returns a boolean if a field has been set.
 
 ### GetName
 

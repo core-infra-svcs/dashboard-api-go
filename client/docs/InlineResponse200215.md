@@ -4,19 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
-**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
+**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
+**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
+**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
+**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 
 ## Methods
 
 ### NewInlineResponse200215
 
-`func NewInlineResponse200215() *InlineResponse200215`
+`func NewInlineResponse200215(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200215`
 
 NewInlineResponse200215 instantiates a new InlineResponse200215 object
 This constructor will assign default values to properties that have it defined,
@@ -31,180 +30,150 @@ NewInlineResponse200215WithDefaults instantiates a new InlineResponse200215 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAclId
+### GetId
 
-`func (o *InlineResponse200215) GetAclId() string`
+`func (o *InlineResponse200215) GetId() string`
 
-GetAclId returns the AclId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAclIdOk
+### GetIdOk
 
-`func (o *InlineResponse200215) GetAclIdOk() (*string, bool)`
+`func (o *InlineResponse200215) GetIdOk() (*string, bool)`
 
-GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAclId
+### SetId
 
-`func (o *InlineResponse200215) SetAclId(v string)`
+`func (o *InlineResponse200215) SetId(v string)`
 
-SetAclId sets AclId field to given value.
+SetId sets Id field to given value.
 
-### HasAclId
+### HasId
 
-`func (o *InlineResponse200215) HasAclId() bool`
+`func (o *InlineResponse200215) HasId() bool`
 
-HasAclId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetName
+### GetOrganizationId
 
-`func (o *InlineResponse200215) GetName() string`
+`func (o *InlineResponse200215) GetOrganizationId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200215) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200215) GetOrganizationIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOrganizationId
 
-`func (o *InlineResponse200215) SetName(v string)`
+`func (o *InlineResponse200215) SetOrganizationId(v string)`
 
-SetName sets Name field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasName
+### HasOrganizationId
 
-`func (o *InlineResponse200215) HasName() bool`
+`func (o *InlineResponse200215) HasOrganizationId() bool`
 
-HasName returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetDescription
+### GetConfirmed
 
-`func (o *InlineResponse200215) GetDescription() string`
+`func (o *InlineResponse200215) GetConfirmed() bool`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetConfirmedOk
 
-`func (o *InlineResponse200215) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200215) GetConfirmedOk() (*bool, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetConfirmed
 
-`func (o *InlineResponse200215) SetDescription(v string)`
+`func (o *InlineResponse200215) SetConfirmed(v bool)`
 
-SetDescription sets Description field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasDescription
+### HasConfirmed
 
-`func (o *InlineResponse200215) HasDescription() bool`
+`func (o *InlineResponse200215) HasConfirmed() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetIpVersion
+### GetSynchronous
 
-`func (o *InlineResponse200215) GetIpVersion() string`
+`func (o *InlineResponse200215) GetSynchronous() bool`
 
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetIpVersionOk
+### GetSynchronousOk
 
-`func (o *InlineResponse200215) GetIpVersionOk() (*string, bool)`
+`func (o *InlineResponse200215) GetSynchronousOk() (*bool, bool)`
 
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVersion
+### SetSynchronous
 
-`func (o *InlineResponse200215) SetIpVersion(v string)`
+`func (o *InlineResponse200215) SetSynchronous(v bool)`
 
-SetIpVersion sets IpVersion field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasIpVersion
+### HasSynchronous
 
-`func (o *InlineResponse200215) HasIpVersion() bool`
+`func (o *InlineResponse200215) HasSynchronous() bool`
 
-HasIpVersion returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
 
-### GetRules
+### GetStatus
 
-`func (o *InlineResponse200215) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+`func (o *InlineResponse200215) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetStatusOk
 
-`func (o *InlineResponse200215) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+`func (o *InlineResponse200215) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetStatus
 
-`func (o *InlineResponse200215) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+`func (o *InlineResponse200215) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
 
-SetRules sets Rules field to given value.
+SetStatus sets Status field to given value.
 
-### HasRules
+### HasStatus
 
-`func (o *InlineResponse200215) HasRules() bool`
+`func (o *InlineResponse200215) HasStatus() bool`
 
-HasRules returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetActions
 
-`func (o *InlineResponse200215) GetCreatedAt() time.Time`
+`func (o *InlineResponse200215) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetActionsOk
 
-`func (o *InlineResponse200215) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200215) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetActions
 
-`func (o *InlineResponse200215) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200215) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetActions sets Actions field to given value.
 
-### HasCreatedAt
-
-`func (o *InlineResponse200215) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200215) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200215) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200215) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200215) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

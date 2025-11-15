@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of wireless network. | [optional] 
-**Number** | Pointer to **int32** | Unique identifier for wireless network. | [optional] 
-**Enabled** | Pointer to **bool** | Status of wireless network. | [optional] 
-**Advertised** | Pointer to **bool** | Availability of wireless network for devices to connect to. | [optional] 
+**Id** | **string** | The index of SSID | 
+**Name** | Pointer to **string** | The name of SSID | [optional] 
+**Number** | Pointer to **int32** | The number of SSID | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200376Ssid
 
-`func NewInlineResponse200376Ssid() *InlineResponse200376Ssid`
+`func NewInlineResponse200376Ssid(id string, ) *InlineResponse200376Ssid`
 
 NewInlineResponse200376Ssid instantiates a new InlineResponse200376Ssid object
 This constructor will assign default values to properties that have it defined,
@@ -27,6 +26,26 @@ will change when the set of required properties is changed
 NewInlineResponse200376SsidWithDefaults instantiates a new InlineResponse200376Ssid object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200376Ssid) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200376Ssid) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200376Ssid) SetId(v string)`
+
+SetId sets Id field to given value.
+
 
 ### GetName
 
@@ -77,56 +96,6 @@ SetNumber sets Number field to given value.
 `func (o *InlineResponse200376Ssid) HasNumber() bool`
 
 HasNumber returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineResponse200376Ssid) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineResponse200376Ssid) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineResponse200376Ssid) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineResponse200376Ssid) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetAdvertised
-
-`func (o *InlineResponse200376Ssid) GetAdvertised() bool`
-
-GetAdvertised returns the Advertised field if non-nil, zero value otherwise.
-
-### GetAdvertisedOk
-
-`func (o *InlineResponse200376Ssid) GetAdvertisedOk() (*bool, bool)`
-
-GetAdvertisedOk returns a tuple with the Advertised field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvertised
-
-`func (o *InlineResponse200376Ssid) SetAdvertised(v bool)`
-
-SetAdvertised sets Advertised field to given value.
-
-### HasAdvertised
-
-`func (o *InlineResponse200376Ssid) HasAdvertised() bool`
-
-HasAdvertised returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

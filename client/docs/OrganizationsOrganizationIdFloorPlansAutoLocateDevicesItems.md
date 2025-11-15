@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **Lat** | Pointer to **float32** | Latitude | [optional] 
 **Lng** | Pointer to **float32** | Longitude | [optional] 
 **AutoLocate** | Pointer to [**OrganizationsOrganizationIdFloorPlansAutoLocateDevicesAutoLocate**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesAutoLocate.md) |  | [optional] 
-**Type** | Pointer to **string** | The type of auto locate position. Possible values: &#39;user&#39;, &#39;gnss&#39;, and &#39;calculated&#39; | [optional] 
+**Type** | Pointer to **string** | The type of auto locate position. Possible values: &#39;user&#39;, &#39;calculated&#39; and &#39;suggested&#39; | [optional] 
 **IsAnchor** | Pointer to **bool** | Whether or not this auto locate position is an anchor | [optional] 
 
 ## Methods

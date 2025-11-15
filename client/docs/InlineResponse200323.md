@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200323Items**](InlineResponse200323Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
+**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200323WithDefaults instantiates a new InlineResponse200323 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetCertificate
 
-`func (o *InlineResponse200323) GetItems() []InlineResponse200323Items`
+`func (o *InlineResponse200323) GetCertificate() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetCertificate returns the Certificate field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetCertificateOk
 
-`func (o *InlineResponse200323) GetItemsOk() (*[]InlineResponse200323Items, bool)`
+`func (o *InlineResponse200323) GetCertificateOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetCertificate
 
-`func (o *InlineResponse200323) SetItems(v []InlineResponse200323Items)`
+`func (o *InlineResponse200323) SetCertificate(v string)`
 
-SetItems sets Items field to given value.
+SetCertificate sets Certificate field to given value.
 
-### HasItems
+### HasCertificate
 
-`func (o *InlineResponse200323) HasItems() bool`
+`func (o *InlineResponse200323) HasCertificate() bool`
 
-HasItems returns a boolean if a field has been set.
+HasCertificate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

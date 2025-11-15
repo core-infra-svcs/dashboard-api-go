@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**NetworkName** | Pointer to **string** | Network name | [optional] 
-**MerakiVpnPeers** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers**](OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers.md) | List of VPN peers with their summaries | [optional] 
+**Items** | Pointer to [**[]InlineResponse200238Items**](InlineResponse200238Items.md) | List of the IPsec SLA policies for an organization | [optional] 
+**Meta** | Pointer to [**InlineResponse200238Meta**](InlineResponse200238Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200239WithDefaults instantiates a new InlineResponse200239 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetItems
 
-`func (o *InlineResponse200239) GetNetworkId() string`
+`func (o *InlineResponse200239) GetItems() []InlineResponse200238Items`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200239) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200239) GetItemsOk() (*[]InlineResponse200238Items, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetItems
 
-`func (o *InlineResponse200239) SetNetworkId(v string)`
+`func (o *InlineResponse200239) SetItems(v []InlineResponse200238Items)`
 
-SetNetworkId sets NetworkId field to given value.
+SetItems sets Items field to given value.
 
-### HasNetworkId
+### HasItems
 
-`func (o *InlineResponse200239) HasNetworkId() bool`
+`func (o *InlineResponse200239) HasItems() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetNetworkName
+### GetMeta
 
-`func (o *InlineResponse200239) GetNetworkName() string`
+`func (o *InlineResponse200239) GetMeta() InlineResponse200238Meta`
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNetworkNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200239) GetNetworkNameOk() (*string, bool)`
+`func (o *InlineResponse200239) GetMetaOk() (*InlineResponse200238Meta, bool)`
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetMeta
 
-`func (o *InlineResponse200239) SetNetworkName(v string)`
+`func (o *InlineResponse200239) SetMeta(v InlineResponse200238Meta)`
 
-SetNetworkName sets NetworkName field to given value.
+SetMeta sets Meta field to given value.
 
-### HasNetworkName
+### HasMeta
 
-`func (o *InlineResponse200239) HasNetworkName() bool`
+`func (o *InlineResponse200239) HasMeta() bool`
 
-HasNetworkName returns a boolean if a field has been set.
-
-### GetMerakiVpnPeers
-
-`func (o *InlineResponse200239) GetMerakiVpnPeers() []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers`
-
-GetMerakiVpnPeers returns the MerakiVpnPeers field if non-nil, zero value otherwise.
-
-### GetMerakiVpnPeersOk
-
-`func (o *InlineResponse200239) GetMerakiVpnPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers, bool)`
-
-GetMerakiVpnPeersOk returns a tuple with the MerakiVpnPeers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMerakiVpnPeers
-
-`func (o *InlineResponse200239) SetMerakiVpnPeers(v []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers)`
-
-SetMerakiVpnPeers sets MerakiVpnPeers field to given value.
-
-### HasMerakiVpnPeers
-
-`func (o *InlineResponse200239) HasMerakiVpnPeers() bool`
-
-HasMerakiVpnPeers returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

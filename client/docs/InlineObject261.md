@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | The serial(s) of the device(s) to stop the capture on | 
+**CaptureIds** | **[]string** | Delete the packet captures of the specified capture ids | 
 
 ## Methods
 
 ### NewInlineObject261
 
-`func NewInlineObject261(serials []string, ) *InlineObject261`
+`func NewInlineObject261(captureIds []string, ) *InlineObject261`
 
 NewInlineObject261 instantiates a new InlineObject261 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject261WithDefaults instantiates a new InlineObject261 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetCaptureIds
 
-`func (o *InlineObject261) GetSerials() []string`
+`func (o *InlineObject261) GetCaptureIds() []string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetCaptureIds returns the CaptureIds field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetCaptureIdsOk
 
-`func (o *InlineObject261) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject261) GetCaptureIdsOk() (*[]string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetCaptureIdsOk returns a tuple with the CaptureIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetCaptureIds
 
-`func (o *InlineObject261) SetSerials(v []string)`
+`func (o *InlineObject261) SetCaptureIds(v []string)`
 
-SetSerials sets Serials field to given value.
+SetCaptureIds sets CaptureIds field to given value.
 
 
 

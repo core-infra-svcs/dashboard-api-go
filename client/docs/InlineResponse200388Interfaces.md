@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the wireless LAN controller interface | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200388Readings**](InlineResponse200388Readings.md) | The status of packets counter on the interfaces of the wireless LAN controller | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the wireless LAN controller interface | [optional] 
+**Changes** | Pointer to [**[]InlineResponse200385Changes**](InlineResponse200385Changes.md) | The statuses of layer 3 interfaces of the wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetReadings
+### GetMac
 
-`func (o *InlineResponse200388Interfaces) GetReadings() []InlineResponse200388Readings`
+`func (o *InlineResponse200388Interfaces) GetMac() string`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetMacOk
 
-`func (o *InlineResponse200388Interfaces) GetReadingsOk() (*[]InlineResponse200388Readings, bool)`
+`func (o *InlineResponse200388Interfaces) GetMacOk() (*string, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetMac
 
-`func (o *InlineResponse200388Interfaces) SetReadings(v []InlineResponse200388Readings)`
+`func (o *InlineResponse200388Interfaces) SetMac(v string)`
 
-SetReadings sets Readings field to given value.
+SetMac sets Mac field to given value.
 
-### HasReadings
+### HasMac
 
-`func (o *InlineResponse200388Interfaces) HasReadings() bool`
+`func (o *InlineResponse200388Interfaces) HasMac() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetChanges
+
+`func (o *InlineResponse200388Interfaces) GetChanges() []InlineResponse200385Changes`
+
+GetChanges returns the Changes field if non-nil, zero value otherwise.
+
+### GetChangesOk
+
+`func (o *InlineResponse200388Interfaces) GetChangesOk() (*[]InlineResponse200385Changes, bool)`
+
+GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChanges
+
+`func (o *InlineResponse200388Interfaces) SetChanges(v []InlineResponse200385Changes)`
+
+SetChanges sets Changes field to given value.
+
+### HasChanges
+
+`func (o *InlineResponse200388Interfaces) HasChanges() bool`
+
+HasChanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

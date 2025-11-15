@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Mac** | Pointer to **string** | The MAC address of the client | [optional] 
 **Ip** | Pointer to **string** | The IP address of the client | [optional] 
 **Ip6** | Pointer to **string** | The IPv6 address of the client | [optional] 
+**Ip6Local** | Pointer to **string** | The IPv6 Link Local address of the client | [optional] 
 **Description** | Pointer to **string** | Short description of the client | [optional] 
 **FirstSeen** | Pointer to **int32** | Timestamp client was first seen in the network | [optional] 
 **LastSeen** | Pointer to **int32** | Timestamp client was last seen in the network | [optional] 
@@ -149,6 +150,31 @@ SetIp6 sets Ip6 field to given value.
 `func (o *InlineResponse20091) HasIp6() bool`
 
 HasIp6 returns a boolean if a field has been set.
+
+### GetIp6Local
+
+`func (o *InlineResponse20091) GetIp6Local() string`
+
+GetIp6Local returns the Ip6Local field if non-nil, zero value otherwise.
+
+### GetIp6LocalOk
+
+`func (o *InlineResponse20091) GetIp6LocalOk() (*string, bool)`
+
+GetIp6LocalOk returns a tuple with the Ip6Local field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp6Local
+
+`func (o *InlineResponse20091) SetIp6Local(v string)`
+
+SetIp6Local sets Ip6Local field to given value.
+
+### HasIp6Local
+
+`func (o *InlineResponse20091) HasIp6Local() bool`
+
+HasIp6Local returns a boolean if a field has been set.
 
 ### GetDescription
 

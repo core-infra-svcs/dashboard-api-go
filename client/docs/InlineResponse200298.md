@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | Pointer to [**[]InlineResponse200298Networks**](InlineResponse200298Networks.md) | List of networks that have XDR disabled | [optional] 
+**Items** | Pointer to [**[]InlineResponse200298Items**](InlineResponse200298Items.md) | List of networks with XDR enabled | [optional] 
+**Meta** | Pointer to [**InlineResponse200298Meta**](InlineResponse200298Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200298WithDefaults instantiates a new InlineResponse200298 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworks
+### GetItems
 
-`func (o *InlineResponse200298) GetNetworks() []InlineResponse200298Networks`
+`func (o *InlineResponse200298) GetItems() []InlineResponse200298Items`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetItemsOk
 
-`func (o *InlineResponse200298) GetNetworksOk() (*[]InlineResponse200298Networks, bool)`
+`func (o *InlineResponse200298) GetItemsOk() (*[]InlineResponse200298Items, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetItems
 
-`func (o *InlineResponse200298) SetNetworks(v []InlineResponse200298Networks)`
+`func (o *InlineResponse200298) SetItems(v []InlineResponse200298Items)`
 
-SetNetworks sets Networks field to given value.
+SetItems sets Items field to given value.
 
-### HasNetworks
+### HasItems
 
-`func (o *InlineResponse200298) HasNetworks() bool`
+`func (o *InlineResponse200298) HasItems() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200298) GetMeta() InlineResponse200298Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200298) GetMetaOk() (*InlineResponse200298Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200298) SetMeta(v InlineResponse200298Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200298) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

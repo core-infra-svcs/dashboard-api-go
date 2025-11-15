@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **PowerExceptions** | Pointer to [**[]NetworksNetworkIdSwitchSettingsPowerExceptions**](NetworksNetworkIdSwitchSettingsPowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
 **UplinkClientSampling** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkClientSampling**](NetworksNetworkIdSwitchSettingsUplinkClientSampling.md) |  | [optional] 
 **MacBlocklist** | Pointer to [**NetworksNetworkIdSwitchSettingsMacBlocklist**](NetworksNetworkIdSwitchSettingsMacBlocklist.md) |  | [optional] 
+**UplinkSelection** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkSelection**](NetworksNetworkIdSwitchSettingsUplinkSelection.md) |  | [optional] 
 
 ## Methods
 
@@ -153,6 +154,31 @@ SetMacBlocklist sets MacBlocklist field to given value.
 `func (o *InlineObject158) HasMacBlocklist() bool`
 
 HasMacBlocklist returns a boolean if a field has been set.
+
+### GetUplinkSelection
+
+`func (o *InlineObject158) GetUplinkSelection() NetworksNetworkIdSwitchSettingsUplinkSelection`
+
+GetUplinkSelection returns the UplinkSelection field if non-nil, zero value otherwise.
+
+### GetUplinkSelectionOk
+
+`func (o *InlineObject158) GetUplinkSelectionOk() (*NetworksNetworkIdSwitchSettingsUplinkSelection, bool)`
+
+GetUplinkSelectionOk returns a tuple with the UplinkSelection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinkSelection
+
+`func (o *InlineObject158) SetUplinkSelection(v NetworksNetworkIdSwitchSettingsUplinkSelection)`
+
+SetUplinkSelection sets UplinkSelection field to given value.
+
+### HasUplinkSelection
+
+`func (o *InlineObject158) HasUplinkSelection() bool`
+
+HasUplinkSelection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

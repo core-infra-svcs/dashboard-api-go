@@ -5,9 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Network** | Pointer to [**InlineResponse200372Network**](InlineResponse200372Network.md) |  | [optional] 
-**Mqtt** | Pointer to [**InlineResponse200372Mqtt**](InlineResponse200372Mqtt.md) |  | [optional] 
-**Ble** | Pointer to [**InlineResponse200372Ble**](InlineResponse200372Ble.md) |  | [optional] 
-**Wifi** | Pointer to [**InlineResponse200372Wifi**](InlineResponse200372Wifi.md) |  | [optional] 
+**ReceiverId** | Pointer to **string** | Receiver ID | [optional] 
+**Url** | Pointer to **string** | Receiver Url | [optional] 
+**Version** | Pointer to **string** | Scanning API Version | [optional] 
+**Radio** | Pointer to [**InlineResponse200372Radio**](InlineResponse200372Radio.md) |  | [optional] 
 
 ## Methods
 
@@ -53,80 +54,105 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetMqtt
+### GetReceiverId
 
-`func (o *InlineResponse200372Items) GetMqtt() InlineResponse200372Mqtt`
+`func (o *InlineResponse200372Items) GetReceiverId() string`
 
-GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+GetReceiverId returns the ReceiverId field if non-nil, zero value otherwise.
 
-### GetMqttOk
+### GetReceiverIdOk
 
-`func (o *InlineResponse200372Items) GetMqttOk() (*InlineResponse200372Mqtt, bool)`
+`func (o *InlineResponse200372Items) GetReceiverIdOk() (*string, bool)`
 
-GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+GetReceiverIdOk returns a tuple with the ReceiverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqtt
+### SetReceiverId
 
-`func (o *InlineResponse200372Items) SetMqtt(v InlineResponse200372Mqtt)`
+`func (o *InlineResponse200372Items) SetReceiverId(v string)`
 
-SetMqtt sets Mqtt field to given value.
+SetReceiverId sets ReceiverId field to given value.
 
-### HasMqtt
+### HasReceiverId
 
-`func (o *InlineResponse200372Items) HasMqtt() bool`
+`func (o *InlineResponse200372Items) HasReceiverId() bool`
 
-HasMqtt returns a boolean if a field has been set.
+HasReceiverId returns a boolean if a field has been set.
 
-### GetBle
+### GetUrl
 
-`func (o *InlineResponse200372Items) GetBle() InlineResponse200372Ble`
+`func (o *InlineResponse200372Items) GetUrl() string`
 
-GetBle returns the Ble field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetBleOk
+### GetUrlOk
 
-`func (o *InlineResponse200372Items) GetBleOk() (*InlineResponse200372Ble, bool)`
+`func (o *InlineResponse200372Items) GetUrlOk() (*string, bool)`
 
-GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBle
+### SetUrl
 
-`func (o *InlineResponse200372Items) SetBle(v InlineResponse200372Ble)`
+`func (o *InlineResponse200372Items) SetUrl(v string)`
 
-SetBle sets Ble field to given value.
+SetUrl sets Url field to given value.
 
-### HasBle
+### HasUrl
 
-`func (o *InlineResponse200372Items) HasBle() bool`
+`func (o *InlineResponse200372Items) HasUrl() bool`
 
-HasBle returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetWifi
+### GetVersion
 
-`func (o *InlineResponse200372Items) GetWifi() InlineResponse200372Wifi`
+`func (o *InlineResponse200372Items) GetVersion() string`
 
-GetWifi returns the Wifi field if non-nil, zero value otherwise.
+GetVersion returns the Version field if non-nil, zero value otherwise.
 
-### GetWifiOk
+### GetVersionOk
 
-`func (o *InlineResponse200372Items) GetWifiOk() (*InlineResponse200372Wifi, bool)`
+`func (o *InlineResponse200372Items) GetVersionOk() (*string, bool)`
 
-GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi
+### SetVersion
 
-`func (o *InlineResponse200372Items) SetWifi(v InlineResponse200372Wifi)`
+`func (o *InlineResponse200372Items) SetVersion(v string)`
 
-SetWifi sets Wifi field to given value.
+SetVersion sets Version field to given value.
 
-### HasWifi
+### HasVersion
 
-`func (o *InlineResponse200372Items) HasWifi() bool`
+`func (o *InlineResponse200372Items) HasVersion() bool`
 
-HasWifi returns a boolean if a field has been set.
+HasVersion returns a boolean if a field has been set.
+
+### GetRadio
+
+`func (o *InlineResponse200372Items) GetRadio() InlineResponse200372Radio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineResponse200372Items) GetRadioOk() (*InlineResponse200372Radio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineResponse200372Items) SetRadio(v InlineResponse200372Radio)`
+
+SetRadio sets Radio field to given value.
+
+### HasRadio
+
+`func (o *InlineResponse200372Items) HasRadio() bool`
+
+HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

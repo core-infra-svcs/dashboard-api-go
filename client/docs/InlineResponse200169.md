@@ -9,8 +9,7 @@ Name | Type | Description | Notes
 **PowerExceptions** | Pointer to [**[]InlineResponse200169PowerExceptions**](InlineResponse200169PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
 **UplinkClientSampling** | Pointer to [**InlineResponse200169UplinkClientSampling**](InlineResponse200169UplinkClientSampling.md) |  | [optional] 
 **MacBlocklist** | Pointer to [**InlineResponse200169MacBlocklist**](InlineResponse200169MacBlocklist.md) |  | [optional] 
-**UacAutomaticFailback** | Pointer to **map[string]interface{}** | UAC Automatic Failback | [optional] 
-**UacCandidateUplink** | Pointer to **map[string]interface{}** | UAC Candidate Uplink | [optional] 
+**UplinkSelection** | Pointer to [**InlineResponse200169UplinkSelection**](InlineResponse200169UplinkSelection.md) |  | [optional] 
 
 ## Methods
 
@@ -156,55 +155,30 @@ SetMacBlocklist sets MacBlocklist field to given value.
 
 HasMacBlocklist returns a boolean if a field has been set.
 
-### GetUacAutomaticFailback
+### GetUplinkSelection
 
-`func (o *InlineResponse200169) GetUacAutomaticFailback() map[string]interface{}`
+`func (o *InlineResponse200169) GetUplinkSelection() InlineResponse200169UplinkSelection`
 
-GetUacAutomaticFailback returns the UacAutomaticFailback field if non-nil, zero value otherwise.
+GetUplinkSelection returns the UplinkSelection field if non-nil, zero value otherwise.
 
-### GetUacAutomaticFailbackOk
+### GetUplinkSelectionOk
 
-`func (o *InlineResponse200169) GetUacAutomaticFailbackOk() (*map[string]interface{}, bool)`
+`func (o *InlineResponse200169) GetUplinkSelectionOk() (*InlineResponse200169UplinkSelection, bool)`
 
-GetUacAutomaticFailbackOk returns a tuple with the UacAutomaticFailback field if it's non-nil, zero value otherwise
+GetUplinkSelectionOk returns a tuple with the UplinkSelection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUacAutomaticFailback
+### SetUplinkSelection
 
-`func (o *InlineResponse200169) SetUacAutomaticFailback(v map[string]interface{})`
+`func (o *InlineResponse200169) SetUplinkSelection(v InlineResponse200169UplinkSelection)`
 
-SetUacAutomaticFailback sets UacAutomaticFailback field to given value.
+SetUplinkSelection sets UplinkSelection field to given value.
 
-### HasUacAutomaticFailback
+### HasUplinkSelection
 
-`func (o *InlineResponse200169) HasUacAutomaticFailback() bool`
+`func (o *InlineResponse200169) HasUplinkSelection() bool`
 
-HasUacAutomaticFailback returns a boolean if a field has been set.
-
-### GetUacCandidateUplink
-
-`func (o *InlineResponse200169) GetUacCandidateUplink() map[string]interface{}`
-
-GetUacCandidateUplink returns the UacCandidateUplink field if non-nil, zero value otherwise.
-
-### GetUacCandidateUplinkOk
-
-`func (o *InlineResponse200169) GetUacCandidateUplinkOk() (*map[string]interface{}, bool)`
-
-GetUacCandidateUplinkOk returns a tuple with the UacCandidateUplink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUacCandidateUplink
-
-`func (o *InlineResponse200169) SetUacCandidateUplink(v map[string]interface{})`
-
-SetUacCandidateUplink sets UacCandidateUplink field to given value.
-
-### HasUacCandidateUplink
-
-`func (o *InlineResponse200169) HasUacCandidateUplink() bool`
-
-HasUacCandidateUplink returns a boolean if a field has been set.
+HasUplinkSelection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

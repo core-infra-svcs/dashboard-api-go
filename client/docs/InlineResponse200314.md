@@ -5,12 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | Policy object ID | [optional] 
-**Name** | Pointer to **string** | Name of the Policy object group. | [optional] 
-**Category** | Pointer to **string** | Type of object groups. (NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**Name** | Pointer to **string** | Name of policy object (alphanumeric, space, dash, or underscore characters only). | [optional] 
+**Category** | Pointer to **string** | Category of a policy object (one of: adaptivePolicy, network) | [optional] 
+**Type** | Pointer to **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object | [optional] 
 **CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
 **UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
-**ObjectIds** | Pointer to **[]int32** | Policy objects associated with Network Object Group or Port Object Group | [optional] 
-**NetworkIds** | Pointer to **[]string** | Network ID&#39;s associated with the policy objects. | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to. | [optional] 
+**NetworkIds** | Pointer to **[]string** | The IDs of the networks that use the policy object. | [optional] 
 
 ## Methods
 
@@ -106,6 +108,56 @@ SetCategory sets Category field to given value.
 
 HasCategory returns a boolean if a field has been set.
 
+### GetType
+
+`func (o *InlineResponse200314) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200314) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200314) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200314) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetCidr
+
+`func (o *InlineResponse200314) GetCidr() string`
+
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
+
+### GetCidrOk
+
+`func (o *InlineResponse200314) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCidr
+
+`func (o *InlineResponse200314) SetCidr(v string)`
+
+SetCidr sets Cidr field to given value.
+
+### HasCidr
+
+`func (o *InlineResponse200314) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
+
 ### GetCreatedAt
 
 `func (o *InlineResponse200314) GetCreatedAt() time.Time`
@@ -156,30 +208,30 @@ SetUpdatedAt sets UpdatedAt field to given value.
 
 HasUpdatedAt returns a boolean if a field has been set.
 
-### GetObjectIds
+### GetGroupIds
 
-`func (o *InlineResponse200314) GetObjectIds() []int32`
+`func (o *InlineResponse200314) GetGroupIds() []string`
 
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
 
-### GetObjectIdsOk
+### GetGroupIdsOk
 
-`func (o *InlineResponse200314) GetObjectIdsOk() (*[]int32, bool)`
+`func (o *InlineResponse200314) GetGroupIdsOk() (*[]string, bool)`
 
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetObjectIds
+### SetGroupIds
 
-`func (o *InlineResponse200314) SetObjectIds(v []int32)`
+`func (o *InlineResponse200314) SetGroupIds(v []string)`
 
-SetObjectIds sets ObjectIds field to given value.
+SetGroupIds sets GroupIds field to given value.
 
-### HasObjectIds
+### HasGroupIds
 
-`func (o *InlineResponse200314) HasObjectIds() bool`
+`func (o *InlineResponse200314) HasGroupIds() bool`
 
-HasObjectIds returns a boolean if a field has been set.
+HasGroupIds returns a boolean if a field has been set.
 
 ### GetNetworkIds
 

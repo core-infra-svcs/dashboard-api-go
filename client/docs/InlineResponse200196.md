@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Vlan** | Pointer to **int32** | LAN | [optional] 
 **ClientMac** | Pointer to **string** | Client Mac | [optional] 
 **Serial** | Pointer to **string** | Serial Number | [optional] 
+**Radio** | Pointer to **int32** | Radio number | [optional] 
 **FailureStep** | Pointer to **string** | The failed onboarding step. One of: assoc, auth, dhcp, dns. | [optional] 
 **Type** | Pointer to **string** | The failure type in the onboarding step | [optional] 
 **Ts** | Pointer to **time.Time** | The timestamp when the client mac failed | [optional] 
@@ -130,6 +131,31 @@ SetSerial sets Serial field to given value.
 `func (o *InlineResponse200196) HasSerial() bool`
 
 HasSerial returns a boolean if a field has been set.
+
+### GetRadio
+
+`func (o *InlineResponse200196) GetRadio() int32`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineResponse200196) GetRadioOk() (*int32, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineResponse200196) SetRadio(v int32)`
+
+SetRadio sets Radio field to given value.
+
+### HasRadio
+
+`func (o *InlineResponse200196) HasRadio() bool`
+
+HasRadio returns a boolean if a field has been set.
 
 ### GetFailureStep
 
