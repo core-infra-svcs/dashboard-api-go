@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **IsolationEnabled** | Pointer to **bool** | The isolation status of the switch template port. | [optional] 
 **RstpEnabled** | Pointer to **bool** | The rapid spanning tree protocol status. | [optional] 
 **StpGuard** | Pointer to **string** | The state of the STP guard (&#39;disabled&#39;, &#39;root guard&#39;, &#39;bpdu guard&#39; or &#39;loop guard&#39;). | [optional] 
+**StpPortFastTrunk** | Pointer to **bool** | The state of STP PortFast Trunk on the switch template port. | [optional] 
 **LinkNegotiation** | Pointer to **string** | The link speed for the switch template port. | [optional] 
 **PortScheduleId** | Pointer to **NullableString** | The ID of the port schedule. A value of null will clear the port schedule. | [optional] 
 **Udld** | Pointer to **string** | The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only. | [optional] 
@@ -354,6 +355,31 @@ SetStpGuard sets StpGuard field to given value.
 `func (o *InlineObject256) HasStpGuard() bool`
 
 HasStpGuard returns a boolean if a field has been set.
+
+### GetStpPortFastTrunk
+
+`func (o *InlineObject256) GetStpPortFastTrunk() bool`
+
+GetStpPortFastTrunk returns the StpPortFastTrunk field if non-nil, zero value otherwise.
+
+### GetStpPortFastTrunkOk
+
+`func (o *InlineObject256) GetStpPortFastTrunkOk() (*bool, bool)`
+
+GetStpPortFastTrunkOk returns a tuple with the StpPortFastTrunk field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStpPortFastTrunk
+
+`func (o *InlineObject256) SetStpPortFastTrunk(v bool)`
+
+SetStpPortFastTrunk sets StpPortFastTrunk field to given value.
+
+### HasStpPortFastTrunk
+
+`func (o *InlineObject256) HasStpPortFastTrunk() bool`
+
+HasStpPortFastTrunk returns a boolean if a field has been set.
 
 ### GetLinkNegotiation
 

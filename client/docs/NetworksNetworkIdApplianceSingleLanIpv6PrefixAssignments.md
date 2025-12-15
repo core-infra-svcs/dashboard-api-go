@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Autonomous** | Pointer to **bool** | Auto assign a /64 prefix from the origin to the VLAN | [optional] 
+**Disabled** | **bool** | Disable the prefix assignment | 
 **StaticPrefix** | Pointer to **string** | Manual configuration of a /64 prefix on the VLAN | [optional] 
 **StaticApplianceIp6** | Pointer to **string** | Manual configuration of the IPv6 Appliance IP | [optional] 
 **Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
@@ -13,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewNetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments
 
-`func NewNetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments() *NetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments`
+`func NewNetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments(disabled bool, ) *NetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments`
 
 NewNetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments instantiates a new NetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments object
 This constructor will assign default values to properties that have it defined,
@@ -52,6 +53,26 @@ SetAutonomous sets Autonomous field to given value.
 `func (o *NetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments) HasAutonomous() bool`
 
 HasAutonomous returns a boolean if a field has been set.
+
+### GetDisabled
+
+`func (o *NetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments) GetDisabled() bool`
+
+GetDisabled returns the Disabled field if non-nil, zero value otherwise.
+
+### GetDisabledOk
+
+`func (o *NetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments) GetDisabledOk() (*bool, bool)`
+
+GetDisabledOk returns a tuple with the Disabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDisabled
+
+`func (o *NetworksNetworkIdApplianceSingleLanIpv6PrefixAssignments) SetDisabled(v bool)`
+
+SetDisabled sets Disabled field to given value.
+
 
 ### GetStaticPrefix
 

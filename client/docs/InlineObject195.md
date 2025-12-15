@@ -66,7 +66,7 @@ Name | Type | Description | Notes
 **SpeedBurst** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSpeedBurst**](NetworksNetworkIdWirelessSsidsNumberSpeedBurst.md) |  | [optional] 
 **NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberNamedVlans**](NetworksNetworkIdWirelessSsidsNumberNamedVlans.md) |  | [optional] 
 **LocalAuthFallback** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback**](NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback.md) |  | [optional] 
-**RadiusAccountingStartDelay** | Pointer to **int32** | The delay (in seconds) before sending the first RADIUS accounting start message. Must be between 0 and 59 seconds. | [optional] 
+**RadiusAccountingStartDelay** | Pointer to **int32** | The delay (in seconds) before sending the first RADIUS accounting start message. Must be between 0 and 60 seconds. | [optional] 
 
 ## Methods
 

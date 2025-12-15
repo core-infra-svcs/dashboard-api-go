@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessFailedConnections
 
-> []InlineResponse200196 GetNetworkWirelessFailedConnections(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
+> []InlineResponse200196 GetNetworkWirelessFailedConnections(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
 
 List of all failed client connection events on this network in a given time range
 
@@ -35,14 +35,13 @@ func main() {
     timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. (optional)
     band := "band_example" // string | Filter results by band (either '2.4', '5' or '6'). Note that data prior to February 2020 will not have band information. (optional)
     ssid := int32(56) // int32 | Filter results by SSID (optional)
-    vlan := int32(56) // int32 | Filter results by VLAN (optional)
     apTag := "apTag_example" // string | Filter results by AP Tag (optional)
     serial := "serial_example" // string | Filter by AP (optional)
     clientId := "clientId_example" // string | Filter by client MAC (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FailedConnectionsApi.GetNetworkWirelessFailedConnections(context.Background(), networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
+    resp, r, err := apiClient.FailedConnectionsApi.GetNetworkWirelessFailedConnections(context.Background(), networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FailedConnectionsApi.GetNetworkWirelessFailedConnections``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -73,7 +72,6 @@ Name | Type | Description  | Notes
  **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. | 
  **band** | **string** | Filter results by band (either &#39;2.4&#39;, &#39;5&#39; or &#39;6&#39;). Note that data prior to February 2020 will not have band information. | 
  **ssid** | **int32** | Filter results by SSID | 
- **vlan** | **int32** | Filter results by VLAN | 
  **apTag** | **string** | Filter results by AP Tag | 
  **serial** | **string** | Filter by AP | 
  **clientId** | **string** | Filter by client MAC | 

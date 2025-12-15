@@ -244,7 +244,7 @@ Method | HTTP request | Description
 [**GetNetworkApplianceTrafficShapingUplinkBandwidth**](ConfigureApi.md#GetNetworkApplianceTrafficShapingUplinkBandwidth) | **Get** /networks/{networkId}/appliance/trafficShaping/uplinkBandwidth | Returns the uplink bandwidth limits for your MX network
 [**GetNetworkApplianceTrafficShapingUplinkSelection**](ConfigureApi.md#GetNetworkApplianceTrafficShapingUplinkSelection) | **Get** /networks/{networkId}/appliance/trafficShaping/uplinkSelection | Show uplink selection settings for an MX network
 [**GetNetworkApplianceVlan**](ConfigureApi.md#GetNetworkApplianceVlan) | **Get** /networks/{networkId}/appliance/vlans/{vlanId} | Return a VLAN
-[**GetNetworkApplianceVlans**](ConfigureApi.md#GetNetworkApplianceVlans) | **Get** /networks/{networkId}/appliance/vlans | List the VLANs for an MX network
+[**GetNetworkApplianceVlans**](ConfigureApi.md#GetNetworkApplianceVlans) | **Get** /networks/{networkId}/appliance/vlans | List the VLANs for a Cisco Secure Router network
 [**GetNetworkApplianceVlansSettings**](ConfigureApi.md#GetNetworkApplianceVlansSettings) | **Get** /networks/{networkId}/appliance/vlans/settings | Returns the enabled status of VLANs for the network
 [**GetNetworkApplianceVpnBgp**](ConfigureApi.md#GetNetworkApplianceVpnBgp) | **Get** /networks/{networkId}/appliance/vpn/bgp | Return a Hub BGP Configuration
 [**GetNetworkApplianceVpnSiteToSiteVpn**](ConfigureApi.md#GetNetworkApplianceVpnSiteToSiteVpn) | **Get** /networks/{networkId}/appliance/vpn/siteToSiteVpn | Return the site-to-site VPN settings of a network
@@ -17839,7 +17839,7 @@ Name | Type | Description  | Notes
 
 > []InlineResponse20076 GetNetworkApplianceVlans(ctx, networkId).Execute()
 
-List the VLANs for an MX network
+List the VLANs for a Cisco Secure Router network
 
 
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | 
-**Mode** | Pointer to **string** | L3 Interface mode, can be one of &#39;vlan&#39;, &#39;routed&#39; or &#39;loopback&#39;. Default is &#39;vlan&#39;. CS 17.18 or higher is required for &#39;routed&#39; mode. | [optional] 
+**Mode** | Pointer to **string** | L3 Interface mode, can be one of &#39;vlan&#39;, &#39;routed&#39;, &#39;loopback&#39;. Default is &#39;vlan&#39;. CS 17.18 or higher is required for &#39;routed&#39; mode.  | [optional] 
 **Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
 **SwitchPortId** | Pointer to **NullableString** | Switch Port ID when in Routed mode (CS 17.18 or higher required) | [optional] 
 **InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 

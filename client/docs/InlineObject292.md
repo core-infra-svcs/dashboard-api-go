@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**SpInitiated** | Pointer to [**InlineResponse200316SpInitiated**](InlineResponse200316SpInitiated.md) |  | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetEnabled sets Enabled field to given value.
 `func (o *InlineObject292) HasEnabled() bool`
 
 HasEnabled returns a boolean if a field has been set.
+
+### GetSpInitiated
+
+`func (o *InlineObject292) GetSpInitiated() InlineResponse200316SpInitiated`
+
+GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+
+### GetSpInitiatedOk
+
+`func (o *InlineObject292) GetSpInitiatedOk() (*InlineResponse200316SpInitiated, bool)`
+
+GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpInitiated
+
+`func (o *InlineObject292) SetSpInitiated(v InlineResponse200316SpInitiated)`
+
+SetSpInitiated sets SpInitiated field to given value.
+
+### HasSpInitiated
+
+`func (o *InlineObject292) HasSpInitiated() bool`
+
+HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

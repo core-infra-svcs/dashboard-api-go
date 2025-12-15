@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** | Whether or not the SSID is enabled | [optional] 
 **SplashPage** | Pointer to **string** | The type of splash page for the SSID | [optional] 
 **SsidAdminAccessible** | Pointer to **bool** | SSID Administrator access status | [optional] 
+**AccessControl** | Pointer to [**NetworksNetworkIdWirelessSsidsAccessControl**](NetworksNetworkIdWirelessSsidsAccessControl.md) |  | [optional] 
 **LocalAuth** | Pointer to **bool** | Extended local auth flag for Enterprise NAC | [optional] 
 **AuthMode** | Pointer to **string** | The association control method for the SSID | [optional] 
 **EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID | [optional] 
@@ -179,6 +180,31 @@ SetSsidAdminAccessible sets SsidAdminAccessible field to given value.
 `func (o *InlineResponse200203) HasSsidAdminAccessible() bool`
 
 HasSsidAdminAccessible returns a boolean if a field has been set.
+
+### GetAccessControl
+
+`func (o *InlineResponse200203) GetAccessControl() NetworksNetworkIdWirelessSsidsAccessControl`
+
+GetAccessControl returns the AccessControl field if non-nil, zero value otherwise.
+
+### GetAccessControlOk
+
+`func (o *InlineResponse200203) GetAccessControlOk() (*NetworksNetworkIdWirelessSsidsAccessControl, bool)`
+
+GetAccessControlOk returns a tuple with the AccessControl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessControl
+
+`func (o *InlineResponse200203) SetAccessControl(v NetworksNetworkIdWirelessSsidsAccessControl)`
+
+SetAccessControl sets AccessControl field to given value.
+
+### HasAccessControl
+
+`func (o *InlineResponse200203) HasAccessControl() bool`
+
+HasAccessControl returns a boolean if a field has been set.
 
 ### GetLocalAuth
 

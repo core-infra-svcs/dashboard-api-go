@@ -6,7 +6,7 @@ info:
   description: |
     The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
 
-    > Date: 05 November, 2025
+    > Date: 03 December, 2025
     >
     > [Recent Updates](https://meraki.io/whats-new/)
 
@@ -18,7 +18,7 @@ info:
 
     [Meraki Homepage](https://www.meraki.com)
   title: Meraki Dashboard API
-  version: 1.64.0
+  version: 1.65.0
 servers:
 - url: https://api.meraki.com/api/v1
 security:
@@ -4429,6 +4429,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 linkNegotiationCapabilities:
                 - Auto negotiate
@@ -4720,6 +4721,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 linkNegotiationCapabilities:
                 - Auto negotiate
@@ -4804,6 +4806,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 portScheduleId: "1234"
                 udld: Alert only
@@ -4887,6 +4890,9 @@ paths:
                   - loop guard
                   - root guard
                   type: string
+                stpPortFastTrunk:
+                  description: The state of STP PortFast Trunk on the switch port.
+                  type: boolean
                 linkNegotiation:
                   description: The link speed for the switch port.
                   type: string
@@ -4991,6 +4997,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 linkNegotiationCapabilities:
                 - Auto negotiate
@@ -5059,6 +5066,7 @@ paths:
         schema:
           enum:
           - loopback
+          - oob_management
           - routed
           - vlan
           type: string
@@ -5157,11 +5165,12 @@ paths:
                     VLAN (max length 128 characters).
                   type: string
                 mode:
-                  description: L3 Interface mode, can be one of 'vlan', 'routed' or
-                    'loopback'. Default is 'vlan'. CS 17.18 or higher is required
-                    for 'routed' mode.
+                  description: 'L3 Interface mode, can be one of ''vlan'', ''routed'',
+                    ''loopback''. Default is ''vlan''. CS 17.18 or higher is required
+                    for ''routed'' mode. '
                   enum:
                   - loopback
+                  - oob_management
                   - routed
                   - vlan
                   type: string
@@ -6224,11 +6233,6 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
@@ -6381,16 +6385,16 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
         schema:
           type: string
+      - description: Filter results by VLAN
+        in: query
+        name: vlan
+        schema:
+          type: integer
       - description: 'Partial selection: If present, this call will return only the
           selected fields of ["rawDistribution", "avg"]. All fields will be returned
           by default. Selected fields must be entered as a comma separated string.'
@@ -11150,7 +11154,7 @@ paths:
       - usageHistory
   /networks/{networkId}/appliance/vlans:
     get:
-      description: List the VLANs for an MX network
+      description: List the VLANs for a Cisco Secure Router network
       operationId: getNetworkApplianceVlans
       parameters:
       - description: Network ID
@@ -11212,7 +11216,7 @@ paths:
                   $ref: '#/components/schemas/inline_response_200_76'
                 type: array
           description: Successful operation
-      summary: List the VLANs for an MX network
+      summary: List the VLANs for a Cisco Secure Router network
       tags:
       - appliance
       - configure
@@ -11245,6 +11249,7 @@ paths:
                   enabled: true
                   prefixAssignments:
                   - autonomous: false
+                    disabled: false
                     staticPrefix: 2001:db8:3c4d:15::/64
                     staticApplianceIp6: 2001:db8:3c4d:15::1
                     origin:
@@ -11586,6 +11591,7 @@ paths:
                   enabled: true
                   prefixAssignments:
                   - autonomous: false
+                    disabled: false
                     staticPrefix: 2001:db8:3c4d:15::/64
                     staticApplianceIp6: 2001:db8:3c4d:15::1
                     origin:
@@ -11704,7 +11710,7 @@ paths:
                     networks. Applicable only for template network.
                   type: integer
                 ipv6:
-                  $ref: '#/components/schemas/_networks__networkId__appliance_singleLan_ipv6'
+                  $ref: '#/components/schemas/_networks__networkId__appliance_vlans__vlanId__ipv6'
                 mandatoryDhcp:
                   $ref: '#/components/schemas/_networks__networkId__appliance_vlans_mandatoryDhcp'
               type: object
@@ -26020,6 +26026,7 @@ paths:
         schema:
           enum:
           - loopback
+          - oob_management
           - routed
           - vlan
           type: string
@@ -26125,11 +26132,12 @@ paths:
                     VLAN (max length 128 characters).
                   type: string
                 mode:
-                  description: L3 Interface mode, can be one of 'vlan', 'routed' or
-                    'loopback'. Default is 'vlan'. CS 17.18 or higher is required
-                    for 'routed' mode.
+                  description: 'L3 Interface mode, can be one of ''vlan'', ''routed'',
+                    ''loopback''. Default is ''vlan''. CS 17.18 or higher is required
+                    for ''routed'' mode. '
                   enum:
                   - loopback
+                  - oob_management
                   - routed
                   - vlan
                   type: string
@@ -29541,11 +29549,6 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
@@ -29636,16 +29639,16 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
         schema:
           type: string
+      - description: Filter results by VLAN
+        in: query
+        name: vlan
+        schema:
+          type: integer
       - description: 'Partial selection: If present, this call will return only the
           selected fields of ["rawDistribution", "avg"]. All fields will be returned
           by default. Selected fields must be entered as a comma separated string.'
@@ -29785,11 +29788,6 @@ paths:
       - description: Filter results by SSID
         in: query
         name: ssid
-        schema:
-          type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
         schema:
           type: integer
       - description: Filter results by AP Tag
@@ -30171,16 +30169,16 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
         schema:
           type: string
+      - description: Filter results by VLAN
+        in: query
+        name: vlan
+        schema:
+          type: integer
       - description: 'Partial selection: If present, this call will return only the
           selected fields of ["rawDistribution", "avg"]. All fields will be returned
           by default. Selected fields must be entered as a comma separated string.'
@@ -30268,11 +30266,6 @@ paths:
       - description: Filter results by SSID
         in: query
         name: ssid
-        schema:
-          type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
         schema:
           type: integer
       - description: Filter results by AP Tag
@@ -30440,11 +30433,6 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
@@ -30520,16 +30508,16 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
         schema:
           type: string
+      - description: Filter results by VLAN
+        in: query
+        name: vlan
+        schema:
+          type: integer
       - description: 'Partial selection: If present, this call will return only the
           selected fields of ["rawDistribution", "avg"]. All fields will be returned
           by default. Selected fields must be entered as a comma separated string.'
@@ -31109,11 +31097,6 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
@@ -31304,16 +31287,16 @@ paths:
         name: ssid
         schema:
           type: integer
-      - description: Filter results by VLAN
-        in: query
-        name: vlan
-        schema:
-          type: integer
       - description: Filter results by AP Tag
         in: query
         name: apTag
         schema:
           type: string
+      - description: Filter results by VLAN
+        in: query
+        name: vlan
+        schema:
+          type: integer
       - description: 'Partial selection: If present, this call will return only the
           selected fields of ["rawDistribution", "avg"]. All fields will be returned
           by default. Selected fields must be entered as a comma separated string.'
@@ -33482,6 +33465,24 @@ paths:
                 enabled: true
                 splashPage: Click-through splash page
                 ssidAdminAccessible: false
+                accessControl:
+                  encryption:
+                    mode: Open
+                  bandwidth:
+                    limit: unlimited
+                  clientIpAssignment:
+                    mode: NAT mode
+                  clientsBlockedFromUsingLan: false
+                  wiredClientsPartOfWifiNetwork: false
+                  tunnel:
+                    enabled: false
+                    summary: Disabled
+                  vlan:
+                    enabled: false
+                    tag: n/a
+                  splashPage:
+                    enabled: false
+                    theme: n/a
                 localAuth: false
                 authMode: 8021x-radius
                 encryptionMode: wpa
@@ -33607,6 +33608,24 @@ paths:
                 enabled: true
                 splashPage: Click-through splash page
                 ssidAdminAccessible: false
+                accessControl:
+                  encryption:
+                    mode: Open
+                  bandwidth:
+                    limit: unlimited
+                  clientIpAssignment:
+                    mode: NAT mode
+                  clientsBlockedFromUsingLan: false
+                  wiredClientsPartOfWifiNetwork: false
+                  tunnel:
+                    enabled: false
+                    summary: Disabled
+                  vlan:
+                    enabled: false
+                    tag: n/a
+                  splashPage:
+                    enabled: false
+                    theme: n/a
                 localAuth: false
                 authMode: 8021x-radius
                 encryptionMode: wpa
@@ -34326,7 +34345,7 @@ paths:
                   $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__localAuthFallback'
                 radiusAccountingStartDelay:
                   description: The delay (in seconds) before sending the first RADIUS
-                    accounting start message. Must be between 0 and 59 seconds.
+                    accounting start message. Must be between 0 and 60 seconds.
                   type: integer
               type: object
         required: false
@@ -34340,6 +34359,24 @@ paths:
                 enabled: true
                 splashPage: Click-through splash page
                 ssidAdminAccessible: false
+                accessControl:
+                  encryption:
+                    mode: Open
+                  bandwidth:
+                    limit: unlimited
+                  clientIpAssignment:
+                    mode: NAT mode
+                  clientsBlockedFromUsingLan: false
+                  wiredClientsPartOfWifiNetwork: false
+                  tunnel:
+                    enabled: false
+                    summary: Disabled
+                  vlan:
+                    enabled: false
+                    tag: n/a
+                  splashPage:
+                    enabled: false
+                    theme: n/a
                 localAuth: false
                 authMode: 8021x-radius
                 encryptionMode: wpa
@@ -40707,6 +40744,7 @@ paths:
             - ap_tunnel_down
             - arp_failure
             - asymmetry
+            - aurora1_subnet_overlap
             - auto_vpn_failure
             - bad_connectivity
             - bad_gateway
@@ -40714,9 +40752,12 @@ paths:
             - bad_ipconf
             - bad_vlanconf
             - ccd
+            - cellular_data_cap
             - cellular_failover
             - cellular_failover_bandwidth
             - cellular_up_down
+            - certificate_enrollment
+            - certificate_renewal
             - client_wayfinding_clustering_warning
             - client_wayfinding_missing_config
             - cloud_archive_alert
@@ -41112,6 +41153,7 @@ paths:
             - ap_tunnel_down
             - arp_failure
             - asymmetry
+            - aurora1_subnet_overlap
             - auto_vpn_failure
             - bad_connectivity
             - bad_gateway
@@ -41119,9 +41161,12 @@ paths:
             - bad_ipconf
             - bad_vlanconf
             - ccd
+            - cellular_data_cap
             - cellular_failover
             - cellular_failover_bandwidth
             - cellular_up_down
+            - certificate_enrollment
+            - certificate_renewal
             - client_wayfinding_clustering_warning
             - client_wayfinding_missing_config
             - cloud_archive_alert
@@ -41471,6 +41516,7 @@ paths:
             - ap_tunnel_down
             - arp_failure
             - asymmetry
+            - aurora1_subnet_overlap
             - auto_vpn_failure
             - bad_connectivity
             - bad_gateway
@@ -41478,9 +41524,12 @@ paths:
             - bad_ipconf
             - bad_vlanconf
             - ccd
+            - cellular_data_cap
             - cellular_failover
             - cellular_failover_bandwidth
             - cellular_up_down
+            - certificate_enrollment
+            - certificate_renewal
             - client_wayfinding_clustering_warning
             - client_wayfinding_missing_config
             - cloud_archive_alert
@@ -41842,6 +41891,7 @@ paths:
             - ap_tunnel_down
             - arp_failure
             - asymmetry
+            - aurora1_subnet_overlap
             - auto_vpn_failure
             - bad_connectivity
             - bad_gateway
@@ -41849,9 +41899,12 @@ paths:
             - bad_ipconf
             - bad_vlanconf
             - ccd
+            - cellular_data_cap
             - cellular_failover
             - cellular_failover_bandwidth
             - cellular_up_down
+            - certificate_enrollment
+            - certificate_renewal
             - client_wayfinding_clustering_warning
             - client_wayfinding_missing_config
             - cloud_archive_alert
@@ -42132,6 +42185,7 @@ paths:
               example:
                 items:
                 - type: vlan_mismatch
+                  lastResolvedAt: 2022-04-01T16:48:57Z
                   count: 3
                 meta:
                   counts:
@@ -42195,6 +42249,7 @@ paths:
             - ap_tunnel_down
             - arp_failure
             - asymmetry
+            - aurora1_subnet_overlap
             - auto_vpn_failure
             - bad_connectivity
             - bad_gateway
@@ -42202,9 +42257,12 @@ paths:
             - bad_ipconf
             - bad_vlanconf
             - ccd
+            - cellular_data_cap
             - cellular_failover
             - cellular_failover_bandwidth
             - cellular_up_down
+            - certificate_enrollment
+            - certificate_renewal
             - client_wayfinding_clustering_warning
             - client_wayfinding_missing_config
             - cloud_archive_alert
@@ -45351,6 +45409,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 linkNegotiationCapabilities:
                 - Auto negotiate
@@ -45447,6 +45506,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 linkNegotiationCapabilities:
                 - Auto negotiate
@@ -45540,6 +45600,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 portScheduleId: "1234"
                 udld: Alert only
@@ -45621,6 +45682,10 @@ paths:
                   - loop guard
                   - root guard
                   type: string
+                stpPortFastTrunk:
+                  description: The state of STP PortFast Trunk on the switch template
+                    port.
+                  type: boolean
                 linkNegotiation:
                   description: The link speed for the switch template port.
                   type: string
@@ -45713,6 +45778,7 @@ paths:
                 isolationEnabled: false
                 rstpEnabled: true
                 stpGuard: disabled
+                stpPortFastTrunk: false
                 linkNegotiation: Auto negotiate
                 linkNegotiationCapabilities:
                 - Auto negotiate
@@ -52394,6 +52460,9 @@ paths:
             application/json:
               example:
                 enabled: true
+                spInitiated:
+                  subdomain: example_subdomain
+                  idpId: uu3H_bx28Nnd
               schema:
                 $ref: '#/components/schemas/inline_response_200_316'
           description: Successful operation
@@ -52419,10 +52488,15 @@ paths:
             schema:
               example:
                 enabled: true
+                spInitiated:
+                  subdomain: example_subdomain
+                  idpId: uu3H_bx28Nnd
               properties:
                 enabled:
                   description: Boolean for updating SAML SSO enabled settings.
                   type: boolean
+                spInitiated:
+                  $ref: '#/components/schemas/inline_response_200_316_spInitiated'
               type: object
         required: false
       responses:
@@ -52431,6 +52505,9 @@ paths:
             application/json:
               example:
                 enabled: true
+                spInitiated:
+                  subdomain: example_subdomain
+                  idpId: uu3H_bx28Nnd
               schema:
                 $ref: '#/components/schemas/inline_response_200_316'
           description: Successful operation
@@ -64390,6 +64467,19 @@ components:
             access without authentication
           type: integer
       type: object
+    _networks__networkId__wireless_ssids_accessControl_splashPage:
+      description: Information about splash page configuration
+      example:
+        theme: theme
+        enabled: true
+      properties:
+        enabled:
+          description: Whether the splash page is enabled
+          type: boolean
+        theme:
+          description: Name of the splash theme, or 'n/a' if not applicable
+          type: string
+      type: object
     inline_response_200_352_createdBy:
       description: Information around who initiated the callback
       example:
@@ -64956,9 +65046,14 @@ components:
       example:
         count: 0
         type: type
+        lastResolvedAt: 2000-01-23T04:56:07.000+00:00
       properties:
         type:
           description: Alert Type
+          type: string
+        lastResolvedAt:
+          description: Last time an alert of this type was resolved
+          format: date-time
           type: string
         count:
           description: Total count of the given alert type
@@ -65834,6 +65929,9 @@ components:
         autonomous:
           description: Auto assign a /64 prefix from the origin to the VLAN
           type: boolean
+        disabled:
+          description: Disable the prefix assignment
+          type: boolean
         staticPrefix:
           description: Manual configuration of a /64 prefix on the VLAN
           type: string
@@ -65842,6 +65940,8 @@ components:
           type: string
         origin:
           $ref: '#/components/schemas/_networks__networkId__appliance_prefixes_delegated_statics_origin_1'
+      required:
+      - disabled
       type: object
     _organizations__organizationId__devices_uplinks_addresses_byDevice_addresses:
       example:
@@ -66981,6 +67081,7 @@ components:
         isolationEnabled: false
         rstpEnabled: true
         stpGuard: disabled
+        stpPortFastTrunk: false
         linkNegotiation: Auto negotiate
         portScheduleId: "1234"
         udld: Alert only
@@ -67061,6 +67162,9 @@ components:
           - loop guard
           - root guard
           type: string
+        stpPortFastTrunk:
+          description: The state of STP PortFast Trunk on the switch template port.
+          type: boolean
         linkNegotiation:
           description: The link speed for the switch template port.
           type: string
@@ -68666,6 +68770,19 @@ components:
           type: string
       required:
       - ssidNumber
+      type: object
+    inline_response_200_316_spInitiated:
+      description: SP-Initiated SSO settings
+      example:
+        idpId: idpId
+        subdomain: subdomain
+      properties:
+        subdomain:
+          description: Organization's unique SSO identifier
+          type: string
+        idpId:
+          description: SAML IdP ID for SP-Initiated SSO Authentication
+          type: string
       type: object
     inline_object_217:
       example:
@@ -72153,10 +72270,15 @@ components:
     inline_object_292:
       example:
         enabled: true
+        spInitiated:
+          subdomain: example_subdomain
+          idpId: uu3H_bx28Nnd
       properties:
         enabled:
           description: Boolean for updating SAML SSO enabled settings.
           type: boolean
+        spInitiated:
+          $ref: '#/components/schemas/inline_response_200_316_spInitiated'
       type: object
     inline_response_200_365_events:
       example:
@@ -74290,6 +74412,15 @@ components:
         "14":
           $ref: '#/components/schemas/_networks__networkId__clients__clientId__splashAuthorizationStatus_ssids_14'
       type: object
+    _networks__networkId__wireless_ssids_accessControl_bandwidth:
+      description: Bandwidth information
+      example:
+        limit: limit
+      properties:
+        limit:
+          description: Defined SSID bandwidth limits
+          type: string
+      type: object
     inline_response_200_269_clientVpnConnections:
       example:
         remoteIp: remoteIp
@@ -74334,10 +74465,11 @@ components:
             length 128 characters).
           type: string
         mode:
-          description: L3 Interface mode, can be one of 'vlan', 'routed' or 'loopback'.
-            Default is 'vlan'. CS 17.18 or higher is required for 'routed' mode.
+          description: 'L3 Interface mode, can be one of ''vlan'', ''routed'', ''loopback''.
+            Default is ''vlan''. CS 17.18 or higher is required for ''routed'' mode. '
           enum:
           - loopback
+          - oob_management
           - routed
           - vlan
           type: string
@@ -74775,6 +74907,7 @@ components:
         isolationEnabled: false
         rstpEnabled: true
         stpGuard: disabled
+        stpPortFastTrunk: false
         linkNegotiation: Auto negotiate
         portScheduleId: "1234"
         udld: Alert only
@@ -74857,6 +74990,9 @@ components:
           - loop guard
           - root guard
           type: string
+        stpPortFastTrunk:
+          description: The state of STP PortFast Trunk on the switch port.
+          type: boolean
         linkNegotiation:
           description: The link speed for the switch port.
           type: string
@@ -76820,6 +76956,7 @@ components:
           enabled: true
           prefixAssignments:
           - autonomous: false
+            disabled: false
             staticPrefix: 2001:db8:3c4d:15::/64
             staticApplianceIp6: 2001:db8:3c4d:15::1
             origin:
@@ -76991,6 +77128,7 @@ components:
           enabled: true
           prefixAssignments:
           - autonomous: false
+            disabled: false
             staticPrefix: 2001:db8:3c4d:15::/64
             staticApplianceIp6: 2001:db8:3c4d:15::1
             origin:
@@ -77106,7 +77244,7 @@ components:
             Applicable only for template network.
           type: integer
         ipv6:
-          $ref: '#/components/schemas/_networks__networkId__appliance_singleLan_ipv6'
+          $ref: '#/components/schemas/_networks__networkId__appliance_vlans__vlanId__ipv6'
         mandatoryDhcp:
           $ref: '#/components/schemas/_networks__networkId__appliance_vlans_mandatoryDhcp'
       type: object
@@ -80645,6 +80783,46 @@ components:
             Can be either true or false.
           type: boolean
       type: object
+    _networks__networkId__wireless_ssids_accessControl:
+      description: Access control related information
+      example:
+        splashPage:
+          theme: theme
+          enabled: true
+        encryption:
+          mode: 802.1X with Access Manager
+        vlan:
+          tag: tag
+          enabled: true
+        bandwidth:
+          limit: limit
+        clientIpAssignment:
+          mode: Bridge mode
+        clientsBlockedFromUsingLan: true
+        wiredClientsPartOfWifiNetwork: true
+        tunnel:
+          summary: summary
+          enabled: true
+      properties:
+        encryption:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids_accessControl_encryption'
+        bandwidth:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids_accessControl_bandwidth'
+        clientIpAssignment:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids_accessControl_clientIpAssignment'
+        clientsBlockedFromUsingLan:
+          description: Whether clients are blocked from using the LAN
+          type: boolean
+        wiredClientsPartOfWifiNetwork:
+          description: Whether wired SSID clients are part of the Wi-Fi network
+          type: boolean
+        tunnel:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids_accessControl_tunnel'
+        vlan:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids_accessControl_vlan'
+        splashPage:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids_accessControl_splashPage'
+      type: object
     inline_object_126:
       example:
         wifiMac: 00:11:22:33:44:55
@@ -82359,6 +82537,18 @@ components:
             Minimum 2 and maximum 8 ports are supported.
           items:
             $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchProfilePorts'
+          type: array
+      type: object
+    _networks__networkId__appliance_vlans__vlanId__ipv6:
+      description: IPv6 configuration on the VLAN
+      properties:
+        enabled:
+          description: Enable IPv6 on VLAN.
+          type: boolean
+        prefixAssignments:
+          description: Prefix assignments on the VLAN
+          items:
+            $ref: '#/components/schemas/_networks__networkId__appliance_vlans__vlanId__ipv6_prefixAssignments'
           type: array
       type: object
     inline_object_148:
@@ -85601,6 +85791,7 @@ components:
           description: The mode
           enum:
           - loopback
+          - oob_management
           - routed
           - vlan
           type: string
@@ -88422,10 +88613,11 @@ components:
             length 128 characters).
           type: string
         mode:
-          description: L3 Interface mode, can be one of 'vlan', 'routed' or 'loopback'.
-            Default is 'vlan'. CS 17.18 or higher is required for 'routed' mode.
+          description: 'L3 Interface mode, can be one of ''vlan'', ''routed'', ''loopback''.
+            Default is ''vlan''. CS 17.18 or higher is required for ''routed'' mode. '
           enum:
           - loopback
+          - oob_management
           - routed
           - vlan
           type: string
@@ -88648,6 +88840,19 @@ components:
           type: string
         bandwidthLimits:
           $ref: '#/components/schemas/_networks__networkId__groupPolicies_bandwidth_bandwidthLimits'
+      type: object
+    _networks__networkId__wireless_ssids_accessControl_vlan:
+      description: VLAN tag information for the SSID
+      example:
+        tag: tag
+        enabled: true
+      properties:
+        enabled:
+          description: Whether VLAN tagging is enabled
+          type: boolean
+        tag:
+          description: VLAN tag applied to this SSID when tagging is enabled
+          type: string
       type: object
     _organizations__organizationId__camera_customAnalytics_artifacts_status:
       description: Custom analytics artifact status
@@ -90056,7 +90261,7 @@ components:
           $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__localAuthFallback'
         radiusAccountingStartDelay:
           description: The delay (in seconds) before sending the first RADIUS accounting
-            start message. Must be between 0 and 59 seconds.
+            start message. Must be between 0 and 60 seconds.
           type: integer
       type: object
     inline_response_200_141:
@@ -92198,6 +92403,35 @@ components:
             unit is bit/sec
           type: integer
       type: object
+    _networks__networkId__wireless_ssids_accessControl_encryption:
+      description: Encryption metadata
+      example:
+        mode: 802.1X with Access Manager
+      properties:
+        mode:
+          description: Specifies the authentication and encryption type for the SSID
+          enum:
+          - 802.1X with Access Manager
+          - 802.1X with Google
+          - 802.1X with Local Auth
+          - 802.1X with Meraki RADIUS
+          - 802.1X with custom RADIUS
+          - Enterprise WPA3 192-bit security
+          - Identity PSK with Access Manager
+          - Identity PSK with RADIUS
+          - Identity PSK without RADIUS
+          - Open
+          - Open with Access Manager
+          - Open with RADIUS
+          - Opportunistic Wireless Encryption
+          - PSK (WPA1 and WPA2)
+          - PSK (WPA1)
+          - PSK (WPA2)
+          - PSK (WPA3-SAE Transition Mode)
+          - PSK (WPA3-SAE)
+          - WEP
+          type: string
+      type: object
     inline_response_200_372_network:
       description: Add scanning API receiver for network
       example:
@@ -92505,6 +92739,20 @@ components:
       - cos
       - dscp
       type: object
+    _networks__networkId__appliance_vlans__vlanId__ipv6_prefixAssignments:
+      properties:
+        autonomous:
+          description: Auto assign a /64 prefix from the origin to the VLAN
+          type: boolean
+        staticPrefix:
+          description: Manual configuration of a /64 prefix on the VLAN
+          type: string
+        staticApplianceIp6:
+          description: Manual configuration of the IPv6 Appliance IP
+          type: string
+        origin:
+          $ref: '#/components/schemas/_networks__networkId__appliance_prefixes_delegated_statics_origin_1'
+      type: object
     inline_response_200_348_items:
       example:
         serial: serial
@@ -92680,6 +92928,24 @@ components:
       properties:
         usage:
           $ref: '#/components/schemas/inline_response_200_394_overall_usage'
+      type: object
+    _networks__networkId__wireless_ssids_accessControl_clientIpAssignment:
+      description: Client IP assignment information
+      example:
+        mode: Bridge mode
+      properties:
+        mode:
+          description: Client IP assignment mode
+          enum:
+          - Bridge mode
+          - Campus Gateway
+          - Ethernet over GRE
+          - Layer 3 roaming
+          - Layer 3 roaming with a concentrator
+          - NAT mode
+          - Stateless L2TPv3
+          - VPN
+          type: string
       type: object
     _networks__networkId__switch_dhcpServerPolicy_alerts:
       description: Alert settings for DHCP servers
@@ -92942,7 +93208,7 @@ components:
       example:
         protocol: tcp
         localPort: localPort
-        uplink: both
+        uplink: all
         allowedIps:
         - allowedIps
         - allowedIps
@@ -92979,10 +93245,12 @@ components:
           description: The physical WAN interface on which the traffic arrives; allowed
             values vary by appliance model and configuration
           enum:
+          - all
           - both
           - internet1
           - internet2
           - internet3
+          - internet4
           type: string
       type: object
     _networks__networkId__clients__clientId__splashAuthorizationStatus_ssids_0:
@@ -96999,6 +97267,7 @@ components:
         portScheduleId: portScheduleId
         mirror:
           mode: Destination port
+        stpPortFastTrunk: true
         isolationEnabled: true
         stormControlEnabled: true
         peerSgtCapable: true
@@ -97106,6 +97375,9 @@ components:
           - loop guard
           - root guard
           type: string
+        stpPortFastTrunk:
+          description: The state of STP PortFast Trunk on the switch port.
+          type: boolean
         linkNegotiation:
           description: The link speed for the switch port.
           type: string
@@ -97749,6 +98021,24 @@ components:
     inline_response_200_203:
       example:
         bandSelection: 5 GHz band only
+        accessControl:
+          splashPage:
+            theme: theme
+            enabled: true
+          encryption:
+            mode: 802.1X with Access Manager
+          vlan:
+            tag: tag
+            enabled: true
+          bandwidth:
+            limit: limit
+          clientIpAssignment:
+            mode: Bridge mode
+          clientsBlockedFromUsingLan: true
+          wiredClientsPartOfWifiNetwork: true
+          tunnel:
+            summary: summary
+            enabled: true
         minBitrate: 2
         radiusAccountingServers:
         - port: 5
@@ -97831,6 +98121,8 @@ components:
         ssidAdminAccessible:
           description: SSID Administrator access status
           type: boolean
+        accessControl:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids_accessControl'
         localAuth:
           description: Extended local auth flag for Enterprise NAC
           type: boolean
@@ -100176,7 +100468,7 @@ components:
         rules:
         - protocol: tcp
           localPort: localPort
-          uplink: both
+          uplink: all
           allowedIps:
           - allowedIps
           - allowedIps
@@ -100185,7 +100477,7 @@ components:
           lanIp: lanIp
         - protocol: tcp
           localPort: localPort
-          uplink: both
+          uplink: all
           allowedIps:
           - allowedIps
           - allowedIps
@@ -100500,6 +100792,7 @@ components:
           description: The mode
           enum:
           - loopback
+          - oob_management
           - routed
           - vlan
           type: string
@@ -106499,8 +106792,10 @@ components:
         items:
         - count: 0
           type: type
+          lastResolvedAt: 2000-01-23T04:56:07.000+00:00
         - count: 0
           type: type
+          lastResolvedAt: 2000-01-23T04:56:07.000+00:00
       properties:
         items:
           description: Organization Alert counts by type
@@ -109132,6 +109427,7 @@ components:
         portScheduleId: portScheduleId
         mirror:
           mode: Destination port
+        stpPortFastTrunk: true
         isolationEnabled: true
         stormControlEnabled: true
         portId: portId
@@ -109234,6 +109530,9 @@ components:
           - loop guard
           - root guard
           type: string
+        stpPortFastTrunk:
+          description: The state of STP PortFast Trunk on the switch template port.
+          type: boolean
         linkNegotiation:
           description: The link speed for the switch template port.
           type: string
@@ -111273,6 +111572,19 @@ components:
           type: string
         name:
           description: The name of the payload template.
+          type: string
+      type: object
+    _networks__networkId__wireless_ssids_accessControl_tunnel:
+      description: Information about traffic tunneling
+      example:
+        summary: summary
+        enabled: true
+      properties:
+        enabled:
+          description: Whether tunneling is enabled
+          type: boolean
+        summary:
+          description: Summary describing whether traffic is tunneled and to where
           type: string
       type: object
     inline_response_200_349_energy_usage:
@@ -117251,10 +117563,12 @@ components:
           description: The physical WAN interface on which the traffic will arrive
             ('internet1' or, if available, 'internet2' or 'both')
           enum:
+          - all
           - both
           - internet1
           - internet2
           - internet3
+          - internet4
           type: string
         publicPort:
           description: A port or port ranges that will be forwarded to the host on
@@ -118390,11 +118704,16 @@ components:
       type: object
     inline_response_200_316:
       example:
+        spInitiated:
+          idpId: idpId
+          subdomain: subdomain
         enabled: true
       properties:
         enabled:
           description: Toggle depicting if SAML SSO settings are enabled
           type: boolean
+        spInitiated:
+          $ref: '#/components/schemas/inline_response_200_316_spInitiated'
       type: object
     inline_response_200_315:
       example:
@@ -122215,10 +122534,6 @@ x-batchable-actions:
   summary: Update the MTU configuration
   resource: /networks/{networkId}/switch/mtu
   operation: update
-- group: MX VLAN settings
-  summary: Enable/Disable VLANs for the given network
-  resource: /networks/{networkId}/appliance/vlans/settings
-  operation: update
 - group: MX connectivity monitoring destination
   summary: Update the connectivity testing destinations for an MX network
   resource: /networks/{networkId}/appliance/connectivityMonitoringDestinations
@@ -122870,6 +123185,10 @@ x-batchable-actions:
 - group: Wired/actions/uplink selection settings
   summary: Update uplink selection settings for an MX network
   resource: /networks/{networkId}/appliance/trafficShaping/uplinkSelection
+  operation: update
+- group: Wired/actions/vlan settings
+  summary: Enable/Disable VLANs for the given network
+  resource: /networks/{networkId}/appliance/vlans/settings
   operation: update
 - group: Wired/actions/vlan/vlan
   summary: Add a VLAN

@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **TemplateVlanType** | Pointer to **string** | Type of subnetting of the VLAN. Applicable only for template network. | [optional] 
 **Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
 **Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdApplianceVlansVlanIdIpv6**](NetworksNetworkIdApplianceVlansVlanIdIpv6.md) |  | [optional] 
 **MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
 
 ## Methods
@@ -506,20 +506,20 @@ HasMask returns a boolean if a field has been set.
 
 ### GetIpv6
 
-`func (o *InlineObject77) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
+`func (o *InlineObject77) GetIpv6() NetworksNetworkIdApplianceVlansVlanIdIpv6`
 
 GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
 ### GetIpv6Ok
 
-`func (o *InlineObject77) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
+`func (o *InlineObject77) GetIpv6Ok() (*NetworksNetworkIdApplianceVlansVlanIdIpv6, bool)`
 
 GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpv6
 
-`func (o *InlineObject77) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
+`func (o *InlineObject77) SetIpv6(v NetworksNetworkIdApplianceVlansVlanIdIpv6)`
 
 SetIpv6 sets Ipv6 field to given value.
 

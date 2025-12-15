@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Type** | **string** | Alert Type | 
+**LastResolvedAt** | Pointer to **time.Time** | Last time an alert of this type was resolved | [optional] 
 **Count** | **int32** | Total count of the given alert type | 
 
 ## Methods
@@ -45,6 +46,31 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
+
+### GetLastResolvedAt
+
+`func (o *InlineResponse200246Items) GetLastResolvedAt() time.Time`
+
+GetLastResolvedAt returns the LastResolvedAt field if non-nil, zero value otherwise.
+
+### GetLastResolvedAtOk
+
+`func (o *InlineResponse200246Items) GetLastResolvedAtOk() (*time.Time, bool)`
+
+GetLastResolvedAtOk returns a tuple with the LastResolvedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastResolvedAt
+
+`func (o *InlineResponse200246Items) SetLastResolvedAt(v time.Time)`
+
+SetLastResolvedAt sets LastResolvedAt field to given value.
+
+### HasLastResolvedAt
+
+`func (o *InlineResponse200246Items) HasLastResolvedAt() bool`
+
+HasLastResolvedAt returns a boolean if a field has been set.
 
 ### GetCount
 
