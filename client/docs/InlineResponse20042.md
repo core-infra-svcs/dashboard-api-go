@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | The name or description of the layer 3 static route | [optional] 
 **Subnet** | **string** | The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24) | 
 **NextHopIp** | **string** | The IP address of the router to which traffic for this destination network should be sent | 
-**ManagementNextHop** | Pointer to **string** | Optional fallback IP address for management traffic | [optional] 
+**ManagementNextHop** | Pointer to **NullableString** | Optional fallback IP address for management traffic | [optional] 
 **Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf**](DevicesSerialSwitchRoutingStaticRoutesVrf.md) |  | [optional] 
 **AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static routes via OSPF | [optional] 
 **PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static routes over OSPF routes | [optional] 
@@ -142,6 +142,16 @@ SetManagementNextHop sets ManagementNextHop field to given value.
 
 HasManagementNextHop returns a boolean if a field has been set.
 
+### SetManagementNextHopNil
+
+`func (o *InlineResponse20042) SetManagementNextHopNil(b bool)`
+
+ SetManagementNextHopNil sets the value for ManagementNextHop to be an explicit nil
+
+### UnsetManagementNextHop
+`func (o *InlineResponse20042) UnsetManagementNextHop()`
+
+UnsetManagementNextHop ensures that no value is present for ManagementNextHop, not even an explicit nil
 ### GetVrf
 
 `func (o *InlineResponse20042) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf`

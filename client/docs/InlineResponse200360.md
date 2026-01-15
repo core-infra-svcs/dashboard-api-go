@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
+**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
+**Example** | Pointer to [**InlineResponse200360Example**](InlineResponse200360Example.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200360WithDefaults instantiates a new InlineResponse200360 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetAlertTypeId
 
-`func (o *InlineResponse200360) GetStartTs() time.Time`
+`func (o *InlineResponse200360) GetAlertTypeId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse200360) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200360) GetAlertTypeIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetAlertTypeId
 
-`func (o *InlineResponse200360) SetStartTs(v time.Time)`
+`func (o *InlineResponse200360) SetAlertTypeId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasStartTs
+### HasAlertTypeId
 
-`func (o *InlineResponse200360) HasStartTs() bool`
+`func (o *InlineResponse200360) HasAlertTypeId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetAlertType
 
-`func (o *InlineResponse200360) GetEndTs() time.Time`
+`func (o *InlineResponse200360) GetAlertType() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse200360) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200360) GetAlertTypeOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetAlertType
 
-`func (o *InlineResponse200360) SetEndTs(v time.Time)`
+`func (o *InlineResponse200360) SetAlertType(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasEndTs
+### HasAlertType
 
-`func (o *InlineResponse200360) HasEndTs() bool`
+`func (o *InlineResponse200360) HasAlertType() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
 
-### GetNetwork
+### GetExample
 
-`func (o *InlineResponse200360) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200360) GetExample() InlineResponse200360Example`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetExample returns the Example field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetExampleOk
 
-`func (o *InlineResponse200360) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200360) GetExampleOk() (*InlineResponse200360Example, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetExample
 
-`func (o *InlineResponse200360) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200360) SetExample(v InlineResponse200360Example)`
 
-SetNetwork sets Network field to given value.
+SetExample sets Example field to given value.
 
-### HasNetwork
+### HasExample
 
-`func (o *InlineResponse200360) HasNetwork() bool`
+`func (o *InlineResponse200360) HasExample() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetByBand
-
-`func (o *InlineResponse200360) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
-
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
-
-### GetByBandOk
-
-`func (o *InlineResponse200360) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
-
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByBand
-
-`func (o *InlineResponse200360) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
-
-SetByBand sets ByBand field to given value.
-
-### HasByBand
-
-`func (o *InlineResponse200360) HasByBand() bool`
-
-HasByBand returns a boolean if a field has been set.
+HasExample returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

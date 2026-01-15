@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200376Items**](InlineResponse200376Items.md) | L2 isolation allowlist items | [optional] 
-**Meta** | Pointer to [**InlineResponse200227Meta**](InlineResponse200227Meta.md) |  | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
+**Status** | Pointer to **string** | The status of the Certificate Authority | [optional] 
+**Contents** | Pointer to **string** | The PEM encoded contents of the Certificate Authority - with newlines as \&quot; \&quot;. Contents can be null, if the cert has not yet been generated. | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200376WithDefaults instantiates a new InlineResponse200376 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetCertificateAuthorityId
 
-`func (o *InlineResponse200376) GetItems() []InlineResponse200376Items`
+`func (o *InlineResponse200376) GetCertificateAuthorityId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineResponse200376) GetItemsOk() (*[]InlineResponse200376Items, bool)`
+`func (o *InlineResponse200376) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetCertificateAuthorityId
 
-`func (o *InlineResponse200376) SetItems(v []InlineResponse200376Items)`
+`func (o *InlineResponse200376) SetCertificateAuthorityId(v string)`
 
-SetItems sets Items field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasItems
+### HasCertificateAuthorityId
 
-`func (o *InlineResponse200376) HasItems() bool`
+`func (o *InlineResponse200376) HasCertificateAuthorityId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
-### GetMeta
+### GetStatus
 
-`func (o *InlineResponse200376) GetMeta() InlineResponse200227Meta`
+`func (o *InlineResponse200376) GetStatus() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetStatusOk
 
-`func (o *InlineResponse200376) GetMetaOk() (*InlineResponse200227Meta, bool)`
+`func (o *InlineResponse200376) GetStatusOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetStatus
 
-`func (o *InlineResponse200376) SetMeta(v InlineResponse200227Meta)`
+`func (o *InlineResponse200376) SetStatus(v string)`
 
-SetMeta sets Meta field to given value.
+SetStatus sets Status field to given value.
 
-### HasMeta
+### HasStatus
 
-`func (o *InlineResponse200376) HasMeta() bool`
+`func (o *InlineResponse200376) HasStatus() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetContents
+
+`func (o *InlineResponse200376) GetContents() string`
+
+GetContents returns the Contents field if non-nil, zero value otherwise.
+
+### GetContentsOk
+
+`func (o *InlineResponse200376) GetContentsOk() (*string, bool)`
+
+GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContents
+
+`func (o *InlineResponse200376) SetContents(v string)`
+
+SetContents sets Contents field to given value.
+
+### HasContents
+
+`func (o *InlineResponse200376) HasContents() bool`
+
+HasContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

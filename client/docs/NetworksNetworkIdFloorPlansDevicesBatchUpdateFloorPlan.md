@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | The ID of the floor plan to assign the device to, or null to unassign the device from its floor plan | 
+**Id** | **NullableString** | The ID of the floor plan to assign the device to, or null to unassign the device from its floor plan | 
 
 ## Methods
 
 ### NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan
 
-`func NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan(id string, ) *NetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan`
+`func NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan(id NullableString, ) *NetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan`
 
 NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan instantiates a new NetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan object
 This constructor will assign default values to properties that have it defined,
@@ -45,6 +45,16 @@ and a boolean to check if the value has been set.
 SetId sets Id field to given value.
 
 
+### SetIdNil
+
+`func (o *NetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan) SetIdNil(b bool)`
+
+ SetIdNil sets the value for Id to be an explicit nil
+
+### UnsetId
+`func (o *NetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan) UnsetId()`
+
+UnsetId ensures that no value is present for Id, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

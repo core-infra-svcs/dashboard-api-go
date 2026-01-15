@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network id | [optional] 
-**NetworkName** | Pointer to **string** | The network name | [optional] 
-**Ssid** | Pointer to [**[]InlineResponse200377Ssid**](InlineResponse200377Ssid.md) | The SSIDs for the network | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
+**Crl** | Pointer to **string** | The PEM encoded CRL for the Certificate Authority | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200377ItemsWithDefaults instantiates a new InlineResponse200377
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetCertificateAuthorityId
 
-`func (o *InlineResponse200377Items) GetNetworkId() string`
+`func (o *InlineResponse200377Items) GetCertificateAuthorityId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineResponse200377Items) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200377Items) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetCertificateAuthorityId
 
-`func (o *InlineResponse200377Items) SetNetworkId(v string)`
+`func (o *InlineResponse200377Items) SetCertificateAuthorityId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasNetworkId
+### HasCertificateAuthorityId
 
-`func (o *InlineResponse200377Items) HasNetworkId() bool`
+`func (o *InlineResponse200377Items) HasCertificateAuthorityId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
-### GetNetworkName
+### GetCrl
 
-`func (o *InlineResponse200377Items) GetNetworkName() string`
+`func (o *InlineResponse200377Items) GetCrl() string`
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+GetCrl returns the Crl field if non-nil, zero value otherwise.
 
-### GetNetworkNameOk
+### GetCrlOk
 
-`func (o *InlineResponse200377Items) GetNetworkNameOk() (*string, bool)`
+`func (o *InlineResponse200377Items) GetCrlOk() (*string, bool)`
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+GetCrlOk returns a tuple with the Crl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetCrl
 
-`func (o *InlineResponse200377Items) SetNetworkName(v string)`
+`func (o *InlineResponse200377Items) SetCrl(v string)`
 
-SetNetworkName sets NetworkName field to given value.
+SetCrl sets Crl field to given value.
 
-### HasNetworkName
+### HasCrl
 
-`func (o *InlineResponse200377Items) HasNetworkName() bool`
+`func (o *InlineResponse200377Items) HasCrl() bool`
 
-HasNetworkName returns a boolean if a field has been set.
-
-### GetSsid
-
-`func (o *InlineResponse200377Items) GetSsid() []InlineResponse200377Ssid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineResponse200377Items) GetSsidOk() (*[]InlineResponse200377Ssid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineResponse200377Items) SetSsid(v []InlineResponse200377Ssid)`
-
-SetSsid sets Ssid field to given value.
-
-### HasSsid
-
-`func (o *InlineResponse200377Items) HasSsid() bool`
-
-HasSsid returns a boolean if a field has been set.
+HasCrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

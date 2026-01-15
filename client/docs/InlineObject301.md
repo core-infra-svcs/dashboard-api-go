@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | theme name | [optional] 
-**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
+**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetBaseTheme
+### GetScope
 
-`func (o *InlineObject301) GetBaseTheme() string`
+`func (o *InlineObject301) GetScope() string`
 
-GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetBaseThemeOk
+### GetScopeOk
 
-`func (o *InlineObject301) GetBaseThemeOk() (*string, bool)`
+`func (o *InlineObject301) GetScopeOk() (*string, bool)`
 
-GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBaseTheme
+### SetScope
 
-`func (o *InlineObject301) SetBaseTheme(v string)`
+`func (o *InlineObject301) SetScope(v string)`
 
-SetBaseTheme sets BaseTheme field to given value.
+SetScope sets Scope field to given value.
 
-### HasBaseTheme
+### HasScope
 
-`func (o *InlineObject301) HasBaseTheme() bool`
+`func (o *InlineObject301) HasScope() bool`
 
-HasBaseTheme returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject301) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject301) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject301) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject301) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **MinBitrate** | Pointer to **float32** | Sets min bitrate (Mbps) of 2.4Ghz band. Can be one of &#39;1&#39;, &#39;2&#39;, &#39;5.5&#39;, &#39;6&#39;, &#39;9&#39;, &#39;11&#39;, &#39;12&#39;, &#39;18&#39;, &#39;24&#39;, &#39;36&#39;, &#39;48&#39; or &#39;54&#39;. | [optional] 
 **ValidAutoChannels** | Pointer to **[]int32** | Sets valid auto channels for 2.4Ghz band. Can be one of &#39;1&#39;, &#39;6&#39; or &#39;11&#39;. | [optional] 
 **AxEnabled** | Pointer to **bool** | Determines whether ax radio on 2.4Ghz band is on or off. Can be either true or false. If false, we highly recommend disabling band steering. | [optional] 
-**Rxsop** | Pointer to **int32** | The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default. | [optional] 
+**Rxsop** | Pointer to **NullableInt32** | The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default. | [optional] 
 
 ## Methods
 
@@ -180,6 +180,16 @@ SetRxsop sets Rxsop field to given value.
 
 HasRxsop returns a boolean if a field has been set.
 
+### SetRxsopNil
+
+`func (o *NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings) SetRxsopNil(b bool)`
+
+ SetRxsopNil sets the value for Rxsop to be an explicit nil
+
+### UnsetRxsop
+`func (o *NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings) UnsetRxsop()`
+
+UnsetRxsop ensures that no value is present for Rxsop, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

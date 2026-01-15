@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Category type | 
-**Title** | **string** | Category title | 
+**Peers** | Pointer to [**[]InlineResponse200248Peers**](InlineResponse200248Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200248
 
-`func NewInlineResponse200248(type_ string, title string, ) *InlineResponse200248`
+`func NewInlineResponse200248() *InlineResponse200248`
 
 NewInlineResponse200248 instantiates a new InlineResponse200248 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse200248WithDefaults instantiates a new InlineResponse200248 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetPeers
 
-`func (o *InlineResponse200248) GetType() string`
+`func (o *InlineResponse200248) GetPeers() []InlineResponse200248Peers`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetPeersOk
 
-`func (o *InlineResponse200248) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200248) GetPeersOk() (*[]InlineResponse200248Peers, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetPeers
 
-`func (o *InlineResponse200248) SetType(v string)`
+`func (o *InlineResponse200248) SetPeers(v []InlineResponse200248Peers)`
 
-SetType sets Type field to given value.
+SetPeers sets Peers field to given value.
 
+### HasPeers
 
-### GetTitle
+`func (o *InlineResponse200248) HasPeers() bool`
 
-`func (o *InlineResponse200248) GetTitle() string`
-
-GetTitle returns the Title field if non-nil, zero value otherwise.
-
-### GetTitleOk
-
-`func (o *InlineResponse200248) GetTitleOk() (*string, bool)`
-
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTitle
-
-`func (o *InlineResponse200248) SetTitle(v string)`
-
-SetTitle sets Title field to given value.
-
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

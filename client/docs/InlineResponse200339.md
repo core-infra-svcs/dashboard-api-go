@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Id** | Pointer to **string** | Splash theme asset id | [optional] 
+**Name** | Pointer to **string** | Splash theme asset name | [optional] 
+**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200339WithDefaults instantiates a new InlineResponse200339 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetId
 
-`func (o *InlineResponse200339) GetModel() string`
+`func (o *InlineResponse200339) GetId() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetIdOk
 
-`func (o *InlineResponse200339) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200339) GetIdOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetId
 
-`func (o *InlineResponse200339) SetModel(v string)`
+`func (o *InlineResponse200339) SetId(v string)`
 
-SetModel sets Model field to given value.
+SetId sets Id field to given value.
 
-### HasModel
+### HasId
 
-`func (o *InlineResponse200339) HasModel() bool`
+`func (o *InlineResponse200339) HasId() bool`
 
-HasModel returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCount
+### GetName
 
-`func (o *InlineResponse200339) GetCount() int32`
+`func (o *InlineResponse200339) GetName() string`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetNameOk
 
-`func (o *InlineResponse200339) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200339) GetNameOk() (*string, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetName
 
-`func (o *InlineResponse200339) SetCount(v int32)`
+`func (o *InlineResponse200339) SetName(v string)`
 
-SetCount sets Count field to given value.
+SetName sets Name field to given value.
 
-### HasCount
+### HasName
 
-`func (o *InlineResponse200339) HasCount() bool`
+`func (o *InlineResponse200339) HasName() bool`
 
-HasCount returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUsage
+### GetFileData
 
-`func (o *InlineResponse200339) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+`func (o *InlineResponse200339) GetFileData() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetFileData returns the FileData field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetFileDataOk
 
-`func (o *InlineResponse200339) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+`func (o *InlineResponse200339) GetFileDataOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetFileData
 
-`func (o *InlineResponse200339) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+`func (o *InlineResponse200339) SetFileData(v string)`
 
-SetUsage sets Usage field to given value.
+SetFileData sets FileData field to given value.
 
-### HasUsage
+### HasFileData
 
-`func (o *InlineResponse200339) HasUsage() bool`
+`func (o *InlineResponse200339) HasFileData() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasFileData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

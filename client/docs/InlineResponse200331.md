@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | theme id | [optional] 
-**Name** | Pointer to **string** | theme name | [optional] 
-**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
+**Items** | Pointer to [**[]InlineResponse200331Items**](InlineResponse200331Items.md) | Array of Limited Access Roles | [optional] 
+**Meta** | Pointer to [**InlineResponse200233Meta**](InlineResponse200233Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200331WithDefaults instantiates a new InlineResponse200331 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetItems
 
-`func (o *InlineResponse200331) GetId() string`
+`func (o *InlineResponse200331) GetItems() []InlineResponse200331Items`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200331) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200331) GetItemsOk() (*[]InlineResponse200331Items, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetItems
 
-`func (o *InlineResponse200331) SetId(v string)`
+`func (o *InlineResponse200331) SetItems(v []InlineResponse200331Items)`
 
-SetId sets Id field to given value.
+SetItems sets Items field to given value.
 
-### HasId
+### HasItems
 
-`func (o *InlineResponse200331) HasId() bool`
+`func (o *InlineResponse200331) HasItems() bool`
 
-HasId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetName
+### GetMeta
 
-`func (o *InlineResponse200331) GetName() string`
+`func (o *InlineResponse200331) GetMeta() InlineResponse200233Meta`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200331) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200331) GetMetaOk() (*InlineResponse200233Meta, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200331) SetName(v string)`
+`func (o *InlineResponse200331) SetMeta(v InlineResponse200233Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200331) HasName() bool`
+`func (o *InlineResponse200331) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetThemeAssets
-
-`func (o *InlineResponse200331) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
-
-GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
-
-### GetThemeAssetsOk
-
-`func (o *InlineResponse200331) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
-
-GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetThemeAssets
-
-`func (o *InlineResponse200331) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
-
-SetThemeAssets sets ThemeAssets field to given value.
-
-### HasThemeAssets
-
-`func (o *InlineResponse200331) HasThemeAssets() bool`
-
-HasThemeAssets returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

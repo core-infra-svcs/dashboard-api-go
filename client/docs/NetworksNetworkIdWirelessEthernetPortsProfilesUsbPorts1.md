@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | AP usb port name | 
 **Enabled** | Pointer to **bool** | AP usb port enabled | [optional] 
-**Ssid** | Pointer to **int32** | AP usb port ssid number | [optional] 
+**Ssid** | Pointer to **NullableInt32** | AP usb port ssid number | [optional] 
 
 ## Methods
 
@@ -97,6 +97,16 @@ SetSsid sets Ssid field to given value.
 
 HasSsid returns a boolean if a field has been set.
 
+### SetSsidNil
+
+`func (o *NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1) SetSsidNil(b bool)`
+
+ SetSsidNil sets the value for Ssid to be an explicit nil
+
+### UnsetSsid
+`func (o *NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1) UnsetSsid()`
+
+UnsetSsid ensures that no value is present for Ssid, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

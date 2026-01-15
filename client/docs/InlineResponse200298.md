@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200298Items**](InlineResponse200298Items.md) | List of networks with XDR enabled | [optional] 
-**Meta** | Pointer to [**InlineResponse200298Meta**](InlineResponse200298Meta.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
+**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
+**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200298LimitScopeToNetworks**](InlineResponse200298LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
+**OptOutEligibility** | Pointer to [**InlineResponse200298OptOutEligibility**](InlineResponse200298OptOutEligibility.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200298WithDefaults instantiates a new InlineResponse200298 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200298) GetItems() []InlineResponse200298Items`
+`func (o *InlineResponse200298) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200298) GetItemsOk() (*[]InlineResponse200298Items, bool)`
+`func (o *InlineResponse200298) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200298) SetItems(v []InlineResponse200298Items)`
+`func (o *InlineResponse200298) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
-### HasItems
+### HasId
 
-`func (o *InlineResponse200298) HasItems() bool`
+`func (o *InlineResponse200298) HasId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMeta
+### GetShortName
 
-`func (o *InlineResponse200298) GetMeta() InlineResponse200298Meta`
+`func (o *InlineResponse200298) GetShortName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetShortNameOk
 
-`func (o *InlineResponse200298) GetMetaOk() (*InlineResponse200298Meta, bool)`
+`func (o *InlineResponse200298) GetShortNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetShortName
 
-`func (o *InlineResponse200298) SetMeta(v InlineResponse200298Meta)`
+`func (o *InlineResponse200298) SetShortName(v string)`
 
-SetMeta sets Meta field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasMeta
+### HasShortName
 
-`func (o *InlineResponse200298) HasMeta() bool`
+`func (o *InlineResponse200298) HasShortName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasShortName returns a boolean if a field has been set.
+
+### GetLimitScopeToNetworks
+
+`func (o *InlineResponse200298) GetLimitScopeToNetworks() []InlineResponse200298LimitScopeToNetworks`
+
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+
+### GetLimitScopeToNetworksOk
+
+`func (o *InlineResponse200298) GetLimitScopeToNetworksOk() (*[]InlineResponse200298LimitScopeToNetworks, bool)`
+
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimitScopeToNetworks
+
+`func (o *InlineResponse200298) SetLimitScopeToNetworks(v []InlineResponse200298LimitScopeToNetworks)`
+
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+
+### HasLimitScopeToNetworks
+
+`func (o *InlineResponse200298) HasLimitScopeToNetworks() bool`
+
+HasLimitScopeToNetworks returns a boolean if a field has been set.
+
+### GetOptOutEligibility
+
+`func (o *InlineResponse200298) GetOptOutEligibility() InlineResponse200298OptOutEligibility`
+
+GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
+
+### GetOptOutEligibilityOk
+
+`func (o *InlineResponse200298) GetOptOutEligibilityOk() (*InlineResponse200298OptOutEligibility, bool)`
+
+GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOptOutEligibility
+
+`func (o *InlineResponse200298) SetOptOutEligibility(v InlineResponse200298OptOutEligibility)`
+
+SetOptOutEligibility sets OptOutEligibility field to given value.
+
+### HasOptOutEligibility
+
+`func (o *InlineResponse200298) HasOptOutEligibility() bool`
+
+HasOptOutEligibility returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200298) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200298) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200298) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200298) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

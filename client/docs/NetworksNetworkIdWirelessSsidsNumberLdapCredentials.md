@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DistinguishedName** | Pointer to **string** | The distinguished name of the LDAP user account (example: cn&#x3D;user,dc&#x3D;meraki,dc&#x3D;com). | [optional] 
-**Password** | Pointer to **string** | The password of the LDAP user account. | [optional] 
+**DistinguishedName** | Pointer to **NullableString** | The distinguished name of the LDAP user account (example: cn&#x3D;user,dc&#x3D;meraki,dc&#x3D;com). | [optional] 
+**Password** | Pointer to **NullableString** | The password of the LDAP user account. | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetDistinguishedName sets DistinguishedName field to given value.
 
 HasDistinguishedName returns a boolean if a field has been set.
 
+### SetDistinguishedNameNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdapCredentials) SetDistinguishedNameNil(b bool)`
+
+ SetDistinguishedNameNil sets the value for DistinguishedName to be an explicit nil
+
+### UnsetDistinguishedName
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdapCredentials) UnsetDistinguishedName()`
+
+UnsetDistinguishedName ensures that no value is present for DistinguishedName, not even an explicit nil
 ### GetPassword
 
 `func (o *NetworksNetworkIdWirelessSsidsNumberLdapCredentials) GetPassword() string`
@@ -76,6 +86,16 @@ SetPassword sets Password field to given value.
 
 HasPassword returns a boolean if a field has been set.
 
+### SetPasswordNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdapCredentials) SetPasswordNil(b bool)`
+
+ SetPasswordNil sets the value for Password to be an explicit nil
+
+### UnsetPassword
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdapCredentials) UnsetPassword()`
+
+UnsetPassword ensures that no value is present for Password, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

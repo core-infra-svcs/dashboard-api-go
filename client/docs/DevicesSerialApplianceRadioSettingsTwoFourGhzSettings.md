@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Channel** | Pointer to **int32** | Sets a manual channel for 2.4 GHz. Can be &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;, &#39;11&#39;, &#39;12&#39;, &#39;13&#39; or &#39;14&#39; or null for using auto channel. | [optional] 
-**TargetPower** | Pointer to **int32** | Set a manual target power for 2.4 GHz (dBm). Enter null for using auto power range. | [optional] 
+**Channel** | Pointer to **NullableInt32** | Sets a manual channel for 2.4 GHz. Can be &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;, &#39;11&#39;, &#39;12&#39;, &#39;13&#39; or &#39;14&#39; or null for using auto channel. | [optional] 
+**TargetPower** | Pointer to **NullableInt32** | Set a manual target power for 2.4 GHz (dBm). Enter null for using auto power range. | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetChannel sets Channel field to given value.
 
 HasChannel returns a boolean if a field has been set.
 
+### SetChannelNil
+
+`func (o *DevicesSerialApplianceRadioSettingsTwoFourGhzSettings) SetChannelNil(b bool)`
+
+ SetChannelNil sets the value for Channel to be an explicit nil
+
+### UnsetChannel
+`func (o *DevicesSerialApplianceRadioSettingsTwoFourGhzSettings) UnsetChannel()`
+
+UnsetChannel ensures that no value is present for Channel, not even an explicit nil
 ### GetTargetPower
 
 `func (o *DevicesSerialApplianceRadioSettingsTwoFourGhzSettings) GetTargetPower() int32`
@@ -76,6 +86,16 @@ SetTargetPower sets TargetPower field to given value.
 
 HasTargetPower returns a boolean if a field has been set.
 
+### SetTargetPowerNil
+
+`func (o *DevicesSerialApplianceRadioSettingsTwoFourGhzSettings) SetTargetPowerNil(b bool)`
+
+ SetTargetPowerNil sets the value for TargetPower to be an explicit nil
+
+### UnsetTargetPower
+`func (o *DevicesSerialApplianceRadioSettingsTwoFourGhzSettings) UnsetTargetPower()`
+
+UnsetTargetPower ensures that no value is present for TargetPower, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **Port** | Pointer to **int32** | UDP port the RADIUS server listens on for Access-requests | [optional] 
 **Secret** | Pointer to **string** | RADIUS client shared secret | [optional] 
 **RadsecEnabled** | Pointer to **bool** | Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled. | [optional] 
-**OpenRoamingCertificateId** | Pointer to **int32** | The ID of the Openroaming Certificate attached to radius server. | [optional] 
-**CaCertificate** | Pointer to **string** | Certificate used for authorization for the RADSEC Server | [optional] 
+**OpenRoamingCertificateId** | Pointer to **NullableInt32** | The ID of the Openroaming Certificate attached to radius server. | [optional] 
+**CaCertificate** | Pointer to **NullableString** | Certificate used for authorization for the RADSEC Server | [optional] 
 
 ## Methods
 
@@ -150,6 +150,16 @@ SetOpenRoamingCertificateId sets OpenRoamingCertificateId field to given value.
 
 HasOpenRoamingCertificateId returns a boolean if a field has been set.
 
+### SetOpenRoamingCertificateIdNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberRadiusServers) SetOpenRoamingCertificateIdNil(b bool)`
+
+ SetOpenRoamingCertificateIdNil sets the value for OpenRoamingCertificateId to be an explicit nil
+
+### UnsetOpenRoamingCertificateId
+`func (o *NetworksNetworkIdWirelessSsidsNumberRadiusServers) UnsetOpenRoamingCertificateId()`
+
+UnsetOpenRoamingCertificateId ensures that no value is present for OpenRoamingCertificateId, not even an explicit nil
 ### GetCaCertificate
 
 `func (o *NetworksNetworkIdWirelessSsidsNumberRadiusServers) GetCaCertificate() string`
@@ -175,6 +185,16 @@ SetCaCertificate sets CaCertificate field to given value.
 
 HasCaCertificate returns a boolean if a field has been set.
 
+### SetCaCertificateNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberRadiusServers) SetCaCertificateNil(b bool)`
+
+ SetCaCertificateNil sets the value for CaCertificate to be an explicit nil
+
+### UnsetCaCertificate
+`func (o *NetworksNetworkIdWirelessSsidsNumberRadiusServers) UnsetCaCertificate()`
+
+UnsetCaCertificate ensures that no value is present for CaCertificate, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

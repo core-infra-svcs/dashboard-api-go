@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **StaticGatewayIp** | Pointer to **string** | The IP of the gateway on the WAN. | [optional] 
 **StaticSubnetMask** | Pointer to **string** | The subnet mask for the WAN. | [optional] 
 **StaticDns** | Pointer to **[]string** | Up to two DNS IPs. | [optional] 
-**Vlan** | Pointer to **int32** | The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false. | [optional] 
+**Vlan** | Pointer to **NullableInt32** | The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false. | [optional] 
 
 ## Methods
 
@@ -206,6 +206,16 @@ SetVlan sets Vlan field to given value.
 
 HasVlan returns a boolean if a field has been set.
 
+### SetVlanNil
+
+`func (o *DevicesSerialManagementInterfaceWan2) SetVlanNil(b bool)`
+
+ SetVlanNil sets the value for Vlan to be an explicit nil
+
+### UnsetVlan
+`func (o *DevicesSerialManagementInterfaceWan2) UnsetVlan()`
+
+UnsetVlan ensures that no value is present for Vlan, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

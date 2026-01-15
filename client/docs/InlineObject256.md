@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **StormControlEnabled** | Pointer to **bool** | The storm control status of the switch template port. | [optional] 
 **FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
 **DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
-**Profile** | Pointer to [**DevicesSerialSwitchPortsProfile**](DevicesSerialSwitchPortsProfile.md) |  | [optional] 
+**Profile** | Pointer to [**DevicesSerialSwitchPortsPortIdProfile**](DevicesSerialSwitchPortsPortIdProfile.md) |  | [optional] 
 **Dot3az** | Pointer to [**OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az**](OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az.md) |  | [optional] 
 **HighSpeed** | Pointer to [**DevicesSerialSwitchPortsHighSpeed**](DevicesSerialSwitchPortsHighSpeed.md) |  | [optional] 
 
@@ -693,20 +693,20 @@ HasDaiTrusted returns a boolean if a field has been set.
 
 ### GetProfile
 
-`func (o *InlineObject256) GetProfile() DevicesSerialSwitchPortsProfile`
+`func (o *InlineObject256) GetProfile() DevicesSerialSwitchPortsPortIdProfile`
 
 GetProfile returns the Profile field if non-nil, zero value otherwise.
 
 ### GetProfileOk
 
-`func (o *InlineObject256) GetProfileOk() (*DevicesSerialSwitchPortsProfile, bool)`
+`func (o *InlineObject256) GetProfileOk() (*DevicesSerialSwitchPortsPortIdProfile, bool)`
 
 GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProfile
 
-`func (o *InlineObject256) SetProfile(v DevicesSerialSwitchPortsProfile)`
+`func (o *InlineObject256) SetProfile(v DevicesSerialSwitchPortsPortIdProfile)`
 
 SetProfile sets Profile field to given value.
 

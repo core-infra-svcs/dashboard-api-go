@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkTopologyLinkLayer
 
-> map[string]interface{} GetNetworkTopologyLinkLayer(ctx, networkId).Execute()
+> InlineResponse200179 GetNetworkTopologyLinkLayer(ctx, networkId).Execute()
 
 List the LLDP and CDP information for all discovered devices and connections in a network
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LinkLayerApi.GetNetworkTopologyLinkLayer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkTopologyLinkLayer`: map[string]interface{}
+    // response from `GetNetworkTopologyLinkLayer`: InlineResponse200179
     fmt.Fprintf(os.Stdout, "Response from `LinkLayerApi.GetNetworkTopologyLinkLayer`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200179**](InlineResponse200179.md)
 
 ### Authorization
 

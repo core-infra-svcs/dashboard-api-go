@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Event category | [optional] 
-**Type** | Pointer to **string** | Event type | [optional] 
-**Description** | Pointer to **string** | Description of the event | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
+**Errors** | Pointer to [**[]InlineResponse20098Errors**](InlineResponse20098Errors.md) | Errors for devices that were not added | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20098WithDefaults instantiates a new InlineResponse20098 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetSerials
 
-`func (o *InlineResponse20098) GetCategory() string`
+`func (o *InlineResponse20098) GetSerials() []string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetSerialsOk
 
-`func (o *InlineResponse20098) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse20098) GetSerialsOk() (*[]string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetSerials
 
-`func (o *InlineResponse20098) SetCategory(v string)`
+`func (o *InlineResponse20098) SetSerials(v []string)`
 
-SetCategory sets Category field to given value.
+SetSerials sets Serials field to given value.
 
-### HasCategory
+### HasSerials
 
-`func (o *InlineResponse20098) HasCategory() bool`
+`func (o *InlineResponse20098) HasSerials() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetType
+### GetErrors
 
-`func (o *InlineResponse20098) GetType() string`
+`func (o *InlineResponse20098) GetErrors() []InlineResponse20098Errors`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetErrorsOk
 
-`func (o *InlineResponse20098) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20098) GetErrorsOk() (*[]InlineResponse20098Errors, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetErrors
 
-`func (o *InlineResponse20098) SetType(v string)`
+`func (o *InlineResponse20098) SetErrors(v []InlineResponse20098Errors)`
 
-SetType sets Type field to given value.
+SetErrors sets Errors field to given value.
 
-### HasType
+### HasErrors
 
-`func (o *InlineResponse20098) HasType() bool`
+`func (o *InlineResponse20098) HasErrors() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse20098) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse20098) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse20098) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse20098) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

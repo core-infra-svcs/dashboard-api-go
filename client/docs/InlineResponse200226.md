@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | Profile ID | [optional] 
-**Name** | Pointer to **string** | Name of profile | [optional] 
+**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200226WithDefaults instantiates a new InlineResponse200226 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetEnabledNetworks
 
-`func (o *InlineResponse200226) GetProfileId() string`
+`func (o *InlineResponse200226) GetEnabledNetworks() []string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetEnabledNetworksOk
 
-`func (o *InlineResponse200226) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200226) GetEnabledNetworksOk() (*[]string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetEnabledNetworks
 
-`func (o *InlineResponse200226) SetProfileId(v string)`
+`func (o *InlineResponse200226) SetEnabledNetworks(v []string)`
 
-SetProfileId sets ProfileId field to given value.
+SetEnabledNetworks sets EnabledNetworks field to given value.
 
-### HasProfileId
+### HasEnabledNetworks
 
-`func (o *InlineResponse200226) HasProfileId() bool`
+`func (o *InlineResponse200226) HasEnabledNetworks() bool`
 
-HasProfileId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200226) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200226) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200226) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200226) HasName() bool`
-
-HasName returns a boolean if a field has been set.
+HasEnabledNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

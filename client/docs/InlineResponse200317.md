@@ -4,12 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
-**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
-**VisionConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) for Meraki Vision Portal | [optional] 
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Status** | Pointer to **string** | License status (Co-termination licensing only) | [optional] 
+**ExpirationDate** | Pointer to **string** | License expiration date (Co-termination licensing only) | [optional] 
+**LicensedDeviceCounts** | Pointer to **map[string]int32** | License counts (Co-termination licensing only) | [optional] 
+**LicenseCount** | Pointer to **int32** | Total number of licenses (Per-device licensing only) | [optional] 
+**States** | Pointer to [**InlineResponse200317States**](InlineResponse200317States.md) |  | [optional] 
+**LicenseTypes** | Pointer to [**[]InlineResponse200317LicenseTypes**](InlineResponse200317LicenseTypes.md) | Data by license type (Per-device licensing only) | [optional] 
+**SystemsManager** | Pointer to [**InlineResponse200317SystemsManager**](InlineResponse200317SystemsManager.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +31,180 @@ NewInlineResponse200317WithDefaults instantiates a new InlineResponse200317 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdpId
+### GetStatus
 
-`func (o *InlineResponse200317) GetIdpId() string`
+`func (o *InlineResponse200317) GetStatus() string`
 
-GetIdpId returns the IdpId field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetIdpIdOk
+### GetStatusOk
 
-`func (o *InlineResponse200317) GetIdpIdOk() (*string, bool)`
+`func (o *InlineResponse200317) GetStatusOk() (*string, bool)`
 
-GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdpId
+### SetStatus
 
-`func (o *InlineResponse200317) SetIdpId(v string)`
+`func (o *InlineResponse200317) SetStatus(v string)`
 
-SetIdpId sets IdpId field to given value.
+SetStatus sets Status field to given value.
 
-### HasIdpId
+### HasStatus
 
-`func (o *InlineResponse200317) HasIdpId() bool`
+`func (o *InlineResponse200317) HasStatus() bool`
 
-HasIdpId returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetConsumerUrl
+### GetExpirationDate
 
-`func (o *InlineResponse200317) GetConsumerUrl() string`
+`func (o *InlineResponse200317) GetExpirationDate() string`
 
-GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
+GetExpirationDate returns the ExpirationDate field if non-nil, zero value otherwise.
 
-### GetConsumerUrlOk
+### GetExpirationDateOk
 
-`func (o *InlineResponse200317) GetConsumerUrlOk() (*string, bool)`
+`func (o *InlineResponse200317) GetExpirationDateOk() (*string, bool)`
 
-GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
+GetExpirationDateOk returns a tuple with the ExpirationDate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConsumerUrl
+### SetExpirationDate
 
-`func (o *InlineResponse200317) SetConsumerUrl(v string)`
+`func (o *InlineResponse200317) SetExpirationDate(v string)`
 
-SetConsumerUrl sets ConsumerUrl field to given value.
+SetExpirationDate sets ExpirationDate field to given value.
 
-### HasConsumerUrl
+### HasExpirationDate
 
-`func (o *InlineResponse200317) HasConsumerUrl() bool`
+`func (o *InlineResponse200317) HasExpirationDate() bool`
 
-HasConsumerUrl returns a boolean if a field has been set.
+HasExpirationDate returns a boolean if a field has been set.
 
-### GetVisionConsumerUrl
+### GetLicensedDeviceCounts
 
-`func (o *InlineResponse200317) GetVisionConsumerUrl() string`
+`func (o *InlineResponse200317) GetLicensedDeviceCounts() map[string]int32`
 
-GetVisionConsumerUrl returns the VisionConsumerUrl field if non-nil, zero value otherwise.
+GetLicensedDeviceCounts returns the LicensedDeviceCounts field if non-nil, zero value otherwise.
 
-### GetVisionConsumerUrlOk
+### GetLicensedDeviceCountsOk
 
-`func (o *InlineResponse200317) GetVisionConsumerUrlOk() (*string, bool)`
+`func (o *InlineResponse200317) GetLicensedDeviceCountsOk() (*map[string]int32, bool)`
 
-GetVisionConsumerUrlOk returns a tuple with the VisionConsumerUrl field if it's non-nil, zero value otherwise
+GetLicensedDeviceCountsOk returns a tuple with the LicensedDeviceCounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVisionConsumerUrl
+### SetLicensedDeviceCounts
 
-`func (o *InlineResponse200317) SetVisionConsumerUrl(v string)`
+`func (o *InlineResponse200317) SetLicensedDeviceCounts(v map[string]int32)`
 
-SetVisionConsumerUrl sets VisionConsumerUrl field to given value.
+SetLicensedDeviceCounts sets LicensedDeviceCounts field to given value.
 
-### HasVisionConsumerUrl
+### HasLicensedDeviceCounts
 
-`func (o *InlineResponse200317) HasVisionConsumerUrl() bool`
+`func (o *InlineResponse200317) HasLicensedDeviceCounts() bool`
 
-HasVisionConsumerUrl returns a boolean if a field has been set.
+HasLicensedDeviceCounts returns a boolean if a field has been set.
 
-### GetX509certSha1Fingerprint
+### GetLicenseCount
 
-`func (o *InlineResponse200317) GetX509certSha1Fingerprint() string`
+`func (o *InlineResponse200317) GetLicenseCount() int32`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetLicenseCount returns the LicenseCount field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetLicenseCountOk
 
-`func (o *InlineResponse200317) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineResponse200317) GetLicenseCountOk() (*int32, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetLicenseCountOk returns a tuple with the LicenseCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetLicenseCount
 
-`func (o *InlineResponse200317) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineResponse200317) SetLicenseCount(v int32)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetLicenseCount sets LicenseCount field to given value.
 
-### HasX509certSha1Fingerprint
+### HasLicenseCount
 
-`func (o *InlineResponse200317) HasX509certSha1Fingerprint() bool`
+`func (o *InlineResponse200317) HasLicenseCount() bool`
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+HasLicenseCount returns a boolean if a field has been set.
 
-### GetSsoLoginUrl
+### GetStates
 
-`func (o *InlineResponse200317) GetSsoLoginUrl() string`
+`func (o *InlineResponse200317) GetStates() InlineResponse200317States`
 
-GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
+GetStates returns the States field if non-nil, zero value otherwise.
 
-### GetSsoLoginUrlOk
+### GetStatesOk
 
-`func (o *InlineResponse200317) GetSsoLoginUrlOk() (*string, bool)`
+`func (o *InlineResponse200317) GetStatesOk() (*InlineResponse200317States, bool)`
 
-GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
+GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsoLoginUrl
+### SetStates
 
-`func (o *InlineResponse200317) SetSsoLoginUrl(v string)`
+`func (o *InlineResponse200317) SetStates(v InlineResponse200317States)`
 
-SetSsoLoginUrl sets SsoLoginUrl field to given value.
+SetStates sets States field to given value.
 
-### HasSsoLoginUrl
+### HasStates
 
-`func (o *InlineResponse200317) HasSsoLoginUrl() bool`
+`func (o *InlineResponse200317) HasStates() bool`
 
-HasSsoLoginUrl returns a boolean if a field has been set.
+HasStates returns a boolean if a field has been set.
 
-### GetSloLogoutUrl
+### GetLicenseTypes
 
-`func (o *InlineResponse200317) GetSloLogoutUrl() string`
+`func (o *InlineResponse200317) GetLicenseTypes() []InlineResponse200317LicenseTypes`
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+GetLicenseTypes returns the LicenseTypes field if non-nil, zero value otherwise.
 
-### GetSloLogoutUrlOk
+### GetLicenseTypesOk
 
-`func (o *InlineResponse200317) GetSloLogoutUrlOk() (*string, bool)`
+`func (o *InlineResponse200317) GetLicenseTypesOk() (*[]InlineResponse200317LicenseTypes, bool)`
 
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+GetLicenseTypesOk returns a tuple with the LicenseTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetLicenseTypes
 
-`func (o *InlineResponse200317) SetSloLogoutUrl(v string)`
+`func (o *InlineResponse200317) SetLicenseTypes(v []InlineResponse200317LicenseTypes)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetLicenseTypes sets LicenseTypes field to given value.
 
-### HasSloLogoutUrl
+### HasLicenseTypes
 
-`func (o *InlineResponse200317) HasSloLogoutUrl() bool`
+`func (o *InlineResponse200317) HasLicenseTypes() bool`
 
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasLicenseTypes returns a boolean if a field has been set.
+
+### GetSystemsManager
+
+`func (o *InlineResponse200317) GetSystemsManager() InlineResponse200317SystemsManager`
+
+GetSystemsManager returns the SystemsManager field if non-nil, zero value otherwise.
+
+### GetSystemsManagerOk
+
+`func (o *InlineResponse200317) GetSystemsManagerOk() (*InlineResponse200317SystemsManager, bool)`
+
+GetSystemsManagerOk returns a tuple with the SystemsManager field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSystemsManager
+
+`func (o *InlineResponse200317) SetSystemsManager(v InlineResponse200317SystemsManager)`
+
+SetSystemsManager sets SystemsManager field to given value.
+
+### HasSystemsManager
+
+`func (o *InlineResponse200317) HasSystemsManager() bool`
+
+HasSystemsManager returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | Usage received by the client on a given day | [optional] 
-**Sent** | Pointer to **float32** | Usage sent by the client on a given day | [optional] 
-**Ts** | Pointer to **time.Time** | The day&#39;s timestamp | [optional] 
+**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
+**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
+**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
+**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20094WithDefaults instantiates a new InlineResponse20094 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetClientId
 
-`func (o *InlineResponse20094) GetReceived() float32`
+`func (o *InlineResponse20094) GetClientId() string`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetClientIdOk
 
-`func (o *InlineResponse20094) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse20094) GetClientIdOk() (*string, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetClientId
 
-`func (o *InlineResponse20094) SetReceived(v float32)`
+`func (o *InlineResponse20094) SetClientId(v string)`
 
-SetReceived sets Received field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasReceived
+### HasClientId
 
-`func (o *InlineResponse20094) HasReceived() bool`
+`func (o *InlineResponse20094) HasClientId() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetSent
+### GetClientIp
 
-`func (o *InlineResponse20094) GetSent() float32`
+`func (o *InlineResponse20094) GetClientIp() string`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetClientIpOk
 
-`func (o *InlineResponse20094) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse20094) GetClientIpOk() (*string, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetClientIp
 
-`func (o *InlineResponse20094) SetSent(v float32)`
+`func (o *InlineResponse20094) SetClientIp(v string)`
 
-SetSent sets Sent field to given value.
+SetClientIp sets ClientIp field to given value.
 
-### HasSent
+### HasClientIp
 
-`func (o *InlineResponse20094) HasSent() bool`
+`func (o *InlineResponse20094) HasClientIp() bool`
 
-HasSent returns a boolean if a field has been set.
+HasClientIp returns a boolean if a field has been set.
 
-### GetTs
+### GetClientMac
 
-`func (o *InlineResponse20094) GetTs() time.Time`
+`func (o *InlineResponse20094) GetClientMac() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetClientMacOk
 
-`func (o *InlineResponse20094) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20094) GetClientMacOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetClientMac
 
-`func (o *InlineResponse20094) SetTs(v time.Time)`
+`func (o *InlineResponse20094) SetClientMac(v string)`
 
-SetTs sets Ts field to given value.
+SetClientMac sets ClientMac field to given value.
 
-### HasTs
+### HasClientMac
 
-`func (o *InlineResponse20094) HasTs() bool`
+`func (o *InlineResponse20094) HasClientMac() bool`
 
-HasTs returns a boolean if a field has been set.
+HasClientMac returns a boolean if a field has been set.
+
+### GetUsageHistory
+
+`func (o *InlineResponse20094) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
+
+GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
+
+### GetUsageHistoryOk
+
+`func (o *InlineResponse20094) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
+
+GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsageHistory
+
+`func (o *InlineResponse20094) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
+
+SetUsageHistory sets UsageHistory field to given value.
+
+### HasUsageHistory
+
+`func (o *InlineResponse20094) HasUsageHistory() bool`
+
+HasUsageHistory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

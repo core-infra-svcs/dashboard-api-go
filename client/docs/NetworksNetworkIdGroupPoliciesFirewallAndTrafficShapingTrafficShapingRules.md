@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Definitions** | [**[]NetworksNetworkIdApplianceTrafficShapingRulesDefinitions**](NetworksNetworkIdApplianceTrafficShapingRulesDefinitions.md) |     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.  | 
 **PerClientBandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits.md) |  | [optional] 
-**DscpTagValue** | Pointer to **int32** |     The DSCP tag applied by your rule. null means &#39;Do not change DSCP tag&#39;.     For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.  | [optional] 
-**PcpTagValue** | Pointer to **int32** |     The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).     null means &#39;Do not set PCP tag&#39;.  | [optional] 
+**DscpTagValue** | Pointer to **NullableInt32** |     The DSCP tag applied by your rule. null means &#39;Do not change DSCP tag&#39;.     For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.  | [optional] 
+**PcpTagValue** | Pointer to **NullableInt32** |     The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).     null means &#39;Do not set PCP tag&#39;.  | [optional] 
 **Priority** | Pointer to **string** |     A string, indicating the priority level for packets bound to your rule.     Can be &#39;low&#39;, &#39;normal&#39; or &#39;high&#39;.  | [optional] 
 
 ## Methods
@@ -99,6 +99,16 @@ SetDscpTagValue sets DscpTagValue field to given value.
 
 HasDscpTagValue returns a boolean if a field has been set.
 
+### SetDscpTagValueNil
+
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) SetDscpTagValueNil(b bool)`
+
+ SetDscpTagValueNil sets the value for DscpTagValue to be an explicit nil
+
+### UnsetDscpTagValue
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) UnsetDscpTagValue()`
+
+UnsetDscpTagValue ensures that no value is present for DscpTagValue, not even an explicit nil
 ### GetPcpTagValue
 
 `func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetPcpTagValue() int32`
@@ -124,6 +134,16 @@ SetPcpTagValue sets PcpTagValue field to given value.
 
 HasPcpTagValue returns a boolean if a field has been set.
 
+### SetPcpTagValueNil
+
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) SetPcpTagValueNil(b bool)`
+
+ SetPcpTagValueNil sets the value for PcpTagValue to be an explicit nil
+
+### UnsetPcpTagValue
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) UnsetPcpTagValue()`
+
+UnsetPcpTagValue ensures that no value is present for PcpTagValue, not even an explicit nil
 ### GetPriority
 
 `func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetPriority() string`

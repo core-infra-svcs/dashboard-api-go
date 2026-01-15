@@ -4,10 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
-**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
-**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
-**Events** | Pointer to [**[]InlineResponse20097Events**](InlineResponse20097Events.md) | An array of events that took place in the network. | [optional] 
+**Ts** | Pointer to **time.Time** | The start time from which daily traffic data was collected | [optional] 
+**Application** | Pointer to **string** | The name of the application the client is connected to | [optional] 
+**Destination** | Pointer to **string** | The IP or web address the client is connected to | [optional] 
+**Protocol** | Pointer to **string** | The client protocol | [optional] 
+**Port** | Pointer to **int32** | The port the client is connected to | [optional] 
+**Recv** | Pointer to **float32** | Usage received by the client | [optional] 
+**Sent** | Pointer to **float32** | Usage sent by the client | [optional] 
+**NumFlows** | Pointer to **int32** | The number of flows the client has | [optional] 
+**ActiveSeconds** | Pointer to **int32** | The amount of seconds the client was active | [optional] 
 
 ## Methods
 
@@ -28,105 +33,230 @@ NewInlineResponse20097WithDefaults instantiates a new InlineResponse20097 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetTs
 
-`func (o *InlineResponse20097) GetMessage() string`
+`func (o *InlineResponse20097) GetTs() time.Time`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetTsOk
 
-`func (o *InlineResponse20097) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse20097) GetTsOk() (*time.Time, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetTs
 
-`func (o *InlineResponse20097) SetMessage(v string)`
+`func (o *InlineResponse20097) SetTs(v time.Time)`
 
-SetMessage sets Message field to given value.
+SetTs sets Ts field to given value.
 
-### HasMessage
+### HasTs
 
-`func (o *InlineResponse20097) HasMessage() bool`
+`func (o *InlineResponse20097) HasTs() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetPageStartAt
+### GetApplication
 
-`func (o *InlineResponse20097) GetPageStartAt() string`
+`func (o *InlineResponse20097) GetApplication() string`
 
-GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+GetApplication returns the Application field if non-nil, zero value otherwise.
 
-### GetPageStartAtOk
+### GetApplicationOk
 
-`func (o *InlineResponse20097) GetPageStartAtOk() (*string, bool)`
+`func (o *InlineResponse20097) GetApplicationOk() (*string, bool)`
 
-GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageStartAt
+### SetApplication
 
-`func (o *InlineResponse20097) SetPageStartAt(v string)`
+`func (o *InlineResponse20097) SetApplication(v string)`
 
-SetPageStartAt sets PageStartAt field to given value.
+SetApplication sets Application field to given value.
 
-### HasPageStartAt
+### HasApplication
 
-`func (o *InlineResponse20097) HasPageStartAt() bool`
+`func (o *InlineResponse20097) HasApplication() bool`
 
-HasPageStartAt returns a boolean if a field has been set.
+HasApplication returns a boolean if a field has been set.
 
-### GetPageEndAt
+### GetDestination
 
-`func (o *InlineResponse20097) GetPageEndAt() string`
+`func (o *InlineResponse20097) GetDestination() string`
 
-GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetPageEndAtOk
+### GetDestinationOk
 
-`func (o *InlineResponse20097) GetPageEndAtOk() (*string, bool)`
+`func (o *InlineResponse20097) GetDestinationOk() (*string, bool)`
 
-GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageEndAt
+### SetDestination
 
-`func (o *InlineResponse20097) SetPageEndAt(v string)`
+`func (o *InlineResponse20097) SetDestination(v string)`
 
-SetPageEndAt sets PageEndAt field to given value.
+SetDestination sets Destination field to given value.
 
-### HasPageEndAt
+### HasDestination
 
-`func (o *InlineResponse20097) HasPageEndAt() bool`
+`func (o *InlineResponse20097) HasDestination() bool`
 
-HasPageEndAt returns a boolean if a field has been set.
+HasDestination returns a boolean if a field has been set.
 
-### GetEvents
+### GetProtocol
 
-`func (o *InlineResponse20097) GetEvents() []InlineResponse20097Events`
+`func (o *InlineResponse20097) GetProtocol() string`
 
-GetEvents returns the Events field if non-nil, zero value otherwise.
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-### GetEventsOk
+### GetProtocolOk
 
-`func (o *InlineResponse20097) GetEventsOk() (*[]InlineResponse20097Events, bool)`
+`func (o *InlineResponse20097) GetProtocolOk() (*string, bool)`
 
-GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEvents
+### SetProtocol
 
-`func (o *InlineResponse20097) SetEvents(v []InlineResponse20097Events)`
+`func (o *InlineResponse20097) SetProtocol(v string)`
 
-SetEvents sets Events field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasEvents
+### HasProtocol
 
-`func (o *InlineResponse20097) HasEvents() bool`
+`func (o *InlineResponse20097) HasProtocol() bool`
 
-HasEvents returns a boolean if a field has been set.
+HasProtocol returns a boolean if a field has been set.
+
+### GetPort
+
+`func (o *InlineResponse20097) GetPort() int32`
+
+GetPort returns the Port field if non-nil, zero value otherwise.
+
+### GetPortOk
+
+`func (o *InlineResponse20097) GetPortOk() (*int32, bool)`
+
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPort
+
+`func (o *InlineResponse20097) SetPort(v int32)`
+
+SetPort sets Port field to given value.
+
+### HasPort
+
+`func (o *InlineResponse20097) HasPort() bool`
+
+HasPort returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse20097) GetRecv() float32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse20097) GetRecvOk() (*float32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse20097) SetRecv(v float32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse20097) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse20097) GetSent() float32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse20097) GetSentOk() (*float32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse20097) SetSent(v float32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse20097) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetNumFlows
+
+`func (o *InlineResponse20097) GetNumFlows() int32`
+
+GetNumFlows returns the NumFlows field if non-nil, zero value otherwise.
+
+### GetNumFlowsOk
+
+`func (o *InlineResponse20097) GetNumFlowsOk() (*int32, bool)`
+
+GetNumFlowsOk returns a tuple with the NumFlows field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumFlows
+
+`func (o *InlineResponse20097) SetNumFlows(v int32)`
+
+SetNumFlows sets NumFlows field to given value.
+
+### HasNumFlows
+
+`func (o *InlineResponse20097) HasNumFlows() bool`
+
+HasNumFlows returns a boolean if a field has been set.
+
+### GetActiveSeconds
+
+`func (o *InlineResponse20097) GetActiveSeconds() int32`
+
+GetActiveSeconds returns the ActiveSeconds field if non-nil, zero value otherwise.
+
+### GetActiveSecondsOk
+
+`func (o *InlineResponse20097) GetActiveSecondsOk() (*int32, bool)`
+
+GetActiveSecondsOk returns a tuple with the ActiveSeconds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActiveSeconds
+
+`func (o *InlineResponse20097) SetActiveSeconds(v int32)`
+
+SetActiveSeconds sets ActiveSeconds field to given value.
+
+### HasActiveSeconds
+
+`func (o *InlineResponse20097) HasActiveSeconds() bool`
+
+HasActiveSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

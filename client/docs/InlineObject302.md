@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | File name. Will overwrite files with same name. | [optional] 
-**Content** | Pointer to **string** | a file containing the asset content | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
 
 ## Methods
 
 ### NewInlineObject302
 
-`func NewInlineObject302() *InlineObject302`
+`func NewInlineObject302(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject302`
 
 NewInlineObject302 instantiates a new InlineObject302 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject302WithDefaults instantiates a new InlineObject302 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetItems
 
-`func (o *InlineObject302) GetName() string`
+`func (o *InlineObject302) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetItemsOk
 
-`func (o *InlineObject302) GetNameOk() (*string, bool)`
+`func (o *InlineObject302) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetItems
 
-`func (o *InlineObject302) SetName(v string)`
+`func (o *InlineObject302) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
 
-SetName sets Name field to given value.
+SetItems sets Items field to given value.
 
-### HasName
-
-`func (o *InlineObject302) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetContent
-
-`func (o *InlineObject302) GetContent() string`
-
-GetContent returns the Content field if non-nil, zero value otherwise.
-
-### GetContentOk
-
-`func (o *InlineObject302) GetContentOk() (*string, bool)`
-
-GetContentOk returns a tuple with the Content field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetContent
-
-`func (o *InlineObject302) SetContent(v string)`
-
-SetContent sets Content field to given value.
-
-### HasContent
-
-`func (o *InlineObject302) HasContent() bool`
-
-HasContent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean indicating if Smart Retention is enabled(true) or disabled(false). | [optional] 
+**Enabled** | Pointer to **bool** | Whether smart retention is enabled | [optional] 
 
 ## Methods
 

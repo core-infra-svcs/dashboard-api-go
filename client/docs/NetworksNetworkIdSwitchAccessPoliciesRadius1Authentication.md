@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Authentication mode of the policy  ( Open | Closed )  | [optional] 
+**Mode** | Pointer to **NullableString** | Authentication mode of the policy  ( Open | Closed )  | [optional] 
 
 ## Methods
 
@@ -50,6 +50,16 @@ SetMode sets Mode field to given value.
 
 HasMode returns a boolean if a field has been set.
 
+### SetModeNil
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius1Authentication) SetModeNil(b bool)`
+
+ SetModeNil sets the value for Mode to be an explicit nil
+
+### UnsetMode
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius1Authentication) UnsetMode()`
+
+UnsetMode ensures that no value is present for Mode, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

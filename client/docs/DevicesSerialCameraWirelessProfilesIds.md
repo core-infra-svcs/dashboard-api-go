@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Primary** | **string** | The id of the primary wireless profile | 
-**Secondary** | **string** | The id of the secondary wireless profile | 
-**Backup** | Pointer to **string** | The id of the backup wireless profile | [optional] 
+**Primary** | **NullableString** | The id of the primary wireless profile | 
+**Secondary** | **NullableString** | The id of the secondary wireless profile | 
+**Backup** | Pointer to **NullableString** | The id of the backup wireless profile | [optional] 
 
 ## Methods
 
 ### NewDevicesSerialCameraWirelessProfilesIds
 
-`func NewDevicesSerialCameraWirelessProfilesIds(primary string, secondary string, ) *DevicesSerialCameraWirelessProfilesIds`
+`func NewDevicesSerialCameraWirelessProfilesIds(primary NullableString, secondary NullableString, ) *DevicesSerialCameraWirelessProfilesIds`
 
 NewDevicesSerialCameraWirelessProfilesIds instantiates a new DevicesSerialCameraWirelessProfilesIds object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,16 @@ and a boolean to check if the value has been set.
 SetPrimary sets Primary field to given value.
 
 
+### SetPrimaryNil
+
+`func (o *DevicesSerialCameraWirelessProfilesIds) SetPrimaryNil(b bool)`
+
+ SetPrimaryNil sets the value for Primary to be an explicit nil
+
+### UnsetPrimary
+`func (o *DevicesSerialCameraWirelessProfilesIds) UnsetPrimary()`
+
+UnsetPrimary ensures that no value is present for Primary, not even an explicit nil
 ### GetSecondary
 
 `func (o *DevicesSerialCameraWirelessProfilesIds) GetSecondary() string`
@@ -67,6 +77,16 @@ and a boolean to check if the value has been set.
 SetSecondary sets Secondary field to given value.
 
 
+### SetSecondaryNil
+
+`func (o *DevicesSerialCameraWirelessProfilesIds) SetSecondaryNil(b bool)`
+
+ SetSecondaryNil sets the value for Secondary to be an explicit nil
+
+### UnsetSecondary
+`func (o *DevicesSerialCameraWirelessProfilesIds) UnsetSecondary()`
+
+UnsetSecondary ensures that no value is present for Secondary, not even an explicit nil
 ### GetBackup
 
 `func (o *DevicesSerialCameraWirelessProfilesIds) GetBackup() string`
@@ -92,6 +112,16 @@ SetBackup sets Backup field to given value.
 
 HasBackup returns a boolean if a field has been set.
 
+### SetBackupNil
+
+`func (o *DevicesSerialCameraWirelessProfilesIds) SetBackupNil(b bool)`
+
+ SetBackupNil sets the value for Backup to be an explicit nil
+
+### UnsetBackup
+`func (o *DevicesSerialCameraWirelessProfilesIds) UnsetBackup()`
+
+UnsetBackup ensures that no value is present for Backup, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

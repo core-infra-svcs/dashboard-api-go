@@ -14,9 +14,12 @@ Name | Type | Description | Notes
 **Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
 **Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
 **DhcpHandling** | Pointer to **string** | The appliance&#39;s handling of DHCP requests on this VLAN. One of: &#39;Run a DHCP server&#39;, &#39;Relay DHCP to another server&#39; or &#39;Do not respond to DHCP requests&#39; | [optional] 
+**DhcpRelayServerIps** | Pointer to **[]string** | The IPs (IPv4) of the DHCP servers that DHCP requests should be relayed to. CIDR/subnet notation and hostnames are not supported. | [optional] 
 **DhcpLeaseTime** | Pointer to **string** | The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39; | [optional] 
 **MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
 **DhcpBootOptionsEnabled** | Pointer to **bool** | Use DHCP boot options specified in other properties | [optional] 
+**DhcpBootNextServer** | Pointer to **string** | DHCP boot option to direct boot clients to the server to load the boot file from | [optional] 
+**DhcpBootFilename** | Pointer to **string** | DHCP boot option for boot filename | [optional] 
 **DhcpOptions** | Pointer to [**[]NetworksNetworkIdApplianceVlansDhcpOptions**](NetworksNetworkIdApplianceVlansDhcpOptions.md) | The list of DHCP options that will be included in DHCP responses. Each object in the list should have \&quot;code\&quot;, \&quot;type\&quot;, and \&quot;value\&quot; properties. | [optional] 
 
 ## Methods
@@ -288,6 +291,31 @@ SetDhcpHandling sets DhcpHandling field to given value.
 
 HasDhcpHandling returns a boolean if a field has been set.
 
+### GetDhcpRelayServerIps
+
+`func (o *InlineObject75) GetDhcpRelayServerIps() []string`
+
+GetDhcpRelayServerIps returns the DhcpRelayServerIps field if non-nil, zero value otherwise.
+
+### GetDhcpRelayServerIpsOk
+
+`func (o *InlineObject75) GetDhcpRelayServerIpsOk() (*[]string, bool)`
+
+GetDhcpRelayServerIpsOk returns a tuple with the DhcpRelayServerIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpRelayServerIps
+
+`func (o *InlineObject75) SetDhcpRelayServerIps(v []string)`
+
+SetDhcpRelayServerIps sets DhcpRelayServerIps field to given value.
+
+### HasDhcpRelayServerIps
+
+`func (o *InlineObject75) HasDhcpRelayServerIps() bool`
+
+HasDhcpRelayServerIps returns a boolean if a field has been set.
+
 ### GetDhcpLeaseTime
 
 `func (o *InlineObject75) GetDhcpLeaseTime() string`
@@ -362,6 +390,56 @@ SetDhcpBootOptionsEnabled sets DhcpBootOptionsEnabled field to given value.
 `func (o *InlineObject75) HasDhcpBootOptionsEnabled() bool`
 
 HasDhcpBootOptionsEnabled returns a boolean if a field has been set.
+
+### GetDhcpBootNextServer
+
+`func (o *InlineObject75) GetDhcpBootNextServer() string`
+
+GetDhcpBootNextServer returns the DhcpBootNextServer field if non-nil, zero value otherwise.
+
+### GetDhcpBootNextServerOk
+
+`func (o *InlineObject75) GetDhcpBootNextServerOk() (*string, bool)`
+
+GetDhcpBootNextServerOk returns a tuple with the DhcpBootNextServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpBootNextServer
+
+`func (o *InlineObject75) SetDhcpBootNextServer(v string)`
+
+SetDhcpBootNextServer sets DhcpBootNextServer field to given value.
+
+### HasDhcpBootNextServer
+
+`func (o *InlineObject75) HasDhcpBootNextServer() bool`
+
+HasDhcpBootNextServer returns a boolean if a field has been set.
+
+### GetDhcpBootFilename
+
+`func (o *InlineObject75) GetDhcpBootFilename() string`
+
+GetDhcpBootFilename returns the DhcpBootFilename field if non-nil, zero value otherwise.
+
+### GetDhcpBootFilenameOk
+
+`func (o *InlineObject75) GetDhcpBootFilenameOk() (*string, bool)`
+
+GetDhcpBootFilenameOk returns a tuple with the DhcpBootFilename field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpBootFilename
+
+`func (o *InlineObject75) SetDhcpBootFilename(v string)`
+
+SetDhcpBootFilename sets DhcpBootFilename field to given value.
+
+### HasDhcpBootFilename
+
+`func (o *InlineObject75) HasDhcpBootFilename() bool`
+
+HasDhcpBootFilename returns a boolean if a field has been set.
 
 ### GetDhcpOptions
 

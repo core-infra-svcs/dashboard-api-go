@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Enables / disables the authentication on Local Status page(s). | [optional] 
-**Username** | Pointer to **string** | The username used for Local Status Page(s). Setting this to null or empty string will clear the value, allowing you to use the default of &#39;admin&#39; | [optional] 
-**Password** | Pointer to **string** | The password used for Local Status Page(s). Set this to null to clear the password. | [optional] 
+**Username** | Pointer to **NullableString** | The username used for Local Status Page(s). Setting this to null or empty string will clear the value, allowing you to use the default of &#39;admin&#39; | [optional] 
+**Password** | Pointer to **NullableString** | The password used for Local Status Page(s). Set this to null to clear the password. | [optional] 
 
 ## Methods
 
@@ -77,6 +77,16 @@ SetUsername sets Username field to given value.
 
 HasUsername returns a boolean if a field has been set.
 
+### SetUsernameNil
+
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) SetUsernameNil(b bool)`
+
+ SetUsernameNil sets the value for Username to be an explicit nil
+
+### UnsetUsername
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) UnsetUsername()`
+
+UnsetUsername ensures that no value is present for Username, not even an explicit nil
 ### GetPassword
 
 `func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) GetPassword() string`
@@ -102,6 +112,16 @@ SetPassword sets Password field to given value.
 
 HasPassword returns a boolean if a field has been set.
 
+### SetPasswordNil
+
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) SetPasswordNil(b bool)`
+
+ SetPasswordNil sets the value for Password to be an explicit nil
+
+### UnsetPassword
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) UnsetPassword()`
+
+UnsetPassword ensures that no value is present for Password, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

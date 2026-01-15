@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Id of the major application, or a list of NBAR Application Category or Application selections | [optional] 
-**Name** | Pointer to **string** | Name of the major application or application category selected | [optional] 
-**Type** | Pointer to **string** | app type (major or nbar) | [optional] 
+**Id** | Pointer to **NullableString** | Id of the major application, or a list of NBAR Application Category or Application selections | [optional] 
+**Name** | Pointer to **NullableString** | Name of the major application or application category selected | [optional] 
+**Type** | Pointer to **NullableString** | app type (major or nbar) | [optional] 
 
 ## Methods
 
@@ -52,6 +52,16 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### SetIdNil
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) SetIdNil(b bool)`
+
+ SetIdNil sets the value for Id to be an explicit nil
+
+### UnsetId
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) UnsetId()`
+
+UnsetId ensures that no value is present for Id, not even an explicit nil
 ### GetName
 
 `func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) GetName() string`
@@ -77,6 +87,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetType
 
 `func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) GetType() string`
@@ -102,6 +122,16 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
+### SetTypeNil
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) SetTypeNil(b bool)`
+
+ SetTypeNil sets the value for Type to be an explicit nil
+
+### UnsetType
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications) UnsetType()`
+
+UnsetType ensures that no value is present for Type, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

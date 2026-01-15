@@ -4,29 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppId** | Pointer to **string** | The Meraki managed application Id for this record on a particular device. | [optional] 
-**BundleSize** | Pointer to **int32** | The size of the software bundle. | [optional] 
-**CreatedAt** | Pointer to **string** | When the Meraki record for the software was created. | [optional] 
-**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
-**DynamicSize** | Pointer to **int32** | The size of the data stored in the application. | [optional] 
-**Id** | Pointer to **string** | The Meraki software Id. | [optional] 
-**Identifier** | Pointer to **string** | Software bundle identifier. | [optional] 
-**InstalledAt** | Pointer to **string** | When the Software was installed on the device. | [optional] 
-**ToInstall** | Pointer to **bool** | A boolean indicating this software record should be installed on the associated device. | [optional] 
-**IosRedemptionCode** | Pointer to **bool** | A boolean indicating whether or not an iOS redemption code was used. | [optional] 
-**IsManaged** | Pointer to **bool** | A boolean indicating whether or not the software is managed by Meraki. | [optional] 
-**ItunesId** | Pointer to **string** | The itunes numerical identifier. | [optional] 
-**LicenseKey** | Pointer to **string** | The license key associated with this software installation. | [optional] 
-**Name** | Pointer to **string** | The name of the software. | [optional] 
-**Path** | Pointer to **string** | The path on the device where the software record is located. | [optional] 
-**RedemptionCode** | Pointer to **int32** | The redemption code used for this software. | [optional] 
-**ShortVersion** | Pointer to **string** | Short version notation for the software. | [optional] 
-**Status** | Pointer to **string** | The management status of the software. | [optional] 
-**ToUninstall** | Pointer to **bool** | A boolean indicating this software record should be uninstalled on the associated device. | [optional] 
-**UninstalledAt** | Pointer to **string** | When the record was uninstalled from the device. | [optional] 
-**UpdatedAt** | Pointer to **string** | When the record was last updated by Meraki. | [optional] 
-**Vendor** | Pointer to **string** | The vendor of the software. | [optional] 
-**Version** | Pointer to **string** | Full version notation for the software. | [optional] 
+**CpuPercentUsed** | Pointer to **float32** | The percentage of CPU used as a decimal format. | [optional] 
+**MemFree** | Pointer to **int32** | Memory that is not yet in use by the system. | [optional] 
+**MemWired** | Pointer to **int32** | Memory used for core OS functions on the device. | [optional] 
+**MemActive** | Pointer to **int32** | The active RAM on the device. | [optional] 
+**MemInactive** | Pointer to **int32** | The inactive RAM on the device. | [optional] 
+**NetworkSent** | Pointer to **int32** | Network bandwith transmitted. | [optional] 
+**NetworkReceived** | Pointer to **int32** | Network bandwith received. | [optional] 
+**SwapUsed** | Pointer to **int32** | The amount of space being used on the startup disk to swap unused files to and from RAM. | [optional] 
+**DiskUsage** | Pointer to [**NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage**](NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage.md) |  | [optional] 
+**Ts** | Pointer to **string** | The time at which the performance was measured. | [optional] 
 
 ## Methods
 
@@ -47,580 +34,255 @@ NewInlineResponse200142WithDefaults instantiates a new InlineResponse200142 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAppId
+### GetCpuPercentUsed
 
-`func (o *InlineResponse200142) GetAppId() string`
+`func (o *InlineResponse200142) GetCpuPercentUsed() float32`
 
-GetAppId returns the AppId field if non-nil, zero value otherwise.
+GetCpuPercentUsed returns the CpuPercentUsed field if non-nil, zero value otherwise.
 
-### GetAppIdOk
+### GetCpuPercentUsedOk
 
-`func (o *InlineResponse200142) GetAppIdOk() (*string, bool)`
+`func (o *InlineResponse200142) GetCpuPercentUsedOk() (*float32, bool)`
 
-GetAppIdOk returns a tuple with the AppId field if it's non-nil, zero value otherwise
+GetCpuPercentUsedOk returns a tuple with the CpuPercentUsed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppId
+### SetCpuPercentUsed
 
-`func (o *InlineResponse200142) SetAppId(v string)`
+`func (o *InlineResponse200142) SetCpuPercentUsed(v float32)`
 
-SetAppId sets AppId field to given value.
+SetCpuPercentUsed sets CpuPercentUsed field to given value.
 
-### HasAppId
+### HasCpuPercentUsed
 
-`func (o *InlineResponse200142) HasAppId() bool`
+`func (o *InlineResponse200142) HasCpuPercentUsed() bool`
 
-HasAppId returns a boolean if a field has been set.
+HasCpuPercentUsed returns a boolean if a field has been set.
 
-### GetBundleSize
+### GetMemFree
 
-`func (o *InlineResponse200142) GetBundleSize() int32`
+`func (o *InlineResponse200142) GetMemFree() int32`
 
-GetBundleSize returns the BundleSize field if non-nil, zero value otherwise.
+GetMemFree returns the MemFree field if non-nil, zero value otherwise.
 
-### GetBundleSizeOk
+### GetMemFreeOk
 
-`func (o *InlineResponse200142) GetBundleSizeOk() (*int32, bool)`
+`func (o *InlineResponse200142) GetMemFreeOk() (*int32, bool)`
 
-GetBundleSizeOk returns a tuple with the BundleSize field if it's non-nil, zero value otherwise
+GetMemFreeOk returns a tuple with the MemFree field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBundleSize
+### SetMemFree
 
-`func (o *InlineResponse200142) SetBundleSize(v int32)`
+`func (o *InlineResponse200142) SetMemFree(v int32)`
 
-SetBundleSize sets BundleSize field to given value.
+SetMemFree sets MemFree field to given value.
 
-### HasBundleSize
+### HasMemFree
 
-`func (o *InlineResponse200142) HasBundleSize() bool`
+`func (o *InlineResponse200142) HasMemFree() bool`
 
-HasBundleSize returns a boolean if a field has been set.
+HasMemFree returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetMemWired
 
-`func (o *InlineResponse200142) GetCreatedAt() string`
+`func (o *InlineResponse200142) GetMemWired() int32`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetMemWired returns the MemWired field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetMemWiredOk
 
-`func (o *InlineResponse200142) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse200142) GetMemWiredOk() (*int32, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetMemWiredOk returns a tuple with the MemWired field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetMemWired
 
-`func (o *InlineResponse200142) SetCreatedAt(v string)`
+`func (o *InlineResponse200142) SetMemWired(v int32)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetMemWired sets MemWired field to given value.
 
-### HasCreatedAt
+### HasMemWired
 
-`func (o *InlineResponse200142) HasCreatedAt() bool`
+`func (o *InlineResponse200142) HasMemWired() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasMemWired returns a boolean if a field has been set.
 
-### GetDeviceId
+### GetMemActive
 
-`func (o *InlineResponse200142) GetDeviceId() string`
+`func (o *InlineResponse200142) GetMemActive() int32`
 
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
+GetMemActive returns the MemActive field if non-nil, zero value otherwise.
 
-### GetDeviceIdOk
+### GetMemActiveOk
 
-`func (o *InlineResponse200142) GetDeviceIdOk() (*string, bool)`
+`func (o *InlineResponse200142) GetMemActiveOk() (*int32, bool)`
 
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
+GetMemActiveOk returns a tuple with the MemActive field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceId
+### SetMemActive
 
-`func (o *InlineResponse200142) SetDeviceId(v string)`
+`func (o *InlineResponse200142) SetMemActive(v int32)`
 
-SetDeviceId sets DeviceId field to given value.
+SetMemActive sets MemActive field to given value.
 
-### HasDeviceId
+### HasMemActive
 
-`func (o *InlineResponse200142) HasDeviceId() bool`
+`func (o *InlineResponse200142) HasMemActive() bool`
 
-HasDeviceId returns a boolean if a field has been set.
+HasMemActive returns a boolean if a field has been set.
 
-### GetDynamicSize
+### GetMemInactive
 
-`func (o *InlineResponse200142) GetDynamicSize() int32`
+`func (o *InlineResponse200142) GetMemInactive() int32`
 
-GetDynamicSize returns the DynamicSize field if non-nil, zero value otherwise.
+GetMemInactive returns the MemInactive field if non-nil, zero value otherwise.
 
-### GetDynamicSizeOk
+### GetMemInactiveOk
 
-`func (o *InlineResponse200142) GetDynamicSizeOk() (*int32, bool)`
+`func (o *InlineResponse200142) GetMemInactiveOk() (*int32, bool)`
 
-GetDynamicSizeOk returns a tuple with the DynamicSize field if it's non-nil, zero value otherwise
+GetMemInactiveOk returns a tuple with the MemInactive field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicSize
+### SetMemInactive
 
-`func (o *InlineResponse200142) SetDynamicSize(v int32)`
+`func (o *InlineResponse200142) SetMemInactive(v int32)`
 
-SetDynamicSize sets DynamicSize field to given value.
+SetMemInactive sets MemInactive field to given value.
 
-### HasDynamicSize
+### HasMemInactive
 
-`func (o *InlineResponse200142) HasDynamicSize() bool`
+`func (o *InlineResponse200142) HasMemInactive() bool`
 
-HasDynamicSize returns a boolean if a field has been set.
+HasMemInactive returns a boolean if a field has been set.
 
-### GetId
+### GetNetworkSent
 
-`func (o *InlineResponse200142) GetId() string`
+`func (o *InlineResponse200142) GetNetworkSent() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetNetworkSent returns the NetworkSent field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNetworkSentOk
 
-`func (o *InlineResponse200142) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200142) GetNetworkSentOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNetworkSentOk returns a tuple with the NetworkSent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetNetworkSent
 
-`func (o *InlineResponse200142) SetId(v string)`
+`func (o *InlineResponse200142) SetNetworkSent(v int32)`
 
-SetId sets Id field to given value.
+SetNetworkSent sets NetworkSent field to given value.
 
-### HasId
+### HasNetworkSent
 
-`func (o *InlineResponse200142) HasId() bool`
+`func (o *InlineResponse200142) HasNetworkSent() bool`
 
-HasId returns a boolean if a field has been set.
+HasNetworkSent returns a boolean if a field has been set.
 
-### GetIdentifier
+### GetNetworkReceived
 
-`func (o *InlineResponse200142) GetIdentifier() string`
+`func (o *InlineResponse200142) GetNetworkReceived() int32`
 
-GetIdentifier returns the Identifier field if non-nil, zero value otherwise.
+GetNetworkReceived returns the NetworkReceived field if non-nil, zero value otherwise.
 
-### GetIdentifierOk
+### GetNetworkReceivedOk
 
-`func (o *InlineResponse200142) GetIdentifierOk() (*string, bool)`
+`func (o *InlineResponse200142) GetNetworkReceivedOk() (*int32, bool)`
 
-GetIdentifierOk returns a tuple with the Identifier field if it's non-nil, zero value otherwise
+GetNetworkReceivedOk returns a tuple with the NetworkReceived field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentifier
+### SetNetworkReceived
 
-`func (o *InlineResponse200142) SetIdentifier(v string)`
+`func (o *InlineResponse200142) SetNetworkReceived(v int32)`
 
-SetIdentifier sets Identifier field to given value.
+SetNetworkReceived sets NetworkReceived field to given value.
 
-### HasIdentifier
+### HasNetworkReceived
 
-`func (o *InlineResponse200142) HasIdentifier() bool`
+`func (o *InlineResponse200142) HasNetworkReceived() bool`
 
-HasIdentifier returns a boolean if a field has been set.
+HasNetworkReceived returns a boolean if a field has been set.
 
-### GetInstalledAt
+### GetSwapUsed
 
-`func (o *InlineResponse200142) GetInstalledAt() string`
+`func (o *InlineResponse200142) GetSwapUsed() int32`
 
-GetInstalledAt returns the InstalledAt field if non-nil, zero value otherwise.
+GetSwapUsed returns the SwapUsed field if non-nil, zero value otherwise.
 
-### GetInstalledAtOk
+### GetSwapUsedOk
 
-`func (o *InlineResponse200142) GetInstalledAtOk() (*string, bool)`
+`func (o *InlineResponse200142) GetSwapUsedOk() (*int32, bool)`
 
-GetInstalledAtOk returns a tuple with the InstalledAt field if it's non-nil, zero value otherwise
+GetSwapUsedOk returns a tuple with the SwapUsed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInstalledAt
+### SetSwapUsed
 
-`func (o *InlineResponse200142) SetInstalledAt(v string)`
+`func (o *InlineResponse200142) SetSwapUsed(v int32)`
 
-SetInstalledAt sets InstalledAt field to given value.
+SetSwapUsed sets SwapUsed field to given value.
 
-### HasInstalledAt
+### HasSwapUsed
 
-`func (o *InlineResponse200142) HasInstalledAt() bool`
+`func (o *InlineResponse200142) HasSwapUsed() bool`
 
-HasInstalledAt returns a boolean if a field has been set.
+HasSwapUsed returns a boolean if a field has been set.
 
-### GetToInstall
+### GetDiskUsage
 
-`func (o *InlineResponse200142) GetToInstall() bool`
+`func (o *InlineResponse200142) GetDiskUsage() NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage`
 
-GetToInstall returns the ToInstall field if non-nil, zero value otherwise.
+GetDiskUsage returns the DiskUsage field if non-nil, zero value otherwise.
 
-### GetToInstallOk
+### GetDiskUsageOk
 
-`func (o *InlineResponse200142) GetToInstallOk() (*bool, bool)`
+`func (o *InlineResponse200142) GetDiskUsageOk() (*NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage, bool)`
 
-GetToInstallOk returns a tuple with the ToInstall field if it's non-nil, zero value otherwise
+GetDiskUsageOk returns a tuple with the DiskUsage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetToInstall
+### SetDiskUsage
 
-`func (o *InlineResponse200142) SetToInstall(v bool)`
+`func (o *InlineResponse200142) SetDiskUsage(v NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage)`
 
-SetToInstall sets ToInstall field to given value.
+SetDiskUsage sets DiskUsage field to given value.
 
-### HasToInstall
+### HasDiskUsage
 
-`func (o *InlineResponse200142) HasToInstall() bool`
+`func (o *InlineResponse200142) HasDiskUsage() bool`
 
-HasToInstall returns a boolean if a field has been set.
+HasDiskUsage returns a boolean if a field has been set.
 
-### GetIosRedemptionCode
+### GetTs
 
-`func (o *InlineResponse200142) GetIosRedemptionCode() bool`
+`func (o *InlineResponse200142) GetTs() string`
 
-GetIosRedemptionCode returns the IosRedemptionCode field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetIosRedemptionCodeOk
+### GetTsOk
 
-`func (o *InlineResponse200142) GetIosRedemptionCodeOk() (*bool, bool)`
+`func (o *InlineResponse200142) GetTsOk() (*string, bool)`
 
-GetIosRedemptionCodeOk returns a tuple with the IosRedemptionCode field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIosRedemptionCode
+### SetTs
 
-`func (o *InlineResponse200142) SetIosRedemptionCode(v bool)`
+`func (o *InlineResponse200142) SetTs(v string)`
 
-SetIosRedemptionCode sets IosRedemptionCode field to given value.
+SetTs sets Ts field to given value.
 
-### HasIosRedemptionCode
+### HasTs
 
-`func (o *InlineResponse200142) HasIosRedemptionCode() bool`
+`func (o *InlineResponse200142) HasTs() bool`
 
-HasIosRedemptionCode returns a boolean if a field has been set.
-
-### GetIsManaged
-
-`func (o *InlineResponse200142) GetIsManaged() bool`
-
-GetIsManaged returns the IsManaged field if non-nil, zero value otherwise.
-
-### GetIsManagedOk
-
-`func (o *InlineResponse200142) GetIsManagedOk() (*bool, bool)`
-
-GetIsManagedOk returns a tuple with the IsManaged field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsManaged
-
-`func (o *InlineResponse200142) SetIsManaged(v bool)`
-
-SetIsManaged sets IsManaged field to given value.
-
-### HasIsManaged
-
-`func (o *InlineResponse200142) HasIsManaged() bool`
-
-HasIsManaged returns a boolean if a field has been set.
-
-### GetItunesId
-
-`func (o *InlineResponse200142) GetItunesId() string`
-
-GetItunesId returns the ItunesId field if non-nil, zero value otherwise.
-
-### GetItunesIdOk
-
-`func (o *InlineResponse200142) GetItunesIdOk() (*string, bool)`
-
-GetItunesIdOk returns a tuple with the ItunesId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetItunesId
-
-`func (o *InlineResponse200142) SetItunesId(v string)`
-
-SetItunesId sets ItunesId field to given value.
-
-### HasItunesId
-
-`func (o *InlineResponse200142) HasItunesId() bool`
-
-HasItunesId returns a boolean if a field has been set.
-
-### GetLicenseKey
-
-`func (o *InlineResponse200142) GetLicenseKey() string`
-
-GetLicenseKey returns the LicenseKey field if non-nil, zero value otherwise.
-
-### GetLicenseKeyOk
-
-`func (o *InlineResponse200142) GetLicenseKeyOk() (*string, bool)`
-
-GetLicenseKeyOk returns a tuple with the LicenseKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseKey
-
-`func (o *InlineResponse200142) SetLicenseKey(v string)`
-
-SetLicenseKey sets LicenseKey field to given value.
-
-### HasLicenseKey
-
-`func (o *InlineResponse200142) HasLicenseKey() bool`
-
-HasLicenseKey returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200142) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200142) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200142) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200142) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetPath
-
-`func (o *InlineResponse200142) GetPath() string`
-
-GetPath returns the Path field if non-nil, zero value otherwise.
-
-### GetPathOk
-
-`func (o *InlineResponse200142) GetPathOk() (*string, bool)`
-
-GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPath
-
-`func (o *InlineResponse200142) SetPath(v string)`
-
-SetPath sets Path field to given value.
-
-### HasPath
-
-`func (o *InlineResponse200142) HasPath() bool`
-
-HasPath returns a boolean if a field has been set.
-
-### GetRedemptionCode
-
-`func (o *InlineResponse200142) GetRedemptionCode() int32`
-
-GetRedemptionCode returns the RedemptionCode field if non-nil, zero value otherwise.
-
-### GetRedemptionCodeOk
-
-`func (o *InlineResponse200142) GetRedemptionCodeOk() (*int32, bool)`
-
-GetRedemptionCodeOk returns a tuple with the RedemptionCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRedemptionCode
-
-`func (o *InlineResponse200142) SetRedemptionCode(v int32)`
-
-SetRedemptionCode sets RedemptionCode field to given value.
-
-### HasRedemptionCode
-
-`func (o *InlineResponse200142) HasRedemptionCode() bool`
-
-HasRedemptionCode returns a boolean if a field has been set.
-
-### GetShortVersion
-
-`func (o *InlineResponse200142) GetShortVersion() string`
-
-GetShortVersion returns the ShortVersion field if non-nil, zero value otherwise.
-
-### GetShortVersionOk
-
-`func (o *InlineResponse200142) GetShortVersionOk() (*string, bool)`
-
-GetShortVersionOk returns a tuple with the ShortVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetShortVersion
-
-`func (o *InlineResponse200142) SetShortVersion(v string)`
-
-SetShortVersion sets ShortVersion field to given value.
-
-### HasShortVersion
-
-`func (o *InlineResponse200142) HasShortVersion() bool`
-
-HasShortVersion returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200142) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200142) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200142) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200142) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetToUninstall
-
-`func (o *InlineResponse200142) GetToUninstall() bool`
-
-GetToUninstall returns the ToUninstall field if non-nil, zero value otherwise.
-
-### GetToUninstallOk
-
-`func (o *InlineResponse200142) GetToUninstallOk() (*bool, bool)`
-
-GetToUninstallOk returns a tuple with the ToUninstall field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetToUninstall
-
-`func (o *InlineResponse200142) SetToUninstall(v bool)`
-
-SetToUninstall sets ToUninstall field to given value.
-
-### HasToUninstall
-
-`func (o *InlineResponse200142) HasToUninstall() bool`
-
-HasToUninstall returns a boolean if a field has been set.
-
-### GetUninstalledAt
-
-`func (o *InlineResponse200142) GetUninstalledAt() string`
-
-GetUninstalledAt returns the UninstalledAt field if non-nil, zero value otherwise.
-
-### GetUninstalledAtOk
-
-`func (o *InlineResponse200142) GetUninstalledAtOk() (*string, bool)`
-
-GetUninstalledAtOk returns a tuple with the UninstalledAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUninstalledAt
-
-`func (o *InlineResponse200142) SetUninstalledAt(v string)`
-
-SetUninstalledAt sets UninstalledAt field to given value.
-
-### HasUninstalledAt
-
-`func (o *InlineResponse200142) HasUninstalledAt() bool`
-
-HasUninstalledAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200142) GetUpdatedAt() string`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200142) GetUpdatedAtOk() (*string, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200142) SetUpdatedAt(v string)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200142) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
-
-### GetVendor
-
-`func (o *InlineResponse200142) GetVendor() string`
-
-GetVendor returns the Vendor field if non-nil, zero value otherwise.
-
-### GetVendorOk
-
-`func (o *InlineResponse200142) GetVendorOk() (*string, bool)`
-
-GetVendorOk returns a tuple with the Vendor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVendor
-
-`func (o *InlineResponse200142) SetVendor(v string)`
-
-SetVendor sets Vendor field to given value.
-
-### HasVendor
-
-`func (o *InlineResponse200142) HasVendor() bool`
-
-HasVendor returns a boolean if a field has been set.
-
-### GetVersion
-
-`func (o *InlineResponse200142) GetVersion() string`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineResponse200142) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineResponse200142) SetVersion(v string)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *InlineResponse200142) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

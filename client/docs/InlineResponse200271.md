@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**Eid** | **string** | eSIM EID | 
+**Iccid** | **string** | eSIM ICCID | 
+**Status** | **string** | Swap status | 
 
 ## Methods
 
 ### NewInlineResponse200271
 
-`func NewInlineResponse200271() *InlineResponse200271`
+`func NewInlineResponse200271(eid string, iccid string, status string, ) *InlineResponse200271`
 
 NewInlineResponse200271 instantiates a new InlineResponse200271 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,65 @@ NewInlineResponse200271WithDefaults instantiates a new InlineResponse200271 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetEid
 
-`func (o *InlineResponse200271) GetSwitchProfileId() string`
+`func (o *InlineResponse200271) GetEid() string`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetEid returns the Eid field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetEidOk
 
-`func (o *InlineResponse200271) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200271) GetEidOk() (*string, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetEid
 
-`func (o *InlineResponse200271) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200271) SetEid(v string)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetEid sets Eid field to given value.
 
-### HasSwitchProfileId
 
-`func (o *InlineResponse200271) HasSwitchProfileId() bool`
+### GetIccid
 
-HasSwitchProfileId returns a boolean if a field has been set.
+`func (o *InlineResponse200271) GetIccid() string`
 
-### GetName
+GetIccid returns the Iccid field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200271) GetName() string`
+### GetIccidOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200271) GetIccidOk() (*string, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200271) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIccidOk returns a tuple with the Iccid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetIccid
 
-`func (o *InlineResponse200271) SetName(v string)`
+`func (o *InlineResponse200271) SetIccid(v string)`
 
-SetName sets Name field to given value.
+SetIccid sets Iccid field to given value.
 
-### HasName
 
-`func (o *InlineResponse200271) HasName() bool`
+### GetStatus
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse200271) GetStatus() string`
 
-### GetModel
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200271) GetModel() string`
+### GetStatusOk
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+`func (o *InlineResponse200271) GetStatusOk() (*string, bool)`
 
-### GetModelOk
-
-`func (o *InlineResponse200271) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetStatus
 
-`func (o *InlineResponse200271) SetModel(v string)`
+`func (o *InlineResponse200271) SetStatus(v string)`
 
-SetModel sets Model field to given value.
+SetStatus sets Status field to given value.
 
-### HasModel
-
-`func (o *InlineResponse200271) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

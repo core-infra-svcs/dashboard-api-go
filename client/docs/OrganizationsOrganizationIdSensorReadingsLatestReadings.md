@@ -6,26 +6,29 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Ts** | Pointer to **string** | Time at which the reading occurred, in ISO8601 format. | [optional] 
 **Metric** | Pointer to **string** | Type of sensor reading. | [optional] 
-**ApparentPower** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryApparentPower**](OrganizationsOrganizationIdSensorReadingsHistoryApparentPower.md) |  | [optional] 
-**Battery** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryBattery**](OrganizationsOrganizationIdSensorReadingsHistoryBattery.md) |  | [optional] 
-**Button** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryButton**](OrganizationsOrganizationIdSensorReadingsHistoryButton.md) |  | [optional] 
-**Co2** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryCo2**](OrganizationsOrganizationIdSensorReadingsHistoryCo2.md) |  | [optional] 
-**Current** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryCurrent**](OrganizationsOrganizationIdSensorReadingsHistoryCurrent.md) |  | [optional] 
-**Door** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryDoor**](OrganizationsOrganizationIdSensorReadingsHistoryDoor.md) |  | [optional] 
-**DownstreamPower** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower**](OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower.md) |  | [optional] 
-**Frequency** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryFrequency**](OrganizationsOrganizationIdSensorReadingsHistoryFrequency.md) |  | [optional] 
-**Humidity** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryHumidity**](OrganizationsOrganizationIdSensorReadingsHistoryHumidity.md) |  | [optional] 
-**IndoorAirQuality** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality**](OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality.md) |  | [optional] 
-**Noise** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNoise**](OrganizationsOrganizationIdSensorReadingsHistoryNoise.md) |  | [optional] 
-**Pm25** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryPm25**](OrganizationsOrganizationIdSensorReadingsHistoryPm25.md) |  | [optional] 
-**PowerFactor** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor**](OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor.md) |  | [optional] 
-**RealPower** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryRealPower**](OrganizationsOrganizationIdSensorReadingsHistoryRealPower.md) |  | [optional] 
-**RemoteLockoutSwitch** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch**](OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch.md) |  | [optional] 
-**Temperature** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryTemperature.md) |  | [optional] 
-**Tvoc** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryTvoc**](OrganizationsOrganizationIdSensorReadingsHistoryTvoc.md) |  | [optional] 
-**Voltage** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryVoltage**](OrganizationsOrganizationIdSensorReadingsHistoryVoltage.md) |  | [optional] 
-**Water** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryWater**](OrganizationsOrganizationIdSensorReadingsHistoryWater.md) |  | [optional] 
-**RawTemperature** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature.md) |  | [optional] 
+**ApparentPower** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryApparentPower**](OrganizationsOrganizationIdSensorReadingsHistoryApparentPower.md) |  | [optional] 
+**Battery** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryBattery**](OrganizationsOrganizationIdSensorReadingsHistoryBattery.md) |  | [optional] 
+**Button** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryButton**](OrganizationsOrganizationIdSensorReadingsHistoryButton.md) |  | [optional] 
+**Co2** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryCo2**](OrganizationsOrganizationIdSensorReadingsHistoryCo2.md) |  | [optional] 
+**Current** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryCurrent**](OrganizationsOrganizationIdSensorReadingsHistoryCurrent.md) |  | [optional] 
+**Door** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryDoor**](OrganizationsOrganizationIdSensorReadingsHistoryDoor.md) |  | [optional] 
+**DownstreamPower** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower**](OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower.md) |  | [optional] 
+**Frequency** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryFrequency**](OrganizationsOrganizationIdSensorReadingsHistoryFrequency.md) |  | [optional] 
+**Humidity** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryHumidity**](OrganizationsOrganizationIdSensorReadingsHistoryHumidity.md) |  | [optional] 
+**IndoorAirQuality** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality**](OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality.md) |  | [optional] 
+**Noise** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryNoise**](OrganizationsOrganizationIdSensorReadingsHistoryNoise.md) |  | [optional] 
+**No2** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryNo2**](OrganizationsOrganizationIdSensorReadingsHistoryNo2.md) |  | [optional] 
+**O3** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryO3**](OrganizationsOrganizationIdSensorReadingsHistoryO3.md) |  | [optional] 
+**Pm10** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryPm10**](OrganizationsOrganizationIdSensorReadingsHistoryPm10.md) |  | [optional] 
+**Pm25** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryPm25**](OrganizationsOrganizationIdSensorReadingsHistoryPm25.md) |  | [optional] 
+**PowerFactor** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryPowerFactor**](OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor.md) |  | [optional] 
+**RealPower** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryRealPower**](OrganizationsOrganizationIdSensorReadingsHistoryRealPower.md) |  | [optional] 
+**RemoteLockoutSwitch** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch**](OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch.md) |  | [optional] 
+**Temperature** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryTemperature.md) |  | [optional] 
+**Tvoc** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryTvoc**](OrganizationsOrganizationIdSensorReadingsHistoryTvoc.md) |  | [optional] 
+**Voltage** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryVoltage**](OrganizationsOrganizationIdSensorReadingsHistoryVoltage.md) |  | [optional] 
+**Water** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryWater**](OrganizationsOrganizationIdSensorReadingsHistoryWater.md) |  | [optional] 
+**RawTemperature** | Pointer to [**NullableOrganizationsOrganizationIdSensorReadingsHistoryRawTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature.md) |  | [optional] 
 
 ## Methods
 
@@ -121,6 +124,16 @@ SetApparentPower sets ApparentPower field to given value.
 
 HasApparentPower returns a boolean if a field has been set.
 
+### SetApparentPowerNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetApparentPowerNil(b bool)`
+
+ SetApparentPowerNil sets the value for ApparentPower to be an explicit nil
+
+### UnsetApparentPower
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetApparentPower()`
+
+UnsetApparentPower ensures that no value is present for ApparentPower, not even an explicit nil
 ### GetBattery
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetBattery() OrganizationsOrganizationIdSensorReadingsHistoryBattery`
@@ -146,6 +159,16 @@ SetBattery sets Battery field to given value.
 
 HasBattery returns a boolean if a field has been set.
 
+### SetBatteryNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetBatteryNil(b bool)`
+
+ SetBatteryNil sets the value for Battery to be an explicit nil
+
+### UnsetBattery
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetBattery()`
+
+UnsetBattery ensures that no value is present for Battery, not even an explicit nil
 ### GetButton
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetButton() OrganizationsOrganizationIdSensorReadingsHistoryButton`
@@ -171,6 +194,16 @@ SetButton sets Button field to given value.
 
 HasButton returns a boolean if a field has been set.
 
+### SetButtonNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetButtonNil(b bool)`
+
+ SetButtonNil sets the value for Button to be an explicit nil
+
+### UnsetButton
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetButton()`
+
+UnsetButton ensures that no value is present for Button, not even an explicit nil
 ### GetCo2
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetCo2() OrganizationsOrganizationIdSensorReadingsHistoryCo2`
@@ -196,6 +229,16 @@ SetCo2 sets Co2 field to given value.
 
 HasCo2 returns a boolean if a field has been set.
 
+### SetCo2Nil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetCo2Nil(b bool)`
+
+ SetCo2Nil sets the value for Co2 to be an explicit nil
+
+### UnsetCo2
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetCo2()`
+
+UnsetCo2 ensures that no value is present for Co2, not even an explicit nil
 ### GetCurrent
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetCurrent() OrganizationsOrganizationIdSensorReadingsHistoryCurrent`
@@ -221,6 +264,16 @@ SetCurrent sets Current field to given value.
 
 HasCurrent returns a boolean if a field has been set.
 
+### SetCurrentNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetCurrentNil(b bool)`
+
+ SetCurrentNil sets the value for Current to be an explicit nil
+
+### UnsetCurrent
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetCurrent()`
+
+UnsetCurrent ensures that no value is present for Current, not even an explicit nil
 ### GetDoor
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetDoor() OrganizationsOrganizationIdSensorReadingsHistoryDoor`
@@ -246,6 +299,16 @@ SetDoor sets Door field to given value.
 
 HasDoor returns a boolean if a field has been set.
 
+### SetDoorNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetDoorNil(b bool)`
+
+ SetDoorNil sets the value for Door to be an explicit nil
+
+### UnsetDoor
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetDoor()`
+
+UnsetDoor ensures that no value is present for Door, not even an explicit nil
 ### GetDownstreamPower
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetDownstreamPower() OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower`
@@ -271,6 +334,16 @@ SetDownstreamPower sets DownstreamPower field to given value.
 
 HasDownstreamPower returns a boolean if a field has been set.
 
+### SetDownstreamPowerNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetDownstreamPowerNil(b bool)`
+
+ SetDownstreamPowerNil sets the value for DownstreamPower to be an explicit nil
+
+### UnsetDownstreamPower
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetDownstreamPower()`
+
+UnsetDownstreamPower ensures that no value is present for DownstreamPower, not even an explicit nil
 ### GetFrequency
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetFrequency() OrganizationsOrganizationIdSensorReadingsHistoryFrequency`
@@ -296,6 +369,16 @@ SetFrequency sets Frequency field to given value.
 
 HasFrequency returns a boolean if a field has been set.
 
+### SetFrequencyNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetFrequencyNil(b bool)`
+
+ SetFrequencyNil sets the value for Frequency to be an explicit nil
+
+### UnsetFrequency
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetFrequency()`
+
+UnsetFrequency ensures that no value is present for Frequency, not even an explicit nil
 ### GetHumidity
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetHumidity() OrganizationsOrganizationIdSensorReadingsHistoryHumidity`
@@ -321,6 +404,16 @@ SetHumidity sets Humidity field to given value.
 
 HasHumidity returns a boolean if a field has been set.
 
+### SetHumidityNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetHumidityNil(b bool)`
+
+ SetHumidityNil sets the value for Humidity to be an explicit nil
+
+### UnsetHumidity
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetHumidity()`
+
+UnsetHumidity ensures that no value is present for Humidity, not even an explicit nil
 ### GetIndoorAirQuality
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetIndoorAirQuality() OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality`
@@ -346,6 +439,16 @@ SetIndoorAirQuality sets IndoorAirQuality field to given value.
 
 HasIndoorAirQuality returns a boolean if a field has been set.
 
+### SetIndoorAirQualityNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetIndoorAirQualityNil(b bool)`
+
+ SetIndoorAirQualityNil sets the value for IndoorAirQuality to be an explicit nil
+
+### UnsetIndoorAirQuality
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetIndoorAirQuality()`
+
+UnsetIndoorAirQuality ensures that no value is present for IndoorAirQuality, not even an explicit nil
 ### GetNoise
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetNoise() OrganizationsOrganizationIdSensorReadingsHistoryNoise`
@@ -371,6 +474,121 @@ SetNoise sets Noise field to given value.
 
 HasNoise returns a boolean if a field has been set.
 
+### SetNoiseNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetNoiseNil(b bool)`
+
+ SetNoiseNil sets the value for Noise to be an explicit nil
+
+### UnsetNoise
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetNoise()`
+
+UnsetNoise ensures that no value is present for Noise, not even an explicit nil
+### GetNo2
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetNo2() OrganizationsOrganizationIdSensorReadingsHistoryNo2`
+
+GetNo2 returns the No2 field if non-nil, zero value otherwise.
+
+### GetNo2Ok
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetNo2Ok() (*OrganizationsOrganizationIdSensorReadingsHistoryNo2, bool)`
+
+GetNo2Ok returns a tuple with the No2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNo2
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetNo2(v OrganizationsOrganizationIdSensorReadingsHistoryNo2)`
+
+SetNo2 sets No2 field to given value.
+
+### HasNo2
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) HasNo2() bool`
+
+HasNo2 returns a boolean if a field has been set.
+
+### SetNo2Nil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetNo2Nil(b bool)`
+
+ SetNo2Nil sets the value for No2 to be an explicit nil
+
+### UnsetNo2
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetNo2()`
+
+UnsetNo2 ensures that no value is present for No2, not even an explicit nil
+### GetO3
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetO3() OrganizationsOrganizationIdSensorReadingsHistoryO3`
+
+GetO3 returns the O3 field if non-nil, zero value otherwise.
+
+### GetO3Ok
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetO3Ok() (*OrganizationsOrganizationIdSensorReadingsHistoryO3, bool)`
+
+GetO3Ok returns a tuple with the O3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetO3
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetO3(v OrganizationsOrganizationIdSensorReadingsHistoryO3)`
+
+SetO3 sets O3 field to given value.
+
+### HasO3
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) HasO3() bool`
+
+HasO3 returns a boolean if a field has been set.
+
+### SetO3Nil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetO3Nil(b bool)`
+
+ SetO3Nil sets the value for O3 to be an explicit nil
+
+### UnsetO3
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetO3()`
+
+UnsetO3 ensures that no value is present for O3, not even an explicit nil
+### GetPm10
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetPm10() OrganizationsOrganizationIdSensorReadingsHistoryPm10`
+
+GetPm10 returns the Pm10 field if non-nil, zero value otherwise.
+
+### GetPm10Ok
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetPm10Ok() (*OrganizationsOrganizationIdSensorReadingsHistoryPm10, bool)`
+
+GetPm10Ok returns a tuple with the Pm10 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPm10
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetPm10(v OrganizationsOrganizationIdSensorReadingsHistoryPm10)`
+
+SetPm10 sets Pm10 field to given value.
+
+### HasPm10
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) HasPm10() bool`
+
+HasPm10 returns a boolean if a field has been set.
+
+### SetPm10Nil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetPm10Nil(b bool)`
+
+ SetPm10Nil sets the value for Pm10 to be an explicit nil
+
+### UnsetPm10
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetPm10()`
+
+UnsetPm10 ensures that no value is present for Pm10, not even an explicit nil
 ### GetPm25
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetPm25() OrganizationsOrganizationIdSensorReadingsHistoryPm25`
@@ -396,6 +614,16 @@ SetPm25 sets Pm25 field to given value.
 
 HasPm25 returns a boolean if a field has been set.
 
+### SetPm25Nil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetPm25Nil(b bool)`
+
+ SetPm25Nil sets the value for Pm25 to be an explicit nil
+
+### UnsetPm25
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetPm25()`
+
+UnsetPm25 ensures that no value is present for Pm25, not even an explicit nil
 ### GetPowerFactor
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetPowerFactor() OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor`
@@ -421,6 +649,16 @@ SetPowerFactor sets PowerFactor field to given value.
 
 HasPowerFactor returns a boolean if a field has been set.
 
+### SetPowerFactorNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetPowerFactorNil(b bool)`
+
+ SetPowerFactorNil sets the value for PowerFactor to be an explicit nil
+
+### UnsetPowerFactor
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetPowerFactor()`
+
+UnsetPowerFactor ensures that no value is present for PowerFactor, not even an explicit nil
 ### GetRealPower
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetRealPower() OrganizationsOrganizationIdSensorReadingsHistoryRealPower`
@@ -446,6 +684,16 @@ SetRealPower sets RealPower field to given value.
 
 HasRealPower returns a boolean if a field has been set.
 
+### SetRealPowerNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetRealPowerNil(b bool)`
+
+ SetRealPowerNil sets the value for RealPower to be an explicit nil
+
+### UnsetRealPower
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetRealPower()`
+
+UnsetRealPower ensures that no value is present for RealPower, not even an explicit nil
 ### GetRemoteLockoutSwitch
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetRemoteLockoutSwitch() OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch`
@@ -471,6 +719,16 @@ SetRemoteLockoutSwitch sets RemoteLockoutSwitch field to given value.
 
 HasRemoteLockoutSwitch returns a boolean if a field has been set.
 
+### SetRemoteLockoutSwitchNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetRemoteLockoutSwitchNil(b bool)`
+
+ SetRemoteLockoutSwitchNil sets the value for RemoteLockoutSwitch to be an explicit nil
+
+### UnsetRemoteLockoutSwitch
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetRemoteLockoutSwitch()`
+
+UnsetRemoteLockoutSwitch ensures that no value is present for RemoteLockoutSwitch, not even an explicit nil
 ### GetTemperature
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetTemperature() OrganizationsOrganizationIdSensorReadingsHistoryTemperature`
@@ -496,6 +754,16 @@ SetTemperature sets Temperature field to given value.
 
 HasTemperature returns a boolean if a field has been set.
 
+### SetTemperatureNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetTemperatureNil(b bool)`
+
+ SetTemperatureNil sets the value for Temperature to be an explicit nil
+
+### UnsetTemperature
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetTemperature()`
+
+UnsetTemperature ensures that no value is present for Temperature, not even an explicit nil
 ### GetTvoc
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetTvoc() OrganizationsOrganizationIdSensorReadingsHistoryTvoc`
@@ -521,6 +789,16 @@ SetTvoc sets Tvoc field to given value.
 
 HasTvoc returns a boolean if a field has been set.
 
+### SetTvocNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetTvocNil(b bool)`
+
+ SetTvocNil sets the value for Tvoc to be an explicit nil
+
+### UnsetTvoc
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetTvoc()`
+
+UnsetTvoc ensures that no value is present for Tvoc, not even an explicit nil
 ### GetVoltage
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetVoltage() OrganizationsOrganizationIdSensorReadingsHistoryVoltage`
@@ -546,6 +824,16 @@ SetVoltage sets Voltage field to given value.
 
 HasVoltage returns a boolean if a field has been set.
 
+### SetVoltageNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetVoltageNil(b bool)`
+
+ SetVoltageNil sets the value for Voltage to be an explicit nil
+
+### UnsetVoltage
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetVoltage()`
+
+UnsetVoltage ensures that no value is present for Voltage, not even an explicit nil
 ### GetWater
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetWater() OrganizationsOrganizationIdSensorReadingsHistoryWater`
@@ -571,6 +859,16 @@ SetWater sets Water field to given value.
 
 HasWater returns a boolean if a field has been set.
 
+### SetWaterNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetWaterNil(b bool)`
+
+ SetWaterNil sets the value for Water to be an explicit nil
+
+### UnsetWater
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetWater()`
+
+UnsetWater ensures that no value is present for Water, not even an explicit nil
 ### GetRawTemperature
 
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetRawTemperature() OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature`
@@ -596,6 +894,16 @@ SetRawTemperature sets RawTemperature field to given value.
 
 HasRawTemperature returns a boolean if a field has been set.
 
+### SetRawTemperatureNil
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetRawTemperatureNil(b bool)`
+
+ SetRawTemperatureNil sets the value for RawTemperature to be an explicit nil
+
+### UnsetRawTemperature
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) UnsetRawTemperature()`
+
+UnsetRawTemperature ensures that no value is present for RawTemperature, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

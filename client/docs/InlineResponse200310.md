@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RemainderLicenses** | Pointer to [**[]InlineResponse200309**](InlineResponse200309.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
-**MovedLicenses** | Pointer to [**[]InlineResponse200309**](InlineResponse200309.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
+**ClaimId** | Pointer to **string** | The order claim id | [optional] 
+**Number** | Pointer to **string** | Order Number | [optional] 
+**Serials** | Pointer to **[]string** | All devices claimed in this order | [optional] 
+**Subscriptions** | Pointer to [**[]InlineResponse200310Subscriptions**](InlineResponse200310Subscriptions.md) | Details for subscriptions claimed in this order | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200310WithDefaults instantiates a new InlineResponse200310 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRemainderLicenses
+### GetClaimId
 
-`func (o *InlineResponse200310) GetRemainderLicenses() []InlineResponse200309`
+`func (o *InlineResponse200310) GetClaimId() string`
 
-GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetRemainderLicensesOk
+### GetClaimIdOk
 
-`func (o *InlineResponse200310) GetRemainderLicensesOk() (*[]InlineResponse200309, bool)`
+`func (o *InlineResponse200310) GetClaimIdOk() (*string, bool)`
 
-GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemainderLicenses
+### SetClaimId
 
-`func (o *InlineResponse200310) SetRemainderLicenses(v []InlineResponse200309)`
+`func (o *InlineResponse200310) SetClaimId(v string)`
 
-SetRemainderLicenses sets RemainderLicenses field to given value.
+SetClaimId sets ClaimId field to given value.
 
-### HasRemainderLicenses
+### HasClaimId
 
-`func (o *InlineResponse200310) HasRemainderLicenses() bool`
+`func (o *InlineResponse200310) HasClaimId() bool`
 
-HasRemainderLicenses returns a boolean if a field has been set.
+HasClaimId returns a boolean if a field has been set.
 
-### GetMovedLicenses
+### GetNumber
 
-`func (o *InlineResponse200310) GetMovedLicenses() []InlineResponse200309`
+`func (o *InlineResponse200310) GetNumber() string`
 
-GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetMovedLicensesOk
+### GetNumberOk
 
-`func (o *InlineResponse200310) GetMovedLicensesOk() (*[]InlineResponse200309, bool)`
+`func (o *InlineResponse200310) GetNumberOk() (*string, bool)`
 
-GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMovedLicenses
+### SetNumber
 
-`func (o *InlineResponse200310) SetMovedLicenses(v []InlineResponse200309)`
+`func (o *InlineResponse200310) SetNumber(v string)`
 
-SetMovedLicenses sets MovedLicenses field to given value.
+SetNumber sets Number field to given value.
 
-### HasMovedLicenses
+### HasNumber
 
-`func (o *InlineResponse200310) HasMovedLicenses() bool`
+`func (o *InlineResponse200310) HasNumber() bool`
 
-HasMovedLicenses returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200310) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200310) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200310) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200310) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetSubscriptions
+
+`func (o *InlineResponse200310) GetSubscriptions() []InlineResponse200310Subscriptions`
+
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+
+### GetSubscriptionsOk
+
+`func (o *InlineResponse200310) GetSubscriptionsOk() (*[]InlineResponse200310Subscriptions, bool)`
+
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubscriptions
+
+`func (o *InlineResponse200310) SetSubscriptions(v []InlineResponse200310Subscriptions)`
+
+SetSubscriptions sets Subscriptions field to given value.
+
+### HasSubscriptions
+
+`func (o *InlineResponse200310) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
-**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
-**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
-**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse20089BandwidthLimits**](InlineResponse20089BandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse20089WithDefaults instantiates a new InlineResponse20089 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetBandwidthLimits
 
-`func (o *InlineResponse20089) GetTs() time.Time`
+`func (o *InlineResponse20089) GetBandwidthLimits() InlineResponse20089BandwidthLimits`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineResponse20089) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20089) GetBandwidthLimitsOk() (*InlineResponse20089BandwidthLimits, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetBandwidthLimits
 
-`func (o *InlineResponse20089) SetTs(v time.Time)`
+`func (o *InlineResponse20089) SetBandwidthLimits(v InlineResponse20089BandwidthLimits)`
 
-SetTs sets Ts field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasTs
+### HasBandwidthLimits
 
-`func (o *InlineResponse20089) HasTs() bool`
+`func (o *InlineResponse20089) HasBandwidthLimits() bool`
 
-HasTs returns a boolean if a field has been set.
-
-### GetTotal
-
-`func (o *InlineResponse20089) GetTotal() float32`
-
-GetTotal returns the Total field if non-nil, zero value otherwise.
-
-### GetTotalOk
-
-`func (o *InlineResponse20089) GetTotalOk() (*float32, bool)`
-
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTotal
-
-`func (o *InlineResponse20089) SetTotal(v float32)`
-
-SetTotal sets Total field to given value.
-
-### HasTotal
-
-`func (o *InlineResponse20089) HasTotal() bool`
-
-HasTotal returns a boolean if a field has been set.
-
-### GetUpstream
-
-`func (o *InlineResponse20089) GetUpstream() float32`
-
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
-
-### GetUpstreamOk
-
-`func (o *InlineResponse20089) GetUpstreamOk() (*float32, bool)`
-
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpstream
-
-`func (o *InlineResponse20089) SetUpstream(v float32)`
-
-SetUpstream sets Upstream field to given value.
-
-### HasUpstream
-
-`func (o *InlineResponse20089) HasUpstream() bool`
-
-HasUpstream returns a boolean if a field has been set.
-
-### GetDownstream
-
-`func (o *InlineResponse20089) GetDownstream() float32`
-
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
-
-### GetDownstreamOk
-
-`func (o *InlineResponse20089) GetDownstreamOk() (*float32, bool)`
-
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownstream
-
-`func (o *InlineResponse20089) SetDownstream(v float32)`
-
-SetDownstream sets Downstream field to given value.
-
-### HasDownstream
-
-`func (o *InlineResponse20089) HasDownstream() bool`
-
-HasDownstream returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

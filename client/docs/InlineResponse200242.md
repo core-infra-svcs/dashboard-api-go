@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | Pointer to [**[]InlineResponse200242Peers**](InlineResponse200242Peers.md) | The list of VPN peers | [optional] 
+**Counts** | Pointer to [**InlineResponse200242Counts**](InlineResponse200242Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200242WithDefaults instantiates a new InlineResponse200242 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetCounts
 
-`func (o *InlineResponse200242) GetPeers() []InlineResponse200242Peers`
+`func (o *InlineResponse200242) GetCounts() InlineResponse200242Counts`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetCountsOk
 
-`func (o *InlineResponse200242) GetPeersOk() (*[]InlineResponse200242Peers, bool)`
+`func (o *InlineResponse200242) GetCountsOk() (*InlineResponse200242Counts, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetCounts
 
-`func (o *InlineResponse200242) SetPeers(v []InlineResponse200242Peers)`
+`func (o *InlineResponse200242) SetCounts(v InlineResponse200242Counts)`
 
-SetPeers sets Peers field to given value.
+SetCounts sets Counts field to given value.
 
-### HasPeers
+### HasCounts
 
-`func (o *InlineResponse200242) HasPeers() bool`
+`func (o *InlineResponse200242) HasCounts() bool`
 
-HasPeers returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

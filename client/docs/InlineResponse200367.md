@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
-**Status** | Pointer to **string** | The status of the Certificate Authority | [optional] 
-**Contents** | Pointer to **string** | The PEM encoded contents of the Certificate Authority - with newlines as \&quot; \&quot;. Contents can be null, if the cert has not yet been generated. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
+**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200367WithDefaults instantiates a new InlineResponse200367 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificateAuthorityId
+### GetNetwork
 
-`func (o *InlineResponse200367) GetCertificateAuthorityId() string`
+`func (o *InlineResponse200367) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200367) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineResponse200367) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetNetwork
 
-`func (o *InlineResponse200367) SetCertificateAuthorityId(v string)`
+`func (o *InlineResponse200367) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasCertificateAuthorityId
+### HasNetwork
 
-`func (o *InlineResponse200367) HasCertificateAuthorityId() bool`
+`func (o *InlineResponse200367) HasNetwork() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetStatus
+### GetByBand
 
-`func (o *InlineResponse200367) GetStatus() string`
+`func (o *InlineResponse200367) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetByBand returns the ByBand field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetByBandOk
 
-`func (o *InlineResponse200367) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200367) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetByBand
 
-`func (o *InlineResponse200367) SetStatus(v string)`
+`func (o *InlineResponse200367) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
 
-SetStatus sets Status field to given value.
+SetByBand sets ByBand field to given value.
 
-### HasStatus
+### HasByBand
 
-`func (o *InlineResponse200367) HasStatus() bool`
+`func (o *InlineResponse200367) HasByBand() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetContents
-
-`func (o *InlineResponse200367) GetContents() string`
-
-GetContents returns the Contents field if non-nil, zero value otherwise.
-
-### GetContentsOk
-
-`func (o *InlineResponse200367) GetContentsOk() (*string, bool)`
-
-GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetContents
-
-`func (o *InlineResponse200367) SetContents(v string)`
-
-SetContents sets Contents field to given value.
-
-### HasContents
-
-`func (o *InlineResponse200367) HasContents() bool`
-
-HasContents returns a boolean if a field has been set.
+HasByBand returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

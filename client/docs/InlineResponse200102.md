@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
-**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse200102UpgradeWindow**](InlineResponse200102UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**InlineResponse200102Products**](InlineResponse200102Products.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroupId
+### GetUpgradeWindow
 
-`func (o *InlineResponse200102) GetGroupId() string`
+`func (o *InlineResponse200102) GetUpgradeWindow() InlineResponse200102UpgradeWindow`
 
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetGroupIdOk
+### GetUpgradeWindowOk
 
-`func (o *InlineResponse200102) GetGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200102) GetUpgradeWindowOk() (*InlineResponse200102UpgradeWindow, bool)`
 
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupId
+### SetUpgradeWindow
 
-`func (o *InlineResponse200102) SetGroupId(v string)`
+`func (o *InlineResponse200102) SetUpgradeWindow(v InlineResponse200102UpgradeWindow)`
 
-SetGroupId sets GroupId field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasGroupId
+### HasUpgradeWindow
 
-`func (o *InlineResponse200102) HasGroupId() bool`
+`func (o *InlineResponse200102) HasUpgradeWindow() bool`
 
-HasGroupId returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetName
+### GetTimezone
 
-`func (o *InlineResponse200102) GetName() string`
+`func (o *InlineResponse200102) GetTimezone() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTimezoneOk
 
-`func (o *InlineResponse200102) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200102) GetTimezoneOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTimezone
 
-`func (o *InlineResponse200102) SetName(v string)`
+`func (o *InlineResponse200102) SetTimezone(v string)`
 
-SetName sets Name field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasName
+### HasTimezone
 
-`func (o *InlineResponse200102) HasName() bool`
+`func (o *InlineResponse200102) HasTimezone() bool`
 
-HasName returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetDescription
+### GetProducts
 
-`func (o *InlineResponse200102) GetDescription() string`
+`func (o *InlineResponse200102) GetProducts() InlineResponse200102Products`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetProductsOk
 
-`func (o *InlineResponse200102) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200102) GetProductsOk() (*InlineResponse200102Products, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetProducts
 
-`func (o *InlineResponse200102) SetDescription(v string)`
+`func (o *InlineResponse200102) SetProducts(v InlineResponse200102Products)`
 
-SetDescription sets Description field to given value.
+SetProducts sets Products field to given value.
 
-### HasDescription
+### HasProducts
 
-`func (o *InlineResponse200102) HasDescription() bool`
+`func (o *InlineResponse200102) HasProducts() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetIsDefault
-
-`func (o *InlineResponse200102) GetIsDefault() bool`
-
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
-
-### GetIsDefaultOk
-
-`func (o *InlineResponse200102) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefault
-
-`func (o *InlineResponse200102) SetIsDefault(v bool)`
-
-SetIsDefault sets IsDefault field to given value.
-
-### HasIsDefault
-
-`func (o *InlineResponse200102) HasIsDefault() bool`
-
-HasIsDefault returns a boolean if a field has been set.
-
-### GetAssignedDevices
-
-`func (o *InlineResponse200102) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
-
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
-
-### GetAssignedDevicesOk
-
-`func (o *InlineResponse200102) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
-
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssignedDevices
-
-`func (o *InlineResponse200102) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
-
-SetAssignedDevices sets AssignedDevices field to given value.
-
-### HasAssignedDevices
-
-`func (o *InlineResponse200102) HasAssignedDevices() bool`
-
-HasAssignedDevices returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

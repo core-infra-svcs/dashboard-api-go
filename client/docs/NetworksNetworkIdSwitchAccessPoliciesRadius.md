@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CriticalAuth** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth**](NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth.md) |  | [optional] 
-**FailedAuthVlanId** | Pointer to **int32** | VLAN that clients will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
+**FailedAuthVlanId** | Pointer to **NullableInt32** | VLAN that clients will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
 **FailedAuthGroupPolicyId** | Pointer to **string** | Group policy Number for failed authentication group policy (Requires MS 18 or higher) | [optional] 
 **FailedAuthSgtId** | Pointer to **int32** | Security Group Tag ID for failed authentication group policy (Requires MS 18 or higher) | [optional] 
-**ReAuthenticationInterval** | Pointer to **int32** | Re-authentication period in seconds. Will be null if hostMode is Multi-Auth | [optional] 
+**ReAuthenticationInterval** | Pointer to **NullableInt32** | Re-authentication period in seconds. Will be null if hostMode is Multi-Auth | [optional] 
 **Cache** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCache**](NetworksNetworkIdSwitchAccessPoliciesRadiusCache.md) |  | [optional] 
 **Authentication** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication**](NetworksNetworkIdSwitchAccessPoliciesRadiusAuthentication.md) |  | [optional] 
 **PreAuthenticationGroupPolicyId** | Pointer to **string** | Group policy Number for pre-authentication group policy (Requires MS 18 or higher) | [optional] 
@@ -82,6 +82,16 @@ SetFailedAuthVlanId sets FailedAuthVlanId field to given value.
 
 HasFailedAuthVlanId returns a boolean if a field has been set.
 
+### SetFailedAuthVlanIdNil
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetFailedAuthVlanIdNil(b bool)`
+
+ SetFailedAuthVlanIdNil sets the value for FailedAuthVlanId to be an explicit nil
+
+### UnsetFailedAuthVlanId
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) UnsetFailedAuthVlanId()`
+
+UnsetFailedAuthVlanId ensures that no value is present for FailedAuthVlanId, not even an explicit nil
 ### GetFailedAuthGroupPolicyId
 
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetFailedAuthGroupPolicyId() string`
@@ -157,6 +167,16 @@ SetReAuthenticationInterval sets ReAuthenticationInterval field to given value.
 
 HasReAuthenticationInterval returns a boolean if a field has been set.
 
+### SetReAuthenticationIntervalNil
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetReAuthenticationIntervalNil(b bool)`
+
+ SetReAuthenticationIntervalNil sets the value for ReAuthenticationInterval to be an explicit nil
+
+### UnsetReAuthenticationInterval
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) UnsetReAuthenticationInterval()`
+
+UnsetReAuthenticationInterval ensures that no value is present for ReAuthenticationInterval, not even an explicit nil
 ### GetCache
 
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetCache() NetworksNetworkIdSwitchAccessPoliciesRadiusCache`

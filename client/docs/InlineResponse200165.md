@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleIds** | Pointer to **[]string** | Qos Rule ids | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200165Overrides**](InlineResponse200165Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200165WithDefaults instantiates a new InlineResponse200165 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRuleIds
+### GetDefaultMtuSize
 
-`func (o *InlineResponse200165) GetRuleIds() []string`
+`func (o *InlineResponse200165) GetDefaultMtuSize() int32`
 
-GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetRuleIdsOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineResponse200165) GetRuleIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200165) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleIds
+### SetDefaultMtuSize
 
-`func (o *InlineResponse200165) SetRuleIds(v []string)`
+`func (o *InlineResponse200165) SetDefaultMtuSize(v int32)`
 
-SetRuleIds sets RuleIds field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
-### HasRuleIds
+### HasDefaultMtuSize
 
-`func (o *InlineResponse200165) HasRuleIds() bool`
+`func (o *InlineResponse200165) HasDefaultMtuSize() bool`
 
-HasRuleIds returns a boolean if a field has been set.
+HasDefaultMtuSize returns a boolean if a field has been set.
+
+### GetOverrides
+
+`func (o *InlineResponse200165) GetOverrides() []InlineResponse200165Overrides`
+
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+
+### GetOverridesOk
+
+`func (o *InlineResponse200165) GetOverridesOk() (*[]InlineResponse200165Overrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOverrides
+
+`func (o *InlineResponse200165) SetOverrides(v []InlineResponse200165Overrides)`
+
+SetOverrides sets Overrides field to given value.
+
+### HasOverrides
+
+`func (o *InlineResponse200165) HasOverrides() bool`
+
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

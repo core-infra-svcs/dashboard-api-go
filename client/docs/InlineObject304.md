@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject304WithDefaults instantiates a new InlineObject304 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetName
 
-`func (o *InlineObject304) GetStatus() string`
+`func (o *InlineObject304) GetName() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetNameOk
 
-`func (o *InlineObject304) GetStatusOk() (*string, bool)`
+`func (o *InlineObject304) GetNameOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetName
 
-`func (o *InlineObject304) SetStatus(v string)`
+`func (o *InlineObject304) SetName(v string)`
 
-SetStatus sets Status field to given value.
+SetName sets Name field to given value.
 
-### HasStatus
+### HasName
 
-`func (o *InlineObject304) HasStatus() bool`
+`func (o *InlineObject304) HasName() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCertificateAuthorityId
+### GetBaseTheme
 
-`func (o *InlineObject304) GetCertificateAuthorityId() string`
+`func (o *InlineObject304) GetBaseTheme() string`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetBaseThemeOk
 
-`func (o *InlineObject304) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineObject304) GetBaseThemeOk() (*string, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetBaseTheme
 
-`func (o *InlineObject304) SetCertificateAuthorityId(v string)`
+`func (o *InlineObject304) SetBaseTheme(v string)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetBaseTheme sets BaseTheme field to given value.
 
-### HasCertificateAuthorityId
+### HasBaseTheme
 
-`func (o *InlineObject304) HasCertificateAuthorityId() bool`
+`func (o *InlineObject304) HasBaseTheme() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasBaseTheme returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

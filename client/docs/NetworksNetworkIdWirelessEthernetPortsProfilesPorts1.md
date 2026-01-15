@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | AP port name | 
 **Enabled** | Pointer to **bool** | AP port enabled | [optional] 
-**Ssid** | Pointer to **int32** | AP port ssid number | [optional] 
+**Ssid** | Pointer to **NullableInt32** | AP port ssid number | [optional] 
 **PskGroupId** | Pointer to **string** | AP port PSK Group ID | [optional] 
 
 ## Methods
@@ -98,6 +98,16 @@ SetSsid sets Ssid field to given value.
 
 HasSsid returns a boolean if a field has been set.
 
+### SetSsidNil
+
+`func (o *NetworksNetworkIdWirelessEthernetPortsProfilesPorts1) SetSsidNil(b bool)`
+
+ SetSsidNil sets the value for Ssid to be an explicit nil
+
+### UnsetSsid
+`func (o *NetworksNetworkIdWirelessEthernetPortsProfilesPorts1) UnsetSsid()`
+
+UnsetSsid ensures that no value is present for Ssid, not even an explicit nil
 ### GetPskGroupId
 
 `func (o *NetworksNetworkIdWirelessEthernetPortsProfilesPorts1) GetPskGroupId() string`

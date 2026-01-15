@@ -4,14 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
-**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
-**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
-**Areas** | Pointer to [**[]InlineResponse200168Areas**](InlineResponse200168Areas.md) | OSPF areas | [optional] 
-**V3** | Pointer to [**InlineResponse200168V3**](InlineResponse200168V3.md) |  | [optional] 
-**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
-**Md5AuthenticationKey** | Pointer to [**InlineResponse200168Md5AuthenticationKey**](InlineResponse200168Md5AuthenticationKey.md) |  | [optional] 
-**Vrf** | Pointer to [**InlineResponse200168Vrf**](InlineResponse200168Vrf.md) |  | [optional] 
+**RuleIds** | Pointer to **[]string** | Qos Rule ids | [optional] 
 
 ## Methods
 
@@ -32,205 +25,30 @@ NewInlineResponse200168WithDefaults instantiates a new InlineResponse200168 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRuleIds
 
-`func (o *InlineResponse200168) GetEnabled() bool`
+`func (o *InlineResponse200168) GetRuleIds() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRuleIdsOk
 
-`func (o *InlineResponse200168) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200168) GetRuleIdsOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRuleIds
 
-`func (o *InlineResponse200168) SetEnabled(v bool)`
+`func (o *InlineResponse200168) SetRuleIds(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetRuleIds sets RuleIds field to given value.
 
-### HasEnabled
+### HasRuleIds
 
-`func (o *InlineResponse200168) HasEnabled() bool`
+`func (o *InlineResponse200168) HasRuleIds() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetHelloTimerInSeconds
-
-`func (o *InlineResponse200168) GetHelloTimerInSeconds() int32`
-
-GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
-
-### GetHelloTimerInSecondsOk
-
-`func (o *InlineResponse200168) GetHelloTimerInSecondsOk() (*int32, bool)`
-
-GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHelloTimerInSeconds
-
-`func (o *InlineResponse200168) SetHelloTimerInSeconds(v int32)`
-
-SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
-
-### HasHelloTimerInSeconds
-
-`func (o *InlineResponse200168) HasHelloTimerInSeconds() bool`
-
-HasHelloTimerInSeconds returns a boolean if a field has been set.
-
-### GetDeadTimerInSeconds
-
-`func (o *InlineResponse200168) GetDeadTimerInSeconds() int32`
-
-GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
-
-### GetDeadTimerInSecondsOk
-
-`func (o *InlineResponse200168) GetDeadTimerInSecondsOk() (*int32, bool)`
-
-GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeadTimerInSeconds
-
-`func (o *InlineResponse200168) SetDeadTimerInSeconds(v int32)`
-
-SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
-
-### HasDeadTimerInSeconds
-
-`func (o *InlineResponse200168) HasDeadTimerInSeconds() bool`
-
-HasDeadTimerInSeconds returns a boolean if a field has been set.
-
-### GetAreas
-
-`func (o *InlineResponse200168) GetAreas() []InlineResponse200168Areas`
-
-GetAreas returns the Areas field if non-nil, zero value otherwise.
-
-### GetAreasOk
-
-`func (o *InlineResponse200168) GetAreasOk() (*[]InlineResponse200168Areas, bool)`
-
-GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAreas
-
-`func (o *InlineResponse200168) SetAreas(v []InlineResponse200168Areas)`
-
-SetAreas sets Areas field to given value.
-
-### HasAreas
-
-`func (o *InlineResponse200168) HasAreas() bool`
-
-HasAreas returns a boolean if a field has been set.
-
-### GetV3
-
-`func (o *InlineResponse200168) GetV3() InlineResponse200168V3`
-
-GetV3 returns the V3 field if non-nil, zero value otherwise.
-
-### GetV3Ok
-
-`func (o *InlineResponse200168) GetV3Ok() (*InlineResponse200168V3, bool)`
-
-GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3
-
-`func (o *InlineResponse200168) SetV3(v InlineResponse200168V3)`
-
-SetV3 sets V3 field to given value.
-
-### HasV3
-
-`func (o *InlineResponse200168) HasV3() bool`
-
-HasV3 returns a boolean if a field has been set.
-
-### GetMd5AuthenticationEnabled
-
-`func (o *InlineResponse200168) GetMd5AuthenticationEnabled() bool`
-
-GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
-
-### GetMd5AuthenticationEnabledOk
-
-`func (o *InlineResponse200168) GetMd5AuthenticationEnabledOk() (*bool, bool)`
-
-GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMd5AuthenticationEnabled
-
-`func (o *InlineResponse200168) SetMd5AuthenticationEnabled(v bool)`
-
-SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
-
-### HasMd5AuthenticationEnabled
-
-`func (o *InlineResponse200168) HasMd5AuthenticationEnabled() bool`
-
-HasMd5AuthenticationEnabled returns a boolean if a field has been set.
-
-### GetMd5AuthenticationKey
-
-`func (o *InlineResponse200168) GetMd5AuthenticationKey() InlineResponse200168Md5AuthenticationKey`
-
-GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
-
-### GetMd5AuthenticationKeyOk
-
-`func (o *InlineResponse200168) GetMd5AuthenticationKeyOk() (*InlineResponse200168Md5AuthenticationKey, bool)`
-
-GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMd5AuthenticationKey
-
-`func (o *InlineResponse200168) SetMd5AuthenticationKey(v InlineResponse200168Md5AuthenticationKey)`
-
-SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
-
-### HasMd5AuthenticationKey
-
-`func (o *InlineResponse200168) HasMd5AuthenticationKey() bool`
-
-HasMd5AuthenticationKey returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineResponse200168) GetVrf() InlineResponse200168Vrf`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineResponse200168) GetVrfOk() (*InlineResponse200168Vrf, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineResponse200168) SetVrf(v InlineResponse200168Vrf)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineResponse200168) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
+HasRuleIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

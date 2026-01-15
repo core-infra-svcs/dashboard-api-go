@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LogonName** | Pointer to **string** | The logon name of the Active Directory account. | [optional] 
-**Password** | Pointer to **string** | The password to the Active Directory user account. | [optional] 
+**LogonName** | Pointer to **NullableString** | The logon name of the Active Directory account. | [optional] 
+**Password** | Pointer to **NullableString** | The password to the Active Directory user account. | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetLogonName sets LogonName field to given value.
 
 HasLogonName returns a boolean if a field has been set.
 
+### SetLogonNameNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberActiveDirectoryCredentials) SetLogonNameNil(b bool)`
+
+ SetLogonNameNil sets the value for LogonName to be an explicit nil
+
+### UnsetLogonName
+`func (o *NetworksNetworkIdWirelessSsidsNumberActiveDirectoryCredentials) UnsetLogonName()`
+
+UnsetLogonName ensures that no value is present for LogonName, not even an explicit nil
 ### GetPassword
 
 `func (o *NetworksNetworkIdWirelessSsidsNumberActiveDirectoryCredentials) GetPassword() string`
@@ -76,6 +86,16 @@ SetPassword sets Password field to given value.
 
 HasPassword returns a boolean if a field has been set.
 
+### SetPasswordNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberActiveDirectoryCredentials) SetPasswordNil(b bool)`
+
+ SetPasswordNil sets the value for Password to be an explicit nil
+
+### UnsetPassword
+`func (o *NetworksNetworkIdWirelessSsidsNumberActiveDirectoryCredentials) UnsetPassword()`
+
+UnsetPassword ensures that no value is present for Password, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

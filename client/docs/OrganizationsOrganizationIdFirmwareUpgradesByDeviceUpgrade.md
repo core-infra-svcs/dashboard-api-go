@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **ToVersion** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgradeToVersion**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgradeToVersion.md) |  | [optional] 
 **Status** | Pointer to **string** | Status of the upgrade | [optional] 
 **Id** | Pointer to **string** | ID of the upgrade | [optional] 
-**UpgradeBatchId** | Pointer to **string** | ID of the upgrade batch | [optional] 
+**UpgradeBatchId** | Pointer to **NullableString** | ID of the upgrade batch | [optional] 
 **Staged** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgradeStaged**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgradeStaged.md) |  | [optional] 
 
 ## Methods
@@ -181,6 +181,16 @@ SetUpgradeBatchId sets UpgradeBatchId field to given value.
 
 HasUpgradeBatchId returns a boolean if a field has been set.
 
+### SetUpgradeBatchIdNil
+
+`func (o *OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade) SetUpgradeBatchIdNil(b bool)`
+
+ SetUpgradeBatchIdNil sets the value for UpgradeBatchId to be an explicit nil
+
+### UnsetUpgradeBatchId
+`func (o *OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade) UnsetUpgradeBatchId()`
+
+UnsetUpgradeBatchId ensures that no value is present for UpgradeBatchId, not even an explicit nil
 ### GetStaged
 
 `func (o *OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade) GetStaged() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgradeStaged`

@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200322Items**](InlineResponse200322Items.md) | Array of Limited Access Roles | [optional] 
-**Meta** | Pointer to [**InlineResponse200227Meta**](InlineResponse200227Meta.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**ClientId** | Pointer to **string** | ID of client | [optional] 
+**Mac** | Pointer to **string** | MAC address of client | [optional] 
+**NetworkId** | Pointer to **string** | NetworkID | [optional] 
+**Assigned** | Pointer to [**[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned**](OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned.md) | Assigned policies | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200322WithDefaults instantiates a new InlineResponse200322 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineResponse200322) GetItems() []InlineResponse200322Items`
+`func (o *InlineResponse200322) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineResponse200322) GetItemsOk() (*[]InlineResponse200322Items, bool)`
+`func (o *InlineResponse200322) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineResponse200322) SetItems(v []InlineResponse200322Items)`
+`func (o *InlineResponse200322) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
-### HasItems
+### HasName
 
-`func (o *InlineResponse200322) HasItems() bool`
+`func (o *InlineResponse200322) HasName() bool`
 
-HasItems returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMeta
+### GetClientId
 
-`func (o *InlineResponse200322) GetMeta() InlineResponse200227Meta`
+`func (o *InlineResponse200322) GetClientId() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetClientIdOk
 
-`func (o *InlineResponse200322) GetMetaOk() (*InlineResponse200227Meta, bool)`
+`func (o *InlineResponse200322) GetClientIdOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetClientId
 
-`func (o *InlineResponse200322) SetMeta(v InlineResponse200227Meta)`
+`func (o *InlineResponse200322) SetClientId(v string)`
 
-SetMeta sets Meta field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasMeta
+### HasClientId
 
-`func (o *InlineResponse200322) HasMeta() bool`
+`func (o *InlineResponse200322) HasClientId() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200322) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200322) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200322) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200322) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse200322) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200322) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200322) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200322) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetAssigned
+
+`func (o *InlineResponse200322) GetAssigned() []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned`
+
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+
+### GetAssignedOk
+
+`func (o *InlineResponse200322) GetAssignedOk() (*[]OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned, bool)`
+
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssigned
+
+`func (o *InlineResponse200322) SetAssigned(v []OrganizationsOrganizationIdPoliciesAssignmentsByClientAssigned)`
+
+SetAssigned sets Assigned field to given value.
+
+### HasAssigned
+
+`func (o *InlineResponse200322) HasAssigned() bool`
+
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

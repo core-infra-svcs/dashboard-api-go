@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Tag** | Pointer to **string** | Device tag. | [optional] 
-**Id** | Pointer to **string** | Device id. | [optional] 
-**InNetworksWithTag** | Pointer to **string** | Network tag scope | [optional] 
-**InNetworksWithId** | Pointer to **string** | Network id scope | [optional] 
-**PermissionScopeId** | **string** | Permission scope id | 
+**Tag** | Pointer to **string** | Device tag | [optional] 
+**Id** | Pointer to **string** | Device ID | [optional] 
+**PermissionScopeId** | Pointer to **string** | Permission scope ID | [optional] 
+**PermissionScope** | Pointer to **string** | Permission scope name | [optional] 
+**PermissionLevel** | Pointer to **string** | Permission level | [optional] 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdCameraRolesAppliedOnDevices
 
-`func NewOrganizationsOrganizationIdCameraRolesAppliedOnDevices(permissionScopeId string, ) *OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
+`func NewOrganizationsOrganizationIdCameraRolesAppliedOnDevices() *OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
 
 NewOrganizationsOrganizationIdCameraRolesAppliedOnDevices instantiates a new OrganizationsOrganizationIdCameraRolesAppliedOnDevices object
 This constructor will assign default values to properties that have it defined,
@@ -79,56 +79,6 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetInNetworksWithTag
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetInNetworksWithTag() string`
-
-GetInNetworksWithTag returns the InNetworksWithTag field if non-nil, zero value otherwise.
-
-### GetInNetworksWithTagOk
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetInNetworksWithTagOk() (*string, bool)`
-
-GetInNetworksWithTagOk returns a tuple with the InNetworksWithTag field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInNetworksWithTag
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) SetInNetworksWithTag(v string)`
-
-SetInNetworksWithTag sets InNetworksWithTag field to given value.
-
-### HasInNetworksWithTag
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) HasInNetworksWithTag() bool`
-
-HasInNetworksWithTag returns a boolean if a field has been set.
-
-### GetInNetworksWithId
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetInNetworksWithId() string`
-
-GetInNetworksWithId returns the InNetworksWithId field if non-nil, zero value otherwise.
-
-### GetInNetworksWithIdOk
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetInNetworksWithIdOk() (*string, bool)`
-
-GetInNetworksWithIdOk returns a tuple with the InNetworksWithId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInNetworksWithId
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) SetInNetworksWithId(v string)`
-
-SetInNetworksWithId sets InNetworksWithId field to given value.
-
-### HasInNetworksWithId
-
-`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) HasInNetworksWithId() bool`
-
-HasInNetworksWithId returns a boolean if a field has been set.
-
 ### GetPermissionScopeId
 
 `func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetPermissionScopeId() string`
@@ -148,6 +98,61 @@ and a boolean to check if the value has been set.
 
 SetPermissionScopeId sets PermissionScopeId field to given value.
 
+### HasPermissionScopeId
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) HasPermissionScopeId() bool`
+
+HasPermissionScopeId returns a boolean if a field has been set.
+
+### GetPermissionScope
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetPermissionScope() string`
+
+GetPermissionScope returns the PermissionScope field if non-nil, zero value otherwise.
+
+### GetPermissionScopeOk
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetPermissionScopeOk() (*string, bool)`
+
+GetPermissionScopeOk returns a tuple with the PermissionScope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPermissionScope
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) SetPermissionScope(v string)`
+
+SetPermissionScope sets PermissionScope field to given value.
+
+### HasPermissionScope
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) HasPermissionScope() bool`
+
+HasPermissionScope returns a boolean if a field has been set.
+
+### GetPermissionLevel
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetPermissionLevel() string`
+
+GetPermissionLevel returns the PermissionLevel field if non-nil, zero value otherwise.
+
+### GetPermissionLevelOk
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) GetPermissionLevelOk() (*string, bool)`
+
+GetPermissionLevelOk returns a tuple with the PermissionLevel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPermissionLevel
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) SetPermissionLevel(v string)`
+
+SetPermissionLevel sets PermissionLevel field to given value.
+
+### HasPermissionLevel
+
+`func (o *OrganizationsOrganizationIdCameraRolesAppliedOnDevices) HasPermissionLevel() bool`
+
+HasPermissionLevel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

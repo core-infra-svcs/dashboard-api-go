@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Definitions** | [**[]NetworksNetworkIdApplianceTrafficShapingRulesDefinitions**](NetworksNetworkIdApplianceTrafficShapingRulesDefinitions.md) |     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.  | 
-**PerClientBandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits.md) |  | [optional] 
-**DscpTagValue** | Pointer to **int32** |     The DSCP tag applied by your rule. null means &#39;Do not change DSCP tag&#39;.     For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.  | [optional] 
-**PcpTagValue** | Pointer to **int32** |     The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).     null means &#39;Do not set PCP tag&#39;.  | [optional] 
+**Policy** | Pointer to **string** | &#39;Deny&#39; traffic specified by this rule | [optional] 
+**Type** | Pointer to **string** | Type of the L7 firewall rule. One of: &#39;application&#39;, &#39;applicationCategory&#39;, &#39;host&#39;, &#39;port&#39;, &#39;ipRange&#39; | [optional] 
+**Value** | Pointer to **string** | The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200212Rules
 
-`func NewInlineResponse200212Rules(definitions []NetworksNetworkIdApplianceTrafficShapingRulesDefinitions, ) *InlineResponse200212Rules`
+`func NewInlineResponse200212Rules() *InlineResponse200212Rules`
 
 NewInlineResponse200212Rules instantiates a new InlineResponse200212Rules object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,80 @@ NewInlineResponse200212RulesWithDefaults instantiates a new InlineResponse200212
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefinitions
+### GetPolicy
 
-`func (o *InlineResponse200212Rules) GetDefinitions() []NetworksNetworkIdApplianceTrafficShapingRulesDefinitions`
+`func (o *InlineResponse200212Rules) GetPolicy() string`
 
-GetDefinitions returns the Definitions field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetDefinitionsOk
+### GetPolicyOk
 
-`func (o *InlineResponse200212Rules) GetDefinitionsOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesDefinitions, bool)`
+`func (o *InlineResponse200212Rules) GetPolicyOk() (*string, bool)`
 
-GetDefinitionsOk returns a tuple with the Definitions field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefinitions
+### SetPolicy
 
-`func (o *InlineResponse200212Rules) SetDefinitions(v []NetworksNetworkIdApplianceTrafficShapingRulesDefinitions)`
+`func (o *InlineResponse200212Rules) SetPolicy(v string)`
 
-SetDefinitions sets Definitions field to given value.
+SetPolicy sets Policy field to given value.
 
+### HasPolicy
 
-### GetPerClientBandwidthLimits
+`func (o *InlineResponse200212Rules) HasPolicy() bool`
 
-`func (o *InlineResponse200212Rules) GetPerClientBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits`
+HasPolicy returns a boolean if a field has been set.
 
-GetPerClientBandwidthLimits returns the PerClientBandwidthLimits field if non-nil, zero value otherwise.
+### GetType
 
-### GetPerClientBandwidthLimitsOk
+`func (o *InlineResponse200212Rules) GetType() string`
 
-`func (o *InlineResponse200212Rules) GetPerClientBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits, bool)`
+GetType returns the Type field if non-nil, zero value otherwise.
 
-GetPerClientBandwidthLimitsOk returns a tuple with the PerClientBandwidthLimits field if it's non-nil, zero value otherwise
+### GetTypeOk
+
+`func (o *InlineResponse200212Rules) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPerClientBandwidthLimits
+### SetType
 
-`func (o *InlineResponse200212Rules) SetPerClientBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits)`
+`func (o *InlineResponse200212Rules) SetType(v string)`
 
-SetPerClientBandwidthLimits sets PerClientBandwidthLimits field to given value.
+SetType sets Type field to given value.
 
-### HasPerClientBandwidthLimits
+### HasType
 
-`func (o *InlineResponse200212Rules) HasPerClientBandwidthLimits() bool`
+`func (o *InlineResponse200212Rules) HasType() bool`
 
-HasPerClientBandwidthLimits returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetDscpTagValue
+### GetValue
 
-`func (o *InlineResponse200212Rules) GetDscpTagValue() int32`
+`func (o *InlineResponse200212Rules) GetValue() string`
 
-GetDscpTagValue returns the DscpTagValue field if non-nil, zero value otherwise.
+GetValue returns the Value field if non-nil, zero value otherwise.
 
-### GetDscpTagValueOk
+### GetValueOk
 
-`func (o *InlineResponse200212Rules) GetDscpTagValueOk() (*int32, bool)`
+`func (o *InlineResponse200212Rules) GetValueOk() (*string, bool)`
 
-GetDscpTagValueOk returns a tuple with the DscpTagValue field if it's non-nil, zero value otherwise
+GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDscpTagValue
+### SetValue
 
-`func (o *InlineResponse200212Rules) SetDscpTagValue(v int32)`
+`func (o *InlineResponse200212Rules) SetValue(v string)`
 
-SetDscpTagValue sets DscpTagValue field to given value.
+SetValue sets Value field to given value.
 
-### HasDscpTagValue
+### HasValue
 
-`func (o *InlineResponse200212Rules) HasDscpTagValue() bool`
+`func (o *InlineResponse200212Rules) HasValue() bool`
 
-HasDscpTagValue returns a boolean if a field has been set.
-
-### GetPcpTagValue
-
-`func (o *InlineResponse200212Rules) GetPcpTagValue() int32`
-
-GetPcpTagValue returns the PcpTagValue field if non-nil, zero value otherwise.
-
-### GetPcpTagValueOk
-
-`func (o *InlineResponse200212Rules) GetPcpTagValueOk() (*int32, bool)`
-
-GetPcpTagValueOk returns a tuple with the PcpTagValue field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPcpTagValue
-
-`func (o *InlineResponse200212Rules) SetPcpTagValue(v int32)`
-
-SetPcpTagValue sets PcpTagValue field to given value.
-
-### HasPcpTagValue
-
-`func (o *InlineResponse200212Rules) HasPcpTagValue() bool`
-
-HasPcpTagValue returns a boolean if a field has been set.
+HasValue returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

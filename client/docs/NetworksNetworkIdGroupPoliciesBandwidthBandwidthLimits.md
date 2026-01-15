@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LimitUp** | Pointer to **int32** | The maximum upload limit (integer, in Kbps). null indicates no limit | [optional] 
-**LimitDown** | Pointer to **int32** | The maximum download limit (integer, in Kbps). null indicates no limit | [optional] 
+**LimitUp** | Pointer to **NullableInt32** | The maximum upload limit (integer, in Kbps). null indicates no limit | [optional] 
+**LimitDown** | Pointer to **NullableInt32** | The maximum download limit (integer, in Kbps). null indicates no limit | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetLimitUp sets LimitUp field to given value.
 
 HasLimitUp returns a boolean if a field has been set.
 
+### SetLimitUpNil
+
+`func (o *NetworksNetworkIdGroupPoliciesBandwidthBandwidthLimits) SetLimitUpNil(b bool)`
+
+ SetLimitUpNil sets the value for LimitUp to be an explicit nil
+
+### UnsetLimitUp
+`func (o *NetworksNetworkIdGroupPoliciesBandwidthBandwidthLimits) UnsetLimitUp()`
+
+UnsetLimitUp ensures that no value is present for LimitUp, not even an explicit nil
 ### GetLimitDown
 
 `func (o *NetworksNetworkIdGroupPoliciesBandwidthBandwidthLimits) GetLimitDown() int32`
@@ -76,6 +86,16 @@ SetLimitDown sets LimitDown field to given value.
 
 HasLimitDown returns a boolean if a field has been set.
 
+### SetLimitDownNil
+
+`func (o *NetworksNetworkIdGroupPoliciesBandwidthBandwidthLimits) SetLimitDownNil(b bool)`
+
+ SetLimitDownNil sets the value for LimitDown to be an explicit nil
+
+### UnsetLimitDown
+`func (o *NetworksNetworkIdGroupPoliciesBandwidthBandwidthLimits) UnsetLimitDown()`
+
+UnsetLimitDown ensures that no value is present for LimitDown, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

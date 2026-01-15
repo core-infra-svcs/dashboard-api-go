@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | [**InlineResponse200376Client**](InlineResponse200376Client.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
-**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
+**Url** | Pointer to **string** | Receiver Url | [optional] 
+**Version** | Pointer to **string** | Scanning API Version | [optional] 
+**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject309
 
-`func NewInlineObject309(client InlineResponse200376Client, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject309`
+`func NewInlineObject309() *InlineObject309`
 
 NewInlineObject309 instantiates a new InlineObject309 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +27,80 @@ NewInlineObject309WithDefaults instantiates a new InlineObject309 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetUrl
 
-`func (o *InlineObject309) GetDescription() string`
+`func (o *InlineObject309) GetUrl() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetUrlOk
 
-`func (o *InlineObject309) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject309) GetUrlOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetUrl
 
-`func (o *InlineObject309) SetDescription(v string)`
+`func (o *InlineObject309) SetUrl(v string)`
 
-SetDescription sets Description field to given value.
+SetUrl sets Url field to given value.
 
-### HasDescription
+### HasUrl
 
-`func (o *InlineObject309) HasDescription() bool`
+`func (o *InlineObject309) HasUrl() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetClient
+### GetVersion
 
-`func (o *InlineObject309) GetClient() InlineResponse200376Client`
+`func (o *InlineObject309) GetVersion() string`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetVersion returns the Version field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetVersionOk
 
-`func (o *InlineObject309) GetClientOk() (*InlineResponse200376Client, bool)`
+`func (o *InlineObject309) GetVersionOk() (*string, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetVersion
 
-`func (o *InlineObject309) SetClient(v InlineResponse200376Client)`
+`func (o *InlineObject309) SetVersion(v string)`
 
-SetClient sets Client field to given value.
+SetVersion sets Version field to given value.
 
+### HasVersion
 
-### GetSsid
+`func (o *InlineObject309) HasVersion() bool`
 
-`func (o *InlineObject309) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
+HasVersion returns a boolean if a field has been set.
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+### GetRadio
 
-### GetSsidOk
+`func (o *InlineObject309) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
 
-`func (o *InlineObject309) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
+GetRadio returns the Radio field if non-nil, zero value otherwise.
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+### GetRadioOk
+
+`func (o *InlineObject309) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetRadio
 
-`func (o *InlineObject309) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
+`func (o *InlineObject309) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
 
-SetSsid sets Ssid field to given value.
+SetRadio sets Radio field to given value.
 
+### HasRadio
 
-### GetNetwork
+`func (o *InlineObject309) HasRadio() bool`
 
-`func (o *InlineObject309) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineObject309) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineObject309) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
-
-SetNetwork sets Network field to given value.
-
+HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

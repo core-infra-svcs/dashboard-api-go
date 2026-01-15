@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResponseCodeCounts** | Pointer to [**InlineResponse200224ResponseCodeCounts**](InlineResponse200224ResponseCodeCounts.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200224Counts**](InlineResponse200224Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse200224Limits**](InlineResponse200224Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200224WithDefaults instantiates a new InlineResponse200224 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResponseCodeCounts
+### GetCounts
 
-`func (o *InlineResponse200224) GetResponseCodeCounts() InlineResponse200224ResponseCodeCounts`
+`func (o *InlineResponse200224) GetCounts() InlineResponse200224Counts`
 
-GetResponseCodeCounts returns the ResponseCodeCounts field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetResponseCodeCountsOk
+### GetCountsOk
 
-`func (o *InlineResponse200224) GetResponseCodeCountsOk() (*InlineResponse200224ResponseCodeCounts, bool)`
+`func (o *InlineResponse200224) GetCountsOk() (*InlineResponse200224Counts, bool)`
 
-GetResponseCodeCountsOk returns a tuple with the ResponseCodeCounts field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResponseCodeCounts
+### SetCounts
 
-`func (o *InlineResponse200224) SetResponseCodeCounts(v InlineResponse200224ResponseCodeCounts)`
+`func (o *InlineResponse200224) SetCounts(v InlineResponse200224Counts)`
 
-SetResponseCodeCounts sets ResponseCodeCounts field to given value.
+SetCounts sets Counts field to given value.
 
-### HasResponseCodeCounts
+### HasCounts
 
-`func (o *InlineResponse200224) HasResponseCodeCounts() bool`
+`func (o *InlineResponse200224) HasCounts() bool`
 
-HasResponseCodeCounts returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
+
+### GetLimits
+
+`func (o *InlineResponse200224) GetLimits() InlineResponse200224Limits`
+
+GetLimits returns the Limits field if non-nil, zero value otherwise.
+
+### GetLimitsOk
+
+`func (o *InlineResponse200224) GetLimitsOk() (*InlineResponse200224Limits, bool)`
+
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimits
+
+`func (o *InlineResponse200224) SetLimits(v InlineResponse200224Limits)`
+
+SetLimits sets Limits field to given value.
+
+### HasLimits
+
+`func (o *InlineResponse200224) HasLimits() bool`
+
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

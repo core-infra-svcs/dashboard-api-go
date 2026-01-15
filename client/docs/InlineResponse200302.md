@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ImportId** | Pointer to **string** | Database ID for the new entity entry. | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice.md) |  | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems**](OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems.md) | Items in the paginated dataset | [optional] 
+**Meta** | Pointer to [**InlineResponse200233Meta**](InlineResponse200233Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200302WithDefaults instantiates a new InlineResponse200302 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetImportId
+### GetItems
 
-`func (o *InlineResponse200302) GetImportId() string`
+`func (o *InlineResponse200302) GetItems() []OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems`
 
-GetImportId returns the ImportId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetImportIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200302) GetImportIdOk() (*string, bool)`
+`func (o *InlineResponse200302) GetItemsOk() (*[]OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems, bool)`
 
-GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImportId
+### SetItems
 
-`func (o *InlineResponse200302) SetImportId(v string)`
+`func (o *InlineResponse200302) SetItems(v []OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems)`
 
-SetImportId sets ImportId field to given value.
+SetItems sets Items field to given value.
 
-### HasImportId
+### HasItems
 
-`func (o *InlineResponse200302) HasImportId() bool`
+`func (o *InlineResponse200302) HasItems() bool`
 
-HasImportId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetDevice
+### GetMeta
 
-`func (o *InlineResponse200302) GetDevice() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice`
+`func (o *InlineResponse200302) GetMeta() InlineResponse200233Meta`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetMetaOk
 
-`func (o *InlineResponse200302) GetDeviceOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice, bool)`
+`func (o *InlineResponse200302) GetMetaOk() (*InlineResponse200233Meta, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetMeta
 
-`func (o *InlineResponse200302) SetDevice(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice)`
+`func (o *InlineResponse200302) SetMeta(v InlineResponse200233Meta)`
 
-SetDevice sets Device field to given value.
+SetMeta sets Meta field to given value.
 
-### HasDevice
+### HasMeta
 
-`func (o *InlineResponse200302) HasDevice() bool`
+`func (o *InlineResponse200302) HasMeta() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

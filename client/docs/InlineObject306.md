@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
+**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
+**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
 
 ## Methods
 
 ### NewInlineObject306
 
-`func NewInlineObject306() *InlineObject306`
+`func NewInlineObject306(sourceSerial string, targetSerials []string, ) *InlineObject306`
 
 NewInlineObject306 instantiates a new InlineObject306 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,45 @@ NewInlineObject306WithDefaults instantiates a new InlineObject306 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetSourceSerial
 
-`func (o *InlineObject306) GetUrl() string`
+`func (o *InlineObject306) GetSourceSerial() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetSourceSerialOk
 
-`func (o *InlineObject306) GetUrlOk() (*string, bool)`
+`func (o *InlineObject306) GetSourceSerialOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSourceSerial
 
-`func (o *InlineObject306) SetUrl(v string)`
+`func (o *InlineObject306) SetSourceSerial(v string)`
 
-SetUrl sets Url field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
-### HasUrl
 
-`func (o *InlineObject306) HasUrl() bool`
+### GetTargetSerials
 
-HasUrl returns a boolean if a field has been set.
+`func (o *InlineObject306) GetTargetSerials() []string`
 
-### GetVersion
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-`func (o *InlineObject306) GetVersion() string`
+### GetTargetSerialsOk
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+`func (o *InlineObject306) GetTargetSerialsOk() (*[]string, bool)`
 
-### GetVersionOk
-
-`func (o *InlineObject306) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetTargetSerials
 
-`func (o *InlineObject306) SetVersion(v string)`
+`func (o *InlineObject306) SetTargetSerials(v []string)`
 
-SetVersion sets Version field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
-### HasVersion
-
-`func (o *InlineObject306) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
-### GetRadio
-
-`func (o *InlineObject306) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject306) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject306) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
-
-SetRadio sets Radio field to given value.
-
-### HasRadio
-
-`func (o *InlineObject306) HasRadio() bool`
-
-HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

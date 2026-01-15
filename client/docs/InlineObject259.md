@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **Duration** | Pointer to **int32** | Duration in seconds of packet capture | [optional] 
 **FilterExpression** | Pointer to **string** | Filter expression for packet capture | [optional] 
 **Interface** | Pointer to **string** | Interface of the device | [optional] 
+**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced.md) |  | [optional] 
 
 ## Methods
 
@@ -247,6 +248,31 @@ SetInterface sets Interface field to given value.
 `func (o *InlineObject259) HasInterface() bool`
 
 HasInterface returns a boolean if a field has been set.
+
+### GetAdvanced
+
+`func (o *InlineObject259) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced`
+
+GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
+
+### GetAdvancedOk
+
+`func (o *InlineObject259) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced, bool)`
+
+GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvanced
+
+`func (o *InlineObject259) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced)`
+
+SetAdvanced sets Advanced field to given value.
+
+### HasAdvanced
+
+`func (o *InlineObject259) HasAdvanced() bool`
+
+HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

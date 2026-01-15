@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaCertificate** | Pointer to **string** | CA Certificate of the MQTT broker. | [optional] 
+**CaCertificate** | Pointer to **NullableString** | CA Certificate of the MQTT broker. | [optional] 
 **VerifyHostnames** | Pointer to **bool** | Whether the TLS hostname verification is enabled for the MQTT broker. | [optional] 
 
 ## Methods
@@ -51,6 +51,16 @@ SetCaCertificate sets CaCertificate field to given value.
 
 HasCaCertificate returns a boolean if a field has been set.
 
+### SetCaCertificateNil
+
+`func (o *NetworksNetworkIdMqttBrokersSecurity1Tls) SetCaCertificateNil(b bool)`
+
+ SetCaCertificateNil sets the value for CaCertificate to be an explicit nil
+
+### UnsetCaCertificate
+`func (o *NetworksNetworkIdMqttBrokersSecurity1Tls) UnsetCaCertificate()`
+
+UnsetCaCertificate ensures that no value is present for CaCertificate, not even an explicit nil
 ### GetVerifyHostnames
 
 `func (o *NetworksNetworkIdMqttBrokersSecurity1Tls) GetVerifyHostnames() bool`

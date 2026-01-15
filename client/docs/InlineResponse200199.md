@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
-**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
+**Name** | Pointer to **string** | AP port profile name | [optional] 
+**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
+**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200199WithDefaults instantiates a new InlineResponse200199 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetProfileId
 
-`func (o *InlineResponse200199) GetSerial() string`
+`func (o *InlineResponse200199) GetProfileId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200199) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200199) GetProfileIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetProfileId
 
-`func (o *InlineResponse200199) SetSerial(v string)`
+`func (o *InlineResponse200199) SetProfileId(v string)`
 
-SetSerial sets Serial field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasSerial
+### HasProfileId
 
-`func (o *InlineResponse200199) HasSerial() bool`
+`func (o *InlineResponse200199) HasProfileId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetMeshRoute
+### GetName
 
-`func (o *InlineResponse200199) GetMeshRoute() []string`
+`func (o *InlineResponse200199) GetName() string`
 
-GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMeshRouteOk
+### GetNameOk
 
-`func (o *InlineResponse200199) GetMeshRouteOk() (*[]string, bool)`
+`func (o *InlineResponse200199) GetNameOk() (*string, bool)`
 
-GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshRoute
+### SetName
 
-`func (o *InlineResponse200199) SetMeshRoute(v []string)`
+`func (o *InlineResponse200199) SetName(v string)`
 
-SetMeshRoute sets MeshRoute field to given value.
+SetName sets Name field to given value.
 
-### HasMeshRoute
+### HasName
 
-`func (o *InlineResponse200199) HasMeshRoute() bool`
+`func (o *InlineResponse200199) HasName() bool`
 
-HasMeshRoute returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLatestMeshPerformance
+### GetIsDefault
 
-`func (o *InlineResponse200199) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
+`func (o *InlineResponse200199) GetIsDefault() bool`
 
-GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetLatestMeshPerformanceOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200199) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
+`func (o *InlineResponse200199) GetIsDefaultOk() (*bool, bool)`
 
-GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatestMeshPerformance
+### SetIsDefault
 
-`func (o *InlineResponse200199) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
+`func (o *InlineResponse200199) SetIsDefault(v bool)`
 
-SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasLatestMeshPerformance
+### HasIsDefault
 
-`func (o *InlineResponse200199) HasLatestMeshPerformance() bool`
+`func (o *InlineResponse200199) HasIsDefault() bool`
 
-HasLatestMeshPerformance returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineResponse200199) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineResponse200199) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineResponse200199) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineResponse200199) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
+
+### GetUsbPorts
+
+`func (o *InlineResponse200199) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
+
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+
+### GetUsbPortsOk
+
+`func (o *InlineResponse200199) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
+
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsbPorts
+
+`func (o *InlineResponse200199) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
+
+SetUsbPorts sets UsbPorts field to given value.
+
+### HasUsbPorts
+
+`func (o *InlineResponse200199) HasUsbPorts() bool`
+
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

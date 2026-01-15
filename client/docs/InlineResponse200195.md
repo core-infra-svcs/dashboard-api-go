@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
+**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
+**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
+**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200195WithDefaults instantiates a new InlineResponse200195 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetT0
 
-`func (o *InlineResponse200195) GetProfileId() string`
+`func (o *InlineResponse200195) GetT0() int32`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetT0 returns the T0 field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetT0Ok
 
-`func (o *InlineResponse200195) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200195) GetT0Ok() (*int32, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetT0
 
-`func (o *InlineResponse200195) SetProfileId(v string)`
+`func (o *InlineResponse200195) SetT0(v int32)`
 
-SetProfileId sets ProfileId field to given value.
+SetT0 sets T0 field to given value.
 
-### HasProfileId
+### HasT0
 
-`func (o *InlineResponse200195) HasProfileId() bool`
+`func (o *InlineResponse200195) HasT0() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasT0 returns a boolean if a field has been set.
+
+### GetT1
+
+`func (o *InlineResponse200195) GetT1() int32`
+
+GetT1 returns the T1 field if non-nil, zero value otherwise.
+
+### GetT1Ok
+
+`func (o *InlineResponse200195) GetT1Ok() (*int32, bool)`
+
+GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetT1
+
+`func (o *InlineResponse200195) SetT1(v int32)`
+
+SetT1 sets T1 field to given value.
+
+### HasT1
+
+`func (o *InlineResponse200195) HasT1() bool`
+
+HasT1 returns a boolean if a field has been set.
+
+### GetLatencyBinsByCategory
+
+`func (o *InlineResponse200195) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
+
+GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
+
+### GetLatencyBinsByCategoryOk
+
+`func (o *InlineResponse200195) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
+
+GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLatencyBinsByCategory
+
+`func (o *InlineResponse200195) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
+
+SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
+
+### HasLatencyBinsByCategory
+
+`func (o *InlineResponse200195) HasLatencyBinsByCategory() bool`
+
+HasLatencyBinsByCategory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]InlineResponse200174StpBridgePriority**](InlineResponse200174StpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | The name af the new stack | [optional] 
+**Serials** | Pointer to **[]string** | An array of switch serials added to the stack | [optional] 
+**WorkflowId** | Pointer to **string** | ID of the workflow | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200174WithDefaults instantiates a new InlineResponse200174 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetId
 
-`func (o *InlineResponse200174) GetRstpEnabled() bool`
+`func (o *InlineResponse200174) GetId() string`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse200174) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200174) GetIdOk() (*string, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetId
 
-`func (o *InlineResponse200174) SetRstpEnabled(v bool)`
+`func (o *InlineResponse200174) SetId(v string)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasRstpEnabled
+### HasId
 
-`func (o *InlineResponse200174) HasRstpEnabled() bool`
+`func (o *InlineResponse200174) HasId() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetName
 
-`func (o *InlineResponse200174) GetStpBridgePriority() []InlineResponse200174StpBridgePriority`
+`func (o *InlineResponse200174) GetName() string`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetNameOk
 
-`func (o *InlineResponse200174) GetStpBridgePriorityOk() (*[]InlineResponse200174StpBridgePriority, bool)`
+`func (o *InlineResponse200174) GetNameOk() (*string, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetName
 
-`func (o *InlineResponse200174) SetStpBridgePriority(v []InlineResponse200174StpBridgePriority)`
+`func (o *InlineResponse200174) SetName(v string)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetName sets Name field to given value.
 
-### HasStpBridgePriority
+### HasName
 
-`func (o *InlineResponse200174) HasStpBridgePriority() bool`
+`func (o *InlineResponse200174) HasName() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200174) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200174) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200174) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200174) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetWorkflowId
+
+`func (o *InlineResponse200174) GetWorkflowId() string`
+
+GetWorkflowId returns the WorkflowId field if non-nil, zero value otherwise.
+
+### GetWorkflowIdOk
+
+`func (o *InlineResponse200174) GetWorkflowIdOk() (*string, bool)`
+
+GetWorkflowIdOk returns a tuple with the WorkflowId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWorkflowId
+
+`func (o *InlineResponse200174) SetWorkflowId(v string)`
+
+SetWorkflowId sets WorkflowId field to given value.
+
+### HasWorkflowId
+
+`func (o *InlineResponse200174) HasWorkflowId() bool`
+
+HasWorkflowId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

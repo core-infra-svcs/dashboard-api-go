@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Servers** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberLdapServers**](NetworksNetworkIdWirelessSsidsNumberLdapServers.md) | The LDAP servers to be used for authentication. | [optional] 
 **Credentials** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberLdapCredentials**](NetworksNetworkIdWirelessSsidsNumberLdapCredentials.md) |  | [optional] 
-**BaseDistinguishedName** | Pointer to **string** | The base distinguished name of users on the LDAP server. | [optional] 
+**BaseDistinguishedName** | Pointer to **NullableString** | The base distinguished name of users on the LDAP server. | [optional] 
 **ServerCaCertificate** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberLdapServerCaCertificate**](NetworksNetworkIdWirelessSsidsNumberLdapServerCaCertificate.md) |  | [optional] 
 
 ## Methods
@@ -103,6 +103,16 @@ SetBaseDistinguishedName sets BaseDistinguishedName field to given value.
 
 HasBaseDistinguishedName returns a boolean if a field has been set.
 
+### SetBaseDistinguishedNameNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdap) SetBaseDistinguishedNameNil(b bool)`
+
+ SetBaseDistinguishedNameNil sets the value for BaseDistinguishedName to be an explicit nil
+
+### UnsetBaseDistinguishedName
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdap) UnsetBaseDistinguishedName()`
+
+UnsetBaseDistinguishedName ensures that no value is present for BaseDistinguishedName, not even an explicit nil
 ### GetServerCaCertificate
 
 `func (o *NetworksNetworkIdWirelessSsidsNumberLdap) GetServerCaCertificate() NetworksNetworkIdWirelessSsidsNumberLdapServerCaCertificate`

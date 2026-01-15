@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200319Items**](InlineResponse200319Items.md) | The organization&#39;s RSSI information between sensor-gateway pairs. | 
-**Meta** | Pointer to [**InlineResponse200319Meta**](InlineResponse200319Meta.md) |  | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200318**](InlineResponse200318.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200318**](InlineResponse200318.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200319
 
-`func NewInlineResponse200319(items []InlineResponse200319Items, ) *InlineResponse200319`
+`func NewInlineResponse200319() *InlineResponse200319`
 
 NewInlineResponse200319 instantiates a new InlineResponse200319 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineResponse200319WithDefaults instantiates a new InlineResponse200319 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetRemainderLicenses
 
-`func (o *InlineResponse200319) GetItems() []InlineResponse200319Items`
+`func (o *InlineResponse200319) GetRemainderLicenses() []InlineResponse200318`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200319) GetItemsOk() (*[]InlineResponse200319Items, bool)`
+`func (o *InlineResponse200319) GetRemainderLicensesOk() (*[]InlineResponse200318, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetRemainderLicenses
 
-`func (o *InlineResponse200319) SetItems(v []InlineResponse200319Items)`
+`func (o *InlineResponse200319) SetRemainderLicenses(v []InlineResponse200318)`
 
-SetItems sets Items field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
+### HasRemainderLicenses
 
-### GetMeta
+`func (o *InlineResponse200319) HasRemainderLicenses() bool`
 
-`func (o *InlineResponse200319) GetMeta() InlineResponse200319Meta`
+HasRemainderLicenses returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetMovedLicenses
 
-### GetMetaOk
+`func (o *InlineResponse200319) GetMovedLicenses() []InlineResponse200318`
 
-`func (o *InlineResponse200319) GetMetaOk() (*InlineResponse200319Meta, bool)`
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetMovedLicensesOk
+
+`func (o *InlineResponse200319) GetMovedLicensesOk() (*[]InlineResponse200318, bool)`
+
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetMovedLicenses
 
-`func (o *InlineResponse200319) SetMeta(v InlineResponse200319Meta)`
+`func (o *InlineResponse200319) SetMovedLicenses(v []InlineResponse200318)`
 
-SetMeta sets Meta field to given value.
+SetMovedLicenses sets MovedLicenses field to given value.
 
-### HasMeta
+### HasMovedLicenses
 
-`func (o *InlineResponse200319) HasMeta() bool`
+`func (o *InlineResponse200319) HasMovedLicenses() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

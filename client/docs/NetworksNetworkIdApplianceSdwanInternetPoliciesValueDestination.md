@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Port** | Pointer to **string** | E.g.: \&quot;any\&quot;, \&quot;0\&quot; (also means \&quot;any\&quot;), \&quot;8080\&quot;, \&quot;1-1024\&quot; | [optional] 
-**Cidr** | Pointer to **string** | CIDR format address (e.g.\&quot;192.168.10.1\&quot;, which is the same as \&quot;192.168.10.1/32\&quot;), or \&quot;any\&quot; | [optional] 
+**Port** | Pointer to **NullableString** | E.g.: \&quot;any\&quot;, \&quot;0\&quot; (also means \&quot;any\&quot;), \&quot;8080\&quot;, \&quot;1-1024\&quot; | [optional] 
+**Cidr** | Pointer to **NullableString** | CIDR format address (e.g.\&quot;192.168.10.1\&quot;, which is the same as \&quot;192.168.10.1/32\&quot;), or \&quot;any\&quot; | [optional] 
 **Applications** | Pointer to [**[]NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications**](NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications.md) | list of application objects (either majorApplication or nbar) | [optional] 
 
 ## Methods
@@ -52,6 +52,16 @@ SetPort sets Port field to given value.
 
 HasPort returns a boolean if a field has been set.
 
+### SetPortNil
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) SetPortNil(b bool)`
+
+ SetPortNil sets the value for Port to be an explicit nil
+
+### UnsetPort
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) UnsetPort()`
+
+UnsetPort ensures that no value is present for Port, not even an explicit nil
 ### GetCidr
 
 `func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) GetCidr() string`
@@ -77,6 +87,16 @@ SetCidr sets Cidr field to given value.
 
 HasCidr returns a boolean if a field has been set.
 
+### SetCidrNil
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) SetCidrNil(b bool)`
+
+ SetCidrNil sets the value for Cidr to be an explicit nil
+
+### UnsetCidr
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) UnsetCidr()`
+
+UnsetCidr ensures that no value is present for Cidr, not even an explicit nil
 ### GetApplications
 
 `func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) GetApplications() []NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestinationApplications`
@@ -102,6 +122,16 @@ SetApplications sets Applications field to given value.
 
 HasApplications returns a boolean if a field has been set.
 
+### SetApplicationsNil
+
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) SetApplicationsNil(b bool)`
+
+ SetApplicationsNil sets the value for Applications to be an explicit nil
+
+### UnsetApplications
+`func (o *NetworksNetworkIdApplianceSdwanInternetPoliciesValueDestination) UnsetApplications()`
+
+UnsetApplications ensures that no value is present for Applications, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

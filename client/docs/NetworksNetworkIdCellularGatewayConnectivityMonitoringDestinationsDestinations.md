@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Ip** | **string** | The IP address to test connectivity with | 
-**Description** | Pointer to **string** | Description of the testing destination. Optional, defaults to an empty string | [optional] [default to ""]
+**Description** | Pointer to **NullableString** | Description of the testing destination. Optional, defaults to an empty string | [optional] [default to ""]
 **Default** | Pointer to **bool** | Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed | [optional] [default to false]
 
 ## Methods
@@ -72,6 +72,16 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### SetDescriptionNil
+
+`func (o *NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
 ### GetDefault
 
 `func (o *NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations) GetDefault() bool`

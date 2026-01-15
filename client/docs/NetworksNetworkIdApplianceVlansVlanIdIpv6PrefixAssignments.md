@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Autonomous** | Pointer to **bool** | Auto assign a /64 prefix from the origin to the VLAN | [optional] 
-**StaticPrefix** | Pointer to **string** | Manual configuration of a /64 prefix on the VLAN | [optional] 
-**StaticApplianceIp6** | Pointer to **string** | Manual configuration of the IPv6 Appliance IP | [optional] 
+**StaticPrefix** | Pointer to **NullableString** | Manual configuration of a /64 prefix on the VLAN | [optional] 
+**StaticApplianceIp6** | Pointer to **NullableString** | Manual configuration of the IPv6 Appliance IP | [optional] 
 **Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
 
 ## Methods
@@ -78,6 +78,16 @@ SetStaticPrefix sets StaticPrefix field to given value.
 
 HasStaticPrefix returns a boolean if a field has been set.
 
+### SetStaticPrefixNil
+
+`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) SetStaticPrefixNil(b bool)`
+
+ SetStaticPrefixNil sets the value for StaticPrefix to be an explicit nil
+
+### UnsetStaticPrefix
+`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) UnsetStaticPrefix()`
+
+UnsetStaticPrefix ensures that no value is present for StaticPrefix, not even an explicit nil
 ### GetStaticApplianceIp6
 
 `func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) GetStaticApplianceIp6() string`
@@ -103,6 +113,16 @@ SetStaticApplianceIp6 sets StaticApplianceIp6 field to given value.
 
 HasStaticApplianceIp6 returns a boolean if a field has been set.
 
+### SetStaticApplianceIp6Nil
+
+`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) SetStaticApplianceIp6Nil(b bool)`
+
+ SetStaticApplianceIp6Nil sets the value for StaticApplianceIp6 to be an explicit nil
+
+### UnsetStaticApplianceIp6
+`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) UnsetStaticApplianceIp6()`
+
+UnsetStaticApplianceIp6 ensures that no value is present for StaticApplianceIp6, not even an explicit nil
 ### GetOrigin
 
 `func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Md5** | Pointer to **string** | The MD5 value of the logo file. Setting this to null will remove the logo from the splash page. | [optional] 
+**Md5** | Pointer to **NullableString** | The MD5 value of the logo file. Setting this to null will remove the logo from the splash page. | [optional] 
 **Extension** | Pointer to **string** | The extension of the logo file. | [optional] 
 **Image** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogoImage**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogoImage.md) |  | [optional] 
 
@@ -52,6 +52,16 @@ SetMd5 sets Md5 field to given value.
 
 HasMd5 returns a boolean if a field has been set.
 
+### SetMd5Nil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) SetMd5Nil(b bool)`
+
+ SetMd5Nil sets the value for Md5 to be an explicit nil
+
+### UnsetMd5
+`func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) UnsetMd5()`
+
+UnsetMd5 ensures that no value is present for Md5, not even an explicit nil
 ### GetExtension
 
 `func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) GetExtension() string`

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DataVlanId** | Pointer to **int32** | VLAN that clients who use data will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
-**VoiceVlanId** | Pointer to **int32** | VLAN that clients who use voice will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
+**DataVlanId** | Pointer to **NullableInt32** | VLAN that clients who use data will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
+**VoiceVlanId** | Pointer to **NullableInt32** | VLAN that clients who use voice will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
 **SuspendPortBounce** | Pointer to **bool** | Disable port bounce when RADIUS servers are unreachable | [optional] 
 **DataGroupPolicyId** | Pointer to **string** | Group policy Number for data VLAN (Requires MS 18 or higher) | [optional] 
 **VoiceGroupPolicyId** | Pointer to **string** | Group policy Number for voice VLAN (Requires MS 18 or higher) | [optional] 
@@ -56,6 +56,16 @@ SetDataVlanId sets DataVlanId field to given value.
 
 HasDataVlanId returns a boolean if a field has been set.
 
+### SetDataVlanIdNil
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) SetDataVlanIdNil(b bool)`
+
+ SetDataVlanIdNil sets the value for DataVlanId to be an explicit nil
+
+### UnsetDataVlanId
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) UnsetDataVlanId()`
+
+UnsetDataVlanId ensures that no value is present for DataVlanId, not even an explicit nil
 ### GetVoiceVlanId
 
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetVoiceVlanId() int32`
@@ -81,6 +91,16 @@ SetVoiceVlanId sets VoiceVlanId field to given value.
 
 HasVoiceVlanId returns a boolean if a field has been set.
 
+### SetVoiceVlanIdNil
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) SetVoiceVlanIdNil(b bool)`
+
+ SetVoiceVlanIdNil sets the value for VoiceVlanId to be an explicit nil
+
+### UnsetVoiceVlanId
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) UnsetVoiceVlanId()`
+
+UnsetVoiceVlanId ensures that no value is present for VoiceVlanId, not even an explicit nil
 ### GetSuspendPortBounce
 
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth) GetSuspendPortBounce() bool`

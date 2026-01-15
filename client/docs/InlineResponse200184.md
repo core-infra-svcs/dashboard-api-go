@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse200184Plans**](InlineResponse200184Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**VlanProfile** | Pointer to [**InlineResponse200184VlanProfile**](InlineResponse200184VlanProfile.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
+**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200184WithDefaults instantiates a new InlineResponse200184 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetVlanProfile
 
-`func (o *InlineResponse200184) GetCurrency() string`
+`func (o *InlineResponse200184) GetVlanProfile() InlineResponse200184VlanProfile`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetVlanProfileOk
 
-`func (o *InlineResponse200184) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse200184) GetVlanProfileOk() (*InlineResponse200184VlanProfile, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetVlanProfile
 
-`func (o *InlineResponse200184) SetCurrency(v string)`
+`func (o *InlineResponse200184) SetVlanProfile(v InlineResponse200184VlanProfile)`
 
-SetCurrency sets Currency field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasCurrency
+### HasVlanProfile
 
-`func (o *InlineResponse200184) HasCurrency() bool`
+`func (o *InlineResponse200184) HasVlanProfile() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetPlans
+### GetSerials
 
-`func (o *InlineResponse200184) GetPlans() []InlineResponse200184Plans`
+`func (o *InlineResponse200184) GetSerials() []string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetSerialsOk
 
-`func (o *InlineResponse200184) GetPlansOk() (*[]InlineResponse200184Plans, bool)`
+`func (o *InlineResponse200184) GetSerialsOk() (*[]string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetSerials
 
-`func (o *InlineResponse200184) SetPlans(v []InlineResponse200184Plans)`
+`func (o *InlineResponse200184) SetSerials(v []string)`
 
-SetPlans sets Plans field to given value.
+SetSerials sets Serials field to given value.
 
-### HasPlans
+### HasSerials
 
-`func (o *InlineResponse200184) HasPlans() bool`
+`func (o *InlineResponse200184) HasSerials() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetStackIds
+
+`func (o *InlineResponse200184) GetStackIds() []string`
+
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
+
+### GetStackIdsOk
+
+`func (o *InlineResponse200184) GetStackIdsOk() (*[]string, bool)`
+
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStackIds
+
+`func (o *InlineResponse200184) SetStackIds(v []string)`
+
+SetStackIds sets StackIds field to given value.
+
+### HasStackIds
+
+`func (o *InlineResponse200184) HasStackIds() bool`
+
+HasStackIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

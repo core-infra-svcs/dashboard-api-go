@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **StaticGatewayIp** | Pointer to **string** | The IP of the gateway on the WAN. | [optional] 
 **StaticDns** | Pointer to **[]string** | Up to two DNS IPs. | [optional] 
 **Vlan** | Pointer to **int32** | The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false. | [optional] 
+**Vrf** | Pointer to [**NullableInlineResponse20033Wan1Vrf**](InlineResponse20033Wan1Vrf.md) |  | [optional] 
 
 ## Methods
 
@@ -206,6 +207,41 @@ SetVlan sets Vlan field to given value.
 
 HasVlan returns a boolean if a field has been set.
 
+### GetVrf
+
+`func (o *InlineResponse20033Wan1) GetVrf() InlineResponse20033Wan1Vrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineResponse20033Wan1) GetVrfOk() (*InlineResponse20033Wan1Vrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineResponse20033Wan1) SetVrf(v InlineResponse20033Wan1Vrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineResponse20033Wan1) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
+
+### SetVrfNil
+
+`func (o *InlineResponse20033Wan1) SetVrfNil(b bool)`
+
+ SetVrfNil sets the value for Vrf to be an explicit nil
+
+### UnsetVrf
+`func (o *InlineResponse20033Wan1) UnsetVrf()`
+
+UnsetVrf ensures that no value is present for Vrf, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

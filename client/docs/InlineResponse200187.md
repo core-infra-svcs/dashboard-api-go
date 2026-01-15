@@ -4,9 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
+**Ssid** | Pointer to **string** | SSID name | [optional] 
+**Bssids** | Pointer to [**[]NetworksNetworkIdWirelessAirMarshalBssids**](NetworksNetworkIdWirelessAirMarshalBssids.md) | BSSIDs broadcasting the SSID | [optional] 
+**Channels** | Pointer to **[]int32** | Channels where the SSID was observed | [optional] 
+**FirstSeen** | Pointer to **int32** | First time the SSID was observed (epoch seconds) | [optional] 
+**LastSeen** | Pointer to **int32** | Most recent time the SSID was observed (epoch seconds) | [optional] 
+**WiredMacs** | Pointer to **[]string** | MAC addresses observed on the SSID | [optional] 
+**WiredVlans** | Pointer to **[]int32** | VLAN IDs observed on the SSID | [optional] 
+**WiredLastSeen** | Pointer to **int32** | Last time observed on the SSID (epoch seconds) | [optional] 
 
 ## Methods
 
@@ -27,80 +32,205 @@ NewInlineResponse200187WithDefaults instantiates a new InlineResponse200187 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetSsid
 
-`func (o *InlineResponse200187) GetStartTs() time.Time`
+`func (o *InlineResponse200187) GetSsid() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetSsidOk
 
-`func (o *InlineResponse200187) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200187) GetSsidOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetSsid
 
-`func (o *InlineResponse200187) SetStartTs(v time.Time)`
+`func (o *InlineResponse200187) SetSsid(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasStartTs
+### HasSsid
 
-`func (o *InlineResponse200187) HasStartTs() bool`
+`func (o *InlineResponse200187) HasSsid() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
 
-### GetEndTs
+### GetBssids
 
-`func (o *InlineResponse200187) GetEndTs() time.Time`
+`func (o *InlineResponse200187) GetBssids() []NetworksNetworkIdWirelessAirMarshalBssids`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetBssids returns the Bssids field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetBssidsOk
 
-`func (o *InlineResponse200187) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200187) GetBssidsOk() (*[]NetworksNetworkIdWirelessAirMarshalBssids, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetBssidsOk returns a tuple with the Bssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetBssids
 
-`func (o *InlineResponse200187) SetEndTs(v time.Time)`
+`func (o *InlineResponse200187) SetBssids(v []NetworksNetworkIdWirelessAirMarshalBssids)`
 
-SetEndTs sets EndTs field to given value.
+SetBssids sets Bssids field to given value.
 
-### HasEndTs
+### HasBssids
 
-`func (o *InlineResponse200187) HasEndTs() bool`
+`func (o *InlineResponse200187) HasBssids() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasBssids returns a boolean if a field has been set.
 
-### GetClientCount
+### GetChannels
 
-`func (o *InlineResponse200187) GetClientCount() int32`
+`func (o *InlineResponse200187) GetChannels() []int32`
 
-GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+GetChannels returns the Channels field if non-nil, zero value otherwise.
 
-### GetClientCountOk
+### GetChannelsOk
 
-`func (o *InlineResponse200187) GetClientCountOk() (*int32, bool)`
+`func (o *InlineResponse200187) GetChannelsOk() (*[]int32, bool)`
 
-GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+GetChannelsOk returns a tuple with the Channels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientCount
+### SetChannels
 
-`func (o *InlineResponse200187) SetClientCount(v int32)`
+`func (o *InlineResponse200187) SetChannels(v []int32)`
 
-SetClientCount sets ClientCount field to given value.
+SetChannels sets Channels field to given value.
 
-### HasClientCount
+### HasChannels
 
-`func (o *InlineResponse200187) HasClientCount() bool`
+`func (o *InlineResponse200187) HasChannels() bool`
 
-HasClientCount returns a boolean if a field has been set.
+HasChannels returns a boolean if a field has been set.
+
+### GetFirstSeen
+
+`func (o *InlineResponse200187) GetFirstSeen() int32`
+
+GetFirstSeen returns the FirstSeen field if non-nil, zero value otherwise.
+
+### GetFirstSeenOk
+
+`func (o *InlineResponse200187) GetFirstSeenOk() (*int32, bool)`
+
+GetFirstSeenOk returns a tuple with the FirstSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirstSeen
+
+`func (o *InlineResponse200187) SetFirstSeen(v int32)`
+
+SetFirstSeen sets FirstSeen field to given value.
+
+### HasFirstSeen
+
+`func (o *InlineResponse200187) HasFirstSeen() bool`
+
+HasFirstSeen returns a boolean if a field has been set.
+
+### GetLastSeen
+
+`func (o *InlineResponse200187) GetLastSeen() int32`
+
+GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
+
+### GetLastSeenOk
+
+`func (o *InlineResponse200187) GetLastSeenOk() (*int32, bool)`
+
+GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastSeen
+
+`func (o *InlineResponse200187) SetLastSeen(v int32)`
+
+SetLastSeen sets LastSeen field to given value.
+
+### HasLastSeen
+
+`func (o *InlineResponse200187) HasLastSeen() bool`
+
+HasLastSeen returns a boolean if a field has been set.
+
+### GetWiredMacs
+
+`func (o *InlineResponse200187) GetWiredMacs() []string`
+
+GetWiredMacs returns the WiredMacs field if non-nil, zero value otherwise.
+
+### GetWiredMacsOk
+
+`func (o *InlineResponse200187) GetWiredMacsOk() (*[]string, bool)`
+
+GetWiredMacsOk returns a tuple with the WiredMacs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredMacs
+
+`func (o *InlineResponse200187) SetWiredMacs(v []string)`
+
+SetWiredMacs sets WiredMacs field to given value.
+
+### HasWiredMacs
+
+`func (o *InlineResponse200187) HasWiredMacs() bool`
+
+HasWiredMacs returns a boolean if a field has been set.
+
+### GetWiredVlans
+
+`func (o *InlineResponse200187) GetWiredVlans() []int32`
+
+GetWiredVlans returns the WiredVlans field if non-nil, zero value otherwise.
+
+### GetWiredVlansOk
+
+`func (o *InlineResponse200187) GetWiredVlansOk() (*[]int32, bool)`
+
+GetWiredVlansOk returns a tuple with the WiredVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredVlans
+
+`func (o *InlineResponse200187) SetWiredVlans(v []int32)`
+
+SetWiredVlans sets WiredVlans field to given value.
+
+### HasWiredVlans
+
+`func (o *InlineResponse200187) HasWiredVlans() bool`
+
+HasWiredVlans returns a boolean if a field has been set.
+
+### GetWiredLastSeen
+
+`func (o *InlineResponse200187) GetWiredLastSeen() int32`
+
+GetWiredLastSeen returns the WiredLastSeen field if non-nil, zero value otherwise.
+
+### GetWiredLastSeenOk
+
+`func (o *InlineResponse200187) GetWiredLastSeenOk() (*int32, bool)`
+
+GetWiredLastSeenOk returns a tuple with the WiredLastSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredLastSeen
+
+`func (o *InlineResponse200187) SetWiredLastSeen(v int32)`
+
+SetWiredLastSeen sets WiredLastSeen field to given value.
+
+### HasWiredLastSeen
+
+`func (o *InlineResponse200187) HasWiredLastSeen() bool`
+
+HasWiredLastSeen returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

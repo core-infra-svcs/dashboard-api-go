@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Serial** | Pointer to **string** | The uplink serial | [optional] 
-**Model** | Pointer to **string** | The uplink model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**HighAvailability** | Pointer to [**OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability**](OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability.md) |  | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks**](OrganizationsOrganizationIdApplianceUplinkStatusesUplinks.md) | Uplinks | [optional] 
+**RecordId** | Pointer to **string** | Record ID | [optional] 
+**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
+**Address** | Pointer to **string** | IP for the DNS record | [optional] 
+**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse200235WithDefaults instantiates a new InlineResponse200235 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetRecordId
 
-`func (o *InlineResponse200235) GetNetworkId() string`
+`func (o *InlineResponse200235) GetRecordId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetRecordId returns the RecordId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetRecordIdOk
 
-`func (o *InlineResponse200235) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200235) GetRecordIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetRecordIdOk returns a tuple with the RecordId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetRecordId
 
-`func (o *InlineResponse200235) SetNetworkId(v string)`
+`func (o *InlineResponse200235) SetRecordId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetRecordId sets RecordId field to given value.
 
-### HasNetworkId
+### HasRecordId
 
-`func (o *InlineResponse200235) HasNetworkId() bool`
+`func (o *InlineResponse200235) HasRecordId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasRecordId returns a boolean if a field has been set.
 
-### GetSerial
+### GetHostname
 
-`func (o *InlineResponse200235) GetSerial() string`
+`func (o *InlineResponse200235) GetHostname() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetHostnameOk
 
-`func (o *InlineResponse200235) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200235) GetHostnameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetHostname
 
-`func (o *InlineResponse200235) SetSerial(v string)`
+`func (o *InlineResponse200235) SetHostname(v string)`
 
-SetSerial sets Serial field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasSerial
+### HasHostname
 
-`func (o *InlineResponse200235) HasSerial() bool`
+`func (o *InlineResponse200235) HasHostname() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
 
-### GetModel
+### GetAddress
 
-`func (o *InlineResponse200235) GetModel() string`
+`func (o *InlineResponse200235) GetAddress() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetAddressOk
 
-`func (o *InlineResponse200235) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200235) GetAddressOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetAddress
 
-`func (o *InlineResponse200235) SetModel(v string)`
+`func (o *InlineResponse200235) SetAddress(v string)`
 
-SetModel sets Model field to given value.
+SetAddress sets Address field to given value.
 
-### HasModel
+### HasAddress
 
-`func (o *InlineResponse200235) HasModel() bool`
+`func (o *InlineResponse200235) HasAddress() bool`
 
-HasModel returns a boolean if a field has been set.
+HasAddress returns a boolean if a field has been set.
 
-### GetLastReportedAt
+### GetProfile
 
-`func (o *InlineResponse200235) GetLastReportedAt() time.Time`
+`func (o *InlineResponse200235) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
 
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-### GetLastReportedAtOk
+### GetProfileOk
 
-`func (o *InlineResponse200235) GetLastReportedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200235) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
 
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastReportedAt
+### SetProfile
 
-`func (o *InlineResponse200235) SetLastReportedAt(v time.Time)`
+`func (o *InlineResponse200235) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
 
-SetLastReportedAt sets LastReportedAt field to given value.
+SetProfile sets Profile field to given value.
 
-### HasLastReportedAt
+### HasProfile
 
-`func (o *InlineResponse200235) HasLastReportedAt() bool`
+`func (o *InlineResponse200235) HasProfile() bool`
 
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetHighAvailability
-
-`func (o *InlineResponse200235) GetHighAvailability() OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability`
-
-GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
-
-### GetHighAvailabilityOk
-
-`func (o *InlineResponse200235) GetHighAvailabilityOk() (*OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability, bool)`
-
-GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHighAvailability
-
-`func (o *InlineResponse200235) SetHighAvailability(v OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability)`
-
-SetHighAvailability sets HighAvailability field to given value.
-
-### HasHighAvailability
-
-`func (o *InlineResponse200235) HasHighAvailability() bool`
-
-HasHighAvailability returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200235) GetUplinks() []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200235) GetUplinksOk() (*[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200235) SetUplinks(v []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200235) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

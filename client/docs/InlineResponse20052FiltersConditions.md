@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Type** | Pointer to **string** | Type of condition | [optional] 
-**Unit** | Pointer to **string** | Unit | [optional] 
+**Unit** | Pointer to **NullableString** | Unit | [optional] 
 **Duration** | Pointer to **int32** | Duration | [optional] 
 **Direction** | Pointer to **string** | Direction | [optional] 
 **Threshold** | Pointer to **float32** | Threshold | [optional] 
@@ -79,6 +79,16 @@ SetUnit sets Unit field to given value.
 
 HasUnit returns a boolean if a field has been set.
 
+### SetUnitNil
+
+`func (o *InlineResponse20052FiltersConditions) SetUnitNil(b bool)`
+
+ SetUnitNil sets the value for Unit to be an explicit nil
+
+### UnsetUnit
+`func (o *InlineResponse20052FiltersConditions) UnsetUnit()`
+
+UnsetUnit ensures that no value is present for Unit, not even an explicit nil
 ### GetDuration
 
 `func (o *InlineResponse20052FiltersConditions) GetDuration() int32`

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200260Items**](InlineResponse200260Items.md) | List Cellular Service Providers | [optional] 
-**Meta** | Pointer to [**InlineResponse200260Meta**](InlineResponse200260Meta.md) |  | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200260WithDefaults instantiates a new InlineResponse200260 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetArtifactId
 
-`func (o *InlineResponse200260) GetItems() []InlineResponse200260Items`
+`func (o *InlineResponse200260) GetArtifactId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse200260) GetItemsOk() (*[]InlineResponse200260Items, bool)`
+`func (o *InlineResponse200260) GetArtifactIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetArtifactId
 
-`func (o *InlineResponse200260) SetItems(v []InlineResponse200260Items)`
+`func (o *InlineResponse200260) SetArtifactId(v string)`
 
-SetItems sets Items field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasItems
+### HasArtifactId
 
-`func (o *InlineResponse200260) HasItems() bool`
+`func (o *InlineResponse200260) HasArtifactId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
 
-### GetMeta
+### GetOrganizationId
 
-`func (o *InlineResponse200260) GetMeta() InlineResponse200260Meta`
+`func (o *InlineResponse200260) GetOrganizationId() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200260) GetMetaOk() (*InlineResponse200260Meta, bool)`
+`func (o *InlineResponse200260) GetOrganizationIdOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetOrganizationId
 
-`func (o *InlineResponse200260) SetMeta(v InlineResponse200260Meta)`
+`func (o *InlineResponse200260) SetOrganizationId(v string)`
 
-SetMeta sets Meta field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasMeta
+### HasOrganizationId
 
-`func (o *InlineResponse200260) HasMeta() bool`
+`func (o *InlineResponse200260) HasOrganizationId() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200260) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200260) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200260) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200260) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse200260) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200260) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200260) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200260) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

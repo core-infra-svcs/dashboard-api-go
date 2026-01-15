@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**InlineResponse20067DynamicDns**](InlineResponse20067DynamicDns.md) |  | [optional] 
+**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
+**AllowedUrls** | Pointer to [**[]InlineResponse20067AllowedUrls**](InlineResponse20067AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
+**AllowedFiles** | Pointer to [**[]InlineResponse20067AllowedFiles**](InlineResponse20067AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20067WithDefaults instantiates a new InlineResponse20067 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetMode
 
-`func (o *InlineResponse20067) GetClientTrackingMethod() string`
+`func (o *InlineResponse20067) GetMode() string`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetModeOk
 
-`func (o *InlineResponse20067) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineResponse20067) GetModeOk() (*string, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetMode
 
-`func (o *InlineResponse20067) SetClientTrackingMethod(v string)`
+`func (o *InlineResponse20067) SetMode(v string)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetMode sets Mode field to given value.
 
-### HasClientTrackingMethod
+### HasMode
 
-`func (o *InlineResponse20067) HasClientTrackingMethod() bool`
+`func (o *InlineResponse20067) HasMode() bool`
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetDeploymentMode
+### GetAllowedUrls
 
-`func (o *InlineResponse20067) GetDeploymentMode() string`
+`func (o *InlineResponse20067) GetAllowedUrls() []InlineResponse20067AllowedUrls`
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetDeploymentModeOk
+### GetAllowedUrlsOk
 
-`func (o *InlineResponse20067) GetDeploymentModeOk() (*string, bool)`
+`func (o *InlineResponse20067) GetAllowedUrlsOk() (*[]InlineResponse20067AllowedUrls, bool)`
 
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetAllowedUrls
 
-`func (o *InlineResponse20067) SetDeploymentMode(v string)`
+`func (o *InlineResponse20067) SetAllowedUrls(v []InlineResponse20067AllowedUrls)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasDeploymentMode
+### HasAllowedUrls
 
-`func (o *InlineResponse20067) HasDeploymentMode() bool`
+`func (o *InlineResponse20067) HasAllowedUrls() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetDynamicDns
+### GetAllowedFiles
 
-`func (o *InlineResponse20067) GetDynamicDns() InlineResponse20067DynamicDns`
+`func (o *InlineResponse20067) GetAllowedFiles() []InlineResponse20067AllowedFiles`
 
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetDynamicDnsOk
+### GetAllowedFilesOk
 
-`func (o *InlineResponse20067) GetDynamicDnsOk() (*InlineResponse20067DynamicDns, bool)`
+`func (o *InlineResponse20067) GetAllowedFilesOk() (*[]InlineResponse20067AllowedFiles, bool)`
 
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicDns
+### SetAllowedFiles
 
-`func (o *InlineResponse20067) SetDynamicDns(v InlineResponse20067DynamicDns)`
+`func (o *InlineResponse20067) SetAllowedFiles(v []InlineResponse20067AllowedFiles)`
 
-SetDynamicDns sets DynamicDns field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasDynamicDns
+### HasAllowedFiles
 
-`func (o *InlineResponse20067) HasDynamicDns() bool`
+`func (o *InlineResponse20067) HasAllowedFiles() bool`
 
-HasDynamicDns returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

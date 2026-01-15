@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
-**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200216Ranges**](InlineResponse200216Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200216RangesInSeconds**](InlineResponse200216RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineResponse200216WithDefaults instantiates a new InlineResponse200216 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAclId
+### GetEnabled
 
-`func (o *InlineResponse200216) GetAclId() string`
+`func (o *InlineResponse200216) GetEnabled() bool`
 
-GetAclId returns the AclId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAclIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200216) GetAclIdOk() (*string, bool)`
+`func (o *InlineResponse200216) GetEnabledOk() (*bool, bool)`
 
-GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAclId
+### SetEnabled
 
-`func (o *InlineResponse200216) SetAclId(v string)`
+`func (o *InlineResponse200216) SetEnabled(v bool)`
 
-SetAclId sets AclId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAclId
+### HasEnabled
 
-`func (o *InlineResponse200216) HasAclId() bool`
+`func (o *InlineResponse200216) HasEnabled() bool`
 
-HasAclId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetRanges
 
-`func (o *InlineResponse200216) GetName() string`
+`func (o *InlineResponse200216) GetRanges() []InlineResponse200216Ranges`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRangesOk
 
-`func (o *InlineResponse200216) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200216) GetRangesOk() (*[]InlineResponse200216Ranges, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRanges
 
-`func (o *InlineResponse200216) SetName(v string)`
+`func (o *InlineResponse200216) SetRanges(v []InlineResponse200216Ranges)`
 
-SetName sets Name field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasName
+### HasRanges
 
-`func (o *InlineResponse200216) HasName() bool`
+`func (o *InlineResponse200216) HasRanges() bool`
 
-HasName returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetDescription
+### GetRangesInSeconds
 
-`func (o *InlineResponse200216) GetDescription() string`
+`func (o *InlineResponse200216) GetRangesInSeconds() []InlineResponse200216RangesInSeconds`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetRangesInSecondsOk
 
-`func (o *InlineResponse200216) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200216) GetRangesInSecondsOk() (*[]InlineResponse200216RangesInSeconds, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetRangesInSeconds
 
-`func (o *InlineResponse200216) SetDescription(v string)`
+`func (o *InlineResponse200216) SetRangesInSeconds(v []InlineResponse200216RangesInSeconds)`
 
-SetDescription sets Description field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasDescription
+### HasRangesInSeconds
 
-`func (o *InlineResponse200216) HasDescription() bool`
+`func (o *InlineResponse200216) HasRangesInSeconds() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetIpVersion
-
-`func (o *InlineResponse200216) GetIpVersion() string`
-
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
-
-### GetIpVersionOk
-
-`func (o *InlineResponse200216) GetIpVersionOk() (*string, bool)`
-
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpVersion
-
-`func (o *InlineResponse200216) SetIpVersion(v string)`
-
-SetIpVersion sets IpVersion field to given value.
-
-### HasIpVersion
-
-`func (o *InlineResponse200216) HasIpVersion() bool`
-
-HasIpVersion returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineResponse200216) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineResponse200216) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineResponse200216) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineResponse200216) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200216) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200216) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200216) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200216) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200216) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200216) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200216) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200216) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

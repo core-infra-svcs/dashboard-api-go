@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200377Items**](InlineResponse200377Items.md) | The paginated dataset | [optional] 
+**Items** | Pointer to [**[]InlineResponse200377Items**](InlineResponse200377Items.md) | List of CRLs for the specified CAs | [optional] 
 **Meta** | Pointer to [**InlineResponse200377Meta**](InlineResponse200377Meta.md) |  | [optional] 
 
 ## Methods

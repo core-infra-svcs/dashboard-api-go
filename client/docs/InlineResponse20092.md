@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
-**PoliciesBySsid** | Pointer to [**[]InlineResponse20092PoliciesBySsid**](InlineResponse20092PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
+**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
+**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
+**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
+**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetTs
 
-`func (o *InlineResponse20092) GetMac() string`
+`func (o *InlineResponse20092) GetTs() time.Time`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetTsOk
 
-`func (o *InlineResponse20092) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20092) GetTsOk() (*time.Time, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetTs
 
-`func (o *InlineResponse20092) SetMac(v string)`
+`func (o *InlineResponse20092) SetTs(v time.Time)`
 
-SetMac sets Mac field to given value.
+SetTs sets Ts field to given value.
 
-### HasMac
+### HasTs
 
-`func (o *InlineResponse20092) HasMac() bool`
+`func (o *InlineResponse20092) HasTs() bool`
 
-HasMac returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetDevicePolicy
+### GetTotal
 
-`func (o *InlineResponse20092) GetDevicePolicy() string`
+`func (o *InlineResponse20092) GetTotal() float32`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetTotalOk
 
-`func (o *InlineResponse20092) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineResponse20092) GetTotalOk() (*float32, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetTotal
 
-`func (o *InlineResponse20092) SetDevicePolicy(v string)`
+`func (o *InlineResponse20092) SetTotal(v float32)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetTotal sets Total field to given value.
 
-### HasDevicePolicy
+### HasTotal
 
-`func (o *InlineResponse20092) HasDevicePolicy() bool`
+`func (o *InlineResponse20092) HasTotal() bool`
 
-HasDevicePolicy returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetUpstream
 
-`func (o *InlineResponse20092) GetGroupPolicyId() string`
+`func (o *InlineResponse20092) GetUpstream() float32`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetUpstreamOk
 
-`func (o *InlineResponse20092) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse20092) GetUpstreamOk() (*float32, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetUpstream
 
-`func (o *InlineResponse20092) SetGroupPolicyId(v string)`
+`func (o *InlineResponse20092) SetUpstream(v float32)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasGroupPolicyId
+### HasUpstream
 
-`func (o *InlineResponse20092) HasGroupPolicyId() bool`
+`func (o *InlineResponse20092) HasUpstream() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetPoliciesBySsid
+### GetDownstream
 
-`func (o *InlineResponse20092) GetPoliciesBySsid() []InlineResponse20092PoliciesBySsid`
+`func (o *InlineResponse20092) GetDownstream() float32`
 
-GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetPoliciesBySsidOk
+### GetDownstreamOk
 
-`func (o *InlineResponse20092) GetPoliciesBySsidOk() (*[]InlineResponse20092PoliciesBySsid, bool)`
+`func (o *InlineResponse20092) GetDownstreamOk() (*float32, bool)`
 
-GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPoliciesBySsid
+### SetDownstream
 
-`func (o *InlineResponse20092) SetPoliciesBySsid(v []InlineResponse20092PoliciesBySsid)`
+`func (o *InlineResponse20092) SetDownstream(v float32)`
 
-SetPoliciesBySsid sets PoliciesBySsid field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasPoliciesBySsid
+### HasDownstream
 
-`func (o *InlineResponse20092) HasPoliciesBySsid() bool`
+`func (o *InlineResponse20092) HasDownstream() bool`
 
-HasPoliciesBySsid returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

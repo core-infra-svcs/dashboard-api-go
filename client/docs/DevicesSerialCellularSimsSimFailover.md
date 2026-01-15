@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Failover to secondary SIM (optional) | [optional] 
-**Timeout** | Pointer to **int32** | Failover timeout in seconds (optional) | [optional] 
+**Timeout** | Pointer to **NullableInt32** | Failover timeout in seconds (optional) | [optional] 
 
 ## Methods
 
@@ -76,6 +76,16 @@ SetTimeout sets Timeout field to given value.
 
 HasTimeout returns a boolean if a field has been set.
 
+### SetTimeoutNil
+
+`func (o *DevicesSerialCellularSimsSimFailover) SetTimeoutNil(b bool)`
+
+ SetTimeoutNil sets the value for Timeout to be an explicit nil
+
+### UnsetTimeout
+`func (o *DevicesSerialCellularSimsSimFailover) UnsetTimeout()`
+
+UnsetTimeout ensures that no value is present for Timeout, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

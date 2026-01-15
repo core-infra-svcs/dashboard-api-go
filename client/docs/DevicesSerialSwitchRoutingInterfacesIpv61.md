@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssignmentMode** | Pointer to **string** | The IPv6 assignment mode for the interface. Can be either &#39;eui-64&#39; or &#39;static&#39;. | [optional] 
-**Prefix** | Pointer to **string** | The IPv6 prefix of the interface. Required if IPv6 object is included. | [optional] 
-**Address** | Pointer to **string** | The IPv6 address of the interface. Required if assignmentMode is &#39;static&#39;. Must not be included if           assignmentMode is &#39;eui-64&#39;. | [optional] 
+**AssignmentMode** | Pointer to **NullableString** | The IPv6 assignment mode for the interface. Can be either &#39;eui-64&#39; or &#39;static&#39;. | [optional] 
+**Prefix** | Pointer to **NullableString** | The IPv6 prefix of the interface. Required if IPv6 object is included. | [optional] 
+**Address** | Pointer to **NullableString** | The IPv6 address of the interface. Required if assignmentMode is &#39;static&#39;. Must not be included if           assignmentMode is &#39;eui-64&#39;. | [optional] 
 **Gateway** | Pointer to **string** | The IPv6 default gateway of the interface. Required if prefix is defined and this is the first           interface with IPv6 configured. | [optional] 
 
 ## Methods
@@ -53,6 +53,16 @@ SetAssignmentMode sets AssignmentMode field to given value.
 
 HasAssignmentMode returns a boolean if a field has been set.
 
+### SetAssignmentModeNil
+
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv61) SetAssignmentModeNil(b bool)`
+
+ SetAssignmentModeNil sets the value for AssignmentMode to be an explicit nil
+
+### UnsetAssignmentMode
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv61) UnsetAssignmentMode()`
+
+UnsetAssignmentMode ensures that no value is present for AssignmentMode, not even an explicit nil
 ### GetPrefix
 
 `func (o *DevicesSerialSwitchRoutingInterfacesIpv61) GetPrefix() string`
@@ -78,6 +88,16 @@ SetPrefix sets Prefix field to given value.
 
 HasPrefix returns a boolean if a field has been set.
 
+### SetPrefixNil
+
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv61) SetPrefixNil(b bool)`
+
+ SetPrefixNil sets the value for Prefix to be an explicit nil
+
+### UnsetPrefix
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv61) UnsetPrefix()`
+
+UnsetPrefix ensures that no value is present for Prefix, not even an explicit nil
 ### GetAddress
 
 `func (o *DevicesSerialSwitchRoutingInterfacesIpv61) GetAddress() string`
@@ -103,6 +123,16 @@ SetAddress sets Address field to given value.
 
 HasAddress returns a boolean if a field has been set.
 
+### SetAddressNil
+
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv61) SetAddressNil(b bool)`
+
+ SetAddressNil sets the value for Address to be an explicit nil
+
+### UnsetAddress
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv61) UnsetAddress()`
+
+UnsetAddress ensures that no value is present for Address, not even an explicit nil
 ### GetGateway
 
 `func (o *DevicesSerialSwitchRoutingInterfacesIpv61) GetGateway() string`

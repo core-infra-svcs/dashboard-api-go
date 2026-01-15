@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Contents** | Pointer to **string** | The contents of the CA certificate. Must be in PEM or DER format. | [optional] 
+**Contents** | Pointer to **NullableString** | The contents of the CA certificate. Must be in PEM or DER format. | [optional] 
 
 ## Methods
 
@@ -50,6 +50,16 @@ SetContents sets Contents field to given value.
 
 HasContents returns a boolean if a field has been set.
 
+### SetContentsNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdapServerCaCertificate) SetContentsNil(b bool)`
+
+ SetContentsNil sets the value for Contents to be an explicit nil
+
+### UnsetContents
+`func (o *NetworksNetworkIdWirelessSsidsNumberLdapServerCaCertificate) UnsetContents()`
+
+UnsetContents ensures that no value is present for Contents, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

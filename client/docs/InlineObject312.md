@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
+**Description** | Pointer to **string** | The description of mac address | [optional] 
+**Client** | [**InlineResponse200385Client**](InlineResponse200385Client.md) |  | 
+**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
+**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
 
 ## Methods
 
 ### NewInlineObject312
 
-`func NewInlineObject312() *InlineObject312`
+`func NewInlineObject312(client InlineResponse200385Client, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject312`
 
 NewInlineObject312 instantiates a new InlineObject312 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +28,90 @@ NewInlineObject312WithDefaults instantiates a new InlineObject312 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDoorLockIds
+### GetDescription
 
-`func (o *InlineObject312) GetDoorLockIds() []string`
+`func (o *InlineObject312) GetDescription() string`
 
-GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetDoorLockIdsOk
+### GetDescriptionOk
 
-`func (o *InlineObject312) GetDoorLockIdsOk() (*[]string, bool)`
+`func (o *InlineObject312) GetDescriptionOk() (*string, bool)`
 
-GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLockIds
+### SetDescription
 
-`func (o *InlineObject312) SetDoorLockIds(v []string)`
+`func (o *InlineObject312) SetDescription(v string)`
 
-SetDoorLockIds sets DoorLockIds field to given value.
+SetDescription sets Description field to given value.
 
-### HasDoorLockIds
+### HasDescription
 
-`func (o *InlineObject312) HasDoorLockIds() bool`
+`func (o *InlineObject312) HasDescription() bool`
 
-HasDoorLockIds returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### GetClient
+
+`func (o *InlineObject312) GetClient() InlineResponse200385Client`
+
+GetClient returns the Client field if non-nil, zero value otherwise.
+
+### GetClientOk
+
+`func (o *InlineObject312) GetClientOk() (*InlineResponse200385Client, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClient
+
+`func (o *InlineObject312) SetClient(v InlineResponse200385Client)`
+
+SetClient sets Client field to given value.
+
+
+### GetSsid
+
+`func (o *InlineObject312) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineObject312) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineObject312) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
+
+SetSsid sets Ssid field to given value.
+
+
+### GetNetwork
+
+`func (o *InlineObject312) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineObject312) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineObject312) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
+
+SetNetwork sets Network field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

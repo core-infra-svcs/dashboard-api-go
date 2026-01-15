@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 **PeerSgtCapable** | Pointer to **bool** | If true, Peer SGT is enabled for traffic through this switch port. Applicable to trunk port only, not access port. Cannot be applied to a port on a switch bound to profile. | [optional] 
 **FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
 **DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
-**Profile** | Pointer to [**DevicesSerialSwitchPortsProfile**](DevicesSerialSwitchPortsProfile.md) |  | [optional] 
+**Profile** | Pointer to [**DevicesSerialSwitchPortsPortIdProfile**](DevicesSerialSwitchPortsPortIdProfile.md) |  | [optional] 
 **Dot3az** | Pointer to [**DevicesSerialSwitchPortsDot3az**](DevicesSerialSwitchPortsDot3az.md) |  | [optional] 
 **HighSpeed** | Pointer to [**DevicesSerialSwitchPortsHighSpeed**](DevicesSerialSwitchPortsHighSpeed.md) |  | [optional] 
 
@@ -755,20 +755,20 @@ HasDaiTrusted returns a boolean if a field has been set.
 
 ### GetProfile
 
-`func (o *InlineObject29) GetProfile() DevicesSerialSwitchPortsProfile`
+`func (o *InlineObject29) GetProfile() DevicesSerialSwitchPortsPortIdProfile`
 
 GetProfile returns the Profile field if non-nil, zero value otherwise.
 
 ### GetProfileOk
 
-`func (o *InlineObject29) GetProfileOk() (*DevicesSerialSwitchPortsProfile, bool)`
+`func (o *InlineObject29) GetProfileOk() (*DevicesSerialSwitchPortsPortIdProfile, bool)`
 
 GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProfile
 
-`func (o *InlineObject29) SetProfile(v DevicesSerialSwitchPortsProfile)`
+`func (o *InlineObject29) SetProfile(v DevicesSerialSwitchPortsPortIdProfile)`
 
 SetProfile sets Profile field to given value.
 

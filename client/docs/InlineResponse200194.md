@@ -4,11 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
+**OccurredAt** | Pointer to **time.Time** | Timestamp at which the event occurred | [optional] 
+**Band** | Pointer to **string** | Wireless band the event occurred on | [optional] 
+**SsidNumber** | Pointer to **int32** | Number of the SSID the event occurred in | [optional] 
+**Type** | Pointer to **string** | Event type | [optional] 
+**Subtype** | Pointer to **string** | Event subtype | [optional] 
+**Severity** | Pointer to **string** | Event severity | [optional] 
+**DurationMs** | Pointer to **int32** | Duration of the event in milliseconds | [optional] 
+**Channel** | Pointer to **int32** | Wireless channel the event occurred over | [optional] 
+**Rssi** | Pointer to **int32** | RSSI recorded at the time of the event | [optional] 
+**EventData** | Pointer to **map[string]interface{}** | Additional information relevant to the given event. Properties vary based on event type. | [optional] 
+**DeviceSerial** | Pointer to **string** | Serial number of the device the event occurred for | [optional] 
+**CaptureId** | Pointer to **string** | Id of the packet capture triggered for the event, if any | [optional] 
 
 ## Methods
 
@@ -29,130 +36,305 @@ NewInlineResponse200194WithDefaults instantiates a new InlineResponse200194 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetOccurredAt
 
-`func (o *InlineResponse200194) GetProfileId() string`
+`func (o *InlineResponse200194) GetOccurredAt() time.Time`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetOccurredAt returns the OccurredAt field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetOccurredAtOk
 
-`func (o *InlineResponse200194) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200194) GetOccurredAtOk() (*time.Time, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetOccurredAtOk returns a tuple with the OccurredAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetOccurredAt
 
-`func (o *InlineResponse200194) SetProfileId(v string)`
+`func (o *InlineResponse200194) SetOccurredAt(v time.Time)`
 
-SetProfileId sets ProfileId field to given value.
+SetOccurredAt sets OccurredAt field to given value.
 
-### HasProfileId
+### HasOccurredAt
 
-`func (o *InlineResponse200194) HasProfileId() bool`
+`func (o *InlineResponse200194) HasOccurredAt() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasOccurredAt returns a boolean if a field has been set.
 
-### GetName
+### GetBand
 
-`func (o *InlineResponse200194) GetName() string`
+`func (o *InlineResponse200194) GetBand() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBand returns the Band field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBandOk
 
-`func (o *InlineResponse200194) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200194) GetBandOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBandOk returns a tuple with the Band field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBand
 
-`func (o *InlineResponse200194) SetName(v string)`
+`func (o *InlineResponse200194) SetBand(v string)`
 
-SetName sets Name field to given value.
+SetBand sets Band field to given value.
 
-### HasName
+### HasBand
 
-`func (o *InlineResponse200194) HasName() bool`
+`func (o *InlineResponse200194) HasBand() bool`
 
-HasName returns a boolean if a field has been set.
+HasBand returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetSsidNumber
 
-`func (o *InlineResponse200194) GetIsDefault() bool`
+`func (o *InlineResponse200194) GetSsidNumber() int32`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetSsidNumberOk
 
-`func (o *InlineResponse200194) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200194) GetSsidNumberOk() (*int32, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetSsidNumber
 
-`func (o *InlineResponse200194) SetIsDefault(v bool)`
+`func (o *InlineResponse200194) SetSsidNumber(v int32)`
 
-SetIsDefault sets IsDefault field to given value.
+SetSsidNumber sets SsidNumber field to given value.
 
-### HasIsDefault
+### HasSsidNumber
 
-`func (o *InlineResponse200194) HasIsDefault() bool`
+`func (o *InlineResponse200194) HasSsidNumber() bool`
 
-HasIsDefault returns a boolean if a field has been set.
+HasSsidNumber returns a boolean if a field has been set.
 
-### GetPorts
+### GetType
 
-`func (o *InlineResponse200194) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
+`func (o *InlineResponse200194) GetType() string`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetTypeOk
 
-`func (o *InlineResponse200194) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
+`func (o *InlineResponse200194) GetTypeOk() (*string, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetType
 
-`func (o *InlineResponse200194) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
+`func (o *InlineResponse200194) SetType(v string)`
 
-SetPorts sets Ports field to given value.
+SetType sets Type field to given value.
 
-### HasPorts
+### HasType
 
-`func (o *InlineResponse200194) HasPorts() bool`
+`func (o *InlineResponse200194) HasType() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetUsbPorts
+### GetSubtype
 
-`func (o *InlineResponse200194) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
+`func (o *InlineResponse200194) GetSubtype() string`
 
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+GetSubtype returns the Subtype field if non-nil, zero value otherwise.
 
-### GetUsbPortsOk
+### GetSubtypeOk
 
-`func (o *InlineResponse200194) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
+`func (o *InlineResponse200194) GetSubtypeOk() (*string, bool)`
 
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+GetSubtypeOk returns a tuple with the Subtype field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsbPorts
+### SetSubtype
 
-`func (o *InlineResponse200194) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
+`func (o *InlineResponse200194) SetSubtype(v string)`
 
-SetUsbPorts sets UsbPorts field to given value.
+SetSubtype sets Subtype field to given value.
 
-### HasUsbPorts
+### HasSubtype
 
-`func (o *InlineResponse200194) HasUsbPorts() bool`
+`func (o *InlineResponse200194) HasSubtype() bool`
 
-HasUsbPorts returns a boolean if a field has been set.
+HasSubtype returns a boolean if a field has been set.
+
+### GetSeverity
+
+`func (o *InlineResponse200194) GetSeverity() string`
+
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
+
+### GetSeverityOk
+
+`func (o *InlineResponse200194) GetSeverityOk() (*string, bool)`
+
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverity
+
+`func (o *InlineResponse200194) SetSeverity(v string)`
+
+SetSeverity sets Severity field to given value.
+
+### HasSeverity
+
+`func (o *InlineResponse200194) HasSeverity() bool`
+
+HasSeverity returns a boolean if a field has been set.
+
+### GetDurationMs
+
+`func (o *InlineResponse200194) GetDurationMs() int32`
+
+GetDurationMs returns the DurationMs field if non-nil, zero value otherwise.
+
+### GetDurationMsOk
+
+`func (o *InlineResponse200194) GetDurationMsOk() (*int32, bool)`
+
+GetDurationMsOk returns a tuple with the DurationMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDurationMs
+
+`func (o *InlineResponse200194) SetDurationMs(v int32)`
+
+SetDurationMs sets DurationMs field to given value.
+
+### HasDurationMs
+
+`func (o *InlineResponse200194) HasDurationMs() bool`
+
+HasDurationMs returns a boolean if a field has been set.
+
+### GetChannel
+
+`func (o *InlineResponse200194) GetChannel() int32`
+
+GetChannel returns the Channel field if non-nil, zero value otherwise.
+
+### GetChannelOk
+
+`func (o *InlineResponse200194) GetChannelOk() (*int32, bool)`
+
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChannel
+
+`func (o *InlineResponse200194) SetChannel(v int32)`
+
+SetChannel sets Channel field to given value.
+
+### HasChannel
+
+`func (o *InlineResponse200194) HasChannel() bool`
+
+HasChannel returns a boolean if a field has been set.
+
+### GetRssi
+
+`func (o *InlineResponse200194) GetRssi() int32`
+
+GetRssi returns the Rssi field if non-nil, zero value otherwise.
+
+### GetRssiOk
+
+`func (o *InlineResponse200194) GetRssiOk() (*int32, bool)`
+
+GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRssi
+
+`func (o *InlineResponse200194) SetRssi(v int32)`
+
+SetRssi sets Rssi field to given value.
+
+### HasRssi
+
+`func (o *InlineResponse200194) HasRssi() bool`
+
+HasRssi returns a boolean if a field has been set.
+
+### GetEventData
+
+`func (o *InlineResponse200194) GetEventData() map[string]interface{}`
+
+GetEventData returns the EventData field if non-nil, zero value otherwise.
+
+### GetEventDataOk
+
+`func (o *InlineResponse200194) GetEventDataOk() (*map[string]interface{}, bool)`
+
+GetEventDataOk returns a tuple with the EventData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEventData
+
+`func (o *InlineResponse200194) SetEventData(v map[string]interface{})`
+
+SetEventData sets EventData field to given value.
+
+### HasEventData
+
+`func (o *InlineResponse200194) HasEventData() bool`
+
+HasEventData returns a boolean if a field has been set.
+
+### GetDeviceSerial
+
+`func (o *InlineResponse200194) GetDeviceSerial() string`
+
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+
+### GetDeviceSerialOk
+
+`func (o *InlineResponse200194) GetDeviceSerialOk() (*string, bool)`
+
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceSerial
+
+`func (o *InlineResponse200194) SetDeviceSerial(v string)`
+
+SetDeviceSerial sets DeviceSerial field to given value.
+
+### HasDeviceSerial
+
+`func (o *InlineResponse200194) HasDeviceSerial() bool`
+
+HasDeviceSerial returns a boolean if a field has been set.
+
+### GetCaptureId
+
+`func (o *InlineResponse200194) GetCaptureId() string`
+
+GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
+
+### GetCaptureIdOk
+
+`func (o *InlineResponse200194) GetCaptureIdOk() (*string, bool)`
+
+GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCaptureId
+
+`func (o *InlineResponse200194) SetCaptureId(v string)`
+
+SetCaptureId sets CaptureId field to given value.
+
+### HasCaptureId
+
+`func (o *InlineResponse200194) HasCaptureId() bool`
+
+HasCaptureId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Ip** | Pointer to **string** | The IP address of the ARP table entry | [optional] 
 **Mac** | Pointer to **string** | The MAC address of the ARP table entry | [optional] 
 **VlanId** | Pointer to **int32** | The VLAN ID of the ARP table entry | [optional] 
+**Interface** | Pointer to **string** | The interface name of the ARP table entry, such as Vlan1, Port-channel2, or GigabitEthernet1/0/1 | [optional] 
 **LastUpdatedAt** | Pointer to **time.Time** | Time of the last update of the ARP table entry | [optional] 
 
 ## Methods
@@ -102,6 +103,31 @@ SetVlanId sets VlanId field to given value.
 `func (o *InlineResponse20022Entries) HasVlanId() bool`
 
 HasVlanId returns a boolean if a field has been set.
+
+### GetInterface
+
+`func (o *InlineResponse20022Entries) GetInterface() string`
+
+GetInterface returns the Interface field if non-nil, zero value otherwise.
+
+### GetInterfaceOk
+
+`func (o *InlineResponse20022Entries) GetInterfaceOk() (*string, bool)`
+
+GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterface
+
+`func (o *InlineResponse20022Entries) SetInterface(v string)`
+
+SetInterface sets Interface field to given value.
+
+### HasInterface
+
+`func (o *InlineResponse20022Entries) HasInterface() bool`
+
+HasInterface returns a boolean if a field has been set.
 
 ### GetLastUpdatedAt
 

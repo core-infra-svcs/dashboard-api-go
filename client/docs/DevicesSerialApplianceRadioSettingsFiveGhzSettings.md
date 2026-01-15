@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Channel** | Pointer to **int32** | Sets a manual channel for 5 GHz. Can be &#39;36&#39;, &#39;40&#39;, &#39;44&#39;, &#39;48&#39;, &#39;52&#39;, &#39;56&#39;, &#39;60&#39;, &#39;64&#39;, &#39;100&#39;, &#39;104&#39;, &#39;108&#39;, &#39;112&#39;, &#39;116&#39;, &#39;120&#39;, &#39;124&#39;, &#39;128&#39;, &#39;132&#39;, &#39;136&#39;, &#39;140&#39;, &#39;144&#39;, &#39;149&#39;, &#39;153&#39;, &#39;157&#39;, &#39;161&#39;, &#39;165&#39;, &#39;169&#39;, &#39;173&#39; or &#39;177&#39; or null for using auto channel. | [optional] 
-**ChannelWidth** | Pointer to **int32** | Sets a manual channel width for 5 GHz. Can be &#39;0&#39;, &#39;20&#39;, &#39;40&#39;, &#39;80&#39; or &#39;160&#39; or null for using auto channel width. | [optional] 
-**TargetPower** | Pointer to **int32** | Set a manual target power for 5 GHz (dBm). Enter null for using auto power range. | [optional] 
+**Channel** | Pointer to **NullableInt32** | Sets a manual channel for 5 GHz. Can be &#39;36&#39;, &#39;40&#39;, &#39;44&#39;, &#39;48&#39;, &#39;52&#39;, &#39;56&#39;, &#39;60&#39;, &#39;64&#39;, &#39;100&#39;, &#39;104&#39;, &#39;108&#39;, &#39;112&#39;, &#39;116&#39;, &#39;120&#39;, &#39;124&#39;, &#39;128&#39;, &#39;132&#39;, &#39;136&#39;, &#39;140&#39;, &#39;144&#39;, &#39;149&#39;, &#39;153&#39;, &#39;157&#39;, &#39;161&#39;, &#39;165&#39;, &#39;169&#39;, &#39;173&#39; or &#39;177&#39; or null for using auto channel. | [optional] 
+**ChannelWidth** | Pointer to **NullableInt32** | Sets a manual channel width for 5 GHz. Can be &#39;0&#39;, &#39;20&#39;, &#39;40&#39;, &#39;80&#39; or &#39;160&#39; or null for using auto channel width. | [optional] 
+**TargetPower** | Pointer to **NullableInt32** | Set a manual target power for 5 GHz (dBm). Enter null for using auto power range. | [optional] 
 
 ## Methods
 
@@ -52,6 +52,16 @@ SetChannel sets Channel field to given value.
 
 HasChannel returns a boolean if a field has been set.
 
+### SetChannelNil
+
+`func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) SetChannelNil(b bool)`
+
+ SetChannelNil sets the value for Channel to be an explicit nil
+
+### UnsetChannel
+`func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) UnsetChannel()`
+
+UnsetChannel ensures that no value is present for Channel, not even an explicit nil
 ### GetChannelWidth
 
 `func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) GetChannelWidth() int32`
@@ -77,6 +87,16 @@ SetChannelWidth sets ChannelWidth field to given value.
 
 HasChannelWidth returns a boolean if a field has been set.
 
+### SetChannelWidthNil
+
+`func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) SetChannelWidthNil(b bool)`
+
+ SetChannelWidthNil sets the value for ChannelWidth to be an explicit nil
+
+### UnsetChannelWidth
+`func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) UnsetChannelWidth()`
+
+UnsetChannelWidth ensures that no value is present for ChannelWidth, not even an explicit nil
 ### GetTargetPower
 
 `func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) GetTargetPower() int32`
@@ -102,6 +122,16 @@ SetTargetPower sets TargetPower field to given value.
 
 HasTargetPower returns a boolean if a field has been set.
 
+### SetTargetPowerNil
+
+`func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) SetTargetPowerNil(b bool)`
+
+ SetTargetPowerNil sets the value for TargetPower to be an explicit nil
+
+### UnsetTargetPower
+`func (o *DevicesSerialApplianceRadioSettingsFiveGhzSettings) UnsetTargetPower()`
+
+UnsetTargetPower ensures that no value is present for TargetPower, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

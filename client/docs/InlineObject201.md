@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
-**Operator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Operator**](NetworksNetworkIdWirelessSsidsNumberHotspot20Operator.md) |  | [optional] 
+**Operator** | Pointer to [**InlineResponse200213Operator**](InlineResponse200213Operator.md) |  | [optional] 
 **Venue** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Venue**](NetworksNetworkIdWirelessSsidsNumberHotspot20Venue.md) |  | [optional] 
 **NetworkAccessType** | Pointer to **string** | The network type of this SSID (&#39;Private network&#39;, &#39;Private network with guest access&#39;, &#39;Chargeable public network&#39;, &#39;Free public network&#39;, &#39;Personal device network&#39;, &#39;Emergency services only network&#39;, &#39;Test or experimental&#39;, &#39;Wildcard&#39;) | [optional] 
 **Domains** | Pointer to **[]string** | An array of domain names | [optional] 
 **RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
-**MccMncs** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs**](NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**MccMncs** | Pointer to [**[]InlineResponse200213MccMncs**](InlineResponse200213MccMncs.md) | An array of MCC/MNC pairs | [optional] 
 **NaiRealms** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms**](NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
@@ -59,20 +59,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetOperator
 
-`func (o *InlineObject201) GetOperator() NetworksNetworkIdWirelessSsidsNumberHotspot20Operator`
+`func (o *InlineObject201) GetOperator() InlineResponse200213Operator`
 
 GetOperator returns the Operator field if non-nil, zero value otherwise.
 
 ### GetOperatorOk
 
-`func (o *InlineObject201) GetOperatorOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Operator, bool)`
+`func (o *InlineObject201) GetOperatorOk() (*InlineResponse200213Operator, bool)`
 
 GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOperator
 
-`func (o *InlineObject201) SetOperator(v NetworksNetworkIdWirelessSsidsNumberHotspot20Operator)`
+`func (o *InlineObject201) SetOperator(v InlineResponse200213Operator)`
 
 SetOperator sets Operator field to given value.
 
@@ -184,20 +184,20 @@ HasRoamConsortOis returns a boolean if a field has been set.
 
 ### GetMccMncs
 
-`func (o *InlineObject201) GetMccMncs() []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs`
+`func (o *InlineObject201) GetMccMncs() []InlineResponse200213MccMncs`
 
 GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
 
 ### GetMccMncsOk
 
-`func (o *InlineObject201) GetMccMncsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs, bool)`
+`func (o *InlineObject201) GetMccMncsOk() (*[]InlineResponse200213MccMncs, bool)`
 
 GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMccMncs
 
-`func (o *InlineObject201) SetMccMncs(v []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs)`
+`func (o *InlineObject201) SetMccMncs(v []InlineResponse200213MccMncs)`
 
 SetMccMncs sets MccMncs field to given value.
 

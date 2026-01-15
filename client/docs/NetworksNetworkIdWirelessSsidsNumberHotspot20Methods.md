@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | ID of method | [optional] 
-**AuthenticationTypes** | Pointer to **map[string]interface{}** | The authentication types for the method. These should be formatted as an object with the EAP method category in camelcase as the key and the list of types as the value (nonEapInnerAuthentication: Reserved, PAP, CHAP, MSCHAP, MSCHAPV2; eapInnerAuthentication: EAP-TLS, EAP-SIM, EAP-AKA, EAP-TTLS with MSCHAPv2; credentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, none, Reserved, Vendor Specific; tunneledEapMethodCredentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, Reserved, Anonymous, Vendor Specific) | [optional] 
+**AuthenticationTypes** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20AuthenticationTypes**](NetworksNetworkIdWirelessSsidsNumberHotspot20AuthenticationTypes.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetAuthenticationTypes
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberHotspot20Methods) GetAuthenticationTypes() map[string]interface{}`
+`func (o *NetworksNetworkIdWirelessSsidsNumberHotspot20Methods) GetAuthenticationTypes() NetworksNetworkIdWirelessSsidsNumberHotspot20AuthenticationTypes`
 
 GetAuthenticationTypes returns the AuthenticationTypes field if non-nil, zero value otherwise.
 
 ### GetAuthenticationTypesOk
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberHotspot20Methods) GetAuthenticationTypesOk() (*map[string]interface{}, bool)`
+`func (o *NetworksNetworkIdWirelessSsidsNumberHotspot20Methods) GetAuthenticationTypesOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20AuthenticationTypes, bool)`
 
 GetAuthenticationTypesOk returns a tuple with the AuthenticationTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAuthenticationTypes
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberHotspot20Methods) SetAuthenticationTypes(v map[string]interface{})`
+`func (o *NetworksNetworkIdWirelessSsidsNumberHotspot20Methods) SetAuthenticationTypes(v NetworksNetworkIdWirelessSsidsNumberHotspot20AuthenticationTypes)`
 
 SetAuthenticationTypes sets AuthenticationTypes field to given value.
 

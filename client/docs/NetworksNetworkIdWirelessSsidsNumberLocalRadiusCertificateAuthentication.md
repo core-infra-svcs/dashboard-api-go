@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** | Whether or not to use EAP-TLS certificate-based authentication to validate wireless clients. | [optional] 
 **UseLdap** | Pointer to **bool** | Whether or not to verify the certificate with LDAP. | [optional] 
 **UseOcsp** | Pointer to **bool** | Whether or not to verify the certificate with OCSP. | [optional] 
-**OcspResponderUrl** | Pointer to **string** | (Optional) The URL of the OCSP responder to verify client certificate status. | [optional] 
+**OcspResponderUrl** | Pointer to **NullableString** | (Optional) The URL of the OCSP responder to verify client certificate status. | [optional] 
 **ClientRootCaCertificate** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberLocalRadiusCertificateAuthenticationClientRootCaCertificate**](NetworksNetworkIdWirelessSsidsNumberLocalRadiusCertificateAuthenticationClientRootCaCertificate.md) |  | [optional] 
 
 ## Methods
@@ -129,6 +129,16 @@ SetOcspResponderUrl sets OcspResponderUrl field to given value.
 
 HasOcspResponderUrl returns a boolean if a field has been set.
 
+### SetOcspResponderUrlNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberLocalRadiusCertificateAuthentication) SetOcspResponderUrlNil(b bool)`
+
+ SetOcspResponderUrlNil sets the value for OcspResponderUrl to be an explicit nil
+
+### UnsetOcspResponderUrl
+`func (o *NetworksNetworkIdWirelessSsidsNumberLocalRadiusCertificateAuthentication) UnsetOcspResponderUrl()`
+
+UnsetOcspResponderUrl ensures that no value is present for OcspResponderUrl, not even an explicit nil
 ### GetClientRootCaCertificate
 
 `func (o *NetworksNetworkIdWirelessSsidsNumberLocalRadiusCertificateAuthentication) GetClientRootCaCertificate() NetworksNetworkIdWirelessSsidsNumberLocalRadiusCertificateAuthenticationClientRootCaCertificate`

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Port** | Pointer to **int32** | Port on the RADIUS server that is listening for accounting messages | [optional] 
 **Secret** | Pointer to **string** | Shared key used to authenticate messages between the APs and RADIUS server | [optional] 
 **RadsecEnabled** | Pointer to **bool** | Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled. | [optional] 
-**CaCertificate** | Pointer to **string** | Certificate used for authorization for the RADSEC Server | [optional] 
+**CaCertificate** | Pointer to **NullableString** | Certificate used for authorization for the RADSEC Server | [optional] 
 
 ## Methods
 
@@ -149,6 +149,16 @@ SetCaCertificate sets CaCertificate field to given value.
 
 HasCaCertificate returns a boolean if a field has been set.
 
+### SetCaCertificateNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberRadiusAccountingServers) SetCaCertificateNil(b bool)`
+
+ SetCaCertificateNil sets the value for CaCertificate to be an explicit nil
+
+### UnsetCaCertificate
+`func (o *NetworksNetworkIdWirelessSsidsNumberRadiusAccountingServers) UnsetCaCertificate()`
+
+UnsetCaCertificate ensures that no value is present for CaCertificate, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

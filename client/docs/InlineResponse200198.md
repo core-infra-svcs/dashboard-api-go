@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
-**Api** | Pointer to [**InlineResponse200198Api**](InlineResponse200198Api.md) |  | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
 
 ## Methods
 
@@ -25,6 +26,31 @@ will change when the set of required properties is changed
 NewInlineResponse200198WithDefaults instantiates a new InlineResponse200198 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetHostname
+
+`func (o *InlineResponse200198) GetHostname() string`
+
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
+
+### GetHostnameOk
+
+`func (o *InlineResponse200198) GetHostnameOk() (*string, bool)`
+
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostname
+
+`func (o *InlineResponse200198) SetHostname(v string)`
+
+SetHostname sets Hostname field to given value.
+
+### HasHostname
+
+`func (o *InlineResponse200198) HasHostname() bool`
+
+HasHostname returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -51,30 +77,30 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetApi
+### GetMode
 
-`func (o *InlineResponse200198) GetApi() InlineResponse200198Api`
+`func (o *InlineResponse200198) GetMode() string`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetModeOk
 
-`func (o *InlineResponse200198) GetApiOk() (*InlineResponse200198Api, bool)`
+`func (o *InlineResponse200198) GetModeOk() (*string, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetMode
 
-`func (o *InlineResponse200198) SetApi(v InlineResponse200198Api)`
+`func (o *InlineResponse200198) SetMode(v string)`
 
-SetApi sets Api field to given value.
+SetMode sets Mode field to given value.
 
-### HasApi
+### HasMode
 
-`func (o *InlineResponse200198) HasApi() bool`
+`func (o *InlineResponse200198) HasMode() bool`
 
-HasApi returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

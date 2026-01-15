@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device Serial number | [optional] 
+**Serial** | Pointer to **NullableString** | Device Serial number | [optional] 
 
 ## Methods
 
@@ -50,6 +50,16 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
+### SetSerialNil
+
+`func (o *NetworksNetworkIdWirelessZigbeeIotController) SetSerialNil(b bool)`
+
+ SetSerialNil sets the value for Serial to be an explicit nil
+
+### UnsetSerial
+`func (o *NetworksNetworkIdWirelessZigbeeIotController) UnsetSerial()`
+
+UnsetSerial ensures that no value is present for Serial, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

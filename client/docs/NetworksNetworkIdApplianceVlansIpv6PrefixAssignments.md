@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Autonomous** | Pointer to **bool** | Auto assign a /64 prefix from the origin to the VLAN | [optional] 
 **StaticPrefix** | Pointer to **string** | Manual configuration of a /64 prefix on the VLAN | [optional] 
 **StaticApplianceIp6** | Pointer to **string** | Manual configuration of the IPv6 Appliance IP | [optional] 
-**Origin** | Pointer to [**InlineResponse20068Ipv6Origin**](InlineResponse20068Ipv6Origin.md) |  | [optional] 
+**Origin** | Pointer to [**InlineResponse20069Ipv6Origin**](InlineResponse20069Ipv6Origin.md) |  | [optional] 
 
 ## Methods
 
@@ -105,20 +105,20 @@ HasStaticApplianceIp6 returns a boolean if a field has been set.
 
 ### GetOrigin
 
-`func (o *NetworksNetworkIdApplianceVlansIpv6PrefixAssignments) GetOrigin() InlineResponse20068Ipv6Origin`
+`func (o *NetworksNetworkIdApplianceVlansIpv6PrefixAssignments) GetOrigin() InlineResponse20069Ipv6Origin`
 
 GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
 ### GetOriginOk
 
-`func (o *NetworksNetworkIdApplianceVlansIpv6PrefixAssignments) GetOriginOk() (*InlineResponse20068Ipv6Origin, bool)`
+`func (o *NetworksNetworkIdApplianceVlansIpv6PrefixAssignments) GetOriginOk() (*InlineResponse20069Ipv6Origin, bool)`
 
 GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOrigin
 
-`func (o *NetworksNetworkIdApplianceVlansIpv6PrefixAssignments) SetOrigin(v InlineResponse20068Ipv6Origin)`
+`func (o *NetworksNetworkIdApplianceVlansIpv6PrefixAssignments) SetOrigin(v InlineResponse20069Ipv6Origin)`
 
 SetOrigin sets Origin field to given value.
 

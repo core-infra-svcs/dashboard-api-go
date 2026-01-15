@@ -4,30 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number of the sensor that took the reading. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
-**Ts** | Pointer to **string** | Time at which the reading occurred, in ISO8601 format. | [optional] 
-**Metric** | Pointer to **string** | Type of sensor reading. | [optional] 
-**ApparentPower** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryApparentPower**](OrganizationsOrganizationIdSensorReadingsHistoryApparentPower.md) |  | [optional] 
-**Battery** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryBattery**](OrganizationsOrganizationIdSensorReadingsHistoryBattery.md) |  | [optional] 
-**Button** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryButton**](OrganizationsOrganizationIdSensorReadingsHistoryButton.md) |  | [optional] 
-**Co2** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryCo2**](OrganizationsOrganizationIdSensorReadingsHistoryCo2.md) |  | [optional] 
-**Current** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryCurrent**](OrganizationsOrganizationIdSensorReadingsHistoryCurrent.md) |  | [optional] 
-**Door** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryDoor**](OrganizationsOrganizationIdSensorReadingsHistoryDoor.md) |  | [optional] 
-**DownstreamPower** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower**](OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower.md) |  | [optional] 
-**Frequency** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryFrequency**](OrganizationsOrganizationIdSensorReadingsHistoryFrequency.md) |  | [optional] 
-**Humidity** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryHumidity**](OrganizationsOrganizationIdSensorReadingsHistoryHumidity.md) |  | [optional] 
-**IndoorAirQuality** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality**](OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality.md) |  | [optional] 
-**Noise** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNoise**](OrganizationsOrganizationIdSensorReadingsHistoryNoise.md) |  | [optional] 
-**Pm25** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryPm25**](OrganizationsOrganizationIdSensorReadingsHistoryPm25.md) |  | [optional] 
-**PowerFactor** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor**](OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor.md) |  | [optional] 
-**RealPower** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryRealPower**](OrganizationsOrganizationIdSensorReadingsHistoryRealPower.md) |  | [optional] 
-**RemoteLockoutSwitch** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch**](OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch.md) |  | [optional] 
-**Temperature** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryTemperature.md) |  | [optional] 
-**Tvoc** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryTvoc**](OrganizationsOrganizationIdSensorReadingsHistoryTvoc.md) |  | [optional] 
-**Voltage** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryVoltage**](OrganizationsOrganizationIdSensorReadingsHistoryVoltage.md) |  | [optional] 
-**Water** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryWater**](OrganizationsOrganizationIdSensorReadingsHistoryWater.md) |  | [optional] 
-**RawTemperature** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature.md) |  | [optional] 
+**EnforcePasswordExpiration** | Pointer to **bool** | Boolean indicating whether users are forced to change their password every X number of days. | [optional] 
+**PasswordExpirationDays** | Pointer to **int32** | Number of days after which users will be forced to change their password. | [optional] 
+**EnforceDifferentPasswords** | Pointer to **bool** | Boolean indicating whether users, when setting a new password, are forced to choose a new password that is different from any past passwords. | [optional] 
+**NumDifferentPasswords** | Pointer to **int32** | Number of recent passwords that new password must be distinct from. | [optional] 
+**EnforceStrongPasswords** | Pointer to **bool** | Deprecated. This will always be &#39;true&#39;. | [optional] 
+**MinimumPasswordLength** | Pointer to **int32** | The minimum number of characters required in admins&#39; passwords. | [optional] 
+**EnforceAccountLockout** | Pointer to **bool** | Boolean indicating whether users&#39; Dashboard accounts will be locked out after a specified number of consecutive failed login attempts. | [optional] 
+**AccountLockoutAttempts** | Pointer to **int32** | Number of consecutive failed login attempts after which users&#39; accounts will be locked. | [optional] 
+**EnforceIdleTimeout** | Pointer to **bool** | Boolean indicating whether users will be logged out after being idle for the specified number of minutes. | [optional] 
+**IdleTimeoutMinutes** | Pointer to **int32** | Number of minutes users can remain idle before being logged out of their accounts. | [optional] 
+**EnforceTwoFactorAuth** | Pointer to **bool** | Boolean indicating whether users in this organization will be required to use an extra verification code when logging in to Dashboard. This code will be sent to their mobile phone via SMS, or can be generated by the authenticator application. | [optional] 
+**EnforceLoginIpRanges** | Pointer to **bool** | Boolean indicating whether organization will restrict access to Dashboard (including the API) from certain IP addresses. | [optional] 
+**LoginIpRanges** | Pointer to **[]string** | List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets. | [optional] 
+**ApiAuthentication** | Pointer to [**InlineResponse200320ApiAuthentication**](InlineResponse200320ApiAuthentication.md) |  | [optional] 
 
 ## Methods
 
@@ -48,605 +38,355 @@ NewInlineResponse200320WithDefaults instantiates a new InlineResponse200320 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetEnforcePasswordExpiration
 
-`func (o *InlineResponse200320) GetSerial() string`
+`func (o *InlineResponse200320) GetEnforcePasswordExpiration() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEnforcePasswordExpiration returns the EnforcePasswordExpiration field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEnforcePasswordExpirationOk
 
-`func (o *InlineResponse200320) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200320) GetEnforcePasswordExpirationOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEnforcePasswordExpirationOk returns a tuple with the EnforcePasswordExpiration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEnforcePasswordExpiration
 
-`func (o *InlineResponse200320) SetSerial(v string)`
+`func (o *InlineResponse200320) SetEnforcePasswordExpiration(v bool)`
 
-SetSerial sets Serial field to given value.
+SetEnforcePasswordExpiration sets EnforcePasswordExpiration field to given value.
 
-### HasSerial
+### HasEnforcePasswordExpiration
 
-`func (o *InlineResponse200320) HasSerial() bool`
+`func (o *InlineResponse200320) HasEnforcePasswordExpiration() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasEnforcePasswordExpiration returns a boolean if a field has been set.
 
-### GetNetwork
+### GetPasswordExpirationDays
 
-`func (o *InlineResponse200320) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
+`func (o *InlineResponse200320) GetPasswordExpirationDays() int32`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetPasswordExpirationDays returns the PasswordExpirationDays field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetPasswordExpirationDaysOk
 
-`func (o *InlineResponse200320) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
+`func (o *InlineResponse200320) GetPasswordExpirationDaysOk() (*int32, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetPasswordExpirationDaysOk returns a tuple with the PasswordExpirationDays field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetPasswordExpirationDays
 
-`func (o *InlineResponse200320) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
+`func (o *InlineResponse200320) SetPasswordExpirationDays(v int32)`
 
-SetNetwork sets Network field to given value.
+SetPasswordExpirationDays sets PasswordExpirationDays field to given value.
 
-### HasNetwork
+### HasPasswordExpirationDays
 
-`func (o *InlineResponse200320) HasNetwork() bool`
+`func (o *InlineResponse200320) HasPasswordExpirationDays() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasPasswordExpirationDays returns a boolean if a field has been set.
 
-### GetTs
+### GetEnforceDifferentPasswords
 
-`func (o *InlineResponse200320) GetTs() string`
+`func (o *InlineResponse200320) GetEnforceDifferentPasswords() bool`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetEnforceDifferentPasswords returns the EnforceDifferentPasswords field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetEnforceDifferentPasswordsOk
 
-`func (o *InlineResponse200320) GetTsOk() (*string, bool)`
+`func (o *InlineResponse200320) GetEnforceDifferentPasswordsOk() (*bool, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetEnforceDifferentPasswordsOk returns a tuple with the EnforceDifferentPasswords field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetEnforceDifferentPasswords
 
-`func (o *InlineResponse200320) SetTs(v string)`
+`func (o *InlineResponse200320) SetEnforceDifferentPasswords(v bool)`
 
-SetTs sets Ts field to given value.
+SetEnforceDifferentPasswords sets EnforceDifferentPasswords field to given value.
 
-### HasTs
+### HasEnforceDifferentPasswords
 
-`func (o *InlineResponse200320) HasTs() bool`
+`func (o *InlineResponse200320) HasEnforceDifferentPasswords() bool`
 
-HasTs returns a boolean if a field has been set.
+HasEnforceDifferentPasswords returns a boolean if a field has been set.
 
-### GetMetric
+### GetNumDifferentPasswords
 
-`func (o *InlineResponse200320) GetMetric() string`
+`func (o *InlineResponse200320) GetNumDifferentPasswords() int32`
 
-GetMetric returns the Metric field if non-nil, zero value otherwise.
+GetNumDifferentPasswords returns the NumDifferentPasswords field if non-nil, zero value otherwise.
 
-### GetMetricOk
+### GetNumDifferentPasswordsOk
 
-`func (o *InlineResponse200320) GetMetricOk() (*string, bool)`
+`func (o *InlineResponse200320) GetNumDifferentPasswordsOk() (*int32, bool)`
 
-GetMetricOk returns a tuple with the Metric field if it's non-nil, zero value otherwise
+GetNumDifferentPasswordsOk returns a tuple with the NumDifferentPasswords field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMetric
+### SetNumDifferentPasswords
 
-`func (o *InlineResponse200320) SetMetric(v string)`
+`func (o *InlineResponse200320) SetNumDifferentPasswords(v int32)`
 
-SetMetric sets Metric field to given value.
+SetNumDifferentPasswords sets NumDifferentPasswords field to given value.
 
-### HasMetric
+### HasNumDifferentPasswords
 
-`func (o *InlineResponse200320) HasMetric() bool`
+`func (o *InlineResponse200320) HasNumDifferentPasswords() bool`
 
-HasMetric returns a boolean if a field has been set.
+HasNumDifferentPasswords returns a boolean if a field has been set.
 
-### GetApparentPower
+### GetEnforceStrongPasswords
 
-`func (o *InlineResponse200320) GetApparentPower() OrganizationsOrganizationIdSensorReadingsHistoryApparentPower`
+`func (o *InlineResponse200320) GetEnforceStrongPasswords() bool`
 
-GetApparentPower returns the ApparentPower field if non-nil, zero value otherwise.
+GetEnforceStrongPasswords returns the EnforceStrongPasswords field if non-nil, zero value otherwise.
 
-### GetApparentPowerOk
+### GetEnforceStrongPasswordsOk
 
-`func (o *InlineResponse200320) GetApparentPowerOk() (*OrganizationsOrganizationIdSensorReadingsHistoryApparentPower, bool)`
+`func (o *InlineResponse200320) GetEnforceStrongPasswordsOk() (*bool, bool)`
 
-GetApparentPowerOk returns a tuple with the ApparentPower field if it's non-nil, zero value otherwise
+GetEnforceStrongPasswordsOk returns a tuple with the EnforceStrongPasswords field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApparentPower
+### SetEnforceStrongPasswords
 
-`func (o *InlineResponse200320) SetApparentPower(v OrganizationsOrganizationIdSensorReadingsHistoryApparentPower)`
+`func (o *InlineResponse200320) SetEnforceStrongPasswords(v bool)`
 
-SetApparentPower sets ApparentPower field to given value.
+SetEnforceStrongPasswords sets EnforceStrongPasswords field to given value.
 
-### HasApparentPower
+### HasEnforceStrongPasswords
 
-`func (o *InlineResponse200320) HasApparentPower() bool`
+`func (o *InlineResponse200320) HasEnforceStrongPasswords() bool`
 
-HasApparentPower returns a boolean if a field has been set.
+HasEnforceStrongPasswords returns a boolean if a field has been set.
 
-### GetBattery
+### GetMinimumPasswordLength
 
-`func (o *InlineResponse200320) GetBattery() OrganizationsOrganizationIdSensorReadingsHistoryBattery`
+`func (o *InlineResponse200320) GetMinimumPasswordLength() int32`
 
-GetBattery returns the Battery field if non-nil, zero value otherwise.
+GetMinimumPasswordLength returns the MinimumPasswordLength field if non-nil, zero value otherwise.
 
-### GetBatteryOk
+### GetMinimumPasswordLengthOk
 
-`func (o *InlineResponse200320) GetBatteryOk() (*OrganizationsOrganizationIdSensorReadingsHistoryBattery, bool)`
+`func (o *InlineResponse200320) GetMinimumPasswordLengthOk() (*int32, bool)`
 
-GetBatteryOk returns a tuple with the Battery field if it's non-nil, zero value otherwise
+GetMinimumPasswordLengthOk returns a tuple with the MinimumPasswordLength field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBattery
+### SetMinimumPasswordLength
 
-`func (o *InlineResponse200320) SetBattery(v OrganizationsOrganizationIdSensorReadingsHistoryBattery)`
+`func (o *InlineResponse200320) SetMinimumPasswordLength(v int32)`
 
-SetBattery sets Battery field to given value.
+SetMinimumPasswordLength sets MinimumPasswordLength field to given value.
 
-### HasBattery
+### HasMinimumPasswordLength
 
-`func (o *InlineResponse200320) HasBattery() bool`
+`func (o *InlineResponse200320) HasMinimumPasswordLength() bool`
 
-HasBattery returns a boolean if a field has been set.
+HasMinimumPasswordLength returns a boolean if a field has been set.
 
-### GetButton
+### GetEnforceAccountLockout
 
-`func (o *InlineResponse200320) GetButton() OrganizationsOrganizationIdSensorReadingsHistoryButton`
+`func (o *InlineResponse200320) GetEnforceAccountLockout() bool`
 
-GetButton returns the Button field if non-nil, zero value otherwise.
+GetEnforceAccountLockout returns the EnforceAccountLockout field if non-nil, zero value otherwise.
 
-### GetButtonOk
+### GetEnforceAccountLockoutOk
 
-`func (o *InlineResponse200320) GetButtonOk() (*OrganizationsOrganizationIdSensorReadingsHistoryButton, bool)`
+`func (o *InlineResponse200320) GetEnforceAccountLockoutOk() (*bool, bool)`
 
-GetButtonOk returns a tuple with the Button field if it's non-nil, zero value otherwise
+GetEnforceAccountLockoutOk returns a tuple with the EnforceAccountLockout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetButton
+### SetEnforceAccountLockout
 
-`func (o *InlineResponse200320) SetButton(v OrganizationsOrganizationIdSensorReadingsHistoryButton)`
+`func (o *InlineResponse200320) SetEnforceAccountLockout(v bool)`
 
-SetButton sets Button field to given value.
+SetEnforceAccountLockout sets EnforceAccountLockout field to given value.
 
-### HasButton
+### HasEnforceAccountLockout
 
-`func (o *InlineResponse200320) HasButton() bool`
+`func (o *InlineResponse200320) HasEnforceAccountLockout() bool`
 
-HasButton returns a boolean if a field has been set.
+HasEnforceAccountLockout returns a boolean if a field has been set.
 
-### GetCo2
+### GetAccountLockoutAttempts
 
-`func (o *InlineResponse200320) GetCo2() OrganizationsOrganizationIdSensorReadingsHistoryCo2`
+`func (o *InlineResponse200320) GetAccountLockoutAttempts() int32`
 
-GetCo2 returns the Co2 field if non-nil, zero value otherwise.
+GetAccountLockoutAttempts returns the AccountLockoutAttempts field if non-nil, zero value otherwise.
 
-### GetCo2Ok
+### GetAccountLockoutAttemptsOk
 
-`func (o *InlineResponse200320) GetCo2Ok() (*OrganizationsOrganizationIdSensorReadingsHistoryCo2, bool)`
+`func (o *InlineResponse200320) GetAccountLockoutAttemptsOk() (*int32, bool)`
 
-GetCo2Ok returns a tuple with the Co2 field if it's non-nil, zero value otherwise
+GetAccountLockoutAttemptsOk returns a tuple with the AccountLockoutAttempts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCo2
+### SetAccountLockoutAttempts
 
-`func (o *InlineResponse200320) SetCo2(v OrganizationsOrganizationIdSensorReadingsHistoryCo2)`
+`func (o *InlineResponse200320) SetAccountLockoutAttempts(v int32)`
 
-SetCo2 sets Co2 field to given value.
+SetAccountLockoutAttempts sets AccountLockoutAttempts field to given value.
 
-### HasCo2
+### HasAccountLockoutAttempts
 
-`func (o *InlineResponse200320) HasCo2() bool`
+`func (o *InlineResponse200320) HasAccountLockoutAttempts() bool`
 
-HasCo2 returns a boolean if a field has been set.
+HasAccountLockoutAttempts returns a boolean if a field has been set.
 
-### GetCurrent
+### GetEnforceIdleTimeout
 
-`func (o *InlineResponse200320) GetCurrent() OrganizationsOrganizationIdSensorReadingsHistoryCurrent`
+`func (o *InlineResponse200320) GetEnforceIdleTimeout() bool`
 
-GetCurrent returns the Current field if non-nil, zero value otherwise.
+GetEnforceIdleTimeout returns the EnforceIdleTimeout field if non-nil, zero value otherwise.
 
-### GetCurrentOk
+### GetEnforceIdleTimeoutOk
 
-`func (o *InlineResponse200320) GetCurrentOk() (*OrganizationsOrganizationIdSensorReadingsHistoryCurrent, bool)`
+`func (o *InlineResponse200320) GetEnforceIdleTimeoutOk() (*bool, bool)`
 
-GetCurrentOk returns a tuple with the Current field if it's non-nil, zero value otherwise
+GetEnforceIdleTimeoutOk returns a tuple with the EnforceIdleTimeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrent
+### SetEnforceIdleTimeout
 
-`func (o *InlineResponse200320) SetCurrent(v OrganizationsOrganizationIdSensorReadingsHistoryCurrent)`
+`func (o *InlineResponse200320) SetEnforceIdleTimeout(v bool)`
 
-SetCurrent sets Current field to given value.
+SetEnforceIdleTimeout sets EnforceIdleTimeout field to given value.
 
-### HasCurrent
+### HasEnforceIdleTimeout
 
-`func (o *InlineResponse200320) HasCurrent() bool`
+`func (o *InlineResponse200320) HasEnforceIdleTimeout() bool`
 
-HasCurrent returns a boolean if a field has been set.
+HasEnforceIdleTimeout returns a boolean if a field has been set.
 
-### GetDoor
+### GetIdleTimeoutMinutes
 
-`func (o *InlineResponse200320) GetDoor() OrganizationsOrganizationIdSensorReadingsHistoryDoor`
+`func (o *InlineResponse200320) GetIdleTimeoutMinutes() int32`
 
-GetDoor returns the Door field if non-nil, zero value otherwise.
+GetIdleTimeoutMinutes returns the IdleTimeoutMinutes field if non-nil, zero value otherwise.
 
-### GetDoorOk
+### GetIdleTimeoutMinutesOk
 
-`func (o *InlineResponse200320) GetDoorOk() (*OrganizationsOrganizationIdSensorReadingsHistoryDoor, bool)`
+`func (o *InlineResponse200320) GetIdleTimeoutMinutesOk() (*int32, bool)`
 
-GetDoorOk returns a tuple with the Door field if it's non-nil, zero value otherwise
+GetIdleTimeoutMinutesOk returns a tuple with the IdleTimeoutMinutes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoor
+### SetIdleTimeoutMinutes
 
-`func (o *InlineResponse200320) SetDoor(v OrganizationsOrganizationIdSensorReadingsHistoryDoor)`
+`func (o *InlineResponse200320) SetIdleTimeoutMinutes(v int32)`
 
-SetDoor sets Door field to given value.
+SetIdleTimeoutMinutes sets IdleTimeoutMinutes field to given value.
 
-### HasDoor
+### HasIdleTimeoutMinutes
 
-`func (o *InlineResponse200320) HasDoor() bool`
+`func (o *InlineResponse200320) HasIdleTimeoutMinutes() bool`
 
-HasDoor returns a boolean if a field has been set.
+HasIdleTimeoutMinutes returns a boolean if a field has been set.
 
-### GetDownstreamPower
+### GetEnforceTwoFactorAuth
 
-`func (o *InlineResponse200320) GetDownstreamPower() OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower`
+`func (o *InlineResponse200320) GetEnforceTwoFactorAuth() bool`
 
-GetDownstreamPower returns the DownstreamPower field if non-nil, zero value otherwise.
+GetEnforceTwoFactorAuth returns the EnforceTwoFactorAuth field if non-nil, zero value otherwise.
 
-### GetDownstreamPowerOk
+### GetEnforceTwoFactorAuthOk
 
-`func (o *InlineResponse200320) GetDownstreamPowerOk() (*OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower, bool)`
+`func (o *InlineResponse200320) GetEnforceTwoFactorAuthOk() (*bool, bool)`
 
-GetDownstreamPowerOk returns a tuple with the DownstreamPower field if it's non-nil, zero value otherwise
+GetEnforceTwoFactorAuthOk returns a tuple with the EnforceTwoFactorAuth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstreamPower
+### SetEnforceTwoFactorAuth
 
-`func (o *InlineResponse200320) SetDownstreamPower(v OrganizationsOrganizationIdSensorReadingsHistoryDownstreamPower)`
+`func (o *InlineResponse200320) SetEnforceTwoFactorAuth(v bool)`
 
-SetDownstreamPower sets DownstreamPower field to given value.
+SetEnforceTwoFactorAuth sets EnforceTwoFactorAuth field to given value.
 
-### HasDownstreamPower
+### HasEnforceTwoFactorAuth
 
-`func (o *InlineResponse200320) HasDownstreamPower() bool`
+`func (o *InlineResponse200320) HasEnforceTwoFactorAuth() bool`
 
-HasDownstreamPower returns a boolean if a field has been set.
+HasEnforceTwoFactorAuth returns a boolean if a field has been set.
 
-### GetFrequency
+### GetEnforceLoginIpRanges
 
-`func (o *InlineResponse200320) GetFrequency() OrganizationsOrganizationIdSensorReadingsHistoryFrequency`
+`func (o *InlineResponse200320) GetEnforceLoginIpRanges() bool`
 
-GetFrequency returns the Frequency field if non-nil, zero value otherwise.
+GetEnforceLoginIpRanges returns the EnforceLoginIpRanges field if non-nil, zero value otherwise.
 
-### GetFrequencyOk
+### GetEnforceLoginIpRangesOk
 
-`func (o *InlineResponse200320) GetFrequencyOk() (*OrganizationsOrganizationIdSensorReadingsHistoryFrequency, bool)`
+`func (o *InlineResponse200320) GetEnforceLoginIpRangesOk() (*bool, bool)`
 
-GetFrequencyOk returns a tuple with the Frequency field if it's non-nil, zero value otherwise
+GetEnforceLoginIpRangesOk returns a tuple with the EnforceLoginIpRanges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFrequency
+### SetEnforceLoginIpRanges
 
-`func (o *InlineResponse200320) SetFrequency(v OrganizationsOrganizationIdSensorReadingsHistoryFrequency)`
+`func (o *InlineResponse200320) SetEnforceLoginIpRanges(v bool)`
 
-SetFrequency sets Frequency field to given value.
+SetEnforceLoginIpRanges sets EnforceLoginIpRanges field to given value.
 
-### HasFrequency
+### HasEnforceLoginIpRanges
 
-`func (o *InlineResponse200320) HasFrequency() bool`
+`func (o *InlineResponse200320) HasEnforceLoginIpRanges() bool`
 
-HasFrequency returns a boolean if a field has been set.
+HasEnforceLoginIpRanges returns a boolean if a field has been set.
 
-### GetHumidity
+### GetLoginIpRanges
 
-`func (o *InlineResponse200320) GetHumidity() OrganizationsOrganizationIdSensorReadingsHistoryHumidity`
+`func (o *InlineResponse200320) GetLoginIpRanges() []string`
 
-GetHumidity returns the Humidity field if non-nil, zero value otherwise.
+GetLoginIpRanges returns the LoginIpRanges field if non-nil, zero value otherwise.
 
-### GetHumidityOk
+### GetLoginIpRangesOk
 
-`func (o *InlineResponse200320) GetHumidityOk() (*OrganizationsOrganizationIdSensorReadingsHistoryHumidity, bool)`
+`func (o *InlineResponse200320) GetLoginIpRangesOk() (*[]string, bool)`
 
-GetHumidityOk returns a tuple with the Humidity field if it's non-nil, zero value otherwise
+GetLoginIpRangesOk returns a tuple with the LoginIpRanges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHumidity
+### SetLoginIpRanges
 
-`func (o *InlineResponse200320) SetHumidity(v OrganizationsOrganizationIdSensorReadingsHistoryHumidity)`
+`func (o *InlineResponse200320) SetLoginIpRanges(v []string)`
 
-SetHumidity sets Humidity field to given value.
+SetLoginIpRanges sets LoginIpRanges field to given value.
 
-### HasHumidity
+### HasLoginIpRanges
 
-`func (o *InlineResponse200320) HasHumidity() bool`
+`func (o *InlineResponse200320) HasLoginIpRanges() bool`
 
-HasHumidity returns a boolean if a field has been set.
+HasLoginIpRanges returns a boolean if a field has been set.
 
-### GetIndoorAirQuality
+### GetApiAuthentication
 
-`func (o *InlineResponse200320) GetIndoorAirQuality() OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality`
+`func (o *InlineResponse200320) GetApiAuthentication() InlineResponse200320ApiAuthentication`
 
-GetIndoorAirQuality returns the IndoorAirQuality field if non-nil, zero value otherwise.
+GetApiAuthentication returns the ApiAuthentication field if non-nil, zero value otherwise.
 
-### GetIndoorAirQualityOk
+### GetApiAuthenticationOk
 
-`func (o *InlineResponse200320) GetIndoorAirQualityOk() (*OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality, bool)`
+`func (o *InlineResponse200320) GetApiAuthenticationOk() (*InlineResponse200320ApiAuthentication, bool)`
 
-GetIndoorAirQualityOk returns a tuple with the IndoorAirQuality field if it's non-nil, zero value otherwise
+GetApiAuthenticationOk returns a tuple with the ApiAuthentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIndoorAirQuality
+### SetApiAuthentication
 
-`func (o *InlineResponse200320) SetIndoorAirQuality(v OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality)`
+`func (o *InlineResponse200320) SetApiAuthentication(v InlineResponse200320ApiAuthentication)`
 
-SetIndoorAirQuality sets IndoorAirQuality field to given value.
+SetApiAuthentication sets ApiAuthentication field to given value.
 
-### HasIndoorAirQuality
+### HasApiAuthentication
 
-`func (o *InlineResponse200320) HasIndoorAirQuality() bool`
+`func (o *InlineResponse200320) HasApiAuthentication() bool`
 
-HasIndoorAirQuality returns a boolean if a field has been set.
-
-### GetNoise
-
-`func (o *InlineResponse200320) GetNoise() OrganizationsOrganizationIdSensorReadingsHistoryNoise`
-
-GetNoise returns the Noise field if non-nil, zero value otherwise.
-
-### GetNoiseOk
-
-`func (o *InlineResponse200320) GetNoiseOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNoise, bool)`
-
-GetNoiseOk returns a tuple with the Noise field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNoise
-
-`func (o *InlineResponse200320) SetNoise(v OrganizationsOrganizationIdSensorReadingsHistoryNoise)`
-
-SetNoise sets Noise field to given value.
-
-### HasNoise
-
-`func (o *InlineResponse200320) HasNoise() bool`
-
-HasNoise returns a boolean if a field has been set.
-
-### GetPm25
-
-`func (o *InlineResponse200320) GetPm25() OrganizationsOrganizationIdSensorReadingsHistoryPm25`
-
-GetPm25 returns the Pm25 field if non-nil, zero value otherwise.
-
-### GetPm25Ok
-
-`func (o *InlineResponse200320) GetPm25Ok() (*OrganizationsOrganizationIdSensorReadingsHistoryPm25, bool)`
-
-GetPm25Ok returns a tuple with the Pm25 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPm25
-
-`func (o *InlineResponse200320) SetPm25(v OrganizationsOrganizationIdSensorReadingsHistoryPm25)`
-
-SetPm25 sets Pm25 field to given value.
-
-### HasPm25
-
-`func (o *InlineResponse200320) HasPm25() bool`
-
-HasPm25 returns a boolean if a field has been set.
-
-### GetPowerFactor
-
-`func (o *InlineResponse200320) GetPowerFactor() OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor`
-
-GetPowerFactor returns the PowerFactor field if non-nil, zero value otherwise.
-
-### GetPowerFactorOk
-
-`func (o *InlineResponse200320) GetPowerFactorOk() (*OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor, bool)`
-
-GetPowerFactorOk returns a tuple with the PowerFactor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPowerFactor
-
-`func (o *InlineResponse200320) SetPowerFactor(v OrganizationsOrganizationIdSensorReadingsHistoryPowerFactor)`
-
-SetPowerFactor sets PowerFactor field to given value.
-
-### HasPowerFactor
-
-`func (o *InlineResponse200320) HasPowerFactor() bool`
-
-HasPowerFactor returns a boolean if a field has been set.
-
-### GetRealPower
-
-`func (o *InlineResponse200320) GetRealPower() OrganizationsOrganizationIdSensorReadingsHistoryRealPower`
-
-GetRealPower returns the RealPower field if non-nil, zero value otherwise.
-
-### GetRealPowerOk
-
-`func (o *InlineResponse200320) GetRealPowerOk() (*OrganizationsOrganizationIdSensorReadingsHistoryRealPower, bool)`
-
-GetRealPowerOk returns a tuple with the RealPower field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRealPower
-
-`func (o *InlineResponse200320) SetRealPower(v OrganizationsOrganizationIdSensorReadingsHistoryRealPower)`
-
-SetRealPower sets RealPower field to given value.
-
-### HasRealPower
-
-`func (o *InlineResponse200320) HasRealPower() bool`
-
-HasRealPower returns a boolean if a field has been set.
-
-### GetRemoteLockoutSwitch
-
-`func (o *InlineResponse200320) GetRemoteLockoutSwitch() OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch`
-
-GetRemoteLockoutSwitch returns the RemoteLockoutSwitch field if non-nil, zero value otherwise.
-
-### GetRemoteLockoutSwitchOk
-
-`func (o *InlineResponse200320) GetRemoteLockoutSwitchOk() (*OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch, bool)`
-
-GetRemoteLockoutSwitchOk returns a tuple with the RemoteLockoutSwitch field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRemoteLockoutSwitch
-
-`func (o *InlineResponse200320) SetRemoteLockoutSwitch(v OrganizationsOrganizationIdSensorReadingsHistoryRemoteLockoutSwitch)`
-
-SetRemoteLockoutSwitch sets RemoteLockoutSwitch field to given value.
-
-### HasRemoteLockoutSwitch
-
-`func (o *InlineResponse200320) HasRemoteLockoutSwitch() bool`
-
-HasRemoteLockoutSwitch returns a boolean if a field has been set.
-
-### GetTemperature
-
-`func (o *InlineResponse200320) GetTemperature() OrganizationsOrganizationIdSensorReadingsHistoryTemperature`
-
-GetTemperature returns the Temperature field if non-nil, zero value otherwise.
-
-### GetTemperatureOk
-
-`func (o *InlineResponse200320) GetTemperatureOk() (*OrganizationsOrganizationIdSensorReadingsHistoryTemperature, bool)`
-
-GetTemperatureOk returns a tuple with the Temperature field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTemperature
-
-`func (o *InlineResponse200320) SetTemperature(v OrganizationsOrganizationIdSensorReadingsHistoryTemperature)`
-
-SetTemperature sets Temperature field to given value.
-
-### HasTemperature
-
-`func (o *InlineResponse200320) HasTemperature() bool`
-
-HasTemperature returns a boolean if a field has been set.
-
-### GetTvoc
-
-`func (o *InlineResponse200320) GetTvoc() OrganizationsOrganizationIdSensorReadingsHistoryTvoc`
-
-GetTvoc returns the Tvoc field if non-nil, zero value otherwise.
-
-### GetTvocOk
-
-`func (o *InlineResponse200320) GetTvocOk() (*OrganizationsOrganizationIdSensorReadingsHistoryTvoc, bool)`
-
-GetTvocOk returns a tuple with the Tvoc field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTvoc
-
-`func (o *InlineResponse200320) SetTvoc(v OrganizationsOrganizationIdSensorReadingsHistoryTvoc)`
-
-SetTvoc sets Tvoc field to given value.
-
-### HasTvoc
-
-`func (o *InlineResponse200320) HasTvoc() bool`
-
-HasTvoc returns a boolean if a field has been set.
-
-### GetVoltage
-
-`func (o *InlineResponse200320) GetVoltage() OrganizationsOrganizationIdSensorReadingsHistoryVoltage`
-
-GetVoltage returns the Voltage field if non-nil, zero value otherwise.
-
-### GetVoltageOk
-
-`func (o *InlineResponse200320) GetVoltageOk() (*OrganizationsOrganizationIdSensorReadingsHistoryVoltage, bool)`
-
-GetVoltageOk returns a tuple with the Voltage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVoltage
-
-`func (o *InlineResponse200320) SetVoltage(v OrganizationsOrganizationIdSensorReadingsHistoryVoltage)`
-
-SetVoltage sets Voltage field to given value.
-
-### HasVoltage
-
-`func (o *InlineResponse200320) HasVoltage() bool`
-
-HasVoltage returns a boolean if a field has been set.
-
-### GetWater
-
-`func (o *InlineResponse200320) GetWater() OrganizationsOrganizationIdSensorReadingsHistoryWater`
-
-GetWater returns the Water field if non-nil, zero value otherwise.
-
-### GetWaterOk
-
-`func (o *InlineResponse200320) GetWaterOk() (*OrganizationsOrganizationIdSensorReadingsHistoryWater, bool)`
-
-GetWaterOk returns a tuple with the Water field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWater
-
-`func (o *InlineResponse200320) SetWater(v OrganizationsOrganizationIdSensorReadingsHistoryWater)`
-
-SetWater sets Water field to given value.
-
-### HasWater
-
-`func (o *InlineResponse200320) HasWater() bool`
-
-HasWater returns a boolean if a field has been set.
-
-### GetRawTemperature
-
-`func (o *InlineResponse200320) GetRawTemperature() OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature`
-
-GetRawTemperature returns the RawTemperature field if non-nil, zero value otherwise.
-
-### GetRawTemperatureOk
-
-`func (o *InlineResponse200320) GetRawTemperatureOk() (*OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature, bool)`
-
-GetRawTemperatureOk returns a tuple with the RawTemperature field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRawTemperature
-
-`func (o *InlineResponse200320) SetRawTemperature(v OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature)`
-
-SetRawTemperature sets RawTemperature field to given value.
-
-### HasRawTemperature
-
-`func (o *InlineResponse200320) HasRawTemperature() bool`
-
-HasRawTemperature returns a boolean if a field has been set.
+HasApiAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

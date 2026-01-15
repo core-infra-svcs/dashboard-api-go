@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Splash theme asset id | [optional] 
-**Name** | Pointer to **string** | Splash theme asset name | [optional] 
-**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
+**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
+**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200330WithDefaults instantiates a new InlineResponse200330 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSerial
 
-`func (o *InlineResponse200330) GetId() string`
+`func (o *InlineResponse200330) GetSerial() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200330) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200330) GetSerialOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSerial
 
-`func (o *InlineResponse200330) SetId(v string)`
+`func (o *InlineResponse200330) SetSerial(v string)`
 
-SetId sets Id field to given value.
+SetSerial sets Serial field to given value.
 
-### HasId
+### HasSerial
 
-`func (o *InlineResponse200330) HasId() bool`
+`func (o *InlineResponse200330) HasSerial() bool`
 
-HasId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetName
+### GetNetwork
 
-`func (o *InlineResponse200330) GetName() string`
+`func (o *InlineResponse200330) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkOk
 
-`func (o *InlineResponse200330) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200330) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetwork
 
-`func (o *InlineResponse200330) SetName(v string)`
+`func (o *InlineResponse200330) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
 
-SetName sets Name field to given value.
+SetNetwork sets Network field to given value.
 
-### HasName
+### HasNetwork
 
-`func (o *InlineResponse200330) HasName() bool`
+`func (o *InlineResponse200330) HasNetwork() bool`
 
-HasName returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetFileData
+### GetReadings
 
-`func (o *InlineResponse200330) GetFileData() string`
+`func (o *InlineResponse200330) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
 
-GetFileData returns the FileData field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetFileDataOk
+### GetReadingsOk
 
-`func (o *InlineResponse200330) GetFileDataOk() (*string, bool)`
+`func (o *InlineResponse200330) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
 
-GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFileData
+### SetReadings
 
-`func (o *InlineResponse200330) SetFileData(v string)`
+`func (o *InlineResponse200330) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
 
-SetFileData sets FileData field to given value.
+SetReadings sets Readings field to given value.
 
-### HasFileData
+### HasReadings
 
-`func (o *InlineResponse200330) HasFileData() bool`
+`func (o *InlineResponse200330) HasReadings() bool`
 
-HasFileData returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20124Request**](InlineResponse20124Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
+**CrlId** | **string** | ID of the CRL | 
+**Data** | [**[]InlineResponse20124Data**](InlineResponse20124Data.md) | CRL parsed data | 
+**IsDelta** | **bool** | Whether it&#39;s a delta CRL or not | 
+**CaId** | **string** | ID of the CRL issuer | 
+**CreatedAt** | Pointer to **string** | Date of CRL creation | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Date of CRL update | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20124
 
-`func NewInlineResponse20124() *InlineResponse20124`
+`func NewInlineResponse20124(crlId string, data []InlineResponse20124Data, isDelta bool, caId string, ) *InlineResponse20124`
 
 NewInlineResponse20124 instantiates a new InlineResponse20124 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +30,135 @@ NewInlineResponse20124WithDefaults instantiates a new InlineResponse20124 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetCrlId
 
-`func (o *InlineResponse20124) GetDisenrollmentId() string`
+`func (o *InlineResponse20124) GetCrlId() string`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetCrlId returns the CrlId field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetCrlIdOk
 
-`func (o *InlineResponse20124) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse20124) GetCrlIdOk() (*string, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetCrlIdOk returns a tuple with the CrlId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetCrlId
 
-`func (o *InlineResponse20124) SetDisenrollmentId(v string)`
+`func (o *InlineResponse20124) SetCrlId(v string)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetCrlId sets CrlId field to given value.
 
-### HasDisenrollmentId
 
-`func (o *InlineResponse20124) HasDisenrollmentId() bool`
+### GetData
 
-HasDisenrollmentId returns a boolean if a field has been set.
+`func (o *InlineResponse20124) GetData() []InlineResponse20124Data`
 
-### GetUrl
+GetData returns the Data field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20124) GetUrl() string`
+### GetDataOk
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+`func (o *InlineResponse20124) GetDataOk() (*[]InlineResponse20124Data, bool)`
 
-### GetUrlOk
-
-`func (o *InlineResponse20124) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetData
 
-`func (o *InlineResponse20124) SetUrl(v string)`
+`func (o *InlineResponse20124) SetData(v []InlineResponse20124Data)`
 
-SetUrl sets Url field to given value.
+SetData sets Data field to given value.
 
-### HasUrl
 
-`func (o *InlineResponse20124) HasUrl() bool`
+### GetIsDelta
 
-HasUrl returns a boolean if a field has been set.
+`func (o *InlineResponse20124) GetIsDelta() bool`
 
-### GetRequest
+GetIsDelta returns the IsDelta field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20124) GetRequest() InlineResponse20124Request`
+### GetIsDeltaOk
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+`func (o *InlineResponse20124) GetIsDeltaOk() (*bool, bool)`
 
-### GetRequestOk
-
-`func (o *InlineResponse20124) GetRequestOk() (*InlineResponse20124Request, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetIsDeltaOk returns a tuple with the IsDelta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetIsDelta
 
-`func (o *InlineResponse20124) SetRequest(v InlineResponse20124Request)`
+`func (o *InlineResponse20124) SetIsDelta(v bool)`
 
-SetRequest sets Request field to given value.
+SetIsDelta sets IsDelta field to given value.
 
-### HasRequest
 
-`func (o *InlineResponse20124) HasRequest() bool`
+### GetCaId
 
-HasRequest returns a boolean if a field has been set.
+`func (o *InlineResponse20124) GetCaId() string`
 
-### GetStatus
+GetCaId returns the CaId field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20124) GetStatus() string`
+### GetCaIdOk
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+`func (o *InlineResponse20124) GetCaIdOk() (*string, bool)`
 
-### GetStatusOk
-
-`func (o *InlineResponse20124) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetCaIdOk returns a tuple with the CaId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetCaId
 
-`func (o *InlineResponse20124) SetStatus(v string)`
+`func (o *InlineResponse20124) SetCaId(v string)`
 
-SetStatus sets Status field to given value.
+SetCaId sets CaId field to given value.
 
-### HasStatus
 
-`func (o *InlineResponse20124) HasStatus() bool`
+### GetCreatedAt
 
-HasStatus returns a boolean if a field has been set.
+`func (o *InlineResponse20124) GetCreatedAt() string`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse20124) GetCreatedAtOk() (*string, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse20124) SetCreatedAt(v string)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse20124) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse20124) GetLastUpdatedAt() string`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse20124) GetLastUpdatedAtOk() (*string, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse20124) SetLastUpdatedAt(v string)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse20124) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

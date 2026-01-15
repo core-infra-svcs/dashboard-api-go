@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ControlDirection** | Pointer to **string** | Supports either &#39;both&#39; or &#39;inbound&#39;. Set to &#39;inbound&#39; to allow unauthorized egress on the switchport. Set to &#39;both&#39; to control both traffic directions with authorization. Defaults to &#39;both&#39; | [optional] 
+**ControlDirection** | Pointer to **NullableString** | Supports either &#39;both&#39; or &#39;inbound&#39;. Set to &#39;inbound&#39; to allow unauthorized egress on the switchport. Set to &#39;both&#39; to control both traffic directions with authorization. Defaults to &#39;both&#39; | [optional] 
 
 ## Methods
 
@@ -50,6 +50,16 @@ SetControlDirection sets ControlDirection field to given value.
 
 HasControlDirection returns a boolean if a field has been set.
 
+### SetControlDirectionNil
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesDot1x) SetControlDirectionNil(b bool)`
+
+ SetControlDirectionNil sets the value for ControlDirection to be an explicit nil
+
+### UnsetControlDirection
+`func (o *NetworksNetworkIdSwitchAccessPoliciesDot1x) UnsetControlDirection()`
+
+UnsetControlDirection ensures that no value is present for ControlDirection, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

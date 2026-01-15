@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberGreConcentrator**](NetworksNetworkIdWirelessSsidsNumberGreConcentrator.md) |  | [optional] 
-**Key** | Pointer to **int32** | Optional numerical identifier that will add the GRE key field to the GRE header. Used to identify an individual traffic flow within a tunnel. | [optional] 
+**Key** | Pointer to **NullableInt32** | Optional numerical identifier that will add the GRE key field to the GRE header. Used to identify an individual traffic flow within a tunnel. | [optional] 
 
 ## Methods
 
@@ -76,6 +76,16 @@ SetKey sets Key field to given value.
 
 HasKey returns a boolean if a field has been set.
 
+### SetKeyNil
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberGre) SetKeyNil(b bool)`
+
+ SetKeyNil sets the value for Key to be an explicit nil
+
+### UnsetKey
+`func (o *NetworksNetworkIdWirelessSsidsNumberGre) UnsetKey()`
+
+UnsetKey ensures that no value is present for Key, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

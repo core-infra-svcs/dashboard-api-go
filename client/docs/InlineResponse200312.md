@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingNetwork** | Pointer to [**InlineResponse200312ResultingNetwork**](InlineResponse200312ResultingNetwork.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the devices that were released | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200312WithDefaults instantiates a new InlineResponse200312 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingNetwork
+### GetSerials
 
-`func (o *InlineResponse200312) GetResultingNetwork() InlineResponse200312ResultingNetwork`
+`func (o *InlineResponse200312) GetSerials() []string`
 
-GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetResultingNetworkOk
+### GetSerialsOk
 
-`func (o *InlineResponse200312) GetResultingNetworkOk() (*InlineResponse200312ResultingNetwork, bool)`
+`func (o *InlineResponse200312) GetSerialsOk() (*[]string, bool)`
 
-GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingNetwork
+### SetSerials
 
-`func (o *InlineResponse200312) SetResultingNetwork(v InlineResponse200312ResultingNetwork)`
+`func (o *InlineResponse200312) SetSerials(v []string)`
 
-SetResultingNetwork sets ResultingNetwork field to given value.
+SetSerials sets Serials field to given value.
 
-### HasResultingNetwork
+### HasSerials
 
-`func (o *InlineResponse200312) HasResultingNetwork() bool`
+`func (o *InlineResponse200312) HasSerials() bool`
 
-HasResultingNetwork returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

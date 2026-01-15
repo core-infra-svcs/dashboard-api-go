@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **AudioRecordingEnabled** | Pointer to **bool** | Whether or not to record audio. Can be either true or false. Defaults to false. | [optional] 
 **CloudArchiveEnabled** | Pointer to **bool** | Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false. | [optional] 
 **MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
-**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention.md) |  | [optional] 
+**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1.md) |  | [optional] 
 **ScheduleId** | Pointer to **NullableString** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
 **MaxRetentionDays** | Pointer to **NullableInt32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be in the range of one to ninety days. | [optional] 
-**VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) |  | [optional] 
+**VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1.md) |  | [optional] 
 
 ## Methods
 
@@ -181,20 +181,20 @@ HasMotionDetectorVersion returns a boolean if a field has been set.
 
 ### GetSmartRetention
 
-`func (o *InlineObject82) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention`
+`func (o *InlineObject82) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1`
 
 GetSmartRetention returns the SmartRetention field if non-nil, zero value otherwise.
 
 ### GetSmartRetentionOk
 
-`func (o *InlineObject82) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention, bool)`
+`func (o *InlineObject82) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1, bool)`
 
 GetSmartRetentionOk returns a tuple with the SmartRetention field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSmartRetention
 
-`func (o *InlineObject82) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention)`
+`func (o *InlineObject82) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1)`
 
 SetSmartRetention sets SmartRetention field to given value.
 
@@ -276,20 +276,20 @@ HasMaxRetentionDays returns a boolean if a field has been set.
 UnsetMaxRetentionDays ensures that no value is present for MaxRetentionDays, not even an explicit nil
 ### GetVideoSettings
 
-`func (o *InlineObject82) GetVideoSettings() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings`
+`func (o *InlineObject82) GetVideoSettings() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1`
 
 GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
 
 ### GetVideoSettingsOk
 
-`func (o *InlineObject82) GetVideoSettingsOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings, bool)`
+`func (o *InlineObject82) GetVideoSettingsOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1, bool)`
 
 GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVideoSettings
 
-`func (o *InlineObject82) SetVideoSettings(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings)`
+`func (o *InlineObject82) SetVideoSettings(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1)`
 
 SetVideoSettings sets VideoSettings field to given value.
 

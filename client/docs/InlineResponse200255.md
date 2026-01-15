@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
-**Type** | Pointer to **string** | The boundary type | [optional] 
-**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
+**Type** | **string** | Alert type | 
+**Title** | **string** | Alert type title | 
+**CategoryType** | **string** | Alert category type | 
+**Severities** | [**[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities**](OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities.md) | List of possible severities for the alert type | 
+**DeviceTypes** | **[]string** | List of possible device types for the alert type | 
 
 ## Methods
 
 ### NewInlineResponse200255
 
-`func NewInlineResponse200255() *InlineResponse200255`
+`func NewInlineResponse200255(type_ string, title string, categoryType string, severities []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, deviceTypes []string, ) *InlineResponse200255`
 
 NewInlineResponse200255 instantiates a new InlineResponse200255 object
 This constructor will assign default values to properties that have it defined,
@@ -26,31 +28,6 @@ will change when the set of required properties is changed
 NewInlineResponse200255WithDefaults instantiates a new InlineResponse200255 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetBoundaryId
-
-`func (o *InlineResponse200255) GetBoundaryId() string`
-
-GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
-
-### GetBoundaryIdOk
-
-`func (o *InlineResponse200255) GetBoundaryIdOk() (*string, bool)`
-
-GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBoundaryId
-
-`func (o *InlineResponse200255) SetBoundaryId(v string)`
-
-SetBoundaryId sets BoundaryId field to given value.
-
-### HasBoundaryId
-
-`func (o *InlineResponse200255) HasBoundaryId() bool`
-
-HasBoundaryId returns a boolean if a field has been set.
 
 ### GetType
 
@@ -71,36 +48,86 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
 
-`func (o *InlineResponse200255) HasType() bool`
+### GetTitle
 
-HasType returns a boolean if a field has been set.
+`func (o *InlineResponse200255) GetTitle() string`
 
-### GetResults
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200255) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
+### GetTitleOk
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+`func (o *InlineResponse200255) GetTitleOk() (*string, bool)`
 
-### GetResultsOk
-
-`func (o *InlineResponse200255) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
-
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetTitle
 
-`func (o *InlineResponse200255) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
+`func (o *InlineResponse200255) SetTitle(v string)`
 
-SetResults sets Results field to given value.
+SetTitle sets Title field to given value.
 
-### HasResults
 
-`func (o *InlineResponse200255) HasResults() bool`
+### GetCategoryType
 
-HasResults returns a boolean if a field has been set.
+`func (o *InlineResponse200255) GetCategoryType() string`
+
+GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
+
+### GetCategoryTypeOk
+
+`func (o *InlineResponse200255) GetCategoryTypeOk() (*string, bool)`
+
+GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategoryType
+
+`func (o *InlineResponse200255) SetCategoryType(v string)`
+
+SetCategoryType sets CategoryType field to given value.
+
+
+### GetSeverities
+
+`func (o *InlineResponse200255) GetSeverities() []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities`
+
+GetSeverities returns the Severities field if non-nil, zero value otherwise.
+
+### GetSeveritiesOk
+
+`func (o *InlineResponse200255) GetSeveritiesOk() (*[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, bool)`
+
+GetSeveritiesOk returns a tuple with the Severities field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverities
+
+`func (o *InlineResponse200255) SetSeverities(v []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities)`
+
+SetSeverities sets Severities field to given value.
+
+
+### GetDeviceTypes
+
+`func (o *InlineResponse200255) GetDeviceTypes() []string`
+
+GetDeviceTypes returns the DeviceTypes field if non-nil, zero value otherwise.
+
+### GetDeviceTypesOk
+
+`func (o *InlineResponse200255) GetDeviceTypesOk() (*[]string, bool)`
+
+GetDeviceTypesOk returns a tuple with the DeviceTypes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceTypes
+
+`func (o *InlineResponse200255) SetDeviceTypes(v []string)`
+
+SetDeviceTypes sets DeviceTypes field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]InlineResponse200210Ranges**](InlineResponse200210Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]InlineResponse200210RangesInSeconds**](InlineResponse200210RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**Identity** | Pointer to [**InlineResponse200210Identity**](InlineResponse200210Identity.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200210EapolKey**](InlineResponse200210EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200210WithDefaults instantiates a new InlineResponse200210 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetTimeout
 
-`func (o *InlineResponse200210) GetEnabled() bool`
+`func (o *InlineResponse200210) GetTimeout() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTimeoutOk
 
-`func (o *InlineResponse200210) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200210) GetTimeoutOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTimeout
 
-`func (o *InlineResponse200210) SetEnabled(v bool)`
+`func (o *InlineResponse200210) SetTimeout(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasEnabled
+### HasTimeout
 
-`func (o *InlineResponse200210) HasEnabled() bool`
+`func (o *InlineResponse200210) HasTimeout() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetRanges
+### GetMaxRetries
 
-`func (o *InlineResponse200210) GetRanges() []InlineResponse200210Ranges`
+`func (o *InlineResponse200210) GetMaxRetries() int32`
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetRangesOk
+### GetMaxRetriesOk
 
-`func (o *InlineResponse200210) GetRangesOk() (*[]InlineResponse200210Ranges, bool)`
+`func (o *InlineResponse200210) GetMaxRetriesOk() (*int32, bool)`
 
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetMaxRetries
 
-`func (o *InlineResponse200210) SetRanges(v []InlineResponse200210Ranges)`
+`func (o *InlineResponse200210) SetMaxRetries(v int32)`
 
-SetRanges sets Ranges field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasRanges
+### HasMaxRetries
 
-`func (o *InlineResponse200210) HasRanges() bool`
+`func (o *InlineResponse200210) HasMaxRetries() bool`
 
-HasRanges returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
 
-### GetRangesInSeconds
+### GetIdentity
 
-`func (o *InlineResponse200210) GetRangesInSeconds() []InlineResponse200210RangesInSeconds`
+`func (o *InlineResponse200210) GetIdentity() InlineResponse200210Identity`
 
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetRangesInSecondsOk
+### GetIdentityOk
 
-`func (o *InlineResponse200210) GetRangesInSecondsOk() (*[]InlineResponse200210RangesInSeconds, bool)`
+`func (o *InlineResponse200210) GetIdentityOk() (*InlineResponse200210Identity, bool)`
 
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRangesInSeconds
+### SetIdentity
 
-`func (o *InlineResponse200210) SetRangesInSeconds(v []InlineResponse200210RangesInSeconds)`
+`func (o *InlineResponse200210) SetIdentity(v InlineResponse200210Identity)`
 
-SetRangesInSeconds sets RangesInSeconds field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasRangesInSeconds
+### HasIdentity
 
-`func (o *InlineResponse200210) HasRangesInSeconds() bool`
+`func (o *InlineResponse200210) HasIdentity() bool`
 
-HasRangesInSeconds returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
+
+### GetEapolKey
+
+`func (o *InlineResponse200210) GetEapolKey() InlineResponse200210EapolKey`
+
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+
+### GetEapolKeyOk
+
+`func (o *InlineResponse200210) GetEapolKeyOk() (*InlineResponse200210EapolKey, bool)`
+
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEapolKey
+
+`func (o *InlineResponse200210) SetEapolKey(v InlineResponse200210EapolKey)`
+
+SetEapolKey sets EapolKey field to given value.
+
+### HasEapolKey
+
+`func (o *InlineResponse200210) HasEapolKey() bool`
+
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

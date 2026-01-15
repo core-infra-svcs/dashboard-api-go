@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
-**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
+**IsMonitorOnly** | Pointer to **bool** | Tells if stack is Monitored Stack. | [optional] 
+**VirtualMac** | Pointer to **string** | The virtual MAC address of the switch stack | [optional] 
+**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksMembers**](NetworksNetworkIdSwitchStacksMembers.md) | Members of the Stack | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineResponse200173WithDefaults instantiates a new InlineResponse200173 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetId
 
-`func (o *InlineResponse200173) GetBroadcastThreshold() int32`
+`func (o *InlineResponse200173) GetId() string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetIdOk
 
-`func (o *InlineResponse200173) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200173) GetIdOk() (*string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetId
 
-`func (o *InlineResponse200173) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse200173) SetId(v string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetId sets Id field to given value.
 
-### HasBroadcastThreshold
+### HasId
 
-`func (o *InlineResponse200173) HasBroadcastThreshold() bool`
+`func (o *InlineResponse200173) HasId() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetName
 
-`func (o *InlineResponse200173) GetMulticastThreshold() int32`
+`func (o *InlineResponse200173) GetName() string`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetNameOk
 
-`func (o *InlineResponse200173) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200173) GetNameOk() (*string, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetName
 
-`func (o *InlineResponse200173) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse200173) SetName(v string)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetName sets Name field to given value.
 
-### HasMulticastThreshold
+### HasName
 
-`func (o *InlineResponse200173) HasMulticastThreshold() bool`
+`func (o *InlineResponse200173) HasName() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUnknownUnicastThreshold
+### GetSerials
 
-`func (o *InlineResponse200173) GetUnknownUnicastThreshold() int32`
+`func (o *InlineResponse200173) GetSerials() []string`
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetUnknownUnicastThresholdOk
+### GetSerialsOk
 
-`func (o *InlineResponse200173) GetUnknownUnicastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200173) GetSerialsOk() (*[]string, bool)`
 
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetSerials
 
-`func (o *InlineResponse200173) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineResponse200173) SetSerials(v []string)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetSerials sets Serials field to given value.
 
-### HasUnknownUnicastThreshold
+### HasSerials
 
-`func (o *InlineResponse200173) HasUnknownUnicastThreshold() bool`
+`func (o *InlineResponse200173) HasSerials() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetTreatTheseTrafficTypesAsOneThreshold
+### GetIsMonitorOnly
 
-`func (o *InlineResponse200173) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+`func (o *InlineResponse200173) GetIsMonitorOnly() bool`
 
-GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+GetIsMonitorOnly returns the IsMonitorOnly field if non-nil, zero value otherwise.
 
-### GetTreatTheseTrafficTypesAsOneThresholdOk
+### GetIsMonitorOnlyOk
 
-`func (o *InlineResponse200173) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
+`func (o *InlineResponse200173) GetIsMonitorOnlyOk() (*bool, bool)`
 
-GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+GetIsMonitorOnlyOk returns a tuple with the IsMonitorOnly field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTreatTheseTrafficTypesAsOneThreshold
+### SetIsMonitorOnly
 
-`func (o *InlineResponse200173) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+`func (o *InlineResponse200173) SetIsMonitorOnly(v bool)`
 
-SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+SetIsMonitorOnly sets IsMonitorOnly field to given value.
 
-### HasTreatTheseTrafficTypesAsOneThreshold
+### HasIsMonitorOnly
 
-`func (o *InlineResponse200173) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+`func (o *InlineResponse200173) HasIsMonitorOnly() bool`
 
-HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
+HasIsMonitorOnly returns a boolean if a field has been set.
+
+### GetVirtualMac
+
+`func (o *InlineResponse200173) GetVirtualMac() string`
+
+GetVirtualMac returns the VirtualMac field if non-nil, zero value otherwise.
+
+### GetVirtualMacOk
+
+`func (o *InlineResponse200173) GetVirtualMacOk() (*string, bool)`
+
+GetVirtualMacOk returns a tuple with the VirtualMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualMac
+
+`func (o *InlineResponse200173) SetVirtualMac(v string)`
+
+SetVirtualMac sets VirtualMac field to given value.
+
+### HasVirtualMac
+
+`func (o *InlineResponse200173) HasVirtualMac() bool`
+
+HasVirtualMac returns a boolean if a field has been set.
+
+### GetMembers
+
+`func (o *InlineResponse200173) GetMembers() []NetworksNetworkIdSwitchStacksMembers`
+
+GetMembers returns the Members field if non-nil, zero value otherwise.
+
+### GetMembersOk
+
+`func (o *InlineResponse200173) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksMembers, bool)`
+
+GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMembers
+
+`func (o *InlineResponse200173) SetMembers(v []NetworksNetworkIdSwitchStacksMembers)`
+
+SetMembers sets Members field to given value.
+
+### HasMembers
+
+`func (o *InlineResponse200173) HasMembers() bool`
+
+HasMembers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

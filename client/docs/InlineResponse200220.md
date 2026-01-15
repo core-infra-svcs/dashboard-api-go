@@ -4,7 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +31,180 @@ NewInlineResponse200220WithDefaults instantiates a new InlineResponse200220 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabledNetworks
+### GetId
 
-`func (o *InlineResponse200220) GetEnabledNetworks() []string`
+`func (o *InlineResponse200220) GetId() string`
 
-GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetEnabledNetworksOk
+### GetIdOk
 
-`func (o *InlineResponse200220) GetEnabledNetworksOk() (*[]string, bool)`
+`func (o *InlineResponse200220) GetIdOk() (*string, bool)`
 
-GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabledNetworks
+### SetId
 
-`func (o *InlineResponse200220) SetEnabledNetworks(v []string)`
+`func (o *InlineResponse200220) SetId(v string)`
 
-SetEnabledNetworks sets EnabledNetworks field to given value.
+SetId sets Id field to given value.
 
-### HasEnabledNetworks
+### HasId
 
-`func (o *InlineResponse200220) HasEnabledNetworks() bool`
+`func (o *InlineResponse200220) HasId() bool`
 
-HasEnabledNetworks returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200220) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200220) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200220) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200220) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200220) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200220) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200220) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200220) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### GetApi
+
+`func (o *InlineResponse200220) GetApi() OrganizationsApi`
+
+GetApi returns the Api field if non-nil, zero value otherwise.
+
+### GetApiOk
+
+`func (o *InlineResponse200220) GetApiOk() (*OrganizationsApi, bool)`
+
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApi
+
+`func (o *InlineResponse200220) SetApi(v OrganizationsApi)`
+
+SetApi sets Api field to given value.
+
+### HasApi
+
+`func (o *InlineResponse200220) HasApi() bool`
+
+HasApi returns a boolean if a field has been set.
+
+### GetLicensing
+
+`func (o *InlineResponse200220) GetLicensing() OrganizationsLicensing`
+
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
+
+### GetLicensingOk
+
+`func (o *InlineResponse200220) GetLicensingOk() (*OrganizationsLicensing, bool)`
+
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicensing
+
+`func (o *InlineResponse200220) SetLicensing(v OrganizationsLicensing)`
+
+SetLicensing sets Licensing field to given value.
+
+### HasLicensing
+
+`func (o *InlineResponse200220) HasLicensing() bool`
+
+HasLicensing returns a boolean if a field has been set.
+
+### GetCloud
+
+`func (o *InlineResponse200220) GetCloud() OrganizationsCloud`
+
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
+
+### GetCloudOk
+
+`func (o *InlineResponse200220) GetCloudOk() (*OrganizationsCloud, bool)`
+
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCloud
+
+`func (o *InlineResponse200220) SetCloud(v OrganizationsCloud)`
+
+SetCloud sets Cloud field to given value.
+
+### HasCloud
+
+`func (o *InlineResponse200220) HasCloud() bool`
+
+HasCloud returns a boolean if a field has been set.
+
+### GetManagement
+
+`func (o *InlineResponse200220) GetManagement() OrganizationsManagement`
+
+GetManagement returns the Management field if non-nil, zero value otherwise.
+
+### GetManagementOk
+
+`func (o *InlineResponse200220) GetManagementOk() (*OrganizationsManagement, bool)`
+
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManagement
+
+`func (o *InlineResponse200220) SetManagement(v OrganizationsManagement)`
+
+SetManagement sets Management field to given value.
+
+### HasManagement
+
+`func (o *InlineResponse200220) HasManagement() bool`
+
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Username** | Pointer to **string** | Username for the MQTT broker. | [optional] 
-**Password** | Pointer to **string** | Password for the MQTT broker. | [optional] 
+**Username** | Pointer to **NullableString** | Username for the MQTT broker. | [optional] 
+**Password** | Pointer to **NullableString** | Password for the MQTT broker. | [optional] 
 
 ## Methods
 
@@ -51,6 +51,16 @@ SetUsername sets Username field to given value.
 
 HasUsername returns a boolean if a field has been set.
 
+### SetUsernameNil
+
+`func (o *NetworksNetworkIdMqttBrokersAuthentication1) SetUsernameNil(b bool)`
+
+ SetUsernameNil sets the value for Username to be an explicit nil
+
+### UnsetUsername
+`func (o *NetworksNetworkIdMqttBrokersAuthentication1) UnsetUsername()`
+
+UnsetUsername ensures that no value is present for Username, not even an explicit nil
 ### GetPassword
 
 `func (o *NetworksNetworkIdMqttBrokersAuthentication1) GetPassword() string`
@@ -76,6 +86,16 @@ SetPassword sets Password field to given value.
 
 HasPassword returns a boolean if a field has been set.
 
+### SetPasswordNil
+
+`func (o *NetworksNetworkIdMqttBrokersAuthentication1) SetPasswordNil(b bool)`
+
+ SetPasswordNil sets the value for Password to be an explicit nil
+
+### UnsetPassword
+`func (o *NetworksNetworkIdMqttBrokersAuthentication1) UnsetPassword()`
+
+UnsetPassword ensures that no value is present for Password, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
