@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
 **BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
 **AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
+**AlwaysAllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers that are always allowed on the network. These are the MAC addresses of switches, switch stacks, and VRRP groups in the network. These servers cannot be blocked. | [optional] 
 **ArpInspection** | Pointer to [**InlineResponse200160ArpInspection**](InlineResponse200160ArpInspection.md) |  | [optional] 
 
 ## Methods
@@ -128,6 +129,31 @@ SetAllowedServers sets AllowedServers field to given value.
 `func (o *InlineResponse200160) HasAllowedServers() bool`
 
 HasAllowedServers returns a boolean if a field has been set.
+
+### GetAlwaysAllowedServers
+
+`func (o *InlineResponse200160) GetAlwaysAllowedServers() []string`
+
+GetAlwaysAllowedServers returns the AlwaysAllowedServers field if non-nil, zero value otherwise.
+
+### GetAlwaysAllowedServersOk
+
+`func (o *InlineResponse200160) GetAlwaysAllowedServersOk() (*[]string, bool)`
+
+GetAlwaysAllowedServersOk returns a tuple with the AlwaysAllowedServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlwaysAllowedServers
+
+`func (o *InlineResponse200160) SetAlwaysAllowedServers(v []string)`
+
+SetAlwaysAllowedServers sets AlwaysAllowedServers field to given value.
+
+### HasAlwaysAllowedServers
+
+`func (o *InlineResponse200160) HasAlwaysAllowedServers() bool`
+
+HasAlwaysAllowedServers returns a boolean if a field has been set.
 
 ### GetArpInspection
 

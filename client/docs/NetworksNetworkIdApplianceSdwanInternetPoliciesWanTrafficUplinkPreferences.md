@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PreferredUplink** | **string** | Preferred uplink for uplink preference rule. Must be one of: &#39;wan1&#39;, &#39;wan2&#39;, &#39;bestForVoIP&#39;, &#39;loadBalancing&#39; or &#39;defaultUplink&#39; | 
+**PreferredUplink** | **string** | Preferred uplink for uplink preference rule. Must be one of: &#39;wan1&#39;, &#39;wan2&#39;, &#39;bestForVoIP&#39;, &#39;loadBalancing&#39;, &#39;defaultUplink&#39; or &#39;cellular&#39; | 
 **FailOverCriterion** | Pointer to **string** | WAN failover and failback behavior | [optional] 
 **PerformanceClass** | Pointer to [**NetworksNetworkIdApplianceSdwanInternetPoliciesPerformanceClass**](NetworksNetworkIdApplianceSdwanInternetPoliciesPerformanceClass.md) |  | [optional] 
 **TrafficFilters** | [**[]NetworksNetworkIdApplianceSdwanInternetPoliciesTrafficFilters**](NetworksNetworkIdApplianceSdwanInternetPoliciesTrafficFilters.md) | Traffic filters | 

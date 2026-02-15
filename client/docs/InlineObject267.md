@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
 
 ## Methods
 
 ### NewInlineObject267
 
-`func NewInlineObject267(shortName string, ) *InlineObject267`
+`func NewInlineObject267(scheduleId string, ) *InlineObject267`
 
 NewInlineObject267 instantiates a new InlineObject267 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,25 @@ NewInlineObject267WithDefaults instantiates a new InlineObject267 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetScheduleId
 
-`func (o *InlineObject267) GetShortName() string`
+`func (o *InlineObject267) GetScheduleId() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetScheduleIdOk
 
-`func (o *InlineObject267) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject267) GetScheduleIdOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetScheduleId
 
-`func (o *InlineObject267) SetShortName(v string)`
+`func (o *InlineObject267) SetScheduleId(v string)`
 
-SetShortName sets ShortName field to given value.
+SetScheduleId sets ScheduleId field to given value.
 
-
-### GetLimitScopeToNetworks
-
-`func (o *InlineObject267) GetLimitScopeToNetworks() []string`
-
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
-
-### GetLimitScopeToNetworksOk
-
-`func (o *InlineObject267) GetLimitScopeToNetworksOk() (*[]string, bool)`
-
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLimitScopeToNetworks
-
-`func (o *InlineObject267) SetLimitScopeToNetworks(v []string)`
-
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
-
-### HasLimitScopeToNetworks
-
-`func (o *InlineObject267) HasLimitScopeToNetworks() bool`
-
-HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

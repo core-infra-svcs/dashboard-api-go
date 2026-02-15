@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new role. Must be unique. This parameter is required. | 
-**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices1.md) | Device tag on which this specified permission is applied. | [optional] 
-**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1.md) | Network tag on which this specified permission is applied. | [optional] 
-**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide1.md) | Permissions to be applied org wide. | [optional] 
+**Serial** | Pointer to **string** | Serial of camera | [optional] 
+**WirelessCredentialsSent** | Pointer to **bool** | Note whether credentials were sent successfully | [optional] 
 
 ## Methods
 
 ### NewInlineObject246
 
-`func NewInlineObject246(name string, ) *InlineObject246`
+`func NewInlineObject246() *InlineObject246`
 
 NewInlineObject246 instantiates a new InlineObject246 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +26,55 @@ NewInlineObject246WithDefaults instantiates a new InlineObject246 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSerial
 
-`func (o *InlineObject246) GetName() string`
+`func (o *InlineObject246) GetSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialOk
 
-`func (o *InlineObject246) GetNameOk() (*string, bool)`
+`func (o *InlineObject246) GetSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerial
 
-`func (o *InlineObject246) SetName(v string)`
+`func (o *InlineObject246) SetSerial(v string)`
 
-SetName sets Name field to given value.
+SetSerial sets Serial field to given value.
 
+### HasSerial
 
-### GetAppliedOnDevices
+`func (o *InlineObject246) HasSerial() bool`
 
-`func (o *InlineObject246) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1`
+HasSerial returns a boolean if a field has been set.
 
-GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
+### GetWirelessCredentialsSent
 
-### GetAppliedOnDevicesOk
+`func (o *InlineObject246) GetWirelessCredentialsSent() bool`
 
-`func (o *InlineObject246) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1, bool)`
+GetWirelessCredentialsSent returns the WirelessCredentialsSent field if non-nil, zero value otherwise.
 
-GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
+### GetWirelessCredentialsSentOk
+
+`func (o *InlineObject246) GetWirelessCredentialsSentOk() (*bool, bool)`
+
+GetWirelessCredentialsSentOk returns a tuple with the WirelessCredentialsSent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedOnDevices
+### SetWirelessCredentialsSent
 
-`func (o *InlineObject246) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1)`
+`func (o *InlineObject246) SetWirelessCredentialsSent(v bool)`
 
-SetAppliedOnDevices sets AppliedOnDevices field to given value.
+SetWirelessCredentialsSent sets WirelessCredentialsSent field to given value.
 
-### HasAppliedOnDevices
+### HasWirelessCredentialsSent
 
-`func (o *InlineObject246) HasAppliedOnDevices() bool`
+`func (o *InlineObject246) HasWirelessCredentialsSent() bool`
 
-HasAppliedOnDevices returns a boolean if a field has been set.
-
-### GetAppliedOnNetworks
-
-`func (o *InlineObject246) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1`
-
-GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
-
-### GetAppliedOnNetworksOk
-
-`func (o *InlineObject246) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1, bool)`
-
-GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAppliedOnNetworks
-
-`func (o *InlineObject246) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1)`
-
-SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
-
-### HasAppliedOnNetworks
-
-`func (o *InlineObject246) HasAppliedOnNetworks() bool`
-
-HasAppliedOnNetworks returns a boolean if a field has been set.
-
-### GetAppliedOrgWide
-
-`func (o *InlineObject246) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1`
-
-GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
-
-### GetAppliedOrgWideOk
-
-`func (o *InlineObject246) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1, bool)`
-
-GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAppliedOrgWide
-
-`func (o *InlineObject246) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1)`
-
-SetAppliedOrgWide sets AppliedOrgWide field to given value.
-
-### HasAppliedOrgWide
-
-`func (o *InlineObject246) HasAppliedOrgWide() bool`
-
-HasAppliedOrgWide returns a boolean if a field has been set.
+HasWirelessCredentialsSent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**Identity** | Pointer to [**InlineResponse200210Identity**](InlineResponse200210Identity.md) |  | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200210EapolKey**](InlineResponse200210EapolKey.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
+**Exception** | Pointer to [**InlineResponse200210Exception**](InlineResponse200210Exception.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200210Rules**](InlineResponse200210Rules.md) | Bonjour forwarding rules | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200210WithDefaults instantiates a new InlineResponse200210 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetEnabled
 
-`func (o *InlineResponse200210) GetTimeout() int32`
+`func (o *InlineResponse200210) GetEnabled() bool`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetEnabledOk
 
-`func (o *InlineResponse200210) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineResponse200210) GetEnabledOk() (*bool, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetEnabled
 
-`func (o *InlineResponse200210) SetTimeout(v int32)`
+`func (o *InlineResponse200210) SetEnabled(v bool)`
 
-SetTimeout sets Timeout field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTimeout
+### HasEnabled
 
-`func (o *InlineResponse200210) HasTimeout() bool`
+`func (o *InlineResponse200210) HasEnabled() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetException
 
-`func (o *InlineResponse200210) GetMaxRetries() int32`
+`func (o *InlineResponse200210) GetException() InlineResponse200210Exception`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetException returns the Exception field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetExceptionOk
 
-`func (o *InlineResponse200210) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineResponse200210) GetExceptionOk() (*InlineResponse200210Exception, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetException
 
-`func (o *InlineResponse200210) SetMaxRetries(v int32)`
+`func (o *InlineResponse200210) SetException(v InlineResponse200210Exception)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetException sets Exception field to given value.
 
-### HasMaxRetries
+### HasException
 
-`func (o *InlineResponse200210) HasMaxRetries() bool`
+`func (o *InlineResponse200210) HasException() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
+HasException returns a boolean if a field has been set.
 
-### GetIdentity
+### GetRules
 
-`func (o *InlineResponse200210) GetIdentity() InlineResponse200210Identity`
+`func (o *InlineResponse200210) GetRules() []InlineResponse200210Rules`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetRulesOk
 
-`func (o *InlineResponse200210) GetIdentityOk() (*InlineResponse200210Identity, bool)`
+`func (o *InlineResponse200210) GetRulesOk() (*[]InlineResponse200210Rules, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetRules
 
-`func (o *InlineResponse200210) SetIdentity(v InlineResponse200210Identity)`
+`func (o *InlineResponse200210) SetRules(v []InlineResponse200210Rules)`
 
-SetIdentity sets Identity field to given value.
+SetRules sets Rules field to given value.
 
-### HasIdentity
+### HasRules
 
-`func (o *InlineResponse200210) HasIdentity() bool`
+`func (o *InlineResponse200210) HasRules() bool`
 
-HasIdentity returns a boolean if a field has been set.
-
-### GetEapolKey
-
-`func (o *InlineResponse200210) GetEapolKey() InlineResponse200210EapolKey`
-
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
-
-### GetEapolKeyOk
-
-`func (o *InlineResponse200210) GetEapolKeyOk() (*InlineResponse200210EapolKey, bool)`
-
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEapolKey
-
-`func (o *InlineResponse200210) SetEapolKey(v InlineResponse200210EapolKey)`
-
-SetEapolKey sets EapolKey field to given value.
-
-### HasEapolKey
-
-`func (o *InlineResponse200210) HasEapolKey() bool`
-
-HasEapolKey returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

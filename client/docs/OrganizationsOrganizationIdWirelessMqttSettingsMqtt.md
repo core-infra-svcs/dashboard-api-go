@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Enabled** | **bool** | MQTT Enabled | 
 **Topic** | Pointer to **string** | MQTT Topic | [optional] 
 **MessageFields** | Pointer to **[]string** | Select fields to populate in MQTT messages. Valid types are: RSSI, AP MAC address, Client MAC address, Timestamp, Radio, Network ID, Beacon type, Raw payload, Client UUID, Client major value, Client minor value, Signal power, Band, Slot ID | [optional] 
-**Publishing** | Pointer to [**InlineResponse200382MqttPublishing**](InlineResponse200382MqttPublishing.md) |  | [optional] 
+**Publishing** | Pointer to [**InlineResponse200385MqttPublishing**](InlineResponse200385MqttPublishing.md) |  | [optional] 
 **Broker** | Pointer to [**OrganizationsOrganizationIdWirelessMqttSettingsMqttBroker**](OrganizationsOrganizationIdWirelessMqttSettingsMqttBroker.md) |  | [optional] 
 
 ## Methods
@@ -101,20 +101,20 @@ HasMessageFields returns a boolean if a field has been set.
 
 ### GetPublishing
 
-`func (o *OrganizationsOrganizationIdWirelessMqttSettingsMqtt) GetPublishing() InlineResponse200382MqttPublishing`
+`func (o *OrganizationsOrganizationIdWirelessMqttSettingsMqtt) GetPublishing() InlineResponse200385MqttPublishing`
 
 GetPublishing returns the Publishing field if non-nil, zero value otherwise.
 
 ### GetPublishingOk
 
-`func (o *OrganizationsOrganizationIdWirelessMqttSettingsMqtt) GetPublishingOk() (*InlineResponse200382MqttPublishing, bool)`
+`func (o *OrganizationsOrganizationIdWirelessMqttSettingsMqtt) GetPublishingOk() (*InlineResponse200385MqttPublishing, bool)`
 
 GetPublishingOk returns a tuple with the Publishing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPublishing
 
-`func (o *OrganizationsOrganizationIdWirelessMqttSettingsMqtt) SetPublishing(v InlineResponse200382MqttPublishing)`
+`func (o *OrganizationsOrganizationIdWirelessMqttSettingsMqtt) SetPublishing(v InlineResponse200385MqttPublishing)`
 
 SetPublishing sets Publishing field to given value.
 

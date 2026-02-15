@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Ip** | Pointer to **string** | The IP address of the ARP table entry | [optional] 
 **Mac** | Pointer to **string** | The MAC address of the ARP table entry | [optional] 
-**VlanId** | Pointer to **int32** | The VLAN ID of the ARP table entry | [optional] 
+**VlanId** | Pointer to **NullableInt32** | The VLAN ID of the ARP table entry. Null for Meraki wireless devices. | [optional] 
 **Interface** | Pointer to **string** | The interface name of the ARP table entry, such as Vlan1, Port-channel2, or GigabitEthernet1/0/1 | [optional] 
-**LastUpdatedAt** | Pointer to **time.Time** | Time of the last update of the ARP table entry | [optional] 
+**LastUpdatedAt** | Pointer to **NullableTime** | Time of the last update of the ARP table entry. Null for Meraki wireless devices. | [optional] 
 
 ## Methods
 
@@ -104,6 +104,16 @@ SetVlanId sets VlanId field to given value.
 
 HasVlanId returns a boolean if a field has been set.
 
+### SetVlanIdNil
+
+`func (o *InlineResponse20022Entries) SetVlanIdNil(b bool)`
+
+ SetVlanIdNil sets the value for VlanId to be an explicit nil
+
+### UnsetVlanId
+`func (o *InlineResponse20022Entries) UnsetVlanId()`
+
+UnsetVlanId ensures that no value is present for VlanId, not even an explicit nil
 ### GetInterface
 
 `func (o *InlineResponse20022Entries) GetInterface() string`
@@ -154,6 +164,16 @@ SetLastUpdatedAt sets LastUpdatedAt field to given value.
 
 HasLastUpdatedAt returns a boolean if a field has been set.
 
+### SetLastUpdatedAtNil
+
+`func (o *InlineResponse20022Entries) SetLastUpdatedAtNil(b bool)`
+
+ SetLastUpdatedAtNil sets the value for LastUpdatedAt to be an explicit nil
+
+### UnsetLastUpdatedAt
+`func (o *InlineResponse20022Entries) UnsetLastUpdatedAt()`
+
+UnsetLastUpdatedAt ensures that no value is present for LastUpdatedAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,16 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**InlineResponse200214Operator**](InlineResponse200214Operator.md) |  | [optional] 
+**Venue** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Venue**](NetworksNetworkIdWirelessSsidsNumberHotspot20Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID (&#39;Private network&#39;, &#39;Private network with guest access&#39;, &#39;Chargeable public network&#39;, &#39;Free public network&#39;, &#39;Personal device network&#39;, &#39;Emergency services only network&#39;, &#39;Test or experimental&#39;, &#39;Wildcard&#39;) | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]InlineResponse200214MccMncs**](InlineResponse200214MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms**](NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
 ### NewInlineObject202
 
-`func NewInlineObject202(name string, groupPolicyId string, ) *InlineObject202`
+`func NewInlineObject202() *InlineObject202`
 
 NewInlineObject202 instantiates a new InlineObject202 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +32,205 @@ NewInlineObject202WithDefaults instantiates a new InlineObject202 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject202) GetName() string`
+`func (o *InlineObject202) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject202) GetNameOk() (*string, bool)`
+`func (o *InlineObject202) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject202) SetName(v string)`
+`func (o *InlineObject202) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetPassphrase
+`func (o *InlineObject202) HasEnabled() bool`
 
-`func (o *InlineObject202) GetPassphrase() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+### GetOperator
 
-### GetPassphraseOk
+`func (o *InlineObject202) GetOperator() InlineResponse200214Operator`
 
-`func (o *InlineObject202) GetPassphraseOk() (*string, bool)`
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+### GetOperatorOk
+
+`func (o *InlineObject202) GetOperatorOk() (*InlineResponse200214Operator, bool)`
+
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetOperator
 
-`func (o *InlineObject202) SetPassphrase(v string)`
+`func (o *InlineObject202) SetOperator(v InlineResponse200214Operator)`
 
-SetPassphrase sets Passphrase field to given value.
+SetOperator sets Operator field to given value.
 
-### HasPassphrase
+### HasOperator
 
-`func (o *InlineObject202) HasPassphrase() bool`
+`func (o *InlineObject202) HasOperator() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasOperator returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetVenue
 
-`func (o *InlineObject202) GetGroupPolicyId() string`
+`func (o *InlineObject202) GetVenue() NetworksNetworkIdWirelessSsidsNumberHotspot20Venue`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetVenueOk
 
-`func (o *InlineObject202) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject202) GetVenueOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Venue, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetVenue
 
-`func (o *InlineObject202) SetGroupPolicyId(v string)`
+`func (o *InlineObject202) SetVenue(v NetworksNetworkIdWirelessSsidsNumberHotspot20Venue)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetVenue sets Venue field to given value.
 
+### HasVenue
 
-### GetExpiresAt
+`func (o *InlineObject202) HasVenue() bool`
 
-`func (o *InlineObject202) GetExpiresAt() time.Time`
+HasVenue returns a boolean if a field has been set.
 
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+### GetNetworkAccessType
 
-### GetExpiresAtOk
+`func (o *InlineObject202) GetNetworkAccessType() string`
 
-`func (o *InlineObject202) GetExpiresAtOk() (*time.Time, bool)`
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
 
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+### GetNetworkAccessTypeOk
+
+`func (o *InlineObject202) GetNetworkAccessTypeOk() (*string, bool)`
+
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExpiresAt
+### SetNetworkAccessType
 
-`func (o *InlineObject202) SetExpiresAt(v time.Time)`
+`func (o *InlineObject202) SetNetworkAccessType(v string)`
 
-SetExpiresAt sets ExpiresAt field to given value.
+SetNetworkAccessType sets NetworkAccessType field to given value.
 
-### HasExpiresAt
+### HasNetworkAccessType
 
-`func (o *InlineObject202) HasExpiresAt() bool`
+`func (o *InlineObject202) HasNetworkAccessType() bool`
 
-HasExpiresAt returns a boolean if a field has been set.
+HasNetworkAccessType returns a boolean if a field has been set.
+
+### GetDomains
+
+`func (o *InlineObject202) GetDomains() []string`
+
+GetDomains returns the Domains field if non-nil, zero value otherwise.
+
+### GetDomainsOk
+
+`func (o *InlineObject202) GetDomainsOk() (*[]string, bool)`
+
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDomains
+
+`func (o *InlineObject202) SetDomains(v []string)`
+
+SetDomains sets Domains field to given value.
+
+### HasDomains
+
+`func (o *InlineObject202) HasDomains() bool`
+
+HasDomains returns a boolean if a field has been set.
+
+### GetRoamConsortOis
+
+`func (o *InlineObject202) GetRoamConsortOis() []string`
+
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
+
+### GetRoamConsortOisOk
+
+`func (o *InlineObject202) GetRoamConsortOisOk() (*[]string, bool)`
+
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRoamConsortOis
+
+`func (o *InlineObject202) SetRoamConsortOis(v []string)`
+
+SetRoamConsortOis sets RoamConsortOis field to given value.
+
+### HasRoamConsortOis
+
+`func (o *InlineObject202) HasRoamConsortOis() bool`
+
+HasRoamConsortOis returns a boolean if a field has been set.
+
+### GetMccMncs
+
+`func (o *InlineObject202) GetMccMncs() []InlineResponse200214MccMncs`
+
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
+
+### GetMccMncsOk
+
+`func (o *InlineObject202) GetMccMncsOk() (*[]InlineResponse200214MccMncs, bool)`
+
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMccMncs
+
+`func (o *InlineObject202) SetMccMncs(v []InlineResponse200214MccMncs)`
+
+SetMccMncs sets MccMncs field to given value.
+
+### HasMccMncs
+
+`func (o *InlineObject202) HasMccMncs() bool`
+
+HasMccMncs returns a boolean if a field has been set.
+
+### GetNaiRealms
+
+`func (o *InlineObject202) GetNaiRealms() []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms`
+
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
+
+### GetNaiRealmsOk
+
+`func (o *InlineObject202) GetNaiRealmsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms, bool)`
+
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNaiRealms
+
+`func (o *InlineObject202) SetNaiRealms(v []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms)`
+
+SetNaiRealms sets NaiRealms field to given value.
+
+### HasNaiRealms
+
+`func (o *InlineObject202) HasNaiRealms() bool`
+
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | **string** | The unique order claim id | 
-**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
+**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices.md) | A set of devices to import (or update) | 
+**Options** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject278
 
-`func NewInlineObject278(claimId string, ) *InlineObject278`
+`func NewInlineObject278(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, ) *InlineObject278`
 
 NewInlineObject278 instantiates a new InlineObject278 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,50 @@ NewInlineObject278WithDefaults instantiates a new InlineObject278 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetDevices
 
-`func (o *InlineObject278) GetClaimId() string`
+`func (o *InlineObject278) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetDevicesOk
 
-`func (o *InlineObject278) GetClaimIdOk() (*string, bool)`
+`func (o *InlineObject278) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetDevices
 
-`func (o *InlineObject278) SetClaimId(v string)`
+`func (o *InlineObject278) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices)`
 
-SetClaimId sets ClaimId field to given value.
+SetDevices sets Devices field to given value.
 
 
-### GetSubscriptions
+### GetOptions
 
-`func (o *InlineObject278) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
+`func (o *InlineObject278) GetOptions() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions`
 
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+GetOptions returns the Options field if non-nil, zero value otherwise.
 
-### GetSubscriptionsOk
+### GetOptionsOk
 
-`func (o *InlineObject278) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
+`func (o *InlineObject278) GetOptionsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions, bool)`
 
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+GetOptionsOk returns a tuple with the Options field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptions
+### SetOptions
 
-`func (o *InlineObject278) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
+`func (o *InlineObject278) SetOptions(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions)`
 
-SetSubscriptions sets Subscriptions field to given value.
+SetOptions sets Options field to given value.
 
-### HasSubscriptions
+### HasOptions
 
-`func (o *InlineObject278) HasSubscriptions() bool`
+`func (o *InlineObject278) HasOptions() bool`
 
-HasSubscriptions returns a boolean if a field has been set.
+HasOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

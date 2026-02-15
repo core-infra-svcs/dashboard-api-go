@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
-**Address** | Pointer to **string** | IP for the DNS record | [optional] 
-**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
+**Hostname** | **string** | Hostname for the DNS record | 
+**Address** | **string** | IP for the DNS record | 
+**Profile** | [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile1**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile1.md) |  | 
 
 ## Methods
 
 ### NewInlineObject230
 
-`func NewInlineObject230() *InlineObject230`
+`func NewInlineObject230(hostname string, address string, profile OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile1, ) *InlineObject230`
 
 NewInlineObject230 instantiates a new InlineObject230 object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetHostname sets Hostname field to given value.
 
-### HasHostname
-
-`func (o *InlineObject230) HasHostname() bool`
-
-HasHostname returns a boolean if a field has been set.
 
 ### GetAddress
 
@@ -71,36 +66,26 @@ and a boolean to check if the value has been set.
 
 SetAddress sets Address field to given value.
 
-### HasAddress
-
-`func (o *InlineObject230) HasAddress() bool`
-
-HasAddress returns a boolean if a field has been set.
 
 ### GetProfile
 
-`func (o *InlineObject230) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
+`func (o *InlineObject230) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile1`
 
 GetProfile returns the Profile field if non-nil, zero value otherwise.
 
 ### GetProfileOk
 
-`func (o *InlineObject230) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
+`func (o *InlineObject230) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile1, bool)`
 
 GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProfile
 
-`func (o *InlineObject230) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
+`func (o *InlineObject230) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile1)`
 
 SetProfile sets Profile field to given value.
 
-### HasProfile
-
-`func (o *InlineObject230) HasProfile() bool`
-
-HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

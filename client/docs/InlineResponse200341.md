@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**Message** | Pointer to **string** | The error message of the API | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200341WithDefaults instantiates a new InlineResponse200341 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetStatus
 
-`func (o *InlineResponse200341) GetTs() time.Time`
+`func (o *InlineResponse200341) GetStatus() bool`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetStatusOk
 
-`func (o *InlineResponse200341) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200341) GetStatusOk() (*bool, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetStatus
 
-`func (o *InlineResponse200341) SetTs(v time.Time)`
+`func (o *InlineResponse200341) SetStatus(v bool)`
 
-SetTs sets Ts field to given value.
+SetStatus sets Status field to given value.
 
-### HasTs
+### HasStatus
 
-`func (o *InlineResponse200341) HasTs() bool`
+`func (o *InlineResponse200341) HasStatus() bool`
 
-HasTs returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetDraw
+### GetMessage
 
-`func (o *InlineResponse200341) GetDraw() float32`
+`func (o *InlineResponse200341) GetMessage() string`
 
-GetDraw returns the Draw field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetDrawOk
+### GetMessageOk
 
-`func (o *InlineResponse200341) GetDrawOk() (*float32, bool)`
+`func (o *InlineResponse200341) GetMessageOk() (*string, bool)`
 
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDraw
+### SetMessage
 
-`func (o *InlineResponse200341) SetDraw(v float32)`
+`func (o *InlineResponse200341) SetMessage(v string)`
 
-SetDraw sets Draw field to given value.
+SetMessage sets Message field to given value.
 
-### HasDraw
+### HasMessage
 
-`func (o *InlineResponse200341) HasDraw() bool`
+`func (o *InlineResponse200341) HasMessage() bool`
 
-HasDraw returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

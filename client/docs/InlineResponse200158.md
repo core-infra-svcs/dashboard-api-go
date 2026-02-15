@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**UseOobMgmt** | Pointer to **bool** | Boolean value to use out-of-band management interface when configured | [optional] 
 **VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
 **Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
 **Switches** | Pointer to [**[]InlineResponse200158Switches**](InlineResponse200158Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
@@ -52,6 +53,31 @@ SetEnabled sets Enabled field to given value.
 `func (o *InlineResponse200158) HasEnabled() bool`
 
 HasEnabled returns a boolean if a field has been set.
+
+### GetUseOobMgmt
+
+`func (o *InlineResponse200158) GetUseOobMgmt() bool`
+
+GetUseOobMgmt returns the UseOobMgmt field if non-nil, zero value otherwise.
+
+### GetUseOobMgmtOk
+
+`func (o *InlineResponse200158) GetUseOobMgmtOk() (*bool, bool)`
+
+GetUseOobMgmtOk returns a tuple with the UseOobMgmt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUseOobMgmt
+
+`func (o *InlineResponse200158) SetUseOobMgmt(v bool)`
+
+SetUseOobMgmt sets UseOobMgmt field to given value.
+
+### HasUseOobMgmt
+
+`func (o *InlineResponse200158) HasUseOobMgmt() bool`
+
+HasUseOobMgmt returns a boolean if a field has been set.
 
 ### GetVlanId
 

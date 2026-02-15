@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200387Items**](InlineResponse200387Items.md) | The top-level propery containing all status data. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200205**](InlineResponse200205.md) | List of RRM settings | [optional] 
 **Meta** | Pointer to [**InlineResponse200387Meta**](InlineResponse200387Meta.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200387) GetItems() []InlineResponse200387Items`
+`func (o *InlineResponse200387) GetItems() []InlineResponse200205`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200387) GetItemsOk() (*[]InlineResponse200387Items, bool)`
+`func (o *InlineResponse200387) GetItemsOk() (*[]InlineResponse200205, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200387) SetItems(v []InlineResponse200387Items)`
+`func (o *InlineResponse200387) SetItems(v []InlineResponse200205)`
 
 SetItems sets Items field to given value.
 

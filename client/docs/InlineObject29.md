@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **AccessPolicyType** | Pointer to **string** | The type of the access policy of the switch port. Only applicable to access ports. Can be one of &#39;Open&#39;, &#39;Custom access policy&#39;, &#39;MAC allow list&#39; or &#39;Sticky MAC allow list&#39;. | [optional] 
 **AccessPolicyNumber** | Pointer to **int32** | The number of a custom access policy to configure on the switch port. Only applicable when &#39;accessPolicyType&#39; is &#39;Custom access policy&#39;. | [optional] 
 **MacAllowList** | Pointer to **[]string** | Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when &#39;accessPolicyType&#39; is &#39;MAC allow list&#39;. | [optional] 
-**MacWhitelistLimit** | Pointer to **int32** | The maximum number of MAC addresses for regular MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;MAC allow list&#39;.           Note: Config only supported on verions greater than ms18 only for classic switches. | [optional] 
+**MacWhitelistLimit** | Pointer to **NullableInt32** | The maximum number of MAC addresses for regular MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;MAC allow list&#39;.           Note: Config only supported on verions greater than ms18 only for classic switches. | [optional] 
 **StickyMacAllowList** | Pointer to **[]string** | The initial list of MAC addresses for sticky Mac allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
 **StickyMacAllowListLimit** | Pointer to **int32** | The maximum number of MAC addresses for sticky MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
 **StormControlEnabled** | Pointer to **bool** | The storm control status of the switch port. | [optional] 
@@ -568,6 +568,16 @@ SetMacWhitelistLimit sets MacWhitelistLimit field to given value.
 
 HasMacWhitelistLimit returns a boolean if a field has been set.
 
+### SetMacWhitelistLimitNil
+
+`func (o *InlineObject29) SetMacWhitelistLimitNil(b bool)`
+
+ SetMacWhitelistLimitNil sets the value for MacWhitelistLimit to be an explicit nil
+
+### UnsetMacWhitelistLimit
+`func (o *InlineObject29) UnsetMacWhitelistLimit()`
+
+UnsetMacWhitelistLimit ensures that no value is present for MacWhitelistLimit, not even an explicit nil
 ### GetStickyMacAllowList
 
 `func (o *InlineObject29) GetStickyMacAllowList() []string`

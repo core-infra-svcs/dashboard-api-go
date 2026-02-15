@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**CreateNetworkApplianceVlan**](VlansApi.md#CreateNetworkApplianceVlan) | **Post** /networks/{networkId}/appliance/vlans | Add a VLAN
 [**DeleteNetworkApplianceVlan**](VlansApi.md#DeleteNetworkApplianceVlan) | **Delete** /networks/{networkId}/appliance/vlans/{vlanId} | Delete a VLAN from a network
 [**GetNetworkApplianceVlan**](VlansApi.md#GetNetworkApplianceVlan) | **Get** /networks/{networkId}/appliance/vlans/{vlanId} | Return a VLAN
-[**GetNetworkApplianceVlans**](VlansApi.md#GetNetworkApplianceVlans) | **Get** /networks/{networkId}/appliance/vlans | List the VLANs for a Cisco Secure Router network
+[**GetNetworkApplianceVlans**](VlansApi.md#GetNetworkApplianceVlans) | **Get** /networks/{networkId}/appliance/vlans | List the VLANs for a Security Appliance network
 [**GetNetworkApplianceVlansSettings**](VlansApi.md#GetNetworkApplianceVlansSettings) | **Get** /networks/{networkId}/appliance/vlans/settings | Returns the enabled status of VLANs for the network
 [**UpdateNetworkApplianceVlan**](VlansApi.md#UpdateNetworkApplianceVlan) | **Put** /networks/{networkId}/appliance/vlans/{vlanId} | Update a VLAN
 [**UpdateNetworkApplianceVlansSettings**](VlansApi.md#UpdateNetworkApplianceVlansSettings) | **Put** /networks/{networkId}/appliance/vlans/settings | Enable/Disable VLANs for the given network
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 > []InlineResponse20077 GetNetworkApplianceVlans(ctx, networkId).Execute()
 
-List the VLANs for a Cisco Secure Router network
+List the VLANs for a Security Appliance network
 
 
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | [optional] 
+**Role** | **string** | The role of the SAML administrator | 
+**OrgAccess** | **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | 
 **Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
 **Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject299
 
-`func NewInlineObject299() *InlineObject299`
+`func NewInlineObject299(role string, orgAccess string, ) *InlineObject299`
 
 NewInlineObject299 instantiates a new InlineObject299 object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetRole sets Role field to given value.
 
-### HasRole
-
-`func (o *InlineObject299) HasRole() bool`
-
-HasRole returns a boolean if a field has been set.
 
 ### GetOrgAccess
 
@@ -72,11 +67,6 @@ and a boolean to check if the value has been set.
 
 SetOrgAccess sets OrgAccess field to given value.
 
-### HasOrgAccess
-
-`func (o *InlineObject299) HasOrgAccess() bool`
-
-HasOrgAccess returns a boolean if a field has been set.
 
 ### GetTags
 

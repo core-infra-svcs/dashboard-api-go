@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Number** | Pointer to **int32** | [optional] Represents the ordering of primary and backup tunnels group. primary and backup tunnels are grouped by this number. If you submit a request with the numbers [1, 9, 999], these numbers will be automatically adjusted to a sequential order starting from 1. So, they will be changed to [1, 2, 3] to reflect their positions in the sequence. | [optional] 
-**Failover** | Pointer to [**InlineResponse200248GroupFailover**](InlineResponse200248GroupFailover.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200249GroupFailover**](InlineResponse200249GroupFailover.md) |  | [optional] 
 **ActiveActiveTunnel** | Pointer to **bool** | [optional] Both primary and backup tunnels are active. | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasNumber returns a boolean if a field has been set.
 
 ### GetFailover
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup) GetFailover() InlineResponse200248GroupFailover`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup) GetFailover() InlineResponse200249GroupFailover`
 
 GetFailover returns the Failover field if non-nil, zero value otherwise.
 
 ### GetFailoverOk
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup) GetFailoverOk() (*InlineResponse200248GroupFailover, bool)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup) GetFailoverOk() (*InlineResponse200249GroupFailover, bool)`
 
 GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFailover
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup) SetFailover(v InlineResponse200248GroupFailover)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup) SetFailover(v InlineResponse200249GroupFailover)`
 
 SetFailover sets Failover field to given value.
 

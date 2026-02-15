@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**X509certSha1Fingerprint** | **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | 
 **SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
 **SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject297
 
-`func NewInlineObject297() *InlineObject297`
+`func NewInlineObject297(x509certSha1Fingerprint string, ) *InlineObject297`
 
 NewInlineObject297 instantiates a new InlineObject297 object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasX509certSha1Fingerprint
-
-`func (o *InlineObject297) HasX509certSha1Fingerprint() bool`
-
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
 ### GetSsoLoginUrl
 

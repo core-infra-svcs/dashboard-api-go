@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
+**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
 ### NewInlineObject302
 
-`func NewInlineObject302(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject302`
+`func NewInlineObject302() *InlineObject302`
 
 NewInlineObject302 instantiates a new InlineObject302 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineObject302WithDefaults instantiates a new InlineObject302 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject302) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
+`func (o *InlineObject302) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject302) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
+`func (o *InlineObject302) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject302) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
+`func (o *InlineObject302) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject302) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineObject302) GetScope() string`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineObject302) GetScopeOk() (*string, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineObject302) SetScope(v string)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineObject302) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject302) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject302) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject302) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject302) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

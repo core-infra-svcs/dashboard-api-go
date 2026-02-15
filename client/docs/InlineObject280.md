@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**ClaimId** | **string** | The unique order claim id | 
 
 ## Methods
 
 ### NewInlineObject280
 
-`func NewInlineObject280() *InlineObject280`
+`func NewInlineObject280(claimId string, ) *InlineObject280`
 
 NewInlineObject280 instantiates a new InlineObject280 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject280WithDefaults instantiates a new InlineObject280 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetClaimId
 
-`func (o *InlineObject280) GetSerials() []string`
+`func (o *InlineObject280) GetClaimId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetClaimIdOk
 
-`func (o *InlineObject280) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject280) GetClaimIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetClaimId
 
-`func (o *InlineObject280) SetSerials(v []string)`
+`func (o *InlineObject280) SetClaimId(v string)`
 
-SetSerials sets Serials field to given value.
+SetClaimId sets ClaimId field to given value.
 
-### HasSerials
-
-`func (o *InlineObject280) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

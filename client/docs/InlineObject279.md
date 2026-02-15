@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ClaimId** | **string** | The unique order claim id | 
+**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
 
 ## Methods
 
@@ -44,6 +45,31 @@ and a boolean to check if the value has been set.
 
 SetClaimId sets ClaimId field to given value.
 
+
+### GetSubscriptions
+
+`func (o *InlineObject279) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
+
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+
+### GetSubscriptionsOk
+
+`func (o *InlineObject279) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
+
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubscriptions
+
+`func (o *InlineObject279) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
+
+SetSubscriptions sets Subscriptions field to given value.
+
+### HasSubscriptions
+
+`func (o *InlineObject279) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

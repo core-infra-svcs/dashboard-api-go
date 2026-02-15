@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200294Items**](InlineResponse200294Items.md) | The top-level property containing all memory utilization data. | [optional] 
-**Meta** | Pointer to [**InlineResponse200264Meta**](InlineResponse200264Meta.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200294Counts**](InlineResponse200294Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200294WithDefaults instantiates a new InlineResponse200294 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetCounts
 
-`func (o *InlineResponse200294) GetItems() []InlineResponse200294Items`
+`func (o *InlineResponse200294) GetCounts() InlineResponse200294Counts`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetCountsOk
 
-`func (o *InlineResponse200294) GetItemsOk() (*[]InlineResponse200294Items, bool)`
+`func (o *InlineResponse200294) GetCountsOk() (*InlineResponse200294Counts, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetCounts
 
-`func (o *InlineResponse200294) SetItems(v []InlineResponse200294Items)`
+`func (o *InlineResponse200294) SetCounts(v InlineResponse200294Counts)`
 
-SetItems sets Items field to given value.
+SetCounts sets Counts field to given value.
 
-### HasItems
+### HasCounts
 
-`func (o *InlineResponse200294) HasItems() bool`
+`func (o *InlineResponse200294) HasCounts() bool`
 
-HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200294) GetMeta() InlineResponse200264Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200294) GetMetaOk() (*InlineResponse200264Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200294) SetMeta(v InlineResponse200264Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200294) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

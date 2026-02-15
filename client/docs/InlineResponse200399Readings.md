@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The type of packets being counted | [optional] 
-**Total** | Pointer to **int32** | The total count of sent and received packets during the timespan | [optional] 
-**Recv** | Pointer to **int32** | The total count of packets received by the interface during the timespan | [optional] 
-**Send** | Pointer to **int32** | The total count of packets sent by the interface during the timespan | [optional] 
-**Rate** | Pointer to [**InlineResponse200399Rate**](InlineResponse200399Rate.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the wireless LAN controller interface | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the wireless controller interface | [optional] 
+**Recv** | Pointer to **int32** | The volume of data, in bytes/sec, received by wireless controller interface | [optional] 
+**Send** | Pointer to **int32** | The volume of data, in bytes/sec, transmitted by wireless controller interface | [optional] 
 
 ## Methods
 
@@ -54,30 +53,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetTotal
+### GetMac
 
-`func (o *InlineResponse200399Readings) GetTotal() int32`
+`func (o *InlineResponse200399Readings) GetMac() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetMacOk
 
-`func (o *InlineResponse200399Readings) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200399Readings) GetMacOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetMac
 
-`func (o *InlineResponse200399Readings) SetTotal(v int32)`
+`func (o *InlineResponse200399Readings) SetMac(v string)`
 
-SetTotal sets Total field to given value.
+SetMac sets Mac field to given value.
 
-### HasTotal
+### HasMac
 
-`func (o *InlineResponse200399Readings) HasTotal() bool`
+`func (o *InlineResponse200399Readings) HasMac() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
 ### GetRecv
 
@@ -128,31 +127,6 @@ SetSend sets Send field to given value.
 `func (o *InlineResponse200399Readings) HasSend() bool`
 
 HasSend returns a boolean if a field has been set.
-
-### GetRate
-
-`func (o *InlineResponse200399Readings) GetRate() InlineResponse200399Rate`
-
-GetRate returns the Rate field if non-nil, zero value otherwise.
-
-### GetRateOk
-
-`func (o *InlineResponse200399Readings) GetRateOk() (*InlineResponse200399Rate, bool)`
-
-GetRateOk returns a tuple with the Rate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRate
-
-`func (o *InlineResponse200399Readings) SetRate(v InlineResponse200399Rate)`
-
-SetRate sets Rate field to given value.
-
-### HasRate
-
-`func (o *InlineResponse200399Readings) HasRate() bool`
-
-HasRate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

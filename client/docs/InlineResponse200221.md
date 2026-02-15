@@ -4,18 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200221
 
-`func NewInlineResponse200221(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200221`
+`func NewInlineResponse200221() *InlineResponse200221`
 
 NewInlineResponse200221 instantiates a new InlineResponse200221 object
 This constructor will assign default values to properties that have it defined,
@@ -55,125 +56,155 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetName
 
-`func (o *InlineResponse200221) GetOrganizationId() string`
+`func (o *InlineResponse200221) GetName() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetNameOk
 
-`func (o *InlineResponse200221) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200221) GetNameOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetName
 
-`func (o *InlineResponse200221) SetOrganizationId(v string)`
+`func (o *InlineResponse200221) SetName(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetName sets Name field to given value.
 
-### HasOrganizationId
+### HasName
 
-`func (o *InlineResponse200221) HasOrganizationId() bool`
+`func (o *InlineResponse200221) HasName() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetUrl
 
-`func (o *InlineResponse200221) GetConfirmed() bool`
+`func (o *InlineResponse200221) GetUrl() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetUrlOk
 
-`func (o *InlineResponse200221) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse200221) GetUrlOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetUrl
 
-`func (o *InlineResponse200221) SetConfirmed(v bool)`
+`func (o *InlineResponse200221) SetUrl(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetUrl sets Url field to given value.
 
-### HasConfirmed
+### HasUrl
 
-`func (o *InlineResponse200221) HasConfirmed() bool`
+`func (o *InlineResponse200221) HasUrl() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetApi
 
-`func (o *InlineResponse200221) GetSynchronous() bool`
+`func (o *InlineResponse200221) GetApi() OrganizationsApi`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetApiOk
 
-`func (o *InlineResponse200221) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineResponse200221) GetApiOk() (*OrganizationsApi, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetApi
 
-`func (o *InlineResponse200221) SetSynchronous(v bool)`
+`func (o *InlineResponse200221) SetApi(v OrganizationsApi)`
 
-SetSynchronous sets Synchronous field to given value.
+SetApi sets Api field to given value.
 
-### HasSynchronous
+### HasApi
 
-`func (o *InlineResponse200221) HasSynchronous() bool`
+`func (o *InlineResponse200221) HasApi() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
-### GetStatus
+### GetLicensing
 
-`func (o *InlineResponse200221) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
+`func (o *InlineResponse200221) GetLicensing() OrganizationsLicensing`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetLicensingOk
 
-`func (o *InlineResponse200221) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
+`func (o *InlineResponse200221) GetLicensingOk() (*OrganizationsLicensing, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetLicensing
 
-`func (o *InlineResponse200221) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
+`func (o *InlineResponse200221) SetLicensing(v OrganizationsLicensing)`
 
-SetStatus sets Status field to given value.
+SetLicensing sets Licensing field to given value.
 
-### HasStatus
+### HasLicensing
 
-`func (o *InlineResponse200221) HasStatus() bool`
+`func (o *InlineResponse200221) HasLicensing() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasLicensing returns a boolean if a field has been set.
 
-### GetActions
+### GetCloud
 
-`func (o *InlineResponse200221) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
+`func (o *InlineResponse200221) GetCloud() OrganizationsCloud`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetCloudOk
 
-`func (o *InlineResponse200221) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+`func (o *InlineResponse200221) GetCloudOk() (*OrganizationsCloud, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetCloud
 
-`func (o *InlineResponse200221) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
+`func (o *InlineResponse200221) SetCloud(v OrganizationsCloud)`
 
-SetActions sets Actions field to given value.
+SetCloud sets Cloud field to given value.
 
+### HasCloud
+
+`func (o *InlineResponse200221) HasCloud() bool`
+
+HasCloud returns a boolean if a field has been set.
+
+### GetManagement
+
+`func (o *InlineResponse200221) GetManagement() OrganizationsManagement`
+
+GetManagement returns the Management field if non-nil, zero value otherwise.
+
+### GetManagementOk
+
+`func (o *InlineResponse200221) GetManagementOk() (*OrganizationsManagement, bool)`
+
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManagement
+
+`func (o *InlineResponse200221) SetManagement(v OrganizationsManagement)`
+
+SetManagement sets Management field to given value.
+
+### HasManagement
+
+`func (o *InlineResponse200221) HasManagement() bool`
+
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TrafficFilters** | [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionTrafficFilters1**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionTrafficFilters1.md) | Array of traffic filters for this uplink preference rule | 
-**PreferredUplink** | **string** | Preferred uplink for this uplink preference rule. Must be one of: &#39;wan1&#39;, &#39;wan2&#39;, &#39;bestForVoIP&#39;, &#39;loadBalancing&#39; or &#39;defaultUplink&#39;, or any other valid uplink(wanX) if it applies to the network | 
+**PreferredUplink** | **string** | Preferred uplink for this uplink preference rule. Must be one of: &#39;wan1&#39;, &#39;wan2&#39;, &#39;bestForVoIP&#39;, &#39;loadBalancing&#39;, &#39;defaultUplink&#39; or &#39;cellular&#39;, or any other valid uplink(wanX) if it applies to the network | 
 **FailOverCriterion** | Pointer to **string** | Fail over criterion for this uplink preference rule. Must be one of: &#39;poorPerformance&#39; or &#39;uplinkDown&#39; | [optional] 
 **PerformanceClass** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionPerformanceClass**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionPerformanceClass.md) |  | [optional] 
 

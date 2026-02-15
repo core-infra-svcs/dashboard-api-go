@@ -4,15 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | Pointer to **string** | &#39;Deny&#39; traffic specified by this rule | [optional] 
-**Type** | Pointer to **string** | Type of the L7 firewall rule. One of: &#39;application&#39;, &#39;applicationCategory&#39;, &#39;host&#39;, &#39;port&#39;, &#39;ipRange&#39; | [optional] 
-**Value** | Pointer to **string** | The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected. | [optional] 
+**Comment** | Pointer to **string** | Description of the rule (optional) | [optional] 
+**Policy** | **string** | &#39;allow&#39; or &#39;deny&#39; traffic specified by this rule | 
+**IpVer** | Pointer to **string** | IP version to which this rule applies (must be one of &#39;both&#39;, &#39;ipv4&#39; or &#39;ipv6&#39;). Defaults to &#39;both&#39; if not specified. | [optional] 
+**Protocol** | **string** | The type of protocol (must be &#39;tcp&#39;, &#39;udp&#39;, &#39;icmp&#39;, &#39;icmp6&#39; or &#39;any&#39;) | 
+**DestPort** | Pointer to **string** | Comma-separated list of destination port(s) (integer in the range 1-65535), or &#39;any&#39; | [optional] 
+**DestCidr** | **string** | Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or &#39;any&#39; | 
 
 ## Methods
 
 ### NewInlineResponse200212Rules
 
-`func NewInlineResponse200212Rules() *InlineResponse200212Rules`
+`func NewInlineResponse200212Rules(policy string, protocol string, destCidr string, ) *InlineResponse200212Rules`
 
 NewInlineResponse200212Rules instantiates a new InlineResponse200212Rules object
 This constructor will assign default values to properties that have it defined,
@@ -26,6 +29,31 @@ will change when the set of required properties is changed
 NewInlineResponse200212RulesWithDefaults instantiates a new InlineResponse200212Rules object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetComment
+
+`func (o *InlineResponse200212Rules) GetComment() string`
+
+GetComment returns the Comment field if non-nil, zero value otherwise.
+
+### GetCommentOk
+
+`func (o *InlineResponse200212Rules) GetCommentOk() (*string, bool)`
+
+GetCommentOk returns a tuple with the Comment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetComment
+
+`func (o *InlineResponse200212Rules) SetComment(v string)`
+
+SetComment sets Comment field to given value.
+
+### HasComment
+
+`func (o *InlineResponse200212Rules) HasComment() bool`
+
+HasComment returns a boolean if a field has been set.
 
 ### GetPolicy
 
@@ -46,61 +74,96 @@ and a boolean to check if the value has been set.
 
 SetPolicy sets Policy field to given value.
 
-### HasPolicy
 
-`func (o *InlineResponse200212Rules) HasPolicy() bool`
+### GetIpVer
 
-HasPolicy returns a boolean if a field has been set.
+`func (o *InlineResponse200212Rules) GetIpVer() string`
 
-### GetType
+GetIpVer returns the IpVer field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200212Rules) GetType() string`
+### GetIpVerOk
 
-GetType returns the Type field if non-nil, zero value otherwise.
+`func (o *InlineResponse200212Rules) GetIpVerOk() (*string, bool)`
 
-### GetTypeOk
-
-`func (o *InlineResponse200212Rules) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetIpVerOk returns a tuple with the IpVer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetIpVer
 
-`func (o *InlineResponse200212Rules) SetType(v string)`
+`func (o *InlineResponse200212Rules) SetIpVer(v string)`
 
-SetType sets Type field to given value.
+SetIpVer sets IpVer field to given value.
 
-### HasType
+### HasIpVer
 
-`func (o *InlineResponse200212Rules) HasType() bool`
+`func (o *InlineResponse200212Rules) HasIpVer() bool`
 
-HasType returns a boolean if a field has been set.
+HasIpVer returns a boolean if a field has been set.
 
-### GetValue
+### GetProtocol
 
-`func (o *InlineResponse200212Rules) GetValue() string`
+`func (o *InlineResponse200212Rules) GetProtocol() string`
 
-GetValue returns the Value field if non-nil, zero value otherwise.
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-### GetValueOk
+### GetProtocolOk
 
-`func (o *InlineResponse200212Rules) GetValueOk() (*string, bool)`
+`func (o *InlineResponse200212Rules) GetProtocolOk() (*string, bool)`
 
-GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetValue
+### SetProtocol
 
-`func (o *InlineResponse200212Rules) SetValue(v string)`
+`func (o *InlineResponse200212Rules) SetProtocol(v string)`
 
-SetValue sets Value field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasValue
 
-`func (o *InlineResponse200212Rules) HasValue() bool`
+### GetDestPort
 
-HasValue returns a boolean if a field has been set.
+`func (o *InlineResponse200212Rules) GetDestPort() string`
+
+GetDestPort returns the DestPort field if non-nil, zero value otherwise.
+
+### GetDestPortOk
+
+`func (o *InlineResponse200212Rules) GetDestPortOk() (*string, bool)`
+
+GetDestPortOk returns a tuple with the DestPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestPort
+
+`func (o *InlineResponse200212Rules) SetDestPort(v string)`
+
+SetDestPort sets DestPort field to given value.
+
+### HasDestPort
+
+`func (o *InlineResponse200212Rules) HasDestPort() bool`
+
+HasDestPort returns a boolean if a field has been set.
+
+### GetDestCidr
+
+`func (o *InlineResponse200212Rules) GetDestCidr() string`
+
+GetDestCidr returns the DestCidr field if non-nil, zero value otherwise.
+
+### GetDestCidrOk
+
+`func (o *InlineResponse200212Rules) GetDestCidrOk() (*string, bool)`
+
+GetDestCidrOk returns a tuple with the DestCidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestCidr
+
+`func (o *InlineResponse200212Rules) SetDestCidr(v string)`
+
+SetDestCidr sets DestCidr field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,20 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
-**Category** | **string** | Category of a policy object (one of: adaptivePolicy, network) | 
-**Type** | **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask) | 
-**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
-**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
-**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
-**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
-**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to | [optional] 
+**Network** | [**OrganizationsOrganizationIdNetworksMovesNetwork**](OrganizationsOrganizationIdNetworksMovesNetwork.md) |  | 
+**Organizations** | [**OrganizationsOrganizationIdNetworksMovesOrganizations**](OrganizationsOrganizationIdNetworksMovesOrganizations.md) |  | 
+**Simulate** | Pointer to **bool** | If true, simulates the network move and validates the operation without committing changes. The network will remain in the source organization. | [optional] 
 
 ## Methods
 
 ### NewInlineObject291
 
-`func NewInlineObject291(name string, category string, type_ string, ) *InlineObject291`
+`func NewInlineObject291(network OrganizationsOrganizationIdNetworksMovesNetwork, organizations OrganizationsOrganizationIdNetworksMovesOrganizations, ) *InlineObject291`
 
 NewInlineObject291 instantiates a new InlineObject291 object
 This constructor will assign default values to properties that have it defined,
@@ -32,190 +27,70 @@ NewInlineObject291WithDefaults instantiates a new InlineObject291 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetNetwork
 
-`func (o *InlineObject291) GetName() string`
+`func (o *InlineObject291) GetNetwork() OrganizationsOrganizationIdNetworksMovesNetwork`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkOk
 
-`func (o *InlineObject291) GetNameOk() (*string, bool)`
+`func (o *InlineObject291) GetNetworkOk() (*OrganizationsOrganizationIdNetworksMovesNetwork, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetwork
 
-`func (o *InlineObject291) SetName(v string)`
+`func (o *InlineObject291) SetNetwork(v OrganizationsOrganizationIdNetworksMovesNetwork)`
 
-SetName sets Name field to given value.
+SetNetwork sets Network field to given value.
 
 
-### GetCategory
+### GetOrganizations
 
-`func (o *InlineObject291) GetCategory() string`
+`func (o *InlineObject291) GetOrganizations() OrganizationsOrganizationIdNetworksMovesOrganizations`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetOrganizationsOk
 
-`func (o *InlineObject291) GetCategoryOk() (*string, bool)`
+`func (o *InlineObject291) GetOrganizationsOk() (*OrganizationsOrganizationIdNetworksMovesOrganizations, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetOrganizations
 
-`func (o *InlineObject291) SetCategory(v string)`
+`func (o *InlineObject291) SetOrganizations(v OrganizationsOrganizationIdNetworksMovesOrganizations)`
 
-SetCategory sets Category field to given value.
+SetOrganizations sets Organizations field to given value.
 
 
-### GetType
+### GetSimulate
 
-`func (o *InlineObject291) GetType() string`
+`func (o *InlineObject291) GetSimulate() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetSimulate returns the Simulate field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetSimulateOk
 
-`func (o *InlineObject291) GetTypeOk() (*string, bool)`
+`func (o *InlineObject291) GetSimulateOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetSimulateOk returns a tuple with the Simulate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetSimulate
 
-`func (o *InlineObject291) SetType(v string)`
+`func (o *InlineObject291) SetSimulate(v bool)`
 
-SetType sets Type field to given value.
+SetSimulate sets Simulate field to given value.
 
+### HasSimulate
 
-### GetCidr
+`func (o *InlineObject291) HasSimulate() bool`
 
-`func (o *InlineObject291) GetCidr() string`
-
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
-
-### GetCidrOk
-
-`func (o *InlineObject291) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCidr
-
-`func (o *InlineObject291) SetCidr(v string)`
-
-SetCidr sets Cidr field to given value.
-
-### HasCidr
-
-`func (o *InlineObject291) HasCidr() bool`
-
-HasCidr returns a boolean if a field has been set.
-
-### GetFqdn
-
-`func (o *InlineObject291) GetFqdn() string`
-
-GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
-
-### GetFqdnOk
-
-`func (o *InlineObject291) GetFqdnOk() (*string, bool)`
-
-GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFqdn
-
-`func (o *InlineObject291) SetFqdn(v string)`
-
-SetFqdn sets Fqdn field to given value.
-
-### HasFqdn
-
-`func (o *InlineObject291) HasFqdn() bool`
-
-HasFqdn returns a boolean if a field has been set.
-
-### GetMask
-
-`func (o *InlineObject291) GetMask() string`
-
-GetMask returns the Mask field if non-nil, zero value otherwise.
-
-### GetMaskOk
-
-`func (o *InlineObject291) GetMaskOk() (*string, bool)`
-
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMask
-
-`func (o *InlineObject291) SetMask(v string)`
-
-SetMask sets Mask field to given value.
-
-### HasMask
-
-`func (o *InlineObject291) HasMask() bool`
-
-HasMask returns a boolean if a field has been set.
-
-### GetIp
-
-`func (o *InlineObject291) GetIp() string`
-
-GetIp returns the Ip field if non-nil, zero value otherwise.
-
-### GetIpOk
-
-`func (o *InlineObject291) GetIpOk() (*string, bool)`
-
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIp
-
-`func (o *InlineObject291) SetIp(v string)`
-
-SetIp sets Ip field to given value.
-
-### HasIp
-
-`func (o *InlineObject291) HasIp() bool`
-
-HasIp returns a boolean if a field has been set.
-
-### GetGroupIds
-
-`func (o *InlineObject291) GetGroupIds() []string`
-
-GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
-
-### GetGroupIdsOk
-
-`func (o *InlineObject291) GetGroupIdsOk() (*[]string, bool)`
-
-GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupIds
-
-`func (o *InlineObject291) SetGroupIds(v []string)`
-
-SetGroupIds sets GroupIds field to given value.
-
-### HasGroupIds
-
-`func (o *InlineObject291) HasGroupIds() bool`
-
-HasGroupIds returns a boolean if a field has been set.
+HasSimulate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

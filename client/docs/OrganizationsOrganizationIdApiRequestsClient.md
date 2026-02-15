@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID for the client which made the request, if applicable. | [optional] 
+**Id** | Pointer to **NullableString** | ID for the client which made the request, if applicable. | [optional] 
 **Type** | Pointer to **string** | Type of client which made the request, if applicable. Available options are: oauth, api_key | [optional] 
 
 ## Methods
@@ -51,6 +51,16 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### SetIdNil
+
+`func (o *OrganizationsOrganizationIdApiRequestsClient) SetIdNil(b bool)`
+
+ SetIdNil sets the value for Id to be an explicit nil
+
+### UnsetId
+`func (o *OrganizationsOrganizationIdApiRequestsClient) UnsetId()`
+
+UnsetId ensures that no value is present for Id, not even an explicit nil
 ### GetType
 
 `func (o *OrganizationsOrganizationIdApiRequestsClient) GetType() string`

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems**](OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems.md) | List of IPsec SLA policies | [optional] 
 
 ## Methods
 
 ### NewInlineObject237
 
-`func NewInlineObject237(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject237`
+`func NewInlineObject237() *InlineObject237`
 
 NewInlineObject237 instantiates a new InlineObject237 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject237WithDefaults instantiates a new InlineObject237 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetItems
 
-`func (o *InlineObject237) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
+`func (o *InlineObject237) GetItems() []OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetItemsOk
 
-`func (o *InlineObject237) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
+`func (o *InlineObject237) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetItems
 
-`func (o *InlineObject237) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
+`func (o *InlineObject237) SetItems(v []OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems)`
 
-SetPeers sets Peers field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
+
+`func (o *InlineObject237) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200395Readings**](InlineResponse200395Readings.md) | The usages of layer 2 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
+**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
+**Network** | Pointer to [**InlineResponse200395Network**](InlineResponse200395Network.md) |  | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200395Readings**](InlineResponse200395Readings.md) | Overview history of a wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -50,6 +51,31 @@ SetSerial sets Serial field to given value.
 `func (o *InlineResponse200395Items) HasSerial() bool`
 
 HasSerial returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200395Items) GetNetwork() InlineResponse200395Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200395Items) GetNetworkOk() (*InlineResponse200395Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200395Items) SetNetwork(v InlineResponse200395Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200395Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 ### GetReadings
 

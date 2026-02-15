@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
+**Type** | **string** | Alert type | 
+**Title** | **string** | Alert type title | 
+**CategoryType** | **string** | Alert category type | 
+**Severities** | [**[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities**](OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities.md) | List of possible severities for the alert type | 
+**DeviceTypes** | **[]string** | List of possible device types for the alert type | 
 
 ## Methods
 
 ### NewInlineResponse200256
 
-`func NewInlineResponse200256() *InlineResponse200256`
+`func NewInlineResponse200256(type_ string, title string, categoryType string, severities []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, deviceTypes []string, ) *InlineResponse200256`
 
 NewInlineResponse200256 instantiates a new InlineResponse200256 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +29,105 @@ NewInlineResponse200256WithDefaults instantiates a new InlineResponse200256 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetType
 
-`func (o *InlineResponse200256) GetName() string`
+`func (o *InlineResponse200256) GetType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTypeOk
 
-`func (o *InlineResponse200256) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200256) GetTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetType
 
-`func (o *InlineResponse200256) SetName(v string)`
+`func (o *InlineResponse200256) SetType(v string)`
 
-SetName sets Name field to given value.
+SetType sets Type field to given value.
 
-### HasName
 
-`func (o *InlineResponse200256) HasName() bool`
+### GetTitle
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse200256) GetTitle() string`
 
-### GetEnabled
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200256) GetEnabled() bool`
+### GetTitleOk
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+`func (o *InlineResponse200256) GetTitleOk() (*string, bool)`
 
-### GetEnabledOk
-
-`func (o *InlineResponse200256) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTitle
 
-`func (o *InlineResponse200256) SetEnabled(v bool)`
+`func (o *InlineResponse200256) SetTitle(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetTitle sets Title field to given value.
 
-### HasEnabled
 
-`func (o *InlineResponse200256) HasEnabled() bool`
+### GetCategoryType
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineResponse200256) GetCategoryType() string`
 
-### GetAdminSettings
+GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200256) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+### GetCategoryTypeOk
 
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+`func (o *InlineResponse200256) GetCategoryTypeOk() (*string, bool)`
 
-### GetAdminSettingsOk
-
-`func (o *InlineResponse200256) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
-
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminSettings
+### SetCategoryType
 
-`func (o *InlineResponse200256) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+`func (o *InlineResponse200256) SetCategoryType(v string)`
 
-SetAdminSettings sets AdminSettings field to given value.
+SetCategoryType sets CategoryType field to given value.
 
-### HasAdminSettings
 
-`func (o *InlineResponse200256) HasAdminSettings() bool`
+### GetSeverities
 
-HasAdminSettings returns a boolean if a field has been set.
+`func (o *InlineResponse200256) GetSeverities() []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities`
 
-### GetHelpSettings
+GetSeverities returns the Severities field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200256) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+### GetSeveritiesOk
 
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+`func (o *InlineResponse200256) GetSeveritiesOk() (*[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, bool)`
 
-### GetHelpSettingsOk
-
-`func (o *InlineResponse200256) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
-
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+GetSeveritiesOk returns a tuple with the Severities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelpSettings
+### SetSeverities
 
-`func (o *InlineResponse200256) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+`func (o *InlineResponse200256) SetSeverities(v []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities)`
 
-SetHelpSettings sets HelpSettings field to given value.
+SetSeverities sets Severities field to given value.
 
-### HasHelpSettings
 
-`func (o *InlineResponse200256) HasHelpSettings() bool`
+### GetDeviceTypes
 
-HasHelpSettings returns a boolean if a field has been set.
+`func (o *InlineResponse200256) GetDeviceTypes() []string`
 
-### GetCustomLogo
+GetDeviceTypes returns the DeviceTypes field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200256) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+### GetDeviceTypesOk
 
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+`func (o *InlineResponse200256) GetDeviceTypesOk() (*[]string, bool)`
 
-### GetCustomLogoOk
-
-`func (o *InlineResponse200256) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
-
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+GetDeviceTypesOk returns a tuple with the DeviceTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomLogo
+### SetDeviceTypes
 
-`func (o *InlineResponse200256) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+`func (o *InlineResponse200256) SetDeviceTypes(v []string)`
 
-SetCustomLogo sets CustomLogo field to given value.
+SetDeviceTypes sets DeviceTypes field to given value.
 
-### HasCustomLogo
-
-`func (o *InlineResponse200256) HasCustomLogo() bool`
-
-HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

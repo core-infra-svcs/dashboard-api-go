@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of items. | [optional] 
-**Remaining** | Pointer to **int32** | The number of items remaining based on current pagination location within the dataset. | [optional] 
+**Total** | Pointer to **int32** | Total number of items available | [optional] 
+**Remaining** | Pointer to **int32** | Number of items remaining after this page | [optional] 
 
 ## Methods
 

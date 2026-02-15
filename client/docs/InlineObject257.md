@@ -4,14 +4,39 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of Meraki Serials to migrate | 
-**Target** | **string** | The controller or management mode to which the devices will be migrated | 
+**Name** | Pointer to **NullableString** | The name of the switch template port. | [optional] 
+**Tags** | Pointer to **[]string** | The list of tags of the switch template port. | [optional] 
+**Enabled** | Pointer to **bool** | The status of the switch template port. | [optional] 
+**PoeEnabled** | Pointer to **bool** | The PoE status of the switch template port. | [optional] 
+**Type** | Pointer to **string** | The type of the switch template port (&#39;access&#39;, &#39;trunk&#39;, &#39;stack&#39;, &#39;routed&#39;, &#39;svl&#39; or &#39;dad&#39;). | [optional] 
+**Vlan** | Pointer to **NullableInt32** | The VLAN of the switch template port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
+**VoiceVlan** | Pointer to **NullableInt32** | The voice VLAN of the switch template port. Only applicable to access ports. | [optional] 
+**AllowedVlans** | Pointer to **string** | The VLANs allowed on the switch template port. Only applicable to trunk ports. | [optional] 
+**IsolationEnabled** | Pointer to **bool** | The isolation status of the switch template port. | [optional] 
+**RstpEnabled** | Pointer to **bool** | The rapid spanning tree protocol status. | [optional] 
+**StpGuard** | Pointer to **string** | The state of the STP guard (&#39;disabled&#39;, &#39;root guard&#39;, &#39;bpdu guard&#39; or &#39;loop guard&#39;). | [optional] 
+**StpPortFastTrunk** | Pointer to **bool** | The state of STP PortFast Trunk on the switch template port. | [optional] 
+**LinkNegotiation** | Pointer to **string** | The link speed for the switch template port. | [optional] 
+**PortScheduleId** | Pointer to **NullableString** | The ID of the port schedule. A value of null will clear the port schedule. | [optional] 
+**Udld** | Pointer to **string** | The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only. | [optional] 
+**AccessPolicyType** | Pointer to **string** | The type of the access policy of the switch template port. Only applicable to access ports. Can be one of &#39;Open&#39;, &#39;Custom access policy&#39;, &#39;MAC allow list&#39; or &#39;Sticky MAC allow list&#39;. | [optional] 
+**AccessPolicyNumber** | Pointer to **int32** | The number of a custom access policy to configure on the switch template port. Only applicable when &#39;accessPolicyType&#39; is &#39;Custom access policy&#39;. | [optional] 
+**MacAllowList** | Pointer to **[]string** | Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when &#39;accessPolicyType&#39; is &#39;MAC allow list&#39;. | [optional] 
+**MacWhitelistLimit** | Pointer to **NullableInt32** | The maximum number of MAC addresses for regular MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;MAC allow list&#39;.           Note: Config only supported on verions greater than ms18 only for classic switches. | [optional] 
+**StickyMacAllowList** | Pointer to **[]string** | The initial list of MAC addresses for sticky Mac allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
+**StickyMacAllowListLimit** | Pointer to **int32** | The maximum number of MAC addresses for sticky MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
+**StormControlEnabled** | Pointer to **bool** | The storm control status of the switch template port. | [optional] 
+**FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
+**DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
+**Profile** | Pointer to [**DevicesSerialSwitchPortsPortIdProfile**](DevicesSerialSwitchPortsPortIdProfile.md) |  | [optional] 
+**Dot3az** | Pointer to [**OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az**](OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az.md) |  | [optional] 
+**HighSpeed** | Pointer to [**DevicesSerialSwitchPortsHighSpeed**](DevicesSerialSwitchPortsHighSpeed.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject257
 
-`func NewInlineObject257(serials []string, target string, ) *InlineObject257`
+`func NewInlineObject257() *InlineObject257`
 
 NewInlineObject257 instantiates a new InlineObject257 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +51,730 @@ NewInlineObject257WithDefaults instantiates a new InlineObject257 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject257) GetSerials() []string`
+`func (o *InlineObject257) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject257) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject257) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject257) SetSerials(v []string)`
+`func (o *InlineObject257) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetTarget
+`func (o *InlineObject257) HasName() bool`
 
-`func (o *InlineObject257) GetTarget() string`
+HasName returns a boolean if a field has been set.
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+### SetNameNil
 
-### GetTargetOk
+`func (o *InlineObject257) SetNameNil(b bool)`
 
-`func (o *InlineObject257) GetTargetOk() (*string, bool)`
+ SetNameNil sets the value for Name to be an explicit nil
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+### UnsetName
+`func (o *InlineObject257) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
+### GetTags
+
+`func (o *InlineObject257) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject257) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetTags
 
-`func (o *InlineObject257) SetTarget(v string)`
+`func (o *InlineObject257) SetTags(v []string)`
 
-SetTarget sets Target field to given value.
+SetTags sets Tags field to given value.
 
+### HasTags
+
+`func (o *InlineObject257) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineObject257) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject257) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject257) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject257) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetPoeEnabled
+
+`func (o *InlineObject257) GetPoeEnabled() bool`
+
+GetPoeEnabled returns the PoeEnabled field if non-nil, zero value otherwise.
+
+### GetPoeEnabledOk
+
+`func (o *InlineObject257) GetPoeEnabledOk() (*bool, bool)`
+
+GetPoeEnabledOk returns a tuple with the PoeEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoeEnabled
+
+`func (o *InlineObject257) SetPoeEnabled(v bool)`
+
+SetPoeEnabled sets PoeEnabled field to given value.
+
+### HasPoeEnabled
+
+`func (o *InlineObject257) HasPoeEnabled() bool`
+
+HasPoeEnabled returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineObject257) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineObject257) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineObject257) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineObject257) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineObject257) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineObject257) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineObject257) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineObject257) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### SetVlanNil
+
+`func (o *InlineObject257) SetVlanNil(b bool)`
+
+ SetVlanNil sets the value for Vlan to be an explicit nil
+
+### UnsetVlan
+`func (o *InlineObject257) UnsetVlan()`
+
+UnsetVlan ensures that no value is present for Vlan, not even an explicit nil
+### GetVoiceVlan
+
+`func (o *InlineObject257) GetVoiceVlan() int32`
+
+GetVoiceVlan returns the VoiceVlan field if non-nil, zero value otherwise.
+
+### GetVoiceVlanOk
+
+`func (o *InlineObject257) GetVoiceVlanOk() (*int32, bool)`
+
+GetVoiceVlanOk returns a tuple with the VoiceVlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoiceVlan
+
+`func (o *InlineObject257) SetVoiceVlan(v int32)`
+
+SetVoiceVlan sets VoiceVlan field to given value.
+
+### HasVoiceVlan
+
+`func (o *InlineObject257) HasVoiceVlan() bool`
+
+HasVoiceVlan returns a boolean if a field has been set.
+
+### SetVoiceVlanNil
+
+`func (o *InlineObject257) SetVoiceVlanNil(b bool)`
+
+ SetVoiceVlanNil sets the value for VoiceVlan to be an explicit nil
+
+### UnsetVoiceVlan
+`func (o *InlineObject257) UnsetVoiceVlan()`
+
+UnsetVoiceVlan ensures that no value is present for VoiceVlan, not even an explicit nil
+### GetAllowedVlans
+
+`func (o *InlineObject257) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineObject257) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineObject257) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineObject257) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetIsolationEnabled
+
+`func (o *InlineObject257) GetIsolationEnabled() bool`
+
+GetIsolationEnabled returns the IsolationEnabled field if non-nil, zero value otherwise.
+
+### GetIsolationEnabledOk
+
+`func (o *InlineObject257) GetIsolationEnabledOk() (*bool, bool)`
+
+GetIsolationEnabledOk returns a tuple with the IsolationEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsolationEnabled
+
+`func (o *InlineObject257) SetIsolationEnabled(v bool)`
+
+SetIsolationEnabled sets IsolationEnabled field to given value.
+
+### HasIsolationEnabled
+
+`func (o *InlineObject257) HasIsolationEnabled() bool`
+
+HasIsolationEnabled returns a boolean if a field has been set.
+
+### GetRstpEnabled
+
+`func (o *InlineObject257) GetRstpEnabled() bool`
+
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+
+### GetRstpEnabledOk
+
+`func (o *InlineObject257) GetRstpEnabledOk() (*bool, bool)`
+
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRstpEnabled
+
+`func (o *InlineObject257) SetRstpEnabled(v bool)`
+
+SetRstpEnabled sets RstpEnabled field to given value.
+
+### HasRstpEnabled
+
+`func (o *InlineObject257) HasRstpEnabled() bool`
+
+HasRstpEnabled returns a boolean if a field has been set.
+
+### GetStpGuard
+
+`func (o *InlineObject257) GetStpGuard() string`
+
+GetStpGuard returns the StpGuard field if non-nil, zero value otherwise.
+
+### GetStpGuardOk
+
+`func (o *InlineObject257) GetStpGuardOk() (*string, bool)`
+
+GetStpGuardOk returns a tuple with the StpGuard field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStpGuard
+
+`func (o *InlineObject257) SetStpGuard(v string)`
+
+SetStpGuard sets StpGuard field to given value.
+
+### HasStpGuard
+
+`func (o *InlineObject257) HasStpGuard() bool`
+
+HasStpGuard returns a boolean if a field has been set.
+
+### GetStpPortFastTrunk
+
+`func (o *InlineObject257) GetStpPortFastTrunk() bool`
+
+GetStpPortFastTrunk returns the StpPortFastTrunk field if non-nil, zero value otherwise.
+
+### GetStpPortFastTrunkOk
+
+`func (o *InlineObject257) GetStpPortFastTrunkOk() (*bool, bool)`
+
+GetStpPortFastTrunkOk returns a tuple with the StpPortFastTrunk field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStpPortFastTrunk
+
+`func (o *InlineObject257) SetStpPortFastTrunk(v bool)`
+
+SetStpPortFastTrunk sets StpPortFastTrunk field to given value.
+
+### HasStpPortFastTrunk
+
+`func (o *InlineObject257) HasStpPortFastTrunk() bool`
+
+HasStpPortFastTrunk returns a boolean if a field has been set.
+
+### GetLinkNegotiation
+
+`func (o *InlineObject257) GetLinkNegotiation() string`
+
+GetLinkNegotiation returns the LinkNegotiation field if non-nil, zero value otherwise.
+
+### GetLinkNegotiationOk
+
+`func (o *InlineObject257) GetLinkNegotiationOk() (*string, bool)`
+
+GetLinkNegotiationOk returns a tuple with the LinkNegotiation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLinkNegotiation
+
+`func (o *InlineObject257) SetLinkNegotiation(v string)`
+
+SetLinkNegotiation sets LinkNegotiation field to given value.
+
+### HasLinkNegotiation
+
+`func (o *InlineObject257) HasLinkNegotiation() bool`
+
+HasLinkNegotiation returns a boolean if a field has been set.
+
+### GetPortScheduleId
+
+`func (o *InlineObject257) GetPortScheduleId() string`
+
+GetPortScheduleId returns the PortScheduleId field if non-nil, zero value otherwise.
+
+### GetPortScheduleIdOk
+
+`func (o *InlineObject257) GetPortScheduleIdOk() (*string, bool)`
+
+GetPortScheduleIdOk returns a tuple with the PortScheduleId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortScheduleId
+
+`func (o *InlineObject257) SetPortScheduleId(v string)`
+
+SetPortScheduleId sets PortScheduleId field to given value.
+
+### HasPortScheduleId
+
+`func (o *InlineObject257) HasPortScheduleId() bool`
+
+HasPortScheduleId returns a boolean if a field has been set.
+
+### SetPortScheduleIdNil
+
+`func (o *InlineObject257) SetPortScheduleIdNil(b bool)`
+
+ SetPortScheduleIdNil sets the value for PortScheduleId to be an explicit nil
+
+### UnsetPortScheduleId
+`func (o *InlineObject257) UnsetPortScheduleId()`
+
+UnsetPortScheduleId ensures that no value is present for PortScheduleId, not even an explicit nil
+### GetUdld
+
+`func (o *InlineObject257) GetUdld() string`
+
+GetUdld returns the Udld field if non-nil, zero value otherwise.
+
+### GetUdldOk
+
+`func (o *InlineObject257) GetUdldOk() (*string, bool)`
+
+GetUdldOk returns a tuple with the Udld field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUdld
+
+`func (o *InlineObject257) SetUdld(v string)`
+
+SetUdld sets Udld field to given value.
+
+### HasUdld
+
+`func (o *InlineObject257) HasUdld() bool`
+
+HasUdld returns a boolean if a field has been set.
+
+### GetAccessPolicyType
+
+`func (o *InlineObject257) GetAccessPolicyType() string`
+
+GetAccessPolicyType returns the AccessPolicyType field if non-nil, zero value otherwise.
+
+### GetAccessPolicyTypeOk
+
+`func (o *InlineObject257) GetAccessPolicyTypeOk() (*string, bool)`
+
+GetAccessPolicyTypeOk returns a tuple with the AccessPolicyType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicyType
+
+`func (o *InlineObject257) SetAccessPolicyType(v string)`
+
+SetAccessPolicyType sets AccessPolicyType field to given value.
+
+### HasAccessPolicyType
+
+`func (o *InlineObject257) HasAccessPolicyType() bool`
+
+HasAccessPolicyType returns a boolean if a field has been set.
+
+### GetAccessPolicyNumber
+
+`func (o *InlineObject257) GetAccessPolicyNumber() int32`
+
+GetAccessPolicyNumber returns the AccessPolicyNumber field if non-nil, zero value otherwise.
+
+### GetAccessPolicyNumberOk
+
+`func (o *InlineObject257) GetAccessPolicyNumberOk() (*int32, bool)`
+
+GetAccessPolicyNumberOk returns a tuple with the AccessPolicyNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicyNumber
+
+`func (o *InlineObject257) SetAccessPolicyNumber(v int32)`
+
+SetAccessPolicyNumber sets AccessPolicyNumber field to given value.
+
+### HasAccessPolicyNumber
+
+`func (o *InlineObject257) HasAccessPolicyNumber() bool`
+
+HasAccessPolicyNumber returns a boolean if a field has been set.
+
+### GetMacAllowList
+
+`func (o *InlineObject257) GetMacAllowList() []string`
+
+GetMacAllowList returns the MacAllowList field if non-nil, zero value otherwise.
+
+### GetMacAllowListOk
+
+`func (o *InlineObject257) GetMacAllowListOk() (*[]string, bool)`
+
+GetMacAllowListOk returns a tuple with the MacAllowList field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMacAllowList
+
+`func (o *InlineObject257) SetMacAllowList(v []string)`
+
+SetMacAllowList sets MacAllowList field to given value.
+
+### HasMacAllowList
+
+`func (o *InlineObject257) HasMacAllowList() bool`
+
+HasMacAllowList returns a boolean if a field has been set.
+
+### GetMacWhitelistLimit
+
+`func (o *InlineObject257) GetMacWhitelistLimit() int32`
+
+GetMacWhitelistLimit returns the MacWhitelistLimit field if non-nil, zero value otherwise.
+
+### GetMacWhitelistLimitOk
+
+`func (o *InlineObject257) GetMacWhitelistLimitOk() (*int32, bool)`
+
+GetMacWhitelistLimitOk returns a tuple with the MacWhitelistLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMacWhitelistLimit
+
+`func (o *InlineObject257) SetMacWhitelistLimit(v int32)`
+
+SetMacWhitelistLimit sets MacWhitelistLimit field to given value.
+
+### HasMacWhitelistLimit
+
+`func (o *InlineObject257) HasMacWhitelistLimit() bool`
+
+HasMacWhitelistLimit returns a boolean if a field has been set.
+
+### SetMacWhitelistLimitNil
+
+`func (o *InlineObject257) SetMacWhitelistLimitNil(b bool)`
+
+ SetMacWhitelistLimitNil sets the value for MacWhitelistLimit to be an explicit nil
+
+### UnsetMacWhitelistLimit
+`func (o *InlineObject257) UnsetMacWhitelistLimit()`
+
+UnsetMacWhitelistLimit ensures that no value is present for MacWhitelistLimit, not even an explicit nil
+### GetStickyMacAllowList
+
+`func (o *InlineObject257) GetStickyMacAllowList() []string`
+
+GetStickyMacAllowList returns the StickyMacAllowList field if non-nil, zero value otherwise.
+
+### GetStickyMacAllowListOk
+
+`func (o *InlineObject257) GetStickyMacAllowListOk() (*[]string, bool)`
+
+GetStickyMacAllowListOk returns a tuple with the StickyMacAllowList field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStickyMacAllowList
+
+`func (o *InlineObject257) SetStickyMacAllowList(v []string)`
+
+SetStickyMacAllowList sets StickyMacAllowList field to given value.
+
+### HasStickyMacAllowList
+
+`func (o *InlineObject257) HasStickyMacAllowList() bool`
+
+HasStickyMacAllowList returns a boolean if a field has been set.
+
+### GetStickyMacAllowListLimit
+
+`func (o *InlineObject257) GetStickyMacAllowListLimit() int32`
+
+GetStickyMacAllowListLimit returns the StickyMacAllowListLimit field if non-nil, zero value otherwise.
+
+### GetStickyMacAllowListLimitOk
+
+`func (o *InlineObject257) GetStickyMacAllowListLimitOk() (*int32, bool)`
+
+GetStickyMacAllowListLimitOk returns a tuple with the StickyMacAllowListLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStickyMacAllowListLimit
+
+`func (o *InlineObject257) SetStickyMacAllowListLimit(v int32)`
+
+SetStickyMacAllowListLimit sets StickyMacAllowListLimit field to given value.
+
+### HasStickyMacAllowListLimit
+
+`func (o *InlineObject257) HasStickyMacAllowListLimit() bool`
+
+HasStickyMacAllowListLimit returns a boolean if a field has been set.
+
+### GetStormControlEnabled
+
+`func (o *InlineObject257) GetStormControlEnabled() bool`
+
+GetStormControlEnabled returns the StormControlEnabled field if non-nil, zero value otherwise.
+
+### GetStormControlEnabledOk
+
+`func (o *InlineObject257) GetStormControlEnabledOk() (*bool, bool)`
+
+GetStormControlEnabledOk returns a tuple with the StormControlEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStormControlEnabled
+
+`func (o *InlineObject257) SetStormControlEnabled(v bool)`
+
+SetStormControlEnabled sets StormControlEnabled field to given value.
+
+### HasStormControlEnabled
+
+`func (o *InlineObject257) HasStormControlEnabled() bool`
+
+HasStormControlEnabled returns a boolean if a field has been set.
+
+### GetFlexibleStackingEnabled
+
+`func (o *InlineObject257) GetFlexibleStackingEnabled() bool`
+
+GetFlexibleStackingEnabled returns the FlexibleStackingEnabled field if non-nil, zero value otherwise.
+
+### GetFlexibleStackingEnabledOk
+
+`func (o *InlineObject257) GetFlexibleStackingEnabledOk() (*bool, bool)`
+
+GetFlexibleStackingEnabledOk returns a tuple with the FlexibleStackingEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlexibleStackingEnabled
+
+`func (o *InlineObject257) SetFlexibleStackingEnabled(v bool)`
+
+SetFlexibleStackingEnabled sets FlexibleStackingEnabled field to given value.
+
+### HasFlexibleStackingEnabled
+
+`func (o *InlineObject257) HasFlexibleStackingEnabled() bool`
+
+HasFlexibleStackingEnabled returns a boolean if a field has been set.
+
+### GetDaiTrusted
+
+`func (o *InlineObject257) GetDaiTrusted() bool`
+
+GetDaiTrusted returns the DaiTrusted field if non-nil, zero value otherwise.
+
+### GetDaiTrustedOk
+
+`func (o *InlineObject257) GetDaiTrustedOk() (*bool, bool)`
+
+GetDaiTrustedOk returns a tuple with the DaiTrusted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDaiTrusted
+
+`func (o *InlineObject257) SetDaiTrusted(v bool)`
+
+SetDaiTrusted sets DaiTrusted field to given value.
+
+### HasDaiTrusted
+
+`func (o *InlineObject257) HasDaiTrusted() bool`
+
+HasDaiTrusted returns a boolean if a field has been set.
+
+### GetProfile
+
+`func (o *InlineObject257) GetProfile() DevicesSerialSwitchPortsPortIdProfile`
+
+GetProfile returns the Profile field if non-nil, zero value otherwise.
+
+### GetProfileOk
+
+`func (o *InlineObject257) GetProfileOk() (*DevicesSerialSwitchPortsPortIdProfile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfile
+
+`func (o *InlineObject257) SetProfile(v DevicesSerialSwitchPortsPortIdProfile)`
+
+SetProfile sets Profile field to given value.
+
+### HasProfile
+
+`func (o *InlineObject257) HasProfile() bool`
+
+HasProfile returns a boolean if a field has been set.
+
+### GetDot3az
+
+`func (o *InlineObject257) GetDot3az() OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az`
+
+GetDot3az returns the Dot3az field if non-nil, zero value otherwise.
+
+### GetDot3azOk
+
+`func (o *InlineObject257) GetDot3azOk() (*OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az, bool)`
+
+GetDot3azOk returns a tuple with the Dot3az field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDot3az
+
+`func (o *InlineObject257) SetDot3az(v OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az)`
+
+SetDot3az sets Dot3az field to given value.
+
+### HasDot3az
+
+`func (o *InlineObject257) HasDot3az() bool`
+
+HasDot3az returns a boolean if a field has been set.
+
+### GetHighSpeed
+
+`func (o *InlineObject257) GetHighSpeed() DevicesSerialSwitchPortsHighSpeed`
+
+GetHighSpeed returns the HighSpeed field if non-nil, zero value otherwise.
+
+### GetHighSpeedOk
+
+`func (o *InlineObject257) GetHighSpeedOk() (*DevicesSerialSwitchPortsHighSpeed, bool)`
+
+GetHighSpeedOk returns a tuple with the HighSpeed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHighSpeed
+
+`func (o *InlineObject257) SetHighSpeed(v DevicesSerialSwitchPortsHighSpeed)`
+
+SetHighSpeed sets HighSpeed field to given value.
+
+### HasHighSpeed
+
+`func (o *InlineObject257) HasHighSpeed() bool`
+
+HasHighSpeed returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

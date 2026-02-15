@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | Floor plan ID | [optional] 
-**Status** | Pointer to **string** | Floor plan name | [optional] 
+**Name** | Pointer to **string** | Floor plan name | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetStatus
+### GetName
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) GetStatus() string`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) GetName() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetNameOk
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) GetStatusOk() (*string, bool)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) GetNameOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetName
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) SetStatus(v string)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) SetName(v string)`
 
-SetStatus sets Status field to given value.
+SetName sets Name field to given value.
 
-### HasStatus
+### HasName
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) HasStatus() bool`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateDevicesFloorPlan) HasName() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
