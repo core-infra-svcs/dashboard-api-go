@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destinations** | Pointer to [**[]InlineResponse20053Destinations**](InlineResponse20053Destinations.md) | The list of connectivity monitoring destinations | [optional] 
+**BasicServiceSets** | Pointer to [**[]InlineResponse20053BasicServiceSets**](InlineResponse20053BasicServiceSets.md) | SSID status list | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20053WithDefaults instantiates a new InlineResponse20053 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestinations
+### GetBasicServiceSets
 
-`func (o *InlineResponse20053) GetDestinations() []InlineResponse20053Destinations`
+`func (o *InlineResponse20053) GetBasicServiceSets() []InlineResponse20053BasicServiceSets`
 
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
 
-### GetDestinationsOk
+### GetBasicServiceSetsOk
 
-`func (o *InlineResponse20053) GetDestinationsOk() (*[]InlineResponse20053Destinations, bool)`
+`func (o *InlineResponse20053) GetBasicServiceSetsOk() (*[]InlineResponse20053BasicServiceSets, bool)`
 
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinations
+### SetBasicServiceSets
 
-`func (o *InlineResponse20053) SetDestinations(v []InlineResponse20053Destinations)`
+`func (o *InlineResponse20053) SetBasicServiceSets(v []InlineResponse20053BasicServiceSets)`
 
-SetDestinations sets Destinations field to given value.
+SetBasicServiceSets sets BasicServiceSets field to given value.
 
-### HasDestinations
+### HasBasicServiceSets
 
-`func (o *InlineResponse20053) HasDestinations() bool`
+`func (o *InlineResponse20053) HasBasicServiceSets() bool`
 
-HasDestinations returns a boolean if a field has been set.
+HasBasicServiceSets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

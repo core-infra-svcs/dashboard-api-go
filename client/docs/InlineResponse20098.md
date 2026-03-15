@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
-**Errors** | Pointer to [**[]InlineResponse20098Errors**](InlineResponse20098Errors.md) | Errors for devices that were not added | [optional] 
+**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
+**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
+**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
+**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20098WithDefaults instantiates a new InlineResponse20098 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetTs
 
-`func (o *InlineResponse20098) GetSerials() []string`
+`func (o *InlineResponse20098) GetTs() time.Time`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetTsOk
 
-`func (o *InlineResponse20098) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20098) GetTsOk() (*time.Time, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetTs
 
-`func (o *InlineResponse20098) SetSerials(v []string)`
+`func (o *InlineResponse20098) SetTs(v time.Time)`
 
-SetSerials sets Serials field to given value.
+SetTs sets Ts field to given value.
 
-### HasSerials
+### HasTs
 
-`func (o *InlineResponse20098) HasSerials() bool`
+`func (o *InlineResponse20098) HasTs() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetErrors
+### GetTotal
 
-`func (o *InlineResponse20098) GetErrors() []InlineResponse20098Errors`
+`func (o *InlineResponse20098) GetTotal() float32`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetTotalOk
 
-`func (o *InlineResponse20098) GetErrorsOk() (*[]InlineResponse20098Errors, bool)`
+`func (o *InlineResponse20098) GetTotalOk() (*float32, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetTotal
 
-`func (o *InlineResponse20098) SetErrors(v []InlineResponse20098Errors)`
+`func (o *InlineResponse20098) SetTotal(v float32)`
 
-SetErrors sets Errors field to given value.
+SetTotal sets Total field to given value.
 
-### HasErrors
+### HasTotal
 
-`func (o *InlineResponse20098) HasErrors() bool`
+`func (o *InlineResponse20098) HasTotal() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse20098) GetUpstream() float32`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse20098) GetUpstreamOk() (*float32, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse20098) SetUpstream(v float32)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse20098) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetDownstream
+
+`func (o *InlineResponse20098) GetDownstream() float32`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse20098) GetDownstreamOk() (*float32, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse20098) SetDownstream(v float32)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse20098) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
+**Meta** | Pointer to [**InlineResponse200240Meta**](InlineResponse200240Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject310
 
-`func NewInlineObject310() *InlineObject310`
+`func NewInlineObject310(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject310`
 
 NewInlineObject310 instantiates a new InlineObject310 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject310WithDefaults instantiates a new InlineObject310 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetItems
 
-`func (o *InlineObject310) GetUrl() string`
+`func (o *InlineObject310) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetItemsOk
 
-`func (o *InlineObject310) GetUrlOk() (*string, bool)`
+`func (o *InlineObject310) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetItems
 
-`func (o *InlineObject310) SetUrl(v string)`
+`func (o *InlineObject310) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
 
-SetUrl sets Url field to given value.
+SetItems sets Items field to given value.
 
-### HasUrl
 
-`func (o *InlineObject310) HasUrl() bool`
+### GetMeta
 
-HasUrl returns a boolean if a field has been set.
+`func (o *InlineObject310) GetMeta() InlineResponse200240Meta`
 
-### GetVersion
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-`func (o *InlineObject310) GetVersion() string`
+### GetMetaOk
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+`func (o *InlineObject310) GetMetaOk() (*InlineResponse200240Meta, bool)`
 
-### GetVersionOk
-
-`func (o *InlineObject310) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetMeta
 
-`func (o *InlineObject310) SetVersion(v string)`
+`func (o *InlineObject310) SetMeta(v InlineResponse200240Meta)`
 
-SetVersion sets Version field to given value.
+SetMeta sets Meta field to given value.
 
-### HasVersion
+### HasMeta
 
-`func (o *InlineObject310) HasVersion() bool`
+`func (o *InlineObject310) HasMeta() bool`
 
-HasVersion returns a boolean if a field has been set.
-
-### GetRadio
-
-`func (o *InlineObject310) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject310) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject310) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
-
-SetRadio sets Radio field to given value.
-
-### HasRadio
-
-`func (o *InlineObject310) HasRadio() bool`
-
-HasRadio returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

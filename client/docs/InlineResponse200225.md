@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200225Counts**](InlineResponse200225Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse200225Limits**](InlineResponse200225Limits.md) |  | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200225Rules**](InlineResponse200225Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200225WithDefaults instantiates a new InlineResponse200225 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetTrafficShapingEnabled
 
-`func (o *InlineResponse200225) GetCounts() InlineResponse200225Counts`
+`func (o *InlineResponse200225) GetTrafficShapingEnabled() bool`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineResponse200225) GetCountsOk() (*InlineResponse200225Counts, bool)`
+`func (o *InlineResponse200225) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetTrafficShapingEnabled
 
-`func (o *InlineResponse200225) SetCounts(v InlineResponse200225Counts)`
+`func (o *InlineResponse200225) SetTrafficShapingEnabled(v bool)`
 
-SetCounts sets Counts field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasCounts
+### HasTrafficShapingEnabled
 
-`func (o *InlineResponse200225) HasCounts() bool`
+`func (o *InlineResponse200225) HasTrafficShapingEnabled() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetLimits
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200225) GetLimits() InlineResponse200225Limits`
+`func (o *InlineResponse200225) GetDefaultRulesEnabled() bool`
 
-GetLimits returns the Limits field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetLimitsOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200225) GetLimitsOk() (*InlineResponse200225Limits, bool)`
+`func (o *InlineResponse200225) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimits
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200225) SetLimits(v InlineResponse200225Limits)`
+`func (o *InlineResponse200225) SetDefaultRulesEnabled(v bool)`
 
-SetLimits sets Limits field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasLimits
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse200225) HasLimits() bool`
+`func (o *InlineResponse200225) HasDefaultRulesEnabled() bool`
 
-HasLimits returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200225) GetRules() []InlineResponse200225Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200225) GetRulesOk() (*[]InlineResponse200225Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200225) SetRules(v []InlineResponse200225Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200225) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

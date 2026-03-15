@@ -4,13 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureIds** | **[]string** | Delete the packet captures of the specified capture ids | 
+**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices.md) | Device details (maximum of 20 devices allowed) | 
+**Notes** | Pointer to **string** | Reason for capture | [optional] 
+**Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
+**FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
+**Name** | **string** | Name of packet capture file | 
+**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject262
 
-`func NewInlineObject262(captureIds []string, ) *InlineObject262`
+`func NewInlineObject262(devices []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, name string, ) *InlineObject262`
 
 NewInlineObject262 instantiates a new InlineObject262 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +30,145 @@ NewInlineObject262WithDefaults instantiates a new InlineObject262 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureIds
+### GetDevices
 
-`func (o *InlineObject262) GetCaptureIds() []string`
+`func (o *InlineObject262) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices`
 
-GetCaptureIds returns the CaptureIds field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetCaptureIdsOk
+### GetDevicesOk
 
-`func (o *InlineObject262) GetCaptureIdsOk() (*[]string, bool)`
+`func (o *InlineObject262) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, bool)`
 
-GetCaptureIdsOk returns a tuple with the CaptureIds field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureIds
+### SetDevices
 
-`func (o *InlineObject262) SetCaptureIds(v []string)`
+`func (o *InlineObject262) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices)`
 
-SetCaptureIds sets CaptureIds field to given value.
+SetDevices sets Devices field to given value.
 
+
+### GetNotes
+
+`func (o *InlineObject262) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject262) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject262) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject262) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetDuration
+
+`func (o *InlineObject262) GetDuration() int32`
+
+GetDuration returns the Duration field if non-nil, zero value otherwise.
+
+### GetDurationOk
+
+`func (o *InlineObject262) GetDurationOk() (*int32, bool)`
+
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDuration
+
+`func (o *InlineObject262) SetDuration(v int32)`
+
+SetDuration sets Duration field to given value.
+
+### HasDuration
+
+`func (o *InlineObject262) HasDuration() bool`
+
+HasDuration returns a boolean if a field has been set.
+
+### GetFilterExpression
+
+`func (o *InlineObject262) GetFilterExpression() string`
+
+GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
+
+### GetFilterExpressionOk
+
+`func (o *InlineObject262) GetFilterExpressionOk() (*string, bool)`
+
+GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilterExpression
+
+`func (o *InlineObject262) SetFilterExpression(v string)`
+
+SetFilterExpression sets FilterExpression field to given value.
+
+### HasFilterExpression
+
+`func (o *InlineObject262) HasFilterExpression() bool`
+
+HasFilterExpression returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineObject262) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineObject262) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineObject262) SetName(v string)`
+
+SetName sets Name field to given value.
+
+
+### GetAdvanced
+
+`func (o *InlineObject262) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced`
+
+GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
+
+### GetAdvancedOk
+
+`func (o *InlineObject262) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced, bool)`
+
+GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvanced
+
+`func (o *InlineObject262) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced)`
+
+SetAdvanced sets Advanced field to given value.
+
+### HasAdvanced
+
+`func (o *InlineObject262) HasAdvanced() bool`
+
+HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

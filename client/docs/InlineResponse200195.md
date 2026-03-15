@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
-**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
-**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]InlineResponse200195Plans**](InlineResponse200195Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200195WithDefaults instantiates a new InlineResponse200195 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetT0
+### GetCurrency
 
-`func (o *InlineResponse200195) GetT0() int32`
+`func (o *InlineResponse200195) GetCurrency() string`
 
-GetT0 returns the T0 field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetT0Ok
+### GetCurrencyOk
 
-`func (o *InlineResponse200195) GetT0Ok() (*int32, bool)`
+`func (o *InlineResponse200195) GetCurrencyOk() (*string, bool)`
 
-GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT0
+### SetCurrency
 
-`func (o *InlineResponse200195) SetT0(v int32)`
+`func (o *InlineResponse200195) SetCurrency(v string)`
 
-SetT0 sets T0 field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasT0
+### HasCurrency
 
-`func (o *InlineResponse200195) HasT0() bool`
+`func (o *InlineResponse200195) HasCurrency() bool`
 
-HasT0 returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
 
-### GetT1
+### GetPlans
 
-`func (o *InlineResponse200195) GetT1() int32`
+`func (o *InlineResponse200195) GetPlans() []InlineResponse200195Plans`
 
-GetT1 returns the T1 field if non-nil, zero value otherwise.
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-### GetT1Ok
+### GetPlansOk
 
-`func (o *InlineResponse200195) GetT1Ok() (*int32, bool)`
+`func (o *InlineResponse200195) GetPlansOk() (*[]InlineResponse200195Plans, bool)`
 
-GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT1
+### SetPlans
 
-`func (o *InlineResponse200195) SetT1(v int32)`
+`func (o *InlineResponse200195) SetPlans(v []InlineResponse200195Plans)`
 
-SetT1 sets T1 field to given value.
+SetPlans sets Plans field to given value.
 
-### HasT1
+### HasPlans
 
-`func (o *InlineResponse200195) HasT1() bool`
+`func (o *InlineResponse200195) HasPlans() bool`
 
-HasT1 returns a boolean if a field has been set.
-
-### GetLatencyBinsByCategory
-
-`func (o *InlineResponse200195) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
-
-GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
-
-### GetLatencyBinsByCategoryOk
-
-`func (o *InlineResponse200195) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
-
-GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLatencyBinsByCategory
-
-`func (o *InlineResponse200195) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
-
-SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
-
-### HasLatencyBinsByCategory
-
-`func (o *InlineResponse200195) HasLatencyBinsByCategory() bool`
-
-HasLatencyBinsByCategory returns a boolean if a field has been set.
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

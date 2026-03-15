@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**Nodes** | Pointer to [**[]InlineResponse200185Nodes**](InlineResponse200185Nodes.md) | List of nodes in the network topology | [optional] 
+**Links** | Pointer to [**[]InlineResponse200185Links**](InlineResponse200185Links.md) | List of links between nodes | [optional] 
+**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200185WithDefaults instantiates a new InlineResponse200185 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetNodes
 
-`func (o *InlineResponse200185) GetId() string`
+`func (o *InlineResponse200185) GetNodes() []InlineResponse200185Nodes`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetNodes returns the Nodes field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNodesOk
 
-`func (o *InlineResponse200185) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200185) GetNodesOk() (*[]InlineResponse200185Nodes, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetNodes
 
-`func (o *InlineResponse200185) SetId(v string)`
+`func (o *InlineResponse200185) SetNodes(v []InlineResponse200185Nodes)`
 
-SetId sets Id field to given value.
+SetNodes sets Nodes field to given value.
 
-### HasId
+### HasNodes
 
-`func (o *InlineResponse200185) HasId() bool`
+`func (o *InlineResponse200185) HasNodes() bool`
 
-HasId returns a boolean if a field has been set.
+HasNodes returns a boolean if a field has been set.
 
-### GetName
+### GetLinks
 
-`func (o *InlineResponse200185) GetName() string`
+`func (o *InlineResponse200185) GetLinks() []InlineResponse200185Links`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLinksOk
 
-`func (o *InlineResponse200185) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200185) GetLinksOk() (*[]InlineResponse200185Links, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLinks
 
-`func (o *InlineResponse200185) SetName(v string)`
+`func (o *InlineResponse200185) SetLinks(v []InlineResponse200185Links)`
 
-SetName sets Name field to given value.
+SetLinks sets Links field to given value.
 
-### HasName
+### HasLinks
 
-`func (o *InlineResponse200185) HasName() bool`
+`func (o *InlineResponse200185) HasLinks() bool`
 
-HasName returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
 
-### GetUrl
+### GetErrors
 
-`func (o *InlineResponse200185) GetUrl() string`
+`func (o *InlineResponse200185) GetErrors() []string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetErrorsOk
 
-`func (o *InlineResponse200185) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200185) GetErrorsOk() (*[]string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetErrors
 
-`func (o *InlineResponse200185) SetUrl(v string)`
+`func (o *InlineResponse200185) SetErrors(v []string)`
 
-SetUrl sets Url field to given value.
+SetErrors sets Errors field to given value.
 
-### HasUrl
+### HasErrors
 
-`func (o *InlineResponse200185) HasUrl() bool`
+`func (o *InlineResponse200185) HasErrors() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200185) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200185) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200185) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200185) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineResponse200185) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineResponse200185) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineResponse200185) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineResponse200185) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

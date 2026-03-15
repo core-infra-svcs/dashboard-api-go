@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
-**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
+**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
+**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
+**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
 
 ## Methods
 
@@ -53,80 +53,80 @@ SetTs sets Ts field to given value.
 
 HasTs returns a boolean if a field has been set.
 
-### GetDevice
+### GetTotal
 
-`func (o *InlineResponse200283) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
+`func (o *InlineResponse200283) GetTotal() int32`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetTotalOk
 
-`func (o *InlineResponse200283) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
+`func (o *InlineResponse200283) GetTotalOk() (*int32, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetTotal
 
-`func (o *InlineResponse200283) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
+`func (o *InlineResponse200283) SetTotal(v int32)`
 
-SetDevice sets Device field to given value.
+SetTotal sets Total field to given value.
 
-### HasDevice
+### HasTotal
 
-`func (o *InlineResponse200283) HasDevice() bool`
+`func (o *InlineResponse200283) HasTotal() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetDetails
+### GetUpstream
 
-`func (o *InlineResponse200283) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
+`func (o *InlineResponse200283) GetUpstream() int32`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200283) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
+`func (o *InlineResponse200283) GetUpstreamOk() (*int32, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetUpstream
 
-`func (o *InlineResponse200283) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
+`func (o *InlineResponse200283) SetUpstream(v int32)`
 
-SetDetails sets Details field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasDetails
+### HasUpstream
 
-`func (o *InlineResponse200283) HasDetails() bool`
+`func (o *InlineResponse200283) HasUpstream() bool`
 
-HasDetails returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetNetwork
+### GetDownstream
 
-`func (o *InlineResponse200283) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
+`func (o *InlineResponse200283) GetDownstream() int32`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200283) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
+`func (o *InlineResponse200283) GetDownstreamOk() (*int32, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetDownstream
 
-`func (o *InlineResponse200283) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
+`func (o *InlineResponse200283) SetDownstream(v int32)`
 
-SetNetwork sets Network field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasNetwork
+### HasDownstream
 
-`func (o *InlineResponse200283) HasNetwork() bool`
+`func (o *InlineResponse200283) HasDownstream() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Switch serial. | [optional] 
-**Name** | Pointer to **string** | Switch name. | [optional] 
-**Url** | Pointer to **string** | Url link to switch. | [optional] 
-**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
-**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200162Rules**](InlineResponse200162Rules.md) | An ordered array of the access control list rules | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse200162WithDefaults instantiates a new InlineResponse200162 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetRules
 
-`func (o *InlineResponse200162) GetSerial() string`
+`func (o *InlineResponse200162) GetRules() []InlineResponse200162Rules`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetRulesOk
 
-`func (o *InlineResponse200162) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200162) GetRulesOk() (*[]InlineResponse200162Rules, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetRules
 
-`func (o *InlineResponse200162) SetSerial(v string)`
+`func (o *InlineResponse200162) SetRules(v []InlineResponse200162Rules)`
 
-SetSerial sets Serial field to given value.
+SetRules sets Rules field to given value.
 
-### HasSerial
+### HasRules
 
-`func (o *InlineResponse200162) HasSerial() bool`
+`func (o *InlineResponse200162) HasRules() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200162) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200162) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200162) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200162) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200162) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200162) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200162) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200162) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetSupportsInspection
-
-`func (o *InlineResponse200162) GetSupportsInspection() bool`
-
-GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
-
-### GetSupportsInspectionOk
-
-`func (o *InlineResponse200162) GetSupportsInspectionOk() (*bool, bool)`
-
-GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportsInspection
-
-`func (o *InlineResponse200162) SetSupportsInspection(v bool)`
-
-SetSupportsInspection sets SupportsInspection field to given value.
-
-### HasSupportsInspection
-
-`func (o *InlineResponse200162) HasSupportsInspection() bool`
-
-HasSupportsInspection returns a boolean if a field has been set.
-
-### GetHasTrustedPort
-
-`func (o *InlineResponse200162) GetHasTrustedPort() bool`
-
-GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
-
-### GetHasTrustedPortOk
-
-`func (o *InlineResponse200162) GetHasTrustedPortOk() (*bool, bool)`
-
-GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasTrustedPort
-
-`func (o *InlineResponse200162) SetHasTrustedPort(v bool)`
-
-SetHasTrustedPort sets HasTrustedPort field to given value.
-
-### HasHasTrustedPort
-
-`func (o *InlineResponse200162) HasHasTrustedPort() bool`
-
-HasHasTrustedPort returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

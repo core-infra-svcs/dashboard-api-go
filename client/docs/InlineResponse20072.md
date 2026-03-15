@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**CustomPerformanceClassId** | Pointer to **string** | ID of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
+**AllowedUrls** | Pointer to [**[]InlineResponse20072AllowedUrls**](InlineResponse20072AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
+**AllowedFiles** | Pointer to [**[]InlineResponse20072AllowedFiles**](InlineResponse20072AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20072WithDefaults instantiates a new InlineResponse20072 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMode
 
-`func (o *InlineResponse20072) GetName() string`
+`func (o *InlineResponse20072) GetMode() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetModeOk
 
-`func (o *InlineResponse20072) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20072) GetModeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMode
 
-`func (o *InlineResponse20072) SetName(v string)`
+`func (o *InlineResponse20072) SetMode(v string)`
 
-SetName sets Name field to given value.
+SetMode sets Mode field to given value.
 
-### HasName
+### HasMode
 
-`func (o *InlineResponse20072) HasName() bool`
+`func (o *InlineResponse20072) HasMode() bool`
 
-HasName returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetCustomPerformanceClassId
+### GetAllowedUrls
 
-`func (o *InlineResponse20072) GetCustomPerformanceClassId() string`
+`func (o *InlineResponse20072) GetAllowedUrls() []InlineResponse20072AllowedUrls`
 
-GetCustomPerformanceClassId returns the CustomPerformanceClassId field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetCustomPerformanceClassIdOk
+### GetAllowedUrlsOk
 
-`func (o *InlineResponse20072) GetCustomPerformanceClassIdOk() (*string, bool)`
+`func (o *InlineResponse20072) GetAllowedUrlsOk() (*[]InlineResponse20072AllowedUrls, bool)`
 
-GetCustomPerformanceClassIdOk returns a tuple with the CustomPerformanceClassId field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPerformanceClassId
+### SetAllowedUrls
 
-`func (o *InlineResponse20072) SetCustomPerformanceClassId(v string)`
+`func (o *InlineResponse20072) SetAllowedUrls(v []InlineResponse20072AllowedUrls)`
 
-SetCustomPerformanceClassId sets CustomPerformanceClassId field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasCustomPerformanceClassId
+### HasAllowedUrls
 
-`func (o *InlineResponse20072) HasCustomPerformanceClassId() bool`
+`func (o *InlineResponse20072) HasAllowedUrls() bool`
 
-HasCustomPerformanceClassId returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetMaxLatency
+### GetAllowedFiles
 
-`func (o *InlineResponse20072) GetMaxLatency() int32`
+`func (o *InlineResponse20072) GetAllowedFiles() []InlineResponse20072AllowedFiles`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetAllowedFilesOk
 
-`func (o *InlineResponse20072) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineResponse20072) GetAllowedFilesOk() (*[]InlineResponse20072AllowedFiles, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetAllowedFiles
 
-`func (o *InlineResponse20072) SetMaxLatency(v int32)`
+`func (o *InlineResponse20072) SetAllowedFiles(v []InlineResponse20072AllowedFiles)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasMaxLatency
+### HasAllowedFiles
 
-`func (o *InlineResponse20072) HasMaxLatency() bool`
+`func (o *InlineResponse20072) HasAllowedFiles() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
-
-### GetMaxJitter
-
-`func (o *InlineResponse20072) GetMaxJitter() int32`
-
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
-
-### GetMaxJitterOk
-
-`func (o *InlineResponse20072) GetMaxJitterOk() (*int32, bool)`
-
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxJitter
-
-`func (o *InlineResponse20072) SetMaxJitter(v int32)`
-
-SetMaxJitter sets MaxJitter field to given value.
-
-### HasMaxJitter
-
-`func (o *InlineResponse20072) HasMaxJitter() bool`
-
-HasMaxJitter returns a boolean if a field has been set.
-
-### GetMaxLossPercentage
-
-`func (o *InlineResponse20072) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineResponse20072) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxLossPercentage
-
-`func (o *InlineResponse20072) SetMaxLossPercentage(v int32)`
-
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
-
-### HasMaxLossPercentage
-
-`func (o *InlineResponse20072) HasMaxLossPercentage() bool`
-
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

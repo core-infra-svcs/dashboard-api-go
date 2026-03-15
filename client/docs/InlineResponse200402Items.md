@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200399Readings**](InlineResponse200399Readings.md) | The usages of layer 3 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
+**NetworkId** | Pointer to **string** | The network id | [optional] 
+**NetworkName** | Pointer to **string** | The network name | [optional] 
+**Ssid** | Pointer to [**[]InlineResponse200402Ssid**](InlineResponse200402Ssid.md) | The SSIDs for the network | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200402ItemsWithDefaults instantiates a new InlineResponse200402
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetNetworkId
 
-`func (o *InlineResponse200402Items) GetSerial() string`
+`func (o *InlineResponse200402Items) GetNetworkId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200402Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200402Items) GetNetworkIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetworkId
 
-`func (o *InlineResponse200402Items) SetSerial(v string)`
+`func (o *InlineResponse200402Items) SetNetworkId(v string)`
 
-SetSerial sets Serial field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasSerial
+### HasNetworkId
 
-`func (o *InlineResponse200402Items) HasSerial() bool`
+`func (o *InlineResponse200402Items) HasNetworkId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetReadings
+### GetNetworkName
 
-`func (o *InlineResponse200402Items) GetReadings() []InlineResponse200399Readings`
+`func (o *InlineResponse200402Items) GetNetworkName() string`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetNetworkNameOk
 
-`func (o *InlineResponse200402Items) GetReadingsOk() (*[]InlineResponse200399Readings, bool)`
+`func (o *InlineResponse200402Items) GetNetworkNameOk() (*string, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetNetworkName
 
-`func (o *InlineResponse200402Items) SetReadings(v []InlineResponse200399Readings)`
+`func (o *InlineResponse200402Items) SetNetworkName(v string)`
 
-SetReadings sets Readings field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasReadings
+### HasNetworkName
 
-`func (o *InlineResponse200402Items) HasReadings() bool`
+`func (o *InlineResponse200402Items) HasNetworkName() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasNetworkName returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineResponse200402Items) GetSsid() []InlineResponse200402Ssid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineResponse200402Items) GetSsidOk() (*[]InlineResponse200402Ssid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineResponse200402Items) SetSsid(v []InlineResponse200402Ssid)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineResponse200402Items) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

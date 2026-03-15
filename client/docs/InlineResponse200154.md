@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | User name | [optional] 
-**Login** | Pointer to **string** | User login identifier | [optional] 
-**Ssid** | Pointer to **string** | SSID name | [optional] 
-**LoginAt** | Pointer to **time.Time** | Login timestamp | [optional] 
-**GatewayDeviceMac** | Pointer to **string** | Gateway device mac address | [optional] 
-**ClientMac** | Pointer to **string** | Client mac address | [optional] 
-**ClientId** | Pointer to **string** | Client ID | [optional] 
-**Authorization** | Pointer to **string** | Authorization status | [optional] 
+**Id** | Pointer to **string** | ID of a profile. | [optional] 
+**Name** | Pointer to **string** | Name of a profile. | [optional] 
+**Description** | Pointer to **string** | Description of a profile. | [optional] 
+**Scope** | Pointer to **string** | Scope of a profile. | [optional] 
+**Tags** | Pointer to **[]string** | Tags of a profile. | [optional] 
+**PayloadTypes** | Pointer to **[]string** | Payloads in the profile. | [optional] 
 
 ## Methods
 
@@ -31,6 +29,31 @@ will change when the set of required properties is changed
 NewInlineResponse200154WithDefaults instantiates a new InlineResponse200154 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200154) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200154) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200154) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200154) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -57,180 +80,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetLogin
+### GetDescription
 
-`func (o *InlineResponse200154) GetLogin() string`
+`func (o *InlineResponse200154) GetDescription() string`
 
-GetLogin returns the Login field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetLoginOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200154) GetLoginOk() (*string, bool)`
+`func (o *InlineResponse200154) GetDescriptionOk() (*string, bool)`
 
-GetLoginOk returns a tuple with the Login field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLogin
+### SetDescription
 
-`func (o *InlineResponse200154) SetLogin(v string)`
+`func (o *InlineResponse200154) SetDescription(v string)`
 
-SetLogin sets Login field to given value.
+SetDescription sets Description field to given value.
 
-### HasLogin
+### HasDescription
 
-`func (o *InlineResponse200154) HasLogin() bool`
+`func (o *InlineResponse200154) HasDescription() bool`
 
-HasLogin returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetSsid
+### GetScope
 
-`func (o *InlineResponse200154) GetSsid() string`
+`func (o *InlineResponse200154) GetScope() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetScopeOk
 
-`func (o *InlineResponse200154) GetSsidOk() (*string, bool)`
+`func (o *InlineResponse200154) GetScopeOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetScope
 
-`func (o *InlineResponse200154) SetSsid(v string)`
+`func (o *InlineResponse200154) SetScope(v string)`
 
-SetSsid sets Ssid field to given value.
+SetScope sets Scope field to given value.
 
-### HasSsid
+### HasScope
 
-`func (o *InlineResponse200154) HasSsid() bool`
+`func (o *InlineResponse200154) HasScope() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
-### GetLoginAt
+### GetTags
 
-`func (o *InlineResponse200154) GetLoginAt() time.Time`
+`func (o *InlineResponse200154) GetTags() []string`
 
-GetLoginAt returns the LoginAt field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetLoginAtOk
+### GetTagsOk
 
-`func (o *InlineResponse200154) GetLoginAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200154) GetTagsOk() (*[]string, bool)`
 
-GetLoginAtOk returns a tuple with the LoginAt field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoginAt
+### SetTags
 
-`func (o *InlineResponse200154) SetLoginAt(v time.Time)`
+`func (o *InlineResponse200154) SetTags(v []string)`
 
-SetLoginAt sets LoginAt field to given value.
+SetTags sets Tags field to given value.
 
-### HasLoginAt
+### HasTags
 
-`func (o *InlineResponse200154) HasLoginAt() bool`
+`func (o *InlineResponse200154) HasTags() bool`
 
-HasLoginAt returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetGatewayDeviceMac
+### GetPayloadTypes
 
-`func (o *InlineResponse200154) GetGatewayDeviceMac() string`
+`func (o *InlineResponse200154) GetPayloadTypes() []string`
 
-GetGatewayDeviceMac returns the GatewayDeviceMac field if non-nil, zero value otherwise.
+GetPayloadTypes returns the PayloadTypes field if non-nil, zero value otherwise.
 
-### GetGatewayDeviceMacOk
+### GetPayloadTypesOk
 
-`func (o *InlineResponse200154) GetGatewayDeviceMacOk() (*string, bool)`
+`func (o *InlineResponse200154) GetPayloadTypesOk() (*[]string, bool)`
 
-GetGatewayDeviceMacOk returns a tuple with the GatewayDeviceMac field if it's non-nil, zero value otherwise
+GetPayloadTypesOk returns a tuple with the PayloadTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGatewayDeviceMac
+### SetPayloadTypes
 
-`func (o *InlineResponse200154) SetGatewayDeviceMac(v string)`
+`func (o *InlineResponse200154) SetPayloadTypes(v []string)`
 
-SetGatewayDeviceMac sets GatewayDeviceMac field to given value.
+SetPayloadTypes sets PayloadTypes field to given value.
 
-### HasGatewayDeviceMac
+### HasPayloadTypes
 
-`func (o *InlineResponse200154) HasGatewayDeviceMac() bool`
+`func (o *InlineResponse200154) HasPayloadTypes() bool`
 
-HasGatewayDeviceMac returns a boolean if a field has been set.
-
-### GetClientMac
-
-`func (o *InlineResponse200154) GetClientMac() string`
-
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
-
-### GetClientMacOk
-
-`func (o *InlineResponse200154) GetClientMacOk() (*string, bool)`
-
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientMac
-
-`func (o *InlineResponse200154) SetClientMac(v string)`
-
-SetClientMac sets ClientMac field to given value.
-
-### HasClientMac
-
-`func (o *InlineResponse200154) HasClientMac() bool`
-
-HasClientMac returns a boolean if a field has been set.
-
-### GetClientId
-
-`func (o *InlineResponse200154) GetClientId() string`
-
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
-
-### GetClientIdOk
-
-`func (o *InlineResponse200154) GetClientIdOk() (*string, bool)`
-
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientId
-
-`func (o *InlineResponse200154) SetClientId(v string)`
-
-SetClientId sets ClientId field to given value.
-
-### HasClientId
-
-`func (o *InlineResponse200154) HasClientId() bool`
-
-HasClientId returns a boolean if a field has been set.
-
-### GetAuthorization
-
-`func (o *InlineResponse200154) GetAuthorization() string`
-
-GetAuthorization returns the Authorization field if non-nil, zero value otherwise.
-
-### GetAuthorizationOk
-
-`func (o *InlineResponse200154) GetAuthorizationOk() (*string, bool)`
-
-GetAuthorizationOk returns a tuple with the Authorization field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthorization
-
-`func (o *InlineResponse200154) SetAuthorization(v string)`
-
-SetAuthorization sets Authorization field to given value.
-
-### HasAuthorization
-
-`func (o *InlineResponse200154) HasAuthorization() bool`
-
-HasAuthorization returns a boolean if a field has been set.
+HasPayloadTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

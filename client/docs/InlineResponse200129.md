@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
+**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
+**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
+**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200129WithDefaults instantiates a new InlineResponse200129 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetStartTs
 
-`func (o *InlineResponse200129) GetIds() []string`
+`func (o *InlineResponse200129) GetStartTs() time.Time`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetStartTsOk
 
-`func (o *InlineResponse200129) GetIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200129) GetStartTsOk() (*time.Time, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetStartTs
 
-`func (o *InlineResponse200129) SetIds(v []string)`
+`func (o *InlineResponse200129) SetStartTs(v time.Time)`
 
-SetIds sets Ids field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasIds
+### HasStartTs
 
-`func (o *InlineResponse200129) HasIds() bool`
+`func (o *InlineResponse200129) HasStartTs() bool`
 
-HasIds returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
+
+### GetEndTs
+
+`func (o *InlineResponse200129) GetEndTs() time.Time`
+
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+
+### GetEndTsOk
+
+`func (o *InlineResponse200129) GetEndTsOk() (*time.Time, bool)`
+
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEndTs
+
+`func (o *InlineResponse200129) SetEndTs(v time.Time)`
+
+SetEndTs sets EndTs field to given value.
+
+### HasEndTs
+
+`func (o *InlineResponse200129) HasEndTs() bool`
+
+HasEndTs returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200129) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200129) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200129) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200129) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

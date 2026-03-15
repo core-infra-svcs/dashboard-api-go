@@ -4,20 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the sensor alert profile. | [optional] 
-**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule**](NetworksNetworkIdSensorAlertsProfilesSchedule.md) |  | [optional] 
-**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
-**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] 
-**Message** | Pointer to **string** | A custom message that will appear in email and text message alerts. | [optional] 
+**Serial** | Pointer to **string** | Device serial | [optional] 
+**Model** | Pointer to **string** | Device model. | [optional] 
+**Tags** | Pointer to **string** | Device tags. | [optional] 
+**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
+**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200124
 
-`func NewInlineResponse200124(conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineResponse200124`
+`func NewInlineResponse200124() *InlineResponse200124`
 
 NewInlineResponse200124 instantiates a new InlineResponse200124 object
 This constructor will assign default values to properties that have it defined,
@@ -32,200 +29,130 @@ NewInlineResponse200124WithDefaults instantiates a new InlineResponse200124 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetSerial
 
-`func (o *InlineResponse200124) GetProfileId() string`
+`func (o *InlineResponse200124) GetSerial() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200124) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200124) GetSerialOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetSerial
 
-`func (o *InlineResponse200124) SetProfileId(v string)`
+`func (o *InlineResponse200124) SetSerial(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasProfileId
+### HasSerial
 
-`func (o *InlineResponse200124) HasProfileId() bool`
+`func (o *InlineResponse200124) HasSerial() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetName
+### GetModel
 
-`func (o *InlineResponse200124) GetName() string`
+`func (o *InlineResponse200124) GetModel() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetModelOk
 
-`func (o *InlineResponse200124) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200124) GetModelOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetModel
 
-`func (o *InlineResponse200124) SetName(v string)`
+`func (o *InlineResponse200124) SetModel(v string)`
 
-SetName sets Name field to given value.
+SetModel sets Model field to given value.
 
-### HasName
+### HasModel
 
-`func (o *InlineResponse200124) HasName() bool`
+`func (o *InlineResponse200124) HasModel() bool`
 
-HasName returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetSchedule
+### GetTags
 
-`func (o *InlineResponse200124) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule`
+`func (o *InlineResponse200124) GetTags() string`
 
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetScheduleOk
+### GetTagsOk
 
-`func (o *InlineResponse200124) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule, bool)`
+`func (o *InlineResponse200124) GetTagsOk() (*string, bool)`
 
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSchedule
+### SetTags
 
-`func (o *InlineResponse200124) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule)`
+`func (o *InlineResponse200124) SetTags(v string)`
 
-SetSchedule sets Schedule field to given value.
+SetTags sets Tags field to given value.
 
-### HasSchedule
+### HasTags
 
-`func (o *InlineResponse200124) HasSchedule() bool`
+`func (o *InlineResponse200124) HasTags() bool`
 
-HasSchedule returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetConditions
+### GetWifi0
 
-`func (o *InlineResponse200124) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+`func (o *InlineResponse200124) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
 
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
+GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
 
-### GetConditionsOk
+### GetWifi0Ok
 
-`func (o *InlineResponse200124) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+`func (o *InlineResponse200124) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
 
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConditions
+### SetWifi0
 
-`func (o *InlineResponse200124) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+`func (o *InlineResponse200124) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
 
-SetConditions sets Conditions field to given value.
+SetWifi0 sets Wifi0 field to given value.
 
+### HasWifi0
 
-### GetRecipients
+`func (o *InlineResponse200124) HasWifi0() bool`
 
-`func (o *InlineResponse200124) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+HasWifi0 returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetWifi1
 
-### GetRecipientsOk
+`func (o *InlineResponse200124) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
 
-`func (o *InlineResponse200124) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetWifi1Ok
+
+`func (o *InlineResponse200124) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+
+GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetWifi1
 
-`func (o *InlineResponse200124) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+`func (o *InlineResponse200124) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
 
-SetRecipients sets Recipients field to given value.
+SetWifi1 sets Wifi1 field to given value.
 
-### HasRecipients
+### HasWifi1
 
-`func (o *InlineResponse200124) HasRecipients() bool`
+`func (o *InlineResponse200124) HasWifi1() bool`
 
-HasRecipients returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineResponse200124) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineResponse200124) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineResponse200124) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineResponse200124) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetIncludeSensorUrl
-
-`func (o *InlineResponse200124) GetIncludeSensorUrl() bool`
-
-GetIncludeSensorUrl returns the IncludeSensorUrl field if non-nil, zero value otherwise.
-
-### GetIncludeSensorUrlOk
-
-`func (o *InlineResponse200124) GetIncludeSensorUrlOk() (*bool, bool)`
-
-GetIncludeSensorUrlOk returns a tuple with the IncludeSensorUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIncludeSensorUrl
-
-`func (o *InlineResponse200124) SetIncludeSensorUrl(v bool)`
-
-SetIncludeSensorUrl sets IncludeSensorUrl field to given value.
-
-### HasIncludeSensorUrl
-
-`func (o *InlineResponse200124) HasIncludeSensorUrl() bool`
-
-HasIncludeSensorUrl returns a boolean if a field has been set.
-
-### GetMessage
-
-`func (o *InlineResponse200124) GetMessage() string`
-
-GetMessage returns the Message field if non-nil, zero value otherwise.
-
-### GetMessageOk
-
-`func (o *InlineResponse200124) GetMessageOk() (*string, bool)`
-
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMessage
-
-`func (o *InlineResponse200124) SetMessage(v string)`
-
-SetMessage sets Message field to given value.
-
-### HasMessage
-
-`func (o *InlineResponse200124) HasMessage() bool`
-
-HasMessage returns a boolean if a field has been set.
+HasWifi1 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

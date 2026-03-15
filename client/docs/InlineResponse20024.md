@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LedsBlinkId** | Pointer to **string** | ID of led blink job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your leds blink request | [optional] 
-**Status** | Pointer to **string** | Status of the leds blink request | [optional] 
-**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed Blink LEDs execution, if present | [optional] 
+**DeviceName** | Pointer to **string** | Name of the MG. | [optional] 
+**DeviceLanIp** | Pointer to **string** | Lan IP of the MG | [optional] 
+**DeviceSubnet** | Pointer to **string** | Subnet configuration of the MG. | [optional] 
+**FixedIpAssignments** | Pointer to [**[]InlineResponse20024FixedIpAssignments**](InlineResponse20024FixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
+**ReservedIpRanges** | Pointer to [**[]InlineResponse20024ReservedIpRanges**](InlineResponse20024ReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse20024WithDefaults instantiates a new InlineResponse20024 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLedsBlinkId
+### GetDeviceName
 
-`func (o *InlineResponse20024) GetLedsBlinkId() string`
+`func (o *InlineResponse20024) GetDeviceName() string`
 
-GetLedsBlinkId returns the LedsBlinkId field if non-nil, zero value otherwise.
+GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
 
-### GetLedsBlinkIdOk
+### GetDeviceNameOk
 
-`func (o *InlineResponse20024) GetLedsBlinkIdOk() (*string, bool)`
+`func (o *InlineResponse20024) GetDeviceNameOk() (*string, bool)`
 
-GetLedsBlinkIdOk returns a tuple with the LedsBlinkId field if it's non-nil, zero value otherwise
+GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLedsBlinkId
+### SetDeviceName
 
-`func (o *InlineResponse20024) SetLedsBlinkId(v string)`
+`func (o *InlineResponse20024) SetDeviceName(v string)`
 
-SetLedsBlinkId sets LedsBlinkId field to given value.
+SetDeviceName sets DeviceName field to given value.
 
-### HasLedsBlinkId
+### HasDeviceName
 
-`func (o *InlineResponse20024) HasLedsBlinkId() bool`
+`func (o *InlineResponse20024) HasDeviceName() bool`
 
-HasLedsBlinkId returns a boolean if a field has been set.
+HasDeviceName returns a boolean if a field has been set.
 
-### GetUrl
+### GetDeviceLanIp
 
-`func (o *InlineResponse20024) GetUrl() string`
+`func (o *InlineResponse20024) GetDeviceLanIp() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetDeviceLanIp returns the DeviceLanIp field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetDeviceLanIpOk
 
-`func (o *InlineResponse20024) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20024) GetDeviceLanIpOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetDeviceLanIpOk returns a tuple with the DeviceLanIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetDeviceLanIp
 
-`func (o *InlineResponse20024) SetUrl(v string)`
+`func (o *InlineResponse20024) SetDeviceLanIp(v string)`
 
-SetUrl sets Url field to given value.
+SetDeviceLanIp sets DeviceLanIp field to given value.
 
-### HasUrl
+### HasDeviceLanIp
 
-`func (o *InlineResponse20024) HasUrl() bool`
+`func (o *InlineResponse20024) HasDeviceLanIp() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasDeviceLanIp returns a boolean if a field has been set.
 
-### GetStatus
+### GetDeviceSubnet
 
-`func (o *InlineResponse20024) GetStatus() string`
+`func (o *InlineResponse20024) GetDeviceSubnet() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetDeviceSubnet returns the DeviceSubnet field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetDeviceSubnetOk
 
-`func (o *InlineResponse20024) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20024) GetDeviceSubnetOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetDeviceSubnetOk returns a tuple with the DeviceSubnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetDeviceSubnet
 
-`func (o *InlineResponse20024) SetStatus(v string)`
+`func (o *InlineResponse20024) SetDeviceSubnet(v string)`
 
-SetStatus sets Status field to given value.
+SetDeviceSubnet sets DeviceSubnet field to given value.
 
-### HasStatus
+### HasDeviceSubnet
 
-`func (o *InlineResponse20024) HasStatus() bool`
+`func (o *InlineResponse20024) HasDeviceSubnet() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasDeviceSubnet returns a boolean if a field has been set.
 
-### GetRequest
+### GetFixedIpAssignments
 
-`func (o *InlineResponse20024) GetRequest() InlineResponse2013Request`
+`func (o *InlineResponse20024) GetFixedIpAssignments() []InlineResponse20024FixedIpAssignments`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetFixedIpAssignmentsOk
 
-`func (o *InlineResponse20024) GetRequestOk() (*InlineResponse2013Request, bool)`
+`func (o *InlineResponse20024) GetFixedIpAssignmentsOk() (*[]InlineResponse20024FixedIpAssignments, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetFixedIpAssignments
 
-`func (o *InlineResponse20024) SetRequest(v InlineResponse2013Request)`
+`func (o *InlineResponse20024) SetFixedIpAssignments(v []InlineResponse20024FixedIpAssignments)`
 
-SetRequest sets Request field to given value.
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
 
-### HasRequest
+### HasFixedIpAssignments
 
-`func (o *InlineResponse20024) HasRequest() bool`
+`func (o *InlineResponse20024) HasFixedIpAssignments() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasFixedIpAssignments returns a boolean if a field has been set.
 
-### GetError
+### GetReservedIpRanges
 
-`func (o *InlineResponse20024) GetError() string`
+`func (o *InlineResponse20024) GetReservedIpRanges() []InlineResponse20024ReservedIpRanges`
 
-GetError returns the Error field if non-nil, zero value otherwise.
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
 
-### GetErrorOk
+### GetReservedIpRangesOk
 
-`func (o *InlineResponse20024) GetErrorOk() (*string, bool)`
+`func (o *InlineResponse20024) GetReservedIpRangesOk() (*[]InlineResponse20024ReservedIpRanges, bool)`
 
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetError
+### SetReservedIpRanges
 
-`func (o *InlineResponse20024) SetError(v string)`
+`func (o *InlineResponse20024) SetReservedIpRanges(v []InlineResponse20024ReservedIpRanges)`
 
-SetError sets Error field to given value.
+SetReservedIpRanges sets ReservedIpRanges field to given value.
 
-### HasError
+### HasReservedIpRanges
 
-`func (o *InlineResponse20024) HasError() bool`
+`func (o *InlineResponse20024) HasReservedIpRanges() bool`
 
-HasError returns a boolean if a field has been set.
+HasReservedIpRanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

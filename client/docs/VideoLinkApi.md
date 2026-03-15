@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraVideoLink
 
-> map[string]interface{} GetDeviceCameraVideoLink(ctx, serial).Timestamp(timestamp).Execute()
+> InlineResponse20021 GetDeviceCameraVideoLink(ctx, serial).Timestamp(timestamp).Execute()
 
 Returns video link to the specified camera
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VideoLinkApi.GetDeviceCameraVideoLink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraVideoLink`: map[string]interface{}
+    // response from `GetDeviceCameraVideoLink`: InlineResponse20021
     fmt.Fprintf(os.Stdout, "Response from `VideoLinkApi.GetDeviceCameraVideoLink`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 

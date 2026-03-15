@@ -4,14 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the certificate. | [optional] 
-**NotValidAfter** | Pointer to **string** | The date after which the certificate is no longer valid. | [optional] 
-**NotValidBefore** | Pointer to **string** | The date before which the certificate is not valid. | [optional] 
-**CertPem** | Pointer to **string** | The PEM of the certificate. | [optional] 
-**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
-**Issuer** | Pointer to **string** | The certificate issuer. | [optional] 
-**Subject** | Pointer to **string** | The subject of the certificate. | [optional] 
-**Id** | Pointer to **string** | The Meraki Id of the certificate record. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
+**Name** | Pointer to **string** | The name of the device. | [optional] 
+**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
+**Serial** | Pointer to **string** | The device serial. | [optional] 
+**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
 
 ## Methods
 
@@ -31,6 +28,31 @@ will change when the set of required properties is changed
 NewInlineResponse200136WithDefaults instantiates a new InlineResponse200136 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200136) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200136) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200136) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200136) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -57,180 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetNotValidAfter
+### GetWifiMac
 
-`func (o *InlineResponse200136) GetNotValidAfter() string`
+`func (o *InlineResponse200136) GetWifiMac() string`
 
-GetNotValidAfter returns the NotValidAfter field if non-nil, zero value otherwise.
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
 
-### GetNotValidAfterOk
+### GetWifiMacOk
 
-`func (o *InlineResponse200136) GetNotValidAfterOk() (*string, bool)`
+`func (o *InlineResponse200136) GetWifiMacOk() (*string, bool)`
 
-GetNotValidAfterOk returns a tuple with the NotValidAfter field if it's non-nil, zero value otherwise
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidAfter
+### SetWifiMac
 
-`func (o *InlineResponse200136) SetNotValidAfter(v string)`
+`func (o *InlineResponse200136) SetWifiMac(v string)`
 
-SetNotValidAfter sets NotValidAfter field to given value.
+SetWifiMac sets WifiMac field to given value.
 
-### HasNotValidAfter
+### HasWifiMac
 
-`func (o *InlineResponse200136) HasNotValidAfter() bool`
+`func (o *InlineResponse200136) HasWifiMac() bool`
 
-HasNotValidAfter returns a boolean if a field has been set.
+HasWifiMac returns a boolean if a field has been set.
 
-### GetNotValidBefore
+### GetSerial
 
-`func (o *InlineResponse200136) GetNotValidBefore() string`
+`func (o *InlineResponse200136) GetSerial() string`
 
-GetNotValidBefore returns the NotValidBefore field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNotValidBeforeOk
+### GetSerialOk
 
-`func (o *InlineResponse200136) GetNotValidBeforeOk() (*string, bool)`
+`func (o *InlineResponse200136) GetSerialOk() (*string, bool)`
 
-GetNotValidBeforeOk returns a tuple with the NotValidBefore field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidBefore
+### SetSerial
 
-`func (o *InlineResponse200136) SetNotValidBefore(v string)`
+`func (o *InlineResponse200136) SetSerial(v string)`
 
-SetNotValidBefore sets NotValidBefore field to given value.
+SetSerial sets Serial field to given value.
 
-### HasNotValidBefore
+### HasSerial
 
-`func (o *InlineResponse200136) HasNotValidBefore() bool`
+`func (o *InlineResponse200136) HasSerial() bool`
 
-HasNotValidBefore returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetCertPem
+### GetNotes
 
-`func (o *InlineResponse200136) GetCertPem() string`
+`func (o *InlineResponse200136) GetNotes() string`
 
-GetCertPem returns the CertPem field if non-nil, zero value otherwise.
+GetNotes returns the Notes field if non-nil, zero value otherwise.
 
-### GetCertPemOk
+### GetNotesOk
 
-`func (o *InlineResponse200136) GetCertPemOk() (*string, bool)`
+`func (o *InlineResponse200136) GetNotesOk() (*string, bool)`
 
-GetCertPemOk returns a tuple with the CertPem field if it's non-nil, zero value otherwise
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertPem
+### SetNotes
 
-`func (o *InlineResponse200136) SetCertPem(v string)`
+`func (o *InlineResponse200136) SetNotes(v string)`
 
-SetCertPem sets CertPem field to given value.
+SetNotes sets Notes field to given value.
 
-### HasCertPem
+### HasNotes
 
-`func (o *InlineResponse200136) HasCertPem() bool`
+`func (o *InlineResponse200136) HasNotes() bool`
 
-HasCertPem returns a boolean if a field has been set.
-
-### GetDeviceId
-
-`func (o *InlineResponse200136) GetDeviceId() string`
-
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
-
-### GetDeviceIdOk
-
-`func (o *InlineResponse200136) GetDeviceIdOk() (*string, bool)`
-
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceId
-
-`func (o *InlineResponse200136) SetDeviceId(v string)`
-
-SetDeviceId sets DeviceId field to given value.
-
-### HasDeviceId
-
-`func (o *InlineResponse200136) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
-
-### GetIssuer
-
-`func (o *InlineResponse200136) GetIssuer() string`
-
-GetIssuer returns the Issuer field if non-nil, zero value otherwise.
-
-### GetIssuerOk
-
-`func (o *InlineResponse200136) GetIssuerOk() (*string, bool)`
-
-GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIssuer
-
-`func (o *InlineResponse200136) SetIssuer(v string)`
-
-SetIssuer sets Issuer field to given value.
-
-### HasIssuer
-
-`func (o *InlineResponse200136) HasIssuer() bool`
-
-HasIssuer returns a boolean if a field has been set.
-
-### GetSubject
-
-`func (o *InlineResponse200136) GetSubject() string`
-
-GetSubject returns the Subject field if non-nil, zero value otherwise.
-
-### GetSubjectOk
-
-`func (o *InlineResponse200136) GetSubjectOk() (*string, bool)`
-
-GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubject
-
-`func (o *InlineResponse200136) SetSubject(v string)`
-
-SetSubject sets Subject field to given value.
-
-### HasSubject
-
-`func (o *InlineResponse200136) HasSubject() bool`
-
-HasSubject returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse200136) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200136) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200136) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200136) HasId() bool`
-
-HasId returns a boolean if a field has been set.
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

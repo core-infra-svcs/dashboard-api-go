@@ -4,15 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
-**V2CommunityString** | Pointer to **string** | The community string for SNMP version 2c, if enabled. | [optional] 
-**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
-**V3User** | Pointer to **string** | The user for SNMP version 3, if enabled. | [optional] 
-**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
-**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
-**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
-**Hostname** | Pointer to **string** | The hostname of the SNMP server. | [optional] 
-**Port** | Pointer to **int32** | The port of the SNMP server. | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**VisionConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) for Meraki Vision Portal | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -33,230 +30,155 @@ NewInlineResponse200339WithDefaults instantiates a new InlineResponse200339 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetV2cEnabled
+### GetIdpId
 
-`func (o *InlineResponse200339) GetV2cEnabled() bool`
+`func (o *InlineResponse200339) GetIdpId() string`
 
-GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetV2cEnabledOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200339) GetV2cEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200339) GetIdpIdOk() (*string, bool)`
 
-GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV2cEnabled
+### SetIdpId
 
-`func (o *InlineResponse200339) SetV2cEnabled(v bool)`
+`func (o *InlineResponse200339) SetIdpId(v string)`
 
-SetV2cEnabled sets V2cEnabled field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasV2cEnabled
+### HasIdpId
 
-`func (o *InlineResponse200339) HasV2cEnabled() bool`
+`func (o *InlineResponse200339) HasIdpId() bool`
 
-HasV2cEnabled returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetV2CommunityString
+### GetConsumerUrl
 
-`func (o *InlineResponse200339) GetV2CommunityString() string`
+`func (o *InlineResponse200339) GetConsumerUrl() string`
 
-GetV2CommunityString returns the V2CommunityString field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetV2CommunityStringOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200339) GetV2CommunityStringOk() (*string, bool)`
+`func (o *InlineResponse200339) GetConsumerUrlOk() (*string, bool)`
 
-GetV2CommunityStringOk returns a tuple with the V2CommunityString field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV2CommunityString
+### SetConsumerUrl
 
-`func (o *InlineResponse200339) SetV2CommunityString(v string)`
+`func (o *InlineResponse200339) SetConsumerUrl(v string)`
 
-SetV2CommunityString sets V2CommunityString field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasV2CommunityString
+### HasConsumerUrl
 
-`func (o *InlineResponse200339) HasV2CommunityString() bool`
+`func (o *InlineResponse200339) HasConsumerUrl() bool`
 
-HasV2CommunityString returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
 
-### GetV3Enabled
+### GetVisionConsumerUrl
 
-`func (o *InlineResponse200339) GetV3Enabled() bool`
+`func (o *InlineResponse200339) GetVisionConsumerUrl() string`
 
-GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
+GetVisionConsumerUrl returns the VisionConsumerUrl field if non-nil, zero value otherwise.
 
-### GetV3EnabledOk
+### GetVisionConsumerUrlOk
 
-`func (o *InlineResponse200339) GetV3EnabledOk() (*bool, bool)`
+`func (o *InlineResponse200339) GetVisionConsumerUrlOk() (*string, bool)`
 
-GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
+GetVisionConsumerUrlOk returns a tuple with the VisionConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3Enabled
+### SetVisionConsumerUrl
 
-`func (o *InlineResponse200339) SetV3Enabled(v bool)`
+`func (o *InlineResponse200339) SetVisionConsumerUrl(v string)`
 
-SetV3Enabled sets V3Enabled field to given value.
+SetVisionConsumerUrl sets VisionConsumerUrl field to given value.
 
-### HasV3Enabled
+### HasVisionConsumerUrl
 
-`func (o *InlineResponse200339) HasV3Enabled() bool`
+`func (o *InlineResponse200339) HasVisionConsumerUrl() bool`
 
-HasV3Enabled returns a boolean if a field has been set.
+HasVisionConsumerUrl returns a boolean if a field has been set.
 
-### GetV3User
+### GetX509certSha1Fingerprint
 
-`func (o *InlineResponse200339) GetV3User() string`
+`func (o *InlineResponse200339) GetX509certSha1Fingerprint() string`
 
-GetV3User returns the V3User field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetV3UserOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineResponse200339) GetV3UserOk() (*string, bool)`
+`func (o *InlineResponse200339) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetV3UserOk returns a tuple with the V3User field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3User
+### SetX509certSha1Fingerprint
 
-`func (o *InlineResponse200339) SetV3User(v string)`
+`func (o *InlineResponse200339) SetX509certSha1Fingerprint(v string)`
 
-SetV3User sets V3User field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasV3User
+### HasX509certSha1Fingerprint
 
-`func (o *InlineResponse200339) HasV3User() bool`
+`func (o *InlineResponse200339) HasX509certSha1Fingerprint() bool`
 
-HasV3User returns a boolean if a field has been set.
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-### GetV3AuthMode
+### GetSsoLoginUrl
 
-`func (o *InlineResponse200339) GetV3AuthMode() string`
+`func (o *InlineResponse200339) GetSsoLoginUrl() string`
 
-GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
+GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
 
-### GetV3AuthModeOk
+### GetSsoLoginUrlOk
 
-`func (o *InlineResponse200339) GetV3AuthModeOk() (*string, bool)`
+`func (o *InlineResponse200339) GetSsoLoginUrlOk() (*string, bool)`
 
-GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
+GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3AuthMode
+### SetSsoLoginUrl
 
-`func (o *InlineResponse200339) SetV3AuthMode(v string)`
+`func (o *InlineResponse200339) SetSsoLoginUrl(v string)`
 
-SetV3AuthMode sets V3AuthMode field to given value.
+SetSsoLoginUrl sets SsoLoginUrl field to given value.
 
-### HasV3AuthMode
+### HasSsoLoginUrl
 
-`func (o *InlineResponse200339) HasV3AuthMode() bool`
+`func (o *InlineResponse200339) HasSsoLoginUrl() bool`
 
-HasV3AuthMode returns a boolean if a field has been set.
+HasSsoLoginUrl returns a boolean if a field has been set.
 
-### GetV3PrivMode
+### GetSloLogoutUrl
 
-`func (o *InlineResponse200339) GetV3PrivMode() string`
+`func (o *InlineResponse200339) GetSloLogoutUrl() string`
 
-GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-### GetV3PrivModeOk
+### GetSloLogoutUrlOk
 
-`func (o *InlineResponse200339) GetV3PrivModeOk() (*string, bool)`
+`func (o *InlineResponse200339) GetSloLogoutUrlOk() (*string, bool)`
 
-GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3PrivMode
+### SetSloLogoutUrl
 
-`func (o *InlineResponse200339) SetV3PrivMode(v string)`
+`func (o *InlineResponse200339) SetSloLogoutUrl(v string)`
 
-SetV3PrivMode sets V3PrivMode field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
-### HasV3PrivMode
+### HasSloLogoutUrl
 
-`func (o *InlineResponse200339) HasV3PrivMode() bool`
+`func (o *InlineResponse200339) HasSloLogoutUrl() bool`
 
-HasV3PrivMode returns a boolean if a field has been set.
-
-### GetPeerIps
-
-`func (o *InlineResponse200339) GetPeerIps() []string`
-
-GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
-
-### GetPeerIpsOk
-
-`func (o *InlineResponse200339) GetPeerIpsOk() (*[]string, bool)`
-
-GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPeerIps
-
-`func (o *InlineResponse200339) SetPeerIps(v []string)`
-
-SetPeerIps sets PeerIps field to given value.
-
-### HasPeerIps
-
-`func (o *InlineResponse200339) HasPeerIps() bool`
-
-HasPeerIps returns a boolean if a field has been set.
-
-### GetHostname
-
-`func (o *InlineResponse200339) GetHostname() string`
-
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
-
-### GetHostnameOk
-
-`func (o *InlineResponse200339) GetHostnameOk() (*string, bool)`
-
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHostname
-
-`func (o *InlineResponse200339) SetHostname(v string)`
-
-SetHostname sets Hostname field to given value.
-
-### HasHostname
-
-`func (o *InlineResponse200339) HasHostname() bool`
-
-HasHostname returns a boolean if a field has been set.
-
-### GetPort
-
-`func (o *InlineResponse200339) GetPort() int32`
-
-GetPort returns the Port field if non-nil, zero value otherwise.
-
-### GetPortOk
-
-`func (o *InlineResponse200339) GetPortOk() (*int32, bool)`
-
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPort
-
-`func (o *InlineResponse200339) SetPort(v int32)`
-
-SetPort sets Port field to given value.
-
-### HasPort
-
-`func (o *InlineResponse200339) HasPort() bool`
-
-HasPort returns a boolean if a field has been set.
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

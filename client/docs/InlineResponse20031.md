@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceMac** | Pointer to **string** | Source MAC address | [optional] 
-**Ports** | Pointer to [**map[string]InlineResponse20031Ports**](InlineResponse20031Ports.md) | Mapping of ports to lldp and/or cdp information | [optional] 
+**MulticastRoutingId** | Pointer to **string** | ID of the Multicast routing request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your Multicast routing request. | [optional] 
+**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the Multicast routing request. | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse20031Interfaces**](InlineResponse20031Interfaces.md) | The interfaces that have PIM enabled | [optional] 
+**Routes** | Pointer to [**[]InlineResponse20031Routes**](InlineResponse20031Routes.md) | The multicast routes | [optional] 
+**Error** | Pointer to **string** | Description of the error. | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineResponse20031WithDefaults instantiates a new InlineResponse20031 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceMac
+### GetMulticastRoutingId
 
-`func (o *InlineResponse20031) GetSourceMac() string`
+`func (o *InlineResponse20031) GetMulticastRoutingId() string`
 
-GetSourceMac returns the SourceMac field if non-nil, zero value otherwise.
+GetMulticastRoutingId returns the MulticastRoutingId field if non-nil, zero value otherwise.
 
-### GetSourceMacOk
+### GetMulticastRoutingIdOk
 
-`func (o *InlineResponse20031) GetSourceMacOk() (*string, bool)`
+`func (o *InlineResponse20031) GetMulticastRoutingIdOk() (*string, bool)`
 
-GetSourceMacOk returns a tuple with the SourceMac field if it's non-nil, zero value otherwise
+GetMulticastRoutingIdOk returns a tuple with the MulticastRoutingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceMac
+### SetMulticastRoutingId
 
-`func (o *InlineResponse20031) SetSourceMac(v string)`
+`func (o *InlineResponse20031) SetMulticastRoutingId(v string)`
 
-SetSourceMac sets SourceMac field to given value.
+SetMulticastRoutingId sets MulticastRoutingId field to given value.
 
-### HasSourceMac
+### HasMulticastRoutingId
 
-`func (o *InlineResponse20031) HasSourceMac() bool`
+`func (o *InlineResponse20031) HasMulticastRoutingId() bool`
 
-HasSourceMac returns a boolean if a field has been set.
+HasMulticastRoutingId returns a boolean if a field has been set.
 
-### GetPorts
+### GetUrl
 
-`func (o *InlineResponse20031) GetPorts() map[string]InlineResponse20031Ports`
+`func (o *InlineResponse20031) GetUrl() string`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetUrlOk
 
-`func (o *InlineResponse20031) GetPortsOk() (*map[string]InlineResponse20031Ports, bool)`
+`func (o *InlineResponse20031) GetUrlOk() (*string, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetUrl
 
-`func (o *InlineResponse20031) SetPorts(v map[string]InlineResponse20031Ports)`
+`func (o *InlineResponse20031) SetUrl(v string)`
 
-SetPorts sets Ports field to given value.
+SetUrl sets Url field to given value.
 
-### HasPorts
+### HasUrl
 
-`func (o *InlineResponse20031) HasPorts() bool`
+`func (o *InlineResponse20031) HasUrl() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20031) GetRequest() InlineResponse2015Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20031) GetRequestOk() (*InlineResponse2015Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20031) SetRequest(v InlineResponse2015Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20031) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20031) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20031) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20031) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20031) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetInterfaces
+
+`func (o *InlineResponse20031) GetInterfaces() []InlineResponse20031Interfaces`
+
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+
+### GetInterfacesOk
+
+`func (o *InlineResponse20031) GetInterfacesOk() (*[]InlineResponse20031Interfaces, bool)`
+
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterfaces
+
+`func (o *InlineResponse20031) SetInterfaces(v []InlineResponse20031Interfaces)`
+
+SetInterfaces sets Interfaces field to given value.
+
+### HasInterfaces
+
+`func (o *InlineResponse20031) HasInterfaces() bool`
+
+HasInterfaces returns a boolean if a field has been set.
+
+### GetRoutes
+
+`func (o *InlineResponse20031) GetRoutes() []InlineResponse20031Routes`
+
+GetRoutes returns the Routes field if non-nil, zero value otherwise.
+
+### GetRoutesOk
+
+`func (o *InlineResponse20031) GetRoutesOk() (*[]InlineResponse20031Routes, bool)`
+
+GetRoutesOk returns a tuple with the Routes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRoutes
+
+`func (o *InlineResponse20031) SetRoutes(v []InlineResponse20031Routes)`
+
+SetRoutes sets Routes field to given value.
+
+### HasRoutes
+
+`func (o *InlineResponse20031) HasRoutes() bool`
+
+HasRoutes returns a boolean if a field has been set.
+
+### GetError
+
+`func (o *InlineResponse20031) GetError() string`
+
+GetError returns the Error field if non-nil, zero value otherwise.
+
+### GetErrorOk
+
+`func (o *InlineResponse20031) GetErrorOk() (*string, bool)`
+
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetError
+
+`func (o *InlineResponse20031) SetError(v string)`
+
+SetError sets Error field to given value.
+
+### HasError
+
+`func (o *InlineResponse20031) HasError() bool`
+
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -31,7 +31,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSmBypassActivationLockAttempt := *openapiclient.NewInlineObject124([]string{"Ids_example"}) // InlineObject124 | 
+    createNetworkSmBypassActivationLockAttempt := *openapiclient.NewInlineObject125([]string{"Ids_example"}) // InlineObject125 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSmBypassActiv
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSmBypassActivationLockAttempt** | [**InlineObject124**](InlineObject124.md) |  | 
+ **createNetworkSmBypassActivationLockAttempt** | [**InlineObject125**](InlineObject125.md) |  | 
 
 ### Return type
 

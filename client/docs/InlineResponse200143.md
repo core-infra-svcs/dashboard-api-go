@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Restrictions** | Pointer to [**[]InlineResponse200143Restrictions**](InlineResponse200143Restrictions.md) | The list of restrictions for the device | [optional] 
+**FirstSeenAt** | Pointer to **string** | When the device was first seen as connected to the internet in each connection. | [optional] 
+**LastSeenAt** | Pointer to **string** | When the device was last seen as connected to the internet in each connection. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200143WithDefaults instantiates a new InlineResponse200143 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRestrictions
+### GetFirstSeenAt
 
-`func (o *InlineResponse200143) GetRestrictions() []InlineResponse200143Restrictions`
+`func (o *InlineResponse200143) GetFirstSeenAt() string`
 
-GetRestrictions returns the Restrictions field if non-nil, zero value otherwise.
+GetFirstSeenAt returns the FirstSeenAt field if non-nil, zero value otherwise.
 
-### GetRestrictionsOk
+### GetFirstSeenAtOk
 
-`func (o *InlineResponse200143) GetRestrictionsOk() (*[]InlineResponse200143Restrictions, bool)`
+`func (o *InlineResponse200143) GetFirstSeenAtOk() (*string, bool)`
 
-GetRestrictionsOk returns a tuple with the Restrictions field if it's non-nil, zero value otherwise
+GetFirstSeenAtOk returns a tuple with the FirstSeenAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictions
+### SetFirstSeenAt
 
-`func (o *InlineResponse200143) SetRestrictions(v []InlineResponse200143Restrictions)`
+`func (o *InlineResponse200143) SetFirstSeenAt(v string)`
 
-SetRestrictions sets Restrictions field to given value.
+SetFirstSeenAt sets FirstSeenAt field to given value.
 
-### HasRestrictions
+### HasFirstSeenAt
 
-`func (o *InlineResponse200143) HasRestrictions() bool`
+`func (o *InlineResponse200143) HasFirstSeenAt() bool`
 
-HasRestrictions returns a boolean if a field has been set.
+HasFirstSeenAt returns a boolean if a field has been set.
+
+### GetLastSeenAt
+
+`func (o *InlineResponse200143) GetLastSeenAt() string`
+
+GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
+
+### GetLastSeenAtOk
+
+`func (o *InlineResponse200143) GetLastSeenAtOk() (*string, bool)`
+
+GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastSeenAt
+
+`func (o *InlineResponse200143) SetLastSeenAt(v string)`
+
+SetLastSeenAt sets LastSeenAt field to given value.
+
+### HasLastSeenAt
+
+`func (o *InlineResponse200143) HasLastSeenAt() bool`
+
+HasLastSeenAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
-**CommunityString** | Pointer to **string** | SNMP community string if access is &#39;community&#39;. | [optional] 
-**Users** | Pointer to [**[]InlineResponse200153Users**](InlineResponse200153Users.md) | SNMP settings if access is &#39;users&#39;. | [optional] 
+**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
+**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
+**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200153WithDefaults instantiates a new InlineResponse200153 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccess
+### GetCreatedAt
 
-`func (o *InlineResponse200153) GetAccess() string`
+`func (o *InlineResponse200153) GetCreatedAt() string`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200153) GetAccessOk() (*string, bool)`
+`func (o *InlineResponse200153) GetCreatedAtOk() (*string, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetCreatedAt
 
-`func (o *InlineResponse200153) SetAccess(v string)`
+`func (o *InlineResponse200153) SetCreatedAt(v string)`
 
-SetAccess sets Access field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasAccess
+### HasCreatedAt
 
-`func (o *InlineResponse200153) HasAccess() bool`
+`func (o *InlineResponse200153) HasCreatedAt() bool`
 
-HasAccess returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetCommunityString
+### GetId
 
-`func (o *InlineResponse200153) GetCommunityString() string`
+`func (o *InlineResponse200153) GetId() string`
 
-GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetCommunityStringOk
+### GetIdOk
 
-`func (o *InlineResponse200153) GetCommunityStringOk() (*string, bool)`
+`func (o *InlineResponse200153) GetIdOk() (*string, bool)`
 
-GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCommunityString
+### SetId
 
-`func (o *InlineResponse200153) SetCommunityString(v string)`
+`func (o *InlineResponse200153) SetId(v string)`
 
-SetCommunityString sets CommunityString field to given value.
+SetId sets Id field to given value.
 
-### HasCommunityString
+### HasId
 
-`func (o *InlineResponse200153) HasCommunityString() bool`
+`func (o *InlineResponse200153) HasId() bool`
 
-HasCommunityString returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUsers
+### GetXml
 
-`func (o *InlineResponse200153) GetUsers() []InlineResponse200153Users`
+`func (o *InlineResponse200153) GetXml() string`
 
-GetUsers returns the Users field if non-nil, zero value otherwise.
+GetXml returns the Xml field if non-nil, zero value otherwise.
 
-### GetUsersOk
+### GetXmlOk
 
-`func (o *InlineResponse200153) GetUsersOk() (*[]InlineResponse200153Users, bool)`
+`func (o *InlineResponse200153) GetXmlOk() (*string, bool)`
 
-GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
+GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsers
+### SetXml
 
-`func (o *InlineResponse200153) SetUsers(v []InlineResponse200153Users)`
+`func (o *InlineResponse200153) SetXml(v string)`
 
-SetUsers sets Users field to given value.
+SetXml sets Xml field to given value.
 
-### HasUsers
+### HasXml
 
-`func (o *InlineResponse200153) HasUsers() bool`
+`func (o *InlineResponse200153) HasXml() bool`
 
-HasUsers returns a boolean if a field has been set.
+HasXml returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

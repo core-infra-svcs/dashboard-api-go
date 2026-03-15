@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice**](OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice.md) |  | [optional] 
+**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
+**Status** | Pointer to **string** | The status of the callback | [optional] 
+**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
+**CreatedBy** | Pointer to [**InlineResponse200375CreatedBy**](InlineResponse200375CreatedBy.md) |  | [optional] 
+**Webhook** | Pointer to [**InlineResponse200375Webhook**](InlineResponse200375Webhook.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200375WithDefaults instantiates a new InlineResponse200375 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetCallbackId
 
-`func (o *InlineResponse200375) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200375) GetCallbackId() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetCallbackIdOk
 
-`func (o *InlineResponse200375) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200375) GetCallbackIdOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetCallbackId
 
-`func (o *InlineResponse200375) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200375) SetCallbackId(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetCallbackId sets CallbackId field to given value.
 
-### HasDownstream
+### HasCallbackId
 
-`func (o *InlineResponse200375) HasDownstream() bool`
+`func (o *InlineResponse200375) HasCallbackId() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasCallbackId returns a boolean if a field has been set.
 
-### GetUpstream
+### GetStatus
 
-`func (o *InlineResponse200375) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200375) GetStatus() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetStatusOk
 
-`func (o *InlineResponse200375) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200375) GetStatusOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetStatus
 
-`func (o *InlineResponse200375) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200375) SetStatus(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetStatus sets Status field to given value.
 
-### HasUpstream
+### HasStatus
 
-`func (o *InlineResponse200375) HasUpstream() bool`
+`func (o *InlineResponse200375) HasStatus() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetNetwork
+### GetErrors
 
-`func (o *InlineResponse200375) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200375) GetErrors() []string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetErrorsOk
 
-`func (o *InlineResponse200375) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200375) GetErrorsOk() (*[]string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetErrors
 
-`func (o *InlineResponse200375) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200375) SetErrors(v []string)`
 
-SetNetwork sets Network field to given value.
+SetErrors sets Errors field to given value.
 
-### HasNetwork
+### HasErrors
 
-`func (o *InlineResponse200375) HasNetwork() bool`
+`func (o *InlineResponse200375) HasErrors() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
-### GetDevice
+### GetCreatedBy
 
-`func (o *InlineResponse200375) GetDevice() OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice`
+`func (o *InlineResponse200375) GetCreatedBy() InlineResponse200375CreatedBy`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetCreatedByOk
 
-`func (o *InlineResponse200375) GetDeviceOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice, bool)`
+`func (o *InlineResponse200375) GetCreatedByOk() (*InlineResponse200375CreatedBy, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetCreatedBy
 
-`func (o *InlineResponse200375) SetDevice(v OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice)`
+`func (o *InlineResponse200375) SetCreatedBy(v InlineResponse200375CreatedBy)`
 
-SetDevice sets Device field to given value.
+SetCreatedBy sets CreatedBy field to given value.
 
-### HasDevice
+### HasCreatedBy
 
-`func (o *InlineResponse200375) HasDevice() bool`
+`func (o *InlineResponse200375) HasCreatedBy() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasCreatedBy returns a boolean if a field has been set.
+
+### GetWebhook
+
+`func (o *InlineResponse200375) GetWebhook() InlineResponse200375Webhook`
+
+GetWebhook returns the Webhook field if non-nil, zero value otherwise.
+
+### GetWebhookOk
+
+`func (o *InlineResponse200375) GetWebhookOk() (*InlineResponse200375Webhook, bool)`
+
+GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWebhook
+
+`func (o *InlineResponse200375) SetWebhook(v InlineResponse200375Webhook)`
+
+SetWebhook sets Webhook field to given value.
+
+### HasWebhook
+
+`func (o *InlineResponse200375) HasWebhook() bool`
+
+HasWebhook returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

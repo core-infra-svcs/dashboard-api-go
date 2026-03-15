@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | Pointer to [**[]InlineResponse200307Networks**](InlineResponse200307Networks.md) | List of networks that have XDR disabled | [optional] 
+**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
+**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
+**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200307LimitScopeToNetworks**](InlineResponse200307LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
+**OptOutEligibility** | Pointer to [**InlineResponse200307OptOutEligibility**](InlineResponse200307OptOutEligibility.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
 
 ## Methods
 
@@ -25,30 +29,130 @@ NewInlineResponse200307WithDefaults instantiates a new InlineResponse200307 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworks
+### GetId
 
-`func (o *InlineResponse200307) GetNetworks() []InlineResponse200307Networks`
+`func (o *InlineResponse200307) GetId() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetIdOk
 
-`func (o *InlineResponse200307) GetNetworksOk() (*[]InlineResponse200307Networks, bool)`
+`func (o *InlineResponse200307) GetIdOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetId
 
-`func (o *InlineResponse200307) SetNetworks(v []InlineResponse200307Networks)`
+`func (o *InlineResponse200307) SetId(v string)`
 
-SetNetworks sets Networks field to given value.
+SetId sets Id field to given value.
 
-### HasNetworks
+### HasId
 
-`func (o *InlineResponse200307) HasNetworks() bool`
+`func (o *InlineResponse200307) HasId() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetShortName
+
+`func (o *InlineResponse200307) GetShortName() string`
+
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
+
+### GetShortNameOk
+
+`func (o *InlineResponse200307) GetShortNameOk() (*string, bool)`
+
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetShortName
+
+`func (o *InlineResponse200307) SetShortName(v string)`
+
+SetShortName sets ShortName field to given value.
+
+### HasShortName
+
+`func (o *InlineResponse200307) HasShortName() bool`
+
+HasShortName returns a boolean if a field has been set.
+
+### GetLimitScopeToNetworks
+
+`func (o *InlineResponse200307) GetLimitScopeToNetworks() []InlineResponse200307LimitScopeToNetworks`
+
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+
+### GetLimitScopeToNetworksOk
+
+`func (o *InlineResponse200307) GetLimitScopeToNetworksOk() (*[]InlineResponse200307LimitScopeToNetworks, bool)`
+
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimitScopeToNetworks
+
+`func (o *InlineResponse200307) SetLimitScopeToNetworks(v []InlineResponse200307LimitScopeToNetworks)`
+
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+
+### HasLimitScopeToNetworks
+
+`func (o *InlineResponse200307) HasLimitScopeToNetworks() bool`
+
+HasLimitScopeToNetworks returns a boolean if a field has been set.
+
+### GetOptOutEligibility
+
+`func (o *InlineResponse200307) GetOptOutEligibility() InlineResponse200307OptOutEligibility`
+
+GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
+
+### GetOptOutEligibilityOk
+
+`func (o *InlineResponse200307) GetOptOutEligibilityOk() (*InlineResponse200307OptOutEligibility, bool)`
+
+GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOptOutEligibility
+
+`func (o *InlineResponse200307) SetOptOutEligibility(v InlineResponse200307OptOutEligibility)`
+
+SetOptOutEligibility sets OptOutEligibility field to given value.
+
+### HasOptOutEligibility
+
+`func (o *InlineResponse200307) HasOptOutEligibility() bool`
+
+HasOptOutEligibility returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200307) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200307) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200307) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200307) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

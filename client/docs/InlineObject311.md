@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
-**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
-**Ble** | Pointer to [**InlineResponse200385Ble**](InlineResponse200385Ble.md) |  | [optional] 
-**Wifi** | Pointer to [**InlineResponse200385Wifi**](InlineResponse200385Wifi.md) |  | [optional] 
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
 
 ## Methods
 
 ### NewInlineObject311
 
-`func NewInlineObject311(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject311`
+`func NewInlineObject311() *InlineObject311`
 
 NewInlineObject311 instantiates a new InlineObject311 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,55 @@ NewInlineObject311WithDefaults instantiates a new InlineObject311 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetStatus
 
-`func (o *InlineObject311) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
+`func (o *InlineObject311) GetStatus() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetStatusOk
 
-`func (o *InlineObject311) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
+`func (o *InlineObject311) GetStatusOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetStatus
 
-`func (o *InlineObject311) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
+`func (o *InlineObject311) SetStatus(v string)`
 
-SetNetwork sets Network field to given value.
+SetStatus sets Status field to given value.
 
+### HasStatus
 
-### GetMqtt
+`func (o *InlineObject311) HasStatus() bool`
 
-`func (o *InlineObject311) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
+HasStatus returns a boolean if a field has been set.
 
-GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+### GetCertificateAuthorityId
 
-### GetMqttOk
+`func (o *InlineObject311) GetCertificateAuthorityId() string`
 
-`func (o *InlineObject311) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+### GetCertificateAuthorityIdOk
+
+`func (o *InlineObject311) GetCertificateAuthorityIdOk() (*string, bool)`
+
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqtt
+### SetCertificateAuthorityId
 
-`func (o *InlineObject311) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
+`func (o *InlineObject311) SetCertificateAuthorityId(v string)`
 
-SetMqtt sets Mqtt field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
+### HasCertificateAuthorityId
 
-### GetBle
+`func (o *InlineObject311) HasCertificateAuthorityId() bool`
 
-`func (o *InlineObject311) GetBle() InlineResponse200385Ble`
-
-GetBle returns the Ble field if non-nil, zero value otherwise.
-
-### GetBleOk
-
-`func (o *InlineObject311) GetBleOk() (*InlineResponse200385Ble, bool)`
-
-GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBle
-
-`func (o *InlineObject311) SetBle(v InlineResponse200385Ble)`
-
-SetBle sets Ble field to given value.
-
-### HasBle
-
-`func (o *InlineObject311) HasBle() bool`
-
-HasBle returns a boolean if a field has been set.
-
-### GetWifi
-
-`func (o *InlineObject311) GetWifi() InlineResponse200385Wifi`
-
-GetWifi returns the Wifi field if non-nil, zero value otherwise.
-
-### GetWifiOk
-
-`func (o *InlineObject311) GetWifiOk() (*InlineResponse200385Wifi, bool)`
-
-GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifi
-
-`func (o *InlineObject311) SetWifi(v InlineResponse200385Wifi)`
-
-SetWifi sets Wifi field to given value.
-
-### HasWifi
-
-`func (o *InlineObject311) HasWifi() bool`
-
-HasWifi returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

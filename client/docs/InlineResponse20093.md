@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse20093Counts**](InlineResponse20093Counts.md) |  | [optional] 
-**Usages** | Pointer to [**InlineResponse20093Usages**](InlineResponse20093Usages.md) |  | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG in the network. | [optional] 
+**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG in the network. | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | List of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39;. | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20093WithDefaults instantiates a new InlineResponse20093 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetDhcpLeaseTime
 
-`func (o *InlineResponse20093) GetCounts() InlineResponse20093Counts`
+`func (o *InlineResponse20093) GetDhcpLeaseTime() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineResponse20093) GetCountsOk() (*InlineResponse20093Counts, bool)`
+`func (o *InlineResponse20093) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetDhcpLeaseTime
 
-`func (o *InlineResponse20093) SetCounts(v InlineResponse20093Counts)`
+`func (o *InlineResponse20093) SetDhcpLeaseTime(v string)`
 
-SetCounts sets Counts field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
-### HasCounts
+### HasDhcpLeaseTime
 
-`func (o *InlineResponse20093) HasCounts() bool`
+`func (o *InlineResponse20093) HasDhcpLeaseTime() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasDhcpLeaseTime returns a boolean if a field has been set.
 
-### GetUsages
+### GetDnsNameservers
 
-`func (o *InlineResponse20093) GetUsages() InlineResponse20093Usages`
+`func (o *InlineResponse20093) GetDnsNameservers() string`
 
-GetUsages returns the Usages field if non-nil, zero value otherwise.
+GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
 
-### GetUsagesOk
+### GetDnsNameserversOk
 
-`func (o *InlineResponse20093) GetUsagesOk() (*InlineResponse20093Usages, bool)`
+`func (o *InlineResponse20093) GetDnsNameserversOk() (*string, bool)`
 
-GetUsagesOk returns a tuple with the Usages field if it's non-nil, zero value otherwise
+GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsages
+### SetDnsNameservers
 
-`func (o *InlineResponse20093) SetUsages(v InlineResponse20093Usages)`
+`func (o *InlineResponse20093) SetDnsNameservers(v string)`
 
-SetUsages sets Usages field to given value.
+SetDnsNameservers sets DnsNameservers field to given value.
 
-### HasUsages
+### HasDnsNameservers
 
-`func (o *InlineResponse20093) HasUsages() bool`
+`func (o *InlineResponse20093) HasDnsNameservers() bool`
 
-HasUsages returns a boolean if a field has been set.
+HasDnsNameservers returns a boolean if a field has been set.
+
+### GetDnsCustomNameservers
+
+`func (o *InlineResponse20093) GetDnsCustomNameservers() []string`
+
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+
+### GetDnsCustomNameserversOk
+
+`func (o *InlineResponse20093) GetDnsCustomNameserversOk() (*[]string, bool)`
+
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsCustomNameservers
+
+`func (o *InlineResponse20093) SetDnsCustomNameservers(v []string)`
+
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+
+### HasDnsCustomNameservers
+
+`func (o *InlineResponse20093) HasDnsCustomNameservers() bool`
+
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

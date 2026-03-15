@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Nodes** | Pointer to [**[]InlineResponse200179Nodes**](InlineResponse200179Nodes.md) | List of nodes in the network topology | [optional] 
-**Links** | Pointer to [**[]InlineResponse200179Links**](InlineResponse200179Links.md) | List of links between nodes | [optional] 
-**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
+**IsMonitorOnly** | Pointer to **bool** | Tells if stack is Monitored Stack. | [optional] 
+**VirtualMac** | Pointer to **string** | The virtual MAC address of the switch stack | [optional] 
+**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksMembers**](NetworksNetworkIdSwitchStacksMembers.md) | Members of the Stack | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200179WithDefaults instantiates a new InlineResponse200179 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNodes
+### GetId
 
-`func (o *InlineResponse200179) GetNodes() []InlineResponse200179Nodes`
+`func (o *InlineResponse200179) GetId() string`
 
-GetNodes returns the Nodes field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNodesOk
+### GetIdOk
 
-`func (o *InlineResponse200179) GetNodesOk() (*[]InlineResponse200179Nodes, bool)`
+`func (o *InlineResponse200179) GetIdOk() (*string, bool)`
 
-GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNodes
+### SetId
 
-`func (o *InlineResponse200179) SetNodes(v []InlineResponse200179Nodes)`
+`func (o *InlineResponse200179) SetId(v string)`
 
-SetNodes sets Nodes field to given value.
+SetId sets Id field to given value.
 
-### HasNodes
+### HasId
 
-`func (o *InlineResponse200179) HasNodes() bool`
+`func (o *InlineResponse200179) HasId() bool`
 
-HasNodes returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetLinks
+### GetName
 
-`func (o *InlineResponse200179) GetLinks() []InlineResponse200179Links`
+`func (o *InlineResponse200179) GetName() string`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetNameOk
 
-`func (o *InlineResponse200179) GetLinksOk() (*[]InlineResponse200179Links, bool)`
+`func (o *InlineResponse200179) GetNameOk() (*string, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetName
 
-`func (o *InlineResponse200179) SetLinks(v []InlineResponse200179Links)`
+`func (o *InlineResponse200179) SetName(v string)`
 
-SetLinks sets Links field to given value.
+SetName sets Name field to given value.
 
-### HasLinks
+### HasName
 
-`func (o *InlineResponse200179) HasLinks() bool`
+`func (o *InlineResponse200179) HasName() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetErrors
+### GetSerials
 
-`func (o *InlineResponse200179) GetErrors() []string`
+`func (o *InlineResponse200179) GetSerials() []string`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetSerialsOk
 
-`func (o *InlineResponse200179) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200179) GetSerialsOk() (*[]string, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetSerials
 
-`func (o *InlineResponse200179) SetErrors(v []string)`
+`func (o *InlineResponse200179) SetSerials(v []string)`
 
-SetErrors sets Errors field to given value.
+SetSerials sets Serials field to given value.
 
-### HasErrors
+### HasSerials
 
-`func (o *InlineResponse200179) HasErrors() bool`
+`func (o *InlineResponse200179) HasSerials() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetIsMonitorOnly
+
+`func (o *InlineResponse200179) GetIsMonitorOnly() bool`
+
+GetIsMonitorOnly returns the IsMonitorOnly field if non-nil, zero value otherwise.
+
+### GetIsMonitorOnlyOk
+
+`func (o *InlineResponse200179) GetIsMonitorOnlyOk() (*bool, bool)`
+
+GetIsMonitorOnlyOk returns a tuple with the IsMonitorOnly field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsMonitorOnly
+
+`func (o *InlineResponse200179) SetIsMonitorOnly(v bool)`
+
+SetIsMonitorOnly sets IsMonitorOnly field to given value.
+
+### HasIsMonitorOnly
+
+`func (o *InlineResponse200179) HasIsMonitorOnly() bool`
+
+HasIsMonitorOnly returns a boolean if a field has been set.
+
+### GetVirtualMac
+
+`func (o *InlineResponse200179) GetVirtualMac() string`
+
+GetVirtualMac returns the VirtualMac field if non-nil, zero value otherwise.
+
+### GetVirtualMacOk
+
+`func (o *InlineResponse200179) GetVirtualMacOk() (*string, bool)`
+
+GetVirtualMacOk returns a tuple with the VirtualMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualMac
+
+`func (o *InlineResponse200179) SetVirtualMac(v string)`
+
+SetVirtualMac sets VirtualMac field to given value.
+
+### HasVirtualMac
+
+`func (o *InlineResponse200179) HasVirtualMac() bool`
+
+HasVirtualMac returns a boolean if a field has been set.
+
+### GetMembers
+
+`func (o *InlineResponse200179) GetMembers() []NetworksNetworkIdSwitchStacksMembers`
+
+GetMembers returns the Members field if non-nil, zero value otherwise.
+
+### GetMembersOk
+
+`func (o *InlineResponse200179) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksMembers, bool)`
+
+GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMembers
+
+`func (o *InlineResponse200179) SetMembers(v []NetworksNetworkIdSwitchStacksMembers)`
+
+SetMembers sets Members field to given value.
+
+### HasMembers
+
+`func (o *InlineResponse200179) HasMembers() bool`
+
+HasMembers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

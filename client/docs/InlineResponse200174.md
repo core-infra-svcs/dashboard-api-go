@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
-**Name** | Pointer to **string** | The name af the new stack | [optional] 
-**Serials** | Pointer to **[]string** | An array of switch serials added to the stack | [optional] 
-**WorkflowId** | Pointer to **string** | ID of the workflow | [optional] 
+**RuleIds** | Pointer to **[]string** | Qos Rule ids | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200174WithDefaults instantiates a new InlineResponse200174 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetRuleIds
 
-`func (o *InlineResponse200174) GetId() string`
+`func (o *InlineResponse200174) GetRuleIds() []string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetRuleIdsOk
 
-`func (o *InlineResponse200174) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200174) GetRuleIdsOk() (*[]string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetRuleIds
 
-`func (o *InlineResponse200174) SetId(v string)`
+`func (o *InlineResponse200174) SetRuleIds(v []string)`
 
-SetId sets Id field to given value.
+SetRuleIds sets RuleIds field to given value.
 
-### HasId
+### HasRuleIds
 
-`func (o *InlineResponse200174) HasId() bool`
+`func (o *InlineResponse200174) HasRuleIds() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200174) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200174) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200174) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200174) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineResponse200174) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineResponse200174) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineResponse200174) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineResponse200174) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetWorkflowId
-
-`func (o *InlineResponse200174) GetWorkflowId() string`
-
-GetWorkflowId returns the WorkflowId field if non-nil, zero value otherwise.
-
-### GetWorkflowIdOk
-
-`func (o *InlineResponse200174) GetWorkflowIdOk() (*string, bool)`
-
-GetWorkflowIdOk returns a tuple with the WorkflowId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWorkflowId
-
-`func (o *InlineResponse200174) SetWorkflowId(v string)`
-
-SetWorkflowId sets WorkflowId field to given value.
-
-### HasWorkflowId
-
-`func (o *InlineResponse200174) HasWorkflowId() bool`
-
-HasWorkflowId returns a boolean if a field has been set.
+HasRuleIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

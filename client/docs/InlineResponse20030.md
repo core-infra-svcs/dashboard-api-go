@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
-**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
-**Request** | Pointer to [**InlineResponse2019Request**](InlineResponse2019Request.md) |  | [optional] 
+**MacTableId** | Pointer to **string** | ID of the MAC table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your MAC table request. | [optional] 
+**Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the MAC table request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse20030Entries**](InlineResponse20030Entries.md) | MAC address table entries | [optional] 
 **Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
@@ -29,30 +30,30 @@ NewInlineResponse20030WithDefaults instantiates a new InlineResponse20030 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWakeOnLanId
+### GetMacTableId
 
-`func (o *InlineResponse20030) GetWakeOnLanId() string`
+`func (o *InlineResponse20030) GetMacTableId() string`
 
-GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
+GetMacTableId returns the MacTableId field if non-nil, zero value otherwise.
 
-### GetWakeOnLanIdOk
+### GetMacTableIdOk
 
-`func (o *InlineResponse20030) GetWakeOnLanIdOk() (*string, bool)`
+`func (o *InlineResponse20030) GetMacTableIdOk() (*string, bool)`
 
-GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
+GetMacTableIdOk returns a tuple with the MacTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWakeOnLanId
+### SetMacTableId
 
-`func (o *InlineResponse20030) SetWakeOnLanId(v string)`
+`func (o *InlineResponse20030) SetMacTableId(v string)`
 
-SetWakeOnLanId sets WakeOnLanId field to given value.
+SetMacTableId sets MacTableId field to given value.
 
-### HasWakeOnLanId
+### HasMacTableId
 
-`func (o *InlineResponse20030) HasWakeOnLanId() bool`
+`func (o *InlineResponse20030) HasMacTableId() bool`
 
-HasWakeOnLanId returns a boolean if a field has been set.
+HasMacTableId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -79,6 +80,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20030) GetRequest() InlineResponse2014Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20030) GetRequestOk() (*InlineResponse2014Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20030) SetRequest(v InlineResponse2014Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20030) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20030) GetStatus() string`
@@ -104,30 +130,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetRequest
+### GetEntries
 
-`func (o *InlineResponse20030) GetRequest() InlineResponse2019Request`
+`func (o *InlineResponse20030) GetEntries() []InlineResponse20030Entries`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetEntriesOk
 
-`func (o *InlineResponse20030) GetRequestOk() (*InlineResponse2019Request, bool)`
+`func (o *InlineResponse20030) GetEntriesOk() (*[]InlineResponse20030Entries, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetEntries
 
-`func (o *InlineResponse20030) SetRequest(v InlineResponse2019Request)`
+`func (o *InlineResponse20030) SetEntries(v []InlineResponse20030Entries)`
 
-SetRequest sets Request field to given value.
+SetEntries sets Entries field to given value.
 
-### HasRequest
+### HasEntries
 
-`func (o *InlineResponse20030) HasRequest() bool`
+`func (o *InlineResponse20030) HasEntries() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
 
 ### GetError
 

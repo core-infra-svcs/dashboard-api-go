@@ -4,11 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
-**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the device | [optional] 
+**Lat** | Pointer to **float32** | Latitude of the device | [optional] 
+**Lng** | Pointer to **float32** | Longitude of the device | [optional] 
+**Address** | Pointer to **string** | Physical address of the device | [optional] 
+**Notes** | Pointer to **string** | Notes for the device, limited to 255 characters | [optional] 
+**Tags** | Pointer to **[]string** | List of tags assigned to the device | [optional] 
+**NetworkId** | Pointer to **string** | ID of the network the device belongs to | [optional] 
+**Serial** | Pointer to **string** | Serial number of the device | [optional] 
+**Model** | Pointer to **string** | Model of the device | [optional] 
+**Imei** | Pointer to **string** | IMEI of the device, if applicable | [optional] 
+**Mac** | Pointer to **string** | MAC address of the device | [optional] 
+**LanIp** | Pointer to **string** | LAN IP address of the device | [optional] 
+**Firmware** | Pointer to **string** | Firmware version of the device | [optional] 
+**ProductType** | Pointer to **string** | Product type of the device | [optional] 
+**Details** | Pointer to [**[]InlineResponse2006Details**](InlineResponse2006Details.md) | Additional device information | [optional] 
 
 ## Methods
 
@@ -28,31 +38,6 @@ will change when the set of required properties is changed
 NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetGroupId
-
-`func (o *InlineResponse200105) GetGroupId() string`
-
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
-
-### GetGroupIdOk
-
-`func (o *InlineResponse200105) GetGroupIdOk() (*string, bool)`
-
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupId
-
-`func (o *InlineResponse200105) SetGroupId(v string)`
-
-SetGroupId sets GroupId field to given value.
-
-### HasGroupId
-
-`func (o *InlineResponse200105) HasGroupId() bool`
-
-HasGroupId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -79,80 +64,355 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetLat
 
-`func (o *InlineResponse200105) GetDescription() string`
+`func (o *InlineResponse200105) GetLat() float32`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetLat returns the Lat field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetLatOk
 
-`func (o *InlineResponse200105) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200105) GetLatOk() (*float32, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetLatOk returns a tuple with the Lat field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetLat
 
-`func (o *InlineResponse200105) SetDescription(v string)`
+`func (o *InlineResponse200105) SetLat(v float32)`
 
-SetDescription sets Description field to given value.
+SetLat sets Lat field to given value.
 
-### HasDescription
+### HasLat
 
-`func (o *InlineResponse200105) HasDescription() bool`
+`func (o *InlineResponse200105) HasLat() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasLat returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetLng
 
-`func (o *InlineResponse200105) GetIsDefault() bool`
+`func (o *InlineResponse200105) GetLng() float32`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetLng returns the Lng field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetLngOk
 
-`func (o *InlineResponse200105) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200105) GetLngOk() (*float32, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetLngOk returns a tuple with the Lng field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetLng
 
-`func (o *InlineResponse200105) SetIsDefault(v bool)`
+`func (o *InlineResponse200105) SetLng(v float32)`
 
-SetIsDefault sets IsDefault field to given value.
+SetLng sets Lng field to given value.
 
-### HasIsDefault
+### HasLng
 
-`func (o *InlineResponse200105) HasIsDefault() bool`
+`func (o *InlineResponse200105) HasLng() bool`
 
-HasIsDefault returns a boolean if a field has been set.
+HasLng returns a boolean if a field has been set.
 
-### GetAssignedDevices
+### GetAddress
 
-`func (o *InlineResponse200105) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
+`func (o *InlineResponse200105) GetAddress() string`
 
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetAssignedDevicesOk
+### GetAddressOk
 
-`func (o *InlineResponse200105) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
+`func (o *InlineResponse200105) GetAddressOk() (*string, bool)`
 
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignedDevices
+### SetAddress
 
-`func (o *InlineResponse200105) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
+`func (o *InlineResponse200105) SetAddress(v string)`
 
-SetAssignedDevices sets AssignedDevices field to given value.
+SetAddress sets Address field to given value.
 
-### HasAssignedDevices
+### HasAddress
 
-`func (o *InlineResponse200105) HasAssignedDevices() bool`
+`func (o *InlineResponse200105) HasAddress() bool`
 
-HasAssignedDevices returns a boolean if a field has been set.
+HasAddress returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse200105) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse200105) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse200105) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse200105) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200105) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200105) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200105) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200105) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse200105) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200105) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200105) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200105) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse200105) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse200105) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse200105) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse200105) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200105) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200105) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200105) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200105) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetImei
+
+`func (o *InlineResponse200105) GetImei() string`
+
+GetImei returns the Imei field if non-nil, zero value otherwise.
+
+### GetImeiOk
+
+`func (o *InlineResponse200105) GetImeiOk() (*string, bool)`
+
+GetImeiOk returns a tuple with the Imei field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImei
+
+`func (o *InlineResponse200105) SetImei(v string)`
+
+SetImei sets Imei field to given value.
+
+### HasImei
+
+`func (o *InlineResponse200105) HasImei() bool`
+
+HasImei returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200105) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200105) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200105) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200105) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetLanIp
+
+`func (o *InlineResponse200105) GetLanIp() string`
+
+GetLanIp returns the LanIp field if non-nil, zero value otherwise.
+
+### GetLanIpOk
+
+`func (o *InlineResponse200105) GetLanIpOk() (*string, bool)`
+
+GetLanIpOk returns a tuple with the LanIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanIp
+
+`func (o *InlineResponse200105) SetLanIp(v string)`
+
+SetLanIp sets LanIp field to given value.
+
+### HasLanIp
+
+`func (o *InlineResponse200105) HasLanIp() bool`
+
+HasLanIp returns a boolean if a field has been set.
+
+### GetFirmware
+
+`func (o *InlineResponse200105) GetFirmware() string`
+
+GetFirmware returns the Firmware field if non-nil, zero value otherwise.
+
+### GetFirmwareOk
+
+`func (o *InlineResponse200105) GetFirmwareOk() (*string, bool)`
+
+GetFirmwareOk returns a tuple with the Firmware field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirmware
+
+`func (o *InlineResponse200105) SetFirmware(v string)`
+
+SetFirmware sets Firmware field to given value.
+
+### HasFirmware
+
+`func (o *InlineResponse200105) HasFirmware() bool`
+
+HasFirmware returns a boolean if a field has been set.
+
+### GetProductType
+
+`func (o *InlineResponse200105) GetProductType() string`
+
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
+
+### GetProductTypeOk
+
+`func (o *InlineResponse200105) GetProductTypeOk() (*string, bool)`
+
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductType
+
+`func (o *InlineResponse200105) SetProductType(v string)`
+
+SetProductType sets ProductType field to given value.
+
+### HasProductType
+
+`func (o *InlineResponse200105) HasProductType() bool`
+
+HasProductType returns a boolean if a field has been set.
+
+### GetDetails
+
+`func (o *InlineResponse200105) GetDetails() []InlineResponse2006Details`
+
+GetDetails returns the Details field if non-nil, zero value otherwise.
+
+### GetDetailsOk
+
+`func (o *InlineResponse200105) GetDetailsOk() (*[]InlineResponse2006Details, bool)`
+
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetails
+
+`func (o *InlineResponse200105) SetDetails(v []InlineResponse2006Details)`
+
+SetDetails sets Details field to given value.
+
+### HasDetails
+
+`func (o *InlineResponse200105) HasDetails() bool`
+
+HasDetails returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

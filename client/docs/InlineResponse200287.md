@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200287Items**](InlineResponse200287Items.md) | List of packet capture files | [optional] 
-**Meta** | Pointer to [**InlineResponse200287Meta**](InlineResponse200287Meta.md) |  | [optional] 
+**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
+**Name** | Pointer to **string** | Switch template name | [optional] 
+**Model** | Pointer to **string** | Switch model | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200287WithDefaults instantiates a new InlineResponse200287 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSwitchProfileId
 
-`func (o *InlineResponse200287) GetItems() []InlineResponse200287Items`
+`func (o *InlineResponse200287) GetSwitchProfileId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSwitchProfileIdOk
 
-`func (o *InlineResponse200287) GetItemsOk() (*[]InlineResponse200287Items, bool)`
+`func (o *InlineResponse200287) GetSwitchProfileIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSwitchProfileId
 
-`func (o *InlineResponse200287) SetItems(v []InlineResponse200287Items)`
+`func (o *InlineResponse200287) SetSwitchProfileId(v string)`
 
-SetItems sets Items field to given value.
+SetSwitchProfileId sets SwitchProfileId field to given value.
 
-### HasItems
+### HasSwitchProfileId
 
-`func (o *InlineResponse200287) HasItems() bool`
+`func (o *InlineResponse200287) HasSwitchProfileId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasSwitchProfileId returns a boolean if a field has been set.
 
-### GetMeta
+### GetName
 
-`func (o *InlineResponse200287) GetMeta() InlineResponse200287Meta`
+`func (o *InlineResponse200287) GetName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetNameOk
 
-`func (o *InlineResponse200287) GetMetaOk() (*InlineResponse200287Meta, bool)`
+`func (o *InlineResponse200287) GetNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200287) SetMeta(v InlineResponse200287Meta)`
+`func (o *InlineResponse200287) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
-### HasMeta
+### HasName
 
-`func (o *InlineResponse200287) HasMeta() bool`
+`func (o *InlineResponse200287) HasName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200287) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200287) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200287) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200287) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

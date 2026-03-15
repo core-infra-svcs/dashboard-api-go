@@ -4,13 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CommandId** | Pointer to **string** | ID to check the status of the command request | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time when the command was triggered | [optional] 
-**CompletedAt** | Pointer to **time.Time** | Time when the command was completed | [optional] 
-**CreatedBy** | Pointer to [**DevicesSerialSensorCommandsCreatedBy**](DevicesSerialSensorCommandsCreatedBy.md) |  | [optional] 
-**Operation** | Pointer to **string** | Operation run on the sensor | [optional] 
-**Status** | Pointer to **string** | Status of the command request | [optional] 
-**Errors** | Pointer to **[]string** | Array of errors if failed | [optional] 
+**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
+**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
+**Result** | Pointer to [**InlineResponse2018Result**](InlineResponse2018Result.md) |  | [optional] 
+**Request** | Pointer to [**InlineResponse2018Request**](InlineResponse2018Request.md) |  | [optional] 
+**Error** | Pointer to **string** | Description of the error. | [optional] 
 
 ## Methods
 
@@ -31,130 +30,55 @@ NewInlineResponse20034WithDefaults instantiates a new InlineResponse20034 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCommandId
+### GetThroughputTestId
 
-`func (o *InlineResponse20034) GetCommandId() string`
+`func (o *InlineResponse20034) GetThroughputTestId() string`
 
-GetCommandId returns the CommandId field if non-nil, zero value otherwise.
+GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
 
-### GetCommandIdOk
+### GetThroughputTestIdOk
 
-`func (o *InlineResponse20034) GetCommandIdOk() (*string, bool)`
+`func (o *InlineResponse20034) GetThroughputTestIdOk() (*string, bool)`
 
-GetCommandIdOk returns a tuple with the CommandId field if it's non-nil, zero value otherwise
+GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCommandId
+### SetThroughputTestId
 
-`func (o *InlineResponse20034) SetCommandId(v string)`
+`func (o *InlineResponse20034) SetThroughputTestId(v string)`
 
-SetCommandId sets CommandId field to given value.
+SetThroughputTestId sets ThroughputTestId field to given value.
 
-### HasCommandId
+### HasThroughputTestId
 
-`func (o *InlineResponse20034) HasCommandId() bool`
+`func (o *InlineResponse20034) HasThroughputTestId() bool`
 
-HasCommandId returns a boolean if a field has been set.
+HasThroughputTestId returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetUrl
 
-`func (o *InlineResponse20034) GetCreatedAt() time.Time`
+`func (o *InlineResponse20034) GetUrl() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetUrlOk
 
-`func (o *InlineResponse20034) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20034) GetUrlOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetUrl
 
-`func (o *InlineResponse20034) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse20034) SetUrl(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetUrl sets Url field to given value.
 
-### HasCreatedAt
+### HasUrl
 
-`func (o *InlineResponse20034) HasCreatedAt() bool`
+`func (o *InlineResponse20034) HasUrl() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetCompletedAt
-
-`func (o *InlineResponse20034) GetCompletedAt() time.Time`
-
-GetCompletedAt returns the CompletedAt field if non-nil, zero value otherwise.
-
-### GetCompletedAtOk
-
-`func (o *InlineResponse20034) GetCompletedAtOk() (*time.Time, bool)`
-
-GetCompletedAtOk returns a tuple with the CompletedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCompletedAt
-
-`func (o *InlineResponse20034) SetCompletedAt(v time.Time)`
-
-SetCompletedAt sets CompletedAt field to given value.
-
-### HasCompletedAt
-
-`func (o *InlineResponse20034) HasCompletedAt() bool`
-
-HasCompletedAt returns a boolean if a field has been set.
-
-### GetCreatedBy
-
-`func (o *InlineResponse20034) GetCreatedBy() DevicesSerialSensorCommandsCreatedBy`
-
-GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
-
-### GetCreatedByOk
-
-`func (o *InlineResponse20034) GetCreatedByOk() (*DevicesSerialSensorCommandsCreatedBy, bool)`
-
-GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedBy
-
-`func (o *InlineResponse20034) SetCreatedBy(v DevicesSerialSensorCommandsCreatedBy)`
-
-SetCreatedBy sets CreatedBy field to given value.
-
-### HasCreatedBy
-
-`func (o *InlineResponse20034) HasCreatedBy() bool`
-
-HasCreatedBy returns a boolean if a field has been set.
-
-### GetOperation
-
-`func (o *InlineResponse20034) GetOperation() string`
-
-GetOperation returns the Operation field if non-nil, zero value otherwise.
-
-### GetOperationOk
-
-`func (o *InlineResponse20034) GetOperationOk() (*string, bool)`
-
-GetOperationOk returns a tuple with the Operation field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOperation
-
-`func (o *InlineResponse20034) SetOperation(v string)`
-
-SetOperation sets Operation field to given value.
-
-### HasOperation
-
-`func (o *InlineResponse20034) HasOperation() bool`
-
-HasOperation returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
 ### GetStatus
 
@@ -181,30 +105,80 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetErrors
+### GetResult
 
-`func (o *InlineResponse20034) GetErrors() []string`
+`func (o *InlineResponse20034) GetResult() InlineResponse2018Result`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetResult returns the Result field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetResultOk
 
-`func (o *InlineResponse20034) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse20034) GetResultOk() (*InlineResponse2018Result, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetResult
 
-`func (o *InlineResponse20034) SetErrors(v []string)`
+`func (o *InlineResponse20034) SetResult(v InlineResponse2018Result)`
 
-SetErrors sets Errors field to given value.
+SetResult sets Result field to given value.
 
-### HasErrors
+### HasResult
 
-`func (o *InlineResponse20034) HasErrors() bool`
+`func (o *InlineResponse20034) HasResult() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasResult returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20034) GetRequest() InlineResponse2018Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20034) GetRequestOk() (*InlineResponse2018Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20034) SetRequest(v InlineResponse2018Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20034) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
+### GetError
+
+`func (o *InlineResponse20034) GetError() string`
+
+GetError returns the Error field if non-nil, zero value otherwise.
+
+### GetErrorOk
+
+`func (o *InlineResponse20034) GetErrorOk() (*string, bool)`
+
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetError
+
+`func (o *InlineResponse20034) SetError(v string)`
+
+SetError sets Error field to given value.
+
+### HasError
+
+`func (o *InlineResponse20034) HasError() bool`
+
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

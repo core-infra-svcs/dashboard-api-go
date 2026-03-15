@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RemainderLicenses** | Pointer to [**[]InlineResponse200320**](InlineResponse200320.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
-**MovedLicenses** | Pointer to [**[]InlineResponse200320**](InlineResponse200320.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
+**ImportId** | Pointer to **string** | Database ID for the new entity entry. | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200321WithDefaults instantiates a new InlineResponse200321 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRemainderLicenses
+### GetImportId
 
-`func (o *InlineResponse200321) GetRemainderLicenses() []InlineResponse200320`
+`func (o *InlineResponse200321) GetImportId() string`
 
-GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
+GetImportId returns the ImportId field if non-nil, zero value otherwise.
 
-### GetRemainderLicensesOk
+### GetImportIdOk
 
-`func (o *InlineResponse200321) GetRemainderLicensesOk() (*[]InlineResponse200320, bool)`
+`func (o *InlineResponse200321) GetImportIdOk() (*string, bool)`
 
-GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
+GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemainderLicenses
+### SetImportId
 
-`func (o *InlineResponse200321) SetRemainderLicenses(v []InlineResponse200320)`
+`func (o *InlineResponse200321) SetImportId(v string)`
 
-SetRemainderLicenses sets RemainderLicenses field to given value.
+SetImportId sets ImportId field to given value.
 
-### HasRemainderLicenses
+### HasImportId
 
-`func (o *InlineResponse200321) HasRemainderLicenses() bool`
+`func (o *InlineResponse200321) HasImportId() bool`
 
-HasRemainderLicenses returns a boolean if a field has been set.
+HasImportId returns a boolean if a field has been set.
 
-### GetMovedLicenses
+### GetDevice
 
-`func (o *InlineResponse200321) GetMovedLicenses() []InlineResponse200320`
+`func (o *InlineResponse200321) GetDevice() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice`
 
-GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetMovedLicensesOk
+### GetDeviceOk
 
-`func (o *InlineResponse200321) GetMovedLicensesOk() (*[]InlineResponse200320, bool)`
+`func (o *InlineResponse200321) GetDeviceOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice, bool)`
 
-GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMovedLicenses
+### SetDevice
 
-`func (o *InlineResponse200321) SetMovedLicenses(v []InlineResponse200320)`
+`func (o *InlineResponse200321) SetDevice(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice)`
 
-SetMovedLicenses sets MovedLicenses field to given value.
+SetDevice sets Device field to given value.
 
-### HasMovedLicenses
+### HasDevice
 
-`func (o *InlineResponse200321) HasMovedLicenses() bool`
+`func (o *InlineResponse200321) HasDevice() bool`
 
-HasMovedLicenses returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

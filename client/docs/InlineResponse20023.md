@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CableTestId** | Pointer to **string** | Id of the cable test request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your cable test request. | [optional] 
-**Request** | Pointer to [**InlineResponse2012Request**](InlineResponse2012Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the cable test request. | [optional] 
-**Results** | Pointer to [**[]InlineResponse20023Results**](InlineResponse20023Results.md) | Results of the cable test request, one for each requested port. | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**Sims** | Pointer to [**[]InlineResponse20023Sims**](InlineResponse20023Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
+**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. To indicate eSIM, use &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
+**SimFailover** | Pointer to [**InlineResponse20023SimFailover**](InlineResponse20023SimFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse20023WithDefaults instantiates a new InlineResponse20023 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCableTestId
+### GetSims
 
-`func (o *InlineResponse20023) GetCableTestId() string`
+`func (o *InlineResponse20023) GetSims() []InlineResponse20023Sims`
 
-GetCableTestId returns the CableTestId field if non-nil, zero value otherwise.
+GetSims returns the Sims field if non-nil, zero value otherwise.
 
-### GetCableTestIdOk
+### GetSimsOk
 
-`func (o *InlineResponse20023) GetCableTestIdOk() (*string, bool)`
+`func (o *InlineResponse20023) GetSimsOk() (*[]InlineResponse20023Sims, bool)`
 
-GetCableTestIdOk returns a tuple with the CableTestId field if it's non-nil, zero value otherwise
+GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCableTestId
+### SetSims
 
-`func (o *InlineResponse20023) SetCableTestId(v string)`
+`func (o *InlineResponse20023) SetSims(v []InlineResponse20023Sims)`
 
-SetCableTestId sets CableTestId field to given value.
+SetSims sets Sims field to given value.
 
-### HasCableTestId
+### HasSims
 
-`func (o *InlineResponse20023) HasCableTestId() bool`
+`func (o *InlineResponse20023) HasSims() bool`
 
-HasCableTestId returns a boolean if a field has been set.
+HasSims returns a boolean if a field has been set.
 
-### GetUrl
+### GetSimOrdering
 
-`func (o *InlineResponse20023) GetUrl() string`
+`func (o *InlineResponse20023) GetSimOrdering() []string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetSimOrdering returns the SimOrdering field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetSimOrderingOk
 
-`func (o *InlineResponse20023) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20023) GetSimOrderingOk() (*[]string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetSimOrderingOk returns a tuple with the SimOrdering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSimOrdering
 
-`func (o *InlineResponse20023) SetUrl(v string)`
+`func (o *InlineResponse20023) SetSimOrdering(v []string)`
 
-SetUrl sets Url field to given value.
+SetSimOrdering sets SimOrdering field to given value.
 
-### HasUrl
+### HasSimOrdering
 
-`func (o *InlineResponse20023) HasUrl() bool`
+`func (o *InlineResponse20023) HasSimOrdering() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasSimOrdering returns a boolean if a field has been set.
 
-### GetRequest
+### GetSimFailover
 
-`func (o *InlineResponse20023) GetRequest() InlineResponse2012Request`
+`func (o *InlineResponse20023) GetSimFailover() InlineResponse20023SimFailover`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetSimFailoverOk
 
-`func (o *InlineResponse20023) GetRequestOk() (*InlineResponse2012Request, bool)`
+`func (o *InlineResponse20023) GetSimFailoverOk() (*InlineResponse20023SimFailover, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetSimFailover
 
-`func (o *InlineResponse20023) SetRequest(v InlineResponse2012Request)`
+`func (o *InlineResponse20023) SetSimFailover(v InlineResponse20023SimFailover)`
 
-SetRequest sets Request field to given value.
+SetSimFailover sets SimFailover field to given value.
 
-### HasRequest
+### HasSimFailover
 
-`func (o *InlineResponse20023) HasRequest() bool`
+`func (o *InlineResponse20023) HasSimFailover() bool`
 
-HasRequest returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse20023) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20023) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20023) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20023) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetResults
-
-`func (o *InlineResponse20023) GetResults() []InlineResponse20023Results`
-
-GetResults returns the Results field if non-nil, zero value otherwise.
-
-### GetResultsOk
-
-`func (o *InlineResponse20023) GetResultsOk() (*[]InlineResponse20023Results, bool)`
-
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResults
-
-`func (o *InlineResponse20023) SetResults(v []InlineResponse20023Results)`
-
-SetResults sets Results field to given value.
-
-### HasResults
-
-`func (o *InlineResponse20023) HasResults() bool`
-
-HasResults returns a boolean if a field has been set.
-
-### GetError
-
-`func (o *InlineResponse20023) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *InlineResponse20023) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *InlineResponse20023) SetError(v string)`
-
-SetError sets Error field to given value.
-
-### HasError
-
-`func (o *InlineResponse20023) HasError() bool`
-
-HasError returns a boolean if a field has been set.
+HasSimFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

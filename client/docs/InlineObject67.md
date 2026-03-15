@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
 **GatewayVlanId** | Pointer to **NullableString** | Gateway VLAN ID | [optional] 
 **Enabled** | Pointer to **bool** | Whether the route should be enabled or not | [optional] 
-**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
+**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
 **ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
 
 ## Methods
@@ -168,20 +168,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetFixedIpAssignments
 
-`func (o *InlineObject67) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments`
+`func (o *InlineObject67) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments`
 
 GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
 
 ### GetFixedIpAssignmentsOk
 
-`func (o *InlineObject67) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments, bool)`
+`func (o *InlineObject67) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments, bool)`
 
 GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFixedIpAssignments
 
-`func (o *InlineObject67) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments)`
+`func (o *InlineObject67) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments)`
 
 SetFixedIpAssignments sets FixedIpAssignments field to given value.
 

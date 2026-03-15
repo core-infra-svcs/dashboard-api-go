@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
-**AllowedUrls** | Pointer to [**[]InlineResponse20067AllowedUrls**](InlineResponse20067AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
-**AllowedFiles** | Pointer to [**[]InlineResponse20067AllowedFiles**](InlineResponse20067AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
+**Number** | Pointer to **int32** | Number of the port | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Whether the trunk port can drop all untagged traffic. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of the VLAN ID&#39;s allowed on the port, or &#39;all&#39; to permit all VLAN&#39;s on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineResponse20067WithDefaults instantiates a new InlineResponse20067 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetNumber
 
-`func (o *InlineResponse20067) GetMode() string`
+`func (o *InlineResponse20067) GetNumber() int32`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNumberOk
 
-`func (o *InlineResponse20067) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20067) GetNumberOk() (*int32, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetNumber
 
-`func (o *InlineResponse20067) SetMode(v string)`
+`func (o *InlineResponse20067) SetNumber(v int32)`
 
-SetMode sets Mode field to given value.
+SetNumber sets Number field to given value.
 
-### HasMode
+### HasNumber
 
-`func (o *InlineResponse20067) HasMode() bool`
+`func (o *InlineResponse20067) HasNumber() bool`
 
-HasMode returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
 
-### GetAllowedUrls
+### GetEnabled
 
-`func (o *InlineResponse20067) GetAllowedUrls() []InlineResponse20067AllowedUrls`
+`func (o *InlineResponse20067) GetEnabled() bool`
 
-GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAllowedUrlsOk
+### GetEnabledOk
 
-`func (o *InlineResponse20067) GetAllowedUrlsOk() (*[]InlineResponse20067AllowedUrls, bool)`
+`func (o *InlineResponse20067) GetEnabledOk() (*bool, bool)`
 
-GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrls
+### SetEnabled
 
-`func (o *InlineResponse20067) SetAllowedUrls(v []InlineResponse20067AllowedUrls)`
+`func (o *InlineResponse20067) SetEnabled(v bool)`
 
-SetAllowedUrls sets AllowedUrls field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAllowedUrls
+### HasEnabled
 
-`func (o *InlineResponse20067) HasAllowedUrls() bool`
+`func (o *InlineResponse20067) HasEnabled() bool`
 
-HasAllowedUrls returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetAllowedFiles
+### GetType
 
-`func (o *InlineResponse20067) GetAllowedFiles() []InlineResponse20067AllowedFiles`
+`func (o *InlineResponse20067) GetType() string`
 
-GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetAllowedFilesOk
+### GetTypeOk
 
-`func (o *InlineResponse20067) GetAllowedFilesOk() (*[]InlineResponse20067AllowedFiles, bool)`
+`func (o *InlineResponse20067) GetTypeOk() (*string, bool)`
 
-GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedFiles
+### SetType
 
-`func (o *InlineResponse20067) SetAllowedFiles(v []InlineResponse20067AllowedFiles)`
+`func (o *InlineResponse20067) SetType(v string)`
 
-SetAllowedFiles sets AllowedFiles field to given value.
+SetType sets Type field to given value.
 
-### HasAllowedFiles
+### HasType
 
-`func (o *InlineResponse20067) HasAllowedFiles() bool`
+`func (o *InlineResponse20067) HasType() bool`
 
-HasAllowedFiles returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetDropUntaggedTraffic
+
+`func (o *InlineResponse20067) GetDropUntaggedTraffic() bool`
+
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
+
+### GetDropUntaggedTrafficOk
+
+`func (o *InlineResponse20067) GetDropUntaggedTrafficOk() (*bool, bool)`
+
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDropUntaggedTraffic
+
+`func (o *InlineResponse20067) SetDropUntaggedTraffic(v bool)`
+
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
+
+### HasDropUntaggedTraffic
+
+`func (o *InlineResponse20067) HasDropUntaggedTraffic() bool`
+
+HasDropUntaggedTraffic returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse20067) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse20067) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse20067) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse20067) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineResponse20067) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineResponse20067) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineResponse20067) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineResponse20067) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineResponse20067) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineResponse20067) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineResponse20067) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineResponse20067) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

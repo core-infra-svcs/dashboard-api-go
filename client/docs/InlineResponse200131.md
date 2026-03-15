@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
-**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
-**Serial** | Pointer to **string** | The device serial. | [optional] 
+**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
+**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMqttBrokerId
 
-`func (o *InlineResponse200131) GetId() string`
+`func (o *InlineResponse200131) GetMqttBrokerId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMqttBrokerIdOk
 
-`func (o *InlineResponse200131) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200131) GetMqttBrokerIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMqttBrokerId
 
-`func (o *InlineResponse200131) SetId(v string)`
+`func (o *InlineResponse200131) SetMqttBrokerId(v string)`
 
-SetId sets Id field to given value.
+SetMqttBrokerId sets MqttBrokerId field to given value.
 
-### HasId
+### HasMqttBrokerId
 
-`func (o *InlineResponse200131) HasId() bool`
+`func (o *InlineResponse200131) HasMqttBrokerId() bool`
 
-HasId returns a boolean if a field has been set.
+HasMqttBrokerId returns a boolean if a field has been set.
 
-### GetTags
+### GetEnabled
 
-`func (o *InlineResponse200131) GetTags() []string`
+`func (o *InlineResponse200131) GetEnabled() bool`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200131) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200131) GetEnabledOk() (*bool, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetEnabled
 
-`func (o *InlineResponse200131) SetTags(v []string)`
+`func (o *InlineResponse200131) SetEnabled(v bool)`
 
-SetTags sets Tags field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTags
+### HasEnabled
 
-`func (o *InlineResponse200131) HasTags() bool`
+`func (o *InlineResponse200131) HasEnabled() bool`
 
-HasTags returns a boolean if a field has been set.
-
-### GetWifiMac
-
-`func (o *InlineResponse200131) GetWifiMac() string`
-
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
-
-### GetWifiMacOk
-
-`func (o *InlineResponse200131) GetWifiMacOk() (*string, bool)`
-
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifiMac
-
-`func (o *InlineResponse200131) SetWifiMac(v string)`
-
-SetWifiMac sets WifiMac field to given value.
-
-### HasWifiMac
-
-`func (o *InlineResponse200131) HasWifiMac() bool`
-
-HasWifiMac returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200131) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200131) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200131) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200131) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

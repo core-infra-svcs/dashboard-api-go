@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdNetworksMovesNetwork**](OrganizationsOrganizationIdNetworksMovesNetwork.md) |  | 
-**Organizations** | [**OrganizationsOrganizationIdNetworksMovesOrganizations**](OrganizationsOrganizationIdNetworksMovesOrganizations.md) |  | 
-**Simulate** | Pointer to **bool** | If true, simulates the network move and validates the operation without committing changes. The network will remain in the source organization. | [optional] 
+**Name** | **string** | The name of the combined network | 
+**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
 
 ## Methods
 
 ### NewInlineObject291
 
-`func NewInlineObject291(network OrganizationsOrganizationIdNetworksMovesNetwork, organizations OrganizationsOrganizationIdNetworksMovesOrganizations, ) *InlineObject291`
+`func NewInlineObject291(name string, networkIds []string, ) *InlineObject291`
 
 NewInlineObject291 instantiates a new InlineObject291 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +27,70 @@ NewInlineObject291WithDefaults instantiates a new InlineObject291 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetName
 
-`func (o *InlineObject291) GetNetwork() OrganizationsOrganizationIdNetworksMovesNetwork`
+`func (o *InlineObject291) GetName() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNameOk
 
-`func (o *InlineObject291) GetNetworkOk() (*OrganizationsOrganizationIdNetworksMovesNetwork, bool)`
+`func (o *InlineObject291) GetNameOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetName
 
-`func (o *InlineObject291) SetNetwork(v OrganizationsOrganizationIdNetworksMovesNetwork)`
+`func (o *InlineObject291) SetName(v string)`
 
-SetNetwork sets Network field to given value.
+SetName sets Name field to given value.
 
 
-### GetOrganizations
+### GetNetworkIds
 
-`func (o *InlineObject291) GetOrganizations() OrganizationsOrganizationIdNetworksMovesOrganizations`
+`func (o *InlineObject291) GetNetworkIds() []string`
 
-GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetOrganizationsOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject291) GetOrganizationsOk() (*OrganizationsOrganizationIdNetworksMovesOrganizations, bool)`
+`func (o *InlineObject291) GetNetworkIdsOk() (*[]string, bool)`
 
-GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizations
+### SetNetworkIds
 
-`func (o *InlineObject291) SetOrganizations(v OrganizationsOrganizationIdNetworksMovesOrganizations)`
+`func (o *InlineObject291) SetNetworkIds(v []string)`
 
-SetOrganizations sets Organizations field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
 
-### GetSimulate
+### GetEnrollmentString
 
-`func (o *InlineObject291) GetSimulate() bool`
+`func (o *InlineObject291) GetEnrollmentString() string`
 
-GetSimulate returns the Simulate field if non-nil, zero value otherwise.
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-### GetSimulateOk
+### GetEnrollmentStringOk
 
-`func (o *InlineObject291) GetSimulateOk() (*bool, bool)`
+`func (o *InlineObject291) GetEnrollmentStringOk() (*string, bool)`
 
-GetSimulateOk returns a tuple with the Simulate field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimulate
+### SetEnrollmentString
 
-`func (o *InlineObject291) SetSimulate(v bool)`
+`func (o *InlineObject291) SetEnrollmentString(v string)`
 
-SetSimulate sets Simulate field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
-### HasSimulate
+### HasEnrollmentString
 
-`func (o *InlineObject291) HasSimulate() bool`
+`func (o *InlineObject291) HasEnrollmentString() bool`
 
-HasSimulate returns a boolean if a field has been set.
+HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

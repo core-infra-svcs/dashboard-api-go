@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraSenseObjectDetectionModels
 
-> []map[string]interface{} GetDeviceCameraSenseObjectDetectionModels(ctx, serial).Execute()
+> []InlineResponse20019 GetDeviceCameraSenseObjectDetectionModels(ctx, serial).Execute()
 
 Returns the MV Sense object detection model list for the given camera
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ObjectDetectionModelsApi.GetDeviceCameraSenseObjectDetectionModels``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraSenseObjectDetectionModels`: []map[string]interface{}
+    // response from `GetDeviceCameraSenseObjectDetectionModels`: []InlineResponse20019
     fmt.Fprintf(os.Stdout, "Response from `ObjectDetectionModelsApi.GetDeviceCameraSenseObjectDetectionModels`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 

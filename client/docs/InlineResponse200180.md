@@ -4,15 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Application** | Pointer to **string** | Traffic application | [optional] 
-**Destination** | Pointer to **string** | Traffic destination | [optional] 
-**Protocol** | Pointer to **string** | Traffic protocol | [optional] 
-**Port** | Pointer to **int32** | Traffic port | [optional] 
-**Sent** | Pointer to **float32** | Traffic sent in kb | [optional] 
-**Recv** | Pointer to **float32** | Traffic received in kb | [optional] 
-**NumClients** | Pointer to **int32** | Number of clients with traffic | [optional] 
-**ActiveTime** | Pointer to **int32** | Active time with traffic | [optional] 
-**Flows** | Pointer to **int32** | Number of traffic flows | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | The name af the new stack | [optional] 
+**Serials** | Pointer to **[]string** | An array of switch serials added to the stack | [optional] 
+**WorkflowId** | Pointer to **string** | ID of the workflow | [optional] 
 
 ## Methods
 
@@ -33,230 +28,105 @@ NewInlineResponse200180WithDefaults instantiates a new InlineResponse200180 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplication
+### GetId
 
-`func (o *InlineResponse200180) GetApplication() string`
+`func (o *InlineResponse200180) GetId() string`
 
-GetApplication returns the Application field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetApplicationOk
+### GetIdOk
 
-`func (o *InlineResponse200180) GetApplicationOk() (*string, bool)`
+`func (o *InlineResponse200180) GetIdOk() (*string, bool)`
 
-GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplication
+### SetId
 
-`func (o *InlineResponse200180) SetApplication(v string)`
+`func (o *InlineResponse200180) SetId(v string)`
 
-SetApplication sets Application field to given value.
+SetId sets Id field to given value.
 
-### HasApplication
+### HasId
 
-`func (o *InlineResponse200180) HasApplication() bool`
+`func (o *InlineResponse200180) HasId() bool`
 
-HasApplication returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDestination
+### GetName
 
-`func (o *InlineResponse200180) GetDestination() string`
+`func (o *InlineResponse200180) GetName() string`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetNameOk
 
-`func (o *InlineResponse200180) GetDestinationOk() (*string, bool)`
+`func (o *InlineResponse200180) GetNameOk() (*string, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetName
 
-`func (o *InlineResponse200180) SetDestination(v string)`
+`func (o *InlineResponse200180) SetName(v string)`
 
-SetDestination sets Destination field to given value.
+SetName sets Name field to given value.
 
-### HasDestination
+### HasName
 
-`func (o *InlineResponse200180) HasDestination() bool`
+`func (o *InlineResponse200180) HasName() bool`
 
-HasDestination returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetProtocol
+### GetSerials
 
-`func (o *InlineResponse200180) GetProtocol() string`
+`func (o *InlineResponse200180) GetSerials() []string`
 
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetProtocolOk
+### GetSerialsOk
 
-`func (o *InlineResponse200180) GetProtocolOk() (*string, bool)`
+`func (o *InlineResponse200180) GetSerialsOk() (*[]string, bool)`
 
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocol
+### SetSerials
 
-`func (o *InlineResponse200180) SetProtocol(v string)`
+`func (o *InlineResponse200180) SetSerials(v []string)`
 
-SetProtocol sets Protocol field to given value.
+SetSerials sets Serials field to given value.
 
-### HasProtocol
+### HasSerials
 
-`func (o *InlineResponse200180) HasProtocol() bool`
+`func (o *InlineResponse200180) HasSerials() bool`
 
-HasProtocol returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetPort
+### GetWorkflowId
 
-`func (o *InlineResponse200180) GetPort() int32`
+`func (o *InlineResponse200180) GetWorkflowId() string`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetWorkflowId returns the WorkflowId field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetWorkflowIdOk
 
-`func (o *InlineResponse200180) GetPortOk() (*int32, bool)`
+`func (o *InlineResponse200180) GetWorkflowIdOk() (*string, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetWorkflowIdOk returns a tuple with the WorkflowId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetWorkflowId
 
-`func (o *InlineResponse200180) SetPort(v int32)`
+`func (o *InlineResponse200180) SetWorkflowId(v string)`
 
-SetPort sets Port field to given value.
+SetWorkflowId sets WorkflowId field to given value.
 
-### HasPort
+### HasWorkflowId
 
-`func (o *InlineResponse200180) HasPort() bool`
+`func (o *InlineResponse200180) HasWorkflowId() bool`
 
-HasPort returns a boolean if a field has been set.
-
-### GetSent
-
-`func (o *InlineResponse200180) GetSent() float32`
-
-GetSent returns the Sent field if non-nil, zero value otherwise.
-
-### GetSentOk
-
-`func (o *InlineResponse200180) GetSentOk() (*float32, bool)`
-
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSent
-
-`func (o *InlineResponse200180) SetSent(v float32)`
-
-SetSent sets Sent field to given value.
-
-### HasSent
-
-`func (o *InlineResponse200180) HasSent() bool`
-
-HasSent returns a boolean if a field has been set.
-
-### GetRecv
-
-`func (o *InlineResponse200180) GetRecv() float32`
-
-GetRecv returns the Recv field if non-nil, zero value otherwise.
-
-### GetRecvOk
-
-`func (o *InlineResponse200180) GetRecvOk() (*float32, bool)`
-
-GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecv
-
-`func (o *InlineResponse200180) SetRecv(v float32)`
-
-SetRecv sets Recv field to given value.
-
-### HasRecv
-
-`func (o *InlineResponse200180) HasRecv() bool`
-
-HasRecv returns a boolean if a field has been set.
-
-### GetNumClients
-
-`func (o *InlineResponse200180) GetNumClients() int32`
-
-GetNumClients returns the NumClients field if non-nil, zero value otherwise.
-
-### GetNumClientsOk
-
-`func (o *InlineResponse200180) GetNumClientsOk() (*int32, bool)`
-
-GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNumClients
-
-`func (o *InlineResponse200180) SetNumClients(v int32)`
-
-SetNumClients sets NumClients field to given value.
-
-### HasNumClients
-
-`func (o *InlineResponse200180) HasNumClients() bool`
-
-HasNumClients returns a boolean if a field has been set.
-
-### GetActiveTime
-
-`func (o *InlineResponse200180) GetActiveTime() int32`
-
-GetActiveTime returns the ActiveTime field if non-nil, zero value otherwise.
-
-### GetActiveTimeOk
-
-`func (o *InlineResponse200180) GetActiveTimeOk() (*int32, bool)`
-
-GetActiveTimeOk returns a tuple with the ActiveTime field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActiveTime
-
-`func (o *InlineResponse200180) SetActiveTime(v int32)`
-
-SetActiveTime sets ActiveTime field to given value.
-
-### HasActiveTime
-
-`func (o *InlineResponse200180) HasActiveTime() bool`
-
-HasActiveTime returns a boolean if a field has been set.
-
-### GetFlows
-
-`func (o *InlineResponse200180) GetFlows() int32`
-
-GetFlows returns the Flows field if non-nil, zero value otherwise.
-
-### GetFlowsOk
-
-`func (o *InlineResponse200180) GetFlowsOk() (*int32, bool)`
-
-GetFlowsOk returns a tuple with the Flows field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFlows
-
-`func (o *InlineResponse200180) SetFlows(v int32)`
-
-SetFlows sets Flows field to given value.
-
-### HasFlows
-
-`func (o *InlineResponse200180) HasFlows() bool`
-
-HasFlows returns a boolean if a field has been set.
+HasWorkflowId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

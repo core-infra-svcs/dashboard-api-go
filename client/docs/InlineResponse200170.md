@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RendezvousPointId** | Pointer to **string** | The id. | [optional] 
-**Serial** | Pointer to **string** | The serial. | [optional] 
-**InterfaceName** | Pointer to **string** | The name of the interface to use. | [optional] 
-**InterfaceIp** | Pointer to **string** | The IP address of the interface to use. | [optional] 
-**MulticastGroup** | Pointer to **string** | &#39;Any&#39;, or the IP address of a multicast group. | [optional] 
+**Id** | Pointer to **string** | The ID for the link aggregation. | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | The ID for the link aggregation. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200170WithDefaults instantiates a new InlineResponse200170 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRendezvousPointId
+### GetId
 
-`func (o *InlineResponse200170) GetRendezvousPointId() string`
+`func (o *InlineResponse200170) GetId() string`
 
-GetRendezvousPointId returns the RendezvousPointId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetRendezvousPointIdOk
+### GetIdOk
 
-`func (o *InlineResponse200170) GetRendezvousPointIdOk() (*string, bool)`
+`func (o *InlineResponse200170) GetIdOk() (*string, bool)`
 
-GetRendezvousPointIdOk returns a tuple with the RendezvousPointId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRendezvousPointId
+### SetId
 
-`func (o *InlineResponse200170) SetRendezvousPointId(v string)`
+`func (o *InlineResponse200170) SetId(v string)`
 
-SetRendezvousPointId sets RendezvousPointId field to given value.
+SetId sets Id field to given value.
 
-### HasRendezvousPointId
+### HasId
 
-`func (o *InlineResponse200170) HasRendezvousPointId() bool`
+`func (o *InlineResponse200170) HasId() bool`
 
-HasRendezvousPointId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetSerial
+### GetSwitchPorts
 
-`func (o *InlineResponse200170) GetSerial() string`
+`func (o *InlineResponse200170) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSwitchPortsOk
 
-`func (o *InlineResponse200170) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200170) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSwitchPorts
 
-`func (o *InlineResponse200170) SetSerial(v string)`
+`func (o *InlineResponse200170) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
 
-SetSerial sets Serial field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasSerial
+### HasSwitchPorts
 
-`func (o *InlineResponse200170) HasSerial() bool`
+`func (o *InlineResponse200170) HasSwitchPorts() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetInterfaceName
-
-`func (o *InlineResponse200170) GetInterfaceName() string`
-
-GetInterfaceName returns the InterfaceName field if non-nil, zero value otherwise.
-
-### GetInterfaceNameOk
-
-`func (o *InlineResponse200170) GetInterfaceNameOk() (*string, bool)`
-
-GetInterfaceNameOk returns a tuple with the InterfaceName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterfaceName
-
-`func (o *InlineResponse200170) SetInterfaceName(v string)`
-
-SetInterfaceName sets InterfaceName field to given value.
-
-### HasInterfaceName
-
-`func (o *InlineResponse200170) HasInterfaceName() bool`
-
-HasInterfaceName returns a boolean if a field has been set.
-
-### GetInterfaceIp
-
-`func (o *InlineResponse200170) GetInterfaceIp() string`
-
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
-
-### GetInterfaceIpOk
-
-`func (o *InlineResponse200170) GetInterfaceIpOk() (*string, bool)`
-
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterfaceIp
-
-`func (o *InlineResponse200170) SetInterfaceIp(v string)`
-
-SetInterfaceIp sets InterfaceIp field to given value.
-
-### HasInterfaceIp
-
-`func (o *InlineResponse200170) HasInterfaceIp() bool`
-
-HasInterfaceIp returns a boolean if a field has been set.
-
-### GetMulticastGroup
-
-`func (o *InlineResponse200170) GetMulticastGroup() string`
-
-GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
-
-### GetMulticastGroupOk
-
-`func (o *InlineResponse200170) GetMulticastGroupOk() (*string, bool)`
-
-GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastGroup
-
-`func (o *InlineResponse200170) SetMulticastGroup(v string)`
-
-SetMulticastGroup sets MulticastGroup field to given value.
-
-### HasMulticastGroup
-
-`func (o *InlineResponse200170) HasMulticastGroup() bool`
-
-HasMulticastGroup returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

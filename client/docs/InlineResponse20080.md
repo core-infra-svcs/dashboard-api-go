@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
-**Hubs** | Pointer to [**[]InlineResponse20080Hubs**](InlineResponse20080Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
-**Subnets** | Pointer to [**[]InlineResponse20080Subnets**](InlineResponse20080Subnets.md) | The list of subnets and their VPN presence. | [optional] 
-**Subnet** | Pointer to [**InlineResponse20080Subnet**](InlineResponse20080Subnet.md) |  | [optional] 
+**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
+**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
+**Custom** | [**[]InlineResponse20080Custom**](InlineResponse20080Custom.md) | Custom VPN exclusion rules. | 
+**MajorApplications** | [**[]InlineResponse20080MajorApplications**](InlineResponse20080MajorApplications.md) | Major Application based VPN exclusion rules. | 
 
 ## Methods
 
 ### NewInlineResponse20080
 
-`func NewInlineResponse20080() *InlineResponse20080`
+`func NewInlineResponse20080(networkId string, networkName string, custom []InlineResponse20080Custom, majorApplications []InlineResponse20080MajorApplications, ) *InlineResponse20080`
 
 NewInlineResponse20080 instantiates a new InlineResponse20080 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,85 @@ NewInlineResponse20080WithDefaults instantiates a new InlineResponse20080 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetNetworkId
 
-`func (o *InlineResponse20080) GetMode() string`
+`func (o *InlineResponse20080) GetNetworkId() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20080) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20080) GetNetworkIdOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetNetworkId
 
-`func (o *InlineResponse20080) SetMode(v string)`
+`func (o *InlineResponse20080) SetNetworkId(v string)`
 
-SetMode sets Mode field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasMode
 
-`func (o *InlineResponse20080) HasMode() bool`
+### GetNetworkName
 
-HasMode returns a boolean if a field has been set.
+`func (o *InlineResponse20080) GetNetworkName() string`
 
-### GetHubs
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20080) GetHubs() []InlineResponse20080Hubs`
+### GetNetworkNameOk
 
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
+`func (o *InlineResponse20080) GetNetworkNameOk() (*string, bool)`
 
-### GetHubsOk
-
-`func (o *InlineResponse20080) GetHubsOk() (*[]InlineResponse20080Hubs, bool)`
-
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHubs
+### SetNetworkName
 
-`func (o *InlineResponse20080) SetHubs(v []InlineResponse20080Hubs)`
+`func (o *InlineResponse20080) SetNetworkName(v string)`
 
-SetHubs sets Hubs field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasHubs
 
-`func (o *InlineResponse20080) HasHubs() bool`
+### GetCustom
 
-HasHubs returns a boolean if a field has been set.
+`func (o *InlineResponse20080) GetCustom() []InlineResponse20080Custom`
 
-### GetSubnets
+GetCustom returns the Custom field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20080) GetSubnets() []InlineResponse20080Subnets`
+### GetCustomOk
 
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+`func (o *InlineResponse20080) GetCustomOk() (*[]InlineResponse20080Custom, bool)`
 
-### GetSubnetsOk
-
-`func (o *InlineResponse20080) GetSubnetsOk() (*[]InlineResponse20080Subnets, bool)`
-
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnets
+### SetCustom
 
-`func (o *InlineResponse20080) SetSubnets(v []InlineResponse20080Subnets)`
+`func (o *InlineResponse20080) SetCustom(v []InlineResponse20080Custom)`
 
-SetSubnets sets Subnets field to given value.
+SetCustom sets Custom field to given value.
 
-### HasSubnets
 
-`func (o *InlineResponse20080) HasSubnets() bool`
+### GetMajorApplications
 
-HasSubnets returns a boolean if a field has been set.
+`func (o *InlineResponse20080) GetMajorApplications() []InlineResponse20080MajorApplications`
 
-### GetSubnet
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20080) GetSubnet() InlineResponse20080Subnet`
+### GetMajorApplicationsOk
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+`func (o *InlineResponse20080) GetMajorApplicationsOk() (*[]InlineResponse20080MajorApplications, bool)`
 
-### GetSubnetOk
-
-`func (o *InlineResponse20080) GetSubnetOk() (*InlineResponse20080Subnet, bool)`
-
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetMajorApplications
 
-`func (o *InlineResponse20080) SetSubnet(v InlineResponse20080Subnet)`
+`func (o *InlineResponse20080) SetMajorApplications(v []InlineResponse20080MajorApplications)`
 
-SetSubnet sets Subnet field to given value.
+SetMajorApplications sets MajorApplications field to given value.
 
-### HasSubnet
-
-`func (o *InlineResponse20080) HasSubnet() bool`
-
-HasSubnet returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

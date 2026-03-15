@@ -11,15 +11,16 @@ Name | Type | Description | Notes
 **PrivateSubnets** | **[]string** | The list of the private subnets of the VPN peer | 
 **LocalId** | Pointer to **string** | [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to. | [optional] 
 **RemoteId** | Pointer to **string** | [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN. | [optional] 
-**IpsecPolicies** | Pointer to [**InlineResponse200249IpsecPolicies**](InlineResponse200249IpsecPolicies.md) |  | [optional] 
+**IpsecPolicies** | Pointer to [**InlineResponse200255IpsecPolicies**](InlineResponse200255IpsecPolicies.md) |  | [optional] 
 **IpsecPoliciesPreset** | Pointer to **string** | One of the following available presets: &#39;default&#39;, &#39;aws&#39;, &#39;azure&#39;, &#39;umbrella&#39;, &#39;zscaler&#39;. If this is provided, the &#39;ipsecPolicies&#39; parameter is ignored. | [optional] 
-**SlaPolicy** | Pointer to [**InlineResponse200249SlaPolicy**](InlineResponse200249SlaPolicy.md) |  | [optional] 
+**SlaPolicy** | Pointer to [**InlineResponse200255SlaPolicy**](InlineResponse200255SlaPolicy.md) |  | [optional] 
 **Secret** | **string** | The shared secret with the VPN peer | 
 **IkeVersion** | Pointer to **string** | [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to &#39;1&#39; when omitted. | [optional] [default to "1"]
 **NetworkTags** | Pointer to **[]string** | A list of network tags that will connect with this peer. Use [&#39;all&#39;] for all networks. Use [&#39;none&#39;] for no networks. If not included, the default is [&#39;all&#39;]. | [optional] 
 **Network** | Pointer to [**OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersNetwork**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersNetwork.md) |  | [optional] 
 **IsRouteBased** | Pointer to **bool** | [optional] If true, the VPN peer is route-based. If not included, the default is false. Supported only for MX 19.1 and above. | [optional] 
 **EbgpNeighbor** | Pointer to [**OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighbor**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEbgpNeighbor.md) |  | [optional] 
+**EcmpUplinkConfigs** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEcmpUplinkConfigs**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEcmpUplinkConfigs.md) | [optional] The ECMP per-uplink BGP-over-IPsec configuration for the VPN peer. | [optional] 
 **PriorityInGroup** | Pointer to **int32** | [optional] Represents the order of peer inside a group. If you submit a request with the numbers [1, 9, 999], these numbers will be automatically adjusted to a sequential order starting from 1. So, they will be changed to [1, 2, 3] to reflect their positions in the sequence. | [optional] 
 **Group** | Pointer to [**OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersGroup.md) |  | [optional] 
 
@@ -209,20 +210,20 @@ HasRemoteId returns a boolean if a field has been set.
 
 ### GetIpsecPolicies
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPolicies() InlineResponse200249IpsecPolicies`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPolicies() InlineResponse200255IpsecPolicies`
 
 GetIpsecPolicies returns the IpsecPolicies field if non-nil, zero value otherwise.
 
 ### GetIpsecPoliciesOk
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPoliciesOk() (*InlineResponse200249IpsecPolicies, bool)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPoliciesOk() (*InlineResponse200255IpsecPolicies, bool)`
 
 GetIpsecPoliciesOk returns a tuple with the IpsecPolicies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpsecPolicies
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetIpsecPolicies(v InlineResponse200249IpsecPolicies)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetIpsecPolicies(v InlineResponse200255IpsecPolicies)`
 
 SetIpsecPolicies sets IpsecPolicies field to given value.
 
@@ -259,20 +260,20 @@ HasIpsecPoliciesPreset returns a boolean if a field has been set.
 
 ### GetSlaPolicy
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicy() InlineResponse200249SlaPolicy`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicy() InlineResponse200255SlaPolicy`
 
 GetSlaPolicy returns the SlaPolicy field if non-nil, zero value otherwise.
 
 ### GetSlaPolicyOk
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicyOk() (*InlineResponse200249SlaPolicy, bool)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicyOk() (*InlineResponse200255SlaPolicy, bool)`
 
 GetSlaPolicyOk returns a tuple with the SlaPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlaPolicy
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetSlaPolicy(v InlineResponse200249SlaPolicy)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetSlaPolicy(v InlineResponse200255SlaPolicy)`
 
 SetSlaPolicy sets SlaPolicy field to given value.
 
@@ -426,6 +427,31 @@ SetEbgpNeighbor sets EbgpNeighbor field to given value.
 `func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) HasEbgpNeighbor() bool`
 
 HasEbgpNeighbor returns a boolean if a field has been set.
+
+### GetEcmpUplinkConfigs
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetEcmpUplinkConfigs() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEcmpUplinkConfigs`
+
+GetEcmpUplinkConfigs returns the EcmpUplinkConfigs field if non-nil, zero value otherwise.
+
+### GetEcmpUplinkConfigsOk
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetEcmpUplinkConfigsOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEcmpUplinkConfigs, bool)`
+
+GetEcmpUplinkConfigsOk returns a tuple with the EcmpUplinkConfigs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEcmpUplinkConfigs
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetEcmpUplinkConfigs(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersEcmpUplinkConfigs)`
+
+SetEcmpUplinkConfigs sets EcmpUplinkConfigs field to given value.
+
+### HasEcmpUplinkConfigs
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) HasEcmpUplinkConfigs() bool`
+
+HasEcmpUplinkConfigs returns a boolean if a field has been set.
 
 ### GetPriorityInGroup
 

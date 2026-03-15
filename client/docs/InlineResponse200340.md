@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
-**States** | Pointer to **[]string** | The set of different states on the spaces integration process | [optional] 
-**Email** | Pointer to **string** | The meraki user who attempts the spaces integration | [optional] 
-**AccountName** | Pointer to **string** | The spaces dashboard account name created in spaces integration | [optional] 
-**AccountType** | Pointer to **string** | The spaces dashboard account type created in spaces integration | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
+**Camera** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesCamera**](OrganizationsOrganizationIdSamlRolesCamera.md) | The list of camera access privileges for SAML administrator | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200340WithDefaults instantiates a new InlineResponse200340 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetId
 
-`func (o *InlineResponse200340) GetStatus() bool`
+`func (o *InlineResponse200340) GetId() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetIdOk
 
-`func (o *InlineResponse200340) GetStatusOk() (*bool, bool)`
+`func (o *InlineResponse200340) GetIdOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetId
 
-`func (o *InlineResponse200340) SetStatus(v bool)`
+`func (o *InlineResponse200340) SetId(v string)`
 
-SetStatus sets Status field to given value.
+SetId sets Id field to given value.
 
-### HasStatus
+### HasId
 
-`func (o *InlineResponse200340) HasStatus() bool`
+`func (o *InlineResponse200340) HasId() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetStates
+### GetRole
 
-`func (o *InlineResponse200340) GetStates() []string`
+`func (o *InlineResponse200340) GetRole() string`
 
-GetStates returns the States field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetStatesOk
+### GetRoleOk
 
-`func (o *InlineResponse200340) GetStatesOk() (*[]string, bool)`
+`func (o *InlineResponse200340) GetRoleOk() (*string, bool)`
 
-GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStates
+### SetRole
 
-`func (o *InlineResponse200340) SetStates(v []string)`
+`func (o *InlineResponse200340) SetRole(v string)`
 
-SetStates sets States field to given value.
+SetRole sets Role field to given value.
 
-### HasStates
+### HasRole
 
-`func (o *InlineResponse200340) HasStates() bool`
+`func (o *InlineResponse200340) HasRole() bool`
 
-HasStates returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetEmail
+### GetOrgAccess
 
-`func (o *InlineResponse200340) GetEmail() string`
+`func (o *InlineResponse200340) GetOrgAccess() string`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetOrgAccessOk
 
-`func (o *InlineResponse200340) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse200340) GetOrgAccessOk() (*string, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetOrgAccess
 
-`func (o *InlineResponse200340) SetEmail(v string)`
+`func (o *InlineResponse200340) SetOrgAccess(v string)`
 
-SetEmail sets Email field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasEmail
+### HasOrgAccess
 
-`func (o *InlineResponse200340) HasEmail() bool`
+`func (o *InlineResponse200340) HasOrgAccess() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
 
-### GetAccountName
+### GetNetworks
 
-`func (o *InlineResponse200340) GetAccountName() string`
+`func (o *InlineResponse200340) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
 
-GetAccountName returns the AccountName field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetAccountNameOk
+### GetNetworksOk
 
-`func (o *InlineResponse200340) GetAccountNameOk() (*string, bool)`
+`func (o *InlineResponse200340) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
 
-GetAccountNameOk returns a tuple with the AccountName field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountName
+### SetNetworks
 
-`func (o *InlineResponse200340) SetAccountName(v string)`
+`func (o *InlineResponse200340) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
 
-SetAccountName sets AccountName field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasAccountName
+### HasNetworks
 
-`func (o *InlineResponse200340) HasAccountName() bool`
+`func (o *InlineResponse200340) HasNetworks() bool`
 
-HasAccountName returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
-### GetAccountType
+### GetTags
 
-`func (o *InlineResponse200340) GetAccountType() string`
+`func (o *InlineResponse200340) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
 
-GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetAccountTypeOk
+### GetTagsOk
 
-`func (o *InlineResponse200340) GetAccountTypeOk() (*string, bool)`
+`func (o *InlineResponse200340) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
 
-GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountType
+### SetTags
 
-`func (o *InlineResponse200340) SetAccountType(v string)`
+`func (o *InlineResponse200340) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
 
-SetAccountType sets AccountType field to given value.
+SetTags sets Tags field to given value.
 
-### HasAccountType
+### HasTags
 
-`func (o *InlineResponse200340) HasAccountType() bool`
+`func (o *InlineResponse200340) HasTags() bool`
 
-HasAccountType returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetCamera
+
+`func (o *InlineResponse200340) GetCamera() []OrganizationsOrganizationIdSamlRolesCamera`
+
+GetCamera returns the Camera field if non-nil, zero value otherwise.
+
+### GetCameraOk
+
+`func (o *InlineResponse200340) GetCameraOk() (*[]OrganizationsOrganizationIdSamlRolesCamera, bool)`
+
+GetCameraOk returns a tuple with the Camera field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCamera
+
+`func (o *InlineResponse200340) SetCamera(v []OrganizationsOrganizationIdSamlRolesCamera)`
+
+SetCamera sets Camera field to given value.
+
+### HasCamera
+
+`func (o *InlineResponse200340) HasCamera() bool`
+
+HasCamera returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

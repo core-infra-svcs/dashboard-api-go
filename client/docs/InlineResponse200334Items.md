@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RoleId** | Pointer to **string** | The Id of the limited access role | [optional] 
-**Name** | Pointer to **string** | The name of the limited access role | [optional] 
-**Scope** | Pointer to **string** | The scope of the limited access role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the limited access role | [optional] 
+**MoveId** | Pointer to **string** | ID of the network move operation | [optional] 
+**Initiator** | Pointer to [**InlineResponse200334Initiator**](InlineResponse200334Initiator.md) |  | [optional] 
+**Organizations** | Pointer to [**InlineResponse200334Organizations**](InlineResponse200334Organizations.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200334Network**](InlineResponse200334Network.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Timestamp when the network move initiated | [optional] 
+**LastUpdatedAt** | Pointer to **time.Time** | Timestamp when the network move status last changed | [optional] 
+**Result** | Pointer to [**InlineResponse200334Result**](InlineResponse200334Result.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +31,180 @@ NewInlineResponse200334ItemsWithDefaults instantiates a new InlineResponse200334
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRoleId
+### GetMoveId
 
-`func (o *InlineResponse200334Items) GetRoleId() string`
+`func (o *InlineResponse200334Items) GetMoveId() string`
 
-GetRoleId returns the RoleId field if non-nil, zero value otherwise.
+GetMoveId returns the MoveId field if non-nil, zero value otherwise.
 
-### GetRoleIdOk
+### GetMoveIdOk
 
-`func (o *InlineResponse200334Items) GetRoleIdOk() (*string, bool)`
+`func (o *InlineResponse200334Items) GetMoveIdOk() (*string, bool)`
 
-GetRoleIdOk returns a tuple with the RoleId field if it's non-nil, zero value otherwise
+GetMoveIdOk returns a tuple with the MoveId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRoleId
+### SetMoveId
 
-`func (o *InlineResponse200334Items) SetRoleId(v string)`
+`func (o *InlineResponse200334Items) SetMoveId(v string)`
 
-SetRoleId sets RoleId field to given value.
+SetMoveId sets MoveId field to given value.
 
-### HasRoleId
+### HasMoveId
 
-`func (o *InlineResponse200334Items) HasRoleId() bool`
+`func (o *InlineResponse200334Items) HasMoveId() bool`
 
-HasRoleId returns a boolean if a field has been set.
+HasMoveId returns a boolean if a field has been set.
 
-### GetName
+### GetInitiator
 
-`func (o *InlineResponse200334Items) GetName() string`
+`func (o *InlineResponse200334Items) GetInitiator() InlineResponse200334Initiator`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetInitiator returns the Initiator field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetInitiatorOk
 
-`func (o *InlineResponse200334Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200334Items) GetInitiatorOk() (*InlineResponse200334Initiator, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetInitiatorOk returns a tuple with the Initiator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetInitiator
 
-`func (o *InlineResponse200334Items) SetName(v string)`
+`func (o *InlineResponse200334Items) SetInitiator(v InlineResponse200334Initiator)`
 
-SetName sets Name field to given value.
+SetInitiator sets Initiator field to given value.
 
-### HasName
+### HasInitiator
 
-`func (o *InlineResponse200334Items) HasName() bool`
+`func (o *InlineResponse200334Items) HasInitiator() bool`
 
-HasName returns a boolean if a field has been set.
+HasInitiator returns a boolean if a field has been set.
 
-### GetScope
+### GetOrganizations
 
-`func (o *InlineResponse200334Items) GetScope() string`
+`func (o *InlineResponse200334Items) GetOrganizations() InlineResponse200334Organizations`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetOrganizationsOk
 
-`func (o *InlineResponse200334Items) GetScopeOk() (*string, bool)`
+`func (o *InlineResponse200334Items) GetOrganizationsOk() (*InlineResponse200334Organizations, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetOrganizations
 
-`func (o *InlineResponse200334Items) SetScope(v string)`
+`func (o *InlineResponse200334Items) SetOrganizations(v InlineResponse200334Organizations)`
 
-SetScope sets Scope field to given value.
+SetOrganizations sets Organizations field to given value.
 
-### HasScope
+### HasOrganizations
 
-`func (o *InlineResponse200334Items) HasScope() bool`
+`func (o *InlineResponse200334Items) HasOrganizations() bool`
 
-HasScope returns a boolean if a field has been set.
+HasOrganizations returns a boolean if a field has been set.
 
-### GetTags
+### GetNetwork
 
-`func (o *InlineResponse200334Items) GetTags() []string`
+`func (o *InlineResponse200334Items) GetNetwork() InlineResponse200334Network`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetNetworkOk
 
-`func (o *InlineResponse200334Items) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200334Items) GetNetworkOk() (*InlineResponse200334Network, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetNetwork
 
-`func (o *InlineResponse200334Items) SetTags(v []string)`
+`func (o *InlineResponse200334Items) SetNetwork(v InlineResponse200334Network)`
 
-SetTags sets Tags field to given value.
+SetNetwork sets Network field to given value.
 
-### HasTags
+### HasNetwork
 
-`func (o *InlineResponse200334Items) HasTags() bool`
+`func (o *InlineResponse200334Items) HasNetwork() bool`
 
-HasTags returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200334Items) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200334Items) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200334Items) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200334Items) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200334Items) GetLastUpdatedAt() time.Time`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200334Items) GetLastUpdatedAtOk() (*time.Time, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200334Items) SetLastUpdatedAt(v time.Time)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200334Items) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetResult
+
+`func (o *InlineResponse200334Items) GetResult() InlineResponse200334Result`
+
+GetResult returns the Result field if non-nil, zero value otherwise.
+
+### GetResultOk
+
+`func (o *InlineResponse200334Items) GetResultOk() (*InlineResponse200334Result, bool)`
+
+GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResult
+
+`func (o *InlineResponse200334Items) SetResult(v InlineResponse200334Result)`
+
+SetResult sets Result field to given value.
+
+### HasResult
+
+`func (o *InlineResponse200334Items) HasResult() bool`
+
+HasResult returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

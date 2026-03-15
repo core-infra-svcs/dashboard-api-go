@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices updated | 
+**ClientId** | Pointer to **string** | The ID of the client | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**Manufacturer** | Pointer to **string** | Manufacturer of the client | [optional] 
+**Records** | Pointer to [**[]InlineResponse200285Records**](InlineResponse200285Records.md) | The clients that appear on any networks within an organization | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200285
 
-`func NewInlineResponse200285(serials []string, ) *InlineResponse200285`
+`func NewInlineResponse200285() *InlineResponse200285`
 
 NewInlineResponse200285 instantiates a new InlineResponse200285 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +28,105 @@ NewInlineResponse200285WithDefaults instantiates a new InlineResponse200285 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetClientId
 
-`func (o *InlineResponse200285) GetSerials() []string`
+`func (o *InlineResponse200285) GetClientId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetClientIdOk
 
-`func (o *InlineResponse200285) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200285) GetClientIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetClientId
 
-`func (o *InlineResponse200285) SetSerials(v []string)`
+`func (o *InlineResponse200285) SetClientId(v string)`
 
-SetSerials sets Serials field to given value.
+SetClientId sets ClientId field to given value.
 
+### HasClientId
+
+`func (o *InlineResponse200285) HasClientId() bool`
+
+HasClientId returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200285) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200285) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200285) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200285) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetManufacturer
+
+`func (o *InlineResponse200285) GetManufacturer() string`
+
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
+
+### GetManufacturerOk
+
+`func (o *InlineResponse200285) GetManufacturerOk() (*string, bool)`
+
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManufacturer
+
+`func (o *InlineResponse200285) SetManufacturer(v string)`
+
+SetManufacturer sets Manufacturer field to given value.
+
+### HasManufacturer
+
+`func (o *InlineResponse200285) HasManufacturer() bool`
+
+HasManufacturer returns a boolean if a field has been set.
+
+### GetRecords
+
+`func (o *InlineResponse200285) GetRecords() []InlineResponse200285Records`
+
+GetRecords returns the Records field if non-nil, zero value otherwise.
+
+### GetRecordsOk
+
+`func (o *InlineResponse200285) GetRecordsOk() (*[]InlineResponse200285Records, bool)`
+
+GetRecordsOk returns a tuple with the Records field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecords
+
+`func (o *InlineResponse200285) SetRecords(v []InlineResponse200285Records)`
+
+SetRecords sets Records field to given value.
+
+### HasRecords
+
+`func (o *InlineResponse200285) HasRecords() bool`
+
+HasRecords returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

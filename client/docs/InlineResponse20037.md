@@ -4,7 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | Pointer to **[]string** | List of switch ports | [optional] 
+**StartTime** | Pointer to **time.Time** | Start time of the sample | [optional] 
+**EndTime** | Pointer to **time.Time** | End time of the sample | [optional] 
+**LossPercent** | Pointer to **float32** | Percentage of packets lost | [optional] 
+**LatencyMs** | Pointer to **float32** | Latency in milliseconds | [optional] 
+**Goodput** | Pointer to **int32** | Number of useful information bits delivered | [optional] 
+**Jitter** | Pointer to **float32** | Jitter, in milliseconds | [optional] 
 
 ## Methods
 
@@ -25,30 +30,155 @@ NewInlineResponse20037WithDefaults instantiates a new InlineResponse20037 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetStartTime
 
-`func (o *InlineResponse20037) GetPorts() []string`
+`func (o *InlineResponse20037) GetStartTime() time.Time`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetStartTime returns the StartTime field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetStartTimeOk
 
-`func (o *InlineResponse20037) GetPortsOk() (*[]string, bool)`
+`func (o *InlineResponse20037) GetStartTimeOk() (*time.Time, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetStartTime
 
-`func (o *InlineResponse20037) SetPorts(v []string)`
+`func (o *InlineResponse20037) SetStartTime(v time.Time)`
 
-SetPorts sets Ports field to given value.
+SetStartTime sets StartTime field to given value.
 
-### HasPorts
+### HasStartTime
 
-`func (o *InlineResponse20037) HasPorts() bool`
+`func (o *InlineResponse20037) HasStartTime() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasStartTime returns a boolean if a field has been set.
+
+### GetEndTime
+
+`func (o *InlineResponse20037) GetEndTime() time.Time`
+
+GetEndTime returns the EndTime field if non-nil, zero value otherwise.
+
+### GetEndTimeOk
+
+`func (o *InlineResponse20037) GetEndTimeOk() (*time.Time, bool)`
+
+GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEndTime
+
+`func (o *InlineResponse20037) SetEndTime(v time.Time)`
+
+SetEndTime sets EndTime field to given value.
+
+### HasEndTime
+
+`func (o *InlineResponse20037) HasEndTime() bool`
+
+HasEndTime returns a boolean if a field has been set.
+
+### GetLossPercent
+
+`func (o *InlineResponse20037) GetLossPercent() float32`
+
+GetLossPercent returns the LossPercent field if non-nil, zero value otherwise.
+
+### GetLossPercentOk
+
+`func (o *InlineResponse20037) GetLossPercentOk() (*float32, bool)`
+
+GetLossPercentOk returns a tuple with the LossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLossPercent
+
+`func (o *InlineResponse20037) SetLossPercent(v float32)`
+
+SetLossPercent sets LossPercent field to given value.
+
+### HasLossPercent
+
+`func (o *InlineResponse20037) HasLossPercent() bool`
+
+HasLossPercent returns a boolean if a field has been set.
+
+### GetLatencyMs
+
+`func (o *InlineResponse20037) GetLatencyMs() float32`
+
+GetLatencyMs returns the LatencyMs field if non-nil, zero value otherwise.
+
+### GetLatencyMsOk
+
+`func (o *InlineResponse20037) GetLatencyMsOk() (*float32, bool)`
+
+GetLatencyMsOk returns a tuple with the LatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLatencyMs
+
+`func (o *InlineResponse20037) SetLatencyMs(v float32)`
+
+SetLatencyMs sets LatencyMs field to given value.
+
+### HasLatencyMs
+
+`func (o *InlineResponse20037) HasLatencyMs() bool`
+
+HasLatencyMs returns a boolean if a field has been set.
+
+### GetGoodput
+
+`func (o *InlineResponse20037) GetGoodput() int32`
+
+GetGoodput returns the Goodput field if non-nil, zero value otherwise.
+
+### GetGoodputOk
+
+`func (o *InlineResponse20037) GetGoodputOk() (*int32, bool)`
+
+GetGoodputOk returns a tuple with the Goodput field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGoodput
+
+`func (o *InlineResponse20037) SetGoodput(v int32)`
+
+SetGoodput sets Goodput field to given value.
+
+### HasGoodput
+
+`func (o *InlineResponse20037) HasGoodput() bool`
+
+HasGoodput returns a boolean if a field has been set.
+
+### GetJitter
+
+`func (o *InlineResponse20037) GetJitter() float32`
+
+GetJitter returns the Jitter field if non-nil, zero value otherwise.
+
+### GetJitterOk
+
+`func (o *InlineResponse20037) GetJitterOk() (*float32, bool)`
+
+GetJitterOk returns a tuple with the Jitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJitter
+
+`func (o *InlineResponse20037) SetJitter(v float32)`
+
+SetJitter sets Jitter field to given value.
+
+### HasJitter
+
+`func (o *InlineResponse20037) HasJitter() bool`
+
+HasJitter returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

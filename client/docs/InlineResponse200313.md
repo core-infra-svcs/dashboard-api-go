@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | Pointer to **string** | The secure unique order claim number | [optional] 
-**Number** | Pointer to **string** | Order Number | [optional] 
-**Shipping** | Pointer to [**InlineResponse200313Shipping**](InlineResponse200313Shipping.md) |  | [optional] 
-**Subscriptions** | Pointer to [**[]InlineResponse200312Subscriptions**](InlineResponse200312Subscriptions.md) | All subscriptions contained in this order | [optional] 
+**Id** | Pointer to **string** | Monitored media server id | [optional] 
+**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
+**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200313WithDefaults instantiates a new InlineResponse200313 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetId
 
-`func (o *InlineResponse200313) GetClaimId() string`
+`func (o *InlineResponse200313) GetId() string`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetIdOk
 
-`func (o *InlineResponse200313) GetClaimIdOk() (*string, bool)`
+`func (o *InlineResponse200313) GetIdOk() (*string, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetId
 
-`func (o *InlineResponse200313) SetClaimId(v string)`
+`func (o *InlineResponse200313) SetId(v string)`
 
-SetClaimId sets ClaimId field to given value.
+SetId sets Id field to given value.
 
-### HasClaimId
+### HasId
 
-`func (o *InlineResponse200313) HasClaimId() bool`
+`func (o *InlineResponse200313) HasId() bool`
 
-HasClaimId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetNumber
+### GetName
 
-`func (o *InlineResponse200313) GetNumber() string`
+`func (o *InlineResponse200313) GetName() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetNameOk
 
-`func (o *InlineResponse200313) GetNumberOk() (*string, bool)`
+`func (o *InlineResponse200313) GetNameOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetName
 
-`func (o *InlineResponse200313) SetNumber(v string)`
+`func (o *InlineResponse200313) SetName(v string)`
 
-SetNumber sets Number field to given value.
+SetName sets Name field to given value.
 
-### HasNumber
+### HasName
 
-`func (o *InlineResponse200313) HasNumber() bool`
+`func (o *InlineResponse200313) HasName() bool`
 
-HasNumber returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetShipping
+### GetAddress
 
-`func (o *InlineResponse200313) GetShipping() InlineResponse200313Shipping`
+`func (o *InlineResponse200313) GetAddress() string`
 
-GetShipping returns the Shipping field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetShippingOk
+### GetAddressOk
 
-`func (o *InlineResponse200313) GetShippingOk() (*InlineResponse200313Shipping, bool)`
+`func (o *InlineResponse200313) GetAddressOk() (*string, bool)`
 
-GetShippingOk returns a tuple with the Shipping field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShipping
+### SetAddress
 
-`func (o *InlineResponse200313) SetShipping(v InlineResponse200313Shipping)`
+`func (o *InlineResponse200313) SetAddress(v string)`
 
-SetShipping sets Shipping field to given value.
+SetAddress sets Address field to given value.
 
-### HasShipping
+### HasAddress
 
-`func (o *InlineResponse200313) HasShipping() bool`
+`func (o *InlineResponse200313) HasAddress() bool`
 
-HasShipping returns a boolean if a field has been set.
+HasAddress returns a boolean if a field has been set.
 
-### GetSubscriptions
+### GetBestEffortMonitoringEnabled
 
-`func (o *InlineResponse200313) GetSubscriptions() []InlineResponse200312Subscriptions`
+`func (o *InlineResponse200313) GetBestEffortMonitoringEnabled() bool`
 
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
 
-### GetSubscriptionsOk
+### GetBestEffortMonitoringEnabledOk
 
-`func (o *InlineResponse200313) GetSubscriptionsOk() (*[]InlineResponse200312Subscriptions, bool)`
+`func (o *InlineResponse200313) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
 
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptions
+### SetBestEffortMonitoringEnabled
 
-`func (o *InlineResponse200313) SetSubscriptions(v []InlineResponse200312Subscriptions)`
+`func (o *InlineResponse200313) SetBestEffortMonitoringEnabled(v bool)`
 
-SetSubscriptions sets Subscriptions field to given value.
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
 
-### HasSubscriptions
+### HasBestEffortMonitoringEnabled
 
-`func (o *InlineResponse200313) HasSubscriptions() bool`
+`func (o *InlineResponse200313) HasBestEffortMonitoringEnabled() bool`
 
-HasSubscriptions returns a boolean if a field has been set.
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

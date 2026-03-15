@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
-**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
-**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**InlineResponse200220Operator**](InlineResponse200220Operator.md) |  | [optional] 
+**Venue** | Pointer to [**InlineResponse200220Venue**](InlineResponse200220Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]InlineResponse200220MccMncs**](InlineResponse200220MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]InlineResponse200220NaiRealms**](InlineResponse200220NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
@@ -29,130 +32,205 @@ NewInlineResponse200220WithDefaults instantiates a new InlineResponse200220 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetEnabled
 
-`func (o *InlineResponse200220) GetStartTs() time.Time`
+`func (o *InlineResponse200220) GetEnabled() bool`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200220) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200220) GetEnabledOk() (*bool, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetEnabled
 
-`func (o *InlineResponse200220) SetStartTs(v time.Time)`
+`func (o *InlineResponse200220) SetEnabled(v bool)`
 
-SetStartTs sets StartTs field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasStartTs
+### HasEnabled
 
-`func (o *InlineResponse200220) HasStartTs() bool`
+`func (o *InlineResponse200220) HasEnabled() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetEndTs
+### GetOperator
 
-`func (o *InlineResponse200220) GetEndTs() time.Time`
+`func (o *InlineResponse200220) GetOperator() InlineResponse200220Operator`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetOperatorOk
 
-`func (o *InlineResponse200220) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200220) GetOperatorOk() (*InlineResponse200220Operator, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetOperator
 
-`func (o *InlineResponse200220) SetEndTs(v time.Time)`
+`func (o *InlineResponse200220) SetOperator(v InlineResponse200220Operator)`
 
-SetEndTs sets EndTs field to given value.
+SetOperator sets Operator field to given value.
 
-### HasEndTs
+### HasOperator
 
-`func (o *InlineResponse200220) HasEndTs() bool`
+`func (o *InlineResponse200220) HasOperator() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasOperator returns a boolean if a field has been set.
 
-### GetTotalKbps
+### GetVenue
 
-`func (o *InlineResponse200220) GetTotalKbps() int32`
+`func (o *InlineResponse200220) GetVenue() InlineResponse200220Venue`
 
-GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-### GetTotalKbpsOk
+### GetVenueOk
 
-`func (o *InlineResponse200220) GetTotalKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200220) GetVenueOk() (*InlineResponse200220Venue, bool)`
 
-GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotalKbps
+### SetVenue
 
-`func (o *InlineResponse200220) SetTotalKbps(v int32)`
+`func (o *InlineResponse200220) SetVenue(v InlineResponse200220Venue)`
 
-SetTotalKbps sets TotalKbps field to given value.
+SetVenue sets Venue field to given value.
 
-### HasTotalKbps
+### HasVenue
 
-`func (o *InlineResponse200220) HasTotalKbps() bool`
+`func (o *InlineResponse200220) HasVenue() bool`
 
-HasTotalKbps returns a boolean if a field has been set.
+HasVenue returns a boolean if a field has been set.
 
-### GetSentKbps
+### GetNetworkAccessType
 
-`func (o *InlineResponse200220) GetSentKbps() int32`
+`func (o *InlineResponse200220) GetNetworkAccessType() string`
 
-GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
 
-### GetSentKbpsOk
+### GetNetworkAccessTypeOk
 
-`func (o *InlineResponse200220) GetSentKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200220) GetNetworkAccessTypeOk() (*string, bool)`
 
-GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSentKbps
+### SetNetworkAccessType
 
-`func (o *InlineResponse200220) SetSentKbps(v int32)`
+`func (o *InlineResponse200220) SetNetworkAccessType(v string)`
 
-SetSentKbps sets SentKbps field to given value.
+SetNetworkAccessType sets NetworkAccessType field to given value.
 
-### HasSentKbps
+### HasNetworkAccessType
 
-`func (o *InlineResponse200220) HasSentKbps() bool`
+`func (o *InlineResponse200220) HasNetworkAccessType() bool`
 
-HasSentKbps returns a boolean if a field has been set.
+HasNetworkAccessType returns a boolean if a field has been set.
 
-### GetReceivedKbps
+### GetDomains
 
-`func (o *InlineResponse200220) GetReceivedKbps() int32`
+`func (o *InlineResponse200220) GetDomains() []string`
 
-GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetReceivedKbpsOk
+### GetDomainsOk
 
-`func (o *InlineResponse200220) GetReceivedKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200220) GetDomainsOk() (*[]string, bool)`
 
-GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceivedKbps
+### SetDomains
 
-`func (o *InlineResponse200220) SetReceivedKbps(v int32)`
+`func (o *InlineResponse200220) SetDomains(v []string)`
 
-SetReceivedKbps sets ReceivedKbps field to given value.
+SetDomains sets Domains field to given value.
 
-### HasReceivedKbps
+### HasDomains
 
-`func (o *InlineResponse200220) HasReceivedKbps() bool`
+`func (o *InlineResponse200220) HasDomains() bool`
 
-HasReceivedKbps returns a boolean if a field has been set.
+HasDomains returns a boolean if a field has been set.
+
+### GetRoamConsortOis
+
+`func (o *InlineResponse200220) GetRoamConsortOis() []string`
+
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
+
+### GetRoamConsortOisOk
+
+`func (o *InlineResponse200220) GetRoamConsortOisOk() (*[]string, bool)`
+
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRoamConsortOis
+
+`func (o *InlineResponse200220) SetRoamConsortOis(v []string)`
+
+SetRoamConsortOis sets RoamConsortOis field to given value.
+
+### HasRoamConsortOis
+
+`func (o *InlineResponse200220) HasRoamConsortOis() bool`
+
+HasRoamConsortOis returns a boolean if a field has been set.
+
+### GetMccMncs
+
+`func (o *InlineResponse200220) GetMccMncs() []InlineResponse200220MccMncs`
+
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
+
+### GetMccMncsOk
+
+`func (o *InlineResponse200220) GetMccMncsOk() (*[]InlineResponse200220MccMncs, bool)`
+
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMccMncs
+
+`func (o *InlineResponse200220) SetMccMncs(v []InlineResponse200220MccMncs)`
+
+SetMccMncs sets MccMncs field to given value.
+
+### HasMccMncs
+
+`func (o *InlineResponse200220) HasMccMncs() bool`
+
+HasMccMncs returns a boolean if a field has been set.
+
+### GetNaiRealms
+
+`func (o *InlineResponse200220) GetNaiRealms() []InlineResponse200220NaiRealms`
+
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
+
+### GetNaiRealmsOk
+
+`func (o *InlineResponse200220) GetNaiRealmsOk() (*[]InlineResponse200220NaiRealms, bool)`
+
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNaiRealms
+
+`func (o *InlineResponse200220) SetNaiRealms(v []InlineResponse200220NaiRealms)`
+
+SetNaiRealms sets NaiRealms field to given value.
+
+### HasNaiRealms
+
+`func (o *InlineResponse200220) HasNaiRealms() bool`
+
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

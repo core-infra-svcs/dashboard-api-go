@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Name of the Application Category | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
+**Items** | Pointer to [**[]InlineResponse200347Items**](InlineResponse200347Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse200347WithDefaults instantiates a new InlineResponse200347 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetItems
 
-`func (o *InlineResponse200347) GetCategory() string`
+`func (o *InlineResponse200347) GetItems() []InlineResponse200347Items`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetItemsOk
 
-`func (o *InlineResponse200347) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200347) GetItemsOk() (*[]InlineResponse200347Items, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetItems
 
-`func (o *InlineResponse200347) SetCategory(v string)`
+`func (o *InlineResponse200347) SetItems(v []InlineResponse200347Items)`
 
-SetCategory sets Category field to given value.
+SetItems sets Items field to given value.
 
-### HasCategory
+### HasItems
 
-`func (o *InlineResponse200347) HasCategory() bool`
+`func (o *InlineResponse200347) HasItems() bool`
 
-HasCategory returns a boolean if a field has been set.
-
-### GetTotal
-
-`func (o *InlineResponse200347) GetTotal() float32`
-
-GetTotal returns the Total field if non-nil, zero value otherwise.
-
-### GetTotalOk
-
-`func (o *InlineResponse200347) GetTotalOk() (*float32, bool)`
-
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTotal
-
-`func (o *InlineResponse200347) SetTotal(v float32)`
-
-SetTotal sets Total field to given value.
-
-### HasTotal
-
-`func (o *InlineResponse200347) HasTotal() bool`
-
-HasTotal returns a boolean if a field has been set.
-
-### GetDownstream
-
-`func (o *InlineResponse200347) GetDownstream() float32`
-
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
-
-### GetDownstreamOk
-
-`func (o *InlineResponse200347) GetDownstreamOk() (*float32, bool)`
-
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownstream
-
-`func (o *InlineResponse200347) SetDownstream(v float32)`
-
-SetDownstream sets Downstream field to given value.
-
-### HasDownstream
-
-`func (o *InlineResponse200347) HasDownstream() bool`
-
-HasDownstream returns a boolean if a field has been set.
-
-### GetUpstream
-
-`func (o *InlineResponse200347) GetUpstream() float32`
-
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
-
-### GetUpstreamOk
-
-`func (o *InlineResponse200347) GetUpstreamOk() (*float32, bool)`
-
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpstream
-
-`func (o *InlineResponse200347) SetUpstream(v float32)`
-
-SetUpstream sets Upstream field to given value.
-
-### HasUpstream
-
-`func (o *InlineResponse200347) HasUpstream() bool`
-
-HasUpstream returns a boolean if a field has been set.
-
-### GetPercentage
-
-`func (o *InlineResponse200347) GetPercentage() float32`
-
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
-
-### GetPercentageOk
-
-`func (o *InlineResponse200347) GetPercentageOk() (*float32, bool)`
-
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPercentage
-
-`func (o *InlineResponse200347) SetPercentage(v float32)`
-
-SetPercentage sets Percentage field to given value.
-
-### HasPercentage
-
-`func (o *InlineResponse200347) HasPercentage() bool`
-
-HasPercentage returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse200102UpgradeWindow**](InlineResponse200102UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**InlineResponse200102Products**](InlineResponse200102Products.md) |  | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
+**PoliciesBySsid** | Pointer to [**[]InlineResponse200102PoliciesBySsid**](InlineResponse200102PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetMac
 
-`func (o *InlineResponse200102) GetUpgradeWindow() InlineResponse200102UpgradeWindow`
+`func (o *InlineResponse200102) GetMac() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetMacOk
 
-`func (o *InlineResponse200102) GetUpgradeWindowOk() (*InlineResponse200102UpgradeWindow, bool)`
+`func (o *InlineResponse200102) GetMacOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetMac
 
-`func (o *InlineResponse200102) SetUpgradeWindow(v InlineResponse200102UpgradeWindow)`
+`func (o *InlineResponse200102) SetMac(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetMac sets Mac field to given value.
 
-### HasUpgradeWindow
+### HasMac
 
-`func (o *InlineResponse200102) HasUpgradeWindow() bool`
+`func (o *InlineResponse200102) HasMac() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetTimezone
+### GetDevicePolicy
 
-`func (o *InlineResponse200102) GetTimezone() string`
+`func (o *InlineResponse200102) GetDevicePolicy() string`
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetTimezoneOk
+### GetDevicePolicyOk
 
-`func (o *InlineResponse200102) GetTimezoneOk() (*string, bool)`
+`func (o *InlineResponse200102) GetDevicePolicyOk() (*string, bool)`
 
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetDevicePolicy
 
-`func (o *InlineResponse200102) SetTimezone(v string)`
+`func (o *InlineResponse200102) SetDevicePolicy(v string)`
 
-SetTimezone sets Timezone field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasTimezone
+### HasDevicePolicy
 
-`func (o *InlineResponse200102) HasTimezone() bool`
+`func (o *InlineResponse200102) HasDevicePolicy() bool`
 
-HasTimezone returns a boolean if a field has been set.
+HasDevicePolicy returns a boolean if a field has been set.
 
-### GetProducts
+### GetGroupPolicyId
 
-`func (o *InlineResponse200102) GetProducts() InlineResponse200102Products`
+`func (o *InlineResponse200102) GetGroupPolicyId() string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse200102) GetProductsOk() (*InlineResponse200102Products, bool)`
+`func (o *InlineResponse200102) GetGroupPolicyIdOk() (*string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetGroupPolicyId
 
-`func (o *InlineResponse200102) SetProducts(v InlineResponse200102Products)`
+`func (o *InlineResponse200102) SetGroupPolicyId(v string)`
 
-SetProducts sets Products field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasProducts
+### HasGroupPolicyId
 
-`func (o *InlineResponse200102) HasProducts() bool`
+`func (o *InlineResponse200102) HasGroupPolicyId() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetPoliciesBySsid
+
+`func (o *InlineResponse200102) GetPoliciesBySsid() []InlineResponse200102PoliciesBySsid`
+
+GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+
+### GetPoliciesBySsidOk
+
+`func (o *InlineResponse200102) GetPoliciesBySsidOk() (*[]InlineResponse200102PoliciesBySsid, bool)`
+
+GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySsid
+
+`func (o *InlineResponse200102) SetPoliciesBySsid(v []InlineResponse200102PoliciesBySsid)`
+
+SetPoliciesBySsid sets PoliciesBySsid field to given value.
+
+### HasPoliciesBySsid
+
+`func (o *InlineResponse200102) HasPoliciesBySsid() bool`
+
+HasPoliciesBySsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
-**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
-**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
-**Events** | Pointer to [**[]InlineResponse200100Events**](InlineResponse200100Events.md) | An array of events that took place in the network. | [optional] 
+**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
+**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
+**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
+**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200100WithDefaults instantiates a new InlineResponse200100 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetClientId
 
-`func (o *InlineResponse200100) GetMessage() string`
+`func (o *InlineResponse200100) GetClientId() string`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetClientIdOk
 
-`func (o *InlineResponse200100) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse200100) GetClientIdOk() (*string, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetClientId
 
-`func (o *InlineResponse200100) SetMessage(v string)`
+`func (o *InlineResponse200100) SetClientId(v string)`
 
-SetMessage sets Message field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasMessage
+### HasClientId
 
-`func (o *InlineResponse200100) HasMessage() bool`
+`func (o *InlineResponse200100) HasClientId() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetPageStartAt
+### GetClientIp
 
-`func (o *InlineResponse200100) GetPageStartAt() string`
+`func (o *InlineResponse200100) GetClientIp() string`
 
-GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
 
-### GetPageStartAtOk
+### GetClientIpOk
 
-`func (o *InlineResponse200100) GetPageStartAtOk() (*string, bool)`
+`func (o *InlineResponse200100) GetClientIpOk() (*string, bool)`
 
-GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageStartAt
+### SetClientIp
 
-`func (o *InlineResponse200100) SetPageStartAt(v string)`
+`func (o *InlineResponse200100) SetClientIp(v string)`
 
-SetPageStartAt sets PageStartAt field to given value.
+SetClientIp sets ClientIp field to given value.
 
-### HasPageStartAt
+### HasClientIp
 
-`func (o *InlineResponse200100) HasPageStartAt() bool`
+`func (o *InlineResponse200100) HasClientIp() bool`
 
-HasPageStartAt returns a boolean if a field has been set.
+HasClientIp returns a boolean if a field has been set.
 
-### GetPageEndAt
+### GetClientMac
 
-`func (o *InlineResponse200100) GetPageEndAt() string`
+`func (o *InlineResponse200100) GetClientMac() string`
 
-GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
 
-### GetPageEndAtOk
+### GetClientMacOk
 
-`func (o *InlineResponse200100) GetPageEndAtOk() (*string, bool)`
+`func (o *InlineResponse200100) GetClientMacOk() (*string, bool)`
 
-GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageEndAt
+### SetClientMac
 
-`func (o *InlineResponse200100) SetPageEndAt(v string)`
+`func (o *InlineResponse200100) SetClientMac(v string)`
 
-SetPageEndAt sets PageEndAt field to given value.
+SetClientMac sets ClientMac field to given value.
 
-### HasPageEndAt
+### HasClientMac
 
-`func (o *InlineResponse200100) HasPageEndAt() bool`
+`func (o *InlineResponse200100) HasClientMac() bool`
 
-HasPageEndAt returns a boolean if a field has been set.
+HasClientMac returns a boolean if a field has been set.
 
-### GetEvents
+### GetUsageHistory
 
-`func (o *InlineResponse200100) GetEvents() []InlineResponse200100Events`
+`func (o *InlineResponse200100) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
 
-GetEvents returns the Events field if non-nil, zero value otherwise.
+GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
 
-### GetEventsOk
+### GetUsageHistoryOk
 
-`func (o *InlineResponse200100) GetEventsOk() (*[]InlineResponse200100Events, bool)`
+`func (o *InlineResponse200100) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
 
-GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEvents
+### SetUsageHistory
 
-`func (o *InlineResponse200100) SetEvents(v []InlineResponse200100Events)`
+`func (o *InlineResponse200100) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
 
-SetEvents sets Events field to given value.
+SetUsageHistory sets UsageHistory field to given value.
 
-### HasEvents
+### HasUsageHistory
 
-`func (o *InlineResponse200100) HasEvents() bool`
+`func (o *InlineResponse200100) HasUsageHistory() bool`
 
-HasEvents returns a boolean if a field has been set.
+HasUsageHistory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

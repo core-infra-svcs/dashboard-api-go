@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
-**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
+**RendezvousPointId** | Pointer to **string** | The id. | [optional] 
+**Serial** | Pointer to **string** | The serial. | [optional] 
+**InterfaceName** | Pointer to **string** | The name of the interface to use. | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address of the interface to use. | [optional] 
+**MulticastGroup** | Pointer to **string** | &#39;Any&#39;, or the IP address of a multicast group. | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200176WithDefaults instantiates a new InlineResponse200176 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetRendezvousPointId
 
-`func (o *InlineResponse200176) GetBroadcastThreshold() int32`
+`func (o *InlineResponse200176) GetRendezvousPointId() string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetRendezvousPointId returns the RendezvousPointId field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetRendezvousPointIdOk
 
-`func (o *InlineResponse200176) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200176) GetRendezvousPointIdOk() (*string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetRendezvousPointIdOk returns a tuple with the RendezvousPointId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetRendezvousPointId
 
-`func (o *InlineResponse200176) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse200176) SetRendezvousPointId(v string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetRendezvousPointId sets RendezvousPointId field to given value.
 
-### HasBroadcastThreshold
+### HasRendezvousPointId
 
-`func (o *InlineResponse200176) HasBroadcastThreshold() bool`
+`func (o *InlineResponse200176) HasRendezvousPointId() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasRendezvousPointId returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetSerial
 
-`func (o *InlineResponse200176) GetMulticastThreshold() int32`
+`func (o *InlineResponse200176) GetSerial() string`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetSerialOk
 
-`func (o *InlineResponse200176) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200176) GetSerialOk() (*string, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetSerial
 
-`func (o *InlineResponse200176) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse200176) SetSerial(v string)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetSerial sets Serial field to given value.
 
-### HasMulticastThreshold
+### HasSerial
 
-`func (o *InlineResponse200176) HasMulticastThreshold() bool`
+`func (o *InlineResponse200176) HasSerial() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetUnknownUnicastThreshold
+### GetInterfaceName
 
-`func (o *InlineResponse200176) GetUnknownUnicastThreshold() int32`
+`func (o *InlineResponse200176) GetInterfaceName() string`
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+GetInterfaceName returns the InterfaceName field if non-nil, zero value otherwise.
 
-### GetUnknownUnicastThresholdOk
+### GetInterfaceNameOk
 
-`func (o *InlineResponse200176) GetUnknownUnicastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200176) GetInterfaceNameOk() (*string, bool)`
 
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetInterfaceNameOk returns a tuple with the InterfaceName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetInterfaceName
 
-`func (o *InlineResponse200176) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineResponse200176) SetInterfaceName(v string)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetInterfaceName sets InterfaceName field to given value.
 
-### HasUnknownUnicastThreshold
+### HasInterfaceName
 
-`func (o *InlineResponse200176) HasUnknownUnicastThreshold() bool`
+`func (o *InlineResponse200176) HasInterfaceName() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasInterfaceName returns a boolean if a field has been set.
 
-### GetTreatTheseTrafficTypesAsOneThreshold
+### GetInterfaceIp
 
-`func (o *InlineResponse200176) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+`func (o *InlineResponse200176) GetInterfaceIp() string`
 
-GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetTreatTheseTrafficTypesAsOneThresholdOk
+### GetInterfaceIpOk
 
-`func (o *InlineResponse200176) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
+`func (o *InlineResponse200176) GetInterfaceIpOk() (*string, bool)`
 
-GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTreatTheseTrafficTypesAsOneThreshold
+### SetInterfaceIp
 
-`func (o *InlineResponse200176) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+`func (o *InlineResponse200176) SetInterfaceIp(v string)`
 
-SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasTreatTheseTrafficTypesAsOneThreshold
+### HasInterfaceIp
 
-`func (o *InlineResponse200176) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+`func (o *InlineResponse200176) HasInterfaceIp() bool`
 
-HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
+
+### GetMulticastGroup
+
+`func (o *InlineResponse200176) GetMulticastGroup() string`
+
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
+
+### GetMulticastGroupOk
+
+`func (o *InlineResponse200176) GetMulticastGroupOk() (*string, bool)`
+
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastGroup
+
+`func (o *InlineResponse200176) SetMulticastGroup(v string)`
+
+SetMulticastGroup sets MulticastGroup field to given value.
+
+### HasMulticastGroup
+
+`func (o *InlineResponse200176) HasMulticastGroup() bool`
+
+HasMulticastGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

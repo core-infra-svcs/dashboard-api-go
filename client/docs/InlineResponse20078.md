@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlansEnabled** | Pointer to **bool** | Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse20078BandwidthLimits**](InlineResponse20078BandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20078WithDefaults instantiates a new InlineResponse20078 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlansEnabled
+### GetBandwidthLimits
 
-`func (o *InlineResponse20078) GetVlansEnabled() bool`
+`func (o *InlineResponse20078) GetBandwidthLimits() InlineResponse20078BandwidthLimits`
 
-GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetVlansEnabledOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineResponse20078) GetVlansEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20078) GetBandwidthLimitsOk() (*InlineResponse20078BandwidthLimits, bool)`
 
-GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlansEnabled
+### SetBandwidthLimits
 
-`func (o *InlineResponse20078) SetVlansEnabled(v bool)`
+`func (o *InlineResponse20078) SetBandwidthLimits(v InlineResponse20078BandwidthLimits)`
 
-SetVlansEnabled sets VlansEnabled field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasVlansEnabled
+### HasBandwidthLimits
 
-`func (o *InlineResponse20078) HasVlansEnabled() bool`
+`func (o *InlineResponse20078) HasBandwidthLimits() bool`
 
-HasVlansEnabled returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

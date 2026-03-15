@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Splash theme asset id | [optional] 
-**Name** | Pointer to **string** | Splash theme asset name | [optional] 
-**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
+**Items** | [**[]InlineResponse200342Items**](InlineResponse200342Items.md) | The organization&#39;s RSSI information between sensor-gateway pairs. | 
+**Meta** | Pointer to [**InlineResponse200342Meta**](InlineResponse200342Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200342
 
-`func NewInlineResponse200342() *InlineResponse200342`
+`func NewInlineResponse200342(items []InlineResponse200342Items, ) *InlineResponse200342`
 
 NewInlineResponse200342 instantiates a new InlineResponse200342 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineResponse200342WithDefaults instantiates a new InlineResponse200342 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetItems
 
-`func (o *InlineResponse200342) GetId() string`
+`func (o *InlineResponse200342) GetItems() []InlineResponse200342Items`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200342) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200342) GetItemsOk() (*[]InlineResponse200342Items, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetItems
 
-`func (o *InlineResponse200342) SetId(v string)`
+`func (o *InlineResponse200342) SetItems(v []InlineResponse200342Items)`
 
-SetId sets Id field to given value.
+SetItems sets Items field to given value.
 
-### HasId
 
-`func (o *InlineResponse200342) HasId() bool`
+### GetMeta
 
-HasId returns a boolean if a field has been set.
+`func (o *InlineResponse200342) GetMeta() InlineResponse200342Meta`
 
-### GetName
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200342) GetName() string`
+### GetMetaOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200342) GetMetaOk() (*InlineResponse200342Meta, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200342) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200342) SetName(v string)`
+`func (o *InlineResponse200342) SetMeta(v InlineResponse200342Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200342) HasName() bool`
+`func (o *InlineResponse200342) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetFileData
-
-`func (o *InlineResponse200342) GetFileData() string`
-
-GetFileData returns the FileData field if non-nil, zero value otherwise.
-
-### GetFileDataOk
-
-`func (o *InlineResponse200342) GetFileDataOk() (*string, bool)`
-
-GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFileData
-
-`func (o *InlineResponse200342) SetFileData(v string)`
-
-SetFileData sets FileData field to given value.
-
-### HasFileData
-
-`func (o *InlineResponse200342) HasFileData() bool`
-
-HasFileData returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

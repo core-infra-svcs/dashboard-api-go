@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
-**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
-**PowerExceptions** | Pointer to [**[]InlineResponse200172PowerExceptions**](InlineResponse200172PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
-**UplinkClientSampling** | Pointer to [**InlineResponse200172UplinkClientSampling**](InlineResponse200172UplinkClientSampling.md) |  | [optional] 
-**MacBlocklist** | Pointer to [**InlineResponse200172MacBlocklist**](InlineResponse200172MacBlocklist.md) |  | [optional] 
-**UplinkSelection** | Pointer to [**InlineResponse200172UplinkSelection**](InlineResponse200172UplinkSelection.md) |  | [optional] 
+**Id** | Pointer to **string** | Switch port schedule ID | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Switch port schedule name | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse200172WithDefaults instantiates a new InlineResponse200172 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlan
+### GetId
 
-`func (o *InlineResponse200172) GetVlan() int32`
+`func (o *InlineResponse200172) GetId() string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetIdOk
 
-`func (o *InlineResponse200172) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200172) GetIdOk() (*string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetId
 
-`func (o *InlineResponse200172) SetVlan(v int32)`
+`func (o *InlineResponse200172) SetId(v string)`
 
-SetVlan sets Vlan field to given value.
+SetId sets Id field to given value.
 
-### HasVlan
+### HasId
 
-`func (o *InlineResponse200172) HasVlan() bool`
+`func (o *InlineResponse200172) HasId() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUseCombinedPower
+### GetNetworkId
 
-`func (o *InlineResponse200172) GetUseCombinedPower() bool`
+`func (o *InlineResponse200172) GetNetworkId() string`
 
-GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetUseCombinedPowerOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200172) GetUseCombinedPowerOk() (*bool, bool)`
+`func (o *InlineResponse200172) GetNetworkIdOk() (*string, bool)`
 
-GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseCombinedPower
+### SetNetworkId
 
-`func (o *InlineResponse200172) SetUseCombinedPower(v bool)`
+`func (o *InlineResponse200172) SetNetworkId(v string)`
 
-SetUseCombinedPower sets UseCombinedPower field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasUseCombinedPower
+### HasNetworkId
 
-`func (o *InlineResponse200172) HasUseCombinedPower() bool`
+`func (o *InlineResponse200172) HasNetworkId() bool`
 
-HasUseCombinedPower returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetPowerExceptions
+### GetName
 
-`func (o *InlineResponse200172) GetPowerExceptions() []InlineResponse200172PowerExceptions`
+`func (o *InlineResponse200172) GetName() string`
 
-GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPowerExceptionsOk
+### GetNameOk
 
-`func (o *InlineResponse200172) GetPowerExceptionsOk() (*[]InlineResponse200172PowerExceptions, bool)`
+`func (o *InlineResponse200172) GetNameOk() (*string, bool)`
 
-GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPowerExceptions
+### SetName
 
-`func (o *InlineResponse200172) SetPowerExceptions(v []InlineResponse200172PowerExceptions)`
+`func (o *InlineResponse200172) SetName(v string)`
 
-SetPowerExceptions sets PowerExceptions field to given value.
+SetName sets Name field to given value.
 
-### HasPowerExceptions
+### HasName
 
-`func (o *InlineResponse200172) HasPowerExceptions() bool`
+`func (o *InlineResponse200172) HasName() bool`
 
-HasPowerExceptions returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUplinkClientSampling
+### GetPortSchedule
 
-`func (o *InlineResponse200172) GetUplinkClientSampling() InlineResponse200172UplinkClientSampling`
+`func (o *InlineResponse200172) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
 
-GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-### GetUplinkClientSamplingOk
+### GetPortScheduleOk
 
-`func (o *InlineResponse200172) GetUplinkClientSamplingOk() (*InlineResponse200172UplinkClientSampling, bool)`
+`func (o *InlineResponse200172) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
 
-GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkClientSampling
+### SetPortSchedule
 
-`func (o *InlineResponse200172) SetUplinkClientSampling(v InlineResponse200172UplinkClientSampling)`
+`func (o *InlineResponse200172) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
 
-SetUplinkClientSampling sets UplinkClientSampling field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
-### HasUplinkClientSampling
+### HasPortSchedule
 
-`func (o *InlineResponse200172) HasUplinkClientSampling() bool`
+`func (o *InlineResponse200172) HasPortSchedule() bool`
 
-HasUplinkClientSampling returns a boolean if a field has been set.
-
-### GetMacBlocklist
-
-`func (o *InlineResponse200172) GetMacBlocklist() InlineResponse200172MacBlocklist`
-
-GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
-
-### GetMacBlocklistOk
-
-`func (o *InlineResponse200172) GetMacBlocklistOk() (*InlineResponse200172MacBlocklist, bool)`
-
-GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMacBlocklist
-
-`func (o *InlineResponse200172) SetMacBlocklist(v InlineResponse200172MacBlocklist)`
-
-SetMacBlocklist sets MacBlocklist field to given value.
-
-### HasMacBlocklist
-
-`func (o *InlineResponse200172) HasMacBlocklist() bool`
-
-HasMacBlocklist returns a boolean if a field has been set.
-
-### GetUplinkSelection
-
-`func (o *InlineResponse200172) GetUplinkSelection() InlineResponse200172UplinkSelection`
-
-GetUplinkSelection returns the UplinkSelection field if non-nil, zero value otherwise.
-
-### GetUplinkSelectionOk
-
-`func (o *InlineResponse200172) GetUplinkSelectionOk() (*InlineResponse200172UplinkSelection, bool)`
-
-GetUplinkSelectionOk returns a tuple with the UplinkSelection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinkSelection
-
-`func (o *InlineResponse200172) SetUplinkSelection(v InlineResponse200172UplinkSelection)`
-
-SetUplinkSelection sets UplinkSelection field to given value.
-
-### HasUplinkSelection
-
-`func (o *InlineResponse200172) HasUplinkSelection() bool`
-
-HasUplinkSelection returns a boolean if a field has been set.
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

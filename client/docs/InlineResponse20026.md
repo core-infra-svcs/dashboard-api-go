@@ -4,13 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MulticastRoutingId** | Pointer to **string** | ID of the Multicast routing request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this URL to check the status of your Multicast routing request. | [optional] 
-**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the Multicast routing request. | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse20026Interfaces**](InlineResponse20026Interfaces.md) | The interfaces that have PIM enabled | [optional] 
-**Routes** | Pointer to [**[]InlineResponse20026Routes**](InlineResponse20026Routes.md) | The multicast routes | [optional] 
-**Error** | Pointer to **string** | Description of the error. | [optional] 
+**Id** | Pointer to **string** | The ID of the client | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**Description** | Pointer to **string** | Short description of the client | [optional] 
+**MdnsName** | Pointer to **string** | The client&#39;s MDNS name | [optional] 
+**DhcpHostname** | Pointer to **string** | The client&#39;s DHCP hostname | [optional] 
+**User** | Pointer to **string** | The client user&#39;s name | [optional] 
+**Ip** | Pointer to **string** | The IP address of the client | [optional] 
+**Vlan** | Pointer to **string** | The client-assigned name of the VLAN the client is connected to | [optional] 
+**NamedVlan** | Pointer to **string** | The owner-assigned name of the VLAN the client is connected to | [optional] 
+**Switchport** | Pointer to **string** | The name of the switchport with clients on it, if the device is a switch | [optional] 
+**AdaptivePolicyGroup** | Pointer to **string** | A description of the adaptive policy group | [optional] 
+**Usage** | Pointer to [**DevicesSerialClientsUsage**](DevicesSerialClientsUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +36,305 @@ NewInlineResponse20026WithDefaults instantiates a new InlineResponse20026 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMulticastRoutingId
+### GetId
 
-`func (o *InlineResponse20026) GetMulticastRoutingId() string`
+`func (o *InlineResponse20026) GetId() string`
 
-GetMulticastRoutingId returns the MulticastRoutingId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetMulticastRoutingIdOk
+### GetIdOk
 
-`func (o *InlineResponse20026) GetMulticastRoutingIdOk() (*string, bool)`
+`func (o *InlineResponse20026) GetIdOk() (*string, bool)`
 
-GetMulticastRoutingIdOk returns a tuple with the MulticastRoutingId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastRoutingId
+### SetId
 
-`func (o *InlineResponse20026) SetMulticastRoutingId(v string)`
+`func (o *InlineResponse20026) SetId(v string)`
 
-SetMulticastRoutingId sets MulticastRoutingId field to given value.
+SetId sets Id field to given value.
 
-### HasMulticastRoutingId
+### HasId
 
-`func (o *InlineResponse20026) HasMulticastRoutingId() bool`
+`func (o *InlineResponse20026) HasId() bool`
 
-HasMulticastRoutingId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUrl
+### GetMac
 
-`func (o *InlineResponse20026) GetUrl() string`
+`func (o *InlineResponse20026) GetMac() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetMacOk
 
-`func (o *InlineResponse20026) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20026) GetMacOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetMac
 
-`func (o *InlineResponse20026) SetUrl(v string)`
+`func (o *InlineResponse20026) SetMac(v string)`
 
-SetUrl sets Url field to given value.
+SetMac sets Mac field to given value.
 
-### HasUrl
+### HasMac
 
-`func (o *InlineResponse20026) HasUrl() bool`
+`func (o *InlineResponse20026) HasMac() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetRequest
+### GetDescription
 
-`func (o *InlineResponse20026) GetRequest() InlineResponse2015Request`
+`func (o *InlineResponse20026) GetDescription() string`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20026) GetRequestOk() (*InlineResponse2015Request, bool)`
+`func (o *InlineResponse20026) GetDescriptionOk() (*string, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetDescription
 
-`func (o *InlineResponse20026) SetRequest(v InlineResponse2015Request)`
+`func (o *InlineResponse20026) SetDescription(v string)`
 
-SetRequest sets Request field to given value.
+SetDescription sets Description field to given value.
 
-### HasRequest
+### HasDescription
 
-`func (o *InlineResponse20026) HasRequest() bool`
+`func (o *InlineResponse20026) HasDescription() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetStatus
+### GetMdnsName
 
-`func (o *InlineResponse20026) GetStatus() string`
+`func (o *InlineResponse20026) GetMdnsName() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetMdnsName returns the MdnsName field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetMdnsNameOk
 
-`func (o *InlineResponse20026) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20026) GetMdnsNameOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetMdnsNameOk returns a tuple with the MdnsName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetMdnsName
 
-`func (o *InlineResponse20026) SetStatus(v string)`
+`func (o *InlineResponse20026) SetMdnsName(v string)`
 
-SetStatus sets Status field to given value.
+SetMdnsName sets MdnsName field to given value.
 
-### HasStatus
+### HasMdnsName
 
-`func (o *InlineResponse20026) HasStatus() bool`
+`func (o *InlineResponse20026) HasMdnsName() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasMdnsName returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetDhcpHostname
 
-`func (o *InlineResponse20026) GetInterfaces() []InlineResponse20026Interfaces`
+`func (o *InlineResponse20026) GetDhcpHostname() string`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetDhcpHostname returns the DhcpHostname field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetDhcpHostnameOk
 
-`func (o *InlineResponse20026) GetInterfacesOk() (*[]InlineResponse20026Interfaces, bool)`
+`func (o *InlineResponse20026) GetDhcpHostnameOk() (*string, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetDhcpHostnameOk returns a tuple with the DhcpHostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetDhcpHostname
 
-`func (o *InlineResponse20026) SetInterfaces(v []InlineResponse20026Interfaces)`
+`func (o *InlineResponse20026) SetDhcpHostname(v string)`
 
-SetInterfaces sets Interfaces field to given value.
+SetDhcpHostname sets DhcpHostname field to given value.
 
-### HasInterfaces
+### HasDhcpHostname
 
-`func (o *InlineResponse20026) HasInterfaces() bool`
+`func (o *InlineResponse20026) HasDhcpHostname() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasDhcpHostname returns a boolean if a field has been set.
 
-### GetRoutes
+### GetUser
 
-`func (o *InlineResponse20026) GetRoutes() []InlineResponse20026Routes`
+`func (o *InlineResponse20026) GetUser() string`
 
-GetRoutes returns the Routes field if non-nil, zero value otherwise.
+GetUser returns the User field if non-nil, zero value otherwise.
 
-### GetRoutesOk
+### GetUserOk
 
-`func (o *InlineResponse20026) GetRoutesOk() (*[]InlineResponse20026Routes, bool)`
+`func (o *InlineResponse20026) GetUserOk() (*string, bool)`
 
-GetRoutesOk returns a tuple with the Routes field if it's non-nil, zero value otherwise
+GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRoutes
+### SetUser
 
-`func (o *InlineResponse20026) SetRoutes(v []InlineResponse20026Routes)`
+`func (o *InlineResponse20026) SetUser(v string)`
 
-SetRoutes sets Routes field to given value.
+SetUser sets User field to given value.
 
-### HasRoutes
+### HasUser
 
-`func (o *InlineResponse20026) HasRoutes() bool`
+`func (o *InlineResponse20026) HasUser() bool`
 
-HasRoutes returns a boolean if a field has been set.
+HasUser returns a boolean if a field has been set.
 
-### GetError
+### GetIp
 
-`func (o *InlineResponse20026) GetError() string`
+`func (o *InlineResponse20026) GetIp() string`
 
-GetError returns the Error field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetErrorOk
+### GetIpOk
 
-`func (o *InlineResponse20026) GetErrorOk() (*string, bool)`
+`func (o *InlineResponse20026) GetIpOk() (*string, bool)`
 
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetError
+### SetIp
 
-`func (o *InlineResponse20026) SetError(v string)`
+`func (o *InlineResponse20026) SetIp(v string)`
 
-SetError sets Error field to given value.
+SetIp sets Ip field to given value.
 
-### HasError
+### HasIp
 
-`func (o *InlineResponse20026) HasError() bool`
+`func (o *InlineResponse20026) HasIp() bool`
 
-HasError returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse20026) GetVlan() string`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse20026) GetVlanOk() (*string, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse20026) SetVlan(v string)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse20026) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetNamedVlan
+
+`func (o *InlineResponse20026) GetNamedVlan() string`
+
+GetNamedVlan returns the NamedVlan field if non-nil, zero value otherwise.
+
+### GetNamedVlanOk
+
+`func (o *InlineResponse20026) GetNamedVlanOk() (*string, bool)`
+
+GetNamedVlanOk returns a tuple with the NamedVlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlan
+
+`func (o *InlineResponse20026) SetNamedVlan(v string)`
+
+SetNamedVlan sets NamedVlan field to given value.
+
+### HasNamedVlan
+
+`func (o *InlineResponse20026) HasNamedVlan() bool`
+
+HasNamedVlan returns a boolean if a field has been set.
+
+### GetSwitchport
+
+`func (o *InlineResponse20026) GetSwitchport() string`
+
+GetSwitchport returns the Switchport field if non-nil, zero value otherwise.
+
+### GetSwitchportOk
+
+`func (o *InlineResponse20026) GetSwitchportOk() (*string, bool)`
+
+GetSwitchportOk returns a tuple with the Switchport field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitchport
+
+`func (o *InlineResponse20026) SetSwitchport(v string)`
+
+SetSwitchport sets Switchport field to given value.
+
+### HasSwitchport
+
+`func (o *InlineResponse20026) HasSwitchport() bool`
+
+HasSwitchport returns a boolean if a field has been set.
+
+### GetAdaptivePolicyGroup
+
+`func (o *InlineResponse20026) GetAdaptivePolicyGroup() string`
+
+GetAdaptivePolicyGroup returns the AdaptivePolicyGroup field if non-nil, zero value otherwise.
+
+### GetAdaptivePolicyGroupOk
+
+`func (o *InlineResponse20026) GetAdaptivePolicyGroupOk() (*string, bool)`
+
+GetAdaptivePolicyGroupOk returns a tuple with the AdaptivePolicyGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdaptivePolicyGroup
+
+`func (o *InlineResponse20026) SetAdaptivePolicyGroup(v string)`
+
+SetAdaptivePolicyGroup sets AdaptivePolicyGroup field to given value.
+
+### HasAdaptivePolicyGroup
+
+`func (o *InlineResponse20026) HasAdaptivePolicyGroup() bool`
+
+HasAdaptivePolicyGroup returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse20026) GetUsage() DevicesSerialClientsUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse20026) GetUsageOk() (*DevicesSerialClientsUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse20026) SetUsage(v DevicesSerialClientsUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse20026) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

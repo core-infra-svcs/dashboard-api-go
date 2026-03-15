@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Serials** | **[]string** | List of AP serials | 
 **ProfileId** | **NullableString** | AP profile ID | 
 
 ## Methods
 
 ### NewInlineObject189
 
-`func NewInlineObject189(profileId NullableString, ) *InlineObject189`
+`func NewInlineObject189(serials []string, profileId NullableString, ) *InlineObject189`
 
 NewInlineObject189 instantiates a new InlineObject189 object
 This constructor will assign default values to properties that have it defined,
@@ -24,6 +25,26 @@ will change when the set of required properties is changed
 NewInlineObject189WithDefaults instantiates a new InlineObject189 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetSerials
+
+`func (o *InlineObject189) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject189) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject189) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
 
 ### GetProfileId
 

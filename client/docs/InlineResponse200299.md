@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
-**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
-**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200299LimitScopeToNetworks**](InlineResponse200299LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
-**OptOutEligibility** | Pointer to [**InlineResponse200299OptOutEligibility**](InlineResponse200299OptOutEligibility.md) |  | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
+**Mac** | Pointer to **string** | The device MAC address. | [optional] 
+**Name** | Pointer to **string** | The device name. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork.md) |  | [optional] 
+**ProductType** | Pointer to **string** | Device product type. | [optional] 
+**Serial** | Pointer to **string** | The device serial number. | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
+**Slots** | Pointer to [**[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots.md) | Information for the device&#39;s AC power supplies. | [optional] 
 
 ## Methods
 
@@ -29,130 +31,180 @@ NewInlineResponse200299WithDefaults instantiates a new InlineResponse200299 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMac
 
-`func (o *InlineResponse200299) GetId() string`
+`func (o *InlineResponse200299) GetMac() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMacOk
 
-`func (o *InlineResponse200299) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200299) GetMacOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMac
 
-`func (o *InlineResponse200299) SetId(v string)`
+`func (o *InlineResponse200299) SetMac(v string)`
 
-SetId sets Id field to given value.
+SetMac sets Mac field to given value.
 
-### HasId
+### HasMac
 
-`func (o *InlineResponse200299) HasId() bool`
+`func (o *InlineResponse200299) HasMac() bool`
 
-HasId returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetShortName
+### GetName
 
-`func (o *InlineResponse200299) GetShortName() string`
+`func (o *InlineResponse200299) GetName() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetNameOk
 
-`func (o *InlineResponse200299) GetShortNameOk() (*string, bool)`
+`func (o *InlineResponse200299) GetNameOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetName
 
-`func (o *InlineResponse200299) SetShortName(v string)`
+`func (o *InlineResponse200299) SetName(v string)`
 
-SetShortName sets ShortName field to given value.
+SetName sets Name field to given value.
 
-### HasShortName
+### HasName
 
-`func (o *InlineResponse200299) HasShortName() bool`
+`func (o *InlineResponse200299) HasName() bool`
 
-HasShortName returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLimitScopeToNetworks
+### GetNetwork
 
-`func (o *InlineResponse200299) GetLimitScopeToNetworks() []InlineResponse200299LimitScopeToNetworks`
+`func (o *InlineResponse200299) GetNetwork() OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetNetworkOk
 
-`func (o *InlineResponse200299) GetLimitScopeToNetworksOk() (*[]InlineResponse200299LimitScopeToNetworks, bool)`
+`func (o *InlineResponse200299) GetNetworkOk() (*OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetNetwork
 
-`func (o *InlineResponse200299) SetLimitScopeToNetworks(v []InlineResponse200299LimitScopeToNetworks)`
+`func (o *InlineResponse200299) SetNetwork(v OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetNetwork sets Network field to given value.
 
-### HasLimitScopeToNetworks
+### HasNetwork
 
-`func (o *InlineResponse200299) HasLimitScopeToNetworks() bool`
+`func (o *InlineResponse200299) HasNetwork() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetOptOutEligibility
+### GetProductType
 
-`func (o *InlineResponse200299) GetOptOutEligibility() InlineResponse200299OptOutEligibility`
+`func (o *InlineResponse200299) GetProductType() string`
 
-GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
 
-### GetOptOutEligibilityOk
+### GetProductTypeOk
 
-`func (o *InlineResponse200299) GetOptOutEligibilityOk() (*InlineResponse200299OptOutEligibility, bool)`
+`func (o *InlineResponse200299) GetProductTypeOk() (*string, bool)`
 
-GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOptOutEligibility
+### SetProductType
 
-`func (o *InlineResponse200299) SetOptOutEligibility(v InlineResponse200299OptOutEligibility)`
+`func (o *InlineResponse200299) SetProductType(v string)`
 
-SetOptOutEligibility sets OptOutEligibility field to given value.
+SetProductType sets ProductType field to given value.
 
-### HasOptOutEligibility
+### HasProductType
 
-`func (o *InlineResponse200299) HasOptOutEligibility() bool`
+`func (o *InlineResponse200299) HasProductType() bool`
 
-HasOptOutEligibility returns a boolean if a field has been set.
+HasProductType returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetSerial
 
-`func (o *InlineResponse200299) GetCreatedAt() time.Time`
+`func (o *InlineResponse200299) GetSerial() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetSerialOk
 
-`func (o *InlineResponse200299) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200299) GetSerialOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetSerial
 
-`func (o *InlineResponse200299) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200299) SetSerial(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetSerial sets Serial field to given value.
 
-### HasCreatedAt
+### HasSerial
 
-`func (o *InlineResponse200299) HasCreatedAt() bool`
+`func (o *InlineResponse200299) HasSerial() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200299) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200299) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200299) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200299) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetSlots
+
+`func (o *InlineResponse200299) GetSlots() []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots`
+
+GetSlots returns the Slots field if non-nil, zero value otherwise.
+
+### GetSlotsOk
+
+`func (o *InlineResponse200299) GetSlotsOk() (*[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots, bool)`
+
+GetSlotsOk returns a tuple with the Slots field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSlots
+
+`func (o *InlineResponse200299) SetSlots(v []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots)`
+
+SetSlots sets Slots field to given value.
+
+### HasSlots
+
+`func (o *InlineResponse200299) HasSlots() bool`
+
+HasSlots returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

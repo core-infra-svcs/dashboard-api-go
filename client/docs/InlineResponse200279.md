@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**Items** | Pointer to [**[]InlineResponse200279Items**](InlineResponse200279Items.md) | List of Cellular Service Provider Rate Plans | [optional] 
+**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200279WithDefaults instantiates a new InlineResponse200279 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetItems
 
-`func (o *InlineResponse200279) GetSwitchProfileId() string`
+`func (o *InlineResponse200279) GetItems() []InlineResponse200279Items`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200279) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200279) GetItemsOk() (*[]InlineResponse200279Items, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetItems
 
-`func (o *InlineResponse200279) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200279) SetItems(v []InlineResponse200279Items)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetItems sets Items field to given value.
 
-### HasSwitchProfileId
+### HasItems
 
-`func (o *InlineResponse200279) HasSwitchProfileId() bool`
+`func (o *InlineResponse200279) HasItems() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetName
+### GetMeta
 
-`func (o *InlineResponse200279) GetName() string`
+`func (o *InlineResponse200279) GetMeta() InlineResponse200279Meta`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200279) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200279) GetMetaOk() (*InlineResponse200279Meta, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200279) SetName(v string)`
+`func (o *InlineResponse200279) SetMeta(v InlineResponse200279Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200279) HasName() bool`
+`func (o *InlineResponse200279) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200279) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200279) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200279) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200279) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

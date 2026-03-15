@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
+**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
+**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
+**Ble** | Pointer to [**InlineResponse200397Ble**](InlineResponse200397Ble.md) |  | [optional] 
+**Wifi** | Pointer to [**InlineResponse200397Wifi**](InlineResponse200397Wifi.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject314
 
-`func NewInlineObject314() *InlineObject314`
+`func NewInlineObject314(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject314`
 
 NewInlineObject314 instantiates a new InlineObject314 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,95 @@ NewInlineObject314WithDefaults instantiates a new InlineObject314 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetNetwork
 
-`func (o *InlineObject314) GetDescription() string`
+`func (o *InlineObject314) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetNetworkOk
 
-`func (o *InlineObject314) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject314) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetNetwork
 
-`func (o *InlineObject314) SetDescription(v string)`
+`func (o *InlineObject314) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
 
-SetDescription sets Description field to given value.
+SetNetwork sets Network field to given value.
 
-### HasDescription
 
-`func (o *InlineObject314) HasDescription() bool`
+### GetMqtt
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject314) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
 
-### GetClient
+GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
 
-`func (o *InlineObject314) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
+### GetMqttOk
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+`func (o *InlineObject314) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
 
-### GetClientOk
-
-`func (o *InlineObject314) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetMqtt
 
-`func (o *InlineObject314) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
+`func (o *InlineObject314) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
 
-SetClient sets Client field to given value.
+SetMqtt sets Mqtt field to given value.
 
-### HasClient
 
-`func (o *InlineObject314) HasClient() bool`
+### GetBle
 
-HasClient returns a boolean if a field has been set.
+`func (o *InlineObject314) GetBle() InlineResponse200397Ble`
+
+GetBle returns the Ble field if non-nil, zero value otherwise.
+
+### GetBleOk
+
+`func (o *InlineObject314) GetBleOk() (*InlineResponse200397Ble, bool)`
+
+GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBle
+
+`func (o *InlineObject314) SetBle(v InlineResponse200397Ble)`
+
+SetBle sets Ble field to given value.
+
+### HasBle
+
+`func (o *InlineObject314) HasBle() bool`
+
+HasBle returns a boolean if a field has been set.
+
+### GetWifi
+
+`func (o *InlineObject314) GetWifi() InlineResponse200397Wifi`
+
+GetWifi returns the Wifi field if non-nil, zero value otherwise.
+
+### GetWifiOk
+
+`func (o *InlineObject314) GetWifiOk() (*InlineResponse200397Wifi, bool)`
+
+GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi
+
+`func (o *InlineObject314) SetWifi(v InlineResponse200397Wifi)`
+
+SetWifi sets Wifi field to given value.
+
+### HasWifi
+
+`func (o *InlineObject314) HasWifi() bool`
+
+HasWifi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

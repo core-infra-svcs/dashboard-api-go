@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | Pointer to **string** | The order claim id | [optional] 
-**Number** | Pointer to **string** | Order Number | [optional] 
-**Serials** | Pointer to **[]string** | All devices claimed in this order | [optional] 
-**Subscriptions** | Pointer to [**[]InlineResponse200312Subscriptions**](InlineResponse200312Subscriptions.md) | Details for subscriptions claimed in this order | [optional] 
+**ApplicationId** | Pointer to **string** | Application identifier | [optional] 
+**Name** | Pointer to **string** | Application name | [optional] 
+**Thresholds** | Pointer to [**OrganizationsOrganizationIdInsightApplicationsThresholds**](OrganizationsOrganizationIdInsightApplicationsThresholds.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200312WithDefaults instantiates a new InlineResponse200312 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetApplicationId
 
-`func (o *InlineResponse200312) GetClaimId() string`
+`func (o *InlineResponse200312) GetApplicationId() string`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetApplicationId returns the ApplicationId field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetApplicationIdOk
 
-`func (o *InlineResponse200312) GetClaimIdOk() (*string, bool)`
+`func (o *InlineResponse200312) GetApplicationIdOk() (*string, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetApplicationIdOk returns a tuple with the ApplicationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetApplicationId
 
-`func (o *InlineResponse200312) SetClaimId(v string)`
+`func (o *InlineResponse200312) SetApplicationId(v string)`
 
-SetClaimId sets ClaimId field to given value.
+SetApplicationId sets ApplicationId field to given value.
 
-### HasClaimId
+### HasApplicationId
 
-`func (o *InlineResponse200312) HasClaimId() bool`
+`func (o *InlineResponse200312) HasApplicationId() bool`
 
-HasClaimId returns a boolean if a field has been set.
+HasApplicationId returns a boolean if a field has been set.
 
-### GetNumber
+### GetName
 
-`func (o *InlineResponse200312) GetNumber() string`
+`func (o *InlineResponse200312) GetName() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetNameOk
 
-`func (o *InlineResponse200312) GetNumberOk() (*string, bool)`
+`func (o *InlineResponse200312) GetNameOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetName
 
-`func (o *InlineResponse200312) SetNumber(v string)`
+`func (o *InlineResponse200312) SetName(v string)`
 
-SetNumber sets Number field to given value.
+SetName sets Name field to given value.
 
-### HasNumber
+### HasName
 
-`func (o *InlineResponse200312) HasNumber() bool`
+`func (o *InlineResponse200312) HasName() bool`
 
-HasNumber returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSerials
+### GetThresholds
 
-`func (o *InlineResponse200312) GetSerials() []string`
+`func (o *InlineResponse200312) GetThresholds() OrganizationsOrganizationIdInsightApplicationsThresholds`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetThresholds returns the Thresholds field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetThresholdsOk
 
-`func (o *InlineResponse200312) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200312) GetThresholdsOk() (*OrganizationsOrganizationIdInsightApplicationsThresholds, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetThresholdsOk returns a tuple with the Thresholds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetThresholds
 
-`func (o *InlineResponse200312) SetSerials(v []string)`
+`func (o *InlineResponse200312) SetThresholds(v OrganizationsOrganizationIdInsightApplicationsThresholds)`
 
-SetSerials sets Serials field to given value.
+SetThresholds sets Thresholds field to given value.
 
-### HasSerials
+### HasThresholds
 
-`func (o *InlineResponse200312) HasSerials() bool`
+`func (o *InlineResponse200312) HasThresholds() bool`
 
-HasSerials returns a boolean if a field has been set.
-
-### GetSubscriptions
-
-`func (o *InlineResponse200312) GetSubscriptions() []InlineResponse200312Subscriptions`
-
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
-
-### GetSubscriptionsOk
-
-`func (o *InlineResponse200312) GetSubscriptionsOk() (*[]InlineResponse200312Subscriptions, bool)`
-
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubscriptions
-
-`func (o *InlineResponse200312) SetSubscriptions(v []InlineResponse200312Subscriptions)`
-
-SetSubscriptions sets Subscriptions field to given value.
-
-### HasSubscriptions
-
-`func (o *InlineResponse200312) HasSubscriptions() bool`
-
-HasSubscriptions returns a boolean if a field has been set.
+HasThresholds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

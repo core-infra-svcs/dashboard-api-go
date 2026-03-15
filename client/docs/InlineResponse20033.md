@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DdnsHostnames** | Pointer to [**InlineResponse20033DdnsHostnames**](InlineResponse20033DdnsHostnames.md) |  | [optional] 
-**Wan1** | Pointer to [**InlineResponse20033Wan1**](InlineResponse20033Wan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse20033Wan2**](InlineResponse20033Wan2.md) |  | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**Request** | Pointer to [**InlineResponse2017Request**](InlineResponse2017Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Results** | Pointer to [**InlineResponse20032Results**](InlineResponse20032Results.md) |  | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse20033WithDefaults instantiates a new InlineResponse20033 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDdnsHostnames
+### GetPingId
 
-`func (o *InlineResponse20033) GetDdnsHostnames() InlineResponse20033DdnsHostnames`
+`func (o *InlineResponse20033) GetPingId() string`
 
-GetDdnsHostnames returns the DdnsHostnames field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetDdnsHostnamesOk
+### GetPingIdOk
 
-`func (o *InlineResponse20033) GetDdnsHostnamesOk() (*InlineResponse20033DdnsHostnames, bool)`
+`func (o *InlineResponse20033) GetPingIdOk() (*string, bool)`
 
-GetDdnsHostnamesOk returns a tuple with the DdnsHostnames field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDdnsHostnames
+### SetPingId
 
-`func (o *InlineResponse20033) SetDdnsHostnames(v InlineResponse20033DdnsHostnames)`
+`func (o *InlineResponse20033) SetPingId(v string)`
 
-SetDdnsHostnames sets DdnsHostnames field to given value.
+SetPingId sets PingId field to given value.
 
-### HasDdnsHostnames
+### HasPingId
 
-`func (o *InlineResponse20033) HasDdnsHostnames() bool`
+`func (o *InlineResponse20033) HasPingId() bool`
 
-HasDdnsHostnames returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
 
-### GetWan1
+### GetUrl
 
-`func (o *InlineResponse20033) GetWan1() InlineResponse20033Wan1`
+`func (o *InlineResponse20033) GetUrl() string`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetUrlOk
 
-`func (o *InlineResponse20033) GetWan1Ok() (*InlineResponse20033Wan1, bool)`
+`func (o *InlineResponse20033) GetUrlOk() (*string, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetUrl
 
-`func (o *InlineResponse20033) SetWan1(v InlineResponse20033Wan1)`
+`func (o *InlineResponse20033) SetUrl(v string)`
 
-SetWan1 sets Wan1 field to given value.
+SetUrl sets Url field to given value.
 
-### HasWan1
+### HasUrl
 
-`func (o *InlineResponse20033) HasWan1() bool`
+`func (o *InlineResponse20033) HasUrl() bool`
 
-HasWan1 returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetWan2
+### GetRequest
 
-`func (o *InlineResponse20033) GetWan2() InlineResponse20033Wan2`
+`func (o *InlineResponse20033) GetRequest() InlineResponse2017Request`
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetWan2Ok
+### GetRequestOk
 
-`func (o *InlineResponse20033) GetWan2Ok() (*InlineResponse20033Wan2, bool)`
+`func (o *InlineResponse20033) GetRequestOk() (*InlineResponse2017Request, bool)`
 
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetRequest
 
-`func (o *InlineResponse20033) SetWan2(v InlineResponse20033Wan2)`
+`func (o *InlineResponse20033) SetRequest(v InlineResponse2017Request)`
 
-SetWan2 sets Wan2 field to given value.
+SetRequest sets Request field to given value.
 
-### HasWan2
+### HasRequest
 
-`func (o *InlineResponse20033) HasWan2() bool`
+`func (o *InlineResponse20033) HasRequest() bool`
 
-HasWan2 returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20033) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20033) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20033) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20033) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetResults
+
+`func (o *InlineResponse20033) GetResults() InlineResponse20032Results`
+
+GetResults returns the Results field if non-nil, zero value otherwise.
+
+### GetResultsOk
+
+`func (o *InlineResponse20033) GetResultsOk() (*InlineResponse20032Results, bool)`
+
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResults
+
+`func (o *InlineResponse20033) SetResults(v InlineResponse20032Results)`
+
+SetResults sets Results field to given value.
+
+### HasResults
+
+`func (o *InlineResponse20033) HasResults() bool`
+
+HasResults returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineResponse20033) GetCallback() InlineResponse2011Callback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineResponse20033) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineResponse20033) SetCallback(v InlineResponse2011Callback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineResponse20033) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

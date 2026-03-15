@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The alert config ID | [optional] 
-**Type** | Pointer to **string** | The alert type | [optional] 
-**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
-**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | [optional] 
-**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
-**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
+**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
+**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
+**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
 
 ## Methods
 
@@ -31,155 +31,55 @@ NewInlineResponse200229WithDefaults instantiates a new InlineResponse200229 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetAclId
 
-`func (o *InlineResponse200229) GetId() string`
+`func (o *InlineResponse200229) GetAclId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetAclId returns the AclId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetAclIdOk
 
-`func (o *InlineResponse200229) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200229) GetAclIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetAclId
 
-`func (o *InlineResponse200229) SetId(v string)`
+`func (o *InlineResponse200229) SetAclId(v string)`
 
-SetId sets Id field to given value.
+SetAclId sets AclId field to given value.
 
-### HasId
+### HasAclId
 
-`func (o *InlineResponse200229) HasId() bool`
+`func (o *InlineResponse200229) HasAclId() bool`
 
-HasId returns a boolean if a field has been set.
+HasAclId returns a boolean if a field has been set.
 
-### GetType
+### GetName
 
-`func (o *InlineResponse200229) GetType() string`
+`func (o *InlineResponse200229) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineResponse200229) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200229) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineResponse200229) SetType(v string)`
+`func (o *InlineResponse200229) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
-### HasType
+### HasName
 
-`func (o *InlineResponse200229) HasType() bool`
+`func (o *InlineResponse200229) HasName() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineResponse200229) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineResponse200229) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineResponse200229) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineResponse200229) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetAlertCondition
-
-`func (o *InlineResponse200229) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
-
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
-
-### GetAlertConditionOk
-
-`func (o *InlineResponse200229) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
-
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertCondition
-
-`func (o *InlineResponse200229) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
-
-SetAlertCondition sets AlertCondition field to given value.
-
-### HasAlertCondition
-
-`func (o *InlineResponse200229) HasAlertCondition() bool`
-
-HasAlertCondition returns a boolean if a field has been set.
-
-### GetRecipients
-
-`func (o *InlineResponse200229) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
-
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
-
-### GetRecipientsOk
-
-`func (o *InlineResponse200229) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
-
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecipients
-
-`func (o *InlineResponse200229) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
-
-SetRecipients sets Recipients field to given value.
-
-### HasRecipients
-
-`func (o *InlineResponse200229) HasRecipients() bool`
-
-HasRecipients returns a boolean if a field has been set.
-
-### GetNetworkTags
-
-`func (o *InlineResponse200229) GetNetworkTags() []string`
-
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
-
-### GetNetworkTagsOk
-
-`func (o *InlineResponse200229) GetNetworkTagsOk() (*[]string, bool)`
-
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkTags
-
-`func (o *InlineResponse200229) SetNetworkTags(v []string)`
-
-SetNetworkTags sets NetworkTags field to given value.
-
-### HasNetworkTags
-
-`func (o *InlineResponse200229) HasNetworkTags() bool`
-
-HasNetworkTags returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -205,6 +105,106 @@ SetDescription sets Description field to given value.
 `func (o *InlineResponse200229) HasDescription() bool`
 
 HasDescription returns a boolean if a field has been set.
+
+### GetIpVersion
+
+`func (o *InlineResponse200229) GetIpVersion() string`
+
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+
+### GetIpVersionOk
+
+`func (o *InlineResponse200229) GetIpVersionOk() (*string, bool)`
+
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpVersion
+
+`func (o *InlineResponse200229) SetIpVersion(v string)`
+
+SetIpVersion sets IpVersion field to given value.
+
+### HasIpVersion
+
+`func (o *InlineResponse200229) HasIpVersion() bool`
+
+HasIpVersion returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200229) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200229) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200229) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200229) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200229) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200229) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200229) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200229) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200229) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200229) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200229) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200229) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

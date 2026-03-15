@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the access policy(max length 255) | [optional] 
-**RadiusServers** | Pointer to [**[]NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusServers**](NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusServers.md) | List of RADIUS servers to require connecting devices to authenticate against before granting network access | [optional] 
+**Name** | **string** | Name of the access policy(max length 255) | 
+**RadiusServers** | [**[]NetworksNetworkIdSwitchAccessPoliciesRadiusServers1**](NetworksNetworkIdSwitchAccessPoliciesRadiusServers1.md) | List of RADIUS servers to require connecting devices to authenticate against before granting network access | 
 **Radius** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadius1**](NetworksNetworkIdSwitchAccessPoliciesRadius1.md) |  | [optional] 
 **GuestPortBouncing** | Pointer to **bool** | If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers | [optional] 
 **RadiusTestingEnabled** | Pointer to **bool** | If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers | [optional] 
 **RadiusCoaSupportEnabled** | Pointer to **bool** | Change of authentication for RADIUS re-authentication and disconnection | [optional] 
-**RadiusAccountingEnabled** | Pointer to **bool** | Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients | [optional] 
-**RadiusAccountingServers** | Pointer to [**[]NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers**](NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers.md) | List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access | [optional] 
+**RadiusAccountingEnabled** | **bool** | Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients | 
+**RadiusAccountingServers** | Pointer to [**[]NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1**](NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1.md) | List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access | [optional] 
 **RadiusGroupAttribute** | Pointer to **string** | Acceptable values are &#x60;\&quot;\&quot;&#x60; for None, or &#x60;\&quot;11\&quot;&#x60; for Group Policies ACL | [optional] 
 **HostMode** | Pointer to **string** | Choose the Host Mode for the access policy. | [optional] 
 **AccessPolicyType** | Pointer to **string** | Access Type of the policy. Automatically &#39;Hybrid authentication&#39; when hostMode is &#39;Multi-Domain&#39;. | [optional] 
@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject140
 
-`func NewInlineObject140() *InlineObject140`
+`func NewInlineObject140(name string, radiusServers []NetworksNetworkIdSwitchAccessPoliciesRadiusServers1, radiusAccountingEnabled bool, ) *InlineObject140`
 
 NewInlineObject140 instantiates a new InlineObject140 object
 This constructor will assign default values to properties that have it defined,
@@ -62,36 +62,26 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject140) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetRadiusServers
 
-`func (o *InlineObject140) GetRadiusServers() []NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusServers`
+`func (o *InlineObject140) GetRadiusServers() []NetworksNetworkIdSwitchAccessPoliciesRadiusServers1`
 
 GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
 
 ### GetRadiusServersOk
 
-`func (o *InlineObject140) GetRadiusServersOk() (*[]NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusServers, bool)`
+`func (o *InlineObject140) GetRadiusServersOk() (*[]NetworksNetworkIdSwitchAccessPoliciesRadiusServers1, bool)`
 
 GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRadiusServers
 
-`func (o *InlineObject140) SetRadiusServers(v []NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusServers)`
+`func (o *InlineObject140) SetRadiusServers(v []NetworksNetworkIdSwitchAccessPoliciesRadiusServers1)`
 
 SetRadiusServers sets RadiusServers field to given value.
 
-### HasRadiusServers
-
-`func (o *InlineObject140) HasRadiusServers() bool`
-
-HasRadiusServers returns a boolean if a field has been set.
 
 ### GetRadius
 
@@ -212,28 +202,23 @@ and a boolean to check if the value has been set.
 
 SetRadiusAccountingEnabled sets RadiusAccountingEnabled field to given value.
 
-### HasRadiusAccountingEnabled
-
-`func (o *InlineObject140) HasRadiusAccountingEnabled() bool`
-
-HasRadiusAccountingEnabled returns a boolean if a field has been set.
 
 ### GetRadiusAccountingServers
 
-`func (o *InlineObject140) GetRadiusAccountingServers() []NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers`
+`func (o *InlineObject140) GetRadiusAccountingServers() []NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1`
 
 GetRadiusAccountingServers returns the RadiusAccountingServers field if non-nil, zero value otherwise.
 
 ### GetRadiusAccountingServersOk
 
-`func (o *InlineObject140) GetRadiusAccountingServersOk() (*[]NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers, bool)`
+`func (o *InlineObject140) GetRadiusAccountingServersOk() (*[]NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1, bool)`
 
 GetRadiusAccountingServersOk returns a tuple with the RadiusAccountingServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRadiusAccountingServers
 
-`func (o *InlineObject140) SetRadiusAccountingServers(v []NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers)`
+`func (o *InlineObject140) SetRadiusAccountingServers(v []NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1)`
 
 SetRadiusAccountingServers sets RadiusAccountingServers field to given value.
 

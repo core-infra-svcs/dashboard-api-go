@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
-**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
+**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200355WithDefaults instantiates a new InlineResponse200355 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetTs
 
-`func (o *InlineResponse200355) GetSourceSerial() string`
+`func (o *InlineResponse200355) GetTs() time.Time`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetTsOk
 
-`func (o *InlineResponse200355) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineResponse200355) GetTsOk() (*time.Time, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetTs
 
-`func (o *InlineResponse200355) SetSourceSerial(v string)`
+`func (o *InlineResponse200355) SetTs(v time.Time)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetTs sets Ts field to given value.
 
-### HasSourceSerial
+### HasTs
 
-`func (o *InlineResponse200355) HasSourceSerial() bool`
+`func (o *InlineResponse200355) HasTs() bool`
 
-HasSourceSerial returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetTargetSerials
+### GetDraw
 
-`func (o *InlineResponse200355) GetTargetSerials() []string`
+`func (o *InlineResponse200355) GetDraw() float32`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetDraw returns the Draw field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetDrawOk
 
-`func (o *InlineResponse200355) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200355) GetDrawOk() (*float32, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetDraw
 
-`func (o *InlineResponse200355) SetTargetSerials(v []string)`
+`func (o *InlineResponse200355) SetDraw(v float32)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetDraw sets Draw field to given value.
 
-### HasTargetSerials
+### HasDraw
 
-`func (o *InlineResponse200355) HasTargetSerials() bool`
+`func (o *InlineResponse200355) HasDraw() bool`
 
-HasTargetSerials returns a boolean if a field has been set.
+HasDraw returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

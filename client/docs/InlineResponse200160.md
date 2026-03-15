@@ -4,12 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**InlineResponse200160Alerts**](InlineResponse200160Alerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
-**AlwaysAllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers that are always allowed on the network. These are the MAC addresses of switches, switch stacks, and VRRP groups in the network. These servers cannot be blocked. | [optional] 
-**ArpInspection** | Pointer to [**InlineResponse200160ArpInspection**](InlineResponse200160ArpInspection.md) |  | [optional] 
+**Name** | Pointer to **string** | User name | [optional] 
+**Login** | Pointer to **string** | User login identifier | [optional] 
+**Ssid** | Pointer to **string** | SSID name | [optional] 
+**LoginAt** | Pointer to **time.Time** | Login timestamp | [optional] 
+**GatewayDeviceMac** | Pointer to **string** | Gateway device mac address | [optional] 
+**ClientMac** | Pointer to **string** | Client mac address | [optional] 
+**ClientId** | Pointer to **string** | Client ID | [optional] 
+**Authorization** | Pointer to **string** | Authorization status | [optional] 
 
 ## Methods
 
@@ -30,155 +32,205 @@ NewInlineResponse200160WithDefaults instantiates a new InlineResponse200160 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetName
 
-`func (o *InlineResponse200160) GetAlerts() InlineResponse200160Alerts`
+`func (o *InlineResponse200160) GetName() string`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetNameOk
 
-`func (o *InlineResponse200160) GetAlertsOk() (*InlineResponse200160Alerts, bool)`
+`func (o *InlineResponse200160) GetNameOk() (*string, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetName
 
-`func (o *InlineResponse200160) SetAlerts(v InlineResponse200160Alerts)`
+`func (o *InlineResponse200160) SetName(v string)`
 
-SetAlerts sets Alerts field to given value.
+SetName sets Name field to given value.
 
-### HasAlerts
+### HasName
 
-`func (o *InlineResponse200160) HasAlerts() bool`
+`func (o *InlineResponse200160) HasName() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetLogin
 
-`func (o *InlineResponse200160) GetDefaultPolicy() string`
+`func (o *InlineResponse200160) GetLogin() string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetLogin returns the Login field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetLoginOk
 
-`func (o *InlineResponse200160) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse200160) GetLoginOk() (*string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetLoginOk returns a tuple with the Login field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetLogin
 
-`func (o *InlineResponse200160) SetDefaultPolicy(v string)`
+`func (o *InlineResponse200160) SetLogin(v string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetLogin sets Login field to given value.
 
-### HasDefaultPolicy
+### HasLogin
 
-`func (o *InlineResponse200160) HasDefaultPolicy() bool`
+`func (o *InlineResponse200160) HasLogin() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasLogin returns a boolean if a field has been set.
 
-### GetBlockedServers
+### GetSsid
 
-`func (o *InlineResponse200160) GetBlockedServers() []string`
+`func (o *InlineResponse200160) GetSsid() string`
 
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetBlockedServersOk
+### GetSsidOk
 
-`func (o *InlineResponse200160) GetBlockedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200160) GetSsidOk() (*string, bool)`
 
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedServers
+### SetSsid
 
-`func (o *InlineResponse200160) SetBlockedServers(v []string)`
+`func (o *InlineResponse200160) SetSsid(v string)`
 
-SetBlockedServers sets BlockedServers field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasBlockedServers
+### HasSsid
 
-`func (o *InlineResponse200160) HasBlockedServers() bool`
+`func (o *InlineResponse200160) HasSsid() bool`
 
-HasBlockedServers returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetLoginAt
 
-`func (o *InlineResponse200160) GetAllowedServers() []string`
+`func (o *InlineResponse200160) GetLoginAt() time.Time`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetLoginAt returns the LoginAt field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetLoginAtOk
 
-`func (o *InlineResponse200160) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200160) GetLoginAtOk() (*time.Time, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetLoginAtOk returns a tuple with the LoginAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetLoginAt
 
-`func (o *InlineResponse200160) SetAllowedServers(v []string)`
+`func (o *InlineResponse200160) SetLoginAt(v time.Time)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetLoginAt sets LoginAt field to given value.
 
-### HasAllowedServers
+### HasLoginAt
 
-`func (o *InlineResponse200160) HasAllowedServers() bool`
+`func (o *InlineResponse200160) HasLoginAt() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
+HasLoginAt returns a boolean if a field has been set.
 
-### GetAlwaysAllowedServers
+### GetGatewayDeviceMac
 
-`func (o *InlineResponse200160) GetAlwaysAllowedServers() []string`
+`func (o *InlineResponse200160) GetGatewayDeviceMac() string`
 
-GetAlwaysAllowedServers returns the AlwaysAllowedServers field if non-nil, zero value otherwise.
+GetGatewayDeviceMac returns the GatewayDeviceMac field if non-nil, zero value otherwise.
 
-### GetAlwaysAllowedServersOk
+### GetGatewayDeviceMacOk
 
-`func (o *InlineResponse200160) GetAlwaysAllowedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200160) GetGatewayDeviceMacOk() (*string, bool)`
 
-GetAlwaysAllowedServersOk returns a tuple with the AlwaysAllowedServers field if it's non-nil, zero value otherwise
+GetGatewayDeviceMacOk returns a tuple with the GatewayDeviceMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlwaysAllowedServers
+### SetGatewayDeviceMac
 
-`func (o *InlineResponse200160) SetAlwaysAllowedServers(v []string)`
+`func (o *InlineResponse200160) SetGatewayDeviceMac(v string)`
 
-SetAlwaysAllowedServers sets AlwaysAllowedServers field to given value.
+SetGatewayDeviceMac sets GatewayDeviceMac field to given value.
 
-### HasAlwaysAllowedServers
+### HasGatewayDeviceMac
 
-`func (o *InlineResponse200160) HasAlwaysAllowedServers() bool`
+`func (o *InlineResponse200160) HasGatewayDeviceMac() bool`
 
-HasAlwaysAllowedServers returns a boolean if a field has been set.
+HasGatewayDeviceMac returns a boolean if a field has been set.
 
-### GetArpInspection
+### GetClientMac
 
-`func (o *InlineResponse200160) GetArpInspection() InlineResponse200160ArpInspection`
+`func (o *InlineResponse200160) GetClientMac() string`
 
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
 
-### GetArpInspectionOk
+### GetClientMacOk
 
-`func (o *InlineResponse200160) GetArpInspectionOk() (*InlineResponse200160ArpInspection, bool)`
+`func (o *InlineResponse200160) GetClientMacOk() (*string, bool)`
 
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArpInspection
+### SetClientMac
 
-`func (o *InlineResponse200160) SetArpInspection(v InlineResponse200160ArpInspection)`
+`func (o *InlineResponse200160) SetClientMac(v string)`
 
-SetArpInspection sets ArpInspection field to given value.
+SetClientMac sets ClientMac field to given value.
 
-### HasArpInspection
+### HasClientMac
 
-`func (o *InlineResponse200160) HasArpInspection() bool`
+`func (o *InlineResponse200160) HasClientMac() bool`
 
-HasArpInspection returns a boolean if a field has been set.
+HasClientMac returns a boolean if a field has been set.
+
+### GetClientId
+
+`func (o *InlineResponse200160) GetClientId() string`
+
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
+
+### GetClientIdOk
+
+`func (o *InlineResponse200160) GetClientIdOk() (*string, bool)`
+
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientId
+
+`func (o *InlineResponse200160) SetClientId(v string)`
+
+SetClientId sets ClientId field to given value.
+
+### HasClientId
+
+`func (o *InlineResponse200160) HasClientId() bool`
+
+HasClientId returns a boolean if a field has been set.
+
+### GetAuthorization
+
+`func (o *InlineResponse200160) GetAuthorization() string`
+
+GetAuthorization returns the Authorization field if non-nil, zero value otherwise.
+
+### GetAuthorizationOk
+
+`func (o *InlineResponse200160) GetAuthorizationOk() (*string, bool)`
+
+GetAuthorizationOk returns a tuple with the Authorization field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorization
+
+`func (o *InlineResponse200160) SetAuthorization(v string)`
+
+SetAuthorization sets Authorization field to given value.
+
+### HasAuthorization
+
+`func (o *InlineResponse200160) HasAuthorization() bool`
+
+HasAuthorization returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

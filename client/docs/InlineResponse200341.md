@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
-**Message** | Pointer to **string** | The error message of the API | [optional] 
+**Items** | Pointer to [**[]InlineResponse200341Items**](InlineResponse200341Items.md) | List of enrollable networks | [optional] 
+**Meta** | Pointer to [**InlineResponse200240Meta**](InlineResponse200240Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200341WithDefaults instantiates a new InlineResponse200341 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetItems
 
-`func (o *InlineResponse200341) GetStatus() bool`
+`func (o *InlineResponse200341) GetItems() []InlineResponse200341Items`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetItemsOk
 
-`func (o *InlineResponse200341) GetStatusOk() (*bool, bool)`
+`func (o *InlineResponse200341) GetItemsOk() (*[]InlineResponse200341Items, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetItems
 
-`func (o *InlineResponse200341) SetStatus(v bool)`
+`func (o *InlineResponse200341) SetItems(v []InlineResponse200341Items)`
 
-SetStatus sets Status field to given value.
+SetItems sets Items field to given value.
 
-### HasStatus
+### HasItems
 
-`func (o *InlineResponse200341) HasStatus() bool`
+`func (o *InlineResponse200341) HasItems() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetMessage
+### GetMeta
 
-`func (o *InlineResponse200341) GetMessage() string`
+`func (o *InlineResponse200341) GetMeta() InlineResponse200240Meta`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetMetaOk
 
-`func (o *InlineResponse200341) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse200341) GetMetaOk() (*InlineResponse200240Meta, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetMeta
 
-`func (o *InlineResponse200341) SetMessage(v string)`
+`func (o *InlineResponse200341) SetMeta(v InlineResponse200240Meta)`
 
-SetMessage sets Message field to given value.
+SetMeta sets Meta field to given value.
 
-### HasMessage
+### HasMeta
 
-`func (o *InlineResponse200341) HasMessage() bool`
+`func (o *InlineResponse200341) HasMeta() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

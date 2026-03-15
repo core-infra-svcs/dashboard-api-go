@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
-**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200204WithDefaults instantiates a new InlineResponse200204 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetHostname
 
-`func (o *InlineResponse200204) GetSerial() string`
+`func (o *InlineResponse200204) GetHostname() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetHostnameOk
 
-`func (o *InlineResponse200204) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200204) GetHostnameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetHostname
 
-`func (o *InlineResponse200204) SetSerial(v string)`
+`func (o *InlineResponse200204) SetHostname(v string)`
 
-SetSerial sets Serial field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasSerial
+### HasHostname
 
-`func (o *InlineResponse200204) HasSerial() bool`
+`func (o *InlineResponse200204) HasHostname() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
 
-### GetMeshRoute
+### GetEnabled
 
-`func (o *InlineResponse200204) GetMeshRoute() []string`
+`func (o *InlineResponse200204) GetEnabled() bool`
 
-GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetMeshRouteOk
+### GetEnabledOk
 
-`func (o *InlineResponse200204) GetMeshRouteOk() (*[]string, bool)`
+`func (o *InlineResponse200204) GetEnabledOk() (*bool, bool)`
 
-GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshRoute
+### SetEnabled
 
-`func (o *InlineResponse200204) SetMeshRoute(v []string)`
+`func (o *InlineResponse200204) SetEnabled(v bool)`
 
-SetMeshRoute sets MeshRoute field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasMeshRoute
+### HasEnabled
 
-`func (o *InlineResponse200204) HasMeshRoute() bool`
+`func (o *InlineResponse200204) HasEnabled() bool`
 
-HasMeshRoute returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetLatestMeshPerformance
+### GetMode
 
-`func (o *InlineResponse200204) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
+`func (o *InlineResponse200204) GetMode() string`
 
-GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetLatestMeshPerformanceOk
+### GetModeOk
 
-`func (o *InlineResponse200204) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
+`func (o *InlineResponse200204) GetModeOk() (*string, bool)`
 
-GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatestMeshPerformance
+### SetMode
 
-`func (o *InlineResponse200204) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
+`func (o *InlineResponse200204) SetMode(v string)`
 
-SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
+SetMode sets Mode field to given value.
 
-### HasLatestMeshPerformance
+### HasMode
 
-`func (o *InlineResponse200204) HasLatestMeshPerformance() bool`
+`func (o *InlineResponse200204) HasMode() bool`
 
-HasLatestMeshPerformance returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

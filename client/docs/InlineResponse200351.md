@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**States** | Pointer to **[]string** | The set of different states on the spaces integration process | [optional] 
+**Email** | Pointer to **string** | The meraki user who attempts the spaces integration | [optional] 
+**AccountName** | Pointer to **string** | The spaces dashboard account name created in spaces integration | [optional] 
+**AccountType** | Pointer to **string** | The spaces dashboard account type created in spaces integration | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200351WithDefaults instantiates a new InlineResponse200351 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetStatus
 
-`func (o *InlineResponse200351) GetModel() string`
+`func (o *InlineResponse200351) GetStatus() bool`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetStatusOk
 
-`func (o *InlineResponse200351) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200351) GetStatusOk() (*bool, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetStatus
 
-`func (o *InlineResponse200351) SetModel(v string)`
+`func (o *InlineResponse200351) SetStatus(v bool)`
 
-SetModel sets Model field to given value.
+SetStatus sets Status field to given value.
 
-### HasModel
+### HasStatus
 
-`func (o *InlineResponse200351) HasModel() bool`
+`func (o *InlineResponse200351) HasStatus() bool`
 
-HasModel returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetCount
+### GetStates
 
-`func (o *InlineResponse200351) GetCount() int32`
+`func (o *InlineResponse200351) GetStates() []string`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetStates returns the States field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetStatesOk
 
-`func (o *InlineResponse200351) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200351) GetStatesOk() (*[]string, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetStates
 
-`func (o *InlineResponse200351) SetCount(v int32)`
+`func (o *InlineResponse200351) SetStates(v []string)`
 
-SetCount sets Count field to given value.
+SetStates sets States field to given value.
 
-### HasCount
+### HasStates
 
-`func (o *InlineResponse200351) HasCount() bool`
+`func (o *InlineResponse200351) HasStates() bool`
 
-HasCount returns a boolean if a field has been set.
+HasStates returns a boolean if a field has been set.
 
-### GetUsage
+### GetEmail
 
-`func (o *InlineResponse200351) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+`func (o *InlineResponse200351) GetEmail() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetEmailOk
 
-`func (o *InlineResponse200351) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+`func (o *InlineResponse200351) GetEmailOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetEmail
 
-`func (o *InlineResponse200351) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+`func (o *InlineResponse200351) SetEmail(v string)`
 
-SetUsage sets Usage field to given value.
+SetEmail sets Email field to given value.
 
-### HasUsage
+### HasEmail
 
-`func (o *InlineResponse200351) HasUsage() bool`
+`func (o *InlineResponse200351) HasEmail() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
+
+### GetAccountName
+
+`func (o *InlineResponse200351) GetAccountName() string`
+
+GetAccountName returns the AccountName field if non-nil, zero value otherwise.
+
+### GetAccountNameOk
+
+`func (o *InlineResponse200351) GetAccountNameOk() (*string, bool)`
+
+GetAccountNameOk returns a tuple with the AccountName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountName
+
+`func (o *InlineResponse200351) SetAccountName(v string)`
+
+SetAccountName sets AccountName field to given value.
+
+### HasAccountName
+
+`func (o *InlineResponse200351) HasAccountName() bool`
+
+HasAccountName returns a boolean if a field has been set.
+
+### GetAccountType
+
+`func (o *InlineResponse200351) GetAccountType() string`
+
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+
+### GetAccountTypeOk
+
+`func (o *InlineResponse200351) GetAccountTypeOk() (*string, bool)`
+
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountType
+
+`func (o *InlineResponse200351) SetAccountType(v string)`
+
+SetAccountType sets AccountType field to given value.
+
+### HasAccountType
+
+`func (o *InlineResponse200351) HasAccountType() bool`
+
+HasAccountType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

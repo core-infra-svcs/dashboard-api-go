@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**InlineResponse200104Products**](InlineResponse200104Products.md) |  | [optional] 
-**Stages** | Pointer to [**[]InlineResponse200104Stages**](InlineResponse200104Stages.md) | The ordered stages in the network | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse200103Reasons**](InlineResponse200103Reasons.md) | Reasons for the rollback | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
+**Errors** | Pointer to [**[]InlineResponse200104Errors**](InlineResponse200104Errors.md) | Errors for devices that were not added | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200104WithDefaults instantiates a new InlineResponse200104 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetSerials
 
-`func (o *InlineResponse200104) GetProducts() InlineResponse200104Products`
+`func (o *InlineResponse200104) GetSerials() []string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetSerialsOk
 
-`func (o *InlineResponse200104) GetProductsOk() (*InlineResponse200104Products, bool)`
+`func (o *InlineResponse200104) GetSerialsOk() (*[]string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetSerials
 
-`func (o *InlineResponse200104) SetProducts(v InlineResponse200104Products)`
+`func (o *InlineResponse200104) SetSerials(v []string)`
 
-SetProducts sets Products field to given value.
+SetSerials sets Serials field to given value.
 
-### HasProducts
+### HasSerials
 
-`func (o *InlineResponse200104) HasProducts() bool`
+`func (o *InlineResponse200104) HasSerials() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetStages
+### GetErrors
 
-`func (o *InlineResponse200104) GetStages() []InlineResponse200104Stages`
+`func (o *InlineResponse200104) GetErrors() []InlineResponse200104Errors`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetErrorsOk
 
-`func (o *InlineResponse200104) GetStagesOk() (*[]InlineResponse200104Stages, bool)`
+`func (o *InlineResponse200104) GetErrorsOk() (*[]InlineResponse200104Errors, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetErrors
 
-`func (o *InlineResponse200104) SetStages(v []InlineResponse200104Stages)`
+`func (o *InlineResponse200104) SetErrors(v []InlineResponse200104Errors)`
 
-SetStages sets Stages field to given value.
+SetErrors sets Errors field to given value.
 
-### HasStages
+### HasErrors
 
-`func (o *InlineResponse200104) HasStages() bool`
+`func (o *InlineResponse200104) HasErrors() bool`
 
-HasStages returns a boolean if a field has been set.
-
-### GetReasons
-
-`func (o *InlineResponse200104) GetReasons() []InlineResponse200103Reasons`
-
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
-
-### GetReasonsOk
-
-`func (o *InlineResponse200104) GetReasonsOk() (*[]InlineResponse200103Reasons, bool)`
-
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReasons
-
-`func (o *InlineResponse200104) SetReasons(v []InlineResponse200103Reasons)`
-
-SetReasons sets Reasons field to given value.
-
-### HasReasons
-
-`func (o *InlineResponse200104) HasReasons() bool`
-
-HasReasons returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

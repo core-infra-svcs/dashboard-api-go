@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, OpenRoaming is enabled on the SSID. | [optional] 
-**TenantId** | Pointer to **string** | The OpenRoaming DNA Spaces tenant ID. | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
+**Exception** | Pointer to [**InlineResponse200216Exception**](InlineResponse200216Exception.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200216Rules**](InlineResponse200216Rules.md) | Bonjour forwarding rules | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetTenantId
+### GetException
 
-`func (o *InlineResponse200216) GetTenantId() string`
+`func (o *InlineResponse200216) GetException() InlineResponse200216Exception`
 
-GetTenantId returns the TenantId field if non-nil, zero value otherwise.
+GetException returns the Exception field if non-nil, zero value otherwise.
 
-### GetTenantIdOk
+### GetExceptionOk
 
-`func (o *InlineResponse200216) GetTenantIdOk() (*string, bool)`
+`func (o *InlineResponse200216) GetExceptionOk() (*InlineResponse200216Exception, bool)`
 
-GetTenantIdOk returns a tuple with the TenantId field if it's non-nil, zero value otherwise
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTenantId
+### SetException
 
-`func (o *InlineResponse200216) SetTenantId(v string)`
+`func (o *InlineResponse200216) SetException(v InlineResponse200216Exception)`
 
-SetTenantId sets TenantId field to given value.
+SetException sets Exception field to given value.
 
-### HasTenantId
+### HasException
 
-`func (o *InlineResponse200216) HasTenantId() bool`
+`func (o *InlineResponse200216) HasException() bool`
 
-HasTenantId returns a boolean if a field has been set.
+HasException returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200216) GetRules() []InlineResponse200216Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200216) GetRulesOk() (*[]InlineResponse200216Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200216) SetRules(v []InlineResponse200216Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200216) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
+**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
+**Url** | **string** | Receiver Url | 
+**Version** | **string** | Scanning API Version | 
+**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
+**SharedSecret** | **string** | Secret Value for Receiver | 
 
 ## Methods
 
 ### NewInlineObject312
 
-`func NewInlineObject312(networkIds []string, ) *InlineObject312`
+`func NewInlineObject312(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject312`
 
 NewInlineObject312 instantiates a new InlineObject312 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +29,104 @@ NewInlineObject312WithDefaults instantiates a new InlineObject312 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetNetwork
 
-`func (o *InlineObject312) GetNetworkIds() []string`
+`func (o *InlineObject312) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetNetworkOk
 
-`func (o *InlineObject312) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject312) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetNetwork
 
-`func (o *InlineObject312) SetNetworkIds(v []string)`
+`func (o *InlineObject312) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetNetwork sets Network field to given value.
+
+
+### GetUrl
+
+`func (o *InlineObject312) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineObject312) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineObject312) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+
+### GetVersion
+
+`func (o *InlineObject312) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineObject312) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineObject312) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+
+### GetRadio
+
+`func (o *InlineObject312) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineObject312) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineObject312) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
+
+SetRadio sets Radio field to given value.
+
+
+### GetSharedSecret
+
+`func (o *InlineObject312) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *InlineObject312) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *InlineObject312) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
 
 
 

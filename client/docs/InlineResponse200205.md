@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Id of the network | [optional] 
-**Name** | Pointer to **string** | Name of the network | [optional] 
-**TimeZone** | Pointer to **string** | Time zone of the network | [optional] 
-**BusyHour** | Pointer to [**InlineResponse200205BusyHour**](InlineResponse200205BusyHour.md) |  | [optional] 
-**Channel** | Pointer to [**InlineResponse200205Channel**](InlineResponse200205Channel.md) |  | [optional] 
-**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
-**Ai** | Pointer to [**InlineResponse200205Ai**](InlineResponse200205Ai.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
+**Name** | Pointer to **string** | AP port profile name | [optional] 
+**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
+**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
 
 ## Methods
 
@@ -31,30 +29,30 @@ NewInlineResponse200205WithDefaults instantiates a new InlineResponse200205 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetProfileId
 
-`func (o *InlineResponse200205) GetNetworkId() string`
+`func (o *InlineResponse200205) GetProfileId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200205) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200205) GetProfileIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetProfileId
 
-`func (o *InlineResponse200205) SetNetworkId(v string)`
+`func (o *InlineResponse200205) SetProfileId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasNetworkId
+### HasProfileId
 
-`func (o *InlineResponse200205) HasNetworkId() bool`
+`func (o *InlineResponse200205) HasProfileId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,130 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetIsDefault
 
-`func (o *InlineResponse200205) GetTimeZone() string`
+`func (o *InlineResponse200205) GetIsDefault() bool`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200205) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineResponse200205) GetIsDefaultOk() (*bool, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetIsDefault
 
-`func (o *InlineResponse200205) SetTimeZone(v string)`
+`func (o *InlineResponse200205) SetIsDefault(v bool)`
 
-SetTimeZone sets TimeZone field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasTimeZone
+### HasIsDefault
 
-`func (o *InlineResponse200205) HasTimeZone() bool`
+`func (o *InlineResponse200205) HasIsDefault() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetBusyHour
+### GetPorts
 
-`func (o *InlineResponse200205) GetBusyHour() InlineResponse200205BusyHour`
+`func (o *InlineResponse200205) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
 
-GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetBusyHourOk
+### GetPortsOk
 
-`func (o *InlineResponse200205) GetBusyHourOk() (*InlineResponse200205BusyHour, bool)`
+`func (o *InlineResponse200205) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
 
-GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBusyHour
+### SetPorts
 
-`func (o *InlineResponse200205) SetBusyHour(v InlineResponse200205BusyHour)`
+`func (o *InlineResponse200205) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
 
-SetBusyHour sets BusyHour field to given value.
+SetPorts sets Ports field to given value.
 
-### HasBusyHour
+### HasPorts
 
-`func (o *InlineResponse200205) HasBusyHour() bool`
+`func (o *InlineResponse200205) HasPorts() bool`
 
-HasBusyHour returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
-### GetChannel
+### GetUsbPorts
 
-`func (o *InlineResponse200205) GetChannel() InlineResponse200205Channel`
+`func (o *InlineResponse200205) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetUsbPortsOk
 
-`func (o *InlineResponse200205) GetChannelOk() (*InlineResponse200205Channel, bool)`
+`func (o *InlineResponse200205) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetUsbPorts
 
-`func (o *InlineResponse200205) SetChannel(v InlineResponse200205Channel)`
+`func (o *InlineResponse200205) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
 
-SetChannel sets Channel field to given value.
+SetUsbPorts sets UsbPorts field to given value.
 
-### HasChannel
+### HasUsbPorts
 
-`func (o *InlineResponse200205) HasChannel() bool`
+`func (o *InlineResponse200205) HasUsbPorts() bool`
 
-HasChannel returns a boolean if a field has been set.
-
-### GetFra
-
-`func (o *InlineResponse200205) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
-
-GetFra returns the Fra field if non-nil, zero value otherwise.
-
-### GetFraOk
-
-`func (o *InlineResponse200205) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
-
-GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFra
-
-`func (o *InlineResponse200205) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
-
-SetFra sets Fra field to given value.
-
-### HasFra
-
-`func (o *InlineResponse200205) HasFra() bool`
-
-HasFra returns a boolean if a field has been set.
-
-### GetAi
-
-`func (o *InlineResponse200205) GetAi() InlineResponse200205Ai`
-
-GetAi returns the Ai field if non-nil, zero value otherwise.
-
-### GetAiOk
-
-`func (o *InlineResponse200205) GetAiOk() (*InlineResponse200205Ai, bool)`
-
-GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAi
-
-`func (o *InlineResponse200205) SetAi(v InlineResponse200205Ai)`
-
-SetAi sets Ai field to given value.
-
-### HasAi
-
-`func (o *InlineResponse200205) HasAi() bool`
-
-HasAi returns a boolean if a field has been set.
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

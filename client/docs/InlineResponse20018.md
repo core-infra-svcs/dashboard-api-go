@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sims** | Pointer to [**[]InlineResponse20018Sims**](InlineResponse20018Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
-**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. To indicate eSIM, use &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
-**SimFailover** | Pointer to [**InlineResponse20018SimFailover**](InlineResponse20018SimFailover.md) |  | [optional] 
+**SenseEnabled** | Pointer to **bool** | Whether MV Sense is enabled on the camera | [optional] 
+**MqttBrokerId** | Pointer to **NullableString** | ID of the MQTT broker; null if MQTT is disabled | [optional] 
+**MqttTopics** | Pointer to **[]string** | MQTT topics the camera publishes to | [optional] 
+**AudioDetection** | Pointer to [**InlineResponse20018AudioDetection**](InlineResponse20018AudioDetection.md) |  | [optional] 
+**DetectionModelId** | Pointer to **NullableString** | ID of the object detection model | [optional] 
 
 ## Methods
 
@@ -27,81 +29,151 @@ NewInlineResponse20018WithDefaults instantiates a new InlineResponse20018 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSims
+### GetSenseEnabled
 
-`func (o *InlineResponse20018) GetSims() []InlineResponse20018Sims`
+`func (o *InlineResponse20018) GetSenseEnabled() bool`
 
-GetSims returns the Sims field if non-nil, zero value otherwise.
+GetSenseEnabled returns the SenseEnabled field if non-nil, zero value otherwise.
 
-### GetSimsOk
+### GetSenseEnabledOk
 
-`func (o *InlineResponse20018) GetSimsOk() (*[]InlineResponse20018Sims, bool)`
+`func (o *InlineResponse20018) GetSenseEnabledOk() (*bool, bool)`
 
-GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
+GetSenseEnabledOk returns a tuple with the SenseEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSims
+### SetSenseEnabled
 
-`func (o *InlineResponse20018) SetSims(v []InlineResponse20018Sims)`
+`func (o *InlineResponse20018) SetSenseEnabled(v bool)`
 
-SetSims sets Sims field to given value.
+SetSenseEnabled sets SenseEnabled field to given value.
 
-### HasSims
+### HasSenseEnabled
 
-`func (o *InlineResponse20018) HasSims() bool`
+`func (o *InlineResponse20018) HasSenseEnabled() bool`
 
-HasSims returns a boolean if a field has been set.
+HasSenseEnabled returns a boolean if a field has been set.
 
-### GetSimOrdering
+### GetMqttBrokerId
 
-`func (o *InlineResponse20018) GetSimOrdering() []string`
+`func (o *InlineResponse20018) GetMqttBrokerId() string`
 
-GetSimOrdering returns the SimOrdering field if non-nil, zero value otherwise.
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
 
-### GetSimOrderingOk
+### GetMqttBrokerIdOk
 
-`func (o *InlineResponse20018) GetSimOrderingOk() (*[]string, bool)`
+`func (o *InlineResponse20018) GetMqttBrokerIdOk() (*string, bool)`
 
-GetSimOrderingOk returns a tuple with the SimOrdering field if it's non-nil, zero value otherwise
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimOrdering
+### SetMqttBrokerId
 
-`func (o *InlineResponse20018) SetSimOrdering(v []string)`
+`func (o *InlineResponse20018) SetMqttBrokerId(v string)`
 
-SetSimOrdering sets SimOrdering field to given value.
+SetMqttBrokerId sets MqttBrokerId field to given value.
 
-### HasSimOrdering
+### HasMqttBrokerId
 
-`func (o *InlineResponse20018) HasSimOrdering() bool`
+`func (o *InlineResponse20018) HasMqttBrokerId() bool`
 
-HasSimOrdering returns a boolean if a field has been set.
+HasMqttBrokerId returns a boolean if a field has been set.
 
-### GetSimFailover
+### SetMqttBrokerIdNil
 
-`func (o *InlineResponse20018) GetSimFailover() InlineResponse20018SimFailover`
+`func (o *InlineResponse20018) SetMqttBrokerIdNil(b bool)`
 
-GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
+ SetMqttBrokerIdNil sets the value for MqttBrokerId to be an explicit nil
 
-### GetSimFailoverOk
+### UnsetMqttBrokerId
+`func (o *InlineResponse20018) UnsetMqttBrokerId()`
 
-`func (o *InlineResponse20018) GetSimFailoverOk() (*InlineResponse20018SimFailover, bool)`
+UnsetMqttBrokerId ensures that no value is present for MqttBrokerId, not even an explicit nil
+### GetMqttTopics
 
-GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
+`func (o *InlineResponse20018) GetMqttTopics() []string`
+
+GetMqttTopics returns the MqttTopics field if non-nil, zero value otherwise.
+
+### GetMqttTopicsOk
+
+`func (o *InlineResponse20018) GetMqttTopicsOk() (*[]string, bool)`
+
+GetMqttTopicsOk returns a tuple with the MqttTopics field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimFailover
+### SetMqttTopics
 
-`func (o *InlineResponse20018) SetSimFailover(v InlineResponse20018SimFailover)`
+`func (o *InlineResponse20018) SetMqttTopics(v []string)`
 
-SetSimFailover sets SimFailover field to given value.
+SetMqttTopics sets MqttTopics field to given value.
 
-### HasSimFailover
+### HasMqttTopics
 
-`func (o *InlineResponse20018) HasSimFailover() bool`
+`func (o *InlineResponse20018) HasMqttTopics() bool`
 
-HasSimFailover returns a boolean if a field has been set.
+HasMqttTopics returns a boolean if a field has been set.
 
+### GetAudioDetection
+
+`func (o *InlineResponse20018) GetAudioDetection() InlineResponse20018AudioDetection`
+
+GetAudioDetection returns the AudioDetection field if non-nil, zero value otherwise.
+
+### GetAudioDetectionOk
+
+`func (o *InlineResponse20018) GetAudioDetectionOk() (*InlineResponse20018AudioDetection, bool)`
+
+GetAudioDetectionOk returns a tuple with the AudioDetection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAudioDetection
+
+`func (o *InlineResponse20018) SetAudioDetection(v InlineResponse20018AudioDetection)`
+
+SetAudioDetection sets AudioDetection field to given value.
+
+### HasAudioDetection
+
+`func (o *InlineResponse20018) HasAudioDetection() bool`
+
+HasAudioDetection returns a boolean if a field has been set.
+
+### GetDetectionModelId
+
+`func (o *InlineResponse20018) GetDetectionModelId() string`
+
+GetDetectionModelId returns the DetectionModelId field if non-nil, zero value otherwise.
+
+### GetDetectionModelIdOk
+
+`func (o *InlineResponse20018) GetDetectionModelIdOk() (*string, bool)`
+
+GetDetectionModelIdOk returns a tuple with the DetectionModelId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetectionModelId
+
+`func (o *InlineResponse20018) SetDetectionModelId(v string)`
+
+SetDetectionModelId sets DetectionModelId field to given value.
+
+### HasDetectionModelId
+
+`func (o *InlineResponse20018) HasDetectionModelId() bool`
+
+HasDetectionModelId returns a boolean if a field has been set.
+
+### SetDetectionModelIdNil
+
+`func (o *InlineResponse20018) SetDetectionModelIdNil(b bool)`
+
+ SetDetectionModelIdNil sets the value for DetectionModelId to be an explicit nil
+
+### UnsetDetectionModelId
+`func (o *InlineResponse20018) UnsetDetectionModelId()`
+
+UnsetDetectionModelId ensures that no value is present for DetectionModelId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

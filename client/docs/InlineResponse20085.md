@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Schedule id | [optional] 
-**Name** | Pointer to **string** | Schedule name | [optional] 
+**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
+**AsNumber** | Pointer to **int32** | Organization-specific number of the Autonomous System to which the appliance belongs | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
+**Neighbors** | Pointer to [**[]InlineResponse20085Neighbors**](InlineResponse20085Neighbors.md) | List of eBGP neighbor configurations | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20085WithDefaults instantiates a new InlineResponse20085 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnabled
 
-`func (o *InlineResponse20085) GetId() string`
+`func (o *InlineResponse20085) GetEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20085) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20085) GetEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnabled
 
-`func (o *InlineResponse20085) SetId(v string)`
+`func (o *InlineResponse20085) SetEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasId
+### HasEnabled
 
-`func (o *InlineResponse20085) HasId() bool`
+`func (o *InlineResponse20085) HasEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetAsNumber
 
-`func (o *InlineResponse20085) GetName() string`
+`func (o *InlineResponse20085) GetAsNumber() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAsNumberOk
 
-`func (o *InlineResponse20085) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20085) GetAsNumberOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAsNumber
 
-`func (o *InlineResponse20085) SetName(v string)`
+`func (o *InlineResponse20085) SetAsNumber(v int32)`
 
-SetName sets Name field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasName
+### HasAsNumber
 
-`func (o *InlineResponse20085) HasName() bool`
+`func (o *InlineResponse20085) HasAsNumber() bool`
 
-HasName returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
+
+### GetIbgpHoldTimer
+
+`func (o *InlineResponse20085) GetIbgpHoldTimer() int32`
+
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
+
+### GetIbgpHoldTimerOk
+
+`func (o *InlineResponse20085) GetIbgpHoldTimerOk() (*int32, bool)`
+
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIbgpHoldTimer
+
+`func (o *InlineResponse20085) SetIbgpHoldTimer(v int32)`
+
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
+
+### HasIbgpHoldTimer
+
+`func (o *InlineResponse20085) HasIbgpHoldTimer() bool`
+
+HasIbgpHoldTimer returns a boolean if a field has been set.
+
+### GetNeighbors
+
+`func (o *InlineResponse20085) GetNeighbors() []InlineResponse20085Neighbors`
+
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+
+### GetNeighborsOk
+
+`func (o *InlineResponse20085) GetNeighborsOk() (*[]InlineResponse20085Neighbors, bool)`
+
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNeighbors
+
+`func (o *InlineResponse20085) SetNeighbors(v []InlineResponse20085Neighbors)`
+
+SetNeighbors sets Neighbors field to given value.
+
+### HasNeighbors
+
+`func (o *InlineResponse20085) HasNeighbors() bool`
+
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

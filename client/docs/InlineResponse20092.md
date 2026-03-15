@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
-**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
-**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
-**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
+**Id** | Pointer to **string** | The ID of the camera wireless profile. | [optional] 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**AppliedDeviceCount** | Pointer to **int32** | The count of the applied devices. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetId
 
-`func (o *InlineResponse20092) GetTs() time.Time`
+`func (o *InlineResponse20092) GetId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetIdOk
 
-`func (o *InlineResponse20092) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20092) GetIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetId
 
-`func (o *InlineResponse20092) SetTs(v time.Time)`
+`func (o *InlineResponse20092) SetId(v string)`
 
-SetTs sets Ts field to given value.
+SetId sets Id field to given value.
 
-### HasTs
+### HasId
 
-`func (o *InlineResponse20092) HasTs() bool`
+`func (o *InlineResponse20092) HasId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetTotal
+### GetName
 
-`func (o *InlineResponse20092) GetTotal() float32`
+`func (o *InlineResponse20092) GetName() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetNameOk
 
-`func (o *InlineResponse20092) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse20092) GetNameOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetName
 
-`func (o *InlineResponse20092) SetTotal(v float32)`
+`func (o *InlineResponse20092) SetName(v string)`
 
-SetTotal sets Total field to given value.
+SetName sets Name field to given value.
 
-### HasTotal
+### HasName
 
-`func (o *InlineResponse20092) HasTotal() bool`
+`func (o *InlineResponse20092) HasName() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUpstream
+### GetAppliedDeviceCount
 
-`func (o *InlineResponse20092) GetUpstream() float32`
+`func (o *InlineResponse20092) GetAppliedDeviceCount() int32`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetAppliedDeviceCount returns the AppliedDeviceCount field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetAppliedDeviceCountOk
 
-`func (o *InlineResponse20092) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse20092) GetAppliedDeviceCountOk() (*int32, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetAppliedDeviceCountOk returns a tuple with the AppliedDeviceCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetAppliedDeviceCount
 
-`func (o *InlineResponse20092) SetUpstream(v float32)`
+`func (o *InlineResponse20092) SetAppliedDeviceCount(v int32)`
 
-SetUpstream sets Upstream field to given value.
+SetAppliedDeviceCount sets AppliedDeviceCount field to given value.
 
-### HasUpstream
+### HasAppliedDeviceCount
 
-`func (o *InlineResponse20092) HasUpstream() bool`
+`func (o *InlineResponse20092) HasAppliedDeviceCount() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasAppliedDeviceCount returns a boolean if a field has been set.
 
-### GetDownstream
+### GetSsid
 
-`func (o *InlineResponse20092) GetDownstream() float32`
+`func (o *InlineResponse20092) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetSsidOk
 
-`func (o *InlineResponse20092) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse20092) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetSsid
 
-`func (o *InlineResponse20092) SetDownstream(v float32)`
+`func (o *InlineResponse20092) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
 
-SetDownstream sets Downstream field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasDownstream
+### HasSsid
 
-`func (o *InlineResponse20092) HasDownstream() bool`
+`func (o *InlineResponse20092) HasSsid() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineResponse20092) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineResponse20092) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineResponse20092) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineResponse20092) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

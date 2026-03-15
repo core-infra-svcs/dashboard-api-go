@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are allowed | [optional] 
-**BlockedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are blocked | [optional] 
-**BlockedUrlCategories** | Pointer to [**[]InlineResponse20054BlockedUrlCategories**](InlineResponse20054BlockedUrlCategories.md) | A list of URL categories to block | [optional] 
-**UrlCategoryListSize** | Pointer to **string** | URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39; | [optional] 
+**EnrollmentId** | Pointer to **string** | Id to check the status of your enrollment | [optional] 
+**Url** | Pointer to **string** | Url to check the status of your enrollment | [optional] 
+**Request** | Pointer to [**InlineResponse20110Request**](InlineResponse20110Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the enrollment | [optional] 
+**EnrollmentStartedAt** | Pointer to **string** | Enrollment started at | [optional] 
+**DoorLocks** | Pointer to [**[]InlineResponse20054DoorLocks**](InlineResponse20054DoorLocks.md) | Door locks | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineResponse20054WithDefaults instantiates a new InlineResponse20054 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedUrlPatterns
+### GetEnrollmentId
 
-`func (o *InlineResponse20054) GetAllowedUrlPatterns() []string`
+`func (o *InlineResponse20054) GetEnrollmentId() string`
 
-GetAllowedUrlPatterns returns the AllowedUrlPatterns field if non-nil, zero value otherwise.
+GetEnrollmentId returns the EnrollmentId field if non-nil, zero value otherwise.
 
-### GetAllowedUrlPatternsOk
+### GetEnrollmentIdOk
 
-`func (o *InlineResponse20054) GetAllowedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineResponse20054) GetEnrollmentIdOk() (*string, bool)`
 
-GetAllowedUrlPatternsOk returns a tuple with the AllowedUrlPatterns field if it's non-nil, zero value otherwise
+GetEnrollmentIdOk returns a tuple with the EnrollmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrlPatterns
+### SetEnrollmentId
 
-`func (o *InlineResponse20054) SetAllowedUrlPatterns(v []string)`
+`func (o *InlineResponse20054) SetEnrollmentId(v string)`
 
-SetAllowedUrlPatterns sets AllowedUrlPatterns field to given value.
+SetEnrollmentId sets EnrollmentId field to given value.
 
-### HasAllowedUrlPatterns
+### HasEnrollmentId
 
-`func (o *InlineResponse20054) HasAllowedUrlPatterns() bool`
+`func (o *InlineResponse20054) HasEnrollmentId() bool`
 
-HasAllowedUrlPatterns returns a boolean if a field has been set.
+HasEnrollmentId returns a boolean if a field has been set.
 
-### GetBlockedUrlPatterns
+### GetUrl
 
-`func (o *InlineResponse20054) GetBlockedUrlPatterns() []string`
+`func (o *InlineResponse20054) GetUrl() string`
 
-GetBlockedUrlPatterns returns the BlockedUrlPatterns field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetBlockedUrlPatternsOk
+### GetUrlOk
 
-`func (o *InlineResponse20054) GetBlockedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineResponse20054) GetUrlOk() (*string, bool)`
 
-GetBlockedUrlPatternsOk returns a tuple with the BlockedUrlPatterns field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedUrlPatterns
+### SetUrl
 
-`func (o *InlineResponse20054) SetBlockedUrlPatterns(v []string)`
+`func (o *InlineResponse20054) SetUrl(v string)`
 
-SetBlockedUrlPatterns sets BlockedUrlPatterns field to given value.
+SetUrl sets Url field to given value.
 
-### HasBlockedUrlPatterns
+### HasUrl
 
-`func (o *InlineResponse20054) HasBlockedUrlPatterns() bool`
+`func (o *InlineResponse20054) HasUrl() bool`
 
-HasBlockedUrlPatterns returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetBlockedUrlCategories
+### GetRequest
 
-`func (o *InlineResponse20054) GetBlockedUrlCategories() []InlineResponse20054BlockedUrlCategories`
+`func (o *InlineResponse20054) GetRequest() InlineResponse20110Request`
 
-GetBlockedUrlCategories returns the BlockedUrlCategories field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetBlockedUrlCategoriesOk
+### GetRequestOk
 
-`func (o *InlineResponse20054) GetBlockedUrlCategoriesOk() (*[]InlineResponse20054BlockedUrlCategories, bool)`
+`func (o *InlineResponse20054) GetRequestOk() (*InlineResponse20110Request, bool)`
 
-GetBlockedUrlCategoriesOk returns a tuple with the BlockedUrlCategories field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedUrlCategories
+### SetRequest
 
-`func (o *InlineResponse20054) SetBlockedUrlCategories(v []InlineResponse20054BlockedUrlCategories)`
+`func (o *InlineResponse20054) SetRequest(v InlineResponse20110Request)`
 
-SetBlockedUrlCategories sets BlockedUrlCategories field to given value.
+SetRequest sets Request field to given value.
 
-### HasBlockedUrlCategories
+### HasRequest
 
-`func (o *InlineResponse20054) HasBlockedUrlCategories() bool`
+`func (o *InlineResponse20054) HasRequest() bool`
 
-HasBlockedUrlCategories returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
 
-### GetUrlCategoryListSize
+### GetStatus
 
-`func (o *InlineResponse20054) GetUrlCategoryListSize() string`
+`func (o *InlineResponse20054) GetStatus() string`
 
-GetUrlCategoryListSize returns the UrlCategoryListSize field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetUrlCategoryListSizeOk
+### GetStatusOk
 
-`func (o *InlineResponse20054) GetUrlCategoryListSizeOk() (*string, bool)`
+`func (o *InlineResponse20054) GetStatusOk() (*string, bool)`
 
-GetUrlCategoryListSizeOk returns a tuple with the UrlCategoryListSize field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrlCategoryListSize
+### SetStatus
 
-`func (o *InlineResponse20054) SetUrlCategoryListSize(v string)`
+`func (o *InlineResponse20054) SetStatus(v string)`
 
-SetUrlCategoryListSize sets UrlCategoryListSize field to given value.
+SetStatus sets Status field to given value.
 
-### HasUrlCategoryListSize
+### HasStatus
 
-`func (o *InlineResponse20054) HasUrlCategoryListSize() bool`
+`func (o *InlineResponse20054) HasStatus() bool`
 
-HasUrlCategoryListSize returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetEnrollmentStartedAt
+
+`func (o *InlineResponse20054) GetEnrollmentStartedAt() string`
+
+GetEnrollmentStartedAt returns the EnrollmentStartedAt field if non-nil, zero value otherwise.
+
+### GetEnrollmentStartedAtOk
+
+`func (o *InlineResponse20054) GetEnrollmentStartedAtOk() (*string, bool)`
+
+GetEnrollmentStartedAtOk returns a tuple with the EnrollmentStartedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnrollmentStartedAt
+
+`func (o *InlineResponse20054) SetEnrollmentStartedAt(v string)`
+
+SetEnrollmentStartedAt sets EnrollmentStartedAt field to given value.
+
+### HasEnrollmentStartedAt
+
+`func (o *InlineResponse20054) HasEnrollmentStartedAt() bool`
+
+HasEnrollmentStartedAt returns a boolean if a field has been set.
+
+### GetDoorLocks
+
+`func (o *InlineResponse20054) GetDoorLocks() []InlineResponse20054DoorLocks`
+
+GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
+
+### GetDoorLocksOk
+
+`func (o *InlineResponse20054) GetDoorLocksOk() (*[]InlineResponse20054DoorLocks, bool)`
+
+GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDoorLocks
+
+`func (o *InlineResponse20054) SetDoorLocks(v []InlineResponse20054DoorLocks)`
+
+SetDoorLocks sets DoorLocks field to given value.
+
+### HasDoorLocks
+
+`func (o *InlineResponse20054) HasDoorLocks() bool`
+
+HasDoorLocks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
