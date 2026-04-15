@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**NetworkName** | Pointer to **string** | Network name | [optional] 
-**MerakiVpnPeers** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers**](OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers.md) | List of VPN peers with their summaries | [optional] 
+**ProfileId** | Pointer to **string** | Profile ID | [optional] 
+**Name** | Pointer to **string** | Name of profile | [optional] 
+**Hostnames** | Pointer to **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | [optional] 
+**Nameservers** | Pointer to [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200253WithDefaults instantiates a new InlineResponse200253 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetProfileId
 
-`func (o *InlineResponse200253) GetNetworkId() string`
+`func (o *InlineResponse200253) GetProfileId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200253) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200253) GetProfileIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetProfileId
 
-`func (o *InlineResponse200253) SetNetworkId(v string)`
+`func (o *InlineResponse200253) SetProfileId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasNetworkId
+### HasProfileId
 
-`func (o *InlineResponse200253) HasNetworkId() bool`
+`func (o *InlineResponse200253) HasProfileId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetNetworkName
+### GetName
 
-`func (o *InlineResponse200253) GetNetworkName() string`
+`func (o *InlineResponse200253) GetName() string`
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkNameOk
+### GetNameOk
 
-`func (o *InlineResponse200253) GetNetworkNameOk() (*string, bool)`
+`func (o *InlineResponse200253) GetNameOk() (*string, bool)`
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetName
 
-`func (o *InlineResponse200253) SetNetworkName(v string)`
+`func (o *InlineResponse200253) SetName(v string)`
 
-SetNetworkName sets NetworkName field to given value.
+SetName sets Name field to given value.
 
-### HasNetworkName
+### HasName
 
-`func (o *InlineResponse200253) HasNetworkName() bool`
+`func (o *InlineResponse200253) HasName() bool`
 
-HasNetworkName returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMerakiVpnPeers
+### GetHostnames
 
-`func (o *InlineResponse200253) GetMerakiVpnPeers() []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers`
+`func (o *InlineResponse200253) GetHostnames() []string`
 
-GetMerakiVpnPeers returns the MerakiVpnPeers field if non-nil, zero value otherwise.
+GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
 
-### GetMerakiVpnPeersOk
+### GetHostnamesOk
 
-`func (o *InlineResponse200253) GetMerakiVpnPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers, bool)`
+`func (o *InlineResponse200253) GetHostnamesOk() (*[]string, bool)`
 
-GetMerakiVpnPeersOk returns a tuple with the MerakiVpnPeers field if it's non-nil, zero value otherwise
+GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMerakiVpnPeers
+### SetHostnames
 
-`func (o *InlineResponse200253) SetMerakiVpnPeers(v []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers)`
+`func (o *InlineResponse200253) SetHostnames(v []string)`
 
-SetMerakiVpnPeers sets MerakiVpnPeers field to given value.
+SetHostnames sets Hostnames field to given value.
 
-### HasMerakiVpnPeers
+### HasHostnames
 
-`func (o *InlineResponse200253) HasMerakiVpnPeers() bool`
+`func (o *InlineResponse200253) HasHostnames() bool`
 
-HasMerakiVpnPeers returns a boolean if a field has been set.
+HasHostnames returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *InlineResponse200253) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineResponse200253) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineResponse200253) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *InlineResponse200253) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

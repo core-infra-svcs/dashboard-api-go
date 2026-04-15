@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Mac** | Pointer to **string** | Mac address of the device | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageClients**](OrganizationsOrganizationIdSummaryTopDevicesByUsageClients.md) |  | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
+**Camera** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesCamera**](OrganizationsOrganizationIdSamlRolesCamera.md) | The list of camera access privileges for SAML administrator | [optional] 
 
 ## Methods
 
@@ -32,205 +30,155 @@ NewInlineResponse200361WithDefaults instantiates a new InlineResponse200361 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetId
 
-`func (o *InlineResponse200361) GetName() string`
+`func (o *InlineResponse200361) GetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdOk
 
-`func (o *InlineResponse200361) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200361) GetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetId
 
-`func (o *InlineResponse200361) SetName(v string)`
+`func (o *InlineResponse200361) SetId(v string)`
 
-SetName sets Name field to given value.
+SetId sets Id field to given value.
 
-### HasName
+### HasId
 
-`func (o *InlineResponse200361) HasName() bool`
+`func (o *InlineResponse200361) HasId() bool`
 
-HasName returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetModel
+### GetRole
 
-`func (o *InlineResponse200361) GetModel() string`
+`func (o *InlineResponse200361) GetRole() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetRoleOk
 
-`func (o *InlineResponse200361) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200361) GetRoleOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetRole
 
-`func (o *InlineResponse200361) SetModel(v string)`
+`func (o *InlineResponse200361) SetRole(v string)`
 
-SetModel sets Model field to given value.
+SetRole sets Role field to given value.
 
-### HasModel
+### HasRole
 
-`func (o *InlineResponse200361) HasModel() bool`
+`func (o *InlineResponse200361) HasRole() bool`
 
-HasModel returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetSerial
+### GetOrgAccess
 
-`func (o *InlineResponse200361) GetSerial() string`
+`func (o *InlineResponse200361) GetOrgAccess() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetOrgAccessOk
 
-`func (o *InlineResponse200361) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200361) GetOrgAccessOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetOrgAccess
 
-`func (o *InlineResponse200361) SetSerial(v string)`
+`func (o *InlineResponse200361) SetOrgAccess(v string)`
 
-SetSerial sets Serial field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasSerial
+### HasOrgAccess
 
-`func (o *InlineResponse200361) HasSerial() bool`
+`func (o *InlineResponse200361) HasOrgAccess() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
 
-### GetMac
+### GetNetworks
 
-`func (o *InlineResponse200361) GetMac() string`
+`func (o *InlineResponse200361) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetNetworksOk
 
-`func (o *InlineResponse200361) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200361) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetNetworks
 
-`func (o *InlineResponse200361) SetMac(v string)`
+`func (o *InlineResponse200361) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
 
-SetMac sets Mac field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasMac
+### HasNetworks
 
-`func (o *InlineResponse200361) HasMac() bool`
+`func (o *InlineResponse200361) HasNetworks() bool`
 
-HasMac returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
-### GetProductType
+### GetTags
 
-`func (o *InlineResponse200361) GetProductType() string`
+`func (o *InlineResponse200361) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetTagsOk
 
-`func (o *InlineResponse200361) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse200361) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetTags
 
-`func (o *InlineResponse200361) SetProductType(v string)`
+`func (o *InlineResponse200361) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
 
-SetProductType sets ProductType field to given value.
+SetTags sets Tags field to given value.
 
-### HasProductType
+### HasTags
 
-`func (o *InlineResponse200361) HasProductType() bool`
+`func (o *InlineResponse200361) HasTags() bool`
 
-HasProductType returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetNetwork
+### GetCamera
 
-`func (o *InlineResponse200361) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200361) GetCamera() []OrganizationsOrganizationIdSamlRolesCamera`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetCamera returns the Camera field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetCameraOk
 
-`func (o *InlineResponse200361) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200361) GetCameraOk() (*[]OrganizationsOrganizationIdSamlRolesCamera, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetCameraOk returns a tuple with the Camera field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetCamera
 
-`func (o *InlineResponse200361) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200361) SetCamera(v []OrganizationsOrganizationIdSamlRolesCamera)`
 
-SetNetwork sets Network field to given value.
+SetCamera sets Camera field to given value.
 
-### HasNetwork
+### HasCamera
 
-`func (o *InlineResponse200361) HasNetwork() bool`
+`func (o *InlineResponse200361) HasCamera() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200361) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200361) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200361) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200361) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200361) GetClients() OrganizationsOrganizationIdSummaryTopDevicesByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200361) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200361) SetClients(v OrganizationsOrganizationIdSummaryTopDevicesByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200361) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
+HasCamera returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

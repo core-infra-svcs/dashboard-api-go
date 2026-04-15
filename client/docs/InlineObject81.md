@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable warm spare | 
-**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
-**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
-**VirtualIp1** | Pointer to **string** | The WAN 1 shared IP | [optional] 
-**VirtualIp2** | Pointer to **string** | The WAN 2 shared IP | [optional] 
+**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
+**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
+**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
+**Subnet** | Pointer to [**InlineResponse20089Subnet**](InlineResponse20089Subnet.md) |  | [optional] 
+**HostTranslations** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
 
 ## Methods
 
 ### NewInlineObject81
 
-`func NewInlineObject81(enabled bool, ) *InlineObject81`
+`func NewInlineObject81(mode string, ) *InlineObject81`
 
 NewInlineObject81 instantiates a new InlineObject81 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +29,125 @@ NewInlineObject81WithDefaults instantiates a new InlineObject81 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetMode
 
-`func (o *InlineObject81) GetEnabled() bool`
+`func (o *InlineObject81) GetMode() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetModeOk
 
-`func (o *InlineObject81) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject81) GetModeOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMode
 
-`func (o *InlineObject81) SetEnabled(v bool)`
+`func (o *InlineObject81) SetMode(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetMode sets Mode field to given value.
 
 
-### GetSpareSerial
+### GetHubs
 
-`func (o *InlineObject81) GetSpareSerial() string`
+`func (o *InlineObject81) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
 
-GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetSpareSerialOk
+### GetHubsOk
 
-`func (o *InlineObject81) GetSpareSerialOk() (*string, bool)`
+`func (o *InlineObject81) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
 
-GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpareSerial
+### SetHubs
 
-`func (o *InlineObject81) SetSpareSerial(v string)`
+`func (o *InlineObject81) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
 
-SetSpareSerial sets SpareSerial field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasSpareSerial
+### HasHubs
 
-`func (o *InlineObject81) HasSpareSerial() bool`
+`func (o *InlineObject81) HasHubs() bool`
 
-HasSpareSerial returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetUplinkMode
+### GetSubnets
 
-`func (o *InlineObject81) GetUplinkMode() string`
+`func (o *InlineObject81) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
 
-GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetUplinkModeOk
+### GetSubnetsOk
 
-`func (o *InlineObject81) GetUplinkModeOk() (*string, bool)`
+`func (o *InlineObject81) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
 
-GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkMode
+### SetSubnets
 
-`func (o *InlineObject81) SetUplinkMode(v string)`
+`func (o *InlineObject81) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
 
-SetUplinkMode sets UplinkMode field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasUplinkMode
+### HasSubnets
 
-`func (o *InlineObject81) HasUplinkMode() bool`
+`func (o *InlineObject81) HasSubnets() bool`
 
-HasUplinkMode returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
-### GetVirtualIp1
+### GetSubnet
 
-`func (o *InlineObject81) GetVirtualIp1() string`
+`func (o *InlineObject81) GetSubnet() InlineResponse20089Subnet`
 
-GetVirtualIp1 returns the VirtualIp1 field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetVirtualIp1Ok
+### GetSubnetOk
 
-`func (o *InlineObject81) GetVirtualIp1Ok() (*string, bool)`
+`func (o *InlineObject81) GetSubnetOk() (*InlineResponse20089Subnet, bool)`
 
-GetVirtualIp1Ok returns a tuple with the VirtualIp1 field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVirtualIp1
+### SetSubnet
 
-`func (o *InlineObject81) SetVirtualIp1(v string)`
+`func (o *InlineObject81) SetSubnet(v InlineResponse20089Subnet)`
 
-SetVirtualIp1 sets VirtualIp1 field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasVirtualIp1
+### HasSubnet
 
-`func (o *InlineObject81) HasVirtualIp1() bool`
+`func (o *InlineObject81) HasSubnet() bool`
 
-HasVirtualIp1 returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetVirtualIp2
+### GetHostTranslations
 
-`func (o *InlineObject81) GetVirtualIp2() string`
+`func (o *InlineObject81) GetHostTranslations() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations`
 
-GetVirtualIp2 returns the VirtualIp2 field if non-nil, zero value otherwise.
+GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
 
-### GetVirtualIp2Ok
+### GetHostTranslationsOk
 
-`func (o *InlineObject81) GetVirtualIp2Ok() (*string, bool)`
+`func (o *InlineObject81) GetHostTranslationsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations, bool)`
 
-GetVirtualIp2Ok returns a tuple with the VirtualIp2 field if it's non-nil, zero value otherwise
+GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVirtualIp2
+### SetHostTranslations
 
-`func (o *InlineObject81) SetVirtualIp2(v string)`
+`func (o *InlineObject81) SetHostTranslations(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations)`
 
-SetVirtualIp2 sets VirtualIp2 field to given value.
+SetHostTranslations sets HostTranslations field to given value.
 
-### HasVirtualIp2
+### HasHostTranslations
 
-`func (o *InlineObject81) HasVirtualIp2() bool`
+`func (o *InlineObject81) HasHostTranslations() bool`
 
-HasVirtualIp2 returns a boolean if a field has been set.
+HasHostTranslations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

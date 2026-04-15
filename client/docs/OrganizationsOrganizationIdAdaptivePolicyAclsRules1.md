@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **SrcPort** | Pointer to **string** | Source port. Must be in the format of single port: &#39;1&#39;, port list: &#39;1,2&#39; or port range: &#39;1-10&#39;, and in the range of 1-65535, or &#39;any&#39;. Default is &#39;any&#39;. | [optional] 
 **DstPort** | Pointer to **string** | Destination port. Must be in the format of single port: &#39;1&#39;, port list: &#39;1,2&#39; or port range: &#39;1-10&#39;, and in the range of 1-65535, or &#39;any&#39;. Default is &#39;any&#39;. | [optional] 
 **Log** | Pointer to **bool** | If enabled, when this rule is hit an entry will be logged to the event log  | [optional] 
-**TcpEstablished** | Pointer to **bool** | If enabled, means TCP connection with this node must be established.  | [optional] 
+**TcpEstablished** | Pointer to **bool** | If enabled, means TCP connection with this node must be established. Can only be enabled when policy protocol is &#39;allow tcp&#39;  | [optional] 
 
 ## Methods
 

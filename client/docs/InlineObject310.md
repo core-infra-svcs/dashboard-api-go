@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
-**Meta** | Pointer to [**InlineResponse200240Meta**](InlineResponse200240Meta.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**SpInitiated** | Pointer to [**InlineResponse200359SpInitiated**](InlineResponse200359SpInitiated.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject310
 
-`func NewInlineObject310(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject310`
+`func NewInlineObject310() *InlineObject310`
 
 NewInlineObject310 instantiates a new InlineObject310 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject310WithDefaults instantiates a new InlineObject310 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetEnabled
 
-`func (o *InlineObject310) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
+`func (o *InlineObject310) GetEnabled() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetEnabledOk
 
-`func (o *InlineObject310) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
+`func (o *InlineObject310) GetEnabledOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetEnabled
 
-`func (o *InlineObject310) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
+`func (o *InlineObject310) SetEnabled(v bool)`
 
-SetItems sets Items field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetMeta
+`func (o *InlineObject310) HasEnabled() bool`
 
-`func (o *InlineObject310) GetMeta() InlineResponse200240Meta`
+HasEnabled returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetSpInitiated
 
-### GetMetaOk
+`func (o *InlineObject310) GetSpInitiated() InlineResponse200359SpInitiated`
 
-`func (o *InlineObject310) GetMetaOk() (*InlineResponse200240Meta, bool)`
+GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetSpInitiatedOk
+
+`func (o *InlineObject310) GetSpInitiatedOk() (*InlineResponse200359SpInitiated, bool)`
+
+GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetSpInitiated
 
-`func (o *InlineObject310) SetMeta(v InlineResponse200240Meta)`
+`func (o *InlineObject310) SetSpInitiated(v InlineResponse200359SpInitiated)`
 
-SetMeta sets Meta field to given value.
+SetSpInitiated sets SpInitiated field to given value.
 
-### HasMeta
+### HasSpInitiated
 
-`func (o *InlineObject310) HasMeta() bool`
+`func (o *InlineObject310) HasSpInitiated() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

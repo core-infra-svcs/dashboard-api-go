@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## ConnectNetworkApplianceUmbrellaAccount
 
-> InlineResponse20081 ConnectNetworkApplianceUmbrellaAccount(ctx, networkId).ConnectNetworkApplianceUmbrellaAccount(connectNetworkApplianceUmbrellaAccount).Execute()
+> InlineResponse20083 ConnectNetworkApplianceUmbrellaAccount(ctx, networkId).ConnectNetworkApplianceUmbrellaAccount(connectNetworkApplianceUmbrellaAccount).Execute()
 
 Connect a Cisco Umbrella account to this network
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccountApi.ConnectNetworkApplianceUmbrellaAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ConnectNetworkApplianceUmbrellaAccount`: InlineResponse20081
+    // response from `ConnectNetworkApplianceUmbrellaAccount`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `AccountApi.ConnectNetworkApplianceUmbrellaAccount`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20081**](InlineResponse20081.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 

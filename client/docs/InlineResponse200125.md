@@ -4,12 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Macs** | Pointer to **[]string** | List of mac addresses | [optional] 
-**Emails** | Pointer to **[]string** | List of email addresses | [optional] 
-**Usernames** | Pointer to **[]string** | List of usernames | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials | [optional] 
-**Imeis** | Pointer to **[]string** | List of IMEIs | [optional] 
-**BluetoothMacs** | Pointer to **[]string** | List of bluetooth mac addresses | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
@@ -30,155 +31,180 @@ NewInlineResponse200125WithDefaults instantiates a new InlineResponse200125 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMacs
+### GetId
 
-`func (o *InlineResponse200125) GetMacs() []string`
+`func (o *InlineResponse200125) GetId() string`
 
-GetMacs returns the Macs field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetMacsOk
+### GetIdOk
 
-`func (o *InlineResponse200125) GetMacsOk() (*[]string, bool)`
+`func (o *InlineResponse200125) GetIdOk() (*string, bool)`
 
-GetMacsOk returns a tuple with the Macs field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMacs
+### SetId
 
-`func (o *InlineResponse200125) SetMacs(v []string)`
+`func (o *InlineResponse200125) SetId(v string)`
 
-SetMacs sets Macs field to given value.
+SetId sets Id field to given value.
 
-### HasMacs
+### HasId
 
-`func (o *InlineResponse200125) HasMacs() bool`
+`func (o *InlineResponse200125) HasId() bool`
 
-HasMacs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetEmails
+### GetEmail
 
-`func (o *InlineResponse200125) GetEmails() []string`
+`func (o *InlineResponse200125) GetEmail() string`
 
-GetEmails returns the Emails field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetEmailsOk
+### GetEmailOk
 
-`func (o *InlineResponse200125) GetEmailsOk() (*[]string, bool)`
+`func (o *InlineResponse200125) GetEmailOk() (*string, bool)`
 
-GetEmailsOk returns a tuple with the Emails field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmails
+### SetEmail
 
-`func (o *InlineResponse200125) SetEmails(v []string)`
+`func (o *InlineResponse200125) SetEmail(v string)`
 
-SetEmails sets Emails field to given value.
+SetEmail sets Email field to given value.
 
-### HasEmails
+### HasEmail
 
-`func (o *InlineResponse200125) HasEmails() bool`
+`func (o *InlineResponse200125) HasEmail() bool`
 
-HasEmails returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetUsernames
+### GetName
 
-`func (o *InlineResponse200125) GetUsernames() []string`
+`func (o *InlineResponse200125) GetName() string`
 
-GetUsernames returns the Usernames field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUsernamesOk
+### GetNameOk
 
-`func (o *InlineResponse200125) GetUsernamesOk() (*[]string, bool)`
+`func (o *InlineResponse200125) GetNameOk() (*string, bool)`
 
-GetUsernamesOk returns a tuple with the Usernames field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsernames
+### SetName
 
-`func (o *InlineResponse200125) SetUsernames(v []string)`
+`func (o *InlineResponse200125) SetName(v string)`
 
-SetUsernames sets Usernames field to given value.
+SetName sets Name field to given value.
 
-### HasUsernames
+### HasName
 
-`func (o *InlineResponse200125) HasUsernames() bool`
+`func (o *InlineResponse200125) HasName() bool`
 
-HasUsernames returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSerials
+### GetCreatedAt
 
-`func (o *InlineResponse200125) GetSerials() []string`
+`func (o *InlineResponse200125) GetCreatedAt() time.Time`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200125) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200125) GetCreatedAtOk() (*time.Time, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetCreatedAt
 
-`func (o *InlineResponse200125) SetSerials(v []string)`
+`func (o *InlineResponse200125) SetCreatedAt(v time.Time)`
 
-SetSerials sets Serials field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasSerials
+### HasCreatedAt
 
-`func (o *InlineResponse200125) HasSerials() bool`
+`func (o *InlineResponse200125) HasCreatedAt() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetImeis
+### GetAccountType
 
-`func (o *InlineResponse200125) GetImeis() []string`
+`func (o *InlineResponse200125) GetAccountType() string`
 
-GetImeis returns the Imeis field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetImeisOk
+### GetAccountTypeOk
 
-`func (o *InlineResponse200125) GetImeisOk() (*[]string, bool)`
+`func (o *InlineResponse200125) GetAccountTypeOk() (*string, bool)`
 
-GetImeisOk returns a tuple with the Imeis field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImeis
+### SetAccountType
 
-`func (o *InlineResponse200125) SetImeis(v []string)`
+`func (o *InlineResponse200125) SetAccountType(v string)`
 
-SetImeis sets Imeis field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasImeis
+### HasAccountType
 
-`func (o *InlineResponse200125) HasImeis() bool`
+`func (o *InlineResponse200125) HasAccountType() bool`
 
-HasImeis returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
 
-### GetBluetoothMacs
+### GetIsAdmin
 
-`func (o *InlineResponse200125) GetBluetoothMacs() []string`
+`func (o *InlineResponse200125) GetIsAdmin() bool`
 
-GetBluetoothMacs returns the BluetoothMacs field if non-nil, zero value otherwise.
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
 
-### GetBluetoothMacsOk
+### GetIsAdminOk
 
-`func (o *InlineResponse200125) GetBluetoothMacsOk() (*[]string, bool)`
+`func (o *InlineResponse200125) GetIsAdminOk() (*bool, bool)`
 
-GetBluetoothMacsOk returns a tuple with the BluetoothMacs field if it's non-nil, zero value otherwise
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBluetoothMacs
+### SetIsAdmin
 
-`func (o *InlineResponse200125) SetBluetoothMacs(v []string)`
+`func (o *InlineResponse200125) SetIsAdmin(v bool)`
 
-SetBluetoothMacs sets BluetoothMacs field to given value.
+SetIsAdmin sets IsAdmin field to given value.
 
-### HasBluetoothMacs
+### HasIsAdmin
 
-`func (o *InlineResponse200125) HasBluetoothMacs() bool`
+`func (o *InlineResponse200125) HasIsAdmin() bool`
 
-HasBluetoothMacs returns a boolean if a field has been set.
+HasIsAdmin returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineResponse200125) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineResponse200125) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineResponse200125) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
+
+SetAuthorizations sets Authorizations field to given value.
+
+### HasAuthorizations
+
+`func (o *InlineResponse200125) HasAuthorizations() bool`
+
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

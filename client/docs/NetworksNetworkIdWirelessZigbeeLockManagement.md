@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Address** | Pointer to **string** | Host Address | [optional] 
+**Address** | Pointer to **string** | Valid hostname or IP address | [optional] 
 **Username** | Pointer to **string** | Username | [optional] 
 **Password** | Pointer to **string** | Password | [optional] 
 

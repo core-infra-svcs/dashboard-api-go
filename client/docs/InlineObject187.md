@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
-**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
+**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
+**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
+**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
+**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
+**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineObject187WithDefaults instantiates a new InlineObject187 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetScanningEnabled
 
-`func (o *InlineObject187) GetHostname() string`
+`func (o *InlineObject187) GetScanningEnabled() bool`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetScanningEnabledOk
 
-`func (o *InlineObject187) GetHostnameOk() (*string, bool)`
+`func (o *InlineObject187) GetScanningEnabledOk() (*bool, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetScanningEnabled
 
-`func (o *InlineObject187) SetHostname(v string)`
+`func (o *InlineObject187) SetScanningEnabled(v bool)`
 
-SetHostname sets Hostname field to given value.
+SetScanningEnabled sets ScanningEnabled field to given value.
 
-### HasHostname
+### HasScanningEnabled
 
-`func (o *InlineObject187) HasHostname() bool`
+`func (o *InlineObject187) HasScanningEnabled() bool`
 
-HasHostname returns a boolean if a field has been set.
+HasScanningEnabled returns a boolean if a field has been set.
 
-### GetEnabled
+### GetAdvertisingEnabled
 
-`func (o *InlineObject187) GetEnabled() bool`
+`func (o *InlineObject187) GetAdvertisingEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetAdvertisingEnabledOk
 
-`func (o *InlineObject187) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject187) GetAdvertisingEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetAdvertisingEnabled
 
-`func (o *InlineObject187) SetEnabled(v bool)`
+`func (o *InlineObject187) SetAdvertisingEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
 
-### HasEnabled
+### HasAdvertisingEnabled
 
-`func (o *InlineObject187) HasEnabled() bool`
+`func (o *InlineObject187) HasAdvertisingEnabled() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasAdvertisingEnabled returns a boolean if a field has been set.
 
-### GetMode
+### GetUuid
 
-`func (o *InlineObject187) GetMode() string`
+`func (o *InlineObject187) GetUuid() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetUuidOk
 
-`func (o *InlineObject187) GetModeOk() (*string, bool)`
+`func (o *InlineObject187) GetUuidOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetUuid
 
-`func (o *InlineObject187) SetMode(v string)`
+`func (o *InlineObject187) SetUuid(v string)`
 
-SetMode sets Mode field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasMode
+### HasUuid
 
-`func (o *InlineObject187) HasMode() bool`
+`func (o *InlineObject187) HasUuid() bool`
 
-HasMode returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
+
+### GetMajorMinorAssignmentMode
+
+`func (o *InlineObject187) GetMajorMinorAssignmentMode() string`
+
+GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+
+### GetMajorMinorAssignmentModeOk
+
+`func (o *InlineObject187) GetMajorMinorAssignmentModeOk() (*string, bool)`
+
+GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorMinorAssignmentMode
+
+`func (o *InlineObject187) SetMajorMinorAssignmentMode(v string)`
+
+SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+
+### HasMajorMinorAssignmentMode
+
+`func (o *InlineObject187) HasMajorMinorAssignmentMode() bool`
+
+HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+
+### GetMajor
+
+`func (o *InlineObject187) GetMajor() int32`
+
+GetMajor returns the Major field if non-nil, zero value otherwise.
+
+### GetMajorOk
+
+`func (o *InlineObject187) GetMajorOk() (*int32, bool)`
+
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajor
+
+`func (o *InlineObject187) SetMajor(v int32)`
+
+SetMajor sets Major field to given value.
+
+### HasMajor
+
+`func (o *InlineObject187) HasMajor() bool`
+
+HasMajor returns a boolean if a field has been set.
+
+### GetMinor
+
+`func (o *InlineObject187) GetMinor() int32`
+
+GetMinor returns the Minor field if non-nil, zero value otherwise.
+
+### GetMinorOk
+
+`func (o *InlineObject187) GetMinorOk() (*int32, bool)`
+
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMinor
+
+`func (o *InlineObject187) SetMinor(v int32)`
+
+SetMinor sets Minor field to given value.
+
+### HasMinor
+
+`func (o *InlineObject187) HasMinor() bool`
+
+HasMinor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

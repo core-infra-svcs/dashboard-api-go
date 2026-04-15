@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkEventsEventTypes
 
-> []InlineResponse200107 GetNetworkEventsEventTypes(ctx, networkId).Execute()
+> []InlineResponse200111 GetNetworkEventsEventTypes(ctx, networkId).Execute()
 
 List the event type to human-readable description
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EventTypesApi.GetNetworkEventsEventTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkEventsEventTypes`: []InlineResponse200107
+    // response from `GetNetworkEventsEventTypes`: []InlineResponse200111
     fmt.Fprintf(os.Stdout, "Response from `EventTypesApi.GetNetworkEventsEventTypes`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200107**](InlineResponse200107.md)
+[**[]InlineResponse200111**](InlineResponse200111.md)
 
 ### Authorization
 

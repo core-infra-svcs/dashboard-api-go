@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
-**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
-**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
-**ApplicationUsage** | Pointer to [**[]NetworksNetworkIdClientsApplicationUsageApplicationUsage**](NetworksNetworkIdClientsApplicationUsageApplicationUsage.md) | An array of application usage records for the client | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode for the cellular gateways in the network. (Passthrough/Routed) | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse20097Subnets**](InlineResponse20097Subnets.md) | List of subnets of all MGs in this network. | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse20097WithDefaults instantiates a new InlineResponse20097 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientId
+### GetDeploymentMode
 
-`func (o *InlineResponse20097) GetClientId() string`
+`func (o *InlineResponse20097) GetDeploymentMode() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse20097) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse20097) GetDeploymentModeOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetDeploymentMode
 
-`func (o *InlineResponse20097) SetClientId(v string)`
+`func (o *InlineResponse20097) SetDeploymentMode(v string)`
 
-SetClientId sets ClientId field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasClientId
+### HasDeploymentMode
 
-`func (o *InlineResponse20097) HasClientId() bool`
+`func (o *InlineResponse20097) HasDeploymentMode() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetClientIp
+### GetCidr
 
-`func (o *InlineResponse20097) GetClientIp() string`
+`func (o *InlineResponse20097) GetCidr() string`
 
-GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetClientIpOk
+### GetCidrOk
 
-`func (o *InlineResponse20097) GetClientIpOk() (*string, bool)`
+`func (o *InlineResponse20097) GetCidrOk() (*string, bool)`
 
-GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientIp
+### SetCidr
 
-`func (o *InlineResponse20097) SetClientIp(v string)`
+`func (o *InlineResponse20097) SetCidr(v string)`
 
-SetClientIp sets ClientIp field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasClientIp
+### HasCidr
 
-`func (o *InlineResponse20097) HasClientIp() bool`
+`func (o *InlineResponse20097) HasCidr() bool`
 
-HasClientIp returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetClientMac
+### GetMask
 
-`func (o *InlineResponse20097) GetClientMac() string`
+`func (o *InlineResponse20097) GetMask() int32`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetMaskOk
 
-`func (o *InlineResponse20097) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse20097) GetMaskOk() (*int32, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetMask
 
-`func (o *InlineResponse20097) SetClientMac(v string)`
+`func (o *InlineResponse20097) SetMask(v int32)`
 
-SetClientMac sets ClientMac field to given value.
+SetMask sets Mask field to given value.
 
-### HasClientMac
+### HasMask
 
-`func (o *InlineResponse20097) HasClientMac() bool`
+`func (o *InlineResponse20097) HasMask() bool`
 
-HasClientMac returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
 
-### GetApplicationUsage
+### GetSubnets
 
-`func (o *InlineResponse20097) GetApplicationUsage() []NetworksNetworkIdClientsApplicationUsageApplicationUsage`
+`func (o *InlineResponse20097) GetSubnets() []InlineResponse20097Subnets`
 
-GetApplicationUsage returns the ApplicationUsage field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetApplicationUsageOk
+### GetSubnetsOk
 
-`func (o *InlineResponse20097) GetApplicationUsageOk() (*[]NetworksNetworkIdClientsApplicationUsageApplicationUsage, bool)`
+`func (o *InlineResponse20097) GetSubnetsOk() (*[]InlineResponse20097Subnets, bool)`
 
-GetApplicationUsageOk returns a tuple with the ApplicationUsage field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplicationUsage
+### SetSubnets
 
-`func (o *InlineResponse20097) SetApplicationUsage(v []NetworksNetworkIdClientsApplicationUsageApplicationUsage)`
+`func (o *InlineResponse20097) SetSubnets(v []InlineResponse20097Subnets)`
 
-SetApplicationUsage sets ApplicationUsage field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasApplicationUsage
+### HasSubnets
 
-`func (o *InlineResponse20097) HasApplicationUsage() bool`
+`func (o *InlineResponse20097) HasSubnets() bool`
 
-HasApplicationUsage returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

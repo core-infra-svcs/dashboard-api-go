@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Changes** | Pointer to [**[]InlineResponse200406Changes**](InlineResponse200406Changes.md) | Connectivity information of a wireless LAN controller | [optional] 
+**Network** | Pointer to [**InlineResponse200406Network**](InlineResponse200406Network.md) |  | [optional] 
+**Serial** | Pointer to **string** | Access point Serial number | [optional] 
+**Counts** | Pointer to [**InlineResponse200406Counts**](InlineResponse200406Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,6 +26,31 @@ will change when the set of required properties is changed
 NewInlineResponse200406ItemsWithDefaults instantiates a new InlineResponse200406Items object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetNetwork
+
+`func (o *InlineResponse200406Items) GetNetwork() InlineResponse200406Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200406Items) GetNetworkOk() (*InlineResponse200406Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200406Items) SetNetwork(v InlineResponse200406Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200406Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -51,30 +77,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetChanges
+### GetCounts
 
-`func (o *InlineResponse200406Items) GetChanges() []InlineResponse200406Changes`
+`func (o *InlineResponse200406Items) GetCounts() InlineResponse200406Counts`
 
-GetChanges returns the Changes field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetChangesOk
+### GetCountsOk
 
-`func (o *InlineResponse200406Items) GetChangesOk() (*[]InlineResponse200406Changes, bool)`
+`func (o *InlineResponse200406Items) GetCountsOk() (*InlineResponse200406Counts, bool)`
 
-GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChanges
+### SetCounts
 
-`func (o *InlineResponse200406Items) SetChanges(v []InlineResponse200406Changes)`
+`func (o *InlineResponse200406Items) SetCounts(v InlineResponse200406Counts)`
 
-SetChanges sets Changes field to given value.
+SetCounts sets Counts field to given value.
 
-### HasChanges
+### HasCounts
 
-`func (o *InlineResponse200406Items) HasChanges() bool`
+`func (o *InlineResponse200406Items) HasCounts() bool`
 
-HasChanges returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

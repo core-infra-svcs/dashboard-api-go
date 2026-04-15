@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
-**SpInitiated** | Pointer to [**InlineResponse200338SpInitiated**](InlineResponse200338SpInitiated.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the firewall ruleset | [optional] 
+**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject297WithDefaults instantiates a new InlineObject297 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject297) GetEnabled() bool`
+`func (o *InlineObject297) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject297) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject297) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject297) SetEnabled(v bool)`
+`func (o *InlineObject297) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineObject297) HasEnabled() bool`
+`func (o *InlineObject297) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSpInitiated
+### GetDescription
 
-`func (o *InlineObject297) GetSpInitiated() InlineResponse200338SpInitiated`
+`func (o *InlineObject297) GetDescription() string`
 
-GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetSpInitiatedOk
+### GetDescriptionOk
 
-`func (o *InlineObject297) GetSpInitiatedOk() (*InlineResponse200338SpInitiated, bool)`
+`func (o *InlineObject297) GetDescriptionOk() (*string, bool)`
 
-GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpInitiated
+### SetDescription
 
-`func (o *InlineObject297) SetSpInitiated(v InlineResponse200338SpInitiated)`
+`func (o *InlineObject297) SetDescription(v string)`
 
-SetSpInitiated sets SpInitiated field to given value.
+SetDescription sets Description field to given value.
 
-### HasSpInitiated
+### HasDescription
 
-`func (o *InlineObject297) HasSpInitiated() bool`
+`func (o *InlineObject297) HasDescription() bool`
 
-HasSpInitiated returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
-**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
-**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**ConnectionStats** | Pointer to [**NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats**](NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200203WithDefaults instantiates a new InlineResponse200203 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetMac
 
-`func (o *InlineResponse200203) GetStartTs() time.Time`
+`func (o *InlineResponse200203) GetMac() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetMacOk
 
-`func (o *InlineResponse200203) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200203) GetMacOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetMac
 
-`func (o *InlineResponse200203) SetStartTs(v time.Time)`
+`func (o *InlineResponse200203) SetMac(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetMac sets Mac field to given value.
 
-### HasStartTs
+### HasMac
 
-`func (o *InlineResponse200203) HasStartTs() bool`
+`func (o *InlineResponse200203) HasMac() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetEndTs
+### GetConnectionStats
 
-`func (o *InlineResponse200203) GetEndTs() time.Time`
+`func (o *InlineResponse200203) GetConnectionStats() NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse200203) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200203) GetConnectionStatsOk() (*NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetConnectionStats
 
-`func (o *InlineResponse200203) SetEndTs(v time.Time)`
+`func (o *InlineResponse200203) SetConnectionStats(v NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats)`
 
-SetEndTs sets EndTs field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasEndTs
+### HasConnectionStats
 
-`func (o *InlineResponse200203) HasEndTs() bool`
+`func (o *InlineResponse200203) HasConnectionStats() bool`
 
-HasEndTs returns a boolean if a field has been set.
-
-### GetAverageKbps
-
-`func (o *InlineResponse200203) GetAverageKbps() int32`
-
-GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
-
-### GetAverageKbpsOk
-
-`func (o *InlineResponse200203) GetAverageKbpsOk() (*int32, bool)`
-
-GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAverageKbps
-
-`func (o *InlineResponse200203) SetAverageKbps(v int32)`
-
-SetAverageKbps sets AverageKbps field to given value.
-
-### HasAverageKbps
-
-`func (o *InlineResponse200203) HasAverageKbps() bool`
-
-HasAverageKbps returns a boolean if a field has been set.
-
-### GetDownloadKbps
-
-`func (o *InlineResponse200203) GetDownloadKbps() int32`
-
-GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
-
-### GetDownloadKbpsOk
-
-`func (o *InlineResponse200203) GetDownloadKbpsOk() (*int32, bool)`
-
-GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownloadKbps
-
-`func (o *InlineResponse200203) SetDownloadKbps(v int32)`
-
-SetDownloadKbps sets DownloadKbps field to given value.
-
-### HasDownloadKbps
-
-`func (o *InlineResponse200203) HasDownloadKbps() bool`
-
-HasDownloadKbps returns a boolean if a field has been set.
-
-### GetUploadKbps
-
-`func (o *InlineResponse200203) GetUploadKbps() int32`
-
-GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
-
-### GetUploadKbpsOk
-
-`func (o *InlineResponse200203) GetUploadKbpsOk() (*int32, bool)`
-
-GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadKbps
-
-`func (o *InlineResponse200203) SetUploadKbps(v int32)`
-
-SetUploadKbps sets UploadKbps field to given value.
-
-### HasUploadKbps
-
-`func (o *InlineResponse200203) HasUploadKbps() bool`
-
-HasUploadKbps returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

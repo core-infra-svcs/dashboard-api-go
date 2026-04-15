@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
-**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
-**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
+**Ssid** | Pointer to **string** | SSID name | [optional] 
+**Bssids** | Pointer to [**[]NetworksNetworkIdWirelessAirMarshalBssids**](NetworksNetworkIdWirelessAirMarshalBssids.md) | BSSIDs broadcasting the SSID | [optional] 
+**Channels** | Pointer to **[]int32** | Channels where the SSID was observed | [optional] 
+**FirstSeen** | Pointer to **int32** | First time the SSID was observed (epoch seconds) | [optional] 
+**LastSeen** | Pointer to **int32** | Most recent time the SSID was observed (epoch seconds) | [optional] 
+**WiredMacs** | Pointer to **[]string** | MAC addresses observed on the SSID | [optional] 
+**WiredVlans** | Pointer to **[]int32** | VLAN IDs observed on the SSID | [optional] 
+**WiredLastSeen** | Pointer to **int32** | Last time observed on the SSID (epoch seconds) | [optional] 
 
 ## Methods
 
@@ -29,130 +32,205 @@ NewInlineResponse200197WithDefaults instantiates a new InlineResponse200197 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetSsid
 
-`func (o *InlineResponse200197) GetStartTs() time.Time`
+`func (o *InlineResponse200197) GetSsid() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetSsidOk
 
-`func (o *InlineResponse200197) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200197) GetSsidOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetSsid
 
-`func (o *InlineResponse200197) SetStartTs(v time.Time)`
+`func (o *InlineResponse200197) SetSsid(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasStartTs
+### HasSsid
 
-`func (o *InlineResponse200197) HasStartTs() bool`
+`func (o *InlineResponse200197) HasSsid() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
 
-### GetEndTs
+### GetBssids
 
-`func (o *InlineResponse200197) GetEndTs() time.Time`
+`func (o *InlineResponse200197) GetBssids() []NetworksNetworkIdWirelessAirMarshalBssids`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetBssids returns the Bssids field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetBssidsOk
 
-`func (o *InlineResponse200197) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200197) GetBssidsOk() (*[]NetworksNetworkIdWirelessAirMarshalBssids, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetBssidsOk returns a tuple with the Bssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetBssids
 
-`func (o *InlineResponse200197) SetEndTs(v time.Time)`
+`func (o *InlineResponse200197) SetBssids(v []NetworksNetworkIdWirelessAirMarshalBssids)`
 
-SetEndTs sets EndTs field to given value.
+SetBssids sets Bssids field to given value.
 
-### HasEndTs
+### HasBssids
 
-`func (o *InlineResponse200197) HasEndTs() bool`
+`func (o *InlineResponse200197) HasBssids() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasBssids returns a boolean if a field has been set.
 
-### GetUtilizationTotal
+### GetChannels
 
-`func (o *InlineResponse200197) GetUtilizationTotal() float32`
+`func (o *InlineResponse200197) GetChannels() []int32`
 
-GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
+GetChannels returns the Channels field if non-nil, zero value otherwise.
 
-### GetUtilizationTotalOk
+### GetChannelsOk
 
-`func (o *InlineResponse200197) GetUtilizationTotalOk() (*float32, bool)`
+`func (o *InlineResponse200197) GetChannelsOk() (*[]int32, bool)`
 
-GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
+GetChannelsOk returns a tuple with the Channels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilizationTotal
+### SetChannels
 
-`func (o *InlineResponse200197) SetUtilizationTotal(v float32)`
+`func (o *InlineResponse200197) SetChannels(v []int32)`
 
-SetUtilizationTotal sets UtilizationTotal field to given value.
+SetChannels sets Channels field to given value.
 
-### HasUtilizationTotal
+### HasChannels
 
-`func (o *InlineResponse200197) HasUtilizationTotal() bool`
+`func (o *InlineResponse200197) HasChannels() bool`
 
-HasUtilizationTotal returns a boolean if a field has been set.
+HasChannels returns a boolean if a field has been set.
 
-### GetUtilization80211
+### GetFirstSeen
 
-`func (o *InlineResponse200197) GetUtilization80211() float32`
+`func (o *InlineResponse200197) GetFirstSeen() int32`
 
-GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
+GetFirstSeen returns the FirstSeen field if non-nil, zero value otherwise.
 
-### GetUtilization80211Ok
+### GetFirstSeenOk
 
-`func (o *InlineResponse200197) GetUtilization80211Ok() (*float32, bool)`
+`func (o *InlineResponse200197) GetFirstSeenOk() (*int32, bool)`
 
-GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
+GetFirstSeenOk returns a tuple with the FirstSeen field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilization80211
+### SetFirstSeen
 
-`func (o *InlineResponse200197) SetUtilization80211(v float32)`
+`func (o *InlineResponse200197) SetFirstSeen(v int32)`
 
-SetUtilization80211 sets Utilization80211 field to given value.
+SetFirstSeen sets FirstSeen field to given value.
 
-### HasUtilization80211
+### HasFirstSeen
 
-`func (o *InlineResponse200197) HasUtilization80211() bool`
+`func (o *InlineResponse200197) HasFirstSeen() bool`
 
-HasUtilization80211 returns a boolean if a field has been set.
+HasFirstSeen returns a boolean if a field has been set.
 
-### GetUtilizationNon80211
+### GetLastSeen
 
-`func (o *InlineResponse200197) GetUtilizationNon80211() float32`
+`func (o *InlineResponse200197) GetLastSeen() int32`
 
-GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
+GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
 
-### GetUtilizationNon80211Ok
+### GetLastSeenOk
 
-`func (o *InlineResponse200197) GetUtilizationNon80211Ok() (*float32, bool)`
+`func (o *InlineResponse200197) GetLastSeenOk() (*int32, bool)`
 
-GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
+GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilizationNon80211
+### SetLastSeen
 
-`func (o *InlineResponse200197) SetUtilizationNon80211(v float32)`
+`func (o *InlineResponse200197) SetLastSeen(v int32)`
 
-SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
+SetLastSeen sets LastSeen field to given value.
 
-### HasUtilizationNon80211
+### HasLastSeen
 
-`func (o *InlineResponse200197) HasUtilizationNon80211() bool`
+`func (o *InlineResponse200197) HasLastSeen() bool`
 
-HasUtilizationNon80211 returns a boolean if a field has been set.
+HasLastSeen returns a boolean if a field has been set.
+
+### GetWiredMacs
+
+`func (o *InlineResponse200197) GetWiredMacs() []string`
+
+GetWiredMacs returns the WiredMacs field if non-nil, zero value otherwise.
+
+### GetWiredMacsOk
+
+`func (o *InlineResponse200197) GetWiredMacsOk() (*[]string, bool)`
+
+GetWiredMacsOk returns a tuple with the WiredMacs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredMacs
+
+`func (o *InlineResponse200197) SetWiredMacs(v []string)`
+
+SetWiredMacs sets WiredMacs field to given value.
+
+### HasWiredMacs
+
+`func (o *InlineResponse200197) HasWiredMacs() bool`
+
+HasWiredMacs returns a boolean if a field has been set.
+
+### GetWiredVlans
+
+`func (o *InlineResponse200197) GetWiredVlans() []int32`
+
+GetWiredVlans returns the WiredVlans field if non-nil, zero value otherwise.
+
+### GetWiredVlansOk
+
+`func (o *InlineResponse200197) GetWiredVlansOk() (*[]int32, bool)`
+
+GetWiredVlansOk returns a tuple with the WiredVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredVlans
+
+`func (o *InlineResponse200197) SetWiredVlans(v []int32)`
+
+SetWiredVlans sets WiredVlans field to given value.
+
+### HasWiredVlans
+
+`func (o *InlineResponse200197) HasWiredVlans() bool`
+
+HasWiredVlans returns a boolean if a field has been set.
+
+### GetWiredLastSeen
+
+`func (o *InlineResponse200197) GetWiredLastSeen() int32`
+
+GetWiredLastSeen returns the WiredLastSeen field if non-nil, zero value otherwise.
+
+### GetWiredLastSeenOk
+
+`func (o *InlineResponse200197) GetWiredLastSeenOk() (*int32, bool)`
+
+GetWiredLastSeenOk returns a tuple with the WiredLastSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredLastSeen
+
+`func (o *InlineResponse200197) SetWiredLastSeen(v int32)`
+
+SetWiredLastSeen sets WiredLastSeen field to given value.
+
+### HasWiredLastSeen
+
+`func (o *InlineResponse200197) HasWiredLastSeen() bool`
+
+HasWiredLastSeen returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

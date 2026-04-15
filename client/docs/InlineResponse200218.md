@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200218Rules**](InlineResponse200218Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
-**AllowLanAccess** | Pointer to **bool** | Allows wireless client access to local LAN (boolean value - true allows access and false denies access) | [optional] 
+**NetworkId** | Pointer to **string** | Id of the network | [optional] 
+**Name** | Pointer to **string** | Name of the network | [optional] 
+**TimeZone** | Pointer to **string** | Time zone of the network | [optional] 
+**BusyHour** | Pointer to [**InlineResponse200218BusyHour**](InlineResponse200218BusyHour.md) |  | [optional] 
+**Channel** | Pointer to [**InlineResponse200218Channel**](InlineResponse200218Channel.md) |  | [optional] 
+**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
+**Ai** | Pointer to [**InlineResponse200218Ai**](InlineResponse200218Ai.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetNetworkId
 
-`func (o *InlineResponse200218) GetRules() []InlineResponse200218Rules`
+`func (o *InlineResponse200218) GetNetworkId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200218) GetRulesOk() (*[]InlineResponse200218Rules, bool)`
+`func (o *InlineResponse200218) GetNetworkIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetNetworkId
 
-`func (o *InlineResponse200218) SetRules(v []InlineResponse200218Rules)`
+`func (o *InlineResponse200218) SetNetworkId(v string)`
 
-SetRules sets Rules field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasRules
+### HasNetworkId
 
-`func (o *InlineResponse200218) HasRules() bool`
+`func (o *InlineResponse200218) HasNetworkId() bool`
 
-HasRules returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetAllowLanAccess
+### GetName
 
-`func (o *InlineResponse200218) GetAllowLanAccess() bool`
+`func (o *InlineResponse200218) GetName() string`
 
-GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAllowLanAccessOk
+### GetNameOk
 
-`func (o *InlineResponse200218) GetAllowLanAccessOk() (*bool, bool)`
+`func (o *InlineResponse200218) GetNameOk() (*string, bool)`
 
-GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowLanAccess
+### SetName
 
-`func (o *InlineResponse200218) SetAllowLanAccess(v bool)`
+`func (o *InlineResponse200218) SetName(v string)`
 
-SetAllowLanAccess sets AllowLanAccess field to given value.
+SetName sets Name field to given value.
 
-### HasAllowLanAccess
+### HasName
 
-`func (o *InlineResponse200218) HasAllowLanAccess() bool`
+`func (o *InlineResponse200218) HasName() bool`
 
-HasAllowLanAccess returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetTimeZone
+
+`func (o *InlineResponse200218) GetTimeZone() string`
+
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+
+### GetTimeZoneOk
+
+`func (o *InlineResponse200218) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeZone
+
+`func (o *InlineResponse200218) SetTimeZone(v string)`
+
+SetTimeZone sets TimeZone field to given value.
+
+### HasTimeZone
+
+`func (o *InlineResponse200218) HasTimeZone() bool`
+
+HasTimeZone returns a boolean if a field has been set.
+
+### GetBusyHour
+
+`func (o *InlineResponse200218) GetBusyHour() InlineResponse200218BusyHour`
+
+GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
+
+### GetBusyHourOk
+
+`func (o *InlineResponse200218) GetBusyHourOk() (*InlineResponse200218BusyHour, bool)`
+
+GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBusyHour
+
+`func (o *InlineResponse200218) SetBusyHour(v InlineResponse200218BusyHour)`
+
+SetBusyHour sets BusyHour field to given value.
+
+### HasBusyHour
+
+`func (o *InlineResponse200218) HasBusyHour() bool`
+
+HasBusyHour returns a boolean if a field has been set.
+
+### GetChannel
+
+`func (o *InlineResponse200218) GetChannel() InlineResponse200218Channel`
+
+GetChannel returns the Channel field if non-nil, zero value otherwise.
+
+### GetChannelOk
+
+`func (o *InlineResponse200218) GetChannelOk() (*InlineResponse200218Channel, bool)`
+
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChannel
+
+`func (o *InlineResponse200218) SetChannel(v InlineResponse200218Channel)`
+
+SetChannel sets Channel field to given value.
+
+### HasChannel
+
+`func (o *InlineResponse200218) HasChannel() bool`
+
+HasChannel returns a boolean if a field has been set.
+
+### GetFra
+
+`func (o *InlineResponse200218) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
+
+GetFra returns the Fra field if non-nil, zero value otherwise.
+
+### GetFraOk
+
+`func (o *InlineResponse200218) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
+
+GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFra
+
+`func (o *InlineResponse200218) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
+
+SetFra sets Fra field to given value.
+
+### HasFra
+
+`func (o *InlineResponse200218) HasFra() bool`
+
+HasFra returns a boolean if a field has been set.
+
+### GetAi
+
+`func (o *InlineResponse200218) GetAi() InlineResponse200218Ai`
+
+GetAi returns the Ai field if non-nil, zero value otherwise.
+
+### GetAiOk
+
+`func (o *InlineResponse200218) GetAiOk() (*InlineResponse200218Ai, bool)`
+
+GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAi
+
+`func (o *InlineResponse200218) SetAi(v InlineResponse200218Ai)`
+
+SetAi sets Ai field to given value.
+
+### HasAi
+
+`func (o *InlineResponse200218) HasAi() bool`
+
+HasAi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

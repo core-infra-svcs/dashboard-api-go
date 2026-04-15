@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
-**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
-**Reasons** | [**[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons**](NetworksNetworkIdFirmwareUpgradesRollbacksReasons.md) | Reasons for the rollback | 
-**ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksToVersion**](NetworksNetworkIdFirmwareUpgradesRollbacksToVersion.md) |  | [optional] 
+**UpgradeWindow** | Pointer to [**NetworksNetworkIdFirmwareUpgradesUpgradeWindow**](NetworksNetworkIdFirmwareUpgradesUpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject100
 
-`func NewInlineObject100(reasons []NetworksNetworkIdFirmwareUpgradesRollbacksReasons, ) *InlineObject100`
+`func NewInlineObject100() *InlineObject100`
 
 NewInlineObject100 instantiates a new InlineObject100 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,80 @@ NewInlineObject100WithDefaults instantiates a new InlineObject100 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProduct
+### GetUpgradeWindow
 
-`func (o *InlineObject100) GetProduct() string`
+`func (o *InlineObject100) GetUpgradeWindow() NetworksNetworkIdFirmwareUpgradesUpgradeWindow`
 
-GetProduct returns the Product field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetProductOk
+### GetUpgradeWindowOk
 
-`func (o *InlineObject100) GetProductOk() (*string, bool)`
+`func (o *InlineObject100) GetUpgradeWindowOk() (*NetworksNetworkIdFirmwareUpgradesUpgradeWindow, bool)`
 
-GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProduct
+### SetUpgradeWindow
 
-`func (o *InlineObject100) SetProduct(v string)`
+`func (o *InlineObject100) SetUpgradeWindow(v NetworksNetworkIdFirmwareUpgradesUpgradeWindow)`
 
-SetProduct sets Product field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasProduct
+### HasUpgradeWindow
 
-`func (o *InlineObject100) HasProduct() bool`
+`func (o *InlineObject100) HasUpgradeWindow() bool`
 
-HasProduct returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetTime
+### GetTimezone
 
-`func (o *InlineObject100) GetTime() time.Time`
+`func (o *InlineObject100) GetTimezone() string`
 
-GetTime returns the Time field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetTimeOk
+### GetTimezoneOk
 
-`func (o *InlineObject100) GetTimeOk() (*time.Time, bool)`
+`func (o *InlineObject100) GetTimezoneOk() (*string, bool)`
 
-GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTime
+### SetTimezone
 
-`func (o *InlineObject100) SetTime(v time.Time)`
+`func (o *InlineObject100) SetTimezone(v string)`
 
-SetTime sets Time field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasTime
+### HasTimezone
 
-`func (o *InlineObject100) HasTime() bool`
+`func (o *InlineObject100) HasTimezone() bool`
 
-HasTime returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetReasons
+### GetProducts
 
-`func (o *InlineObject100) GetReasons() []NetworksNetworkIdFirmwareUpgradesRollbacksReasons`
+`func (o *InlineObject100) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
 
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetReasonsOk
+### GetProductsOk
 
-`func (o *InlineObject100) GetReasonsOk() (*[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons, bool)`
+`func (o *InlineObject100) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
 
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReasons
+### SetProducts
 
-`func (o *InlineObject100) SetReasons(v []NetworksNetworkIdFirmwareUpgradesRollbacksReasons)`
+`func (o *InlineObject100) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
 
-SetReasons sets Reasons field to given value.
+SetProducts sets Products field to given value.
 
+### HasProducts
 
-### GetToVersion
+`func (o *InlineObject100) HasProducts() bool`
 
-`func (o *InlineObject100) GetToVersion() NetworksNetworkIdFirmwareUpgradesRollbacksToVersion`
-
-GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
-
-### GetToVersionOk
-
-`func (o *InlineObject100) GetToVersionOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksToVersion, bool)`
-
-GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetToVersion
-
-`func (o *InlineObject100) SetToVersion(v NetworksNetworkIdFirmwareUpgradesRollbacksToVersion)`
-
-SetToVersion sets ToVersion field to given value.
-
-### HasToVersion
-
-`func (o *InlineObject100) HasToVersion() bool`
-
-HasToVersion returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

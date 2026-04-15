@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assignments** | [**[]NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments**](NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments.md) | List of floorplan assignments to update. Up to 100 floor plan assignments can be provided in a request. | 
+**Devices** | Pointer to [**[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices**](NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices.md) | The list of devices to update anchor positions for | [optional] 
 
 ## Methods
 
 ### NewInlineObject111
 
-`func NewInlineObject111(assignments []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments, ) *InlineObject111`
+`func NewInlineObject111() *InlineObject111`
 
 NewInlineObject111 instantiates a new InlineObject111 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject111WithDefaults instantiates a new InlineObject111 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssignments
+### GetDevices
 
-`func (o *InlineObject111) GetAssignments() []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments`
+`func (o *InlineObject111) GetDevices() []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices`
 
-GetAssignments returns the Assignments field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetAssignmentsOk
+### GetDevicesOk
 
-`func (o *InlineObject111) GetAssignmentsOk() (*[]NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments, bool)`
+`func (o *InlineObject111) GetDevicesOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices, bool)`
 
-GetAssignmentsOk returns a tuple with the Assignments field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignments
+### SetDevices
 
-`func (o *InlineObject111) SetAssignments(v []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments)`
+`func (o *InlineObject111) SetDevices(v []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices)`
 
-SetAssignments sets Assignments field to given value.
+SetDevices sets Devices field to given value.
 
+### HasDevices
+
+`func (o *InlineObject111) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
-**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
-**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
+**Restrictions** | Pointer to [**[]InlineResponse200153Restrictions**](InlineResponse200153Restrictions.md) | The list of restrictions for the device | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200153WithDefaults instantiates a new InlineResponse200153 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCreatedAt
+### GetRestrictions
 
-`func (o *InlineResponse200153) GetCreatedAt() string`
+`func (o *InlineResponse200153) GetRestrictions() []InlineResponse200153Restrictions`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetRestrictions returns the Restrictions field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetRestrictionsOk
 
-`func (o *InlineResponse200153) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse200153) GetRestrictionsOk() (*[]InlineResponse200153Restrictions, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetRestrictionsOk returns a tuple with the Restrictions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetRestrictions
 
-`func (o *InlineResponse200153) SetCreatedAt(v string)`
+`func (o *InlineResponse200153) SetRestrictions(v []InlineResponse200153Restrictions)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetRestrictions sets Restrictions field to given value.
 
-### HasCreatedAt
+### HasRestrictions
 
-`func (o *InlineResponse200153) HasCreatedAt() bool`
+`func (o *InlineResponse200153) HasRestrictions() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse200153) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200153) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200153) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200153) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetXml
-
-`func (o *InlineResponse200153) GetXml() string`
-
-GetXml returns the Xml field if non-nil, zero value otherwise.
-
-### GetXmlOk
-
-`func (o *InlineResponse200153) GetXmlOk() (*string, bool)`
-
-GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetXml
-
-`func (o *InlineResponse200153) SetXml(v string)`
-
-SetXml sets Xml field to given value.
-
-### HasXml
-
-`func (o *InlineResponse200153) HasXml() bool`
-
-HasXml returns a boolean if a field has been set.
+HasRestrictions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

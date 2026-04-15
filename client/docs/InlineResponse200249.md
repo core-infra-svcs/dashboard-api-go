@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200249Counts**](InlineResponse200249Counts.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | Profile ID | [optional] 
+**Name** | Pointer to **string** | Name of profile | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200249WithDefaults instantiates a new InlineResponse200249 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetProfileId
 
-`func (o *InlineResponse200249) GetCounts() InlineResponse200249Counts`
+`func (o *InlineResponse200249) GetProfileId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200249) GetCountsOk() (*InlineResponse200249Counts, bool)`
+`func (o *InlineResponse200249) GetProfileIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetProfileId
 
-`func (o *InlineResponse200249) SetCounts(v InlineResponse200249Counts)`
+`func (o *InlineResponse200249) SetProfileId(v string)`
 
-SetCounts sets Counts field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasCounts
+### HasProfileId
 
-`func (o *InlineResponse200249) HasCounts() bool`
+`func (o *InlineResponse200249) HasProfileId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200249) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200249) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200249) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200249) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

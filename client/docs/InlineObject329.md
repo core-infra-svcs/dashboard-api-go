@@ -1,0 +1,82 @@
+# InlineObject329
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+
+## Methods
+
+### NewInlineObject329
+
+`func NewInlineObject329() *InlineObject329`
+
+NewInlineObject329 instantiates a new InlineObject329 object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewInlineObject329WithDefaults
+
+`func NewInlineObject329WithDefaults() *InlineObject329`
+
+NewInlineObject329WithDefaults instantiates a new InlineObject329 object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetStatus
+
+`func (o *InlineObject329) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineObject329) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineObject329) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineObject329) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetCertificateAuthorityId
+
+`func (o *InlineObject329) GetCertificateAuthorityId() string`
+
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+
+### GetCertificateAuthorityIdOk
+
+`func (o *InlineObject329) GetCertificateAuthorityIdOk() (*string, bool)`
+
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCertificateAuthorityId
+
+`func (o *InlineObject329) SetCertificateAuthorityId(v string)`
+
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+
+### HasCertificateAuthorityId
+
+`func (o *InlineObject329) HasCertificateAuthorityId() bool`
+
+HasCertificateAuthorityId returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

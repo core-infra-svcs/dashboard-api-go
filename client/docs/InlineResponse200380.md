@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Id** | Pointer to **string** | Splash theme asset id | [optional] 
+**Name** | Pointer to **string** | Splash theme asset name | [optional] 
+**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200380WithDefaults instantiates a new InlineResponse200380 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetId
 
-`func (o *InlineResponse200380) GetSerial() string`
+`func (o *InlineResponse200380) GetId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetIdOk
 
-`func (o *InlineResponse200380) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200380) GetIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetId
 
-`func (o *InlineResponse200380) SetSerial(v string)`
+`func (o *InlineResponse200380) SetId(v string)`
 
-SetSerial sets Serial field to given value.
+SetId sets Id field to given value.
 
-### HasSerial
+### HasId
 
-`func (o *InlineResponse200380) HasSerial() bool`
+`func (o *InlineResponse200380) HasId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMac
+### GetName
 
-`func (o *InlineResponse200380) GetMac() string`
+`func (o *InlineResponse200380) GetName() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetNameOk
 
-`func (o *InlineResponse200380) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200380) GetNameOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetName
 
-`func (o *InlineResponse200380) SetMac(v string)`
+`func (o *InlineResponse200380) SetName(v string)`
 
-SetMac sets Mac field to given value.
+SetName sets Name field to given value.
 
-### HasMac
+### HasName
 
-`func (o *InlineResponse200380) HasMac() bool`
+`func (o *InlineResponse200380) HasName() bool`
 
-HasMac returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetFileData
 
-`func (o *InlineResponse200380) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200380) GetFileData() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetFileData returns the FileData field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetFileDataOk
 
-`func (o *InlineResponse200380) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200380) GetFileDataOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetFileData
 
-`func (o *InlineResponse200380) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200380) SetFileData(v string)`
 
-SetNetwork sets Network field to given value.
+SetFileData sets FileData field to given value.
 
-### HasNetwork
+### HasFileData
 
-`func (o *InlineResponse200380) HasNetwork() bool`
+`func (o *InlineResponse200380) HasFileData() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetByBand
-
-`func (o *InlineResponse200380) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
-
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
-
-### GetByBandOk
-
-`func (o *InlineResponse200380) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
-
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByBand
-
-`func (o *InlineResponse200380) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
-
-SetByBand sets ByBand field to given value.
-
-### HasByBand
-
-`func (o *InlineResponse200380) HasByBand() bool`
-
-HasByBand returns a boolean if a field has been set.
+HasFileData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

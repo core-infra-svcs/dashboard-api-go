@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
+**RulesetId** | Pointer to **string** | ID of the ruleset to assign | [optional] 
+**PolicyId** | Pointer to **string** | ID of the policy to assign the ruleset to | [optional] 
+**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
 
 ## Methods
 
 ### NewInlineObject304
 
-`func NewInlineObject304(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject304`
+`func NewInlineObject304() *InlineObject304`
 
 NewInlineObject304 instantiates a new InlineObject304 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineObject304WithDefaults instantiates a new InlineObject304 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetRulesetId
 
-`func (o *InlineObject304) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
+`func (o *InlineObject304) GetRulesetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetRulesetIdOk
 
-`func (o *InlineObject304) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
+`func (o *InlineObject304) GetRulesetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetRulesetId
 
-`func (o *InlineObject304) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
+`func (o *InlineObject304) SetRulesetId(v string)`
 
-SetItems sets Items field to given value.
+SetRulesetId sets RulesetId field to given value.
 
+### HasRulesetId
+
+`func (o *InlineObject304) HasRulesetId() bool`
+
+HasRulesetId returns a boolean if a field has been set.
+
+### GetPolicyId
+
+`func (o *InlineObject304) GetPolicyId() string`
+
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+
+### GetPolicyIdOk
+
+`func (o *InlineObject304) GetPolicyIdOk() (*string, bool)`
+
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicyId
+
+`func (o *InlineObject304) SetPolicyId(v string)`
+
+SetPolicyId sets PolicyId field to given value.
+
+### HasPolicyId
+
+`func (o *InlineObject304) HasPolicyId() bool`
+
+HasPolicyId returns a boolean if a field has been set.
+
+### GetPriority
+
+`func (o *InlineObject304) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *InlineObject304) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *InlineObject304) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *InlineObject304) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

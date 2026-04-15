@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **MultiExitDiscriminator** | Pointer to **int32** | Configures the local metric associated with routes received from the remote peer. Routes from peers with lower metrics are will be preferred. Must be an integer between 0 and 4294967295. MED is 6th in the decision tree when identical routes from multiple peers exist. | [optional] 
 **PathPrepend** | Pointer to **[]int32** | Prepends the AS_PATH BGP Attribute associated with routes received from the remote peer. Configurable value of ASNs to prepend. Length of the array may not exceed 10, and each ASN in the array must be an integer between 1 and 4294967295. AS_PATH is 4th in the decision tree when identical routes from multiple peers exist. | [optional] 
 **Weight** | Pointer to **int32** | Sets the local weight for routes received from the remote peer. Routes from peers with higher weights will be preferred. Must be an integer between 0 and 49. | [optional] 
+**FilterIn** | Pointer to **[]string** | Filters routes received from an eBGP neighbor. Each entry must be an IPv4 CIDR string (e.g., &#39;10.0.0.0/8&#39; or &#39;10.0.0.5/32&#39;). | [optional] 
+**CommunityOut** | Pointer to **[]string** | List of BGP communities tagged to the routes advertised to an eBGP neighbor. | [optional] 
 
 ## Methods
 
@@ -372,6 +374,56 @@ SetWeight sets Weight field to given value.
 `func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasWeight() bool`
 
 HasWeight returns a boolean if a field has been set.
+
+### GetFilterIn
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilterIn() []string`
+
+GetFilterIn returns the FilterIn field if non-nil, zero value otherwise.
+
+### GetFilterInOk
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilterInOk() (*[]string, bool)`
+
+GetFilterInOk returns a tuple with the FilterIn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilterIn
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetFilterIn(v []string)`
+
+SetFilterIn sets FilterIn field to given value.
+
+### HasFilterIn
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasFilterIn() bool`
+
+HasFilterIn returns a boolean if a field has been set.
+
+### GetCommunityOut
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetCommunityOut() []string`
+
+GetCommunityOut returns the CommunityOut field if non-nil, zero value otherwise.
+
+### GetCommunityOutOk
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetCommunityOutOk() (*[]string, bool)`
+
+GetCommunityOutOk returns a tuple with the CommunityOut field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCommunityOut
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetCommunityOut(v []string)`
+
+SetCommunityOut sets CommunityOut field to given value.
+
+### HasCommunityOut
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasCommunityOut() bool`
+
+HasCommunityOut returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

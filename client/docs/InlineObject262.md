@@ -4,18 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices.md) | Device details (maximum of 20 devices allowed) | 
-**Notes** | Pointer to **string** | Reason for capture | [optional] 
-**Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
+**Serials** | **[]string** | The serial(s) of the device(s) | 
 **Name** | **string** | Name of packet capture file | 
-**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced.md) |  | [optional] 
+**OutputType** | Pointer to **string** | Output type of packet capture file. Possible values: text, pcap, cloudshark, or upload_to_cloud | [optional] 
+**Destination** | Pointer to **string** | Destination of packet capture file. Possible values: [upload_to_cloud] | [optional] 
+**Ports** | Pointer to **string** | Ports of packet capture file, comma-separated | [optional] 
+**Notes** | Pointer to **string** | Reason for taking the packet capture | [optional] 
+**Duration** | Pointer to **int32** | Duration in seconds of packet capture | [optional] 
+**FilterExpression** | Pointer to **string** | Filter expression for packet capture | [optional] 
+**Interface** | Pointer to **string** | Interface of the device | [optional] 
+**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject262
 
-`func NewInlineObject262(devices []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, name string, ) *InlineObject262`
+`func NewInlineObject262(serials []string, name string, ) *InlineObject262`
 
 NewInlineObject262 instantiates a new InlineObject262 object
 This constructor will assign default values to properties that have it defined,
@@ -30,25 +34,120 @@ NewInlineObject262WithDefaults instantiates a new InlineObject262 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetSerials
 
-`func (o *InlineObject262) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices`
+`func (o *InlineObject262) GetSerials() []string`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetSerialsOk
 
-`func (o *InlineObject262) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, bool)`
+`func (o *InlineObject262) GetSerialsOk() (*[]string, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetSerials
 
-`func (o *InlineObject262) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices)`
+`func (o *InlineObject262) SetSerials(v []string)`
 
-SetDevices sets Devices field to given value.
+SetSerials sets Serials field to given value.
 
+
+### GetName
+
+`func (o *InlineObject262) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineObject262) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineObject262) SetName(v string)`
+
+SetName sets Name field to given value.
+
+
+### GetOutputType
+
+`func (o *InlineObject262) GetOutputType() string`
+
+GetOutputType returns the OutputType field if non-nil, zero value otherwise.
+
+### GetOutputTypeOk
+
+`func (o *InlineObject262) GetOutputTypeOk() (*string, bool)`
+
+GetOutputTypeOk returns a tuple with the OutputType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOutputType
+
+`func (o *InlineObject262) SetOutputType(v string)`
+
+SetOutputType sets OutputType field to given value.
+
+### HasOutputType
+
+`func (o *InlineObject262) HasOutputType() bool`
+
+HasOutputType returns a boolean if a field has been set.
+
+### GetDestination
+
+`func (o *InlineObject262) GetDestination() string`
+
+GetDestination returns the Destination field if non-nil, zero value otherwise.
+
+### GetDestinationOk
+
+`func (o *InlineObject262) GetDestinationOk() (*string, bool)`
+
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestination
+
+`func (o *InlineObject262) SetDestination(v string)`
+
+SetDestination sets Destination field to given value.
+
+### HasDestination
+
+`func (o *InlineObject262) HasDestination() bool`
+
+HasDestination returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineObject262) GetPorts() string`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineObject262) GetPortsOk() (*string, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineObject262) SetPorts(v string)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineObject262) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
 
 ### GetNotes
 
@@ -125,42 +224,47 @@ SetFilterExpression sets FilterExpression field to given value.
 
 HasFilterExpression returns a boolean if a field has been set.
 
-### GetName
+### GetInterface
 
-`func (o *InlineObject262) GetName() string`
+`func (o *InlineObject262) GetInterface() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetInterface returns the Interface field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetInterfaceOk
 
-`func (o *InlineObject262) GetNameOk() (*string, bool)`
+`func (o *InlineObject262) GetInterfaceOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetInterface
 
-`func (o *InlineObject262) SetName(v string)`
+`func (o *InlineObject262) SetInterface(v string)`
 
-SetName sets Name field to given value.
+SetInterface sets Interface field to given value.
 
+### HasInterface
+
+`func (o *InlineObject262) HasInterface() bool`
+
+HasInterface returns a boolean if a field has been set.
 
 ### GetAdvanced
 
-`func (o *InlineObject262) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced`
+`func (o *InlineObject262) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced`
 
 GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
 
 ### GetAdvancedOk
 
-`func (o *InlineObject262) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced, bool)`
+`func (o *InlineObject262) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced, bool)`
 
 GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAdvanced
 
-`func (o *InlineObject262) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced)`
+`func (o *InlineObject262) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced)`
 
 SetAdvanced sets Advanced field to given value.
 

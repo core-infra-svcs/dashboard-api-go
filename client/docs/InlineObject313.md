@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
+**Role** | **string** | The role of the SAML administrator | 
+**OrgAccess** | **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
 
 ## Methods
 
 ### NewInlineObject313
 
-`func NewInlineObject313() *InlineObject313`
+`func NewInlineObject313(role string, orgAccess string, ) *InlineObject313`
 
 NewInlineObject313 instantiates a new InlineObject313 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +28,95 @@ NewInlineObject313WithDefaults instantiates a new InlineObject313 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetRole
 
-`func (o *InlineObject313) GetUrl() string`
+`func (o *InlineObject313) GetRole() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetRoleOk
 
-`func (o *InlineObject313) GetUrlOk() (*string, bool)`
+`func (o *InlineObject313) GetRoleOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetRole
 
-`func (o *InlineObject313) SetUrl(v string)`
+`func (o *InlineObject313) SetRole(v string)`
 
-SetUrl sets Url field to given value.
+SetRole sets Role field to given value.
 
-### HasUrl
 
-`func (o *InlineObject313) HasUrl() bool`
+### GetOrgAccess
 
-HasUrl returns a boolean if a field has been set.
+`func (o *InlineObject313) GetOrgAccess() string`
 
-### GetVersion
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-`func (o *InlineObject313) GetVersion() string`
+### GetOrgAccessOk
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+`func (o *InlineObject313) GetOrgAccessOk() (*string, bool)`
 
-### GetVersionOk
-
-`func (o *InlineObject313) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetOrgAccess
 
-`func (o *InlineObject313) SetVersion(v string)`
+`func (o *InlineObject313) SetOrgAccess(v string)`
 
-SetVersion sets Version field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasVersion
 
-`func (o *InlineObject313) HasVersion() bool`
+### GetTags
 
-HasVersion returns a boolean if a field has been set.
+`func (o *InlineObject313) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
 
-### GetRadio
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-`func (o *InlineObject313) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
+### GetTagsOk
 
-GetRadio returns the Radio field if non-nil, zero value otherwise.
+`func (o *InlineObject313) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
 
-### GetRadioOk
-
-`func (o *InlineObject313) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadio
+### SetTags
 
-`func (o *InlineObject313) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
+`func (o *InlineObject313) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
 
-SetRadio sets Radio field to given value.
+SetTags sets Tags field to given value.
 
-### HasRadio
+### HasTags
 
-`func (o *InlineObject313) HasRadio() bool`
+`func (o *InlineObject313) HasTags() bool`
 
-HasRadio returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineObject313) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineObject313) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineObject313) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineObject313) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

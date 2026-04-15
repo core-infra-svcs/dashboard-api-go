@@ -4,11 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID for integration | [optional] 
-**Type** | Pointer to **string** | Identifier for integration type. One of Axis, Catalyst SD-WAN, Cisco Spaces, Genea, OAuth, PagerDuty, Secure Access, Secure Connect, Splunk, XDR | [optional] 
-**Name** | Pointer to **string** | Name of integration | [optional] 
-**Provider** | Pointer to **string** | Integration provider. One of Cisco, Genea, partner | [optional] 
-**Tags** | Pointer to **[]string** | Integration types | [optional] 
+**Serial** | Pointer to **string** | Unique serial number for the device | [optional] 
+**Model** | Pointer to **string** | Model of the device | [optional] 
+**Name** | Pointer to **string** | Name of the device | [optional] 
+**Mac** | Pointer to **string** | MAC address of the device | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device | [optional] 
+**Provisioned** | Pointer to **int32** | The total RAM size provisioned on the device, in kB | [optional] 
+**Used** | Pointer to [**InlineResponse200315Used**](InlineResponse200315Used.md) |  | [optional] 
+**Free** | Pointer to [**InlineResponse200315Free**](InlineResponse200315Free.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200315Network**](InlineResponse200315Network.md) |  | [optional] 
+**Intervals** | Pointer to [**[]InlineResponse200315Intervals**](InlineResponse200315Intervals.md) | Time interval snapshots of system memory utilization on the device with the most recent snapshot first | [optional] 
 
 ## Methods
 
@@ -29,55 +34,55 @@ NewInlineResponse200315ItemsWithDefaults instantiates a new InlineResponse200315
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSerial
 
-`func (o *InlineResponse200315Items) GetId() string`
+`func (o *InlineResponse200315Items) GetSerial() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200315Items) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200315Items) GetSerialOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSerial
 
-`func (o *InlineResponse200315Items) SetId(v string)`
+`func (o *InlineResponse200315Items) SetSerial(v string)`
 
-SetId sets Id field to given value.
+SetSerial sets Serial field to given value.
 
-### HasId
+### HasSerial
 
-`func (o *InlineResponse200315Items) HasId() bool`
+`func (o *InlineResponse200315Items) HasSerial() bool`
 
-HasId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetType
+### GetModel
 
-`func (o *InlineResponse200315Items) GetType() string`
+`func (o *InlineResponse200315Items) GetModel() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetModelOk
 
-`func (o *InlineResponse200315Items) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200315Items) GetModelOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetModel
 
-`func (o *InlineResponse200315Items) SetType(v string)`
+`func (o *InlineResponse200315Items) SetModel(v string)`
 
-SetType sets Type field to given value.
+SetModel sets Model field to given value.
 
-### HasType
+### HasModel
 
-`func (o *InlineResponse200315Items) HasType() bool`
+`func (o *InlineResponse200315Items) HasModel() bool`
 
-HasType returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
 ### GetName
 
@@ -104,30 +109,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetProvider
+### GetMac
 
-`func (o *InlineResponse200315Items) GetProvider() string`
+`func (o *InlineResponse200315Items) GetMac() string`
 
-GetProvider returns the Provider field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetProviderOk
+### GetMacOk
 
-`func (o *InlineResponse200315Items) GetProviderOk() (*string, bool)`
+`func (o *InlineResponse200315Items) GetMacOk() (*string, bool)`
 
-GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProvider
+### SetMac
 
-`func (o *InlineResponse200315Items) SetProvider(v string)`
+`func (o *InlineResponse200315Items) SetMac(v string)`
 
-SetProvider sets Provider field to given value.
+SetMac sets Mac field to given value.
 
-### HasProvider
+### HasMac
 
-`func (o *InlineResponse200315Items) HasProvider() bool`
+`func (o *InlineResponse200315Items) HasMac() bool`
 
-HasProvider returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
 ### GetTags
 
@@ -153,6 +158,131 @@ SetTags sets Tags field to given value.
 `func (o *InlineResponse200315Items) HasTags() bool`
 
 HasTags returns a boolean if a field has been set.
+
+### GetProvisioned
+
+`func (o *InlineResponse200315Items) GetProvisioned() int32`
+
+GetProvisioned returns the Provisioned field if non-nil, zero value otherwise.
+
+### GetProvisionedOk
+
+`func (o *InlineResponse200315Items) GetProvisionedOk() (*int32, bool)`
+
+GetProvisionedOk returns a tuple with the Provisioned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProvisioned
+
+`func (o *InlineResponse200315Items) SetProvisioned(v int32)`
+
+SetProvisioned sets Provisioned field to given value.
+
+### HasProvisioned
+
+`func (o *InlineResponse200315Items) HasProvisioned() bool`
+
+HasProvisioned returns a boolean if a field has been set.
+
+### GetUsed
+
+`func (o *InlineResponse200315Items) GetUsed() InlineResponse200315Used`
+
+GetUsed returns the Used field if non-nil, zero value otherwise.
+
+### GetUsedOk
+
+`func (o *InlineResponse200315Items) GetUsedOk() (*InlineResponse200315Used, bool)`
+
+GetUsedOk returns a tuple with the Used field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsed
+
+`func (o *InlineResponse200315Items) SetUsed(v InlineResponse200315Used)`
+
+SetUsed sets Used field to given value.
+
+### HasUsed
+
+`func (o *InlineResponse200315Items) HasUsed() bool`
+
+HasUsed returns a boolean if a field has been set.
+
+### GetFree
+
+`func (o *InlineResponse200315Items) GetFree() InlineResponse200315Free`
+
+GetFree returns the Free field if non-nil, zero value otherwise.
+
+### GetFreeOk
+
+`func (o *InlineResponse200315Items) GetFreeOk() (*InlineResponse200315Free, bool)`
+
+GetFreeOk returns a tuple with the Free field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFree
+
+`func (o *InlineResponse200315Items) SetFree(v InlineResponse200315Free)`
+
+SetFree sets Free field to given value.
+
+### HasFree
+
+`func (o *InlineResponse200315Items) HasFree() bool`
+
+HasFree returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200315Items) GetNetwork() InlineResponse200315Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200315Items) GetNetworkOk() (*InlineResponse200315Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200315Items) SetNetwork(v InlineResponse200315Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200315Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetIntervals
+
+`func (o *InlineResponse200315Items) GetIntervals() []InlineResponse200315Intervals`
+
+GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+
+### GetIntervalsOk
+
+`func (o *InlineResponse200315Items) GetIntervalsOk() (*[]InlineResponse200315Intervals, bool)`
+
+GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIntervals
+
+`func (o *InlineResponse200315Items) SetIntervals(v []InlineResponse200315Intervals)`
+
+SetIntervals sets Intervals field to given value.
+
+### HasIntervals
+
+`func (o *InlineResponse200315Items) HasIntervals() bool`
+
+HasIntervals returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

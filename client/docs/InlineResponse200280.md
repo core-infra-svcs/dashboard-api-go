@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Eid** | **string** | eSIM EID | 
-**Iccid** | **string** | eSIM ICCID | 
-**Status** | **string** | Swap status | 
+**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
+**Type** | Pointer to **string** | The boundary type | [optional] 
+**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200280
 
-`func NewInlineResponse200280(eid string, iccid string, status string, ) *InlineResponse200280`
+`func NewInlineResponse200280() *InlineResponse200280`
 
 NewInlineResponse200280 instantiates a new InlineResponse200280 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +27,80 @@ NewInlineResponse200280WithDefaults instantiates a new InlineResponse200280 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEid
+### GetBoundaryId
 
-`func (o *InlineResponse200280) GetEid() string`
+`func (o *InlineResponse200280) GetBoundaryId() string`
 
-GetEid returns the Eid field if non-nil, zero value otherwise.
+GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
 
-### GetEidOk
+### GetBoundaryIdOk
 
-`func (o *InlineResponse200280) GetEidOk() (*string, bool)`
+`func (o *InlineResponse200280) GetBoundaryIdOk() (*string, bool)`
 
-GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
+GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEid
+### SetBoundaryId
 
-`func (o *InlineResponse200280) SetEid(v string)`
+`func (o *InlineResponse200280) SetBoundaryId(v string)`
 
-SetEid sets Eid field to given value.
+SetBoundaryId sets BoundaryId field to given value.
 
+### HasBoundaryId
 
-### GetIccid
+`func (o *InlineResponse200280) HasBoundaryId() bool`
 
-`func (o *InlineResponse200280) GetIccid() string`
+HasBoundaryId returns a boolean if a field has been set.
 
-GetIccid returns the Iccid field if non-nil, zero value otherwise.
+### GetType
 
-### GetIccidOk
+`func (o *InlineResponse200280) GetType() string`
 
-`func (o *InlineResponse200280) GetIccidOk() (*string, bool)`
+GetType returns the Type field if non-nil, zero value otherwise.
 
-GetIccidOk returns a tuple with the Iccid field if it's non-nil, zero value otherwise
+### GetTypeOk
+
+`func (o *InlineResponse200280) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIccid
+### SetType
 
-`func (o *InlineResponse200280) SetIccid(v string)`
+`func (o *InlineResponse200280) SetType(v string)`
 
-SetIccid sets Iccid field to given value.
+SetType sets Type field to given value.
 
+### HasType
 
-### GetStatus
+`func (o *InlineResponse200280) HasType() bool`
 
-`func (o *InlineResponse200280) GetStatus() string`
+HasType returns a boolean if a field has been set.
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+### GetResults
 
-### GetStatusOk
+`func (o *InlineResponse200280) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
 
-`func (o *InlineResponse200280) GetStatusOk() (*string, bool)`
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+### GetResultsOk
+
+`func (o *InlineResponse200280) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
+
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetResults
 
-`func (o *InlineResponse200280) SetStatus(v string)`
+`func (o *InlineResponse200280) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
 
-SetStatus sets Status field to given value.
+SetResults sets Results field to given value.
 
+### HasResults
+
+`func (o *InlineResponse200280) HasResults() bool`
+
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

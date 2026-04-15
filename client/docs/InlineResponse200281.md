@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network Id | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Model** | Pointer to **string** | Device model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Serial** | Pointer to **string** | Camera serial number | [optional] 
+**Status** | Pointer to **string** | Onboarding status | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | When the status was last updated | [optional] 
 
 ## Methods
 
@@ -79,80 +78,55 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetModel
+### GetStatus
 
-`func (o *InlineResponse200281) GetModel() string`
+`func (o *InlineResponse200281) GetStatus() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetStatusOk
 
-`func (o *InlineResponse200281) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200281) GetStatusOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetStatus
 
-`func (o *InlineResponse200281) SetModel(v string)`
+`func (o *InlineResponse200281) SetStatus(v string)`
 
-SetModel sets Model field to given value.
+SetStatus sets Status field to given value.
 
-### HasModel
+### HasStatus
 
-`func (o *InlineResponse200281) HasModel() bool`
+`func (o *InlineResponse200281) HasStatus() bool`
 
-HasModel returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetLastReportedAt
+### GetUpdatedAt
 
-`func (o *InlineResponse200281) GetLastReportedAt() time.Time`
+`func (o *InlineResponse200281) GetUpdatedAt() time.Time`
 
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
-### GetLastReportedAtOk
+### GetUpdatedAtOk
 
-`func (o *InlineResponse200281) GetLastReportedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200281) GetUpdatedAtOk() (*time.Time, bool)`
 
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastReportedAt
+### SetUpdatedAt
 
-`func (o *InlineResponse200281) SetLastReportedAt(v time.Time)`
+`func (o *InlineResponse200281) SetUpdatedAt(v time.Time)`
 
-SetLastReportedAt sets LastReportedAt field to given value.
+SetUpdatedAt sets UpdatedAt field to given value.
 
-### HasLastReportedAt
+### HasUpdatedAt
 
-`func (o *InlineResponse200281) HasLastReportedAt() bool`
+`func (o *InlineResponse200281) HasUpdatedAt() bool`
 
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200281) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200281) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200281) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200281) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

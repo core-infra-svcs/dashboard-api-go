@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | **string** | The role of the SAML administrator | 
-**OrgAccess** | **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy.md) |  | 
+**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to remove | 
 
 ## Methods
 
 ### NewInlineObject300
 
-`func NewInlineObject300(role string, orgAccess string, ) *InlineObject300`
+`func NewInlineObject300(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject300`
 
 NewInlineObject300 instantiates a new InlineObject300 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,45 @@ NewInlineObject300WithDefaults instantiates a new InlineObject300 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetPolicy
 
-`func (o *InlineObject300) GetRole() string`
+`func (o *InlineObject300) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetPolicyOk
 
-`func (o *InlineObject300) GetRoleOk() (*string, bool)`
+`func (o *InlineObject300) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetPolicy
 
-`func (o *InlineObject300) SetRole(v string)`
+`func (o *InlineObject300) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy)`
 
-SetRole sets Role field to given value.
+SetPolicy sets Policy field to given value.
 
 
-### GetOrgAccess
+### GetAdaptivePolicyGroups
 
-`func (o *InlineObject300) GetOrgAccess() string`
+`func (o *InlineObject300) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetAdaptivePolicyGroupsOk
 
-`func (o *InlineObject300) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject300) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetAdaptivePolicyGroups
 
-`func (o *InlineObject300) SetOrgAccess(v string)`
+`func (o *InlineObject300) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
 
-
-### GetTags
-
-`func (o *InlineObject300) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject300) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject300) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject300) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject300) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject300) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject300) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject300) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

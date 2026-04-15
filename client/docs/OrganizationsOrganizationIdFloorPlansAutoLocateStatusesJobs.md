@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 **Id** | Pointer to **string** | Auto locate job ID | [optional] 
 **Status** | Pointer to **string** | Auto locate job status. Possible values: &#39;scheduled&#39;, &#39;in progress&#39;, &#39;canceling&#39;, &#39;error&#39;, &#39;finished&#39;, &#39;published&#39;, &#39;canceled&#39; | [optional] 
 **ScheduledAt** | Pointer to **time.Time** | Scheduled start time for auto locate job | [optional] 
-**Completed** | Pointer to [**InlineResponse200114Completed**](InlineResponse200114Completed.md) |  | [optional] 
-**Ranging** | Pointer to [**InlineResponse200114Ranging**](InlineResponse200114Ranging.md) |  | [optional] 
-**Gnss** | Pointer to [**InlineResponse200114Gnss**](InlineResponse200114Gnss.md) |  | [optional] 
-**Errors** | Pointer to [**[]InlineResponse200114Errors**](InlineResponse200114Errors.md) | List of errors that occurred during a failed run of auto locate | [optional] 
+**Completed** | Pointer to [**InlineResponse200118Completed**](InlineResponse200118Completed.md) |  | [optional] 
+**Ranging** | Pointer to [**InlineResponse200118Ranging**](InlineResponse200118Ranging.md) |  | [optional] 
+**Gnss** | Pointer to [**InlineResponse200118Gnss**](InlineResponse200118Gnss.md) |  | [optional] 
+**Errors** | Pointer to [**[]InlineResponse200118Errors**](InlineResponse200118Errors.md) | List of errors that occurred during a failed run of auto locate | [optional] 
 
 ## Methods
 
@@ -108,20 +108,20 @@ HasScheduledAt returns a boolean if a field has been set.
 
 ### GetCompleted
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetCompleted() InlineResponse200114Completed`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetCompleted() InlineResponse200118Completed`
 
 GetCompleted returns the Completed field if non-nil, zero value otherwise.
 
 ### GetCompletedOk
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetCompletedOk() (*InlineResponse200114Completed, bool)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetCompletedOk() (*InlineResponse200118Completed, bool)`
 
 GetCompletedOk returns a tuple with the Completed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCompleted
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetCompleted(v InlineResponse200114Completed)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetCompleted(v InlineResponse200118Completed)`
 
 SetCompleted sets Completed field to given value.
 
@@ -133,20 +133,20 @@ HasCompleted returns a boolean if a field has been set.
 
 ### GetRanging
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetRanging() InlineResponse200114Ranging`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetRanging() InlineResponse200118Ranging`
 
 GetRanging returns the Ranging field if non-nil, zero value otherwise.
 
 ### GetRangingOk
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetRangingOk() (*InlineResponse200114Ranging, bool)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetRangingOk() (*InlineResponse200118Ranging, bool)`
 
 GetRangingOk returns a tuple with the Ranging field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRanging
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetRanging(v InlineResponse200114Ranging)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetRanging(v InlineResponse200118Ranging)`
 
 SetRanging sets Ranging field to given value.
 
@@ -158,20 +158,20 @@ HasRanging returns a boolean if a field has been set.
 
 ### GetGnss
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetGnss() InlineResponse200114Gnss`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetGnss() InlineResponse200118Gnss`
 
 GetGnss returns the Gnss field if non-nil, zero value otherwise.
 
 ### GetGnssOk
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetGnssOk() (*InlineResponse200114Gnss, bool)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetGnssOk() (*InlineResponse200118Gnss, bool)`
 
 GetGnssOk returns a tuple with the Gnss field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetGnss
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetGnss(v InlineResponse200114Gnss)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetGnss(v InlineResponse200118Gnss)`
 
 SetGnss sets Gnss field to given value.
 
@@ -183,20 +183,20 @@ HasGnss returns a boolean if a field has been set.
 
 ### GetErrors
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetErrors() []InlineResponse200114Errors`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetErrors() []InlineResponse200118Errors`
 
 GetErrors returns the Errors field if non-nil, zero value otherwise.
 
 ### GetErrorsOk
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetErrorsOk() (*[]InlineResponse200114Errors, bool)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) GetErrorsOk() (*[]InlineResponse200118Errors, bool)`
 
 GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetErrors
 
-`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetErrors(v []InlineResponse200114Errors)`
+`func (o *OrganizationsOrganizationIdFloorPlansAutoLocateStatusesJobs) SetErrors(v []InlineResponse200118Errors)`
 
 SetErrors sets Errors field to given value.
 

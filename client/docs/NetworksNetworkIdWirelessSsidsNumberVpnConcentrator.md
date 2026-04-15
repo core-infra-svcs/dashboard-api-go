@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The NAT ID of the concentrator that should be set. | [optional] 
+**NetworkId** | Pointer to **string** | The network ID of the concentrator that should be set. | [optional] 
 **VlanId** | Pointer to **int32** | The VLAN that should be tagged for the concentrator. | [optional] 
 
 ## Methods

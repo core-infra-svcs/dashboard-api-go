@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessSsidHotspot20
 
-> InlineResponse200220 GetNetworkWirelessSsidHotspot20(ctx, networkId, number).Execute()
+> InlineResponse200227 GetNetworkWirelessSsidHotspot20(ctx, networkId, number).Execute()
 
 Return the Hotspot 2.0 settings for an SSID
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `Hotspot20Api.GetNetworkWirelessSsidHotspot20``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidHotspot20`: InlineResponse200220
+    // response from `GetNetworkWirelessSsidHotspot20`: InlineResponse200227
     fmt.Fprintf(os.Stdout, "Response from `Hotspot20Api.GetNetworkWirelessSsidHotspot20`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200220**](InlineResponse200220.md)
+[**InlineResponse200227**](InlineResponse200227.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidHotspot20
 
-> InlineResponse200220 UpdateNetworkWirelessSsidHotspot20(ctx, networkId, number).UpdateNetworkWirelessSsidHotspot20(updateNetworkWirelessSsidHotspot20).Execute()
+> InlineResponse200227 UpdateNetworkWirelessSsidHotspot20(ctx, networkId, number).UpdateNetworkWirelessSsidHotspot20(updateNetworkWirelessSsidHotspot20).Execute()
 
 Update the Hotspot 2.0 settings of an SSID
 
@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidHotspot20 := *openapiclient.NewInlineObject203() // InlineObject203 |  (optional)
+    updateNetworkWirelessSsidHotspot20 := *openapiclient.NewInlineObject204() // InlineObject204 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `Hotspot20Api.UpdateNetworkWirelessSsidHotspot20``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidHotspot20`: InlineResponse200220
+    // response from `UpdateNetworkWirelessSsidHotspot20`: InlineResponse200227
     fmt.Fprintf(os.Stdout, "Response from `Hotspot20Api.UpdateNetworkWirelessSsidHotspot20`: %v\n", resp)
 }
 ```
@@ -137,11 +137,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidHotspot20** | [**InlineObject203**](InlineObject203.md) |  | 
+ **updateNetworkWirelessSsidHotspot20** | [**InlineObject204**](InlineObject204.md) |  | 
 
 ### Return type
 
-[**InlineResponse200220**](InlineResponse200220.md)
+[**InlineResponse200227**](InlineResponse200227.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkClientSplashAuthorizationStatus
 
-> map[string]interface{} GetNetworkClientSplashAuthorizationStatus(ctx, networkId, clientId).Execute()
+> InlineResponse200106 GetNetworkClientSplashAuthorizationStatus(ctx, networkId, clientId).Execute()
 
 Return the splash authorization for a client, for each SSID they've associated with through splash
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashAuthorizationStatusApi.GetNetworkClientSplashAuthorizationStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientSplashAuthorizationStatus`: map[string]interface{}
+    // response from `GetNetworkClientSplashAuthorizationStatus`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `SplashAuthorizationStatusApi.GetNetworkClientSplashAuthorizationStatus`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkClientSplashAuthorizationStatus
 
-> map[string]interface{} UpdateNetworkClientSplashAuthorizationStatus(ctx, networkId, clientId).UpdateNetworkClientSplashAuthorizationStatus(updateNetworkClientSplashAuthorizationStatus).Execute()
+> InlineResponse200106 UpdateNetworkClientSplashAuthorizationStatus(ctx, networkId, clientId).UpdateNetworkClientSplashAuthorizationStatus(updateNetworkClientSplashAuthorizationStatus).Execute()
 
 Update a client's splash authorization
 
@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject95(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject95 | 
+    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject96(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject96 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashAuthorizationStatusApi.UpdateNetworkClientSplashAuthorizationStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkClientSplashAuthorizationStatus`: map[string]interface{}
+    // response from `UpdateNetworkClientSplashAuthorizationStatus`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `SplashAuthorizationStatusApi.UpdateNetworkClientSplashAuthorizationStatus`: %v\n", resp)
 }
 ```
@@ -137,11 +137,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject95**](InlineObject95.md) |  | 
+ **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject96**](InlineObject96.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 

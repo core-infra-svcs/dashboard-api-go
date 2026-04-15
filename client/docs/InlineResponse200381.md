@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Id** | Pointer to **string** | theme id | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**IsSystemTheme** | Pointer to **bool** | is a Meraki provided theme | [optional] 
+**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200381WithDefaults instantiates a new InlineResponse200381 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetId
 
-`func (o *InlineResponse200381) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200381) GetId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetIdOk
 
-`func (o *InlineResponse200381) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200381) GetIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetId
 
-`func (o *InlineResponse200381) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200381) SetId(v string)`
 
-SetNetwork sets Network field to given value.
+SetId sets Id field to given value.
 
-### HasNetwork
+### HasId
 
-`func (o *InlineResponse200381) HasNetwork() bool`
+`func (o *InlineResponse200381) HasId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetByBand
+### GetName
 
-`func (o *InlineResponse200381) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200381) GetName() string`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetNameOk
 
-`func (o *InlineResponse200381) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200381) GetNameOk() (*string, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetName
 
-`func (o *InlineResponse200381) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200381) SetName(v string)`
 
-SetByBand sets ByBand field to given value.
+SetName sets Name field to given value.
 
-### HasByBand
+### HasName
 
-`func (o *InlineResponse200381) HasByBand() bool`
+`func (o *InlineResponse200381) HasName() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetIsSystemTheme
+
+`func (o *InlineResponse200381) GetIsSystemTheme() bool`
+
+GetIsSystemTheme returns the IsSystemTheme field if non-nil, zero value otherwise.
+
+### GetIsSystemThemeOk
+
+`func (o *InlineResponse200381) GetIsSystemThemeOk() (*bool, bool)`
+
+GetIsSystemThemeOk returns a tuple with the IsSystemTheme field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsSystemTheme
+
+`func (o *InlineResponse200381) SetIsSystemTheme(v bool)`
+
+SetIsSystemTheme sets IsSystemTheme field to given value.
+
+### HasIsSystemTheme
+
+`func (o *InlineResponse200381) HasIsSystemTheme() bool`
+
+HasIsSystemTheme returns a boolean if a field has been set.
+
+### GetThemeAssets
+
+`func (o *InlineResponse200381) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
+
+GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
+
+### GetThemeAssetsOk
+
+`func (o *InlineResponse200381) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
+
+GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetThemeAssets
+
+`func (o *InlineResponse200381) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
+
+SetThemeAssets sets ThemeAssets field to given value.
+
+### HasThemeAssets
+
+`func (o *InlineResponse200381) HasThemeAssets() bool`
+
+HasThemeAssets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

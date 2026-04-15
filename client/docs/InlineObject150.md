@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name for your port schedule. Required | 
-**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200175Overrides**](InlineResponse200175Overrides.md) | Override MTU size for individual switches or switch templates. An empty array will clear overrides. | [optional] 
 
 ## Methods
 
 ### NewInlineObject150
 
-`func NewInlineObject150(name string, ) *InlineObject150`
+`func NewInlineObject150() *InlineObject150`
 
 NewInlineObject150 instantiates a new InlineObject150 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject150WithDefaults instantiates a new InlineObject150 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDefaultMtuSize
 
-`func (o *InlineObject150) GetName() string`
+`func (o *InlineObject150) GetDefaultMtuSize() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineObject150) GetNameOk() (*string, bool)`
+`func (o *InlineObject150) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultMtuSize
 
-`func (o *InlineObject150) SetName(v string)`
+`func (o *InlineObject150) SetDefaultMtuSize(v int32)`
 
-SetName sets Name field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
+### HasDefaultMtuSize
 
-### GetPortSchedule
+`func (o *InlineObject150) HasDefaultMtuSize() bool`
 
-`func (o *InlineObject150) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
+HasDefaultMtuSize returns a boolean if a field has been set.
 
-GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
+### GetOverrides
 
-### GetPortScheduleOk
+`func (o *InlineObject150) GetOverrides() []InlineResponse200175Overrides`
 
-`func (o *InlineObject150) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
+### GetOverridesOk
+
+`func (o *InlineObject150) GetOverridesOk() (*[]InlineResponse200175Overrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPortSchedule
+### SetOverrides
 
-`func (o *InlineObject150) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
+`func (o *InlineObject150) SetOverrides(v []InlineResponse200175Overrides)`
 
-SetPortSchedule sets PortSchedule field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasPortSchedule
+### HasOverrides
 
-`func (o *InlineObject150) HasPortSchedule() bool`
+`func (o *InlineObject150) HasOverrides() bool`
 
-HasPortSchedule returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

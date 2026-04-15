@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeploymentMode** | Pointer to **string** | Deployment mode for the cellular gateways in the network. (Passthrough/Routed) | [optional] 
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
-**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
-**Subnets** | Pointer to [**[]InlineResponse20094Subnets**](InlineResponse20094Subnets.md) | List of subnets of all MGs in this network. | [optional] 
+**Id** | Pointer to **string** | Schedule id | [optional] 
+**Name** | Pointer to **string** | Schedule name | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse20094WithDefaults instantiates a new InlineResponse20094 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeploymentMode
+### GetId
 
-`func (o *InlineResponse20094) GetDeploymentMode() string`
+`func (o *InlineResponse20094) GetId() string`
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDeploymentModeOk
+### GetIdOk
 
-`func (o *InlineResponse20094) GetDeploymentModeOk() (*string, bool)`
+`func (o *InlineResponse20094) GetIdOk() (*string, bool)`
 
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetId
 
-`func (o *InlineResponse20094) SetDeploymentMode(v string)`
+`func (o *InlineResponse20094) SetId(v string)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetId sets Id field to given value.
 
-### HasDeploymentMode
+### HasId
 
-`func (o *InlineResponse20094) HasDeploymentMode() bool`
+`func (o *InlineResponse20094) HasId() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCidr
+### GetName
 
-`func (o *InlineResponse20094) GetCidr() string`
+`func (o *InlineResponse20094) GetName() string`
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCidrOk
+### GetNameOk
 
-`func (o *InlineResponse20094) GetCidrOk() (*string, bool)`
+`func (o *InlineResponse20094) GetNameOk() (*string, bool)`
 
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetName
 
-`func (o *InlineResponse20094) SetCidr(v string)`
+`func (o *InlineResponse20094) SetName(v string)`
 
-SetCidr sets Cidr field to given value.
+SetName sets Name field to given value.
 
-### HasCidr
+### HasName
 
-`func (o *InlineResponse20094) HasCidr() bool`
+`func (o *InlineResponse20094) HasName() bool`
 
-HasCidr returns a boolean if a field has been set.
-
-### GetMask
-
-`func (o *InlineResponse20094) GetMask() int32`
-
-GetMask returns the Mask field if non-nil, zero value otherwise.
-
-### GetMaskOk
-
-`func (o *InlineResponse20094) GetMaskOk() (*int32, bool)`
-
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMask
-
-`func (o *InlineResponse20094) SetMask(v int32)`
-
-SetMask sets Mask field to given value.
-
-### HasMask
-
-`func (o *InlineResponse20094) HasMask() bool`
-
-HasMask returns a boolean if a field has been set.
-
-### GetSubnets
-
-`func (o *InlineResponse20094) GetSubnets() []InlineResponse20094Subnets`
-
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
-
-### GetSubnetsOk
-
-`func (o *InlineResponse20094) GetSubnetsOk() (*[]InlineResponse20094Subnets, bool)`
-
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnets
-
-`func (o *InlineResponse20094) SetSubnets(v []InlineResponse20094Subnets)`
-
-SetSubnets sets Subnets field to given value.
-
-### HasSubnets
-
-`func (o *InlineResponse20094) HasSubnets() bool`
-
-HasSubnets returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

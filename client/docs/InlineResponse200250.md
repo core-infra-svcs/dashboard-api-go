@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
+**Items** | Pointer to [**[]InlineResponse200250Items**](InlineResponse200250Items.md) | List of local DNS profile assignment | [optional] 
+**Meta** | Pointer to [**InlineResponse200250Meta**](InlineResponse200250Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200250WithDefaults instantiates a new InlineResponse200250 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetItems
 
-`func (o *InlineResponse200250) GetNetworkId() string`
+`func (o *InlineResponse200250) GetItems() []InlineResponse200250Items`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200250) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200250) GetItemsOk() (*[]InlineResponse200250Items, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetItems
 
-`func (o *InlineResponse200250) SetNetworkId(v string)`
+`func (o *InlineResponse200250) SetItems(v []InlineResponse200250Items)`
 
-SetNetworkId sets NetworkId field to given value.
+SetItems sets Items field to given value.
 
-### HasNetworkId
+### HasItems
 
-`func (o *InlineResponse200250) HasNetworkId() bool`
+`func (o *InlineResponse200250) HasItems() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetName
+### GetMeta
 
-`func (o *InlineResponse200250) GetName() string`
+`func (o *InlineResponse200250) GetMeta() InlineResponse200250Meta`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200250) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200250) GetMetaOk() (*InlineResponse200250Meta, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200250) SetName(v string)`
+`func (o *InlineResponse200250) SetMeta(v InlineResponse200250Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200250) HasName() bool`
+`func (o *InlineResponse200250) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetByUplink
-
-`func (o *InlineResponse200250) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
-
-GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
-
-### GetByUplinkOk
-
-`func (o *InlineResponse200250) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
-
-GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByUplink
-
-`func (o *InlineResponse200250) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
-
-SetByUplink sets ByUplink field to given value.
-
-### HasByUplink
-
-`func (o *InlineResponse200250) HasByUplink() bool`
-
-HasByUplink returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

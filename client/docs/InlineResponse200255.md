@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | Pointer to [**[]InlineResponse200255Peers**](InlineResponse200255Peers.md) | The list of VPN peers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200250Items**](InlineResponse200250Items.md) | List of split DNS profile assignment | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200255WithDefaults instantiates a new InlineResponse200255 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetItems
 
-`func (o *InlineResponse200255) GetPeers() []InlineResponse200255Peers`
+`func (o *InlineResponse200255) GetItems() []InlineResponse200250Items`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetItemsOk
 
-`func (o *InlineResponse200255) GetPeersOk() (*[]InlineResponse200255Peers, bool)`
+`func (o *InlineResponse200255) GetItemsOk() (*[]InlineResponse200250Items, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetItems
 
-`func (o *InlineResponse200255) SetPeers(v []InlineResponse200255Peers)`
+`func (o *InlineResponse200255) SetItems(v []InlineResponse200250Items)`
 
-SetPeers sets Peers field to given value.
+SetItems sets Items field to given value.
 
-### HasPeers
+### HasItems
 
-`func (o *InlineResponse200255) HasPeers() bool`
+`func (o *InlineResponse200255) HasItems() bool`
 
-HasPeers returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

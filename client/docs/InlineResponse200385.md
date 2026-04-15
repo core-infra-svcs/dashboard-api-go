@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
+**Category** | Pointer to **string** | Name of the Application Category | [optional] 
+**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
+**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
+**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
+**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
 
 ## Methods
 
@@ -28,22 +29,72 @@ NewInlineResponse200385WithDefaults instantiates a new InlineResponse200385 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetCategory
+
+`func (o *InlineResponse200385) GetCategory() string`
+
+GetCategory returns the Category field if non-nil, zero value otherwise.
+
+### GetCategoryOk
+
+`func (o *InlineResponse200385) GetCategoryOk() (*string, bool)`
+
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategory
+
+`func (o *InlineResponse200385) SetCategory(v string)`
+
+SetCategory sets Category field to given value.
+
+### HasCategory
+
+`func (o *InlineResponse200385) HasCategory() bool`
+
+HasCategory returns a boolean if a field has been set.
+
+### GetTotal
+
+`func (o *InlineResponse200385) GetTotal() float32`
+
+GetTotal returns the Total field if non-nil, zero value otherwise.
+
+### GetTotalOk
+
+`func (o *InlineResponse200385) GetTotalOk() (*float32, bool)`
+
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTotal
+
+`func (o *InlineResponse200385) SetTotal(v float32)`
+
+SetTotal sets Total field to given value.
+
+### HasTotal
+
+`func (o *InlineResponse200385) HasTotal() bool`
+
+HasTotal returns a boolean if a field has been set.
+
 ### GetDownstream
 
-`func (o *InlineResponse200385) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200385) GetDownstream() float32`
 
 GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
 ### GetDownstreamOk
 
-`func (o *InlineResponse200385) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200385) GetDownstreamOk() (*float32, bool)`
 
 GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDownstream
 
-`func (o *InlineResponse200385) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200385) SetDownstream(v float32)`
 
 SetDownstream sets Downstream field to given value.
 
@@ -55,20 +106,20 @@ HasDownstream returns a boolean if a field has been set.
 
 ### GetUpstream
 
-`func (o *InlineResponse200385) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200385) GetUpstream() float32`
 
 GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
 ### GetUpstreamOk
 
-`func (o *InlineResponse200385) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200385) GetUpstreamOk() (*float32, bool)`
 
 GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpstream
 
-`func (o *InlineResponse200385) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200385) SetUpstream(v float32)`
 
 SetUpstream sets Upstream field to given value.
 
@@ -78,55 +129,30 @@ SetUpstream sets Upstream field to given value.
 
 HasUpstream returns a boolean if a field has been set.
 
-### GetClient
+### GetPercentage
 
-`func (o *InlineResponse200385) GetClient() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient`
+`func (o *InlineResponse200385) GetPercentage() float32`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetPercentage returns the Percentage field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetPercentageOk
 
-`func (o *InlineResponse200385) GetClientOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient, bool)`
+`func (o *InlineResponse200385) GetPercentageOk() (*float32, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetPercentage
 
-`func (o *InlineResponse200385) SetClient(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient)`
+`func (o *InlineResponse200385) SetPercentage(v float32)`
 
-SetClient sets Client field to given value.
+SetPercentage sets Percentage field to given value.
 
-### HasClient
+### HasPercentage
 
-`func (o *InlineResponse200385) HasClient() bool`
+`func (o *InlineResponse200385) HasPercentage() bool`
 
-HasClient returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200385) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200385) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200385) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200385) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

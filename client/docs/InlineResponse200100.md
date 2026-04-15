@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ClientId** | Pointer to **string** | The identifier of the client | [optional] 
 **ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
 **ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
-**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
+**ApplicationUsage** | Pointer to [**[]NetworksNetworkIdClientsApplicationUsageApplicationUsage**](NetworksNetworkIdClientsApplicationUsageApplicationUsage.md) | An array of application usage records for the client | [optional] 
 
 ## Methods
 
@@ -103,30 +103,30 @@ SetClientMac sets ClientMac field to given value.
 
 HasClientMac returns a boolean if a field has been set.
 
-### GetUsageHistory
+### GetApplicationUsage
 
-`func (o *InlineResponse200100) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
+`func (o *InlineResponse200100) GetApplicationUsage() []NetworksNetworkIdClientsApplicationUsageApplicationUsage`
 
-GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
+GetApplicationUsage returns the ApplicationUsage field if non-nil, zero value otherwise.
 
-### GetUsageHistoryOk
+### GetApplicationUsageOk
 
-`func (o *InlineResponse200100) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
+`func (o *InlineResponse200100) GetApplicationUsageOk() (*[]NetworksNetworkIdClientsApplicationUsageApplicationUsage, bool)`
 
-GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
+GetApplicationUsageOk returns a tuple with the ApplicationUsage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsageHistory
+### SetApplicationUsage
 
-`func (o *InlineResponse200100) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
+`func (o *InlineResponse200100) SetApplicationUsage(v []NetworksNetworkIdClientsApplicationUsageApplicationUsage)`
 
-SetUsageHistory sets UsageHistory field to given value.
+SetApplicationUsage sets ApplicationUsage field to given value.
 
-### HasUsageHistory
+### HasApplicationUsage
 
-`func (o *InlineResponse200100) HasUsageHistory() bool`
+`func (o *InlineResponse200100) HasApplicationUsage() bool`
 
-HasUsageHistory returns a boolean if a field has been set.
+HasApplicationUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

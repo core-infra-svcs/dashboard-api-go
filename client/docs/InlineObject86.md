@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
-**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid**](NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid.md) |  | [optional] 
+**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
+**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | 
 **Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject86
 
-`func NewInlineObject86() *InlineObject86`
+`func NewInlineObject86(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid1, ) *InlineObject86`
 
 NewInlineObject86 instantiates a new InlineObject86 object
 This constructor will assign default values to properties that have it defined,
@@ -46,36 +46,26 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject86) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetSsid
 
-`func (o *InlineObject86) GetSsid() NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid`
+`func (o *InlineObject86) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid1`
 
 GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
 ### GetSsidOk
 
-`func (o *InlineObject86) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid, bool)`
+`func (o *InlineObject86) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid1, bool)`
 
 GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSsid
 
-`func (o *InlineObject86) SetSsid(v NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid)`
+`func (o *InlineObject86) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid1)`
 
 SetSsid sets Ssid field to given value.
 
-### HasSsid
-
-`func (o *InlineObject86) HasSsid() bool`
-
-HasSsid returns a boolean if a field has been set.
 
 ### GetIdentity
 

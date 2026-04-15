@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
-**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
-**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**Name** | **string** | Name of the firewall ruleset | 
+**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
 
 ## Methods
 
@@ -47,55 +46,30 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetCategory
+### GetDescription
 
-`func (o *InlineObject294) GetCategory() string`
+`func (o *InlineObject294) GetDescription() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetDescriptionOk
 
-`func (o *InlineObject294) GetCategoryOk() (*string, bool)`
+`func (o *InlineObject294) GetDescriptionOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetDescription
 
-`func (o *InlineObject294) SetCategory(v string)`
+`func (o *InlineObject294) SetDescription(v string)`
 
-SetCategory sets Category field to given value.
+SetDescription sets Description field to given value.
 
-### HasCategory
+### HasDescription
 
-`func (o *InlineObject294) HasCategory() bool`
+`func (o *InlineObject294) HasDescription() bool`
 
-HasCategory returns a boolean if a field has been set.
-
-### GetObjectIds
-
-`func (o *InlineObject294) GetObjectIds() []string`
-
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
-
-### GetObjectIdsOk
-
-`func (o *InlineObject294) GetObjectIdsOk() (*[]string, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetObjectIds
-
-`func (o *InlineObject294) SetObjectIds(v []string)`
-
-SetObjectIds sets ObjectIds field to given value.
-
-### HasObjectIds
-
-`func (o *InlineObject294) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

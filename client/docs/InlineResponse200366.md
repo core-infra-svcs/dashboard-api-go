@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
-**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
+**Items** | Pointer to [**[]InlineResponse200366Items**](InlineResponse200366Items.md) | Collection of site connectivity payloads | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200366WithDefaults instantiates a new InlineResponse200366 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetItems
 
-`func (o *InlineResponse200366) GetSourceSerial() string`
+`func (o *InlineResponse200366) GetItems() []InlineResponse200366Items`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetItemsOk
 
-`func (o *InlineResponse200366) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineResponse200366) GetItemsOk() (*[]InlineResponse200366Items, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetItems
 
-`func (o *InlineResponse200366) SetSourceSerial(v string)`
+`func (o *InlineResponse200366) SetItems(v []InlineResponse200366Items)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetItems sets Items field to given value.
 
-### HasSourceSerial
+### HasItems
 
-`func (o *InlineResponse200366) HasSourceSerial() bool`
+`func (o *InlineResponse200366) HasItems() bool`
 
-HasSourceSerial returns a boolean if a field has been set.
-
-### GetTargetSerials
-
-`func (o *InlineResponse200366) GetTargetSerials() []string`
-
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
-
-### GetTargetSerialsOk
-
-`func (o *InlineResponse200366) GetTargetSerialsOk() (*[]string, bool)`
-
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTargetSerials
-
-`func (o *InlineResponse200366) SetTargetSerials(v []string)`
-
-SetTargetSerials sets TargetSerials field to given value.
-
-### HasTargetSerials
-
-`func (o *InlineResponse200366) HasTargetSerials() bool`
-
-HasTargetSerials returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

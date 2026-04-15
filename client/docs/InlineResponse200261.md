@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Category type | 
-**Title** | **string** | Category title | 
+**Counts** | Pointer to [**InlineResponse200261Counts**](InlineResponse200261Counts.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200261
 
-`func NewInlineResponse200261(type_ string, title string, ) *InlineResponse200261`
+`func NewInlineResponse200261() *InlineResponse200261`
 
 NewInlineResponse200261 instantiates a new InlineResponse200261 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse200261WithDefaults instantiates a new InlineResponse200261 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetCounts
 
-`func (o *InlineResponse200261) GetType() string`
+`func (o *InlineResponse200261) GetCounts() InlineResponse200261Counts`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetCountsOk
 
-`func (o *InlineResponse200261) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200261) GetCountsOk() (*InlineResponse200261Counts, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetCounts
 
-`func (o *InlineResponse200261) SetType(v string)`
+`func (o *InlineResponse200261) SetCounts(v InlineResponse200261Counts)`
 
-SetType sets Type field to given value.
+SetCounts sets Counts field to given value.
 
+### HasCounts
 
-### GetTitle
+`func (o *InlineResponse200261) HasCounts() bool`
 
-`func (o *InlineResponse200261) GetTitle() string`
-
-GetTitle returns the Title field if non-nil, zero value otherwise.
-
-### GetTitleOk
-
-`func (o *InlineResponse200261) GetTitleOk() (*string, bool)`
-
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTitle
-
-`func (o *InlineResponse200261) SetTitle(v string)`
-
-SetTitle sets Title field to given value.
-
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

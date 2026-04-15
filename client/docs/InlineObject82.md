@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigTemplateId** | **string** | The ID of the template to which the network should be bound. | 
-**AutoBind** | Pointer to **bool** | Optional boolean indicating whether the network&#39;s switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model. | [optional] 
+**Enabled** | **bool** | Enable warm spare | 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
+**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
+**VirtualIp1** | Pointer to **string** | The WAN 1 shared IP | [optional] 
+**VirtualIp2** | Pointer to **string** | The WAN 2 shared IP | [optional] 
 
 ## Methods
 
 ### NewInlineObject82
 
-`func NewInlineObject82(configTemplateId string, ) *InlineObject82`
+`func NewInlineObject82(enabled bool, ) *InlineObject82`
 
 NewInlineObject82 instantiates a new InlineObject82 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +29,125 @@ NewInlineObject82WithDefaults instantiates a new InlineObject82 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfigTemplateId
+### GetEnabled
 
-`func (o *InlineObject82) GetConfigTemplateId() string`
+`func (o *InlineObject82) GetEnabled() bool`
 
-GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConfigTemplateIdOk
+### GetEnabledOk
 
-`func (o *InlineObject82) GetConfigTemplateIdOk() (*string, bool)`
+`func (o *InlineObject82) GetEnabledOk() (*bool, bool)`
 
-GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfigTemplateId
+### SetEnabled
 
-`func (o *InlineObject82) SetConfigTemplateId(v string)`
+`func (o *InlineObject82) SetEnabled(v bool)`
 
-SetConfigTemplateId sets ConfigTemplateId field to given value.
+SetEnabled sets Enabled field to given value.
 
 
-### GetAutoBind
+### GetSpareSerial
 
-`func (o *InlineObject82) GetAutoBind() bool`
+`func (o *InlineObject82) GetSpareSerial() string`
 
-GetAutoBind returns the AutoBind field if non-nil, zero value otherwise.
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-### GetAutoBindOk
+### GetSpareSerialOk
 
-`func (o *InlineObject82) GetAutoBindOk() (*bool, bool)`
+`func (o *InlineObject82) GetSpareSerialOk() (*string, bool)`
 
-GetAutoBindOk returns a tuple with the AutoBind field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAutoBind
+### SetSpareSerial
 
-`func (o *InlineObject82) SetAutoBind(v bool)`
+`func (o *InlineObject82) SetSpareSerial(v string)`
 
-SetAutoBind sets AutoBind field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasAutoBind
+### HasSpareSerial
 
-`func (o *InlineObject82) HasAutoBind() bool`
+`func (o *InlineObject82) HasSpareSerial() bool`
 
-HasAutoBind returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
+
+### GetUplinkMode
+
+`func (o *InlineObject82) GetUplinkMode() string`
+
+GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
+
+### GetUplinkModeOk
+
+`func (o *InlineObject82) GetUplinkModeOk() (*string, bool)`
+
+GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinkMode
+
+`func (o *InlineObject82) SetUplinkMode(v string)`
+
+SetUplinkMode sets UplinkMode field to given value.
+
+### HasUplinkMode
+
+`func (o *InlineObject82) HasUplinkMode() bool`
+
+HasUplinkMode returns a boolean if a field has been set.
+
+### GetVirtualIp1
+
+`func (o *InlineObject82) GetVirtualIp1() string`
+
+GetVirtualIp1 returns the VirtualIp1 field if non-nil, zero value otherwise.
+
+### GetVirtualIp1Ok
+
+`func (o *InlineObject82) GetVirtualIp1Ok() (*string, bool)`
+
+GetVirtualIp1Ok returns a tuple with the VirtualIp1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualIp1
+
+`func (o *InlineObject82) SetVirtualIp1(v string)`
+
+SetVirtualIp1 sets VirtualIp1 field to given value.
+
+### HasVirtualIp1
+
+`func (o *InlineObject82) HasVirtualIp1() bool`
+
+HasVirtualIp1 returns a boolean if a field has been set.
+
+### GetVirtualIp2
+
+`func (o *InlineObject82) GetVirtualIp2() string`
+
+GetVirtualIp2 returns the VirtualIp2 field if non-nil, zero value otherwise.
+
+### GetVirtualIp2Ok
+
+`func (o *InlineObject82) GetVirtualIp2Ok() (*string, bool)`
+
+GetVirtualIp2Ok returns a tuple with the VirtualIp2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualIp2
+
+`func (o *InlineObject82) SetVirtualIp2(v string)`
+
+SetVirtualIp2 sets VirtualIp2 field to given value.
+
+### HasVirtualIp2
+
+`func (o *InlineObject82) HasVirtualIp2() bool`
+
+HasVirtualIp2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,12 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
-**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
-**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
-**Description** | Pointer to **string** | Identifying description for the prefix. | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
+**Number** | Pointer to **int32** | Number of the port | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Whether the trunk port can drop all untagged traffic. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of VLAN IDs and/or ranges (for example, &#39;2-10,15&#39;), or &#39;all&#39; to permit all VLANs on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. | [optional] 
 
 ## Methods
 
@@ -30,155 +31,180 @@ NewInlineResponse20068WithDefaults instantiates a new InlineResponse20068 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStaticDelegatedPrefixId
+### GetNumber
 
-`func (o *InlineResponse20068) GetStaticDelegatedPrefixId() string`
+`func (o *InlineResponse20068) GetNumber() int32`
 
-GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetStaticDelegatedPrefixIdOk
+### GetNumberOk
 
-`func (o *InlineResponse20068) GetStaticDelegatedPrefixIdOk() (*string, bool)`
+`func (o *InlineResponse20068) GetNumberOk() (*int32, bool)`
 
-GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStaticDelegatedPrefixId
+### SetNumber
 
-`func (o *InlineResponse20068) SetStaticDelegatedPrefixId(v string)`
+`func (o *InlineResponse20068) SetNumber(v int32)`
 
-SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
+SetNumber sets Number field to given value.
 
-### HasStaticDelegatedPrefixId
+### HasNumber
 
-`func (o *InlineResponse20068) HasStaticDelegatedPrefixId() bool`
+`func (o *InlineResponse20068) HasNumber() bool`
 
-HasStaticDelegatedPrefixId returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
 
-### GetPrefix
+### GetEnabled
 
-`func (o *InlineResponse20068) GetPrefix() string`
+`func (o *InlineResponse20068) GetEnabled() bool`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetEnabledOk
 
-`func (o *InlineResponse20068) GetPrefixOk() (*string, bool)`
+`func (o *InlineResponse20068) GetEnabledOk() (*bool, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetEnabled
 
-`func (o *InlineResponse20068) SetPrefix(v string)`
+`func (o *InlineResponse20068) SetEnabled(v bool)`
 
-SetPrefix sets Prefix field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasPrefix
+### HasEnabled
 
-`func (o *InlineResponse20068) HasPrefix() bool`
+`func (o *InlineResponse20068) HasEnabled() bool`
 
-HasPrefix returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetOrigin
+### GetType
 
-`func (o *InlineResponse20068) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
+`func (o *InlineResponse20068) GetType() string`
 
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetOriginOk
+### GetTypeOk
 
-`func (o *InlineResponse20068) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
+`func (o *InlineResponse20068) GetTypeOk() (*string, bool)`
 
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrigin
+### SetType
 
-`func (o *InlineResponse20068) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
+`func (o *InlineResponse20068) SetType(v string)`
 
-SetOrigin sets Origin field to given value.
+SetType sets Type field to given value.
 
-### HasOrigin
+### HasType
 
-`func (o *InlineResponse20068) HasOrigin() bool`
+`func (o *InlineResponse20068) HasType() bool`
 
-HasOrigin returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetDescription
+### GetDropUntaggedTraffic
 
-`func (o *InlineResponse20068) GetDescription() string`
+`func (o *InlineResponse20068) GetDropUntaggedTraffic() bool`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetDropUntaggedTrafficOk
 
-`func (o *InlineResponse20068) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse20068) GetDropUntaggedTrafficOk() (*bool, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetDropUntaggedTraffic
 
-`func (o *InlineResponse20068) SetDescription(v string)`
+`func (o *InlineResponse20068) SetDropUntaggedTraffic(v bool)`
 
-SetDescription sets Description field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
-### HasDescription
+### HasDropUntaggedTraffic
 
-`func (o *InlineResponse20068) HasDescription() bool`
+`func (o *InlineResponse20068) HasDropUntaggedTraffic() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasDropUntaggedTraffic returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetVlan
 
-`func (o *InlineResponse20068) GetCreatedAt() time.Time`
+`func (o *InlineResponse20068) GetVlan() int32`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetVlanOk
 
-`func (o *InlineResponse20068) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20068) GetVlanOk() (*int32, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetVlan
 
-`func (o *InlineResponse20068) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse20068) SetVlan(v int32)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasCreatedAt
+### HasVlan
 
-`func (o *InlineResponse20068) HasCreatedAt() bool`
+`func (o *InlineResponse20068) HasVlan() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetUpdatedAt
+### GetAllowedVlans
 
-`func (o *InlineResponse20068) GetUpdatedAt() time.Time`
+`func (o *InlineResponse20068) GetAllowedVlans() string`
 
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
 
-### GetUpdatedAtOk
+### GetAllowedVlansOk
 
-`func (o *InlineResponse20068) GetUpdatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20068) GetAllowedVlansOk() (*string, bool)`
 
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedAt
+### SetAllowedVlans
 
-`func (o *InlineResponse20068) SetUpdatedAt(v time.Time)`
+`func (o *InlineResponse20068) SetAllowedVlans(v string)`
 
-SetUpdatedAt sets UpdatedAt field to given value.
+SetAllowedVlans sets AllowedVlans field to given value.
 
-### HasUpdatedAt
+### HasAllowedVlans
 
-`func (o *InlineResponse20068) HasUpdatedAt() bool`
+`func (o *InlineResponse20068) HasAllowedVlans() bool`
 
-HasUpdatedAt returns a boolean if a field has been set.
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineResponse20068) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineResponse20068) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineResponse20068) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineResponse20068) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

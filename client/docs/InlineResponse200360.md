@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the manufacturer | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage.md) |  | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**VisionConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) for Meraki Vision Portal | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200360WithDefaults instantiates a new InlineResponse200360 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetIdpId
 
-`func (o *InlineResponse200360) GetName() string`
+`func (o *InlineResponse200360) GetIdpId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200360) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200360) GetIdpIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetIdpId
 
-`func (o *InlineResponse200360) SetName(v string)`
+`func (o *InlineResponse200360) SetIdpId(v string)`
 
-SetName sets Name field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasName
+### HasIdpId
 
-`func (o *InlineResponse200360) HasName() bool`
+`func (o *InlineResponse200360) HasIdpId() bool`
 
-HasName returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetClients
+### GetConsumerUrl
 
-`func (o *InlineResponse200360) GetClients() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients`
+`func (o *InlineResponse200360) GetConsumerUrl() string`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200360) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients, bool)`
+`func (o *InlineResponse200360) GetConsumerUrlOk() (*string, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetConsumerUrl
 
-`func (o *InlineResponse200360) SetClients(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients)`
+`func (o *InlineResponse200360) SetConsumerUrl(v string)`
 
-SetClients sets Clients field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasClients
+### HasConsumerUrl
 
-`func (o *InlineResponse200360) HasClients() bool`
+`func (o *InlineResponse200360) HasConsumerUrl() bool`
 
-HasClients returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
 
-### GetUsage
+### GetVisionConsumerUrl
 
-`func (o *InlineResponse200360) GetUsage() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage`
+`func (o *InlineResponse200360) GetVisionConsumerUrl() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetVisionConsumerUrl returns the VisionConsumerUrl field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetVisionConsumerUrlOk
 
-`func (o *InlineResponse200360) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage, bool)`
+`func (o *InlineResponse200360) GetVisionConsumerUrlOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetVisionConsumerUrlOk returns a tuple with the VisionConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetVisionConsumerUrl
 
-`func (o *InlineResponse200360) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage)`
+`func (o *InlineResponse200360) SetVisionConsumerUrl(v string)`
 
-SetUsage sets Usage field to given value.
+SetVisionConsumerUrl sets VisionConsumerUrl field to given value.
 
-### HasUsage
+### HasVisionConsumerUrl
 
-`func (o *InlineResponse200360) HasUsage() bool`
+`func (o *InlineResponse200360) HasVisionConsumerUrl() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasVisionConsumerUrl returns a boolean if a field has been set.
+
+### GetX509certSha1Fingerprint
+
+`func (o *InlineResponse200360) GetX509certSha1Fingerprint() string`
+
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+
+### GetX509certSha1FingerprintOk
+
+`func (o *InlineResponse200360) GetX509certSha1FingerprintOk() (*string, bool)`
+
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetX509certSha1Fingerprint
+
+`func (o *InlineResponse200360) SetX509certSha1Fingerprint(v string)`
+
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+
+### HasX509certSha1Fingerprint
+
+`func (o *InlineResponse200360) HasX509certSha1Fingerprint() bool`
+
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
+
+### GetSsoLoginUrl
+
+`func (o *InlineResponse200360) GetSsoLoginUrl() string`
+
+GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
+
+### GetSsoLoginUrlOk
+
+`func (o *InlineResponse200360) GetSsoLoginUrlOk() (*string, bool)`
+
+GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsoLoginUrl
+
+`func (o *InlineResponse200360) SetSsoLoginUrl(v string)`
+
+SetSsoLoginUrl sets SsoLoginUrl field to given value.
+
+### HasSsoLoginUrl
+
+`func (o *InlineResponse200360) HasSsoLoginUrl() bool`
+
+HasSsoLoginUrl returns a boolean if a field has been set.
+
+### GetSloLogoutUrl
+
+`func (o *InlineResponse200360) GetSloLogoutUrl() string`
+
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+
+### GetSloLogoutUrlOk
+
+`func (o *InlineResponse200360) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSloLogoutUrl
+
+`func (o *InlineResponse200360) SetSloLogoutUrl(v string)`
+
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
+
+### HasSloLogoutUrl
+
+`func (o *InlineResponse200360) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

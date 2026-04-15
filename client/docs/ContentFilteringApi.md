@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceContentFiltering
 
-> InlineResponse20059 GetNetworkApplianceContentFiltering(ctx, networkId).Execute()
+> InlineResponse20060 GetNetworkApplianceContentFiltering(ctx, networkId).Execute()
 
 Return the content filtering settings for an MX network
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ContentFilteringApi.GetNetworkApplianceContentFiltering``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceContentFiltering`: InlineResponse20059
+    // response from `GetNetworkApplianceContentFiltering`: InlineResponse20060
     fmt.Fprintf(os.Stdout, "Response from `ContentFilteringApi.GetNetworkApplianceContentFiltering`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceContentFiltering
 
-> InlineResponse20059 UpdateNetworkApplianceContentFiltering(ctx, networkId).UpdateNetworkApplianceContentFiltering(updateNetworkApplianceContentFiltering).Execute()
+> InlineResponse20060 UpdateNetworkApplianceContentFiltering(ctx, networkId).UpdateNetworkApplianceContentFiltering(updateNetworkApplianceContentFiltering).Execute()
 
 Update the content filtering settings for an MX network
 
@@ -181,7 +181,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ContentFilteringApi.UpdateNetworkApplianceContentFiltering``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceContentFiltering`: InlineResponse20059
+    // response from `UpdateNetworkApplianceContentFiltering`: InlineResponse20060
     fmt.Fprintf(os.Stdout, "Response from `ContentFilteringApi.UpdateNetworkApplianceContentFiltering`: %v\n", resp)
 }
 ```
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 

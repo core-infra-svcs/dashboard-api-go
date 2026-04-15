@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Organization name | [optional] 
-**Url** | Pointer to **string** | Organization URL | [optional] 
-**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
-**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
-**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
-**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**InlineResponse200227Operator**](InlineResponse200227Operator.md) |  | [optional] 
+**Venue** | Pointer to [**InlineResponse200227Venue**](InlineResponse200227Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]InlineResponse200227MccMncs**](InlineResponse200227MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]InlineResponse200227NaiRealms**](InlineResponse200227NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
@@ -31,180 +32,205 @@ NewInlineResponse200227WithDefaults instantiates a new InlineResponse200227 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnabled
 
-`func (o *InlineResponse200227) GetId() string`
+`func (o *InlineResponse200227) GetEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200227) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200227) GetEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnabled
 
-`func (o *InlineResponse200227) SetId(v string)`
+`func (o *InlineResponse200227) SetEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasId
+### HasEnabled
 
-`func (o *InlineResponse200227) HasId() bool`
+`func (o *InlineResponse200227) HasEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetOperator
 
-`func (o *InlineResponse200227) GetName() string`
+`func (o *InlineResponse200227) GetOperator() InlineResponse200227Operator`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOperatorOk
 
-`func (o *InlineResponse200227) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200227) GetOperatorOk() (*InlineResponse200227Operator, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOperator
 
-`func (o *InlineResponse200227) SetName(v string)`
+`func (o *InlineResponse200227) SetOperator(v InlineResponse200227Operator)`
 
-SetName sets Name field to given value.
+SetOperator sets Operator field to given value.
 
-### HasName
+### HasOperator
 
-`func (o *InlineResponse200227) HasName() bool`
+`func (o *InlineResponse200227) HasOperator() bool`
 
-HasName returns a boolean if a field has been set.
+HasOperator returns a boolean if a field has been set.
 
-### GetUrl
+### GetVenue
 
-`func (o *InlineResponse200227) GetUrl() string`
+`func (o *InlineResponse200227) GetVenue() InlineResponse200227Venue`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetVenueOk
 
-`func (o *InlineResponse200227) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200227) GetVenueOk() (*InlineResponse200227Venue, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetVenue
 
-`func (o *InlineResponse200227) SetUrl(v string)`
+`func (o *InlineResponse200227) SetVenue(v InlineResponse200227Venue)`
 
-SetUrl sets Url field to given value.
+SetVenue sets Venue field to given value.
 
-### HasUrl
+### HasVenue
 
-`func (o *InlineResponse200227) HasUrl() bool`
+`func (o *InlineResponse200227) HasVenue() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasVenue returns a boolean if a field has been set.
 
-### GetApi
+### GetNetworkAccessType
 
-`func (o *InlineResponse200227) GetApi() OrganizationsApi`
+`func (o *InlineResponse200227) GetNetworkAccessType() string`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetNetworkAccessTypeOk
 
-`func (o *InlineResponse200227) GetApiOk() (*OrganizationsApi, bool)`
+`func (o *InlineResponse200227) GetNetworkAccessTypeOk() (*string, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetNetworkAccessType
 
-`func (o *InlineResponse200227) SetApi(v OrganizationsApi)`
+`func (o *InlineResponse200227) SetNetworkAccessType(v string)`
 
-SetApi sets Api field to given value.
+SetNetworkAccessType sets NetworkAccessType field to given value.
 
-### HasApi
+### HasNetworkAccessType
 
-`func (o *InlineResponse200227) HasApi() bool`
+`func (o *InlineResponse200227) HasNetworkAccessType() bool`
 
-HasApi returns a boolean if a field has been set.
+HasNetworkAccessType returns a boolean if a field has been set.
 
-### GetLicensing
+### GetDomains
 
-`func (o *InlineResponse200227) GetLicensing() OrganizationsLicensing`
+`func (o *InlineResponse200227) GetDomains() []string`
 
-GetLicensing returns the Licensing field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetLicensingOk
+### GetDomainsOk
 
-`func (o *InlineResponse200227) GetLicensingOk() (*OrganizationsLicensing, bool)`
+`func (o *InlineResponse200227) GetDomainsOk() (*[]string, bool)`
 
-GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicensing
+### SetDomains
 
-`func (o *InlineResponse200227) SetLicensing(v OrganizationsLicensing)`
+`func (o *InlineResponse200227) SetDomains(v []string)`
 
-SetLicensing sets Licensing field to given value.
+SetDomains sets Domains field to given value.
 
-### HasLicensing
+### HasDomains
 
-`func (o *InlineResponse200227) HasLicensing() bool`
+`func (o *InlineResponse200227) HasDomains() bool`
 
-HasLicensing returns a boolean if a field has been set.
+HasDomains returns a boolean if a field has been set.
 
-### GetCloud
+### GetRoamConsortOis
 
-`func (o *InlineResponse200227) GetCloud() OrganizationsCloud`
+`func (o *InlineResponse200227) GetRoamConsortOis() []string`
 
-GetCloud returns the Cloud field if non-nil, zero value otherwise.
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
 
-### GetCloudOk
+### GetRoamConsortOisOk
 
-`func (o *InlineResponse200227) GetCloudOk() (*OrganizationsCloud, bool)`
+`func (o *InlineResponse200227) GetRoamConsortOisOk() (*[]string, bool)`
 
-GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCloud
+### SetRoamConsortOis
 
-`func (o *InlineResponse200227) SetCloud(v OrganizationsCloud)`
+`func (o *InlineResponse200227) SetRoamConsortOis(v []string)`
 
-SetCloud sets Cloud field to given value.
+SetRoamConsortOis sets RoamConsortOis field to given value.
 
-### HasCloud
+### HasRoamConsortOis
 
-`func (o *InlineResponse200227) HasCloud() bool`
+`func (o *InlineResponse200227) HasRoamConsortOis() bool`
 
-HasCloud returns a boolean if a field has been set.
+HasRoamConsortOis returns a boolean if a field has been set.
 
-### GetManagement
+### GetMccMncs
 
-`func (o *InlineResponse200227) GetManagement() OrganizationsManagement`
+`func (o *InlineResponse200227) GetMccMncs() []InlineResponse200227MccMncs`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetMccMncsOk
 
-`func (o *InlineResponse200227) GetManagementOk() (*OrganizationsManagement, bool)`
+`func (o *InlineResponse200227) GetMccMncsOk() (*[]InlineResponse200227MccMncs, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetMccMncs
 
-`func (o *InlineResponse200227) SetManagement(v OrganizationsManagement)`
+`func (o *InlineResponse200227) SetMccMncs(v []InlineResponse200227MccMncs)`
 
-SetManagement sets Management field to given value.
+SetMccMncs sets MccMncs field to given value.
 
-### HasManagement
+### HasMccMncs
 
-`func (o *InlineResponse200227) HasManagement() bool`
+`func (o *InlineResponse200227) HasMccMncs() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasMccMncs returns a boolean if a field has been set.
+
+### GetNaiRealms
+
+`func (o *InlineResponse200227) GetNaiRealms() []InlineResponse200227NaiRealms`
+
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
+
+### GetNaiRealmsOk
+
+`func (o *InlineResponse200227) GetNaiRealmsOk() (*[]InlineResponse200227NaiRealms, bool)`
+
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNaiRealms
+
+`func (o *InlineResponse200227) SetNaiRealms(v []InlineResponse200227NaiRealms)`
+
+SetNaiRealms sets NaiRealms field to given value.
+
+### HasNaiRealms
+
+`func (o *InlineResponse200227) HasNaiRealms() bool`
+
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

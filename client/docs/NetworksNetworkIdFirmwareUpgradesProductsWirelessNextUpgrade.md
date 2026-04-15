@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Predownload** | Pointer to [**InlineResponse200112ProductsWirelessNextUpgradePredownload**](InlineResponse200112ProductsWirelessNextUpgradePredownload.md) |  | [optional] 
 **Time** | Pointer to **string** | The time of the last successful upgrade | [optional] 
 **ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgradeToVersion**](NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgradeToVersion.md) |  | [optional] 
 
@@ -25,6 +26,31 @@ will change when the set of required properties is changed
 NewNetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgradeWithDefaults instantiates a new NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetPredownload
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownload() InlineResponse200112ProductsWirelessNextUpgradePredownload`
+
+GetPredownload returns the Predownload field if non-nil, zero value otherwise.
+
+### GetPredownloadOk
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownloadOk() (*InlineResponse200112ProductsWirelessNextUpgradePredownload, bool)`
+
+GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPredownload
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) SetPredownload(v InlineResponse200112ProductsWirelessNextUpgradePredownload)`
+
+SetPredownload sets Predownload field to given value.
+
+### HasPredownload
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) HasPredownload() bool`
+
+HasPredownload returns a boolean if a field has been set.
 
 ### GetTime
 

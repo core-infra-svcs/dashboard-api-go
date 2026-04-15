@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdaptivePolicyId** | Pointer to **string** | The ID for the adaptive policy | [optional] 
-**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | [optional] 
-**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | [optional] 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | The access control lists for the adaptive policy | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
-**CreatedAt** | Pointer to **string** | The created at timestamp for the adaptive policy | [optional] 
-**UpdatedAt** | Pointer to **string** | The updated at timestamp for the adaptive policy | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200232Rules**](InlineResponse200232Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineResponse200232WithDefaults instantiates a new InlineResponse200232 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdaptivePolicyId
+### GetTrafficShapingEnabled
 
-`func (o *InlineResponse200232) GetAdaptivePolicyId() string`
+`func (o *InlineResponse200232) GetTrafficShapingEnabled() bool`
 
-GetAdaptivePolicyId returns the AdaptivePolicyId field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetAdaptivePolicyIdOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineResponse200232) GetAdaptivePolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200232) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetAdaptivePolicyIdOk returns a tuple with the AdaptivePolicyId field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyId
+### SetTrafficShapingEnabled
 
-`func (o *InlineResponse200232) SetAdaptivePolicyId(v string)`
+`func (o *InlineResponse200232) SetTrafficShapingEnabled(v bool)`
 
-SetAdaptivePolicyId sets AdaptivePolicyId field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasAdaptivePolicyId
+### HasTrafficShapingEnabled
 
-`func (o *InlineResponse200232) HasAdaptivePolicyId() bool`
+`func (o *InlineResponse200232) HasTrafficShapingEnabled() bool`
 
-HasAdaptivePolicyId returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetSourceGroup
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200232) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
+`func (o *InlineResponse200232) GetDefaultRulesEnabled() bool`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200232) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
+`func (o *InlineResponse200232) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200232) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
+`func (o *InlineResponse200232) SetDefaultRulesEnabled(v bool)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasSourceGroup
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse200232) HasSourceGroup() bool`
+`func (o *InlineResponse200232) HasDefaultRulesEnabled() bool`
 
-HasSourceGroup returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetDestinationGroup
+### GetRules
 
-`func (o *InlineResponse200232) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
+`func (o *InlineResponse200232) GetRules() []InlineResponse200232Rules`
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetDestinationGroupOk
+### GetRulesOk
 
-`func (o *InlineResponse200232) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
+`func (o *InlineResponse200232) GetRulesOk() (*[]InlineResponse200232Rules, bool)`
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetRules
 
-`func (o *InlineResponse200232) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
+`func (o *InlineResponse200232) SetRules(v []InlineResponse200232Rules)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetRules sets Rules field to given value.
 
-### HasDestinationGroup
+### HasRules
 
-`func (o *InlineResponse200232) HasDestinationGroup() bool`
+`func (o *InlineResponse200232) HasRules() bool`
 
-HasDestinationGroup returns a boolean if a field has been set.
-
-### GetAcls
-
-`func (o *InlineResponse200232) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
-
-GetAcls returns the Acls field if non-nil, zero value otherwise.
-
-### GetAclsOk
-
-`func (o *InlineResponse200232) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
-
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAcls
-
-`func (o *InlineResponse200232) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
-
-SetAcls sets Acls field to given value.
-
-### HasAcls
-
-`func (o *InlineResponse200232) HasAcls() bool`
-
-HasAcls returns a boolean if a field has been set.
-
-### GetLastEntryRule
-
-`func (o *InlineResponse200232) GetLastEntryRule() string`
-
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
-
-### GetLastEntryRuleOk
-
-`func (o *InlineResponse200232) GetLastEntryRuleOk() (*string, bool)`
-
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastEntryRule
-
-`func (o *InlineResponse200232) SetLastEntryRule(v string)`
-
-SetLastEntryRule sets LastEntryRule field to given value.
-
-### HasLastEntryRule
-
-`func (o *InlineResponse200232) HasLastEntryRule() bool`
-
-HasLastEntryRule returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200232) GetCreatedAt() string`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200232) GetCreatedAtOk() (*string, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200232) SetCreatedAt(v string)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200232) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200232) GetUpdatedAt() string`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200232) GetUpdatedAtOk() (*string, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200232) SetUpdatedAt(v string)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200232) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

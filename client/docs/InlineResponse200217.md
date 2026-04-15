@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**Identity** | Pointer to [**InlineResponse200217Identity**](InlineResponse200217Identity.md) |  | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200217EapolKey**](InlineResponse200217EapolKey.md) |  | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
+**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
+**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200217WithDefaults instantiates a new InlineResponse200217 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetSerial
 
-`func (o *InlineResponse200217) GetTimeout() int32`
+`func (o *InlineResponse200217) GetSerial() string`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetSerialOk
 
-`func (o *InlineResponse200217) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineResponse200217) GetSerialOk() (*string, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetSerial
 
-`func (o *InlineResponse200217) SetTimeout(v int32)`
+`func (o *InlineResponse200217) SetSerial(v string)`
 
-SetTimeout sets Timeout field to given value.
+SetSerial sets Serial field to given value.
 
-### HasTimeout
+### HasSerial
 
-`func (o *InlineResponse200217) HasTimeout() bool`
+`func (o *InlineResponse200217) HasSerial() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetMeshRoute
 
-`func (o *InlineResponse200217) GetMaxRetries() int32`
+`func (o *InlineResponse200217) GetMeshRoute() []string`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetMeshRouteOk
 
-`func (o *InlineResponse200217) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineResponse200217) GetMeshRouteOk() (*[]string, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetMeshRoute
 
-`func (o *InlineResponse200217) SetMaxRetries(v int32)`
+`func (o *InlineResponse200217) SetMeshRoute(v []string)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetMeshRoute sets MeshRoute field to given value.
 
-### HasMaxRetries
+### HasMeshRoute
 
-`func (o *InlineResponse200217) HasMaxRetries() bool`
+`func (o *InlineResponse200217) HasMeshRoute() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
+HasMeshRoute returns a boolean if a field has been set.
 
-### GetIdentity
+### GetLatestMeshPerformance
 
-`func (o *InlineResponse200217) GetIdentity() InlineResponse200217Identity`
+`func (o *InlineResponse200217) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetLatestMeshPerformanceOk
 
-`func (o *InlineResponse200217) GetIdentityOk() (*InlineResponse200217Identity, bool)`
+`func (o *InlineResponse200217) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetLatestMeshPerformance
 
-`func (o *InlineResponse200217) SetIdentity(v InlineResponse200217Identity)`
+`func (o *InlineResponse200217) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
 
-SetIdentity sets Identity field to given value.
+SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
 
-### HasIdentity
+### HasLatestMeshPerformance
 
-`func (o *InlineResponse200217) HasIdentity() bool`
+`func (o *InlineResponse200217) HasLatestMeshPerformance() bool`
 
-HasIdentity returns a boolean if a field has been set.
-
-### GetEapolKey
-
-`func (o *InlineResponse200217) GetEapolKey() InlineResponse200217EapolKey`
-
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
-
-### GetEapolKeyOk
-
-`func (o *InlineResponse200217) GetEapolKeyOk() (*InlineResponse200217EapolKey, bool)`
-
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEapolKey
-
-`func (o *InlineResponse200217) SetEapolKey(v InlineResponse200217EapolKey)`
-
-SetEapolKey sets EapolKey field to given value.
-
-### HasEapolKey
-
-`func (o *InlineResponse200217) HasEapolKey() bool`
-
-HasEapolKey returns a boolean if a field has been set.
+HasLatestMeshPerformance returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

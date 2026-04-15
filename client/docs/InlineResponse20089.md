@@ -4,17 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the client | [optional] 
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Name of the client | [optional] 
-**DeviceName** | Pointer to **string** | Bluetooth device name | [optional] 
-**Manufacturer** | Pointer to **string** | Name of the manufacturer | [optional] 
-**LastSeen** | Pointer to **int32** | Epoch timestamp of the device&#39;s last appearance | [optional] 
-**SeenByDeviceMac** | Pointer to **string** | Seen by device MAC | [optional] 
-**InSightAlert** | Pointer to **bool** | Device in sight alert | [optional] 
-**OutOfSightAlert** | Pointer to **bool** | Device out of sight alert | [optional] 
-**Tags** | Pointer to **[]string** | A list of tags applied to the device | [optional] 
+**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
+**Hubs** | Pointer to [**[]InlineResponse20089Hubs**](InlineResponse20089Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse20089Subnets**](InlineResponse20089Subnets.md) | The list of subnets and their VPN presence. | [optional] 
+**Subnet** | Pointer to [**InlineResponse20089Subnet**](InlineResponse20089Subnet.md) |  | [optional] 
+**HostTranslations** | Pointer to [**[]InlineResponse20089HostTranslations**](InlineResponse20089HostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
 
 ## Methods
 
@@ -35,280 +29,130 @@ NewInlineResponse20089WithDefaults instantiates a new InlineResponse20089 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMode
 
-`func (o *InlineResponse20089) GetId() string`
+`func (o *InlineResponse20089) GetMode() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetModeOk
 
-`func (o *InlineResponse20089) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20089) GetModeOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMode
 
-`func (o *InlineResponse20089) SetId(v string)`
+`func (o *InlineResponse20089) SetMode(v string)`
 
-SetId sets Id field to given value.
+SetMode sets Mode field to given value.
 
-### HasId
+### HasMode
 
-`func (o *InlineResponse20089) HasId() bool`
+`func (o *InlineResponse20089) HasMode() bool`
 
-HasId returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetMac
+### GetHubs
 
-`func (o *InlineResponse20089) GetMac() string`
+`func (o *InlineResponse20089) GetHubs() []InlineResponse20089Hubs`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetHubsOk
 
-`func (o *InlineResponse20089) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20089) GetHubsOk() (*[]InlineResponse20089Hubs, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetHubs
 
-`func (o *InlineResponse20089) SetMac(v string)`
+`func (o *InlineResponse20089) SetHubs(v []InlineResponse20089Hubs)`
 
-SetMac sets Mac field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasMac
+### HasHubs
 
-`func (o *InlineResponse20089) HasMac() bool`
+`func (o *InlineResponse20089) HasHubs() bool`
 
-HasMac returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetSubnets
 
-`func (o *InlineResponse20089) GetNetworkId() string`
+`func (o *InlineResponse20089) GetSubnets() []InlineResponse20089Subnets`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetSubnetsOk
 
-`func (o *InlineResponse20089) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20089) GetSubnetsOk() (*[]InlineResponse20089Subnets, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSubnets
 
-`func (o *InlineResponse20089) SetNetworkId(v string)`
+`func (o *InlineResponse20089) SetSubnets(v []InlineResponse20089Subnets)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasNetworkId
+### HasSubnets
 
-`func (o *InlineResponse20089) HasNetworkId() bool`
+`func (o *InlineResponse20089) HasSubnets() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
-### GetName
+### GetSubnet
 
-`func (o *InlineResponse20089) GetName() string`
+`func (o *InlineResponse20089) GetSubnet() InlineResponse20089Subnet`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSubnetOk
 
-`func (o *InlineResponse20089) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20089) GetSubnetOk() (*InlineResponse20089Subnet, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSubnet
 
-`func (o *InlineResponse20089) SetName(v string)`
+`func (o *InlineResponse20089) SetSubnet(v InlineResponse20089Subnet)`
 
-SetName sets Name field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasName
+### HasSubnet
 
-`func (o *InlineResponse20089) HasName() bool`
+`func (o *InlineResponse20089) HasSubnet() bool`
 
-HasName returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetDeviceName
+### GetHostTranslations
 
-`func (o *InlineResponse20089) GetDeviceName() string`
+`func (o *InlineResponse20089) GetHostTranslations() []InlineResponse20089HostTranslations`
 
-GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
+GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
 
-### GetDeviceNameOk
+### GetHostTranslationsOk
 
-`func (o *InlineResponse20089) GetDeviceNameOk() (*string, bool)`
+`func (o *InlineResponse20089) GetHostTranslationsOk() (*[]InlineResponse20089HostTranslations, bool)`
 
-GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
+GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceName
+### SetHostTranslations
 
-`func (o *InlineResponse20089) SetDeviceName(v string)`
+`func (o *InlineResponse20089) SetHostTranslations(v []InlineResponse20089HostTranslations)`
 
-SetDeviceName sets DeviceName field to given value.
+SetHostTranslations sets HostTranslations field to given value.
 
-### HasDeviceName
+### HasHostTranslations
 
-`func (o *InlineResponse20089) HasDeviceName() bool`
+`func (o *InlineResponse20089) HasHostTranslations() bool`
 
-HasDeviceName returns a boolean if a field has been set.
-
-### GetManufacturer
-
-`func (o *InlineResponse20089) GetManufacturer() string`
-
-GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
-
-### GetManufacturerOk
-
-`func (o *InlineResponse20089) GetManufacturerOk() (*string, bool)`
-
-GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetManufacturer
-
-`func (o *InlineResponse20089) SetManufacturer(v string)`
-
-SetManufacturer sets Manufacturer field to given value.
-
-### HasManufacturer
-
-`func (o *InlineResponse20089) HasManufacturer() bool`
-
-HasManufacturer returns a boolean if a field has been set.
-
-### GetLastSeen
-
-`func (o *InlineResponse20089) GetLastSeen() int32`
-
-GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
-
-### GetLastSeenOk
-
-`func (o *InlineResponse20089) GetLastSeenOk() (*int32, bool)`
-
-GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastSeen
-
-`func (o *InlineResponse20089) SetLastSeen(v int32)`
-
-SetLastSeen sets LastSeen field to given value.
-
-### HasLastSeen
-
-`func (o *InlineResponse20089) HasLastSeen() bool`
-
-HasLastSeen returns a boolean if a field has been set.
-
-### GetSeenByDeviceMac
-
-`func (o *InlineResponse20089) GetSeenByDeviceMac() string`
-
-GetSeenByDeviceMac returns the SeenByDeviceMac field if non-nil, zero value otherwise.
-
-### GetSeenByDeviceMacOk
-
-`func (o *InlineResponse20089) GetSeenByDeviceMacOk() (*string, bool)`
-
-GetSeenByDeviceMacOk returns a tuple with the SeenByDeviceMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeenByDeviceMac
-
-`func (o *InlineResponse20089) SetSeenByDeviceMac(v string)`
-
-SetSeenByDeviceMac sets SeenByDeviceMac field to given value.
-
-### HasSeenByDeviceMac
-
-`func (o *InlineResponse20089) HasSeenByDeviceMac() bool`
-
-HasSeenByDeviceMac returns a boolean if a field has been set.
-
-### GetInSightAlert
-
-`func (o *InlineResponse20089) GetInSightAlert() bool`
-
-GetInSightAlert returns the InSightAlert field if non-nil, zero value otherwise.
-
-### GetInSightAlertOk
-
-`func (o *InlineResponse20089) GetInSightAlertOk() (*bool, bool)`
-
-GetInSightAlertOk returns a tuple with the InSightAlert field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInSightAlert
-
-`func (o *InlineResponse20089) SetInSightAlert(v bool)`
-
-SetInSightAlert sets InSightAlert field to given value.
-
-### HasInSightAlert
-
-`func (o *InlineResponse20089) HasInSightAlert() bool`
-
-HasInSightAlert returns a boolean if a field has been set.
-
-### GetOutOfSightAlert
-
-`func (o *InlineResponse20089) GetOutOfSightAlert() bool`
-
-GetOutOfSightAlert returns the OutOfSightAlert field if non-nil, zero value otherwise.
-
-### GetOutOfSightAlertOk
-
-`func (o *InlineResponse20089) GetOutOfSightAlertOk() (*bool, bool)`
-
-GetOutOfSightAlertOk returns a tuple with the OutOfSightAlert field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOutOfSightAlert
-
-`func (o *InlineResponse20089) SetOutOfSightAlert(v bool)`
-
-SetOutOfSightAlert sets OutOfSightAlert field to given value.
-
-### HasOutOfSightAlert
-
-`func (o *InlineResponse20089) HasOutOfSightAlert() bool`
-
-HasOutOfSightAlert returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20089) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20089) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20089) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20089) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasHostTranslations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

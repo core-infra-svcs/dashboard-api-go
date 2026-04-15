@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
-**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
+**Email** | **string** | Email address of the user | 
+**Name** | Pointer to **string** | Name of the user. Only required If the user is not a Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only required If the user is not a Dashboard administrator. | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. Can be &#39;Guest&#39; or &#39;802.1X&#39; for wireless networks, or &#39;Client VPN&#39; for MX networks. Defaults to &#39;802.1X&#39;. | [optional] [default to "802.1X"]
 **EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator. | [optional] 
+**Authorizations** | [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations1**](NetworksNetworkIdMerakiAuthUsersAuthorizations1.md) | Authorization zones and expiration dates for the user. | 
 
 ## Methods
 
 ### NewInlineObject116
 
-`func NewInlineObject116() *InlineObject116`
+`func NewInlineObject116(email string, authorizations []NetworksNetworkIdMerakiAuthUsersAuthorizations1, ) *InlineObject116`
 
 NewInlineObject116 instantiates a new InlineObject116 object
 This constructor will assign default values to properties that have it defined,
@@ -27,6 +30,26 @@ will change when the set of required properties is changed
 NewInlineObject116WithDefaults instantiates a new InlineObject116 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetEmail
+
+`func (o *InlineObject116) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineObject116) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineObject116) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
 
 ### GetName
 
@@ -78,6 +101,31 @@ SetPassword sets Password field to given value.
 
 HasPassword returns a boolean if a field has been set.
 
+### GetAccountType
+
+`func (o *InlineObject116) GetAccountType() string`
+
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+
+### GetAccountTypeOk
+
+`func (o *InlineObject116) GetAccountTypeOk() (*string, bool)`
+
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountType
+
+`func (o *InlineObject116) SetAccountType(v string)`
+
+SetAccountType sets AccountType field to given value.
+
+### HasAccountType
+
+`func (o *InlineObject116) HasAccountType() bool`
+
+HasAccountType returns a boolean if a field has been set.
+
 ### GetEmailPasswordToUser
 
 `func (o *InlineObject116) GetEmailPasswordToUser() bool`
@@ -103,30 +151,50 @@ SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
 
 HasEmailPasswordToUser returns a boolean if a field has been set.
 
+### GetIsAdmin
+
+`func (o *InlineObject116) GetIsAdmin() bool`
+
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+
+### GetIsAdminOk
+
+`func (o *InlineObject116) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsAdmin
+
+`func (o *InlineObject116) SetIsAdmin(v bool)`
+
+SetIsAdmin sets IsAdmin field to given value.
+
+### HasIsAdmin
+
+`func (o *InlineObject116) HasIsAdmin() bool`
+
+HasIsAdmin returns a boolean if a field has been set.
+
 ### GetAuthorizations
 
-`func (o *InlineObject116) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
+`func (o *InlineObject116) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations1`
 
 GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
 ### GetAuthorizationsOk
 
-`func (o *InlineObject116) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
+`func (o *InlineObject116) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations1, bool)`
 
 GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAuthorizations
 
-`func (o *InlineObject116) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
+`func (o *InlineObject116) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations1)`
 
 SetAuthorizations sets Authorizations field to given value.
 
-### HasAuthorizations
-
-`func (o *InlineObject116) HasAuthorizations() bool`
-
-HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

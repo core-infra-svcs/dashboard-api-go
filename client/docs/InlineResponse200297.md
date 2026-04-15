@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200297Items**](InlineResponse200297Items.md) | List of scheduled packet captures | [optional] 
-**Meta** | Pointer to [**InlineResponse200297Meta**](InlineResponse200297Meta.md) |  | [optional] 
+**ClientId** | Pointer to **string** | The ID of the client | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**Manufacturer** | Pointer to **string** | Manufacturer of the client | [optional] 
+**Records** | Pointer to [**[]InlineResponse200297Records**](InlineResponse200297Records.md) | The clients that appear on any networks within an organization | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200297WithDefaults instantiates a new InlineResponse200297 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetClientId
 
-`func (o *InlineResponse200297) GetItems() []InlineResponse200297Items`
+`func (o *InlineResponse200297) GetClientId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetClientIdOk
 
-`func (o *InlineResponse200297) GetItemsOk() (*[]InlineResponse200297Items, bool)`
+`func (o *InlineResponse200297) GetClientIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetClientId
 
-`func (o *InlineResponse200297) SetItems(v []InlineResponse200297Items)`
+`func (o *InlineResponse200297) SetClientId(v string)`
 
-SetItems sets Items field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasItems
+### HasClientId
 
-`func (o *InlineResponse200297) HasItems() bool`
+`func (o *InlineResponse200297) HasClientId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetMeta
+### GetMac
 
-`func (o *InlineResponse200297) GetMeta() InlineResponse200297Meta`
+`func (o *InlineResponse200297) GetMac() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetMacOk
 
-`func (o *InlineResponse200297) GetMetaOk() (*InlineResponse200297Meta, bool)`
+`func (o *InlineResponse200297) GetMacOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetMac
 
-`func (o *InlineResponse200297) SetMeta(v InlineResponse200297Meta)`
+`func (o *InlineResponse200297) SetMac(v string)`
 
-SetMeta sets Meta field to given value.
+SetMac sets Mac field to given value.
 
-### HasMeta
+### HasMac
 
-`func (o *InlineResponse200297) HasMeta() bool`
+`func (o *InlineResponse200297) HasMac() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetManufacturer
+
+`func (o *InlineResponse200297) GetManufacturer() string`
+
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
+
+### GetManufacturerOk
+
+`func (o *InlineResponse200297) GetManufacturerOk() (*string, bool)`
+
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManufacturer
+
+`func (o *InlineResponse200297) SetManufacturer(v string)`
+
+SetManufacturer sets Manufacturer field to given value.
+
+### HasManufacturer
+
+`func (o *InlineResponse200297) HasManufacturer() bool`
+
+HasManufacturer returns a boolean if a field has been set.
+
+### GetRecords
+
+`func (o *InlineResponse200297) GetRecords() []InlineResponse200297Records`
+
+GetRecords returns the Records field if non-nil, zero value otherwise.
+
+### GetRecordsOk
+
+`func (o *InlineResponse200297) GetRecordsOk() (*[]InlineResponse200297Records, bool)`
+
+GetRecordsOk returns a tuple with the Records field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecords
+
+`func (o *InlineResponse200297) SetRecords(v []InlineResponse200297Records)`
+
+SetRecords sets Records field to given value.
+
+### HasRecords
+
+`func (o *InlineResponse200297) HasRecords() bool`
+
+HasRecords returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

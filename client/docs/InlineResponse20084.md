@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlansEnabled** | Pointer to **bool** | Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network | [optional] 
+**Uplinks** | Pointer to [**[]InlineResponse20084Uplinks**](InlineResponse20084Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20084WithDefaults instantiates a new InlineResponse20084 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlansEnabled
+### GetUplinks
 
-`func (o *InlineResponse20084) GetVlansEnabled() bool`
+`func (o *InlineResponse20084) GetUplinks() []InlineResponse20084Uplinks`
 
-GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetVlansEnabledOk
+### GetUplinksOk
 
-`func (o *InlineResponse20084) GetVlansEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20084) GetUplinksOk() (*[]InlineResponse20084Uplinks, bool)`
 
-GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlansEnabled
+### SetUplinks
 
-`func (o *InlineResponse20084) SetVlansEnabled(v bool)`
+`func (o *InlineResponse20084) SetUplinks(v []InlineResponse20084Uplinks)`
 
-SetVlansEnabled sets VlansEnabled field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasVlansEnabled
+### HasUplinks
 
-`func (o *InlineResponse20084) HasVlansEnabled() bool`
+`func (o *InlineResponse20084) HasUplinks() bool`
 
-HasVlansEnabled returns a boolean if a field has been set.
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

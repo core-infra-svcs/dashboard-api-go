@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
+**Peers** | Pointer to [**[]InlineResponse200267Peers**](InlineResponse200267Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200267WithDefaults instantiates a new InlineResponse200267 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetArtifactId
+### GetPeers
 
-`func (o *InlineResponse200267) GetArtifactId() string`
+`func (o *InlineResponse200267) GetPeers() []InlineResponse200267Peers`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetPeersOk
 
-`func (o *InlineResponse200267) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineResponse200267) GetPeersOk() (*[]InlineResponse200267Peers, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetPeers
 
-`func (o *InlineResponse200267) SetArtifactId(v string)`
+`func (o *InlineResponse200267) SetPeers(v []InlineResponse200267Peers)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetPeers sets Peers field to given value.
 
-### HasArtifactId
+### HasPeers
 
-`func (o *InlineResponse200267) HasArtifactId() bool`
+`func (o *InlineResponse200267) HasPeers() bool`
 
-HasArtifactId returns a boolean if a field has been set.
-
-### GetOrganizationId
-
-`func (o *InlineResponse200267) GetOrganizationId() string`
-
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
-
-### GetOrganizationIdOk
-
-`func (o *InlineResponse200267) GetOrganizationIdOk() (*string, bool)`
-
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrganizationId
-
-`func (o *InlineResponse200267) SetOrganizationId(v string)`
-
-SetOrganizationId sets OrganizationId field to given value.
-
-### HasOrganizationId
-
-`func (o *InlineResponse200267) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200267) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200267) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200267) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200267) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200267) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200267) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200267) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200267) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

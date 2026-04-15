@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse200108UpgradeWindow**](InlineResponse200108UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**InlineResponse200108Products**](InlineResponse200108Products.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
+**Errors** | Pointer to [**[]InlineResponse200108Errors**](InlineResponse200108Errors.md) | Errors for devices that were not added | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200108WithDefaults instantiates a new InlineResponse200108 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetSerials
 
-`func (o *InlineResponse200108) GetUpgradeWindow() InlineResponse200108UpgradeWindow`
+`func (o *InlineResponse200108) GetSerials() []string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetSerialsOk
 
-`func (o *InlineResponse200108) GetUpgradeWindowOk() (*InlineResponse200108UpgradeWindow, bool)`
+`func (o *InlineResponse200108) GetSerialsOk() (*[]string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetSerials
 
-`func (o *InlineResponse200108) SetUpgradeWindow(v InlineResponse200108UpgradeWindow)`
+`func (o *InlineResponse200108) SetSerials(v []string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetSerials sets Serials field to given value.
 
-### HasUpgradeWindow
+### HasSerials
 
-`func (o *InlineResponse200108) HasUpgradeWindow() bool`
+`func (o *InlineResponse200108) HasSerials() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetTimezone
+### GetErrors
 
-`func (o *InlineResponse200108) GetTimezone() string`
+`func (o *InlineResponse200108) GetErrors() []InlineResponse200108Errors`
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetTimezoneOk
+### GetErrorsOk
 
-`func (o *InlineResponse200108) GetTimezoneOk() (*string, bool)`
+`func (o *InlineResponse200108) GetErrorsOk() (*[]InlineResponse200108Errors, bool)`
 
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetErrors
 
-`func (o *InlineResponse200108) SetTimezone(v string)`
+`func (o *InlineResponse200108) SetErrors(v []InlineResponse200108Errors)`
 
-SetTimezone sets Timezone field to given value.
+SetErrors sets Errors field to given value.
 
-### HasTimezone
+### HasErrors
 
-`func (o *InlineResponse200108) HasTimezone() bool`
+`func (o *InlineResponse200108) HasErrors() bool`
 
-HasTimezone returns a boolean if a field has been set.
-
-### GetProducts
-
-`func (o *InlineResponse200108) GetProducts() InlineResponse200108Products`
-
-GetProducts returns the Products field if non-nil, zero value otherwise.
-
-### GetProductsOk
-
-`func (o *InlineResponse200108) GetProductsOk() (*InlineResponse200108Products, bool)`
-
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProducts
-
-`func (o *InlineResponse200108) SetProducts(v InlineResponse200108Products)`
-
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineResponse200108) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

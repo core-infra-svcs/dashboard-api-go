@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Jobs** | Pointer to [**[]InlineResponse200114Jobs**](InlineResponse200114Jobs.md) | The newly created jobs | [optional] 
+**Products** | Pointer to [**InlineResponse200114Products**](InlineResponse200114Products.md) |  | [optional] 
+**Stages** | Pointer to [**[]InlineResponse200114Stages**](InlineResponse200114Stages.md) | The ordered stages in the network | [optional] 
+**Reasons** | Pointer to [**[]InlineResponse200113Reasons**](InlineResponse200113Reasons.md) | Reasons for the rollback | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200114WithDefaults instantiates a new InlineResponse200114 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJobs
+### GetProducts
 
-`func (o *InlineResponse200114) GetJobs() []InlineResponse200114Jobs`
+`func (o *InlineResponse200114) GetProducts() InlineResponse200114Products`
 
-GetJobs returns the Jobs field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetJobsOk
+### GetProductsOk
 
-`func (o *InlineResponse200114) GetJobsOk() (*[]InlineResponse200114Jobs, bool)`
+`func (o *InlineResponse200114) GetProductsOk() (*InlineResponse200114Products, bool)`
 
-GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJobs
+### SetProducts
 
-`func (o *InlineResponse200114) SetJobs(v []InlineResponse200114Jobs)`
+`func (o *InlineResponse200114) SetProducts(v InlineResponse200114Products)`
 
-SetJobs sets Jobs field to given value.
+SetProducts sets Products field to given value.
 
-### HasJobs
+### HasProducts
 
-`func (o *InlineResponse200114) HasJobs() bool`
+`func (o *InlineResponse200114) HasProducts() bool`
 
-HasJobs returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
+
+### GetStages
+
+`func (o *InlineResponse200114) GetStages() []InlineResponse200114Stages`
+
+GetStages returns the Stages field if non-nil, zero value otherwise.
+
+### GetStagesOk
+
+`func (o *InlineResponse200114) GetStagesOk() (*[]InlineResponse200114Stages, bool)`
+
+GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStages
+
+`func (o *InlineResponse200114) SetStages(v []InlineResponse200114Stages)`
+
+SetStages sets Stages field to given value.
+
+### HasStages
+
+`func (o *InlineResponse200114) HasStages() bool`
+
+HasStages returns a boolean if a field has been set.
+
+### GetReasons
+
+`func (o *InlineResponse200114) GetReasons() []InlineResponse200113Reasons`
+
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
+
+### GetReasonsOk
+
+`func (o *InlineResponse200114) GetReasonsOk() (*[]InlineResponse200113Reasons, bool)`
+
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReasons
+
+`func (o *InlineResponse200114) SetReasons(v []InlineResponse200113Reasons)`
+
+SetReasons sets Reasons field to given value.
+
+### HasReasons
+
+`func (o *InlineResponse200114) HasReasons() bool`
+
+HasReasons returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

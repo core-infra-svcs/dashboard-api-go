@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InterfaceIp** | **string** | The IP address of the interface where the RP needs to be created. | 
-**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
-**Vrf** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf**](NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf.md) |  | [optional] 
+**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
 ### NewInlineObject156
 
-`func NewInlineObject156(interfaceIp string, multicastGroup string, ) *InlineObject156`
+`func NewInlineObject156() *InlineObject156`
 
 NewInlineObject156 instantiates a new InlineObject156 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,55 @@ NewInlineObject156WithDefaults instantiates a new InlineObject156 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaceIp
+### GetDefaultSettings
 
-`func (o *InlineObject156) GetInterfaceIp() string`
+`func (o *InlineObject156) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetDefaultSettingsOk
 
-`func (o *InlineObject156) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineObject156) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetDefaultSettings
 
-`func (o *InlineObject156) SetInterfaceIp(v string)`
+`func (o *InlineObject156) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
+### HasDefaultSettings
 
-### GetMulticastGroup
+`func (o *InlineObject156) HasDefaultSettings() bool`
 
-`func (o *InlineObject156) GetMulticastGroup() string`
+HasDefaultSettings returns a boolean if a field has been set.
 
-GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
+### GetOverrides
 
-### GetMulticastGroupOk
+`func (o *InlineObject156) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
 
-`func (o *InlineObject156) GetMulticastGroupOk() (*string, bool)`
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
+### GetOverridesOk
+
+`func (o *InlineObject156) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastGroup
+### SetOverrides
 
-`func (o *InlineObject156) SetMulticastGroup(v string)`
+`func (o *InlineObject156) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
 
-SetMulticastGroup sets MulticastGroup field to given value.
+SetOverrides sets Overrides field to given value.
 
+### HasOverrides
 
-### GetVrf
+`func (o *InlineObject156) HasOverrides() bool`
 
-`func (o *InlineObject156) GetVrf() NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineObject156) GetVrfOk() (*NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineObject156) SetVrf(v NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineObject156) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

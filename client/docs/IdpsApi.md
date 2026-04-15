@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationSamlIdp
 
-> []InlineResponse200339 CreateOrganizationSamlIdp(ctx, organizationId).CreateOrganizationSamlIdp(createOrganizationSamlIdp).Execute()
+> []InlineResponse200360 CreateOrganizationSamlIdp(ctx, organizationId).CreateOrganizationSamlIdp(createOrganizationSamlIdp).Execute()
 
 Create a SAML IdP for your organization.
 
@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSamlIdp := *openapiclient.NewInlineObject298("X509certSha1Fingerprint_example") // InlineObject298 | 
+    createOrganizationSamlIdp := *openapiclient.NewInlineObject311("X509certSha1Fingerprint_example") // InlineObject311 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IdpsApi.CreateOrganizationSamlIdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSamlIdp`: []InlineResponse200339
+    // response from `CreateOrganizationSamlIdp`: []InlineResponse200360
     fmt.Fprintf(os.Stdout, "Response from `IdpsApi.CreateOrganizationSamlIdp`: %v\n", resp)
 }
 ```
@@ -64,11 +64,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSamlIdpR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSamlIdp** | [**InlineObject298**](InlineObject298.md) |  | 
+ **createOrganizationSamlIdp** | [**InlineObject311**](InlineObject311.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200339**](InlineResponse200339.md)
+[**[]InlineResponse200360**](InlineResponse200360.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSamlIdp
 
-> InlineResponse200339 GetOrganizationSamlIdp(ctx, organizationId, idpId).Execute()
+> InlineResponse200360 GetOrganizationSamlIdp(ctx, organizationId, idpId).Execute()
 
 Get a SAML IdP from your organization.
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IdpsApi.GetOrganizationSamlIdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSamlIdp`: InlineResponse200339
+    // response from `GetOrganizationSamlIdp`: InlineResponse200360
     fmt.Fprintf(os.Stdout, "Response from `IdpsApi.GetOrganizationSamlIdp`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200339**](InlineResponse200339.md)
+[**InlineResponse200360**](InlineResponse200360.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSamlIdps
 
-> []InlineResponse200339 GetOrganizationSamlIdps(ctx, organizationId).Execute()
+> []InlineResponse200360 GetOrganizationSamlIdps(ctx, organizationId).Execute()
 
 List the SAML IdPs in your organization.
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IdpsApi.GetOrganizationSamlIdps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSamlIdps`: []InlineResponse200339
+    // response from `GetOrganizationSamlIdps`: []InlineResponse200360
     fmt.Fprintf(os.Stdout, "Response from `IdpsApi.GetOrganizationSamlIdps`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200339**](InlineResponse200339.md)
+[**[]InlineResponse200360**](InlineResponse200360.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSamlIdp
 
-> []InlineResponse200339 UpdateOrganizationSamlIdp(ctx, organizationId, idpId).UpdateOrganizationSamlIdp(updateOrganizationSamlIdp).Execute()
+> []InlineResponse200360 UpdateOrganizationSamlIdp(ctx, organizationId, idpId).UpdateOrganizationSamlIdp(updateOrganizationSamlIdp).Execute()
 
 Update a SAML IdP in your organization
 
@@ -321,7 +321,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     idpId := "idpId_example" // string | Idp ID
-    updateOrganizationSamlIdp := *openapiclient.NewInlineObject299() // InlineObject299 |  (optional)
+    updateOrganizationSamlIdp := *openapiclient.NewInlineObject312() // InlineObject312 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IdpsApi.UpdateOrganizationSamlIdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSamlIdp`: []InlineResponse200339
+    // response from `UpdateOrganizationSamlIdp`: []InlineResponse200360
     fmt.Fprintf(os.Stdout, "Response from `IdpsApi.UpdateOrganizationSamlIdp`: %v\n", resp)
 }
 ```
@@ -353,11 +353,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSamlIdp** | [**InlineObject299**](InlineObject299.md) |  | 
+ **updateOrganizationSamlIdp** | [**InlineObject312**](InlineObject312.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200339**](InlineResponse200339.md)
+[**[]InlineResponse200360**](InlineResponse200360.md)
 
 ### Authorization
 

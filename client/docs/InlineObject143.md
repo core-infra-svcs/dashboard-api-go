@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyAlerts**](NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspection**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspection.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches**](NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineObject143WithDefaults instantiates a new InlineObject143 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetEnabled
 
-`func (o *InlineObject143) GetAlerts() NetworksNetworkIdSwitchDhcpServerPolicyAlerts`
+`func (o *InlineObject143) GetEnabled() bool`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetEnabledOk
 
-`func (o *InlineObject143) GetAlertsOk() (*NetworksNetworkIdSwitchDhcpServerPolicyAlerts, bool)`
+`func (o *InlineObject143) GetEnabledOk() (*bool, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetEnabled
 
-`func (o *InlineObject143) SetAlerts(v NetworksNetworkIdSwitchDhcpServerPolicyAlerts)`
+`func (o *InlineObject143) SetEnabled(v bool)`
 
-SetAlerts sets Alerts field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAlerts
+### HasEnabled
 
-`func (o *InlineObject143) HasAlerts() bool`
+`func (o *InlineObject143) HasEnabled() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetVlanId
 
-`func (o *InlineObject143) GetDefaultPolicy() string`
+`func (o *InlineObject143) GetVlanId() int32`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetVlanIdOk
 
-`func (o *InlineObject143) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject143) GetVlanIdOk() (*int32, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetVlanId
 
-`func (o *InlineObject143) SetDefaultPolicy(v string)`
+`func (o *InlineObject143) SetVlanId(v int32)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasDefaultPolicy
+### HasVlanId
 
-`func (o *InlineObject143) HasDefaultPolicy() bool`
+`func (o *InlineObject143) HasVlanId() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetProtocols
 
-`func (o *InlineObject143) GetAllowedServers() []string`
+`func (o *InlineObject143) GetProtocols() []string`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetProtocolsOk
 
-`func (o *InlineObject143) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineObject143) GetProtocolsOk() (*[]string, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetProtocols
 
-`func (o *InlineObject143) SetAllowedServers(v []string)`
+`func (o *InlineObject143) SetProtocols(v []string)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasAllowedServers
+### HasProtocols
 
-`func (o *InlineObject143) HasAllowedServers() bool`
+`func (o *InlineObject143) HasProtocols() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
 
-### GetBlockedServers
+### GetSwitches
 
-`func (o *InlineObject143) GetBlockedServers() []string`
+`func (o *InlineObject143) GetSwitches() []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches`
 
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
 
-### GetBlockedServersOk
+### GetSwitchesOk
 
-`func (o *InlineObject143) GetBlockedServersOk() (*[]string, bool)`
+`func (o *InlineObject143) GetSwitchesOk() (*[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches, bool)`
 
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedServers
+### SetSwitches
 
-`func (o *InlineObject143) SetBlockedServers(v []string)`
+`func (o *InlineObject143) SetSwitches(v []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches)`
 
-SetBlockedServers sets BlockedServers field to given value.
+SetSwitches sets Switches field to given value.
 
-### HasBlockedServers
+### HasSwitches
 
-`func (o *InlineObject143) HasBlockedServers() bool`
+`func (o *InlineObject143) HasSwitches() bool`
 
-HasBlockedServers returns a boolean if a field has been set.
-
-### GetArpInspection
-
-`func (o *InlineObject143) GetArpInspection() NetworksNetworkIdSwitchDhcpServerPolicyArpInspection`
-
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
-
-### GetArpInspectionOk
-
-`func (o *InlineObject143) GetArpInspectionOk() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspection, bool)`
-
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetArpInspection
-
-`func (o *InlineObject143) SetArpInspection(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspection)`
-
-SetArpInspection sets ArpInspection field to given value.
-
-### HasArpInspection
-
-`func (o *InlineObject143) HasArpInspection() bool`
-
-HasArpInspection returns a boolean if a field has been set.
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the VoIP provider | 
-**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject271
 
-`func NewInlineObject271(name string, address string, ) *InlineObject271`
+`func NewInlineObject271() *InlineObject271`
 
 NewInlineObject271 instantiates a new InlineObject271 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +25,30 @@ NewInlineObject271WithDefaults instantiates a new InlineObject271 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject271) GetName() string`
+`func (o *InlineObject271) GetLimitScopeToNetworks() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject271) GetNameOk() (*string, bool)`
+`func (o *InlineObject271) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject271) SetName(v string)`
+`func (o *InlineObject271) SetLimitScopeToNetworks(v []string)`
 
-SetName sets Name field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
+### HasLimitScopeToNetworks
 
-### GetAddress
+`func (o *InlineObject271) HasLimitScopeToNetworks() bool`
 
-`func (o *InlineObject271) GetAddress() string`
-
-GetAddress returns the Address field if non-nil, zero value otherwise.
-
-### GetAddressOk
-
-`func (o *InlineObject271) GetAddressOk() (*string, bool)`
-
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAddress
-
-`func (o *InlineObject271) SetAddress(v string)`
-
-SetAddress sets Address field to given value.
-
-
-### GetBestEffortMonitoringEnabled
-
-`func (o *InlineObject271) GetBestEffortMonitoringEnabled() bool`
-
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
-
-### GetBestEffortMonitoringEnabledOk
-
-`func (o *InlineObject271) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
-
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBestEffortMonitoringEnabled
-
-`func (o *InlineObject271) SetBestEffortMonitoringEnabled(v bool)`
-
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
-
-### HasBestEffortMonitoringEnabled
-
-`func (o *InlineObject271) HasBestEffortMonitoringEnabled() bool`
-
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
-**Url** | **string** | Receiver Url | 
-**Version** | **string** | Scanning API Version | 
-**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
-**SharedSecret** | **string** | Secret Value for Receiver | 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
 ### NewInlineObject312
 
-`func NewInlineObject312(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject312`
+`func NewInlineObject312() *InlineObject312`
 
 NewInlineObject312 instantiates a new InlineObject312 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +27,80 @@ NewInlineObject312WithDefaults instantiates a new InlineObject312 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetX509certSha1Fingerprint
 
-`func (o *InlineObject312) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
+`func (o *InlineObject312) GetX509certSha1Fingerprint() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineObject312) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
+`func (o *InlineObject312) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetX509certSha1Fingerprint
 
-`func (o *InlineObject312) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
+`func (o *InlineObject312) SetX509certSha1Fingerprint(v string)`
 
-SetNetwork sets Network field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
+### HasX509certSha1Fingerprint
 
-### GetUrl
+`func (o *InlineObject312) HasX509certSha1Fingerprint() bool`
 
-`func (o *InlineObject312) GetUrl() string`
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+### GetSsoLoginUrl
 
-### GetUrlOk
+`func (o *InlineObject312) GetSsoLoginUrl() string`
 
-`func (o *InlineObject312) GetUrlOk() (*string, bool)`
+GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+### GetSsoLoginUrlOk
+
+`func (o *InlineObject312) GetSsoLoginUrlOk() (*string, bool)`
+
+GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSsoLoginUrl
 
-`func (o *InlineObject312) SetUrl(v string)`
+`func (o *InlineObject312) SetSsoLoginUrl(v string)`
 
-SetUrl sets Url field to given value.
+SetSsoLoginUrl sets SsoLoginUrl field to given value.
 
+### HasSsoLoginUrl
 
-### GetVersion
+`func (o *InlineObject312) HasSsoLoginUrl() bool`
 
-`func (o *InlineObject312) GetVersion() string`
+HasSsoLoginUrl returns a boolean if a field has been set.
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+### GetSloLogoutUrl
 
-### GetVersionOk
+`func (o *InlineObject312) GetSloLogoutUrl() string`
 
-`func (o *InlineObject312) GetVersionOk() (*string, bool)`
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+### GetSloLogoutUrlOk
+
+`func (o *InlineObject312) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetSloLogoutUrl
 
-`func (o *InlineObject312) SetVersion(v string)`
+`func (o *InlineObject312) SetSloLogoutUrl(v string)`
 
-SetVersion sets Version field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
+### HasSloLogoutUrl
 
-### GetRadio
+`func (o *InlineObject312) HasSloLogoutUrl() bool`
 
-`func (o *InlineObject312) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject312) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject312) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
-
-SetRadio sets Radio field to given value.
-
-
-### GetSharedSecret
-
-`func (o *InlineObject312) GetSharedSecret() string`
-
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
-
-### GetSharedSecretOk
-
-`func (o *InlineObject312) GetSharedSecretOk() (*string, bool)`
-
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharedSecret
-
-`func (o *InlineObject312) SetSharedSecret(v string)`
-
-SetSharedSecret sets SharedSecret field to given value.
-
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesDetachItems**](OrganizationsOrganizationIdSaseSitesDetachItems.md) | List of Secure Access sites to be detached. | [optional] 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject318
 
-`func NewInlineObject318(enrolled bool, ) *InlineObject318`
+`func NewInlineObject318() *InlineObject318`
 
 NewInlineObject318 instantiates a new InlineObject318 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject318WithDefaults instantiates a new InlineObject318 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetItems
 
-`func (o *InlineObject318) GetEnrolled() bool`
+`func (o *InlineObject318) GetItems() []OrganizationsOrganizationIdSaseSitesDetachItems`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetItemsOk
 
-`func (o *InlineObject318) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject318) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesDetachItems, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetItems
 
-`func (o *InlineObject318) SetEnrolled(v bool)`
+`func (o *InlineObject318) SetItems(v []OrganizationsOrganizationIdSaseSitesDetachItems)`
 
-SetEnrolled sets Enrolled field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
 
-### GetChannel
+`func (o *InlineObject318) HasItems() bool`
 
-`func (o *InlineObject318) GetChannel() string`
+HasItems returns a boolean if a field has been set.
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+### GetCallback
 
-### GetChannelOk
+`func (o *InlineObject318) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-`func (o *InlineObject318) GetChannelOk() (*string, bool)`
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+### GetCallbackOk
+
+`func (o *InlineObject318) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetCallback
 
-`func (o *InlineObject318) SetChannel(v string)`
+`func (o *InlineObject318) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetChannel sets Channel field to given value.
+SetCallback sets Callback field to given value.
 
-### HasChannel
+### HasCallback
 
-`func (o *InlineObject318) HasChannel() bool`
+`func (o *InlineObject318) HasCallback() bool`
 
-HasChannel returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

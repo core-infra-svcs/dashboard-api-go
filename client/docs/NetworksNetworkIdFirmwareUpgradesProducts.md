@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Wireless** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**Appliance** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**Switch** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**Camera** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**CellularGateway** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**Sensor** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**WirelessController** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**SecureConnect** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
-**SwitchCatalyst** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
+**Appliance** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**Switch** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**Camera** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**CellularGateway** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**Sensor** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**WirelessController** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**SecureConnect** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**SwitchCatalyst** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
 
 ## Methods
 
@@ -60,20 +60,20 @@ HasWireless returns a boolean if a field has been set.
 
 ### GetAppliance
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetAppliance() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetAppliance() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetAppliance returns the Appliance field if non-nil, zero value otherwise.
 
 ### GetApplianceOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetApplianceOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetApplianceOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetApplianceOk returns a tuple with the Appliance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAppliance
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetAppliance(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetAppliance(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetAppliance sets Appliance field to given value.
 
@@ -85,20 +85,20 @@ HasAppliance returns a boolean if a field has been set.
 
 ### GetSwitch
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitch() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitch() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetSwitch returns the Switch field if non-nil, zero value otherwise.
 
 ### GetSwitchOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitchOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitchOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetSwitchOk returns a tuple with the Switch field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSwitch
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSwitch(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSwitch(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetSwitch sets Switch field to given value.
 
@@ -110,20 +110,20 @@ HasSwitch returns a boolean if a field has been set.
 
 ### GetCamera
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCamera() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCamera() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetCamera returns the Camera field if non-nil, zero value otherwise.
 
 ### GetCameraOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCameraOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCameraOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetCameraOk returns a tuple with the Camera field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCamera
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetCamera(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetCamera(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetCamera sets Camera field to given value.
 
@@ -135,20 +135,20 @@ HasCamera returns a boolean if a field has been set.
 
 ### GetCellularGateway
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCellularGateway() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCellularGateway() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetCellularGateway returns the CellularGateway field if non-nil, zero value otherwise.
 
 ### GetCellularGatewayOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCellularGatewayOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCellularGatewayOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetCellularGatewayOk returns a tuple with the CellularGateway field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCellularGateway
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetCellularGateway(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetCellularGateway(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetCellularGateway sets CellularGateway field to given value.
 
@@ -160,20 +160,20 @@ HasCellularGateway returns a boolean if a field has been set.
 
 ### GetSensor
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSensor() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSensor() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetSensor returns the Sensor field if non-nil, zero value otherwise.
 
 ### GetSensorOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSensorOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSensorOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetSensorOk returns a tuple with the Sensor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSensor
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSensor(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSensor(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetSensor sets Sensor field to given value.
 
@@ -185,20 +185,20 @@ HasSensor returns a boolean if a field has been set.
 
 ### GetWirelessController
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetWirelessController() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetWirelessController() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetWirelessController returns the WirelessController field if non-nil, zero value otherwise.
 
 ### GetWirelessControllerOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetWirelessControllerOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetWirelessControllerOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetWirelessControllerOk returns a tuple with the WirelessController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetWirelessController
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetWirelessController(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetWirelessController(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetWirelessController sets WirelessController field to given value.
 
@@ -210,20 +210,20 @@ HasWirelessController returns a boolean if a field has been set.
 
 ### GetSecureConnect
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSecureConnect() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSecureConnect() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetSecureConnect returns the SecureConnect field if non-nil, zero value otherwise.
 
 ### GetSecureConnectOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSecureConnectOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSecureConnectOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetSecureConnectOk returns a tuple with the SecureConnect field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSecureConnect
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSecureConnect(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSecureConnect(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetSecureConnect sets SecureConnect field to given value.
 
@@ -235,20 +235,20 @@ HasSecureConnect returns a boolean if a field has been set.
 
 ### GetSwitchCatalyst
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitchCatalyst() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitchCatalyst() NetworksNetworkIdFirmwareUpgradesProductsAppliance`
 
 GetSwitchCatalyst returns the SwitchCatalyst field if non-nil, zero value otherwise.
 
 ### GetSwitchCatalystOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitchCatalystOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSwitchCatalystOk() (*NetworksNetworkIdFirmwareUpgradesProductsAppliance, bool)`
 
 GetSwitchCatalystOk returns a tuple with the SwitchCatalyst field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSwitchCatalyst
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSwitchCatalyst(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSwitchCatalyst(v NetworksNetworkIdFirmwareUpgradesProductsAppliance)`
 
 SetSwitchCatalyst sets SwitchCatalyst field to given value.
 

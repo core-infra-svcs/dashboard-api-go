@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkClientsApplicationUsage
 
-> []InlineResponse20097 GetNetworkClientsApplicationUsage(ctx, networkId).Clients(clients).SsidNumber(ssidNumber).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200100 GetNetworkClientsApplicationUsage(ctx, networkId).Clients(clients).SsidNumber(ssidNumber).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the application usage data for clients
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationUsageApi.GetNetworkClientsApplicationUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientsApplicationUsage`: []InlineResponse20097
+    // response from `GetNetworkClientsApplicationUsage`: []InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `ApplicationUsageApi.GetNetworkClientsApplicationUsage`: %v\n", resp)
 }
 ```
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20097**](InlineResponse20097.md)
+[**[]InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 

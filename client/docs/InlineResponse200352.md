@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
-**Message** | Pointer to **string** | The error message of the API | [optional] 
+**Success** | Pointer to **bool** | Whether the operation was successful | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200352WithDefaults instantiates a new InlineResponse200352 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetSuccess
 
-`func (o *InlineResponse200352) GetStatus() bool`
+`func (o *InlineResponse200352) GetSuccess() bool`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSuccessOk
 
-`func (o *InlineResponse200352) GetStatusOk() (*bool, bool)`
+`func (o *InlineResponse200352) GetSuccessOk() (*bool, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSuccess
 
-`func (o *InlineResponse200352) SetStatus(v bool)`
+`func (o *InlineResponse200352) SetSuccess(v bool)`
 
-SetStatus sets Status field to given value.
+SetSuccess sets Success field to given value.
 
-### HasStatus
+### HasSuccess
 
-`func (o *InlineResponse200352) HasStatus() bool`
+`func (o *InlineResponse200352) HasSuccess() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetMessage
-
-`func (o *InlineResponse200352) GetMessage() string`
-
-GetMessage returns the Message field if non-nil, zero value otherwise.
-
-### GetMessageOk
-
-`func (o *InlineResponse200352) GetMessageOk() (*string, bool)`
-
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMessage
-
-`func (o *InlineResponse200352) SetMessage(v string)`
-
-SetMessage sets Message field to given value.
-
-### HasMessage
-
-`func (o *InlineResponse200352) HasMessage() bool`
-
-HasMessage returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

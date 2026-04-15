@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
-**Status** | Pointer to **string** | The status of the Certificate Authority | [optional] 
-**Contents** | Pointer to **string** | The PEM encoded contents of the Certificate Authority - with newlines as \&quot; \&quot;. Contents can be null, if the cert has not yet been generated. | [optional] 
+**Name** | Pointer to **string** | Name of the SSID | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200391WithDefaults instantiates a new InlineResponse200391 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificateAuthorityId
+### GetName
 
-`func (o *InlineResponse200391) GetCertificateAuthorityId() string`
+`func (o *InlineResponse200391) GetName() string`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetNameOk
 
-`func (o *InlineResponse200391) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineResponse200391) GetNameOk() (*string, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetName
 
-`func (o *InlineResponse200391) SetCertificateAuthorityId(v string)`
+`func (o *InlineResponse200391) SetName(v string)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetName sets Name field to given value.
 
-### HasCertificateAuthorityId
+### HasName
 
-`func (o *InlineResponse200391) HasCertificateAuthorityId() bool`
+`func (o *InlineResponse200391) HasName() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetStatus
+### GetUsage
 
-`func (o *InlineResponse200391) GetStatus() string`
+`func (o *InlineResponse200391) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetUsageOk
 
-`func (o *InlineResponse200391) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200391) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetUsage
 
-`func (o *InlineResponse200391) SetStatus(v string)`
+`func (o *InlineResponse200391) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
 
-SetStatus sets Status field to given value.
+SetUsage sets Usage field to given value.
 
-### HasStatus
+### HasUsage
 
-`func (o *InlineResponse200391) HasStatus() bool`
+`func (o *InlineResponse200391) HasUsage() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetContents
+### GetClients
 
-`func (o *InlineResponse200391) GetContents() string`
+`func (o *InlineResponse200391) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
 
-GetContents returns the Contents field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetContentsOk
+### GetClientsOk
 
-`func (o *InlineResponse200391) GetContentsOk() (*string, bool)`
+`func (o *InlineResponse200391) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
 
-GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetContents
+### SetClients
 
-`func (o *InlineResponse200391) SetContents(v string)`
+`func (o *InlineResponse200391) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
 
-SetContents sets Contents field to given value.
+SetClients sets Clients field to given value.
 
-### HasContents
+### HasClients
 
-`func (o *InlineResponse200391) HasContents() bool`
+`func (o *InlineResponse200391) HasClients() bool`
 
-HasContents returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
-**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
-**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
+**Usage** | Pointer to [**InlineResponse200296Usage**](InlineResponse200296Usage.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200296Counts**](InlineResponse200296Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200296WithDefaults instantiates a new InlineResponse200296 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureId
+### GetUsage
 
-`func (o *InlineResponse200296) GetCaptureId() string`
+`func (o *InlineResponse200296) GetUsage() InlineResponse200296Usage`
 
-GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetCaptureIdOk
+### GetUsageOk
 
-`func (o *InlineResponse200296) GetCaptureIdOk() (*string, bool)`
+`func (o *InlineResponse200296) GetUsageOk() (*InlineResponse200296Usage, bool)`
 
-GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureId
+### SetUsage
 
-`func (o *InlineResponse200296) SetCaptureId(v string)`
+`func (o *InlineResponse200296) SetUsage(v InlineResponse200296Usage)`
 
-SetCaptureId sets CaptureId field to given value.
+SetUsage sets Usage field to given value.
 
-### HasCaptureId
+### HasUsage
 
-`func (o *InlineResponse200296) HasCaptureId() bool`
+`func (o *InlineResponse200296) HasUsage() bool`
 
-HasCaptureId returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetDownloadUrl
+### GetCounts
 
-`func (o *InlineResponse200296) GetDownloadUrl() string`
+`func (o *InlineResponse200296) GetCounts() InlineResponse200296Counts`
 
-GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetDownloadUrlOk
+### GetCountsOk
 
-`func (o *InlineResponse200296) GetDownloadUrlOk() (*string, bool)`
+`func (o *InlineResponse200296) GetCountsOk() (*InlineResponse200296Counts, bool)`
 
-GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadUrl
+### SetCounts
 
-`func (o *InlineResponse200296) SetDownloadUrl(v string)`
+`func (o *InlineResponse200296) SetCounts(v InlineResponse200296Counts)`
 
-SetDownloadUrl sets DownloadUrl field to given value.
+SetCounts sets Counts field to given value.
 
-### HasDownloadUrl
+### HasCounts
 
-`func (o *InlineResponse200296) HasDownloadUrl() bool`
+`func (o *InlineResponse200296) HasCounts() bool`
 
-HasDownloadUrl returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200296) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200296) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200296) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200296) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

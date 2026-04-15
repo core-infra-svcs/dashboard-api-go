@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseConnectorsBatchCreateItems**](OrganizationsOrganizationIdSaseConnectorsBatchCreateItems.md) | List of connectors to deploy (maximum 20 items) | [optional] 
 
 ## Methods
 
 ### NewInlineObject315
 
-`func NewInlineObject315(networkIds []string, ) *InlineObject315`
+`func NewInlineObject315() *InlineObject315`
 
 NewInlineObject315 instantiates a new InlineObject315 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject315WithDefaults instantiates a new InlineObject315 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetItems
 
-`func (o *InlineObject315) GetNetworkIds() []string`
+`func (o *InlineObject315) GetItems() []OrganizationsOrganizationIdSaseConnectorsBatchCreateItems`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetItemsOk
 
-`func (o *InlineObject315) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject315) GetItemsOk() (*[]OrganizationsOrganizationIdSaseConnectorsBatchCreateItems, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetItems
 
-`func (o *InlineObject315) SetNetworkIds(v []string)`
+`func (o *InlineObject315) SetItems(v []OrganizationsOrganizationIdSaseConnectorsBatchCreateItems)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
+
+`func (o *InlineObject315) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

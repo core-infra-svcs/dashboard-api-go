@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Application** | Pointer to **string** | Name of the Application | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application | [optional] 
+**Id** | Pointer to **string** | Policy object ID | [optional] 
+**Name** | Pointer to **string** | Name of policy object (alphanumeric, space, dash, or underscore characters only). | [optional] 
+**Category** | Pointer to **string** | Category of a policy object (one of: adaptivePolicy, network) | [optional] 
+**Type** | Pointer to **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to. | [optional] 
+**NetworkIds** | Pointer to **[]string** | The IDs of the networks that use the policy object. | [optional] 
 
 ## Methods
 
@@ -29,130 +33,230 @@ NewInlineResponse200357WithDefaults instantiates a new InlineResponse200357 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplication
+### GetId
 
-`func (o *InlineResponse200357) GetApplication() string`
+`func (o *InlineResponse200357) GetId() string`
 
-GetApplication returns the Application field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetApplicationOk
+### GetIdOk
 
-`func (o *InlineResponse200357) GetApplicationOk() (*string, bool)`
+`func (o *InlineResponse200357) GetIdOk() (*string, bool)`
 
-GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplication
+### SetId
 
-`func (o *InlineResponse200357) SetApplication(v string)`
+`func (o *InlineResponse200357) SetId(v string)`
 
-SetApplication sets Application field to given value.
+SetId sets Id field to given value.
 
-### HasApplication
+### HasId
 
-`func (o *InlineResponse200357) HasApplication() bool`
+`func (o *InlineResponse200357) HasId() bool`
 
-HasApplication returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetTotal
+### GetName
 
-`func (o *InlineResponse200357) GetTotal() float32`
+`func (o *InlineResponse200357) GetName() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetNameOk
 
-`func (o *InlineResponse200357) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200357) GetNameOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetName
 
-`func (o *InlineResponse200357) SetTotal(v float32)`
+`func (o *InlineResponse200357) SetName(v string)`
 
-SetTotal sets Total field to given value.
+SetName sets Name field to given value.
 
-### HasTotal
+### HasName
 
-`func (o *InlineResponse200357) HasTotal() bool`
+`func (o *InlineResponse200357) HasName() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDownstream
+### GetCategory
 
-`func (o *InlineResponse200357) GetDownstream() float32`
+`func (o *InlineResponse200357) GetCategory() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetCategoryOk
 
-`func (o *InlineResponse200357) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200357) GetCategoryOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetCategory
 
-`func (o *InlineResponse200357) SetDownstream(v float32)`
+`func (o *InlineResponse200357) SetCategory(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetCategory sets Category field to given value.
 
-### HasDownstream
+### HasCategory
 
-`func (o *InlineResponse200357) HasDownstream() bool`
+`func (o *InlineResponse200357) HasCategory() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetUpstream
+### GetType
 
-`func (o *InlineResponse200357) GetUpstream() float32`
+`func (o *InlineResponse200357) GetType() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetTypeOk
 
-`func (o *InlineResponse200357) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse200357) GetTypeOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetType
 
-`func (o *InlineResponse200357) SetUpstream(v float32)`
+`func (o *InlineResponse200357) SetType(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetType sets Type field to given value.
 
-### HasUpstream
+### HasType
 
-`func (o *InlineResponse200357) HasUpstream() bool`
+`func (o *InlineResponse200357) HasType() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetPercentage
+### GetCidr
 
-`func (o *InlineResponse200357) GetPercentage() float32`
+`func (o *InlineResponse200357) GetCidr() string`
 
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetPercentageOk
+### GetCidrOk
 
-`func (o *InlineResponse200357) GetPercentageOk() (*float32, bool)`
+`func (o *InlineResponse200357) GetCidrOk() (*string, bool)`
 
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPercentage
+### SetCidr
 
-`func (o *InlineResponse200357) SetPercentage(v float32)`
+`func (o *InlineResponse200357) SetCidr(v string)`
 
-SetPercentage sets Percentage field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasPercentage
+### HasCidr
 
-`func (o *InlineResponse200357) HasPercentage() bool`
+`func (o *InlineResponse200357) HasCidr() bool`
 
-HasPercentage returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200357) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200357) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200357) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200357) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200357) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200357) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200357) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200357) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineResponse200357) GetGroupIds() []string`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineResponse200357) GetGroupIdsOk() (*[]string, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineResponse200357) SetGroupIds(v []string)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineResponse200357) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
+
+### GetNetworkIds
+
+`func (o *InlineResponse200357) GetNetworkIds() []string`
+
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+
+### GetNetworkIdsOk
+
+`func (o *InlineResponse200357) GetNetworkIdsOk() (*[]string, bool)`
+
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkIds
+
+`func (o *InlineResponse200357) SetNetworkIds(v []string)`
+
+SetNetworkIds sets NetworkIds field to given value.
+
+### HasNetworkIds
+
+`func (o *InlineResponse200357) HasNetworkIds() bool`
+
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

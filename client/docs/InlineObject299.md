@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy.md) |  | 
+**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to assign | 
 
 ## Methods
 
 ### NewInlineObject299
 
-`func NewInlineObject299() *InlineObject299`
+`func NewInlineObject299(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject299`
 
 NewInlineObject299 instantiates a new InlineObject299 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,45 @@ NewInlineObject299WithDefaults instantiates a new InlineObject299 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetPolicy
 
-`func (o *InlineObject299) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject299) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetPolicyOk
 
-`func (o *InlineObject299) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject299) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetPolicy
 
-`func (o *InlineObject299) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject299) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasX509certSha1Fingerprint
 
-`func (o *InlineObject299) HasX509certSha1Fingerprint() bool`
+### GetAdaptivePolicyGroups
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+`func (o *InlineObject299) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
 
-### GetSsoLoginUrl
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject299) GetSsoLoginUrl() string`
+### GetAdaptivePolicyGroupsOk
 
-GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
+`func (o *InlineObject299) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
 
-### GetSsoLoginUrlOk
-
-`func (o *InlineObject299) GetSsoLoginUrlOk() (*string, bool)`
-
-GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsoLoginUrl
+### SetAdaptivePolicyGroups
 
-`func (o *InlineObject299) SetSsoLoginUrl(v string)`
+`func (o *InlineObject299) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
 
-SetSsoLoginUrl sets SsoLoginUrl field to given value.
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
 
-### HasSsoLoginUrl
-
-`func (o *InlineObject299) HasSsoLoginUrl() bool`
-
-HasSsoLoginUrl returns a boolean if a field has been set.
-
-### GetSloLogoutUrl
-
-`func (o *InlineObject299) GetSloLogoutUrl() string`
-
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
-
-### GetSloLogoutUrlOk
-
-`func (o *InlineObject299) GetSloLogoutUrlOk() (*string, bool)`
-
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSloLogoutUrl
-
-`func (o *InlineObject299) SetSloLogoutUrl(v string)`
-
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
-
-### HasSloLogoutUrl
-
-`func (o *InlineObject299) HasSloLogoutUrl() bool`
-
-HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

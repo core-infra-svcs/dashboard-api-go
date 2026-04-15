@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]InlineResponse200223Ranges**](InlineResponse200223Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]InlineResponse200223RangesInSeconds**](InlineResponse200223RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Enabled** | Pointer to **bool** | If true, OpenRoaming is enabled on this SSID. | [optional] 
+**TenantId** | Pointer to **string** | The OpenRoaming DNA Spaces tenant ID. | [optional] 
 
 ## Methods
 
@@ -52,55 +51,30 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetRanges
+### GetTenantId
 
-`func (o *InlineObject207) GetRanges() []InlineResponse200223Ranges`
+`func (o *InlineObject207) GetTenantId() string`
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+GetTenantId returns the TenantId field if non-nil, zero value otherwise.
 
-### GetRangesOk
+### GetTenantIdOk
 
-`func (o *InlineObject207) GetRangesOk() (*[]InlineResponse200223Ranges, bool)`
+`func (o *InlineObject207) GetTenantIdOk() (*string, bool)`
 
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetTenantIdOk returns a tuple with the TenantId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetTenantId
 
-`func (o *InlineObject207) SetRanges(v []InlineResponse200223Ranges)`
+`func (o *InlineObject207) SetTenantId(v string)`
 
-SetRanges sets Ranges field to given value.
+SetTenantId sets TenantId field to given value.
 
-### HasRanges
+### HasTenantId
 
-`func (o *InlineObject207) HasRanges() bool`
+`func (o *InlineObject207) HasTenantId() bool`
 
-HasRanges returns a boolean if a field has been set.
-
-### GetRangesInSeconds
-
-`func (o *InlineObject207) GetRangesInSeconds() []InlineResponse200223RangesInSeconds`
-
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
-
-### GetRangesInSecondsOk
-
-`func (o *InlineObject207) GetRangesInSecondsOk() (*[]InlineResponse200223RangesInSeconds, bool)`
-
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRangesInSeconds
-
-`func (o *InlineObject207) SetRangesInSeconds(v []InlineResponse200223RangesInSeconds)`
-
-SetRangesInSeconds sets RangesInSeconds field to given value.
-
-### HasRangesInSeconds
-
-`func (o *InlineObject207) HasRangesInSeconds() bool`
-
-HasRangesInSeconds returns a boolean if a field has been set.
+HasTenantId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

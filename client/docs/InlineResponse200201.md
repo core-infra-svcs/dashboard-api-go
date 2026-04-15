@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
-**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
-**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
+**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
+**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200201WithDefaults instantiates a new InlineResponse200201 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetT0
+### GetStartTs
 
-`func (o *InlineResponse200201) GetT0() int32`
+`func (o *InlineResponse200201) GetStartTs() time.Time`
 
-GetT0 returns the T0 field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetT0Ok
+### GetStartTsOk
 
-`func (o *InlineResponse200201) GetT0Ok() (*int32, bool)`
+`func (o *InlineResponse200201) GetStartTsOk() (*time.Time, bool)`
 
-GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT0
+### SetStartTs
 
-`func (o *InlineResponse200201) SetT0(v int32)`
+`func (o *InlineResponse200201) SetStartTs(v time.Time)`
 
-SetT0 sets T0 field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasT0
+### HasStartTs
 
-`func (o *InlineResponse200201) HasT0() bool`
+`func (o *InlineResponse200201) HasStartTs() bool`
 
-HasT0 returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetT1
+### GetEndTs
 
-`func (o *InlineResponse200201) GetT1() int32`
+`func (o *InlineResponse200201) GetEndTs() time.Time`
 
-GetT1 returns the T1 field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetT1Ok
+### GetEndTsOk
 
-`func (o *InlineResponse200201) GetT1Ok() (*int32, bool)`
+`func (o *InlineResponse200201) GetEndTsOk() (*time.Time, bool)`
 
-GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT1
+### SetEndTs
 
-`func (o *InlineResponse200201) SetT1(v int32)`
+`func (o *InlineResponse200201) SetEndTs(v time.Time)`
 
-SetT1 sets T1 field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasT1
+### HasEndTs
 
-`func (o *InlineResponse200201) HasT1() bool`
+`func (o *InlineResponse200201) HasEndTs() bool`
 
-HasT1 returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLatencyBinsByCategory
+### GetUtilizationTotal
 
-`func (o *InlineResponse200201) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
+`func (o *InlineResponse200201) GetUtilizationTotal() float32`
 
-GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
+GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
 
-### GetLatencyBinsByCategoryOk
+### GetUtilizationTotalOk
 
-`func (o *InlineResponse200201) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
+`func (o *InlineResponse200201) GetUtilizationTotalOk() (*float32, bool)`
 
-GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
+GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyBinsByCategory
+### SetUtilizationTotal
 
-`func (o *InlineResponse200201) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
+`func (o *InlineResponse200201) SetUtilizationTotal(v float32)`
 
-SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
+SetUtilizationTotal sets UtilizationTotal field to given value.
 
-### HasLatencyBinsByCategory
+### HasUtilizationTotal
 
-`func (o *InlineResponse200201) HasLatencyBinsByCategory() bool`
+`func (o *InlineResponse200201) HasUtilizationTotal() bool`
 
-HasLatencyBinsByCategory returns a boolean if a field has been set.
+HasUtilizationTotal returns a boolean if a field has been set.
+
+### GetUtilization80211
+
+`func (o *InlineResponse200201) GetUtilization80211() float32`
+
+GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
+
+### GetUtilization80211Ok
+
+`func (o *InlineResponse200201) GetUtilization80211Ok() (*float32, bool)`
+
+GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilization80211
+
+`func (o *InlineResponse200201) SetUtilization80211(v float32)`
+
+SetUtilization80211 sets Utilization80211 field to given value.
+
+### HasUtilization80211
+
+`func (o *InlineResponse200201) HasUtilization80211() bool`
+
+HasUtilization80211 returns a boolean if a field has been set.
+
+### GetUtilizationNon80211
+
+`func (o *InlineResponse200201) GetUtilizationNon80211() float32`
+
+GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
+
+### GetUtilizationNon80211Ok
+
+`func (o *InlineResponse200201) GetUtilizationNon80211Ok() (*float32, bool)`
+
+GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilizationNon80211
+
+`func (o *InlineResponse200201) SetUtilizationNon80211(v float32)`
+
+SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
+
+### HasUtilizationNon80211
+
+`func (o *InlineResponse200201) HasUtilizationNon80211() bool`
+
+HasUtilizationNon80211 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

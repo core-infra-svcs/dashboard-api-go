@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
-**CommunityString** | Pointer to **string** | SNMP community string if access is &#39;community&#39;. | [optional] 
-**Users** | Pointer to [**[]InlineResponse200159Users**](InlineResponse200159Users.md) | SNMP settings if access is &#39;users&#39;. | [optional] 
+**Id** | Pointer to **string** | The ID of this target group. | [optional] 
+**Name** | Pointer to **string** | The name of this target group. | [optional] 
+**Scope** | Pointer to **string** | The scope of the target group. | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the target group. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200159WithDefaults instantiates a new InlineResponse200159 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccess
+### GetId
 
-`func (o *InlineResponse200159) GetAccess() string`
+`func (o *InlineResponse200159) GetId() string`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetIdOk
 
-`func (o *InlineResponse200159) GetAccessOk() (*string, bool)`
+`func (o *InlineResponse200159) GetIdOk() (*string, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetId
 
-`func (o *InlineResponse200159) SetAccess(v string)`
+`func (o *InlineResponse200159) SetId(v string)`
 
-SetAccess sets Access field to given value.
+SetId sets Id field to given value.
 
-### HasAccess
+### HasId
 
-`func (o *InlineResponse200159) HasAccess() bool`
+`func (o *InlineResponse200159) HasId() bool`
 
-HasAccess returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCommunityString
+### GetName
 
-`func (o *InlineResponse200159) GetCommunityString() string`
+`func (o *InlineResponse200159) GetName() string`
 
-GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCommunityStringOk
+### GetNameOk
 
-`func (o *InlineResponse200159) GetCommunityStringOk() (*string, bool)`
+`func (o *InlineResponse200159) GetNameOk() (*string, bool)`
 
-GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCommunityString
+### SetName
 
-`func (o *InlineResponse200159) SetCommunityString(v string)`
+`func (o *InlineResponse200159) SetName(v string)`
 
-SetCommunityString sets CommunityString field to given value.
+SetName sets Name field to given value.
 
-### HasCommunityString
+### HasName
 
-`func (o *InlineResponse200159) HasCommunityString() bool`
+`func (o *InlineResponse200159) HasName() bool`
 
-HasCommunityString returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUsers
+### GetScope
 
-`func (o *InlineResponse200159) GetUsers() []InlineResponse200159Users`
+`func (o *InlineResponse200159) GetScope() string`
 
-GetUsers returns the Users field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetUsersOk
+### GetScopeOk
 
-`func (o *InlineResponse200159) GetUsersOk() (*[]InlineResponse200159Users, bool)`
+`func (o *InlineResponse200159) GetScopeOk() (*string, bool)`
 
-GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsers
+### SetScope
 
-`func (o *InlineResponse200159) SetUsers(v []InlineResponse200159Users)`
+`func (o *InlineResponse200159) SetScope(v string)`
 
-SetUsers sets Users field to given value.
+SetScope sets Scope field to given value.
 
-### HasUsers
+### HasScope
 
-`func (o *InlineResponse200159) HasUsers() bool`
+`func (o *InlineResponse200159) HasScope() bool`
 
-HasUsers returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200159) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200159) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200159) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200159) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

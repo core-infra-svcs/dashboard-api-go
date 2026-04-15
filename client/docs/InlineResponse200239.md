@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | Profile ID | [optional] 
-**Name** | Pointer to **string** | Name of profile | [optional] 
+**Counts** | Pointer to [**InlineResponse200239Counts**](InlineResponse200239Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse200239Limits**](InlineResponse200239Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200239WithDefaults instantiates a new InlineResponse200239 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetCounts
 
-`func (o *InlineResponse200239) GetProfileId() string`
+`func (o *InlineResponse200239) GetCounts() InlineResponse200239Counts`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetCountsOk
 
-`func (o *InlineResponse200239) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200239) GetCountsOk() (*InlineResponse200239Counts, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetCounts
 
-`func (o *InlineResponse200239) SetProfileId(v string)`
+`func (o *InlineResponse200239) SetCounts(v InlineResponse200239Counts)`
 
-SetProfileId sets ProfileId field to given value.
+SetCounts sets Counts field to given value.
 
-### HasProfileId
+### HasCounts
 
-`func (o *InlineResponse200239) HasProfileId() bool`
+`func (o *InlineResponse200239) HasCounts() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetName
+### GetLimits
 
-`func (o *InlineResponse200239) GetName() string`
+`func (o *InlineResponse200239) GetLimits() InlineResponse200239Limits`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLimits returns the Limits field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLimitsOk
 
-`func (o *InlineResponse200239) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200239) GetLimitsOk() (*InlineResponse200239Limits, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLimits
 
-`func (o *InlineResponse200239) SetName(v string)`
+`func (o *InlineResponse200239) SetLimits(v InlineResponse200239Limits)`
 
-SetName sets Name field to given value.
+SetLimits sets Limits field to given value.
 
-### HasName
+### HasLimits
 
-`func (o *InlineResponse200239) HasName() bool`
+`func (o *InlineResponse200239) HasLimits() bool`
 
-HasName returns a boolean if a field has been set.
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

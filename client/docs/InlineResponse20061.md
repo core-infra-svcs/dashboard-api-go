@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Service** | Pointer to **string** | Appliance service name | [optional] 
 **Access** | Pointer to **string** | A string indicating the rule for which IPs are allowed to use the specified service | [optional] 
-**AllowedIps** | Pointer to **[]string** | An array of allowed IPs that can access the service | [optional] 
+**AllowedIps** | Pointer to **[]string** | An array of allowed CIDRs that can access the service | [optional] 
 
 ## Methods
 

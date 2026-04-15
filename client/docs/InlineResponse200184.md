@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | Pointer to [**[]InlineResponse200184Servers**](InlineResponse200184Servers.md) | List of the syslog servers for this network | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | The name af the new stack | [optional] 
+**Serials** | Pointer to **[]string** | An array of switch serials added to the stack | [optional] 
+**WorkflowId** | Pointer to **string** | ID of the workflow | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineResponse200184WithDefaults instantiates a new InlineResponse200184 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetId
 
-`func (o *InlineResponse200184) GetServers() []InlineResponse200184Servers`
+`func (o *InlineResponse200184) GetId() string`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetIdOk
 
-`func (o *InlineResponse200184) GetServersOk() (*[]InlineResponse200184Servers, bool)`
+`func (o *InlineResponse200184) GetIdOk() (*string, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetId
 
-`func (o *InlineResponse200184) SetServers(v []InlineResponse200184Servers)`
+`func (o *InlineResponse200184) SetId(v string)`
 
-SetServers sets Servers field to given value.
+SetId sets Id field to given value.
 
-### HasServers
+### HasId
 
-`func (o *InlineResponse200184) HasServers() bool`
+`func (o *InlineResponse200184) HasId() bool`
 
-HasServers returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200184) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200184) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200184) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200184) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200184) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200184) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200184) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200184) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetWorkflowId
+
+`func (o *InlineResponse200184) GetWorkflowId() string`
+
+GetWorkflowId returns the WorkflowId field if non-nil, zero value otherwise.
+
+### GetWorkflowIdOk
+
+`func (o *InlineResponse200184) GetWorkflowIdOk() (*string, bool)`
+
+GetWorkflowIdOk returns a tuple with the WorkflowId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWorkflowId
+
+`func (o *InlineResponse200184) SetWorkflowId(v string)`
+
+SetWorkflowId sets WorkflowId field to given value.
+
+### HasWorkflowId
+
+`func (o *InlineResponse200184) HasWorkflowId() bool`
+
+HasWorkflowId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

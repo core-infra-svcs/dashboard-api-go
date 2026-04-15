@@ -4,24 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdminId** | Pointer to **string** | Database ID for the admin user who made the API request. | [optional] 
-**Method** | Pointer to **string** | HTTP method used in the API request. | [optional] 
-**Host** | Pointer to **string** | The host which the API request was directed at. | [optional] 
-**Path** | Pointer to **string** | The API request path. | [optional] 
-**QueryString** | Pointer to **string** | The query string sent with the API request. | [optional] 
-**UserAgent** | Pointer to **string** | The API request user agent. | [optional] 
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, indicating when the API request was made. | [optional] 
-**ResponseCode** | Pointer to **int32** | API request response code. | [optional] 
-**SourceIp** | Pointer to **string** | Public IP address from which the API request was made. | [optional] 
-**Version** | Pointer to **int32** | API version of the endpoint. | [optional] 
-**OperationId** | Pointer to **string** | Operation ID for the endpoint. | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdApiRequestsClient**](OrganizationsOrganizationIdApiRequestsClient.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
+**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
+**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
+**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 
 ## Methods
 
 ### NewInlineResponse200236
 
-`func NewInlineResponse200236() *InlineResponse200236`
+`func NewInlineResponse200236(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200236`
 
 NewInlineResponse200236 instantiates a new InlineResponse200236 object
 This constructor will assign default values to properties that have it defined,
@@ -36,305 +30,150 @@ NewInlineResponse200236WithDefaults instantiates a new InlineResponse200236 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdminId
+### GetId
 
-`func (o *InlineResponse200236) GetAdminId() string`
+`func (o *InlineResponse200236) GetId() string`
 
-GetAdminId returns the AdminId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAdminIdOk
+### GetIdOk
 
-`func (o *InlineResponse200236) GetAdminIdOk() (*string, bool)`
+`func (o *InlineResponse200236) GetIdOk() (*string, bool)`
 
-GetAdminIdOk returns a tuple with the AdminId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminId
+### SetId
 
-`func (o *InlineResponse200236) SetAdminId(v string)`
+`func (o *InlineResponse200236) SetId(v string)`
 
-SetAdminId sets AdminId field to given value.
+SetId sets Id field to given value.
 
-### HasAdminId
+### HasId
 
-`func (o *InlineResponse200236) HasAdminId() bool`
+`func (o *InlineResponse200236) HasId() bool`
 
-HasAdminId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMethod
+### GetOrganizationId
 
-`func (o *InlineResponse200236) GetMethod() string`
+`func (o *InlineResponse200236) GetOrganizationId() string`
 
-GetMethod returns the Method field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetMethodOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200236) GetMethodOk() (*string, bool)`
+`func (o *InlineResponse200236) GetOrganizationIdOk() (*string, bool)`
 
-GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMethod
+### SetOrganizationId
 
-`func (o *InlineResponse200236) SetMethod(v string)`
+`func (o *InlineResponse200236) SetOrganizationId(v string)`
 
-SetMethod sets Method field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasMethod
+### HasOrganizationId
 
-`func (o *InlineResponse200236) HasMethod() bool`
+`func (o *InlineResponse200236) HasOrganizationId() bool`
 
-HasMethod returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetHost
+### GetConfirmed
 
-`func (o *InlineResponse200236) GetHost() string`
+`func (o *InlineResponse200236) GetConfirmed() bool`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetConfirmedOk
 
-`func (o *InlineResponse200236) GetHostOk() (*string, bool)`
+`func (o *InlineResponse200236) GetConfirmedOk() (*bool, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetConfirmed
 
-`func (o *InlineResponse200236) SetHost(v string)`
+`func (o *InlineResponse200236) SetConfirmed(v bool)`
 
-SetHost sets Host field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasHost
+### HasConfirmed
 
-`func (o *InlineResponse200236) HasHost() bool`
+`func (o *InlineResponse200236) HasConfirmed() bool`
 
-HasHost returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetPath
+### GetSynchronous
 
-`func (o *InlineResponse200236) GetPath() string`
+`func (o *InlineResponse200236) GetSynchronous() bool`
 
-GetPath returns the Path field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetPathOk
+### GetSynchronousOk
 
-`func (o *InlineResponse200236) GetPathOk() (*string, bool)`
+`func (o *InlineResponse200236) GetSynchronousOk() (*bool, bool)`
 
-GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPath
+### SetSynchronous
 
-`func (o *InlineResponse200236) SetPath(v string)`
+`func (o *InlineResponse200236) SetSynchronous(v bool)`
 
-SetPath sets Path field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasPath
+### HasSynchronous
 
-`func (o *InlineResponse200236) HasPath() bool`
+`func (o *InlineResponse200236) HasSynchronous() bool`
 
-HasPath returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
 
-### GetQueryString
+### GetStatus
 
-`func (o *InlineResponse200236) GetQueryString() string`
+`func (o *InlineResponse200236) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
 
-GetQueryString returns the QueryString field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetQueryStringOk
+### GetStatusOk
 
-`func (o *InlineResponse200236) GetQueryStringOk() (*string, bool)`
+`func (o *InlineResponse200236) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
 
-GetQueryStringOk returns a tuple with the QueryString field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetQueryString
+### SetStatus
 
-`func (o *InlineResponse200236) SetQueryString(v string)`
+`func (o *InlineResponse200236) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
 
-SetQueryString sets QueryString field to given value.
+SetStatus sets Status field to given value.
 
-### HasQueryString
+### HasStatus
 
-`func (o *InlineResponse200236) HasQueryString() bool`
+`func (o *InlineResponse200236) HasStatus() bool`
 
-HasQueryString returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetUserAgent
+### GetActions
 
-`func (o *InlineResponse200236) GetUserAgent() string`
+`func (o *InlineResponse200236) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
-GetUserAgent returns the UserAgent field if non-nil, zero value otherwise.
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-### GetUserAgentOk
+### GetActionsOk
 
-`func (o *InlineResponse200236) GetUserAgentOk() (*string, bool)`
+`func (o *InlineResponse200236) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
 
-GetUserAgentOk returns a tuple with the UserAgent field if it's non-nil, zero value otherwise
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUserAgent
+### SetActions
 
-`func (o *InlineResponse200236) SetUserAgent(v string)`
+`func (o *InlineResponse200236) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
-SetUserAgent sets UserAgent field to given value.
+SetActions sets Actions field to given value.
 
-### HasUserAgent
-
-`func (o *InlineResponse200236) HasUserAgent() bool`
-
-HasUserAgent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200236) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200236) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200236) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200236) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
-
-### GetResponseCode
-
-`func (o *InlineResponse200236) GetResponseCode() int32`
-
-GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
-
-### GetResponseCodeOk
-
-`func (o *InlineResponse200236) GetResponseCodeOk() (*int32, bool)`
-
-GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseCode
-
-`func (o *InlineResponse200236) SetResponseCode(v int32)`
-
-SetResponseCode sets ResponseCode field to given value.
-
-### HasResponseCode
-
-`func (o *InlineResponse200236) HasResponseCode() bool`
-
-HasResponseCode returns a boolean if a field has been set.
-
-### GetSourceIp
-
-`func (o *InlineResponse200236) GetSourceIp() string`
-
-GetSourceIp returns the SourceIp field if non-nil, zero value otherwise.
-
-### GetSourceIpOk
-
-`func (o *InlineResponse200236) GetSourceIpOk() (*string, bool)`
-
-GetSourceIpOk returns a tuple with the SourceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSourceIp
-
-`func (o *InlineResponse200236) SetSourceIp(v string)`
-
-SetSourceIp sets SourceIp field to given value.
-
-### HasSourceIp
-
-`func (o *InlineResponse200236) HasSourceIp() bool`
-
-HasSourceIp returns a boolean if a field has been set.
-
-### GetVersion
-
-`func (o *InlineResponse200236) GetVersion() int32`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineResponse200236) GetVersionOk() (*int32, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineResponse200236) SetVersion(v int32)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *InlineResponse200236) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
-### GetOperationId
-
-`func (o *InlineResponse200236) GetOperationId() string`
-
-GetOperationId returns the OperationId field if non-nil, zero value otherwise.
-
-### GetOperationIdOk
-
-`func (o *InlineResponse200236) GetOperationIdOk() (*string, bool)`
-
-GetOperationIdOk returns a tuple with the OperationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOperationId
-
-`func (o *InlineResponse200236) SetOperationId(v string)`
-
-SetOperationId sets OperationId field to given value.
-
-### HasOperationId
-
-`func (o *InlineResponse200236) HasOperationId() bool`
-
-HasOperationId returns a boolean if a field has been set.
-
-### GetClient
-
-`func (o *InlineResponse200236) GetClient() OrganizationsOrganizationIdApiRequestsClient`
-
-GetClient returns the Client field if non-nil, zero value otherwise.
-
-### GetClientOk
-
-`func (o *InlineResponse200236) GetClientOk() (*OrganizationsOrganizationIdApiRequestsClient, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClient
-
-`func (o *InlineResponse200236) SetClient(v OrganizationsOrganizationIdApiRequestsClient)`
-
-SetClient sets Client field to given value.
-
-### HasClient
-
-`func (o *InlineResponse200236) HasClient() bool`
-
-HasClient returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

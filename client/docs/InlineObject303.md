@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
-**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
+**RulesetId** | **string** | ID of the ruleset to assign | 
+**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
+**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
 
 ## Methods
 
 ### NewInlineObject303
 
-`func NewInlineObject303() *InlineObject303`
+`func NewInlineObject303(rulesetId string, policyId string, ) *InlineObject303`
 
 NewInlineObject303 instantiates a new InlineObject303 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,70 @@ NewInlineObject303WithDefaults instantiates a new InlineObject303 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRulesetId
 
-`func (o *InlineObject303) GetName() string`
+`func (o *InlineObject303) GetRulesetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesetIdOk
 
-`func (o *InlineObject303) GetNameOk() (*string, bool)`
+`func (o *InlineObject303) GetRulesetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRulesetId
 
-`func (o *InlineObject303) SetName(v string)`
+`func (o *InlineObject303) SetRulesetId(v string)`
 
-SetName sets Name field to given value.
+SetRulesetId sets RulesetId field to given value.
 
-### HasName
 
-`func (o *InlineObject303) HasName() bool`
+### GetPolicyId
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject303) GetPolicyId() string`
 
-### GetScope
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject303) GetScope() string`
+### GetPolicyIdOk
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+`func (o *InlineObject303) GetPolicyIdOk() (*string, bool)`
 
-### GetScopeOk
-
-`func (o *InlineObject303) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetPolicyId
 
-`func (o *InlineObject303) SetScope(v string)`
+`func (o *InlineObject303) SetPolicyId(v string)`
 
-SetScope sets Scope field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasScope
 
-`func (o *InlineObject303) HasScope() bool`
+### GetPriority
 
-HasScope returns a boolean if a field has been set.
+`func (o *InlineObject303) GetPriority() int32`
 
-### GetTags
+GetPriority returns the Priority field if non-nil, zero value otherwise.
 
-`func (o *InlineObject303) GetTags() []string`
+### GetPriorityOk
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+`func (o *InlineObject303) GetPriorityOk() (*int32, bool)`
 
-### GetTagsOk
-
-`func (o *InlineObject303) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetPriority
 
-`func (o *InlineObject303) SetTags(v []string)`
+`func (o *InlineObject303) SetPriority(v int32)`
 
-SetTags sets Tags field to given value.
+SetPriority sets Priority field to given value.
 
-### HasTags
+### HasPriority
 
-`func (o *InlineObject303) HasTags() bool`
+`func (o *InlineObject303) HasPriority() bool`
 
-HasTags returns a boolean if a field has been set.
+HasPriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

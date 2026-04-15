@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name for your port schedule. | [optional] 
+**Name** | **string** | The name for your port schedule. Required | 
 **PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject151
 
-`func NewInlineObject151() *InlineObject151`
+`func NewInlineObject151(name string, ) *InlineObject151`
 
 NewInlineObject151 instantiates a new InlineObject151 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject151) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetPortSchedule
 

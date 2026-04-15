@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
-**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
-**Ble** | Pointer to [**InlineResponse200397Ble**](InlineResponse200397Ble.md) |  | [optional] 
-**Wifi** | Pointer to [**InlineResponse200397Wifi**](InlineResponse200397Wifi.md) |  | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
 
 ## Methods
 
 ### NewInlineObject314
 
-`func NewInlineObject314(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject314`
+`func NewInlineObject314() *InlineObject314`
 
 NewInlineObject314 instantiates a new InlineObject314 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +28,105 @@ NewInlineObject314WithDefaults instantiates a new InlineObject314 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetRole
 
-`func (o *InlineObject314) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
+`func (o *InlineObject314) GetRole() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetRoleOk
 
-`func (o *InlineObject314) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
+`func (o *InlineObject314) GetRoleOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetRole
 
-`func (o *InlineObject314) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
+`func (o *InlineObject314) SetRole(v string)`
 
-SetNetwork sets Network field to given value.
+SetRole sets Role field to given value.
 
+### HasRole
 
-### GetMqtt
+`func (o *InlineObject314) HasRole() bool`
 
-`func (o *InlineObject314) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
+HasRole returns a boolean if a field has been set.
 
-GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+### GetOrgAccess
 
-### GetMqttOk
+`func (o *InlineObject314) GetOrgAccess() string`
 
-`func (o *InlineObject314) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+### GetOrgAccessOk
+
+`func (o *InlineObject314) GetOrgAccessOk() (*string, bool)`
+
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqtt
+### SetOrgAccess
 
-`func (o *InlineObject314) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
+`func (o *InlineObject314) SetOrgAccess(v string)`
 
-SetMqtt sets Mqtt field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
+### HasOrgAccess
 
-### GetBle
+`func (o *InlineObject314) HasOrgAccess() bool`
 
-`func (o *InlineObject314) GetBle() InlineResponse200397Ble`
+HasOrgAccess returns a boolean if a field has been set.
 
-GetBle returns the Ble field if non-nil, zero value otherwise.
+### GetTags
 
-### GetBleOk
+`func (o *InlineObject314) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
 
-`func (o *InlineObject314) GetBleOk() (*InlineResponse200397Ble, bool)`
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+### GetTagsOk
+
+`func (o *InlineObject314) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBle
+### SetTags
 
-`func (o *InlineObject314) SetBle(v InlineResponse200397Ble)`
+`func (o *InlineObject314) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
 
-SetBle sets Ble field to given value.
+SetTags sets Tags field to given value.
 
-### HasBle
+### HasTags
 
-`func (o *InlineObject314) HasBle() bool`
+`func (o *InlineObject314) HasTags() bool`
 
-HasBle returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetWifi
+### GetNetworks
 
-`func (o *InlineObject314) GetWifi() InlineResponse200397Wifi`
+`func (o *InlineObject314) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
 
-GetWifi returns the Wifi field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetWifiOk
+### GetNetworksOk
 
-`func (o *InlineObject314) GetWifiOk() (*InlineResponse200397Wifi, bool)`
+`func (o *InlineObject314) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
 
-GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi
+### SetNetworks
 
-`func (o *InlineObject314) SetWifi(v InlineResponse200397Wifi)`
+`func (o *InlineObject314) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
 
-SetWifi sets Wifi field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasWifi
+### HasNetworks
 
-`func (o *InlineObject314) HasWifi() bool`
+`func (o *InlineObject314) HasNetworks() bool`
 
-HasWifi returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

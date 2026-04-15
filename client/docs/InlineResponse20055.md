@@ -4,16 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Network ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ProductTypes** | Pointer to **[]string** | List of the product types that the network supports | [optional] 
-**TimeZone** | Pointer to **string** | Timezone of the network | [optional] 
-**Tags** | Pointer to **[]string** | Network tags | [optional] 
-**EnrollmentString** | Pointer to **string** | Enrollment string for the network | [optional] 
-**Url** | Pointer to **string** | URL to the network Dashboard UI | [optional] 
-**Notes** | Pointer to **string** | Notes for the network | [optional] 
-**IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
+**EnrollmentId** | Pointer to **string** | Id to check the status of your enrollment | [optional] 
+**Url** | Pointer to **string** | Url to check the status of your enrollment | [optional] 
+**Request** | Pointer to [**InlineResponse20110Request**](InlineResponse20110Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the enrollment | [optional] 
+**EnrollmentStartedAt** | Pointer to **string** | Enrollment started at | [optional] 
+**DoorLocks** | Pointer to [**[]InlineResponse20055DoorLocks**](InlineResponse20055DoorLocks.md) | Door locks | [optional] 
 
 ## Methods
 
@@ -34,180 +30,30 @@ NewInlineResponse20055WithDefaults instantiates a new InlineResponse20055 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnrollmentId
 
-`func (o *InlineResponse20055) GetId() string`
+`func (o *InlineResponse20055) GetEnrollmentId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnrollmentId returns the EnrollmentId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnrollmentIdOk
 
-`func (o *InlineResponse20055) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20055) GetEnrollmentIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnrollmentIdOk returns a tuple with the EnrollmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnrollmentId
 
-`func (o *InlineResponse20055) SetId(v string)`
+`func (o *InlineResponse20055) SetEnrollmentId(v string)`
 
-SetId sets Id field to given value.
+SetEnrollmentId sets EnrollmentId field to given value.
 
-### HasId
+### HasEnrollmentId
 
-`func (o *InlineResponse20055) HasId() bool`
+`func (o *InlineResponse20055) HasEnrollmentId() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetOrganizationId
-
-`func (o *InlineResponse20055) GetOrganizationId() string`
-
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
-
-### GetOrganizationIdOk
-
-`func (o *InlineResponse20055) GetOrganizationIdOk() (*string, bool)`
-
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrganizationId
-
-`func (o *InlineResponse20055) SetOrganizationId(v string)`
-
-SetOrganizationId sets OrganizationId field to given value.
-
-### HasOrganizationId
-
-`func (o *InlineResponse20055) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse20055) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse20055) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse20055) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse20055) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetProductTypes
-
-`func (o *InlineResponse20055) GetProductTypes() []string`
-
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
-
-### GetProductTypesOk
-
-`func (o *InlineResponse20055) GetProductTypesOk() (*[]string, bool)`
-
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductTypes
-
-`func (o *InlineResponse20055) SetProductTypes(v []string)`
-
-SetProductTypes sets ProductTypes field to given value.
-
-### HasProductTypes
-
-`func (o *InlineResponse20055) HasProductTypes() bool`
-
-HasProductTypes returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineResponse20055) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineResponse20055) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineResponse20055) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineResponse20055) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20055) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20055) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20055) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20055) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetEnrollmentString
-
-`func (o *InlineResponse20055) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineResponse20055) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineResponse20055) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineResponse20055) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
+HasEnrollmentId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -234,55 +80,105 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
-### GetNotes
+### GetRequest
 
-`func (o *InlineResponse20055) GetNotes() string`
+`func (o *InlineResponse20055) GetRequest() InlineResponse20110Request`
 
-GetNotes returns the Notes field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetNotesOk
+### GetRequestOk
 
-`func (o *InlineResponse20055) GetNotesOk() (*string, bool)`
+`func (o *InlineResponse20055) GetRequestOk() (*InlineResponse20110Request, bool)`
 
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotes
+### SetRequest
 
-`func (o *InlineResponse20055) SetNotes(v string)`
+`func (o *InlineResponse20055) SetRequest(v InlineResponse20110Request)`
 
-SetNotes sets Notes field to given value.
+SetRequest sets Request field to given value.
 
-### HasNotes
+### HasRequest
 
-`func (o *InlineResponse20055) HasNotes() bool`
+`func (o *InlineResponse20055) HasRequest() bool`
 
-HasNotes returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
 
-### GetIsBoundToConfigTemplate
+### GetStatus
 
-`func (o *InlineResponse20055) GetIsBoundToConfigTemplate() bool`
+`func (o *InlineResponse20055) GetStatus() string`
 
-GetIsBoundToConfigTemplate returns the IsBoundToConfigTemplate field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetIsBoundToConfigTemplateOk
+### GetStatusOk
 
-`func (o *InlineResponse20055) GetIsBoundToConfigTemplateOk() (*bool, bool)`
+`func (o *InlineResponse20055) GetStatusOk() (*string, bool)`
 
-GetIsBoundToConfigTemplateOk returns a tuple with the IsBoundToConfigTemplate field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsBoundToConfigTemplate
+### SetStatus
 
-`func (o *InlineResponse20055) SetIsBoundToConfigTemplate(v bool)`
+`func (o *InlineResponse20055) SetStatus(v string)`
 
-SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
+SetStatus sets Status field to given value.
 
-### HasIsBoundToConfigTemplate
+### HasStatus
 
-`func (o *InlineResponse20055) HasIsBoundToConfigTemplate() bool`
+`func (o *InlineResponse20055) HasStatus() bool`
 
-HasIsBoundToConfigTemplate returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetEnrollmentStartedAt
+
+`func (o *InlineResponse20055) GetEnrollmentStartedAt() string`
+
+GetEnrollmentStartedAt returns the EnrollmentStartedAt field if non-nil, zero value otherwise.
+
+### GetEnrollmentStartedAtOk
+
+`func (o *InlineResponse20055) GetEnrollmentStartedAtOk() (*string, bool)`
+
+GetEnrollmentStartedAtOk returns a tuple with the EnrollmentStartedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnrollmentStartedAt
+
+`func (o *InlineResponse20055) SetEnrollmentStartedAt(v string)`
+
+SetEnrollmentStartedAt sets EnrollmentStartedAt field to given value.
+
+### HasEnrollmentStartedAt
+
+`func (o *InlineResponse20055) HasEnrollmentStartedAt() bool`
+
+HasEnrollmentStartedAt returns a boolean if a field has been set.
+
+### GetDoorLocks
+
+`func (o *InlineResponse20055) GetDoorLocks() []InlineResponse20055DoorLocks`
+
+GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
+
+### GetDoorLocksOk
+
+`func (o *InlineResponse20055) GetDoorLocksOk() (*[]InlineResponse20055DoorLocks, bool)`
+
+GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDoorLocks
+
+`func (o *InlineResponse20055) SetDoorLocks(v []InlineResponse20055DoorLocks)`
+
+SetDoorLocks sets DoorLocks field to given value.
+
+### HasDoorLocks
+
+`func (o *InlineResponse20055) HasDoorLocks() bool`
+
+HasDoorLocks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

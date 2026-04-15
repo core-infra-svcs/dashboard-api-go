@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**GetOrganizationWirelessRadioRrmByNetwork**](RadioApi.md#GetOrganizationWirelessRadioRrmByNetwork) | **Get** /organizations/{organizationId}/wireless/radio/rrm/byNetwork | List the AutoRF settings of an organization by network
 [**RecalculateOrganizationWirelessRadioAutoRfChannels**](RadioApi.md#RecalculateOrganizationWirelessRadioAutoRfChannels) | **Post** /organizations/{organizationId}/wireless/radio/autoRf/channels/recalculate | Recalculates automatically assigned channels for every AP within specified the specified network(s)
 [**UpdateDeviceApplianceRadioSettings**](RadioApi.md#UpdateDeviceApplianceRadioSettings) | **Put** /devices/{serial}/appliance/radio/settings | Update the radio settings of an appliance
-[**UpdateDeviceWirelessRadioSettings**](RadioApi.md#UpdateDeviceWirelessRadioSettings) | **Put** /devices/{serial}/wireless/radio/settings | Update the radio settings overrides of a device, which take precedence over RF profiles.
+[**UpdateDeviceWirelessRadioSettings**](RadioApi.md#UpdateDeviceWirelessRadioSettings) | **Put** /devices/{serial}/wireless/radio/settings | Update 2.4 GHz and 5 GHz radio settings (channel, channel width, power) that override RF profiles
 [**UpdateNetworkWirelessRadioRrm**](RadioApi.md#UpdateNetworkWirelessRadioRrm) | **Put** /networks/{networkId}/wireless/radio/rrm | Update the AutoRF settings for a wireless network
 
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessRadioRrmByNetwork
 
-> InlineResponse200399 GetOrganizationWirelessRadioRrmByNetwork(ctx, organizationId).NetworkIds(networkIds).StartingAfter(startingAfter).EndingBefore(endingBefore).PerPage(perPage).SortOrder(sortOrder).Execute()
+> InlineResponse200426 GetOrganizationWirelessRadioRrmByNetwork(ctx, organizationId).NetworkIds(networkIds).StartingAfter(startingAfter).EndingBefore(endingBefore).PerPage(perPage).SortOrder(sortOrder).Execute()
 
 List the AutoRF settings of an organization by network
 
@@ -189,7 +189,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RadioApi.GetOrganizationWirelessRadioRrmByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRadioRrmByNetwork`: InlineResponse200399
+    // response from `GetOrganizationWirelessRadioRrmByNetwork`: InlineResponse200426
     fmt.Fprintf(os.Stdout, "Response from `RadioApi.GetOrganizationWirelessRadioRrmByNetwork`: %v\n", resp)
 }
 ```
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200399**](InlineResponse200399.md)
+[**InlineResponse200426**](InlineResponse200426.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## RecalculateOrganizationWirelessRadioAutoRfChannels
 
-> InlineResponse200398 RecalculateOrganizationWirelessRadioAutoRfChannels(ctx, organizationId).RecalculateOrganizationWirelessRadioAutoRfChannels(recalculateOrganizationWirelessRadioAutoRfChannels).Execute()
+> InlineResponse200425 RecalculateOrganizationWirelessRadioAutoRfChannels(ctx, organizationId).RecalculateOrganizationWirelessRadioAutoRfChannels(recalculateOrganizationWirelessRadioAutoRfChannels).Execute()
 
 Recalculates automatically assigned channels for every AP within specified the specified network(s)
 
@@ -256,7 +256,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    recalculateOrganizationWirelessRadioAutoRfChannels := *openapiclient.NewInlineObject315([]string{"NetworkIds_example"}) // InlineObject315 | 
+    recalculateOrganizationWirelessRadioAutoRfChannels := *openapiclient.NewInlineObject333([]string{"NetworkIds_example"}) // InlineObject333 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -265,7 +265,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RadioApi.RecalculateOrganizationWirelessRadioAutoRfChannels``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RecalculateOrganizationWirelessRadioAutoRfChannels`: InlineResponse200398
+    // response from `RecalculateOrganizationWirelessRadioAutoRfChannels`: InlineResponse200425
     fmt.Fprintf(os.Stdout, "Response from `RadioApi.RecalculateOrganizationWirelessRadioAutoRfChannels`: %v\n", resp)
 }
 ```
@@ -286,11 +286,11 @@ Other parameters are passed through a pointer to a apiRecalculateOrganizationWir
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **recalculateOrganizationWirelessRadioAutoRfChannels** | [**InlineObject315**](InlineObject315.md) |  | 
+ **recalculateOrganizationWirelessRadioAutoRfChannels** | [**InlineObject333**](InlineObject333.md) |  | 
 
 ### Return type
 
-[**InlineResponse200398**](InlineResponse200398.md)
+[**InlineResponse200425**](InlineResponse200425.md)
 
 ### Authorization
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 > InlineResponse2009 UpdateDeviceWirelessRadioSettings(ctx, serial).UpdateDeviceWirelessRadioSettings(updateDeviceWirelessRadioSettings).Execute()
 
-Update the radio settings overrides of a device, which take precedence over RF profiles.
+Update 2.4 GHz and 5 GHz radio settings (channel, channel width, power) that override RF profiles
 
 
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessRadioRrm
 
-> InlineResponse200211 UpdateNetworkWirelessRadioRrm(ctx, networkId).UpdateNetworkWirelessRadioRrm(updateNetworkWirelessRadioRrm).Execute()
+> InlineResponse200218 UpdateNetworkWirelessRadioRrm(ctx, networkId).UpdateNetworkWirelessRadioRrm(updateNetworkWirelessRadioRrm).Execute()
 
 Update the AutoRF settings for a wireless network
 
@@ -472,7 +472,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessRadioRrm := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
+    updateNetworkWirelessRadioRrm := *openapiclient.NewInlineObject194() // InlineObject194 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -481,7 +481,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RadioApi.UpdateNetworkWirelessRadioRrm``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessRadioRrm`: InlineResponse200211
+    // response from `UpdateNetworkWirelessRadioRrm`: InlineResponse200218
     fmt.Fprintf(os.Stdout, "Response from `RadioApi.UpdateNetworkWirelessRadioRrm`: %v\n", resp)
 }
 ```
@@ -502,11 +502,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessRadio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessRadioRrm** | [**InlineObject193**](InlineObject193.md) |  | 
+ **updateNetworkWirelessRadioRrm** | [**InlineObject194**](InlineObject194.md) |  | 
 
 ### Return type
 
-[**InlineResponse200211**](InlineResponse200211.md)
+[**InlineResponse200218**](InlineResponse200218.md)
 
 ### Authorization
 

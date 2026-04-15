@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceWirelessZigbeeEnrollment
 
-> InlineResponse20054 GetDeviceWirelessZigbeeEnrollment(ctx, serial, enrollmentId).Execute()
+> InlineResponse20055 GetDeviceWirelessZigbeeEnrollment(ctx, serial, enrollmentId).Execute()
 
 Return an enrollment
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EnrollmentsApi.GetDeviceWirelessZigbeeEnrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessZigbeeEnrollment`: InlineResponse20054
+    // response from `GetDeviceWirelessZigbeeEnrollment`: InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `EnrollmentsApi.GetDeviceWirelessZigbeeEnrollment`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20054**](InlineResponse20054.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
