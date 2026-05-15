@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Api** | [**NetworksNetworkIdApplianceUmbrellaAccountConnectApi**](NetworksNetworkIdApplianceUmbrellaAccountConnectApi.md) |  | 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20092Rules**](InlineResponse20092Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineObject75
 
-`func NewInlineObject75(api NetworksNetworkIdApplianceUmbrellaAccountConnectApi, ) *InlineObject75`
+`func NewInlineObject75() *InlineObject75`
 
 NewInlineObject75 instantiates a new InlineObject75 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject75WithDefaults instantiates a new InlineObject75 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApi
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject75) GetApi() NetworksNetworkIdApplianceUmbrellaAccountConnectApi`
+`func (o *InlineObject75) GetDefaultRulesEnabled() bool`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject75) GetApiOk() (*NetworksNetworkIdApplianceUmbrellaAccountConnectApi, bool)`
+`func (o *InlineObject75) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject75) SetApi(v NetworksNetworkIdApplianceUmbrellaAccountConnectApi)`
+`func (o *InlineObject75) SetDefaultRulesEnabled(v bool)`
 
-SetApi sets Api field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
+### HasDefaultRulesEnabled
+
+`func (o *InlineObject75) HasDefaultRulesEnabled() bool`
+
+HasDefaultRulesEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject75) GetRules() []InlineResponse20092Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject75) GetRulesOk() (*[]InlineResponse20092Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject75) SetRules(v []InlineResponse20092Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineObject75) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

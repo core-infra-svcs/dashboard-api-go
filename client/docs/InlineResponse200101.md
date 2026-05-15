@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
-**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
-**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
-**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
+**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
+**AsNumber** | Pointer to **int32** | Organization-specific number of the Autonomous System to which the appliance belongs | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
+**RouterId** | Pointer to **string** | The router ID of the appliance | [optional] 
+**Neighbors** | Pointer to [**[]InlineResponse200101Neighbors**](InlineResponse200101Neighbors.md) | List of eBGP neighbor configurations | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200101WithDefaults instantiates a new InlineResponse200101 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetEnabled
 
-`func (o *InlineResponse200101) GetTs() time.Time`
+`func (o *InlineResponse200101) GetEnabled() bool`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200101) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200101) GetEnabledOk() (*bool, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetEnabled
 
-`func (o *InlineResponse200101) SetTs(v time.Time)`
+`func (o *InlineResponse200101) SetEnabled(v bool)`
 
-SetTs sets Ts field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTs
+### HasEnabled
 
-`func (o *InlineResponse200101) HasTs() bool`
+`func (o *InlineResponse200101) HasEnabled() bool`
 
-HasTs returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetTotal
+### GetAsNumber
 
-`func (o *InlineResponse200101) GetTotal() float32`
+`func (o *InlineResponse200101) GetAsNumber() int32`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetAsNumberOk
 
-`func (o *InlineResponse200101) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200101) GetAsNumberOk() (*int32, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetAsNumber
 
-`func (o *InlineResponse200101) SetTotal(v float32)`
+`func (o *InlineResponse200101) SetAsNumber(v int32)`
 
-SetTotal sets Total field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasTotal
+### HasAsNumber
 
-`func (o *InlineResponse200101) HasTotal() bool`
+`func (o *InlineResponse200101) HasAsNumber() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetUpstream
+### GetIbgpHoldTimer
 
-`func (o *InlineResponse200101) GetUpstream() float32`
+`func (o *InlineResponse200101) GetIbgpHoldTimer() int32`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineResponse200101) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse200101) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetIbgpHoldTimer
 
-`func (o *InlineResponse200101) SetUpstream(v float32)`
+`func (o *InlineResponse200101) SetIbgpHoldTimer(v int32)`
 
-SetUpstream sets Upstream field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasUpstream
+### HasIbgpHoldTimer
 
-`func (o *InlineResponse200101) HasUpstream() bool`
+`func (o *InlineResponse200101) HasIbgpHoldTimer() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
 
-### GetDownstream
+### GetRouterId
 
-`func (o *InlineResponse200101) GetDownstream() float32`
+`func (o *InlineResponse200101) GetRouterId() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetRouterId returns the RouterId field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetRouterIdOk
 
-`func (o *InlineResponse200101) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200101) GetRouterIdOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetRouterId
 
-`func (o *InlineResponse200101) SetDownstream(v float32)`
+`func (o *InlineResponse200101) SetRouterId(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetRouterId sets RouterId field to given value.
 
-### HasDownstream
+### HasRouterId
 
-`func (o *InlineResponse200101) HasDownstream() bool`
+`func (o *InlineResponse200101) HasRouterId() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasRouterId returns a boolean if a field has been set.
+
+### GetNeighbors
+
+`func (o *InlineResponse200101) GetNeighbors() []InlineResponse200101Neighbors`
+
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+
+### GetNeighborsOk
+
+`func (o *InlineResponse200101) GetNeighborsOk() (*[]InlineResponse200101Neighbors, bool)`
+
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNeighbors
+
+`func (o *InlineResponse200101) SetNeighbors(v []InlineResponse200101Neighbors)`
+
+SetNeighbors sets Neighbors field to given value.
+
+### HasNeighbors
+
+`func (o *InlineResponse200101) HasNeighbors() bool`
+
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

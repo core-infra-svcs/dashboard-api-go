@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | **string** | Site ID of the site to update | 
-**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
+**Role** | **string** | The role of the SAML administrator | 
+**OrgAccess** | **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
 
 ## Methods
 
 ### NewInlineObject319
 
-`func NewInlineObject319(siteId string, ) *InlineObject319`
+`func NewInlineObject319(role string, orgAccess string, ) *InlineObject319`
 
 NewInlineObject319 instantiates a new InlineObject319 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +28,95 @@ NewInlineObject319WithDefaults instantiates a new InlineObject319 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetRole
 
-`func (o *InlineObject319) GetSiteId() string`
+`func (o *InlineObject319) GetRole() string`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetRoleOk
 
-`func (o *InlineObject319) GetSiteIdOk() (*string, bool)`
+`func (o *InlineObject319) GetRoleOk() (*string, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetRole
 
-`func (o *InlineObject319) SetSiteId(v string)`
+`func (o *InlineObject319) SetRole(v string)`
 
-SetSiteId sets SiteId field to given value.
+SetRole sets Role field to given value.
 
 
-### GetRouting
+### GetOrgAccess
 
-`func (o *InlineObject319) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
+`func (o *InlineObject319) GetOrgAccess() string`
 
-GetRouting returns the Routing field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetRoutingOk
+### GetOrgAccessOk
 
-`func (o *InlineObject319) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
+`func (o *InlineObject319) GetOrgAccessOk() (*string, bool)`
 
-GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRouting
+### SetOrgAccess
 
-`func (o *InlineObject319) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
+`func (o *InlineObject319) SetOrgAccess(v string)`
 
-SetRouting sets Routing field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasRouting
 
-`func (o *InlineObject319) HasRouting() bool`
+### GetTags
 
-HasRouting returns a boolean if a field has been set.
+`func (o *InlineObject319) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject319) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject319) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject319) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineObject319) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineObject319) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineObject319) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineObject319) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

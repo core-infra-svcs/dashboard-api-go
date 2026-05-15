@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
-**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
+**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
 
 ## Methods
 
 ### NewInlineObject289
 
-`func NewInlineObject289(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject289`
+`func NewInlineObject289() *InlineObject289`
 
 NewInlineObject289 instantiates a new InlineObject289 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineObject289WithDefaults instantiates a new InlineObject289 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestination
+### GetSerials
 
-`func (o *InlineObject289) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
+`func (o *InlineObject289) GetSerials() []string`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetSerialsOk
 
-`func (o *InlineObject289) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
+`func (o *InlineObject289) GetSerialsOk() (*[]string, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetSerials
 
-`func (o *InlineObject289) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
+`func (o *InlineObject289) SetSerials(v []string)`
 
-SetDestination sets Destination field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
 
-### GetLicenses
+`func (o *InlineObject289) HasSerials() bool`
 
-`func (o *InlineObject289) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject289) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject289) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
-
-SetLicenses sets Licenses field to given value.
-
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

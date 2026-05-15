@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Unique name of the artifact | [optional] 
+**AlertIds** | **[]string** | Array of alert IDs to dismiss | 
 
 ## Methods
 
 ### NewInlineObject247
 
-`func NewInlineObject247() *InlineObject247`
+`func NewInlineObject247(alertIds []string, ) *InlineObject247`
 
 NewInlineObject247 instantiates a new InlineObject247 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject247WithDefaults instantiates a new InlineObject247 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetAlertIds
 
-`func (o *InlineObject247) GetName() string`
+`func (o *InlineObject247) GetAlertIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAlertIdsOk
 
-`func (o *InlineObject247) GetNameOk() (*string, bool)`
+`func (o *InlineObject247) GetAlertIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAlertIds
 
-`func (o *InlineObject247) SetName(v string)`
+`func (o *InlineObject247) SetAlertIds(v []string)`
 
-SetName sets Name field to given value.
+SetAlertIds sets AlertIds field to given value.
 
-### HasName
-
-`func (o *InlineObject247) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

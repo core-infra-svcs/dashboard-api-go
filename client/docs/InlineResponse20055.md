@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnrollmentId** | Pointer to **string** | Id to check the status of your enrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your enrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20110Request**](InlineResponse20110Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the enrollment | [optional] 
-**EnrollmentStartedAt** | Pointer to **string** | Enrollment started at | [optional] 
-**DoorLocks** | Pointer to [**[]InlineResponse20055DoorLocks**](InlineResponse20055DoorLocks.md) | Door locks | [optional] 
+**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s           automatically generated value. | [optional] 
+**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse20055WithDefaults instantiates a new InlineResponse20055 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrollmentId
+### GetUuid
 
-`func (o *InlineResponse20055) GetEnrollmentId() string`
+`func (o *InlineResponse20055) GetUuid() string`
 
-GetEnrollmentId returns the EnrollmentId field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetEnrollmentIdOk
+### GetUuidOk
 
-`func (o *InlineResponse20055) GetEnrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse20055) GetUuidOk() (*string, bool)`
 
-GetEnrollmentIdOk returns a tuple with the EnrollmentId field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrollmentId
+### SetUuid
 
-`func (o *InlineResponse20055) SetEnrollmentId(v string)`
+`func (o *InlineResponse20055) SetUuid(v string)`
 
-SetEnrollmentId sets EnrollmentId field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasEnrollmentId
+### HasUuid
 
-`func (o *InlineResponse20055) HasEnrollmentId() bool`
+`func (o *InlineResponse20055) HasUuid() bool`
 
-HasEnrollmentId returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetUrl
+### GetMajor
 
-`func (o *InlineResponse20055) GetUrl() string`
+`func (o *InlineResponse20055) GetMajor() int32`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetMajorOk
 
-`func (o *InlineResponse20055) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20055) GetMajorOk() (*int32, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetMajor
 
-`func (o *InlineResponse20055) SetUrl(v string)`
+`func (o *InlineResponse20055) SetMajor(v int32)`
 
-SetUrl sets Url field to given value.
+SetMajor sets Major field to given value.
 
-### HasUrl
+### HasMajor
 
-`func (o *InlineResponse20055) HasUrl() bool`
+`func (o *InlineResponse20055) HasMajor() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
-### GetRequest
+### GetMinor
 
-`func (o *InlineResponse20055) GetRequest() InlineResponse20110Request`
+`func (o *InlineResponse20055) GetMinor() int32`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetMinor returns the Minor field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetMinorOk
 
-`func (o *InlineResponse20055) GetRequestOk() (*InlineResponse20110Request, bool)`
+`func (o *InlineResponse20055) GetMinorOk() (*int32, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetMinor
 
-`func (o *InlineResponse20055) SetRequest(v InlineResponse20110Request)`
+`func (o *InlineResponse20055) SetMinor(v int32)`
 
-SetRequest sets Request field to given value.
+SetMinor sets Minor field to given value.
 
-### HasRequest
+### HasMinor
 
-`func (o *InlineResponse20055) HasRequest() bool`
+`func (o *InlineResponse20055) HasMinor() bool`
 
-HasRequest returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse20055) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20055) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20055) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20055) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetEnrollmentStartedAt
-
-`func (o *InlineResponse20055) GetEnrollmentStartedAt() string`
-
-GetEnrollmentStartedAt returns the EnrollmentStartedAt field if non-nil, zero value otherwise.
-
-### GetEnrollmentStartedAtOk
-
-`func (o *InlineResponse20055) GetEnrollmentStartedAtOk() (*string, bool)`
-
-GetEnrollmentStartedAtOk returns a tuple with the EnrollmentStartedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentStartedAt
-
-`func (o *InlineResponse20055) SetEnrollmentStartedAt(v string)`
-
-SetEnrollmentStartedAt sets EnrollmentStartedAt field to given value.
-
-### HasEnrollmentStartedAt
-
-`func (o *InlineResponse20055) HasEnrollmentStartedAt() bool`
-
-HasEnrollmentStartedAt returns a boolean if a field has been set.
-
-### GetDoorLocks
-
-`func (o *InlineResponse20055) GetDoorLocks() []InlineResponse20055DoorLocks`
-
-GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
-
-### GetDoorLocksOk
-
-`func (o *InlineResponse20055) GetDoorLocksOk() (*[]InlineResponse20055DoorLocks, bool)`
-
-GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDoorLocks
-
-`func (o *InlineResponse20055) SetDoorLocks(v []InlineResponse20055DoorLocks)`
-
-SetDoorLocks sets DoorLocks field to given value.
-
-### HasDoorLocks
-
-`func (o *InlineResponse20055) HasDoorLocks() bool`
-
-HasDoorLocks returns a boolean if a field has been set.
+HasMinor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

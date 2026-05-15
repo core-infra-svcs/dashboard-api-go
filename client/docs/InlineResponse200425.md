@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EstimatedCompletedAt** | Pointer to **string** | Estimated time of completion. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
+**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
+**Example** | Pointer to [**InlineResponse200425Example**](InlineResponse200425Example.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200425WithDefaults instantiates a new InlineResponse200425 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEstimatedCompletedAt
+### GetAlertTypeId
 
-`func (o *InlineResponse200425) GetEstimatedCompletedAt() string`
+`func (o *InlineResponse200425) GetAlertTypeId() string`
 
-GetEstimatedCompletedAt returns the EstimatedCompletedAt field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetEstimatedCompletedAtOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse200425) GetEstimatedCompletedAtOk() (*string, bool)`
+`func (o *InlineResponse200425) GetAlertTypeIdOk() (*string, bool)`
 
-GetEstimatedCompletedAtOk returns a tuple with the EstimatedCompletedAt field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEstimatedCompletedAt
+### SetAlertTypeId
 
-`func (o *InlineResponse200425) SetEstimatedCompletedAt(v string)`
+`func (o *InlineResponse200425) SetAlertTypeId(v string)`
 
-SetEstimatedCompletedAt sets EstimatedCompletedAt field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasEstimatedCompletedAt
+### HasAlertTypeId
 
-`func (o *InlineResponse200425) HasEstimatedCompletedAt() bool`
+`func (o *InlineResponse200425) HasAlertTypeId() bool`
 
-HasEstimatedCompletedAt returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
+
+### GetAlertType
+
+`func (o *InlineResponse200425) GetAlertType() string`
+
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+
+### GetAlertTypeOk
+
+`func (o *InlineResponse200425) GetAlertTypeOk() (*string, bool)`
+
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertType
+
+`func (o *InlineResponse200425) SetAlertType(v string)`
+
+SetAlertType sets AlertType field to given value.
+
+### HasAlertType
+
+`func (o *InlineResponse200425) HasAlertType() bool`
+
+HasAlertType returns a boolean if a field has been set.
+
+### GetExample
+
+`func (o *InlineResponse200425) GetExample() InlineResponse200425Example`
+
+GetExample returns the Example field if non-nil, zero value otherwise.
+
+### GetExampleOk
+
+`func (o *InlineResponse200425) GetExampleOk() (*InlineResponse200425Example, bool)`
+
+GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExample
+
+`func (o *InlineResponse200425) SetExample(v InlineResponse200425Example)`
+
+SetExample sets Example field to given value.
+
+### HasExample
+
+`func (o *InlineResponse200425) HasExample() bool`
+
+HasExample returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

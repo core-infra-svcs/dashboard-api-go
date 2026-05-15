@@ -4,18 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdminId** | Pointer to **string** | Database ID for the admin user who made the API request. | [optional] 
-**Method** | Pointer to **string** | HTTP method used in the API request. | [optional] 
-**Host** | Pointer to **string** | The host which the API request was directed at. | [optional] 
-**Path** | Pointer to **string** | The API request path. | [optional] 
-**QueryString** | Pointer to **string** | The query string sent with the API request. | [optional] 
-**UserAgent** | Pointer to **string** | The API request user agent. | [optional] 
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, indicating when the API request was made. | [optional] 
-**ResponseCode** | Pointer to **int32** | API request response code. | [optional] 
-**SourceIp** | Pointer to **string** | Public IP address from which the API request was made. | [optional] 
-**Version** | Pointer to **int32** | API version of the endpoint. | [optional] 
-**OperationId** | Pointer to **string** | Operation ID for the endpoint. | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdApiRequestsClient**](OrganizationsOrganizationIdApiRequestsClient.md) |  | [optional] 
+**Concentrator** | Pointer to [**InlineResponse200246Concentrator**](InlineResponse200246Concentrator.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200246Failover**](InlineResponse200246Failover.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**InlineResponse200246SplitTunnel**](InlineResponse200246SplitTunnel.md) |  | [optional] 
 
 ## Methods
 
@@ -36,305 +27,80 @@ NewInlineResponse200246WithDefaults instantiates a new InlineResponse200246 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdminId
+### GetConcentrator
 
-`func (o *InlineResponse200246) GetAdminId() string`
+`func (o *InlineResponse200246) GetConcentrator() InlineResponse200246Concentrator`
 
-GetAdminId returns the AdminId field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetAdminIdOk
+### GetConcentratorOk
 
-`func (o *InlineResponse200246) GetAdminIdOk() (*string, bool)`
+`func (o *InlineResponse200246) GetConcentratorOk() (*InlineResponse200246Concentrator, bool)`
 
-GetAdminIdOk returns a tuple with the AdminId field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminId
+### SetConcentrator
 
-`func (o *InlineResponse200246) SetAdminId(v string)`
+`func (o *InlineResponse200246) SetConcentrator(v InlineResponse200246Concentrator)`
 
-SetAdminId sets AdminId field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasAdminId
+### HasConcentrator
 
-`func (o *InlineResponse200246) HasAdminId() bool`
+`func (o *InlineResponse200246) HasConcentrator() bool`
 
-HasAdminId returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetMethod
+### GetFailover
 
-`func (o *InlineResponse200246) GetMethod() string`
+`func (o *InlineResponse200246) GetFailover() InlineResponse200246Failover`
 
-GetMethod returns the Method field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetMethodOk
+### GetFailoverOk
 
-`func (o *InlineResponse200246) GetMethodOk() (*string, bool)`
+`func (o *InlineResponse200246) GetFailoverOk() (*InlineResponse200246Failover, bool)`
 
-GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMethod
+### SetFailover
 
-`func (o *InlineResponse200246) SetMethod(v string)`
+`func (o *InlineResponse200246) SetFailover(v InlineResponse200246Failover)`
 
-SetMethod sets Method field to given value.
+SetFailover sets Failover field to given value.
 
-### HasMethod
+### HasFailover
 
-`func (o *InlineResponse200246) HasMethod() bool`
+`func (o *InlineResponse200246) HasFailover() bool`
 
-HasMethod returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
-### GetHost
+### GetSplitTunnel
 
-`func (o *InlineResponse200246) GetHost() string`
+`func (o *InlineResponse200246) GetSplitTunnel() InlineResponse200246SplitTunnel`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetSplitTunnelOk
 
-`func (o *InlineResponse200246) GetHostOk() (*string, bool)`
+`func (o *InlineResponse200246) GetSplitTunnelOk() (*InlineResponse200246SplitTunnel, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetSplitTunnel
 
-`func (o *InlineResponse200246) SetHost(v string)`
+`func (o *InlineResponse200246) SetSplitTunnel(v InlineResponse200246SplitTunnel)`
 
-SetHost sets Host field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasHost
+### HasSplitTunnel
 
-`func (o *InlineResponse200246) HasHost() bool`
+`func (o *InlineResponse200246) HasSplitTunnel() bool`
 
-HasHost returns a boolean if a field has been set.
-
-### GetPath
-
-`func (o *InlineResponse200246) GetPath() string`
-
-GetPath returns the Path field if non-nil, zero value otherwise.
-
-### GetPathOk
-
-`func (o *InlineResponse200246) GetPathOk() (*string, bool)`
-
-GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPath
-
-`func (o *InlineResponse200246) SetPath(v string)`
-
-SetPath sets Path field to given value.
-
-### HasPath
-
-`func (o *InlineResponse200246) HasPath() bool`
-
-HasPath returns a boolean if a field has been set.
-
-### GetQueryString
-
-`func (o *InlineResponse200246) GetQueryString() string`
-
-GetQueryString returns the QueryString field if non-nil, zero value otherwise.
-
-### GetQueryStringOk
-
-`func (o *InlineResponse200246) GetQueryStringOk() (*string, bool)`
-
-GetQueryStringOk returns a tuple with the QueryString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetQueryString
-
-`func (o *InlineResponse200246) SetQueryString(v string)`
-
-SetQueryString sets QueryString field to given value.
-
-### HasQueryString
-
-`func (o *InlineResponse200246) HasQueryString() bool`
-
-HasQueryString returns a boolean if a field has been set.
-
-### GetUserAgent
-
-`func (o *InlineResponse200246) GetUserAgent() string`
-
-GetUserAgent returns the UserAgent field if non-nil, zero value otherwise.
-
-### GetUserAgentOk
-
-`func (o *InlineResponse200246) GetUserAgentOk() (*string, bool)`
-
-GetUserAgentOk returns a tuple with the UserAgent field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUserAgent
-
-`func (o *InlineResponse200246) SetUserAgent(v string)`
-
-SetUserAgent sets UserAgent field to given value.
-
-### HasUserAgent
-
-`func (o *InlineResponse200246) HasUserAgent() bool`
-
-HasUserAgent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200246) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200246) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200246) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200246) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
-
-### GetResponseCode
-
-`func (o *InlineResponse200246) GetResponseCode() int32`
-
-GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
-
-### GetResponseCodeOk
-
-`func (o *InlineResponse200246) GetResponseCodeOk() (*int32, bool)`
-
-GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseCode
-
-`func (o *InlineResponse200246) SetResponseCode(v int32)`
-
-SetResponseCode sets ResponseCode field to given value.
-
-### HasResponseCode
-
-`func (o *InlineResponse200246) HasResponseCode() bool`
-
-HasResponseCode returns a boolean if a field has been set.
-
-### GetSourceIp
-
-`func (o *InlineResponse200246) GetSourceIp() string`
-
-GetSourceIp returns the SourceIp field if non-nil, zero value otherwise.
-
-### GetSourceIpOk
-
-`func (o *InlineResponse200246) GetSourceIpOk() (*string, bool)`
-
-GetSourceIpOk returns a tuple with the SourceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSourceIp
-
-`func (o *InlineResponse200246) SetSourceIp(v string)`
-
-SetSourceIp sets SourceIp field to given value.
-
-### HasSourceIp
-
-`func (o *InlineResponse200246) HasSourceIp() bool`
-
-HasSourceIp returns a boolean if a field has been set.
-
-### GetVersion
-
-`func (o *InlineResponse200246) GetVersion() int32`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineResponse200246) GetVersionOk() (*int32, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineResponse200246) SetVersion(v int32)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *InlineResponse200246) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
-### GetOperationId
-
-`func (o *InlineResponse200246) GetOperationId() string`
-
-GetOperationId returns the OperationId field if non-nil, zero value otherwise.
-
-### GetOperationIdOk
-
-`func (o *InlineResponse200246) GetOperationIdOk() (*string, bool)`
-
-GetOperationIdOk returns a tuple with the OperationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOperationId
-
-`func (o *InlineResponse200246) SetOperationId(v string)`
-
-SetOperationId sets OperationId field to given value.
-
-### HasOperationId
-
-`func (o *InlineResponse200246) HasOperationId() bool`
-
-HasOperationId returns a boolean if a field has been set.
-
-### GetClient
-
-`func (o *InlineResponse200246) GetClient() OrganizationsOrganizationIdApiRequestsClient`
-
-GetClient returns the Client field if non-nil, zero value otherwise.
-
-### GetClientOk
-
-`func (o *InlineResponse200246) GetClientOk() (*OrganizationsOrganizationIdApiRequestsClient, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClient
-
-`func (o *InlineResponse200246) SetClient(v OrganizationsOrganizationIdApiRequestsClient)`
-
-SetClient sets Client field to given value.
-
-### HasClient
-
-`func (o *InlineResponse200246) HasClient() bool`
-
-HasClient returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

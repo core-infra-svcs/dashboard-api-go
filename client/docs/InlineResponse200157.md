@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
-**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
-**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the devices. | [optional] 
 
 ## Methods
 
@@ -26,31 +24,6 @@ will change when the set of required properties is changed
 NewInlineResponse200157WithDefaults instantiates a new InlineResponse200157 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetCreatedAt
-
-`func (o *InlineResponse200157) GetCreatedAt() string`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200157) GetCreatedAtOk() (*string, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200157) SetCreatedAt(v string)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200157) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
 
 ### GetId
 
@@ -76,31 +49,6 @@ SetId sets Id field to given value.
 `func (o *InlineResponse200157) HasId() bool`
 
 HasId returns a boolean if a field has been set.
-
-### GetXml
-
-`func (o *InlineResponse200157) GetXml() string`
-
-GetXml returns the Xml field if non-nil, zero value otherwise.
-
-### GetXmlOk
-
-`func (o *InlineResponse200157) GetXmlOk() (*string, bool)`
-
-GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetXml
-
-`func (o *InlineResponse200157) SetXml(v string)`
-
-SetXml sets Xml field to given value.
-
-### HasXml
-
-`func (o *InlineResponse200157) HasXml() bool`
-
-HasXml returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

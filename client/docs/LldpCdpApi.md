@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceLldpCdp
 
-> InlineResponse20036 GetDeviceLldpCdp(ctx, serial).Execute()
+> InlineResponse20041 GetDeviceLldpCdp(ctx, serial).Execute()
 
 List LLDP and CDP information for a device
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LldpCdpApi.GetDeviceLldpCdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLldpCdp`: InlineResponse20036
+    // response from `GetDeviceLldpCdp`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `LldpCdpApi.GetDeviceLldpCdp`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 

@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the combined network | 
-**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
+**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
+**LicenseId** | **string** | The ID of the SM license to move the seats from | 
+**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject292
 
-`func NewInlineObject292(name string, networkIds []string, ) *InlineObject292`
+`func NewInlineObject292(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject292`
 
 NewInlineObject292 instantiates a new InlineObject292 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +27,65 @@ NewInlineObject292WithDefaults instantiates a new InlineObject292 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDestOrganizationId
 
-`func (o *InlineObject292) GetName() string`
+`func (o *InlineObject292) GetDestOrganizationId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject292) GetNameOk() (*string, bool)`
+`func (o *InlineObject292) GetDestOrganizationIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDestOrganizationId
 
-`func (o *InlineObject292) SetName(v string)`
+`func (o *InlineObject292) SetDestOrganizationId(v string)`
 
-SetName sets Name field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
 
-### GetNetworkIds
+### GetLicenseId
 
-`func (o *InlineObject292) GetNetworkIds() []string`
+`func (o *InlineObject292) GetLicenseId() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetLicenseIdOk
 
-`func (o *InlineObject292) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject292) GetLicenseIdOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetLicenseId
 
-`func (o *InlineObject292) SetNetworkIds(v []string)`
+`func (o *InlineObject292) SetLicenseId(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetLicenseId sets LicenseId field to given value.
 
 
-### GetEnrollmentString
+### GetSeatCount
 
-`func (o *InlineObject292) GetEnrollmentString() string`
+`func (o *InlineObject292) GetSeatCount() int32`
 
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
 
-### GetEnrollmentStringOk
+### GetSeatCountOk
 
-`func (o *InlineObject292) GetEnrollmentStringOk() (*string, bool)`
+`func (o *InlineObject292) GetSeatCountOk() (*int32, bool)`
 
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrollmentString
+### SetSeatCount
 
-`func (o *InlineObject292) SetEnrollmentString(v string)`
+`func (o *InlineObject292) SetSeatCount(v int32)`
 
-SetEnrollmentString sets EnrollmentString field to given value.
+SetSeatCount sets SeatCount field to given value.
 
-### HasEnrollmentString
-
-`func (o *InlineObject292) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

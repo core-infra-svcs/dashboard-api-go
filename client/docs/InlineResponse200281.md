@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Serial** | Pointer to **string** | Camera serial number | [optional] 
-**Status** | Pointer to **string** | Onboarding status | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the status was last updated | [optional] 
+**Peers** | Pointer to [**[]InlineResponse200281Peers**](InlineResponse200281Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200281WithDefaults instantiates a new InlineResponse200281 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetPeers
 
-`func (o *InlineResponse200281) GetNetworkId() string`
+`func (o *InlineResponse200281) GetPeers() []InlineResponse200281Peers`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetPeersOk
 
-`func (o *InlineResponse200281) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200281) GetPeersOk() (*[]InlineResponse200281Peers, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetPeers
 
-`func (o *InlineResponse200281) SetNetworkId(v string)`
+`func (o *InlineResponse200281) SetPeers(v []InlineResponse200281Peers)`
 
-SetNetworkId sets NetworkId field to given value.
+SetPeers sets Peers field to given value.
 
-### HasNetworkId
+### HasPeers
 
-`func (o *InlineResponse200281) HasNetworkId() bool`
+`func (o *InlineResponse200281) HasPeers() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200281) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200281) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200281) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200281) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200281) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200281) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200281) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200281) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200281) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200281) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200281) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200281) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

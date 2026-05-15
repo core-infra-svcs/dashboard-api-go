@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200198**](InlineResponse200198.md) | List of settings | [optional] 
-**Meta** | Pointer to [**InlineResponse200405Meta**](InlineResponse200405Meta.md) |  | [optional] 
+**Id** | Pointer to **string** | theme id | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**IsSystemTheme** | Pointer to **bool** | is a Meraki provided theme | [optional] 
+**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200405WithDefaults instantiates a new InlineResponse200405 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200405) GetItems() []InlineResponse200198`
+`func (o *InlineResponse200405) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200405) GetItemsOk() (*[]InlineResponse200198, bool)`
+`func (o *InlineResponse200405) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200405) SetItems(v []InlineResponse200198)`
+`func (o *InlineResponse200405) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
-### HasItems
+### HasId
 
-`func (o *InlineResponse200405) HasItems() bool`
+`func (o *InlineResponse200405) HasId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMeta
+### GetName
 
-`func (o *InlineResponse200405) GetMeta() InlineResponse200405Meta`
+`func (o *InlineResponse200405) GetName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetNameOk
 
-`func (o *InlineResponse200405) GetMetaOk() (*InlineResponse200405Meta, bool)`
+`func (o *InlineResponse200405) GetNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200405) SetMeta(v InlineResponse200405Meta)`
+`func (o *InlineResponse200405) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
-### HasMeta
+### HasName
 
-`func (o *InlineResponse200405) HasMeta() bool`
+`func (o *InlineResponse200405) HasName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetIsSystemTheme
+
+`func (o *InlineResponse200405) GetIsSystemTheme() bool`
+
+GetIsSystemTheme returns the IsSystemTheme field if non-nil, zero value otherwise.
+
+### GetIsSystemThemeOk
+
+`func (o *InlineResponse200405) GetIsSystemThemeOk() (*bool, bool)`
+
+GetIsSystemThemeOk returns a tuple with the IsSystemTheme field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsSystemTheme
+
+`func (o *InlineResponse200405) SetIsSystemTheme(v bool)`
+
+SetIsSystemTheme sets IsSystemTheme field to given value.
+
+### HasIsSystemTheme
+
+`func (o *InlineResponse200405) HasIsSystemTheme() bool`
+
+HasIsSystemTheme returns a boolean if a field has been set.
+
+### GetThemeAssets
+
+`func (o *InlineResponse200405) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
+
+GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
+
+### GetThemeAssetsOk
+
+`func (o *InlineResponse200405) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
+
+GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetThemeAssets
+
+`func (o *InlineResponse200405) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
+
+SetThemeAssets sets ThemeAssets field to given value.
+
+### HasThemeAssets
+
+`func (o *InlineResponse200405) HasThemeAssets() bool`
+
+HasThemeAssets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

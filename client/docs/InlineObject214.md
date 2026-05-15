@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200245Rules**](InlineResponse200245Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject214WithDefaults instantiates a new InlineObject214 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject214) GetName() string`
+`func (o *InlineObject214) GetTrafficShapingEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject214) GetNameOk() (*string, bool)`
+`func (o *InlineObject214) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject214) SetName(v string)`
+`func (o *InlineObject214) SetTrafficShapingEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasName
+### HasTrafficShapingEnabled
 
-`func (o *InlineObject214) HasName() bool`
+`func (o *InlineObject214) HasTrafficShapingEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetManagement
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject214) GetManagement() OrganizationsManagement1`
+`func (o *InlineObject214) GetDefaultRulesEnabled() bool`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject214) GetManagementOk() (*OrganizationsManagement1, bool)`
+`func (o *InlineObject214) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject214) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject214) SetDefaultRulesEnabled(v bool)`
 
-SetManagement sets Management field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasManagement
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject214) HasManagement() bool`
+`func (o *InlineObject214) HasDefaultRulesEnabled() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetApi
+### GetRules
 
-`func (o *InlineObject214) GetApi() OrganizationsOrganizationIdApi`
+`func (o *InlineObject214) GetRules() []InlineResponse200245Rules`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetRulesOk
 
-`func (o *InlineObject214) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+`func (o *InlineObject214) GetRulesOk() (*[]InlineResponse200245Rules, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetRules
 
-`func (o *InlineObject214) SetApi(v OrganizationsOrganizationIdApi)`
+`func (o *InlineObject214) SetRules(v []InlineResponse200245Rules)`
 
-SetApi sets Api field to given value.
+SetRules sets Rules field to given value.
 
-### HasApi
+### HasRules
 
-`func (o *InlineObject214) HasApi() bool`
+`func (o *InlineObject214) HasRules() bool`
 
-HasApi returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

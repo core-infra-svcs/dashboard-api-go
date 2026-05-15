@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RuleId** | **string** | A rule identifier of the format meraki:intrusion/snort/GID/&lt;gid&gt;/SID/&lt;sid&gt;. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents | 
-**Message** | Pointer to **string** | Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET | [optional] 
+**Message** | Pointer to **NullableString** | Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET | [optional] 
 
 ## Methods
 
@@ -71,6 +71,16 @@ SetMessage sets Message field to given value.
 
 HasMessage returns a boolean if a field has been set.
 
+### SetMessageNil
+
+`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules) SetMessageNil(b bool)`
+
+ SetMessageNil sets the value for Message to be an explicit nil
+
+### UnsetMessage
+`func (o *OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules) UnsetMessage()`
+
+UnsetMessage ensures that no value is present for Message, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

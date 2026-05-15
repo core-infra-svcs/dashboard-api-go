@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems**](OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems.md) | List of connectors to delete (maximum 20 items) | [optional] 
+**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**SpInitiated** | Pointer to [**InlineResponse200383SpInitiated**](InlineResponse200383SpInitiated.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject316WithDefaults instantiates a new InlineObject316 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetEnabled
 
-`func (o *InlineObject316) GetItems() []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems`
+`func (o *InlineObject316) GetEnabled() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetEnabledOk
 
-`func (o *InlineObject316) GetItemsOk() (*[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems, bool)`
+`func (o *InlineObject316) GetEnabledOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetEnabled
 
-`func (o *InlineObject316) SetItems(v []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems)`
+`func (o *InlineObject316) SetEnabled(v bool)`
 
-SetItems sets Items field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasItems
+### HasEnabled
 
-`func (o *InlineObject316) HasItems() bool`
+`func (o *InlineObject316) HasEnabled() bool`
 
-HasItems returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetSpInitiated
+
+`func (o *InlineObject316) GetSpInitiated() InlineResponse200383SpInitiated`
+
+GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+
+### GetSpInitiatedOk
+
+`func (o *InlineObject316) GetSpInitiatedOk() (*InlineResponse200383SpInitiated, bool)`
+
+GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpInitiated
+
+`func (o *InlineObject316) SetSpInitiated(v InlineResponse200383SpInitiated)`
+
+SetSpInitiated sets SpInitiated field to given value.
+
+### HasSpInitiated
+
+`func (o *InlineObject316) HasSpInitiated() bool`
+
+HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

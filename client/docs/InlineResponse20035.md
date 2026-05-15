@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
-**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
-**Request** | Pointer to [**InlineResponse2019Request**](InlineResponse2019Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**MulticastRoutingId** | Pointer to **string** | ID of the Multicast routing request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your Multicast routing request. | [optional] 
+**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the Multicast routing request. | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse20035Interfaces**](InlineResponse20035Interfaces.md) | The interfaces that have PIM enabled | [optional] 
+**Routes** | Pointer to [**[]InlineResponse20035Routes**](InlineResponse20035Routes.md) | The multicast routes | [optional] 
+**Error** | Pointer to **string** | Description of the error. | [optional] 
 
 ## Methods
 
@@ -29,30 +31,30 @@ NewInlineResponse20035WithDefaults instantiates a new InlineResponse20035 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWakeOnLanId
+### GetMulticastRoutingId
 
-`func (o *InlineResponse20035) GetWakeOnLanId() string`
+`func (o *InlineResponse20035) GetMulticastRoutingId() string`
 
-GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
+GetMulticastRoutingId returns the MulticastRoutingId field if non-nil, zero value otherwise.
 
-### GetWakeOnLanIdOk
+### GetMulticastRoutingIdOk
 
-`func (o *InlineResponse20035) GetWakeOnLanIdOk() (*string, bool)`
+`func (o *InlineResponse20035) GetMulticastRoutingIdOk() (*string, bool)`
 
-GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
+GetMulticastRoutingIdOk returns a tuple with the MulticastRoutingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWakeOnLanId
+### SetMulticastRoutingId
 
-`func (o *InlineResponse20035) SetWakeOnLanId(v string)`
+`func (o *InlineResponse20035) SetMulticastRoutingId(v string)`
 
-SetWakeOnLanId sets WakeOnLanId field to given value.
+SetMulticastRoutingId sets MulticastRoutingId field to given value.
 
-### HasWakeOnLanId
+### HasMulticastRoutingId
 
-`func (o *InlineResponse20035) HasWakeOnLanId() bool`
+`func (o *InlineResponse20035) HasMulticastRoutingId() bool`
 
-HasWakeOnLanId returns a boolean if a field has been set.
+HasMulticastRoutingId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -79,6 +81,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20035) GetRequest() InlineResponse2015Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20035) GetRequestOk() (*InlineResponse2015Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20035) SetRequest(v InlineResponse2015Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20035) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20035) GetStatus() string`
@@ -104,30 +131,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetRequest
+### GetInterfaces
 
-`func (o *InlineResponse20035) GetRequest() InlineResponse2019Request`
+`func (o *InlineResponse20035) GetInterfaces() []InlineResponse20035Interfaces`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetInterfacesOk
 
-`func (o *InlineResponse20035) GetRequestOk() (*InlineResponse2019Request, bool)`
+`func (o *InlineResponse20035) GetInterfacesOk() (*[]InlineResponse20035Interfaces, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetInterfaces
 
-`func (o *InlineResponse20035) SetRequest(v InlineResponse2019Request)`
+`func (o *InlineResponse20035) SetInterfaces(v []InlineResponse20035Interfaces)`
 
-SetRequest sets Request field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasRequest
+### HasInterfaces
 
-`func (o *InlineResponse20035) HasRequest() bool`
+`func (o *InlineResponse20035) HasInterfaces() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
+
+### GetRoutes
+
+`func (o *InlineResponse20035) GetRoutes() []InlineResponse20035Routes`
+
+GetRoutes returns the Routes field if non-nil, zero value otherwise.
+
+### GetRoutesOk
+
+`func (o *InlineResponse20035) GetRoutesOk() (*[]InlineResponse20035Routes, bool)`
+
+GetRoutesOk returns a tuple with the Routes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRoutes
+
+`func (o *InlineResponse20035) SetRoutes(v []InlineResponse20035Routes)`
+
+SetRoutes sets Routes field to given value.
+
+### HasRoutes
+
+`func (o *InlineResponse20035) HasRoutes() bool`
+
+HasRoutes returns a boolean if a field has been set.
 
 ### GetError
 

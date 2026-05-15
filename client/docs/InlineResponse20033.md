@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
-**Request** | Pointer to [**InlineResponse2017Request**](InlineResponse2017Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
-**Results** | Pointer to [**InlineResponse20032Results**](InlineResponse20032Results.md) |  | [optional] 
-**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
+**LedsBlinkId** | Pointer to **string** | ID of led blink job | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your leds blink request | [optional] 
+**Status** | Pointer to **string** | Status of the leds blink request | [optional] 
+**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
+**Error** | Pointer to **string** | An error message for a failed Blink LEDs execution, if present | [optional] 
 
 ## Methods
 
@@ -30,30 +29,30 @@ NewInlineResponse20033WithDefaults instantiates a new InlineResponse20033 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetLedsBlinkId
 
-`func (o *InlineResponse20033) GetPingId() string`
+`func (o *InlineResponse20033) GetLedsBlinkId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetLedsBlinkId returns the LedsBlinkId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetLedsBlinkIdOk
 
-`func (o *InlineResponse20033) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse20033) GetLedsBlinkIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetLedsBlinkIdOk returns a tuple with the LedsBlinkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetLedsBlinkId
 
-`func (o *InlineResponse20033) SetPingId(v string)`
+`func (o *InlineResponse20033) SetLedsBlinkId(v string)`
 
-SetPingId sets PingId field to given value.
+SetLedsBlinkId sets LedsBlinkId field to given value.
 
-### HasPingId
+### HasLedsBlinkId
 
-`func (o *InlineResponse20033) HasPingId() bool`
+`func (o *InlineResponse20033) HasLedsBlinkId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasLedsBlinkId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -80,31 +79,6 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
-### GetRequest
-
-`func (o *InlineResponse20033) GetRequest() InlineResponse2017Request`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineResponse20033) GetRequestOk() (*InlineResponse2017Request, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineResponse20033) SetRequest(v InlineResponse2017Request)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineResponse20033) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
-
 ### GetStatus
 
 `func (o *InlineResponse20033) GetStatus() string`
@@ -130,55 +104,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResults
+### GetRequest
 
-`func (o *InlineResponse20033) GetResults() InlineResponse20032Results`
+`func (o *InlineResponse20033) GetRequest() InlineResponse2013Request`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetRequestOk
 
-`func (o *InlineResponse20033) GetResultsOk() (*InlineResponse20032Results, bool)`
+`func (o *InlineResponse20033) GetRequestOk() (*InlineResponse2013Request, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetRequest
 
-`func (o *InlineResponse20033) SetResults(v InlineResponse20032Results)`
+`func (o *InlineResponse20033) SetRequest(v InlineResponse2013Request)`
 
-SetResults sets Results field to given value.
+SetRequest sets Request field to given value.
 
-### HasResults
+### HasRequest
 
-`func (o *InlineResponse20033) HasResults() bool`
+`func (o *InlineResponse20033) HasRequest() bool`
 
-HasResults returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
 
-### GetCallback
+### GetError
 
-`func (o *InlineResponse20033) GetCallback() InlineResponse2011Callback`
+`func (o *InlineResponse20033) GetError() string`
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+GetError returns the Error field if non-nil, zero value otherwise.
 
-### GetCallbackOk
+### GetErrorOk
 
-`func (o *InlineResponse20033) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+`func (o *InlineResponse20033) GetErrorOk() (*string, bool)`
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetError
 
-`func (o *InlineResponse20033) SetCallback(v InlineResponse2011Callback)`
+`func (o *InlineResponse20033) SetError(v string)`
 
-SetCallback sets Callback field to given value.
+SetError sets Error field to given value.
 
-### HasCallback
+### HasError
 
-`func (o *InlineResponse20033) HasCallback() bool`
+`func (o *InlineResponse20033) HasError() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

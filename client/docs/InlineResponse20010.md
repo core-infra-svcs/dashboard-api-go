@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Interfaces** | Pointer to [**InlineResponse20010Interfaces**](InlineResponse20010Interfaces.md) |  | [optional] 
+**Vlan** | Pointer to [**DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan**](DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan.md) |  | [optional] 
+**Origin** | Pointer to [**DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin**](DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin.md) |  | [optional] 
+**Status** | **string** | Current assignment status. | 
+**Ipv6** | Pointer to [**DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6**](DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20010
 
-`func NewInlineResponse20010() *InlineResponse20010`
+`func NewInlineResponse20010(status string, ) *InlineResponse20010`
 
 NewInlineResponse20010 instantiates a new InlineResponse20010 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +28,100 @@ NewInlineResponse20010WithDefaults instantiates a new InlineResponse20010 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaces
+### GetVlan
 
-`func (o *InlineResponse20010) GetInterfaces() InlineResponse20010Interfaces`
+`func (o *InlineResponse20010) GetVlan() DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetVlanOk
 
-`func (o *InlineResponse20010) GetInterfacesOk() (*InlineResponse20010Interfaces, bool)`
+`func (o *InlineResponse20010) GetVlanOk() (*DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetVlan
 
-`func (o *InlineResponse20010) SetInterfaces(v InlineResponse20010Interfaces)`
+`func (o *InlineResponse20010) SetVlan(v DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan)`
 
-SetInterfaces sets Interfaces field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasInterfaces
+### HasVlan
 
-`func (o *InlineResponse20010) HasInterfaces() bool`
+`func (o *InlineResponse20010) HasVlan() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
+
+### GetOrigin
+
+`func (o *InlineResponse20010) GetOrigin() DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin`
+
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
+
+### GetOriginOk
+
+`func (o *InlineResponse20010) GetOriginOk() (*DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin, bool)`
+
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrigin
+
+`func (o *InlineResponse20010) SetOrigin(v DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin)`
+
+SetOrigin sets Origin field to given value.
+
+### HasOrigin
+
+`func (o *InlineResponse20010) HasOrigin() bool`
+
+HasOrigin returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20010) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20010) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20010) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+
+### GetIpv6
+
+`func (o *InlineResponse20010) GetIpv6() DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineResponse20010) GetIpv6Ok() (*DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineResponse20010) SetIpv6(v DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineResponse20010) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

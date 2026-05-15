@@ -4,12 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
-**Name** | Pointer to **string** | Name of the MQTT Broker. | [optional] 
-**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
-**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
-**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication**](NetworksNetworkIdMqttBrokersAuthentication.md) |  | [optional] 
+**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
+**Status** | Pointer to **string** | Status of the rollback | [optional] 
+**UpgradeBatchId** | Pointer to **string** | Batch ID of the firmware rollback | [optional] 
+**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
+**ToVersion** | Pointer to [**InlineResponse200126ToVersion**](InlineResponse200126ToVersion.md) |  | [optional] 
+**Reasons** | Pointer to [**[]InlineResponse200126Reasons**](InlineResponse200126Reasons.md) | Reasons for the rollback | [optional] 
+**Predownload** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksPredownload**](NetworksNetworkIdFirmwareUpgradesRollbacksPredownload.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +31,180 @@ NewInlineResponse200126WithDefaults instantiates a new InlineResponse200126 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetProduct
 
-`func (o *InlineResponse200126) GetId() string`
+`func (o *InlineResponse200126) GetProduct() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetProduct returns the Product field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetProductOk
 
-`func (o *InlineResponse200126) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200126) GetProductOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetProduct
 
-`func (o *InlineResponse200126) SetId(v string)`
+`func (o *InlineResponse200126) SetProduct(v string)`
 
-SetId sets Id field to given value.
+SetProduct sets Product field to given value.
 
-### HasId
+### HasProduct
 
-`func (o *InlineResponse200126) HasId() bool`
+`func (o *InlineResponse200126) HasProduct() bool`
 
-HasId returns a boolean if a field has been set.
+HasProduct returns a boolean if a field has been set.
 
-### GetName
+### GetStatus
 
-`func (o *InlineResponse200126) GetName() string`
+`func (o *InlineResponse200126) GetStatus() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStatusOk
 
-`func (o *InlineResponse200126) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200126) GetStatusOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStatus
 
-`func (o *InlineResponse200126) SetName(v string)`
+`func (o *InlineResponse200126) SetStatus(v string)`
 
-SetName sets Name field to given value.
+SetStatus sets Status field to given value.
 
-### HasName
+### HasStatus
 
-`func (o *InlineResponse200126) HasName() bool`
+`func (o *InlineResponse200126) HasStatus() bool`
 
-HasName returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetHost
+### GetUpgradeBatchId
 
-`func (o *InlineResponse200126) GetHost() string`
+`func (o *InlineResponse200126) GetUpgradeBatchId() string`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetUpgradeBatchId returns the UpgradeBatchId field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetUpgradeBatchIdOk
 
-`func (o *InlineResponse200126) GetHostOk() (*string, bool)`
+`func (o *InlineResponse200126) GetUpgradeBatchIdOk() (*string, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetUpgradeBatchIdOk returns a tuple with the UpgradeBatchId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetUpgradeBatchId
 
-`func (o *InlineResponse200126) SetHost(v string)`
+`func (o *InlineResponse200126) SetUpgradeBatchId(v string)`
 
-SetHost sets Host field to given value.
+SetUpgradeBatchId sets UpgradeBatchId field to given value.
 
-### HasHost
+### HasUpgradeBatchId
 
-`func (o *InlineResponse200126) HasHost() bool`
+`func (o *InlineResponse200126) HasUpgradeBatchId() bool`
 
-HasHost returns a boolean if a field has been set.
+HasUpgradeBatchId returns a boolean if a field has been set.
 
-### GetPort
+### GetTime
 
-`func (o *InlineResponse200126) GetPort() int32`
+`func (o *InlineResponse200126) GetTime() time.Time`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetTime returns the Time field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetTimeOk
 
-`func (o *InlineResponse200126) GetPortOk() (*int32, bool)`
+`func (o *InlineResponse200126) GetTimeOk() (*time.Time, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetTime
 
-`func (o *InlineResponse200126) SetPort(v int32)`
+`func (o *InlineResponse200126) SetTime(v time.Time)`
 
-SetPort sets Port field to given value.
+SetTime sets Time field to given value.
 
-### HasPort
+### HasTime
 
-`func (o *InlineResponse200126) HasPort() bool`
+`func (o *InlineResponse200126) HasTime() bool`
 
-HasPort returns a boolean if a field has been set.
+HasTime returns a boolean if a field has been set.
 
-### GetSecurity
+### GetToVersion
 
-`func (o *InlineResponse200126) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
+`func (o *InlineResponse200126) GetToVersion() InlineResponse200126ToVersion`
 
-GetSecurity returns the Security field if non-nil, zero value otherwise.
+GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
 
-### GetSecurityOk
+### GetToVersionOk
 
-`func (o *InlineResponse200126) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
+`func (o *InlineResponse200126) GetToVersionOk() (*InlineResponse200126ToVersion, bool)`
 
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
+GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurity
+### SetToVersion
 
-`func (o *InlineResponse200126) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
+`func (o *InlineResponse200126) SetToVersion(v InlineResponse200126ToVersion)`
 
-SetSecurity sets Security field to given value.
+SetToVersion sets ToVersion field to given value.
 
-### HasSecurity
+### HasToVersion
 
-`func (o *InlineResponse200126) HasSecurity() bool`
+`func (o *InlineResponse200126) HasToVersion() bool`
 
-HasSecurity returns a boolean if a field has been set.
+HasToVersion returns a boolean if a field has been set.
 
-### GetAuthentication
+### GetReasons
 
-`func (o *InlineResponse200126) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication`
+`func (o *InlineResponse200126) GetReasons() []InlineResponse200126Reasons`
 
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
 
-### GetAuthenticationOk
+### GetReasonsOk
 
-`func (o *InlineResponse200126) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication, bool)`
+`func (o *InlineResponse200126) GetReasonsOk() (*[]InlineResponse200126Reasons, bool)`
 
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthentication
+### SetReasons
 
-`func (o *InlineResponse200126) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication)`
+`func (o *InlineResponse200126) SetReasons(v []InlineResponse200126Reasons)`
 
-SetAuthentication sets Authentication field to given value.
+SetReasons sets Reasons field to given value.
 
-### HasAuthentication
+### HasReasons
 
-`func (o *InlineResponse200126) HasAuthentication() bool`
+`func (o *InlineResponse200126) HasReasons() bool`
 
-HasAuthentication returns a boolean if a field has been set.
+HasReasons returns a boolean if a field has been set.
+
+### GetPredownload
+
+`func (o *InlineResponse200126) GetPredownload() NetworksNetworkIdFirmwareUpgradesRollbacksPredownload`
+
+GetPredownload returns the Predownload field if non-nil, zero value otherwise.
+
+### GetPredownloadOk
+
+`func (o *InlineResponse200126) GetPredownloadOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksPredownload, bool)`
+
+GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPredownload
+
+`func (o *InlineResponse200126) SetPredownload(v NetworksNetworkIdFirmwareUpgradesRollbacksPredownload)`
+
+SetPredownload sets Predownload field to given value.
+
+### HasPredownload
+
+`func (o *InlineResponse200126) HasPredownload() bool`
+
+HasPredownload returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

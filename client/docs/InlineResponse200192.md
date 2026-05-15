@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
-**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
-**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
-**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
+**DefaultSettings** | Pointer to [**InlineResponse200192DefaultSettings**](InlineResponse200192DefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200192Overrides**](InlineResponse200192Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200192WithDefaults instantiates a new InlineResponse200192 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIname
+### GetDefaultSettings
 
-`func (o *InlineResponse200192) GetIname() string`
+`func (o *InlineResponse200192) GetDefaultSettings() InlineResponse200192DefaultSettings`
 
-GetIname returns the Iname field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetInameOk
+### GetDefaultSettingsOk
 
-`func (o *InlineResponse200192) GetInameOk() (*string, bool)`
+`func (o *InlineResponse200192) GetDefaultSettingsOk() (*InlineResponse200192DefaultSettings, bool)`
 
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIname
+### SetDefaultSettings
 
-`func (o *InlineResponse200192) SetIname(v string)`
+`func (o *InlineResponse200192) SetDefaultSettings(v InlineResponse200192DefaultSettings)`
 
-SetIname sets Iname field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasIname
+### HasDefaultSettings
 
-`func (o *InlineResponse200192) HasIname() bool`
+`func (o *InlineResponse200192) HasDefaultSettings() bool`
 
-HasIname returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetName
+### GetOverrides
 
-`func (o *InlineResponse200192) GetName() string`
+`func (o *InlineResponse200192) GetOverrides() []InlineResponse200192Overrides`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOverridesOk
 
-`func (o *InlineResponse200192) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200192) GetOverridesOk() (*[]InlineResponse200192Overrides, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOverrides
 
-`func (o *InlineResponse200192) SetName(v string)`
+`func (o *InlineResponse200192) SetOverrides(v []InlineResponse200192Overrides)`
 
-SetName sets Name field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasName
+### HasOverrides
 
-`func (o *InlineResponse200192) HasName() bool`
+`func (o *InlineResponse200192) HasOverrides() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetIsDefault
-
-`func (o *InlineResponse200192) GetIsDefault() bool`
-
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
-
-### GetIsDefaultOk
-
-`func (o *InlineResponse200192) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefault
-
-`func (o *InlineResponse200192) SetIsDefault(v bool)`
-
-SetIsDefault sets IsDefault field to given value.
-
-### HasIsDefault
-
-`func (o *InlineResponse200192) HasIsDefault() bool`
-
-HasIsDefault returns a boolean if a field has been set.
-
-### GetVlanNames
-
-`func (o *InlineResponse200192) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
-
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
-
-### GetVlanNamesOk
-
-`func (o *InlineResponse200192) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
-
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanNames
-
-`func (o *InlineResponse200192) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
-
-SetVlanNames sets VlanNames field to given value.
-
-### HasVlanNames
-
-`func (o *InlineResponse200192) HasVlanNames() bool`
-
-HasVlanNames returns a boolean if a field has been set.
-
-### GetVlanGroups
-
-`func (o *InlineResponse200192) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineResponse200192) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineResponse200192) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-### HasVlanGroups
-
-`func (o *InlineResponse200192) HasVlanGroups() bool`
-
-HasVlanGroups returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

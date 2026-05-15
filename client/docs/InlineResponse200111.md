@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Event category | [optional] 
-**Type** | Pointer to **string** | Event type | [optional] 
-**Description** | Pointer to **string** | Description of the event | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse200111BandwidthLimits**](InlineResponse200111BandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200111WithDefaults instantiates a new InlineResponse200111 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetBandwidthLimits
 
-`func (o *InlineResponse200111) GetCategory() string`
+`func (o *InlineResponse200111) GetBandwidthLimits() InlineResponse200111BandwidthLimits`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineResponse200111) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200111) GetBandwidthLimitsOk() (*InlineResponse200111BandwidthLimits, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetBandwidthLimits
 
-`func (o *InlineResponse200111) SetCategory(v string)`
+`func (o *InlineResponse200111) SetBandwidthLimits(v InlineResponse200111BandwidthLimits)`
 
-SetCategory sets Category field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasCategory
+### HasBandwidthLimits
 
-`func (o *InlineResponse200111) HasCategory() bool`
+`func (o *InlineResponse200111) HasBandwidthLimits() bool`
 
-HasCategory returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200111) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200111) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200111) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200111) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200111) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200111) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200111) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200111) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

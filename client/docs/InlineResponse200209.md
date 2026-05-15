@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
-**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
-**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
+**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
+**Type** | Pointer to **string** | The type of the payload template | [optional] 
+**Name** | Pointer to **string** | The name of the payload template | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
+**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
+**Sharing** | Pointer to [**NetworksNetworkIdWebhooksPayloadTemplatesSharing**](NetworksNetworkIdWebhooksPayloadTemplatesSharing.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200209WithDefaults instantiates a new InlineResponse200209 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetPayloadTemplateId
 
-`func (o *InlineResponse200209) GetStartTs() time.Time`
+`func (o *InlineResponse200209) GetPayloadTemplateId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetPayloadTemplateIdOk
 
-`func (o *InlineResponse200209) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200209) GetPayloadTemplateIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetPayloadTemplateId
 
-`func (o *InlineResponse200209) SetStartTs(v time.Time)`
+`func (o *InlineResponse200209) SetPayloadTemplateId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
 
-### HasStartTs
+### HasPayloadTemplateId
 
-`func (o *InlineResponse200209) HasStartTs() bool`
+`func (o *InlineResponse200209) HasPayloadTemplateId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasPayloadTemplateId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetType
 
-`func (o *InlineResponse200209) GetEndTs() time.Time`
+`func (o *InlineResponse200209) GetType() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetTypeOk
 
-`func (o *InlineResponse200209) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200209) GetTypeOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetType
 
-`func (o *InlineResponse200209) SetEndTs(v time.Time)`
+`func (o *InlineResponse200209) SetType(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetType sets Type field to given value.
 
-### HasEndTs
+### HasType
 
-`func (o *InlineResponse200209) HasEndTs() bool`
+`func (o *InlineResponse200209) HasType() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetAverageKbps
+### GetName
 
-`func (o *InlineResponse200209) GetAverageKbps() int32`
+`func (o *InlineResponse200209) GetName() string`
 
-GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAverageKbpsOk
+### GetNameOk
 
-`func (o *InlineResponse200209) GetAverageKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200209) GetNameOk() (*string, bool)`
 
-GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAverageKbps
+### SetName
 
-`func (o *InlineResponse200209) SetAverageKbps(v int32)`
+`func (o *InlineResponse200209) SetName(v string)`
 
-SetAverageKbps sets AverageKbps field to given value.
+SetName sets Name field to given value.
 
-### HasAverageKbps
+### HasName
 
-`func (o *InlineResponse200209) HasAverageKbps() bool`
+`func (o *InlineResponse200209) HasName() bool`
 
-HasAverageKbps returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDownloadKbps
+### GetHeaders
 
-`func (o *InlineResponse200209) GetDownloadKbps() int32`
+`func (o *InlineResponse200209) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
 
-GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-### GetDownloadKbpsOk
+### GetHeadersOk
 
-`func (o *InlineResponse200209) GetDownloadKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200209) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
 
-GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadKbps
+### SetHeaders
 
-`func (o *InlineResponse200209) SetDownloadKbps(v int32)`
+`func (o *InlineResponse200209) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
 
-SetDownloadKbps sets DownloadKbps field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasDownloadKbps
+### HasHeaders
 
-`func (o *InlineResponse200209) HasDownloadKbps() bool`
+`func (o *InlineResponse200209) HasHeaders() bool`
 
-HasDownloadKbps returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
 
-### GetUploadKbps
+### GetBody
 
-`func (o *InlineResponse200209) GetUploadKbps() int32`
+`func (o *InlineResponse200209) GetBody() string`
 
-GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-### GetUploadKbpsOk
+### GetBodyOk
 
-`func (o *InlineResponse200209) GetUploadKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200209) GetBodyOk() (*string, bool)`
 
-GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadKbps
+### SetBody
 
-`func (o *InlineResponse200209) SetUploadKbps(v int32)`
+`func (o *InlineResponse200209) SetBody(v string)`
 
-SetUploadKbps sets UploadKbps field to given value.
+SetBody sets Body field to given value.
 
-### HasUploadKbps
+### HasBody
 
-`func (o *InlineResponse200209) HasUploadKbps() bool`
+`func (o *InlineResponse200209) HasBody() bool`
 
-HasUploadKbps returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
+
+### GetSharing
+
+`func (o *InlineResponse200209) GetSharing() NetworksNetworkIdWebhooksPayloadTemplatesSharing`
+
+GetSharing returns the Sharing field if non-nil, zero value otherwise.
+
+### GetSharingOk
+
+`func (o *InlineResponse200209) GetSharingOk() (*NetworksNetworkIdWebhooksPayloadTemplatesSharing, bool)`
+
+GetSharingOk returns a tuple with the Sharing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharing
+
+`func (o *InlineResponse200209) SetSharing(v NetworksNetworkIdWebhooksPayloadTemplatesSharing)`
+
+SetSharing sets Sharing field to given value.
+
+### HasSharing
+
+`func (o *InlineResponse200209) HasSharing() bool`
+
+HasSharing returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

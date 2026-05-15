@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Restrictions** | Pointer to [**[]InlineResponse200153Restrictions**](InlineResponse200153Restrictions.md) | The list of restrictions for the device | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
+**Name** | Pointer to **string** | The name of the device. | [optional] 
+**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
+**Serial** | Pointer to **string** | The device serial. | [optional] 
+**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
 
 ## Methods
 
@@ -25,30 +29,130 @@ NewInlineResponse200153WithDefaults instantiates a new InlineResponse200153 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRestrictions
+### GetId
 
-`func (o *InlineResponse200153) GetRestrictions() []InlineResponse200153Restrictions`
+`func (o *InlineResponse200153) GetId() string`
 
-GetRestrictions returns the Restrictions field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetRestrictionsOk
+### GetIdOk
 
-`func (o *InlineResponse200153) GetRestrictionsOk() (*[]InlineResponse200153Restrictions, bool)`
+`func (o *InlineResponse200153) GetIdOk() (*string, bool)`
 
-GetRestrictionsOk returns a tuple with the Restrictions field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictions
+### SetId
 
-`func (o *InlineResponse200153) SetRestrictions(v []InlineResponse200153Restrictions)`
+`func (o *InlineResponse200153) SetId(v string)`
 
-SetRestrictions sets Restrictions field to given value.
+SetId sets Id field to given value.
 
-### HasRestrictions
+### HasId
 
-`func (o *InlineResponse200153) HasRestrictions() bool`
+`func (o *InlineResponse200153) HasId() bool`
 
-HasRestrictions returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200153) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200153) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200153) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200153) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetWifiMac
+
+`func (o *InlineResponse200153) GetWifiMac() string`
+
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+
+### GetWifiMacOk
+
+`func (o *InlineResponse200153) GetWifiMacOk() (*string, bool)`
+
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifiMac
+
+`func (o *InlineResponse200153) SetWifiMac(v string)`
+
+SetWifiMac sets WifiMac field to given value.
+
+### HasWifiMac
+
+`func (o *InlineResponse200153) HasWifiMac() bool`
+
+HasWifiMac returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse200153) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse200153) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse200153) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse200153) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse200153) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse200153) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse200153) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse200153) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

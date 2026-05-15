@@ -4,15 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The start time from which daily traffic data was collected | [optional] 
-**Application** | Pointer to **string** | The name of the application the client is connected to | [optional] 
-**Destination** | Pointer to **string** | The IP or web address the client is connected to | [optional] 
-**Protocol** | Pointer to **string** | The client protocol | [optional] 
-**Port** | Pointer to **int32** | The port the client is connected to | [optional] 
-**Recv** | Pointer to **float32** | Usage received by the client | [optional] 
-**Sent** | Pointer to **float32** | Usage sent by the client | [optional] 
-**NumFlows** | Pointer to **int32** | The number of flows the client has | [optional] 
-**ActiveSeconds** | Pointer to **int32** | The amount of seconds the client was active | [optional] 
+**Id** | Pointer to **string** | Schedule id | [optional] 
+**Name** | Pointer to **string** | Schedule name | [optional] 
 
 ## Methods
 
@@ -33,230 +26,55 @@ NewInlineResponse200107WithDefaults instantiates a new InlineResponse200107 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetId
 
-`func (o *InlineResponse200107) GetTs() time.Time`
+`func (o *InlineResponse200107) GetId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetIdOk
 
-`func (o *InlineResponse200107) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200107) GetIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetId
 
-`func (o *InlineResponse200107) SetTs(v time.Time)`
+`func (o *InlineResponse200107) SetId(v string)`
 
-SetTs sets Ts field to given value.
+SetId sets Id field to given value.
 
-### HasTs
+### HasId
 
-`func (o *InlineResponse200107) HasTs() bool`
+`func (o *InlineResponse200107) HasId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetApplication
+### GetName
 
-`func (o *InlineResponse200107) GetApplication() string`
+`func (o *InlineResponse200107) GetName() string`
 
-GetApplication returns the Application field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetApplicationOk
+### GetNameOk
 
-`func (o *InlineResponse200107) GetApplicationOk() (*string, bool)`
+`func (o *InlineResponse200107) GetNameOk() (*string, bool)`
 
-GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplication
+### SetName
 
-`func (o *InlineResponse200107) SetApplication(v string)`
+`func (o *InlineResponse200107) SetName(v string)`
 
-SetApplication sets Application field to given value.
+SetName sets Name field to given value.
 
-### HasApplication
+### HasName
 
-`func (o *InlineResponse200107) HasApplication() bool`
+`func (o *InlineResponse200107) HasName() bool`
 
-HasApplication returns a boolean if a field has been set.
-
-### GetDestination
-
-`func (o *InlineResponse200107) GetDestination() string`
-
-GetDestination returns the Destination field if non-nil, zero value otherwise.
-
-### GetDestinationOk
-
-`func (o *InlineResponse200107) GetDestinationOk() (*string, bool)`
-
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestination
-
-`func (o *InlineResponse200107) SetDestination(v string)`
-
-SetDestination sets Destination field to given value.
-
-### HasDestination
-
-`func (o *InlineResponse200107) HasDestination() bool`
-
-HasDestination returns a boolean if a field has been set.
-
-### GetProtocol
-
-`func (o *InlineResponse200107) GetProtocol() string`
-
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
-
-### GetProtocolOk
-
-`func (o *InlineResponse200107) GetProtocolOk() (*string, bool)`
-
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtocol
-
-`func (o *InlineResponse200107) SetProtocol(v string)`
-
-SetProtocol sets Protocol field to given value.
-
-### HasProtocol
-
-`func (o *InlineResponse200107) HasProtocol() bool`
-
-HasProtocol returns a boolean if a field has been set.
-
-### GetPort
-
-`func (o *InlineResponse200107) GetPort() int32`
-
-GetPort returns the Port field if non-nil, zero value otherwise.
-
-### GetPortOk
-
-`func (o *InlineResponse200107) GetPortOk() (*int32, bool)`
-
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPort
-
-`func (o *InlineResponse200107) SetPort(v int32)`
-
-SetPort sets Port field to given value.
-
-### HasPort
-
-`func (o *InlineResponse200107) HasPort() bool`
-
-HasPort returns a boolean if a field has been set.
-
-### GetRecv
-
-`func (o *InlineResponse200107) GetRecv() float32`
-
-GetRecv returns the Recv field if non-nil, zero value otherwise.
-
-### GetRecvOk
-
-`func (o *InlineResponse200107) GetRecvOk() (*float32, bool)`
-
-GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecv
-
-`func (o *InlineResponse200107) SetRecv(v float32)`
-
-SetRecv sets Recv field to given value.
-
-### HasRecv
-
-`func (o *InlineResponse200107) HasRecv() bool`
-
-HasRecv returns a boolean if a field has been set.
-
-### GetSent
-
-`func (o *InlineResponse200107) GetSent() float32`
-
-GetSent returns the Sent field if non-nil, zero value otherwise.
-
-### GetSentOk
-
-`func (o *InlineResponse200107) GetSentOk() (*float32, bool)`
-
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSent
-
-`func (o *InlineResponse200107) SetSent(v float32)`
-
-SetSent sets Sent field to given value.
-
-### HasSent
-
-`func (o *InlineResponse200107) HasSent() bool`
-
-HasSent returns a boolean if a field has been set.
-
-### GetNumFlows
-
-`func (o *InlineResponse200107) GetNumFlows() int32`
-
-GetNumFlows returns the NumFlows field if non-nil, zero value otherwise.
-
-### GetNumFlowsOk
-
-`func (o *InlineResponse200107) GetNumFlowsOk() (*int32, bool)`
-
-GetNumFlowsOk returns a tuple with the NumFlows field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNumFlows
-
-`func (o *InlineResponse200107) SetNumFlows(v int32)`
-
-SetNumFlows sets NumFlows field to given value.
-
-### HasNumFlows
-
-`func (o *InlineResponse200107) HasNumFlows() bool`
-
-HasNumFlows returns a boolean if a field has been set.
-
-### GetActiveSeconds
-
-`func (o *InlineResponse200107) GetActiveSeconds() int32`
-
-GetActiveSeconds returns the ActiveSeconds field if non-nil, zero value otherwise.
-
-### GetActiveSecondsOk
-
-`func (o *InlineResponse200107) GetActiveSecondsOk() (*int32, bool)`
-
-GetActiveSecondsOk returns a tuple with the ActiveSeconds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActiveSeconds
-
-`func (o *InlineResponse200107) SetActiveSeconds(v int32)`
-
-SetActiveSeconds sets ActiveSeconds field to given value.
-
-### HasActiveSeconds
-
-`func (o *InlineResponse200107) HasActiveSeconds() bool`
-
-HasActiveSeconds returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

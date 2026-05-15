@@ -4,24 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | 
-**Mode** | Pointer to **string** | L3 Interface mode, can be one of &#39;vlan&#39;, &#39;routed&#39;, &#39;loopback&#39;. Default is &#39;vlan&#39;. CS 17.18 or higher is required for &#39;routed&#39; mode.  | [optional] 
-**Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
-**SwitchPortId** | Pointer to **NullableString** | Switch Port ID when in Routed mode (CS 17.18 or higher required) | [optional] 
-**InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
-**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
-**VlanId** | Pointer to **NullableInt32** | The VLAN this L3 interface is on. VLAN must be between 1 and 4094. | [optional] 
-**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a L3 interface. Required if this is the first IPv4 interface. | [optional] 
-**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
-**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
-**Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf1**](DevicesSerialSwitchRoutingInterfacesVrf1.md) |  | [optional] 
-**Loopback** | Pointer to **map[string]interface{}** | The loopback settings of the interface. | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]NetworksNetworkIdSwitchSettingsPowerExceptions**](NetworksNetworkIdSwitchSettingsPowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkClientSampling**](NetworksNetworkIdSwitchSettingsUplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**NetworksNetworkIdSwitchSettingsMacBlocklist**](NetworksNetworkIdSwitchSettingsMacBlocklist.md) |  | [optional] 
+**PortChannelFallback** | Pointer to **bool** | Port channel fallback | [optional] 
+**UplinkSelection** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkSelection**](NetworksNetworkIdSwitchSettingsUplinkSelection.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject164
 
-`func NewInlineObject164(name string, ) *InlineObject164`
+`func NewInlineObject164() *InlineObject164`
 
 NewInlineObject164 instantiates a new InlineObject164 object
 This constructor will assign default values to properties that have it defined,
@@ -36,340 +31,180 @@ NewInlineObject164WithDefaults instantiates a new InlineObject164 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetVlan
 
-`func (o *InlineObject164) GetName() string`
+`func (o *InlineObject164) GetVlan() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetVlanOk
 
-`func (o *InlineObject164) GetNameOk() (*string, bool)`
+`func (o *InlineObject164) GetVlanOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetVlan
 
-`func (o *InlineObject164) SetName(v string)`
+`func (o *InlineObject164) SetVlan(v int32)`
 
-SetName sets Name field to given value.
+SetVlan sets Vlan field to given value.
 
+### HasVlan
 
-### GetMode
+`func (o *InlineObject164) HasVlan() bool`
 
-`func (o *InlineObject164) GetMode() string`
+HasVlan returns a boolean if a field has been set.
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+### GetUseCombinedPower
 
-### GetModeOk
+`func (o *InlineObject164) GetUseCombinedPower() bool`
 
-`func (o *InlineObject164) GetModeOk() (*string, bool)`
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+### GetUseCombinedPowerOk
+
+`func (o *InlineObject164) GetUseCombinedPowerOk() (*bool, bool)`
+
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetUseCombinedPower
 
-`func (o *InlineObject164) SetMode(v string)`
+`func (o *InlineObject164) SetUseCombinedPower(v bool)`
 
-SetMode sets Mode field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasMode
+### HasUseCombinedPower
 
-`func (o *InlineObject164) HasMode() bool`
+`func (o *InlineObject164) HasUseCombinedPower() bool`
 
-HasMode returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetSubnet
+### GetPowerExceptions
 
-`func (o *InlineObject164) GetSubnet() string`
+`func (o *InlineObject164) GetPowerExceptions() []NetworksNetworkIdSwitchSettingsPowerExceptions`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetPowerExceptionsOk
 
-`func (o *InlineObject164) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject164) GetPowerExceptionsOk() (*[]NetworksNetworkIdSwitchSettingsPowerExceptions, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetPowerExceptions
 
-`func (o *InlineObject164) SetSubnet(v string)`
+`func (o *InlineObject164) SetPowerExceptions(v []NetworksNetworkIdSwitchSettingsPowerExceptions)`
 
-SetSubnet sets Subnet field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasSubnet
+### HasPowerExceptions
 
-`func (o *InlineObject164) HasSubnet() bool`
+`func (o *InlineObject164) HasPowerExceptions() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### SetSubnetNil
+### GetUplinkClientSampling
 
-`func (o *InlineObject164) SetSubnetNil(b bool)`
+`func (o *InlineObject164) GetUplinkClientSampling() NetworksNetworkIdSwitchSettingsUplinkClientSampling`
 
- SetSubnetNil sets the value for Subnet to be an explicit nil
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### UnsetSubnet
-`func (o *InlineObject164) UnsetSubnet()`
+### GetUplinkClientSamplingOk
 
-UnsetSubnet ensures that no value is present for Subnet, not even an explicit nil
-### GetSwitchPortId
+`func (o *InlineObject164) GetUplinkClientSamplingOk() (*NetworksNetworkIdSwitchSettingsUplinkClientSampling, bool)`
 
-`func (o *InlineObject164) GetSwitchPortId() string`
-
-GetSwitchPortId returns the SwitchPortId field if non-nil, zero value otherwise.
-
-### GetSwitchPortIdOk
-
-`func (o *InlineObject164) GetSwitchPortIdOk() (*string, bool)`
-
-GetSwitchPortIdOk returns a tuple with the SwitchPortId field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPortId
+### SetUplinkClientSampling
 
-`func (o *InlineObject164) SetSwitchPortId(v string)`
+`func (o *InlineObject164) SetUplinkClientSampling(v NetworksNetworkIdSwitchSettingsUplinkClientSampling)`
 
-SetSwitchPortId sets SwitchPortId field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasSwitchPortId
+### HasUplinkClientSampling
 
-`func (o *InlineObject164) HasSwitchPortId() bool`
+`func (o *InlineObject164) HasUplinkClientSampling() bool`
 
-HasSwitchPortId returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
 
-### SetSwitchPortIdNil
+### GetMacBlocklist
 
-`func (o *InlineObject164) SetSwitchPortIdNil(b bool)`
+`func (o *InlineObject164) GetMacBlocklist() NetworksNetworkIdSwitchSettingsMacBlocklist`
 
- SetSwitchPortIdNil sets the value for SwitchPortId to be an explicit nil
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
 
-### UnsetSwitchPortId
-`func (o *InlineObject164) UnsetSwitchPortId()`
+### GetMacBlocklistOk
 
-UnsetSwitchPortId ensures that no value is present for SwitchPortId, not even an explicit nil
-### GetInterfaceIp
+`func (o *InlineObject164) GetMacBlocklistOk() (*NetworksNetworkIdSwitchSettingsMacBlocklist, bool)`
 
-`func (o *InlineObject164) GetInterfaceIp() string`
-
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
-
-### GetInterfaceIpOk
-
-`func (o *InlineObject164) GetInterfaceIpOk() (*string, bool)`
-
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetMacBlocklist
 
-`func (o *InlineObject164) SetInterfaceIp(v string)`
+`func (o *InlineObject164) SetMacBlocklist(v NetworksNetworkIdSwitchSettingsMacBlocklist)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetMacBlocklist sets MacBlocklist field to given value.
 
-### HasInterfaceIp
+### HasMacBlocklist
 
-`func (o *InlineObject164) HasInterfaceIp() bool`
+`func (o *InlineObject164) HasMacBlocklist() bool`
 
-HasInterfaceIp returns a boolean if a field has been set.
+HasMacBlocklist returns a boolean if a field has been set.
 
-### SetInterfaceIpNil
+### GetPortChannelFallback
 
-`func (o *InlineObject164) SetInterfaceIpNil(b bool)`
+`func (o *InlineObject164) GetPortChannelFallback() bool`
 
- SetInterfaceIpNil sets the value for InterfaceIp to be an explicit nil
+GetPortChannelFallback returns the PortChannelFallback field if non-nil, zero value otherwise.
 
-### UnsetInterfaceIp
-`func (o *InlineObject164) UnsetInterfaceIp()`
+### GetPortChannelFallbackOk
 
-UnsetInterfaceIp ensures that no value is present for InterfaceIp, not even an explicit nil
-### GetMulticastRouting
+`func (o *InlineObject164) GetPortChannelFallbackOk() (*bool, bool)`
 
-`func (o *InlineObject164) GetMulticastRouting() string`
-
-GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
-
-### GetMulticastRoutingOk
-
-`func (o *InlineObject164) GetMulticastRoutingOk() (*string, bool)`
-
-GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+GetPortChannelFallbackOk returns a tuple with the PortChannelFallback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastRouting
+### SetPortChannelFallback
 
-`func (o *InlineObject164) SetMulticastRouting(v string)`
+`func (o *InlineObject164) SetPortChannelFallback(v bool)`
 
-SetMulticastRouting sets MulticastRouting field to given value.
+SetPortChannelFallback sets PortChannelFallback field to given value.
 
-### HasMulticastRouting
+### HasPortChannelFallback
 
-`func (o *InlineObject164) HasMulticastRouting() bool`
+`func (o *InlineObject164) HasPortChannelFallback() bool`
 
-HasMulticastRouting returns a boolean if a field has been set.
+HasPortChannelFallback returns a boolean if a field has been set.
 
-### GetVlanId
+### GetUplinkSelection
 
-`func (o *InlineObject164) GetVlanId() int32`
+`func (o *InlineObject164) GetUplinkSelection() NetworksNetworkIdSwitchSettingsUplinkSelection`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetUplinkSelection returns the UplinkSelection field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetUplinkSelectionOk
 
-`func (o *InlineObject164) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject164) GetUplinkSelectionOk() (*NetworksNetworkIdSwitchSettingsUplinkSelection, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetUplinkSelectionOk returns a tuple with the UplinkSelection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetUplinkSelection
 
-`func (o *InlineObject164) SetVlanId(v int32)`
+`func (o *InlineObject164) SetUplinkSelection(v NetworksNetworkIdSwitchSettingsUplinkSelection)`
 
-SetVlanId sets VlanId field to given value.
+SetUplinkSelection sets UplinkSelection field to given value.
 
-### HasVlanId
+### HasUplinkSelection
 
-`func (o *InlineObject164) HasVlanId() bool`
+`func (o *InlineObject164) HasUplinkSelection() bool`
 
-HasVlanId returns a boolean if a field has been set.
-
-### SetVlanIdNil
-
-`func (o *InlineObject164) SetVlanIdNil(b bool)`
-
- SetVlanIdNil sets the value for VlanId to be an explicit nil
-
-### UnsetVlanId
-`func (o *InlineObject164) UnsetVlanId()`
-
-UnsetVlanId ensures that no value is present for VlanId, not even an explicit nil
-### GetDefaultGateway
-
-`func (o *InlineObject164) GetDefaultGateway() string`
-
-GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
-
-### GetDefaultGatewayOk
-
-`func (o *InlineObject164) GetDefaultGatewayOk() (*string, bool)`
-
-GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaultGateway
-
-`func (o *InlineObject164) SetDefaultGateway(v string)`
-
-SetDefaultGateway sets DefaultGateway field to given value.
-
-### HasDefaultGateway
-
-`func (o *InlineObject164) HasDefaultGateway() bool`
-
-HasDefaultGateway returns a boolean if a field has been set.
-
-### GetOspfSettings
-
-`func (o *InlineObject164) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings1`
-
-GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
-
-### GetOspfSettingsOk
-
-`func (o *InlineObject164) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings1, bool)`
-
-GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOspfSettings
-
-`func (o *InlineObject164) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings1)`
-
-SetOspfSettings sets OspfSettings field to given value.
-
-### HasOspfSettings
-
-`func (o *InlineObject164) HasOspfSettings() bool`
-
-HasOspfSettings returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineObject164) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv61`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineObject164) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv61, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineObject164) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv61)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineObject164) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineObject164) GetVrf() DevicesSerialSwitchRoutingInterfacesVrf1`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineObject164) GetVrfOk() (*DevicesSerialSwitchRoutingInterfacesVrf1, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineObject164) SetVrf(v DevicesSerialSwitchRoutingInterfacesVrf1)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineObject164) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
-
-### GetLoopback
-
-`func (o *InlineObject164) GetLoopback() map[string]interface{}`
-
-GetLoopback returns the Loopback field if non-nil, zero value otherwise.
-
-### GetLoopbackOk
-
-`func (o *InlineObject164) GetLoopbackOk() (*map[string]interface{}, bool)`
-
-GetLoopbackOk returns a tuple with the Loopback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLoopback
-
-`func (o *InlineObject164) SetLoopback(v map[string]interface{})`
-
-SetLoopback sets Loopback field to given value.
-
-### HasLoopback
-
-`func (o *InlineObject164) HasLoopback() bool`
-
-HasLoopback returns a boolean if a field has been set.
+HasUplinkSelection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

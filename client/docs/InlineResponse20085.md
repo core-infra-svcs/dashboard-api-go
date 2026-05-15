@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTime** | Pointer to **time.Time** | Start time of interval | [optional] 
-**EndTime** | Pointer to **time.Time** | End time of interval | [optional] 
-**ByInterface** | Pointer to [**[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface**](NetworksNetworkIdApplianceUplinksUsageHistoryByInterface.md) | List of usage data for each interface | [optional] 
+**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
+**AllowedUrls** | Pointer to [**[]InlineResponse20085AllowedUrls**](InlineResponse20085AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
+**AllowedFiles** | Pointer to [**[]InlineResponse20085AllowedFiles**](InlineResponse20085AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20085WithDefaults instantiates a new InlineResponse20085 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTime
+### GetMode
 
-`func (o *InlineResponse20085) GetStartTime() time.Time`
+`func (o *InlineResponse20085) GetMode() string`
 
-GetStartTime returns the StartTime field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetStartTimeOk
+### GetModeOk
 
-`func (o *InlineResponse20085) GetStartTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20085) GetModeOk() (*string, bool)`
 
-GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTime
+### SetMode
 
-`func (o *InlineResponse20085) SetStartTime(v time.Time)`
+`func (o *InlineResponse20085) SetMode(v string)`
 
-SetStartTime sets StartTime field to given value.
+SetMode sets Mode field to given value.
 
-### HasStartTime
+### HasMode
 
-`func (o *InlineResponse20085) HasStartTime() bool`
+`func (o *InlineResponse20085) HasMode() bool`
 
-HasStartTime returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetEndTime
+### GetAllowedUrls
 
-`func (o *InlineResponse20085) GetEndTime() time.Time`
+`func (o *InlineResponse20085) GetAllowedUrls() []InlineResponse20085AllowedUrls`
 
-GetEndTime returns the EndTime field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetEndTimeOk
+### GetAllowedUrlsOk
 
-`func (o *InlineResponse20085) GetEndTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20085) GetAllowedUrlsOk() (*[]InlineResponse20085AllowedUrls, bool)`
 
-GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTime
+### SetAllowedUrls
 
-`func (o *InlineResponse20085) SetEndTime(v time.Time)`
+`func (o *InlineResponse20085) SetAllowedUrls(v []InlineResponse20085AllowedUrls)`
 
-SetEndTime sets EndTime field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasEndTime
+### HasAllowedUrls
 
-`func (o *InlineResponse20085) HasEndTime() bool`
+`func (o *InlineResponse20085) HasAllowedUrls() bool`
 
-HasEndTime returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetByInterface
+### GetAllowedFiles
 
-`func (o *InlineResponse20085) GetByInterface() []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface`
+`func (o *InlineResponse20085) GetAllowedFiles() []InlineResponse20085AllowedFiles`
 
-GetByInterface returns the ByInterface field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetByInterfaceOk
+### GetAllowedFilesOk
 
-`func (o *InlineResponse20085) GetByInterfaceOk() (*[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface, bool)`
+`func (o *InlineResponse20085) GetAllowedFilesOk() (*[]InlineResponse20085AllowedFiles, bool)`
 
-GetByInterfaceOk returns a tuple with the ByInterface field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByInterface
+### SetAllowedFiles
 
-`func (o *InlineResponse20085) SetByInterface(v []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface)`
+`func (o *InlineResponse20085) SetAllowedFiles(v []InlineResponse20085AllowedFiles)`
 
-SetByInterface sets ByInterface field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasByInterface
+### HasAllowedFiles
 
-`func (o *InlineResponse20085) HasByInterface() bool`
+`func (o *InlineResponse20085) HasAllowedFiles() bool`
 
-HasByInterface returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

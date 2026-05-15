@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Application** | Pointer to **string** | Name of the Application | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**VisionConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) for Meraki Vision Portal | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200384WithDefaults instantiates a new InlineResponse200384 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplication
+### GetIdpId
 
-`func (o *InlineResponse200384) GetApplication() string`
+`func (o *InlineResponse200384) GetIdpId() string`
 
-GetApplication returns the Application field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetApplicationOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200384) GetApplicationOk() (*string, bool)`
+`func (o *InlineResponse200384) GetIdpIdOk() (*string, bool)`
 
-GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplication
+### SetIdpId
 
-`func (o *InlineResponse200384) SetApplication(v string)`
+`func (o *InlineResponse200384) SetIdpId(v string)`
 
-SetApplication sets Application field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasApplication
+### HasIdpId
 
-`func (o *InlineResponse200384) HasApplication() bool`
+`func (o *InlineResponse200384) HasIdpId() bool`
 
-HasApplication returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetTotal
+### GetConsumerUrl
 
-`func (o *InlineResponse200384) GetTotal() float32`
+`func (o *InlineResponse200384) GetConsumerUrl() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200384) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200384) GetConsumerUrlOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetConsumerUrl
 
-`func (o *InlineResponse200384) SetTotal(v float32)`
+`func (o *InlineResponse200384) SetConsumerUrl(v string)`
 
-SetTotal sets Total field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasTotal
+### HasConsumerUrl
 
-`func (o *InlineResponse200384) HasTotal() bool`
+`func (o *InlineResponse200384) HasConsumerUrl() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
 
-### GetDownstream
+### GetVisionConsumerUrl
 
-`func (o *InlineResponse200384) GetDownstream() float32`
+`func (o *InlineResponse200384) GetVisionConsumerUrl() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetVisionConsumerUrl returns the VisionConsumerUrl field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetVisionConsumerUrlOk
 
-`func (o *InlineResponse200384) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200384) GetVisionConsumerUrlOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetVisionConsumerUrlOk returns a tuple with the VisionConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetVisionConsumerUrl
 
-`func (o *InlineResponse200384) SetDownstream(v float32)`
+`func (o *InlineResponse200384) SetVisionConsumerUrl(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetVisionConsumerUrl sets VisionConsumerUrl field to given value.
 
-### HasDownstream
+### HasVisionConsumerUrl
 
-`func (o *InlineResponse200384) HasDownstream() bool`
+`func (o *InlineResponse200384) HasVisionConsumerUrl() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasVisionConsumerUrl returns a boolean if a field has been set.
 
-### GetUpstream
+### GetX509certSha1Fingerprint
 
-`func (o *InlineResponse200384) GetUpstream() float32`
+`func (o *InlineResponse200384) GetX509certSha1Fingerprint() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineResponse200384) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse200384) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetX509certSha1Fingerprint
 
-`func (o *InlineResponse200384) SetUpstream(v float32)`
+`func (o *InlineResponse200384) SetX509certSha1Fingerprint(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasUpstream
+### HasX509certSha1Fingerprint
 
-`func (o *InlineResponse200384) HasUpstream() bool`
+`func (o *InlineResponse200384) HasX509certSha1Fingerprint() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-### GetPercentage
+### GetSsoLoginUrl
 
-`func (o *InlineResponse200384) GetPercentage() float32`
+`func (o *InlineResponse200384) GetSsoLoginUrl() string`
 
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
+GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
 
-### GetPercentageOk
+### GetSsoLoginUrlOk
 
-`func (o *InlineResponse200384) GetPercentageOk() (*float32, bool)`
+`func (o *InlineResponse200384) GetSsoLoginUrlOk() (*string, bool)`
 
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
+GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPercentage
+### SetSsoLoginUrl
 
-`func (o *InlineResponse200384) SetPercentage(v float32)`
+`func (o *InlineResponse200384) SetSsoLoginUrl(v string)`
 
-SetPercentage sets Percentage field to given value.
+SetSsoLoginUrl sets SsoLoginUrl field to given value.
 
-### HasPercentage
+### HasSsoLoginUrl
 
-`func (o *InlineResponse200384) HasPercentage() bool`
+`func (o *InlineResponse200384) HasSsoLoginUrl() bool`
 
-HasPercentage returns a boolean if a field has been set.
+HasSsoLoginUrl returns a boolean if a field has been set.
+
+### GetSloLogoutUrl
+
+`func (o *InlineResponse200384) GetSloLogoutUrl() string`
+
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+
+### GetSloLogoutUrlOk
+
+`func (o *InlineResponse200384) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSloLogoutUrl
+
+`func (o *InlineResponse200384) SetSloLogoutUrl(v string)`
+
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
+
+### HasSloLogoutUrl
+
+`func (o *InlineResponse200384) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject18(int32(123)) // InlineObject18 | 
+    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject20(int32(123)) // InlineObject20 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsLedsB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsLedsBlink** | [**InlineObject18**](InlineObject18.md) |  | 
+ **createDeviceLiveToolsLedsBlink** | [**InlineObject20**](InlineObject20.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsLedsBlink
 
-> InlineResponse20029 GetDeviceLiveToolsLedsBlink(ctx, serial, ledsBlinkId).Execute()
+> InlineResponse20033 GetDeviceLiveToolsLedsBlink(ctx, serial, ledsBlinkId).Execute()
 
 Return a blink LEDs job
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LedsApi.GetDeviceLiveToolsLedsBlink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsLedsBlink`: InlineResponse20029
+    // response from `GetDeviceLiveToolsLedsBlink`: InlineResponse20033
     fmt.Fprintf(os.Stdout, "Response from `LedsApi.GetDeviceLiveToolsLedsBlink`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 

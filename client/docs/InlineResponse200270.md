@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200270Items**](InlineResponse200270Items.md) | Alert Counts by Network | 
-**Meta** | [**InlineResponse200270Meta**](InlineResponse200270Meta.md) |  | 
+**Enabled** | Pointer to **bool** | Indicates whether VRFs are enabled for the organization&#39;s appliance configuration. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200270
 
-`func NewInlineResponse200270(items []InlineResponse200270Items, meta InlineResponse200270Meta, ) *InlineResponse200270`
+`func NewInlineResponse200270() *InlineResponse200270`
 
 NewInlineResponse200270 instantiates a new InlineResponse200270 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse200270WithDefaults instantiates a new InlineResponse200270 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetEnabled
 
-`func (o *InlineResponse200270) GetItems() []InlineResponse200270Items`
+`func (o *InlineResponse200270) GetEnabled() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200270) GetItemsOk() (*[]InlineResponse200270Items, bool)`
+`func (o *InlineResponse200270) GetEnabledOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetEnabled
 
-`func (o *InlineResponse200270) SetItems(v []InlineResponse200270Items)`
+`func (o *InlineResponse200270) SetEnabled(v bool)`
 
-SetItems sets Items field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetMeta
+`func (o *InlineResponse200270) HasEnabled() bool`
 
-`func (o *InlineResponse200270) GetMeta() InlineResponse200270Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200270) GetMetaOk() (*InlineResponse200270Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200270) SetMeta(v InlineResponse200270Meta)`
-
-SetMeta sets Meta field to given value.
-
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

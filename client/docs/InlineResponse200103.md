@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
-**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
-**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
-**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
+**Enabled** | Pointer to **bool** | Is the warm spare enabled | [optional] 
+**PrimarySerial** | Pointer to **string** | Serial number of the primary appliance | [optional] 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
+**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
+**Wan1** | Pointer to [**InlineResponse200103Wan1**](InlineResponse200103Wan1.md) |  | [optional] 
+**Wan2** | Pointer to [**InlineResponse200103Wan2**](InlineResponse200103Wan2.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineResponse200103WithDefaults instantiates a new InlineResponse200103 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientId
+### GetEnabled
 
-`func (o *InlineResponse200103) GetClientId() string`
+`func (o *InlineResponse200103) GetEnabled() bool`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200103) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200103) GetEnabledOk() (*bool, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetEnabled
 
-`func (o *InlineResponse200103) SetClientId(v string)`
+`func (o *InlineResponse200103) SetEnabled(v bool)`
 
-SetClientId sets ClientId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasClientId
+### HasEnabled
 
-`func (o *InlineResponse200103) HasClientId() bool`
+`func (o *InlineResponse200103) HasEnabled() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetClientIp
+### GetPrimarySerial
 
-`func (o *InlineResponse200103) GetClientIp() string`
+`func (o *InlineResponse200103) GetPrimarySerial() string`
 
-GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
+GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
 
-### GetClientIpOk
+### GetPrimarySerialOk
 
-`func (o *InlineResponse200103) GetClientIpOk() (*string, bool)`
+`func (o *InlineResponse200103) GetPrimarySerialOk() (*string, bool)`
 
-GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
+GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientIp
+### SetPrimarySerial
 
-`func (o *InlineResponse200103) SetClientIp(v string)`
+`func (o *InlineResponse200103) SetPrimarySerial(v string)`
 
-SetClientIp sets ClientIp field to given value.
+SetPrimarySerial sets PrimarySerial field to given value.
 
-### HasClientIp
+### HasPrimarySerial
 
-`func (o *InlineResponse200103) HasClientIp() bool`
+`func (o *InlineResponse200103) HasPrimarySerial() bool`
 
-HasClientIp returns a boolean if a field has been set.
+HasPrimarySerial returns a boolean if a field has been set.
 
-### GetClientMac
+### GetSpareSerial
 
-`func (o *InlineResponse200103) GetClientMac() string`
+`func (o *InlineResponse200103) GetSpareSerial() string`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetSpareSerialOk
 
-`func (o *InlineResponse200103) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse200103) GetSpareSerialOk() (*string, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetSpareSerial
 
-`func (o *InlineResponse200103) SetClientMac(v string)`
+`func (o *InlineResponse200103) SetSpareSerial(v string)`
 
-SetClientMac sets ClientMac field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasClientMac
+### HasSpareSerial
 
-`func (o *InlineResponse200103) HasClientMac() bool`
+`func (o *InlineResponse200103) HasSpareSerial() bool`
 
-HasClientMac returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
-### GetUsageHistory
+### GetUplinkMode
 
-`func (o *InlineResponse200103) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
+`func (o *InlineResponse200103) GetUplinkMode() string`
 
-GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
+GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
 
-### GetUsageHistoryOk
+### GetUplinkModeOk
 
-`func (o *InlineResponse200103) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
+`func (o *InlineResponse200103) GetUplinkModeOk() (*string, bool)`
 
-GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
+GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsageHistory
+### SetUplinkMode
 
-`func (o *InlineResponse200103) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
+`func (o *InlineResponse200103) SetUplinkMode(v string)`
 
-SetUsageHistory sets UsageHistory field to given value.
+SetUplinkMode sets UplinkMode field to given value.
 
-### HasUsageHistory
+### HasUplinkMode
 
-`func (o *InlineResponse200103) HasUsageHistory() bool`
+`func (o *InlineResponse200103) HasUplinkMode() bool`
 
-HasUsageHistory returns a boolean if a field has been set.
+HasUplinkMode returns a boolean if a field has been set.
+
+### GetWan1
+
+`func (o *InlineResponse200103) GetWan1() InlineResponse200103Wan1`
+
+GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+
+### GetWan1Ok
+
+`func (o *InlineResponse200103) GetWan1Ok() (*InlineResponse200103Wan1, bool)`
+
+GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWan1
+
+`func (o *InlineResponse200103) SetWan1(v InlineResponse200103Wan1)`
+
+SetWan1 sets Wan1 field to given value.
+
+### HasWan1
+
+`func (o *InlineResponse200103) HasWan1() bool`
+
+HasWan1 returns a boolean if a field has been set.
+
+### GetWan2
+
+`func (o *InlineResponse200103) GetWan2() InlineResponse200103Wan2`
+
+GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+
+### GetWan2Ok
+
+`func (o *InlineResponse200103) GetWan2Ok() (*InlineResponse200103Wan2, bool)`
+
+GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWan2
+
+`func (o *InlineResponse200103) SetWan2(v InlineResponse200103Wan2)`
+
+SetWan2 sets Wan2 field to given value.
+
+### HasWan2
+
+`func (o *InlineResponse200103) HasWan2() bool`
+
+HasWan2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

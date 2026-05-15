@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
+**Name** | **string** | Name of the group | 
+**Sgt** | **int32** | SGT value of the group | 
+**Description** | Pointer to **string** | Description of the group (default: \&quot;\&quot;) | [optional] 
+**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) (default: []) | [optional] 
 
 ## Methods
 
 ### NewInlineObject223
 
-`func NewInlineObject223() *InlineObject223`
+`func NewInlineObject223(name string, sgt int32, ) *InlineObject223`
 
 NewInlineObject223 instantiates a new InlineObject223 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +28,95 @@ NewInlineObject223WithDefaults instantiates a new InlineObject223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabledNetworks
+### GetName
 
-`func (o *InlineObject223) GetEnabledNetworks() []string`
+`func (o *InlineObject223) GetName() string`
 
-GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledNetworksOk
+### GetNameOk
 
-`func (o *InlineObject223) GetEnabledNetworksOk() (*[]string, bool)`
+`func (o *InlineObject223) GetNameOk() (*string, bool)`
 
-GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabledNetworks
+### SetName
 
-`func (o *InlineObject223) SetEnabledNetworks(v []string)`
+`func (o *InlineObject223) SetName(v string)`
 
-SetEnabledNetworks sets EnabledNetworks field to given value.
+SetName sets Name field to given value.
 
-### HasEnabledNetworks
 
-`func (o *InlineObject223) HasEnabledNetworks() bool`
+### GetSgt
 
-HasEnabledNetworks returns a boolean if a field has been set.
+`func (o *InlineObject223) GetSgt() int32`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineObject223) GetSgtOk() (*int32, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineObject223) SetSgt(v int32)`
+
+SetSgt sets Sgt field to given value.
+
+
+### GetDescription
+
+`func (o *InlineObject223) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject223) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject223) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject223) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetPolicyObjects
+
+`func (o *InlineObject223) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
+
+GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
+
+### GetPolicyObjectsOk
+
+`func (o *InlineObject223) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
+
+GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicyObjects
+
+`func (o *InlineObject223) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
+
+SetPolicyObjects sets PolicyObjects field to given value.
+
+### HasPolicyObjects
+
+`func (o *InlineObject223) HasPolicyObjects() bool`
+
+HasPolicyObjects returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

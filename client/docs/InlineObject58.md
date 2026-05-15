@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new profile. Must be unique. This param is required on creation. | 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesFiveGhzSettings.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
+**SpoofingProtection** | Pointer to [**InlineResponse20078SpoofingProtection**](InlineResponse20078SpoofingProtection.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject58
 
-`func NewInlineObject58(name string, ) *InlineObject58`
+`func NewInlineObject58() *InlineObject58`
 
 NewInlineObject58 instantiates a new InlineObject58 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +25,30 @@ NewInlineObject58WithDefaults instantiates a new InlineObject58 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSpoofingProtection
 
-`func (o *InlineObject58) GetName() string`
+`func (o *InlineObject58) GetSpoofingProtection() InlineResponse20078SpoofingProtection`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSpoofingProtectionOk
 
-`func (o *InlineObject58) GetNameOk() (*string, bool)`
+`func (o *InlineObject58) GetSpoofingProtectionOk() (*InlineResponse20078SpoofingProtection, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSpoofingProtection
 
-`func (o *InlineObject58) SetName(v string)`
+`func (o *InlineObject58) SetSpoofingProtection(v InlineResponse20078SpoofingProtection)`
 
-SetName sets Name field to given value.
+SetSpoofingProtection sets SpoofingProtection field to given value.
 
+### HasSpoofingProtection
 
-### GetTwoFourGhzSettings
+`func (o *InlineObject58) HasSpoofingProtection() bool`
 
-`func (o *InlineObject58) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject58) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTwoFourGhzSettings
-
-`func (o *InlineObject58) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings)`
-
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
-
-### HasTwoFourGhzSettings
-
-`func (o *InlineObject58) HasTwoFourGhzSettings() bool`
-
-HasTwoFourGhzSettings returns a boolean if a field has been set.
-
-### GetFiveGhzSettings
-
-`func (o *InlineObject58) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesFiveGhzSettings`
-
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
-
-### GetFiveGhzSettingsOk
-
-`func (o *InlineObject58) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesFiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFiveGhzSettings
-
-`func (o *InlineObject58) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesFiveGhzSettings)`
-
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
-
-### HasFiveGhzSettings
-
-`func (o *InlineObject58) HasFiveGhzSettings() bool`
-
-HasFiveGhzSettings returns a boolean if a field has been set.
-
-### GetPerSsidSettings
-
-`func (o *InlineObject58) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
-
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
-
-### GetPerSsidSettingsOk
-
-`func (o *InlineObject58) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
-
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPerSsidSettings
-
-`func (o *InlineObject58) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
-
-SetPerSsidSettings sets PerSsidSettings field to given value.
-
-### HasPerSsidSettings
-
-`func (o *InlineObject58) HasPerSsidSettings() bool`
-
-HasPerSsidSettings returns a boolean if a field has been set.
+HasSpoofingProtection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

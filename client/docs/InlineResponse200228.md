@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
-**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
-**ExpiresAt** | Pointer to **NullableTime** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**BackgroundTraffic** | Pointer to [**InlineResponse20058LatencyStatsBackgroundTraffic**](InlineResponse20058LatencyStatsBackgroundTraffic.md) |  | [optional] 
+**BestEffortTraffic** | Pointer to [**InlineResponse20058LatencyStatsBestEffortTraffic**](InlineResponse20058LatencyStatsBestEffortTraffic.md) |  | [optional] 
+**VideoTraffic** | Pointer to [**InlineResponse20058LatencyStatsVideoTraffic**](InlineResponse20058LatencyStatsVideoTraffic.md) |  | [optional] 
+**VoiceTraffic** | Pointer to [**InlineResponse20058LatencyStatsVoiceTraffic**](InlineResponse20058LatencyStatsVoiceTraffic.md) |  | [optional] 
 
 ## Methods
 
@@ -31,191 +28,106 @@ NewInlineResponse200228WithDefaults instantiates a new InlineResponse200228 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetBackgroundTraffic
 
-`func (o *InlineResponse200228) GetName() string`
+`func (o *InlineResponse200228) GetBackgroundTraffic() InlineResponse20058LatencyStatsBackgroundTraffic`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBackgroundTraffic returns the BackgroundTraffic field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBackgroundTrafficOk
 
-`func (o *InlineResponse200228) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200228) GetBackgroundTrafficOk() (*InlineResponse20058LatencyStatsBackgroundTraffic, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBackgroundTrafficOk returns a tuple with the BackgroundTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBackgroundTraffic
 
-`func (o *InlineResponse200228) SetName(v string)`
+`func (o *InlineResponse200228) SetBackgroundTraffic(v InlineResponse20058LatencyStatsBackgroundTraffic)`
 
-SetName sets Name field to given value.
+SetBackgroundTraffic sets BackgroundTraffic field to given value.
 
-### HasName
+### HasBackgroundTraffic
 
-`func (o *InlineResponse200228) HasName() bool`
+`func (o *InlineResponse200228) HasBackgroundTraffic() bool`
 
-HasName returns a boolean if a field has been set.
+HasBackgroundTraffic returns a boolean if a field has been set.
 
-### GetId
+### GetBestEffortTraffic
 
-`func (o *InlineResponse200228) GetId() string`
+`func (o *InlineResponse200228) GetBestEffortTraffic() InlineResponse20058LatencyStatsBestEffortTraffic`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetBestEffortTraffic returns the BestEffortTraffic field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetBestEffortTrafficOk
 
-`func (o *InlineResponse200228) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200228) GetBestEffortTrafficOk() (*InlineResponse20058LatencyStatsBestEffortTraffic, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetBestEffortTrafficOk returns a tuple with the BestEffortTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetBestEffortTraffic
 
-`func (o *InlineResponse200228) SetId(v string)`
+`func (o *InlineResponse200228) SetBestEffortTraffic(v InlineResponse20058LatencyStatsBestEffortTraffic)`
 
-SetId sets Id field to given value.
+SetBestEffortTraffic sets BestEffortTraffic field to given value.
 
-### HasId
+### HasBestEffortTraffic
 
-`func (o *InlineResponse200228) HasId() bool`
+`func (o *InlineResponse200228) HasBestEffortTraffic() bool`
 
-HasId returns a boolean if a field has been set.
+HasBestEffortTraffic returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetVideoTraffic
 
-`func (o *InlineResponse200228) GetGroupPolicyId() string`
+`func (o *InlineResponse200228) GetVideoTraffic() InlineResponse20058LatencyStatsVideoTraffic`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetVideoTraffic returns the VideoTraffic field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetVideoTrafficOk
 
-`func (o *InlineResponse200228) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200228) GetVideoTrafficOk() (*InlineResponse20058LatencyStatsVideoTraffic, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetVideoTrafficOk returns a tuple with the VideoTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetVideoTraffic
 
-`func (o *InlineResponse200228) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200228) SetVideoTraffic(v InlineResponse20058LatencyStatsVideoTraffic)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetVideoTraffic sets VideoTraffic field to given value.
 
-### HasGroupPolicyId
+### HasVideoTraffic
 
-`func (o *InlineResponse200228) HasGroupPolicyId() bool`
+`func (o *InlineResponse200228) HasVideoTraffic() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasVideoTraffic returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetVoiceTraffic
 
-`func (o *InlineResponse200228) GetPassphrase() string`
+`func (o *InlineResponse200228) GetVoiceTraffic() InlineResponse20058LatencyStatsVoiceTraffic`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetVoiceTraffic returns the VoiceTraffic field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetVoiceTrafficOk
 
-`func (o *InlineResponse200228) GetPassphraseOk() (*string, bool)`
+`func (o *InlineResponse200228) GetVoiceTrafficOk() (*InlineResponse20058LatencyStatsVoiceTraffic, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetVoiceTrafficOk returns a tuple with the VoiceTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetVoiceTraffic
 
-`func (o *InlineResponse200228) SetPassphrase(v string)`
+`func (o *InlineResponse200228) SetVoiceTraffic(v InlineResponse20058LatencyStatsVoiceTraffic)`
 
-SetPassphrase sets Passphrase field to given value.
+SetVoiceTraffic sets VoiceTraffic field to given value.
 
-### HasPassphrase
+### HasVoiceTraffic
 
-`func (o *InlineResponse200228) HasPassphrase() bool`
+`func (o *InlineResponse200228) HasVoiceTraffic() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasVoiceTraffic returns a boolean if a field has been set.
 
-### GetWifiPersonalNetworkId
-
-`func (o *InlineResponse200228) GetWifiPersonalNetworkId() string`
-
-GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
-
-### GetWifiPersonalNetworkIdOk
-
-`func (o *InlineResponse200228) GetWifiPersonalNetworkIdOk() (*string, bool)`
-
-GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifiPersonalNetworkId
-
-`func (o *InlineResponse200228) SetWifiPersonalNetworkId(v string)`
-
-SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
-
-### HasWifiPersonalNetworkId
-
-`func (o *InlineResponse200228) HasWifiPersonalNetworkId() bool`
-
-HasWifiPersonalNetworkId returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200228) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200228) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200228) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200228) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
-
-### GetExpiresAt
-
-`func (o *InlineResponse200228) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineResponse200228) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineResponse200228) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineResponse200228) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
-
-### SetExpiresAtNil
-
-`func (o *InlineResponse200228) SetExpiresAtNil(b bool)`
-
- SetExpiresAtNil sets the value for ExpiresAt to be an explicit nil
-
-### UnsetExpiresAt
-`func (o *InlineResponse200228) UnsetExpiresAt()`
-
-UnsetExpiresAt ensures that no value is present for ExpiresAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

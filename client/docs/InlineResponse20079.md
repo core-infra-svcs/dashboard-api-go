@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**CustomPerformanceClassId** | Pointer to **string** | ID of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**Number** | Pointer to **int32** | Number of the port | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Whether the trunk port can drop all untagged traffic. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of VLAN IDs and/or ranges (for example, &#39;2-10,15&#39;), or &#39;all&#39; to permit all VLANs on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. | [optional] 
 
 ## Methods
 
@@ -29,130 +31,180 @@ NewInlineResponse20079WithDefaults instantiates a new InlineResponse20079 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetNumber
 
-`func (o *InlineResponse20079) GetName() string`
+`func (o *InlineResponse20079) GetNumber() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNumberOk
 
-`func (o *InlineResponse20079) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20079) GetNumberOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNumber
 
-`func (o *InlineResponse20079) SetName(v string)`
+`func (o *InlineResponse20079) SetNumber(v int32)`
 
-SetName sets Name field to given value.
+SetNumber sets Number field to given value.
 
-### HasName
+### HasNumber
 
-`func (o *InlineResponse20079) HasName() bool`
+`func (o *InlineResponse20079) HasNumber() bool`
 
-HasName returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
 
-### GetCustomPerformanceClassId
+### GetEnabled
 
-`func (o *InlineResponse20079) GetCustomPerformanceClassId() string`
+`func (o *InlineResponse20079) GetEnabled() bool`
 
-GetCustomPerformanceClassId returns the CustomPerformanceClassId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetCustomPerformanceClassIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20079) GetCustomPerformanceClassIdOk() (*string, bool)`
+`func (o *InlineResponse20079) GetEnabledOk() (*bool, bool)`
 
-GetCustomPerformanceClassIdOk returns a tuple with the CustomPerformanceClassId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPerformanceClassId
+### SetEnabled
 
-`func (o *InlineResponse20079) SetCustomPerformanceClassId(v string)`
+`func (o *InlineResponse20079) SetEnabled(v bool)`
 
-SetCustomPerformanceClassId sets CustomPerformanceClassId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasCustomPerformanceClassId
+### HasEnabled
 
-`func (o *InlineResponse20079) HasCustomPerformanceClassId() bool`
+`func (o *InlineResponse20079) HasEnabled() bool`
 
-HasCustomPerformanceClassId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMaxLatency
+### GetType
 
-`func (o *InlineResponse20079) GetMaxLatency() int32`
+`func (o *InlineResponse20079) GetType() string`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetTypeOk
 
-`func (o *InlineResponse20079) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineResponse20079) GetTypeOk() (*string, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetType
 
-`func (o *InlineResponse20079) SetMaxLatency(v int32)`
+`func (o *InlineResponse20079) SetType(v string)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetType sets Type field to given value.
 
-### HasMaxLatency
+### HasType
 
-`func (o *InlineResponse20079) HasMaxLatency() bool`
+`func (o *InlineResponse20079) HasType() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetMaxJitter
+### GetDropUntaggedTraffic
 
-`func (o *InlineResponse20079) GetMaxJitter() int32`
+`func (o *InlineResponse20079) GetDropUntaggedTraffic() bool`
 
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-### GetMaxJitterOk
+### GetDropUntaggedTrafficOk
 
-`func (o *InlineResponse20079) GetMaxJitterOk() (*int32, bool)`
+`func (o *InlineResponse20079) GetDropUntaggedTrafficOk() (*bool, bool)`
 
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetDropUntaggedTraffic
 
-`func (o *InlineResponse20079) SetMaxJitter(v int32)`
+`func (o *InlineResponse20079) SetDropUntaggedTraffic(v bool)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
-### HasMaxJitter
+### HasDropUntaggedTraffic
 
-`func (o *InlineResponse20079) HasMaxJitter() bool`
+`func (o *InlineResponse20079) HasDropUntaggedTraffic() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
+HasDropUntaggedTraffic returns a boolean if a field has been set.
 
-### GetMaxLossPercentage
+### GetVlan
 
-`func (o *InlineResponse20079) GetMaxLossPercentage() int32`
+`func (o *InlineResponse20079) GetVlan() int32`
 
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetMaxLossPercentageOk
+### GetVlanOk
 
-`func (o *InlineResponse20079) GetMaxLossPercentageOk() (*int32, bool)`
+`func (o *InlineResponse20079) GetVlanOk() (*int32, bool)`
 
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLossPercentage
+### SetVlan
 
-`func (o *InlineResponse20079) SetMaxLossPercentage(v int32)`
+`func (o *InlineResponse20079) SetVlan(v int32)`
 
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasMaxLossPercentage
+### HasVlan
 
-`func (o *InlineResponse20079) HasMaxLossPercentage() bool`
+`func (o *InlineResponse20079) HasVlan() bool`
 
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineResponse20079) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineResponse20079) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineResponse20079) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineResponse20079) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineResponse20079) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineResponse20079) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineResponse20079) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineResponse20079) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

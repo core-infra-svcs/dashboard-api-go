@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**[]InlineResponse200306Counts**](InlineResponse200306Counts.md) | Counts of devices per model | [optional] 
+**Eid** | **string** | eSIM EID | 
+**Iccid** | **string** | eSIM ICCID | 
+**Status** | **string** | Swap status | 
 
 ## Methods
 
 ### NewInlineResponse200306
 
-`func NewInlineResponse200306() *InlineResponse200306`
+`func NewInlineResponse200306(eid string, iccid string, status string, ) *InlineResponse200306`
 
 NewInlineResponse200306 instantiates a new InlineResponse200306 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +27,65 @@ NewInlineResponse200306WithDefaults instantiates a new InlineResponse200306 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetEid
 
-`func (o *InlineResponse200306) GetCounts() []InlineResponse200306Counts`
+`func (o *InlineResponse200306) GetEid() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetEid returns the Eid field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetEidOk
 
-`func (o *InlineResponse200306) GetCountsOk() (*[]InlineResponse200306Counts, bool)`
+`func (o *InlineResponse200306) GetEidOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetEid
 
-`func (o *InlineResponse200306) SetCounts(v []InlineResponse200306Counts)`
+`func (o *InlineResponse200306) SetEid(v string)`
 
-SetCounts sets Counts field to given value.
+SetEid sets Eid field to given value.
 
-### HasCounts
 
-`func (o *InlineResponse200306) HasCounts() bool`
+### GetIccid
 
-HasCounts returns a boolean if a field has been set.
+`func (o *InlineResponse200306) GetIccid() string`
+
+GetIccid returns the Iccid field if non-nil, zero value otherwise.
+
+### GetIccidOk
+
+`func (o *InlineResponse200306) GetIccidOk() (*string, bool)`
+
+GetIccidOk returns a tuple with the Iccid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIccid
+
+`func (o *InlineResponse200306) SetIccid(v string)`
+
+SetIccid sets Iccid field to given value.
+
+
+### GetStatus
+
+`func (o *InlineResponse200306) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200306) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200306) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

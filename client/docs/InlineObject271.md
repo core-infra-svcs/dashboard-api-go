@@ -4,13 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Serials** | **[]string** | The serial(s) of the device(s) | 
+**Name** | **string** | Name of packet capture file | 
+**OutputType** | Pointer to **string** | Output type of packet capture file. Possible values: text, pcap, cloudshark, or upload_to_cloud | [optional] 
+**Destination** | Pointer to **string** | Destination of packet capture file. Possible values: [upload_to_cloud] | [optional] 
+**Ports** | Pointer to **string** | Ports of packet capture file, comma-separated | [optional] 
+**Notes** | Pointer to **string** | Reason for taking the packet capture | [optional] 
+**Duration** | Pointer to **int32** | Duration in seconds of packet capture | [optional] 
+**FilterExpression** | Pointer to **string** | Filter expression for packet capture | [optional] 
+**Interface** | Pointer to **string** | Interface of the device | [optional] 
+**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject271
 
-`func NewInlineObject271() *InlineObject271`
+`func NewInlineObject271(serials []string, name string, ) *InlineObject271`
 
 NewInlineObject271 instantiates a new InlineObject271 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +34,245 @@ NewInlineObject271WithDefaults instantiates a new InlineObject271 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLimitScopeToNetworks
+### GetSerials
 
-`func (o *InlineObject271) GetLimitScopeToNetworks() []string`
+`func (o *InlineObject271) GetSerials() []string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetSerialsOk
 
-`func (o *InlineObject271) GetLimitScopeToNetworksOk() (*[]string, bool)`
+`func (o *InlineObject271) GetSerialsOk() (*[]string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetSerials
 
-`func (o *InlineObject271) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject271) SetSerials(v []string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetSerials sets Serials field to given value.
 
-### HasLimitScopeToNetworks
 
-`func (o *InlineObject271) HasLimitScopeToNetworks() bool`
+### GetName
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+`func (o *InlineObject271) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineObject271) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineObject271) SetName(v string)`
+
+SetName sets Name field to given value.
+
+
+### GetOutputType
+
+`func (o *InlineObject271) GetOutputType() string`
+
+GetOutputType returns the OutputType field if non-nil, zero value otherwise.
+
+### GetOutputTypeOk
+
+`func (o *InlineObject271) GetOutputTypeOk() (*string, bool)`
+
+GetOutputTypeOk returns a tuple with the OutputType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOutputType
+
+`func (o *InlineObject271) SetOutputType(v string)`
+
+SetOutputType sets OutputType field to given value.
+
+### HasOutputType
+
+`func (o *InlineObject271) HasOutputType() bool`
+
+HasOutputType returns a boolean if a field has been set.
+
+### GetDestination
+
+`func (o *InlineObject271) GetDestination() string`
+
+GetDestination returns the Destination field if non-nil, zero value otherwise.
+
+### GetDestinationOk
+
+`func (o *InlineObject271) GetDestinationOk() (*string, bool)`
+
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestination
+
+`func (o *InlineObject271) SetDestination(v string)`
+
+SetDestination sets Destination field to given value.
+
+### HasDestination
+
+`func (o *InlineObject271) HasDestination() bool`
+
+HasDestination returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineObject271) GetPorts() string`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineObject271) GetPortsOk() (*string, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineObject271) SetPorts(v string)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineObject271) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject271) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject271) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject271) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject271) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetDuration
+
+`func (o *InlineObject271) GetDuration() int32`
+
+GetDuration returns the Duration field if non-nil, zero value otherwise.
+
+### GetDurationOk
+
+`func (o *InlineObject271) GetDurationOk() (*int32, bool)`
+
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDuration
+
+`func (o *InlineObject271) SetDuration(v int32)`
+
+SetDuration sets Duration field to given value.
+
+### HasDuration
+
+`func (o *InlineObject271) HasDuration() bool`
+
+HasDuration returns a boolean if a field has been set.
+
+### GetFilterExpression
+
+`func (o *InlineObject271) GetFilterExpression() string`
+
+GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
+
+### GetFilterExpressionOk
+
+`func (o *InlineObject271) GetFilterExpressionOk() (*string, bool)`
+
+GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilterExpression
+
+`func (o *InlineObject271) SetFilterExpression(v string)`
+
+SetFilterExpression sets FilterExpression field to given value.
+
+### HasFilterExpression
+
+`func (o *InlineObject271) HasFilterExpression() bool`
+
+HasFilterExpression returns a boolean if a field has been set.
+
+### GetInterface
+
+`func (o *InlineObject271) GetInterface() string`
+
+GetInterface returns the Interface field if non-nil, zero value otherwise.
+
+### GetInterfaceOk
+
+`func (o *InlineObject271) GetInterfaceOk() (*string, bool)`
+
+GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterface
+
+`func (o *InlineObject271) SetInterface(v string)`
+
+SetInterface sets Interface field to given value.
+
+### HasInterface
+
+`func (o *InlineObject271) HasInterface() bool`
+
+HasInterface returns a boolean if a field has been set.
+
+### GetAdvanced
+
+`func (o *InlineObject271) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced`
+
+GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
+
+### GetAdvancedOk
+
+`func (o *InlineObject271) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced, bool)`
+
+GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvanced
+
+`func (o *InlineObject271) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced)`
+
+SetAdvanced sets Advanced field to given value.
+
+### HasAdvanced
+
+`func (o *InlineObject271) HasAdvanced() bool`
+
+HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

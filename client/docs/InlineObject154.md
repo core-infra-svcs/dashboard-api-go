@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleIds** | **[]string** | A list of quality of service rule IDs arranged in order in which they should be processed by the switch. | 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200188Overrides**](InlineResponse200188Overrides.md) | Override MTU size for individual switches or switch templates. An empty array will clear overrides. | [optional] 
 
 ## Methods
 
 ### NewInlineObject154
 
-`func NewInlineObject154(ruleIds []string, ) *InlineObject154`
+`func NewInlineObject154() *InlineObject154`
 
 NewInlineObject154 instantiates a new InlineObject154 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject154WithDefaults instantiates a new InlineObject154 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRuleIds
+### GetDefaultMtuSize
 
-`func (o *InlineObject154) GetRuleIds() []string`
+`func (o *InlineObject154) GetDefaultMtuSize() int32`
 
-GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetRuleIdsOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineObject154) GetRuleIdsOk() (*[]string, bool)`
+`func (o *InlineObject154) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleIds
+### SetDefaultMtuSize
 
-`func (o *InlineObject154) SetRuleIds(v []string)`
+`func (o *InlineObject154) SetDefaultMtuSize(v int32)`
 
-SetRuleIds sets RuleIds field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
+### HasDefaultMtuSize
+
+`func (o *InlineObject154) HasDefaultMtuSize() bool`
+
+HasDefaultMtuSize returns a boolean if a field has been set.
+
+### GetOverrides
+
+`func (o *InlineObject154) GetOverrides() []InlineResponse200188Overrides`
+
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+
+### GetOverridesOk
+
+`func (o *InlineObject154) GetOverridesOk() (*[]InlineResponse200188Overrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOverrides
+
+`func (o *InlineObject154) SetOverrides(v []InlineResponse200188Overrides)`
+
+SetOverrides sets Overrides field to given value.
+
+### HasOverrides
+
+`func (o *InlineObject154) HasOverrides() bool`
+
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

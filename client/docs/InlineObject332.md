@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
-**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
-**Ble** | Pointer to [**InlineResponse200424Ble**](InlineResponse200424Ble.md) |  | [optional] 
-**Wifi** | Pointer to [**InlineResponse200424Wifi**](InlineResponse200424Wifi.md) |  | [optional] 
+**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
+**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
 
 ## Methods
 
 ### NewInlineObject332
 
-`func NewInlineObject332(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject332`
+`func NewInlineObject332(sourceSerial string, targetSerials []string, ) *InlineObject332`
 
 NewInlineObject332 instantiates a new InlineObject332 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,45 @@ NewInlineObject332WithDefaults instantiates a new InlineObject332 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetSourceSerial
 
-`func (o *InlineObject332) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
+`func (o *InlineObject332) GetSourceSerial() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetSourceSerialOk
 
-`func (o *InlineObject332) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
+`func (o *InlineObject332) GetSourceSerialOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetSourceSerial
 
-`func (o *InlineObject332) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
+`func (o *InlineObject332) SetSourceSerial(v string)`
 
-SetNetwork sets Network field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
 
-### GetMqtt
+### GetTargetSerials
 
-`func (o *InlineObject332) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
+`func (o *InlineObject332) GetTargetSerials() []string`
 
-GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-### GetMqttOk
+### GetTargetSerialsOk
 
-`func (o *InlineObject332) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
+`func (o *InlineObject332) GetTargetSerialsOk() (*[]string, bool)`
 
-GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqtt
+### SetTargetSerials
 
-`func (o *InlineObject332) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
+`func (o *InlineObject332) SetTargetSerials(v []string)`
 
-SetMqtt sets Mqtt field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
-
-### GetBle
-
-`func (o *InlineObject332) GetBle() InlineResponse200424Ble`
-
-GetBle returns the Ble field if non-nil, zero value otherwise.
-
-### GetBleOk
-
-`func (o *InlineObject332) GetBleOk() (*InlineResponse200424Ble, bool)`
-
-GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBle
-
-`func (o *InlineObject332) SetBle(v InlineResponse200424Ble)`
-
-SetBle sets Ble field to given value.
-
-### HasBle
-
-`func (o *InlineObject332) HasBle() bool`
-
-HasBle returns a boolean if a field has been set.
-
-### GetWifi
-
-`func (o *InlineObject332) GetWifi() InlineResponse200424Wifi`
-
-GetWifi returns the Wifi field if non-nil, zero value otherwise.
-
-### GetWifiOk
-
-`func (o *InlineObject332) GetWifiOk() (*InlineResponse200424Wifi, bool)`
-
-GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifi
-
-`func (o *InlineObject332) SetWifi(v InlineResponse200424Wifi)`
-
-SetWifi sets Wifi field to given value.
-
-### HasWifi
-
-`func (o *InlineObject332) HasWifi() bool`
-
-HasWifi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

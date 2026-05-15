@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
-**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
+**ClaimId** | **string** | The unique order claim id | 
+**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
 
 ## Methods
 
 ### NewInlineObject287
 
-`func NewInlineObject287(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject287`
+`func NewInlineObject287(claimId string, ) *InlineObject287`
 
 NewInlineObject287 instantiates a new InlineObject287 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,50 @@ NewInlineObject287WithDefaults instantiates a new InlineObject287 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseIdToRenew
+### GetClaimId
 
-`func (o *InlineObject287) GetLicenseIdToRenew() string`
+`func (o *InlineObject287) GetClaimId() string`
 
-GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetLicenseIdToRenewOk
+### GetClaimIdOk
 
-`func (o *InlineObject287) GetLicenseIdToRenewOk() (*string, bool)`
+`func (o *InlineObject287) GetClaimIdOk() (*string, bool)`
 
-GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIdToRenew
+### SetClaimId
 
-`func (o *InlineObject287) SetLicenseIdToRenew(v string)`
+`func (o *InlineObject287) SetClaimId(v string)`
 
-SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
+SetClaimId sets ClaimId field to given value.
 
 
-### GetUnusedLicenseId
+### GetSubscriptions
 
-`func (o *InlineObject287) GetUnusedLicenseId() string`
+`func (o *InlineObject287) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
 
-GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
 
-### GetUnusedLicenseIdOk
+### GetSubscriptionsOk
 
-`func (o *InlineObject287) GetUnusedLicenseIdOk() (*string, bool)`
+`func (o *InlineObject287) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
 
-GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnusedLicenseId
+### SetSubscriptions
 
-`func (o *InlineObject287) SetUnusedLicenseId(v string)`
+`func (o *InlineObject287) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
 
-SetUnusedLicenseId sets UnusedLicenseId field to given value.
+SetSubscriptions sets Subscriptions field to given value.
 
+### HasSubscriptions
+
+`func (o *InlineObject287) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

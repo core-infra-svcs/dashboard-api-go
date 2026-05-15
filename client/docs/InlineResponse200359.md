@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
-**SpInitiated** | Pointer to [**InlineResponse200359SpInitiated**](InlineResponse200359SpInitiated.md) |  | [optional] 
+**ClaimId** | Pointer to **string** | The secure unique order claim number | [optional] 
+**Resolution** | Pointer to [**InlineResponse200359Resolution**](InlineResponse200359Resolution.md) |  | [optional] 
+**Number** | Pointer to **string** | Order Number | [optional] 
+**Shipping** | Pointer to [**InlineResponse200359Shipping**](InlineResponse200359Shipping.md) |  | [optional] 
+**Subscriptions** | Pointer to [**[]InlineResponse200358Subscriptions**](InlineResponse200358Subscriptions.md) | All subscriptions contained in this order | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200359WithDefaults instantiates a new InlineResponse200359 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetClaimId
 
-`func (o *InlineResponse200359) GetEnabled() bool`
+`func (o *InlineResponse200359) GetClaimId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetClaimIdOk
 
-`func (o *InlineResponse200359) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200359) GetClaimIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetClaimId
 
-`func (o *InlineResponse200359) SetEnabled(v bool)`
+`func (o *InlineResponse200359) SetClaimId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetClaimId sets ClaimId field to given value.
 
-### HasEnabled
+### HasClaimId
 
-`func (o *InlineResponse200359) HasEnabled() bool`
+`func (o *InlineResponse200359) HasClaimId() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasClaimId returns a boolean if a field has been set.
 
-### GetSpInitiated
+### GetResolution
 
-`func (o *InlineResponse200359) GetSpInitiated() InlineResponse200359SpInitiated`
+`func (o *InlineResponse200359) GetResolution() InlineResponse200359Resolution`
 
-GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+GetResolution returns the Resolution field if non-nil, zero value otherwise.
 
-### GetSpInitiatedOk
+### GetResolutionOk
 
-`func (o *InlineResponse200359) GetSpInitiatedOk() (*InlineResponse200359SpInitiated, bool)`
+`func (o *InlineResponse200359) GetResolutionOk() (*InlineResponse200359Resolution, bool)`
 
-GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpInitiated
+### SetResolution
 
-`func (o *InlineResponse200359) SetSpInitiated(v InlineResponse200359SpInitiated)`
+`func (o *InlineResponse200359) SetResolution(v InlineResponse200359Resolution)`
 
-SetSpInitiated sets SpInitiated field to given value.
+SetResolution sets Resolution field to given value.
 
-### HasSpInitiated
+### HasResolution
 
-`func (o *InlineResponse200359) HasSpInitiated() bool`
+`func (o *InlineResponse200359) HasResolution() bool`
 
-HasSpInitiated returns a boolean if a field has been set.
+HasResolution returns a boolean if a field has been set.
+
+### GetNumber
+
+`func (o *InlineResponse200359) GetNumber() string`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse200359) GetNumberOk() (*string, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse200359) SetNumber(v string)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse200359) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
+
+### GetShipping
+
+`func (o *InlineResponse200359) GetShipping() InlineResponse200359Shipping`
+
+GetShipping returns the Shipping field if non-nil, zero value otherwise.
+
+### GetShippingOk
+
+`func (o *InlineResponse200359) GetShippingOk() (*InlineResponse200359Shipping, bool)`
+
+GetShippingOk returns a tuple with the Shipping field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetShipping
+
+`func (o *InlineResponse200359) SetShipping(v InlineResponse200359Shipping)`
+
+SetShipping sets Shipping field to given value.
+
+### HasShipping
+
+`func (o *InlineResponse200359) HasShipping() bool`
+
+HasShipping returns a boolean if a field has been set.
+
+### GetSubscriptions
+
+`func (o *InlineResponse200359) GetSubscriptions() []InlineResponse200358Subscriptions`
+
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+
+### GetSubscriptionsOk
+
+`func (o *InlineResponse200359) GetSubscriptionsOk() (*[]InlineResponse200358Subscriptions, bool)`
+
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubscriptions
+
+`func (o *InlineResponse200359) SetSubscriptions(v []InlineResponse200358Subscriptions)`
+
+SetSubscriptions sets Subscriptions field to given value.
+
+### HasSubscriptions
+
+`func (o *InlineResponse200359) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

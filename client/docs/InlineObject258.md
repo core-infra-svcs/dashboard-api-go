@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
+**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject258WithDefaults instantiates a new InlineObject258 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTitle
 
-`func (o *InlineObject258) GetName() string`
+`func (o *InlineObject258) GetTitle() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTitleOk
 
-`func (o *InlineObject258) GetNameOk() (*string, bool)`
+`func (o *InlineObject258) GetTitleOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTitle
 
-`func (o *InlineObject258) SetName(v string)`
+`func (o *InlineObject258) SetTitle(v string)`
 
-SetName sets Name field to given value.
+SetTitle sets Title field to given value.
 
-### HasName
+### HasTitle
 
-`func (o *InlineObject258) HasName() bool`
+`func (o *InlineObject258) HasTitle() bool`
 
-HasName returns a boolean if a field has been set.
+HasTitle returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetApiKey
 
-`func (o *InlineObject258) GetTimeZone() string`
+`func (o *InlineObject258) GetApiKey() string`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetApiKeyOk
 
-`func (o *InlineObject258) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineObject258) GetApiKeyOk() (*string, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetApiKey
 
-`func (o *InlineObject258) SetTimeZone(v string)`
+`func (o *InlineObject258) SetApiKey(v string)`
 
-SetTimeZone sets TimeZone field to given value.
+SetApiKey sets ApiKey field to given value.
 
-### HasTimeZone
+### HasApiKey
 
-`func (o *InlineObject258) HasTimeZone() bool`
+`func (o *InlineObject258) HasApiKey() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasApiKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

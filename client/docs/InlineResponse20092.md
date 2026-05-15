@@ -4,17 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the client | [optional] 
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Name of the client | [optional] 
-**DeviceName** | Pointer to **string** | Bluetooth device name | [optional] 
-**Manufacturer** | Pointer to **string** | Name of the manufacturer | [optional] 
-**LastSeen** | Pointer to **int32** | Epoch timestamp of the device&#39;s last appearance | [optional] 
-**SeenByDeviceMac** | Pointer to **string** | Seen by device MAC | [optional] 
-**InSightAlert** | Pointer to **bool** | Device in sight alert | [optional] 
-**OutOfSightAlert** | Pointer to **bool** | Device out of sight alert | [optional] 
-**Tags** | Pointer to **[]string** | A list of tags applied to the device | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20092Rules**](InlineResponse20092Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -35,280 +26,55 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse20092) GetId() string`
+`func (o *InlineResponse20092) GetDefaultRulesEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse20092) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20092) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse20092) SetId(v string)`
+`func (o *InlineResponse20092) SetDefaultRulesEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasId
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse20092) HasId() bool`
+`func (o *InlineResponse20092) HasDefaultRulesEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetMac
+### GetRules
 
-`func (o *InlineResponse20092) GetMac() string`
+`func (o *InlineResponse20092) GetRules() []InlineResponse20092Rules`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetRulesOk
 
-`func (o *InlineResponse20092) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20092) GetRulesOk() (*[]InlineResponse20092Rules, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetRules
 
-`func (o *InlineResponse20092) SetMac(v string)`
+`func (o *InlineResponse20092) SetRules(v []InlineResponse20092Rules)`
 
-SetMac sets Mac field to given value.
+SetRules sets Rules field to given value.
 
-### HasMac
+### HasRules
 
-`func (o *InlineResponse20092) HasMac() bool`
+`func (o *InlineResponse20092) HasRules() bool`
 
-HasMac returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse20092) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse20092) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse20092) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse20092) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse20092) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse20092) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse20092) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse20092) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetDeviceName
-
-`func (o *InlineResponse20092) GetDeviceName() string`
-
-GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
-
-### GetDeviceNameOk
-
-`func (o *InlineResponse20092) GetDeviceNameOk() (*string, bool)`
-
-GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceName
-
-`func (o *InlineResponse20092) SetDeviceName(v string)`
-
-SetDeviceName sets DeviceName field to given value.
-
-### HasDeviceName
-
-`func (o *InlineResponse20092) HasDeviceName() bool`
-
-HasDeviceName returns a boolean if a field has been set.
-
-### GetManufacturer
-
-`func (o *InlineResponse20092) GetManufacturer() string`
-
-GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
-
-### GetManufacturerOk
-
-`func (o *InlineResponse20092) GetManufacturerOk() (*string, bool)`
-
-GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetManufacturer
-
-`func (o *InlineResponse20092) SetManufacturer(v string)`
-
-SetManufacturer sets Manufacturer field to given value.
-
-### HasManufacturer
-
-`func (o *InlineResponse20092) HasManufacturer() bool`
-
-HasManufacturer returns a boolean if a field has been set.
-
-### GetLastSeen
-
-`func (o *InlineResponse20092) GetLastSeen() int32`
-
-GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
-
-### GetLastSeenOk
-
-`func (o *InlineResponse20092) GetLastSeenOk() (*int32, bool)`
-
-GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastSeen
-
-`func (o *InlineResponse20092) SetLastSeen(v int32)`
-
-SetLastSeen sets LastSeen field to given value.
-
-### HasLastSeen
-
-`func (o *InlineResponse20092) HasLastSeen() bool`
-
-HasLastSeen returns a boolean if a field has been set.
-
-### GetSeenByDeviceMac
-
-`func (o *InlineResponse20092) GetSeenByDeviceMac() string`
-
-GetSeenByDeviceMac returns the SeenByDeviceMac field if non-nil, zero value otherwise.
-
-### GetSeenByDeviceMacOk
-
-`func (o *InlineResponse20092) GetSeenByDeviceMacOk() (*string, bool)`
-
-GetSeenByDeviceMacOk returns a tuple with the SeenByDeviceMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeenByDeviceMac
-
-`func (o *InlineResponse20092) SetSeenByDeviceMac(v string)`
-
-SetSeenByDeviceMac sets SeenByDeviceMac field to given value.
-
-### HasSeenByDeviceMac
-
-`func (o *InlineResponse20092) HasSeenByDeviceMac() bool`
-
-HasSeenByDeviceMac returns a boolean if a field has been set.
-
-### GetInSightAlert
-
-`func (o *InlineResponse20092) GetInSightAlert() bool`
-
-GetInSightAlert returns the InSightAlert field if non-nil, zero value otherwise.
-
-### GetInSightAlertOk
-
-`func (o *InlineResponse20092) GetInSightAlertOk() (*bool, bool)`
-
-GetInSightAlertOk returns a tuple with the InSightAlert field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInSightAlert
-
-`func (o *InlineResponse20092) SetInSightAlert(v bool)`
-
-SetInSightAlert sets InSightAlert field to given value.
-
-### HasInSightAlert
-
-`func (o *InlineResponse20092) HasInSightAlert() bool`
-
-HasInSightAlert returns a boolean if a field has been set.
-
-### GetOutOfSightAlert
-
-`func (o *InlineResponse20092) GetOutOfSightAlert() bool`
-
-GetOutOfSightAlert returns the OutOfSightAlert field if non-nil, zero value otherwise.
-
-### GetOutOfSightAlertOk
-
-`func (o *InlineResponse20092) GetOutOfSightAlertOk() (*bool, bool)`
-
-GetOutOfSightAlertOk returns a tuple with the OutOfSightAlert field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOutOfSightAlert
-
-`func (o *InlineResponse20092) SetOutOfSightAlert(v bool)`
-
-SetOutOfSightAlert sets OutOfSightAlert field to given value.
-
-### HasOutOfSightAlert
-
-`func (o *InlineResponse20092) HasOutOfSightAlert() bool`
-
-HasOutOfSightAlert returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20092) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20092) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20092) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20092) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,20 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of your floor plan. | 
-**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter1**](NetworksNetworkIdFloorPlansCenter1.md) |  | [optional] 
-**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner1**](NetworksNetworkIdFloorPlansBottomLeftCorner1.md) |  | [optional] 
-**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner1**](NetworksNetworkIdFloorPlansBottomRightCorner1.md) |  | [optional] 
-**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner1**](NetworksNetworkIdFloorPlansTopLeftCorner1.md) |  | [optional] 
-**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner1**](NetworksNetworkIdFloorPlansTopRightCorner1.md) |  | [optional] 
-**FloorNumber** | Pointer to **float32** | The floor number of the floors within the building | [optional] 
-**ImageContents** | **string** | The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | 
+**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All completed or in-progress stages in the network with their new start times. All pending stages will be canceled | 
+**Reasons** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons**](NetworksNetworkIdFirmwareUpgradesRollbacksReasons.md) | The reason for rolling back the staged upgrade | [optional] 
 
 ## Methods
 
 ### NewInlineObject108
 
-`func NewInlineObject108(name string, imageContents string, ) *InlineObject108`
+`func NewInlineObject108(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject108`
 
 NewInlineObject108 instantiates a new InlineObject108 object
 This constructor will assign default values to properties that have it defined,
@@ -32,195 +26,50 @@ NewInlineObject108WithDefaults instantiates a new InlineObject108 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStages
 
-`func (o *InlineObject108) GetName() string`
+`func (o *InlineObject108) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStages returns the Stages field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStagesOk
 
-`func (o *InlineObject108) GetNameOk() (*string, bool)`
+`func (o *InlineObject108) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStages
 
-`func (o *InlineObject108) SetName(v string)`
+`func (o *InlineObject108) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
 
-SetName sets Name field to given value.
+SetStages sets Stages field to given value.
 
 
-### GetCenter
+### GetReasons
 
-`func (o *InlineObject108) GetCenter() NetworksNetworkIdFloorPlansCenter1`
+`func (o *InlineObject108) GetReasons() []NetworksNetworkIdFirmwareUpgradesRollbacksReasons`
 
-GetCenter returns the Center field if non-nil, zero value otherwise.
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
 
-### GetCenterOk
+### GetReasonsOk
 
-`func (o *InlineObject108) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter1, bool)`
+`func (o *InlineObject108) GetReasonsOk() (*[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons, bool)`
 
-GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCenter
+### SetReasons
 
-`func (o *InlineObject108) SetCenter(v NetworksNetworkIdFloorPlansCenter1)`
+`func (o *InlineObject108) SetReasons(v []NetworksNetworkIdFirmwareUpgradesRollbacksReasons)`
 
-SetCenter sets Center field to given value.
+SetReasons sets Reasons field to given value.
 
-### HasCenter
+### HasReasons
 
-`func (o *InlineObject108) HasCenter() bool`
+`func (o *InlineObject108) HasReasons() bool`
 
-HasCenter returns a boolean if a field has been set.
-
-### GetBottomLeftCorner
-
-`func (o *InlineObject108) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner1`
-
-GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
-
-### GetBottomLeftCornerOk
-
-`func (o *InlineObject108) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner1, bool)`
-
-GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBottomLeftCorner
-
-`func (o *InlineObject108) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner1)`
-
-SetBottomLeftCorner sets BottomLeftCorner field to given value.
-
-### HasBottomLeftCorner
-
-`func (o *InlineObject108) HasBottomLeftCorner() bool`
-
-HasBottomLeftCorner returns a boolean if a field has been set.
-
-### GetBottomRightCorner
-
-`func (o *InlineObject108) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner1`
-
-GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
-
-### GetBottomRightCornerOk
-
-`func (o *InlineObject108) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner1, bool)`
-
-GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBottomRightCorner
-
-`func (o *InlineObject108) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner1)`
-
-SetBottomRightCorner sets BottomRightCorner field to given value.
-
-### HasBottomRightCorner
-
-`func (o *InlineObject108) HasBottomRightCorner() bool`
-
-HasBottomRightCorner returns a boolean if a field has been set.
-
-### GetTopLeftCorner
-
-`func (o *InlineObject108) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner1`
-
-GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
-
-### GetTopLeftCornerOk
-
-`func (o *InlineObject108) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner1, bool)`
-
-GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopLeftCorner
-
-`func (o *InlineObject108) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner1)`
-
-SetTopLeftCorner sets TopLeftCorner field to given value.
-
-### HasTopLeftCorner
-
-`func (o *InlineObject108) HasTopLeftCorner() bool`
-
-HasTopLeftCorner returns a boolean if a field has been set.
-
-### GetTopRightCorner
-
-`func (o *InlineObject108) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner1`
-
-GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
-
-### GetTopRightCornerOk
-
-`func (o *InlineObject108) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner1, bool)`
-
-GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopRightCorner
-
-`func (o *InlineObject108) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner1)`
-
-SetTopRightCorner sets TopRightCorner field to given value.
-
-### HasTopRightCorner
-
-`func (o *InlineObject108) HasTopRightCorner() bool`
-
-HasTopRightCorner returns a boolean if a field has been set.
-
-### GetFloorNumber
-
-`func (o *InlineObject108) GetFloorNumber() float32`
-
-GetFloorNumber returns the FloorNumber field if non-nil, zero value otherwise.
-
-### GetFloorNumberOk
-
-`func (o *InlineObject108) GetFloorNumberOk() (*float32, bool)`
-
-GetFloorNumberOk returns a tuple with the FloorNumber field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFloorNumber
-
-`func (o *InlineObject108) SetFloorNumber(v float32)`
-
-SetFloorNumber sets FloorNumber field to given value.
-
-### HasFloorNumber
-
-`func (o *InlineObject108) HasFloorNumber() bool`
-
-HasFloorNumber returns a boolean if a field has been set.
-
-### GetImageContents
-
-`func (o *InlineObject108) GetImageContents() string`
-
-GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
-
-### GetImageContentsOk
-
-`func (o *InlineObject108) GetImageContentsOk() (*string, bool)`
-
-GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetImageContents
-
-`func (o *InlineObject108) SetImageContents(v string)`
-
-SetImageContents sets ImageContents field to given value.
-
+HasReasons returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

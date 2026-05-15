@@ -4,12 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**InlineResponse200137LocalStatusPage**](InlineResponse200137LocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse200137SecurePort**](InlineResponse200137SecurePort.md) |  | [optional] 
-**Fips** | Pointer to [**InlineResponse200137Fips**](InlineResponse200137Fips.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse200137NamedVlans**](InlineResponse200137NamedVlans.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
+**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
+**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
+**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
+**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
+**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
+**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
+**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients | [optional] 
 
 ## Methods
 
@@ -30,155 +36,305 @@ NewInlineResponse200137WithDefaults instantiates a new InlineResponse200137 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetStartTs
 
-`func (o *InlineResponse200137) GetLocalStatusPageEnabled() bool`
+`func (o *InlineResponse200137) GetStartTs() time.Time`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse200137) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200137) GetStartTsOk() (*time.Time, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetStartTs
 
-`func (o *InlineResponse200137) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineResponse200137) SetStartTs(v time.Time)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasLocalStatusPageEnabled
+### HasStartTs
 
-`func (o *InlineResponse200137) HasLocalStatusPageEnabled() bool`
+`func (o *InlineResponse200137) HasStartTs() bool`
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetRemoteStatusPageEnabled
+### GetEndTs
 
-`func (o *InlineResponse200137) GetRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse200137) GetEndTs() time.Time`
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetRemoteStatusPageEnabledOk
+### GetEndTsOk
 
-`func (o *InlineResponse200137) GetRemoteStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200137) GetEndTsOk() (*time.Time, bool)`
 
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetEndTs
 
-`func (o *InlineResponse200137) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineResponse200137) SetEndTs(v time.Time)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasEndTs
 
-`func (o *InlineResponse200137) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse200137) HasEndTs() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLocalStatusPage
+### GetWanGoodput
 
-`func (o *InlineResponse200137) GetLocalStatusPage() InlineResponse200137LocalStatusPage`
+`func (o *InlineResponse200137) GetWanGoodput() int32`
 
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
+GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageOk
+### GetWanGoodputOk
 
-`func (o *InlineResponse200137) GetLocalStatusPageOk() (*InlineResponse200137LocalStatusPage, bool)`
+`func (o *InlineResponse200137) GetWanGoodputOk() (*int32, bool)`
 
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
+GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPage
+### SetWanGoodput
 
-`func (o *InlineResponse200137) SetLocalStatusPage(v InlineResponse200137LocalStatusPage)`
+`func (o *InlineResponse200137) SetWanGoodput(v int32)`
 
-SetLocalStatusPage sets LocalStatusPage field to given value.
+SetWanGoodput sets WanGoodput field to given value.
 
-### HasLocalStatusPage
+### HasWanGoodput
 
-`func (o *InlineResponse200137) HasLocalStatusPage() bool`
+`func (o *InlineResponse200137) HasWanGoodput() bool`
 
-HasLocalStatusPage returns a boolean if a field has been set.
+HasWanGoodput returns a boolean if a field has been set.
 
-### GetSecurePort
+### GetLanGoodput
 
-`func (o *InlineResponse200137) GetSecurePort() InlineResponse200137SecurePort`
+`func (o *InlineResponse200137) GetLanGoodput() int32`
 
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
+GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
 
-### GetSecurePortOk
+### GetLanGoodputOk
 
-`func (o *InlineResponse200137) GetSecurePortOk() (*InlineResponse200137SecurePort, bool)`
+`func (o *InlineResponse200137) GetLanGoodputOk() (*int32, bool)`
 
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
+GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurePort
+### SetLanGoodput
 
-`func (o *InlineResponse200137) SetSecurePort(v InlineResponse200137SecurePort)`
+`func (o *InlineResponse200137) SetLanGoodput(v int32)`
 
-SetSecurePort sets SecurePort field to given value.
+SetLanGoodput sets LanGoodput field to given value.
 
-### HasSecurePort
+### HasLanGoodput
 
-`func (o *InlineResponse200137) HasSecurePort() bool`
+`func (o *InlineResponse200137) HasLanGoodput() bool`
 
-HasSecurePort returns a boolean if a field has been set.
+HasLanGoodput returns a boolean if a field has been set.
 
-### GetFips
+### GetWanLatencyMs
 
-`func (o *InlineResponse200137) GetFips() InlineResponse200137Fips`
+`func (o *InlineResponse200137) GetWanLatencyMs() float32`
 
-GetFips returns the Fips field if non-nil, zero value otherwise.
+GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
 
-### GetFipsOk
+### GetWanLatencyMsOk
 
-`func (o *InlineResponse200137) GetFipsOk() (*InlineResponse200137Fips, bool)`
+`func (o *InlineResponse200137) GetWanLatencyMsOk() (*float32, bool)`
 
-GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
+GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFips
+### SetWanLatencyMs
 
-`func (o *InlineResponse200137) SetFips(v InlineResponse200137Fips)`
+`func (o *InlineResponse200137) SetWanLatencyMs(v float32)`
 
-SetFips sets Fips field to given value.
+SetWanLatencyMs sets WanLatencyMs field to given value.
 
-### HasFips
+### HasWanLatencyMs
 
-`func (o *InlineResponse200137) HasFips() bool`
+`func (o *InlineResponse200137) HasWanLatencyMs() bool`
 
-HasFips returns a boolean if a field has been set.
+HasWanLatencyMs returns a boolean if a field has been set.
 
-### GetNamedVlans
+### GetLanLatencyMs
 
-`func (o *InlineResponse200137) GetNamedVlans() InlineResponse200137NamedVlans`
+`func (o *InlineResponse200137) GetLanLatencyMs() float32`
 
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
 
-### GetNamedVlansOk
+### GetLanLatencyMsOk
 
-`func (o *InlineResponse200137) GetNamedVlansOk() (*InlineResponse200137NamedVlans, bool)`
+`func (o *InlineResponse200137) GetLanLatencyMsOk() (*float32, bool)`
 
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNamedVlans
+### SetLanLatencyMs
 
-`func (o *InlineResponse200137) SetNamedVlans(v InlineResponse200137NamedVlans)`
+`func (o *InlineResponse200137) SetLanLatencyMs(v float32)`
 
-SetNamedVlans sets NamedVlans field to given value.
+SetLanLatencyMs sets LanLatencyMs field to given value.
 
-### HasNamedVlans
+### HasLanLatencyMs
 
-`func (o *InlineResponse200137) HasNamedVlans() bool`
+`func (o *InlineResponse200137) HasLanLatencyMs() bool`
 
-HasNamedVlans returns a boolean if a field has been set.
+HasLanLatencyMs returns a boolean if a field has been set.
+
+### GetWanLossPercent
+
+`func (o *InlineResponse200137) GetWanLossPercent() float32`
+
+GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
+
+### GetWanLossPercentOk
+
+`func (o *InlineResponse200137) GetWanLossPercentOk() (*float32, bool)`
+
+GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWanLossPercent
+
+`func (o *InlineResponse200137) SetWanLossPercent(v float32)`
+
+SetWanLossPercent sets WanLossPercent field to given value.
+
+### HasWanLossPercent
+
+`func (o *InlineResponse200137) HasWanLossPercent() bool`
+
+HasWanLossPercent returns a boolean if a field has been set.
+
+### GetLanLossPercent
+
+`func (o *InlineResponse200137) GetLanLossPercent() float32`
+
+GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
+
+### GetLanLossPercentOk
+
+`func (o *InlineResponse200137) GetLanLossPercentOk() (*float32, bool)`
+
+GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLossPercent
+
+`func (o *InlineResponse200137) SetLanLossPercent(v float32)`
+
+SetLanLossPercent sets LanLossPercent field to given value.
+
+### HasLanLossPercent
+
+`func (o *InlineResponse200137) HasLanLossPercent() bool`
+
+HasLanLossPercent returns a boolean if a field has been set.
+
+### GetResponseDuration
+
+`func (o *InlineResponse200137) GetResponseDuration() int32`
+
+GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
+
+### GetResponseDurationOk
+
+`func (o *InlineResponse200137) GetResponseDurationOk() (*int32, bool)`
+
+GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResponseDuration
+
+`func (o *InlineResponse200137) SetResponseDuration(v int32)`
+
+SetResponseDuration sets ResponseDuration field to given value.
+
+### HasResponseDuration
+
+`func (o *InlineResponse200137) HasResponseDuration() bool`
+
+HasResponseDuration returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse200137) GetSent() int32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse200137) GetSentOk() (*int32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse200137) SetSent(v int32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse200137) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse200137) GetRecv() int32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse200137) GetRecvOk() (*int32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse200137) SetRecv(v int32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse200137) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetNumClients
+
+`func (o *InlineResponse200137) GetNumClients() int32`
+
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+
+### GetNumClientsOk
+
+`func (o *InlineResponse200137) GetNumClientsOk() (*int32, bool)`
+
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumClients
+
+`func (o *InlineResponse200137) SetNumClients(v int32)`
+
+SetNumClients sets NumClients field to given value.
+
+### HasNumClients
+
+`func (o *InlineResponse200137) HasNumClients() bool`
+
+HasNumClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

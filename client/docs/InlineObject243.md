@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs to restore | 
+**AllowedRules** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules**](OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules.md) | Sets a list of specific SNORT signatures to allow | 
 
 ## Methods
 
 ### NewInlineObject243
 
-`func NewInlineObject243(alertIds []string, ) *InlineObject243`
+`func NewInlineObject243(allowedRules []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, ) *InlineObject243`
 
 NewInlineObject243 instantiates a new InlineObject243 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject243WithDefaults instantiates a new InlineObject243 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetAllowedRules
 
-`func (o *InlineObject243) GetAlertIds() []string`
+`func (o *InlineObject243) GetAllowedRules() []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetAllowedRulesOk
 
-`func (o *InlineObject243) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject243) GetAllowedRulesOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetAllowedRules
 
-`func (o *InlineObject243) SetAlertIds(v []string)`
+`func (o *InlineObject243) SetAllowedRules(v []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules)`
 
-SetAlertIds sets AlertIds field to given value.
+SetAllowedRules sets AllowedRules field to given value.
 
 
 

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
-**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
-**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
-**Events** | Pointer to [**[]InlineResponse200110Events**](InlineResponse200110Events.md) | An array of events that took place in the network. | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode for the cellular gateways in the network. (Passthrough/Routed) | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse200110Subnets**](InlineResponse200110Subnets.md) | List of subnets of all MGs in this network. | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200110WithDefaults instantiates a new InlineResponse200110 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetDeploymentMode
 
-`func (o *InlineResponse200110) GetMessage() string`
+`func (o *InlineResponse200110) GetDeploymentMode() string`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse200110) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse200110) GetDeploymentModeOk() (*string, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetDeploymentMode
 
-`func (o *InlineResponse200110) SetMessage(v string)`
+`func (o *InlineResponse200110) SetDeploymentMode(v string)`
 
-SetMessage sets Message field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasMessage
+### HasDeploymentMode
 
-`func (o *InlineResponse200110) HasMessage() bool`
+`func (o *InlineResponse200110) HasDeploymentMode() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetPageStartAt
+### GetCidr
 
-`func (o *InlineResponse200110) GetPageStartAt() string`
+`func (o *InlineResponse200110) GetCidr() string`
 
-GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetPageStartAtOk
+### GetCidrOk
 
-`func (o *InlineResponse200110) GetPageStartAtOk() (*string, bool)`
+`func (o *InlineResponse200110) GetCidrOk() (*string, bool)`
 
-GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageStartAt
+### SetCidr
 
-`func (o *InlineResponse200110) SetPageStartAt(v string)`
+`func (o *InlineResponse200110) SetCidr(v string)`
 
-SetPageStartAt sets PageStartAt field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasPageStartAt
+### HasCidr
 
-`func (o *InlineResponse200110) HasPageStartAt() bool`
+`func (o *InlineResponse200110) HasCidr() bool`
 
-HasPageStartAt returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetPageEndAt
+### GetMask
 
-`func (o *InlineResponse200110) GetPageEndAt() string`
+`func (o *InlineResponse200110) GetMask() int32`
 
-GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetPageEndAtOk
+### GetMaskOk
 
-`func (o *InlineResponse200110) GetPageEndAtOk() (*string, bool)`
+`func (o *InlineResponse200110) GetMaskOk() (*int32, bool)`
 
-GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageEndAt
+### SetMask
 
-`func (o *InlineResponse200110) SetPageEndAt(v string)`
+`func (o *InlineResponse200110) SetMask(v int32)`
 
-SetPageEndAt sets PageEndAt field to given value.
+SetMask sets Mask field to given value.
 
-### HasPageEndAt
+### HasMask
 
-`func (o *InlineResponse200110) HasPageEndAt() bool`
+`func (o *InlineResponse200110) HasMask() bool`
 
-HasPageEndAt returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
 
-### GetEvents
+### GetSubnets
 
-`func (o *InlineResponse200110) GetEvents() []InlineResponse200110Events`
+`func (o *InlineResponse200110) GetSubnets() []InlineResponse200110Subnets`
 
-GetEvents returns the Events field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetEventsOk
+### GetSubnetsOk
 
-`func (o *InlineResponse200110) GetEventsOk() (*[]InlineResponse200110Events, bool)`
+`func (o *InlineResponse200110) GetSubnetsOk() (*[]InlineResponse200110Subnets, bool)`
 
-GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEvents
+### SetSubnets
 
-`func (o *InlineResponse200110) SetEvents(v []InlineResponse200110Events)`
+`func (o *InlineResponse200110) SetSubnets(v []InlineResponse200110Subnets)`
 
-SetEvents sets Events field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasEvents
+### HasSubnets
 
-`func (o *InlineResponse200110) HasEvents() bool`
+`func (o *InlineResponse200110) HasSubnets() bool`
 
-HasEvents returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200285Items**](InlineResponse200285Items.md) | List of clusters | [optional] 
-**Meta** | Pointer to [**InlineResponse200285Meta**](InlineResponse200285Meta.md) |  | [optional] 
+**Items** | [**[]InlineResponse200285Items**](InlineResponse200285Items.md) | Organization Alert counts by type | 
+**Meta** | [**InlineResponse200284Meta**](InlineResponse200284Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200285
 
-`func NewInlineResponse200285() *InlineResponse200285`
+`func NewInlineResponse200285(items []InlineResponse200285Items, meta InlineResponse200284Meta, ) *InlineResponse200285`
 
 NewInlineResponse200285 instantiates a new InlineResponse200285 object
 This constructor will assign default values to properties that have it defined,
@@ -45,36 +45,26 @@ and a boolean to check if the value has been set.
 
 SetItems sets Items field to given value.
 
-### HasItems
-
-`func (o *InlineResponse200285) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200285) GetMeta() InlineResponse200285Meta`
+`func (o *InlineResponse200285) GetMeta() InlineResponse200284Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200285) GetMetaOk() (*InlineResponse200285Meta, bool)`
+`func (o *InlineResponse200285) GetMetaOk() (*InlineResponse200284Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200285) SetMeta(v InlineResponse200285Meta)`
+`func (o *InlineResponse200285) SetMeta(v InlineResponse200284Meta)`
 
 SetMeta sets Meta field to given value.
 
-### HasMeta
-
-`func (o *InlineResponse200285) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

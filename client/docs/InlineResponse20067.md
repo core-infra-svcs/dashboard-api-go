@@ -4,7 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20067Rules**](InlineResponse20067Rules.md) | An array of port forwarding rules | [optional] 
+**NetworkId** | Pointer to **string** | Dashboard network ID | [optional] 
+**Name** | Pointer to **string** | Dashboard network name | [optional] 
+**Enabled** | Pointer to **bool** | Is warm spare enabled | [optional] 
+**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
+**Designations** | Pointer to [**[]InlineResponse20067Designations**](InlineResponse20067Designations.md) | Ordered HA roles (1&#x3D;primary, 2&#x3D;spare) | [optional] 
+**Uplink** | Pointer to [**InlineResponse20067Uplink**](InlineResponse20067Uplink.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +30,155 @@ NewInlineResponse20067WithDefaults instantiates a new InlineResponse20067 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetNetworkId
 
-`func (o *InlineResponse20067) GetRules() []InlineResponse20067Rules`
+`func (o *InlineResponse20067) GetNetworkId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20067) GetRulesOk() (*[]InlineResponse20067Rules, bool)`
+`func (o *InlineResponse20067) GetNetworkIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetNetworkId
 
-`func (o *InlineResponse20067) SetRules(v []InlineResponse20067Rules)`
+`func (o *InlineResponse20067) SetNetworkId(v string)`
 
-SetRules sets Rules field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasRules
+### HasNetworkId
 
-`func (o *InlineResponse20067) HasRules() bool`
+`func (o *InlineResponse20067) HasNetworkId() bool`
 
-HasRules returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20067) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20067) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20067) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20067) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse20067) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse20067) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse20067) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse20067) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetMode
+
+`func (o *InlineResponse20067) GetMode() string`
+
+GetMode returns the Mode field if non-nil, zero value otherwise.
+
+### GetModeOk
+
+`func (o *InlineResponse20067) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMode
+
+`func (o *InlineResponse20067) SetMode(v string)`
+
+SetMode sets Mode field to given value.
+
+### HasMode
+
+`func (o *InlineResponse20067) HasMode() bool`
+
+HasMode returns a boolean if a field has been set.
+
+### GetDesignations
+
+`func (o *InlineResponse20067) GetDesignations() []InlineResponse20067Designations`
+
+GetDesignations returns the Designations field if non-nil, zero value otherwise.
+
+### GetDesignationsOk
+
+`func (o *InlineResponse20067) GetDesignationsOk() (*[]InlineResponse20067Designations, bool)`
+
+GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDesignations
+
+`func (o *InlineResponse20067) SetDesignations(v []InlineResponse20067Designations)`
+
+SetDesignations sets Designations field to given value.
+
+### HasDesignations
+
+`func (o *InlineResponse20067) HasDesignations() bool`
+
+HasDesignations returns a boolean if a field has been set.
+
+### GetUplink
+
+`func (o *InlineResponse20067) GetUplink() InlineResponse20067Uplink`
+
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
+
+### GetUplinkOk
+
+`func (o *InlineResponse20067) GetUplinkOk() (*InlineResponse20067Uplink, bool)`
+
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplink
+
+`func (o *InlineResponse20067) SetUplink(v InlineResponse20067Uplink)`
+
+SetUplink sets Uplink field to given value.
+
+### HasUplink
+
+`func (o *InlineResponse20067) HasUplink() bool`
+
+HasUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

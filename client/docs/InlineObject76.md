@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | [**[]NetworksNetworkIdApplianceUplinksNatUplinks**](NetworksNetworkIdApplianceUplinksNatUplinks.md) | Per-uplink NAT exception configuration on the network. | 
+**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject76
 
-`func NewInlineObject76(uplinks []NetworksNetworkIdApplianceUplinksNatUplinks, ) *InlineObject76`
+`func NewInlineObject76() *InlineObject76`
 
 NewInlineObject76 instantiates a new InlineObject76 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject76WithDefaults instantiates a new InlineObject76 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetBandwidthLimits
 
-`func (o *InlineObject76) GetUplinks() []NetworksNetworkIdApplianceUplinksNatUplinks`
+`func (o *InlineObject76) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineObject76) GetUplinksOk() (*[]NetworksNetworkIdApplianceUplinksNatUplinks, bool)`
+`func (o *InlineObject76) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetBandwidthLimits
 
-`func (o *InlineObject76) SetUplinks(v []NetworksNetworkIdApplianceUplinksNatUplinks)`
+`func (o *InlineObject76) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits)`
 
-SetUplinks sets Uplinks field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
+### HasBandwidthLimits
+
+`func (o *InlineObject76) HasBandwidthLimits() bool`
+
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

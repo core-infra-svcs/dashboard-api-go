@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Total** | Pointer to **int32** | The total number of items in the dataset | [optional] 
-**Remaining** | Pointer to **int32** | The number of items in the dataset available on subsequent pages | [optional] 
+**Remaining** | Pointer to **int32** | The number of items in the dataset that are available on subsequent pages | [optional] 
 
 ## Methods
 

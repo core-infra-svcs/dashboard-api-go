@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Nodes** | Pointer to [**[]InlineResponse200189Nodes**](InlineResponse200189Nodes.md) | List of nodes in the network topology | [optional] 
-**Links** | Pointer to [**[]InlineResponse200189Links**](InlineResponse200189Links.md) | List of links between nodes | [optional] 
-**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
+**Id** | Pointer to **string** | Switch port schedule ID | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Switch port schedule name | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200189WithDefaults instantiates a new InlineResponse200189 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNodes
+### GetId
 
-`func (o *InlineResponse200189) GetNodes() []InlineResponse200189Nodes`
+`func (o *InlineResponse200189) GetId() string`
 
-GetNodes returns the Nodes field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNodesOk
+### GetIdOk
 
-`func (o *InlineResponse200189) GetNodesOk() (*[]InlineResponse200189Nodes, bool)`
+`func (o *InlineResponse200189) GetIdOk() (*string, bool)`
 
-GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNodes
+### SetId
 
-`func (o *InlineResponse200189) SetNodes(v []InlineResponse200189Nodes)`
+`func (o *InlineResponse200189) SetId(v string)`
 
-SetNodes sets Nodes field to given value.
+SetId sets Id field to given value.
 
-### HasNodes
+### HasId
 
-`func (o *InlineResponse200189) HasNodes() bool`
+`func (o *InlineResponse200189) HasId() bool`
 
-HasNodes returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetLinks
+### GetNetworkId
 
-`func (o *InlineResponse200189) GetLinks() []InlineResponse200189Links`
+`func (o *InlineResponse200189) GetNetworkId() string`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200189) GetLinksOk() (*[]InlineResponse200189Links, bool)`
+`func (o *InlineResponse200189) GetNetworkIdOk() (*string, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetNetworkId
 
-`func (o *InlineResponse200189) SetLinks(v []InlineResponse200189Links)`
+`func (o *InlineResponse200189) SetNetworkId(v string)`
 
-SetLinks sets Links field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasLinks
+### HasNetworkId
 
-`func (o *InlineResponse200189) HasLinks() bool`
+`func (o *InlineResponse200189) HasNetworkId() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetErrors
+### GetName
 
-`func (o *InlineResponse200189) GetErrors() []string`
+`func (o *InlineResponse200189) GetName() string`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetNameOk
 
-`func (o *InlineResponse200189) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200189) GetNameOk() (*string, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetName
 
-`func (o *InlineResponse200189) SetErrors(v []string)`
+`func (o *InlineResponse200189) SetName(v string)`
 
-SetErrors sets Errors field to given value.
+SetName sets Name field to given value.
 
-### HasErrors
+### HasName
 
-`func (o *InlineResponse200189) HasErrors() bool`
+`func (o *InlineResponse200189) HasName() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetPortSchedule
+
+`func (o *InlineResponse200189) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
+
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
+
+### GetPortScheduleOk
+
+`func (o *InlineResponse200189) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
+
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortSchedule
+
+`func (o *InlineResponse200189) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
+
+SetPortSchedule sets PortSchedule field to given value.
+
+### HasPortSchedule
+
+`func (o *InlineResponse200189) HasPortSchedule() bool`
+
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

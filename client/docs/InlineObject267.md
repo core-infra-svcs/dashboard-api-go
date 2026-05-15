@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
+**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems.md) | List of device-to-profile assignments to remove. | 
 
 ## Methods
 
 ### NewInlineObject267
 
-`func NewInlineObject267(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject267`
+`func NewInlineObject267(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, ) *InlineObject267`
 
 NewInlineObject267 instantiates a new InlineObject267 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject267WithDefaults instantiates a new InlineObject267 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrder
+### GetItems
 
-`func (o *InlineObject267) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
+`func (o *InlineObject267) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems`
 
-GetOrder returns the Order field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetOrderOk
+### GetItemsOk
 
-`func (o *InlineObject267) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
+`func (o *InlineObject267) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, bool)`
 
-GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrder
+### SetItems
 
-`func (o *InlineObject267) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
+`func (o *InlineObject267) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems)`
 
-SetOrder sets Order field to given value.
+SetItems sets Items field to given value.
 
 
 

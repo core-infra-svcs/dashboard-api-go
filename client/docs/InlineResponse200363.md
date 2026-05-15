@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200363Items**](InlineResponse200363Items.md) | List of enrollable networks | [optional] 
-**Meta** | Pointer to [**InlineResponse200250Meta**](InlineResponse200250Meta.md) |  | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
+**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200363WithDefaults instantiates a new InlineResponse200363 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetDestOrganizationId
 
-`func (o *InlineResponse200363) GetItems() []InlineResponse200363Items`
+`func (o *InlineResponse200363) GetDestOrganizationId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200363) GetItemsOk() (*[]InlineResponse200363Items, bool)`
+`func (o *InlineResponse200363) GetDestOrganizationIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetDestOrganizationId
 
-`func (o *InlineResponse200363) SetItems(v []InlineResponse200363Items)`
+`func (o *InlineResponse200363) SetDestOrganizationId(v string)`
 
-SetItems sets Items field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasItems
+### HasDestOrganizationId
 
-`func (o *InlineResponse200363) HasItems() bool`
+`func (o *InlineResponse200363) HasDestOrganizationId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
 
-### GetMeta
+### GetLicenseIds
 
-`func (o *InlineResponse200363) GetMeta() InlineResponse200250Meta`
+`func (o *InlineResponse200363) GetLicenseIds() []string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetLicenseIdsOk
 
-`func (o *InlineResponse200363) GetMetaOk() (*InlineResponse200250Meta, bool)`
+`func (o *InlineResponse200363) GetLicenseIdsOk() (*[]string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetLicenseIds
 
-`func (o *InlineResponse200363) SetMeta(v InlineResponse200250Meta)`
+`func (o *InlineResponse200363) SetLicenseIds(v []string)`
 
-SetMeta sets Meta field to given value.
+SetLicenseIds sets LicenseIds field to given value.
 
-### HasMeta
+### HasLicenseIds
 
-`func (o *InlineResponse200363) HasMeta() bool`
+`func (o *InlineResponse200363) HasLicenseIds() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasLicenseIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

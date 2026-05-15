@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**NetworkName** | Pointer to **string** | Network name | [optional] 
-**MerakiVpnPeers** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers**](OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers.md) | List of VPN peers with their summaries | [optional] 
+**RecordId** | Pointer to **string** | Record ID | [optional] 
+**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
+**Address** | Pointer to **string** | IP for the DNS record | [optional] 
+**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200265WithDefaults instantiates a new InlineResponse200265 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetRecordId
 
-`func (o *InlineResponse200265) GetNetworkId() string`
+`func (o *InlineResponse200265) GetRecordId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetRecordId returns the RecordId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetRecordIdOk
 
-`func (o *InlineResponse200265) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200265) GetRecordIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetRecordIdOk returns a tuple with the RecordId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetRecordId
 
-`func (o *InlineResponse200265) SetNetworkId(v string)`
+`func (o *InlineResponse200265) SetRecordId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetRecordId sets RecordId field to given value.
 
-### HasNetworkId
+### HasRecordId
 
-`func (o *InlineResponse200265) HasNetworkId() bool`
+`func (o *InlineResponse200265) HasRecordId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasRecordId returns a boolean if a field has been set.
 
-### GetNetworkName
+### GetHostname
 
-`func (o *InlineResponse200265) GetNetworkName() string`
+`func (o *InlineResponse200265) GetHostname() string`
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetNetworkNameOk
+### GetHostnameOk
 
-`func (o *InlineResponse200265) GetNetworkNameOk() (*string, bool)`
+`func (o *InlineResponse200265) GetHostnameOk() (*string, bool)`
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetHostname
 
-`func (o *InlineResponse200265) SetNetworkName(v string)`
+`func (o *InlineResponse200265) SetHostname(v string)`
 
-SetNetworkName sets NetworkName field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasNetworkName
+### HasHostname
 
-`func (o *InlineResponse200265) HasNetworkName() bool`
+`func (o *InlineResponse200265) HasHostname() bool`
 
-HasNetworkName returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
 
-### GetMerakiVpnPeers
+### GetAddress
 
-`func (o *InlineResponse200265) GetMerakiVpnPeers() []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers`
+`func (o *InlineResponse200265) GetAddress() string`
 
-GetMerakiVpnPeers returns the MerakiVpnPeers field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetMerakiVpnPeersOk
+### GetAddressOk
 
-`func (o *InlineResponse200265) GetMerakiVpnPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers, bool)`
+`func (o *InlineResponse200265) GetAddressOk() (*string, bool)`
 
-GetMerakiVpnPeersOk returns a tuple with the MerakiVpnPeers field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMerakiVpnPeers
+### SetAddress
 
-`func (o *InlineResponse200265) SetMerakiVpnPeers(v []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers)`
+`func (o *InlineResponse200265) SetAddress(v string)`
 
-SetMerakiVpnPeers sets MerakiVpnPeers field to given value.
+SetAddress sets Address field to given value.
 
-### HasMerakiVpnPeers
+### HasAddress
 
-`func (o *InlineResponse200265) HasMerakiVpnPeers() bool`
+`func (o *InlineResponse200265) HasAddress() bool`
 
-HasMerakiVpnPeers returns a boolean if a field has been set.
+HasAddress returns a boolean if a field has been set.
+
+### GetProfile
+
+`func (o *InlineResponse200265) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
+
+GetProfile returns the Profile field if non-nil, zero value otherwise.
+
+### GetProfileOk
+
+`func (o *InlineResponse200265) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfile
+
+`func (o *InlineResponse200265) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
+
+SetProfile sets Profile field to given value.
+
+### HasProfile
+
+`func (o *InlineResponse200265) HasProfile() bool`
+
+HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

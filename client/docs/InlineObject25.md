@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Wan1** | Pointer to [**DevicesSerialManagementInterfaceWan1**](DevicesSerialManagementInterfaceWan1.md) |  | [optional] 
-**Wan2** | Pointer to [**DevicesSerialManagementInterfaceWan2**](DevicesSerialManagementInterfaceWan2.md) |  | [optional] 
+**Ports** | **[]string** | A list of ports to cycle. For Catalyst switches, IOS interface names are also supported, such as \&quot;GigabitEthernet1/0/8\&quot;, \&quot;Gi1/0/8\&quot;, or even \&quot;1/0/8\&quot;. | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject25
 
-`func NewInlineObject25() *InlineObject25`
+`func NewInlineObject25(ports []string, ) *InlineObject25`
 
 NewInlineObject25 instantiates a new InlineObject25 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject25WithDefaults instantiates a new InlineObject25 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWan1
+### GetPorts
 
-`func (o *InlineObject25) GetWan1() DevicesSerialManagementInterfaceWan1`
+`func (o *InlineObject25) GetPorts() []string`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetPortsOk
 
-`func (o *InlineObject25) GetWan1Ok() (*DevicesSerialManagementInterfaceWan1, bool)`
+`func (o *InlineObject25) GetPortsOk() (*[]string, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetPorts
 
-`func (o *InlineObject25) SetWan1(v DevicesSerialManagementInterfaceWan1)`
+`func (o *InlineObject25) SetPorts(v []string)`
 
-SetWan1 sets Wan1 field to given value.
+SetPorts sets Ports field to given value.
 
-### HasWan1
 
-`func (o *InlineObject25) HasWan1() bool`
+### GetCallback
 
-HasWan1 returns a boolean if a field has been set.
+`func (o *InlineObject25) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-### GetWan2
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-`func (o *InlineObject25) GetWan2() DevicesSerialManagementInterfaceWan2`
+### GetCallbackOk
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+`func (o *InlineObject25) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-### GetWan2Ok
-
-`func (o *InlineObject25) GetWan2Ok() (*DevicesSerialManagementInterfaceWan2, bool)`
-
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetCallback
 
-`func (o *InlineObject25) SetWan2(v DevicesSerialManagementInterfaceWan2)`
+`func (o *InlineObject25) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetWan2 sets Wan2 field to given value.
+SetCallback sets Callback field to given value.
 
-### HasWan2
+### HasCallback
 
-`func (o *InlineObject25) HasWan2() bool`
+`func (o *InlineObject25) HasCallback() bool`
 
-HasWan2 returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

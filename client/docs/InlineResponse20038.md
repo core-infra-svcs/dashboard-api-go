@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DdnsHostnames** | Pointer to [**InlineResponse20038DdnsHostnames**](InlineResponse20038DdnsHostnames.md) |  | [optional] 
-**Wan1** | Pointer to [**InlineResponse20038Wan1**](InlineResponse20038Wan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse20038Wan2**](InlineResponse20038Wan2.md) |  | [optional] 
+**CyclePortId** | Pointer to **string** | ID of the cycle port request | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your cycle port request. | [optional] 
+**Request** | Pointer to [**InlineResponse2018Request**](InlineResponse2018Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the cycle port request | [optional] 
+**Error** | Pointer to **string** | An error message for a failed cycle port execution, if present | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20038WithDefaults instantiates a new InlineResponse20038 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDdnsHostnames
+### GetCyclePortId
 
-`func (o *InlineResponse20038) GetDdnsHostnames() InlineResponse20038DdnsHostnames`
+`func (o *InlineResponse20038) GetCyclePortId() string`
 
-GetDdnsHostnames returns the DdnsHostnames field if non-nil, zero value otherwise.
+GetCyclePortId returns the CyclePortId field if non-nil, zero value otherwise.
 
-### GetDdnsHostnamesOk
+### GetCyclePortIdOk
 
-`func (o *InlineResponse20038) GetDdnsHostnamesOk() (*InlineResponse20038DdnsHostnames, bool)`
+`func (o *InlineResponse20038) GetCyclePortIdOk() (*string, bool)`
 
-GetDdnsHostnamesOk returns a tuple with the DdnsHostnames field if it's non-nil, zero value otherwise
+GetCyclePortIdOk returns a tuple with the CyclePortId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDdnsHostnames
+### SetCyclePortId
 
-`func (o *InlineResponse20038) SetDdnsHostnames(v InlineResponse20038DdnsHostnames)`
+`func (o *InlineResponse20038) SetCyclePortId(v string)`
 
-SetDdnsHostnames sets DdnsHostnames field to given value.
+SetCyclePortId sets CyclePortId field to given value.
 
-### HasDdnsHostnames
+### HasCyclePortId
 
-`func (o *InlineResponse20038) HasDdnsHostnames() bool`
+`func (o *InlineResponse20038) HasCyclePortId() bool`
 
-HasDdnsHostnames returns a boolean if a field has been set.
+HasCyclePortId returns a boolean if a field has been set.
 
-### GetWan1
+### GetUrl
 
-`func (o *InlineResponse20038) GetWan1() InlineResponse20038Wan1`
+`func (o *InlineResponse20038) GetUrl() string`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetUrlOk
 
-`func (o *InlineResponse20038) GetWan1Ok() (*InlineResponse20038Wan1, bool)`
+`func (o *InlineResponse20038) GetUrlOk() (*string, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetUrl
 
-`func (o *InlineResponse20038) SetWan1(v InlineResponse20038Wan1)`
+`func (o *InlineResponse20038) SetUrl(v string)`
 
-SetWan1 sets Wan1 field to given value.
+SetUrl sets Url field to given value.
 
-### HasWan1
+### HasUrl
 
-`func (o *InlineResponse20038) HasWan1() bool`
+`func (o *InlineResponse20038) HasUrl() bool`
 
-HasWan1 returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetWan2
+### GetRequest
 
-`func (o *InlineResponse20038) GetWan2() InlineResponse20038Wan2`
+`func (o *InlineResponse20038) GetRequest() InlineResponse2018Request`
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetWan2Ok
+### GetRequestOk
 
-`func (o *InlineResponse20038) GetWan2Ok() (*InlineResponse20038Wan2, bool)`
+`func (o *InlineResponse20038) GetRequestOk() (*InlineResponse2018Request, bool)`
 
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetRequest
 
-`func (o *InlineResponse20038) SetWan2(v InlineResponse20038Wan2)`
+`func (o *InlineResponse20038) SetRequest(v InlineResponse2018Request)`
 
-SetWan2 sets Wan2 field to given value.
+SetRequest sets Request field to given value.
 
-### HasWan2
+### HasRequest
 
-`func (o *InlineResponse20038) HasWan2() bool`
+`func (o *InlineResponse20038) HasRequest() bool`
 
-HasWan2 returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20038) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20038) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20038) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20038) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetError
+
+`func (o *InlineResponse20038) GetError() string`
+
+GetError returns the Error field if non-nil, zero value otherwise.
+
+### GetErrorOk
+
+`func (o *InlineResponse20038) GetErrorOk() (*string, bool)`
+
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetError
+
+`func (o *InlineResponse20038) SetError(v string)`
+
+SetError sets Error field to given value.
+
+### HasError
+
+`func (o *InlineResponse20038) HasError() bool`
+
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

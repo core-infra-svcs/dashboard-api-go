@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Application** | Pointer to **string** | Name of the Application | [optional] 
+**Total** | Pointer to **float32** | Total usage of the Application, in megabytes | [optional] 
+**Downstream** | Pointer to **float32** | Downstream usage of the Application, in megabytes | [optional] 
+**Upstream** | Pointer to **float32** | Upstream usage of the Application, in megabytes | [optional] 
+**Percentage** | Pointer to **float32** | Percent usage of the Application | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200408WithDefaults instantiates a new InlineResponse200408 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetApplication
 
-`func (o *InlineResponse200408) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200408) GetApplication() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetApplication returns the Application field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetApplicationOk
 
-`func (o *InlineResponse200408) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200408) GetApplicationOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetApplication
 
-`func (o *InlineResponse200408) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200408) SetApplication(v string)`
 
-SetNetwork sets Network field to given value.
+SetApplication sets Application field to given value.
 
-### HasNetwork
+### HasApplication
 
-`func (o *InlineResponse200408) HasNetwork() bool`
+`func (o *InlineResponse200408) HasApplication() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasApplication returns a boolean if a field has been set.
 
-### GetByBand
+### GetTotal
 
-`func (o *InlineResponse200408) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200408) GetTotal() float32`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetTotalOk
 
-`func (o *InlineResponse200408) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200408) GetTotalOk() (*float32, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetTotal
 
-`func (o *InlineResponse200408) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200408) SetTotal(v float32)`
 
-SetByBand sets ByBand field to given value.
+SetTotal sets Total field to given value.
 
-### HasByBand
+### HasTotal
 
-`func (o *InlineResponse200408) HasByBand() bool`
+`func (o *InlineResponse200408) HasTotal() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
+
+### GetDownstream
+
+`func (o *InlineResponse200408) GetDownstream() float32`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse200408) GetDownstreamOk() (*float32, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse200408) SetDownstream(v float32)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse200408) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse200408) GetUpstream() float32`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse200408) GetUpstreamOk() (*float32, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse200408) SetUpstream(v float32)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse200408) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetPercentage
+
+`func (o *InlineResponse200408) GetPercentage() float32`
+
+GetPercentage returns the Percentage field if non-nil, zero value otherwise.
+
+### GetPercentageOk
+
+`func (o *InlineResponse200408) GetPercentageOk() (*float32, bool)`
+
+GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPercentage
+
+`func (o *InlineResponse200408) SetPercentage(v float32)`
+
+SetPercentage sets Percentage field to given value.
+
+### HasPercentage
+
+`func (o *InlineResponse200408) HasPercentage() bool`
+
+HasPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

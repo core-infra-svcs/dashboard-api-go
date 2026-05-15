@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
-**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
-**IbgpHoldTimer** | Pointer to **int32** | The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
-**RouterId** | Pointer to **NullableString** | The router ID of the appliance | [optional] 
-**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
+**Uplinks** | [**[]NetworksNetworkIdApplianceUplinksNatUplinks**](NetworksNetworkIdApplianceUplinksNatUplinks.md) | Per-uplink NAT exception configuration on the network. | 
 
 ## Methods
 
 ### NewInlineObject80
 
-`func NewInlineObject80(enabled bool, ) *InlineObject80`
+`func NewInlineObject80(uplinks []NetworksNetworkIdApplianceUplinksNatUplinks, ) *InlineObject80`
 
 NewInlineObject80 instantiates a new InlineObject80 object
 This constructor will assign default values to properties that have it defined,
@@ -29,135 +25,25 @@ NewInlineObject80WithDefaults instantiates a new InlineObject80 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetUplinks
 
-`func (o *InlineObject80) GetEnabled() bool`
+`func (o *InlineObject80) GetUplinks() []NetworksNetworkIdApplianceUplinksNatUplinks`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetUplinksOk
 
-`func (o *InlineObject80) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject80) GetUplinksOk() (*[]NetworksNetworkIdApplianceUplinksNatUplinks, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetUplinks
 
-`func (o *InlineObject80) SetEnabled(v bool)`
+`func (o *InlineObject80) SetUplinks(v []NetworksNetworkIdApplianceUplinksNatUplinks)`
 
-SetEnabled sets Enabled field to given value.
+SetUplinks sets Uplinks field to given value.
 
-
-### GetAsNumber
-
-`func (o *InlineObject80) GetAsNumber() int32`
-
-GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
-
-### GetAsNumberOk
-
-`func (o *InlineObject80) GetAsNumberOk() (*int32, bool)`
-
-GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAsNumber
-
-`func (o *InlineObject80) SetAsNumber(v int32)`
-
-SetAsNumber sets AsNumber field to given value.
-
-### HasAsNumber
-
-`func (o *InlineObject80) HasAsNumber() bool`
-
-HasAsNumber returns a boolean if a field has been set.
-
-### GetIbgpHoldTimer
-
-`func (o *InlineObject80) GetIbgpHoldTimer() int32`
-
-GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
-
-### GetIbgpHoldTimerOk
-
-`func (o *InlineObject80) GetIbgpHoldTimerOk() (*int32, bool)`
-
-GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIbgpHoldTimer
-
-`func (o *InlineObject80) SetIbgpHoldTimer(v int32)`
-
-SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
-
-### HasIbgpHoldTimer
-
-`func (o *InlineObject80) HasIbgpHoldTimer() bool`
-
-HasIbgpHoldTimer returns a boolean if a field has been set.
-
-### GetRouterId
-
-`func (o *InlineObject80) GetRouterId() string`
-
-GetRouterId returns the RouterId field if non-nil, zero value otherwise.
-
-### GetRouterIdOk
-
-`func (o *InlineObject80) GetRouterIdOk() (*string, bool)`
-
-GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRouterId
-
-`func (o *InlineObject80) SetRouterId(v string)`
-
-SetRouterId sets RouterId field to given value.
-
-### HasRouterId
-
-`func (o *InlineObject80) HasRouterId() bool`
-
-HasRouterId returns a boolean if a field has been set.
-
-### SetRouterIdNil
-
-`func (o *InlineObject80) SetRouterIdNil(b bool)`
-
- SetRouterIdNil sets the value for RouterId to be an explicit nil
-
-### UnsetRouterId
-`func (o *InlineObject80) UnsetRouterId()`
-
-UnsetRouterId ensures that no value is present for RouterId, not even an explicit nil
-### GetNeighbors
-
-`func (o *InlineObject80) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
-
-GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
-
-### GetNeighborsOk
-
-`func (o *InlineObject80) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
-
-GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNeighbors
-
-`func (o *InlineObject80) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
-
-SetNeighbors sets Neighbors field to given value.
-
-### HasNeighbors
-
-`func (o *InlineObject80) HasNeighbors() bool`
-
-HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

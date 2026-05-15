@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Name** | Pointer to **string** | Name of profile | [optional] 
+**Hostnames** | Pointer to **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | [optional] 
+**Nameservers** | Pointer to [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject241WithDefaults instantiates a new InlineObject241 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetName
 
-`func (o *InlineObject241) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
+`func (o *InlineObject241) GetName() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetNameOk
 
-`func (o *InlineObject241) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
+`func (o *InlineObject241) GetNameOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetName
 
-`func (o *InlineObject241) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
+`func (o *InlineObject241) SetName(v string)`
 
-SetRules sets Rules field to given value.
+SetName sets Name field to given value.
 
-### HasRules
+### HasName
 
-`func (o *InlineObject241) HasRules() bool`
+`func (o *InlineObject241) HasName() bool`
 
-HasRules returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSyslogDefaultRule
+### GetHostnames
 
-`func (o *InlineObject241) GetSyslogDefaultRule() bool`
+`func (o *InlineObject241) GetHostnames() []string`
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
 
-### GetSyslogDefaultRuleOk
+### GetHostnamesOk
 
-`func (o *InlineObject241) GetSyslogDefaultRuleOk() (*bool, bool)`
+`func (o *InlineObject241) GetHostnamesOk() (*[]string, bool)`
 
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetHostnames
 
-`func (o *InlineObject241) SetSyslogDefaultRule(v bool)`
+`func (o *InlineObject241) SetHostnames(v []string)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetHostnames sets Hostnames field to given value.
 
-### HasSyslogDefaultRule
+### HasHostnames
 
-`func (o *InlineObject241) HasSyslogDefaultRule() bool`
+`func (o *InlineObject241) HasHostnames() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasHostnames returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *InlineObject241) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject241) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject241) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *InlineObject241) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
+**Items** | Pointer to [**[]InlineResponse200373Items**](InlineResponse200373Items.md) | List of Firewall Rulesets | [optional] 
+**Meta** | Pointer to [**InlineResponse200263Meta**](InlineResponse200263Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200373WithDefaults instantiates a new InlineResponse200373 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificate
+### GetItems
 
-`func (o *InlineResponse200373) GetCertificate() string`
+`func (o *InlineResponse200373) GetItems() []InlineResponse200373Items`
 
-GetCertificate returns the Certificate field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetCertificateOk
+### GetItemsOk
 
-`func (o *InlineResponse200373) GetCertificateOk() (*string, bool)`
+`func (o *InlineResponse200373) GetItemsOk() (*[]InlineResponse200373Items, bool)`
 
-GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificate
+### SetItems
 
-`func (o *InlineResponse200373) SetCertificate(v string)`
+`func (o *InlineResponse200373) SetItems(v []InlineResponse200373Items)`
 
-SetCertificate sets Certificate field to given value.
+SetItems sets Items field to given value.
 
-### HasCertificate
+### HasItems
 
-`func (o *InlineResponse200373) HasCertificate() bool`
+`func (o *InlineResponse200373) HasItems() bool`
 
-HasCertificate returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200373) GetMeta() InlineResponse200263Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200373) GetMetaOk() (*InlineResponse200263Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200373) SetMeta(v InlineResponse200263Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200373) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

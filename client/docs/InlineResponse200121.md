@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Status of attempt to update device floorplan assignments | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
+**Errors** | Pointer to [**[]InlineResponse200121Errors**](InlineResponse200121Errors.md) | Errors for devices that were not added | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200121WithDefaults instantiates a new InlineResponse200121 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetSerials
 
-`func (o *InlineResponse200121) GetSuccess() bool`
+`func (o *InlineResponse200121) GetSerials() []string`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetSerialsOk
 
-`func (o *InlineResponse200121) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200121) GetSerialsOk() (*[]string, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetSerials
 
-`func (o *InlineResponse200121) SetSuccess(v bool)`
+`func (o *InlineResponse200121) SetSerials(v []string)`
 
-SetSuccess sets Success field to given value.
+SetSerials sets Serials field to given value.
 
-### HasSuccess
+### HasSerials
 
-`func (o *InlineResponse200121) HasSuccess() bool`
+`func (o *InlineResponse200121) HasSerials() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetErrors
+
+`func (o *InlineResponse200121) GetErrors() []InlineResponse200121Errors`
+
+GetErrors returns the Errors field if non-nil, zero value otherwise.
+
+### GetErrorsOk
+
+`func (o *InlineResponse200121) GetErrorsOk() (*[]InlineResponse200121Errors, bool)`
+
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetErrors
+
+`func (o *InlineResponse200121) SetErrors(v []InlineResponse200121Errors)`
+
+SetErrors sets Errors field to given value.
+
+### HasErrors
+
+`func (o *InlineResponse200121) HasErrors() bool`
+
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

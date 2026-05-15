@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**ProductTypes** | Pointer to **[]string** | The product types of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**Name** | Pointer to **string** | Name of the role | [optional] 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices.md) | Devices the role is applied to | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks.md) | Networks the role is applied to | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide.md) | Organization-wide permissions | [optional] 
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewInlineResponse200298WithDefaults instantiates a new InlineResponse200298 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineResponse200298) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200298) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200298) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200298) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +53,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetProductTypes
+### GetAppliedOnDevices
 
-`func (o *InlineResponse200298) GetProductTypes() []string`
+`func (o *InlineResponse200298) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-### GetProductTypesOk
+### GetAppliedOnDevicesOk
 
-`func (o *InlineResponse200298) GetProductTypesOk() (*[]string, bool)`
+`func (o *InlineResponse200298) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices, bool)`
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetAppliedOnDevices
 
-`func (o *InlineResponse200298) SetProductTypes(v []string)`
+`func (o *InlineResponse200298) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
-### HasProductTypes
+### HasAppliedOnDevices
 
-`func (o *InlineResponse200298) HasProductTypes() bool`
+`func (o *InlineResponse200298) HasAppliedOnDevices() bool`
 
-HasProductTypes returns a boolean if a field has been set.
+HasAppliedOnDevices returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetAppliedOnNetworks
 
-`func (o *InlineResponse200298) GetTimeZone() string`
+`func (o *InlineResponse200298) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetAppliedOnNetworksOk
 
-`func (o *InlineResponse200298) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineResponse200298) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetAppliedOnNetworks
 
-`func (o *InlineResponse200298) SetTimeZone(v string)`
+`func (o *InlineResponse200298) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks)`
 
-SetTimeZone sets TimeZone field to given value.
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
 
-### HasTimeZone
+### HasAppliedOnNetworks
 
-`func (o *InlineResponse200298) HasTimeZone() bool`
+`func (o *InlineResponse200298) HasAppliedOnNetworks() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasAppliedOnNetworks returns a boolean if a field has been set.
+
+### GetAppliedOrgWide
+
+`func (o *InlineResponse200298) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide`
+
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+
+### GetAppliedOrgWideOk
+
+`func (o *InlineResponse200298) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOrgWide
+
+`func (o *InlineResponse200298) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide)`
+
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
+
+### HasAppliedOrgWide
+
+`func (o *InlineResponse200298) HasAppliedOrgWide() bool`
+
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

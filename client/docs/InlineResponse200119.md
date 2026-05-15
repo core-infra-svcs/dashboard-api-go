@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Status of attempt to publish auto locate job | [optional] 
+**Ssids** | Pointer to [**InlineResponse200119Ssids**](InlineResponse200119Ssids.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200119WithDefaults instantiates a new InlineResponse200119 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetSsids
 
-`func (o *InlineResponse200119) GetSuccess() bool`
+`func (o *InlineResponse200119) GetSsids() InlineResponse200119Ssids`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetSsids returns the Ssids field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetSsidsOk
 
-`func (o *InlineResponse200119) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200119) GetSsidsOk() (*InlineResponse200119Ssids, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetSsids
 
-`func (o *InlineResponse200119) SetSuccess(v bool)`
+`func (o *InlineResponse200119) SetSsids(v InlineResponse200119Ssids)`
 
-SetSuccess sets Success field to given value.
+SetSsids sets Ssids field to given value.
 
-### HasSuccess
+### HasSsids
 
-`func (o *InlineResponse200119) HasSuccess() bool`
+`func (o *InlineResponse200119) HasSsids() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasSsids returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

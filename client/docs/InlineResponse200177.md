@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Qos Rule id | [optional] 
-**Vlan** | Pointer to **NullableInt32** | The VLAN of the incoming packet. A null value will match any VLAN. | [optional] 
-**Protocol** | Pointer to **string** | The protocol of the incoming packet. Can be one of \&quot;ANY\&quot;, \&quot;TCP\&quot; or \&quot;UDP\&quot;. Default value is \&quot;ANY\&quot; | [optional] 
-**SrcPort** | Pointer to **int32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
-**SrcPortRange** | Pointer to **string** | The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80 | [optional] 
-**DstPort** | Pointer to **int32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
-**DstPortRange** | Pointer to **string** | The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80 | [optional] 
-**Dscp** | Pointer to **int32** | DSCP tag for the incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0 | [optional] 
+**Name** | Pointer to **string** | User name | [optional] 
+**Login** | Pointer to **string** | User login identifier | [optional] 
+**Ssid** | Pointer to **string** | SSID name | [optional] 
+**LoginAt** | Pointer to **time.Time** | Login timestamp | [optional] 
+**GatewayDeviceMac** | Pointer to **string** | Gateway device mac address | [optional] 
+**ClientMac** | Pointer to **string** | Client mac address | [optional] 
+**ClientId** | Pointer to **string** | Client ID | [optional] 
+**Authorization** | Pointer to **string** | Authorization status | [optional] 
 
 ## Methods
 
@@ -32,215 +32,205 @@ NewInlineResponse200177WithDefaults instantiates a new InlineResponse200177 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetName
 
-`func (o *InlineResponse200177) GetId() string`
+`func (o *InlineResponse200177) GetName() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNameOk
 
-`func (o *InlineResponse200177) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200177) GetNameOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetName
 
-`func (o *InlineResponse200177) SetId(v string)`
+`func (o *InlineResponse200177) SetName(v string)`
 
-SetId sets Id field to given value.
+SetName sets Name field to given value.
 
-### HasId
+### HasName
 
-`func (o *InlineResponse200177) HasId() bool`
+`func (o *InlineResponse200177) HasName() bool`
 
-HasId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetVlan
+### GetLogin
 
-`func (o *InlineResponse200177) GetVlan() int32`
+`func (o *InlineResponse200177) GetLogin() string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetLogin returns the Login field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetLoginOk
 
-`func (o *InlineResponse200177) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200177) GetLoginOk() (*string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetLoginOk returns a tuple with the Login field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetLogin
 
-`func (o *InlineResponse200177) SetVlan(v int32)`
+`func (o *InlineResponse200177) SetLogin(v string)`
 
-SetVlan sets Vlan field to given value.
+SetLogin sets Login field to given value.
 
-### HasVlan
+### HasLogin
 
-`func (o *InlineResponse200177) HasVlan() bool`
+`func (o *InlineResponse200177) HasLogin() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasLogin returns a boolean if a field has been set.
 
-### SetVlanNil
+### GetSsid
 
-`func (o *InlineResponse200177) SetVlanNil(b bool)`
+`func (o *InlineResponse200177) GetSsid() string`
 
- SetVlanNil sets the value for Vlan to be an explicit nil
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### UnsetVlan
-`func (o *InlineResponse200177) UnsetVlan()`
+### GetSsidOk
 
-UnsetVlan ensures that no value is present for Vlan, not even an explicit nil
-### GetProtocol
+`func (o *InlineResponse200177) GetSsidOk() (*string, bool)`
 
-`func (o *InlineResponse200177) GetProtocol() string`
-
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
-
-### GetProtocolOk
-
-`func (o *InlineResponse200177) GetProtocolOk() (*string, bool)`
-
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocol
+### SetSsid
 
-`func (o *InlineResponse200177) SetProtocol(v string)`
+`func (o *InlineResponse200177) SetSsid(v string)`
 
-SetProtocol sets Protocol field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasProtocol
+### HasSsid
 
-`func (o *InlineResponse200177) HasProtocol() bool`
+`func (o *InlineResponse200177) HasSsid() bool`
 
-HasProtocol returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
 
-### GetSrcPort
+### GetLoginAt
 
-`func (o *InlineResponse200177) GetSrcPort() int32`
+`func (o *InlineResponse200177) GetLoginAt() time.Time`
 
-GetSrcPort returns the SrcPort field if non-nil, zero value otherwise.
+GetLoginAt returns the LoginAt field if non-nil, zero value otherwise.
 
-### GetSrcPortOk
+### GetLoginAtOk
 
-`func (o *InlineResponse200177) GetSrcPortOk() (*int32, bool)`
+`func (o *InlineResponse200177) GetLoginAtOk() (*time.Time, bool)`
 
-GetSrcPortOk returns a tuple with the SrcPort field if it's non-nil, zero value otherwise
+GetLoginAtOk returns a tuple with the LoginAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSrcPort
+### SetLoginAt
 
-`func (o *InlineResponse200177) SetSrcPort(v int32)`
+`func (o *InlineResponse200177) SetLoginAt(v time.Time)`
 
-SetSrcPort sets SrcPort field to given value.
+SetLoginAt sets LoginAt field to given value.
 
-### HasSrcPort
+### HasLoginAt
 
-`func (o *InlineResponse200177) HasSrcPort() bool`
+`func (o *InlineResponse200177) HasLoginAt() bool`
 
-HasSrcPort returns a boolean if a field has been set.
+HasLoginAt returns a boolean if a field has been set.
 
-### GetSrcPortRange
+### GetGatewayDeviceMac
 
-`func (o *InlineResponse200177) GetSrcPortRange() string`
+`func (o *InlineResponse200177) GetGatewayDeviceMac() string`
 
-GetSrcPortRange returns the SrcPortRange field if non-nil, zero value otherwise.
+GetGatewayDeviceMac returns the GatewayDeviceMac field if non-nil, zero value otherwise.
 
-### GetSrcPortRangeOk
+### GetGatewayDeviceMacOk
 
-`func (o *InlineResponse200177) GetSrcPortRangeOk() (*string, bool)`
+`func (o *InlineResponse200177) GetGatewayDeviceMacOk() (*string, bool)`
 
-GetSrcPortRangeOk returns a tuple with the SrcPortRange field if it's non-nil, zero value otherwise
+GetGatewayDeviceMacOk returns a tuple with the GatewayDeviceMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSrcPortRange
+### SetGatewayDeviceMac
 
-`func (o *InlineResponse200177) SetSrcPortRange(v string)`
+`func (o *InlineResponse200177) SetGatewayDeviceMac(v string)`
 
-SetSrcPortRange sets SrcPortRange field to given value.
+SetGatewayDeviceMac sets GatewayDeviceMac field to given value.
 
-### HasSrcPortRange
+### HasGatewayDeviceMac
 
-`func (o *InlineResponse200177) HasSrcPortRange() bool`
+`func (o *InlineResponse200177) HasGatewayDeviceMac() bool`
 
-HasSrcPortRange returns a boolean if a field has been set.
+HasGatewayDeviceMac returns a boolean if a field has been set.
 
-### GetDstPort
+### GetClientMac
 
-`func (o *InlineResponse200177) GetDstPort() int32`
+`func (o *InlineResponse200177) GetClientMac() string`
 
-GetDstPort returns the DstPort field if non-nil, zero value otherwise.
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
 
-### GetDstPortOk
+### GetClientMacOk
 
-`func (o *InlineResponse200177) GetDstPortOk() (*int32, bool)`
+`func (o *InlineResponse200177) GetClientMacOk() (*string, bool)`
 
-GetDstPortOk returns a tuple with the DstPort field if it's non-nil, zero value otherwise
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDstPort
+### SetClientMac
 
-`func (o *InlineResponse200177) SetDstPort(v int32)`
+`func (o *InlineResponse200177) SetClientMac(v string)`
 
-SetDstPort sets DstPort field to given value.
+SetClientMac sets ClientMac field to given value.
 
-### HasDstPort
+### HasClientMac
 
-`func (o *InlineResponse200177) HasDstPort() bool`
+`func (o *InlineResponse200177) HasClientMac() bool`
 
-HasDstPort returns a boolean if a field has been set.
+HasClientMac returns a boolean if a field has been set.
 
-### GetDstPortRange
+### GetClientId
 
-`func (o *InlineResponse200177) GetDstPortRange() string`
+`func (o *InlineResponse200177) GetClientId() string`
 
-GetDstPortRange returns the DstPortRange field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetDstPortRangeOk
+### GetClientIdOk
 
-`func (o *InlineResponse200177) GetDstPortRangeOk() (*string, bool)`
+`func (o *InlineResponse200177) GetClientIdOk() (*string, bool)`
 
-GetDstPortRangeOk returns a tuple with the DstPortRange field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDstPortRange
+### SetClientId
 
-`func (o *InlineResponse200177) SetDstPortRange(v string)`
+`func (o *InlineResponse200177) SetClientId(v string)`
 
-SetDstPortRange sets DstPortRange field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasDstPortRange
+### HasClientId
 
-`func (o *InlineResponse200177) HasDstPortRange() bool`
+`func (o *InlineResponse200177) HasClientId() bool`
 
-HasDstPortRange returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetDscp
+### GetAuthorization
 
-`func (o *InlineResponse200177) GetDscp() int32`
+`func (o *InlineResponse200177) GetAuthorization() string`
 
-GetDscp returns the Dscp field if non-nil, zero value otherwise.
+GetAuthorization returns the Authorization field if non-nil, zero value otherwise.
 
-### GetDscpOk
+### GetAuthorizationOk
 
-`func (o *InlineResponse200177) GetDscpOk() (*int32, bool)`
+`func (o *InlineResponse200177) GetAuthorizationOk() (*string, bool)`
 
-GetDscpOk returns a tuple with the Dscp field if it's non-nil, zero value otherwise
+GetAuthorizationOk returns a tuple with the Authorization field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDscp
+### SetAuthorization
 
-`func (o *InlineResponse200177) SetDscp(v int32)`
+`func (o *InlineResponse200177) SetAuthorization(v string)`
 
-SetDscp sets Dscp field to given value.
+SetAuthorization sets Authorization field to given value.
 
-### HasDscp
+### HasAuthorization
 
-`func (o *InlineResponse200177) HasDscp() bool`
+`func (o *InlineResponse200177) HasAuthorization() bool`
 
-HasDscp returns a boolean if a field has been set.
+HasAuthorization returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

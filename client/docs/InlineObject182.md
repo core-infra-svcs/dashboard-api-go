@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
-**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject182
 
-`func NewInlineObject182(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject182`
+`func NewInlineObject182() *InlineObject182`
 
 NewInlineObject182 instantiates a new InlineObject182 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,80 @@ NewInlineObject182WithDefaults instantiates a new InlineObject182 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetName
 
-`func (o *InlineObject182) GetType() string`
+`func (o *InlineObject182) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineObject182) GetTypeOk() (*string, bool)`
+`func (o *InlineObject182) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineObject182) SetType(v string)`
+`func (o *InlineObject182) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetMatch
+`func (o *InlineObject182) HasName() bool`
 
-`func (o *InlineObject182) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
+HasName returns a boolean if a field has been set.
 
-GetMatch returns the Match field if non-nil, zero value otherwise.
+### GetSharedSecret
 
-### GetMatchOk
+`func (o *InlineObject182) GetSharedSecret() string`
 
-`func (o *InlineObject182) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+### GetSharedSecretOk
+
+`func (o *InlineObject182) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMatch
+### SetSharedSecret
 
-`func (o *InlineObject182) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
+`func (o *InlineObject182) SetSharedSecret(v string)`
 
-SetMatch sets Match field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
+### HasSharedSecret
+
+`func (o *InlineObject182) HasSharedSecret() bool`
+
+HasSharedSecret returns a boolean if a field has been set.
+
+### GetPayloadTemplate
+
+`func (o *InlineObject182) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
+
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateOk
+
+`func (o *InlineObject182) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
+
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplate
+
+`func (o *InlineObject182) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
+
+SetPayloadTemplate sets PayloadTemplate field to given value.
+
+### HasPayloadTemplate
+
+`func (o *InlineObject182) HasPayloadTemplate() bool`
+
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

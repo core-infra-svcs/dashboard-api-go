@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Network Name | [optional] 
-**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
-**Api** | Pointer to [**InlineResponse200216Api**](InlineResponse200216Api.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the switch. | [optional] 
+**Serial** | Pointer to **string** | The serial number of the switch. | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the switch. | [optional] 
+**Network** | Pointer to [**InlineResponse200418Network**](InlineResponse200418Network.md) |  | [optional] 
+**Model** | Pointer to **string** | The model of the switch. | [optional] 
+**Ports** | Pointer to [**[]InlineResponse200422Ports**](InlineResponse200422Ports.md) | Ports belonging to the switch with LLDP/CDP discovery info. | [optional] 
 
 ## Methods
 
@@ -27,31 +29,6 @@ will change when the set of required properties is changed
 NewInlineResponse200422ItemsWithDefaults instantiates a new InlineResponse200422Items object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetNetworkId
-
-`func (o *InlineResponse200422Items) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200422Items) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200422Items) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200422Items) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +55,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetEnabled
+### GetSerial
 
-`func (o *InlineResponse200422Items) GetEnabled() bool`
+`func (o *InlineResponse200422Items) GetSerial() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSerialOk
 
-`func (o *InlineResponse200422Items) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200422Items) GetSerialOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSerial
 
-`func (o *InlineResponse200422Items) SetEnabled(v bool)`
+`func (o *InlineResponse200422Items) SetSerial(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetSerial sets Serial field to given value.
 
-### HasEnabled
+### HasSerial
 
-`func (o *InlineResponse200422Items) HasEnabled() bool`
+`func (o *InlineResponse200422Items) HasSerial() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetApi
+### GetMac
 
-`func (o *InlineResponse200422Items) GetApi() InlineResponse200216Api`
+`func (o *InlineResponse200422Items) GetMac() string`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetMacOk
 
-`func (o *InlineResponse200422Items) GetApiOk() (*InlineResponse200216Api, bool)`
+`func (o *InlineResponse200422Items) GetMacOk() (*string, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetMac
 
-`func (o *InlineResponse200422Items) SetApi(v InlineResponse200216Api)`
+`func (o *InlineResponse200422Items) SetMac(v string)`
 
-SetApi sets Api field to given value.
+SetMac sets Mac field to given value.
 
-### HasApi
+### HasMac
 
-`func (o *InlineResponse200422Items) HasApi() bool`
+`func (o *InlineResponse200422Items) HasMac() bool`
 
-HasApi returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200422Items) GetNetwork() InlineResponse200418Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200422Items) GetNetworkOk() (*InlineResponse200418Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200422Items) SetNetwork(v InlineResponse200418Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200422Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200422Items) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200422Items) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200422Items) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200422Items) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineResponse200422Items) GetPorts() []InlineResponse200422Ports`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineResponse200422Items) GetPortsOk() (*[]InlineResponse200422Ports, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineResponse200422Items) SetPorts(v []InlineResponse200422Ports)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineResponse200422Items) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

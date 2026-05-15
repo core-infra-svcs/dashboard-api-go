@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**InlineResponse200114Products**](InlineResponse200114Products.md) |  | [optional] 
-**Stages** | Pointer to [**[]InlineResponse200114Stages**](InlineResponse200114Stages.md) | The ordered stages in the network | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse200113Reasons**](InlineResponse200113Reasons.md) | Reasons for the rollback | [optional] 
+**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
+**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
+**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
+**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200114WithDefaults instantiates a new InlineResponse200114 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetTs
 
-`func (o *InlineResponse200114) GetProducts() InlineResponse200114Products`
+`func (o *InlineResponse200114) GetTs() time.Time`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetTsOk
 
-`func (o *InlineResponse200114) GetProductsOk() (*InlineResponse200114Products, bool)`
+`func (o *InlineResponse200114) GetTsOk() (*time.Time, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetTs
 
-`func (o *InlineResponse200114) SetProducts(v InlineResponse200114Products)`
+`func (o *InlineResponse200114) SetTs(v time.Time)`
 
-SetProducts sets Products field to given value.
+SetTs sets Ts field to given value.
 
-### HasProducts
+### HasTs
 
-`func (o *InlineResponse200114) HasProducts() bool`
+`func (o *InlineResponse200114) HasTs() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetStages
+### GetTotal
 
-`func (o *InlineResponse200114) GetStages() []InlineResponse200114Stages`
+`func (o *InlineResponse200114) GetTotal() float32`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetTotalOk
 
-`func (o *InlineResponse200114) GetStagesOk() (*[]InlineResponse200114Stages, bool)`
+`func (o *InlineResponse200114) GetTotalOk() (*float32, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetTotal
 
-`func (o *InlineResponse200114) SetStages(v []InlineResponse200114Stages)`
+`func (o *InlineResponse200114) SetTotal(v float32)`
 
-SetStages sets Stages field to given value.
+SetTotal sets Total field to given value.
 
-### HasStages
+### HasTotal
 
-`func (o *InlineResponse200114) HasStages() bool`
+`func (o *InlineResponse200114) HasTotal() bool`
 
-HasStages returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetReasons
+### GetUpstream
 
-`func (o *InlineResponse200114) GetReasons() []InlineResponse200113Reasons`
+`func (o *InlineResponse200114) GetUpstream() float32`
 
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetReasonsOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200114) GetReasonsOk() (*[]InlineResponse200113Reasons, bool)`
+`func (o *InlineResponse200114) GetUpstreamOk() (*float32, bool)`
 
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReasons
+### SetUpstream
 
-`func (o *InlineResponse200114) SetReasons(v []InlineResponse200113Reasons)`
+`func (o *InlineResponse200114) SetUpstream(v float32)`
 
-SetReasons sets Reasons field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasReasons
+### HasUpstream
 
-`func (o *InlineResponse200114) HasReasons() bool`
+`func (o *InlineResponse200114) HasUpstream() bool`
 
-HasReasons returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
+
+### GetDownstream
+
+`func (o *InlineResponse200114) GetDownstream() float32`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse200114) GetDownstreamOk() (*float32, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse200114) SetDownstream(v float32)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse200114) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

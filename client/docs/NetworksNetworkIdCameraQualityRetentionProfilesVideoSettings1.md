@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **MV93X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV93X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV93X.md) |  | [optional] 
 **MV53X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV53X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV53X.md) |  | [optional] 
 **MV84X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV84X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV84X.md) |  | [optional] 
+**MV44X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV44X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV44X.md) |  | [optional] 
 
 ## Methods
 
@@ -647,6 +648,31 @@ SetMV84X sets MV84X field to given value.
 `func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1) HasMV84X() bool`
 
 HasMV84X returns a boolean if a field has been set.
+
+### GetMV44X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1) GetMV44X() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV44X`
+
+GetMV44X returns the MV44X field if non-nil, zero value otherwise.
+
+### GetMV44XOk
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1) GetMV44XOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV44X, bool)`
+
+GetMV44XOk returns a tuple with the MV44X field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV44X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1) SetMV44X(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1MV44X)`
+
+SetMV44X sets MV44X field to given value.
+
+### HasMV44X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1) HasMV44X() bool`
+
+HasMV44X returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

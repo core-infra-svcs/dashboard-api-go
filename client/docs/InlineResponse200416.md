@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems.md) | List of zero touch deployments | 
-**Meta** | Pointer to [**InlineResponse200250Meta**](InlineResponse200250Meta.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the switch | [optional] 
+**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
+**Model** | Pointer to **string** | Model of the switch | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200416
 
-`func NewInlineResponse200416(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems, ) *InlineResponse200416`
+`func NewInlineResponse200416() *InlineResponse200416`
 
 NewInlineResponse200416 instantiates a new InlineResponse200416 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +29,130 @@ NewInlineResponse200416WithDefaults instantiates a new InlineResponse200416 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetNetwork
 
-`func (o *InlineResponse200416) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems`
+`func (o *InlineResponse200416) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNetworkOk
 
-`func (o *InlineResponse200416) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems, bool)`
+`func (o *InlineResponse200416) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetNetwork
 
-`func (o *InlineResponse200416) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems)`
+`func (o *InlineResponse200416) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
 
-SetItems sets Items field to given value.
+SetNetwork sets Network field to given value.
 
+### HasNetwork
 
-### GetMeta
+`func (o *InlineResponse200416) HasNetwork() bool`
 
-`func (o *InlineResponse200416) GetMeta() InlineResponse200250Meta`
+HasNetwork returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetName
 
-### GetMetaOk
+`func (o *InlineResponse200416) GetName() string`
 
-`func (o *InlineResponse200416) GetMetaOk() (*InlineResponse200250Meta, bool)`
+GetName returns the Name field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetNameOk
+
+`func (o *InlineResponse200416) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200416) SetMeta(v InlineResponse200250Meta)`
+`func (o *InlineResponse200416) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
-### HasMeta
+### HasName
 
-`func (o *InlineResponse200416) HasMeta() bool`
+`func (o *InlineResponse200416) HasName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200416) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200416) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200416) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200416) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200416) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200416) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200416) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200416) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse200416) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200416) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200416) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200416) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

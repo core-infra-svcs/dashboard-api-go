@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**Identity** | Pointer to [**InlineResponse200224Identity**](InlineResponse200224Identity.md) |  | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200224EapolKey**](InlineResponse200224EapolKey.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
+**Name** | Pointer to **string** | AP port profile name | [optional] 
+**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
+**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200224WithDefaults instantiates a new InlineResponse200224 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetProfileId
 
-`func (o *InlineResponse200224) GetTimeout() int32`
+`func (o *InlineResponse200224) GetProfileId() string`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200224) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineResponse200224) GetProfileIdOk() (*string, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetProfileId
 
-`func (o *InlineResponse200224) SetTimeout(v int32)`
+`func (o *InlineResponse200224) SetProfileId(v string)`
 
-SetTimeout sets Timeout field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasTimeout
+### HasProfileId
 
-`func (o *InlineResponse200224) HasTimeout() bool`
+`func (o *InlineResponse200224) HasProfileId() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetName
 
-`func (o *InlineResponse200224) GetMaxRetries() int32`
+`func (o *InlineResponse200224) GetName() string`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetNameOk
 
-`func (o *InlineResponse200224) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineResponse200224) GetNameOk() (*string, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetName
 
-`func (o *InlineResponse200224) SetMaxRetries(v int32)`
+`func (o *InlineResponse200224) SetName(v string)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetName sets Name field to given value.
 
-### HasMaxRetries
+### HasName
 
-`func (o *InlineResponse200224) HasMaxRetries() bool`
+`func (o *InlineResponse200224) HasName() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIdentity
+### GetIsDefault
 
-`func (o *InlineResponse200224) GetIdentity() InlineResponse200224Identity`
+`func (o *InlineResponse200224) GetIsDefault() bool`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200224) GetIdentityOk() (*InlineResponse200224Identity, bool)`
+`func (o *InlineResponse200224) GetIsDefaultOk() (*bool, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetIsDefault
 
-`func (o *InlineResponse200224) SetIdentity(v InlineResponse200224Identity)`
+`func (o *InlineResponse200224) SetIsDefault(v bool)`
 
-SetIdentity sets Identity field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasIdentity
+### HasIsDefault
 
-`func (o *InlineResponse200224) HasIdentity() bool`
+`func (o *InlineResponse200224) HasIsDefault() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetEapolKey
+### GetPorts
 
-`func (o *InlineResponse200224) GetEapolKey() InlineResponse200224EapolKey`
+`func (o *InlineResponse200224) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
 
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetEapolKeyOk
+### GetPortsOk
 
-`func (o *InlineResponse200224) GetEapolKeyOk() (*InlineResponse200224EapolKey, bool)`
+`func (o *InlineResponse200224) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
 
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEapolKey
+### SetPorts
 
-`func (o *InlineResponse200224) SetEapolKey(v InlineResponse200224EapolKey)`
+`func (o *InlineResponse200224) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
 
-SetEapolKey sets EapolKey field to given value.
+SetPorts sets Ports field to given value.
 
-### HasEapolKey
+### HasPorts
 
-`func (o *InlineResponse200224) HasEapolKey() bool`
+`func (o *InlineResponse200224) HasPorts() bool`
 
-HasEapolKey returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
+
+### GetUsbPorts
+
+`func (o *InlineResponse200224) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
+
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+
+### GetUsbPortsOk
+
+`func (o *InlineResponse200224) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
+
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsbPorts
+
+`func (o *InlineResponse200224) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
+
+SetUsbPorts sets UsbPorts field to given value.
+
+### HasUsbPorts
+
+`func (o *InlineResponse200224) HasUsbPorts() bool`
+
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

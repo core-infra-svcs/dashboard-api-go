@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | Pointer to **string** | The type of command sent to the device. | [optional] 
-**Name** | Pointer to **string** | The name of the device to which the command is sent. | [optional] 
-**Details** | Pointer to **string** | A JSON string object containing command details. | [optional] 
-**DashboardUser** | Pointer to **string** | The Meraki dashboard user who initiated the command. | [optional] 
-**Ts** | Pointer to **string** | The time the command was sent to the device. | [optional] 
+**Device** | Pointer to [**NetworksNetworkIdSensorRelationshipsDevice**](NetworksNetworkIdSensorRelationshipsDevice.md) |  | [optional] 
+**Relationships** | Pointer to [**NetworksNetworkIdSensorRelationshipsRelationships**](NetworksNetworkIdSensorRelationshipsRelationships.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200149WithDefaults instantiates a new InlineResponse200149 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAction
+### GetDevice
 
-`func (o *InlineResponse200149) GetAction() string`
+`func (o *InlineResponse200149) GetDevice() NetworksNetworkIdSensorRelationshipsDevice`
 
-GetAction returns the Action field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetActionOk
+### GetDeviceOk
 
-`func (o *InlineResponse200149) GetActionOk() (*string, bool)`
+`func (o *InlineResponse200149) GetDeviceOk() (*NetworksNetworkIdSensorRelationshipsDevice, bool)`
 
-GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAction
+### SetDevice
 
-`func (o *InlineResponse200149) SetAction(v string)`
+`func (o *InlineResponse200149) SetDevice(v NetworksNetworkIdSensorRelationshipsDevice)`
 
-SetAction sets Action field to given value.
+SetDevice sets Device field to given value.
 
-### HasAction
+### HasDevice
 
-`func (o *InlineResponse200149) HasAction() bool`
+`func (o *InlineResponse200149) HasDevice() bool`
 
-HasAction returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetName
+### GetRelationships
 
-`func (o *InlineResponse200149) GetName() string`
+`func (o *InlineResponse200149) GetRelationships() NetworksNetworkIdSensorRelationshipsRelationships`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRelationships returns the Relationships field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRelationshipsOk
 
-`func (o *InlineResponse200149) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200149) GetRelationshipsOk() (*NetworksNetworkIdSensorRelationshipsRelationships, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRelationships
 
-`func (o *InlineResponse200149) SetName(v string)`
+`func (o *InlineResponse200149) SetRelationships(v NetworksNetworkIdSensorRelationshipsRelationships)`
 
-SetName sets Name field to given value.
+SetRelationships sets Relationships field to given value.
 
-### HasName
+### HasRelationships
 
-`func (o *InlineResponse200149) HasName() bool`
+`func (o *InlineResponse200149) HasRelationships() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDetails
-
-`func (o *InlineResponse200149) GetDetails() string`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineResponse200149) GetDetailsOk() (*string, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineResponse200149) SetDetails(v string)`
-
-SetDetails sets Details field to given value.
-
-### HasDetails
-
-`func (o *InlineResponse200149) HasDetails() bool`
-
-HasDetails returns a boolean if a field has been set.
-
-### GetDashboardUser
-
-`func (o *InlineResponse200149) GetDashboardUser() string`
-
-GetDashboardUser returns the DashboardUser field if non-nil, zero value otherwise.
-
-### GetDashboardUserOk
-
-`func (o *InlineResponse200149) GetDashboardUserOk() (*string, bool)`
-
-GetDashboardUserOk returns a tuple with the DashboardUser field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDashboardUser
-
-`func (o *InlineResponse200149) SetDashboardUser(v string)`
-
-SetDashboardUser sets DashboardUser field to given value.
-
-### HasDashboardUser
-
-`func (o *InlineResponse200149) HasDashboardUser() bool`
-
-HasDashboardUser returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200149) GetTs() string`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200149) GetTsOk() (*string, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200149) SetTs(v string)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200149) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasRelationships returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

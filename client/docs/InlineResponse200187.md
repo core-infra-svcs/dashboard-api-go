@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]InlineResponse200187StpBridgePriority**](InlineResponse200187StpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
+**Id** | Pointer to **string** | The ID for the link aggregation. | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | The ID for the link aggregation. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200187WithDefaults instantiates a new InlineResponse200187 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetId
 
-`func (o *InlineResponse200187) GetRstpEnabled() bool`
+`func (o *InlineResponse200187) GetId() string`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse200187) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200187) GetIdOk() (*string, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetId
 
-`func (o *InlineResponse200187) SetRstpEnabled(v bool)`
+`func (o *InlineResponse200187) SetId(v string)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasRstpEnabled
+### HasId
 
-`func (o *InlineResponse200187) HasRstpEnabled() bool`
+`func (o *InlineResponse200187) HasId() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetSwitchPorts
 
-`func (o *InlineResponse200187) GetStpBridgePriority() []InlineResponse200187StpBridgePriority`
+`func (o *InlineResponse200187) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetSwitchPortsOk
 
-`func (o *InlineResponse200187) GetStpBridgePriorityOk() (*[]InlineResponse200187StpBridgePriority, bool)`
+`func (o *InlineResponse200187) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetSwitchPorts
 
-`func (o *InlineResponse200187) SetStpBridgePriority(v []InlineResponse200187StpBridgePriority)`
+`func (o *InlineResponse200187) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasStpBridgePriority
+### HasSwitchPorts
 
-`func (o *InlineResponse200187) HasStpBridgePriority() bool`
+`func (o *InlineResponse200187) HasSwitchPorts() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

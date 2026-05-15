@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Switch port schedule ID | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Switch port schedule name | [optional] 
-**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
+**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
+**CommunityString** | Pointer to **string** | SNMP community string if access is &#39;community&#39;. | [optional] 
+**Users** | Pointer to [**[]InlineResponse200176Users**](InlineResponse200176Users.md) | SNMP settings if access is &#39;users&#39;. | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200176WithDefaults instantiates a new InlineResponse200176 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetAccess
 
-`func (o *InlineResponse200176) GetId() string`
+`func (o *InlineResponse200176) GetAccess() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetAccessOk
 
-`func (o *InlineResponse200176) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200176) GetAccessOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetAccess
 
-`func (o *InlineResponse200176) SetId(v string)`
+`func (o *InlineResponse200176) SetAccess(v string)`
 
-SetId sets Id field to given value.
+SetAccess sets Access field to given value.
 
-### HasId
+### HasAccess
 
-`func (o *InlineResponse200176) HasId() bool`
+`func (o *InlineResponse200176) HasAccess() bool`
 
-HasId returns a boolean if a field has been set.
+HasAccess returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetCommunityString
 
-`func (o *InlineResponse200176) GetNetworkId() string`
+`func (o *InlineResponse200176) GetCommunityString() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetCommunityStringOk
 
-`func (o *InlineResponse200176) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200176) GetCommunityStringOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetCommunityString
 
-`func (o *InlineResponse200176) SetNetworkId(v string)`
+`func (o *InlineResponse200176) SetCommunityString(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetCommunityString sets CommunityString field to given value.
 
-### HasNetworkId
+### HasCommunityString
 
-`func (o *InlineResponse200176) HasNetworkId() bool`
+`func (o *InlineResponse200176) HasCommunityString() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasCommunityString returns a boolean if a field has been set.
 
-### GetName
+### GetUsers
 
-`func (o *InlineResponse200176) GetName() string`
+`func (o *InlineResponse200176) GetUsers() []InlineResponse200176Users`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUsers returns the Users field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUsersOk
 
-`func (o *InlineResponse200176) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200176) GetUsersOk() (*[]InlineResponse200176Users, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUsers
 
-`func (o *InlineResponse200176) SetName(v string)`
+`func (o *InlineResponse200176) SetUsers(v []InlineResponse200176Users)`
 
-SetName sets Name field to given value.
+SetUsers sets Users field to given value.
 
-### HasName
+### HasUsers
 
-`func (o *InlineResponse200176) HasName() bool`
+`func (o *InlineResponse200176) HasUsers() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetPortSchedule
-
-`func (o *InlineResponse200176) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
-
-GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
-
-### GetPortScheduleOk
-
-`func (o *InlineResponse200176) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
-
-GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPortSchedule
-
-`func (o *InlineResponse200176) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
-
-SetPortSchedule sets PortSchedule field to given value.
-
-### HasPortSchedule
-
-`func (o *InlineResponse200176) HasPortSchedule() bool`
-
-HasPortSchedule returns a boolean if a field has been set.
+HasUsers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

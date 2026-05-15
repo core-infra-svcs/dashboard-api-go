@@ -4,11 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
-**Hubs** | Pointer to [**[]InlineResponse20089Hubs**](InlineResponse20089Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
-**Subnets** | Pointer to [**[]InlineResponse20089Subnets**](InlineResponse20089Subnets.md) | The list of subnets and their VPN presence. | [optional] 
-**Subnet** | Pointer to [**InlineResponse20089Subnet**](InlineResponse20089Subnet.md) |  | [optional] 
-**HostTranslations** | Pointer to [**[]InlineResponse20089HostTranslations**](InlineResponse20089HostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
+**Id** | Pointer to **string** | Route ID | [optional] 
+**IpVersion** | Pointer to **int32** | IP protocol version | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Enabled** | Pointer to **bool** | Whether the route is enabled or not | [optional] 
+**Name** | Pointer to **string** | Name of the route | [optional] 
+**Subnet** | Pointer to **string** | Subnet of the route | [optional] 
+**GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
+**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
+**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
+**GatewayVlanId** | Pointer to **int32** | Gateway VLAN ID | [optional] 
 
 ## Methods
 
@@ -29,97 +34,147 @@ NewInlineResponse20089WithDefaults instantiates a new InlineResponse20089 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetId
 
-`func (o *InlineResponse20089) GetMode() string`
+`func (o *InlineResponse20089) GetId() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetIdOk
 
-`func (o *InlineResponse20089) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20089) GetIdOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetId
 
-`func (o *InlineResponse20089) SetMode(v string)`
+`func (o *InlineResponse20089) SetId(v string)`
 
-SetMode sets Mode field to given value.
+SetId sets Id field to given value.
 
-### HasMode
+### HasId
 
-`func (o *InlineResponse20089) HasMode() bool`
+`func (o *InlineResponse20089) HasId() bool`
 
-HasMode returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetHubs
+### GetIpVersion
 
-`func (o *InlineResponse20089) GetHubs() []InlineResponse20089Hubs`
+`func (o *InlineResponse20089) GetIpVersion() int32`
 
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
 
-### GetHubsOk
+### GetIpVersionOk
 
-`func (o *InlineResponse20089) GetHubsOk() (*[]InlineResponse20089Hubs, bool)`
+`func (o *InlineResponse20089) GetIpVersionOk() (*int32, bool)`
 
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHubs
+### SetIpVersion
 
-`func (o *InlineResponse20089) SetHubs(v []InlineResponse20089Hubs)`
+`func (o *InlineResponse20089) SetIpVersion(v int32)`
 
-SetHubs sets Hubs field to given value.
+SetIpVersion sets IpVersion field to given value.
 
-### HasHubs
+### HasIpVersion
 
-`func (o *InlineResponse20089) HasHubs() bool`
+`func (o *InlineResponse20089) HasIpVersion() bool`
 
-HasHubs returns a boolean if a field has been set.
+HasIpVersion returns a boolean if a field has been set.
 
-### GetSubnets
+### GetNetworkId
 
-`func (o *InlineResponse20089) GetSubnets() []InlineResponse20089Subnets`
+`func (o *InlineResponse20089) GetNetworkId() string`
 
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSubnetsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20089) GetSubnetsOk() (*[]InlineResponse20089Subnets, bool)`
+`func (o *InlineResponse20089) GetNetworkIdOk() (*string, bool)`
 
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnets
+### SetNetworkId
 
-`func (o *InlineResponse20089) SetSubnets(v []InlineResponse20089Subnets)`
+`func (o *InlineResponse20089) SetNetworkId(v string)`
 
-SetSubnets sets Subnets field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasSubnets
+### HasNetworkId
 
-`func (o *InlineResponse20089) HasSubnets() bool`
+`func (o *InlineResponse20089) HasNetworkId() bool`
 
-HasSubnets returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse20089) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse20089) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse20089) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse20089) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20089) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20089) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20089) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20089) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetSubnet
 
-`func (o *InlineResponse20089) GetSubnet() InlineResponse20089Subnet`
+`func (o *InlineResponse20089) GetSubnet() string`
 
 GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
 ### GetSubnetOk
 
-`func (o *InlineResponse20089) GetSubnetOk() (*InlineResponse20089Subnet, bool)`
+`func (o *InlineResponse20089) GetSubnetOk() (*string, bool)`
 
 GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSubnet
 
-`func (o *InlineResponse20089) SetSubnet(v InlineResponse20089Subnet)`
+`func (o *InlineResponse20089) SetSubnet(v string)`
 
 SetSubnet sets Subnet field to given value.
 
@@ -129,30 +184,105 @@ SetSubnet sets Subnet field to given value.
 
 HasSubnet returns a boolean if a field has been set.
 
-### GetHostTranslations
+### GetGatewayIp
 
-`func (o *InlineResponse20089) GetHostTranslations() []InlineResponse20089HostTranslations`
+`func (o *InlineResponse20089) GetGatewayIp() string`
 
-GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
 
-### GetHostTranslationsOk
+### GetGatewayIpOk
 
-`func (o *InlineResponse20089) GetHostTranslationsOk() (*[]InlineResponse20089HostTranslations, bool)`
+`func (o *InlineResponse20089) GetGatewayIpOk() (*string, bool)`
 
-GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostTranslations
+### SetGatewayIp
 
-`func (o *InlineResponse20089) SetHostTranslations(v []InlineResponse20089HostTranslations)`
+`func (o *InlineResponse20089) SetGatewayIp(v string)`
 
-SetHostTranslations sets HostTranslations field to given value.
+SetGatewayIp sets GatewayIp field to given value.
 
-### HasHostTranslations
+### HasGatewayIp
 
-`func (o *InlineResponse20089) HasHostTranslations() bool`
+`func (o *InlineResponse20089) HasGatewayIp() bool`
 
-HasHostTranslations returns a boolean if a field has been set.
+HasGatewayIp returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineResponse20089) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineResponse20089) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineResponse20089) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments)`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineResponse20089) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineResponse20089) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineResponse20089) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineResponse20089) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineResponse20089) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
+
+### GetGatewayVlanId
+
+`func (o *InlineResponse20089) GetGatewayVlanId() int32`
+
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
+
+### GetGatewayVlanIdOk
+
+`func (o *InlineResponse20089) GetGatewayVlanIdOk() (*int32, bool)`
+
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayVlanId
+
+`func (o *InlineResponse20089) SetGatewayVlanId(v int32)`
+
+SetGatewayVlanId sets GatewayVlanId field to given value.
+
+### HasGatewayVlanId
+
+`func (o *InlineResponse20089) HasGatewayVlanId() bool`
+
+HasGatewayVlanId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

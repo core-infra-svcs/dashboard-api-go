@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
-**AsNumber** | Pointer to **int32** | Organization-specific number of the Autonomous System to which the appliance belongs | [optional] 
-**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
-**RouterId** | Pointer to **string** | The router ID of the appliance | [optional] 
-**Neighbors** | Pointer to [**[]InlineResponse20088Neighbors**](InlineResponse20088Neighbors.md) | List of eBGP neighbor configurations | [optional] 
+**Number** | Pointer to **int32** | The number of the SSID. | [optional] 
+**Name** | Pointer to **string** | The name of the SSID. | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
+**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. | [optional] 
+**AuthMode** | Pointer to **string** | The association control method for the SSID. | [optional] 
+**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsRadiusServers**](NetworksNetworkIdApplianceSsidsRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. | [optional] 
+**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID. | [optional] 
+**WpaEncryptionMode** | Pointer to **string** | WPA encryption mode for the SSID. | [optional] 
+**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
 
 ## Methods
 
@@ -28,6 +32,56 @@ will change when the set of required properties is changed
 NewInlineResponse20088WithDefaults instantiates a new InlineResponse20088 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetNumber
+
+`func (o *InlineResponse20088) GetNumber() int32`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse20088) GetNumberOk() (*int32, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse20088) SetNumber(v int32)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse20088) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20088) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20088) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20088) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20088) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -54,105 +108,155 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetAsNumber
+### GetDefaultVlanId
 
-`func (o *InlineResponse20088) GetAsNumber() int32`
+`func (o *InlineResponse20088) GetDefaultVlanId() int32`
 
-GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
+GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
 
-### GetAsNumberOk
+### GetDefaultVlanIdOk
 
-`func (o *InlineResponse20088) GetAsNumberOk() (*int32, bool)`
+`func (o *InlineResponse20088) GetDefaultVlanIdOk() (*int32, bool)`
 
-GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
+GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAsNumber
+### SetDefaultVlanId
 
-`func (o *InlineResponse20088) SetAsNumber(v int32)`
+`func (o *InlineResponse20088) SetDefaultVlanId(v int32)`
 
-SetAsNumber sets AsNumber field to given value.
+SetDefaultVlanId sets DefaultVlanId field to given value.
 
-### HasAsNumber
+### HasDefaultVlanId
 
-`func (o *InlineResponse20088) HasAsNumber() bool`
+`func (o *InlineResponse20088) HasDefaultVlanId() bool`
 
-HasAsNumber returns a boolean if a field has been set.
+HasDefaultVlanId returns a boolean if a field has been set.
 
-### GetIbgpHoldTimer
+### GetAuthMode
 
-`func (o *InlineResponse20088) GetIbgpHoldTimer() int32`
+`func (o *InlineResponse20088) GetAuthMode() string`
 
-GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
+GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
 
-### GetIbgpHoldTimerOk
+### GetAuthModeOk
 
-`func (o *InlineResponse20088) GetIbgpHoldTimerOk() (*int32, bool)`
+`func (o *InlineResponse20088) GetAuthModeOk() (*string, bool)`
 
-GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
+GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIbgpHoldTimer
+### SetAuthMode
 
-`func (o *InlineResponse20088) SetIbgpHoldTimer(v int32)`
+`func (o *InlineResponse20088) SetAuthMode(v string)`
 
-SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
+SetAuthMode sets AuthMode field to given value.
 
-### HasIbgpHoldTimer
+### HasAuthMode
 
-`func (o *InlineResponse20088) HasIbgpHoldTimer() bool`
+`func (o *InlineResponse20088) HasAuthMode() bool`
 
-HasIbgpHoldTimer returns a boolean if a field has been set.
+HasAuthMode returns a boolean if a field has been set.
 
-### GetRouterId
+### GetRadiusServers
 
-`func (o *InlineResponse20088) GetRouterId() string`
+`func (o *InlineResponse20088) GetRadiusServers() []NetworksNetworkIdApplianceSsidsRadiusServers`
 
-GetRouterId returns the RouterId field if non-nil, zero value otherwise.
+GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
 
-### GetRouterIdOk
+### GetRadiusServersOk
 
-`func (o *InlineResponse20088) GetRouterIdOk() (*string, bool)`
+`func (o *InlineResponse20088) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsRadiusServers, bool)`
 
-GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
+GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRouterId
+### SetRadiusServers
 
-`func (o *InlineResponse20088) SetRouterId(v string)`
+`func (o *InlineResponse20088) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsRadiusServers)`
 
-SetRouterId sets RouterId field to given value.
+SetRadiusServers sets RadiusServers field to given value.
 
-### HasRouterId
+### HasRadiusServers
 
-`func (o *InlineResponse20088) HasRouterId() bool`
+`func (o *InlineResponse20088) HasRadiusServers() bool`
 
-HasRouterId returns a boolean if a field has been set.
+HasRadiusServers returns a boolean if a field has been set.
 
-### GetNeighbors
+### GetEncryptionMode
 
-`func (o *InlineResponse20088) GetNeighbors() []InlineResponse20088Neighbors`
+`func (o *InlineResponse20088) GetEncryptionMode() string`
 
-GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
 
-### GetNeighborsOk
+### GetEncryptionModeOk
 
-`func (o *InlineResponse20088) GetNeighborsOk() (*[]InlineResponse20088Neighbors, bool)`
+`func (o *InlineResponse20088) GetEncryptionModeOk() (*string, bool)`
 
-GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNeighbors
+### SetEncryptionMode
 
-`func (o *InlineResponse20088) SetNeighbors(v []InlineResponse20088Neighbors)`
+`func (o *InlineResponse20088) SetEncryptionMode(v string)`
 
-SetNeighbors sets Neighbors field to given value.
+SetEncryptionMode sets EncryptionMode field to given value.
 
-### HasNeighbors
+### HasEncryptionMode
 
-`func (o *InlineResponse20088) HasNeighbors() bool`
+`func (o *InlineResponse20088) HasEncryptionMode() bool`
 
-HasNeighbors returns a boolean if a field has been set.
+HasEncryptionMode returns a boolean if a field has been set.
+
+### GetWpaEncryptionMode
+
+`func (o *InlineResponse20088) GetWpaEncryptionMode() string`
+
+GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
+
+### GetWpaEncryptionModeOk
+
+`func (o *InlineResponse20088) GetWpaEncryptionModeOk() (*string, bool)`
+
+GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWpaEncryptionMode
+
+`func (o *InlineResponse20088) SetWpaEncryptionMode(v string)`
+
+SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
+
+### HasWpaEncryptionMode
+
+`func (o *InlineResponse20088) HasWpaEncryptionMode() bool`
+
+HasWpaEncryptionMode returns a boolean if a field has been set.
+
+### GetVisible
+
+`func (o *InlineResponse20088) GetVisible() bool`
+
+GetVisible returns the Visible field if non-nil, zero value otherwise.
+
+### GetVisibleOk
+
+`func (o *InlineResponse20088) GetVisibleOk() (*bool, bool)`
+
+GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisible
+
+`func (o *InlineResponse20088) SetVisible(v bool)`
+
+SetVisible sets Visible field to given value.
+
+### HasVisible
+
+`func (o *InlineResponse20088) HasVisible() bool`
+
+HasVisible returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

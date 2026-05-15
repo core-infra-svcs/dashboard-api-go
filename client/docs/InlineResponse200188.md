@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | Pointer to [**[]InlineResponse200188Servers**](InlineResponse200188Servers.md) | List of the syslog servers for this network | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200188Overrides**](InlineResponse200188Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200188WithDefaults instantiates a new InlineResponse200188 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetDefaultMtuSize
 
-`func (o *InlineResponse200188) GetServers() []InlineResponse200188Servers`
+`func (o *InlineResponse200188) GetDefaultMtuSize() int32`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineResponse200188) GetServersOk() (*[]InlineResponse200188Servers, bool)`
+`func (o *InlineResponse200188) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetDefaultMtuSize
 
-`func (o *InlineResponse200188) SetServers(v []InlineResponse200188Servers)`
+`func (o *InlineResponse200188) SetDefaultMtuSize(v int32)`
 
-SetServers sets Servers field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
-### HasServers
+### HasDefaultMtuSize
 
-`func (o *InlineResponse200188) HasServers() bool`
+`func (o *InlineResponse200188) HasDefaultMtuSize() bool`
 
-HasServers returns a boolean if a field has been set.
+HasDefaultMtuSize returns a boolean if a field has been set.
+
+### GetOverrides
+
+`func (o *InlineResponse200188) GetOverrides() []InlineResponse200188Overrides`
+
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+
+### GetOverridesOk
+
+`func (o *InlineResponse200188) GetOverridesOk() (*[]InlineResponse200188Overrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOverrides
+
+`func (o *InlineResponse200188) SetOverrides(v []InlineResponse200188Overrides)`
+
+SetOverrides sets Overrides field to given value.
+
+### HasOverrides
+
+`func (o *InlineResponse200188) HasOverrides() bool`
+
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

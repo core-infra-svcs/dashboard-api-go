@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the firewall ruleset | 
-**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
+**DeviceSerial** | Pointer to **NullableString** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
 
 ## Methods
 
 ### NewInlineObject294
 
-`func NewInlineObject294(name string, ) *InlineObject294`
+`func NewInlineObject294() *InlineObject294`
 
 NewInlineObject294 instantiates a new InlineObject294 object
 This constructor will assign default values to properties that have it defined,
@@ -26,51 +25,41 @@ NewInlineObject294WithDefaults instantiates a new InlineObject294 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDeviceSerial
 
-`func (o *InlineObject294) GetName() string`
+`func (o *InlineObject294) GetDeviceSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDeviceSerialOk
 
-`func (o *InlineObject294) GetNameOk() (*string, bool)`
+`func (o *InlineObject294) GetDeviceSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDeviceSerial
 
-`func (o *InlineObject294) SetName(v string)`
+`func (o *InlineObject294) SetDeviceSerial(v string)`
 
-SetName sets Name field to given value.
+SetDeviceSerial sets DeviceSerial field to given value.
 
+### HasDeviceSerial
 
-### GetDescription
+`func (o *InlineObject294) HasDeviceSerial() bool`
 
-`func (o *InlineObject294) GetDescription() string`
+HasDeviceSerial returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### SetDeviceSerialNil
 
-### GetDescriptionOk
+`func (o *InlineObject294) SetDeviceSerialNil(b bool)`
 
-`func (o *InlineObject294) GetDescriptionOk() (*string, bool)`
+ SetDeviceSerialNil sets the value for DeviceSerial to be an explicit nil
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+### UnsetDeviceSerial
+`func (o *InlineObject294) UnsetDeviceSerial()`
 
-### SetDescription
-
-`func (o *InlineObject294) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject294) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
+UnsetDeviceSerial ensures that no value is present for DeviceSerial, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

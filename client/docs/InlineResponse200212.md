@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]InlineResponse200212Plans**](InlineResponse200212Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200212WithDefaults instantiates a new InlineResponse200212 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetCurrency
 
-`func (o *InlineResponse200212) GetProfileId() string`
+`func (o *InlineResponse200212) GetCurrency() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetCurrencyOk
 
-`func (o *InlineResponse200212) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200212) GetCurrencyOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetCurrency
 
-`func (o *InlineResponse200212) SetProfileId(v string)`
+`func (o *InlineResponse200212) SetCurrency(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasProfileId
+### HasCurrency
 
-`func (o *InlineResponse200212) HasProfileId() bool`
+`func (o *InlineResponse200212) HasCurrency() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
+
+### GetPlans
+
+`func (o *InlineResponse200212) GetPlans() []InlineResponse200212Plans`
+
+GetPlans returns the Plans field if non-nil, zero value otherwise.
+
+### GetPlansOk
+
+`func (o *InlineResponse200212) GetPlansOk() (*[]InlineResponse200212Plans, bool)`
+
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlans
+
+`func (o *InlineResponse200212) SetPlans(v []InlineResponse200212Plans)`
+
+SetPlans sets Plans field to given value.
+
+### HasPlans
+
+`func (o *InlineResponse200212) HasPlans() bool`
+
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

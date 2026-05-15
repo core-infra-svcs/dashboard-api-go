@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices.md) | Device details (maximum of 20 devices allowed) | 
-**Notes** | Pointer to **string** | Reason for capture | [optional] 
-**Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
-**Name** | **string** | Name of packet capture file | 
-**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
 
 ## Methods
 
 ### NewInlineObject263
 
-`func NewInlineObject263(devices []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, name string, ) *InlineObject263`
+`func NewInlineObject263() *InlineObject263`
 
 NewInlineObject263 instantiates a new InlineObject263 object
 This constructor will assign default values to properties that have it defined,
@@ -29,101 +25,6 @@ will change when the set of required properties is changed
 NewInlineObject263WithDefaults instantiates a new InlineObject263 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetDevices
-
-`func (o *InlineObject263) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineObject263) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineObject263) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices)`
-
-SetDevices sets Devices field to given value.
-
-
-### GetNotes
-
-`func (o *InlineObject263) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject263) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject263) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject263) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetDuration
-
-`func (o *InlineObject263) GetDuration() int32`
-
-GetDuration returns the Duration field if non-nil, zero value otherwise.
-
-### GetDurationOk
-
-`func (o *InlineObject263) GetDurationOk() (*int32, bool)`
-
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDuration
-
-`func (o *InlineObject263) SetDuration(v int32)`
-
-SetDuration sets Duration field to given value.
-
-### HasDuration
-
-`func (o *InlineObject263) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
-
-### GetFilterExpression
-
-`func (o *InlineObject263) GetFilterExpression() string`
-
-GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
-
-### GetFilterExpressionOk
-
-`func (o *InlineObject263) GetFilterExpressionOk() (*string, bool)`
-
-GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFilterExpression
-
-`func (o *InlineObject263) SetFilterExpression(v string)`
-
-SetFilterExpression sets FilterExpression field to given value.
-
-### HasFilterExpression
-
-`func (o *InlineObject263) HasFilterExpression() bool`
-
-HasFilterExpression returns a boolean if a field has been set.
 
 ### GetName
 
@@ -144,31 +45,36 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetAdvanced
+`func (o *InlineObject263) HasName() bool`
 
-`func (o *InlineObject263) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced`
+HasName returns a boolean if a field has been set.
 
-GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
+### GetTimeZone
 
-### GetAdvancedOk
+`func (o *InlineObject263) GetTimeZone() string`
 
-`func (o *InlineObject263) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced, bool)`
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
+### GetTimeZoneOk
+
+`func (o *InlineObject263) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvanced
+### SetTimeZone
 
-`func (o *InlineObject263) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced)`
+`func (o *InlineObject263) SetTimeZone(v string)`
 
-SetAdvanced sets Advanced field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasAdvanced
+### HasTimeZone
 
-`func (o *InlineObject263) HasAdvanced() bool`
+`func (o *InlineObject263) HasTimeZone() bool`
 
-HasAdvanced returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

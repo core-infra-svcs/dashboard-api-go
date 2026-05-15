@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdInventoryClaimLicenses**](OrganizationsOrganizationIdInventoryClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
 
 ## Methods
 
 ### NewInlineObject276
 
-`func NewInlineObject276() *InlineObject276`
+`func NewInlineObject276(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject276`
 
 NewInlineObject276 instantiates a new InlineObject276 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +25,25 @@ NewInlineObject276WithDefaults instantiates a new InlineObject276 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetOrder
 
-`func (o *InlineObject276) GetOrders() []string`
+`func (o *InlineObject276) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetOrder returns the Order field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetOrderOk
 
-`func (o *InlineObject276) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject276) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetOrder
 
-`func (o *InlineObject276) SetOrders(v []string)`
+`func (o *InlineObject276) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
 
-SetOrders sets Orders field to given value.
+SetOrder sets Order field to given value.
 
-### HasOrders
-
-`func (o *InlineObject276) HasOrders() bool`
-
-HasOrders returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject276) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject276) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject276) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineObject276) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineObject276) GetLicenses() []OrganizationsOrganizationIdInventoryClaimLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject276) GetLicensesOk() (*[]OrganizationsOrganizationIdInventoryClaimLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject276) SetLicenses(v []OrganizationsOrganizationIdInventoryClaimLicenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineObject276) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

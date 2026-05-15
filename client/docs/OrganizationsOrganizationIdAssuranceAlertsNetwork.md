@@ -6,12 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | Name of the network where alert appears | 
 **Id** | **string** | ID of the network where alert appears | 
+**Url** | **string** | Authoritative Dashboard URL for the network | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdAssuranceAlertsNetwork
 
-`func NewOrganizationsOrganizationIdAssuranceAlertsNetwork(name string, id string, ) *OrganizationsOrganizationIdAssuranceAlertsNetwork`
+`func NewOrganizationsOrganizationIdAssuranceAlertsNetwork(name string, id string, url string, ) *OrganizationsOrganizationIdAssuranceAlertsNetwork`
 
 NewOrganizationsOrganizationIdAssuranceAlertsNetwork instantiates a new OrganizationsOrganizationIdAssuranceAlertsNetwork object
 This constructor will assign default values to properties that have it defined,
@@ -64,6 +65,26 @@ and a boolean to check if the value has been set.
 `func (o *OrganizationsOrganizationIdAssuranceAlertsNetwork) SetId(v string)`
 
 SetId sets Id field to given value.
+
+
+### GetUrl
+
+`func (o *OrganizationsOrganizationIdAssuranceAlertsNetwork) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *OrganizationsOrganizationIdAssuranceAlertsNetwork) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *OrganizationsOrganizationIdAssuranceAlertsNetwork) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
 
 
 

@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**Identity** | Pointer to [**InlineResponse200237Identity**](InlineResponse200237Identity.md) |  | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200237EapolKey**](InlineResponse200237EapolKey.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject205
 
-`func NewInlineObject205(name string, groupPolicyId string, ) *InlineObject205`
+`func NewInlineObject205() *InlineObject205`
 
 NewInlineObject205 instantiates a new InlineObject205 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +28,105 @@ NewInlineObject205WithDefaults instantiates a new InlineObject205 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTimeout
 
-`func (o *InlineObject205) GetName() string`
+`func (o *InlineObject205) GetTimeout() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTimeoutOk
 
-`func (o *InlineObject205) GetNameOk() (*string, bool)`
+`func (o *InlineObject205) GetTimeoutOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTimeout
 
-`func (o *InlineObject205) SetName(v string)`
+`func (o *InlineObject205) SetTimeout(v int32)`
 
-SetName sets Name field to given value.
+SetTimeout sets Timeout field to given value.
 
+### HasTimeout
 
-### GetPassphrase
+`func (o *InlineObject205) HasTimeout() bool`
 
-`func (o *InlineObject205) GetPassphrase() string`
+HasTimeout returns a boolean if a field has been set.
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+### GetIdentity
 
-### GetPassphraseOk
+`func (o *InlineObject205) GetIdentity() InlineResponse200237Identity`
 
-`func (o *InlineObject205) GetPassphraseOk() (*string, bool)`
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+### GetIdentityOk
+
+`func (o *InlineObject205) GetIdentityOk() (*InlineResponse200237Identity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetIdentity
 
-`func (o *InlineObject205) SetPassphrase(v string)`
+`func (o *InlineObject205) SetIdentity(v InlineResponse200237Identity)`
 
-SetPassphrase sets Passphrase field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasPassphrase
+### HasIdentity
 
-`func (o *InlineObject205) HasPassphrase() bool`
+`func (o *InlineObject205) HasIdentity() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetMaxRetries
 
-`func (o *InlineObject205) GetGroupPolicyId() string`
+`func (o *InlineObject205) GetMaxRetries() int32`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetMaxRetriesOk
 
-`func (o *InlineObject205) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject205) GetMaxRetriesOk() (*int32, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetMaxRetries
 
-`func (o *InlineObject205) SetGroupPolicyId(v string)`
+`func (o *InlineObject205) SetMaxRetries(v int32)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
+### HasMaxRetries
 
-### GetExpiresAt
+`func (o *InlineObject205) HasMaxRetries() bool`
 
-`func (o *InlineObject205) GetExpiresAt() time.Time`
+HasMaxRetries returns a boolean if a field has been set.
 
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+### GetEapolKey
 
-### GetExpiresAtOk
+`func (o *InlineObject205) GetEapolKey() InlineResponse200237EapolKey`
 
-`func (o *InlineObject205) GetExpiresAtOk() (*time.Time, bool)`
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+### GetEapolKeyOk
+
+`func (o *InlineObject205) GetEapolKeyOk() (*InlineResponse200237EapolKey, bool)`
+
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExpiresAt
+### SetEapolKey
 
-`func (o *InlineObject205) SetExpiresAt(v time.Time)`
+`func (o *InlineObject205) SetEapolKey(v InlineResponse200237EapolKey)`
 
-SetExpiresAt sets ExpiresAt field to given value.
+SetEapolKey sets EapolKey field to given value.
 
-### HasExpiresAt
+### HasEapolKey
 
-`func (o *InlineObject205) HasExpiresAt() bool`
+`func (o *InlineObject205) HasEapolKey() bool`
 
-HasExpiresAt returns a boolean if a field has been set.
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

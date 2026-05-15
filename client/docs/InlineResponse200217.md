@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
-**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**LatencyStats** | Pointer to [**NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats**](NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200217WithDefaults instantiates a new InlineResponse200217 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetMac
 
-`func (o *InlineResponse200217) GetSerial() string`
+`func (o *InlineResponse200217) GetMac() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetMacOk
 
-`func (o *InlineResponse200217) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200217) GetMacOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetMac
 
-`func (o *InlineResponse200217) SetSerial(v string)`
+`func (o *InlineResponse200217) SetMac(v string)`
 
-SetSerial sets Serial field to given value.
+SetMac sets Mac field to given value.
 
-### HasSerial
+### HasMac
 
-`func (o *InlineResponse200217) HasSerial() bool`
+`func (o *InlineResponse200217) HasMac() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetMeshRoute
+### GetLatencyStats
 
-`func (o *InlineResponse200217) GetMeshRoute() []string`
+`func (o *InlineResponse200217) GetLatencyStats() NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats`
 
-GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
+GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
 
-### GetMeshRouteOk
+### GetLatencyStatsOk
 
-`func (o *InlineResponse200217) GetMeshRouteOk() (*[]string, bool)`
+`func (o *InlineResponse200217) GetLatencyStatsOk() (*NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats, bool)`
 
-GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
+GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshRoute
+### SetLatencyStats
 
-`func (o *InlineResponse200217) SetMeshRoute(v []string)`
+`func (o *InlineResponse200217) SetLatencyStats(v NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats)`
 
-SetMeshRoute sets MeshRoute field to given value.
+SetLatencyStats sets LatencyStats field to given value.
 
-### HasMeshRoute
+### HasLatencyStats
 
-`func (o *InlineResponse200217) HasMeshRoute() bool`
+`func (o *InlineResponse200217) HasLatencyStats() bool`
 
-HasMeshRoute returns a boolean if a field has been set.
-
-### GetLatestMeshPerformance
-
-`func (o *InlineResponse200217) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
-
-GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
-
-### GetLatestMeshPerformanceOk
-
-`func (o *InlineResponse200217) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
-
-GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLatestMeshPerformance
-
-`func (o *InlineResponse200217) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
-
-SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
-
-### HasLatestMeshPerformance
-
-`func (o *InlineResponse200217) HasLatestMeshPerformance() bool`
-
-HasLatestMeshPerformance returns a boolean if a field has been set.
+HasLatencyStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraQualityAndRetention
 
-> InlineResponse20017 GetDeviceCameraQualityAndRetention(ctx, serial).Execute()
+> InlineResponse20019 GetDeviceCameraQualityAndRetention(ctx, serial).Execute()
 
 Returns quality and retention settings for the given camera
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityAndRetentionApi.GetDeviceCameraQualityAndRetention``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraQualityAndRetention`: InlineResponse20017
+    // response from `GetDeviceCameraQualityAndRetention`: InlineResponse20019
     fmt.Fprintf(os.Stdout, "Response from `QualityAndRetentionApi.GetDeviceCameraQualityAndRetention`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCameraQualityAndRetention
 
-> InlineResponse20017 UpdateDeviceCameraQualityAndRetention(ctx, serial).UpdateDeviceCameraQualityAndRetention(updateDeviceCameraQualityAndRetention).Execute()
+> InlineResponse20019 UpdateDeviceCameraQualityAndRetention(ctx, serial).UpdateDeviceCameraQualityAndRetention(updateDeviceCameraQualityAndRetention).Execute()
 
 Update quality and retention settings for the given camera
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityAndRetentionApi.UpdateDeviceCameraQualityAndRetention``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCameraQualityAndRetention`: InlineResponse20017
+    // response from `UpdateDeviceCameraQualityAndRetention`: InlineResponse20019
     fmt.Fprintf(os.Stdout, "Response from `QualityAndRetentionApi.UpdateDeviceCameraQualityAndRetention`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 

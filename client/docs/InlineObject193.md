@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Collect location and scanning analytics | [optional] 
-**Api** | Pointer to [**NetworksNetworkIdWirelessLocationScanningApi**](NetworksNetworkIdWirelessLocationScanningApi.md) |  | [optional] 
+**Name** | **string** | AP port profile name | 
+**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
 
 ## Methods
 
 ### NewInlineObject193
 
-`func NewInlineObject193() *InlineObject193`
+`func NewInlineObject193(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject193`
 
 NewInlineObject193 instantiates a new InlineObject193 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,70 @@ NewInlineObject193WithDefaults instantiates a new InlineObject193 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject193) GetEnabled() bool`
+`func (o *InlineObject193) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject193) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject193) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject193) SetEnabled(v bool)`
+`func (o *InlineObject193) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject193) HasEnabled() bool`
+### GetPorts
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject193) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
 
-### GetApi
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-`func (o *InlineObject193) GetApi() NetworksNetworkIdWirelessLocationScanningApi`
+### GetPortsOk
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+`func (o *InlineObject193) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
 
-### GetApiOk
-
-`func (o *InlineObject193) GetApiOk() (*NetworksNetworkIdWirelessLocationScanningApi, bool)`
-
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetPorts
 
-`func (o *InlineObject193) SetApi(v NetworksNetworkIdWirelessLocationScanningApi)`
+`func (o *InlineObject193) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
 
-SetApi sets Api field to given value.
+SetPorts sets Ports field to given value.
 
-### HasApi
 
-`func (o *InlineObject193) HasApi() bool`
+### GetUsbPorts
 
-HasApi returns a boolean if a field has been set.
+`func (o *InlineObject193) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+
+### GetUsbPortsOk
+
+`func (o *InlineObject193) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsbPorts
+
+`func (o *InlineObject193) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+
+SetUsbPorts sets UsbPorts field to given value.
+
+### HasUsbPorts
+
+`func (o *InlineObject193) HasUsbPorts() bool`
+
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

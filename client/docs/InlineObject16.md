@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**ReservedIpRanges** | Pointer to [**[]DevicesSerialCellularGatewayLanReservedIpRanges**](DevicesSerialCellularGatewayLanReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
+**FixedIpAssignments** | Pointer to [**[]DevicesSerialCellularGatewayLanFixedIpAssignments**](DevicesSerialCellularGatewayLanFixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject16WithDefaults instantiates a new InlineObject16 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCallback
+### GetReservedIpRanges
 
-`func (o *InlineObject16) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+`func (o *InlineObject16) GetReservedIpRanges() []DevicesSerialCellularGatewayLanReservedIpRanges`
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
 
-### GetCallbackOk
+### GetReservedIpRangesOk
 
-`func (o *InlineObject16) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+`func (o *InlineObject16) GetReservedIpRangesOk() (*[]DevicesSerialCellularGatewayLanReservedIpRanges, bool)`
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetReservedIpRanges
 
-`func (o *InlineObject16) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+`func (o *InlineObject16) SetReservedIpRanges(v []DevicesSerialCellularGatewayLanReservedIpRanges)`
 
-SetCallback sets Callback field to given value.
+SetReservedIpRanges sets ReservedIpRanges field to given value.
 
-### HasCallback
+### HasReservedIpRanges
 
-`func (o *InlineObject16) HasCallback() bool`
+`func (o *InlineObject16) HasReservedIpRanges() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasReservedIpRanges returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineObject16) GetFixedIpAssignments() []DevicesSerialCellularGatewayLanFixedIpAssignments`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineObject16) GetFixedIpAssignmentsOk() (*[]DevicesSerialCellularGatewayLanFixedIpAssignments, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineObject16) SetFixedIpAssignments(v []DevicesSerialCellularGatewayLanFixedIpAssignments)`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineObject16) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

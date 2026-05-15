@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
-**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
-**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
-**IsMonitorOnly** | Pointer to **bool** | Tells if stack is Monitored Stack. | [optional] 
-**VirtualMac** | Pointer to **string** | The virtual MAC address of the switch stack | [optional] 
-**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksMembers**](NetworksNetworkIdSwitchStacksMembers.md) | Members of the Stack | [optional] 
+**Alerts** | Pointer to [**InlineResponse200183Alerts**](InlineResponse200183Alerts.md) |  | [optional] 
+**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
+**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
+**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
+**AlwaysAllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers that are always allowed on the network. These are the MAC addresses of switches, switch stacks, and VRRP groups in the network. These servers cannot be blocked. | [optional] 
+**ArpInspection** | Pointer to [**InlineResponse200183ArpInspection**](InlineResponse200183ArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +30,155 @@ NewInlineResponse200183WithDefaults instantiates a new InlineResponse200183 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetAlerts
 
-`func (o *InlineResponse200183) GetId() string`
+`func (o *InlineResponse200183) GetAlerts() InlineResponse200183Alerts`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetAlertsOk
 
-`func (o *InlineResponse200183) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200183) GetAlertsOk() (*InlineResponse200183Alerts, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetAlerts
 
-`func (o *InlineResponse200183) SetId(v string)`
+`func (o *InlineResponse200183) SetAlerts(v InlineResponse200183Alerts)`
 
-SetId sets Id field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasId
+### HasAlerts
 
-`func (o *InlineResponse200183) HasId() bool`
+`func (o *InlineResponse200183) HasAlerts() bool`
 
-HasId returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### GetName
+### GetDefaultPolicy
 
-`func (o *InlineResponse200183) GetName() string`
+`func (o *InlineResponse200183) GetDefaultPolicy() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse200183) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200183) GetDefaultPolicyOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultPolicy
 
-`func (o *InlineResponse200183) SetName(v string)`
+`func (o *InlineResponse200183) SetDefaultPolicy(v string)`
 
-SetName sets Name field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasName
+### HasDefaultPolicy
 
-`func (o *InlineResponse200183) HasName() bool`
+`func (o *InlineResponse200183) HasDefaultPolicy() bool`
 
-HasName returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
-### GetSerials
+### GetBlockedServers
 
-`func (o *InlineResponse200183) GetSerials() []string`
+`func (o *InlineResponse200183) GetBlockedServers() []string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetBlockedServersOk
 
-`func (o *InlineResponse200183) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200183) GetBlockedServersOk() (*[]string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetBlockedServers
 
-`func (o *InlineResponse200183) SetSerials(v []string)`
+`func (o *InlineResponse200183) SetBlockedServers(v []string)`
 
-SetSerials sets Serials field to given value.
+SetBlockedServers sets BlockedServers field to given value.
 
-### HasSerials
+### HasBlockedServers
 
-`func (o *InlineResponse200183) HasSerials() bool`
+`func (o *InlineResponse200183) HasBlockedServers() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasBlockedServers returns a boolean if a field has been set.
 
-### GetIsMonitorOnly
+### GetAllowedServers
 
-`func (o *InlineResponse200183) GetIsMonitorOnly() bool`
+`func (o *InlineResponse200183) GetAllowedServers() []string`
 
-GetIsMonitorOnly returns the IsMonitorOnly field if non-nil, zero value otherwise.
+GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
 
-### GetIsMonitorOnlyOk
+### GetAllowedServersOk
 
-`func (o *InlineResponse200183) GetIsMonitorOnlyOk() (*bool, bool)`
+`func (o *InlineResponse200183) GetAllowedServersOk() (*[]string, bool)`
 
-GetIsMonitorOnlyOk returns a tuple with the IsMonitorOnly field if it's non-nil, zero value otherwise
+GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsMonitorOnly
+### SetAllowedServers
 
-`func (o *InlineResponse200183) SetIsMonitorOnly(v bool)`
+`func (o *InlineResponse200183) SetAllowedServers(v []string)`
 
-SetIsMonitorOnly sets IsMonitorOnly field to given value.
+SetAllowedServers sets AllowedServers field to given value.
 
-### HasIsMonitorOnly
+### HasAllowedServers
 
-`func (o *InlineResponse200183) HasIsMonitorOnly() bool`
+`func (o *InlineResponse200183) HasAllowedServers() bool`
 
-HasIsMonitorOnly returns a boolean if a field has been set.
+HasAllowedServers returns a boolean if a field has been set.
 
-### GetVirtualMac
+### GetAlwaysAllowedServers
 
-`func (o *InlineResponse200183) GetVirtualMac() string`
+`func (o *InlineResponse200183) GetAlwaysAllowedServers() []string`
 
-GetVirtualMac returns the VirtualMac field if non-nil, zero value otherwise.
+GetAlwaysAllowedServers returns the AlwaysAllowedServers field if non-nil, zero value otherwise.
 
-### GetVirtualMacOk
+### GetAlwaysAllowedServersOk
 
-`func (o *InlineResponse200183) GetVirtualMacOk() (*string, bool)`
+`func (o *InlineResponse200183) GetAlwaysAllowedServersOk() (*[]string, bool)`
 
-GetVirtualMacOk returns a tuple with the VirtualMac field if it's non-nil, zero value otherwise
+GetAlwaysAllowedServersOk returns a tuple with the AlwaysAllowedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVirtualMac
+### SetAlwaysAllowedServers
 
-`func (o *InlineResponse200183) SetVirtualMac(v string)`
+`func (o *InlineResponse200183) SetAlwaysAllowedServers(v []string)`
 
-SetVirtualMac sets VirtualMac field to given value.
+SetAlwaysAllowedServers sets AlwaysAllowedServers field to given value.
 
-### HasVirtualMac
+### HasAlwaysAllowedServers
 
-`func (o *InlineResponse200183) HasVirtualMac() bool`
+`func (o *InlineResponse200183) HasAlwaysAllowedServers() bool`
 
-HasVirtualMac returns a boolean if a field has been set.
+HasAlwaysAllowedServers returns a boolean if a field has been set.
 
-### GetMembers
+### GetArpInspection
 
-`func (o *InlineResponse200183) GetMembers() []NetworksNetworkIdSwitchStacksMembers`
+`func (o *InlineResponse200183) GetArpInspection() InlineResponse200183ArpInspection`
 
-GetMembers returns the Members field if non-nil, zero value otherwise.
+GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
 
-### GetMembersOk
+### GetArpInspectionOk
 
-`func (o *InlineResponse200183) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksMembers, bool)`
+`func (o *InlineResponse200183) GetArpInspectionOk() (*InlineResponse200183ArpInspection, bool)`
 
-GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMembers
+### SetArpInspection
 
-`func (o *InlineResponse200183) SetMembers(v []NetworksNetworkIdSwitchStacksMembers)`
+`func (o *InlineResponse200183) SetArpInspection(v InlineResponse200183ArpInspection)`
 
-SetMembers sets Members field to given value.
+SetArpInspection sets ArpInspection field to given value.
 
-### HasMembers
+### HasArpInspection
 
-`func (o *InlineResponse200183) HasMembers() bool`
+`func (o *InlineResponse200183) HasArpInspection() bool`
 
-HasMembers returns a boolean if a field has been set.
+HasArpInspection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

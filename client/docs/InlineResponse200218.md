@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Id of the network | [optional] 
-**Name** | Pointer to **string** | Name of the network | [optional] 
-**TimeZone** | Pointer to **string** | Time zone of the network | [optional] 
-**BusyHour** | Pointer to [**InlineResponse200218BusyHour**](InlineResponse200218BusyHour.md) |  | [optional] 
-**Channel** | Pointer to [**InlineResponse200218Channel**](InlineResponse200218Channel.md) |  | [optional] 
-**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
-**Ai** | Pointer to [**InlineResponse200218Ai**](InlineResponse200218Ai.md) |  | [optional] 
+**Mac** | Pointer to **string** | MAC address of the client | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse200218ConnectionStats**](InlineResponse200218ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetMac
 
-`func (o *InlineResponse200218) GetNetworkId() string`
+`func (o *InlineResponse200218) GetMac() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetMacOk
 
-`func (o *InlineResponse200218) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200218) GetMacOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetMac
 
-`func (o *InlineResponse200218) SetNetworkId(v string)`
+`func (o *InlineResponse200218) SetMac(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetMac sets Mac field to given value.
 
-### HasNetworkId
+### HasMac
 
-`func (o *InlineResponse200218) HasNetworkId() bool`
+`func (o *InlineResponse200218) HasMac() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetName
+### GetConnectionStats
 
-`func (o *InlineResponse200218) GetName() string`
+`func (o *InlineResponse200218) GetConnectionStats() InlineResponse200218ConnectionStats`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse200218) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200218) GetConnectionStatsOk() (*InlineResponse200218ConnectionStats, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConnectionStats
 
-`func (o *InlineResponse200218) SetName(v string)`
+`func (o *InlineResponse200218) SetConnectionStats(v InlineResponse200218ConnectionStats)`
 
-SetName sets Name field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasName
+### HasConnectionStats
 
-`func (o *InlineResponse200218) HasName() bool`
+`func (o *InlineResponse200218) HasConnectionStats() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineResponse200218) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineResponse200218) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineResponse200218) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineResponse200218) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
-
-### GetBusyHour
-
-`func (o *InlineResponse200218) GetBusyHour() InlineResponse200218BusyHour`
-
-GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
-
-### GetBusyHourOk
-
-`func (o *InlineResponse200218) GetBusyHourOk() (*InlineResponse200218BusyHour, bool)`
-
-GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBusyHour
-
-`func (o *InlineResponse200218) SetBusyHour(v InlineResponse200218BusyHour)`
-
-SetBusyHour sets BusyHour field to given value.
-
-### HasBusyHour
-
-`func (o *InlineResponse200218) HasBusyHour() bool`
-
-HasBusyHour returns a boolean if a field has been set.
-
-### GetChannel
-
-`func (o *InlineResponse200218) GetChannel() InlineResponse200218Channel`
-
-GetChannel returns the Channel field if non-nil, zero value otherwise.
-
-### GetChannelOk
-
-`func (o *InlineResponse200218) GetChannelOk() (*InlineResponse200218Channel, bool)`
-
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetChannel
-
-`func (o *InlineResponse200218) SetChannel(v InlineResponse200218Channel)`
-
-SetChannel sets Channel field to given value.
-
-### HasChannel
-
-`func (o *InlineResponse200218) HasChannel() bool`
-
-HasChannel returns a boolean if a field has been set.
-
-### GetFra
-
-`func (o *InlineResponse200218) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
-
-GetFra returns the Fra field if non-nil, zero value otherwise.
-
-### GetFraOk
-
-`func (o *InlineResponse200218) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
-
-GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFra
-
-`func (o *InlineResponse200218) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
-
-SetFra sets Fra field to given value.
-
-### HasFra
-
-`func (o *InlineResponse200218) HasFra() bool`
-
-HasFra returns a boolean if a field has been set.
-
-### GetAi
-
-`func (o *InlineResponse200218) GetAi() InlineResponse200218Ai`
-
-GetAi returns the Ai field if non-nil, zero value otherwise.
-
-### GetAiOk
-
-`func (o *InlineResponse200218) GetAiOk() (*InlineResponse200218Ai, bool)`
-
-GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAi
-
-`func (o *InlineResponse200218) SetAi(v InlineResponse200218Ai)`
-
-SetAi sets Ai field to given value.
-
-### HasAi
-
-`func (o *InlineResponse200218) HasAi() bool`
-
-HasAi returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

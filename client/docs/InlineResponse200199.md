@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse200199Plans**](InlineResponse200199Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
+**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200199WithDefaults instantiates a new InlineResponse200199 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetBroadcastThreshold
 
-`func (o *InlineResponse200199) GetCurrency() string`
+`func (o *InlineResponse200199) GetBroadcastThreshold() int32`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse200199) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse200199) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetBroadcastThreshold
 
-`func (o *InlineResponse200199) SetCurrency(v string)`
+`func (o *InlineResponse200199) SetBroadcastThreshold(v int32)`
 
-SetCurrency sets Currency field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasCurrency
+### HasBroadcastThreshold
 
-`func (o *InlineResponse200199) HasCurrency() bool`
+`func (o *InlineResponse200199) HasBroadcastThreshold() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetPlans
+### GetMulticastThreshold
 
-`func (o *InlineResponse200199) GetPlans() []InlineResponse200199Plans`
+`func (o *InlineResponse200199) GetMulticastThreshold() int32`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse200199) GetPlansOk() (*[]InlineResponse200199Plans, bool)`
+`func (o *InlineResponse200199) GetMulticastThresholdOk() (*int32, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetMulticastThreshold
 
-`func (o *InlineResponse200199) SetPlans(v []InlineResponse200199Plans)`
+`func (o *InlineResponse200199) SetMulticastThreshold(v int32)`
 
-SetPlans sets Plans field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasPlans
+### HasMulticastThreshold
 
-`func (o *InlineResponse200199) HasPlans() bool`
+`func (o *InlineResponse200199) HasMulticastThreshold() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
+
+### GetUnknownUnicastThreshold
+
+`func (o *InlineResponse200199) GetUnknownUnicastThreshold() int32`
+
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+
+### GetUnknownUnicastThresholdOk
+
+`func (o *InlineResponse200199) GetUnknownUnicastThresholdOk() (*int32, bool)`
+
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnknownUnicastThreshold
+
+`func (o *InlineResponse200199) SetUnknownUnicastThreshold(v int32)`
+
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+
+### HasUnknownUnicastThreshold
+
+`func (o *InlineResponse200199) HasUnknownUnicastThreshold() bool`
+
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
+
+### GetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineResponse200199) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+
+GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+
+### GetTreatTheseTrafficTypesAsOneThresholdOk
+
+`func (o *InlineResponse200199) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
+
+GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineResponse200199) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+
+SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+
+### HasTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineResponse200199) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+
+HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

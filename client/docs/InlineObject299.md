@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy.md) |  | 
-**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to assign | 
+**Network** | [**OrganizationsOrganizationIdNetworksMovesNetwork**](OrganizationsOrganizationIdNetworksMovesNetwork.md) |  | 
+**Organizations** | [**OrganizationsOrganizationIdNetworksMovesOrganizations**](OrganizationsOrganizationIdNetworksMovesOrganizations.md) |  | 
+**Simulate** | Pointer to **bool** | If true, simulates the network move and validates the operation without committing changes. The network will remain in the source organization. | [optional] 
 
 ## Methods
 
 ### NewInlineObject299
 
-`func NewInlineObject299(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject299`
+`func NewInlineObject299(network OrganizationsOrganizationIdNetworksMovesNetwork, organizations OrganizationsOrganizationIdNetworksMovesOrganizations, ) *InlineObject299`
 
 NewInlineObject299 instantiates a new InlineObject299 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,70 @@ NewInlineObject299WithDefaults instantiates a new InlineObject299 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetNetwork
 
-`func (o *InlineObject299) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy`
+`func (o *InlineObject299) GetNetwork() OrganizationsOrganizationIdNetworksMovesNetwork`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNetworkOk
 
-`func (o *InlineObject299) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, bool)`
+`func (o *InlineObject299) GetNetworkOk() (*OrganizationsOrganizationIdNetworksMovesNetwork, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetNetwork
 
-`func (o *InlineObject299) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy)`
+`func (o *InlineObject299) SetNetwork(v OrganizationsOrganizationIdNetworksMovesNetwork)`
 
-SetPolicy sets Policy field to given value.
+SetNetwork sets Network field to given value.
 
 
-### GetAdaptivePolicyGroups
+### GetOrganizations
 
-`func (o *InlineObject299) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
+`func (o *InlineObject299) GetOrganizations() OrganizationsOrganizationIdNetworksMovesOrganizations`
 
-GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
+GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
 
-### GetAdaptivePolicyGroupsOk
+### GetOrganizationsOk
 
-`func (o *InlineObject299) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
+`func (o *InlineObject299) GetOrganizationsOk() (*OrganizationsOrganizationIdNetworksMovesOrganizations, bool)`
 
-GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
+GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyGroups
+### SetOrganizations
 
-`func (o *InlineObject299) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
+`func (o *InlineObject299) SetOrganizations(v OrganizationsOrganizationIdNetworksMovesOrganizations)`
 
-SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
+SetOrganizations sets Organizations field to given value.
 
+
+### GetSimulate
+
+`func (o *InlineObject299) GetSimulate() bool`
+
+GetSimulate returns the Simulate field if non-nil, zero value otherwise.
+
+### GetSimulateOk
+
+`func (o *InlineObject299) GetSimulateOk() (*bool, bool)`
+
+GetSimulateOk returns a tuple with the Simulate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSimulate
+
+`func (o *InlineObject299) SetSimulate(v bool)`
+
+SetSimulate sets Simulate field to given value.
+
+### HasSimulate
+
+`func (o *InlineObject299) HasSimulate() bool`
+
+HasSimulate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

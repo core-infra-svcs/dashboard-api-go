@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
+**Nodes** | Pointer to [**[]InlineResponse200202Nodes**](InlineResponse200202Nodes.md) | List of nodes in the network topology | [optional] 
+**Links** | Pointer to [**[]InlineResponse200202Links**](InlineResponse200202Links.md) | List of links between nodes | [optional] 
+**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200202WithDefaults instantiates a new InlineResponse200202 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetNodes
 
-`func (o *InlineResponse200202) GetStartTs() time.Time`
+`func (o *InlineResponse200202) GetNodes() []InlineResponse200202Nodes`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetNodes returns the Nodes field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetNodesOk
 
-`func (o *InlineResponse200202) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200202) GetNodesOk() (*[]InlineResponse200202Nodes, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetNodes
 
-`func (o *InlineResponse200202) SetStartTs(v time.Time)`
+`func (o *InlineResponse200202) SetNodes(v []InlineResponse200202Nodes)`
 
-SetStartTs sets StartTs field to given value.
+SetNodes sets Nodes field to given value.
 
-### HasStartTs
+### HasNodes
 
-`func (o *InlineResponse200202) HasStartTs() bool`
+`func (o *InlineResponse200202) HasNodes() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasNodes returns a boolean if a field has been set.
 
-### GetEndTs
+### GetLinks
 
-`func (o *InlineResponse200202) GetEndTs() time.Time`
+`func (o *InlineResponse200202) GetLinks() []InlineResponse200202Links`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetLinksOk
 
-`func (o *InlineResponse200202) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200202) GetLinksOk() (*[]InlineResponse200202Links, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetLinks
 
-`func (o *InlineResponse200202) SetEndTs(v time.Time)`
+`func (o *InlineResponse200202) SetLinks(v []InlineResponse200202Links)`
 
-SetEndTs sets EndTs field to given value.
+SetLinks sets Links field to given value.
 
-### HasEndTs
+### HasLinks
 
-`func (o *InlineResponse200202) HasEndTs() bool`
+`func (o *InlineResponse200202) HasLinks() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
 
-### GetClientCount
+### GetErrors
 
-`func (o *InlineResponse200202) GetClientCount() int32`
+`func (o *InlineResponse200202) GetErrors() []string`
 
-GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetClientCountOk
+### GetErrorsOk
 
-`func (o *InlineResponse200202) GetClientCountOk() (*int32, bool)`
+`func (o *InlineResponse200202) GetErrorsOk() (*[]string, bool)`
 
-GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientCount
+### SetErrors
 
-`func (o *InlineResponse200202) SetClientCount(v int32)`
+`func (o *InlineResponse200202) SetErrors(v []string)`
 
-SetClientCount sets ClientCount field to given value.
+SetErrors sets Errors field to given value.
 
-### HasClientCount
+### HasErrors
 
-`func (o *InlineResponse200202) HasClientCount() bool`
+`func (o *InlineResponse200202) HasErrors() bool`
 
-HasClientCount returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

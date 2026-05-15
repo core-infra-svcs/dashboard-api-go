@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the switch | [optional] 
-**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
-**Model** | Pointer to **string** | Model of the switch | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
+**SiteId** | Pointer to **string** | Unique identifier for the enrolled site | [optional] 
+**Network** | Pointer to [**InlineResponse200389Network**](InlineResponse200389Network.md) |  | [optional] 
+**Type** | Pointer to **string** | The site&#39;s type | [optional] 
+**Name** | Pointer to **string** | Site name | [optional] 
+**Region** | Pointer to [**InlineResponse200389Region**](InlineResponse200389Region.md) |  | [optional] 
+**Model** | Pointer to **string** | Model of the network&#39;s primary MX device | [optional] 
+**Address** | Pointer to [**InlineResponse200387Address**](InlineResponse200387Address.md) |  | [optional] 
+**Vpn** | Pointer to [**InlineResponse200387Vpn**](InlineResponse200387Vpn.md) |  | [optional] 
+**Routing** | Pointer to [**InlineResponse200387Routing**](InlineResponse200387Routing.md) |  | [optional] 
 
 ## Methods
 
@@ -29,22 +33,47 @@ NewInlineResponse200392WithDefaults instantiates a new InlineResponse200392 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetSiteId
+
+`func (o *InlineResponse200392) GetSiteId() string`
+
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+
+### GetSiteIdOk
+
+`func (o *InlineResponse200392) GetSiteIdOk() (*string, bool)`
+
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSiteId
+
+`func (o *InlineResponse200392) SetSiteId(v string)`
+
+SetSiteId sets SiteId field to given value.
+
+### HasSiteId
+
+`func (o *InlineResponse200392) HasSiteId() bool`
+
+HasSiteId returns a boolean if a field has been set.
+
 ### GetNetwork
 
-`func (o *InlineResponse200392) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200392) GetNetwork() InlineResponse200389Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200392) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200392) GetNetworkOk() (*InlineResponse200389Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200392) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200392) SetNetwork(v InlineResponse200389Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -53,6 +82,31 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200392) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200392) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200392) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200392) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200392) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 ### GetName
 
@@ -79,30 +133,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetMac
+### GetRegion
 
-`func (o *InlineResponse200392) GetMac() string`
+`func (o *InlineResponse200392) GetRegion() InlineResponse200389Region`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetRegion returns the Region field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetRegionOk
 
-`func (o *InlineResponse200392) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200392) GetRegionOk() (*InlineResponse200389Region, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetRegionOk returns a tuple with the Region field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetRegion
 
-`func (o *InlineResponse200392) SetMac(v string)`
+`func (o *InlineResponse200392) SetRegion(v InlineResponse200389Region)`
 
-SetMac sets Mac field to given value.
+SetRegion sets Region field to given value.
 
-### HasMac
+### HasRegion
 
-`func (o *InlineResponse200392) HasMac() bool`
+`func (o *InlineResponse200392) HasRegion() bool`
 
-HasMac returns a boolean if a field has been set.
+HasRegion returns a boolean if a field has been set.
 
 ### GetModel
 
@@ -129,30 +183,80 @@ SetModel sets Model field to given value.
 
 HasModel returns a boolean if a field has been set.
 
-### GetUsage
+### GetAddress
 
-`func (o *InlineResponse200392) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
+`func (o *InlineResponse200392) GetAddress() InlineResponse200387Address`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetAddressOk
 
-`func (o *InlineResponse200392) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
+`func (o *InlineResponse200392) GetAddressOk() (*InlineResponse200387Address, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetAddress
 
-`func (o *InlineResponse200392) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
+`func (o *InlineResponse200392) SetAddress(v InlineResponse200387Address)`
 
-SetUsage sets Usage field to given value.
+SetAddress sets Address field to given value.
 
-### HasUsage
+### HasAddress
 
-`func (o *InlineResponse200392) HasUsage() bool`
+`func (o *InlineResponse200392) HasAddress() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasAddress returns a boolean if a field has been set.
+
+### GetVpn
+
+`func (o *InlineResponse200392) GetVpn() InlineResponse200387Vpn`
+
+GetVpn returns the Vpn field if non-nil, zero value otherwise.
+
+### GetVpnOk
+
+`func (o *InlineResponse200392) GetVpnOk() (*InlineResponse200387Vpn, bool)`
+
+GetVpnOk returns a tuple with the Vpn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpn
+
+`func (o *InlineResponse200392) SetVpn(v InlineResponse200387Vpn)`
+
+SetVpn sets Vpn field to given value.
+
+### HasVpn
+
+`func (o *InlineResponse200392) HasVpn() bool`
+
+HasVpn returns a boolean if a field has been set.
+
+### GetRouting
+
+`func (o *InlineResponse200392) GetRouting() InlineResponse200387Routing`
+
+GetRouting returns the Routing field if non-nil, zero value otherwise.
+
+### GetRoutingOk
+
+`func (o *InlineResponse200392) GetRoutingOk() (*InlineResponse200387Routing, bool)`
+
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRouting
+
+`func (o *InlineResponse200392) SetRouting(v InlineResponse200387Routing)`
+
+SetRouting sets Routing field to given value.
+
+### HasRouting
+
+`func (o *InlineResponse200392) HasRouting() bool`
+
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

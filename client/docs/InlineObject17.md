@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | **[]string** | A list of ports for which to perform the cable test.  For Catalyst switches, IOS interface names are also supported, such as \&quot;GigabitEthernet1/0/8\&quot;, \&quot;Gi1/0/8\&quot;, or even \&quot;1/0/8\&quot;. | 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Rules** | Pointer to [**[]DevicesSerialCellularGatewayPortForwardingRulesRules**](DevicesSerialCellularGatewayPortForwardingRulesRules.md) | An array of port forwarding params | [optional] 
 
 ## Methods
 
 ### NewInlineObject17
 
-`func NewInlineObject17(ports []string, ) *InlineObject17`
+`func NewInlineObject17() *InlineObject17`
 
 NewInlineObject17 instantiates a new InlineObject17 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,30 @@ NewInlineObject17WithDefaults instantiates a new InlineObject17 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetRules
 
-`func (o *InlineObject17) GetPorts() []string`
+`func (o *InlineObject17) GetRules() []DevicesSerialCellularGatewayPortForwardingRulesRules`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetRulesOk
 
-`func (o *InlineObject17) GetPortsOk() (*[]string, bool)`
+`func (o *InlineObject17) GetRulesOk() (*[]DevicesSerialCellularGatewayPortForwardingRulesRules, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetRules
 
-`func (o *InlineObject17) SetPorts(v []string)`
+`func (o *InlineObject17) SetRules(v []DevicesSerialCellularGatewayPortForwardingRulesRules)`
 
-SetPorts sets Ports field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetCallback
+`func (o *InlineObject17) HasRules() bool`
 
-`func (o *InlineObject17) GetCallback() DevicesSerialLiveToolsArpTableCallback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineObject17) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineObject17) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineObject17) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
-**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
-**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
-**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
-**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
-**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
-**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesAttachItems**](OrganizationsOrganizationIdSaseSitesAttachItems.md) | List of Meraki SD-WAN sites with the associated regions to be attached. | [optional] 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineObject323WithDefaults instantiates a new InlineObject323 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetV2cEnabled
+### GetItems
 
-`func (o *InlineObject323) GetV2cEnabled() bool`
+`func (o *InlineObject323) GetItems() []OrganizationsOrganizationIdSaseSitesAttachItems`
 
-GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetV2cEnabledOk
+### GetItemsOk
 
-`func (o *InlineObject323) GetV2cEnabledOk() (*bool, bool)`
+`func (o *InlineObject323) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesAttachItems, bool)`
 
-GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV2cEnabled
+### SetItems
 
-`func (o *InlineObject323) SetV2cEnabled(v bool)`
+`func (o *InlineObject323) SetItems(v []OrganizationsOrganizationIdSaseSitesAttachItems)`
 
-SetV2cEnabled sets V2cEnabled field to given value.
+SetItems sets Items field to given value.
 
-### HasV2cEnabled
+### HasItems
 
-`func (o *InlineObject323) HasV2cEnabled() bool`
+`func (o *InlineObject323) HasItems() bool`
 
-HasV2cEnabled returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetV3Enabled
+### GetCallback
 
-`func (o *InlineObject323) GetV3Enabled() bool`
+`func (o *InlineObject323) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetV3EnabledOk
+### GetCallbackOk
 
-`func (o *InlineObject323) GetV3EnabledOk() (*bool, bool)`
+`func (o *InlineObject323) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3Enabled
+### SetCallback
 
-`func (o *InlineObject323) SetV3Enabled(v bool)`
+`func (o *InlineObject323) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetV3Enabled sets V3Enabled field to given value.
+SetCallback sets Callback field to given value.
 
-### HasV3Enabled
+### HasCallback
 
-`func (o *InlineObject323) HasV3Enabled() bool`
+`func (o *InlineObject323) HasCallback() bool`
 
-HasV3Enabled returns a boolean if a field has been set.
-
-### GetV3AuthMode
-
-`func (o *InlineObject323) GetV3AuthMode() string`
-
-GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
-
-### GetV3AuthModeOk
-
-`func (o *InlineObject323) GetV3AuthModeOk() (*string, bool)`
-
-GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3AuthMode
-
-`func (o *InlineObject323) SetV3AuthMode(v string)`
-
-SetV3AuthMode sets V3AuthMode field to given value.
-
-### HasV3AuthMode
-
-`func (o *InlineObject323) HasV3AuthMode() bool`
-
-HasV3AuthMode returns a boolean if a field has been set.
-
-### GetV3AuthPass
-
-`func (o *InlineObject323) GetV3AuthPass() string`
-
-GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
-
-### GetV3AuthPassOk
-
-`func (o *InlineObject323) GetV3AuthPassOk() (*string, bool)`
-
-GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3AuthPass
-
-`func (o *InlineObject323) SetV3AuthPass(v string)`
-
-SetV3AuthPass sets V3AuthPass field to given value.
-
-### HasV3AuthPass
-
-`func (o *InlineObject323) HasV3AuthPass() bool`
-
-HasV3AuthPass returns a boolean if a field has been set.
-
-### GetV3PrivMode
-
-`func (o *InlineObject323) GetV3PrivMode() string`
-
-GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
-
-### GetV3PrivModeOk
-
-`func (o *InlineObject323) GetV3PrivModeOk() (*string, bool)`
-
-GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3PrivMode
-
-`func (o *InlineObject323) SetV3PrivMode(v string)`
-
-SetV3PrivMode sets V3PrivMode field to given value.
-
-### HasV3PrivMode
-
-`func (o *InlineObject323) HasV3PrivMode() bool`
-
-HasV3PrivMode returns a boolean if a field has been set.
-
-### GetV3PrivPass
-
-`func (o *InlineObject323) GetV3PrivPass() string`
-
-GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
-
-### GetV3PrivPassOk
-
-`func (o *InlineObject323) GetV3PrivPassOk() (*string, bool)`
-
-GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3PrivPass
-
-`func (o *InlineObject323) SetV3PrivPass(v string)`
-
-SetV3PrivPass sets V3PrivPass field to given value.
-
-### HasV3PrivPass
-
-`func (o *InlineObject323) HasV3PrivPass() bool`
-
-HasV3PrivPass returns a boolean if a field has been set.
-
-### GetPeerIps
-
-`func (o *InlineObject323) GetPeerIps() []string`
-
-GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
-
-### GetPeerIpsOk
-
-`func (o *InlineObject323) GetPeerIpsOk() (*[]string, bool)`
-
-GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPeerIps
-
-`func (o *InlineObject323) SetPeerIps(v []string)`
-
-SetPeerIps sets PeerIps field to given value.
-
-### HasPeerIps
-
-`func (o *InlineObject323) HasPeerIps() bool`
-
-HasPeerIps returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

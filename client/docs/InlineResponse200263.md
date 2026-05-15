@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200263Items**](InlineResponse200263Items.md) | List of the IPSec SLA policies for an organization | [optional] 
+**Items** | Pointer to [**[]InlineResponse200263Items**](InlineResponse200263Items.md) | List of local DNS profile assignment | [optional] 
 **Meta** | Pointer to [**InlineResponse200263Meta**](InlineResponse200263Meta.md) |  | [optional] 
 
 ## Methods

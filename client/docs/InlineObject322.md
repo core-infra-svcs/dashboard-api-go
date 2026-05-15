@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
+**Api** | [**OrganizationsOrganizationIdSaseIntegrationsApi**](OrganizationsOrganizationIdSaseIntegrationsApi.md) |  | 
 
 ## Methods
 
 ### NewInlineObject322
 
-`func NewInlineObject322(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject322`
+`func NewInlineObject322(api OrganizationsOrganizationIdSaseIntegrationsApi, ) *InlineObject322`
 
 NewInlineObject322 instantiates a new InlineObject322 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject322WithDefaults instantiates a new InlineObject322 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetApi
 
-`func (o *InlineObject322) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
+`func (o *InlineObject322) GetApi() OrganizationsOrganizationIdSaseIntegrationsApi`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetApiOk
 
-`func (o *InlineObject322) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
+`func (o *InlineObject322) GetApiOk() (*OrganizationsOrganizationIdSaseIntegrationsApi, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetApi
 
-`func (o *InlineObject322) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
+`func (o *InlineObject322) SetApi(v OrganizationsOrganizationIdSaseIntegrationsApi)`
 
-SetItems sets Items field to given value.
+SetApi sets Api field to given value.
 
 
 

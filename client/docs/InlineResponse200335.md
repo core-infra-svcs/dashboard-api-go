@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | Pointer to **string** | The secure unique order claim number | [optional] 
-**Number** | Pointer to **string** | Order Number | [optional] 
-**Shipping** | Pointer to [**InlineResponse200335Shipping**](InlineResponse200335Shipping.md) |  | [optional] 
-**Subscriptions** | Pointer to [**[]InlineResponse200334Subscriptions**](InlineResponse200334Subscriptions.md) | All subscriptions contained in this order | [optional] 
+**UpdatedPriorities** | Pointer to [**[]InlineResponse200335UpdatedPriorities**](InlineResponse200335UpdatedPriorities.md) | List of updated priorities | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200335WithDefaults instantiates a new InlineResponse200335 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetUpdatedPriorities
 
-`func (o *InlineResponse200335) GetClaimId() string`
+`func (o *InlineResponse200335) GetUpdatedPriorities() []InlineResponse200335UpdatedPriorities`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetUpdatedPriorities returns the UpdatedPriorities field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetUpdatedPrioritiesOk
 
-`func (o *InlineResponse200335) GetClaimIdOk() (*string, bool)`
+`func (o *InlineResponse200335) GetUpdatedPrioritiesOk() (*[]InlineResponse200335UpdatedPriorities, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetUpdatedPrioritiesOk returns a tuple with the UpdatedPriorities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetUpdatedPriorities
 
-`func (o *InlineResponse200335) SetClaimId(v string)`
+`func (o *InlineResponse200335) SetUpdatedPriorities(v []InlineResponse200335UpdatedPriorities)`
 
-SetClaimId sets ClaimId field to given value.
+SetUpdatedPriorities sets UpdatedPriorities field to given value.
 
-### HasClaimId
+### HasUpdatedPriorities
 
-`func (o *InlineResponse200335) HasClaimId() bool`
+`func (o *InlineResponse200335) HasUpdatedPriorities() bool`
 
-HasClaimId returns a boolean if a field has been set.
-
-### GetNumber
-
-`func (o *InlineResponse200335) GetNumber() string`
-
-GetNumber returns the Number field if non-nil, zero value otherwise.
-
-### GetNumberOk
-
-`func (o *InlineResponse200335) GetNumberOk() (*string, bool)`
-
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNumber
-
-`func (o *InlineResponse200335) SetNumber(v string)`
-
-SetNumber sets Number field to given value.
-
-### HasNumber
-
-`func (o *InlineResponse200335) HasNumber() bool`
-
-HasNumber returns a boolean if a field has been set.
-
-### GetShipping
-
-`func (o *InlineResponse200335) GetShipping() InlineResponse200335Shipping`
-
-GetShipping returns the Shipping field if non-nil, zero value otherwise.
-
-### GetShippingOk
-
-`func (o *InlineResponse200335) GetShippingOk() (*InlineResponse200335Shipping, bool)`
-
-GetShippingOk returns a tuple with the Shipping field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetShipping
-
-`func (o *InlineResponse200335) SetShipping(v InlineResponse200335Shipping)`
-
-SetShipping sets Shipping field to given value.
-
-### HasShipping
-
-`func (o *InlineResponse200335) HasShipping() bool`
-
-HasShipping returns a boolean if a field has been set.
-
-### GetSubscriptions
-
-`func (o *InlineResponse200335) GetSubscriptions() []InlineResponse200334Subscriptions`
-
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
-
-### GetSubscriptionsOk
-
-`func (o *InlineResponse200335) GetSubscriptionsOk() (*[]InlineResponse200334Subscriptions, bool)`
-
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubscriptions
-
-`func (o *InlineResponse200335) SetSubscriptions(v []InlineResponse200334Subscriptions)`
-
-SetSubscriptions sets Subscriptions field to given value.
-
-### HasSubscriptions
-
-`func (o *InlineResponse200335) HasSubscriptions() bool`
-
-HasSubscriptions returns a boolean if a field has been set.
+HasUpdatedPriorities returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | **string** | The unique order claim id | 
-**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
+**Name** | **string** | The name of the VoIP provider | 
+**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
 
 ## Methods
 
 ### NewInlineObject281
 
-`func NewInlineObject281(claimId string, ) *InlineObject281`
+`func NewInlineObject281(name string, address string, ) *InlineObject281`
 
 NewInlineObject281 instantiates a new InlineObject281 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,70 @@ NewInlineObject281WithDefaults instantiates a new InlineObject281 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetName
 
-`func (o *InlineObject281) GetClaimId() string`
+`func (o *InlineObject281) GetName() string`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetNameOk
 
-`func (o *InlineObject281) GetClaimIdOk() (*string, bool)`
+`func (o *InlineObject281) GetNameOk() (*string, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetName
 
-`func (o *InlineObject281) SetClaimId(v string)`
+`func (o *InlineObject281) SetName(v string)`
 
-SetClaimId sets ClaimId field to given value.
+SetName sets Name field to given value.
 
 
-### GetSubscriptions
+### GetAddress
 
-`func (o *InlineObject281) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
+`func (o *InlineObject281) GetAddress() string`
 
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetSubscriptionsOk
+### GetAddressOk
 
-`func (o *InlineObject281) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
+`func (o *InlineObject281) GetAddressOk() (*string, bool)`
 
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptions
+### SetAddress
 
-`func (o *InlineObject281) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
+`func (o *InlineObject281) SetAddress(v string)`
 
-SetSubscriptions sets Subscriptions field to given value.
+SetAddress sets Address field to given value.
 
-### HasSubscriptions
 
-`func (o *InlineObject281) HasSubscriptions() bool`
+### GetBestEffortMonitoringEnabled
 
-HasSubscriptions returns a boolean if a field has been set.
+`func (o *InlineObject281) GetBestEffortMonitoringEnabled() bool`
+
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+
+### GetBestEffortMonitoringEnabledOk
+
+`func (o *InlineObject281) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBestEffortMonitoringEnabled
+
+`func (o *InlineObject281) SetBestEffortMonitoringEnabled(v bool)`
+
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+
+### HasBestEffortMonitoringEnabled
+
+`func (o *InlineObject281) HasBestEffortMonitoringEnabled() bool`
+
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

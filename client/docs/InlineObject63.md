@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**NetworksNetworkIdApplianceSettingsDynamicDns**](NetworksNetworkIdApplianceSettingsDynamicDns.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
+**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
+**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineObject63WithDefaults instantiates a new InlineObject63 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetName
 
-`func (o *InlineObject63) GetClientTrackingMethod() string`
+`func (o *InlineObject63) GetName() string`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetNameOk
 
-`func (o *InlineObject63) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineObject63) GetNameOk() (*string, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetName
 
-`func (o *InlineObject63) SetClientTrackingMethod(v string)`
+`func (o *InlineObject63) SetName(v string)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetName sets Name field to given value.
 
-### HasClientTrackingMethod
+### HasName
 
-`func (o *InlineObject63) HasClientTrackingMethod() bool`
+`func (o *InlineObject63) HasName() bool`
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDeploymentMode
+### GetTwoFourGhzSettings
 
-`func (o *InlineObject63) GetDeploymentMode() string`
+`func (o *InlineObject63) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings`
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
 
-### GetDeploymentModeOk
+### GetTwoFourGhzSettingsOk
 
-`func (o *InlineObject63) GetDeploymentModeOk() (*string, bool)`
+`func (o *InlineObject63) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
 
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetTwoFourGhzSettings
 
-`func (o *InlineObject63) SetDeploymentMode(v string)`
+`func (o *InlineObject63) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
-### HasDeploymentMode
+### HasTwoFourGhzSettings
 
-`func (o *InlineObject63) HasDeploymentMode() bool`
+`func (o *InlineObject63) HasTwoFourGhzSettings() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasTwoFourGhzSettings returns a boolean if a field has been set.
 
-### GetDynamicDns
+### GetFiveGhzSettings
 
-`func (o *InlineObject63) GetDynamicDns() NetworksNetworkIdApplianceSettingsDynamicDns`
+`func (o *InlineObject63) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings`
 
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
-### GetDynamicDnsOk
+### GetFiveGhzSettingsOk
 
-`func (o *InlineObject63) GetDynamicDnsOk() (*NetworksNetworkIdApplianceSettingsDynamicDns, bool)`
+`func (o *InlineObject63) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings, bool)`
 
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicDns
+### SetFiveGhzSettings
 
-`func (o *InlineObject63) SetDynamicDns(v NetworksNetworkIdApplianceSettingsDynamicDns)`
+`func (o *InlineObject63) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings)`
 
-SetDynamicDns sets DynamicDns field to given value.
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
-### HasDynamicDns
+### HasFiveGhzSettings
 
-`func (o *InlineObject63) HasDynamicDns() bool`
+`func (o *InlineObject63) HasFiveGhzSettings() bool`
 
-HasDynamicDns returns a boolean if a field has been set.
+HasFiveGhzSettings returns a boolean if a field has been set.
+
+### GetPerSsidSettings
+
+`func (o *InlineObject63) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
+
+GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
+
+### GetPerSsidSettingsOk
+
+`func (o *InlineObject63) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
+
+GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPerSsidSettings
+
+`func (o *InlineObject63) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
+
+SetPerSsidSettings sets PerSsidSettings field to given value.
+
+### HasPerSsidSettings
+
+`func (o *InlineObject63) HasPerSsidSettings() bool`
+
+HasPerSsidSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

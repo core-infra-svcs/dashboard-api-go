@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**Mac** | Pointer to **string** | MAC address of client | [optional] 
+**Id** | Pointer to **string** | ID of client | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork**](OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork.md) |  | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -28,72 +29,97 @@ NewInlineResponse200410WithDefaults instantiates a new InlineResponse200410 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetName
 
-`func (o *InlineResponse200410) GetStartTs() time.Time`
+`func (o *InlineResponse200410) GetName() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetNameOk
 
-`func (o *InlineResponse200410) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200410) GetNameOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetName
 
-`func (o *InlineResponse200410) SetStartTs(v time.Time)`
+`func (o *InlineResponse200410) SetName(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetName sets Name field to given value.
 
-### HasStartTs
+### HasName
 
-`func (o *InlineResponse200410) HasStartTs() bool`
+`func (o *InlineResponse200410) HasName() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMac
 
-`func (o *InlineResponse200410) GetEndTs() time.Time`
+`func (o *InlineResponse200410) GetMac() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMacOk
 
-`func (o *InlineResponse200410) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200410) GetMacOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMac
 
-`func (o *InlineResponse200410) SetEndTs(v time.Time)`
+`func (o *InlineResponse200410) SetMac(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetMac sets Mac field to given value.
 
-### HasEndTs
+### HasMac
 
-`func (o *InlineResponse200410) HasEndTs() bool`
+`func (o *InlineResponse200410) HasMac() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *InlineResponse200410) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200410) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200410) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200410) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetNetwork
 
-`func (o *InlineResponse200410) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200410) GetNetwork() OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200410) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200410) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200410) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200410) SetNetwork(v OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork)`
 
 SetNetwork sets Network field to given value.
 
@@ -103,30 +129,30 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetByBand
+### GetUsage
 
-`func (o *InlineResponse200410) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200410) GetUsage() OrganizationsOrganizationIdSummaryTopClientsByUsageUsage`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetUsageOk
 
-`func (o *InlineResponse200410) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200410) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageUsage, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetUsage
 
-`func (o *InlineResponse200410) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200410) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsByUsageUsage)`
 
-SetByBand sets ByBand field to given value.
+SetUsage sets Usage field to given value.
 
-### HasByBand
+### HasUsage
 
-`func (o *InlineResponse200410) HasByBand() bool`
+`func (o *InlineResponse200410) HasUsage() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

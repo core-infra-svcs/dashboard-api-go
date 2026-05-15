@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | The serial(s) of the device(s) to stop the capture on | 
+**Name** | **string** | Name of the profile to be added. This must be unique. | 
+**Description** | **string** | Description of the profile to be added. | 
+**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
 
 ## Methods
 
 ### NewInlineObject265
 
-`func NewInlineObject265(serials []string, ) *InlineObject265`
+`func NewInlineObject265(name string, description string, rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject265`
 
 NewInlineObject265 instantiates a new InlineObject265 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject265WithDefaults instantiates a new InlineObject265 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject265) GetSerials() []string`
+`func (o *InlineObject265) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject265) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject265) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject265) SetSerials(v []string)`
+`func (o *InlineObject265) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
+
+
+### GetDescription
+
+`func (o *InlineObject265) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject265) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject265) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+
+### GetRules
+
+`func (o *InlineObject265) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject265) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject265) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+
+SetRules sets Rules field to given value.
 
 
 

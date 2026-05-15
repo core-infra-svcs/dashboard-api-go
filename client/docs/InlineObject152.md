@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name for your port schedule. | [optional] 
-**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1.md) | Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject152WithDefaults instantiates a new InlineObject152 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSwitchPorts
 
-`func (o *InlineObject152) GetName() string`
+`func (o *InlineObject152) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSwitchPortsOk
 
-`func (o *InlineObject152) GetNameOk() (*string, bool)`
+`func (o *InlineObject152) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSwitchPorts
 
-`func (o *InlineObject152) SetName(v string)`
+`func (o *InlineObject152) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1)`
 
-SetName sets Name field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasName
+### HasSwitchPorts
 
-`func (o *InlineObject152) HasName() bool`
+`func (o *InlineObject152) HasSwitchPorts() bool`
 
-HasName returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
-### GetPortSchedule
+### GetSwitchProfilePorts
 
-`func (o *InlineObject152) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
+`func (o *InlineObject152) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
 
-GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
+GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
 
-### GetPortScheduleOk
+### GetSwitchProfilePortsOk
 
-`func (o *InlineObject152) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
+`func (o *InlineObject152) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
 
-GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
+GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPortSchedule
+### SetSwitchProfilePorts
 
-`func (o *InlineObject152) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
+`func (o *InlineObject152) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
 
-SetPortSchedule sets PortSchedule field to given value.
+SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
 
-### HasPortSchedule
+### HasSwitchProfilePorts
 
-`func (o *InlineObject152) HasPortSchedule() bool`
+`func (o *InlineObject152) HasSwitchProfilePorts() bool`
 
-HasPortSchedule returns a boolean if a field has been set.
+HasSwitchProfilePorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

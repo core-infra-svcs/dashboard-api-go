@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]InlineResponse200230Ranges**](InlineResponse200230Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]InlineResponse200230RangesInSeconds**](InlineResponse200230RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
+**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
+**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200230WithDefaults instantiates a new InlineResponse200230 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetSerial
 
-`func (o *InlineResponse200230) GetEnabled() bool`
+`func (o *InlineResponse200230) GetSerial() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSerialOk
 
-`func (o *InlineResponse200230) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200230) GetSerialOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSerial
 
-`func (o *InlineResponse200230) SetEnabled(v bool)`
+`func (o *InlineResponse200230) SetSerial(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetSerial sets Serial field to given value.
 
-### HasEnabled
+### HasSerial
 
-`func (o *InlineResponse200230) HasEnabled() bool`
+`func (o *InlineResponse200230) HasSerial() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetRanges
+### GetMeshRoute
 
-`func (o *InlineResponse200230) GetRanges() []InlineResponse200230Ranges`
+`func (o *InlineResponse200230) GetMeshRoute() []string`
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
 
-### GetRangesOk
+### GetMeshRouteOk
 
-`func (o *InlineResponse200230) GetRangesOk() (*[]InlineResponse200230Ranges, bool)`
+`func (o *InlineResponse200230) GetMeshRouteOk() (*[]string, bool)`
 
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetMeshRoute
 
-`func (o *InlineResponse200230) SetRanges(v []InlineResponse200230Ranges)`
+`func (o *InlineResponse200230) SetMeshRoute(v []string)`
 
-SetRanges sets Ranges field to given value.
+SetMeshRoute sets MeshRoute field to given value.
 
-### HasRanges
+### HasMeshRoute
 
-`func (o *InlineResponse200230) HasRanges() bool`
+`func (o *InlineResponse200230) HasMeshRoute() bool`
 
-HasRanges returns a boolean if a field has been set.
+HasMeshRoute returns a boolean if a field has been set.
 
-### GetRangesInSeconds
+### GetLatestMeshPerformance
 
-`func (o *InlineResponse200230) GetRangesInSeconds() []InlineResponse200230RangesInSeconds`
+`func (o *InlineResponse200230) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
 
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
 
-### GetRangesInSecondsOk
+### GetLatestMeshPerformanceOk
 
-`func (o *InlineResponse200230) GetRangesInSecondsOk() (*[]InlineResponse200230RangesInSeconds, bool)`
+`func (o *InlineResponse200230) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
 
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRangesInSeconds
+### SetLatestMeshPerformance
 
-`func (o *InlineResponse200230) SetRangesInSeconds(v []InlineResponse200230RangesInSeconds)`
+`func (o *InlineResponse200230) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
 
-SetRangesInSeconds sets RangesInSeconds field to given value.
+SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
 
-### HasRangesInSeconds
+### HasLatestMeshPerformance
 
-`func (o *InlineResponse200230) HasRangesInSeconds() bool`
+`func (o *InlineResponse200230) HasLatestMeshPerformance() bool`
 
-HasRangesInSeconds returns a boolean if a field has been set.
+HasLatestMeshPerformance returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

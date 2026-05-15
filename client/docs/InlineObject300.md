@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy.md) |  | 
-**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to remove | 
+**Name** | **string** | Name of the firewall ruleset | 
+**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
 
 ## Methods
 
 ### NewInlineObject300
 
-`func NewInlineObject300(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject300`
+`func NewInlineObject300(name string, ) *InlineObject300`
 
 NewInlineObject300 instantiates a new InlineObject300 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,50 @@ NewInlineObject300WithDefaults instantiates a new InlineObject300 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetName
 
-`func (o *InlineObject300) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy`
+`func (o *InlineObject300) GetName() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNameOk
 
-`func (o *InlineObject300) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, bool)`
+`func (o *InlineObject300) GetNameOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetName
 
-`func (o *InlineObject300) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy)`
+`func (o *InlineObject300) SetName(v string)`
 
-SetPolicy sets Policy field to given value.
+SetName sets Name field to given value.
 
 
-### GetAdaptivePolicyGroups
+### GetDescription
 
-`func (o *InlineObject300) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
+`func (o *InlineObject300) GetDescription() string`
 
-GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetAdaptivePolicyGroupsOk
+### GetDescriptionOk
 
-`func (o *InlineObject300) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
+`func (o *InlineObject300) GetDescriptionOk() (*string, bool)`
 
-GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyGroups
+### SetDescription
 
-`func (o *InlineObject300) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
+`func (o *InlineObject300) SetDescription(v string)`
 
-SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
+
+`func (o *InlineObject300) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

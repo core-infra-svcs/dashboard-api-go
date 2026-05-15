@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
-**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
+**Serial** | Pointer to **string** | Serial of camera | [optional] 
+**WirelessCredentialsSent** | Pointer to **bool** | Note whether credentials were sent successfully | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject253WithDefaults instantiates a new InlineObject253 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTitle
+### GetSerial
 
-`func (o *InlineObject253) GetTitle() string`
+`func (o *InlineObject253) GetSerial() string`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetSerialOk
 
-`func (o *InlineObject253) GetTitleOk() (*string, bool)`
+`func (o *InlineObject253) GetSerialOk() (*string, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetSerial
 
-`func (o *InlineObject253) SetTitle(v string)`
+`func (o *InlineObject253) SetSerial(v string)`
 
-SetTitle sets Title field to given value.
+SetSerial sets Serial field to given value.
 
-### HasTitle
+### HasSerial
 
-`func (o *InlineObject253) HasTitle() bool`
+`func (o *InlineObject253) HasSerial() bool`
 
-HasTitle returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetApiKey
+### GetWirelessCredentialsSent
 
-`func (o *InlineObject253) GetApiKey() string`
+`func (o *InlineObject253) GetWirelessCredentialsSent() bool`
 
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
+GetWirelessCredentialsSent returns the WirelessCredentialsSent field if non-nil, zero value otherwise.
 
-### GetApiKeyOk
+### GetWirelessCredentialsSentOk
 
-`func (o *InlineObject253) GetApiKeyOk() (*string, bool)`
+`func (o *InlineObject253) GetWirelessCredentialsSentOk() (*bool, bool)`
 
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
+GetWirelessCredentialsSentOk returns a tuple with the WirelessCredentialsSent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApiKey
+### SetWirelessCredentialsSent
 
-`func (o *InlineObject253) SetApiKey(v string)`
+`func (o *InlineObject253) SetWirelessCredentialsSent(v bool)`
 
-SetApiKey sets ApiKey field to given value.
+SetWirelessCredentialsSent sets WirelessCredentialsSent field to given value.
 
-### HasApiKey
+### HasWirelessCredentialsSent
 
-`func (o *InlineObject253) HasApiKey() bool`
+`func (o *InlineObject253) HasWirelessCredentialsSent() bool`
 
-HasApiKey returns a boolean if a field has been set.
+HasWirelessCredentialsSent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

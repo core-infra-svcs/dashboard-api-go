@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]DevicesSerialCellularGatewayPortForwardingRulesRules**](DevicesSerialCellularGatewayPortForwardingRulesRules.md) | An array of port forwarding params | [optional] 
+**Slot** | **string** | Required parameter for the SIM slot to update the cellular band mask for | 
+**Type** | **string** | Required parameter for the signal type to update the cellular band mask for | 
+**Masked** | **[]string** | Required parameter for the band identifiers to mask for the given SIM slot and signal type. For LTE use bands identifiers like &#39;30&#39; and for 5G use band identifiers like &#39;n30&#39;. Maximum 256 bands. | 
 
 ## Methods
 
 ### NewInlineObject15
 
-`func NewInlineObject15() *InlineObject15`
+`func NewInlineObject15(slot string, type_ string, masked []string, ) *InlineObject15`
 
 NewInlineObject15 instantiates a new InlineObject15 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +27,65 @@ NewInlineObject15WithDefaults instantiates a new InlineObject15 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetSlot
 
-`func (o *InlineObject15) GetRules() []DevicesSerialCellularGatewayPortForwardingRulesRules`
+`func (o *InlineObject15) GetSlot() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetSlot returns the Slot field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetSlotOk
 
-`func (o *InlineObject15) GetRulesOk() (*[]DevicesSerialCellularGatewayPortForwardingRulesRules, bool)`
+`func (o *InlineObject15) GetSlotOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetSlotOk returns a tuple with the Slot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetSlot
 
-`func (o *InlineObject15) SetRules(v []DevicesSerialCellularGatewayPortForwardingRulesRules)`
+`func (o *InlineObject15) SetSlot(v string)`
 
-SetRules sets Rules field to given value.
+SetSlot sets Slot field to given value.
 
-### HasRules
 
-`func (o *InlineObject15) HasRules() bool`
+### GetType
 
-HasRules returns a boolean if a field has been set.
+`func (o *InlineObject15) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineObject15) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineObject15) SetType(v string)`
+
+SetType sets Type field to given value.
+
+
+### GetMasked
+
+`func (o *InlineObject15) GetMasked() []string`
+
+GetMasked returns the Masked field if non-nil, zero value otherwise.
+
+### GetMaskedOk
+
+`func (o *InlineObject15) GetMaskedOk() (*[]string, bool)`
+
+GetMaskedOk returns a tuple with the Masked field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMasked
+
+`func (o *InlineObject15) SetMasked(v []string)`
+
+SetMasked sets Masked field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

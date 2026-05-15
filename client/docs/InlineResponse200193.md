@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Device | [optional] 
-**Serial** | Pointer to **string** | Serial of the Device | [optional] 
-**Mac** | Pointer to **string** | MAC address of the device | [optional] 
-**ProductType** | Pointer to **string** | The product type | [optional] 
-**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile.md) |  | [optional] 
-**Stack** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack**](NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack.md) |  | [optional] 
+**RendezvousPointId** | Pointer to **string** | The id. | [optional] 
+**Serial** | Pointer to **string** | The serial. | [optional] 
+**InterfaceName** | Pointer to **string** | The name of the interface to use. | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address of the interface to use. | [optional] 
+**MulticastGroup** | Pointer to **string** | &#39;Any&#39;, or the IP address of a multicast group. | [optional] 
 
 ## Methods
 
@@ -30,30 +29,30 @@ NewInlineResponse200193WithDefaults instantiates a new InlineResponse200193 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRendezvousPointId
 
-`func (o *InlineResponse200193) GetName() string`
+`func (o *InlineResponse200193) GetRendezvousPointId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRendezvousPointId returns the RendezvousPointId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRendezvousPointIdOk
 
-`func (o *InlineResponse200193) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200193) GetRendezvousPointIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRendezvousPointIdOk returns a tuple with the RendezvousPointId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRendezvousPointId
 
-`func (o *InlineResponse200193) SetName(v string)`
+`func (o *InlineResponse200193) SetRendezvousPointId(v string)`
 
-SetName sets Name field to given value.
+SetRendezvousPointId sets RendezvousPointId field to given value.
 
-### HasName
+### HasRendezvousPointId
 
-`func (o *InlineResponse200193) HasName() bool`
+`func (o *InlineResponse200193) HasRendezvousPointId() bool`
 
-HasName returns a boolean if a field has been set.
+HasRendezvousPointId returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -80,105 +79,80 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetMac
+### GetInterfaceName
 
-`func (o *InlineResponse200193) GetMac() string`
+`func (o *InlineResponse200193) GetInterfaceName() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetInterfaceName returns the InterfaceName field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetInterfaceNameOk
 
-`func (o *InlineResponse200193) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200193) GetInterfaceNameOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetInterfaceNameOk returns a tuple with the InterfaceName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetInterfaceName
 
-`func (o *InlineResponse200193) SetMac(v string)`
+`func (o *InlineResponse200193) SetInterfaceName(v string)`
 
-SetMac sets Mac field to given value.
+SetInterfaceName sets InterfaceName field to given value.
 
-### HasMac
+### HasInterfaceName
 
-`func (o *InlineResponse200193) HasMac() bool`
+`func (o *InlineResponse200193) HasInterfaceName() bool`
 
-HasMac returns a boolean if a field has been set.
+HasInterfaceName returns a boolean if a field has been set.
 
-### GetProductType
+### GetInterfaceIp
 
-`func (o *InlineResponse200193) GetProductType() string`
+`func (o *InlineResponse200193) GetInterfaceIp() string`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetInterfaceIpOk
 
-`func (o *InlineResponse200193) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse200193) GetInterfaceIpOk() (*string, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetInterfaceIp
 
-`func (o *InlineResponse200193) SetProductType(v string)`
+`func (o *InlineResponse200193) SetInterfaceIp(v string)`
 
-SetProductType sets ProductType field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasProductType
+### HasInterfaceIp
 
-`func (o *InlineResponse200193) HasProductType() bool`
+`func (o *InlineResponse200193) HasInterfaceIp() bool`
 
-HasProductType returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
 
-### GetVlanProfile
+### GetMulticastGroup
 
-`func (o *InlineResponse200193) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile`
+`func (o *InlineResponse200193) GetMulticastGroup() string`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetMulticastGroupOk
 
-`func (o *InlineResponse200193) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile, bool)`
+`func (o *InlineResponse200193) GetMulticastGroupOk() (*string, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetMulticastGroup
 
-`func (o *InlineResponse200193) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile)`
+`func (o *InlineResponse200193) SetMulticastGroup(v string)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetMulticastGroup sets MulticastGroup field to given value.
 
-### HasVlanProfile
+### HasMulticastGroup
 
-`func (o *InlineResponse200193) HasVlanProfile() bool`
+`func (o *InlineResponse200193) HasMulticastGroup() bool`
 
-HasVlanProfile returns a boolean if a field has been set.
-
-### GetStack
-
-`func (o *InlineResponse200193) GetStack() NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack`
-
-GetStack returns the Stack field if non-nil, zero value otherwise.
-
-### GetStackOk
-
-`func (o *InlineResponse200193) GetStackOk() (*NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack, bool)`
-
-GetStackOk returns a tuple with the Stack field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStack
-
-`func (o *InlineResponse200193) SetStack(v NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack)`
-
-SetStack sets Stack field to given value.
-
-### HasStack
-
-`func (o *InlineResponse200193) HasStack() bool`
-
-HasStack returns a boolean if a field has been set.
+HasMulticastGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

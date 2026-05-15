@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Name** | Pointer to **string** | The name of the device. | [optional] 
-**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
-**Serial** | Pointer to **string** | The device serial. | [optional] 
-**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200140WithDefaults instantiates a new InlineResponse200140 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetReportingEnabled
 
-`func (o *InlineResponse200140) GetId() string`
+`func (o *InlineResponse200140) GetReportingEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetReportingEnabledOk
 
-`func (o *InlineResponse200140) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200140) GetReportingEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetReportingEnabled
 
-`func (o *InlineResponse200140) SetId(v string)`
+`func (o *InlineResponse200140) SetReportingEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasId
+### HasReportingEnabled
 
-`func (o *InlineResponse200140) HasId() bool`
+`func (o *InlineResponse200140) HasReportingEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetCollectorIp
 
-`func (o *InlineResponse200140) GetName() string`
+`func (o *InlineResponse200140) GetCollectorIp() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCollectorIpOk
 
-`func (o *InlineResponse200140) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200140) GetCollectorIpOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCollectorIp
 
-`func (o *InlineResponse200140) SetName(v string)`
+`func (o *InlineResponse200140) SetCollectorIp(v string)`
 
-SetName sets Name field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasName
+### HasCollectorIp
 
-`func (o *InlineResponse200140) HasName() bool`
+`func (o *InlineResponse200140) HasCollectorIp() bool`
 
-HasName returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetWifiMac
+### GetCollectorPort
 
-`func (o *InlineResponse200140) GetWifiMac() string`
+`func (o *InlineResponse200140) GetCollectorPort() int32`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetCollectorPortOk
 
-`func (o *InlineResponse200140) GetWifiMacOk() (*string, bool)`
+`func (o *InlineResponse200140) GetCollectorPortOk() (*int32, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetCollectorPort
 
-`func (o *InlineResponse200140) SetWifiMac(v string)`
+`func (o *InlineResponse200140) SetCollectorPort(v int32)`
 
-SetWifiMac sets WifiMac field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
-### HasWifiMac
+### HasCollectorPort
 
-`func (o *InlineResponse200140) HasWifiMac() bool`
+`func (o *InlineResponse200140) HasCollectorPort() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasCollectorPort returns a boolean if a field has been set.
 
-### GetSerial
+### GetEtaEnabled
 
-`func (o *InlineResponse200140) GetSerial() string`
+`func (o *InlineResponse200140) GetEtaEnabled() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEtaEnabledOk
 
-`func (o *InlineResponse200140) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200140) GetEtaEnabledOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEtaEnabled
 
-`func (o *InlineResponse200140) SetSerial(v string)`
+`func (o *InlineResponse200140) SetEtaEnabled(v bool)`
 
-SetSerial sets Serial field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasSerial
+### HasEtaEnabled
 
-`func (o *InlineResponse200140) HasSerial() bool`
+`func (o *InlineResponse200140) HasEtaEnabled() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
 
-### GetNotes
+### GetEtaDstPort
 
-`func (o *InlineResponse200140) GetNotes() string`
+`func (o *InlineResponse200140) GetEtaDstPort() int32`
 
-GetNotes returns the Notes field if non-nil, zero value otherwise.
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
 
-### GetNotesOk
+### GetEtaDstPortOk
 
-`func (o *InlineResponse200140) GetNotesOk() (*string, bool)`
+`func (o *InlineResponse200140) GetEtaDstPortOk() (*int32, bool)`
 
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotes
+### SetEtaDstPort
 
-`func (o *InlineResponse200140) SetNotes(v string)`
+`func (o *InlineResponse200140) SetEtaDstPort(v int32)`
 
-SetNotes sets Notes field to given value.
+SetEtaDstPort sets EtaDstPort field to given value.
 
-### HasNotes
+### HasEtaDstPort
 
-`func (o *InlineResponse200140) HasNotes() bool`
+`func (o *InlineResponse200140) HasEtaDstPort() bool`
 
-HasNotes returns a boolean if a field has been set.
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

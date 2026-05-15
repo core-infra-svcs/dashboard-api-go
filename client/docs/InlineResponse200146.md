@@ -4,14 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the certificate. | [optional] 
-**NotValidAfter** | Pointer to **string** | The date after which the certificate is no longer valid. | [optional] 
-**NotValidBefore** | Pointer to **string** | The date before which the certificate is not valid. | [optional] 
-**CertPem** | Pointer to **string** | The PEM of the certificate. | [optional] 
-**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
-**Issuer** | Pointer to **string** | The certificate issuer. | [optional] 
-**Subject** | Pointer to **string** | The subject of the certificate. | [optional] 
-**Id** | Pointer to **string** | The Meraki Id of the certificate record. | [optional] 
+**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
+**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
+**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +27,80 @@ NewInlineResponse200146WithDefaults instantiates a new InlineResponse200146 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStartTs
 
-`func (o *InlineResponse200146) GetName() string`
+`func (o *InlineResponse200146) GetStartTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStartTsOk
 
-`func (o *InlineResponse200146) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200146) GetStartTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStartTs
 
-`func (o *InlineResponse200146) SetName(v string)`
+`func (o *InlineResponse200146) SetStartTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasName
+### HasStartTs
 
-`func (o *InlineResponse200146) HasName() bool`
+`func (o *InlineResponse200146) HasStartTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetNotValidAfter
+### GetEndTs
 
-`func (o *InlineResponse200146) GetNotValidAfter() string`
+`func (o *InlineResponse200146) GetEndTs() time.Time`
 
-GetNotValidAfter returns the NotValidAfter field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNotValidAfterOk
+### GetEndTsOk
 
-`func (o *InlineResponse200146) GetNotValidAfterOk() (*string, bool)`
+`func (o *InlineResponse200146) GetEndTsOk() (*time.Time, bool)`
 
-GetNotValidAfterOk returns a tuple with the NotValidAfter field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidAfter
+### SetEndTs
 
-`func (o *InlineResponse200146) SetNotValidAfter(v string)`
+`func (o *InlineResponse200146) SetEndTs(v time.Time)`
 
-SetNotValidAfter sets NotValidAfter field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasNotValidAfter
+### HasEndTs
 
-`func (o *InlineResponse200146) HasNotValidAfter() bool`
+`func (o *InlineResponse200146) HasEndTs() bool`
 
-HasNotValidAfter returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetNotValidBefore
+### GetCounts
 
-`func (o *InlineResponse200146) GetNotValidBefore() string`
+`func (o *InlineResponse200146) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
 
-GetNotValidBefore returns the NotValidBefore field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetNotValidBeforeOk
+### GetCountsOk
 
-`func (o *InlineResponse200146) GetNotValidBeforeOk() (*string, bool)`
+`func (o *InlineResponse200146) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
 
-GetNotValidBeforeOk returns a tuple with the NotValidBefore field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidBefore
+### SetCounts
 
-`func (o *InlineResponse200146) SetNotValidBefore(v string)`
+`func (o *InlineResponse200146) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
 
-SetNotValidBefore sets NotValidBefore field to given value.
+SetCounts sets Counts field to given value.
 
-### HasNotValidBefore
+### HasCounts
 
-`func (o *InlineResponse200146) HasNotValidBefore() bool`
+`func (o *InlineResponse200146) HasCounts() bool`
 
-HasNotValidBefore returns a boolean if a field has been set.
-
-### GetCertPem
-
-`func (o *InlineResponse200146) GetCertPem() string`
-
-GetCertPem returns the CertPem field if non-nil, zero value otherwise.
-
-### GetCertPemOk
-
-`func (o *InlineResponse200146) GetCertPemOk() (*string, bool)`
-
-GetCertPemOk returns a tuple with the CertPem field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCertPem
-
-`func (o *InlineResponse200146) SetCertPem(v string)`
-
-SetCertPem sets CertPem field to given value.
-
-### HasCertPem
-
-`func (o *InlineResponse200146) HasCertPem() bool`
-
-HasCertPem returns a boolean if a field has been set.
-
-### GetDeviceId
-
-`func (o *InlineResponse200146) GetDeviceId() string`
-
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
-
-### GetDeviceIdOk
-
-`func (o *InlineResponse200146) GetDeviceIdOk() (*string, bool)`
-
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceId
-
-`func (o *InlineResponse200146) SetDeviceId(v string)`
-
-SetDeviceId sets DeviceId field to given value.
-
-### HasDeviceId
-
-`func (o *InlineResponse200146) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
-
-### GetIssuer
-
-`func (o *InlineResponse200146) GetIssuer() string`
-
-GetIssuer returns the Issuer field if non-nil, zero value otherwise.
-
-### GetIssuerOk
-
-`func (o *InlineResponse200146) GetIssuerOk() (*string, bool)`
-
-GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIssuer
-
-`func (o *InlineResponse200146) SetIssuer(v string)`
-
-SetIssuer sets Issuer field to given value.
-
-### HasIssuer
-
-`func (o *InlineResponse200146) HasIssuer() bool`
-
-HasIssuer returns a boolean if a field has been set.
-
-### GetSubject
-
-`func (o *InlineResponse200146) GetSubject() string`
-
-GetSubject returns the Subject field if non-nil, zero value otherwise.
-
-### GetSubjectOk
-
-`func (o *InlineResponse200146) GetSubjectOk() (*string, bool)`
-
-GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubject
-
-`func (o *InlineResponse200146) SetSubject(v string)`
-
-SetSubject sets Subject field to given value.
-
-### HasSubject
-
-`func (o *InlineResponse200146) HasSubject() bool`
-
-HasSubject returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse200146) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200146) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200146) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200146) HasId() bool`
-
-HasId returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

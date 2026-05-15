@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Category** | Pointer to **string** | Name of the Application Category | [optional] 
+**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
+**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
+**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
+**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse200409WithDefaults instantiates a new InlineResponse200409 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetCategory
 
-`func (o *InlineResponse200409) GetStartTs() time.Time`
+`func (o *InlineResponse200409) GetCategory() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetCategoryOk
 
-`func (o *InlineResponse200409) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200409) GetCategoryOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetCategory
 
-`func (o *InlineResponse200409) SetStartTs(v time.Time)`
+`func (o *InlineResponse200409) SetCategory(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetCategory sets Category field to given value.
 
-### HasStartTs
+### HasCategory
 
-`func (o *InlineResponse200409) HasStartTs() bool`
+`func (o *InlineResponse200409) HasCategory() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetEndTs
+### GetTotal
 
-`func (o *InlineResponse200409) GetEndTs() time.Time`
+`func (o *InlineResponse200409) GetTotal() float32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetTotalOk
 
-`func (o *InlineResponse200409) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200409) GetTotalOk() (*float32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetTotal
 
-`func (o *InlineResponse200409) SetEndTs(v time.Time)`
+`func (o *InlineResponse200409) SetTotal(v float32)`
 
-SetEndTs sets EndTs field to given value.
+SetTotal sets Total field to given value.
 
-### HasEndTs
+### HasTotal
 
-`func (o *InlineResponse200409) HasEndTs() bool`
+`func (o *InlineResponse200409) HasTotal() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetSerial
+### GetDownstream
 
-`func (o *InlineResponse200409) GetSerial() string`
+`func (o *InlineResponse200409) GetDownstream() float32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200409) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200409) GetDownstreamOk() (*float32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetDownstream
 
-`func (o *InlineResponse200409) SetSerial(v string)`
+`func (o *InlineResponse200409) SetDownstream(v float32)`
 
-SetSerial sets Serial field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasSerial
+### HasDownstream
 
-`func (o *InlineResponse200409) HasSerial() bool`
+`func (o *InlineResponse200409) HasDownstream() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
-### GetMac
+### GetUpstream
 
-`func (o *InlineResponse200409) GetMac() string`
+`func (o *InlineResponse200409) GetUpstream() float32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200409) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200409) GetUpstreamOk() (*float32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetUpstream
 
-`func (o *InlineResponse200409) SetMac(v string)`
+`func (o *InlineResponse200409) SetUpstream(v float32)`
 
-SetMac sets Mac field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasMac
+### HasUpstream
 
-`func (o *InlineResponse200409) HasMac() bool`
+`func (o *InlineResponse200409) HasUpstream() bool`
 
-HasMac returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetNetwork
+### GetPercentage
 
-`func (o *InlineResponse200409) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200409) GetPercentage() float32`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetPercentage returns the Percentage field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetPercentageOk
 
-`func (o *InlineResponse200409) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200409) GetPercentageOk() (*float32, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetPercentage
 
-`func (o *InlineResponse200409) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200409) SetPercentage(v float32)`
 
-SetNetwork sets Network field to given value.
+SetPercentage sets Percentage field to given value.
 
-### HasNetwork
+### HasPercentage
 
-`func (o *InlineResponse200409) HasNetwork() bool`
+`func (o *InlineResponse200409) HasPercentage() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetByBand
-
-`func (o *InlineResponse200409) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
-
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
-
-### GetByBandOk
-
-`func (o *InlineResponse200409) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
-
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByBand
-
-`func (o *InlineResponse200409) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
-
-SetByBand sets ByBand field to given value.
-
-### HasByBand
-
-`func (o *InlineResponse200409) HasByBand() bool`
-
-HasByBand returns a boolean if a field has been set.
+HasPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**Jobs** | Pointer to [**[]InlineResponse200131Jobs**](InlineResponse200131Jobs.md) | The newly created jobs | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetJobs
 
-`func (o *InlineResponse200131) GetName() string`
+`func (o *InlineResponse200131) GetJobs() []InlineResponse200131Jobs`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetJobs returns the Jobs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetJobsOk
 
-`func (o *InlineResponse200131) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200131) GetJobsOk() (*[]InlineResponse200131Jobs, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetJobs
 
-`func (o *InlineResponse200131) SetName(v string)`
+`func (o *InlineResponse200131) SetJobs(v []InlineResponse200131Jobs)`
 
-SetName sets Name field to given value.
+SetJobs sets Jobs field to given value.
 
-### HasName
+### HasJobs
 
-`func (o *InlineResponse200131) HasName() bool`
+`func (o *InlineResponse200131) HasJobs() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetClientId
-
-`func (o *InlineResponse200131) GetClientId() string`
-
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
-
-### GetClientIdOk
-
-`func (o *InlineResponse200131) GetClientIdOk() (*string, bool)`
-
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientId
-
-`func (o *InlineResponse200131) SetClientId(v string)`
-
-SetClientId sets ClientId field to given value.
-
-### HasClientId
-
-`func (o *InlineResponse200131) HasClientId() bool`
-
-HasClientId returns a boolean if a field has been set.
-
-### GetAssigned
-
-`func (o *InlineResponse200131) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
-
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
-
-### GetAssignedOk
-
-`func (o *InlineResponse200131) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
-
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssigned
-
-`func (o *InlineResponse200131) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
-
-SetAssigned sets Assigned field to given value.
-
-### HasAssigned
-
-`func (o *InlineResponse200131) HasAssigned() bool`
-
-HasAssigned returns a boolean if a field has been set.
+HasJobs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

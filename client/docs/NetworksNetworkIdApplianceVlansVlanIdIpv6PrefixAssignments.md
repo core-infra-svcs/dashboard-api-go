@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Autonomous** | Pointer to **bool** | Auto assign a /64 prefix from the origin to the VLAN | [optional] 
 **StaticPrefix** | Pointer to **NullableString** | Manual configuration of a /64 prefix on the VLAN | [optional] 
 **StaticApplianceIp6** | Pointer to **NullableString** | Manual configuration of the IPv6 Appliance IP | [optional] 
-**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6Origin**](NetworksNetworkIdApplianceSingleLanIpv6Origin.md) |  | [optional] 
 
 ## Methods
 
@@ -125,20 +125,20 @@ HasStaticApplianceIp6 returns a boolean if a field has been set.
 UnsetStaticApplianceIp6 ensures that no value is present for StaticApplianceIp6, not even an explicit nil
 ### GetOrigin
 
-`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
+`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) GetOrigin() NetworksNetworkIdApplianceSingleLanIpv6Origin`
 
 GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
 ### GetOriginOk
 
-`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
+`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) GetOriginOk() (*NetworksNetworkIdApplianceSingleLanIpv6Origin, bool)`
 
 GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOrigin
 
-`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
+`func (o *NetworksNetworkIdApplianceVlansVlanIdIpv6PrefixAssignments) SetOrigin(v NetworksNetworkIdApplianceSingleLanIpv6Origin)`
 
 SetOrigin sets Origin field to given value.
 

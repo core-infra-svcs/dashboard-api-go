@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200328Items**](InlineResponse200328Items.md) | List of networks with XDR enabled | [optional] 
+**Items** | Pointer to [**[]InlineResponse200328Items**](InlineResponse200328Items.md) | List of cellular tower information for devices in the organization. Maximum 100 devices per page by default and 1000 maximum per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200328Meta**](InlineResponse200328Meta.md) |  | [optional] 
 
 ## Methods

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
+**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200208WithDefaults instantiates a new InlineResponse200208 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetId
 
-`func (o *InlineResponse200208) GetAssoc() int32`
+`func (o *InlineResponse200208) GetId() string`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetIdOk
 
-`func (o *InlineResponse200208) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse200208) GetIdOk() (*string, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetId
 
-`func (o *InlineResponse200208) SetAssoc(v int32)`
+`func (o *InlineResponse200208) SetId(v string)`
 
-SetAssoc sets Assoc field to given value.
+SetId sets Id field to given value.
 
-### HasAssoc
+### HasId
 
-`func (o *InlineResponse200208) HasAssoc() bool`
+`func (o *InlineResponse200208) HasId() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetAuth
+### GetName
 
-`func (o *InlineResponse200208) GetAuth() int32`
+`func (o *InlineResponse200208) GetName() string`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetNameOk
 
-`func (o *InlineResponse200208) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse200208) GetNameOk() (*string, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetName
 
-`func (o *InlineResponse200208) SetAuth(v int32)`
+`func (o *InlineResponse200208) SetName(v string)`
 
-SetAuth sets Auth field to given value.
+SetName sets Name field to given value.
 
-### HasAuth
+### HasName
 
-`func (o *InlineResponse200208) HasAuth() bool`
+`func (o *InlineResponse200208) HasName() bool`
 
-HasAuth returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDhcp
+### GetUrl
 
-`func (o *InlineResponse200208) GetDhcp() int32`
+`func (o *InlineResponse200208) GetUrl() string`
 
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetDhcpOk
+### GetUrlOk
 
-`func (o *InlineResponse200208) GetDhcpOk() (*int32, bool)`
+`func (o *InlineResponse200208) GetUrlOk() (*string, bool)`
 
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcp
+### SetUrl
 
-`func (o *InlineResponse200208) SetDhcp(v int32)`
+`func (o *InlineResponse200208) SetUrl(v string)`
 
-SetDhcp sets Dhcp field to given value.
+SetUrl sets Url field to given value.
 
-### HasDhcp
+### HasUrl
 
-`func (o *InlineResponse200208) HasDhcp() bool`
+`func (o *InlineResponse200208) HasUrl() bool`
 
-HasDhcp returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetDns
+### GetNetworkId
 
-`func (o *InlineResponse200208) GetDns() int32`
+`func (o *InlineResponse200208) GetNetworkId() string`
 
-GetDns returns the Dns field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetDnsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200208) GetDnsOk() (*int32, bool)`
+`func (o *InlineResponse200208) GetNetworkIdOk() (*string, bool)`
 
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDns
+### SetNetworkId
 
-`func (o *InlineResponse200208) SetDns(v int32)`
+`func (o *InlineResponse200208) SetNetworkId(v string)`
 
-SetDns sets Dns field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasDns
+### HasNetworkId
 
-`func (o *InlineResponse200208) HasDns() bool`
+`func (o *InlineResponse200208) HasNetworkId() bool`
 
-HasDns returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetSuccess
+### GetPayloadTemplate
 
-`func (o *InlineResponse200208) GetSuccess() int32`
+`func (o *InlineResponse200208) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetPayloadTemplateOk
 
-`func (o *InlineResponse200208) GetSuccessOk() (*int32, bool)`
+`func (o *InlineResponse200208) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetPayloadTemplate
 
-`func (o *InlineResponse200208) SetSuccess(v int32)`
+`func (o *InlineResponse200208) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
 
-SetSuccess sets Success field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasSuccess
+### HasPayloadTemplate
 
-`func (o *InlineResponse200208) HasSuccess() bool`
+`func (o *InlineResponse200208) HasPayloadTemplate() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

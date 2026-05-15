@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
-**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
+**Counts** | Pointer to [**InlineResponse200339Counts**](InlineResponse200339Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200339WithDefaults instantiates a new InlineResponse200339 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetCounts
 
-`func (o *InlineResponse200339) GetDestOrganizationId() string`
+`func (o *InlineResponse200339) GetCounts() InlineResponse200339Counts`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetCountsOk
 
-`func (o *InlineResponse200339) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200339) GetCountsOk() (*InlineResponse200339Counts, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetCounts
 
-`func (o *InlineResponse200339) SetDestOrganizationId(v string)`
+`func (o *InlineResponse200339) SetCounts(v InlineResponse200339Counts)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetCounts sets Counts field to given value.
 
-### HasDestOrganizationId
+### HasCounts
 
-`func (o *InlineResponse200339) HasDestOrganizationId() bool`
+`func (o *InlineResponse200339) HasCounts() bool`
 
-HasDestOrganizationId returns a boolean if a field has been set.
-
-### GetLicenseIds
-
-`func (o *InlineResponse200339) GetLicenseIds() []string`
-
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
-
-### GetLicenseIdsOk
-
-`func (o *InlineResponse200339) GetLicenseIdsOk() (*[]string, bool)`
-
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseIds
-
-`func (o *InlineResponse200339) SetLicenseIds(v []string)`
-
-SetLicenseIds sets LicenseIds field to given value.
-
-### HasLicenseIds
-
-`func (o *InlineResponse200339) HasLicenseIds() bool`
-
-HasLicenseIds returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

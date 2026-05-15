@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
-**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
+**DefaultPolicy** | **string** | Allows clients to access rogue networks. Blocked by default. | 
 
 ## Methods
 
 ### NewInlineObject188
 
-`func NewInlineObject188() *InlineObject188`
+`func NewInlineObject188(defaultPolicy string, ) *InlineObject188`
 
 NewInlineObject188 instantiates a new InlineObject188 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +25,25 @@ NewInlineObject188WithDefaults instantiates a new InlineObject188 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetDefaultPolicy
 
-`func (o *InlineObject188) GetHostname() string`
+`func (o *InlineObject188) GetDefaultPolicy() string`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetDefaultPolicyOk
 
-`func (o *InlineObject188) GetHostnameOk() (*string, bool)`
+`func (o *InlineObject188) GetDefaultPolicyOk() (*string, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetDefaultPolicy
 
-`func (o *InlineObject188) SetHostname(v string)`
+`func (o *InlineObject188) SetDefaultPolicy(v string)`
 
-SetHostname sets Hostname field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasHostname
-
-`func (o *InlineObject188) HasHostname() bool`
-
-HasHostname returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineObject188) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineObject188) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineObject188) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineObject188) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetMode
-
-`func (o *InlineObject188) GetMode() string`
-
-GetMode returns the Mode field if non-nil, zero value otherwise.
-
-### GetModeOk
-
-`func (o *InlineObject188) GetModeOk() (*string, bool)`
-
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMode
-
-`func (o *InlineObject188) SetMode(v string)`
-
-SetMode sets Mode field to given value.
-
-### HasMode
-
-`func (o *InlineObject188) HasMode() bool`
-
-HasMode returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

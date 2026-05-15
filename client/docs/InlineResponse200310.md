@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpdatedPriorities** | Pointer to [**[]InlineResponse200310UpdatedPriorities**](InlineResponse200310UpdatedPriorities.md) | List of updated priorities | [optional] 
+**Usage** | Pointer to [**InlineResponse200310Usage**](InlineResponse200310Usage.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200310Counts**](InlineResponse200310Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200310WithDefaults instantiates a new InlineResponse200310 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpdatedPriorities
+### GetUsage
 
-`func (o *InlineResponse200310) GetUpdatedPriorities() []InlineResponse200310UpdatedPriorities`
+`func (o *InlineResponse200310) GetUsage() InlineResponse200310Usage`
 
-GetUpdatedPriorities returns the UpdatedPriorities field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetUpdatedPrioritiesOk
+### GetUsageOk
 
-`func (o *InlineResponse200310) GetUpdatedPrioritiesOk() (*[]InlineResponse200310UpdatedPriorities, bool)`
+`func (o *InlineResponse200310) GetUsageOk() (*InlineResponse200310Usage, bool)`
 
-GetUpdatedPrioritiesOk returns a tuple with the UpdatedPriorities field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedPriorities
+### SetUsage
 
-`func (o *InlineResponse200310) SetUpdatedPriorities(v []InlineResponse200310UpdatedPriorities)`
+`func (o *InlineResponse200310) SetUsage(v InlineResponse200310Usage)`
 
-SetUpdatedPriorities sets UpdatedPriorities field to given value.
+SetUsage sets Usage field to given value.
 
-### HasUpdatedPriorities
+### HasUsage
 
-`func (o *InlineResponse200310) HasUpdatedPriorities() bool`
+`func (o *InlineResponse200310) HasUsage() bool`
 
-HasUpdatedPriorities returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200310) GetCounts() InlineResponse200310Counts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200310) GetCountsOk() (*InlineResponse200310Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200310) SetCounts(v InlineResponse200310Counts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200310) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

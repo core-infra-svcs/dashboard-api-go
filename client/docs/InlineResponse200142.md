@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
-**NewNetwork** | Pointer to **string** | The network to which the devices was moved. | [optional] 
+**Macs** | Pointer to **[]string** | List of mac addresses | [optional] 
+**Emails** | Pointer to **[]string** | List of email addresses | [optional] 
+**Usernames** | Pointer to **[]string** | List of usernames | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials | [optional] 
+**Imeis** | Pointer to **[]string** | List of IMEIs | [optional] 
+**BluetoothMacs** | Pointer to **[]string** | List of bluetooth mac addresses | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineResponse200142WithDefaults instantiates a new InlineResponse200142 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetMacs
 
-`func (o *InlineResponse200142) GetIds() []string`
+`func (o *InlineResponse200142) GetMacs() []string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetMacs returns the Macs field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetMacsOk
 
-`func (o *InlineResponse200142) GetIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200142) GetMacsOk() (*[]string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetMacsOk returns a tuple with the Macs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetMacs
 
-`func (o *InlineResponse200142) SetIds(v []string)`
+`func (o *InlineResponse200142) SetMacs(v []string)`
 
-SetIds sets Ids field to given value.
+SetMacs sets Macs field to given value.
 
-### HasIds
+### HasMacs
 
-`func (o *InlineResponse200142) HasIds() bool`
+`func (o *InlineResponse200142) HasMacs() bool`
 
-HasIds returns a boolean if a field has been set.
+HasMacs returns a boolean if a field has been set.
 
-### GetNewNetwork
+### GetEmails
 
-`func (o *InlineResponse200142) GetNewNetwork() string`
+`func (o *InlineResponse200142) GetEmails() []string`
 
-GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
+GetEmails returns the Emails field if non-nil, zero value otherwise.
 
-### GetNewNetworkOk
+### GetEmailsOk
 
-`func (o *InlineResponse200142) GetNewNetworkOk() (*string, bool)`
+`func (o *InlineResponse200142) GetEmailsOk() (*[]string, bool)`
 
-GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
+GetEmailsOk returns a tuple with the Emails field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNewNetwork
+### SetEmails
 
-`func (o *InlineResponse200142) SetNewNetwork(v string)`
+`func (o *InlineResponse200142) SetEmails(v []string)`
 
-SetNewNetwork sets NewNetwork field to given value.
+SetEmails sets Emails field to given value.
 
-### HasNewNetwork
+### HasEmails
 
-`func (o *InlineResponse200142) HasNewNetwork() bool`
+`func (o *InlineResponse200142) HasEmails() bool`
 
-HasNewNetwork returns a boolean if a field has been set.
+HasEmails returns a boolean if a field has been set.
+
+### GetUsernames
+
+`func (o *InlineResponse200142) GetUsernames() []string`
+
+GetUsernames returns the Usernames field if non-nil, zero value otherwise.
+
+### GetUsernamesOk
+
+`func (o *InlineResponse200142) GetUsernamesOk() (*[]string, bool)`
+
+GetUsernamesOk returns a tuple with the Usernames field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsernames
+
+`func (o *InlineResponse200142) SetUsernames(v []string)`
+
+SetUsernames sets Usernames field to given value.
+
+### HasUsernames
+
+`func (o *InlineResponse200142) HasUsernames() bool`
+
+HasUsernames returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200142) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200142) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200142) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200142) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetImeis
+
+`func (o *InlineResponse200142) GetImeis() []string`
+
+GetImeis returns the Imeis field if non-nil, zero value otherwise.
+
+### GetImeisOk
+
+`func (o *InlineResponse200142) GetImeisOk() (*[]string, bool)`
+
+GetImeisOk returns a tuple with the Imeis field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImeis
+
+`func (o *InlineResponse200142) SetImeis(v []string)`
+
+SetImeis sets Imeis field to given value.
+
+### HasImeis
+
+`func (o *InlineResponse200142) HasImeis() bool`
+
+HasImeis returns a boolean if a field has been set.
+
+### GetBluetoothMacs
+
+`func (o *InlineResponse200142) GetBluetoothMacs() []string`
+
+GetBluetoothMacs returns the BluetoothMacs field if non-nil, zero value otherwise.
+
+### GetBluetoothMacsOk
+
+`func (o *InlineResponse200142) GetBluetoothMacsOk() (*[]string, bool)`
+
+GetBluetoothMacsOk returns a tuple with the BluetoothMacs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBluetoothMacs
+
+`func (o *InlineResponse200142) SetBluetoothMacs(v []string)`
+
+SetBluetoothMacs sets BluetoothMacs field to given value.
+
+### HasBluetoothMacs
+
+`func (o *InlineResponse200142) HasBluetoothMacs() bool`
+
+HasBluetoothMacs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

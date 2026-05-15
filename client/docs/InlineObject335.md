@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject335WithDefaults instantiates a new InlineObject335 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetStatus
 
-`func (o *InlineObject335) GetDescription() string`
+`func (o *InlineObject335) GetStatus() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetStatusOk
 
-`func (o *InlineObject335) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject335) GetStatusOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetStatus
 
-`func (o *InlineObject335) SetDescription(v string)`
+`func (o *InlineObject335) SetStatus(v string)`
 
-SetDescription sets Description field to given value.
+SetStatus sets Status field to given value.
 
-### HasDescription
+### HasStatus
 
-`func (o *InlineObject335) HasDescription() bool`
+`func (o *InlineObject335) HasStatus() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetClient
+### GetCertificateAuthorityId
 
-`func (o *InlineObject335) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
+`func (o *InlineObject335) GetCertificateAuthorityId() string`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineObject335) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
+`func (o *InlineObject335) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetCertificateAuthorityId
 
-`func (o *InlineObject335) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
+`func (o *InlineObject335) SetCertificateAuthorityId(v string)`
 
-SetClient sets Client field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasClient
+### HasCertificateAuthorityId
 
-`func (o *InlineObject335) HasClient() bool`
+`func (o *InlineObject335) HasCertificateAuthorityId() bool`
 
-HasClient returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,19 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EntryId** | **string** | The id of entry | 
-**CreatedAt** | Pointer to **string** | Created at timestamp for the adaptive policy group | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Updated at timestamp for the adaptive policy group | [optional] 
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**InlineResponse200428Client**](InlineResponse200428Client.md) |  | [optional] 
-**Ssid** | Pointer to [**InlineResponse200428Ssid**](InlineResponse200428Ssid.md) |  | [optional] 
-**Network** | Pointer to [**InlineResponse200428Network**](InlineResponse200428Network.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse20116Network**](InlineResponse20116Network.md) |  | [optional] 
+**RuleId** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**Type** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Updated at timestamp | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Created at timestamp | [optional] 
+**Match** | Pointer to [**InlineResponse200428Match**](InlineResponse200428Match.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200428Items
 
-`func NewInlineResponse200428Items(entryId string, ) *InlineResponse200428Items`
+`func NewInlineResponse200428Items() *InlineResponse200428Items`
 
 NewInlineResponse200428Items instantiates a new InlineResponse200428Items object
 This constructor will assign default values to properties that have it defined,
@@ -31,42 +30,122 @@ NewInlineResponse200428ItemsWithDefaults instantiates a new InlineResponse200428
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEntryId
+### GetNetwork
 
-`func (o *InlineResponse200428Items) GetEntryId() string`
+`func (o *InlineResponse200428Items) GetNetwork() InlineResponse20116Network`
 
-GetEntryId returns the EntryId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetEntryIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200428Items) GetEntryIdOk() (*string, bool)`
+`func (o *InlineResponse200428Items) GetNetworkOk() (*InlineResponse20116Network, bool)`
 
-GetEntryIdOk returns a tuple with the EntryId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEntryId
+### SetNetwork
 
-`func (o *InlineResponse200428Items) SetEntryId(v string)`
+`func (o *InlineResponse200428Items) SetNetwork(v InlineResponse20116Network)`
 
-SetEntryId sets EntryId field to given value.
+SetNetwork sets Network field to given value.
 
+### HasNetwork
+
+`func (o *InlineResponse200428Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetRuleId
+
+`func (o *InlineResponse200428Items) GetRuleId() string`
+
+GetRuleId returns the RuleId field if non-nil, zero value otherwise.
+
+### GetRuleIdOk
+
+`func (o *InlineResponse200428Items) GetRuleIdOk() (*string, bool)`
+
+GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRuleId
+
+`func (o *InlineResponse200428Items) SetRuleId(v string)`
+
+SetRuleId sets RuleId field to given value.
+
+### HasRuleId
+
+`func (o *InlineResponse200428Items) HasRuleId() bool`
+
+HasRuleId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200428Items) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200428Items) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200428Items) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200428Items) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200428Items) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200428Items) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200428Items) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200428Items) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 ### GetCreatedAt
 
-`func (o *InlineResponse200428Items) GetCreatedAt() string`
+`func (o *InlineResponse200428Items) GetCreatedAt() time.Time`
 
 GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
 ### GetCreatedAtOk
 
-`func (o *InlineResponse200428Items) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse200428Items) GetCreatedAtOk() (*time.Time, bool)`
 
 GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCreatedAt
 
-`func (o *InlineResponse200428Items) SetCreatedAt(v string)`
+`func (o *InlineResponse200428Items) SetCreatedAt(v time.Time)`
 
 SetCreatedAt sets CreatedAt field to given value.
 
@@ -76,130 +155,30 @@ SetCreatedAt sets CreatedAt field to given value.
 
 HasCreatedAt returns a boolean if a field has been set.
 
-### GetLastUpdatedAt
+### GetMatch
 
-`func (o *InlineResponse200428Items) GetLastUpdatedAt() string`
+`func (o *InlineResponse200428Items) GetMatch() InlineResponse200428Match`
 
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+GetMatch returns the Match field if non-nil, zero value otherwise.
 
-### GetLastUpdatedAtOk
+### GetMatchOk
 
-`func (o *InlineResponse200428Items) GetLastUpdatedAtOk() (*string, bool)`
+`func (o *InlineResponse200428Items) GetMatchOk() (*InlineResponse200428Match, bool)`
 
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUpdatedAt
+### SetMatch
 
-`func (o *InlineResponse200428Items) SetLastUpdatedAt(v string)`
+`func (o *InlineResponse200428Items) SetMatch(v InlineResponse200428Match)`
 
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
+SetMatch sets Match field to given value.
 
-### HasLastUpdatedAt
+### HasMatch
 
-`func (o *InlineResponse200428Items) HasLastUpdatedAt() bool`
+`func (o *InlineResponse200428Items) HasMatch() bool`
 
-HasLastUpdatedAt returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200428Items) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200428Items) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200428Items) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200428Items) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetClient
-
-`func (o *InlineResponse200428Items) GetClient() InlineResponse200428Client`
-
-GetClient returns the Client field if non-nil, zero value otherwise.
-
-### GetClientOk
-
-`func (o *InlineResponse200428Items) GetClientOk() (*InlineResponse200428Client, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClient
-
-`func (o *InlineResponse200428Items) SetClient(v InlineResponse200428Client)`
-
-SetClient sets Client field to given value.
-
-### HasClient
-
-`func (o *InlineResponse200428Items) HasClient() bool`
-
-HasClient returns a boolean if a field has been set.
-
-### GetSsid
-
-`func (o *InlineResponse200428Items) GetSsid() InlineResponse200428Ssid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineResponse200428Items) GetSsidOk() (*InlineResponse200428Ssid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineResponse200428Items) SetSsid(v InlineResponse200428Ssid)`
-
-SetSsid sets Ssid field to given value.
-
-### HasSsid
-
-`func (o *InlineResponse200428Items) HasSsid() bool`
-
-HasSsid returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200428Items) GetNetwork() InlineResponse200428Network`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200428Items) GetNetworkOk() (*InlineResponse200428Network, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200428Items) SetNetwork(v InlineResponse200428Network)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200428Items) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

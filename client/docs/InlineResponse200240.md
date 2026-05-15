@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdaptivePolicyId** | Pointer to **string** | The ID for the adaptive policy | [optional] 
-**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | [optional] 
-**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | [optional] 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | The access control lists for the adaptive policy | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
-**CreatedAt** | Pointer to **string** | The created at timestamp for the adaptive policy | [optional] 
-**UpdatedAt** | Pointer to **string** | The updated at timestamp for the adaptive policy | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**InlineResponse200240Operator**](InlineResponse200240Operator.md) |  | [optional] 
+**Venue** | Pointer to [**InlineResponse200240Venue**](InlineResponse200240Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]InlineResponse200240MccMncs**](InlineResponse200240MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]InlineResponse200240NaiRealms**](InlineResponse200240NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
@@ -31,180 +32,205 @@ NewInlineResponse200240WithDefaults instantiates a new InlineResponse200240 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdaptivePolicyId
+### GetEnabled
 
-`func (o *InlineResponse200240) GetAdaptivePolicyId() string`
+`func (o *InlineResponse200240) GetEnabled() bool`
 
-GetAdaptivePolicyId returns the AdaptivePolicyId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAdaptivePolicyIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200240) GetAdaptivePolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200240) GetEnabledOk() (*bool, bool)`
 
-GetAdaptivePolicyIdOk returns a tuple with the AdaptivePolicyId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyId
+### SetEnabled
 
-`func (o *InlineResponse200240) SetAdaptivePolicyId(v string)`
+`func (o *InlineResponse200240) SetEnabled(v bool)`
 
-SetAdaptivePolicyId sets AdaptivePolicyId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAdaptivePolicyId
+### HasEnabled
 
-`func (o *InlineResponse200240) HasAdaptivePolicyId() bool`
+`func (o *InlineResponse200240) HasEnabled() bool`
 
-HasAdaptivePolicyId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSourceGroup
+### GetOperator
 
-`func (o *InlineResponse200240) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
+`func (o *InlineResponse200240) GetOperator() InlineResponse200240Operator`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetOperatorOk
 
-`func (o *InlineResponse200240) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
+`func (o *InlineResponse200240) GetOperatorOk() (*InlineResponse200240Operator, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetOperator
 
-`func (o *InlineResponse200240) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
+`func (o *InlineResponse200240) SetOperator(v InlineResponse200240Operator)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetOperator sets Operator field to given value.
 
-### HasSourceGroup
+### HasOperator
 
-`func (o *InlineResponse200240) HasSourceGroup() bool`
+`func (o *InlineResponse200240) HasOperator() bool`
 
-HasSourceGroup returns a boolean if a field has been set.
+HasOperator returns a boolean if a field has been set.
 
-### GetDestinationGroup
+### GetVenue
 
-`func (o *InlineResponse200240) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
+`func (o *InlineResponse200240) GetVenue() InlineResponse200240Venue`
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-### GetDestinationGroupOk
+### GetVenueOk
 
-`func (o *InlineResponse200240) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
+`func (o *InlineResponse200240) GetVenueOk() (*InlineResponse200240Venue, bool)`
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetVenue
 
-`func (o *InlineResponse200240) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
+`func (o *InlineResponse200240) SetVenue(v InlineResponse200240Venue)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetVenue sets Venue field to given value.
 
-### HasDestinationGroup
+### HasVenue
 
-`func (o *InlineResponse200240) HasDestinationGroup() bool`
+`func (o *InlineResponse200240) HasVenue() bool`
 
-HasDestinationGroup returns a boolean if a field has been set.
+HasVenue returns a boolean if a field has been set.
 
-### GetAcls
+### GetNetworkAccessType
 
-`func (o *InlineResponse200240) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
+`func (o *InlineResponse200240) GetNetworkAccessType() string`
 
-GetAcls returns the Acls field if non-nil, zero value otherwise.
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
 
-### GetAclsOk
+### GetNetworkAccessTypeOk
 
-`func (o *InlineResponse200240) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
+`func (o *InlineResponse200240) GetNetworkAccessTypeOk() (*string, bool)`
 
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAcls
+### SetNetworkAccessType
 
-`func (o *InlineResponse200240) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
+`func (o *InlineResponse200240) SetNetworkAccessType(v string)`
 
-SetAcls sets Acls field to given value.
+SetNetworkAccessType sets NetworkAccessType field to given value.
 
-### HasAcls
+### HasNetworkAccessType
 
-`func (o *InlineResponse200240) HasAcls() bool`
+`func (o *InlineResponse200240) HasNetworkAccessType() bool`
 
-HasAcls returns a boolean if a field has been set.
+HasNetworkAccessType returns a boolean if a field has been set.
 
-### GetLastEntryRule
+### GetDomains
 
-`func (o *InlineResponse200240) GetLastEntryRule() string`
+`func (o *InlineResponse200240) GetDomains() []string`
 
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetLastEntryRuleOk
+### GetDomainsOk
 
-`func (o *InlineResponse200240) GetLastEntryRuleOk() (*string, bool)`
+`func (o *InlineResponse200240) GetDomainsOk() (*[]string, bool)`
 
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastEntryRule
+### SetDomains
 
-`func (o *InlineResponse200240) SetLastEntryRule(v string)`
+`func (o *InlineResponse200240) SetDomains(v []string)`
 
-SetLastEntryRule sets LastEntryRule field to given value.
+SetDomains sets Domains field to given value.
 
-### HasLastEntryRule
+### HasDomains
 
-`func (o *InlineResponse200240) HasLastEntryRule() bool`
+`func (o *InlineResponse200240) HasDomains() bool`
 
-HasLastEntryRule returns a boolean if a field has been set.
+HasDomains returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetRoamConsortOis
 
-`func (o *InlineResponse200240) GetCreatedAt() string`
+`func (o *InlineResponse200240) GetRoamConsortOis() []string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetRoamConsortOisOk
 
-`func (o *InlineResponse200240) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse200240) GetRoamConsortOisOk() (*[]string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetRoamConsortOis
 
-`func (o *InlineResponse200240) SetCreatedAt(v string)`
+`func (o *InlineResponse200240) SetRoamConsortOis(v []string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetRoamConsortOis sets RoamConsortOis field to given value.
 
-### HasCreatedAt
+### HasRoamConsortOis
 
-`func (o *InlineResponse200240) HasCreatedAt() bool`
+`func (o *InlineResponse200240) HasRoamConsortOis() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasRoamConsortOis returns a boolean if a field has been set.
 
-### GetUpdatedAt
+### GetMccMncs
 
-`func (o *InlineResponse200240) GetUpdatedAt() string`
+`func (o *InlineResponse200240) GetMccMncs() []InlineResponse200240MccMncs`
 
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
 
-### GetUpdatedAtOk
+### GetMccMncsOk
 
-`func (o *InlineResponse200240) GetUpdatedAtOk() (*string, bool)`
+`func (o *InlineResponse200240) GetMccMncsOk() (*[]InlineResponse200240MccMncs, bool)`
 
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedAt
+### SetMccMncs
 
-`func (o *InlineResponse200240) SetUpdatedAt(v string)`
+`func (o *InlineResponse200240) SetMccMncs(v []InlineResponse200240MccMncs)`
 
-SetUpdatedAt sets UpdatedAt field to given value.
+SetMccMncs sets MccMncs field to given value.
 
-### HasUpdatedAt
+### HasMccMncs
 
-`func (o *InlineResponse200240) HasUpdatedAt() bool`
+`func (o *InlineResponse200240) HasMccMncs() bool`
 
-HasUpdatedAt returns a boolean if a field has been set.
+HasMccMncs returns a boolean if a field has been set.
+
+### GetNaiRealms
+
+`func (o *InlineResponse200240) GetNaiRealms() []InlineResponse200240NaiRealms`
+
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
+
+### GetNaiRealmsOk
+
+`func (o *InlineResponse200240) GetNaiRealmsOk() (*[]InlineResponse200240NaiRealms, bool)`
+
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNaiRealms
+
+`func (o *InlineResponse200240) SetNaiRealms(v []InlineResponse200240NaiRealms)`
+
+SetNaiRealms sets NaiRealms field to given value.
+
+### HasNaiRealms
+
+`func (o *InlineResponse200240) HasNaiRealms() bool`
+
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

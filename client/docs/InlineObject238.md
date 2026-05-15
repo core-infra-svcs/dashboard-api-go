@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedRules** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules**](OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules.md) | Sets a list of specific SNORT signatures to allow | 
+**Name** | **string** | Name of profile | 
+**Hostnames** | **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | 
+**Nameservers** | [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1.md) |  | 
 
 ## Methods
 
 ### NewInlineObject238
 
-`func NewInlineObject238(allowedRules []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, ) *InlineObject238`
+`func NewInlineObject238(name string, hostnames []string, nameservers OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, ) *InlineObject238`
 
 NewInlineObject238 instantiates a new InlineObject238 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject238WithDefaults instantiates a new InlineObject238 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedRules
+### GetName
 
-`func (o *InlineObject238) GetAllowedRules() []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules`
+`func (o *InlineObject238) GetName() string`
 
-GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAllowedRulesOk
+### GetNameOk
 
-`func (o *InlineObject238) GetAllowedRulesOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, bool)`
+`func (o *InlineObject238) GetNameOk() (*string, bool)`
 
-GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedRules
+### SetName
 
-`func (o *InlineObject238) SetAllowedRules(v []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules)`
+`func (o *InlineObject238) SetName(v string)`
 
-SetAllowedRules sets AllowedRules field to given value.
+SetName sets Name field to given value.
+
+
+### GetHostnames
+
+`func (o *InlineObject238) GetHostnames() []string`
+
+GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
+
+### GetHostnamesOk
+
+`func (o *InlineObject238) GetHostnamesOk() (*[]string, bool)`
+
+GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostnames
+
+`func (o *InlineObject238) SetHostnames(v []string)`
+
+SetHostnames sets Hostnames field to given value.
+
+
+### GetNameservers
+
+`func (o *InlineObject238) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject238) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject238) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1)`
+
+SetNameservers sets Nameservers field to given value.
 
 
 

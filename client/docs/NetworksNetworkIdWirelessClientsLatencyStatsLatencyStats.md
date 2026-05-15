@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BackgroundTraffic** | Pointer to [**InlineResponse20053LatencyStatsBackgroundTraffic**](InlineResponse20053LatencyStatsBackgroundTraffic.md) |  | [optional] 
-**BestEffortTraffic** | Pointer to [**InlineResponse20053LatencyStatsBestEffortTraffic**](InlineResponse20053LatencyStatsBestEffortTraffic.md) |  | [optional] 
-**VideoTraffic** | Pointer to [**InlineResponse20053LatencyStatsVideoTraffic**](InlineResponse20053LatencyStatsVideoTraffic.md) |  | [optional] 
-**VoiceTraffic** | Pointer to [**InlineResponse20053LatencyStatsVoiceTraffic**](InlineResponse20053LatencyStatsVoiceTraffic.md) |  | [optional] 
+**BackgroundTraffic** | Pointer to [**InlineResponse20058LatencyStatsBackgroundTraffic**](InlineResponse20058LatencyStatsBackgroundTraffic.md) |  | [optional] 
+**BestEffortTraffic** | Pointer to [**InlineResponse20058LatencyStatsBestEffortTraffic**](InlineResponse20058LatencyStatsBestEffortTraffic.md) |  | [optional] 
+**VideoTraffic** | Pointer to [**InlineResponse20058LatencyStatsVideoTraffic**](InlineResponse20058LatencyStatsVideoTraffic.md) |  | [optional] 
+**VoiceTraffic** | Pointer to [**InlineResponse20058LatencyStatsVoiceTraffic**](InlineResponse20058LatencyStatsVoiceTraffic.md) |  | [optional] 
 
 ## Methods
 
@@ -30,20 +30,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetBackgroundTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBackgroundTraffic() InlineResponse20053LatencyStatsBackgroundTraffic`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBackgroundTraffic() InlineResponse20058LatencyStatsBackgroundTraffic`
 
 GetBackgroundTraffic returns the BackgroundTraffic field if non-nil, zero value otherwise.
 
 ### GetBackgroundTrafficOk
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBackgroundTrafficOk() (*InlineResponse20053LatencyStatsBackgroundTraffic, bool)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBackgroundTrafficOk() (*InlineResponse20058LatencyStatsBackgroundTraffic, bool)`
 
 GetBackgroundTrafficOk returns a tuple with the BackgroundTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackgroundTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetBackgroundTraffic(v InlineResponse20053LatencyStatsBackgroundTraffic)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetBackgroundTraffic(v InlineResponse20058LatencyStatsBackgroundTraffic)`
 
 SetBackgroundTraffic sets BackgroundTraffic field to given value.
 
@@ -55,20 +55,20 @@ HasBackgroundTraffic returns a boolean if a field has been set.
 
 ### GetBestEffortTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBestEffortTraffic() InlineResponse20053LatencyStatsBestEffortTraffic`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBestEffortTraffic() InlineResponse20058LatencyStatsBestEffortTraffic`
 
 GetBestEffortTraffic returns the BestEffortTraffic field if non-nil, zero value otherwise.
 
 ### GetBestEffortTrafficOk
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBestEffortTrafficOk() (*InlineResponse20053LatencyStatsBestEffortTraffic, bool)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetBestEffortTrafficOk() (*InlineResponse20058LatencyStatsBestEffortTraffic, bool)`
 
 GetBestEffortTrafficOk returns a tuple with the BestEffortTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBestEffortTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetBestEffortTraffic(v InlineResponse20053LatencyStatsBestEffortTraffic)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetBestEffortTraffic(v InlineResponse20058LatencyStatsBestEffortTraffic)`
 
 SetBestEffortTraffic sets BestEffortTraffic field to given value.
 
@@ -80,20 +80,20 @@ HasBestEffortTraffic returns a boolean if a field has been set.
 
 ### GetVideoTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVideoTraffic() InlineResponse20053LatencyStatsVideoTraffic`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVideoTraffic() InlineResponse20058LatencyStatsVideoTraffic`
 
 GetVideoTraffic returns the VideoTraffic field if non-nil, zero value otherwise.
 
 ### GetVideoTrafficOk
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVideoTrafficOk() (*InlineResponse20053LatencyStatsVideoTraffic, bool)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVideoTrafficOk() (*InlineResponse20058LatencyStatsVideoTraffic, bool)`
 
 GetVideoTrafficOk returns a tuple with the VideoTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVideoTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetVideoTraffic(v InlineResponse20053LatencyStatsVideoTraffic)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetVideoTraffic(v InlineResponse20058LatencyStatsVideoTraffic)`
 
 SetVideoTraffic sets VideoTraffic field to given value.
 
@@ -105,20 +105,20 @@ HasVideoTraffic returns a boolean if a field has been set.
 
 ### GetVoiceTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVoiceTraffic() InlineResponse20053LatencyStatsVoiceTraffic`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVoiceTraffic() InlineResponse20058LatencyStatsVoiceTraffic`
 
 GetVoiceTraffic returns the VoiceTraffic field if non-nil, zero value otherwise.
 
 ### GetVoiceTrafficOk
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVoiceTrafficOk() (*InlineResponse20053LatencyStatsVoiceTraffic, bool)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) GetVoiceTrafficOk() (*InlineResponse20058LatencyStatsVoiceTraffic, bool)`
 
 GetVoiceTrafficOk returns a tuple with the VoiceTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVoiceTraffic
 
-`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetVoiceTraffic(v InlineResponse20053LatencyStatsVoiceTraffic)`
+`func (o *NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats) SetVoiceTraffic(v InlineResponse20058LatencyStatsVoiceTraffic)`
 
 SetVoiceTraffic sets VoiceTraffic field to given value.
 

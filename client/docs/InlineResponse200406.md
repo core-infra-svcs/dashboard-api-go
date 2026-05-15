@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200406Items**](InlineResponse200406Items.md) | Access point client count | [optional] 
-**Meta** | Pointer to [**InlineResponse200250Meta**](InlineResponse200250Meta.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
+**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200406WithDefaults instantiates a new InlineResponse200406 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetTs
 
-`func (o *InlineResponse200406) GetItems() []InlineResponse200406Items`
+`func (o *InlineResponse200406) GetTs() time.Time`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetTsOk
 
-`func (o *InlineResponse200406) GetItemsOk() (*[]InlineResponse200406Items, bool)`
+`func (o *InlineResponse200406) GetTsOk() (*time.Time, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetTs
 
-`func (o *InlineResponse200406) SetItems(v []InlineResponse200406Items)`
+`func (o *InlineResponse200406) SetTs(v time.Time)`
 
-SetItems sets Items field to given value.
+SetTs sets Ts field to given value.
 
-### HasItems
+### HasTs
 
-`func (o *InlineResponse200406) HasItems() bool`
+`func (o *InlineResponse200406) HasTs() bool`
 
-HasItems returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetMeta
+### GetDraw
 
-`func (o *InlineResponse200406) GetMeta() InlineResponse200250Meta`
+`func (o *InlineResponse200406) GetDraw() float32`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetDraw returns the Draw field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetDrawOk
 
-`func (o *InlineResponse200406) GetMetaOk() (*InlineResponse200250Meta, bool)`
+`func (o *InlineResponse200406) GetDrawOk() (*float32, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetDraw
 
-`func (o *InlineResponse200406) SetMeta(v InlineResponse200250Meta)`
+`func (o *InlineResponse200406) SetDraw(v float32)`
 
-SetMeta sets Meta field to given value.
+SetDraw sets Draw field to given value.
 
-### HasMeta
+### HasDraw
 
-`func (o *InlineResponse200406) HasMeta() bool`
+`func (o *InlineResponse200406) HasDraw() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasDraw returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

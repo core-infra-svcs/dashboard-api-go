@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | Profile ID | [optional] 
-**Name** | Pointer to **string** | Name of profile | [optional] 
-**Hostnames** | Pointer to **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | [optional] 
-**Nameservers** | Pointer to [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers.md) |  | [optional] 
+**AdaptivePolicyId** | Pointer to **string** | The ID for the adaptive policy | [optional] 
+**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | [optional] 
+**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | [optional] 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | The access control lists for the adaptive policy | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
+**CreatedAt** | Pointer to **string** | The created at timestamp for the adaptive policy | [optional] 
+**UpdatedAt** | Pointer to **string** | The updated at timestamp for the adaptive policy | [optional] 
 
 ## Methods
 
@@ -28,105 +31,180 @@ NewInlineResponse200253WithDefaults instantiates a new InlineResponse200253 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetAdaptivePolicyId
 
-`func (o *InlineResponse200253) GetProfileId() string`
+`func (o *InlineResponse200253) GetAdaptivePolicyId() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetAdaptivePolicyId returns the AdaptivePolicyId field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetAdaptivePolicyIdOk
 
-`func (o *InlineResponse200253) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200253) GetAdaptivePolicyIdOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetAdaptivePolicyIdOk returns a tuple with the AdaptivePolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetAdaptivePolicyId
 
-`func (o *InlineResponse200253) SetProfileId(v string)`
+`func (o *InlineResponse200253) SetAdaptivePolicyId(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetAdaptivePolicyId sets AdaptivePolicyId field to given value.
 
-### HasProfileId
+### HasAdaptivePolicyId
 
-`func (o *InlineResponse200253) HasProfileId() bool`
+`func (o *InlineResponse200253) HasAdaptivePolicyId() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasAdaptivePolicyId returns a boolean if a field has been set.
 
-### GetName
+### GetSourceGroup
 
-`func (o *InlineResponse200253) GetName() string`
+`func (o *InlineResponse200253) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSourceGroupOk
 
-`func (o *InlineResponse200253) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200253) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSourceGroup
 
-`func (o *InlineResponse200253) SetName(v string)`
+`func (o *InlineResponse200253) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
 
-SetName sets Name field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
-### HasName
+### HasSourceGroup
 
-`func (o *InlineResponse200253) HasName() bool`
+`func (o *InlineResponse200253) HasSourceGroup() bool`
 
-HasName returns a boolean if a field has been set.
+HasSourceGroup returns a boolean if a field has been set.
 
-### GetHostnames
+### GetDestinationGroup
 
-`func (o *InlineResponse200253) GetHostnames() []string`
+`func (o *InlineResponse200253) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
 
-GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-### GetHostnamesOk
+### GetDestinationGroupOk
 
-`func (o *InlineResponse200253) GetHostnamesOk() (*[]string, bool)`
+`func (o *InlineResponse200253) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
 
-GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostnames
+### SetDestinationGroup
 
-`func (o *InlineResponse200253) SetHostnames(v []string)`
+`func (o *InlineResponse200253) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
 
-SetHostnames sets Hostnames field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
-### HasHostnames
+### HasDestinationGroup
 
-`func (o *InlineResponse200253) HasHostnames() bool`
+`func (o *InlineResponse200253) HasDestinationGroup() bool`
 
-HasHostnames returns a boolean if a field has been set.
+HasDestinationGroup returns a boolean if a field has been set.
 
-### GetNameservers
+### GetAcls
 
-`func (o *InlineResponse200253) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers`
+`func (o *InlineResponse200253) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
 
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+GetAcls returns the Acls field if non-nil, zero value otherwise.
 
-### GetNameserversOk
+### GetAclsOk
 
-`func (o *InlineResponse200253) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, bool)`
+`func (o *InlineResponse200253) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
 
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNameservers
+### SetAcls
 
-`func (o *InlineResponse200253) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers)`
+`func (o *InlineResponse200253) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
 
-SetNameservers sets Nameservers field to given value.
+SetAcls sets Acls field to given value.
 
-### HasNameservers
+### HasAcls
 
-`func (o *InlineResponse200253) HasNameservers() bool`
+`func (o *InlineResponse200253) HasAcls() bool`
 
-HasNameservers returns a boolean if a field has been set.
+HasAcls returns a boolean if a field has been set.
+
+### GetLastEntryRule
+
+`func (o *InlineResponse200253) GetLastEntryRule() string`
+
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+
+### GetLastEntryRuleOk
+
+`func (o *InlineResponse200253) GetLastEntryRuleOk() (*string, bool)`
+
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastEntryRule
+
+`func (o *InlineResponse200253) SetLastEntryRule(v string)`
+
+SetLastEntryRule sets LastEntryRule field to given value.
+
+### HasLastEntryRule
+
+`func (o *InlineResponse200253) HasLastEntryRule() bool`
+
+HasLastEntryRule returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200253) GetCreatedAt() string`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200253) GetCreatedAtOk() (*string, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200253) SetCreatedAt(v string)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200253) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200253) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200253) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200253) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200253) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

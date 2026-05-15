@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200420Items**](InlineResponse200420Items.md) | The top-level property containing all cpu load data. | [optional] 
+**Counts** | Pointer to [**InlineResponse200420Counts**](InlineResponse200420Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200420WithDefaults instantiates a new InlineResponse200420 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetCounts
 
-`func (o *InlineResponse200420) GetItems() []InlineResponse200420Items`
+`func (o *InlineResponse200420) GetCounts() InlineResponse200420Counts`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetCountsOk
 
-`func (o *InlineResponse200420) GetItemsOk() (*[]InlineResponse200420Items, bool)`
+`func (o *InlineResponse200420) GetCountsOk() (*InlineResponse200420Counts, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetCounts
 
-`func (o *InlineResponse200420) SetItems(v []InlineResponse200420Items)`
+`func (o *InlineResponse200420) SetCounts(v InlineResponse200420Counts)`
 
-SetItems sets Items field to given value.
+SetCounts sets Counts field to given value.
 
-### HasItems
+### HasCounts
 
-`func (o *InlineResponse200420) HasItems() bool`
+`func (o *InlineResponse200420) HasCounts() bool`
 
-HasItems returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

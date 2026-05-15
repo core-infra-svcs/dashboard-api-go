@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
-**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
-**ProtectedNetworks** | Pointer to [**InlineResponse20072ProtectedNetworks**](InlineResponse20072ProtectedNetworks.md) |  | [optional] 
+**ApplicationCategories** | Pointer to [**[]InlineResponse20073ApplicationCategories**](InlineResponse20073ApplicationCategories.md) |  The L7 firewall application categories and their associated applications for an MX network | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20073WithDefaults instantiates a new InlineResponse20073 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetApplicationCategories
 
-`func (o *InlineResponse20073) GetMode() string`
+`func (o *InlineResponse20073) GetApplicationCategories() []InlineResponse20073ApplicationCategories`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetApplicationCategories returns the ApplicationCategories field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetApplicationCategoriesOk
 
-`func (o *InlineResponse20073) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20073) GetApplicationCategoriesOk() (*[]InlineResponse20073ApplicationCategories, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetApplicationCategoriesOk returns a tuple with the ApplicationCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetApplicationCategories
 
-`func (o *InlineResponse20073) SetMode(v string)`
+`func (o *InlineResponse20073) SetApplicationCategories(v []InlineResponse20073ApplicationCategories)`
 
-SetMode sets Mode field to given value.
+SetApplicationCategories sets ApplicationCategories field to given value.
 
-### HasMode
+### HasApplicationCategories
 
-`func (o *InlineResponse20073) HasMode() bool`
+`func (o *InlineResponse20073) HasApplicationCategories() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetIdsRulesets
-
-`func (o *InlineResponse20073) GetIdsRulesets() string`
-
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
-
-### GetIdsRulesetsOk
-
-`func (o *InlineResponse20073) GetIdsRulesetsOk() (*string, bool)`
-
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdsRulesets
-
-`func (o *InlineResponse20073) SetIdsRulesets(v string)`
-
-SetIdsRulesets sets IdsRulesets field to given value.
-
-### HasIdsRulesets
-
-`func (o *InlineResponse20073) HasIdsRulesets() bool`
-
-HasIdsRulesets returns a boolean if a field has been set.
-
-### GetProtectedNetworks
-
-`func (o *InlineResponse20073) GetProtectedNetworks() InlineResponse20072ProtectedNetworks`
-
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
-
-### GetProtectedNetworksOk
-
-`func (o *InlineResponse20073) GetProtectedNetworksOk() (*InlineResponse20072ProtectedNetworks, bool)`
-
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtectedNetworks
-
-`func (o *InlineResponse20073) SetProtectedNetworks(v InlineResponse20072ProtectedNetworks)`
-
-SetProtectedNetworks sets ProtectedNetworks field to given value.
-
-### HasProtectedNetworks
-
-`func (o *InlineResponse20073) HasProtectedNetworks() bool`
-
-HasProtectedNetworks returns a boolean if a field has been set.
+HasApplicationCategories returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

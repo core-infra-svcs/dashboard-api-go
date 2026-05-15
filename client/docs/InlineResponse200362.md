@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200362Items**](InlineResponse200362Items.md) | List of connectors | [optional] 
+**ResultingLicenses** | Pointer to [**[]InlineResponse200361**](InlineResponse200361.md) | Resulting licenses from the move | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200362WithDefaults instantiates a new InlineResponse200362 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetResultingLicenses
 
-`func (o *InlineResponse200362) GetItems() []InlineResponse200362Items`
+`func (o *InlineResponse200362) GetResultingLicenses() []InlineResponse200361`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetResultingLicensesOk
 
-`func (o *InlineResponse200362) GetItemsOk() (*[]InlineResponse200362Items, bool)`
+`func (o *InlineResponse200362) GetResultingLicensesOk() (*[]InlineResponse200361, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetResultingLicenses
 
-`func (o *InlineResponse200362) SetItems(v []InlineResponse200362Items)`
+`func (o *InlineResponse200362) SetResultingLicenses(v []InlineResponse200361)`
 
-SetItems sets Items field to given value.
+SetResultingLicenses sets ResultingLicenses field to given value.
 
-### HasItems
+### HasResultingLicenses
 
-`func (o *InlineResponse200362) HasItems() bool`
+`func (o *InlineResponse200362) HasResultingLicenses() bool`
 
-HasItems returns a boolean if a field has been set.
+HasResultingLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

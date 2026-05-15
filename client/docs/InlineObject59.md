@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Trunk port can Drop all Untagged traffic. When true, no VLAN is required. Access ports cannot have dropUntaggedTraffic set to true. | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of VLAN IDs (e.g. &#39;2,15&#39;) for all devices. Secure Routers also support VLAN ranges (e.g. &#39;2-10,15&#39;). Use &#39;all&#39; to permit all VLANs on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. Valid values are: &#39;open&#39;, &#39;8021x-radius&#39;, &#39;mac-radius&#39;, &#39;hybris-radius&#39; for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, &#39;open&#39; is the only valid value and &#39;open&#39; is the default value if the field is missing. | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineObject59WithDefaults instantiates a new InlineObject59 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject59) GetName() string`
+`func (o *InlineObject59) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject59) GetNameOk() (*string, bool)`
+`func (o *InlineObject59) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject59) SetName(v string)`
+`func (o *InlineObject59) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject59) HasName() bool`
+`func (o *InlineObject59) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetTwoFourGhzSettings
+### GetDropUntaggedTraffic
 
-`func (o *InlineObject59) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings`
+`func (o *InlineObject59) GetDropUntaggedTraffic() bool`
 
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-### GetTwoFourGhzSettingsOk
+### GetDropUntaggedTrafficOk
 
-`func (o *InlineObject59) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
+`func (o *InlineObject59) GetDropUntaggedTrafficOk() (*bool, bool)`
 
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetDropUntaggedTraffic
 
-`func (o *InlineObject59) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings)`
+`func (o *InlineObject59) SetDropUntaggedTraffic(v bool)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
-### HasTwoFourGhzSettings
+### HasDropUntaggedTraffic
 
-`func (o *InlineObject59) HasTwoFourGhzSettings() bool`
+`func (o *InlineObject59) HasDropUntaggedTraffic() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+HasDropUntaggedTraffic returns a boolean if a field has been set.
 
-### GetFiveGhzSettings
+### GetType
 
-`func (o *InlineObject59) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings`
+`func (o *InlineObject59) GetType() string`
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetFiveGhzSettingsOk
+### GetTypeOk
 
-`func (o *InlineObject59) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings, bool)`
+`func (o *InlineObject59) GetTypeOk() (*string, bool)`
 
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetType
 
-`func (o *InlineObject59) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings)`
+`func (o *InlineObject59) SetType(v string)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetType sets Type field to given value.
 
-### HasFiveGhzSettings
+### HasType
 
-`func (o *InlineObject59) HasFiveGhzSettings() bool`
+`func (o *InlineObject59) HasType() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetPerSsidSettings
+### GetVlan
 
-`func (o *InlineObject59) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
+`func (o *InlineObject59) GetVlan() int32`
 
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetPerSsidSettingsOk
+### GetVlanOk
 
-`func (o *InlineObject59) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
+`func (o *InlineObject59) GetVlanOk() (*int32, bool)`
 
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPerSsidSettings
+### SetVlan
 
-`func (o *InlineObject59) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
+`func (o *InlineObject59) SetVlan(v int32)`
 
-SetPerSsidSettings sets PerSsidSettings field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasPerSsidSettings
+### HasVlan
 
-`func (o *InlineObject59) HasPerSsidSettings() bool`
+`func (o *InlineObject59) HasVlan() bool`
 
-HasPerSsidSettings returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineObject59) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineObject59) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineObject59) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineObject59) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineObject59) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineObject59) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineObject59) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineObject59) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
-**LicenseId** | **string** | The ID of the SM license to move the seats from | 
-**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
+**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
 
 ## Methods
 
 ### NewInlineObject286
 
-`func NewInlineObject286(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject286`
+`func NewInlineObject286(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject286`
 
 NewInlineObject286 instantiates a new InlineObject286 object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +25,24 @@ NewInlineObject286WithDefaults instantiates a new InlineObject286 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetSwaps
 
-`func (o *InlineObject286) GetDestOrganizationId() string`
+`func (o *InlineObject286) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetSwapsOk
 
-`func (o *InlineObject286) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject286) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetSwaps
 
-`func (o *InlineObject286) SetDestOrganizationId(v string)`
+`func (o *InlineObject286) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
-
-
-### GetLicenseId
-
-`func (o *InlineObject286) GetLicenseId() string`
-
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
-
-### GetLicenseIdOk
-
-`func (o *InlineObject286) GetLicenseIdOk() (*string, bool)`
-
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseId
-
-`func (o *InlineObject286) SetLicenseId(v string)`
-
-SetLicenseId sets LicenseId field to given value.
-
-
-### GetSeatCount
-
-`func (o *InlineObject286) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject286) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject286) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
+SetSwaps sets Swaps field to given value.
 
 
 

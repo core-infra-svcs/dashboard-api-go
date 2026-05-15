@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DevicePolicy** | **string** | The policy to assign. Can be &#39;Whitelisted&#39;, &#39;Blocked&#39;, &#39;Normal&#39; or &#39;Group policy&#39;. Required. | 
-**GroupPolicyId** | Pointer to **string** | [Optional] If &#39;devicePolicy&#39; is set to &#39;Group policy&#39; this param is used to specify the group policy ID. | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. Possible values are &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
+**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. Possible values are: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineObject95
 
-`func NewInlineObject95(devicePolicy string, ) *InlineObject95`
+`func NewInlineObject95() *InlineObject95`
 
 NewInlineObject95 instantiates a new InlineObject95 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,80 @@ NewInlineObject95WithDefaults instantiates a new InlineObject95 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevicePolicy
+### GetDhcpLeaseTime
 
-`func (o *InlineObject95) GetDevicePolicy() string`
+`func (o *InlineObject95) GetDhcpLeaseTime() string`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineObject95) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineObject95) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetDhcpLeaseTime
 
-`func (o *InlineObject95) SetDevicePolicy(v string)`
+`func (o *InlineObject95) SetDhcpLeaseTime(v string)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
+### HasDhcpLeaseTime
 
-### GetGroupPolicyId
+`func (o *InlineObject95) HasDhcpLeaseTime() bool`
 
-`func (o *InlineObject95) GetGroupPolicyId() string`
+HasDhcpLeaseTime returns a boolean if a field has been set.
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+### GetDnsNameservers
 
-### GetGroupPolicyIdOk
+`func (o *InlineObject95) GetDnsNameservers() string`
 
-`func (o *InlineObject95) GetGroupPolicyIdOk() (*string, bool)`
+GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+### GetDnsNameserversOk
+
+`func (o *InlineObject95) GetDnsNameserversOk() (*string, bool)`
+
+GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetDnsNameservers
 
-`func (o *InlineObject95) SetGroupPolicyId(v string)`
+`func (o *InlineObject95) SetDnsNameservers(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetDnsNameservers sets DnsNameservers field to given value.
 
-### HasGroupPolicyId
+### HasDnsNameservers
 
-`func (o *InlineObject95) HasGroupPolicyId() bool`
+`func (o *InlineObject95) HasDnsNameservers() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasDnsNameservers returns a boolean if a field has been set.
+
+### GetDnsCustomNameservers
+
+`func (o *InlineObject95) GetDnsCustomNameservers() []string`
+
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+
+### GetDnsCustomNameserversOk
+
+`func (o *InlineObject95) GetDnsCustomNameserversOk() (*[]string, bool)`
+
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsCustomNameservers
+
+`func (o *InlineObject95) SetDnsCustomNameservers(v []string)`
+
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+
+### HasDnsCustomNameservers
+
+`func (o *InlineObject95) HasDnsCustomNameservers() bool`
+
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

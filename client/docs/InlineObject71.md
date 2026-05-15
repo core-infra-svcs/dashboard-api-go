@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingRulesRules**](NetworksNetworkIdApplianceTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Name** | Pointer to **string** | Name of the route | [optional] 
+**Subnet** | Pointer to **string** | Subnet of the route | [optional] 
+**GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
+**GatewayVlanId** | Pointer to **NullableInt32** | Gateway VLAN ID | [optional] 
+**Enabled** | Pointer to **bool** | Whether the route should be enabled or not | [optional] 
+**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
+**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
 
 ## Methods
 
@@ -26,55 +31,190 @@ NewInlineObject71WithDefaults instantiates a new InlineObject71 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultRulesEnabled
+### GetName
 
-`func (o *InlineObject71) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject71) GetName() string`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetNameOk
 
-`func (o *InlineObject71) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject71) GetNameOk() (*string, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetName
 
-`func (o *InlineObject71) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject71) SetName(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultRulesEnabled
+### HasName
 
-`func (o *InlineObject71) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject71) HasName() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetSubnet
 
-`func (o *InlineObject71) GetRules() []NetworksNetworkIdApplianceTrafficShapingRulesRules`
+`func (o *InlineObject71) GetSubnet() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetSubnetOk
 
-`func (o *InlineObject71) GetRulesOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesRules, bool)`
+`func (o *InlineObject71) GetSubnetOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetSubnet
 
-`func (o *InlineObject71) SetRules(v []NetworksNetworkIdApplianceTrafficShapingRulesRules)`
+`func (o *InlineObject71) SetSubnet(v string)`
 
-SetRules sets Rules field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasRules
+### HasSubnet
 
-`func (o *InlineObject71) HasRules() bool`
+`func (o *InlineObject71) HasSubnet() bool`
 
-HasRules returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
+
+### GetGatewayIp
+
+`func (o *InlineObject71) GetGatewayIp() string`
+
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+
+### GetGatewayIpOk
+
+`func (o *InlineObject71) GetGatewayIpOk() (*string, bool)`
+
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayIp
+
+`func (o *InlineObject71) SetGatewayIp(v string)`
+
+SetGatewayIp sets GatewayIp field to given value.
+
+### HasGatewayIp
+
+`func (o *InlineObject71) HasGatewayIp() bool`
+
+HasGatewayIp returns a boolean if a field has been set.
+
+### GetGatewayVlanId
+
+`func (o *InlineObject71) GetGatewayVlanId() int32`
+
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
+
+### GetGatewayVlanIdOk
+
+`func (o *InlineObject71) GetGatewayVlanIdOk() (*int32, bool)`
+
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayVlanId
+
+`func (o *InlineObject71) SetGatewayVlanId(v int32)`
+
+SetGatewayVlanId sets GatewayVlanId field to given value.
+
+### HasGatewayVlanId
+
+`func (o *InlineObject71) HasGatewayVlanId() bool`
+
+HasGatewayVlanId returns a boolean if a field has been set.
+
+### SetGatewayVlanIdNil
+
+`func (o *InlineObject71) SetGatewayVlanIdNil(b bool)`
+
+ SetGatewayVlanIdNil sets the value for GatewayVlanId to be an explicit nil
+
+### UnsetGatewayVlanId
+`func (o *InlineObject71) UnsetGatewayVlanId()`
+
+UnsetGatewayVlanId ensures that no value is present for GatewayVlanId, not even an explicit nil
+### GetEnabled
+
+`func (o *InlineObject71) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject71) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject71) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject71) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineObject71) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineObject71) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineObject71) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments)`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineObject71) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineObject71) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineObject71) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineObject71) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineObject71) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
+**Url** | **string** | Receiver Url | 
+**Version** | **string** | Scanning API Version | 
+**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
+**SharedSecret** | **string** | Secret Value for Receiver | 
 
 ## Methods
 
 ### NewInlineObject336
 
-`func NewInlineObject336(enrolled bool, ) *InlineObject336`
+`func NewInlineObject336(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject336`
 
 NewInlineObject336 instantiates a new InlineObject336 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +29,105 @@ NewInlineObject336WithDefaults instantiates a new InlineObject336 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetNetwork
 
-`func (o *InlineObject336) GetEnrolled() bool`
+`func (o *InlineObject336) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetNetworkOk
 
-`func (o *InlineObject336) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject336) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetNetwork
 
-`func (o *InlineObject336) SetEnrolled(v bool)`
+`func (o *InlineObject336) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
 
-SetEnrolled sets Enrolled field to given value.
+SetNetwork sets Network field to given value.
 
 
-### GetChannel
+### GetUrl
 
-`func (o *InlineObject336) GetChannel() string`
+`func (o *InlineObject336) GetUrl() string`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetUrlOk
 
-`func (o *InlineObject336) GetChannelOk() (*string, bool)`
+`func (o *InlineObject336) GetUrlOk() (*string, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetUrl
 
-`func (o *InlineObject336) SetChannel(v string)`
+`func (o *InlineObject336) SetUrl(v string)`
 
-SetChannel sets Channel field to given value.
+SetUrl sets Url field to given value.
 
-### HasChannel
 
-`func (o *InlineObject336) HasChannel() bool`
+### GetVersion
 
-HasChannel returns a boolean if a field has been set.
+`func (o *InlineObject336) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineObject336) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineObject336) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+
+### GetRadio
+
+`func (o *InlineObject336) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineObject336) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineObject336) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
+
+SetRadio sets Radio field to given value.
+
+
+### GetSharedSecret
+
+`func (o *InlineObject336) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *InlineObject336) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *InlineObject336) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

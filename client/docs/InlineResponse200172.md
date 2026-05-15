@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Switch serial. | [optional] 
-**Name** | Pointer to **string** | Switch name. | [optional] 
-**Url** | Pointer to **string** | Url link to switch. | [optional] 
-**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
-**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
+**Id** | Pointer to **string** | The ID of this target group. | [optional] 
+**Name** | Pointer to **string** | The name of this target group. | [optional] 
+**Scope** | Pointer to **string** | The scope of the target group. | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the target group. | [optional] 
 
 ## Methods
 
@@ -29,30 +28,30 @@ NewInlineResponse200172WithDefaults instantiates a new InlineResponse200172 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetId
 
-`func (o *InlineResponse200172) GetSerial() string`
+`func (o *InlineResponse200172) GetId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetIdOk
 
-`func (o *InlineResponse200172) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200172) GetIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetId
 
-`func (o *InlineResponse200172) SetSerial(v string)`
+`func (o *InlineResponse200172) SetId(v string)`
 
-SetSerial sets Serial field to given value.
+SetId sets Id field to given value.
 
-### HasSerial
+### HasId
 
-`func (o *InlineResponse200172) HasSerial() bool`
+`func (o *InlineResponse200172) HasId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -79,80 +78,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetUrl
+### GetScope
 
-`func (o *InlineResponse200172) GetUrl() string`
+`func (o *InlineResponse200172) GetScope() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetScopeOk
 
-`func (o *InlineResponse200172) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200172) GetScopeOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetScope
 
-`func (o *InlineResponse200172) SetUrl(v string)`
+`func (o *InlineResponse200172) SetScope(v string)`
 
-SetUrl sets Url field to given value.
+SetScope sets Scope field to given value.
 
-### HasUrl
+### HasScope
 
-`func (o *InlineResponse200172) HasUrl() bool`
+`func (o *InlineResponse200172) HasScope() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
-### GetSupportsInspection
+### GetTags
 
-`func (o *InlineResponse200172) GetSupportsInspection() bool`
+`func (o *InlineResponse200172) GetTags() []string`
 
-GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetSupportsInspectionOk
+### GetTagsOk
 
-`func (o *InlineResponse200172) GetSupportsInspectionOk() (*bool, bool)`
+`func (o *InlineResponse200172) GetTagsOk() (*[]string, bool)`
 
-GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportsInspection
+### SetTags
 
-`func (o *InlineResponse200172) SetSupportsInspection(v bool)`
+`func (o *InlineResponse200172) SetTags(v []string)`
 
-SetSupportsInspection sets SupportsInspection field to given value.
+SetTags sets Tags field to given value.
 
-### HasSupportsInspection
+### HasTags
 
-`func (o *InlineResponse200172) HasSupportsInspection() bool`
+`func (o *InlineResponse200172) HasTags() bool`
 
-HasSupportsInspection returns a boolean if a field has been set.
-
-### GetHasTrustedPort
-
-`func (o *InlineResponse200172) GetHasTrustedPort() bool`
-
-GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
-
-### GetHasTrustedPortOk
-
-`func (o *InlineResponse200172) GetHasTrustedPortOk() (*bool, bool)`
-
-GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasTrustedPort
-
-`func (o *InlineResponse200172) SetHasTrustedPort(v bool)`
-
-SetHasTrustedPort sets HasTrustedPort field to given value.
-
-### HasHasTrustedPort
-
-`func (o *InlineResponse200172) HasHasTrustedPort() bool`
-
-HasHasTrustedPort returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

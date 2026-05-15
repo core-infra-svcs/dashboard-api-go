@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200271Items**](InlineResponse200271Items.md) | Organization Alert counts by type | 
-**Meta** | [**InlineResponse200270Meta**](InlineResponse200270Meta.md) |  | 
+**AllowedRules** | Pointer to [**[]InlineResponse200271AllowedRules**](InlineResponse200271AllowedRules.md) | Sets a list of specific SNORT signatures to allow | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200271
 
-`func NewInlineResponse200271(items []InlineResponse200271Items, meta InlineResponse200270Meta, ) *InlineResponse200271`
+`func NewInlineResponse200271() *InlineResponse200271`
 
 NewInlineResponse200271 instantiates a new InlineResponse200271 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse200271WithDefaults instantiates a new InlineResponse200271 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetAllowedRules
 
-`func (o *InlineResponse200271) GetItems() []InlineResponse200271Items`
+`func (o *InlineResponse200271) GetAllowedRules() []InlineResponse200271AllowedRules`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetAllowedRulesOk
 
-`func (o *InlineResponse200271) GetItemsOk() (*[]InlineResponse200271Items, bool)`
+`func (o *InlineResponse200271) GetAllowedRulesOk() (*[]InlineResponse200271AllowedRules, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetAllowedRules
 
-`func (o *InlineResponse200271) SetItems(v []InlineResponse200271Items)`
+`func (o *InlineResponse200271) SetAllowedRules(v []InlineResponse200271AllowedRules)`
 
-SetItems sets Items field to given value.
+SetAllowedRules sets AllowedRules field to given value.
 
+### HasAllowedRules
 
-### GetMeta
+`func (o *InlineResponse200271) HasAllowedRules() bool`
 
-`func (o *InlineResponse200271) GetMeta() InlineResponse200270Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200271) GetMetaOk() (*InlineResponse200270Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200271) SetMeta(v InlineResponse200270Meta)`
-
-SetMeta sets Meta field to given value.
-
+HasAllowedRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

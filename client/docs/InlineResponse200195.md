@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse200195PowerExceptions**](InlineResponse200195PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**InlineResponse200195UplinkClientSampling**](InlineResponse200195UplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**InlineResponse200195MacBlocklist**](InlineResponse200195MacBlocklist.md) |  | [optional] 
+**PortChannelFallback** | Pointer to **bool** | Enable port channel fallback on Catalyst MS switches. | [optional] 
+**UplinkSelection** | Pointer to [**InlineResponse200195UplinkSelection**](InlineResponse200195UplinkSelection.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +31,180 @@ NewInlineResponse200195WithDefaults instantiates a new InlineResponse200195 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetVlan
 
-`func (o *InlineResponse200195) GetId() string`
+`func (o *InlineResponse200195) GetVlan() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetVlanOk
 
-`func (o *InlineResponse200195) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200195) GetVlanOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetVlan
 
-`func (o *InlineResponse200195) SetId(v string)`
+`func (o *InlineResponse200195) SetVlan(v int32)`
 
-SetId sets Id field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasId
+### HasVlan
 
-`func (o *InlineResponse200195) HasId() bool`
+`func (o *InlineResponse200195) HasVlan() bool`
 
-HasId returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetName
+### GetUseCombinedPower
 
-`func (o *InlineResponse200195) GetName() string`
+`func (o *InlineResponse200195) GetUseCombinedPower() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse200195) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200195) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUseCombinedPower
 
-`func (o *InlineResponse200195) SetName(v string)`
+`func (o *InlineResponse200195) SetUseCombinedPower(v bool)`
 
-SetName sets Name field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasName
+### HasUseCombinedPower
 
-`func (o *InlineResponse200195) HasName() bool`
+`func (o *InlineResponse200195) HasUseCombinedPower() bool`
 
-HasName returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetUrl
+### GetPowerExceptions
 
-`func (o *InlineResponse200195) GetUrl() string`
+`func (o *InlineResponse200195) GetPowerExceptions() []InlineResponse200195PowerExceptions`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse200195) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200195) GetPowerExceptionsOk() (*[]InlineResponse200195PowerExceptions, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetPowerExceptions
 
-`func (o *InlineResponse200195) SetUrl(v string)`
+`func (o *InlineResponse200195) SetPowerExceptions(v []InlineResponse200195PowerExceptions)`
 
-SetUrl sets Url field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasUrl
+### HasPowerExceptions
 
-`func (o *InlineResponse200195) HasUrl() bool`
+`func (o *InlineResponse200195) HasPowerExceptions() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetUplinkClientSampling
 
-`func (o *InlineResponse200195) GetNetworkId() string`
+`func (o *InlineResponse200195) GetUplinkClientSampling() InlineResponse200195UplinkClientSampling`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetUplinkClientSamplingOk
 
-`func (o *InlineResponse200195) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200195) GetUplinkClientSamplingOk() (*InlineResponse200195UplinkClientSampling, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetUplinkClientSampling
 
-`func (o *InlineResponse200195) SetNetworkId(v string)`
+`func (o *InlineResponse200195) SetUplinkClientSampling(v InlineResponse200195UplinkClientSampling)`
 
-SetNetworkId sets NetworkId field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasNetworkId
+### HasUplinkClientSampling
 
-`func (o *InlineResponse200195) HasNetworkId() bool`
+`func (o *InlineResponse200195) HasUplinkClientSampling() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
 
-### GetPayloadTemplate
+### GetMacBlocklist
 
-`func (o *InlineResponse200195) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
+`func (o *InlineResponse200195) GetMacBlocklist() InlineResponse200195MacBlocklist`
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateOk
+### GetMacBlocklistOk
 
-`func (o *InlineResponse200195) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
+`func (o *InlineResponse200195) GetMacBlocklistOk() (*InlineResponse200195MacBlocklist, bool)`
 
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetMacBlocklist
 
-`func (o *InlineResponse200195) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
+`func (o *InlineResponse200195) SetMacBlocklist(v InlineResponse200195MacBlocklist)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetMacBlocklist sets MacBlocklist field to given value.
 
-### HasPayloadTemplate
+### HasMacBlocklist
 
-`func (o *InlineResponse200195) HasPayloadTemplate() bool`
+`func (o *InlineResponse200195) HasMacBlocklist() bool`
 
-HasPayloadTemplate returns a boolean if a field has been set.
+HasMacBlocklist returns a boolean if a field has been set.
+
+### GetPortChannelFallback
+
+`func (o *InlineResponse200195) GetPortChannelFallback() bool`
+
+GetPortChannelFallback returns the PortChannelFallback field if non-nil, zero value otherwise.
+
+### GetPortChannelFallbackOk
+
+`func (o *InlineResponse200195) GetPortChannelFallbackOk() (*bool, bool)`
+
+GetPortChannelFallbackOk returns a tuple with the PortChannelFallback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannelFallback
+
+`func (o *InlineResponse200195) SetPortChannelFallback(v bool)`
+
+SetPortChannelFallback sets PortChannelFallback field to given value.
+
+### HasPortChannelFallback
+
+`func (o *InlineResponse200195) HasPortChannelFallback() bool`
+
+HasPortChannelFallback returns a boolean if a field has been set.
+
+### GetUplinkSelection
+
+`func (o *InlineResponse200195) GetUplinkSelection() InlineResponse200195UplinkSelection`
+
+GetUplinkSelection returns the UplinkSelection field if non-nil, zero value otherwise.
+
+### GetUplinkSelectionOk
+
+`func (o *InlineResponse200195) GetUplinkSelectionOk() (*InlineResponse200195UplinkSelection, bool)`
+
+GetUplinkSelectionOk returns a tuple with the UplinkSelection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinkSelection
+
+`func (o *InlineResponse200195) SetUplinkSelection(v InlineResponse200195UplinkSelection)`
+
+SetUplinkSelection sets UplinkSelection field to given value.
+
+### HasUplinkSelection
+
+`func (o *InlineResponse200195) HasUplinkSelection() bool`
+
+HasUplinkSelection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
-**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200115Counts**](InlineResponse200115Counts.md) |  | [optional] 
+**Usages** | Pointer to [**InlineResponse200115Usages**](InlineResponse200115Usages.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroupId
+### GetCounts
 
-`func (o *InlineResponse200115) GetGroupId() string`
+`func (o *InlineResponse200115) GetCounts() InlineResponse200115Counts`
 
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetGroupIdOk
+### GetCountsOk
 
-`func (o *InlineResponse200115) GetGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetCountsOk() (*InlineResponse200115Counts, bool)`
 
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupId
+### SetCounts
 
-`func (o *InlineResponse200115) SetGroupId(v string)`
+`func (o *InlineResponse200115) SetCounts(v InlineResponse200115Counts)`
 
-SetGroupId sets GroupId field to given value.
+SetCounts sets Counts field to given value.
 
-### HasGroupId
+### HasCounts
 
-`func (o *InlineResponse200115) HasGroupId() bool`
+`func (o *InlineResponse200115) HasCounts() bool`
 
-HasGroupId returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetName
+### GetUsages
 
-`func (o *InlineResponse200115) GetName() string`
+`func (o *InlineResponse200115) GetUsages() InlineResponse200115Usages`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUsages returns the Usages field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUsagesOk
 
-`func (o *InlineResponse200115) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200115) GetUsagesOk() (*InlineResponse200115Usages, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUsagesOk returns a tuple with the Usages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUsages
 
-`func (o *InlineResponse200115) SetName(v string)`
+`func (o *InlineResponse200115) SetUsages(v InlineResponse200115Usages)`
 
-SetName sets Name field to given value.
+SetUsages sets Usages field to given value.
 
-### HasName
+### HasUsages
 
-`func (o *InlineResponse200115) HasName() bool`
+`func (o *InlineResponse200115) HasUsages() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200115) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200115) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200115) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200115) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetIsDefault
-
-`func (o *InlineResponse200115) GetIsDefault() bool`
-
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
-
-### GetIsDefaultOk
-
-`func (o *InlineResponse200115) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefault
-
-`func (o *InlineResponse200115) SetIsDefault(v bool)`
-
-SetIsDefault sets IsDefault field to given value.
-
-### HasIsDefault
-
-`func (o *InlineResponse200115) HasIsDefault() bool`
-
-HasIsDefault returns a boolean if a field has been set.
-
-### GetAssignedDevices
-
-`func (o *InlineResponse200115) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
-
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
-
-### GetAssignedDevicesOk
-
-`func (o *InlineResponse200115) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
-
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssignedDevices
-
-`func (o *InlineResponse200115) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
-
-SetAssignedDevices sets AssignedDevices field to given value.
-
-### HasAssignedDevices
-
-`func (o *InlineResponse200115) HasAssignedDevices() bool`
-
-HasAssignedDevices returns a boolean if a field has been set.
+HasUsages returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

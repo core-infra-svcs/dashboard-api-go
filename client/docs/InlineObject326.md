@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
-**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
+**Name** | **string** | The name of the Limited Access Role | 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
 ### NewInlineObject326
 
-`func NewInlineObject326(sourceSerial string, targetSerials []string, ) *InlineObject326`
+`func NewInlineObject326(name string, ) *InlineObject326`
 
 NewInlineObject326 instantiates a new InlineObject326 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,75 @@ NewInlineObject326WithDefaults instantiates a new InlineObject326 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetName
 
-`func (o *InlineObject326) GetSourceSerial() string`
+`func (o *InlineObject326) GetName() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetNameOk
 
-`func (o *InlineObject326) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineObject326) GetNameOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetName
 
-`func (o *InlineObject326) SetSourceSerial(v string)`
+`func (o *InlineObject326) SetName(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetName sets Name field to given value.
 
 
-### GetTargetSerials
+### GetScope
 
-`func (o *InlineObject326) GetTargetSerials() []string`
+`func (o *InlineObject326) GetScope() string`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetScopeOk
 
-`func (o *InlineObject326) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject326) GetScopeOk() (*string, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetScope
 
-`func (o *InlineObject326) SetTargetSerials(v []string)`
+`func (o *InlineObject326) SetScope(v string)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetScope sets Scope field to given value.
 
+### HasScope
+
+`func (o *InlineObject326) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject326) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject326) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject326) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject326) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

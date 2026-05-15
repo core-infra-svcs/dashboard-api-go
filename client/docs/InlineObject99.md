@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of a device | 
+**DevicePolicy** | **string** | The policy to assign. Can be &#39;Whitelisted&#39;, &#39;Blocked&#39;, &#39;Normal&#39; or &#39;Group policy&#39;. Required. | 
+**GroupPolicyId** | Pointer to **string** | [Optional] If &#39;devicePolicy&#39; is set to &#39;Group policy&#39; this param is used to specify the group policy ID. | [optional] 
 
 ## Methods
 
 ### NewInlineObject99
 
-`func NewInlineObject99(serial string, ) *InlineObject99`
+`func NewInlineObject99(devicePolicy string, ) *InlineObject99`
 
 NewInlineObject99 instantiates a new InlineObject99 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,50 @@ NewInlineObject99WithDefaults instantiates a new InlineObject99 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetDevicePolicy
 
-`func (o *InlineObject99) GetSerial() string`
+`func (o *InlineObject99) GetDevicePolicy() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetDevicePolicyOk
 
-`func (o *InlineObject99) GetSerialOk() (*string, bool)`
+`func (o *InlineObject99) GetDevicePolicyOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetDevicePolicy
 
-`func (o *InlineObject99) SetSerial(v string)`
+`func (o *InlineObject99) SetDevicePolicy(v string)`
 
-SetSerial sets Serial field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
+
+### GetGroupPolicyId
+
+`func (o *InlineObject99) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject99) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject99) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineObject99) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

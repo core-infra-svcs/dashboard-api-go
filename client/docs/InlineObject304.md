@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RulesetId** | Pointer to **string** | ID of the ruleset to assign | [optional] 
-**PolicyId** | Pointer to **string** | ID of the policy to assign the ruleset to | [optional] 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Name** | **string** | Name of the policy | 
+**Description** | Pointer to **string** | Description of the policy | [optional] 
 
 ## Methods
 
 ### NewInlineObject304
 
-`func NewInlineObject304() *InlineObject304`
+`func NewInlineObject304(name string, ) *InlineObject304`
 
 NewInlineObject304 instantiates a new InlineObject304 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject304WithDefaults instantiates a new InlineObject304 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRulesetId
+### GetName
 
-`func (o *InlineObject304) GetRulesetId() string`
+`func (o *InlineObject304) GetName() string`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetNameOk
 
-`func (o *InlineObject304) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject304) GetNameOk() (*string, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetName
 
-`func (o *InlineObject304) SetRulesetId(v string)`
+`func (o *InlineObject304) SetName(v string)`
 
-SetRulesetId sets RulesetId field to given value.
+SetName sets Name field to given value.
 
-### HasRulesetId
 
-`func (o *InlineObject304) HasRulesetId() bool`
+### GetDescription
 
-HasRulesetId returns a boolean if a field has been set.
+`func (o *InlineObject304) GetDescription() string`
 
-### GetPolicyId
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-`func (o *InlineObject304) GetPolicyId() string`
+### GetDescriptionOk
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+`func (o *InlineObject304) GetDescriptionOk() (*string, bool)`
 
-### GetPolicyIdOk
-
-`func (o *InlineObject304) GetPolicyIdOk() (*string, bool)`
-
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetDescription
 
-`func (o *InlineObject304) SetPolicyId(v string)`
+`func (o *InlineObject304) SetDescription(v string)`
 
-SetPolicyId sets PolicyId field to given value.
+SetDescription sets Description field to given value.
 
-### HasPolicyId
+### HasDescription
 
-`func (o *InlineObject304) HasPolicyId() bool`
+`func (o *InlineObject304) HasDescription() bool`
 
-HasPolicyId returns a boolean if a field has been set.
-
-### GetPriority
-
-`func (o *InlineObject304) GetPriority() int32`
-
-GetPriority returns the Priority field if non-nil, zero value otherwise.
-
-### GetPriorityOk
-
-`func (o *InlineObject304) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPriority
-
-`func (o *InlineObject304) SetPriority(v int32)`
-
-SetPriority sets Priority field to given value.
-
-### HasPriority
-
-`func (o *InlineObject304) HasPriority() bool`
-
-HasPriority returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

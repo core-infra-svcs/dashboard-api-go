@@ -4,14 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
-**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
-**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
-**UpgradeStrategy** | Pointer to **string** | The default strategy that network devices will use to perform an upgrade. Requires firmware version MR 26.8 or higher. | [optional] 
-**Upgrade** | Pointer to [**InlineResponse200220Upgrade**](InlineResponse200220Upgrade.md) |  | [optional] 
-**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
-**MulticastToUnicastConversion** | Pointer to [**InlineResponse200220MulticastToUnicastConversion**](InlineResponse200220MulticastToUnicastConversion.md) |  | [optional] 
-**NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSettingsNamedVlans**](NetworksNetworkIdWirelessSettingsNamedVlans.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Collect location and scanning analytics | [optional] 
+**Api** | Pointer to [**NetworksNetworkIdWirelessLocationScanningApi**](NetworksNetworkIdWirelessLocationScanningApi.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +26,55 @@ NewInlineObject197WithDefaults instantiates a new InlineObject197 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMeshingEnabled
+### GetEnabled
 
-`func (o *InlineObject197) GetMeshingEnabled() bool`
+`func (o *InlineObject197) GetEnabled() bool`
 
-GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetMeshingEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject197) GetMeshingEnabledOk() (*bool, bool)`
+`func (o *InlineObject197) GetEnabledOk() (*bool, bool)`
 
-GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshingEnabled
+### SetEnabled
 
-`func (o *InlineObject197) SetMeshingEnabled(v bool)`
+`func (o *InlineObject197) SetEnabled(v bool)`
 
-SetMeshingEnabled sets MeshingEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasMeshingEnabled
+### HasEnabled
 
-`func (o *InlineObject197) HasMeshingEnabled() bool`
+`func (o *InlineObject197) HasEnabled() bool`
 
-HasMeshingEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetIpv6BridgeEnabled
+### GetApi
 
-`func (o *InlineObject197) GetIpv6BridgeEnabled() bool`
+`func (o *InlineObject197) GetApi() NetworksNetworkIdWirelessLocationScanningApi`
 
-GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetIpv6BridgeEnabledOk
+### GetApiOk
 
-`func (o *InlineObject197) GetIpv6BridgeEnabledOk() (*bool, bool)`
+`func (o *InlineObject197) GetApiOk() (*NetworksNetworkIdWirelessLocationScanningApi, bool)`
 
-GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6BridgeEnabled
+### SetApi
 
-`func (o *InlineObject197) SetIpv6BridgeEnabled(v bool)`
+`func (o *InlineObject197) SetApi(v NetworksNetworkIdWirelessLocationScanningApi)`
 
-SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
+SetApi sets Api field to given value.
 
-### HasIpv6BridgeEnabled
+### HasApi
 
-`func (o *InlineObject197) HasIpv6BridgeEnabled() bool`
+`func (o *InlineObject197) HasApi() bool`
 
-HasIpv6BridgeEnabled returns a boolean if a field has been set.
-
-### GetLocationAnalyticsEnabled
-
-`func (o *InlineObject197) GetLocationAnalyticsEnabled() bool`
-
-GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
-
-### GetLocationAnalyticsEnabledOk
-
-`func (o *InlineObject197) GetLocationAnalyticsEnabledOk() (*bool, bool)`
-
-GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocationAnalyticsEnabled
-
-`func (o *InlineObject197) SetLocationAnalyticsEnabled(v bool)`
-
-SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
-
-### HasLocationAnalyticsEnabled
-
-`func (o *InlineObject197) HasLocationAnalyticsEnabled() bool`
-
-HasLocationAnalyticsEnabled returns a boolean if a field has been set.
-
-### GetUpgradeStrategy
-
-`func (o *InlineObject197) GetUpgradeStrategy() string`
-
-GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
-
-### GetUpgradeStrategyOk
-
-`func (o *InlineObject197) GetUpgradeStrategyOk() (*string, bool)`
-
-GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpgradeStrategy
-
-`func (o *InlineObject197) SetUpgradeStrategy(v string)`
-
-SetUpgradeStrategy sets UpgradeStrategy field to given value.
-
-### HasUpgradeStrategy
-
-`func (o *InlineObject197) HasUpgradeStrategy() bool`
-
-HasUpgradeStrategy returns a boolean if a field has been set.
-
-### GetUpgrade
-
-`func (o *InlineObject197) GetUpgrade() InlineResponse200220Upgrade`
-
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
-
-### GetUpgradeOk
-
-`func (o *InlineObject197) GetUpgradeOk() (*InlineResponse200220Upgrade, bool)`
-
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpgrade
-
-`func (o *InlineObject197) SetUpgrade(v InlineResponse200220Upgrade)`
-
-SetUpgrade sets Upgrade field to given value.
-
-### HasUpgrade
-
-`func (o *InlineObject197) HasUpgrade() bool`
-
-HasUpgrade returns a boolean if a field has been set.
-
-### GetLedLightsOn
-
-`func (o *InlineObject197) GetLedLightsOn() bool`
-
-GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
-
-### GetLedLightsOnOk
-
-`func (o *InlineObject197) GetLedLightsOnOk() (*bool, bool)`
-
-GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLedLightsOn
-
-`func (o *InlineObject197) SetLedLightsOn(v bool)`
-
-SetLedLightsOn sets LedLightsOn field to given value.
-
-### HasLedLightsOn
-
-`func (o *InlineObject197) HasLedLightsOn() bool`
-
-HasLedLightsOn returns a boolean if a field has been set.
-
-### GetMulticastToUnicastConversion
-
-`func (o *InlineObject197) GetMulticastToUnicastConversion() InlineResponse200220MulticastToUnicastConversion`
-
-GetMulticastToUnicastConversion returns the MulticastToUnicastConversion field if non-nil, zero value otherwise.
-
-### GetMulticastToUnicastConversionOk
-
-`func (o *InlineObject197) GetMulticastToUnicastConversionOk() (*InlineResponse200220MulticastToUnicastConversion, bool)`
-
-GetMulticastToUnicastConversionOk returns a tuple with the MulticastToUnicastConversion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastToUnicastConversion
-
-`func (o *InlineObject197) SetMulticastToUnicastConversion(v InlineResponse200220MulticastToUnicastConversion)`
-
-SetMulticastToUnicastConversion sets MulticastToUnicastConversion field to given value.
-
-### HasMulticastToUnicastConversion
-
-`func (o *InlineObject197) HasMulticastToUnicastConversion() bool`
-
-HasMulticastToUnicastConversion returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineObject197) GetNamedVlans() NetworksNetworkIdWirelessSettingsNamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineObject197) GetNamedVlansOk() (*NetworksNetworkIdWirelessSettingsNamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineObject197) SetNamedVlans(v NetworksNetworkIdWirelessSettingsNamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineObject197) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

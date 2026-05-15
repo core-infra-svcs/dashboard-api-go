@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
 
 ## Methods
 
 ### NewInlineObject96
 
-`func NewInlineObject96(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject96`
+`func NewInlineObject96() *InlineObject96`
 
 NewInlineObject96 instantiates a new InlineObject96 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject96WithDefaults instantiates a new InlineObject96 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsids
+### GetMask
 
-`func (o *InlineObject96) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
+`func (o *InlineObject96) GetMask() int32`
 
-GetSsids returns the Ssids field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetSsidsOk
+### GetMaskOk
 
-`func (o *InlineObject96) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
+`func (o *InlineObject96) GetMaskOk() (*int32, bool)`
 
-GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsids
+### SetMask
 
-`func (o *InlineObject96) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
+`func (o *InlineObject96) SetMask(v int32)`
 
-SetSsids sets Ssids field to given value.
+SetMask sets Mask field to given value.
 
+### HasMask
+
+`func (o *InlineObject96) HasMask() bool`
+
+HasMask returns a boolean if a field has been set.
+
+### GetCidr
+
+`func (o *InlineObject96) GetCidr() string`
+
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
+
+### GetCidrOk
+
+`func (o *InlineObject96) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCidr
+
+`func (o *InlineObject96) SetCidr(v string)`
+
+SetCidr sets Cidr field to given value.
+
+### HasCidr
+
+`func (o *InlineObject96) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

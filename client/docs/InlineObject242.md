@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs to dismiss | 
+**Enabled** | **bool** | Boolean indicating whether VRFs are enabled for the organization. | 
 
 ## Methods
 
 ### NewInlineObject242
 
-`func NewInlineObject242(alertIds []string, ) *InlineObject242`
+`func NewInlineObject242(enabled bool, ) *InlineObject242`
 
 NewInlineObject242 instantiates a new InlineObject242 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject242WithDefaults instantiates a new InlineObject242 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetEnabled
 
-`func (o *InlineObject242) GetAlertIds() []string`
+`func (o *InlineObject242) GetEnabled() bool`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetEnabledOk
 
-`func (o *InlineObject242) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject242) GetEnabledOk() (*bool, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetEnabled
 
-`func (o *InlineObject242) SetAlertIds(v []string)`
+`func (o *InlineObject242) SetEnabled(v bool)`
 
-SetAlertIds sets AlertIds field to given value.
+SetEnabled sets Enabled field to given value.
 
 
 

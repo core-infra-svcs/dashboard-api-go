@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits.md) |  | [optional] 
+**GlobalBandwidthLimits** | [**InlineResponse20090GlobalBandwidthLimits**](InlineResponse20090GlobalBandwidthLimits.md) |  | 
 
 ## Methods
 
 ### NewInlineObject72
 
-`func NewInlineObject72() *InlineObject72`
+`func NewInlineObject72(globalBandwidthLimits InlineResponse20090GlobalBandwidthLimits, ) *InlineObject72`
 
 NewInlineObject72 instantiates a new InlineObject72 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject72WithDefaults instantiates a new InlineObject72 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBandwidthLimits
+### GetGlobalBandwidthLimits
 
-`func (o *InlineObject72) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits`
+`func (o *InlineObject72) GetGlobalBandwidthLimits() InlineResponse20090GlobalBandwidthLimits`
 
-GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
+GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
 
-### GetBandwidthLimitsOk
+### GetGlobalBandwidthLimitsOk
 
-`func (o *InlineObject72) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits, bool)`
+`func (o *InlineObject72) GetGlobalBandwidthLimitsOk() (*InlineResponse20090GlobalBandwidthLimits, bool)`
 
-GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
+GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidthLimits
+### SetGlobalBandwidthLimits
 
-`func (o *InlineObject72) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits)`
+`func (o *InlineObject72) SetGlobalBandwidthLimits(v InlineResponse20090GlobalBandwidthLimits)`
 
-SetBandwidthLimits sets BandwidthLimits field to given value.
+SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
 
-### HasBandwidthLimits
-
-`func (o *InlineObject72) HasBandwidthLimits() bool`
-
-HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

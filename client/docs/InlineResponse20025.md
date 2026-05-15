@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20025Rules**](InlineResponse20025Rules.md) | An array of port forwarding params | [optional] 
+**Enabled** | Pointer to **bool** | Indicates whether geolocation is enabled for the device | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20025WithDefaults instantiates a new InlineResponse20025 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetEnabled
 
-`func (o *InlineResponse20025) GetRules() []InlineResponse20025Rules`
+`func (o *InlineResponse20025) GetEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetEnabledOk
 
-`func (o *InlineResponse20025) GetRulesOk() (*[]InlineResponse20025Rules, bool)`
+`func (o *InlineResponse20025) GetEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetEnabled
 
-`func (o *InlineResponse20025) SetRules(v []InlineResponse20025Rules)`
+`func (o *InlineResponse20025) SetEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRules
+### HasEnabled
 
-`func (o *InlineResponse20025) HasRules() bool`
+`func (o *InlineResponse20025) HasEnabled() bool`
 
-HasRules returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

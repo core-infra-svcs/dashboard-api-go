@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Name of the Application Category | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
+**Camera** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesCamera**](OrganizationsOrganizationIdSamlRolesCamera.md) | The list of camera access privileges for SAML administrator | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200385WithDefaults instantiates a new InlineResponse200385 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetId
 
-`func (o *InlineResponse200385) GetCategory() string`
+`func (o *InlineResponse200385) GetId() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetIdOk
 
-`func (o *InlineResponse200385) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200385) GetIdOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetId
 
-`func (o *InlineResponse200385) SetCategory(v string)`
+`func (o *InlineResponse200385) SetId(v string)`
 
-SetCategory sets Category field to given value.
+SetId sets Id field to given value.
 
-### HasCategory
+### HasId
 
-`func (o *InlineResponse200385) HasCategory() bool`
+`func (o *InlineResponse200385) HasId() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetTotal
+### GetRole
 
-`func (o *InlineResponse200385) GetTotal() float32`
+`func (o *InlineResponse200385) GetRole() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetRoleOk
 
-`func (o *InlineResponse200385) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200385) GetRoleOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetRole
 
-`func (o *InlineResponse200385) SetTotal(v float32)`
+`func (o *InlineResponse200385) SetRole(v string)`
 
-SetTotal sets Total field to given value.
+SetRole sets Role field to given value.
 
-### HasTotal
+### HasRole
 
-`func (o *InlineResponse200385) HasTotal() bool`
+`func (o *InlineResponse200385) HasRole() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetDownstream
+### GetOrgAccess
 
-`func (o *InlineResponse200385) GetDownstream() float32`
+`func (o *InlineResponse200385) GetOrgAccess() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetOrgAccessOk
 
-`func (o *InlineResponse200385) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200385) GetOrgAccessOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetOrgAccess
 
-`func (o *InlineResponse200385) SetDownstream(v float32)`
+`func (o *InlineResponse200385) SetOrgAccess(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasDownstream
+### HasOrgAccess
 
-`func (o *InlineResponse200385) HasDownstream() bool`
+`func (o *InlineResponse200385) HasOrgAccess() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
 
-### GetUpstream
+### GetNetworks
 
-`func (o *InlineResponse200385) GetUpstream() float32`
+`func (o *InlineResponse200385) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetNetworksOk
 
-`func (o *InlineResponse200385) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse200385) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetNetworks
 
-`func (o *InlineResponse200385) SetUpstream(v float32)`
+`func (o *InlineResponse200385) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
 
-SetUpstream sets Upstream field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasUpstream
+### HasNetworks
 
-`func (o *InlineResponse200385) HasUpstream() bool`
+`func (o *InlineResponse200385) HasNetworks() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
-### GetPercentage
+### GetTags
 
-`func (o *InlineResponse200385) GetPercentage() float32`
+`func (o *InlineResponse200385) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
 
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetPercentageOk
+### GetTagsOk
 
-`func (o *InlineResponse200385) GetPercentageOk() (*float32, bool)`
+`func (o *InlineResponse200385) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
 
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPercentage
+### SetTags
 
-`func (o *InlineResponse200385) SetPercentage(v float32)`
+`func (o *InlineResponse200385) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
 
-SetPercentage sets Percentage field to given value.
+SetTags sets Tags field to given value.
 
-### HasPercentage
+### HasTags
 
-`func (o *InlineResponse200385) HasPercentage() bool`
+`func (o *InlineResponse200385) HasTags() bool`
 
-HasPercentage returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetCamera
+
+`func (o *InlineResponse200385) GetCamera() []OrganizationsOrganizationIdSamlRolesCamera`
+
+GetCamera returns the Camera field if non-nil, zero value otherwise.
+
+### GetCameraOk
+
+`func (o *InlineResponse200385) GetCameraOk() (*[]OrganizationsOrganizationIdSamlRolesCamera, bool)`
+
+GetCameraOk returns a tuple with the Camera field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCamera
+
+`func (o *InlineResponse200385) SetCamera(v []OrganizationsOrganizationIdSamlRolesCamera)`
+
+SetCamera sets Camera field to given value.
+
+### HasCamera
+
+`func (o *InlineResponse200385) HasCamera() bool`
+
+HasCamera returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
+**Serials** | **[]string** | A list of Meraki Serials to migrate | 
+**Target** | **string** | The controller or management mode to which the devices will be migrated | 
 
 ## Methods
 
 ### NewInlineObject269
 
-`func NewInlineObject269(scheduleId string, ) *InlineObject269`
+`func NewInlineObject269(serials []string, target string, ) *InlineObject269`
 
 NewInlineObject269 instantiates a new InlineObject269 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +26,44 @@ NewInlineObject269WithDefaults instantiates a new InlineObject269 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScheduleId
+### GetSerials
 
-`func (o *InlineObject269) GetScheduleId() string`
+`func (o *InlineObject269) GetSerials() []string`
 
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetScheduleIdOk
+### GetSerialsOk
 
-`func (o *InlineObject269) GetScheduleIdOk() (*string, bool)`
+`func (o *InlineObject269) GetSerialsOk() (*[]string, bool)`
 
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduleId
+### SetSerials
 
-`func (o *InlineObject269) SetScheduleId(v string)`
+`func (o *InlineObject269) SetSerials(v []string)`
 
-SetScheduleId sets ScheduleId field to given value.
+SetSerials sets Serials field to given value.
+
+
+### GetTarget
+
+`func (o *InlineObject269) GetTarget() string`
+
+GetTarget returns the Target field if non-nil, zero value otherwise.
+
+### GetTargetOk
+
+`func (o *InlineObject269) GetTargetOk() (*string, bool)`
+
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTarget
+
+`func (o *InlineObject269) SetTarget(v string)`
+
+SetTarget sets Target field to given value.
 
 
 

@@ -4,14 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
-**Operator** | Pointer to [**InlineResponse200227Operator**](InlineResponse200227Operator.md) |  | [optional] 
-**Venue** | Pointer to [**InlineResponse200227Venue**](InlineResponse200227Venue.md) |  | [optional] 
-**NetworkAccessType** | Pointer to **string** | The network type of this SSID | [optional] 
-**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
-**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
-**MccMncs** | Pointer to [**[]InlineResponse200227MccMncs**](InlineResponse200227MccMncs.md) | An array of MCC/MNC pairs | [optional] 
-**NaiRealms** | Pointer to [**[]InlineResponse200227NaiRealms**](InlineResponse200227NaiRealms.md) | An array of NAI realms | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
 
 ## Methods
 
@@ -32,205 +27,80 @@ NewInlineResponse200227WithDefaults instantiates a new InlineResponse200227 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetStartTs
 
-`func (o *InlineResponse200227) GetEnabled() bool`
+`func (o *InlineResponse200227) GetStartTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse200227) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200227) GetStartTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetStartTs
 
-`func (o *InlineResponse200227) SetEnabled(v bool)`
+`func (o *InlineResponse200227) SetStartTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasEnabled
+### HasStartTs
 
-`func (o *InlineResponse200227) HasEnabled() bool`
+`func (o *InlineResponse200227) HasStartTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetOperator
+### GetEndTs
 
-`func (o *InlineResponse200227) GetOperator() InlineResponse200227Operator`
+`func (o *InlineResponse200227) GetEndTs() time.Time`
 
-GetOperator returns the Operator field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetOperatorOk
+### GetEndTsOk
 
-`func (o *InlineResponse200227) GetOperatorOk() (*InlineResponse200227Operator, bool)`
+`func (o *InlineResponse200227) GetEndTsOk() (*time.Time, bool)`
 
-GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOperator
+### SetEndTs
 
-`func (o *InlineResponse200227) SetOperator(v InlineResponse200227Operator)`
+`func (o *InlineResponse200227) SetEndTs(v time.Time)`
 
-SetOperator sets Operator field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasOperator
+### HasEndTs
 
-`func (o *InlineResponse200227) HasOperator() bool`
+`func (o *InlineResponse200227) HasEndTs() bool`
 
-HasOperator returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetVenue
+### GetAvgLatencyMs
 
-`func (o *InlineResponse200227) GetVenue() InlineResponse200227Venue`
+`func (o *InlineResponse200227) GetAvgLatencyMs() int32`
 
-GetVenue returns the Venue field if non-nil, zero value otherwise.
+GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
 
-### GetVenueOk
+### GetAvgLatencyMsOk
 
-`func (o *InlineResponse200227) GetVenueOk() (*InlineResponse200227Venue, bool)`
+`func (o *InlineResponse200227) GetAvgLatencyMsOk() (*int32, bool)`
 
-GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
+GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVenue
+### SetAvgLatencyMs
 
-`func (o *InlineResponse200227) SetVenue(v InlineResponse200227Venue)`
+`func (o *InlineResponse200227) SetAvgLatencyMs(v int32)`
 
-SetVenue sets Venue field to given value.
+SetAvgLatencyMs sets AvgLatencyMs field to given value.
 
-### HasVenue
+### HasAvgLatencyMs
 
-`func (o *InlineResponse200227) HasVenue() bool`
+`func (o *InlineResponse200227) HasAvgLatencyMs() bool`
 
-HasVenue returns a boolean if a field has been set.
-
-### GetNetworkAccessType
-
-`func (o *InlineResponse200227) GetNetworkAccessType() string`
-
-GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
-
-### GetNetworkAccessTypeOk
-
-`func (o *InlineResponse200227) GetNetworkAccessTypeOk() (*string, bool)`
-
-GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkAccessType
-
-`func (o *InlineResponse200227) SetNetworkAccessType(v string)`
-
-SetNetworkAccessType sets NetworkAccessType field to given value.
-
-### HasNetworkAccessType
-
-`func (o *InlineResponse200227) HasNetworkAccessType() bool`
-
-HasNetworkAccessType returns a boolean if a field has been set.
-
-### GetDomains
-
-`func (o *InlineResponse200227) GetDomains() []string`
-
-GetDomains returns the Domains field if non-nil, zero value otherwise.
-
-### GetDomainsOk
-
-`func (o *InlineResponse200227) GetDomainsOk() (*[]string, bool)`
-
-GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDomains
-
-`func (o *InlineResponse200227) SetDomains(v []string)`
-
-SetDomains sets Domains field to given value.
-
-### HasDomains
-
-`func (o *InlineResponse200227) HasDomains() bool`
-
-HasDomains returns a boolean if a field has been set.
-
-### GetRoamConsortOis
-
-`func (o *InlineResponse200227) GetRoamConsortOis() []string`
-
-GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
-
-### GetRoamConsortOisOk
-
-`func (o *InlineResponse200227) GetRoamConsortOisOk() (*[]string, bool)`
-
-GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRoamConsortOis
-
-`func (o *InlineResponse200227) SetRoamConsortOis(v []string)`
-
-SetRoamConsortOis sets RoamConsortOis field to given value.
-
-### HasRoamConsortOis
-
-`func (o *InlineResponse200227) HasRoamConsortOis() bool`
-
-HasRoamConsortOis returns a boolean if a field has been set.
-
-### GetMccMncs
-
-`func (o *InlineResponse200227) GetMccMncs() []InlineResponse200227MccMncs`
-
-GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
-
-### GetMccMncsOk
-
-`func (o *InlineResponse200227) GetMccMncsOk() (*[]InlineResponse200227MccMncs, bool)`
-
-GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMccMncs
-
-`func (o *InlineResponse200227) SetMccMncs(v []InlineResponse200227MccMncs)`
-
-SetMccMncs sets MccMncs field to given value.
-
-### HasMccMncs
-
-`func (o *InlineResponse200227) HasMccMncs() bool`
-
-HasMccMncs returns a boolean if a field has been set.
-
-### GetNaiRealms
-
-`func (o *InlineResponse200227) GetNaiRealms() []InlineResponse200227NaiRealms`
-
-GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
-
-### GetNaiRealmsOk
-
-`func (o *InlineResponse200227) GetNaiRealmsOk() (*[]InlineResponse200227NaiRealms, bool)`
-
-GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNaiRealms
-
-`func (o *InlineResponse200227) SetNaiRealms(v []InlineResponse200227NaiRealms)`
-
-SetNaiRealms sets NaiRealms field to given value.
-
-### HasNaiRealms
-
-`func (o *InlineResponse200227) HasNaiRealms() bool`
-
-HasNaiRealms returns a boolean if a field has been set.
+HasAvgLatencyMs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

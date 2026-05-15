@@ -4,30 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | The VLAN ID of the new VLAN (must be between 1 and 4094) | 
-**Name** | **string** | The name of the new VLAN | 
-**Subnet** | Pointer to **string** | The subnet of the VLAN | [optional] 
-**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the VLAN | [optional] 
-**GroupPolicyId** | Pointer to **NullableString** | The id of the desired group policy to apply to the VLAN | [optional] 
-**TemplateVlanType** | Pointer to **string** | Type of subnetting of the VLAN. Applicable only for template network. | [optional] [default to "same"]
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
-**Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
-**DhcpHandling** | Pointer to **string** | The appliance&#39;s handling of DHCP requests on this VLAN. One of: &#39;Run a DHCP server&#39;, &#39;Relay DHCP to another server&#39; or &#39;Do not respond to DHCP requests&#39; | [optional] 
-**DhcpRelayServerIps** | Pointer to **[]string** | The IPs (IPv4) of the DHCP servers that DHCP requests should be relayed to. CIDR/subnet notation and hostnames are not supported. | [optional] 
-**DhcpLeaseTime** | Pointer to **string** | The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39; | [optional] 
-**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
-**DhcpBootOptionsEnabled** | Pointer to **bool** | Use DHCP boot options specified in other properties | [optional] 
-**DhcpBootNextServer** | Pointer to **string** | DHCP boot option to direct boot clients to the server to load the boot file from | [optional] 
-**DhcpBootFilename** | Pointer to **string** | DHCP boot option for boot filename | [optional] 
-**DhcpOptions** | Pointer to [**[]NetworksNetworkIdApplianceVlansDhcpOptions**](NetworksNetworkIdApplianceVlansDhcpOptions.md) | The list of DHCP options that will be included in DHCP responses. Each object in the list should have \&quot;code\&quot;, \&quot;type\&quot;, and \&quot;value\&quot; properties. | [optional] 
-**Uplinks** | Pointer to [**[]NetworksNetworkIdApplianceUplinksNatUplinks**](NetworksNetworkIdApplianceUplinksNatUplinks.md) | Per-uplink NAT exception override configuration on the VLAN. Applicable only for networks that support NAT exceptions. | [optional] 
+**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Toggle for enabling or disabling active-active AutoVPN | [optional] 
+**DefaultUplink** | Pointer to **string** | The default uplink. Must be a WAN interface &#39;wanX&#39; | [optional] 
+**LoadBalancingEnabled** | Pointer to **bool** | Toggle for enabling or disabling load balancing | [optional] 
+**FailoverAndFailback** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback.md) |  | [optional] 
+**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences.md) | Array of uplink preference rules for WAN traffic | [optional] 
+**VpnTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences.md) | Array of uplink preference rules for VPN traffic | [optional] 
 
 ## Methods
 
 ### NewInlineObject77
 
-`func NewInlineObject77(id string, name string, ) *InlineObject77`
+`func NewInlineObject77() *InlineObject77`
 
 NewInlineObject77 instantiates a new InlineObject77 object
 This constructor will assign default values to properties that have it defined,
@@ -42,455 +30,155 @@ NewInlineObject77WithDefaults instantiates a new InlineObject77 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetActiveActiveAutoVpnEnabled
 
-`func (o *InlineObject77) GetId() string`
+`func (o *InlineObject77) GetActiveActiveAutoVpnEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetActiveActiveAutoVpnEnabledOk
 
-`func (o *InlineObject77) GetIdOk() (*string, bool)`
+`func (o *InlineObject77) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetActiveActiveAutoVpnEnabled
 
-`func (o *InlineObject77) SetId(v string)`
+`func (o *InlineObject77) SetActiveActiveAutoVpnEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
 
+### HasActiveActiveAutoVpnEnabled
 
-### GetName
+`func (o *InlineObject77) HasActiveActiveAutoVpnEnabled() bool`
 
-`func (o *InlineObject77) GetName() string`
+HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
 
-GetName returns the Name field if non-nil, zero value otherwise.
+### GetDefaultUplink
 
-### GetNameOk
+`func (o *InlineObject77) GetDefaultUplink() string`
 
-`func (o *InlineObject77) GetNameOk() (*string, bool)`
+GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+### GetDefaultUplinkOk
+
+`func (o *InlineObject77) GetDefaultUplinkOk() (*string, bool)`
+
+GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultUplink
 
-`func (o *InlineObject77) SetName(v string)`
+`func (o *InlineObject77) SetDefaultUplink(v string)`
 
-SetName sets Name field to given value.
+SetDefaultUplink sets DefaultUplink field to given value.
 
+### HasDefaultUplink
 
-### GetSubnet
+`func (o *InlineObject77) HasDefaultUplink() bool`
 
-`func (o *InlineObject77) GetSubnet() string`
+HasDefaultUplink returns a boolean if a field has been set.
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+### GetLoadBalancingEnabled
 
-### GetSubnetOk
+`func (o *InlineObject77) GetLoadBalancingEnabled() bool`
 
-`func (o *InlineObject77) GetSubnetOk() (*string, bool)`
+GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+### GetLoadBalancingEnabledOk
+
+`func (o *InlineObject77) GetLoadBalancingEnabledOk() (*bool, bool)`
+
+GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetLoadBalancingEnabled
 
-`func (o *InlineObject77) SetSubnet(v string)`
+`func (o *InlineObject77) SetLoadBalancingEnabled(v bool)`
 
-SetSubnet sets Subnet field to given value.
+SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
 
-### HasSubnet
+### HasLoadBalancingEnabled
 
-`func (o *InlineObject77) HasSubnet() bool`
+`func (o *InlineObject77) HasLoadBalancingEnabled() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasLoadBalancingEnabled returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetFailoverAndFailback
 
-`func (o *InlineObject77) GetApplianceIp() string`
+`func (o *InlineObject77) GetFailoverAndFailback() NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetFailoverAndFailback returns the FailoverAndFailback field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetFailoverAndFailbackOk
 
-`func (o *InlineObject77) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineObject77) GetFailoverAndFailbackOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetFailoverAndFailbackOk returns a tuple with the FailoverAndFailback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetFailoverAndFailback
 
-`func (o *InlineObject77) SetApplianceIp(v string)`
+`func (o *InlineObject77) SetFailoverAndFailback(v NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetFailoverAndFailback sets FailoverAndFailback field to given value.
 
-### HasApplianceIp
+### HasFailoverAndFailback
 
-`func (o *InlineObject77) HasApplianceIp() bool`
+`func (o *InlineObject77) HasFailoverAndFailback() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasFailoverAndFailback returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetWanTrafficUplinkPreferences
 
-`func (o *InlineObject77) GetGroupPolicyId() string`
+`func (o *InlineObject77) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetWanTrafficUplinkPreferencesOk
 
-`func (o *InlineObject77) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject77) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetWanTrafficUplinkPreferences
 
-`func (o *InlineObject77) SetGroupPolicyId(v string)`
+`func (o *InlineObject77) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
 
-### HasGroupPolicyId
+### HasWanTrafficUplinkPreferences
 
-`func (o *InlineObject77) HasGroupPolicyId() bool`
+`func (o *InlineObject77) HasWanTrafficUplinkPreferences() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
 
-### SetGroupPolicyIdNil
+### GetVpnTrafficUplinkPreferences
 
-`func (o *InlineObject77) SetGroupPolicyIdNil(b bool)`
+`func (o *InlineObject77) GetVpnTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences`
 
- SetGroupPolicyIdNil sets the value for GroupPolicyId to be an explicit nil
+GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
 
-### UnsetGroupPolicyId
-`func (o *InlineObject77) UnsetGroupPolicyId()`
+### GetVpnTrafficUplinkPreferencesOk
 
-UnsetGroupPolicyId ensures that no value is present for GroupPolicyId, not even an explicit nil
-### GetTemplateVlanType
+`func (o *InlineObject77) GetVpnTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences, bool)`
 
-`func (o *InlineObject77) GetTemplateVlanType() string`
-
-GetTemplateVlanType returns the TemplateVlanType field if non-nil, zero value otherwise.
-
-### GetTemplateVlanTypeOk
-
-`func (o *InlineObject77) GetTemplateVlanTypeOk() (*string, bool)`
-
-GetTemplateVlanTypeOk returns a tuple with the TemplateVlanType field if it's non-nil, zero value otherwise
+GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTemplateVlanType
+### SetVpnTrafficUplinkPreferences
 
-`func (o *InlineObject77) SetTemplateVlanType(v string)`
+`func (o *InlineObject77) SetVpnTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences)`
 
-SetTemplateVlanType sets TemplateVlanType field to given value.
+SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
 
-### HasTemplateVlanType
+### HasVpnTrafficUplinkPreferences
 
-`func (o *InlineObject77) HasTemplateVlanType() bool`
+`func (o *InlineObject77) HasVpnTrafficUplinkPreferences() bool`
 
-HasTemplateVlanType returns a boolean if a field has been set.
-
-### GetCidr
-
-`func (o *InlineObject77) GetCidr() string`
-
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
-
-### GetCidrOk
-
-`func (o *InlineObject77) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCidr
-
-`func (o *InlineObject77) SetCidr(v string)`
-
-SetCidr sets Cidr field to given value.
-
-### HasCidr
-
-`func (o *InlineObject77) HasCidr() bool`
-
-HasCidr returns a boolean if a field has been set.
-
-### GetMask
-
-`func (o *InlineObject77) GetMask() int32`
-
-GetMask returns the Mask field if non-nil, zero value otherwise.
-
-### GetMaskOk
-
-`func (o *InlineObject77) GetMaskOk() (*int32, bool)`
-
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMask
-
-`func (o *InlineObject77) SetMask(v int32)`
-
-SetMask sets Mask field to given value.
-
-### HasMask
-
-`func (o *InlineObject77) HasMask() bool`
-
-HasMask returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineObject77) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineObject77) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineObject77) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineObject77) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
-
-### GetDhcpHandling
-
-`func (o *InlineObject77) GetDhcpHandling() string`
-
-GetDhcpHandling returns the DhcpHandling field if non-nil, zero value otherwise.
-
-### GetDhcpHandlingOk
-
-`func (o *InlineObject77) GetDhcpHandlingOk() (*string, bool)`
-
-GetDhcpHandlingOk returns a tuple with the DhcpHandling field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpHandling
-
-`func (o *InlineObject77) SetDhcpHandling(v string)`
-
-SetDhcpHandling sets DhcpHandling field to given value.
-
-### HasDhcpHandling
-
-`func (o *InlineObject77) HasDhcpHandling() bool`
-
-HasDhcpHandling returns a boolean if a field has been set.
-
-### GetDhcpRelayServerIps
-
-`func (o *InlineObject77) GetDhcpRelayServerIps() []string`
-
-GetDhcpRelayServerIps returns the DhcpRelayServerIps field if non-nil, zero value otherwise.
-
-### GetDhcpRelayServerIpsOk
-
-`func (o *InlineObject77) GetDhcpRelayServerIpsOk() (*[]string, bool)`
-
-GetDhcpRelayServerIpsOk returns a tuple with the DhcpRelayServerIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpRelayServerIps
-
-`func (o *InlineObject77) SetDhcpRelayServerIps(v []string)`
-
-SetDhcpRelayServerIps sets DhcpRelayServerIps field to given value.
-
-### HasDhcpRelayServerIps
-
-`func (o *InlineObject77) HasDhcpRelayServerIps() bool`
-
-HasDhcpRelayServerIps returns a boolean if a field has been set.
-
-### GetDhcpLeaseTime
-
-`func (o *InlineObject77) GetDhcpLeaseTime() string`
-
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
-
-### GetDhcpLeaseTimeOk
-
-`func (o *InlineObject77) GetDhcpLeaseTimeOk() (*string, bool)`
-
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpLeaseTime
-
-`func (o *InlineObject77) SetDhcpLeaseTime(v string)`
-
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
-
-### HasDhcpLeaseTime
-
-`func (o *InlineObject77) HasDhcpLeaseTime() bool`
-
-HasDhcpLeaseTime returns a boolean if a field has been set.
-
-### GetMandatoryDhcp
-
-`func (o *InlineObject77) GetMandatoryDhcp() NetworksNetworkIdApplianceVlansMandatoryDhcp`
-
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
-
-### GetMandatoryDhcpOk
-
-`func (o *InlineObject77) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceVlansMandatoryDhcp, bool)`
-
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMandatoryDhcp
-
-`func (o *InlineObject77) SetMandatoryDhcp(v NetworksNetworkIdApplianceVlansMandatoryDhcp)`
-
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
-
-### HasMandatoryDhcp
-
-`func (o *InlineObject77) HasMandatoryDhcp() bool`
-
-HasMandatoryDhcp returns a boolean if a field has been set.
-
-### GetDhcpBootOptionsEnabled
-
-`func (o *InlineObject77) GetDhcpBootOptionsEnabled() bool`
-
-GetDhcpBootOptionsEnabled returns the DhcpBootOptionsEnabled field if non-nil, zero value otherwise.
-
-### GetDhcpBootOptionsEnabledOk
-
-`func (o *InlineObject77) GetDhcpBootOptionsEnabledOk() (*bool, bool)`
-
-GetDhcpBootOptionsEnabledOk returns a tuple with the DhcpBootOptionsEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpBootOptionsEnabled
-
-`func (o *InlineObject77) SetDhcpBootOptionsEnabled(v bool)`
-
-SetDhcpBootOptionsEnabled sets DhcpBootOptionsEnabled field to given value.
-
-### HasDhcpBootOptionsEnabled
-
-`func (o *InlineObject77) HasDhcpBootOptionsEnabled() bool`
-
-HasDhcpBootOptionsEnabled returns a boolean if a field has been set.
-
-### GetDhcpBootNextServer
-
-`func (o *InlineObject77) GetDhcpBootNextServer() string`
-
-GetDhcpBootNextServer returns the DhcpBootNextServer field if non-nil, zero value otherwise.
-
-### GetDhcpBootNextServerOk
-
-`func (o *InlineObject77) GetDhcpBootNextServerOk() (*string, bool)`
-
-GetDhcpBootNextServerOk returns a tuple with the DhcpBootNextServer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpBootNextServer
-
-`func (o *InlineObject77) SetDhcpBootNextServer(v string)`
-
-SetDhcpBootNextServer sets DhcpBootNextServer field to given value.
-
-### HasDhcpBootNextServer
-
-`func (o *InlineObject77) HasDhcpBootNextServer() bool`
-
-HasDhcpBootNextServer returns a boolean if a field has been set.
-
-### GetDhcpBootFilename
-
-`func (o *InlineObject77) GetDhcpBootFilename() string`
-
-GetDhcpBootFilename returns the DhcpBootFilename field if non-nil, zero value otherwise.
-
-### GetDhcpBootFilenameOk
-
-`func (o *InlineObject77) GetDhcpBootFilenameOk() (*string, bool)`
-
-GetDhcpBootFilenameOk returns a tuple with the DhcpBootFilename field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpBootFilename
-
-`func (o *InlineObject77) SetDhcpBootFilename(v string)`
-
-SetDhcpBootFilename sets DhcpBootFilename field to given value.
-
-### HasDhcpBootFilename
-
-`func (o *InlineObject77) HasDhcpBootFilename() bool`
-
-HasDhcpBootFilename returns a boolean if a field has been set.
-
-### GetDhcpOptions
-
-`func (o *InlineObject77) GetDhcpOptions() []NetworksNetworkIdApplianceVlansDhcpOptions`
-
-GetDhcpOptions returns the DhcpOptions field if non-nil, zero value otherwise.
-
-### GetDhcpOptionsOk
-
-`func (o *InlineObject77) GetDhcpOptionsOk() (*[]NetworksNetworkIdApplianceVlansDhcpOptions, bool)`
-
-GetDhcpOptionsOk returns a tuple with the DhcpOptions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpOptions
-
-`func (o *InlineObject77) SetDhcpOptions(v []NetworksNetworkIdApplianceVlansDhcpOptions)`
-
-SetDhcpOptions sets DhcpOptions field to given value.
-
-### HasDhcpOptions
-
-`func (o *InlineObject77) HasDhcpOptions() bool`
-
-HasDhcpOptions returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineObject77) GetUplinks() []NetworksNetworkIdApplianceUplinksNatUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineObject77) GetUplinksOk() (*[]NetworksNetworkIdApplianceUplinksNatUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineObject77) SetUplinks(v []NetworksNetworkIdApplianceUplinksNatUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineObject77) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Custom** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom.md) | Custom VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
-**MajorApplications** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications.md) | Major Application based VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
+**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
+**MaxLatency** | Pointer to **NullableInt32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **NullableInt32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **NullableInt32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
@@ -26,56 +28,136 @@ NewInlineObject74WithDefaults instantiates a new InlineObject74 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCustom
+### GetName
 
-`func (o *InlineObject74) GetCustom() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom`
+`func (o *InlineObject74) GetName() string`
 
-GetCustom returns the Custom field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCustomOk
+### GetNameOk
 
-`func (o *InlineObject74) GetCustomOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom, bool)`
+`func (o *InlineObject74) GetNameOk() (*string, bool)`
 
-GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustom
+### SetName
 
-`func (o *InlineObject74) SetCustom(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom)`
+`func (o *InlineObject74) SetName(v string)`
 
-SetCustom sets Custom field to given value.
+SetName sets Name field to given value.
 
-### HasCustom
+### HasName
 
-`func (o *InlineObject74) HasCustom() bool`
+`func (o *InlineObject74) HasName() bool`
 
-HasCustom returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMajorApplications
+### GetMaxLatency
 
-`func (o *InlineObject74) GetMajorApplications() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications`
+`func (o *InlineObject74) GetMaxLatency() int32`
 
-GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
 
-### GetMajorApplicationsOk
+### GetMaxLatencyOk
 
-`func (o *InlineObject74) GetMajorApplicationsOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications, bool)`
+`func (o *InlineObject74) GetMaxLatencyOk() (*int32, bool)`
 
-GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorApplications
+### SetMaxLatency
 
-`func (o *InlineObject74) SetMajorApplications(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications)`
+`func (o *InlineObject74) SetMaxLatency(v int32)`
 
-SetMajorApplications sets MajorApplications field to given value.
+SetMaxLatency sets MaxLatency field to given value.
 
-### HasMajorApplications
+### HasMaxLatency
 
-`func (o *InlineObject74) HasMajorApplications() bool`
+`func (o *InlineObject74) HasMaxLatency() bool`
 
-HasMajorApplications returns a boolean if a field has been set.
+HasMaxLatency returns a boolean if a field has been set.
 
+### SetMaxLatencyNil
+
+`func (o *InlineObject74) SetMaxLatencyNil(b bool)`
+
+ SetMaxLatencyNil sets the value for MaxLatency to be an explicit nil
+
+### UnsetMaxLatency
+`func (o *InlineObject74) UnsetMaxLatency()`
+
+UnsetMaxLatency ensures that no value is present for MaxLatency, not even an explicit nil
+### GetMaxJitter
+
+`func (o *InlineObject74) GetMaxJitter() int32`
+
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+
+### GetMaxJitterOk
+
+`func (o *InlineObject74) GetMaxJitterOk() (*int32, bool)`
+
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxJitter
+
+`func (o *InlineObject74) SetMaxJitter(v int32)`
+
+SetMaxJitter sets MaxJitter field to given value.
+
+### HasMaxJitter
+
+`func (o *InlineObject74) HasMaxJitter() bool`
+
+HasMaxJitter returns a boolean if a field has been set.
+
+### SetMaxJitterNil
+
+`func (o *InlineObject74) SetMaxJitterNil(b bool)`
+
+ SetMaxJitterNil sets the value for MaxJitter to be an explicit nil
+
+### UnsetMaxJitter
+`func (o *InlineObject74) UnsetMaxJitter()`
+
+UnsetMaxJitter ensures that no value is present for MaxJitter, not even an explicit nil
+### GetMaxLossPercentage
+
+`func (o *InlineObject74) GetMaxLossPercentage() int32`
+
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+
+### GetMaxLossPercentageOk
+
+`func (o *InlineObject74) GetMaxLossPercentageOk() (*int32, bool)`
+
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLossPercentage
+
+`func (o *InlineObject74) SetMaxLossPercentage(v int32)`
+
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
+
+### HasMaxLossPercentage
+
+`func (o *InlineObject74) HasMaxLossPercentage() bool`
+
+HasMaxLossPercentage returns a boolean if a field has been set.
+
+### SetMaxLossPercentageNil
+
+`func (o *InlineObject74) SetMaxLossPercentageNil(b bool)`
+
+ SetMaxLossPercentageNil sets the value for MaxLossPercentage to be an explicit nil
+
+### UnsetMaxLossPercentage
+`func (o *InlineObject74) UnsetMaxLossPercentage()`
+
+UnsetMaxLossPercentage ensures that no value is present for MaxLossPercentage, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

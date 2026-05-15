@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
-**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
-**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
-**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Serial** | Pointer to **string** | Camera serial number | [optional] 
+**Status** | Pointer to **string** | Onboarding status | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | When the status was last updated | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200295WithDefaults instantiates a new InlineResponse200295 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetNetworkId
 
-`func (o *InlineResponse200295) GetTs() time.Time`
+`func (o *InlineResponse200295) GetNetworkId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200295) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200295) GetNetworkIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetNetworkId
 
-`func (o *InlineResponse200295) SetTs(v time.Time)`
+`func (o *InlineResponse200295) SetNetworkId(v string)`
 
-SetTs sets Ts field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasTs
+### HasNetworkId
 
-`func (o *InlineResponse200295) HasTs() bool`
+`func (o *InlineResponse200295) HasNetworkId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetTotal
+### GetSerial
 
-`func (o *InlineResponse200295) GetTotal() int32`
+`func (o *InlineResponse200295) GetSerial() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetSerialOk
 
-`func (o *InlineResponse200295) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200295) GetSerialOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetSerial
 
-`func (o *InlineResponse200295) SetTotal(v int32)`
+`func (o *InlineResponse200295) SetSerial(v string)`
 
-SetTotal sets Total field to given value.
+SetSerial sets Serial field to given value.
 
-### HasTotal
+### HasSerial
 
-`func (o *InlineResponse200295) HasTotal() bool`
+`func (o *InlineResponse200295) HasSerial() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetUpstream
+### GetStatus
 
-`func (o *InlineResponse200295) GetUpstream() int32`
+`func (o *InlineResponse200295) GetStatus() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetStatusOk
 
-`func (o *InlineResponse200295) GetUpstreamOk() (*int32, bool)`
+`func (o *InlineResponse200295) GetStatusOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetStatus
 
-`func (o *InlineResponse200295) SetUpstream(v int32)`
+`func (o *InlineResponse200295) SetStatus(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetStatus sets Status field to given value.
 
-### HasUpstream
+### HasStatus
 
-`func (o *InlineResponse200295) HasUpstream() bool`
+`func (o *InlineResponse200295) HasStatus() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetDownstream
+### GetUpdatedAt
 
-`func (o *InlineResponse200295) GetDownstream() int32`
+`func (o *InlineResponse200295) GetUpdatedAt() time.Time`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetUpdatedAtOk
 
-`func (o *InlineResponse200295) GetDownstreamOk() (*int32, bool)`
+`func (o *InlineResponse200295) GetUpdatedAtOk() (*time.Time, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetUpdatedAt
 
-`func (o *InlineResponse200295) SetDownstream(v int32)`
+`func (o *InlineResponse200295) SetUpdatedAt(v time.Time)`
 
-SetDownstream sets Downstream field to given value.
+SetUpdatedAt sets UpdatedAt field to given value.
 
-### HasDownstream
+### HasUpdatedAt
 
-`func (o *InlineResponse200295) HasDownstream() bool`
+`func (o *InlineResponse200295) HasUpdatedAt() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

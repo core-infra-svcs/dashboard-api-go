@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LedsBlinkId** | Pointer to **string** | ID of led blink job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your leds blink request | [optional] 
-**Status** | Pointer to **string** | Status of the leds blink request | [optional] 
-**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed Blink LEDs execution, if present | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20029Rules**](InlineResponse20029Rules.md) | An array of port forwarding params | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse20029WithDefaults instantiates a new InlineResponse20029 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLedsBlinkId
+### GetRules
 
-`func (o *InlineResponse20029) GetLedsBlinkId() string`
+`func (o *InlineResponse20029) GetRules() []InlineResponse20029Rules`
 
-GetLedsBlinkId returns the LedsBlinkId field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetLedsBlinkIdOk
+### GetRulesOk
 
-`func (o *InlineResponse20029) GetLedsBlinkIdOk() (*string, bool)`
+`func (o *InlineResponse20029) GetRulesOk() (*[]InlineResponse20029Rules, bool)`
 
-GetLedsBlinkIdOk returns a tuple with the LedsBlinkId field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLedsBlinkId
+### SetRules
 
-`func (o *InlineResponse20029) SetLedsBlinkId(v string)`
+`func (o *InlineResponse20029) SetRules(v []InlineResponse20029Rules)`
 
-SetLedsBlinkId sets LedsBlinkId field to given value.
+SetRules sets Rules field to given value.
 
-### HasLedsBlinkId
+### HasRules
 
-`func (o *InlineResponse20029) HasLedsBlinkId() bool`
+`func (o *InlineResponse20029) HasRules() bool`
 
-HasLedsBlinkId returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse20029) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse20029) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse20029) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse20029) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse20029) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20029) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20029) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20029) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineResponse20029) GetRequest() InlineResponse2013Request`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineResponse20029) GetRequestOk() (*InlineResponse2013Request, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineResponse20029) SetRequest(v InlineResponse2013Request)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineResponse20029) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
-
-### GetError
-
-`func (o *InlineResponse20029) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *InlineResponse20029) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *InlineResponse20029) SetError(v string)`
-
-SetError sets Error field to given value.
-
-### HasError
-
-`func (o *InlineResponse20029) HasError() bool`
-
-HasError returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

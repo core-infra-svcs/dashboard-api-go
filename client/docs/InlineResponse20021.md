@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | URL to the camera video stream | [optional] 
-**VisionUrl** | Pointer to **string** | URL to the Meraki Vision camera view | [optional] 
+**Id** | Pointer to **string** | Model ID | [optional] 
+**Description** | Pointer to **string** | Model description | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse20021WithDefaults instantiates a new InlineResponse20021 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetId
 
-`func (o *InlineResponse20021) GetUrl() string`
+`func (o *InlineResponse20021) GetId() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetIdOk
 
-`func (o *InlineResponse20021) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20021) GetIdOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetId
 
-`func (o *InlineResponse20021) SetUrl(v string)`
+`func (o *InlineResponse20021) SetId(v string)`
 
-SetUrl sets Url field to given value.
+SetId sets Id field to given value.
 
-### HasUrl
+### HasId
 
-`func (o *InlineResponse20021) HasUrl() bool`
+`func (o *InlineResponse20021) HasId() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetVisionUrl
+### GetDescription
 
-`func (o *InlineResponse20021) GetVisionUrl() string`
+`func (o *InlineResponse20021) GetDescription() string`
 
-GetVisionUrl returns the VisionUrl field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetVisionUrlOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20021) GetVisionUrlOk() (*string, bool)`
+`func (o *InlineResponse20021) GetDescriptionOk() (*string, bool)`
 
-GetVisionUrlOk returns a tuple with the VisionUrl field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVisionUrl
+### SetDescription
 
-`func (o *InlineResponse20021) SetVisionUrl(v string)`
+`func (o *InlineResponse20021) SetDescription(v string)`
 
-SetVisionUrl sets VisionUrl field to given value.
+SetDescription sets Description field to given value.
 
-### HasVisionUrl
+### HasDescription
 
-`func (o *InlineResponse20021) HasVisionUrl() bool`
+`func (o *InlineResponse20021) HasDescription() bool`
 
-HasVisionUrl returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

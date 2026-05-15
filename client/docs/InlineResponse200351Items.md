@@ -4,12 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PolicyId** | Pointer to **string** | ID of the Policy | [optional] 
-**Name** | Pointer to **string** | Name of the Policy | [optional] 
-**Description** | Pointer to **string** | Description of the Policy | [optional] 
-**Group** | Pointer to [**InlineResponse200351Group**](InlineResponse200351Group.md) |  | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Policy creation time | [optional] 
-**LastUpdatedAt** | Pointer to **time.Time** | Policy last update time | [optional] 
+**Type** | Pointer to **string** | Identifier for integration type. One of Axis, Catalyst SD-WAN, Cisco Spaces, Genea, OAuth, PagerDuty, Secure Access, Secure Connect, Splunk, XDR | [optional] 
+**Name** | Pointer to **string** | Integration name | [optional] 
+**Provider** | Pointer to **string** | Integration provider. One of Cisco, Genea, partner | [optional] 
+**Tags** | Pointer to **[]string** | Integration categories | [optional] 
+**ShortDescription** | Pointer to **string** | Short description for integration | [optional] 
+**IsDeployable** | Pointer to **bool** | Whether the integration is deployable for this organization | [optional] 
+**ReleaseType** | Pointer to **string** | Release type of the integration. One of Alpha, Beta, or GA | [optional] 
+**LogoUrl** | Pointer to **string** | Url for integration logo | [optional] 
+**RedirectUrl** | Pointer to **string** | Integration&#39;s redirect url | [optional] 
+**IsCiscoProduct** | Pointer to **bool** | Whether the integration is a Cisco product | [optional] 
 
 ## Methods
 
@@ -30,30 +34,30 @@ NewInlineResponse200351ItemsWithDefaults instantiates a new InlineResponse200351
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicyId
+### GetType
 
-`func (o *InlineResponse200351Items) GetPolicyId() string`
+`func (o *InlineResponse200351Items) GetType() string`
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetPolicyIdOk
+### GetTypeOk
 
-`func (o *InlineResponse200351Items) GetPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200351Items) GetTypeOk() (*string, bool)`
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetType
 
-`func (o *InlineResponse200351Items) SetPolicyId(v string)`
+`func (o *InlineResponse200351Items) SetType(v string)`
 
-SetPolicyId sets PolicyId field to given value.
+SetType sets Type field to given value.
 
-### HasPolicyId
+### HasType
 
-`func (o *InlineResponse200351Items) HasPolicyId() bool`
+`func (o *InlineResponse200351Items) HasType() bool`
 
-HasPolicyId returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,105 +84,205 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetProvider
 
-`func (o *InlineResponse200351Items) GetDescription() string`
+`func (o *InlineResponse200351Items) GetProvider() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetProvider returns the Provider field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetProviderOk
 
-`func (o *InlineResponse200351Items) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200351Items) GetProviderOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetProvider
 
-`func (o *InlineResponse200351Items) SetDescription(v string)`
+`func (o *InlineResponse200351Items) SetProvider(v string)`
 
-SetDescription sets Description field to given value.
+SetProvider sets Provider field to given value.
 
-### HasDescription
+### HasProvider
 
-`func (o *InlineResponse200351Items) HasDescription() bool`
+`func (o *InlineResponse200351Items) HasProvider() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasProvider returns a boolean if a field has been set.
 
-### GetGroup
+### GetTags
 
-`func (o *InlineResponse200351Items) GetGroup() InlineResponse200351Group`
+`func (o *InlineResponse200351Items) GetTags() []string`
 
-GetGroup returns the Group field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetGroupOk
+### GetTagsOk
 
-`func (o *InlineResponse200351Items) GetGroupOk() (*InlineResponse200351Group, bool)`
+`func (o *InlineResponse200351Items) GetTagsOk() (*[]string, bool)`
 
-GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroup
+### SetTags
 
-`func (o *InlineResponse200351Items) SetGroup(v InlineResponse200351Group)`
+`func (o *InlineResponse200351Items) SetTags(v []string)`
 
-SetGroup sets Group field to given value.
+SetTags sets Tags field to given value.
 
-### HasGroup
+### HasTags
 
-`func (o *InlineResponse200351Items) HasGroup() bool`
+`func (o *InlineResponse200351Items) HasTags() bool`
 
-HasGroup returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetShortDescription
 
-`func (o *InlineResponse200351Items) GetCreatedAt() time.Time`
+`func (o *InlineResponse200351Items) GetShortDescription() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetShortDescription returns the ShortDescription field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetShortDescriptionOk
 
-`func (o *InlineResponse200351Items) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200351Items) GetShortDescriptionOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetShortDescriptionOk returns a tuple with the ShortDescription field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetShortDescription
 
-`func (o *InlineResponse200351Items) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200351Items) SetShortDescription(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetShortDescription sets ShortDescription field to given value.
 
-### HasCreatedAt
+### HasShortDescription
 
-`func (o *InlineResponse200351Items) HasCreatedAt() bool`
+`func (o *InlineResponse200351Items) HasShortDescription() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasShortDescription returns a boolean if a field has been set.
 
-### GetLastUpdatedAt
+### GetIsDeployable
 
-`func (o *InlineResponse200351Items) GetLastUpdatedAt() time.Time`
+`func (o *InlineResponse200351Items) GetIsDeployable() bool`
 
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+GetIsDeployable returns the IsDeployable field if non-nil, zero value otherwise.
 
-### GetLastUpdatedAtOk
+### GetIsDeployableOk
 
-`func (o *InlineResponse200351Items) GetLastUpdatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200351Items) GetIsDeployableOk() (*bool, bool)`
 
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+GetIsDeployableOk returns a tuple with the IsDeployable field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUpdatedAt
+### SetIsDeployable
 
-`func (o *InlineResponse200351Items) SetLastUpdatedAt(v time.Time)`
+`func (o *InlineResponse200351Items) SetIsDeployable(v bool)`
 
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
+SetIsDeployable sets IsDeployable field to given value.
 
-### HasLastUpdatedAt
+### HasIsDeployable
 
-`func (o *InlineResponse200351Items) HasLastUpdatedAt() bool`
+`func (o *InlineResponse200351Items) HasIsDeployable() bool`
 
-HasLastUpdatedAt returns a boolean if a field has been set.
+HasIsDeployable returns a boolean if a field has been set.
+
+### GetReleaseType
+
+`func (o *InlineResponse200351Items) GetReleaseType() string`
+
+GetReleaseType returns the ReleaseType field if non-nil, zero value otherwise.
+
+### GetReleaseTypeOk
+
+`func (o *InlineResponse200351Items) GetReleaseTypeOk() (*string, bool)`
+
+GetReleaseTypeOk returns a tuple with the ReleaseType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReleaseType
+
+`func (o *InlineResponse200351Items) SetReleaseType(v string)`
+
+SetReleaseType sets ReleaseType field to given value.
+
+### HasReleaseType
+
+`func (o *InlineResponse200351Items) HasReleaseType() bool`
+
+HasReleaseType returns a boolean if a field has been set.
+
+### GetLogoUrl
+
+`func (o *InlineResponse200351Items) GetLogoUrl() string`
+
+GetLogoUrl returns the LogoUrl field if non-nil, zero value otherwise.
+
+### GetLogoUrlOk
+
+`func (o *InlineResponse200351Items) GetLogoUrlOk() (*string, bool)`
+
+GetLogoUrlOk returns a tuple with the LogoUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLogoUrl
+
+`func (o *InlineResponse200351Items) SetLogoUrl(v string)`
+
+SetLogoUrl sets LogoUrl field to given value.
+
+### HasLogoUrl
+
+`func (o *InlineResponse200351Items) HasLogoUrl() bool`
+
+HasLogoUrl returns a boolean if a field has been set.
+
+### GetRedirectUrl
+
+`func (o *InlineResponse200351Items) GetRedirectUrl() string`
+
+GetRedirectUrl returns the RedirectUrl field if non-nil, zero value otherwise.
+
+### GetRedirectUrlOk
+
+`func (o *InlineResponse200351Items) GetRedirectUrlOk() (*string, bool)`
+
+GetRedirectUrlOk returns a tuple with the RedirectUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRedirectUrl
+
+`func (o *InlineResponse200351Items) SetRedirectUrl(v string)`
+
+SetRedirectUrl sets RedirectUrl field to given value.
+
+### HasRedirectUrl
+
+`func (o *InlineResponse200351Items) HasRedirectUrl() bool`
+
+HasRedirectUrl returns a boolean if a field has been set.
+
+### GetIsCiscoProduct
+
+`func (o *InlineResponse200351Items) GetIsCiscoProduct() bool`
+
+GetIsCiscoProduct returns the IsCiscoProduct field if non-nil, zero value otherwise.
+
+### GetIsCiscoProductOk
+
+`func (o *InlineResponse200351Items) GetIsCiscoProductOk() (*bool, bool)`
+
+GetIsCiscoProductOk returns a tuple with the IsCiscoProduct field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsCiscoProduct
+
+`func (o *InlineResponse200351Items) SetIsCiscoProduct(v bool)`
+
+SetIsCiscoProduct sets IsCiscoProduct field to given value.
+
+### HasIsCiscoProduct
+
+`func (o *InlineResponse200351Items) HasIsCiscoProduct() bool`
+
+HasIsCiscoProduct returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

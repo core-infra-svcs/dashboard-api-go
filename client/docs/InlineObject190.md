@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | List of AP serials | 
-**ProfileId** | **NullableString** | AP profile ID | 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
 ### NewInlineObject190
 
-`func NewInlineObject190(serials []string, profileId NullableString, ) *InlineObject190`
+`func NewInlineObject190() *InlineObject190`
 
 NewInlineObject190 instantiates a new InlineObject190 object
 This constructor will assign default values to properties that have it defined,
@@ -26,56 +26,56 @@ NewInlineObject190WithDefaults instantiates a new InlineObject190 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetCurrency
 
-`func (o *InlineObject190) GetSerials() []string`
+`func (o *InlineObject190) GetCurrency() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetCurrencyOk
 
-`func (o *InlineObject190) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject190) GetCurrencyOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetCurrency
 
-`func (o *InlineObject190) SetSerials(v []string)`
+`func (o *InlineObject190) SetCurrency(v string)`
 
-SetSerials sets Serials field to given value.
+SetCurrency sets Currency field to given value.
 
+### HasCurrency
 
-### GetProfileId
+`func (o *InlineObject190) HasCurrency() bool`
 
-`func (o *InlineObject190) GetProfileId() string`
+HasCurrency returns a boolean if a field has been set.
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+### GetPlans
 
-### GetProfileIdOk
+`func (o *InlineObject190) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
 
-`func (o *InlineObject190) GetProfileIdOk() (*string, bool)`
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+### GetPlansOk
+
+`func (o *InlineObject190) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
+
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetPlans
 
-`func (o *InlineObject190) SetProfileId(v string)`
+`func (o *InlineObject190) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
 
-SetProfileId sets ProfileId field to given value.
+SetPlans sets Plans field to given value.
 
+### HasPlans
 
-### SetProfileIdNil
+`func (o *InlineObject190) HasPlans() bool`
 
-`func (o *InlineObject190) SetProfileIdNil(b bool)`
+HasPlans returns a boolean if a field has been set.
 
- SetProfileIdNil sets the value for ProfileId to be an explicit nil
-
-### UnsetProfileId
-`func (o *InlineObject190) UnsetProfileId()`
-
-UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

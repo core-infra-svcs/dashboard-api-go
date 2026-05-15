@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
+**Url** | Pointer to **string** | Receiver Url | [optional] 
+**Version** | Pointer to **string** | Scanning API Version | [optional] 
+**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineObject337WithDefaults instantiates a new InlineObject337 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDoorLockIds
+### GetUrl
 
-`func (o *InlineObject337) GetDoorLockIds() []string`
+`func (o *InlineObject337) GetUrl() string`
 
-GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetDoorLockIdsOk
+### GetUrlOk
 
-`func (o *InlineObject337) GetDoorLockIdsOk() (*[]string, bool)`
+`func (o *InlineObject337) GetUrlOk() (*string, bool)`
 
-GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLockIds
+### SetUrl
 
-`func (o *InlineObject337) SetDoorLockIds(v []string)`
+`func (o *InlineObject337) SetUrl(v string)`
 
-SetDoorLockIds sets DoorLockIds field to given value.
+SetUrl sets Url field to given value.
 
-### HasDoorLockIds
+### HasUrl
 
-`func (o *InlineObject337) HasDoorLockIds() bool`
+`func (o *InlineObject337) HasUrl() bool`
 
-HasDoorLockIds returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetVersion
+
+`func (o *InlineObject337) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineObject337) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineObject337) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+### HasVersion
+
+`func (o *InlineObject337) HasVersion() bool`
+
+HasVersion returns a boolean if a field has been set.
+
+### GetRadio
+
+`func (o *InlineObject337) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineObject337) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineObject337) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
+
+SetRadio sets Radio field to given value.
+
+### HasRadio
+
+`func (o *InlineObject337) HasRadio() bool`
+
+HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

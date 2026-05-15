@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Type** | **string** | Type of the origin | 
-**Interfaces** | Pointer to **[]string** | Interfaces associated with the prefix | [optional] 
+**Interfaces** | Pointer to **[]string** | Interfaces associated with the prefix. Required when origin type is internet. | [optional] 
 
 ## Methods
 

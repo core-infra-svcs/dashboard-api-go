@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the template | [optional] 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. | [optional] 
-**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
 
 ## Methods
 
 ### NewInlineObject180
 
-`func NewInlineObject180() *InlineObject180`
+`func NewInlineObject180(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, ) *InlineObject180`
 
 NewInlineObject180 instantiates a new InlineObject180 object
 This constructor will assign default values to properties that have it defined,
@@ -48,121 +46,46 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject180) HasName() bool`
+### GetVlanNames
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject180) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-### GetBody
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-`func (o *InlineObject180) GetBody() string`
+### GetVlanNamesOk
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+`func (o *InlineObject180) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
 
-### GetBodyOk
-
-`func (o *InlineObject180) GetBodyOk() (*string, bool)`
-
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetVlanNames
 
-`func (o *InlineObject180) SetBody(v string)`
+`func (o *InlineObject180) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetBody sets Body field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasBody
 
-`func (o *InlineObject180) HasBody() bool`
+### GetVlanGroups
 
-HasBody returns a boolean if a field has been set.
+`func (o *InlineObject180) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
 
-### GetHeaders
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject180) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+### GetVlanGroupsOk
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+`func (o *InlineObject180) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
 
-### GetHeadersOk
-
-`func (o *InlineObject180) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
-
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetVlanGroups
 
-`func (o *InlineObject180) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+`func (o *InlineObject180) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
-SetHeaders sets Headers field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasHeaders
-
-`func (o *InlineObject180) HasHeaders() bool`
-
-HasHeaders returns a boolean if a field has been set.
-
-### SetHeadersNil
-
-`func (o *InlineObject180) SetHeadersNil(b bool)`
-
- SetHeadersNil sets the value for Headers to be an explicit nil
-
-### UnsetHeaders
-`func (o *InlineObject180) UnsetHeaders()`
-
-UnsetHeaders ensures that no value is present for Headers, not even an explicit nil
-### GetBodyFile
-
-`func (o *InlineObject180) GetBodyFile() string`
-
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
-
-### GetBodyFileOk
-
-`func (o *InlineObject180) GetBodyFileOk() (*string, bool)`
-
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBodyFile
-
-`func (o *InlineObject180) SetBodyFile(v string)`
-
-SetBodyFile sets BodyFile field to given value.
-
-### HasBodyFile
-
-`func (o *InlineObject180) HasBodyFile() bool`
-
-HasBodyFile returns a boolean if a field has been set.
-
-### GetHeadersFile
-
-`func (o *InlineObject180) GetHeadersFile() string`
-
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
-
-### GetHeadersFileOk
-
-`func (o *InlineObject180) GetHeadersFileOk() (*string, bool)`
-
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeadersFile
-
-`func (o *InlineObject180) SetHeadersFile(v string)`
-
-SetHeadersFile sets HeadersFile field to given value.
-
-### HasHeadersFile
-
-`func (o *InlineObject180) HasHeadersFile() bool`
-
-HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

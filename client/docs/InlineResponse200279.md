@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**NetworkName** | Pointer to **string** | Network name | [optional] 
+**MerakiVpnPeers** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers**](OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers.md) | List of VPN peers with their summaries | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200279WithDefaults instantiates a new InlineResponse200279 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetArtifactId
+### GetNetworkId
 
-`func (o *InlineResponse200279) GetArtifactId() string`
+`func (o *InlineResponse200279) GetNetworkId() string`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200279) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineResponse200279) GetNetworkIdOk() (*string, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetNetworkId
 
-`func (o *InlineResponse200279) SetArtifactId(v string)`
+`func (o *InlineResponse200279) SetNetworkId(v string)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasArtifactId
+### HasNetworkId
 
-`func (o *InlineResponse200279) HasArtifactId() bool`
+`func (o *InlineResponse200279) HasNetworkId() bool`
 
-HasArtifactId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetNetworkName
 
-`func (o *InlineResponse200279) GetOrganizationId() string`
+`func (o *InlineResponse200279) GetNetworkName() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetNetworkNameOk
 
-`func (o *InlineResponse200279) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200279) GetNetworkNameOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetNetworkName
 
-`func (o *InlineResponse200279) SetOrganizationId(v string)`
+`func (o *InlineResponse200279) SetNetworkName(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasOrganizationId
+### HasNetworkName
 
-`func (o *InlineResponse200279) HasOrganizationId() bool`
+`func (o *InlineResponse200279) HasNetworkName() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasNetworkName returns a boolean if a field has been set.
 
-### GetName
+### GetMerakiVpnPeers
 
-`func (o *InlineResponse200279) GetName() string`
+`func (o *InlineResponse200279) GetMerakiVpnPeers() []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMerakiVpnPeers returns the MerakiVpnPeers field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMerakiVpnPeersOk
 
-`func (o *InlineResponse200279) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200279) GetMerakiVpnPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMerakiVpnPeersOk returns a tuple with the MerakiVpnPeers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMerakiVpnPeers
 
-`func (o *InlineResponse200279) SetName(v string)`
+`func (o *InlineResponse200279) SetMerakiVpnPeers(v []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers)`
 
-SetName sets Name field to given value.
+SetMerakiVpnPeers sets MerakiVpnPeers field to given value.
 
-### HasName
+### HasMerakiVpnPeers
 
-`func (o *InlineResponse200279) HasName() bool`
+`func (o *InlineResponse200279) HasMerakiVpnPeers() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200279) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200279) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200279) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200279) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
+HasMerakiVpnPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

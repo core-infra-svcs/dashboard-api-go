@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
-**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
-**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
+**VlanProfile** | Pointer to [**InlineResponse200207VlanProfile**](InlineResponse200207VlanProfile.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
+**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200207WithDefaults instantiates a new InlineResponse200207 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetT0
+### GetVlanProfile
 
-`func (o *InlineResponse200207) GetT0() int32`
+`func (o *InlineResponse200207) GetVlanProfile() InlineResponse200207VlanProfile`
 
-GetT0 returns the T0 field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetT0Ok
+### GetVlanProfileOk
 
-`func (o *InlineResponse200207) GetT0Ok() (*int32, bool)`
+`func (o *InlineResponse200207) GetVlanProfileOk() (*InlineResponse200207VlanProfile, bool)`
 
-GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT0
+### SetVlanProfile
 
-`func (o *InlineResponse200207) SetT0(v int32)`
+`func (o *InlineResponse200207) SetVlanProfile(v InlineResponse200207VlanProfile)`
 
-SetT0 sets T0 field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasT0
+### HasVlanProfile
 
-`func (o *InlineResponse200207) HasT0() bool`
+`func (o *InlineResponse200207) HasVlanProfile() bool`
 
-HasT0 returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetT1
+### GetSerials
 
-`func (o *InlineResponse200207) GetT1() int32`
+`func (o *InlineResponse200207) GetSerials() []string`
 
-GetT1 returns the T1 field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetT1Ok
+### GetSerialsOk
 
-`func (o *InlineResponse200207) GetT1Ok() (*int32, bool)`
+`func (o *InlineResponse200207) GetSerialsOk() (*[]string, bool)`
 
-GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT1
+### SetSerials
 
-`func (o *InlineResponse200207) SetT1(v int32)`
+`func (o *InlineResponse200207) SetSerials(v []string)`
 
-SetT1 sets T1 field to given value.
+SetSerials sets Serials field to given value.
 
-### HasT1
+### HasSerials
 
-`func (o *InlineResponse200207) HasT1() bool`
+`func (o *InlineResponse200207) HasSerials() bool`
 
-HasT1 returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetLatencyBinsByCategory
+### GetStackIds
 
-`func (o *InlineResponse200207) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
+`func (o *InlineResponse200207) GetStackIds() []string`
 
-GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
 
-### GetLatencyBinsByCategoryOk
+### GetStackIdsOk
 
-`func (o *InlineResponse200207) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
+`func (o *InlineResponse200207) GetStackIdsOk() (*[]string, bool)`
 
-GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyBinsByCategory
+### SetStackIds
 
-`func (o *InlineResponse200207) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
+`func (o *InlineResponse200207) SetStackIds(v []string)`
 
-SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
+SetStackIds sets StackIds field to given value.
 
-### HasLatencyBinsByCategory
+### HasStackIds
 
-`func (o *InlineResponse200207) HasLatencyBinsByCategory() bool`
+`func (o *InlineResponse200207) HasStackIds() bool`
 
-HasLatencyBinsByCategory returns a boolean if a field has been set.
+HasStackIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

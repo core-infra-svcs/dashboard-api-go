@@ -4,18 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Name** | Pointer to **string** | The name of the device. | [optional] 
-**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
-**Ssid** | Pointer to **string** | The name of the SSID the device was last connected to. | [optional] 
-**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
-**OsName** | Pointer to **string** | The name of the device OS. | [optional] 
-**SystemModel** | Pointer to **string** | The device model. | [optional] 
-**Uuid** | Pointer to **string** | The UUID of the device. | [optional] 
-**SerialNumber** | Pointer to **string** | The device serial number. | [optional] 
-**Serial** | Pointer to **string** | The device serial. | [optional] 
-**Ip** | Pointer to **string** | The IP address of the device. | [optional] 
-**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
@@ -61,6 +56,31 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### GetEmail
+
+`func (o *InlineResponse200138) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse200138) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse200138) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse200138) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
 ### GetName
 
 `func (o *InlineResponse200138) GetName() string`
@@ -86,255 +106,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetTags
+### GetCreatedAt
 
-`func (o *InlineResponse200138) GetTags() []string`
+`func (o *InlineResponse200138) GetCreatedAt() time.Time`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200138) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200138) GetCreatedAtOk() (*time.Time, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetCreatedAt
 
-`func (o *InlineResponse200138) SetTags(v []string)`
+`func (o *InlineResponse200138) SetCreatedAt(v time.Time)`
 
-SetTags sets Tags field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasTags
+### HasCreatedAt
 
-`func (o *InlineResponse200138) HasTags() bool`
+`func (o *InlineResponse200138) HasCreatedAt() bool`
 
-HasTags returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetSsid
+### GetAccountType
 
-`func (o *InlineResponse200138) GetSsid() string`
+`func (o *InlineResponse200138) GetAccountType() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetAccountTypeOk
 
-`func (o *InlineResponse200138) GetSsidOk() (*string, bool)`
+`func (o *InlineResponse200138) GetAccountTypeOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetAccountType
 
-`func (o *InlineResponse200138) SetSsid(v string)`
+`func (o *InlineResponse200138) SetAccountType(v string)`
 
-SetSsid sets Ssid field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasSsid
+### HasAccountType
 
-`func (o *InlineResponse200138) HasSsid() bool`
+`func (o *InlineResponse200138) HasAccountType() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
 
-### GetWifiMac
+### GetIsAdmin
 
-`func (o *InlineResponse200138) GetWifiMac() string`
+`func (o *InlineResponse200138) GetIsAdmin() bool`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetIsAdminOk
 
-`func (o *InlineResponse200138) GetWifiMacOk() (*string, bool)`
+`func (o *InlineResponse200138) GetIsAdminOk() (*bool, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetIsAdmin
 
-`func (o *InlineResponse200138) SetWifiMac(v string)`
+`func (o *InlineResponse200138) SetIsAdmin(v bool)`
 
-SetWifiMac sets WifiMac field to given value.
+SetIsAdmin sets IsAdmin field to given value.
 
-### HasWifiMac
+### HasIsAdmin
 
-`func (o *InlineResponse200138) HasWifiMac() bool`
+`func (o *InlineResponse200138) HasIsAdmin() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasIsAdmin returns a boolean if a field has been set.
 
-### GetOsName
+### GetAuthorizations
 
-`func (o *InlineResponse200138) GetOsName() string`
+`func (o *InlineResponse200138) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
 
-GetOsName returns the OsName field if non-nil, zero value otherwise.
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
-### GetOsNameOk
+### GetAuthorizationsOk
 
-`func (o *InlineResponse200138) GetOsNameOk() (*string, bool)`
+`func (o *InlineResponse200138) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
 
-GetOsNameOk returns a tuple with the OsName field if it's non-nil, zero value otherwise
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOsName
+### SetAuthorizations
 
-`func (o *InlineResponse200138) SetOsName(v string)`
+`func (o *InlineResponse200138) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
 
-SetOsName sets OsName field to given value.
+SetAuthorizations sets Authorizations field to given value.
 
-### HasOsName
+### HasAuthorizations
 
-`func (o *InlineResponse200138) HasOsName() bool`
+`func (o *InlineResponse200138) HasAuthorizations() bool`
 
-HasOsName returns a boolean if a field has been set.
-
-### GetSystemModel
-
-`func (o *InlineResponse200138) GetSystemModel() string`
-
-GetSystemModel returns the SystemModel field if non-nil, zero value otherwise.
-
-### GetSystemModelOk
-
-`func (o *InlineResponse200138) GetSystemModelOk() (*string, bool)`
-
-GetSystemModelOk returns a tuple with the SystemModel field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSystemModel
-
-`func (o *InlineResponse200138) SetSystemModel(v string)`
-
-SetSystemModel sets SystemModel field to given value.
-
-### HasSystemModel
-
-`func (o *InlineResponse200138) HasSystemModel() bool`
-
-HasSystemModel returns a boolean if a field has been set.
-
-### GetUuid
-
-`func (o *InlineResponse200138) GetUuid() string`
-
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
-
-### GetUuidOk
-
-`func (o *InlineResponse200138) GetUuidOk() (*string, bool)`
-
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUuid
-
-`func (o *InlineResponse200138) SetUuid(v string)`
-
-SetUuid sets Uuid field to given value.
-
-### HasUuid
-
-`func (o *InlineResponse200138) HasUuid() bool`
-
-HasUuid returns a boolean if a field has been set.
-
-### GetSerialNumber
-
-`func (o *InlineResponse200138) GetSerialNumber() string`
-
-GetSerialNumber returns the SerialNumber field if non-nil, zero value otherwise.
-
-### GetSerialNumberOk
-
-`func (o *InlineResponse200138) GetSerialNumberOk() (*string, bool)`
-
-GetSerialNumberOk returns a tuple with the SerialNumber field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerialNumber
-
-`func (o *InlineResponse200138) SetSerialNumber(v string)`
-
-SetSerialNumber sets SerialNumber field to given value.
-
-### HasSerialNumber
-
-`func (o *InlineResponse200138) HasSerialNumber() bool`
-
-HasSerialNumber returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200138) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200138) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200138) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200138) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetIp
-
-`func (o *InlineResponse200138) GetIp() string`
-
-GetIp returns the Ip field if non-nil, zero value otherwise.
-
-### GetIpOk
-
-`func (o *InlineResponse200138) GetIpOk() (*string, bool)`
-
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIp
-
-`func (o *InlineResponse200138) SetIp(v string)`
-
-SetIp sets Ip field to given value.
-
-### HasIp
-
-`func (o *InlineResponse200138) HasIp() bool`
-
-HasIp returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineResponse200138) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineResponse200138) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineResponse200138) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineResponse200138) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

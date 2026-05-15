@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**LatencyStats** | Pointer to [**NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats**](NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats.md) |  | [optional] 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200204CustomPieChartItems**](InlineResponse200204CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200204WithDefaults instantiates a new InlineResponse200204 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetMode
 
-`func (o *InlineResponse200204) GetMac() string`
+`func (o *InlineResponse200204) GetMode() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetModeOk
 
-`func (o *InlineResponse200204) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200204) GetModeOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetMode
 
-`func (o *InlineResponse200204) SetMac(v string)`
+`func (o *InlineResponse200204) SetMode(v string)`
 
-SetMac sets Mac field to given value.
+SetMode sets Mode field to given value.
 
-### HasMac
+### HasMode
 
-`func (o *InlineResponse200204) HasMac() bool`
+`func (o *InlineResponse200204) HasMode() bool`
 
-HasMac returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetLatencyStats
+### GetCustomPieChartItems
 
-`func (o *InlineResponse200204) GetLatencyStats() NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats`
+`func (o *InlineResponse200204) GetCustomPieChartItems() []InlineResponse200204CustomPieChartItems`
 
-GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetLatencyStatsOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineResponse200204) GetLatencyStatsOk() (*NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats, bool)`
+`func (o *InlineResponse200204) GetCustomPieChartItemsOk() (*[]InlineResponse200204CustomPieChartItems, bool)`
 
-GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyStats
+### SetCustomPieChartItems
 
-`func (o *InlineResponse200204) SetLatencyStats(v NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats)`
+`func (o *InlineResponse200204) SetCustomPieChartItems(v []InlineResponse200204CustomPieChartItems)`
 
-SetLatencyStats sets LatencyStats field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
-### HasLatencyStats
+### HasCustomPieChartItems
 
-`func (o *InlineResponse200204) HasLatencyStats() bool`
+`func (o *InlineResponse200204) HasCustomPieChartItems() bool`
 
-HasLatencyStats returns a boolean if a field has been set.
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

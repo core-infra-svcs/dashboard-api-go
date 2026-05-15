@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the configuration template | 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
+**AccountId** | **string** | Service provider account ID | 
+**ApiKey** | **string** | Service provider account API key | 
+**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
+**Title** | **string** | Service provider account name | 
+**Username** | **string** | Service provider account username | 
 
 ## Methods
 
 ### NewInlineObject257
 
-`func NewInlineObject257(name string, ) *InlineObject257`
+`func NewInlineObject257(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject257`
 
 NewInlineObject257 instantiates a new InlineObject257 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +29,105 @@ NewInlineObject257WithDefaults instantiates a new InlineObject257 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetAccountId
 
-`func (o *InlineObject257) GetName() string`
+`func (o *InlineObject257) GetAccountId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAccountId returns the AccountId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAccountIdOk
 
-`func (o *InlineObject257) GetNameOk() (*string, bool)`
+`func (o *InlineObject257) GetAccountIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAccountId
 
-`func (o *InlineObject257) SetName(v string)`
+`func (o *InlineObject257) SetAccountId(v string)`
 
-SetName sets Name field to given value.
+SetAccountId sets AccountId field to given value.
 
 
-### GetTimeZone
+### GetApiKey
 
-`func (o *InlineObject257) GetTimeZone() string`
+`func (o *InlineObject257) GetApiKey() string`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetApiKeyOk
 
-`func (o *InlineObject257) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineObject257) GetApiKeyOk() (*string, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetApiKey
 
-`func (o *InlineObject257) SetTimeZone(v string)`
+`func (o *InlineObject257) SetApiKey(v string)`
 
-SetTimeZone sets TimeZone field to given value.
+SetApiKey sets ApiKey field to given value.
 
-### HasTimeZone
 
-`func (o *InlineObject257) HasTimeZone() bool`
+### GetServiceProvider
 
-HasTimeZone returns a boolean if a field has been set.
+`func (o *InlineObject257) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
 
-### GetCopyFromNetworkId
+GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
 
-`func (o *InlineObject257) GetCopyFromNetworkId() string`
+### GetServiceProviderOk
 
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
+`func (o *InlineObject257) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
 
-### GetCopyFromNetworkIdOk
-
-`func (o *InlineObject257) GetCopyFromNetworkIdOk() (*string, bool)`
-
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
+GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCopyFromNetworkId
+### SetServiceProvider
 
-`func (o *InlineObject257) SetCopyFromNetworkId(v string)`
+`func (o *InlineObject257) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
 
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
+SetServiceProvider sets ServiceProvider field to given value.
 
-### HasCopyFromNetworkId
 
-`func (o *InlineObject257) HasCopyFromNetworkId() bool`
+### GetTitle
 
-HasCopyFromNetworkId returns a boolean if a field has been set.
+`func (o *InlineObject257) GetTitle() string`
+
+GetTitle returns the Title field if non-nil, zero value otherwise.
+
+### GetTitleOk
+
+`func (o *InlineObject257) GetTitleOk() (*string, bool)`
+
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTitle
+
+`func (o *InlineObject257) SetTitle(v string)`
+
+SetTitle sets Title field to given value.
+
+
+### GetUsername
+
+`func (o *InlineObject257) GetUsername() string`
+
+GetUsername returns the Username field if non-nil, zero value otherwise.
+
+### GetUsernameOk
+
+`func (o *InlineObject257) GetUsernameOk() (*string, bool)`
+
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsername
+
+`func (o *InlineObject257) SetUsername(v string)`
+
+SetUsername sets Username field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial | [optional] 
-**Model** | Pointer to **string** | Device model. | [optional] 
-**Tags** | Pointer to **string** | Device tags. | [optional] 
-**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
-**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
+**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
+**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
+**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
+**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200128WithDefaults instantiates a new InlineResponse200128 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetGroupId
 
-`func (o *InlineResponse200128) GetSerial() string`
+`func (o *InlineResponse200128) GetGroupId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetGroupIdOk
 
-`func (o *InlineResponse200128) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200128) GetGroupIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetGroupId
 
-`func (o *InlineResponse200128) SetSerial(v string)`
+`func (o *InlineResponse200128) SetGroupId(v string)`
 
-SetSerial sets Serial field to given value.
+SetGroupId sets GroupId field to given value.
 
-### HasSerial
+### HasGroupId
 
-`func (o *InlineResponse200128) HasSerial() bool`
+`func (o *InlineResponse200128) HasGroupId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasGroupId returns a boolean if a field has been set.
 
-### GetModel
+### GetName
 
-`func (o *InlineResponse200128) GetModel() string`
+`func (o *InlineResponse200128) GetName() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetNameOk
 
-`func (o *InlineResponse200128) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200128) GetNameOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetName
 
-`func (o *InlineResponse200128) SetModel(v string)`
+`func (o *InlineResponse200128) SetName(v string)`
 
-SetModel sets Model field to given value.
+SetName sets Name field to given value.
 
-### HasModel
+### HasName
 
-`func (o *InlineResponse200128) HasModel() bool`
+`func (o *InlineResponse200128) HasName() bool`
 
-HasModel returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetTags
+### GetDescription
 
-`func (o *InlineResponse200128) GetTags() string`
+`func (o *InlineResponse200128) GetDescription() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200128) GetTagsOk() (*string, bool)`
+`func (o *InlineResponse200128) GetDescriptionOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetDescription
 
-`func (o *InlineResponse200128) SetTags(v string)`
+`func (o *InlineResponse200128) SetDescription(v string)`
 
-SetTags sets Tags field to given value.
+SetDescription sets Description field to given value.
 
-### HasTags
+### HasDescription
 
-`func (o *InlineResponse200128) HasTags() bool`
+`func (o *InlineResponse200128) HasDescription() bool`
 
-HasTags returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetWifi0
+### GetIsDefault
 
-`func (o *InlineResponse200128) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200128) GetIsDefault() bool`
 
-GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetWifi0Ok
+### GetIsDefaultOk
 
-`func (o *InlineResponse200128) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200128) GetIsDefaultOk() (*bool, bool)`
 
-GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi0
+### SetIsDefault
 
-`func (o *InlineResponse200128) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200128) SetIsDefault(v bool)`
 
-SetWifi0 sets Wifi0 field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasWifi0
+### HasIsDefault
 
-`func (o *InlineResponse200128) HasWifi0() bool`
+`func (o *InlineResponse200128) HasIsDefault() bool`
 
-HasWifi0 returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetWifi1
+### GetAssignedDevices
 
-`func (o *InlineResponse200128) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200128) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
 
-GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
 
-### GetWifi1Ok
+### GetAssignedDevicesOk
 
-`func (o *InlineResponse200128) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200128) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
 
-GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi1
+### SetAssignedDevices
 
-`func (o *InlineResponse200128) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200128) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
 
-SetWifi1 sets Wifi1 field to given value.
+SetAssignedDevices sets AssignedDevices field to given value.
 
-### HasWifi1
+### HasAssignedDevices
 
-`func (o *InlineResponse200128) HasWifi1() bool`
+`func (o *InlineResponse200128) HasAssignedDevices() bool`
 
-HasWifi1 returns a boolean if a field has been set.
+HasAssignedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

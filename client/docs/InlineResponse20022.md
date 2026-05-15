@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to [**InlineResponse20022Ids**](InlineResponse20022Ids.md) |  | [optional] 
+**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
+**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20022WithDefaults instantiates a new InlineResponse20022 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetExternalRtspEnabled
 
-`func (o *InlineResponse20022) GetIds() InlineResponse20022Ids`
+`func (o *InlineResponse20022) GetExternalRtspEnabled() bool`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetExternalRtspEnabledOk
 
-`func (o *InlineResponse20022) GetIdsOk() (*InlineResponse20022Ids, bool)`
+`func (o *InlineResponse20022) GetExternalRtspEnabledOk() (*bool, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetExternalRtspEnabled
 
-`func (o *InlineResponse20022) SetIds(v InlineResponse20022Ids)`
+`func (o *InlineResponse20022) SetExternalRtspEnabled(v bool)`
 
-SetIds sets Ids field to given value.
+SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
 
-### HasIds
+### HasExternalRtspEnabled
 
-`func (o *InlineResponse20022) HasIds() bool`
+`func (o *InlineResponse20022) HasExternalRtspEnabled() bool`
 
-HasIds returns a boolean if a field has been set.
+HasExternalRtspEnabled returns a boolean if a field has been set.
+
+### GetRtspUrl
+
+`func (o *InlineResponse20022) GetRtspUrl() string`
+
+GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
+
+### GetRtspUrlOk
+
+`func (o *InlineResponse20022) GetRtspUrlOk() (*string, bool)`
+
+GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRtspUrl
+
+`func (o *InlineResponse20022) SetRtspUrl(v string)`
+
+SetRtspUrl sets RtspUrl field to given value.
+
+### HasRtspUrl
+
+`func (o *InlineResponse20022) HasRtspUrl() bool`
+
+HasRtspUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Policy object ID | [optional] 
-**Name** | Pointer to **string** | Name of the Policy object group. | [optional] 
-**Category** | Pointer to **string** | Type of object groups. (NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
-**ObjectIds** | Pointer to **[]int32** | Policy objects associated with Network Object Group or Port Object Group | [optional] 
-**NetworkIds** | Pointer to **[]string** | Network ID&#39;s associated with the policy objects. | [optional] 
+**ClaimId** | Pointer to **string** | The order claim id | [optional] 
+**Number** | Pointer to **string** | Order Number | [optional] 
+**Serials** | Pointer to **[]string** | All devices claimed in this order | [optional] 
+**Subscriptions** | Pointer to [**[]InlineResponse200358Subscriptions**](InlineResponse200358Subscriptions.md) | Details for subscriptions claimed in this order | [optional] 
 
 ## Methods
 
@@ -31,180 +28,105 @@ NewInlineResponse200358WithDefaults instantiates a new InlineResponse200358 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetClaimId
 
-`func (o *InlineResponse200358) GetId() string`
+`func (o *InlineResponse200358) GetClaimId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetClaimIdOk
 
-`func (o *InlineResponse200358) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200358) GetClaimIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetClaimId
 
-`func (o *InlineResponse200358) SetId(v string)`
+`func (o *InlineResponse200358) SetClaimId(v string)`
 
-SetId sets Id field to given value.
+SetClaimId sets ClaimId field to given value.
 
-### HasId
+### HasClaimId
 
-`func (o *InlineResponse200358) HasId() bool`
+`func (o *InlineResponse200358) HasClaimId() bool`
 
-HasId returns a boolean if a field has been set.
+HasClaimId returns a boolean if a field has been set.
 
-### GetName
+### GetNumber
 
-`func (o *InlineResponse200358) GetName() string`
+`func (o *InlineResponse200358) GetNumber() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNumberOk
 
-`func (o *InlineResponse200358) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200358) GetNumberOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNumber
 
-`func (o *InlineResponse200358) SetName(v string)`
+`func (o *InlineResponse200358) SetNumber(v string)`
 
-SetName sets Name field to given value.
+SetNumber sets Number field to given value.
 
-### HasName
+### HasNumber
 
-`func (o *InlineResponse200358) HasName() bool`
+`func (o *InlineResponse200358) HasNumber() bool`
 
-HasName returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
 
-### GetCategory
+### GetSerials
 
-`func (o *InlineResponse200358) GetCategory() string`
+`func (o *InlineResponse200358) GetSerials() []string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetSerialsOk
 
-`func (o *InlineResponse200358) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200358) GetSerialsOk() (*[]string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetSerials
 
-`func (o *InlineResponse200358) SetCategory(v string)`
+`func (o *InlineResponse200358) SetSerials(v []string)`
 
-SetCategory sets Category field to given value.
+SetSerials sets Serials field to given value.
 
-### HasCategory
+### HasSerials
 
-`func (o *InlineResponse200358) HasCategory() bool`
+`func (o *InlineResponse200358) HasSerials() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetSubscriptions
 
-`func (o *InlineResponse200358) GetCreatedAt() time.Time`
+`func (o *InlineResponse200358) GetSubscriptions() []InlineResponse200358Subscriptions`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetSubscriptionsOk
 
-`func (o *InlineResponse200358) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200358) GetSubscriptionsOk() (*[]InlineResponse200358Subscriptions, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetSubscriptions
 
-`func (o *InlineResponse200358) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200358) SetSubscriptions(v []InlineResponse200358Subscriptions)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetSubscriptions sets Subscriptions field to given value.
 
-### HasCreatedAt
+### HasSubscriptions
 
-`func (o *InlineResponse200358) HasCreatedAt() bool`
+`func (o *InlineResponse200358) HasSubscriptions() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200358) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200358) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200358) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200358) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
-
-### GetObjectIds
-
-`func (o *InlineResponse200358) GetObjectIds() []int32`
-
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
-
-### GetObjectIdsOk
-
-`func (o *InlineResponse200358) GetObjectIdsOk() (*[]int32, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetObjectIds
-
-`func (o *InlineResponse200358) SetObjectIds(v []int32)`
-
-SetObjectIds sets ObjectIds field to given value.
-
-### HasObjectIds
-
-`func (o *InlineResponse200358) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
-
-### GetNetworkIds
-
-`func (o *InlineResponse200358) GetNetworkIds() []string`
-
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
-
-### GetNetworkIdsOk
-
-`func (o *InlineResponse200358) GetNetworkIdsOk() (*[]string, bool)`
-
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkIds
-
-`func (o *InlineResponse200358) SetNetworkIds(v []string)`
-
-SetNetworkIds sets NetworkIds field to given value.
-
-### HasNetworkIds
-
-`func (o *InlineResponse200358) HasNetworkIds() bool`
-
-HasNetworkIds returns a boolean if a field has been set.
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

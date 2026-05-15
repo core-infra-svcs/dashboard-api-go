@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
 
 ## Methods
 
 ### NewInlineObject102
 
-`func NewInlineObject102(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject102`
+`func NewInlineObject102(size string, ) *InlineObject102`
 
 NewInlineObject102 instantiates a new InlineObject102 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject102WithDefaults instantiates a new InlineObject102 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStages
+### GetSize
 
-`func (o *InlineObject102) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
+`func (o *InlineObject102) GetSize() string`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetSize returns the Size field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetSizeOk
 
-`func (o *InlineObject102) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
+`func (o *InlineObject102) GetSizeOk() (*string, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetSize
 
-`func (o *InlineObject102) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
+`func (o *InlineObject102) SetSize(v string)`
 
-SetStages sets Stages field to given value.
+SetSize sets Size field to given value.
 
 
 

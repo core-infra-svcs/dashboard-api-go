@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200239Counts**](InlineResponse200239Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse200239Limits**](InlineResponse200239Limits.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200239Rules**](InlineResponse200239Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200239WithDefaults instantiates a new InlineResponse200239 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetRules
 
-`func (o *InlineResponse200239) GetCounts() InlineResponse200239Counts`
+`func (o *InlineResponse200239) GetRules() []InlineResponse200239Rules`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetRulesOk
 
-`func (o *InlineResponse200239) GetCountsOk() (*InlineResponse200239Counts, bool)`
+`func (o *InlineResponse200239) GetRulesOk() (*[]InlineResponse200239Rules, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetRules
 
-`func (o *InlineResponse200239) SetCounts(v InlineResponse200239Counts)`
+`func (o *InlineResponse200239) SetRules(v []InlineResponse200239Rules)`
 
-SetCounts sets Counts field to given value.
+SetRules sets Rules field to given value.
 
-### HasCounts
+### HasRules
 
-`func (o *InlineResponse200239) HasCounts() bool`
+`func (o *InlineResponse200239) HasRules() bool`
 
-HasCounts returns a boolean if a field has been set.
-
-### GetLimits
-
-`func (o *InlineResponse200239) GetLimits() InlineResponse200239Limits`
-
-GetLimits returns the Limits field if non-nil, zero value otherwise.
-
-### GetLimitsOk
-
-`func (o *InlineResponse200239) GetLimitsOk() (*InlineResponse200239Limits, bool)`
-
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLimits
-
-`func (o *InlineResponse200239) SetLimits(v InlineResponse200239Limits)`
-
-SetLimits sets Limits field to given value.
-
-### HasLimits
-
-`func (o *InlineResponse200239) HasLimits() bool`
-
-HasLimits returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

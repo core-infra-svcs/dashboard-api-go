@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
-**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
-**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
+**Licenses** | Pointer to [**[]InlineResponse200308Licenses**](InlineResponse200308Licenses.md) | The licenses claimed | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200308WithDefaults instantiates a new InlineResponse200308 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureId
+### GetOrders
 
-`func (o *InlineResponse200308) GetCaptureId() string`
+`func (o *InlineResponse200308) GetOrders() []string`
 
-GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetCaptureIdOk
+### GetOrdersOk
 
-`func (o *InlineResponse200308) GetCaptureIdOk() (*string, bool)`
+`func (o *InlineResponse200308) GetOrdersOk() (*[]string, bool)`
 
-GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureId
+### SetOrders
 
-`func (o *InlineResponse200308) SetCaptureId(v string)`
+`func (o *InlineResponse200308) SetOrders(v []string)`
 
-SetCaptureId sets CaptureId field to given value.
+SetOrders sets Orders field to given value.
 
-### HasCaptureId
+### HasOrders
 
-`func (o *InlineResponse200308) HasCaptureId() bool`
+`func (o *InlineResponse200308) HasOrders() bool`
 
-HasCaptureId returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
 
-### GetDownloadUrl
+### GetSerials
 
-`func (o *InlineResponse200308) GetDownloadUrl() string`
+`func (o *InlineResponse200308) GetSerials() []string`
 
-GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDownloadUrlOk
+### GetSerialsOk
 
-`func (o *InlineResponse200308) GetDownloadUrlOk() (*string, bool)`
+`func (o *InlineResponse200308) GetSerialsOk() (*[]string, bool)`
 
-GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadUrl
+### SetSerials
 
-`func (o *InlineResponse200308) SetDownloadUrl(v string)`
+`func (o *InlineResponse200308) SetSerials(v []string)`
 
-SetDownloadUrl sets DownloadUrl field to given value.
+SetSerials sets Serials field to given value.
 
-### HasDownloadUrl
+### HasSerials
 
-`func (o *InlineResponse200308) HasDownloadUrl() bool`
+`func (o *InlineResponse200308) HasSerials() bool`
 
-HasDownloadUrl returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetUrl
+### GetLicenses
 
-`func (o *InlineResponse200308) GetUrl() string`
+`func (o *InlineResponse200308) GetLicenses() []InlineResponse200308Licenses`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetLicensesOk
 
-`func (o *InlineResponse200308) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200308) GetLicensesOk() (*[]InlineResponse200308Licenses, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetLicenses
 
-`func (o *InlineResponse200308) SetUrl(v string)`
+`func (o *InlineResponse200308) SetLicenses(v []InlineResponse200308Licenses)`
 
-SetUrl sets Url field to given value.
+SetLicenses sets Licenses field to given value.
 
-### HasUrl
+### HasLicenses
 
-`func (o *InlineResponse200308) HasUrl() bool`
+`func (o *InlineResponse200308) HasLicenses() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

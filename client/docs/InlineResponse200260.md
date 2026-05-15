@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Uplinks** | Pointer to [**[]InlineResponse20084Uplinks**](InlineResponse20084Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
+**ResponseCodeCounts** | Pointer to [**InlineResponse200260ResponseCodeCounts**](InlineResponse200260ResponseCodeCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200260WithDefaults instantiates a new InlineResponse200260 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetResponseCodeCounts
 
-`func (o *InlineResponse200260) GetNetworkId() string`
+`func (o *InlineResponse200260) GetResponseCodeCounts() InlineResponse200260ResponseCodeCounts`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetResponseCodeCounts returns the ResponseCodeCounts field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetResponseCodeCountsOk
 
-`func (o *InlineResponse200260) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200260) GetResponseCodeCountsOk() (*InlineResponse200260ResponseCodeCounts, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetResponseCodeCountsOk returns a tuple with the ResponseCodeCounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetResponseCodeCounts
 
-`func (o *InlineResponse200260) SetNetworkId(v string)`
+`func (o *InlineResponse200260) SetResponseCodeCounts(v InlineResponse200260ResponseCodeCounts)`
 
-SetNetworkId sets NetworkId field to given value.
+SetResponseCodeCounts sets ResponseCodeCounts field to given value.
 
-### HasNetworkId
+### HasResponseCodeCounts
 
-`func (o *InlineResponse200260) HasNetworkId() bool`
+`func (o *InlineResponse200260) HasResponseCodeCounts() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200260) GetUplinks() []InlineResponse20084Uplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200260) GetUplinksOk() (*[]InlineResponse20084Uplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200260) SetUplinks(v []InlineResponse20084Uplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200260) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasResponseCodeCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

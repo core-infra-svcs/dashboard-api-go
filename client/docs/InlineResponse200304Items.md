@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The device serial | [optional] 
-**Target** | Pointer to **string** | The migration target destination | [optional] 
-**CreatedAt** | Pointer to **time.Time** | The time at which a migration was created | [optional] 
-**MigratedAt** | Pointer to **NullableTime** | The time at which the device initiated migration | [optional] 
+**AccountId** | Pointer to **string** | Account ID of plans to be fetched | [optional] 
+**Apns** | Pointer to [**[]InlineResponse200304Apns**](InlineResponse200304Apns.md) | Available APNs | [optional] 
+**Name** | Pointer to **string** | Communication plan name | [optional] 
 
 ## Methods
 
@@ -28,116 +27,81 @@ NewInlineResponse200304ItemsWithDefaults instantiates a new InlineResponse200304
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetAccountId
 
-`func (o *InlineResponse200304Items) GetSerial() string`
+`func (o *InlineResponse200304Items) GetAccountId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetAccountId returns the AccountId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetAccountIdOk
 
-`func (o *InlineResponse200304Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200304Items) GetAccountIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetAccountId
 
-`func (o *InlineResponse200304Items) SetSerial(v string)`
+`func (o *InlineResponse200304Items) SetAccountId(v string)`
 
-SetSerial sets Serial field to given value.
+SetAccountId sets AccountId field to given value.
 
-### HasSerial
+### HasAccountId
 
-`func (o *InlineResponse200304Items) HasSerial() bool`
+`func (o *InlineResponse200304Items) HasAccountId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasAccountId returns a boolean if a field has been set.
 
-### GetTarget
+### GetApns
 
-`func (o *InlineResponse200304Items) GetTarget() string`
+`func (o *InlineResponse200304Items) GetApns() []InlineResponse200304Apns`
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+GetApns returns the Apns field if non-nil, zero value otherwise.
 
-### GetTargetOk
+### GetApnsOk
 
-`func (o *InlineResponse200304Items) GetTargetOk() (*string, bool)`
+`func (o *InlineResponse200304Items) GetApnsOk() (*[]InlineResponse200304Apns, bool)`
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+GetApnsOk returns a tuple with the Apns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetApns
 
-`func (o *InlineResponse200304Items) SetTarget(v string)`
+`func (o *InlineResponse200304Items) SetApns(v []InlineResponse200304Apns)`
 
-SetTarget sets Target field to given value.
+SetApns sets Apns field to given value.
 
-### HasTarget
+### HasApns
 
-`func (o *InlineResponse200304Items) HasTarget() bool`
+`func (o *InlineResponse200304Items) HasApns() bool`
 
-HasTarget returns a boolean if a field has been set.
+HasApns returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetName
 
-`func (o *InlineResponse200304Items) GetCreatedAt() time.Time`
+`func (o *InlineResponse200304Items) GetName() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetNameOk
 
-`func (o *InlineResponse200304Items) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200304Items) GetNameOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetName
 
-`func (o *InlineResponse200304Items) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200304Items) SetName(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetName sets Name field to given value.
 
-### HasCreatedAt
+### HasName
 
-`func (o *InlineResponse200304Items) HasCreatedAt() bool`
+`func (o *InlineResponse200304Items) HasName() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMigratedAt
-
-`func (o *InlineResponse200304Items) GetMigratedAt() time.Time`
-
-GetMigratedAt returns the MigratedAt field if non-nil, zero value otherwise.
-
-### GetMigratedAtOk
-
-`func (o *InlineResponse200304Items) GetMigratedAtOk() (*time.Time, bool)`
-
-GetMigratedAtOk returns a tuple with the MigratedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMigratedAt
-
-`func (o *InlineResponse200304Items) SetMigratedAt(v time.Time)`
-
-SetMigratedAt sets MigratedAt field to given value.
-
-### HasMigratedAt
-
-`func (o *InlineResponse200304Items) HasMigratedAt() bool`
-
-HasMigratedAt returns a boolean if a field has been set.
-
-### SetMigratedAtNil
-
-`func (o *InlineResponse200304Items) SetMigratedAtNil(b bool)`
-
- SetMigratedAtNil sets the value for MigratedAt to be an explicit nil
-
-### UnsetMigratedAt
-`func (o *InlineResponse200304Items) UnsetMigratedAt()`
-
-UnsetMigratedAt ensures that no value is present for MigratedAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

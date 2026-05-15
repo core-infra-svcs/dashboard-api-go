@@ -6,7 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
+**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
+**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
+**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
 
 ## Methods
 
@@ -77,30 +79,80 @@ SetEndTs sets EndTs field to given value.
 
 HasEndTs returns a boolean if a field has been set.
 
-### GetAvgLatencyMs
+### GetUtilizationTotal
 
-`func (o *InlineResponse200214) GetAvgLatencyMs() int32`
+`func (o *InlineResponse200214) GetUtilizationTotal() float32`
 
-GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
+GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
 
-### GetAvgLatencyMsOk
+### GetUtilizationTotalOk
 
-`func (o *InlineResponse200214) GetAvgLatencyMsOk() (*int32, bool)`
+`func (o *InlineResponse200214) GetUtilizationTotalOk() (*float32, bool)`
 
-GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
+GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAvgLatencyMs
+### SetUtilizationTotal
 
-`func (o *InlineResponse200214) SetAvgLatencyMs(v int32)`
+`func (o *InlineResponse200214) SetUtilizationTotal(v float32)`
 
-SetAvgLatencyMs sets AvgLatencyMs field to given value.
+SetUtilizationTotal sets UtilizationTotal field to given value.
 
-### HasAvgLatencyMs
+### HasUtilizationTotal
 
-`func (o *InlineResponse200214) HasAvgLatencyMs() bool`
+`func (o *InlineResponse200214) HasUtilizationTotal() bool`
 
-HasAvgLatencyMs returns a boolean if a field has been set.
+HasUtilizationTotal returns a boolean if a field has been set.
+
+### GetUtilization80211
+
+`func (o *InlineResponse200214) GetUtilization80211() float32`
+
+GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
+
+### GetUtilization80211Ok
+
+`func (o *InlineResponse200214) GetUtilization80211Ok() (*float32, bool)`
+
+GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilization80211
+
+`func (o *InlineResponse200214) SetUtilization80211(v float32)`
+
+SetUtilization80211 sets Utilization80211 field to given value.
+
+### HasUtilization80211
+
+`func (o *InlineResponse200214) HasUtilization80211() bool`
+
+HasUtilization80211 returns a boolean if a field has been set.
+
+### GetUtilizationNon80211
+
+`func (o *InlineResponse200214) GetUtilizationNon80211() float32`
+
+GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
+
+### GetUtilizationNon80211Ok
+
+`func (o *InlineResponse200214) GetUtilizationNon80211Ok() (*float32, bool)`
+
+GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilizationNon80211
+
+`func (o *InlineResponse200214) SetUtilizationNon80211(v float32)`
+
+SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
+
+### HasUtilizationNon80211
+
+`func (o *InlineResponse200214) HasUtilizationNon80211() bool`
+
+HasUtilizationNon80211 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

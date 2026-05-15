@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | **string** | A string indicating the rule for which IPs are allowed to use the specified service. Acceptable values are \&quot;blocked\&quot; (no remote IPs can access the service), \&quot;restricted\&quot; (only allowed IPs can access the service), and \&quot;unrestriced\&quot; (any remote IP can access the service). This field is required | 
-**AllowedIps** | Pointer to **[]string** | An array of allowed CIDRs that can access the service. This field is required if \&quot;access\&quot; is set to \&quot;restricted\&quot;. Otherwise this field is ignored | [optional] 
+**Destinations** | Pointer to [**[]NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations**](NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations.md) | The list of connectivity monitoring destinations | [optional] 
 
 ## Methods
 
 ### NewInlineObject45
 
-`func NewInlineObject45(access string, ) *InlineObject45`
+`func NewInlineObject45() *InlineObject45`
 
 NewInlineObject45 instantiates a new InlineObject45 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,30 @@ NewInlineObject45WithDefaults instantiates a new InlineObject45 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccess
+### GetDestinations
 
-`func (o *InlineObject45) GetAccess() string`
+`func (o *InlineObject45) GetDestinations() []NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetDestinationsOk
 
-`func (o *InlineObject45) GetAccessOk() (*string, bool)`
+`func (o *InlineObject45) GetDestinationsOk() (*[]NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetDestinations
 
-`func (o *InlineObject45) SetAccess(v string)`
+`func (o *InlineObject45) SetDestinations(v []NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations)`
 
-SetAccess sets Access field to given value.
+SetDestinations sets Destinations field to given value.
 
+### HasDestinations
 
-### GetAllowedIps
+`func (o *InlineObject45) HasDestinations() bool`
 
-`func (o *InlineObject45) GetAllowedIps() []string`
-
-GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
-
-### GetAllowedIpsOk
-
-`func (o *InlineObject45) GetAllowedIpsOk() (*[]string, bool)`
-
-GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAllowedIps
-
-`func (o *InlineObject45) SetAllowedIps(v []string)`
-
-SetAllowedIps sets AllowedIps field to given value.
-
-### HasAllowedIps
-
-`func (o *InlineObject45) HasAllowedIps() bool`
-
-HasAllowedIps returns a boolean if a field has been set.
+HasDestinations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

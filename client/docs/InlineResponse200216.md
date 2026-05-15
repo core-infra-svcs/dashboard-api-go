@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
-**Api** | Pointer to [**InlineResponse200216Api**](InlineResponse200216Api.md) |  | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**ConnectionStats** | Pointer to [**NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats**](NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200216WithDefaults instantiates a new InlineResponse200216 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetMac
 
-`func (o *InlineResponse200216) GetEnabled() bool`
+`func (o *InlineResponse200216) GetMac() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetMacOk
 
-`func (o *InlineResponse200216) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200216) GetMacOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMac
 
-`func (o *InlineResponse200216) SetEnabled(v bool)`
+`func (o *InlineResponse200216) SetMac(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetMac sets Mac field to given value.
 
-### HasEnabled
+### HasMac
 
-`func (o *InlineResponse200216) HasEnabled() bool`
+`func (o *InlineResponse200216) HasMac() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetApi
+### GetConnectionStats
 
-`func (o *InlineResponse200216) GetApi() InlineResponse200216Api`
+`func (o *InlineResponse200216) GetConnectionStats() NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse200216) GetApiOk() (*InlineResponse200216Api, bool)`
+`func (o *InlineResponse200216) GetConnectionStatsOk() (*NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetConnectionStats
 
-`func (o *InlineResponse200216) SetApi(v InlineResponse200216Api)`
+`func (o *InlineResponse200216) SetConnectionStats(v NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats)`
 
-SetApi sets Api field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasApi
+### HasConnectionStats
 
-`func (o *InlineResponse200216) HasApi() bool`
+`func (o *InlineResponse200216) HasConnectionStats() bool`
 
-HasApi returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

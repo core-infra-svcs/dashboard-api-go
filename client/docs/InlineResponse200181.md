@@ -4,14 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
-**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
-**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
-**Areas** | Pointer to [**[]InlineResponse200181Areas**](InlineResponse200181Areas.md) | OSPF areas | [optional] 
-**V3** | Pointer to [**InlineResponse200181V3**](InlineResponse200181V3.md) |  | [optional] 
-**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
-**Md5AuthenticationKey** | Pointer to [**InlineResponse200181Md5AuthenticationKey**](InlineResponse200181Md5AuthenticationKey.md) |  | [optional] 
-**Vrf** | Pointer to [**InlineResponse200181Vrf**](InlineResponse200181Vrf.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**UseOobMgmt** | Pointer to **bool** | Boolean value to use out-of-band management interface when configured | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]InlineResponse200181Switches**](InlineResponse200181Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -57,180 +54,105 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetHelloTimerInSeconds
+### GetUseOobMgmt
 
-`func (o *InlineResponse200181) GetHelloTimerInSeconds() int32`
+`func (o *InlineResponse200181) GetUseOobMgmt() bool`
 
-GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
+GetUseOobMgmt returns the UseOobMgmt field if non-nil, zero value otherwise.
 
-### GetHelloTimerInSecondsOk
+### GetUseOobMgmtOk
 
-`func (o *InlineResponse200181) GetHelloTimerInSecondsOk() (*int32, bool)`
+`func (o *InlineResponse200181) GetUseOobMgmtOk() (*bool, bool)`
 
-GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
+GetUseOobMgmtOk returns a tuple with the UseOobMgmt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelloTimerInSeconds
+### SetUseOobMgmt
 
-`func (o *InlineResponse200181) SetHelloTimerInSeconds(v int32)`
+`func (o *InlineResponse200181) SetUseOobMgmt(v bool)`
 
-SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
+SetUseOobMgmt sets UseOobMgmt field to given value.
 
-### HasHelloTimerInSeconds
+### HasUseOobMgmt
 
-`func (o *InlineResponse200181) HasHelloTimerInSeconds() bool`
+`func (o *InlineResponse200181) HasUseOobMgmt() bool`
 
-HasHelloTimerInSeconds returns a boolean if a field has been set.
+HasUseOobMgmt returns a boolean if a field has been set.
 
-### GetDeadTimerInSeconds
+### GetVlanId
 
-`func (o *InlineResponse200181) GetDeadTimerInSeconds() int32`
+`func (o *InlineResponse200181) GetVlanId() int32`
 
-GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetDeadTimerInSecondsOk
+### GetVlanIdOk
 
-`func (o *InlineResponse200181) GetDeadTimerInSecondsOk() (*int32, bool)`
+`func (o *InlineResponse200181) GetVlanIdOk() (*int32, bool)`
 
-GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeadTimerInSeconds
+### SetVlanId
 
-`func (o *InlineResponse200181) SetDeadTimerInSeconds(v int32)`
+`func (o *InlineResponse200181) SetVlanId(v int32)`
 
-SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasDeadTimerInSeconds
+### HasVlanId
 
-`func (o *InlineResponse200181) HasDeadTimerInSeconds() bool`
+`func (o *InlineResponse200181) HasVlanId() bool`
 
-HasDeadTimerInSeconds returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetAreas
+### GetProtocols
 
-`func (o *InlineResponse200181) GetAreas() []InlineResponse200181Areas`
+`func (o *InlineResponse200181) GetProtocols() []string`
 
-GetAreas returns the Areas field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetAreasOk
+### GetProtocolsOk
 
-`func (o *InlineResponse200181) GetAreasOk() (*[]InlineResponse200181Areas, bool)`
+`func (o *InlineResponse200181) GetProtocolsOk() (*[]string, bool)`
 
-GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAreas
+### SetProtocols
 
-`func (o *InlineResponse200181) SetAreas(v []InlineResponse200181Areas)`
+`func (o *InlineResponse200181) SetProtocols(v []string)`
 
-SetAreas sets Areas field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasAreas
+### HasProtocols
 
-`func (o *InlineResponse200181) HasAreas() bool`
+`func (o *InlineResponse200181) HasProtocols() bool`
 
-HasAreas returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
 
-### GetV3
+### GetSwitches
 
-`func (o *InlineResponse200181) GetV3() InlineResponse200181V3`
+`func (o *InlineResponse200181) GetSwitches() []InlineResponse200181Switches`
 
-GetV3 returns the V3 field if non-nil, zero value otherwise.
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
 
-### GetV3Ok
+### GetSwitchesOk
 
-`func (o *InlineResponse200181) GetV3Ok() (*InlineResponse200181V3, bool)`
+`func (o *InlineResponse200181) GetSwitchesOk() (*[]InlineResponse200181Switches, bool)`
 
-GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3
+### SetSwitches
 
-`func (o *InlineResponse200181) SetV3(v InlineResponse200181V3)`
+`func (o *InlineResponse200181) SetSwitches(v []InlineResponse200181Switches)`
 
-SetV3 sets V3 field to given value.
+SetSwitches sets Switches field to given value.
 
-### HasV3
+### HasSwitches
 
-`func (o *InlineResponse200181) HasV3() bool`
+`func (o *InlineResponse200181) HasSwitches() bool`
 
-HasV3 returns a boolean if a field has been set.
-
-### GetMd5AuthenticationEnabled
-
-`func (o *InlineResponse200181) GetMd5AuthenticationEnabled() bool`
-
-GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
-
-### GetMd5AuthenticationEnabledOk
-
-`func (o *InlineResponse200181) GetMd5AuthenticationEnabledOk() (*bool, bool)`
-
-GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMd5AuthenticationEnabled
-
-`func (o *InlineResponse200181) SetMd5AuthenticationEnabled(v bool)`
-
-SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
-
-### HasMd5AuthenticationEnabled
-
-`func (o *InlineResponse200181) HasMd5AuthenticationEnabled() bool`
-
-HasMd5AuthenticationEnabled returns a boolean if a field has been set.
-
-### GetMd5AuthenticationKey
-
-`func (o *InlineResponse200181) GetMd5AuthenticationKey() InlineResponse200181Md5AuthenticationKey`
-
-GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
-
-### GetMd5AuthenticationKeyOk
-
-`func (o *InlineResponse200181) GetMd5AuthenticationKeyOk() (*InlineResponse200181Md5AuthenticationKey, bool)`
-
-GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMd5AuthenticationKey
-
-`func (o *InlineResponse200181) SetMd5AuthenticationKey(v InlineResponse200181Md5AuthenticationKey)`
-
-SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
-
-### HasMd5AuthenticationKey
-
-`func (o *InlineResponse200181) HasMd5AuthenticationKey() bool`
-
-HasMd5AuthenticationKey returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineResponse200181) GetVrf() InlineResponse200181Vrf`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineResponse200181) GetVrfOk() (*InlineResponse200181Vrf, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineResponse200181) SetVrf(v InlineResponse200181Vrf)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineResponse200181) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the custom performance class | 
-**MaxLatency** | Pointer to **NullableInt32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **NullableInt32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **NullableInt32** | Maximum percentage of packet loss | [optional] 
+**Name** | Pointer to **string** | The name of the SSID. | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
+**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. This parameter is only valid if the network is in routed mode. | [optional] 
+**AuthMode** | Pointer to **string** | The association control method for the SSID (&#39;open&#39;, &#39;psk&#39;, &#39;8021x-meraki&#39; or &#39;8021x-radius&#39;). | [optional] 
+**Psk** | Pointer to **string** | The passkey for the SSID. This param is only valid if the authMode is &#39;psk&#39;. | [optional] 
+**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsNumberRadiusServers**](NetworksNetworkIdApplianceSsidsNumberRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. This param is only valid if the authMode is &#39;8021x-radius&#39;. | [optional] 
+**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID (&#39;wep&#39; or &#39;wpa&#39;). This param is only valid if the authMode is &#39;psk&#39;. | [optional] 
+**WpaEncryptionMode** | Pointer to **string** | The types of WPA encryption. (&#39;WPA1 and WPA2&#39;, &#39;WPA2 only&#39;, &#39;WPA3 Transition Mode&#39; or &#39;WPA3 only&#39;). This param is only valid if (1) the authMode is &#39;psk&#39; &amp; the encryptionMode is &#39;wpa&#39; OR (2) the authMode is &#39;8021x-meraki&#39; OR (3) the authMode is &#39;8021x-radius&#39; | [optional] 
+**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
+**DhcpEnforcedDeauthentication** | Pointer to [**NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication**](NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication.md) |  | [optional] 
+**Dot11w** | Pointer to [**NetworksNetworkIdApplianceSsidsNumberDot11w**](NetworksNetworkIdApplianceSsidsNumberDot11w.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject69
 
-`func NewInlineObject69(name string, ) *InlineObject69`
+`func NewInlineObject69() *InlineObject69`
 
 NewInlineObject69 instantiates a new InlineObject69 object
 This constructor will assign default values to properties that have it defined,
@@ -47,112 +54,262 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetMaxLatency
+`func (o *InlineObject69) HasName() bool`
 
-`func (o *InlineObject69) GetMaxLatency() int32`
+HasName returns a boolean if a field has been set.
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+### GetEnabled
 
-### GetMaxLatencyOk
+`func (o *InlineObject69) GetEnabled() bool`
 
-`func (o *InlineObject69) GetMaxLatencyOk() (*int32, bool)`
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+### GetEnabledOk
+
+`func (o *InlineObject69) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetEnabled
 
-`func (o *InlineObject69) SetMaxLatency(v int32)`
+`func (o *InlineObject69) SetEnabled(v bool)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasMaxLatency
+### HasEnabled
 
-`func (o *InlineObject69) HasMaxLatency() bool`
+`func (o *InlineObject69) HasEnabled() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### SetMaxLatencyNil
+### GetDefaultVlanId
 
-`func (o *InlineObject69) SetMaxLatencyNil(b bool)`
+`func (o *InlineObject69) GetDefaultVlanId() int32`
 
- SetMaxLatencyNil sets the value for MaxLatency to be an explicit nil
+GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
 
-### UnsetMaxLatency
-`func (o *InlineObject69) UnsetMaxLatency()`
+### GetDefaultVlanIdOk
 
-UnsetMaxLatency ensures that no value is present for MaxLatency, not even an explicit nil
-### GetMaxJitter
+`func (o *InlineObject69) GetDefaultVlanIdOk() (*int32, bool)`
 
-`func (o *InlineObject69) GetMaxJitter() int32`
-
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
-
-### GetMaxJitterOk
-
-`func (o *InlineObject69) GetMaxJitterOk() (*int32, bool)`
-
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetDefaultVlanId
 
-`func (o *InlineObject69) SetMaxJitter(v int32)`
+`func (o *InlineObject69) SetDefaultVlanId(v int32)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetDefaultVlanId sets DefaultVlanId field to given value.
 
-### HasMaxJitter
+### HasDefaultVlanId
 
-`func (o *InlineObject69) HasMaxJitter() bool`
+`func (o *InlineObject69) HasDefaultVlanId() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
+HasDefaultVlanId returns a boolean if a field has been set.
 
-### SetMaxJitterNil
+### GetAuthMode
 
-`func (o *InlineObject69) SetMaxJitterNil(b bool)`
+`func (o *InlineObject69) GetAuthMode() string`
 
- SetMaxJitterNil sets the value for MaxJitter to be an explicit nil
+GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
 
-### UnsetMaxJitter
-`func (o *InlineObject69) UnsetMaxJitter()`
+### GetAuthModeOk
 
-UnsetMaxJitter ensures that no value is present for MaxJitter, not even an explicit nil
-### GetMaxLossPercentage
+`func (o *InlineObject69) GetAuthModeOk() (*string, bool)`
 
-`func (o *InlineObject69) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineObject69) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLossPercentage
+### SetAuthMode
 
-`func (o *InlineObject69) SetMaxLossPercentage(v int32)`
+`func (o *InlineObject69) SetAuthMode(v string)`
 
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
+SetAuthMode sets AuthMode field to given value.
 
-### HasMaxLossPercentage
+### HasAuthMode
 
-`func (o *InlineObject69) HasMaxLossPercentage() bool`
+`func (o *InlineObject69) HasAuthMode() bool`
 
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasAuthMode returns a boolean if a field has been set.
 
-### SetMaxLossPercentageNil
+### GetPsk
 
-`func (o *InlineObject69) SetMaxLossPercentageNil(b bool)`
+`func (o *InlineObject69) GetPsk() string`
 
- SetMaxLossPercentageNil sets the value for MaxLossPercentage to be an explicit nil
+GetPsk returns the Psk field if non-nil, zero value otherwise.
 
-### UnsetMaxLossPercentage
-`func (o *InlineObject69) UnsetMaxLossPercentage()`
+### GetPskOk
 
-UnsetMaxLossPercentage ensures that no value is present for MaxLossPercentage, not even an explicit nil
+`func (o *InlineObject69) GetPskOk() (*string, bool)`
+
+GetPskOk returns a tuple with the Psk field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPsk
+
+`func (o *InlineObject69) SetPsk(v string)`
+
+SetPsk sets Psk field to given value.
+
+### HasPsk
+
+`func (o *InlineObject69) HasPsk() bool`
+
+HasPsk returns a boolean if a field has been set.
+
+### GetRadiusServers
+
+`func (o *InlineObject69) GetRadiusServers() []NetworksNetworkIdApplianceSsidsNumberRadiusServers`
+
+GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
+
+### GetRadiusServersOk
+
+`func (o *InlineObject69) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsNumberRadiusServers, bool)`
+
+GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusServers
+
+`func (o *InlineObject69) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsNumberRadiusServers)`
+
+SetRadiusServers sets RadiusServers field to given value.
+
+### HasRadiusServers
+
+`func (o *InlineObject69) HasRadiusServers() bool`
+
+HasRadiusServers returns a boolean if a field has been set.
+
+### GetEncryptionMode
+
+`func (o *InlineObject69) GetEncryptionMode() string`
+
+GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
+
+### GetEncryptionModeOk
+
+`func (o *InlineObject69) GetEncryptionModeOk() (*string, bool)`
+
+GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEncryptionMode
+
+`func (o *InlineObject69) SetEncryptionMode(v string)`
+
+SetEncryptionMode sets EncryptionMode field to given value.
+
+### HasEncryptionMode
+
+`func (o *InlineObject69) HasEncryptionMode() bool`
+
+HasEncryptionMode returns a boolean if a field has been set.
+
+### GetWpaEncryptionMode
+
+`func (o *InlineObject69) GetWpaEncryptionMode() string`
+
+GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
+
+### GetWpaEncryptionModeOk
+
+`func (o *InlineObject69) GetWpaEncryptionModeOk() (*string, bool)`
+
+GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWpaEncryptionMode
+
+`func (o *InlineObject69) SetWpaEncryptionMode(v string)`
+
+SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
+
+### HasWpaEncryptionMode
+
+`func (o *InlineObject69) HasWpaEncryptionMode() bool`
+
+HasWpaEncryptionMode returns a boolean if a field has been set.
+
+### GetVisible
+
+`func (o *InlineObject69) GetVisible() bool`
+
+GetVisible returns the Visible field if non-nil, zero value otherwise.
+
+### GetVisibleOk
+
+`func (o *InlineObject69) GetVisibleOk() (*bool, bool)`
+
+GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisible
+
+`func (o *InlineObject69) SetVisible(v bool)`
+
+SetVisible sets Visible field to given value.
+
+### HasVisible
+
+`func (o *InlineObject69) HasVisible() bool`
+
+HasVisible returns a boolean if a field has been set.
+
+### GetDhcpEnforcedDeauthentication
+
+`func (o *InlineObject69) GetDhcpEnforcedDeauthentication() NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication`
+
+GetDhcpEnforcedDeauthentication returns the DhcpEnforcedDeauthentication field if non-nil, zero value otherwise.
+
+### GetDhcpEnforcedDeauthenticationOk
+
+`func (o *InlineObject69) GetDhcpEnforcedDeauthenticationOk() (*NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication, bool)`
+
+GetDhcpEnforcedDeauthenticationOk returns a tuple with the DhcpEnforcedDeauthentication field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpEnforcedDeauthentication
+
+`func (o *InlineObject69) SetDhcpEnforcedDeauthentication(v NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication)`
+
+SetDhcpEnforcedDeauthentication sets DhcpEnforcedDeauthentication field to given value.
+
+### HasDhcpEnforcedDeauthentication
+
+`func (o *InlineObject69) HasDhcpEnforcedDeauthentication() bool`
+
+HasDhcpEnforcedDeauthentication returns a boolean if a field has been set.
+
+### GetDot11w
+
+`func (o *InlineObject69) GetDot11w() NetworksNetworkIdApplianceSsidsNumberDot11w`
+
+GetDot11w returns the Dot11w field if non-nil, zero value otherwise.
+
+### GetDot11wOk
+
+`func (o *InlineObject69) GetDot11wOk() (*NetworksNetworkIdApplianceSsidsNumberDot11w, bool)`
+
+GetDot11wOk returns a tuple with the Dot11w field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDot11w
+
+`func (o *InlineObject69) SetDot11w(v NetworksNetworkIdApplianceSsidsNumberDot11w)`
+
+SetDot11w sets Dot11w field to given value.
+
+### HasDot11w
+
+`func (o *InlineObject69) HasDot11w() bool`
+
+HasDot11w returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

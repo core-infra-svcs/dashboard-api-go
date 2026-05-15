@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PublicIp** | **string** | The IP address that will be used to access the internal resource from the WAN | 
 **Uplink** | **string** | The physical WAN interface on which the traffic will arrive, formatted as &#39;internetN&#39; where N is an integer representing a valid uplink for the network&#39;s appliance | 
-**PortRules** | [**[]NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules**](NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules.md) | An array of associated forwarding rules | 
+**PortRules** | [**[]InlineResponse20075PortRules**](InlineResponse20075PortRules.md) | An array of associated forwarding rules | 
 
 ## Methods
 
 ### NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules
 
-`func NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules(publicIp string, uplink string, portRules []NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules, ) *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules`
+`func NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules(publicIp string, uplink string, portRules []InlineResponse20075PortRules, ) *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules`
 
 NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules instantiates a new NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules object
 This constructor will assign default values to properties that have it defined,
@@ -69,20 +69,20 @@ SetUplink sets Uplink field to given value.
 
 ### GetPortRules
 
-`func (o *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules) GetPortRules() []NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules`
+`func (o *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules) GetPortRules() []InlineResponse20075PortRules`
 
 GetPortRules returns the PortRules field if non-nil, zero value otherwise.
 
 ### GetPortRulesOk
 
-`func (o *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules) GetPortRulesOk() (*[]NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules, bool)`
+`func (o *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules) GetPortRulesOk() (*[]InlineResponse20075PortRules, bool)`
 
 GetPortRulesOk returns a tuple with the PortRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPortRules
 
-`func (o *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules) SetPortRules(v []NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules)`
+`func (o *NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules) SetPortRules(v []InlineResponse20075PortRules)`
 
 SetPortRules sets PortRules field to given value.
 

@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**ConnectionStats** | Pointer to [**InlineResponse200205ConnectionStats**](InlineResponse200205ConnectionStats.md) |  | [optional] 
+**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
+**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
+**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
+**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200205WithDefaults instantiates a new InlineResponse200205 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetIname
 
-`func (o *InlineResponse200205) GetMac() string`
+`func (o *InlineResponse200205) GetIname() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetIname returns the Iname field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetInameOk
 
-`func (o *InlineResponse200205) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200205) GetInameOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetIname
 
-`func (o *InlineResponse200205) SetMac(v string)`
+`func (o *InlineResponse200205) SetIname(v string)`
 
-SetMac sets Mac field to given value.
+SetIname sets Iname field to given value.
 
-### HasMac
+### HasIname
 
-`func (o *InlineResponse200205) HasMac() bool`
+`func (o *InlineResponse200205) HasIname() bool`
 
-HasMac returns a boolean if a field has been set.
+HasIname returns a boolean if a field has been set.
 
-### GetConnectionStats
+### GetName
 
-`func (o *InlineResponse200205) GetConnectionStats() InlineResponse200205ConnectionStats`
+`func (o *InlineResponse200205) GetName() string`
 
-GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConnectionStatsOk
+### GetNameOk
 
-`func (o *InlineResponse200205) GetConnectionStatsOk() (*InlineResponse200205ConnectionStats, bool)`
+`func (o *InlineResponse200205) GetNameOk() (*string, bool)`
 
-GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnectionStats
+### SetName
 
-`func (o *InlineResponse200205) SetConnectionStats(v InlineResponse200205ConnectionStats)`
+`func (o *InlineResponse200205) SetName(v string)`
 
-SetConnectionStats sets ConnectionStats field to given value.
+SetName sets Name field to given value.
 
-### HasConnectionStats
+### HasName
 
-`func (o *InlineResponse200205) HasConnectionStats() bool`
+`func (o *InlineResponse200205) HasName() bool`
 
-HasConnectionStats returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetIsDefault
+
+`func (o *InlineResponse200205) GetIsDefault() bool`
+
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+
+### GetIsDefaultOk
+
+`func (o *InlineResponse200205) GetIsDefaultOk() (*bool, bool)`
+
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsDefault
+
+`func (o *InlineResponse200205) SetIsDefault(v bool)`
+
+SetIsDefault sets IsDefault field to given value.
+
+### HasIsDefault
+
+`func (o *InlineResponse200205) HasIsDefault() bool`
+
+HasIsDefault returns a boolean if a field has been set.
+
+### GetVlanNames
+
+`func (o *InlineResponse200205) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
+
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
+
+### GetVlanNamesOk
+
+`func (o *InlineResponse200205) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
+
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanNames
+
+`func (o *InlineResponse200205) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
+
+SetVlanNames sets VlanNames field to given value.
+
+### HasVlanNames
+
+`func (o *InlineResponse200205) HasVlanNames() bool`
+
+HasVlanNames returns a boolean if a field has been set.
+
+### GetVlanGroups
+
+`func (o *InlineResponse200205) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
+
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
+
+### GetVlanGroupsOk
+
+`func (o *InlineResponse200205) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
+
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanGroups
+
+`func (o *InlineResponse200205) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
+
+SetVlanGroups sets VlanGroups field to given value.
+
+### HasVlanGroups
+
+`func (o *InlineResponse200205) HasVlanGroups() bool`
+
+HasVlanGroups returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

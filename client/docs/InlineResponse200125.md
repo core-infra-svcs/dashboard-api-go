@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Meraki auth user id | [optional] 
-**Email** | Pointer to **string** | Email address of the user | [optional] 
-**Name** | Pointer to **string** | Name of the user | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
-**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
-**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse200125UpgradeWindow**](InlineResponse200125UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**InlineResponse200125Products**](InlineResponse200125Products.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineResponse200125WithDefaults instantiates a new InlineResponse200125 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetUpgradeWindow
 
-`func (o *InlineResponse200125) GetId() string`
+`func (o *InlineResponse200125) GetUpgradeWindow() InlineResponse200125UpgradeWindow`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetUpgradeWindowOk
 
-`func (o *InlineResponse200125) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200125) GetUpgradeWindowOk() (*InlineResponse200125UpgradeWindow, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetUpgradeWindow
 
-`func (o *InlineResponse200125) SetId(v string)`
+`func (o *InlineResponse200125) SetUpgradeWindow(v InlineResponse200125UpgradeWindow)`
 
-SetId sets Id field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasId
+### HasUpgradeWindow
 
-`func (o *InlineResponse200125) HasId() bool`
+`func (o *InlineResponse200125) HasUpgradeWindow() bool`
 
-HasId returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetEmail
+### GetTimezone
 
-`func (o *InlineResponse200125) GetEmail() string`
+`func (o *InlineResponse200125) GetTimezone() string`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetTimezoneOk
 
-`func (o *InlineResponse200125) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse200125) GetTimezoneOk() (*string, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetTimezone
 
-`func (o *InlineResponse200125) SetEmail(v string)`
+`func (o *InlineResponse200125) SetTimezone(v string)`
 
-SetEmail sets Email field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasEmail
+### HasTimezone
 
-`func (o *InlineResponse200125) HasEmail() bool`
+`func (o *InlineResponse200125) HasTimezone() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetName
+### GetProducts
 
-`func (o *InlineResponse200125) GetName() string`
+`func (o *InlineResponse200125) GetProducts() InlineResponse200125Products`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetProductsOk
 
-`func (o *InlineResponse200125) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200125) GetProductsOk() (*InlineResponse200125Products, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetProducts
 
-`func (o *InlineResponse200125) SetName(v string)`
+`func (o *InlineResponse200125) SetProducts(v InlineResponse200125Products)`
 
-SetName sets Name field to given value.
+SetProducts sets Products field to given value.
 
-### HasName
+### HasProducts
 
-`func (o *InlineResponse200125) HasName() bool`
+`func (o *InlineResponse200125) HasProducts() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200125) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200125) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200125) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200125) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetAccountType
-
-`func (o *InlineResponse200125) GetAccountType() string`
-
-GetAccountType returns the AccountType field if non-nil, zero value otherwise.
-
-### GetAccountTypeOk
-
-`func (o *InlineResponse200125) GetAccountTypeOk() (*string, bool)`
-
-GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccountType
-
-`func (o *InlineResponse200125) SetAccountType(v string)`
-
-SetAccountType sets AccountType field to given value.
-
-### HasAccountType
-
-`func (o *InlineResponse200125) HasAccountType() bool`
-
-HasAccountType returns a boolean if a field has been set.
-
-### GetIsAdmin
-
-`func (o *InlineResponse200125) GetIsAdmin() bool`
-
-GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
-
-### GetIsAdminOk
-
-`func (o *InlineResponse200125) GetIsAdminOk() (*bool, bool)`
-
-GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsAdmin
-
-`func (o *InlineResponse200125) SetIsAdmin(v bool)`
-
-SetIsAdmin sets IsAdmin field to given value.
-
-### HasIsAdmin
-
-`func (o *InlineResponse200125) HasIsAdmin() bool`
-
-HasIsAdmin returns a boolean if a field has been set.
-
-### GetAuthorizations
-
-`func (o *InlineResponse200125) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
-
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
-
-### GetAuthorizationsOk
-
-`func (o *InlineResponse200125) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
-
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthorizations
-
-`func (o *InlineResponse200125) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
-
-SetAuthorizations sets Authorizations field to given value.
-
-### HasAuthorizations
-
-`func (o *InlineResponse200125) HasAuthorizations() bool`
-
-HasAuthorizations returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

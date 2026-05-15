@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | SLA policy ID | [optional] 
-**Name** | Pointer to **string** | SLA policy name | [optional] 
-**Uri** | Pointer to **string** | Endpoint for testing SLA | [optional] 
-**Ipsec** | Pointer to [**InlineResponse200263Ipsec**](InlineResponse200263Ipsec.md) |  | [optional] 
+**AssignmentId** | Pointer to **string** | ID of the assignment | [optional] 
+**Network** | Pointer to [**InlineResponse200263Network**](InlineResponse200263Network.md) |  | [optional] 
+**Profile** | Pointer to [**InlineResponse200263Profile**](InlineResponse200263Profile.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200263ItemsWithDefaults instantiates a new InlineResponse200263
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetAssignmentId
 
-`func (o *InlineResponse200263Items) GetId() string`
+`func (o *InlineResponse200263Items) GetAssignmentId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetAssignmentIdOk
 
-`func (o *InlineResponse200263Items) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200263Items) GetAssignmentIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetAssignmentId
 
-`func (o *InlineResponse200263Items) SetId(v string)`
+`func (o *InlineResponse200263Items) SetAssignmentId(v string)`
 
-SetId sets Id field to given value.
+SetAssignmentId sets AssignmentId field to given value.
 
-### HasId
+### HasAssignmentId
 
-`func (o *InlineResponse200263Items) HasId() bool`
+`func (o *InlineResponse200263Items) HasAssignmentId() bool`
 
-HasId returns a boolean if a field has been set.
+HasAssignmentId returns a boolean if a field has been set.
 
-### GetName
+### GetNetwork
 
-`func (o *InlineResponse200263Items) GetName() string`
+`func (o *InlineResponse200263Items) GetNetwork() InlineResponse200263Network`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkOk
 
-`func (o *InlineResponse200263Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200263Items) GetNetworkOk() (*InlineResponse200263Network, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetwork
 
-`func (o *InlineResponse200263Items) SetName(v string)`
+`func (o *InlineResponse200263Items) SetNetwork(v InlineResponse200263Network)`
 
-SetName sets Name field to given value.
+SetNetwork sets Network field to given value.
 
-### HasName
+### HasNetwork
 
-`func (o *InlineResponse200263Items) HasName() bool`
+`func (o *InlineResponse200263Items) HasNetwork() bool`
 
-HasName returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetUri
+### GetProfile
 
-`func (o *InlineResponse200263Items) GetUri() string`
+`func (o *InlineResponse200263Items) GetProfile() InlineResponse200263Profile`
 
-GetUri returns the Uri field if non-nil, zero value otherwise.
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-### GetUriOk
+### GetProfileOk
 
-`func (o *InlineResponse200263Items) GetUriOk() (*string, bool)`
+`func (o *InlineResponse200263Items) GetProfileOk() (*InlineResponse200263Profile, bool)`
 
-GetUriOk returns a tuple with the Uri field if it's non-nil, zero value otherwise
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUri
+### SetProfile
 
-`func (o *InlineResponse200263Items) SetUri(v string)`
+`func (o *InlineResponse200263Items) SetProfile(v InlineResponse200263Profile)`
 
-SetUri sets Uri field to given value.
+SetProfile sets Profile field to given value.
 
-### HasUri
+### HasProfile
 
-`func (o *InlineResponse200263Items) HasUri() bool`
+`func (o *InlineResponse200263Items) HasProfile() bool`
 
-HasUri returns a boolean if a field has been set.
-
-### GetIpsec
-
-`func (o *InlineResponse200263Items) GetIpsec() InlineResponse200263Ipsec`
-
-GetIpsec returns the Ipsec field if non-nil, zero value otherwise.
-
-### GetIpsecOk
-
-`func (o *InlineResponse200263Items) GetIpsecOk() (*InlineResponse200263Ipsec, bool)`
-
-GetIpsecOk returns a tuple with the Ipsec field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpsec
-
-`func (o *InlineResponse200263Items) SetIpsec(v InlineResponse200263Ipsec)`
-
-SetIpsec sets Ipsec field to given value.
-
-### HasIpsec
-
-`func (o *InlineResponse200263Items) HasIpsec() bool`
-
-HasIpsec returns a boolean if a field has been set.
+HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

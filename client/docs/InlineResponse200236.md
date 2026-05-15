@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
+**Exception** | Pointer to [**InlineResponse200236Exception**](InlineResponse200236Exception.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200236Rules**](InlineResponse200236Rules.md) | Bonjour forwarding rules | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200236
 
-`func NewInlineResponse200236(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200236`
+`func NewInlineResponse200236() *InlineResponse200236`
 
 NewInlineResponse200236 instantiates a new InlineResponse200236 object
 This constructor will assign default values to properties that have it defined,
@@ -30,150 +27,80 @@ NewInlineResponse200236WithDefaults instantiates a new InlineResponse200236 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnabled
 
-`func (o *InlineResponse200236) GetId() string`
+`func (o *InlineResponse200236) GetEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200236) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200236) GetEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnabled
 
-`func (o *InlineResponse200236) SetId(v string)`
+`func (o *InlineResponse200236) SetEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasId
+### HasEnabled
 
-`func (o *InlineResponse200236) HasId() bool`
+`func (o *InlineResponse200236) HasEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetException
 
-`func (o *InlineResponse200236) GetOrganizationId() string`
+`func (o *InlineResponse200236) GetException() InlineResponse200236Exception`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetException returns the Exception field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetExceptionOk
 
-`func (o *InlineResponse200236) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200236) GetExceptionOk() (*InlineResponse200236Exception, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetException
 
-`func (o *InlineResponse200236) SetOrganizationId(v string)`
+`func (o *InlineResponse200236) SetException(v InlineResponse200236Exception)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetException sets Exception field to given value.
 
-### HasOrganizationId
+### HasException
 
-`func (o *InlineResponse200236) HasOrganizationId() bool`
+`func (o *InlineResponse200236) HasException() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasException returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetRules
 
-`func (o *InlineResponse200236) GetConfirmed() bool`
+`func (o *InlineResponse200236) GetRules() []InlineResponse200236Rules`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetRulesOk
 
-`func (o *InlineResponse200236) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse200236) GetRulesOk() (*[]InlineResponse200236Rules, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetRules
 
-`func (o *InlineResponse200236) SetConfirmed(v bool)`
+`func (o *InlineResponse200236) SetRules(v []InlineResponse200236Rules)`
 
-SetConfirmed sets Confirmed field to given value.
+SetRules sets Rules field to given value.
 
-### HasConfirmed
+### HasRules
 
-`func (o *InlineResponse200236) HasConfirmed() bool`
+`func (o *InlineResponse200236) HasRules() bool`
 
-HasConfirmed returns a boolean if a field has been set.
-
-### GetSynchronous
-
-`func (o *InlineResponse200236) GetSynchronous() bool`
-
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
-
-### GetSynchronousOk
-
-`func (o *InlineResponse200236) GetSynchronousOk() (*bool, bool)`
-
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSynchronous
-
-`func (o *InlineResponse200236) SetSynchronous(v bool)`
-
-SetSynchronous sets Synchronous field to given value.
-
-### HasSynchronous
-
-`func (o *InlineResponse200236) HasSynchronous() bool`
-
-HasSynchronous returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200236) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200236) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200236) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200236) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetActions
-
-`func (o *InlineResponse200236) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *InlineResponse200236) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *InlineResponse200236) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
-
-SetActions sets Actions field to given value.
-
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

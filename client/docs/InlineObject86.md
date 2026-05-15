@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
-**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | 
-**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
+**Enabled** | **bool** | Enable warm spare | 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
+**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
+**VirtualIp1** | Pointer to **string** | The WAN 1 shared IP | [optional] 
+**VirtualIp2** | Pointer to **string** | The WAN 2 shared IP | [optional] 
 
 ## Methods
 
 ### NewInlineObject86
 
-`func NewInlineObject86(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid1, ) *InlineObject86`
+`func NewInlineObject86(enabled bool, ) *InlineObject86`
 
 NewInlineObject86 instantiates a new InlineObject86 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +29,125 @@ NewInlineObject86WithDefaults instantiates a new InlineObject86 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject86) GetName() string`
+`func (o *InlineObject86) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject86) GetNameOk() (*string, bool)`
+`func (o *InlineObject86) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject86) SetName(v string)`
+`func (o *InlineObject86) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
 
-### GetSsid
+### GetSpareSerial
 
-`func (o *InlineObject86) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid1`
+`func (o *InlineObject86) GetSpareSerial() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetSpareSerialOk
 
-`func (o *InlineObject86) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid1, bool)`
+`func (o *InlineObject86) GetSpareSerialOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetSpareSerial
 
-`func (o *InlineObject86) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid1)`
+`func (o *InlineObject86) SetSpareSerial(v string)`
 
-SetSsid sets Ssid field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
+### HasSpareSerial
 
-### GetIdentity
+`func (o *InlineObject86) HasSpareSerial() bool`
 
-`func (o *InlineObject86) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+HasSpareSerial returns a boolean if a field has been set.
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+### GetUplinkMode
 
-### GetIdentityOk
+`func (o *InlineObject86) GetUplinkMode() string`
 
-`func (o *InlineObject86) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+### GetUplinkModeOk
+
+`func (o *InlineObject86) GetUplinkModeOk() (*string, bool)`
+
+GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetUplinkMode
 
-`func (o *InlineObject86) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+`func (o *InlineObject86) SetUplinkMode(v string)`
 
-SetIdentity sets Identity field to given value.
+SetUplinkMode sets UplinkMode field to given value.
 
-### HasIdentity
+### HasUplinkMode
 
-`func (o *InlineObject86) HasIdentity() bool`
+`func (o *InlineObject86) HasUplinkMode() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasUplinkMode returns a boolean if a field has been set.
+
+### GetVirtualIp1
+
+`func (o *InlineObject86) GetVirtualIp1() string`
+
+GetVirtualIp1 returns the VirtualIp1 field if non-nil, zero value otherwise.
+
+### GetVirtualIp1Ok
+
+`func (o *InlineObject86) GetVirtualIp1Ok() (*string, bool)`
+
+GetVirtualIp1Ok returns a tuple with the VirtualIp1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualIp1
+
+`func (o *InlineObject86) SetVirtualIp1(v string)`
+
+SetVirtualIp1 sets VirtualIp1 field to given value.
+
+### HasVirtualIp1
+
+`func (o *InlineObject86) HasVirtualIp1() bool`
+
+HasVirtualIp1 returns a boolean if a field has been set.
+
+### GetVirtualIp2
+
+`func (o *InlineObject86) GetVirtualIp2() string`
+
+GetVirtualIp2 returns the VirtualIp2 field if non-nil, zero value otherwise.
+
+### GetVirtualIp2Ok
+
+`func (o *InlineObject86) GetVirtualIp2Ok() (*string, bool)`
+
+GetVirtualIp2Ok returns a tuple with the VirtualIp2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualIp2
+
+`func (o *InlineObject86) SetVirtualIp2(v string)`
+
+SetVirtualIp2 sets VirtualIp2 field to given value.
+
+### HasVirtualIp2
+
+`func (o *InlineObject86) HasVirtualIp2() bool`
+
+HasVirtualIp2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

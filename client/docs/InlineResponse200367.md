@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200367Counts**](InlineResponse200367Counts.md) |  | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200366**](InlineResponse200366.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200366**](InlineResponse200366.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200367WithDefaults instantiates a new InlineResponse200367 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetRemainderLicenses
 
-`func (o *InlineResponse200367) GetCounts() InlineResponse200367Counts`
+`func (o *InlineResponse200367) GetRemainderLicenses() []InlineResponse200366`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200367) GetCountsOk() (*InlineResponse200367Counts, bool)`
+`func (o *InlineResponse200367) GetRemainderLicensesOk() (*[]InlineResponse200366, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetRemainderLicenses
 
-`func (o *InlineResponse200367) SetCounts(v InlineResponse200367Counts)`
+`func (o *InlineResponse200367) SetRemainderLicenses(v []InlineResponse200366)`
 
-SetCounts sets Counts field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasCounts
+### HasRemainderLicenses
 
-`func (o *InlineResponse200367) HasCounts() bool`
+`func (o *InlineResponse200367) HasRemainderLicenses() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
+
+### GetMovedLicenses
+
+`func (o *InlineResponse200367) GetMovedLicenses() []InlineResponse200366`
+
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+
+### GetMovedLicensesOk
+
+`func (o *InlineResponse200367) GetMovedLicensesOk() (*[]InlineResponse200366, bool)`
+
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMovedLicenses
+
+`func (o *InlineResponse200367) SetMovedLicenses(v []InlineResponse200366)`
+
+SetMovedLicenses sets MovedLicenses field to given value.
+
+### HasMovedLicenses
+
+`func (o *InlineResponse200367) HasMovedLicenses() bool`
+
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

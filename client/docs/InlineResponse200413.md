@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice**](OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice.md) |  | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200413WithDefaults instantiates a new InlineResponse200413 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetModel
 
-`func (o *InlineResponse200413) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200413) GetModel() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetModelOk
 
-`func (o *InlineResponse200413) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200413) GetModelOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetModel
 
-`func (o *InlineResponse200413) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200413) SetModel(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetModel sets Model field to given value.
 
-### HasDownstream
+### HasModel
 
-`func (o *InlineResponse200413) HasDownstream() bool`
+`func (o *InlineResponse200413) HasModel() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetUpstream
+### GetCount
 
-`func (o *InlineResponse200413) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200413) GetCount() int32`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetCountOk
 
-`func (o *InlineResponse200413) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200413) GetCountOk() (*int32, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetCount
 
-`func (o *InlineResponse200413) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200413) SetCount(v int32)`
 
-SetUpstream sets Upstream field to given value.
+SetCount sets Count field to given value.
 
-### HasUpstream
+### HasCount
 
-`func (o *InlineResponse200413) HasUpstream() bool`
+`func (o *InlineResponse200413) HasCount() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
 
-### GetNetwork
+### GetUsage
 
-`func (o *InlineResponse200413) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200413) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetUsageOk
 
-`func (o *InlineResponse200413) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200413) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetUsage
 
-`func (o *InlineResponse200413) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200413) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
 
-SetNetwork sets Network field to given value.
+SetUsage sets Usage field to given value.
 
-### HasNetwork
+### HasUsage
 
-`func (o *InlineResponse200413) HasNetwork() bool`
+`func (o *InlineResponse200413) HasUsage() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetDevice
-
-`func (o *InlineResponse200413) GetDevice() OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice`
-
-GetDevice returns the Device field if non-nil, zero value otherwise.
-
-### GetDeviceOk
-
-`func (o *InlineResponse200413) GetDeviceOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevice
-
-`func (o *InlineResponse200413) SetDevice(v OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice)`
-
-SetDevice sets Device field to given value.
-
-### HasDevice
-
-`func (o *InlineResponse200413) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

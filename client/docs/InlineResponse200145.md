@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
-**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
-**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
+**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
+**Counts** | Pointer to [**InlineResponse200145Counts**](InlineResponse200145Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200145WithDefaults instantiates a new InlineResponse200145 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetSupportedMetrics
 
-`func (o *InlineResponse200145) GetReceived() float32`
+`func (o *InlineResponse200145) GetSupportedMetrics() []string`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetSupportedMetricsOk
 
-`func (o *InlineResponse200145) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse200145) GetSupportedMetricsOk() (*[]string, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetSupportedMetrics
 
-`func (o *InlineResponse200145) SetReceived(v float32)`
+`func (o *InlineResponse200145) SetSupportedMetrics(v []string)`
 
-SetReceived sets Received field to given value.
+SetSupportedMetrics sets SupportedMetrics field to given value.
 
-### HasReceived
+### HasSupportedMetrics
 
-`func (o *InlineResponse200145) HasReceived() bool`
+`func (o *InlineResponse200145) HasSupportedMetrics() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasSupportedMetrics returns a boolean if a field has been set.
 
-### GetSent
+### GetCounts
 
-`func (o *InlineResponse200145) GetSent() float32`
+`func (o *InlineResponse200145) GetCounts() InlineResponse200145Counts`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetCountsOk
 
-`func (o *InlineResponse200145) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse200145) GetCountsOk() (*InlineResponse200145Counts, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetCounts
 
-`func (o *InlineResponse200145) SetSent(v float32)`
+`func (o *InlineResponse200145) SetCounts(v InlineResponse200145Counts)`
 
-SetSent sets Sent field to given value.
+SetCounts sets Counts field to given value.
 
-### HasSent
+### HasCounts
 
-`func (o *InlineResponse200145) HasSent() bool`
+`func (o *InlineResponse200145) HasCounts() bool`
 
-HasSent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200145) GetTs() string`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200145) GetTsOk() (*string, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200145) SetTs(v string)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200145) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

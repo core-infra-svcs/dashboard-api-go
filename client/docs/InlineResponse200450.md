@@ -1,0 +1,82 @@
+# InlineResponse200450
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Items** | Pointer to [**[]InlineResponse200231**](InlineResponse200231.md) | List of RRM settings | [optional] 
+**Meta** | Pointer to [**InlineResponse200450Meta**](InlineResponse200450Meta.md) |  | [optional] 
+
+## Methods
+
+### NewInlineResponse200450
+
+`func NewInlineResponse200450() *InlineResponse200450`
+
+NewInlineResponse200450 instantiates a new InlineResponse200450 object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewInlineResponse200450WithDefaults
+
+`func NewInlineResponse200450WithDefaults() *InlineResponse200450`
+
+NewInlineResponse200450WithDefaults instantiates a new InlineResponse200450 object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetItems
+
+`func (o *InlineResponse200450) GetItems() []InlineResponse200231`
+
+GetItems returns the Items field if non-nil, zero value otherwise.
+
+### GetItemsOk
+
+`func (o *InlineResponse200450) GetItemsOk() (*[]InlineResponse200231, bool)`
+
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItems
+
+`func (o *InlineResponse200450) SetItems(v []InlineResponse200231)`
+
+SetItems sets Items field to given value.
+
+### HasItems
+
+`func (o *InlineResponse200450) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200450) GetMeta() InlineResponse200450Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200450) GetMetaOk() (*InlineResponse200450Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200450) SetMeta(v InlineResponse200450Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200450) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

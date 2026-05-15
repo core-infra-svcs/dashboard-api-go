@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20124Request**](InlineResponse20124Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
-**DoorLocks** | Pointer to [**[]InlineResponse200432DoorLocks**](InlineResponse200432DoorLocks.md) | Door locks | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
+**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200432WithDefaults instantiates a new InlineResponse200432 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetNetwork
 
-`func (o *InlineResponse200432) GetDisenrollmentId() string`
+`func (o *InlineResponse200432) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200432) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse200432) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetNetwork
 
-`func (o *InlineResponse200432) SetDisenrollmentId(v string)`
+`func (o *InlineResponse200432) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasDisenrollmentId
+### HasNetwork
 
-`func (o *InlineResponse200432) HasDisenrollmentId() bool`
+`func (o *InlineResponse200432) HasNetwork() bool`
 
-HasDisenrollmentId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetUrl
+### GetByBand
 
-`func (o *InlineResponse200432) GetUrl() string`
+`func (o *InlineResponse200432) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetByBand returns the ByBand field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetByBandOk
 
-`func (o *InlineResponse200432) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200432) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetByBand
 
-`func (o *InlineResponse200432) SetUrl(v string)`
+`func (o *InlineResponse200432) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
 
-SetUrl sets Url field to given value.
+SetByBand sets ByBand field to given value.
 
-### HasUrl
+### HasByBand
 
-`func (o *InlineResponse200432) HasUrl() bool`
+`func (o *InlineResponse200432) HasByBand() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineResponse200432) GetRequest() InlineResponse20124Request`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineResponse200432) GetRequestOk() (*InlineResponse20124Request, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineResponse200432) SetRequest(v InlineResponse20124Request)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineResponse200432) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200432) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200432) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200432) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200432) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetDoorLocks
-
-`func (o *InlineResponse200432) GetDoorLocks() []InlineResponse200432DoorLocks`
-
-GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
-
-### GetDoorLocksOk
-
-`func (o *InlineResponse200432) GetDoorLocksOk() (*[]InlineResponse200432DoorLocks, bool)`
-
-GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDoorLocks
-
-`func (o *InlineResponse200432) SetDoorLocks(v []InlineResponse200432DoorLocks)`
-
-SetDoorLocks sets DoorLocks field to given value.
-
-### HasDoorLocks
-
-`func (o *InlineResponse200432) HasDoorLocks() bool`
-
-HasDoorLocks returns a boolean if a field has been set.
+HasByBand returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

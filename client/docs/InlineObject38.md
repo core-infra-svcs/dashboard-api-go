@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Channel** | Pointer to **string** | Desired ESL channel for the device, or &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
+**Enabled** | **bool** | Enable or disable warm spare for a switch | 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
 ### NewInlineObject38
 
-`func NewInlineObject38() *InlineObject38`
+`func NewInlineObject38(enabled bool, ) *InlineObject38`
 
 NewInlineObject38 instantiates a new InlineObject38 object
 This constructor will assign default values to properties that have it defined,
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewInlineObject38WithDefaults instantiates a new InlineObject38 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetChannel
-
-`func (o *InlineObject38) GetChannel() string`
-
-GetChannel returns the Channel field if non-nil, zero value otherwise.
-
-### GetChannelOk
-
-`func (o *InlineObject38) GetChannelOk() (*string, bool)`
-
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetChannel
-
-`func (o *InlineObject38) SetChannel(v string)`
-
-SetChannel sets Channel field to given value.
-
-### HasChannel
-
-`func (o *InlineObject38) HasChannel() bool`
-
-HasChannel returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -70,11 +45,31 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject38) HasEnabled() bool`
+### GetSpareSerial
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject38) GetSpareSerial() string`
+
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+
+### GetSpareSerialOk
+
+`func (o *InlineObject38) GetSpareSerialOk() (*string, bool)`
+
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpareSerial
+
+`func (o *InlineObject38) SetSpareSerial(v string)`
+
+SetSpareSerial sets SpareSerial field to given value.
+
+### HasSpareSerial
+
+`func (o *InlineObject38) HasSpareSerial() bool`
+
+HasSpareSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

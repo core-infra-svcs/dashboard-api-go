@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleIds** | Pointer to **[]string** | Qos Rule ids | [optional] 
+**ResultingNetworks** | Pointer to [**[]InlineResponse20061**](InlineResponse20061.md) | Networks after the split | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200178WithDefaults instantiates a new InlineResponse200178 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRuleIds
+### GetResultingNetworks
 
-`func (o *InlineResponse200178) GetRuleIds() []string`
+`func (o *InlineResponse200178) GetResultingNetworks() []InlineResponse20061`
 
-GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
+GetResultingNetworks returns the ResultingNetworks field if non-nil, zero value otherwise.
 
-### GetRuleIdsOk
+### GetResultingNetworksOk
 
-`func (o *InlineResponse200178) GetRuleIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200178) GetResultingNetworksOk() (*[]InlineResponse20061, bool)`
 
-GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
+GetResultingNetworksOk returns a tuple with the ResultingNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleIds
+### SetResultingNetworks
 
-`func (o *InlineResponse200178) SetRuleIds(v []string)`
+`func (o *InlineResponse200178) SetResultingNetworks(v []InlineResponse20061)`
 
-SetRuleIds sets RuleIds field to given value.
+SetResultingNetworks sets ResultingNetworks field to given value.
 
-### HasRuleIds
+### HasResultingNetworks
 
-`func (o *InlineResponse200178) HasRuleIds() bool`
+`func (o *InlineResponse200178) HasResultingNetworks() bool`
 
-HasRuleIds returns a boolean if a field has been set.
+HasResultingNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

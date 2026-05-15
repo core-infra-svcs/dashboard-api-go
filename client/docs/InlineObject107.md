@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Json** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson**](NetworksNetworkIdFirmwareUpgradesStagedStagesJson.md) | Array of Staged Upgrade Groups | [optional] 
+**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProducts**](NetworksNetworkIdFirmwareUpgradesStagedEventsProducts.md) |  | [optional] 
+**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
 
 ## Methods
 
 ### NewInlineObject107
 
-`func NewInlineObject107() *InlineObject107`
+`func NewInlineObject107(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject107`
 
 NewInlineObject107 instantiates a new InlineObject107 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,50 @@ NewInlineObject107WithDefaults instantiates a new InlineObject107 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJson
+### GetProducts
 
-`func (o *InlineObject107) GetJson() []NetworksNetworkIdFirmwareUpgradesStagedStagesJson`
+`func (o *InlineObject107) GetProducts() NetworksNetworkIdFirmwareUpgradesStagedEventsProducts`
 
-GetJson returns the Json field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetJsonOk
+### GetProductsOk
 
-`func (o *InlineObject107) GetJsonOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson, bool)`
+`func (o *InlineObject107) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProducts, bool)`
 
-GetJsonOk returns a tuple with the Json field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJson
+### SetProducts
 
-`func (o *InlineObject107) SetJson(v []NetworksNetworkIdFirmwareUpgradesStagedStagesJson)`
+`func (o *InlineObject107) SetProducts(v NetworksNetworkIdFirmwareUpgradesStagedEventsProducts)`
 
-SetJson sets Json field to given value.
+SetProducts sets Products field to given value.
 
-### HasJson
+### HasProducts
 
-`func (o *InlineObject107) HasJson() bool`
+`func (o *InlineObject107) HasProducts() bool`
 
-HasJson returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
+
+### GetStages
+
+`func (o *InlineObject107) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
+
+GetStages returns the Stages field if non-nil, zero value otherwise.
+
+### GetStagesOk
+
+`func (o *InlineObject107) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
+
+GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStages
+
+`func (o *InlineObject107) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
+
+SetStages sets Stages field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

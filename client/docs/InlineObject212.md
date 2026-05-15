@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
-**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
-**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
-**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200243Ranges**](InlineResponse200243Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200243RangesInSeconds**](InlineResponse200243RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -53,80 +52,55 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetIotController
+### GetRanges
 
-`func (o *InlineObject212) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
+`func (o *InlineObject212) GetRanges() []InlineResponse200243Ranges`
 
-GetIotController returns the IotController field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetIotControllerOk
+### GetRangesOk
 
-`func (o *InlineObject212) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
+`func (o *InlineObject212) GetRangesOk() (*[]InlineResponse200243Ranges, bool)`
 
-GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIotController
+### SetRanges
 
-`func (o *InlineObject212) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
+`func (o *InlineObject212) SetRanges(v []InlineResponse200243Ranges)`
 
-SetIotController sets IotController field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasIotController
+### HasRanges
 
-`func (o *InlineObject212) HasIotController() bool`
+`func (o *InlineObject212) HasRanges() bool`
 
-HasIotController returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetLockManagement
+### GetRangesInSeconds
 
-`func (o *InlineObject212) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
+`func (o *InlineObject212) GetRangesInSeconds() []InlineResponse200243RangesInSeconds`
 
-GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetLockManagementOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject212) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
+`func (o *InlineObject212) GetRangesInSecondsOk() (*[]InlineResponse200243RangesInSeconds, bool)`
 
-GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLockManagement
+### SetRangesInSeconds
 
-`func (o *InlineObject212) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
+`func (o *InlineObject212) SetRangesInSeconds(v []InlineResponse200243RangesInSeconds)`
 
-SetLockManagement sets LockManagement field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasLockManagement
+### HasRangesInSeconds
 
-`func (o *InlineObject212) HasLockManagement() bool`
+`func (o *InlineObject212) HasRangesInSeconds() bool`
 
-HasLockManagement returns a boolean if a field has been set.
-
-### GetDefaults
-
-`func (o *InlineObject212) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
-
-GetDefaults returns the Defaults field if non-nil, zero value otherwise.
-
-### GetDefaultsOk
-
-`func (o *InlineObject212) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
-
-GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaults
-
-`func (o *InlineObject212) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
-
-SetDefaults sets Defaults field to given value.
-
-### HasDefaults
-
-`func (o *InlineObject212) HasDefaults() bool`
-
-HasDefaults returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

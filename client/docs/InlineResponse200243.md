@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The alert config ID | [optional] 
-**Type** | Pointer to **string** | The alert type | [optional] 
-**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
-**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | [optional] 
-**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
-**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200243Ranges**](InlineResponse200243Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200243RangesInSeconds**](InlineResponse200243RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -30,56 +26,6 @@ will change when the set of required properties is changed
 NewInlineResponse200243WithDefaults instantiates a new InlineResponse200243 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineResponse200243) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200243) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200243) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200243) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200243) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200243) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200243) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200243) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -106,105 +52,55 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetAlertCondition
+### GetRanges
 
-`func (o *InlineResponse200243) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
+`func (o *InlineResponse200243) GetRanges() []InlineResponse200243Ranges`
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetAlertConditionOk
+### GetRangesOk
 
-`func (o *InlineResponse200243) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
+`func (o *InlineResponse200243) GetRangesOk() (*[]InlineResponse200243Ranges, bool)`
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetRanges
 
-`func (o *InlineResponse200243) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
+`func (o *InlineResponse200243) SetRanges(v []InlineResponse200243Ranges)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasAlertCondition
+### HasRanges
 
-`func (o *InlineResponse200243) HasAlertCondition() bool`
+`func (o *InlineResponse200243) HasRanges() bool`
 
-HasAlertCondition returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetRecipients
+### GetRangesInSeconds
 
-`func (o *InlineResponse200243) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+`func (o *InlineResponse200243) GetRangesInSeconds() []InlineResponse200243RangesInSeconds`
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetRecipientsOk
+### GetRangesInSecondsOk
 
-`func (o *InlineResponse200243) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+`func (o *InlineResponse200243) GetRangesInSecondsOk() (*[]InlineResponse200243RangesInSeconds, bool)`
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetRangesInSeconds
 
-`func (o *InlineResponse200243) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+`func (o *InlineResponse200243) SetRangesInSeconds(v []InlineResponse200243RangesInSeconds)`
 
-SetRecipients sets Recipients field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasRecipients
+### HasRangesInSeconds
 
-`func (o *InlineResponse200243) HasRecipients() bool`
+`func (o *InlineResponse200243) HasRangesInSeconds() bool`
 
-HasRecipients returns a boolean if a field has been set.
-
-### GetNetworkTags
-
-`func (o *InlineResponse200243) GetNetworkTags() []string`
-
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
-
-### GetNetworkTagsOk
-
-`func (o *InlineResponse200243) GetNetworkTagsOk() (*[]string, bool)`
-
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkTags
-
-`func (o *InlineResponse200243) SetNetworkTags(v []string)`
-
-SetNetworkTags sets NetworkTags field to given value.
-
-### HasNetworkTags
-
-`func (o *InlineResponse200243) HasNetworkTags() bool`
-
-HasNetworkTags returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200243) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200243) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200243) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200243) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

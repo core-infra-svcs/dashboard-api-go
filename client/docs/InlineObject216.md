@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
+**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject216WithDefaults instantiates a new InlineObject216 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetEnabled
 
-`func (o *InlineObject216) GetConfirmed() bool`
+`func (o *InlineObject216) GetEnabled() bool`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetEnabledOk
 
-`func (o *InlineObject216) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject216) GetEnabledOk() (*bool, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetEnabled
 
-`func (o *InlineObject216) SetConfirmed(v bool)`
+`func (o *InlineObject216) SetEnabled(v bool)`
 
-SetConfirmed sets Confirmed field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConfirmed
+### HasEnabled
 
-`func (o *InlineObject216) HasConfirmed() bool`
+`func (o *InlineObject216) HasEnabled() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetIotController
 
-`func (o *InlineObject216) GetSynchronous() bool`
+`func (o *InlineObject216) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetIotController returns the IotController field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetIotControllerOk
 
-`func (o *InlineObject216) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject216) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetIotController
 
-`func (o *InlineObject216) SetSynchronous(v bool)`
+`func (o *InlineObject216) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
 
-SetSynchronous sets Synchronous field to given value.
+SetIotController sets IotController field to given value.
 
-### HasSynchronous
+### HasIotController
 
-`func (o *InlineObject216) HasSynchronous() bool`
+`func (o *InlineObject216) HasIotController() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasIotController returns a boolean if a field has been set.
+
+### GetLockManagement
+
+`func (o *InlineObject216) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
+
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+
+### GetLockManagementOk
+
+`func (o *InlineObject216) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
+
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLockManagement
+
+`func (o *InlineObject216) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
+
+SetLockManagement sets LockManagement field to given value.
+
+### HasLockManagement
+
+`func (o *InlineObject216) HasLockManagement() bool`
+
+HasLockManagement returns a boolean if a field has been set.
+
+### GetDefaults
+
+`func (o *InlineObject216) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
+
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
+
+### GetDefaultsOk
+
+`func (o *InlineObject216) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
+
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaults
+
+`func (o *InlineObject216) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
+
+SetDefaults sets Defaults field to given value.
+
+### HasDefaults
+
+`func (o *InlineObject216) HasDefaults() bool`
+
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

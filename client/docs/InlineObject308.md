@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
-**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy.md) |  | 
+**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to remove | 
 
 ## Methods
 
 ### NewInlineObject308
 
-`func NewInlineObject308() *InlineObject308`
+`func NewInlineObject308(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject308`
 
 NewInlineObject308 instantiates a new InlineObject308 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject308WithDefaults instantiates a new InlineObject308 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPolicy
 
-`func (o *InlineObject308) GetName() string`
+`func (o *InlineObject308) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPolicyOk
 
-`func (o *InlineObject308) GetNameOk() (*string, bool)`
+`func (o *InlineObject308) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPolicy
 
-`func (o *InlineObject308) SetName(v string)`
+`func (o *InlineObject308) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy)`
 
-SetName sets Name field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasName
 
-`func (o *InlineObject308) HasName() bool`
+### GetVlans
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject308) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
 
-### GetObjectIds
+GetVlans returns the Vlans field if non-nil, zero value otherwise.
 
-`func (o *InlineObject308) GetObjectIds() []string`
+### GetVlansOk
 
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+`func (o *InlineObject308) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
 
-### GetObjectIdsOk
-
-`func (o *InlineObject308) GetObjectIdsOk() (*[]string, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetObjectIds
+### SetVlans
 
-`func (o *InlineObject308) SetObjectIds(v []string)`
+`func (o *InlineObject308) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
 
-SetObjectIds sets ObjectIds field to given value.
+SetVlans sets Vlans field to given value.
 
-### HasObjectIds
-
-`func (o *InlineObject308) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

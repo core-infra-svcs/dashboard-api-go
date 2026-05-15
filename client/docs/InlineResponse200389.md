@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200389Items**](InlineResponse200389Items.md) | List of enrolled sites | [optional] 
+**Meta** | Pointer to [**InlineResponse200263Meta**](InlineResponse200263Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200389WithDefaults instantiates a new InlineResponse200389 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetItems
 
-`func (o *InlineResponse200389) GetModel() string`
+`func (o *InlineResponse200389) GetItems() []InlineResponse200389Items`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetItemsOk
 
-`func (o *InlineResponse200389) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200389) GetItemsOk() (*[]InlineResponse200389Items, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetItems
 
-`func (o *InlineResponse200389) SetModel(v string)`
+`func (o *InlineResponse200389) SetItems(v []InlineResponse200389Items)`
 
-SetModel sets Model field to given value.
+SetItems sets Items field to given value.
 
-### HasModel
+### HasItems
 
-`func (o *InlineResponse200389) HasModel() bool`
+`func (o *InlineResponse200389) HasItems() bool`
 
-HasModel returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetCount
+### GetMeta
 
-`func (o *InlineResponse200389) GetCount() int32`
+`func (o *InlineResponse200389) GetMeta() InlineResponse200263Meta`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetMetaOk
 
-`func (o *InlineResponse200389) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200389) GetMetaOk() (*InlineResponse200263Meta, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetMeta
 
-`func (o *InlineResponse200389) SetCount(v int32)`
+`func (o *InlineResponse200389) SetMeta(v InlineResponse200263Meta)`
 
-SetCount sets Count field to given value.
+SetMeta sets Meta field to given value.
 
-### HasCount
+### HasMeta
 
-`func (o *InlineResponse200389) HasCount() bool`
+`func (o *InlineResponse200389) HasMeta() bool`
 
-HasCount returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200389) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200389) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200389) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200389) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

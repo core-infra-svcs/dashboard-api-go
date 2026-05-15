@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceContentFiltering
 
-> InlineResponse20060 GetNetworkApplianceContentFiltering(ctx, networkId).Execute()
+> InlineResponse20065 GetNetworkApplianceContentFiltering(ctx, networkId).Execute()
 
 Return the content filtering settings for an MX network
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ContentFilteringApi.GetNetworkApplianceContentFiltering``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceContentFiltering`: InlineResponse20060
+    // response from `GetNetworkApplianceContentFiltering`: InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `ContentFilteringApi.GetNetworkApplianceContentFiltering`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceContentFilteringCategories
 
-> map[string]interface{} GetNetworkApplianceContentFilteringCategories(ctx, networkId).Execute()
+> InlineResponse20066 GetNetworkApplianceContentFilteringCategories(ctx, networkId).Execute()
 
 List all available content filtering categories for an MX network
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ContentFilteringApi.GetNetworkApplianceContentFilteringCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceContentFilteringCategories`: map[string]interface{}
+    // response from `GetNetworkApplianceContentFilteringCategories`: InlineResponse20066
     fmt.Fprintf(os.Stdout, "Response from `ContentFilteringApi.GetNetworkApplianceContentFilteringCategories`: %v\n", resp)
 }
 ```
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20066**](InlineResponse20066.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceContentFiltering
 
-> InlineResponse20060 UpdateNetworkApplianceContentFiltering(ctx, networkId).UpdateNetworkApplianceContentFiltering(updateNetworkApplianceContentFiltering).Execute()
+> InlineResponse20065 UpdateNetworkApplianceContentFiltering(ctx, networkId).UpdateNetworkApplianceContentFiltering(updateNetworkApplianceContentFiltering).Execute()
 
 Update the content filtering settings for an MX network
 
@@ -172,7 +172,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceContentFiltering := *openapiclient.NewInlineObject43() // InlineObject43 |  (optional)
+    updateNetworkApplianceContentFiltering := *openapiclient.NewInlineObject46() // InlineObject46 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -181,7 +181,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ContentFilteringApi.UpdateNetworkApplianceContentFiltering``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceContentFiltering`: InlineResponse20060
+    // response from `UpdateNetworkApplianceContentFiltering`: InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `ContentFilteringApi.UpdateNetworkApplianceContentFiltering`: %v\n", resp)
 }
 ```
@@ -202,11 +202,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceCont
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceContentFiltering** | [**InlineObject43**](InlineObject43.md) |  | 
+ **updateNetworkApplianceContentFiltering** | [**InlineObject46**](InlineObject46.md) |  | 
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 

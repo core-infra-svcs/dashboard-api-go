@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Network** | Pointer to [**InlineResponse200434Network**](InlineResponse200434Network.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200447Counts**](InlineResponse200447Counts.md) |  | [optional] 
-**Redundancy** | Pointer to [**InlineResponse200447Redundancy**](InlineResponse200447Redundancy.md) |  | [optional] 
-**Firmware** | Pointer to [**InlineResponse200447Firmware**](InlineResponse200447Firmware.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200447Network**](InlineResponse200447Network.md) |  | [optional] 
+**ReceiverId** | Pointer to **string** | Receiver ID | [optional] 
+**Url** | Pointer to **string** | Receiver Url | [optional] 
+**Version** | Pointer to **string** | Scanning API Version | [optional] 
+**Radio** | Pointer to [**InlineResponse200447Radio**](InlineResponse200447Radio.md) |  | [optional] 
 
 ## Methods
 
@@ -29,47 +29,22 @@ NewInlineResponse200447ItemsWithDefaults instantiates a new InlineResponse200447
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
-
-`func (o *InlineResponse200447Items) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200447Items) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200447Items) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200447Items) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
 ### GetNetwork
 
-`func (o *InlineResponse200447Items) GetNetwork() InlineResponse200434Network`
+`func (o *InlineResponse200447Items) GetNetwork() InlineResponse200447Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200447Items) GetNetworkOk() (*InlineResponse200434Network, bool)`
+`func (o *InlineResponse200447Items) GetNetworkOk() (*InlineResponse200447Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200447Items) SetNetwork(v InlineResponse200434Network)`
+`func (o *InlineResponse200447Items) SetNetwork(v InlineResponse200447Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -79,80 +54,105 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetCounts
+### GetReceiverId
 
-`func (o *InlineResponse200447Items) GetCounts() InlineResponse200447Counts`
+`func (o *InlineResponse200447Items) GetReceiverId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetReceiverId returns the ReceiverId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetReceiverIdOk
 
-`func (o *InlineResponse200447Items) GetCountsOk() (*InlineResponse200447Counts, bool)`
+`func (o *InlineResponse200447Items) GetReceiverIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetReceiverIdOk returns a tuple with the ReceiverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetReceiverId
 
-`func (o *InlineResponse200447Items) SetCounts(v InlineResponse200447Counts)`
+`func (o *InlineResponse200447Items) SetReceiverId(v string)`
 
-SetCounts sets Counts field to given value.
+SetReceiverId sets ReceiverId field to given value.
 
-### HasCounts
+### HasReceiverId
 
-`func (o *InlineResponse200447Items) HasCounts() bool`
+`func (o *InlineResponse200447Items) HasReceiverId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasReceiverId returns a boolean if a field has been set.
 
-### GetRedundancy
+### GetUrl
 
-`func (o *InlineResponse200447Items) GetRedundancy() InlineResponse200447Redundancy`
+`func (o *InlineResponse200447Items) GetUrl() string`
 
-GetRedundancy returns the Redundancy field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetRedundancyOk
+### GetUrlOk
 
-`func (o *InlineResponse200447Items) GetRedundancyOk() (*InlineResponse200447Redundancy, bool)`
+`func (o *InlineResponse200447Items) GetUrlOk() (*string, bool)`
 
-GetRedundancyOk returns a tuple with the Redundancy field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRedundancy
+### SetUrl
 
-`func (o *InlineResponse200447Items) SetRedundancy(v InlineResponse200447Redundancy)`
+`func (o *InlineResponse200447Items) SetUrl(v string)`
 
-SetRedundancy sets Redundancy field to given value.
+SetUrl sets Url field to given value.
 
-### HasRedundancy
+### HasUrl
 
-`func (o *InlineResponse200447Items) HasRedundancy() bool`
+`func (o *InlineResponse200447Items) HasUrl() bool`
 
-HasRedundancy returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetFirmware
+### GetVersion
 
-`func (o *InlineResponse200447Items) GetFirmware() InlineResponse200447Firmware`
+`func (o *InlineResponse200447Items) GetVersion() string`
 
-GetFirmware returns the Firmware field if non-nil, zero value otherwise.
+GetVersion returns the Version field if non-nil, zero value otherwise.
 
-### GetFirmwareOk
+### GetVersionOk
 
-`func (o *InlineResponse200447Items) GetFirmwareOk() (*InlineResponse200447Firmware, bool)`
+`func (o *InlineResponse200447Items) GetVersionOk() (*string, bool)`
 
-GetFirmwareOk returns a tuple with the Firmware field if it's non-nil, zero value otherwise
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirmware
+### SetVersion
 
-`func (o *InlineResponse200447Items) SetFirmware(v InlineResponse200447Firmware)`
+`func (o *InlineResponse200447Items) SetVersion(v string)`
 
-SetFirmware sets Firmware field to given value.
+SetVersion sets Version field to given value.
 
-### HasFirmware
+### HasVersion
 
-`func (o *InlineResponse200447Items) HasFirmware() bool`
+`func (o *InlineResponse200447Items) HasVersion() bool`
 
-HasFirmware returns a boolean if a field has been set.
+HasVersion returns a boolean if a field has been set.
+
+### GetRadio
+
+`func (o *InlineResponse200447Items) GetRadio() InlineResponse200447Radio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineResponse200447Items) GetRadioOk() (*InlineResponse200447Radio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineResponse200447Items) SetRadio(v InlineResponse200447Radio)`
+
+SetRadio sets Radio field to given value.
+
+### HasRadio
+
+`func (o *InlineResponse200447Items) HasRadio() bool`
+
+HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

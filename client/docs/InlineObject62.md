@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | **string** | Set mode to &#39;enabled&#39; to enable malware prevention, otherwise &#39;disabled&#39; | 
-**AllowedUrls** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls**](NetworksNetworkIdApplianceSecurityMalwareAllowedUrls.md) | The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
-**AllowedFiles** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles**](NetworksNetworkIdApplianceSecurityMalwareAllowedFiles.md) | The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
+**Name** | **string** | The name of the new profile. Must be unique. This param is required on creation. | 
+**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesFiveGhzSettings.md) |  | [optional] 
+**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject62
 
-`func NewInlineObject62(mode string, ) *InlineObject62`
+`func NewInlineObject62(name string, ) *InlineObject62`
 
 NewInlineObject62 instantiates a new InlineObject62 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +28,100 @@ NewInlineObject62WithDefaults instantiates a new InlineObject62 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetName
 
-`func (o *InlineObject62) GetMode() string`
+`func (o *InlineObject62) GetName() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNameOk
 
-`func (o *InlineObject62) GetModeOk() (*string, bool)`
+`func (o *InlineObject62) GetNameOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetName
 
-`func (o *InlineObject62) SetMode(v string)`
+`func (o *InlineObject62) SetName(v string)`
 
-SetMode sets Mode field to given value.
+SetName sets Name field to given value.
 
 
-### GetAllowedUrls
+### GetTwoFourGhzSettings
 
-`func (o *InlineObject62) GetAllowedUrls() []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls`
+`func (o *InlineObject62) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings`
 
-GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
 
-### GetAllowedUrlsOk
+### GetTwoFourGhzSettingsOk
 
-`func (o *InlineObject62) GetAllowedUrlsOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls, bool)`
+`func (o *InlineObject62) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings, bool)`
 
-GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrls
+### SetTwoFourGhzSettings
 
-`func (o *InlineObject62) SetAllowedUrls(v []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls)`
+`func (o *InlineObject62) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings)`
 
-SetAllowedUrls sets AllowedUrls field to given value.
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
-### HasAllowedUrls
+### HasTwoFourGhzSettings
 
-`func (o *InlineObject62) HasAllowedUrls() bool`
+`func (o *InlineObject62) HasTwoFourGhzSettings() bool`
 
-HasAllowedUrls returns a boolean if a field has been set.
+HasTwoFourGhzSettings returns a boolean if a field has been set.
 
-### GetAllowedFiles
+### GetFiveGhzSettings
 
-`func (o *InlineObject62) GetAllowedFiles() []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles`
+`func (o *InlineObject62) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesFiveGhzSettings`
 
-GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
-### GetAllowedFilesOk
+### GetFiveGhzSettingsOk
 
-`func (o *InlineObject62) GetAllowedFilesOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles, bool)`
+`func (o *InlineObject62) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesFiveGhzSettings, bool)`
 
-GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedFiles
+### SetFiveGhzSettings
 
-`func (o *InlineObject62) SetAllowedFiles(v []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles)`
+`func (o *InlineObject62) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesFiveGhzSettings)`
 
-SetAllowedFiles sets AllowedFiles field to given value.
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
-### HasAllowedFiles
+### HasFiveGhzSettings
 
-`func (o *InlineObject62) HasAllowedFiles() bool`
+`func (o *InlineObject62) HasFiveGhzSettings() bool`
 
-HasAllowedFiles returns a boolean if a field has been set.
+HasFiveGhzSettings returns a boolean if a field has been set.
+
+### GetPerSsidSettings
+
+`func (o *InlineObject62) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
+
+GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
+
+### GetPerSsidSettingsOk
+
+`func (o *InlineObject62) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
+
+GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPerSsidSettings
+
+`func (o *InlineObject62) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
+
+SetPerSsidSettings sets PerSsidSettings field to given value.
+
+### HasPerSsidSettings
+
+`func (o *InlineObject62) HasPerSsidSettings() bool`
+
+HasPerSsidSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

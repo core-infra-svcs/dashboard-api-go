@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **string** | The current time | [optional] 
-**Zones** | Pointer to [**InlineResponse20011Zones**](InlineResponse20011Zones.md) |  | [optional] 
+**Serial** | Pointer to **string** | The device serial | [optional] 
+**RfProfileId** | Pointer to **string** | RF Profile ID | [optional] 
+**TwoFourGhzSettings** | Pointer to [**InlineResponse20011TwoFourGhzSettings**](InlineResponse20011TwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**InlineResponse20011FiveGhzSettings**](InlineResponse20011FiveGhzSettings.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20011WithDefaults instantiates a new InlineResponse20011 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetSerial
 
-`func (o *InlineResponse20011) GetTs() string`
+`func (o *InlineResponse20011) GetSerial() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetSerialOk
 
-`func (o *InlineResponse20011) GetTsOk() (*string, bool)`
+`func (o *InlineResponse20011) GetSerialOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetSerial
 
-`func (o *InlineResponse20011) SetTs(v string)`
+`func (o *InlineResponse20011) SetSerial(v string)`
 
-SetTs sets Ts field to given value.
+SetSerial sets Serial field to given value.
 
-### HasTs
+### HasSerial
 
-`func (o *InlineResponse20011) HasTs() bool`
+`func (o *InlineResponse20011) HasSerial() bool`
 
-HasTs returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetZones
+### GetRfProfileId
 
-`func (o *InlineResponse20011) GetZones() InlineResponse20011Zones`
+`func (o *InlineResponse20011) GetRfProfileId() string`
 
-GetZones returns the Zones field if non-nil, zero value otherwise.
+GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
 
-### GetZonesOk
+### GetRfProfileIdOk
 
-`func (o *InlineResponse20011) GetZonesOk() (*InlineResponse20011Zones, bool)`
+`func (o *InlineResponse20011) GetRfProfileIdOk() (*string, bool)`
 
-GetZonesOk returns a tuple with the Zones field if it's non-nil, zero value otherwise
+GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetZones
+### SetRfProfileId
 
-`func (o *InlineResponse20011) SetZones(v InlineResponse20011Zones)`
+`func (o *InlineResponse20011) SetRfProfileId(v string)`
 
-SetZones sets Zones field to given value.
+SetRfProfileId sets RfProfileId field to given value.
 
-### HasZones
+### HasRfProfileId
 
-`func (o *InlineResponse20011) HasZones() bool`
+`func (o *InlineResponse20011) HasRfProfileId() bool`
 
-HasZones returns a boolean if a field has been set.
+HasRfProfileId returns a boolean if a field has been set.
+
+### GetTwoFourGhzSettings
+
+`func (o *InlineResponse20011) GetTwoFourGhzSettings() InlineResponse20011TwoFourGhzSettings`
+
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+
+### GetTwoFourGhzSettingsOk
+
+`func (o *InlineResponse20011) GetTwoFourGhzSettingsOk() (*InlineResponse20011TwoFourGhzSettings, bool)`
+
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTwoFourGhzSettings
+
+`func (o *InlineResponse20011) SetTwoFourGhzSettings(v InlineResponse20011TwoFourGhzSettings)`
+
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+
+### HasTwoFourGhzSettings
+
+`func (o *InlineResponse20011) HasTwoFourGhzSettings() bool`
+
+HasTwoFourGhzSettings returns a boolean if a field has been set.
+
+### GetFiveGhzSettings
+
+`func (o *InlineResponse20011) GetFiveGhzSettings() InlineResponse20011FiveGhzSettings`
+
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+
+### GetFiveGhzSettingsOk
+
+`func (o *InlineResponse20011) GetFiveGhzSettingsOk() (*InlineResponse20011FiveGhzSettings, bool)`
+
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFiveGhzSettings
+
+`func (o *InlineResponse20011) SetFiveGhzSettings(v InlineResponse20011FiveGhzSettings)`
+
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
+
+### HasFiveGhzSettings
+
+`func (o *InlineResponse20011) HasFiveGhzSettings() bool`
+
+HasFiveGhzSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

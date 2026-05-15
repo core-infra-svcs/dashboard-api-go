@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ByStatus** | Pointer to [**InlineResponse200332CountsByStatus**](InlineResponse200332CountsByStatus.md) |  | [optional] 
+**Packets** | Pointer to [**InlineResponse200332CountsPackets**](InlineResponse200332CountsPackets.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200332CountsWithDefaults instantiates a new InlineResponse20033
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetByStatus
+### GetPackets
 
-`func (o *InlineResponse200332Counts) GetByStatus() InlineResponse200332CountsByStatus`
+`func (o *InlineResponse200332Counts) GetPackets() InlineResponse200332CountsPackets`
 
-GetByStatus returns the ByStatus field if non-nil, zero value otherwise.
+GetPackets returns the Packets field if non-nil, zero value otherwise.
 
-### GetByStatusOk
+### GetPacketsOk
 
-`func (o *InlineResponse200332Counts) GetByStatusOk() (*InlineResponse200332CountsByStatus, bool)`
+`func (o *InlineResponse200332Counts) GetPacketsOk() (*InlineResponse200332CountsPackets, bool)`
 
-GetByStatusOk returns a tuple with the ByStatus field if it's non-nil, zero value otherwise
+GetPacketsOk returns a tuple with the Packets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByStatus
+### SetPackets
 
-`func (o *InlineResponse200332Counts) SetByStatus(v InlineResponse200332CountsByStatus)`
+`func (o *InlineResponse200332Counts) SetPackets(v InlineResponse200332CountsPackets)`
 
-SetByStatus sets ByStatus field to given value.
+SetPackets sets Packets field to given value.
 
-### HasByStatus
+### HasPackets
 
-`func (o *InlineResponse200332Counts) HasByStatus() bool`
+`func (o *InlineResponse200332Counts) HasPackets() bool`
 
-HasByStatus returns a boolean if a field has been set.
+HasPackets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

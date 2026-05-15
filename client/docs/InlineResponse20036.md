@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceMac** | Pointer to **string** | Source MAC address | [optional] 
-**Ports** | Pointer to [**map[string]InlineResponse20036Ports**](InlineResponse20036Ports.md) | Mapping of ports to lldp and/or cdp information | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**Request** | Pointer to [**InlineResponse2016Request**](InlineResponse2016Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Results** | Pointer to [**InlineResponse20036Results**](InlineResponse20036Results.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20036WithDefaults instantiates a new InlineResponse20036 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceMac
+### GetPingId
 
-`func (o *InlineResponse20036) GetSourceMac() string`
+`func (o *InlineResponse20036) GetPingId() string`
 
-GetSourceMac returns the SourceMac field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetSourceMacOk
+### GetPingIdOk
 
-`func (o *InlineResponse20036) GetSourceMacOk() (*string, bool)`
+`func (o *InlineResponse20036) GetPingIdOk() (*string, bool)`
 
-GetSourceMacOk returns a tuple with the SourceMac field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceMac
+### SetPingId
 
-`func (o *InlineResponse20036) SetSourceMac(v string)`
+`func (o *InlineResponse20036) SetPingId(v string)`
 
-SetSourceMac sets SourceMac field to given value.
+SetPingId sets PingId field to given value.
 
-### HasSourceMac
+### HasPingId
 
-`func (o *InlineResponse20036) HasSourceMac() bool`
+`func (o *InlineResponse20036) HasPingId() bool`
 
-HasSourceMac returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
 
-### GetPorts
+### GetUrl
 
-`func (o *InlineResponse20036) GetPorts() map[string]InlineResponse20036Ports`
+`func (o *InlineResponse20036) GetUrl() string`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetUrlOk
 
-`func (o *InlineResponse20036) GetPortsOk() (*map[string]InlineResponse20036Ports, bool)`
+`func (o *InlineResponse20036) GetUrlOk() (*string, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetUrl
 
-`func (o *InlineResponse20036) SetPorts(v map[string]InlineResponse20036Ports)`
+`func (o *InlineResponse20036) SetUrl(v string)`
 
-SetPorts sets Ports field to given value.
+SetUrl sets Url field to given value.
 
-### HasPorts
+### HasUrl
 
-`func (o *InlineResponse20036) HasPorts() bool`
+`func (o *InlineResponse20036) HasUrl() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20036) GetRequest() InlineResponse2016Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20036) GetRequestOk() (*InlineResponse2016Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20036) SetRequest(v InlineResponse2016Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20036) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20036) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20036) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20036) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20036) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetResults
+
+`func (o *InlineResponse20036) GetResults() InlineResponse20036Results`
+
+GetResults returns the Results field if non-nil, zero value otherwise.
+
+### GetResultsOk
+
+`func (o *InlineResponse20036) GetResultsOk() (*InlineResponse20036Results, bool)`
+
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResults
+
+`func (o *InlineResponse20036) SetResults(v InlineResponse20036Results)`
+
+SetResults sets Results field to given value.
+
+### HasResults
+
+`func (o *InlineResponse20036) HasResults() bool`
+
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

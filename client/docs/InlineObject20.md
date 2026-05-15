@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Duration** | **int32** | The duration in seconds to blink LEDs. | 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject20
 
-`func NewInlineObject20() *InlineObject20`
+`func NewInlineObject20(duration int32, ) *InlineObject20`
 
 NewInlineObject20 instantiates a new InlineObject20 object
 This constructor will assign default values to properties that have it defined,
@@ -24,6 +25,26 @@ will change when the set of required properties is changed
 NewInlineObject20WithDefaults instantiates a new InlineObject20 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetDuration
+
+`func (o *InlineObject20) GetDuration() int32`
+
+GetDuration returns the Duration field if non-nil, zero value otherwise.
+
+### GetDurationOk
+
+`func (o *InlineObject20) GetDurationOk() (*int32, bool)`
+
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDuration
+
+`func (o *InlineObject20) SetDuration(v int32)`
+
+SetDuration sets Duration field to given value.
+
 
 ### GetCallback
 

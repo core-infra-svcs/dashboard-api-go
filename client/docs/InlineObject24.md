@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanId** | **int32** | The target&#39;s VLAN (1 to 4094) | 
-**Mac** | **string** | The target&#39;s MAC address | 
+**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject24
 
-`func NewInlineObject24(vlanId int32, mac string, ) *InlineObject24`
+`func NewInlineObject24() *InlineObject24`
 
 NewInlineObject24 instantiates a new InlineObject24 object
 This constructor will assign default values to properties that have it defined,
@@ -27,45 +26,30 @@ NewInlineObject24WithDefaults instantiates a new InlineObject24 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanId
+### GetCount
 
-`func (o *InlineObject24) GetVlanId() int32`
+`func (o *InlineObject24) GetCount() int32`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetCountOk
 
-`func (o *InlineObject24) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject24) GetCountOk() (*int32, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetCount
 
-`func (o *InlineObject24) SetVlanId(v int32)`
+`func (o *InlineObject24) SetCount(v int32)`
 
-SetVlanId sets VlanId field to given value.
+SetCount sets Count field to given value.
 
+### HasCount
 
-### GetMac
+`func (o *InlineObject24) HasCount() bool`
 
-`func (o *InlineObject24) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineObject24) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineObject24) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
+HasCount returns a boolean if a field has been set.
 
 ### GetCallback
 

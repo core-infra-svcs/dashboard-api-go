@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SsidNumber** | Pointer to **int32** | SSID Number | [optional] 
-**Vlan** | Pointer to **int32** | LAN | [optional] 
-**ClientMac** | Pointer to **string** | Client Mac | [optional] 
-**Serial** | Pointer to **string** | Serial Number | [optional] 
-**Radio** | Pointer to **int32** | Radio number | [optional] 
-**FailureStep** | Pointer to **string** | The failed onboarding step. One of: assoc, auth, dhcp, dns. | [optional] 
-**Type** | Pointer to **string** | The failure type in the onboarding step | [optional] 
-**Ts** | Pointer to **time.Time** | The timestamp when the client mac failed | [optional] 
+**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
+**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
+**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
+**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
+**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
 
 ## Methods
 
@@ -32,205 +31,180 @@ NewInlineResponse200213WithDefaults instantiates a new InlineResponse200213 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsidNumber
+### GetScanningEnabled
 
-`func (o *InlineResponse200213) GetSsidNumber() int32`
+`func (o *InlineResponse200213) GetScanningEnabled() bool`
 
-GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
+GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
 
-### GetSsidNumberOk
+### GetScanningEnabledOk
 
-`func (o *InlineResponse200213) GetSsidNumberOk() (*int32, bool)`
+`func (o *InlineResponse200213) GetScanningEnabledOk() (*bool, bool)`
 
-GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
+GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsidNumber
+### SetScanningEnabled
 
-`func (o *InlineResponse200213) SetSsidNumber(v int32)`
+`func (o *InlineResponse200213) SetScanningEnabled(v bool)`
 
-SetSsidNumber sets SsidNumber field to given value.
+SetScanningEnabled sets ScanningEnabled field to given value.
 
-### HasSsidNumber
+### HasScanningEnabled
 
-`func (o *InlineResponse200213) HasSsidNumber() bool`
+`func (o *InlineResponse200213) HasScanningEnabled() bool`
 
-HasSsidNumber returns a boolean if a field has been set.
+HasScanningEnabled returns a boolean if a field has been set.
 
-### GetVlan
+### GetAdvertisingEnabled
 
-`func (o *InlineResponse200213) GetVlan() int32`
+`func (o *InlineResponse200213) GetAdvertisingEnabled() bool`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetAdvertisingEnabledOk
 
-`func (o *InlineResponse200213) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200213) GetAdvertisingEnabledOk() (*bool, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetAdvertisingEnabled
 
-`func (o *InlineResponse200213) SetVlan(v int32)`
+`func (o *InlineResponse200213) SetAdvertisingEnabled(v bool)`
 
-SetVlan sets Vlan field to given value.
+SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
 
-### HasVlan
+### HasAdvertisingEnabled
 
-`func (o *InlineResponse200213) HasVlan() bool`
+`func (o *InlineResponse200213) HasAdvertisingEnabled() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasAdvertisingEnabled returns a boolean if a field has been set.
 
-### GetClientMac
+### GetUuid
 
-`func (o *InlineResponse200213) GetClientMac() string`
+`func (o *InlineResponse200213) GetUuid() string`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetUuidOk
 
-`func (o *InlineResponse200213) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse200213) GetUuidOk() (*string, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetUuid
 
-`func (o *InlineResponse200213) SetClientMac(v string)`
+`func (o *InlineResponse200213) SetUuid(v string)`
 
-SetClientMac sets ClientMac field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasClientMac
+### HasUuid
 
-`func (o *InlineResponse200213) HasClientMac() bool`
+`func (o *InlineResponse200213) HasUuid() bool`
 
-HasClientMac returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetSerial
+### GetMajorMinorAssignmentMode
 
-`func (o *InlineResponse200213) GetSerial() string`
+`func (o *InlineResponse200213) GetMajorMinorAssignmentMode() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetMajorMinorAssignmentModeOk
 
-`func (o *InlineResponse200213) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200213) GetMajorMinorAssignmentModeOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetMajorMinorAssignmentMode
 
-`func (o *InlineResponse200213) SetSerial(v string)`
+`func (o *InlineResponse200213) SetMajorMinorAssignmentMode(v string)`
 
-SetSerial sets Serial field to given value.
+SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
 
-### HasSerial
+### HasMajorMinorAssignmentMode
 
-`func (o *InlineResponse200213) HasSerial() bool`
+`func (o *InlineResponse200213) HasMajorMinorAssignmentMode() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasMajorMinorAssignmentMode returns a boolean if a field has been set.
 
-### GetRadio
+### GetMajor
 
-`func (o *InlineResponse200213) GetRadio() int32`
+`func (o *InlineResponse200213) GetMajor() int32`
 
-GetRadio returns the Radio field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetRadioOk
+### GetMajorOk
 
-`func (o *InlineResponse200213) GetRadioOk() (*int32, bool)`
+`func (o *InlineResponse200213) GetMajorOk() (*int32, bool)`
 
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadio
+### SetMajor
 
-`func (o *InlineResponse200213) SetRadio(v int32)`
+`func (o *InlineResponse200213) SetMajor(v int32)`
 
-SetRadio sets Radio field to given value.
+SetMajor sets Major field to given value.
 
-### HasRadio
+### HasMajor
 
-`func (o *InlineResponse200213) HasRadio() bool`
+`func (o *InlineResponse200213) HasMajor() bool`
 
-HasRadio returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
-### GetFailureStep
+### GetMinor
 
-`func (o *InlineResponse200213) GetFailureStep() string`
+`func (o *InlineResponse200213) GetMinor() int32`
 
-GetFailureStep returns the FailureStep field if non-nil, zero value otherwise.
+GetMinor returns the Minor field if non-nil, zero value otherwise.
 
-### GetFailureStepOk
+### GetMinorOk
 
-`func (o *InlineResponse200213) GetFailureStepOk() (*string, bool)`
+`func (o *InlineResponse200213) GetMinorOk() (*int32, bool)`
 
-GetFailureStepOk returns a tuple with the FailureStep field if it's non-nil, zero value otherwise
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailureStep
+### SetMinor
 
-`func (o *InlineResponse200213) SetFailureStep(v string)`
+`func (o *InlineResponse200213) SetMinor(v int32)`
 
-SetFailureStep sets FailureStep field to given value.
+SetMinor sets Minor field to given value.
 
-### HasFailureStep
+### HasMinor
 
-`func (o *InlineResponse200213) HasFailureStep() bool`
+`func (o *InlineResponse200213) HasMinor() bool`
 
-HasFailureStep returns a boolean if a field has been set.
+HasMinor returns a boolean if a field has been set.
 
-### GetType
+### GetEslEnabled
 
-`func (o *InlineResponse200213) GetType() string`
+`func (o *InlineResponse200213) GetEslEnabled() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetEslEnabledOk
 
-`func (o *InlineResponse200213) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200213) GetEslEnabledOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetEslEnabled
 
-`func (o *InlineResponse200213) SetType(v string)`
+`func (o *InlineResponse200213) SetEslEnabled(v bool)`
 
-SetType sets Type field to given value.
+SetEslEnabled sets EslEnabled field to given value.
 
-### HasType
+### HasEslEnabled
 
-`func (o *InlineResponse200213) HasType() bool`
+`func (o *InlineResponse200213) HasEslEnabled() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200213) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200213) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200213) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200213) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasEslEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,19 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **NullableInt32** | The VLAN of the incoming packet. A null value will match any VLAN. | [optional] 
-**Protocol** | Pointer to **string** | The protocol of the incoming packet. Default value is \&quot;ANY\&quot; | [optional] 
-**SrcPort** | Pointer to **NullableInt32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
-**SrcPortRange** | Pointer to **string** | The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
-**DstPort** | Pointer to **NullableInt32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
-**DstPortRange** | Pointer to **string** | The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
-**Dscp** | Pointer to **int32** | DSCP tag that should be assigned to incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0 | [optional] 
+**Name** | **string** | The name for your port schedule. Required | 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject155
 
-`func NewInlineObject155() *InlineObject155`
+`func NewInlineObject155(name string, ) *InlineObject155`
 
 NewInlineObject155 instantiates a new InlineObject155 object
 This constructor will assign default values to properties that have it defined,
@@ -31,210 +26,50 @@ NewInlineObject155WithDefaults instantiates a new InlineObject155 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlan
+### GetName
 
-`func (o *InlineObject155) GetVlan() int32`
+`func (o *InlineObject155) GetName() string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetNameOk
 
-`func (o *InlineObject155) GetVlanOk() (*int32, bool)`
+`func (o *InlineObject155) GetNameOk() (*string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetName
 
-`func (o *InlineObject155) SetVlan(v int32)`
+`func (o *InlineObject155) SetName(v string)`
 
-SetVlan sets Vlan field to given value.
+SetName sets Name field to given value.
 
-### HasVlan
 
-`func (o *InlineObject155) HasVlan() bool`
+### GetPortSchedule
 
-HasVlan returns a boolean if a field has been set.
+`func (o *InlineObject155) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
 
-### SetVlanNil
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-`func (o *InlineObject155) SetVlanNil(b bool)`
+### GetPortScheduleOk
 
- SetVlanNil sets the value for Vlan to be an explicit nil
+`func (o *InlineObject155) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
 
-### UnsetVlan
-`func (o *InlineObject155) UnsetVlan()`
-
-UnsetVlan ensures that no value is present for Vlan, not even an explicit nil
-### GetProtocol
-
-`func (o *InlineObject155) GetProtocol() string`
-
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
-
-### GetProtocolOk
-
-`func (o *InlineObject155) GetProtocolOk() (*string, bool)`
-
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocol
+### SetPortSchedule
 
-`func (o *InlineObject155) SetProtocol(v string)`
+`func (o *InlineObject155) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
 
-SetProtocol sets Protocol field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
-### HasProtocol
+### HasPortSchedule
 
-`func (o *InlineObject155) HasProtocol() bool`
+`func (o *InlineObject155) HasPortSchedule() bool`
 
-HasProtocol returns a boolean if a field has been set.
-
-### GetSrcPort
-
-`func (o *InlineObject155) GetSrcPort() int32`
-
-GetSrcPort returns the SrcPort field if non-nil, zero value otherwise.
-
-### GetSrcPortOk
-
-`func (o *InlineObject155) GetSrcPortOk() (*int32, bool)`
-
-GetSrcPortOk returns a tuple with the SrcPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSrcPort
-
-`func (o *InlineObject155) SetSrcPort(v int32)`
-
-SetSrcPort sets SrcPort field to given value.
-
-### HasSrcPort
-
-`func (o *InlineObject155) HasSrcPort() bool`
-
-HasSrcPort returns a boolean if a field has been set.
-
-### SetSrcPortNil
-
-`func (o *InlineObject155) SetSrcPortNil(b bool)`
-
- SetSrcPortNil sets the value for SrcPort to be an explicit nil
-
-### UnsetSrcPort
-`func (o *InlineObject155) UnsetSrcPort()`
-
-UnsetSrcPort ensures that no value is present for SrcPort, not even an explicit nil
-### GetSrcPortRange
-
-`func (o *InlineObject155) GetSrcPortRange() string`
-
-GetSrcPortRange returns the SrcPortRange field if non-nil, zero value otherwise.
-
-### GetSrcPortRangeOk
-
-`func (o *InlineObject155) GetSrcPortRangeOk() (*string, bool)`
-
-GetSrcPortRangeOk returns a tuple with the SrcPortRange field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSrcPortRange
-
-`func (o *InlineObject155) SetSrcPortRange(v string)`
-
-SetSrcPortRange sets SrcPortRange field to given value.
-
-### HasSrcPortRange
-
-`func (o *InlineObject155) HasSrcPortRange() bool`
-
-HasSrcPortRange returns a boolean if a field has been set.
-
-### GetDstPort
-
-`func (o *InlineObject155) GetDstPort() int32`
-
-GetDstPort returns the DstPort field if non-nil, zero value otherwise.
-
-### GetDstPortOk
-
-`func (o *InlineObject155) GetDstPortOk() (*int32, bool)`
-
-GetDstPortOk returns a tuple with the DstPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDstPort
-
-`func (o *InlineObject155) SetDstPort(v int32)`
-
-SetDstPort sets DstPort field to given value.
-
-### HasDstPort
-
-`func (o *InlineObject155) HasDstPort() bool`
-
-HasDstPort returns a boolean if a field has been set.
-
-### SetDstPortNil
-
-`func (o *InlineObject155) SetDstPortNil(b bool)`
-
- SetDstPortNil sets the value for DstPort to be an explicit nil
-
-### UnsetDstPort
-`func (o *InlineObject155) UnsetDstPort()`
-
-UnsetDstPort ensures that no value is present for DstPort, not even an explicit nil
-### GetDstPortRange
-
-`func (o *InlineObject155) GetDstPortRange() string`
-
-GetDstPortRange returns the DstPortRange field if non-nil, zero value otherwise.
-
-### GetDstPortRangeOk
-
-`func (o *InlineObject155) GetDstPortRangeOk() (*string, bool)`
-
-GetDstPortRangeOk returns a tuple with the DstPortRange field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDstPortRange
-
-`func (o *InlineObject155) SetDstPortRange(v string)`
-
-SetDstPortRange sets DstPortRange field to given value.
-
-### HasDstPortRange
-
-`func (o *InlineObject155) HasDstPortRange() bool`
-
-HasDstPortRange returns a boolean if a field has been set.
-
-### GetDscp
-
-`func (o *InlineObject155) GetDscp() int32`
-
-GetDscp returns the Dscp field if non-nil, zero value otherwise.
-
-### GetDscpOk
-
-`func (o *InlineObject155) GetDscpOk() (*int32, bool)`
-
-GetDscpOk returns a tuple with the Dscp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDscp
-
-`func (o *InlineObject155) SetDscp(v int32)`
-
-SetDscp sets Dscp field to given value.
-
-### HasDscp
-
-`func (o *InlineObject155) HasDscp() bool`
-
-HasDscp returns a boolean if a field has been set.
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

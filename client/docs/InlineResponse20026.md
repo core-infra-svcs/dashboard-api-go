@@ -4,18 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the client | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**Description** | Pointer to **string** | Short description of the client | [optional] 
-**MdnsName** | Pointer to **string** | The client&#39;s MDNS name | [optional] 
-**DhcpHostname** | Pointer to **string** | The client&#39;s DHCP hostname | [optional] 
-**User** | Pointer to **string** | The client user&#39;s name | [optional] 
-**Ip** | Pointer to **string** | The IP address of the client | [optional] 
-**Vlan** | Pointer to **string** | The client-assigned name of the VLAN the client is connected to | [optional] 
-**NamedVlan** | Pointer to **string** | The owner-assigned name of the VLAN the client is connected to | [optional] 
-**Switchport** | Pointer to **string** | The name of the switchport with clients on it, if the device is a switch | [optional] 
-**AdaptivePolicyGroup** | Pointer to **string** | A description of the adaptive policy group | [optional] 
-**Usage** | Pointer to [**DevicesSerialClientsUsage**](DevicesSerialClientsUsage.md) |  | [optional] 
+**Sims** | Pointer to [**[]InlineResponse20026Sims**](InlineResponse20026Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
+**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. To indicate eSIM, use &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
+**SimFailover** | Pointer to [**InlineResponse20026SimFailover**](InlineResponse20026SimFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -36,305 +27,80 @@ NewInlineResponse20026WithDefaults instantiates a new InlineResponse20026 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSims
 
-`func (o *InlineResponse20026) GetId() string`
+`func (o *InlineResponse20026) GetSims() []InlineResponse20026Sims`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSims returns the Sims field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSimsOk
 
-`func (o *InlineResponse20026) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20026) GetSimsOk() (*[]InlineResponse20026Sims, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSims
 
-`func (o *InlineResponse20026) SetId(v string)`
+`func (o *InlineResponse20026) SetSims(v []InlineResponse20026Sims)`
 
-SetId sets Id field to given value.
+SetSims sets Sims field to given value.
 
-### HasId
+### HasSims
 
-`func (o *InlineResponse20026) HasId() bool`
+`func (o *InlineResponse20026) HasSims() bool`
 
-HasId returns a boolean if a field has been set.
+HasSims returns a boolean if a field has been set.
 
-### GetMac
+### GetSimOrdering
 
-`func (o *InlineResponse20026) GetMac() string`
+`func (o *InlineResponse20026) GetSimOrdering() []string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetSimOrdering returns the SimOrdering field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetSimOrderingOk
 
-`func (o *InlineResponse20026) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20026) GetSimOrderingOk() (*[]string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetSimOrderingOk returns a tuple with the SimOrdering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetSimOrdering
 
-`func (o *InlineResponse20026) SetMac(v string)`
+`func (o *InlineResponse20026) SetSimOrdering(v []string)`
 
-SetMac sets Mac field to given value.
+SetSimOrdering sets SimOrdering field to given value.
 
-### HasMac
+### HasSimOrdering
 
-`func (o *InlineResponse20026) HasMac() bool`
+`func (o *InlineResponse20026) HasSimOrdering() bool`
 
-HasMac returns a boolean if a field has been set.
+HasSimOrdering returns a boolean if a field has been set.
 
-### GetDescription
+### GetSimFailover
 
-`func (o *InlineResponse20026) GetDescription() string`
+`func (o *InlineResponse20026) GetSimFailover() InlineResponse20026SimFailover`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetSimFailoverOk
 
-`func (o *InlineResponse20026) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse20026) GetSimFailoverOk() (*InlineResponse20026SimFailover, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSimFailover
 
-`func (o *InlineResponse20026) SetDescription(v string)`
+`func (o *InlineResponse20026) SetSimFailover(v InlineResponse20026SimFailover)`
 
-SetDescription sets Description field to given value.
+SetSimFailover sets SimFailover field to given value.
 
-### HasDescription
+### HasSimFailover
 
-`func (o *InlineResponse20026) HasDescription() bool`
+`func (o *InlineResponse20026) HasSimFailover() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetMdnsName
-
-`func (o *InlineResponse20026) GetMdnsName() string`
-
-GetMdnsName returns the MdnsName field if non-nil, zero value otherwise.
-
-### GetMdnsNameOk
-
-`func (o *InlineResponse20026) GetMdnsNameOk() (*string, bool)`
-
-GetMdnsNameOk returns a tuple with the MdnsName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMdnsName
-
-`func (o *InlineResponse20026) SetMdnsName(v string)`
-
-SetMdnsName sets MdnsName field to given value.
-
-### HasMdnsName
-
-`func (o *InlineResponse20026) HasMdnsName() bool`
-
-HasMdnsName returns a boolean if a field has been set.
-
-### GetDhcpHostname
-
-`func (o *InlineResponse20026) GetDhcpHostname() string`
-
-GetDhcpHostname returns the DhcpHostname field if non-nil, zero value otherwise.
-
-### GetDhcpHostnameOk
-
-`func (o *InlineResponse20026) GetDhcpHostnameOk() (*string, bool)`
-
-GetDhcpHostnameOk returns a tuple with the DhcpHostname field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpHostname
-
-`func (o *InlineResponse20026) SetDhcpHostname(v string)`
-
-SetDhcpHostname sets DhcpHostname field to given value.
-
-### HasDhcpHostname
-
-`func (o *InlineResponse20026) HasDhcpHostname() bool`
-
-HasDhcpHostname returns a boolean if a field has been set.
-
-### GetUser
-
-`func (o *InlineResponse20026) GetUser() string`
-
-GetUser returns the User field if non-nil, zero value otherwise.
-
-### GetUserOk
-
-`func (o *InlineResponse20026) GetUserOk() (*string, bool)`
-
-GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUser
-
-`func (o *InlineResponse20026) SetUser(v string)`
-
-SetUser sets User field to given value.
-
-### HasUser
-
-`func (o *InlineResponse20026) HasUser() bool`
-
-HasUser returns a boolean if a field has been set.
-
-### GetIp
-
-`func (o *InlineResponse20026) GetIp() string`
-
-GetIp returns the Ip field if non-nil, zero value otherwise.
-
-### GetIpOk
-
-`func (o *InlineResponse20026) GetIpOk() (*string, bool)`
-
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIp
-
-`func (o *InlineResponse20026) SetIp(v string)`
-
-SetIp sets Ip field to given value.
-
-### HasIp
-
-`func (o *InlineResponse20026) HasIp() bool`
-
-HasIp returns a boolean if a field has been set.
-
-### GetVlan
-
-`func (o *InlineResponse20026) GetVlan() string`
-
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
-
-### GetVlanOk
-
-`func (o *InlineResponse20026) GetVlanOk() (*string, bool)`
-
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlan
-
-`func (o *InlineResponse20026) SetVlan(v string)`
-
-SetVlan sets Vlan field to given value.
-
-### HasVlan
-
-`func (o *InlineResponse20026) HasVlan() bool`
-
-HasVlan returns a boolean if a field has been set.
-
-### GetNamedVlan
-
-`func (o *InlineResponse20026) GetNamedVlan() string`
-
-GetNamedVlan returns the NamedVlan field if non-nil, zero value otherwise.
-
-### GetNamedVlanOk
-
-`func (o *InlineResponse20026) GetNamedVlanOk() (*string, bool)`
-
-GetNamedVlanOk returns a tuple with the NamedVlan field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlan
-
-`func (o *InlineResponse20026) SetNamedVlan(v string)`
-
-SetNamedVlan sets NamedVlan field to given value.
-
-### HasNamedVlan
-
-`func (o *InlineResponse20026) HasNamedVlan() bool`
-
-HasNamedVlan returns a boolean if a field has been set.
-
-### GetSwitchport
-
-`func (o *InlineResponse20026) GetSwitchport() string`
-
-GetSwitchport returns the Switchport field if non-nil, zero value otherwise.
-
-### GetSwitchportOk
-
-`func (o *InlineResponse20026) GetSwitchportOk() (*string, bool)`
-
-GetSwitchportOk returns a tuple with the Switchport field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSwitchport
-
-`func (o *InlineResponse20026) SetSwitchport(v string)`
-
-SetSwitchport sets Switchport field to given value.
-
-### HasSwitchport
-
-`func (o *InlineResponse20026) HasSwitchport() bool`
-
-HasSwitchport returns a boolean if a field has been set.
-
-### GetAdaptivePolicyGroup
-
-`func (o *InlineResponse20026) GetAdaptivePolicyGroup() string`
-
-GetAdaptivePolicyGroup returns the AdaptivePolicyGroup field if non-nil, zero value otherwise.
-
-### GetAdaptivePolicyGroupOk
-
-`func (o *InlineResponse20026) GetAdaptivePolicyGroupOk() (*string, bool)`
-
-GetAdaptivePolicyGroupOk returns a tuple with the AdaptivePolicyGroup field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdaptivePolicyGroup
-
-`func (o *InlineResponse20026) SetAdaptivePolicyGroup(v string)`
-
-SetAdaptivePolicyGroup sets AdaptivePolicyGroup field to given value.
-
-### HasAdaptivePolicyGroup
-
-`func (o *InlineResponse20026) HasAdaptivePolicyGroup() bool`
-
-HasAdaptivePolicyGroup returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse20026) GetUsage() DevicesSerialClientsUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse20026) GetUsageOk() (*DevicesSerialClientsUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse20026) SetUsage(v DevicesSerialClientsUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse20026) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasSimFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**Id** | Pointer to **string** | Policy object ID | [optional] 
+**Name** | Pointer to **string** | Name of the Policy object group. | [optional] 
+**Category** | Pointer to **string** | Type of object groups. (NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
+**ObjectIds** | Pointer to **[]int32** | Policy objects associated with Network Object Group or Port Object Group | [optional] 
+**NetworkIds** | Pointer to **[]string** | Network ID&#39;s associated with the policy objects. | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineResponse200382WithDefaults instantiates a new InlineResponse200382 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetId
 
-`func (o *InlineResponse200382) GetTs() time.Time`
+`func (o *InlineResponse200382) GetId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetIdOk
 
-`func (o *InlineResponse200382) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200382) GetIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetId
 
-`func (o *InlineResponse200382) SetTs(v time.Time)`
+`func (o *InlineResponse200382) SetId(v string)`
 
-SetTs sets Ts field to given value.
+SetId sets Id field to given value.
 
-### HasTs
+### HasId
 
-`func (o *InlineResponse200382) HasTs() bool`
+`func (o *InlineResponse200382) HasId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDraw
+### GetName
 
-`func (o *InlineResponse200382) GetDraw() float32`
+`func (o *InlineResponse200382) GetName() string`
 
-GetDraw returns the Draw field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDrawOk
+### GetNameOk
 
-`func (o *InlineResponse200382) GetDrawOk() (*float32, bool)`
+`func (o *InlineResponse200382) GetNameOk() (*string, bool)`
 
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDraw
+### SetName
 
-`func (o *InlineResponse200382) SetDraw(v float32)`
+`func (o *InlineResponse200382) SetName(v string)`
 
-SetDraw sets Draw field to given value.
+SetName sets Name field to given value.
 
-### HasDraw
+### HasName
 
-`func (o *InlineResponse200382) HasDraw() bool`
+`func (o *InlineResponse200382) HasName() bool`
 
-HasDraw returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetCategory
+
+`func (o *InlineResponse200382) GetCategory() string`
+
+GetCategory returns the Category field if non-nil, zero value otherwise.
+
+### GetCategoryOk
+
+`func (o *InlineResponse200382) GetCategoryOk() (*string, bool)`
+
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategory
+
+`func (o *InlineResponse200382) SetCategory(v string)`
+
+SetCategory sets Category field to given value.
+
+### HasCategory
+
+`func (o *InlineResponse200382) HasCategory() bool`
+
+HasCategory returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200382) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200382) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200382) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200382) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200382) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200382) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200382) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200382) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetObjectIds
+
+`func (o *InlineResponse200382) GetObjectIds() []int32`
+
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+
+### GetObjectIdsOk
+
+`func (o *InlineResponse200382) GetObjectIdsOk() (*[]int32, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetObjectIds
+
+`func (o *InlineResponse200382) SetObjectIds(v []int32)`
+
+SetObjectIds sets ObjectIds field to given value.
+
+### HasObjectIds
+
+`func (o *InlineResponse200382) HasObjectIds() bool`
+
+HasObjectIds returns a boolean if a field has been set.
+
+### GetNetworkIds
+
+`func (o *InlineResponse200382) GetNetworkIds() []string`
+
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+
+### GetNetworkIdsOk
+
+`func (o *InlineResponse200382) GetNetworkIdsOk() (*[]string, bool)`
+
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkIds
+
+`func (o *InlineResponse200382) SetNetworkIds(v []string)`
+
+SetNetworkIds sets NetworkIds field to given value.
+
+### HasNetworkIds
+
+`func (o *InlineResponse200382) HasNetworkIds() bool`
+
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

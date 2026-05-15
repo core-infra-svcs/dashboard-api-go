@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
-**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
-**ProtectedNetworks** | Pointer to [**InlineResponse20072ProtectedNetworks**](InlineResponse20072ProtectedNetworks.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20072Rules**](InlineResponse20072Rules.md) | An ordered array of the MX L7 firewall rules. Each rule is an object with &#39;policy&#39;, &#39;type&#39;, and &#39;value&#39;. The &#39;value&#39; shape depends on &#39;type&#39;: object for application/applicationCategory, string for host/port/ipRange, and an array of 2-letter ISO 3166-1 alpha-2 country codes for allowedCountries/blockedCountries. For backward compatibility, request types also accept whitelistedCountries/blacklistedCountries. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20072WithDefaults instantiates a new InlineResponse20072 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetRules
 
-`func (o *InlineResponse20072) GetMode() string`
+`func (o *InlineResponse20072) GetRules() []InlineResponse20072Rules`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetRulesOk
 
-`func (o *InlineResponse20072) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20072) GetRulesOk() (*[]InlineResponse20072Rules, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetRules
 
-`func (o *InlineResponse20072) SetMode(v string)`
+`func (o *InlineResponse20072) SetRules(v []InlineResponse20072Rules)`
 
-SetMode sets Mode field to given value.
+SetRules sets Rules field to given value.
 
-### HasMode
+### HasRules
 
-`func (o *InlineResponse20072) HasMode() bool`
+`func (o *InlineResponse20072) HasRules() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetIdsRulesets
-
-`func (o *InlineResponse20072) GetIdsRulesets() string`
-
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
-
-### GetIdsRulesetsOk
-
-`func (o *InlineResponse20072) GetIdsRulesetsOk() (*string, bool)`
-
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdsRulesets
-
-`func (o *InlineResponse20072) SetIdsRulesets(v string)`
-
-SetIdsRulesets sets IdsRulesets field to given value.
-
-### HasIdsRulesets
-
-`func (o *InlineResponse20072) HasIdsRulesets() bool`
-
-HasIdsRulesets returns a boolean if a field has been set.
-
-### GetProtectedNetworks
-
-`func (o *InlineResponse20072) GetProtectedNetworks() InlineResponse20072ProtectedNetworks`
-
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
-
-### GetProtectedNetworksOk
-
-`func (o *InlineResponse20072) GetProtectedNetworksOk() (*InlineResponse20072ProtectedNetworks, bool)`
-
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtectedNetworks
-
-`func (o *InlineResponse20072) SetProtectedNetworks(v InlineResponse20072ProtectedNetworks)`
-
-SetProtectedNetworks sets ProtectedNetworks field to given value.
-
-### HasProtectedNetworks
-
-`func (o *InlineResponse20072) HasProtectedNetworks() bool`
-
-HasProtectedNetworks returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

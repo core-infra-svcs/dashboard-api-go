@@ -4,14 +4,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | device ID | [optional] 
-**Name** | Pointer to **string** | device name | [optional] 
-**SystemType** | Pointer to **string** | system type | [optional] 
-**Mac** | Pointer to **string** | mac address | [optional] 
-**Username** | Pointer to **string** | username | [optional] 
-**Email** | Pointer to **string** | user email | [optional] 
-**Tags** | Pointer to **[]string** | device tags | [optional] 
-**TrustedAccessConnections** | Pointer to [**[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections**](NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections.md) | Array of trusted access configs | [optional] 
+**MeasuredAt** | Pointer to **string** | The time the data was measured at. | [optional] 
+**User** | Pointer to **string** | The user during connection. | [optional] 
+**NetworkDevice** | Pointer to **string** | The network device for the device used for connection. | [optional] 
+**NetworkDriver** | Pointer to **string** | The network driver for the device. | [optional] 
+**WifiChannel** | Pointer to **string** | Channel through which the connection is routing. | [optional] 
+**WifiAuth** | Pointer to **string** | The type of authentication used by the SSID. | [optional] 
+**WifiBssid** | Pointer to **string** | The MAC of the access point the device is connected to. | [optional] 
+**WifiSsid** | Pointer to **string** | The name of the network the device is connected to. | [optional] 
+**WifiRssi** | Pointer to **string** | The Received Signal Strength Indicator for the device. | [optional] 
+**WifiNoise** | Pointer to **string** | The wireless signal power level received by the device. | [optional] 
+**DhcpServer** | Pointer to **string** | The IP address of the DCHP Server. | [optional] 
+**Ip** | Pointer to **string** | The IP of the device during connection. | [optional] 
+**NetworkMTU** | Pointer to **string** | The network max transmission unit. | [optional] 
+**Subnet** | Pointer to **string** | The subnet of the device connection. | [optional] 
+**Gateway** | Pointer to **string** | The gateway IP the device was connected to. | [optional] 
+**PublicIP** | Pointer to **string** | The public IP address of the device. | [optional] 
+**DnsServer** | Pointer to **string** | The DNS Server during the connection. | [optional] 
+**Ts** | Pointer to **string** | The time the connection was logged. | [optional] 
 
 ## Methods
 
@@ -32,205 +42,455 @@ NewInlineResponse200161WithDefaults instantiates a new InlineResponse200161 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMeasuredAt
 
-`func (o *InlineResponse200161) GetId() string`
+`func (o *InlineResponse200161) GetMeasuredAt() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMeasuredAt returns the MeasuredAt field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMeasuredAtOk
 
-`func (o *InlineResponse200161) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200161) GetMeasuredAtOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMeasuredAtOk returns a tuple with the MeasuredAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMeasuredAt
 
-`func (o *InlineResponse200161) SetId(v string)`
+`func (o *InlineResponse200161) SetMeasuredAt(v string)`
 
-SetId sets Id field to given value.
+SetMeasuredAt sets MeasuredAt field to given value.
 
-### HasId
+### HasMeasuredAt
 
-`func (o *InlineResponse200161) HasId() bool`
+`func (o *InlineResponse200161) HasMeasuredAt() bool`
 
-HasId returns a boolean if a field has been set.
+HasMeasuredAt returns a boolean if a field has been set.
 
-### GetName
+### GetUser
 
-`func (o *InlineResponse200161) GetName() string`
+`func (o *InlineResponse200161) GetUser() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUser returns the User field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUserOk
 
-`func (o *InlineResponse200161) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200161) GetUserOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUser
 
-`func (o *InlineResponse200161) SetName(v string)`
+`func (o *InlineResponse200161) SetUser(v string)`
 
-SetName sets Name field to given value.
+SetUser sets User field to given value.
 
-### HasName
+### HasUser
 
-`func (o *InlineResponse200161) HasName() bool`
+`func (o *InlineResponse200161) HasUser() bool`
 
-HasName returns a boolean if a field has been set.
+HasUser returns a boolean if a field has been set.
 
-### GetSystemType
+### GetNetworkDevice
 
-`func (o *InlineResponse200161) GetSystemType() string`
+`func (o *InlineResponse200161) GetNetworkDevice() string`
 
-GetSystemType returns the SystemType field if non-nil, zero value otherwise.
+GetNetworkDevice returns the NetworkDevice field if non-nil, zero value otherwise.
 
-### GetSystemTypeOk
+### GetNetworkDeviceOk
 
-`func (o *InlineResponse200161) GetSystemTypeOk() (*string, bool)`
+`func (o *InlineResponse200161) GetNetworkDeviceOk() (*string, bool)`
 
-GetSystemTypeOk returns a tuple with the SystemType field if it's non-nil, zero value otherwise
+GetNetworkDeviceOk returns a tuple with the NetworkDevice field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSystemType
+### SetNetworkDevice
 
-`func (o *InlineResponse200161) SetSystemType(v string)`
+`func (o *InlineResponse200161) SetNetworkDevice(v string)`
 
-SetSystemType sets SystemType field to given value.
+SetNetworkDevice sets NetworkDevice field to given value.
 
-### HasSystemType
+### HasNetworkDevice
 
-`func (o *InlineResponse200161) HasSystemType() bool`
+`func (o *InlineResponse200161) HasNetworkDevice() bool`
 
-HasSystemType returns a boolean if a field has been set.
+HasNetworkDevice returns a boolean if a field has been set.
 
-### GetMac
+### GetNetworkDriver
 
-`func (o *InlineResponse200161) GetMac() string`
+`func (o *InlineResponse200161) GetNetworkDriver() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetNetworkDriver returns the NetworkDriver field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetNetworkDriverOk
 
-`func (o *InlineResponse200161) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200161) GetNetworkDriverOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetNetworkDriverOk returns a tuple with the NetworkDriver field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetNetworkDriver
 
-`func (o *InlineResponse200161) SetMac(v string)`
+`func (o *InlineResponse200161) SetNetworkDriver(v string)`
 
-SetMac sets Mac field to given value.
+SetNetworkDriver sets NetworkDriver field to given value.
 
-### HasMac
+### HasNetworkDriver
 
-`func (o *InlineResponse200161) HasMac() bool`
+`func (o *InlineResponse200161) HasNetworkDriver() bool`
 
-HasMac returns a boolean if a field has been set.
+HasNetworkDriver returns a boolean if a field has been set.
 
-### GetUsername
+### GetWifiChannel
 
-`func (o *InlineResponse200161) GetUsername() string`
+`func (o *InlineResponse200161) GetWifiChannel() string`
 
-GetUsername returns the Username field if non-nil, zero value otherwise.
+GetWifiChannel returns the WifiChannel field if non-nil, zero value otherwise.
 
-### GetUsernameOk
+### GetWifiChannelOk
 
-`func (o *InlineResponse200161) GetUsernameOk() (*string, bool)`
+`func (o *InlineResponse200161) GetWifiChannelOk() (*string, bool)`
 
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+GetWifiChannelOk returns a tuple with the WifiChannel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsername
+### SetWifiChannel
 
-`func (o *InlineResponse200161) SetUsername(v string)`
+`func (o *InlineResponse200161) SetWifiChannel(v string)`
 
-SetUsername sets Username field to given value.
+SetWifiChannel sets WifiChannel field to given value.
 
-### HasUsername
+### HasWifiChannel
 
-`func (o *InlineResponse200161) HasUsername() bool`
+`func (o *InlineResponse200161) HasWifiChannel() bool`
 
-HasUsername returns a boolean if a field has been set.
+HasWifiChannel returns a boolean if a field has been set.
 
-### GetEmail
+### GetWifiAuth
 
-`func (o *InlineResponse200161) GetEmail() string`
+`func (o *InlineResponse200161) GetWifiAuth() string`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetWifiAuth returns the WifiAuth field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetWifiAuthOk
 
-`func (o *InlineResponse200161) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse200161) GetWifiAuthOk() (*string, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetWifiAuthOk returns a tuple with the WifiAuth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetWifiAuth
 
-`func (o *InlineResponse200161) SetEmail(v string)`
+`func (o *InlineResponse200161) SetWifiAuth(v string)`
 
-SetEmail sets Email field to given value.
+SetWifiAuth sets WifiAuth field to given value.
 
-### HasEmail
+### HasWifiAuth
 
-`func (o *InlineResponse200161) HasEmail() bool`
+`func (o *InlineResponse200161) HasWifiAuth() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasWifiAuth returns a boolean if a field has been set.
 
-### GetTags
+### GetWifiBssid
 
-`func (o *InlineResponse200161) GetTags() []string`
+`func (o *InlineResponse200161) GetWifiBssid() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetWifiBssid returns the WifiBssid field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetWifiBssidOk
 
-`func (o *InlineResponse200161) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200161) GetWifiBssidOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetWifiBssidOk returns a tuple with the WifiBssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetWifiBssid
 
-`func (o *InlineResponse200161) SetTags(v []string)`
+`func (o *InlineResponse200161) SetWifiBssid(v string)`
 
-SetTags sets Tags field to given value.
+SetWifiBssid sets WifiBssid field to given value.
 
-### HasTags
+### HasWifiBssid
 
-`func (o *InlineResponse200161) HasTags() bool`
+`func (o *InlineResponse200161) HasWifiBssid() bool`
 
-HasTags returns a boolean if a field has been set.
+HasWifiBssid returns a boolean if a field has been set.
 
-### GetTrustedAccessConnections
+### GetWifiSsid
 
-`func (o *InlineResponse200161) GetTrustedAccessConnections() []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections`
+`func (o *InlineResponse200161) GetWifiSsid() string`
 
-GetTrustedAccessConnections returns the TrustedAccessConnections field if non-nil, zero value otherwise.
+GetWifiSsid returns the WifiSsid field if non-nil, zero value otherwise.
 
-### GetTrustedAccessConnectionsOk
+### GetWifiSsidOk
 
-`func (o *InlineResponse200161) GetTrustedAccessConnectionsOk() (*[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections, bool)`
+`func (o *InlineResponse200161) GetWifiSsidOk() (*string, bool)`
 
-GetTrustedAccessConnectionsOk returns a tuple with the TrustedAccessConnections field if it's non-nil, zero value otherwise
+GetWifiSsidOk returns a tuple with the WifiSsid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrustedAccessConnections
+### SetWifiSsid
 
-`func (o *InlineResponse200161) SetTrustedAccessConnections(v []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections)`
+`func (o *InlineResponse200161) SetWifiSsid(v string)`
 
-SetTrustedAccessConnections sets TrustedAccessConnections field to given value.
+SetWifiSsid sets WifiSsid field to given value.
 
-### HasTrustedAccessConnections
+### HasWifiSsid
 
-`func (o *InlineResponse200161) HasTrustedAccessConnections() bool`
+`func (o *InlineResponse200161) HasWifiSsid() bool`
 
-HasTrustedAccessConnections returns a boolean if a field has been set.
+HasWifiSsid returns a boolean if a field has been set.
+
+### GetWifiRssi
+
+`func (o *InlineResponse200161) GetWifiRssi() string`
+
+GetWifiRssi returns the WifiRssi field if non-nil, zero value otherwise.
+
+### GetWifiRssiOk
+
+`func (o *InlineResponse200161) GetWifiRssiOk() (*string, bool)`
+
+GetWifiRssiOk returns a tuple with the WifiRssi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifiRssi
+
+`func (o *InlineResponse200161) SetWifiRssi(v string)`
+
+SetWifiRssi sets WifiRssi field to given value.
+
+### HasWifiRssi
+
+`func (o *InlineResponse200161) HasWifiRssi() bool`
+
+HasWifiRssi returns a boolean if a field has been set.
+
+### GetWifiNoise
+
+`func (o *InlineResponse200161) GetWifiNoise() string`
+
+GetWifiNoise returns the WifiNoise field if non-nil, zero value otherwise.
+
+### GetWifiNoiseOk
+
+`func (o *InlineResponse200161) GetWifiNoiseOk() (*string, bool)`
+
+GetWifiNoiseOk returns a tuple with the WifiNoise field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifiNoise
+
+`func (o *InlineResponse200161) SetWifiNoise(v string)`
+
+SetWifiNoise sets WifiNoise field to given value.
+
+### HasWifiNoise
+
+`func (o *InlineResponse200161) HasWifiNoise() bool`
+
+HasWifiNoise returns a boolean if a field has been set.
+
+### GetDhcpServer
+
+`func (o *InlineResponse200161) GetDhcpServer() string`
+
+GetDhcpServer returns the DhcpServer field if non-nil, zero value otherwise.
+
+### GetDhcpServerOk
+
+`func (o *InlineResponse200161) GetDhcpServerOk() (*string, bool)`
+
+GetDhcpServerOk returns a tuple with the DhcpServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpServer
+
+`func (o *InlineResponse200161) SetDhcpServer(v string)`
+
+SetDhcpServer sets DhcpServer field to given value.
+
+### HasDhcpServer
+
+`func (o *InlineResponse200161) HasDhcpServer() bool`
+
+HasDhcpServer returns a boolean if a field has been set.
+
+### GetIp
+
+`func (o *InlineResponse200161) GetIp() string`
+
+GetIp returns the Ip field if non-nil, zero value otherwise.
+
+### GetIpOk
+
+`func (o *InlineResponse200161) GetIpOk() (*string, bool)`
+
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp
+
+`func (o *InlineResponse200161) SetIp(v string)`
+
+SetIp sets Ip field to given value.
+
+### HasIp
+
+`func (o *InlineResponse200161) HasIp() bool`
+
+HasIp returns a boolean if a field has been set.
+
+### GetNetworkMTU
+
+`func (o *InlineResponse200161) GetNetworkMTU() string`
+
+GetNetworkMTU returns the NetworkMTU field if non-nil, zero value otherwise.
+
+### GetNetworkMTUOk
+
+`func (o *InlineResponse200161) GetNetworkMTUOk() (*string, bool)`
+
+GetNetworkMTUOk returns a tuple with the NetworkMTU field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkMTU
+
+`func (o *InlineResponse200161) SetNetworkMTU(v string)`
+
+SetNetworkMTU sets NetworkMTU field to given value.
+
+### HasNetworkMTU
+
+`func (o *InlineResponse200161) HasNetworkMTU() bool`
+
+HasNetworkMTU returns a boolean if a field has been set.
+
+### GetSubnet
+
+`func (o *InlineResponse200161) GetSubnet() string`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineResponse200161) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineResponse200161) SetSubnet(v string)`
+
+SetSubnet sets Subnet field to given value.
+
+### HasSubnet
+
+`func (o *InlineResponse200161) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### GetGateway
+
+`func (o *InlineResponse200161) GetGateway() string`
+
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
+
+### GetGatewayOk
+
+`func (o *InlineResponse200161) GetGatewayOk() (*string, bool)`
+
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGateway
+
+`func (o *InlineResponse200161) SetGateway(v string)`
+
+SetGateway sets Gateway field to given value.
+
+### HasGateway
+
+`func (o *InlineResponse200161) HasGateway() bool`
+
+HasGateway returns a boolean if a field has been set.
+
+### GetPublicIP
+
+`func (o *InlineResponse200161) GetPublicIP() string`
+
+GetPublicIP returns the PublicIP field if non-nil, zero value otherwise.
+
+### GetPublicIPOk
+
+`func (o *InlineResponse200161) GetPublicIPOk() (*string, bool)`
+
+GetPublicIPOk returns a tuple with the PublicIP field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPublicIP
+
+`func (o *InlineResponse200161) SetPublicIP(v string)`
+
+SetPublicIP sets PublicIP field to given value.
+
+### HasPublicIP
+
+`func (o *InlineResponse200161) HasPublicIP() bool`
+
+HasPublicIP returns a boolean if a field has been set.
+
+### GetDnsServer
+
+`func (o *InlineResponse200161) GetDnsServer() string`
+
+GetDnsServer returns the DnsServer field if non-nil, zero value otherwise.
+
+### GetDnsServerOk
+
+`func (o *InlineResponse200161) GetDnsServerOk() (*string, bool)`
+
+GetDnsServerOk returns a tuple with the DnsServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsServer
+
+`func (o *InlineResponse200161) SetDnsServer(v string)`
+
+SetDnsServer sets DnsServer field to given value.
+
+### HasDnsServer
+
+`func (o *InlineResponse200161) HasDnsServer() bool`
+
+HasDnsServer returns a boolean if a field has been set.
+
+### GetTs
+
+`func (o *InlineResponse200161) GetTs() string`
+
+GetTs returns the Ts field if non-nil, zero value otherwise.
+
+### GetTsOk
+
+`func (o *InlineResponse200161) GetTsOk() (*string, bool)`
+
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTs
+
+`func (o *InlineResponse200161) SetTs(v string)`
+
+SetTs sets Ts field to given value.
+
+### HasTs
+
+`func (o *InlineResponse200161) HasTs() bool`
+
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Name** | **string** | Name of the new cluster | 
+**Uplinks** | [**[]NetworksNetworkIdCampusGatewayClustersUplinks**](NetworksNetworkIdCampusGatewayClustersUplinks.md) | Uplink interface settings of the cluster | 
+**Tunnels** | [**[]NetworksNetworkIdCampusGatewayClustersTunnels**](NetworksNetworkIdCampusGatewayClustersTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | 
+**Nameservers** | [**NetworksNetworkIdCampusGatewayClustersNameservers**](NetworksNetworkIdCampusGatewayClustersNameservers.md) |  | 
+**PortChannels** | [**[]NetworksNetworkIdCampusGatewayClustersPortChannels**](NetworksNetworkIdCampusGatewayClustersPortChannels.md) | Port channel settings of the cluster | 
+**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersDevices**](NetworksNetworkIdCampusGatewayClustersDevices.md) | Devices to be added to the cluster | [optional] 
+**Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
 
 ## Methods
 
 ### NewInlineObject92
 
-`func NewInlineObject92() *InlineObject92`
+`func NewInlineObject92(name string, uplinks []NetworksNetworkIdCampusGatewayClustersUplinks, tunnels []NetworksNetworkIdCampusGatewayClustersTunnels, nameservers NetworksNetworkIdCampusGatewayClustersNameservers, portChannels []NetworksNetworkIdCampusGatewayClustersPortChannels, ) *InlineObject92`
 
 NewInlineObject92 instantiates a new InlineObject92 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +31,155 @@ NewInlineObject92WithDefaults instantiates a new InlineObject92 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMask
+### GetName
 
-`func (o *InlineObject92) GetMask() int32`
+`func (o *InlineObject92) GetName() string`
 
-GetMask returns the Mask field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMaskOk
+### GetNameOk
 
-`func (o *InlineObject92) GetMaskOk() (*int32, bool)`
+`func (o *InlineObject92) GetNameOk() (*string, bool)`
 
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMask
+### SetName
 
-`func (o *InlineObject92) SetMask(v int32)`
+`func (o *InlineObject92) SetName(v string)`
 
-SetMask sets Mask field to given value.
+SetName sets Name field to given value.
 
-### HasMask
 
-`func (o *InlineObject92) HasMask() bool`
+### GetUplinks
 
-HasMask returns a boolean if a field has been set.
+`func (o *InlineObject92) GetUplinks() []NetworksNetworkIdCampusGatewayClustersUplinks`
 
-### GetCidr
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-`func (o *InlineObject92) GetCidr() string`
+### GetUplinksOk
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+`func (o *InlineObject92) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersUplinks, bool)`
 
-### GetCidrOk
-
-`func (o *InlineObject92) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetUplinks
 
-`func (o *InlineObject92) SetCidr(v string)`
+`func (o *InlineObject92) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersUplinks)`
 
-SetCidr sets Cidr field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasCidr
 
-`func (o *InlineObject92) HasCidr() bool`
+### GetTunnels
 
-HasCidr returns a boolean if a field has been set.
+`func (o *InlineObject92) GetTunnels() []NetworksNetworkIdCampusGatewayClustersTunnels`
+
+GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
+
+### GetTunnelsOk
+
+`func (o *InlineObject92) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersTunnels, bool)`
+
+GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTunnels
+
+`func (o *InlineObject92) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersTunnels)`
+
+SetTunnels sets Tunnels field to given value.
+
+
+### GetNameservers
+
+`func (o *InlineObject92) GetNameservers() NetworksNetworkIdCampusGatewayClustersNameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject92) GetNameserversOk() (*NetworksNetworkIdCampusGatewayClustersNameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject92) SetNameservers(v NetworksNetworkIdCampusGatewayClustersNameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+
+### GetPortChannels
+
+`func (o *InlineObject92) GetPortChannels() []NetworksNetworkIdCampusGatewayClustersPortChannels`
+
+GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
+
+### GetPortChannelsOk
+
+`func (o *InlineObject92) GetPortChannelsOk() (*[]NetworksNetworkIdCampusGatewayClustersPortChannels, bool)`
+
+GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannels
+
+`func (o *InlineObject92) SetPortChannels(v []NetworksNetworkIdCampusGatewayClustersPortChannels)`
+
+SetPortChannels sets PortChannels field to given value.
+
+
+### GetDevices
+
+`func (o *InlineObject92) GetDevices() []NetworksNetworkIdCampusGatewayClustersDevices`
+
+GetDevices returns the Devices field if non-nil, zero value otherwise.
+
+### GetDevicesOk
+
+`func (o *InlineObject92) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersDevices, bool)`
+
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevices
+
+`func (o *InlineObject92) SetDevices(v []NetworksNetworkIdCampusGatewayClustersDevices)`
+
+SetDevices sets Devices field to given value.
+
+### HasDevices
+
+`func (o *InlineObject92) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject92) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject92) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject92) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject92) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

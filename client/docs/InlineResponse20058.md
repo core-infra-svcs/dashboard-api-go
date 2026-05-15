@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultDestinations** | Pointer to [**InlineResponse20058DefaultDestinations**](InlineResponse20058DefaultDestinations.md) |  | [optional] 
-**Alerts** | Pointer to [**[]InlineResponse20058Alerts**](InlineResponse20058Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
-**Muting** | Pointer to [**InlineResponse20058Muting**](InlineResponse20058Muting.md) |  | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device | [optional] 
+**LatencyStats** | Pointer to [**InlineResponse20058LatencyStats**](InlineResponse20058LatencyStats.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20058WithDefaults instantiates a new InlineResponse20058 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultDestinations
+### GetSerial
 
-`func (o *InlineResponse20058) GetDefaultDestinations() InlineResponse20058DefaultDestinations`
+`func (o *InlineResponse20058) GetSerial() string`
 
-GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDefaultDestinationsOk
+### GetSerialOk
 
-`func (o *InlineResponse20058) GetDefaultDestinationsOk() (*InlineResponse20058DefaultDestinations, bool)`
+`func (o *InlineResponse20058) GetSerialOk() (*string, bool)`
 
-GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultDestinations
+### SetSerial
 
-`func (o *InlineResponse20058) SetDefaultDestinations(v InlineResponse20058DefaultDestinations)`
+`func (o *InlineResponse20058) SetSerial(v string)`
 
-SetDefaultDestinations sets DefaultDestinations field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDefaultDestinations
+### HasSerial
 
-`func (o *InlineResponse20058) HasDefaultDestinations() bool`
+`func (o *InlineResponse20058) HasSerial() bool`
 
-HasDefaultDestinations returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetAlerts
+### GetLatencyStats
 
-`func (o *InlineResponse20058) GetAlerts() []InlineResponse20058Alerts`
+`func (o *InlineResponse20058) GetLatencyStats() InlineResponse20058LatencyStats`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetLatencyStatsOk
 
-`func (o *InlineResponse20058) GetAlertsOk() (*[]InlineResponse20058Alerts, bool)`
+`func (o *InlineResponse20058) GetLatencyStatsOk() (*InlineResponse20058LatencyStats, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetLatencyStats
 
-`func (o *InlineResponse20058) SetAlerts(v []InlineResponse20058Alerts)`
+`func (o *InlineResponse20058) SetLatencyStats(v InlineResponse20058LatencyStats)`
 
-SetAlerts sets Alerts field to given value.
+SetLatencyStats sets LatencyStats field to given value.
 
-### HasAlerts
+### HasLatencyStats
 
-`func (o *InlineResponse20058) HasAlerts() bool`
+`func (o *InlineResponse20058) HasLatencyStats() bool`
 
-HasAlerts returns a boolean if a field has been set.
-
-### GetMuting
-
-`func (o *InlineResponse20058) GetMuting() InlineResponse20058Muting`
-
-GetMuting returns the Muting field if non-nil, zero value otherwise.
-
-### GetMutingOk
-
-`func (o *InlineResponse20058) GetMutingOk() (*InlineResponse20058Muting, bool)`
-
-GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMuting
-
-`func (o *InlineResponse20058) SetMuting(v InlineResponse20058Muting)`
-
-SetMuting sets Muting field to given value.
-
-### HasMuting
-
-`func (o *InlineResponse20058) HasMuting() bool`
-
-HasMuting returns a boolean if a field has been set.
+HasLatencyStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

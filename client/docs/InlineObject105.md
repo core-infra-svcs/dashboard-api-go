@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the Staged Upgrade Group. Length must be 1 to 255 characters | 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group. Length must be 1 to 255 characters | [optional] 
-**IsDefault** | **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1.md) |  | [optional] 
+**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
+**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
+**Reasons** | [**[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons**](NetworksNetworkIdFirmwareUpgradesRollbacksReasons.md) | Reasons for the rollback | 
+**ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksToVersion**](NetworksNetworkIdFirmwareUpgradesRollbacksToVersion.md) |  | [optional] 
+**Predownload** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksPredownload**](NetworksNetworkIdFirmwareUpgradesRollbacksPredownload.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject105
 
-`func NewInlineObject105(name string, isDefault bool, ) *InlineObject105`
+`func NewInlineObject105(reasons []NetworksNetworkIdFirmwareUpgradesRollbacksReasons, ) *InlineObject105`
 
 NewInlineObject105 instantiates a new InlineObject105 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +29,125 @@ NewInlineObject105WithDefaults instantiates a new InlineObject105 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetProduct
 
-`func (o *InlineObject105) GetName() string`
+`func (o *InlineObject105) GetProduct() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetProduct returns the Product field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetProductOk
 
-`func (o *InlineObject105) GetNameOk() (*string, bool)`
+`func (o *InlineObject105) GetProductOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetProduct
 
-`func (o *InlineObject105) SetName(v string)`
+`func (o *InlineObject105) SetProduct(v string)`
 
-SetName sets Name field to given value.
+SetProduct sets Product field to given value.
 
+### HasProduct
 
-### GetDescription
+`func (o *InlineObject105) HasProduct() bool`
 
-`func (o *InlineObject105) GetDescription() string`
+HasProduct returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetTime
 
-### GetDescriptionOk
+`func (o *InlineObject105) GetTime() time.Time`
 
-`func (o *InlineObject105) GetDescriptionOk() (*string, bool)`
+GetTime returns the Time field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetTimeOk
+
+`func (o *InlineObject105) GetTimeOk() (*time.Time, bool)`
+
+GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetTime
 
-`func (o *InlineObject105) SetDescription(v string)`
+`func (o *InlineObject105) SetTime(v time.Time)`
 
-SetDescription sets Description field to given value.
+SetTime sets Time field to given value.
 
-### HasDescription
+### HasTime
 
-`func (o *InlineObject105) HasDescription() bool`
+`func (o *InlineObject105) HasTime() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasTime returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetReasons
 
-`func (o *InlineObject105) GetIsDefault() bool`
+`func (o *InlineObject105) GetReasons() []NetworksNetworkIdFirmwareUpgradesRollbacksReasons`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetReasonsOk
 
-`func (o *InlineObject105) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineObject105) GetReasonsOk() (*[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetReasons
 
-`func (o *InlineObject105) SetIsDefault(v bool)`
+`func (o *InlineObject105) SetReasons(v []NetworksNetworkIdFirmwareUpgradesRollbacksReasons)`
 
-SetIsDefault sets IsDefault field to given value.
+SetReasons sets Reasons field to given value.
 
 
-### GetAssignedDevices
+### GetToVersion
 
-`func (o *InlineObject105) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1`
+`func (o *InlineObject105) GetToVersion() NetworksNetworkIdFirmwareUpgradesRollbacksToVersion`
 
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
+GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
 
-### GetAssignedDevicesOk
+### GetToVersionOk
 
-`func (o *InlineObject105) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1, bool)`
+`func (o *InlineObject105) GetToVersionOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksToVersion, bool)`
 
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
+GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignedDevices
+### SetToVersion
 
-`func (o *InlineObject105) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1)`
+`func (o *InlineObject105) SetToVersion(v NetworksNetworkIdFirmwareUpgradesRollbacksToVersion)`
 
-SetAssignedDevices sets AssignedDevices field to given value.
+SetToVersion sets ToVersion field to given value.
 
-### HasAssignedDevices
+### HasToVersion
 
-`func (o *InlineObject105) HasAssignedDevices() bool`
+`func (o *InlineObject105) HasToVersion() bool`
 
-HasAssignedDevices returns a boolean if a field has been set.
+HasToVersion returns a boolean if a field has been set.
+
+### GetPredownload
+
+`func (o *InlineObject105) GetPredownload() NetworksNetworkIdFirmwareUpgradesRollbacksPredownload`
+
+GetPredownload returns the Predownload field if non-nil, zero value otherwise.
+
+### GetPredownloadOk
+
+`func (o *InlineObject105) GetPredownloadOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksPredownload, bool)`
+
+GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPredownload
+
+`func (o *InlineObject105) SetPredownload(v NetworksNetworkIdFirmwareUpgradesRollbacksPredownload)`
+
+SetPredownload sets Predownload field to given value.
+
+### HasPredownload
+
+`func (o *InlineObject105) HasPredownload() bool`
+
+HasPredownload returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

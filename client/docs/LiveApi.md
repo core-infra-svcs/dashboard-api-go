@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraAnalyticsLive
 
-> InlineResponse20011 GetDeviceCameraAnalyticsLive(ctx, serial).Execute()
+> InlineResponse20013 GetDeviceCameraAnalyticsLive(ctx, serial).Execute()
 
 Returns live state from camera analytics zones
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveApi.GetDeviceCameraAnalyticsLive``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsLive`: InlineResponse20011
+    // response from `GetDeviceCameraAnalyticsLive`: InlineResponse20013
     fmt.Fprintf(os.Stdout, "Response from `LiveApi.GetDeviceCameraAnalyticsLive`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 

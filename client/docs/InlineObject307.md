@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
-**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
-**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy.md) |  | 
+**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to assign | 
 
 ## Methods
 
 ### NewInlineObject307
 
-`func NewInlineObject307(name string, ) *InlineObject307`
+`func NewInlineObject307(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject307`
 
 NewInlineObject307 instantiates a new InlineObject307 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +26,45 @@ NewInlineObject307WithDefaults instantiates a new InlineObject307 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPolicy
 
-`func (o *InlineObject307) GetName() string`
+`func (o *InlineObject307) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPolicyOk
 
-`func (o *InlineObject307) GetNameOk() (*string, bool)`
+`func (o *InlineObject307) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPolicy
 
-`func (o *InlineObject307) SetName(v string)`
+`func (o *InlineObject307) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy)`
 
-SetName sets Name field to given value.
+SetPolicy sets Policy field to given value.
 
 
-### GetCategory
+### GetVlans
 
-`func (o *InlineObject307) GetCategory() string`
+`func (o *InlineObject307) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetVlans returns the Vlans field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetVlansOk
 
-`func (o *InlineObject307) GetCategoryOk() (*string, bool)`
+`func (o *InlineObject307) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetVlans
 
-`func (o *InlineObject307) SetCategory(v string)`
+`func (o *InlineObject307) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
 
-SetCategory sets Category field to given value.
+SetVlans sets Vlans field to given value.
 
-### HasCategory
-
-`func (o *InlineObject307) HasCategory() bool`
-
-HasCategory returns a boolean if a field has been set.
-
-### GetObjectIds
-
-`func (o *InlineObject307) GetObjectIds() []string`
-
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
-
-### GetObjectIdsOk
-
-`func (o *InlineObject307) GetObjectIdsOk() (*[]string, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetObjectIds
-
-`func (o *InlineObject307) SetObjectIds(v []string)`
-
-SetObjectIds sets ObjectIds field to given value.
-
-### HasObjectIds
-
-`func (o *InlineObject307) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

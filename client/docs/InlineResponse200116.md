@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
+**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
+**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
+**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
+**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineResponse200116WithDefaults instantiates a new InlineResponse200116 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroup
+### GetClientId
 
-`func (o *InlineResponse200116) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
+`func (o *InlineResponse200116) GetClientId() string`
 
-GetGroup returns the Group field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetGroupOk
+### GetClientIdOk
 
-`func (o *InlineResponse200116) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
+`func (o *InlineResponse200116) GetClientIdOk() (*string, bool)`
 
-GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroup
+### SetClientId
 
-`func (o *InlineResponse200116) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
+`func (o *InlineResponse200116) SetClientId(v string)`
 
-SetGroup sets Group field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasGroup
+### HasClientId
 
-`func (o *InlineResponse200116) HasGroup() bool`
+`func (o *InlineResponse200116) HasClientId() bool`
 
-HasGroup returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
+
+### GetClientIp
+
+`func (o *InlineResponse200116) GetClientIp() string`
+
+GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
+
+### GetClientIpOk
+
+`func (o *InlineResponse200116) GetClientIpOk() (*string, bool)`
+
+GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientIp
+
+`func (o *InlineResponse200116) SetClientIp(v string)`
+
+SetClientIp sets ClientIp field to given value.
+
+### HasClientIp
+
+`func (o *InlineResponse200116) HasClientIp() bool`
+
+HasClientIp returns a boolean if a field has been set.
+
+### GetClientMac
+
+`func (o *InlineResponse200116) GetClientMac() string`
+
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+
+### GetClientMacOk
+
+`func (o *InlineResponse200116) GetClientMacOk() (*string, bool)`
+
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientMac
+
+`func (o *InlineResponse200116) SetClientMac(v string)`
+
+SetClientMac sets ClientMac field to given value.
+
+### HasClientMac
+
+`func (o *InlineResponse200116) HasClientMac() bool`
+
+HasClientMac returns a boolean if a field has been set.
+
+### GetUsageHistory
+
+`func (o *InlineResponse200116) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
+
+GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
+
+### GetUsageHistoryOk
+
+`func (o *InlineResponse200116) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
+
+GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsageHistory
+
+`func (o *InlineResponse200116) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
+
+SetUsageHistory sets UsageHistory field to given value.
+
+### HasUsageHistory
+
+`func (o *InlineResponse200116) HasUsageHistory() bool`
+
+HasUsageHistory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

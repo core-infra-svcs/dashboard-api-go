@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Operation** | **string** | Operation to run on the sensor. &#39;enableDownstreamPower&#39;, &#39;disableDownstreamPower&#39;, and &#39;cycleDownstreamPower&#39; turn power on/off to the device that is connected downstream of an MT40 power monitor. &#39;refreshData&#39; causes an MT15 or MT40 device to upload its latest readings so that they are immediately available in the Dashboard API. | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject26
 
-`func NewInlineObject26(operation string, ) *InlineObject26`
+`func NewInlineObject26() *InlineObject26`
 
 NewInlineObject26 instantiates a new InlineObject26 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject26WithDefaults instantiates a new InlineObject26 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOperation
+### GetCallback
 
-`func (o *InlineObject26) GetOperation() string`
+`func (o *InlineObject26) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-GetOperation returns the Operation field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetOperationOk
+### GetCallbackOk
 
-`func (o *InlineObject26) GetOperationOk() (*string, bool)`
+`func (o *InlineObject26) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-GetOperationOk returns a tuple with the Operation field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOperation
+### SetCallback
 
-`func (o *InlineObject26) SetOperation(v string)`
+`func (o *InlineObject26) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetOperation sets Operation field to given value.
+SetCallback sets Callback field to given value.
 
+### HasCallback
+
+`func (o *InlineObject26) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

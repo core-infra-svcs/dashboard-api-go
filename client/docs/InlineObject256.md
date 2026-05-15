@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new organization | 
+**Status** | Pointer to **string** | Status the eSIM will be updated to | [optional] 
 
 ## Methods
 
 ### NewInlineObject256
 
-`func NewInlineObject256(name string, ) *InlineObject256`
+`func NewInlineObject256() *InlineObject256`
 
 NewInlineObject256 instantiates a new InlineObject256 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject256WithDefaults instantiates a new InlineObject256 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStatus
 
-`func (o *InlineObject256) GetName() string`
+`func (o *InlineObject256) GetStatus() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStatusOk
 
-`func (o *InlineObject256) GetNameOk() (*string, bool)`
+`func (o *InlineObject256) GetStatusOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStatus
 
-`func (o *InlineObject256) SetName(v string)`
+`func (o *InlineObject256) SetStatus(v string)`
 
-SetName sets Name field to given value.
+SetStatus sets Status field to given value.
 
+### HasStatus
+
+`func (o *InlineObject256) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

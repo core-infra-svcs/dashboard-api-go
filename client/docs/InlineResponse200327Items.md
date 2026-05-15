@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID for integration | [optional] 
-**Type** | Pointer to **string** | Identifier for integration type. One of Axis, Catalyst SD-WAN, Cisco Spaces, Genea, OAuth, PagerDuty, Secure Access, Secure Connect, Splunk, XDR | [optional] 
-**Name** | Pointer to **string** | Name of integration | [optional] 
-**Provider** | Pointer to **string** | Integration provider. One of Cisco, Genea, partner | [optional] 
-**Tags** | Pointer to **[]string** | Integration types | [optional] 
+**Serial** | Pointer to **string** | Device serial number | [optional] 
+**BySlot** | Pointer to [**[]InlineResponse200327BySlot**](InlineResponse200327BySlot.md) | SIMs associated with the device. Maximum 3 SIM slots per device. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200327ItemsWithDefaults instantiates a new InlineResponse200327
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSerial
 
-`func (o *InlineResponse200327Items) GetId() string`
+`func (o *InlineResponse200327Items) GetSerial() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200327Items) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200327Items) GetSerialOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSerial
 
-`func (o *InlineResponse200327Items) SetId(v string)`
+`func (o *InlineResponse200327Items) SetSerial(v string)`
 
-SetId sets Id field to given value.
+SetSerial sets Serial field to given value.
 
-### HasId
+### HasSerial
 
-`func (o *InlineResponse200327Items) HasId() bool`
+`func (o *InlineResponse200327Items) HasSerial() bool`
 
-HasId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetType
+### GetBySlot
 
-`func (o *InlineResponse200327Items) GetType() string`
+`func (o *InlineResponse200327Items) GetBySlot() []InlineResponse200327BySlot`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetBySlot returns the BySlot field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetBySlotOk
 
-`func (o *InlineResponse200327Items) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200327Items) GetBySlotOk() (*[]InlineResponse200327BySlot, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetBySlotOk returns a tuple with the BySlot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetBySlot
 
-`func (o *InlineResponse200327Items) SetType(v string)`
+`func (o *InlineResponse200327Items) SetBySlot(v []InlineResponse200327BySlot)`
 
-SetType sets Type field to given value.
+SetBySlot sets BySlot field to given value.
 
-### HasType
+### HasBySlot
 
-`func (o *InlineResponse200327Items) HasType() bool`
+`func (o *InlineResponse200327Items) HasBySlot() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200327Items) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200327Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200327Items) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200327Items) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetProvider
-
-`func (o *InlineResponse200327Items) GetProvider() string`
-
-GetProvider returns the Provider field if non-nil, zero value otherwise.
-
-### GetProviderOk
-
-`func (o *InlineResponse200327Items) GetProviderOk() (*string, bool)`
-
-GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProvider
-
-`func (o *InlineResponse200327Items) SetProvider(v string)`
-
-SetProvider sets Provider field to given value.
-
-### HasProvider
-
-`func (o *InlineResponse200327Items) HasProvider() bool`
-
-HasProvider returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200327Items) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200327Items) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200327Items) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200327Items) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasBySlot returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

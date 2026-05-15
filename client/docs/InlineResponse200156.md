@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Boolean indicating whether the operation was completed successfully. | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of endpoints. | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200156WithDefaults instantiates a new InlineResponse200156 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetIds
 
-`func (o *InlineResponse200156) GetSuccess() bool`
+`func (o *InlineResponse200156) GetIds() []string`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetIdsOk
 
-`func (o *InlineResponse200156) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200156) GetIdsOk() (*[]string, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetIds
 
-`func (o *InlineResponse200156) SetSuccess(v bool)`
+`func (o *InlineResponse200156) SetIds(v []string)`
 
-SetSuccess sets Success field to given value.
+SetIds sets Ids field to given value.
 
-### HasSuccess
+### HasIds
 
-`func (o *InlineResponse200156) HasSuccess() bool`
+`func (o *InlineResponse200156) HasIds() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

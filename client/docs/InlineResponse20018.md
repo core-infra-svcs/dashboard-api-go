@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SenseEnabled** | Pointer to **bool** | Whether MV Sense is enabled on the camera | [optional] 
-**MqttBrokerId** | Pointer to **NullableString** | ID of the MQTT broker; null if MQTT is disabled | [optional] 
-**MqttTopics** | Pointer to **[]string** | MQTT topics the camera publishes to | [optional] 
-**AudioDetection** | Pointer to [**InlineResponse20018AudioDetection**](InlineResponse20018AudioDetection.md) |  | [optional] 
-**DetectionModelId** | Pointer to **NullableString** | ID of the object detection model | [optional] 
+**Enabled** | Pointer to **bool** | Whether custom analytics is enabled | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**Parameters** | Pointer to [**[]InlineResponse20018Parameters**](InlineResponse20018Parameters.md) | Parameters for the custom analytics workload | [optional] 
 
 ## Methods
 
@@ -29,151 +27,81 @@ NewInlineResponse20018WithDefaults instantiates a new InlineResponse20018 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSenseEnabled
+### GetEnabled
 
-`func (o *InlineResponse20018) GetSenseEnabled() bool`
+`func (o *InlineResponse20018) GetEnabled() bool`
 
-GetSenseEnabled returns the SenseEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSenseEnabledOk
+### GetEnabledOk
 
-`func (o *InlineResponse20018) GetSenseEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20018) GetEnabledOk() (*bool, bool)`
 
-GetSenseEnabledOk returns a tuple with the SenseEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSenseEnabled
+### SetEnabled
 
-`func (o *InlineResponse20018) SetSenseEnabled(v bool)`
+`func (o *InlineResponse20018) SetEnabled(v bool)`
 
-SetSenseEnabled sets SenseEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSenseEnabled
+### HasEnabled
 
-`func (o *InlineResponse20018) HasSenseEnabled() bool`
+`func (o *InlineResponse20018) HasEnabled() bool`
 
-HasSenseEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMqttBrokerId
+### GetArtifactId
 
-`func (o *InlineResponse20018) GetMqttBrokerId() string`
+`func (o *InlineResponse20018) GetArtifactId() string`
 
-GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetMqttBrokerIdOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse20018) GetMqttBrokerIdOk() (*string, bool)`
+`func (o *InlineResponse20018) GetArtifactIdOk() (*string, bool)`
 
-GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttBrokerId
+### SetArtifactId
 
-`func (o *InlineResponse20018) SetMqttBrokerId(v string)`
+`func (o *InlineResponse20018) SetArtifactId(v string)`
 
-SetMqttBrokerId sets MqttBrokerId field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasMqttBrokerId
+### HasArtifactId
 
-`func (o *InlineResponse20018) HasMqttBrokerId() bool`
+`func (o *InlineResponse20018) HasArtifactId() bool`
 
-HasMqttBrokerId returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
 
-### SetMqttBrokerIdNil
+### GetParameters
 
-`func (o *InlineResponse20018) SetMqttBrokerIdNil(b bool)`
+`func (o *InlineResponse20018) GetParameters() []InlineResponse20018Parameters`
 
- SetMqttBrokerIdNil sets the value for MqttBrokerId to be an explicit nil
+GetParameters returns the Parameters field if non-nil, zero value otherwise.
 
-### UnsetMqttBrokerId
-`func (o *InlineResponse20018) UnsetMqttBrokerId()`
+### GetParametersOk
 
-UnsetMqttBrokerId ensures that no value is present for MqttBrokerId, not even an explicit nil
-### GetMqttTopics
+`func (o *InlineResponse20018) GetParametersOk() (*[]InlineResponse20018Parameters, bool)`
 
-`func (o *InlineResponse20018) GetMqttTopics() []string`
-
-GetMqttTopics returns the MqttTopics field if non-nil, zero value otherwise.
-
-### GetMqttTopicsOk
-
-`func (o *InlineResponse20018) GetMqttTopicsOk() (*[]string, bool)`
-
-GetMqttTopicsOk returns a tuple with the MqttTopics field if it's non-nil, zero value otherwise
+GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttTopics
+### SetParameters
 
-`func (o *InlineResponse20018) SetMqttTopics(v []string)`
+`func (o *InlineResponse20018) SetParameters(v []InlineResponse20018Parameters)`
 
-SetMqttTopics sets MqttTopics field to given value.
+SetParameters sets Parameters field to given value.
 
-### HasMqttTopics
+### HasParameters
 
-`func (o *InlineResponse20018) HasMqttTopics() bool`
+`func (o *InlineResponse20018) HasParameters() bool`
 
-HasMqttTopics returns a boolean if a field has been set.
+HasParameters returns a boolean if a field has been set.
 
-### GetAudioDetection
-
-`func (o *InlineResponse20018) GetAudioDetection() InlineResponse20018AudioDetection`
-
-GetAudioDetection returns the AudioDetection field if non-nil, zero value otherwise.
-
-### GetAudioDetectionOk
-
-`func (o *InlineResponse20018) GetAudioDetectionOk() (*InlineResponse20018AudioDetection, bool)`
-
-GetAudioDetectionOk returns a tuple with the AudioDetection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAudioDetection
-
-`func (o *InlineResponse20018) SetAudioDetection(v InlineResponse20018AudioDetection)`
-
-SetAudioDetection sets AudioDetection field to given value.
-
-### HasAudioDetection
-
-`func (o *InlineResponse20018) HasAudioDetection() bool`
-
-HasAudioDetection returns a boolean if a field has been set.
-
-### GetDetectionModelId
-
-`func (o *InlineResponse20018) GetDetectionModelId() string`
-
-GetDetectionModelId returns the DetectionModelId field if non-nil, zero value otherwise.
-
-### GetDetectionModelIdOk
-
-`func (o *InlineResponse20018) GetDetectionModelIdOk() (*string, bool)`
-
-GetDetectionModelIdOk returns a tuple with the DetectionModelId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetectionModelId
-
-`func (o *InlineResponse20018) SetDetectionModelId(v string)`
-
-SetDetectionModelId sets DetectionModelId field to given value.
-
-### HasDetectionModelId
-
-`func (o *InlineResponse20018) HasDetectionModelId() bool`
-
-HasDetectionModelId returns a boolean if a field has been set.
-
-### SetDetectionModelIdNil
-
-`func (o *InlineResponse20018) SetDetectionModelIdNil(b bool)`
-
- SetDetectionModelIdNil sets the value for DetectionModelId to be an explicit nil
-
-### UnsetDetectionModelId
-`func (o *InlineResponse20018) UnsetDetectionModelId()`
-
-UnsetDetectionModelId ensures that no value is present for DetectionModelId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

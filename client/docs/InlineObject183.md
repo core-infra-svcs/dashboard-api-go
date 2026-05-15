@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | Indicates if this rule will allow, block, or alert. | [optional] 
-**Match** | Pointer to [**NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch**](NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch.md) |  | [optional] 
+**Name** | **string** | The name of the new template | 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A Base64 encoded file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**HeadersFile** | Pointer to **string** | A Base64 encoded file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183() *InlineObject183`
+`func NewInlineObject183(name string, ) *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +29,135 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetName
 
-`func (o *InlineObject183) GetType() string`
+`func (o *InlineObject183) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineObject183) GetTypeOk() (*string, bool)`
+`func (o *InlineObject183) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineObject183) SetType(v string)`
+`func (o *InlineObject183) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
-### HasType
 
-`func (o *InlineObject183) HasType() bool`
+### GetBody
 
-HasType returns a boolean if a field has been set.
+`func (o *InlineObject183) GetBody() string`
 
-### GetMatch
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-`func (o *InlineObject183) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch`
+### GetBodyOk
 
-GetMatch returns the Match field if non-nil, zero value otherwise.
+`func (o *InlineObject183) GetBodyOk() (*string, bool)`
 
-### GetMatchOk
-
-`func (o *InlineObject183) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch, bool)`
-
-GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMatch
+### SetBody
 
-`func (o *InlineObject183) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch)`
+`func (o *InlineObject183) SetBody(v string)`
 
-SetMatch sets Match field to given value.
+SetBody sets Body field to given value.
 
-### HasMatch
+### HasBody
 
-`func (o *InlineObject183) HasMatch() bool`
+`func (o *InlineObject183) HasBody() bool`
 
-HasMatch returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
+
+### GetHeaders
+
+`func (o *InlineObject183) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
+
+### GetHeadersOk
+
+`func (o *InlineObject183) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeaders
+
+`func (o *InlineObject183) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+
+SetHeaders sets Headers field to given value.
+
+### HasHeaders
+
+`func (o *InlineObject183) HasHeaders() bool`
+
+HasHeaders returns a boolean if a field has been set.
+
+### SetHeadersNil
+
+`func (o *InlineObject183) SetHeadersNil(b bool)`
+
+ SetHeadersNil sets the value for Headers to be an explicit nil
+
+### UnsetHeaders
+`func (o *InlineObject183) UnsetHeaders()`
+
+UnsetHeaders ensures that no value is present for Headers, not even an explicit nil
+### GetBodyFile
+
+`func (o *InlineObject183) GetBodyFile() string`
+
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+
+### GetBodyFileOk
+
+`func (o *InlineObject183) GetBodyFileOk() (*string, bool)`
+
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBodyFile
+
+`func (o *InlineObject183) SetBodyFile(v string)`
+
+SetBodyFile sets BodyFile field to given value.
+
+### HasBodyFile
+
+`func (o *InlineObject183) HasBodyFile() bool`
+
+HasBodyFile returns a boolean if a field has been set.
+
+### GetHeadersFile
+
+`func (o *InlineObject183) GetHeadersFile() string`
+
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+
+### GetHeadersFileOk
+
+`func (o *InlineObject183) GetHeadersFileOk() (*string, bool)`
+
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeadersFile
+
+`func (o *InlineObject183) SetHeadersFile(v string)`
+
+SetHeadersFile sets HeadersFile field to given value.
+
+### HasHeadersFile
+
+`func (o *InlineObject183) HasHeadersFile() bool`
+
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

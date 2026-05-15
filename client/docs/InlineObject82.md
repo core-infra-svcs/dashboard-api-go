@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable warm spare | 
-**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
-**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
-**VirtualIp1** | Pointer to **string** | The WAN 1 shared IP | [optional] 
-**VirtualIp2** | Pointer to **string** | The WAN 2 shared IP | [optional] 
+**VlansEnabled** | Pointer to **bool** | Boolean indicating whether to enable (true) or disable (false) VLANs for the network | [optional] 
 
 ## Methods
 
 ### NewInlineObject82
 
-`func NewInlineObject82(enabled bool, ) *InlineObject82`
+`func NewInlineObject82() *InlineObject82`
 
 NewInlineObject82 instantiates a new InlineObject82 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +25,30 @@ NewInlineObject82WithDefaults instantiates a new InlineObject82 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetVlansEnabled
 
-`func (o *InlineObject82) GetEnabled() bool`
+`func (o *InlineObject82) GetVlansEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetVlansEnabledOk
 
-`func (o *InlineObject82) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject82) GetVlansEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetVlansEnabled
 
-`func (o *InlineObject82) SetEnabled(v bool)`
+`func (o *InlineObject82) SetVlansEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetVlansEnabled sets VlansEnabled field to given value.
 
+### HasVlansEnabled
 
-### GetSpareSerial
+`func (o *InlineObject82) HasVlansEnabled() bool`
 
-`func (o *InlineObject82) GetSpareSerial() string`
-
-GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
-
-### GetSpareSerialOk
-
-`func (o *InlineObject82) GetSpareSerialOk() (*string, bool)`
-
-GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSpareSerial
-
-`func (o *InlineObject82) SetSpareSerial(v string)`
-
-SetSpareSerial sets SpareSerial field to given value.
-
-### HasSpareSerial
-
-`func (o *InlineObject82) HasSpareSerial() bool`
-
-HasSpareSerial returns a boolean if a field has been set.
-
-### GetUplinkMode
-
-`func (o *InlineObject82) GetUplinkMode() string`
-
-GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
-
-### GetUplinkModeOk
-
-`func (o *InlineObject82) GetUplinkModeOk() (*string, bool)`
-
-GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinkMode
-
-`func (o *InlineObject82) SetUplinkMode(v string)`
-
-SetUplinkMode sets UplinkMode field to given value.
-
-### HasUplinkMode
-
-`func (o *InlineObject82) HasUplinkMode() bool`
-
-HasUplinkMode returns a boolean if a field has been set.
-
-### GetVirtualIp1
-
-`func (o *InlineObject82) GetVirtualIp1() string`
-
-GetVirtualIp1 returns the VirtualIp1 field if non-nil, zero value otherwise.
-
-### GetVirtualIp1Ok
-
-`func (o *InlineObject82) GetVirtualIp1Ok() (*string, bool)`
-
-GetVirtualIp1Ok returns a tuple with the VirtualIp1 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVirtualIp1
-
-`func (o *InlineObject82) SetVirtualIp1(v string)`
-
-SetVirtualIp1 sets VirtualIp1 field to given value.
-
-### HasVirtualIp1
-
-`func (o *InlineObject82) HasVirtualIp1() bool`
-
-HasVirtualIp1 returns a boolean if a field has been set.
-
-### GetVirtualIp2
-
-`func (o *InlineObject82) GetVirtualIp2() string`
-
-GetVirtualIp2 returns the VirtualIp2 field if non-nil, zero value otherwise.
-
-### GetVirtualIp2Ok
-
-`func (o *InlineObject82) GetVirtualIp2Ok() (*string, bool)`
-
-GetVirtualIp2Ok returns a tuple with the VirtualIp2 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVirtualIp2
-
-`func (o *InlineObject82) SetVirtualIp2(v string)`
-
-SetVirtualIp2 sets VirtualIp2 field to given value.
-
-### HasVirtualIp2
-
-`func (o *InlineObject82) HasVirtualIp2() bool`
-
-HasVirtualIp2 returns a boolean if a field has been set.
+HasVlansEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

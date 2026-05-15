@@ -4,10 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | theme id | [optional] 
-**Name** | Pointer to **string** | theme name | [optional] 
-**IsSystemTheme** | Pointer to **bool** | is a Meraki provided theme | [optional] 
-**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
+**Id** | Pointer to **string** | Policy object ID | [optional] 
+**Name** | Pointer to **string** | Name of policy object (alphanumeric, space, dash, or underscore characters only). | [optional] 
+**Category** | Pointer to **string** | Category of a policy object (one of: adaptivePolicy, network) | [optional] 
+**Type** | Pointer to **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to. | [optional] 
+**NetworkIds** | Pointer to **[]string** | The IDs of the networks that use the policy object. | [optional] 
 
 ## Methods
 
@@ -78,55 +83,180 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetIsSystemTheme
+### GetCategory
 
-`func (o *InlineResponse200381) GetIsSystemTheme() bool`
+`func (o *InlineResponse200381) GetCategory() string`
 
-GetIsSystemTheme returns the IsSystemTheme field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetIsSystemThemeOk
+### GetCategoryOk
 
-`func (o *InlineResponse200381) GetIsSystemThemeOk() (*bool, bool)`
+`func (o *InlineResponse200381) GetCategoryOk() (*string, bool)`
 
-GetIsSystemThemeOk returns a tuple with the IsSystemTheme field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsSystemTheme
+### SetCategory
 
-`func (o *InlineResponse200381) SetIsSystemTheme(v bool)`
+`func (o *InlineResponse200381) SetCategory(v string)`
 
-SetIsSystemTheme sets IsSystemTheme field to given value.
+SetCategory sets Category field to given value.
 
-### HasIsSystemTheme
+### HasCategory
 
-`func (o *InlineResponse200381) HasIsSystemTheme() bool`
+`func (o *InlineResponse200381) HasCategory() bool`
 
-HasIsSystemTheme returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetThemeAssets
+### GetType
 
-`func (o *InlineResponse200381) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
+`func (o *InlineResponse200381) GetType() string`
 
-GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetThemeAssetsOk
+### GetTypeOk
 
-`func (o *InlineResponse200381) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
+`func (o *InlineResponse200381) GetTypeOk() (*string, bool)`
 
-GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThemeAssets
+### SetType
 
-`func (o *InlineResponse200381) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
+`func (o *InlineResponse200381) SetType(v string)`
 
-SetThemeAssets sets ThemeAssets field to given value.
+SetType sets Type field to given value.
 
-### HasThemeAssets
+### HasType
 
-`func (o *InlineResponse200381) HasThemeAssets() bool`
+`func (o *InlineResponse200381) HasType() bool`
 
-HasThemeAssets returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetCidr
+
+`func (o *InlineResponse200381) GetCidr() string`
+
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
+
+### GetCidrOk
+
+`func (o *InlineResponse200381) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCidr
+
+`func (o *InlineResponse200381) SetCidr(v string)`
+
+SetCidr sets Cidr field to given value.
+
+### HasCidr
+
+`func (o *InlineResponse200381) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200381) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200381) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200381) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200381) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200381) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200381) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200381) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200381) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineResponse200381) GetGroupIds() []string`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineResponse200381) GetGroupIdsOk() (*[]string, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineResponse200381) SetGroupIds(v []string)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineResponse200381) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
+
+### GetNetworkIds
+
+`func (o *InlineResponse200381) GetNetworkIds() []string`
+
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+
+### GetNetworkIdsOk
+
+`func (o *InlineResponse200381) GetNetworkIdsOk() (*[]string, bool)`
+
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkIds
+
+`func (o *InlineResponse200381) SetNetworkIds(v []string)`
+
+SetNetworkIds sets NetworkIds field to given value.
+
+### HasNetworkIds
+
+`func (o *InlineResponse200381) HasNetworkIds() bool`
+
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

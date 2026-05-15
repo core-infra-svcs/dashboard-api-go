@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**Name** | Pointer to **string** | The name of the new role. Must be unique. | [optional] 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices1.md) | Device tag on which this specified permission is applied. | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks**](OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks.md) | Network tag on which this specified permission is applied. | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide1.md) | Permissions to be applied org wide. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineObject255WithDefaults instantiates a new InlineObject255 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetName
 
-`func (o *InlineObject255) GetOrders() []string`
+`func (o *InlineObject255) GetName() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetNameOk
 
-`func (o *InlineObject255) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject255) GetNameOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetName
 
-`func (o *InlineObject255) SetOrders(v []string)`
+`func (o *InlineObject255) SetName(v string)`
 
-SetOrders sets Orders field to given value.
+SetName sets Name field to given value.
 
-### HasOrders
+### HasName
 
-`func (o *InlineObject255) HasOrders() bool`
+`func (o *InlineObject255) HasName() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSerials
+### GetAppliedOnDevices
 
-`func (o *InlineObject255) GetSerials() []string`
+`func (o *InlineObject255) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetAppliedOnDevicesOk
 
-`func (o *InlineObject255) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject255) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetAppliedOnDevices
 
-`func (o *InlineObject255) SetSerials(v []string)`
+`func (o *InlineObject255) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1)`
 
-SetSerials sets Serials field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
-### HasSerials
+### HasAppliedOnDevices
 
-`func (o *InlineObject255) HasSerials() bool`
+`func (o *InlineObject255) HasAppliedOnDevices() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasAppliedOnDevices returns a boolean if a field has been set.
 
-### GetLicenses
+### GetAppliedOnNetworks
 
-`func (o *InlineObject255) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
+`func (o *InlineObject255) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetAppliedOnNetworksOk
 
-`func (o *InlineObject255) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
+`func (o *InlineObject255) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetAppliedOnNetworks
 
-`func (o *InlineObject255) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
+`func (o *InlineObject255) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks)`
 
-SetLicenses sets Licenses field to given value.
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
 
-### HasLicenses
+### HasAppliedOnNetworks
 
-`func (o *InlineObject255) HasLicenses() bool`
+`func (o *InlineObject255) HasAppliedOnNetworks() bool`
 
-HasLicenses returns a boolean if a field has been set.
+HasAppliedOnNetworks returns a boolean if a field has been set.
+
+### GetAppliedOrgWide
+
+`func (o *InlineObject255) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1`
+
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+
+### GetAppliedOrgWideOk
+
+`func (o *InlineObject255) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOrgWide
+
+`func (o *InlineObject255) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1)`
+
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
+
+### HasAppliedOrgWide
+
+`func (o *InlineObject255) HasAppliedOrgWide() bool`
+
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

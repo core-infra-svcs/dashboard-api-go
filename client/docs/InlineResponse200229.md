@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, OpenRoaming is enabled on the SSID. | [optional] 
-**TenantId** | Pointer to **string** | The OpenRoaming DNA Spaces tenant ID. | [optional] 
+**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
+**Api** | Pointer to [**InlineResponse200229Api**](InlineResponse200229Api.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetTenantId
+### GetApi
 
-`func (o *InlineResponse200229) GetTenantId() string`
+`func (o *InlineResponse200229) GetApi() InlineResponse200229Api`
 
-GetTenantId returns the TenantId field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetTenantIdOk
+### GetApiOk
 
-`func (o *InlineResponse200229) GetTenantIdOk() (*string, bool)`
+`func (o *InlineResponse200229) GetApiOk() (*InlineResponse200229Api, bool)`
 
-GetTenantIdOk returns a tuple with the TenantId field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTenantId
+### SetApi
 
-`func (o *InlineResponse200229) SetTenantId(v string)`
+`func (o *InlineResponse200229) SetApi(v InlineResponse200229Api)`
 
-SetTenantId sets TenantId field to given value.
+SetApi sets Api field to given value.
 
-### HasTenantId
+### HasApi
 
-`func (o *InlineResponse200229) HasTenantId() bool`
+`func (o *InlineResponse200229) HasApi() bool`
 
-HasTenantId returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

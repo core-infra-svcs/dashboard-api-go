@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new stack | 
-**Serials** | **[]string** | An array of switch serials to be added into the new stack | 
+**InterfaceIp** | **string** | The IP address of the interface where the RP needs to be created. | 
+**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
+**Vrf** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf**](NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject161
 
-`func NewInlineObject161(name string, serials []string, ) *InlineObject161`
+`func NewInlineObject161(interfaceIp string, multicastGroup string, ) *InlineObject161`
 
 NewInlineObject161 instantiates a new InlineObject161 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,70 @@ NewInlineObject161WithDefaults instantiates a new InlineObject161 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetInterfaceIp
 
-`func (o *InlineObject161) GetName() string`
+`func (o *InlineObject161) GetInterfaceIp() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject161) GetNameOk() (*string, bool)`
+`func (o *InlineObject161) GetInterfaceIpOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetInterfaceIp
 
-`func (o *InlineObject161) SetName(v string)`
+`func (o *InlineObject161) SetInterfaceIp(v string)`
 
-SetName sets Name field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
 
-### GetSerials
+### GetMulticastGroup
 
-`func (o *InlineObject161) GetSerials() []string`
+`func (o *InlineObject161) GetMulticastGroup() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetMulticastGroupOk
 
-`func (o *InlineObject161) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject161) GetMulticastGroupOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetMulticastGroup
 
-`func (o *InlineObject161) SetSerials(v []string)`
+`func (o *InlineObject161) SetMulticastGroup(v string)`
 
-SetSerials sets Serials field to given value.
+SetMulticastGroup sets MulticastGroup field to given value.
 
+
+### GetVrf
+
+`func (o *InlineObject161) GetVrf() NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject161) GetVrfOk() (*NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject161) SetVrf(v NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject161) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

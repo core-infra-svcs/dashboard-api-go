@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks.md) | List containing the network ID and the product type to disable XDR on | 
+**Serials** | **[]string** | The serial(s) of the device(s) to stop the capture on | 
 
 ## Methods
 
 ### NewInlineObject274
 
-`func NewInlineObject274(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, ) *InlineObject274`
+`func NewInlineObject274(serials []string, ) *InlineObject274`
 
 NewInlineObject274 instantiates a new InlineObject274 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject274WithDefaults instantiates a new InlineObject274 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworks
+### GetSerials
 
-`func (o *InlineObject274) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks`
+`func (o *InlineObject274) GetSerials() []string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetSerialsOk
 
-`func (o *InlineObject274) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, bool)`
+`func (o *InlineObject274) GetSerialsOk() (*[]string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetSerials
 
-`func (o *InlineObject274) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks)`
+`func (o *InlineObject274) SetSerials(v []string)`
 
-SetNetworks sets Networks field to given value.
+SetSerials sets Serials field to given value.
 
 
 

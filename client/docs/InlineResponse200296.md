@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200296Usage**](InlineResponse200296Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200296Counts**](InlineResponse200296Counts.md) |  | [optional] 
+**Success** | Pointer to **bool** | Whether the update succeeded | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200296WithDefaults instantiates a new InlineResponse200296 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetSuccess
 
-`func (o *InlineResponse200296) GetUsage() InlineResponse200296Usage`
+`func (o *InlineResponse200296) GetSuccess() bool`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetSuccessOk
 
-`func (o *InlineResponse200296) GetUsageOk() (*InlineResponse200296Usage, bool)`
+`func (o *InlineResponse200296) GetSuccessOk() (*bool, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetSuccess
 
-`func (o *InlineResponse200296) SetUsage(v InlineResponse200296Usage)`
+`func (o *InlineResponse200296) SetSuccess(v bool)`
 
-SetUsage sets Usage field to given value.
+SetSuccess sets Success field to given value.
 
-### HasUsage
+### HasSuccess
 
-`func (o *InlineResponse200296) HasUsage() bool`
+`func (o *InlineResponse200296) HasSuccess() bool`
 
-HasUsage returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200296) GetCounts() InlineResponse200296Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200296) GetCountsOk() (*InlineResponse200296Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200296) SetCounts(v InlineResponse200296Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200296) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

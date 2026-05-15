@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProducts**](NetworksNetworkIdFirmwareUpgradesStagedEventsProducts.md) |  | [optional] 
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**Serial** | **string** | The serial of a device | 
 
 ## Methods
 
 ### NewInlineObject103
 
-`func NewInlineObject103(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject103`
+`func NewInlineObject103(serial string, ) *InlineObject103`
 
 NewInlineObject103 instantiates a new InlineObject103 object
 This constructor will assign default values to properties that have it defined,
@@ -26,49 +25,24 @@ NewInlineObject103WithDefaults instantiates a new InlineObject103 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetSerial
 
-`func (o *InlineObject103) GetProducts() NetworksNetworkIdFirmwareUpgradesStagedEventsProducts`
+`func (o *InlineObject103) GetSerial() string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetSerialOk
 
-`func (o *InlineObject103) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProducts, bool)`
+`func (o *InlineObject103) GetSerialOk() (*string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetSerial
 
-`func (o *InlineObject103) SetProducts(v NetworksNetworkIdFirmwareUpgradesStagedEventsProducts)`
+`func (o *InlineObject103) SetSerial(v string)`
 
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineObject103) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
-
-### GetStages
-
-`func (o *InlineObject103) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
-
-GetStages returns the Stages field if non-nil, zero value otherwise.
-
-### GetStagesOk
-
-`func (o *InlineObject103) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
-
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStages
-
-`func (o *InlineObject103) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
-
-SetStages sets Stages field to given value.
+SetSerial sets Serial field to given value.
 
 
 

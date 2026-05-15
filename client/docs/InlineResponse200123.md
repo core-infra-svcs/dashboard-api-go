@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
-**Category** | Pointer to **string** | Category of the alert | [optional] 
-**Type** | Pointer to **string** | Alert type | [optional] 
-**Severity** | Pointer to **string** | Severity of the alert | [optional] 
-**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
+**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
+**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
+**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
+**Events** | Pointer to [**[]InlineResponse200123Events**](InlineResponse200123Events.md) | An array of events that took place in the network. | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200123WithDefaults instantiates a new InlineResponse200123 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMessage
 
-`func (o *InlineResponse200123) GetId() string`
+`func (o *InlineResponse200123) GetMessage() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMessageOk
 
-`func (o *InlineResponse200123) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200123) GetMessageOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMessage
 
-`func (o *InlineResponse200123) SetId(v string)`
+`func (o *InlineResponse200123) SetMessage(v string)`
 
-SetId sets Id field to given value.
+SetMessage sets Message field to given value.
 
-### HasId
+### HasMessage
 
-`func (o *InlineResponse200123) HasId() bool`
+`func (o *InlineResponse200123) HasMessage() bool`
 
-HasId returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
-### GetCategory
+### GetPageStartAt
 
-`func (o *InlineResponse200123) GetCategory() string`
+`func (o *InlineResponse200123) GetPageStartAt() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetPageStartAtOk
 
-`func (o *InlineResponse200123) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200123) GetPageStartAtOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetPageStartAt
 
-`func (o *InlineResponse200123) SetCategory(v string)`
+`func (o *InlineResponse200123) SetPageStartAt(v string)`
 
-SetCategory sets Category field to given value.
+SetPageStartAt sets PageStartAt field to given value.
 
-### HasCategory
+### HasPageStartAt
 
-`func (o *InlineResponse200123) HasCategory() bool`
+`func (o *InlineResponse200123) HasPageStartAt() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasPageStartAt returns a boolean if a field has been set.
 
-### GetType
+### GetPageEndAt
 
-`func (o *InlineResponse200123) GetType() string`
+`func (o *InlineResponse200123) GetPageEndAt() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetPageEndAtOk
 
-`func (o *InlineResponse200123) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200123) GetPageEndAtOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetPageEndAt
 
-`func (o *InlineResponse200123) SetType(v string)`
+`func (o *InlineResponse200123) SetPageEndAt(v string)`
 
-SetType sets Type field to given value.
+SetPageEndAt sets PageEndAt field to given value.
 
-### HasType
+### HasPageEndAt
 
-`func (o *InlineResponse200123) HasType() bool`
+`func (o *InlineResponse200123) HasPageEndAt() bool`
 
-HasType returns a boolean if a field has been set.
+HasPageEndAt returns a boolean if a field has been set.
 
-### GetSeverity
+### GetEvents
 
-`func (o *InlineResponse200123) GetSeverity() string`
+`func (o *InlineResponse200123) GetEvents() []InlineResponse200123Events`
 
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
+GetEvents returns the Events field if non-nil, zero value otherwise.
 
-### GetSeverityOk
+### GetEventsOk
 
-`func (o *InlineResponse200123) GetSeverityOk() (*string, bool)`
+`func (o *InlineResponse200123) GetEventsOk() (*[]InlineResponse200123Events, bool)`
 
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeverity
+### SetEvents
 
-`func (o *InlineResponse200123) SetSeverity(v string)`
+`func (o *InlineResponse200123) SetEvents(v []InlineResponse200123Events)`
 
-SetSeverity sets Severity field to given value.
+SetEvents sets Events field to given value.
 
-### HasSeverity
+### HasEvents
 
-`func (o *InlineResponse200123) HasSeverity() bool`
+`func (o *InlineResponse200123) HasEvents() bool`
 
-HasSeverity returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse200123) GetScope() NetworksNetworkIdHealthAlertsScope`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse200123) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse200123) SetScope(v NetworksNetworkIdHealthAlertsScope)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse200123) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

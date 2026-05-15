@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be moved. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be moved. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be moved. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be moved. | [optional] 
-**NewNetwork** | **string** | The new network to which the devices will be moved. | 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be checked-in. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be checked-in. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be checked-in. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in. | [optional] 
 
 ## Methods
 
 ### NewInlineObject131
 
-`func NewInlineObject131(newNetwork string, ) *InlineObject131`
+`func NewInlineObject131() *InlineObject131`
 
 NewInlineObject131 instantiates a new InlineObject131 object
 This constructor will assign default values to properties that have it defined,
@@ -128,26 +127,6 @@ SetScope sets Scope field to given value.
 `func (o *InlineObject131) HasScope() bool`
 
 HasScope returns a boolean if a field has been set.
-
-### GetNewNetwork
-
-`func (o *InlineObject131) GetNewNetwork() string`
-
-GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
-
-### GetNewNetworkOk
-
-`func (o *InlineObject131) GetNewNetworkOk() (*string, bool)`
-
-GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNewNetwork
-
-`func (o *InlineObject131) SetNewNetwork(v string)`
-
-SetNewNetwork sets NewNetwork field to given value.
-
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

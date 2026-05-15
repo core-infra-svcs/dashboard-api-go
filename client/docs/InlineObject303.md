@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RulesetId** | **string** | ID of the ruleset to assign | 
-**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Name** | Pointer to **string** | Name of the firewall ruleset | [optional] 
+**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
 
 ## Methods
 
 ### NewInlineObject303
 
-`func NewInlineObject303(rulesetId string, policyId string, ) *InlineObject303`
+`func NewInlineObject303() *InlineObject303`
 
 NewInlineObject303 instantiates a new InlineObject303 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,55 @@ NewInlineObject303WithDefaults instantiates a new InlineObject303 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRulesetId
+### GetName
 
-`func (o *InlineObject303) GetRulesetId() string`
+`func (o *InlineObject303) GetName() string`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetNameOk
 
-`func (o *InlineObject303) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject303) GetNameOk() (*string, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetName
 
-`func (o *InlineObject303) SetRulesetId(v string)`
+`func (o *InlineObject303) SetName(v string)`
 
-SetRulesetId sets RulesetId field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetPolicyId
+`func (o *InlineObject303) HasName() bool`
 
-`func (o *InlineObject303) GetPolicyId() string`
+HasName returns a boolean if a field has been set.
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+### GetDescription
 
-### GetPolicyIdOk
+`func (o *InlineObject303) GetDescription() string`
 
-`func (o *InlineObject303) GetPolicyIdOk() (*string, bool)`
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+### GetDescriptionOk
+
+`func (o *InlineObject303) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetDescription
 
-`func (o *InlineObject303) SetPolicyId(v string)`
+`func (o *InlineObject303) SetDescription(v string)`
 
-SetPolicyId sets PolicyId field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
 
-### GetPriority
+`func (o *InlineObject303) HasDescription() bool`
 
-`func (o *InlineObject303) GetPriority() int32`
-
-GetPriority returns the Priority field if non-nil, zero value otherwise.
-
-### GetPriorityOk
-
-`func (o *InlineObject303) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPriority
-
-`func (o *InlineObject303) SetPriority(v int32)`
-
-SetPriority sets Priority field to given value.
-
-### HasPriority
-
-`func (o *InlineObject303) HasPriority() bool`
-
-HasPriority returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

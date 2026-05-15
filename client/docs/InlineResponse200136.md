@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Device** | Pointer to [**NetworksNetworkIdSensorRelationshipsDevice**](NetworksNetworkIdSensorRelationshipsDevice.md) |  | [optional] 
-**Relationships** | Pointer to [**NetworksNetworkIdSensorRelationshipsRelationships**](NetworksNetworkIdSensorRelationshipsRelationships.md) |  | [optional] 
+**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
+**Category** | Pointer to **string** | Category of the alert | [optional] 
+**Type** | Pointer to **string** | Alert type | [optional] 
+**Severity** | Pointer to **string** | Severity of the alert | [optional] 
+**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200136WithDefaults instantiates a new InlineResponse200136 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevice
+### GetId
 
-`func (o *InlineResponse200136) GetDevice() NetworksNetworkIdSensorRelationshipsDevice`
+`func (o *InlineResponse200136) GetId() string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetIdOk
 
-`func (o *InlineResponse200136) GetDeviceOk() (*NetworksNetworkIdSensorRelationshipsDevice, bool)`
+`func (o *InlineResponse200136) GetIdOk() (*string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetId
 
-`func (o *InlineResponse200136) SetDevice(v NetworksNetworkIdSensorRelationshipsDevice)`
+`func (o *InlineResponse200136) SetId(v string)`
 
-SetDevice sets Device field to given value.
+SetId sets Id field to given value.
 
-### HasDevice
+### HasId
 
-`func (o *InlineResponse200136) HasDevice() bool`
+`func (o *InlineResponse200136) HasId() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetRelationships
+### GetCategory
 
-`func (o *InlineResponse200136) GetRelationships() NetworksNetworkIdSensorRelationshipsRelationships`
+`func (o *InlineResponse200136) GetCategory() string`
 
-GetRelationships returns the Relationships field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetRelationshipsOk
+### GetCategoryOk
 
-`func (o *InlineResponse200136) GetRelationshipsOk() (*NetworksNetworkIdSensorRelationshipsRelationships, bool)`
+`func (o *InlineResponse200136) GetCategoryOk() (*string, bool)`
 
-GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRelationships
+### SetCategory
 
-`func (o *InlineResponse200136) SetRelationships(v NetworksNetworkIdSensorRelationshipsRelationships)`
+`func (o *InlineResponse200136) SetCategory(v string)`
 
-SetRelationships sets Relationships field to given value.
+SetCategory sets Category field to given value.
 
-### HasRelationships
+### HasCategory
 
-`func (o *InlineResponse200136) HasRelationships() bool`
+`func (o *InlineResponse200136) HasCategory() bool`
 
-HasRelationships returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200136) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200136) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200136) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200136) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetSeverity
+
+`func (o *InlineResponse200136) GetSeverity() string`
+
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
+
+### GetSeverityOk
+
+`func (o *InlineResponse200136) GetSeverityOk() (*string, bool)`
+
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverity
+
+`func (o *InlineResponse200136) SetSeverity(v string)`
+
+SetSeverity sets Severity field to given value.
+
+### HasSeverity
+
+`func (o *InlineResponse200136) HasSeverity() bool`
+
+HasSeverity returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineResponse200136) GetScope() NetworksNetworkIdHealthAlertsScope`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineResponse200136) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineResponse200136) SetScope(v NetworksNetworkIdHealthAlertsScope)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineResponse200136) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

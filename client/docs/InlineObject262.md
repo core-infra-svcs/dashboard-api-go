@@ -4,22 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | The serial(s) of the device(s) | 
-**Name** | **string** | Name of packet capture file | 
-**OutputType** | Pointer to **string** | Output type of packet capture file. Possible values: text, pcap, cloudshark, or upload_to_cloud | [optional] 
-**Destination** | Pointer to **string** | Destination of packet capture file. Possible values: [upload_to_cloud] | [optional] 
-**Ports** | Pointer to **string** | Ports of packet capture file, comma-separated | [optional] 
-**Notes** | Pointer to **string** | Reason for taking the packet capture | [optional] 
-**Duration** | Pointer to **int32** | Duration in seconds of packet capture | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for packet capture | [optional] 
-**Interface** | Pointer to **string** | Interface of the device | [optional] 
-**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced.md) |  | [optional] 
+**Name** | **string** | The name of the configuration template | 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
 
 ## Methods
 
 ### NewInlineObject262
 
-`func NewInlineObject262(serials []string, name string, ) *InlineObject262`
+`func NewInlineObject262(name string, ) *InlineObject262`
 
 NewInlineObject262 instantiates a new InlineObject262 object
 This constructor will assign default values to properties that have it defined,
@@ -33,26 +26,6 @@ will change when the set of required properties is changed
 NewInlineObject262WithDefaults instantiates a new InlineObject262 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetSerials
-
-`func (o *InlineObject262) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject262) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject262) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
 
 ### GetName
 
@@ -74,205 +47,55 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetOutputType
+### GetTimeZone
 
-`func (o *InlineObject262) GetOutputType() string`
+`func (o *InlineObject262) GetTimeZone() string`
 
-GetOutputType returns the OutputType field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetOutputTypeOk
+### GetTimeZoneOk
 
-`func (o *InlineObject262) GetOutputTypeOk() (*string, bool)`
+`func (o *InlineObject262) GetTimeZoneOk() (*string, bool)`
 
-GetOutputTypeOk returns a tuple with the OutputType field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOutputType
+### SetTimeZone
 
-`func (o *InlineObject262) SetOutputType(v string)`
+`func (o *InlineObject262) SetTimeZone(v string)`
 
-SetOutputType sets OutputType field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasOutputType
+### HasTimeZone
 
-`func (o *InlineObject262) HasOutputType() bool`
+`func (o *InlineObject262) HasTimeZone() bool`
 
-HasOutputType returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetDestination
+### GetCopyFromNetworkId
 
-`func (o *InlineObject262) GetDestination() string`
+`func (o *InlineObject262) GetCopyFromNetworkId() string`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetCopyFromNetworkIdOk
 
-`func (o *InlineObject262) GetDestinationOk() (*string, bool)`
+`func (o *InlineObject262) GetCopyFromNetworkIdOk() (*string, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetCopyFromNetworkId
 
-`func (o *InlineObject262) SetDestination(v string)`
+`func (o *InlineObject262) SetCopyFromNetworkId(v string)`
 
-SetDestination sets Destination field to given value.
+SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
 
-### HasDestination
+### HasCopyFromNetworkId
 
-`func (o *InlineObject262) HasDestination() bool`
+`func (o *InlineObject262) HasCopyFromNetworkId() bool`
 
-HasDestination returns a boolean if a field has been set.
-
-### GetPorts
-
-`func (o *InlineObject262) GetPorts() string`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineObject262) GetPortsOk() (*string, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineObject262) SetPorts(v string)`
-
-SetPorts sets Ports field to given value.
-
-### HasPorts
-
-`func (o *InlineObject262) HasPorts() bool`
-
-HasPorts returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject262) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject262) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject262) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject262) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetDuration
-
-`func (o *InlineObject262) GetDuration() int32`
-
-GetDuration returns the Duration field if non-nil, zero value otherwise.
-
-### GetDurationOk
-
-`func (o *InlineObject262) GetDurationOk() (*int32, bool)`
-
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDuration
-
-`func (o *InlineObject262) SetDuration(v int32)`
-
-SetDuration sets Duration field to given value.
-
-### HasDuration
-
-`func (o *InlineObject262) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
-
-### GetFilterExpression
-
-`func (o *InlineObject262) GetFilterExpression() string`
-
-GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
-
-### GetFilterExpressionOk
-
-`func (o *InlineObject262) GetFilterExpressionOk() (*string, bool)`
-
-GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFilterExpression
-
-`func (o *InlineObject262) SetFilterExpression(v string)`
-
-SetFilterExpression sets FilterExpression field to given value.
-
-### HasFilterExpression
-
-`func (o *InlineObject262) HasFilterExpression() bool`
-
-HasFilterExpression returns a boolean if a field has been set.
-
-### GetInterface
-
-`func (o *InlineObject262) GetInterface() string`
-
-GetInterface returns the Interface field if non-nil, zero value otherwise.
-
-### GetInterfaceOk
-
-`func (o *InlineObject262) GetInterfaceOk() (*string, bool)`
-
-GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterface
-
-`func (o *InlineObject262) SetInterface(v string)`
-
-SetInterface sets Interface field to given value.
-
-### HasInterface
-
-`func (o *InlineObject262) HasInterface() bool`
-
-HasInterface returns a boolean if a field has been set.
-
-### GetAdvanced
-
-`func (o *InlineObject262) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced`
-
-GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
-
-### GetAdvancedOk
-
-`func (o *InlineObject262) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced, bool)`
-
-GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvanced
-
-`func (o *InlineObject262) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced)`
-
-SetAdvanced sets Advanced field to given value.
-
-### HasAdvanced
-
-`func (o *InlineObject262) HasAdvanced() bool`
-
-HasAdvanced returns a boolean if a field has been set.
+HasCopyFromNetworkId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

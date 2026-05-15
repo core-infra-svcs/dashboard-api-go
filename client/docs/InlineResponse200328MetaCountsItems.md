@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of networks in the dataset | [optional] 
-**Remaining** | Pointer to **int32** | The number of networks in the dataset that are available on subsequent pages | [optional] 
+**Total** | Pointer to **int32** | Total number of devices with cellular tower information available | [optional] 
+**Remaining** | Pointer to **int32** | Remaining number of devices with cellular tower information (for paginated response) | [optional] 
 
 ## Methods
 

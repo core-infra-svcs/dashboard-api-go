@@ -4,19 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
-**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse20118Network**](InlineResponse20118Network.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If Zigbee is enabled for the network | [optional] 
+**IotController** | Pointer to [**InlineResponse20118IotController**](InlineResponse20118IotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**InlineResponse20118LockManagement**](InlineResponse20118LockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**InlineResponse20118Defaults**](InlineResponse20118Defaults.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20118
 
-`func NewInlineResponse20118(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse20118`
+`func NewInlineResponse20118() *InlineResponse20118`
 
 NewInlineResponse20118 instantiates a new InlineResponse20118 object
 This constructor will assign default values to properties that have it defined,
@@ -31,175 +29,130 @@ NewInlineResponse20118WithDefaults instantiates a new InlineResponse20118 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetNetwork
 
-`func (o *InlineResponse20118) GetId() string`
+`func (o *InlineResponse20118) GetNetwork() InlineResponse20118Network`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse20118) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20118) GetNetworkOk() (*InlineResponse20118Network, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetNetwork
 
-`func (o *InlineResponse20118) SetId(v string)`
+`func (o *InlineResponse20118) SetNetwork(v InlineResponse20118Network)`
 
-SetId sets Id field to given value.
+SetNetwork sets Network field to given value.
 
-### HasId
+### HasNetwork
 
-`func (o *InlineResponse20118) HasId() bool`
+`func (o *InlineResponse20118) HasNetwork() bool`
 
-HasId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetEnabled
 
-`func (o *InlineResponse20118) GetOrganizationId() string`
+`func (o *InlineResponse20118) GetEnabled() bool`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20118) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse20118) GetEnabledOk() (*bool, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetEnabled
 
-`func (o *InlineResponse20118) SetOrganizationId(v string)`
+`func (o *InlineResponse20118) SetEnabled(v bool)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasOrganizationId
+### HasEnabled
 
-`func (o *InlineResponse20118) HasOrganizationId() bool`
+`func (o *InlineResponse20118) HasEnabled() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetIotController
 
-`func (o *InlineResponse20118) GetConfirmed() bool`
+`func (o *InlineResponse20118) GetIotController() InlineResponse20118IotController`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetIotController returns the IotController field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetIotControllerOk
 
-`func (o *InlineResponse20118) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse20118) GetIotControllerOk() (*InlineResponse20118IotController, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetIotController
 
-`func (o *InlineResponse20118) SetConfirmed(v bool)`
+`func (o *InlineResponse20118) SetIotController(v InlineResponse20118IotController)`
 
-SetConfirmed sets Confirmed field to given value.
+SetIotController sets IotController field to given value.
 
-### HasConfirmed
+### HasIotController
 
-`func (o *InlineResponse20118) HasConfirmed() bool`
+`func (o *InlineResponse20118) HasIotController() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasIotController returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetLockManagement
 
-`func (o *InlineResponse20118) GetSynchronous() bool`
+`func (o *InlineResponse20118) GetLockManagement() InlineResponse20118LockManagement`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetLockManagementOk
 
-`func (o *InlineResponse20118) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineResponse20118) GetLockManagementOk() (*InlineResponse20118LockManagement, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetLockManagement
 
-`func (o *InlineResponse20118) SetSynchronous(v bool)`
+`func (o *InlineResponse20118) SetLockManagement(v InlineResponse20118LockManagement)`
 
-SetSynchronous sets Synchronous field to given value.
+SetLockManagement sets LockManagement field to given value.
 
-### HasSynchronous
+### HasLockManagement
 
-`func (o *InlineResponse20118) HasSynchronous() bool`
+`func (o *InlineResponse20118) HasLockManagement() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasLockManagement returns a boolean if a field has been set.
 
-### GetStatus
+### GetDefaults
 
-`func (o *InlineResponse20118) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
+`func (o *InlineResponse20118) GetDefaults() InlineResponse20118Defaults`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetDefaultsOk
 
-`func (o *InlineResponse20118) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
+`func (o *InlineResponse20118) GetDefaultsOk() (*InlineResponse20118Defaults, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetDefaults
 
-`func (o *InlineResponse20118) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
+`func (o *InlineResponse20118) SetDefaults(v InlineResponse20118Defaults)`
 
-SetStatus sets Status field to given value.
+SetDefaults sets Defaults field to given value.
 
-### HasStatus
+### HasDefaults
 
-`func (o *InlineResponse20118) HasStatus() bool`
+`func (o *InlineResponse20118) HasDefaults() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetActions
-
-`func (o *InlineResponse20118) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *InlineResponse20118) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *InlineResponse20118) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
-
-SetActions sets Actions field to given value.
-
-
-### GetCallback
-
-`func (o *InlineResponse20118) GetCallback() InlineResponse2011Callback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineResponse20118) GetCallbackOk() (*InlineResponse2011Callback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineResponse20118) SetCallback(v InlineResponse2011Callback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineResponse20118) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

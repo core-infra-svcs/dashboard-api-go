@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of a profile. | [optional] 
-**Name** | Pointer to **string** | Name of a profile. | [optional] 
-**Description** | Pointer to **string** | Description of a profile. | [optional] 
-**Scope** | Pointer to **string** | Scope of a profile. | [optional] 
-**Tags** | Pointer to **[]string** | Tags of a profile. | [optional] 
-**PayloadTypes** | Pointer to **[]string** | Payloads in the profile. | [optional] 
+**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
+**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
+**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse200158WithDefaults instantiates a new InlineResponse200158 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetReceived
 
-`func (o *InlineResponse200158) GetId() string`
+`func (o *InlineResponse200158) GetReceived() float32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetReceivedOk
 
-`func (o *InlineResponse200158) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200158) GetReceivedOk() (*float32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetReceived
 
-`func (o *InlineResponse200158) SetId(v string)`
+`func (o *InlineResponse200158) SetReceived(v float32)`
 
-SetId sets Id field to given value.
+SetReceived sets Received field to given value.
 
-### HasId
+### HasReceived
 
-`func (o *InlineResponse200158) HasId() bool`
+`func (o *InlineResponse200158) HasReceived() bool`
 
-HasId returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
 
-### GetName
+### GetSent
 
-`func (o *InlineResponse200158) GetName() string`
+`func (o *InlineResponse200158) GetSent() float32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSentOk
 
-`func (o *InlineResponse200158) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200158) GetSentOk() (*float32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSent
 
-`func (o *InlineResponse200158) SetName(v string)`
+`func (o *InlineResponse200158) SetSent(v float32)`
 
-SetName sets Name field to given value.
+SetSent sets Sent field to given value.
 
-### HasName
+### HasSent
 
-`func (o *InlineResponse200158) HasName() bool`
+`func (o *InlineResponse200158) HasSent() bool`
 
-HasName returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
 
-### GetDescription
+### GetTs
 
-`func (o *InlineResponse200158) GetDescription() string`
+`func (o *InlineResponse200158) GetTs() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetTsOk
 
-`func (o *InlineResponse200158) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200158) GetTsOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetTs
 
-`func (o *InlineResponse200158) SetDescription(v string)`
+`func (o *InlineResponse200158) SetTs(v string)`
 
-SetDescription sets Description field to given value.
+SetTs sets Ts field to given value.
 
-### HasDescription
+### HasTs
 
-`func (o *InlineResponse200158) HasDescription() bool`
+`func (o *InlineResponse200158) HasTs() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse200158) GetScope() string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse200158) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse200158) SetScope(v string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse200158) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200158) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200158) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200158) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200158) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetPayloadTypes
-
-`func (o *InlineResponse200158) GetPayloadTypes() []string`
-
-GetPayloadTypes returns the PayloadTypes field if non-nil, zero value otherwise.
-
-### GetPayloadTypesOk
-
-`func (o *InlineResponse200158) GetPayloadTypesOk() (*[]string, bool)`
-
-GetPayloadTypesOk returns a tuple with the PayloadTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTypes
-
-`func (o *InlineResponse200158) SetPayloadTypes(v []string)`
-
-SetPayloadTypes sets PayloadTypes field to given value.
-
-### HasPayloadTypes
-
-`func (o *InlineResponse200158) HasPayloadTypes() bool`
-
-HasPayloadTypes returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

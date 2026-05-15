@@ -4,22 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new profile. Must be unique. This parameter is required. | 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether or not to record audio. Can be either true or false. Defaults to false. | [optional] 
-**CloudArchiveEnabled** | Pointer to **bool** | Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false. | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
-**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1.md) |  | [optional] 
-**ScheduleId** | Pointer to **NullableString** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
-**MaxRetentionDays** | Pointer to **NullableInt32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be in the range of one to ninety days. | [optional] 
-**VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1.md) |  | [optional] 
+**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
+**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
+**RouterId** | Pointer to **NullableString** | The router ID of the appliance | [optional] 
+**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
 
 ## Methods
 
 ### NewInlineObject84
 
-`func NewInlineObject84(name string, ) *InlineObject84`
+`func NewInlineObject84(enabled bool, ) *InlineObject84`
 
 NewInlineObject84 instantiates a new InlineObject84 object
 This constructor will assign default values to properties that have it defined,
@@ -34,270 +29,135 @@ NewInlineObject84WithDefaults instantiates a new InlineObject84 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject84) GetName() string`
+`func (o *InlineObject84) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject84) GetNameOk() (*string, bool)`
+`func (o *InlineObject84) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject84) SetName(v string)`
+`func (o *InlineObject84) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
 
-### GetMotionBasedRetentionEnabled
+### GetAsNumber
 
-`func (o *InlineObject84) GetMotionBasedRetentionEnabled() bool`
+`func (o *InlineObject84) GetAsNumber() int32`
 
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetMotionBasedRetentionEnabledOk
+### GetAsNumberOk
 
-`func (o *InlineObject84) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+`func (o *InlineObject84) GetAsNumberOk() (*int32, bool)`
 
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionBasedRetentionEnabled
+### SetAsNumber
 
-`func (o *InlineObject84) SetMotionBasedRetentionEnabled(v bool)`
+`func (o *InlineObject84) SetAsNumber(v int32)`
 
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasMotionBasedRetentionEnabled
+### HasAsNumber
 
-`func (o *InlineObject84) HasMotionBasedRetentionEnabled() bool`
+`func (o *InlineObject84) HasAsNumber() bool`
 
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetRestrictedBandwidthModeEnabled
+### GetIbgpHoldTimer
 
-`func (o *InlineObject84) GetRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineObject84) GetIbgpHoldTimer() int32`
 
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetRestrictedBandwidthModeEnabledOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineObject84) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
+`func (o *InlineObject84) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictedBandwidthModeEnabled
+### SetIbgpHoldTimer
 
-`func (o *InlineObject84) SetRestrictedBandwidthModeEnabled(v bool)`
+`func (o *InlineObject84) SetIbgpHoldTimer(v int32)`
 
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasRestrictedBandwidthModeEnabled
+### HasIbgpHoldTimer
 
-`func (o *InlineObject84) HasRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineObject84) HasIbgpHoldTimer() bool`
 
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
 
-### GetAudioRecordingEnabled
+### GetRouterId
 
-`func (o *InlineObject84) GetAudioRecordingEnabled() bool`
+`func (o *InlineObject84) GetRouterId() string`
 
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
+GetRouterId returns the RouterId field if non-nil, zero value otherwise.
 
-### GetAudioRecordingEnabledOk
+### GetRouterIdOk
 
-`func (o *InlineObject84) GetAudioRecordingEnabledOk() (*bool, bool)`
+`func (o *InlineObject84) GetRouterIdOk() (*string, bool)`
 
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
+GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioRecordingEnabled
+### SetRouterId
 
-`func (o *InlineObject84) SetAudioRecordingEnabled(v bool)`
+`func (o *InlineObject84) SetRouterId(v string)`
 
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
+SetRouterId sets RouterId field to given value.
 
-### HasAudioRecordingEnabled
+### HasRouterId
 
-`func (o *InlineObject84) HasAudioRecordingEnabled() bool`
+`func (o *InlineObject84) HasRouterId() bool`
 
-HasAudioRecordingEnabled returns a boolean if a field has been set.
+HasRouterId returns a boolean if a field has been set.
 
-### GetCloudArchiveEnabled
+### SetRouterIdNil
 
-`func (o *InlineObject84) GetCloudArchiveEnabled() bool`
+`func (o *InlineObject84) SetRouterIdNil(b bool)`
 
-GetCloudArchiveEnabled returns the CloudArchiveEnabled field if non-nil, zero value otherwise.
+ SetRouterIdNil sets the value for RouterId to be an explicit nil
 
-### GetCloudArchiveEnabledOk
+### UnsetRouterId
+`func (o *InlineObject84) UnsetRouterId()`
 
-`func (o *InlineObject84) GetCloudArchiveEnabledOk() (*bool, bool)`
+UnsetRouterId ensures that no value is present for RouterId, not even an explicit nil
+### GetNeighbors
 
-GetCloudArchiveEnabledOk returns a tuple with the CloudArchiveEnabled field if it's non-nil, zero value otherwise
+`func (o *InlineObject84) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
+
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+
+### GetNeighborsOk
+
+`func (o *InlineObject84) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
+
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCloudArchiveEnabled
+### SetNeighbors
 
-`func (o *InlineObject84) SetCloudArchiveEnabled(v bool)`
+`func (o *InlineObject84) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
 
-SetCloudArchiveEnabled sets CloudArchiveEnabled field to given value.
+SetNeighbors sets Neighbors field to given value.
 
-### HasCloudArchiveEnabled
+### HasNeighbors
 
-`func (o *InlineObject84) HasCloudArchiveEnabled() bool`
+`func (o *InlineObject84) HasNeighbors() bool`
 
-HasCloudArchiveEnabled returns a boolean if a field has been set.
-
-### GetMotionDetectorVersion
-
-`func (o *InlineObject84) GetMotionDetectorVersion() int32`
-
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
-
-### GetMotionDetectorVersionOk
-
-`func (o *InlineObject84) GetMotionDetectorVersionOk() (*int32, bool)`
-
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMotionDetectorVersion
-
-`func (o *InlineObject84) SetMotionDetectorVersion(v int32)`
-
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
-
-### HasMotionDetectorVersion
-
-`func (o *InlineObject84) HasMotionDetectorVersion() bool`
-
-HasMotionDetectorVersion returns a boolean if a field has been set.
-
-### GetSmartRetention
-
-`func (o *InlineObject84) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1`
-
-GetSmartRetention returns the SmartRetention field if non-nil, zero value otherwise.
-
-### GetSmartRetentionOk
-
-`func (o *InlineObject84) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1, bool)`
-
-GetSmartRetentionOk returns a tuple with the SmartRetention field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmartRetention
-
-`func (o *InlineObject84) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention1)`
-
-SetSmartRetention sets SmartRetention field to given value.
-
-### HasSmartRetention
-
-`func (o *InlineObject84) HasSmartRetention() bool`
-
-HasSmartRetention returns a boolean if a field has been set.
-
-### GetScheduleId
-
-`func (o *InlineObject84) GetScheduleId() string`
-
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
-
-### GetScheduleIdOk
-
-`func (o *InlineObject84) GetScheduleIdOk() (*string, bool)`
-
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScheduleId
-
-`func (o *InlineObject84) SetScheduleId(v string)`
-
-SetScheduleId sets ScheduleId field to given value.
-
-### HasScheduleId
-
-`func (o *InlineObject84) HasScheduleId() bool`
-
-HasScheduleId returns a boolean if a field has been set.
-
-### SetScheduleIdNil
-
-`func (o *InlineObject84) SetScheduleIdNil(b bool)`
-
- SetScheduleIdNil sets the value for ScheduleId to be an explicit nil
-
-### UnsetScheduleId
-`func (o *InlineObject84) UnsetScheduleId()`
-
-UnsetScheduleId ensures that no value is present for ScheduleId, not even an explicit nil
-### GetMaxRetentionDays
-
-`func (o *InlineObject84) GetMaxRetentionDays() int32`
-
-GetMaxRetentionDays returns the MaxRetentionDays field if non-nil, zero value otherwise.
-
-### GetMaxRetentionDaysOk
-
-`func (o *InlineObject84) GetMaxRetentionDaysOk() (*int32, bool)`
-
-GetMaxRetentionDaysOk returns a tuple with the MaxRetentionDays field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxRetentionDays
-
-`func (o *InlineObject84) SetMaxRetentionDays(v int32)`
-
-SetMaxRetentionDays sets MaxRetentionDays field to given value.
-
-### HasMaxRetentionDays
-
-`func (o *InlineObject84) HasMaxRetentionDays() bool`
-
-HasMaxRetentionDays returns a boolean if a field has been set.
-
-### SetMaxRetentionDaysNil
-
-`func (o *InlineObject84) SetMaxRetentionDaysNil(b bool)`
-
- SetMaxRetentionDaysNil sets the value for MaxRetentionDays to be an explicit nil
-
-### UnsetMaxRetentionDays
-`func (o *InlineObject84) UnsetMaxRetentionDays()`
-
-UnsetMaxRetentionDays ensures that no value is present for MaxRetentionDays, not even an explicit nil
-### GetVideoSettings
-
-`func (o *InlineObject84) GetVideoSettings() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1`
-
-GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
-
-### GetVideoSettingsOk
-
-`func (o *InlineObject84) GetVideoSettingsOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1, bool)`
-
-GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVideoSettings
-
-`func (o *InlineObject84) SetVideoSettings(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings1)`
-
-SetVideoSettings sets VideoSettings field to given value.
-
-### HasVideoSettings
-
-`func (o *InlineObject84) HasVideoSettings() bool`
-
-HasVideoSettings returns a boolean if a field has been set.
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

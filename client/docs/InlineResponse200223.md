@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
-**Exception** | Pointer to [**InlineResponse200223Exception**](InlineResponse200223Exception.md) |  | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200223Rules**](InlineResponse200223Rules.md) | Bonjour forwarding rules | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
+**Sepioo** | Pointer to [**InlineResponse200223Sepioo**](InlineResponse200223Sepioo.md) |  | [optional] 
 
 ## Methods
 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewInlineResponse200223WithDefaults instantiates a new InlineResponse200223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetHostname
+
+`func (o *InlineResponse200223) GetHostname() string`
+
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
+
+### GetHostnameOk
+
+`func (o *InlineResponse200223) GetHostnameOk() (*string, bool)`
+
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostname
+
+`func (o *InlineResponse200223) SetHostname(v string)`
+
+SetHostname sets Hostname field to given value.
+
+### HasHostname
+
+`func (o *InlineResponse200223) HasHostname() bool`
+
+HasHostname returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -52,55 +78,55 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetException
+### GetMode
 
-`func (o *InlineResponse200223) GetException() InlineResponse200223Exception`
+`func (o *InlineResponse200223) GetMode() string`
 
-GetException returns the Exception field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetExceptionOk
+### GetModeOk
 
-`func (o *InlineResponse200223) GetExceptionOk() (*InlineResponse200223Exception, bool)`
+`func (o *InlineResponse200223) GetModeOk() (*string, bool)`
 
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetException
+### SetMode
 
-`func (o *InlineResponse200223) SetException(v InlineResponse200223Exception)`
+`func (o *InlineResponse200223) SetMode(v string)`
 
-SetException sets Exception field to given value.
+SetMode sets Mode field to given value.
 
-### HasException
+### HasMode
 
-`func (o *InlineResponse200223) HasException() bool`
+`func (o *InlineResponse200223) HasMode() bool`
 
-HasException returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetRules
+### GetSepioo
 
-`func (o *InlineResponse200223) GetRules() []InlineResponse200223Rules`
+`func (o *InlineResponse200223) GetSepioo() InlineResponse200223Sepioo`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetSepioo returns the Sepioo field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetSepiooOk
 
-`func (o *InlineResponse200223) GetRulesOk() (*[]InlineResponse200223Rules, bool)`
+`func (o *InlineResponse200223) GetSepiooOk() (*InlineResponse200223Sepioo, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetSepiooOk returns a tuple with the Sepioo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetSepioo
 
-`func (o *InlineResponse200223) SetRules(v []InlineResponse200223Rules)`
+`func (o *InlineResponse200223) SetSepioo(v InlineResponse200223Sepioo)`
 
-SetRules sets Rules field to given value.
+SetSepioo sets Sepioo field to given value.
 
-### HasRules
+### HasSepioo
 
-`func (o *InlineResponse200223) HasRules() bool`
+`func (o *InlineResponse200223) HasSepioo() bool`
 
-HasRules returns a boolean if a field has been set.
+HasSepioo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

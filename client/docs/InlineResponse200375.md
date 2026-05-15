@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200374Items**](InlineResponse200374Items.md) | Sentry Group Policies for the Organization keyed by the Network or Locale Id the Policy belongs to | [optional] 
-**Meta** | Pointer to [**InlineResponse200250Meta**](InlineResponse200250Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200375Items**](InlineResponse200375Items.md) | List of Policies | [optional] 
+**Meta** | Pointer to [**InlineResponse200263Meta**](InlineResponse200263Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200375) GetItems() []InlineResponse200374Items`
+`func (o *InlineResponse200375) GetItems() []InlineResponse200375Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200375) GetItemsOk() (*[]InlineResponse200374Items, bool)`
+`func (o *InlineResponse200375) GetItemsOk() (*[]InlineResponse200375Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200375) SetItems(v []InlineResponse200374Items)`
+`func (o *InlineResponse200375) SetItems(v []InlineResponse200375Items)`
 
 SetItems sets Items field to given value.
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200375) GetMeta() InlineResponse200250Meta`
+`func (o *InlineResponse200375) GetMeta() InlineResponse200263Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200375) GetMetaOk() (*InlineResponse200250Meta, bool)`
+`func (o *InlineResponse200375) GetMetaOk() (*InlineResponse200263Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200375) SetMeta(v InlineResponse200250Meta)`
+`func (o *InlineResponse200375) SetMeta(v InlineResponse200263Meta)`
 
 SetMeta sets Meta field to given value.
 

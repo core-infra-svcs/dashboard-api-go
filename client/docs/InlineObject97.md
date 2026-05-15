@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to claim | 
-**DetailsByDevice** | Pointer to [**[]NetworksNetworkIdDevicesClaimDetailsByDevice**](NetworksNetworkIdDevicesClaimDetailsByDevice.md) | Optional details for claimed devices (currently only used for Catalyst devices) | [optional] 
+**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject97
 
-`func NewInlineObject97(serials []string, ) *InlineObject97`
+`func NewInlineObject97() *InlineObject97`
 
 NewInlineObject97 instantiates a new InlineObject97 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,30 @@ NewInlineObject97WithDefaults instantiates a new InlineObject97 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetBandwidthLimits
 
-`func (o *InlineObject97) GetSerials() []string`
+`func (o *InlineObject97) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineObject97) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject97) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetBandwidthLimits
 
-`func (o *InlineObject97) SetSerials(v []string)`
+`func (o *InlineObject97) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular)`
 
-SetSerials sets Serials field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
+### HasBandwidthLimits
 
-### GetDetailsByDevice
+`func (o *InlineObject97) HasBandwidthLimits() bool`
 
-`func (o *InlineObject97) GetDetailsByDevice() []NetworksNetworkIdDevicesClaimDetailsByDevice`
-
-GetDetailsByDevice returns the DetailsByDevice field if non-nil, zero value otherwise.
-
-### GetDetailsByDeviceOk
-
-`func (o *InlineObject97) GetDetailsByDeviceOk() (*[]NetworksNetworkIdDevicesClaimDetailsByDevice, bool)`
-
-GetDetailsByDeviceOk returns a tuple with the DetailsByDevice field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetailsByDevice
-
-`func (o *InlineObject97) SetDetailsByDevice(v []NetworksNetworkIdDevicesClaimDetailsByDevice)`
-
-SetDetailsByDevice sets DetailsByDevice field to given value.
-
-### HasDetailsByDevice
-
-`func (o *InlineObject97) HasDetailsByDevice() bool`
-
-HasDetailsByDevice returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

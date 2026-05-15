@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssignmentId** | Pointer to **string** | ID of the assignment | [optional] 
-**PolicyId** | Pointer to **string** | ID of the assigned policy | [optional] 
-**AdaptivePolicyGroupId** | Pointer to **string** | Adaptive policy group ID | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**ProductTypes** | Pointer to **[]string** | List of products that have XDR enabled | [optional] 
+**Name** | Pointer to **string** | The name of the network | [optional] 
+**Enabled** | Pointer to **bool** | Represents whether XDR is enabled for the network | [optional] 
+**IsEligible** | Pointer to **bool** | Represents whether the network is eligible for XDR | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200353ItemsWithDefaults instantiates a new InlineResponse200353
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssignmentId
+### GetNetworkId
 
-`func (o *InlineResponse200353Items) GetAssignmentId() string`
+`func (o *InlineResponse200353Items) GetNetworkId() string`
 
-GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetAssignmentIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200353Items) GetAssignmentIdOk() (*string, bool)`
+`func (o *InlineResponse200353Items) GetNetworkIdOk() (*string, bool)`
 
-GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignmentId
+### SetNetworkId
 
-`func (o *InlineResponse200353Items) SetAssignmentId(v string)`
+`func (o *InlineResponse200353Items) SetNetworkId(v string)`
 
-SetAssignmentId sets AssignmentId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasAssignmentId
+### HasNetworkId
 
-`func (o *InlineResponse200353Items) HasAssignmentId() bool`
+`func (o *InlineResponse200353Items) HasNetworkId() bool`
 
-HasAssignmentId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetPolicyId
+### GetProductTypes
 
-`func (o *InlineResponse200353Items) GetPolicyId() string`
+`func (o *InlineResponse200353Items) GetProductTypes() []string`
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-### GetPolicyIdOk
+### GetProductTypesOk
 
-`func (o *InlineResponse200353Items) GetPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200353Items) GetProductTypesOk() (*[]string, bool)`
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetProductTypes
 
-`func (o *InlineResponse200353Items) SetPolicyId(v string)`
+`func (o *InlineResponse200353Items) SetProductTypes(v []string)`
 
-SetPolicyId sets PolicyId field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasPolicyId
+### HasProductTypes
 
-`func (o *InlineResponse200353Items) HasPolicyId() bool`
+`func (o *InlineResponse200353Items) HasProductTypes() bool`
 
-HasPolicyId returns a boolean if a field has been set.
+HasProductTypes returns a boolean if a field has been set.
 
-### GetAdaptivePolicyGroupId
+### GetName
 
-`func (o *InlineResponse200353Items) GetAdaptivePolicyGroupId() string`
+`func (o *InlineResponse200353Items) GetName() string`
 
-GetAdaptivePolicyGroupId returns the AdaptivePolicyGroupId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAdaptivePolicyGroupIdOk
+### GetNameOk
 
-`func (o *InlineResponse200353Items) GetAdaptivePolicyGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200353Items) GetNameOk() (*string, bool)`
 
-GetAdaptivePolicyGroupIdOk returns a tuple with the AdaptivePolicyGroupId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyGroupId
+### SetName
 
-`func (o *InlineResponse200353Items) SetAdaptivePolicyGroupId(v string)`
+`func (o *InlineResponse200353Items) SetName(v string)`
 
-SetAdaptivePolicyGroupId sets AdaptivePolicyGroupId field to given value.
+SetName sets Name field to given value.
 
-### HasAdaptivePolicyGroupId
+### HasName
 
-`func (o *InlineResponse200353Items) HasAdaptivePolicyGroupId() bool`
+`func (o *InlineResponse200353Items) HasName() bool`
 
-HasAdaptivePolicyGroupId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse200353Items) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200353Items) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200353Items) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200353Items) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetIsEligible
+
+`func (o *InlineResponse200353Items) GetIsEligible() bool`
+
+GetIsEligible returns the IsEligible field if non-nil, zero value otherwise.
+
+### GetIsEligibleOk
+
+`func (o *InlineResponse200353Items) GetIsEligibleOk() (*bool, bool)`
+
+GetIsEligibleOk returns a tuple with the IsEligible field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsEligible
+
+`func (o *InlineResponse200353Items) SetIsEligible(v bool)`
+
+SetIsEligible sets IsEligible field to given value.
+
+### HasIsEligible
+
+`func (o *InlineResponse200353Items) HasIsEligible() bool`
+
+HasIsEligible returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

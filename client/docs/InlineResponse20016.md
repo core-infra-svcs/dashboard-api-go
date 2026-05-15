@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether custom analytics is enabled | [optional] 
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**Parameters** | Pointer to [**[]InlineResponse20016Parameters**](InlineResponse20016Parameters.md) | Parameters for the custom analytics workload | [optional] 
+**Id** | Pointer to **string** | The zone ID | [optional] 
+**Type** | Pointer to **string** | The zone type | [optional] 
+**Label** | Pointer to **string** | The zone label | [optional] 
+**RegionOfInterest** | Pointer to [**DevicesSerialCameraAnalyticsZonesRegionOfInterest**](DevicesSerialCameraAnalyticsZonesRegionOfInterest.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20016WithDefaults instantiates a new InlineResponse20016 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetId
 
-`func (o *InlineResponse20016) GetEnabled() bool`
+`func (o *InlineResponse20016) GetId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse20016) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20016) GetIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetId
 
-`func (o *InlineResponse20016) SetEnabled(v bool)`
+`func (o *InlineResponse20016) SetId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetId sets Id field to given value.
 
-### HasEnabled
+### HasId
 
-`func (o *InlineResponse20016) HasEnabled() bool`
+`func (o *InlineResponse20016) HasId() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetArtifactId
+### GetType
 
-`func (o *InlineResponse20016) GetArtifactId() string`
+`func (o *InlineResponse20016) GetType() string`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetTypeOk
 
-`func (o *InlineResponse20016) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineResponse20016) GetTypeOk() (*string, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetType
 
-`func (o *InlineResponse20016) SetArtifactId(v string)`
+`func (o *InlineResponse20016) SetType(v string)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetType sets Type field to given value.
 
-### HasArtifactId
+### HasType
 
-`func (o *InlineResponse20016) HasArtifactId() bool`
+`func (o *InlineResponse20016) HasType() bool`
 
-HasArtifactId returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetParameters
+### GetLabel
 
-`func (o *InlineResponse20016) GetParameters() []InlineResponse20016Parameters`
+`func (o *InlineResponse20016) GetLabel() string`
 
-GetParameters returns the Parameters field if non-nil, zero value otherwise.
+GetLabel returns the Label field if non-nil, zero value otherwise.
 
-### GetParametersOk
+### GetLabelOk
 
-`func (o *InlineResponse20016) GetParametersOk() (*[]InlineResponse20016Parameters, bool)`
+`func (o *InlineResponse20016) GetLabelOk() (*string, bool)`
 
-GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
+GetLabelOk returns a tuple with the Label field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetParameters
+### SetLabel
 
-`func (o *InlineResponse20016) SetParameters(v []InlineResponse20016Parameters)`
+`func (o *InlineResponse20016) SetLabel(v string)`
 
-SetParameters sets Parameters field to given value.
+SetLabel sets Label field to given value.
 
-### HasParameters
+### HasLabel
 
-`func (o *InlineResponse20016) HasParameters() bool`
+`func (o *InlineResponse20016) HasLabel() bool`
 
-HasParameters returns a boolean if a field has been set.
+HasLabel returns a boolean if a field has been set.
+
+### GetRegionOfInterest
+
+`func (o *InlineResponse20016) GetRegionOfInterest() DevicesSerialCameraAnalyticsZonesRegionOfInterest`
+
+GetRegionOfInterest returns the RegionOfInterest field if non-nil, zero value otherwise.
+
+### GetRegionOfInterestOk
+
+`func (o *InlineResponse20016) GetRegionOfInterestOk() (*DevicesSerialCameraAnalyticsZonesRegionOfInterest, bool)`
+
+GetRegionOfInterestOk returns a tuple with the RegionOfInterest field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRegionOfInterest
+
+`func (o *InlineResponse20016) SetRegionOfInterest(v DevicesSerialCameraAnalyticsZonesRegionOfInterest)`
+
+SetRegionOfInterest sets RegionOfInterest field to given value.
+
+### HasRegionOfInterest
+
+`func (o *InlineResponse20016) HasRegionOfInterest() bool`
+
+HasRegionOfInterest returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

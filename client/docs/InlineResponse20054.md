@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BasicServiceSets** | Pointer to [**[]InlineResponse20054BasicServiceSets**](InlineResponse20054BasicServiceSets.md) | SSID status list | [optional] 
+**Addresses** | Pointer to [**[]InlineResponse20054Addresses**](InlineResponse20054Addresses.md) | configured alternate management interface addresses | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20054WithDefaults instantiates a new InlineResponse20054 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBasicServiceSets
+### GetAddresses
 
-`func (o *InlineResponse20054) GetBasicServiceSets() []InlineResponse20054BasicServiceSets`
+`func (o *InlineResponse20054) GetAddresses() []InlineResponse20054Addresses`
 
-GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
+GetAddresses returns the Addresses field if non-nil, zero value otherwise.
 
-### GetBasicServiceSetsOk
+### GetAddressesOk
 
-`func (o *InlineResponse20054) GetBasicServiceSetsOk() (*[]InlineResponse20054BasicServiceSets, bool)`
+`func (o *InlineResponse20054) GetAddressesOk() (*[]InlineResponse20054Addresses, bool)`
 
-GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
+GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBasicServiceSets
+### SetAddresses
 
-`func (o *InlineResponse20054) SetBasicServiceSets(v []InlineResponse20054BasicServiceSets)`
+`func (o *InlineResponse20054) SetAddresses(v []InlineResponse20054Addresses)`
 
-SetBasicServiceSets sets BasicServiceSets field to given value.
+SetAddresses sets Addresses field to given value.
 
-### HasBasicServiceSets
+### HasAddresses
 
-`func (o *InlineResponse20054) HasBasicServiceSets() bool`
+`func (o *InlineResponse20054) HasAddresses() bool`
 
-HasBasicServiceSets returns a boolean if a field has been set.
+HasAddresses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

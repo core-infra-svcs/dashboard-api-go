@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
-**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
-**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
-**ApplicationUsage** | Pointer to [**[]NetworksNetworkIdClientsApplicationUsageApplicationUsage**](NetworksNetworkIdClientsApplicationUsageApplicationUsage.md) | An array of application usage records for the client | [optional] 
+**VlansEnabled** | Pointer to **bool** | Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200100WithDefaults instantiates a new InlineResponse200100 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientId
+### GetVlansEnabled
 
-`func (o *InlineResponse200100) GetClientId() string`
+`func (o *InlineResponse200100) GetVlansEnabled() bool`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetVlansEnabledOk
 
-`func (o *InlineResponse200100) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200100) GetVlansEnabledOk() (*bool, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetVlansEnabled
 
-`func (o *InlineResponse200100) SetClientId(v string)`
+`func (o *InlineResponse200100) SetVlansEnabled(v bool)`
 
-SetClientId sets ClientId field to given value.
+SetVlansEnabled sets VlansEnabled field to given value.
 
-### HasClientId
+### HasVlansEnabled
 
-`func (o *InlineResponse200100) HasClientId() bool`
+`func (o *InlineResponse200100) HasVlansEnabled() bool`
 
-HasClientId returns a boolean if a field has been set.
-
-### GetClientIp
-
-`func (o *InlineResponse200100) GetClientIp() string`
-
-GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
-
-### GetClientIpOk
-
-`func (o *InlineResponse200100) GetClientIpOk() (*string, bool)`
-
-GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientIp
-
-`func (o *InlineResponse200100) SetClientIp(v string)`
-
-SetClientIp sets ClientIp field to given value.
-
-### HasClientIp
-
-`func (o *InlineResponse200100) HasClientIp() bool`
-
-HasClientIp returns a boolean if a field has been set.
-
-### GetClientMac
-
-`func (o *InlineResponse200100) GetClientMac() string`
-
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
-
-### GetClientMacOk
-
-`func (o *InlineResponse200100) GetClientMacOk() (*string, bool)`
-
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientMac
-
-`func (o *InlineResponse200100) SetClientMac(v string)`
-
-SetClientMac sets ClientMac field to given value.
-
-### HasClientMac
-
-`func (o *InlineResponse200100) HasClientMac() bool`
-
-HasClientMac returns a boolean if a field has been set.
-
-### GetApplicationUsage
-
-`func (o *InlineResponse200100) GetApplicationUsage() []NetworksNetworkIdClientsApplicationUsageApplicationUsage`
-
-GetApplicationUsage returns the ApplicationUsage field if non-nil, zero value otherwise.
-
-### GetApplicationUsageOk
-
-`func (o *InlineResponse200100) GetApplicationUsageOk() (*[]NetworksNetworkIdClientsApplicationUsageApplicationUsage, bool)`
-
-GetApplicationUsageOk returns a tuple with the ApplicationUsage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApplicationUsage
-
-`func (o *InlineResponse200100) SetApplicationUsage(v []NetworksNetworkIdClientsApplicationUsageApplicationUsage)`
-
-SetApplicationUsage sets ApplicationUsage field to given value.
-
-### HasApplicationUsage
-
-`func (o *InlineResponse200100) HasApplicationUsage() bool`
-
-HasApplicationUsage returns a boolean if a field has been set.
+HasVlansEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

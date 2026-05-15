@@ -4,10 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
-**PoliciesBySsid** | Pointer to [**[]InlineResponse200105PoliciesBySsid**](InlineResponse200105PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
+**Id** | Pointer to **string** | ID of the client | [optional] 
+**Mac** | Pointer to **string** | MAC address of the client | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Name of the client | [optional] 
+**DeviceName** | Pointer to **string** | Bluetooth device name | [optional] 
+**Manufacturer** | Pointer to **string** | Name of the manufacturer | [optional] 
+**LastSeen** | Pointer to **int32** | Epoch timestamp of the device&#39;s last appearance | [optional] 
+**SeenByDeviceMac** | Pointer to **string** | Seen by device MAC | [optional] 
+**InSightAlert** | Pointer to **bool** | Device in sight alert | [optional] 
+**OutOfSightAlert** | Pointer to **bool** | Device out of sight alert | [optional] 
+**Tags** | Pointer to **[]string** | A list of tags applied to the device | [optional] 
 
 ## Methods
 
@@ -27,6 +34,31 @@ will change when the set of required properties is changed
 NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200105) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200105) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200105) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200105) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetMac
 
@@ -53,80 +85,230 @@ SetMac sets Mac field to given value.
 
 HasMac returns a boolean if a field has been set.
 
-### GetDevicePolicy
+### GetNetworkId
 
-`func (o *InlineResponse200105) GetDevicePolicy() string`
+`func (o *InlineResponse200105) GetNetworkId() string`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200105) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineResponse200105) GetNetworkIdOk() (*string, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetNetworkId
 
-`func (o *InlineResponse200105) SetDevicePolicy(v string)`
+`func (o *InlineResponse200105) SetNetworkId(v string)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasDevicePolicy
+### HasNetworkId
 
-`func (o *InlineResponse200105) HasDevicePolicy() bool`
+`func (o *InlineResponse200105) HasNetworkId() bool`
 
-HasDevicePolicy returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetName
 
-`func (o *InlineResponse200105) GetGroupPolicyId() string`
+`func (o *InlineResponse200105) GetName() string`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetNameOk
 
-`func (o *InlineResponse200105) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200105) GetNameOk() (*string, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetName
 
-`func (o *InlineResponse200105) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200105) SetName(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetName sets Name field to given value.
 
-### HasGroupPolicyId
+### HasName
 
-`func (o *InlineResponse200105) HasGroupPolicyId() bool`
+`func (o *InlineResponse200105) HasName() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetPoliciesBySsid
+### GetDeviceName
 
-`func (o *InlineResponse200105) GetPoliciesBySsid() []InlineResponse200105PoliciesBySsid`
+`func (o *InlineResponse200105) GetDeviceName() string`
 
-GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
 
-### GetPoliciesBySsidOk
+### GetDeviceNameOk
 
-`func (o *InlineResponse200105) GetPoliciesBySsidOk() (*[]InlineResponse200105PoliciesBySsid, bool)`
+`func (o *InlineResponse200105) GetDeviceNameOk() (*string, bool)`
 
-GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPoliciesBySsid
+### SetDeviceName
 
-`func (o *InlineResponse200105) SetPoliciesBySsid(v []InlineResponse200105PoliciesBySsid)`
+`func (o *InlineResponse200105) SetDeviceName(v string)`
 
-SetPoliciesBySsid sets PoliciesBySsid field to given value.
+SetDeviceName sets DeviceName field to given value.
 
-### HasPoliciesBySsid
+### HasDeviceName
 
-`func (o *InlineResponse200105) HasPoliciesBySsid() bool`
+`func (o *InlineResponse200105) HasDeviceName() bool`
 
-HasPoliciesBySsid returns a boolean if a field has been set.
+HasDeviceName returns a boolean if a field has been set.
+
+### GetManufacturer
+
+`func (o *InlineResponse200105) GetManufacturer() string`
+
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
+
+### GetManufacturerOk
+
+`func (o *InlineResponse200105) GetManufacturerOk() (*string, bool)`
+
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManufacturer
+
+`func (o *InlineResponse200105) SetManufacturer(v string)`
+
+SetManufacturer sets Manufacturer field to given value.
+
+### HasManufacturer
+
+`func (o *InlineResponse200105) HasManufacturer() bool`
+
+HasManufacturer returns a boolean if a field has been set.
+
+### GetLastSeen
+
+`func (o *InlineResponse200105) GetLastSeen() int32`
+
+GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
+
+### GetLastSeenOk
+
+`func (o *InlineResponse200105) GetLastSeenOk() (*int32, bool)`
+
+GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastSeen
+
+`func (o *InlineResponse200105) SetLastSeen(v int32)`
+
+SetLastSeen sets LastSeen field to given value.
+
+### HasLastSeen
+
+`func (o *InlineResponse200105) HasLastSeen() bool`
+
+HasLastSeen returns a boolean if a field has been set.
+
+### GetSeenByDeviceMac
+
+`func (o *InlineResponse200105) GetSeenByDeviceMac() string`
+
+GetSeenByDeviceMac returns the SeenByDeviceMac field if non-nil, zero value otherwise.
+
+### GetSeenByDeviceMacOk
+
+`func (o *InlineResponse200105) GetSeenByDeviceMacOk() (*string, bool)`
+
+GetSeenByDeviceMacOk returns a tuple with the SeenByDeviceMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeenByDeviceMac
+
+`func (o *InlineResponse200105) SetSeenByDeviceMac(v string)`
+
+SetSeenByDeviceMac sets SeenByDeviceMac field to given value.
+
+### HasSeenByDeviceMac
+
+`func (o *InlineResponse200105) HasSeenByDeviceMac() bool`
+
+HasSeenByDeviceMac returns a boolean if a field has been set.
+
+### GetInSightAlert
+
+`func (o *InlineResponse200105) GetInSightAlert() bool`
+
+GetInSightAlert returns the InSightAlert field if non-nil, zero value otherwise.
+
+### GetInSightAlertOk
+
+`func (o *InlineResponse200105) GetInSightAlertOk() (*bool, bool)`
+
+GetInSightAlertOk returns a tuple with the InSightAlert field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInSightAlert
+
+`func (o *InlineResponse200105) SetInSightAlert(v bool)`
+
+SetInSightAlert sets InSightAlert field to given value.
+
+### HasInSightAlert
+
+`func (o *InlineResponse200105) HasInSightAlert() bool`
+
+HasInSightAlert returns a boolean if a field has been set.
+
+### GetOutOfSightAlert
+
+`func (o *InlineResponse200105) GetOutOfSightAlert() bool`
+
+GetOutOfSightAlert returns the OutOfSightAlert field if non-nil, zero value otherwise.
+
+### GetOutOfSightAlertOk
+
+`func (o *InlineResponse200105) GetOutOfSightAlertOk() (*bool, bool)`
+
+GetOutOfSightAlertOk returns a tuple with the OutOfSightAlert field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOutOfSightAlert
+
+`func (o *InlineResponse200105) SetOutOfSightAlert(v bool)`
+
+SetOutOfSightAlert sets OutOfSightAlert field to given value.
+
+### HasOutOfSightAlert
+
+`func (o *InlineResponse200105) HasOutOfSightAlert() bool`
+
+HasOutOfSightAlert returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200105) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200105) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200105) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200105) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number | [optional] 
-**Uplink** | Pointer to [**InlineResponse200286Uplink**](InlineResponse200286Uplink.md) |  | [optional] 
-**Nameservers** | Pointer to [**InlineResponse20112Nameservers**](InlineResponse20112Nameservers.md) |  | [optional] 
-**Sgt** | Pointer to **int32** | Infra Security Group Tag(sgt) value for Trustsec | [optional] 
+**SegmentStart** | **time.Time** | Starting datetime of the segment in iso8601 format | 
+**Totals** | [**InlineResponse200286Totals**](InlineResponse200286Totals.md) |  | 
+**ByAlertType** | [**[]InlineResponse200286ByAlertType**](InlineResponse200286ByAlertType.md) | Totals by Type | 
 
 ## Methods
 
 ### NewInlineResponse200286Items
 
-`func NewInlineResponse200286Items() *InlineResponse200286Items`
+`func NewInlineResponse200286Items(segmentStart time.Time, totals InlineResponse200286Totals, byAlertType []InlineResponse200286ByAlertType, ) *InlineResponse200286Items`
 
 NewInlineResponse200286Items instantiates a new InlineResponse200286Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,65 @@ NewInlineResponse200286ItemsWithDefaults instantiates a new InlineResponse200286
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetSegmentStart
 
-`func (o *InlineResponse200286Items) GetSerial() string`
+`func (o *InlineResponse200286Items) GetSegmentStart() time.Time`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSegmentStart returns the SegmentStart field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSegmentStartOk
 
-`func (o *InlineResponse200286Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200286Items) GetSegmentStartOk() (*time.Time, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSegmentStartOk returns a tuple with the SegmentStart field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSegmentStart
 
-`func (o *InlineResponse200286Items) SetSerial(v string)`
+`func (o *InlineResponse200286Items) SetSegmentStart(v time.Time)`
 
-SetSerial sets Serial field to given value.
+SetSegmentStart sets SegmentStart field to given value.
 
-### HasSerial
 
-`func (o *InlineResponse200286Items) HasSerial() bool`
+### GetTotals
 
-HasSerial returns a boolean if a field has been set.
+`func (o *InlineResponse200286Items) GetTotals() InlineResponse200286Totals`
 
-### GetUplink
+GetTotals returns the Totals field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200286Items) GetUplink() InlineResponse200286Uplink`
+### GetTotalsOk
 
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
+`func (o *InlineResponse200286Items) GetTotalsOk() (*InlineResponse200286Totals, bool)`
 
-### GetUplinkOk
-
-`func (o *InlineResponse200286Items) GetUplinkOk() (*InlineResponse200286Uplink, bool)`
-
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+GetTotalsOk returns a tuple with the Totals field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplink
+### SetTotals
 
-`func (o *InlineResponse200286Items) SetUplink(v InlineResponse200286Uplink)`
+`func (o *InlineResponse200286Items) SetTotals(v InlineResponse200286Totals)`
 
-SetUplink sets Uplink field to given value.
+SetTotals sets Totals field to given value.
 
-### HasUplink
 
-`func (o *InlineResponse200286Items) HasUplink() bool`
+### GetByAlertType
 
-HasUplink returns a boolean if a field has been set.
+`func (o *InlineResponse200286Items) GetByAlertType() []InlineResponse200286ByAlertType`
 
-### GetNameservers
+GetByAlertType returns the ByAlertType field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200286Items) GetNameservers() InlineResponse20112Nameservers`
+### GetByAlertTypeOk
 
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+`func (o *InlineResponse200286Items) GetByAlertTypeOk() (*[]InlineResponse200286ByAlertType, bool)`
 
-### GetNameserversOk
-
-`func (o *InlineResponse200286Items) GetNameserversOk() (*InlineResponse20112Nameservers, bool)`
-
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+GetByAlertTypeOk returns a tuple with the ByAlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNameservers
+### SetByAlertType
 
-`func (o *InlineResponse200286Items) SetNameservers(v InlineResponse20112Nameservers)`
+`func (o *InlineResponse200286Items) SetByAlertType(v []InlineResponse200286ByAlertType)`
 
-SetNameservers sets Nameservers field to given value.
+SetByAlertType sets ByAlertType field to given value.
 
-### HasNameservers
-
-`func (o *InlineResponse200286Items) HasNameservers() bool`
-
-HasNameservers returns a boolean if a field has been set.
-
-### GetSgt
-
-`func (o *InlineResponse200286Items) GetSgt() int32`
-
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
-
-### GetSgtOk
-
-`func (o *InlineResponse200286Items) GetSgtOk() (*int32, bool)`
-
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSgt
-
-`func (o *InlineResponse200286Items) SetSgt(v int32)`
-
-SetSgt sets Sgt field to given value.
-
-### HasSgt
-
-`func (o *InlineResponse200286Items) HasSgt() bool`
-
-HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | Pointer to [**[]InlineResponse20084Uplinks**](InlineResponse20084Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
+**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
+**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
+**ProtectedNetworks** | Pointer to [**InlineResponse20083ProtectedNetworks**](InlineResponse20083ProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20084WithDefaults instantiates a new InlineResponse20084 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetMode
 
-`func (o *InlineResponse20084) GetUplinks() []InlineResponse20084Uplinks`
+`func (o *InlineResponse20084) GetMode() string`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetModeOk
 
-`func (o *InlineResponse20084) GetUplinksOk() (*[]InlineResponse20084Uplinks, bool)`
+`func (o *InlineResponse20084) GetModeOk() (*string, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetMode
 
-`func (o *InlineResponse20084) SetUplinks(v []InlineResponse20084Uplinks)`
+`func (o *InlineResponse20084) SetMode(v string)`
 
-SetUplinks sets Uplinks field to given value.
+SetMode sets Mode field to given value.
 
-### HasUplinks
+### HasMode
 
-`func (o *InlineResponse20084) HasUplinks() bool`
+`func (o *InlineResponse20084) HasMode() bool`
 
-HasUplinks returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
+
+### GetIdsRulesets
+
+`func (o *InlineResponse20084) GetIdsRulesets() string`
+
+GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
+
+### GetIdsRulesetsOk
+
+`func (o *InlineResponse20084) GetIdsRulesetsOk() (*string, bool)`
+
+GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdsRulesets
+
+`func (o *InlineResponse20084) SetIdsRulesets(v string)`
+
+SetIdsRulesets sets IdsRulesets field to given value.
+
+### HasIdsRulesets
+
+`func (o *InlineResponse20084) HasIdsRulesets() bool`
+
+HasIdsRulesets returns a boolean if a field has been set.
+
+### GetProtectedNetworks
+
+`func (o *InlineResponse20084) GetProtectedNetworks() InlineResponse20083ProtectedNetworks`
+
+GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
+
+### GetProtectedNetworksOk
+
+`func (o *InlineResponse20084) GetProtectedNetworksOk() (*InlineResponse20083ProtectedNetworks, bool)`
+
+GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtectedNetworks
+
+`func (o *InlineResponse20084) SetProtectedNetworks(v InlineResponse20083ProtectedNetworks)`
+
+SetProtectedNetworks sets ProtectedNetworks field to given value.
+
+### HasProtectedNetworks
+
+`func (o *InlineResponse20084) HasProtectedNetworks() bool`
+
+HasProtectedNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

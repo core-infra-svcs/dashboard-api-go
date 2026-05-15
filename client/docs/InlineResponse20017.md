@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **NullableString** | Quality and retention profile ID; null if not using a profile | [optional] 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Whether motion-based retention is enabled | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether audio recording is enabled | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Whether restricted bandwidth mode is enabled | [optional] 
-**Quality** | Pointer to **string** | Video quality | [optional] 
-**Resolution** | Pointer to **string** | Video resolution | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | Motion detector version | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time | [optional] 
+**Entrances** | Pointer to **int32** | The number of entrances | [optional] 
+**AverageCount** | Pointer to **float32** | The average count | [optional] 
 
 ## Methods
 
@@ -31,190 +28,105 @@ NewInlineResponse20017WithDefaults instantiates a new InlineResponse20017 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetStartTs
 
-`func (o *InlineResponse20017) GetProfileId() string`
+`func (o *InlineResponse20017) GetStartTs() time.Time`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20017) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20017) GetStartTsOk() (*time.Time, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetStartTs
 
-`func (o *InlineResponse20017) SetProfileId(v string)`
+`func (o *InlineResponse20017) SetStartTs(v time.Time)`
 
-SetProfileId sets ProfileId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasProfileId
+### HasStartTs
 
-`func (o *InlineResponse20017) HasProfileId() bool`
+`func (o *InlineResponse20017) HasStartTs() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### SetProfileIdNil
+### GetEndTs
 
-`func (o *InlineResponse20017) SetProfileIdNil(b bool)`
+`func (o *InlineResponse20017) GetEndTs() time.Time`
 
- SetProfileIdNil sets the value for ProfileId to be an explicit nil
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### UnsetProfileId
-`func (o *InlineResponse20017) UnsetProfileId()`
+### GetEndTsOk
 
-UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
-### GetMotionBasedRetentionEnabled
+`func (o *InlineResponse20017) GetEndTsOk() (*time.Time, bool)`
 
-`func (o *InlineResponse20017) GetMotionBasedRetentionEnabled() bool`
-
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
-
-### GetMotionBasedRetentionEnabledOk
-
-`func (o *InlineResponse20017) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
-
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionBasedRetentionEnabled
+### SetEndTs
 
-`func (o *InlineResponse20017) SetMotionBasedRetentionEnabled(v bool)`
+`func (o *InlineResponse20017) SetEndTs(v time.Time)`
 
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasMotionBasedRetentionEnabled
+### HasEndTs
 
-`func (o *InlineResponse20017) HasMotionBasedRetentionEnabled() bool`
+`func (o *InlineResponse20017) HasEndTs() bool`
 
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetAudioRecordingEnabled
+### GetEntrances
 
-`func (o *InlineResponse20017) GetAudioRecordingEnabled() bool`
+`func (o *InlineResponse20017) GetEntrances() int32`
 
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
+GetEntrances returns the Entrances field if non-nil, zero value otherwise.
 
-### GetAudioRecordingEnabledOk
+### GetEntrancesOk
 
-`func (o *InlineResponse20017) GetAudioRecordingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20017) GetEntrancesOk() (*int32, bool)`
 
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
+GetEntrancesOk returns a tuple with the Entrances field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioRecordingEnabled
+### SetEntrances
 
-`func (o *InlineResponse20017) SetAudioRecordingEnabled(v bool)`
+`func (o *InlineResponse20017) SetEntrances(v int32)`
 
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
+SetEntrances sets Entrances field to given value.
 
-### HasAudioRecordingEnabled
+### HasEntrances
 
-`func (o *InlineResponse20017) HasAudioRecordingEnabled() bool`
+`func (o *InlineResponse20017) HasEntrances() bool`
 
-HasAudioRecordingEnabled returns a boolean if a field has been set.
+HasEntrances returns a boolean if a field has been set.
 
-### GetRestrictedBandwidthModeEnabled
+### GetAverageCount
 
-`func (o *InlineResponse20017) GetRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineResponse20017) GetAverageCount() float32`
 
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
+GetAverageCount returns the AverageCount field if non-nil, zero value otherwise.
 
-### GetRestrictedBandwidthModeEnabledOk
+### GetAverageCountOk
 
-`func (o *InlineResponse20017) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20017) GetAverageCountOk() (*float32, bool)`
 
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
+GetAverageCountOk returns a tuple with the AverageCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictedBandwidthModeEnabled
+### SetAverageCount
 
-`func (o *InlineResponse20017) SetRestrictedBandwidthModeEnabled(v bool)`
+`func (o *InlineResponse20017) SetAverageCount(v float32)`
 
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
+SetAverageCount sets AverageCount field to given value.
 
-### HasRestrictedBandwidthModeEnabled
+### HasAverageCount
 
-`func (o *InlineResponse20017) HasRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineResponse20017) HasAverageCount() bool`
 
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
-
-### GetQuality
-
-`func (o *InlineResponse20017) GetQuality() string`
-
-GetQuality returns the Quality field if non-nil, zero value otherwise.
-
-### GetQualityOk
-
-`func (o *InlineResponse20017) GetQualityOk() (*string, bool)`
-
-GetQualityOk returns a tuple with the Quality field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetQuality
-
-`func (o *InlineResponse20017) SetQuality(v string)`
-
-SetQuality sets Quality field to given value.
-
-### HasQuality
-
-`func (o *InlineResponse20017) HasQuality() bool`
-
-HasQuality returns a boolean if a field has been set.
-
-### GetResolution
-
-`func (o *InlineResponse20017) GetResolution() string`
-
-GetResolution returns the Resolution field if non-nil, zero value otherwise.
-
-### GetResolutionOk
-
-`func (o *InlineResponse20017) GetResolutionOk() (*string, bool)`
-
-GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResolution
-
-`func (o *InlineResponse20017) SetResolution(v string)`
-
-SetResolution sets Resolution field to given value.
-
-### HasResolution
-
-`func (o *InlineResponse20017) HasResolution() bool`
-
-HasResolution returns a boolean if a field has been set.
-
-### GetMotionDetectorVersion
-
-`func (o *InlineResponse20017) GetMotionDetectorVersion() int32`
-
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
-
-### GetMotionDetectorVersionOk
-
-`func (o *InlineResponse20017) GetMotionDetectorVersionOk() (*int32, bool)`
-
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMotionDetectorVersion
-
-`func (o *InlineResponse20017) SetMotionDetectorVersion(v int32)`
-
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
-
-### HasMotionDetectorVersion
-
-`func (o *InlineResponse20017) HasMotionDetectorVersion() bool`
-
-HasMotionDetectorVersion returns a boolean if a field has been set.
+HasAverageCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

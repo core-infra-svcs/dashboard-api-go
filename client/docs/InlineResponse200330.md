@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | Pointer to [**[]InlineResponse200328Items**](InlineResponse200328Items.md) | List of networks that have XDR enabled | [optional] 
+**Serials** | **[]string** | A list of serials of devices updated | 
 
 ## Methods
 
 ### NewInlineResponse200330
 
-`func NewInlineResponse200330() *InlineResponse200330`
+`func NewInlineResponse200330(serials []string, ) *InlineResponse200330`
 
 NewInlineResponse200330 instantiates a new InlineResponse200330 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineResponse200330WithDefaults instantiates a new InlineResponse200330 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworks
+### GetSerials
 
-`func (o *InlineResponse200330) GetNetworks() []InlineResponse200328Items`
+`func (o *InlineResponse200330) GetSerials() []string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetSerialsOk
 
-`func (o *InlineResponse200330) GetNetworksOk() (*[]InlineResponse200328Items, bool)`
+`func (o *InlineResponse200330) GetSerialsOk() (*[]string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetSerials
 
-`func (o *InlineResponse200330) SetNetworks(v []InlineResponse200328Items)`
+`func (o *InlineResponse200330) SetSerials(v []string)`
 
-SetNetworks sets Networks field to given value.
+SetSerials sets Serials field to given value.
 
-### HasNetworks
-
-`func (o *InlineResponse200330) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
