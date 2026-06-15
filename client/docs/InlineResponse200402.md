@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
-**States** | Pointer to **[]string** | The set of different states on the spaces integration process | [optional] 
-**Email** | Pointer to **string** | The meraki user who attempts the spaces integration | [optional] 
-**AccountName** | Pointer to **string** | The spaces dashboard account name created in spaces integration | [optional] 
-**AccountType** | Pointer to **string** | The spaces dashboard account type created in spaces integration | [optional] 
+**Items** | Pointer to [**[]InlineResponse200402Items**](InlineResponse200402Items.md) | Collection of site connectivity payloads | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse200402WithDefaults instantiates a new InlineResponse200402 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetItems
 
-`func (o *InlineResponse200402) GetStatus() bool`
+`func (o *InlineResponse200402) GetItems() []InlineResponse200402Items`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetItemsOk
 
-`func (o *InlineResponse200402) GetStatusOk() (*bool, bool)`
+`func (o *InlineResponse200402) GetItemsOk() (*[]InlineResponse200402Items, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetItems
 
-`func (o *InlineResponse200402) SetStatus(v bool)`
+`func (o *InlineResponse200402) SetItems(v []InlineResponse200402Items)`
 
-SetStatus sets Status field to given value.
+SetItems sets Items field to given value.
 
-### HasStatus
+### HasItems
 
-`func (o *InlineResponse200402) HasStatus() bool`
+`func (o *InlineResponse200402) HasItems() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetStates
-
-`func (o *InlineResponse200402) GetStates() []string`
-
-GetStates returns the States field if non-nil, zero value otherwise.
-
-### GetStatesOk
-
-`func (o *InlineResponse200402) GetStatesOk() (*[]string, bool)`
-
-GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStates
-
-`func (o *InlineResponse200402) SetStates(v []string)`
-
-SetStates sets States field to given value.
-
-### HasStates
-
-`func (o *InlineResponse200402) HasStates() bool`
-
-HasStates returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200402) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200402) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200402) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200402) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
-
-### GetAccountName
-
-`func (o *InlineResponse200402) GetAccountName() string`
-
-GetAccountName returns the AccountName field if non-nil, zero value otherwise.
-
-### GetAccountNameOk
-
-`func (o *InlineResponse200402) GetAccountNameOk() (*string, bool)`
-
-GetAccountNameOk returns a tuple with the AccountName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccountName
-
-`func (o *InlineResponse200402) SetAccountName(v string)`
-
-SetAccountName sets AccountName field to given value.
-
-### HasAccountName
-
-`func (o *InlineResponse200402) HasAccountName() bool`
-
-HasAccountName returns a boolean if a field has been set.
-
-### GetAccountType
-
-`func (o *InlineResponse200402) GetAccountType() string`
-
-GetAccountType returns the AccountType field if non-nil, zero value otherwise.
-
-### GetAccountTypeOk
-
-`func (o *InlineResponse200402) GetAccountTypeOk() (*string, bool)`
-
-GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccountType
-
-`func (o *InlineResponse200402) SetAccountType(v string)`
-
-SetAccountType sets AccountType field to given value.
-
-### HasAccountType
-
-`func (o *InlineResponse200402) HasAccountType() bool`
-
-HasAccountType returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

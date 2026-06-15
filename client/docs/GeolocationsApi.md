@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationDevicesCellularGeolocations
 
-> InlineResponse200326 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200338 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular geolocation telemetry for devices in an organization
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GeolocationsApi.GetOrganizationDevicesCellularGeolocations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200326
+    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200338
     fmt.Fprintf(os.Stdout, "Response from `GeolocationsApi.GetOrganizationDevicesCellularGeolocations`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200326**](InlineResponse200326.md)
+[**InlineResponse200338**](InlineResponse200338.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularGeolocations
 
-> InlineResponse20025 UpdateDeviceCellularGeolocations(ctx, serial).UpdateDeviceCellularGeolocations(updateDeviceCellularGeolocations).Execute()
+> InlineResponse20026 UpdateDeviceCellularGeolocations(ctx, serial).UpdateDeviceCellularGeolocations(updateDeviceCellularGeolocations).Execute()
 
 Update the enablement of the geolocation feature for a device
 
@@ -109,7 +109,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGeolocations := *openapiclient.NewInlineObject13(false) // InlineObject13 | 
+    updateDeviceCellularGeolocations := *openapiclient.NewInlineObject14(false) // InlineObject14 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GeolocationsApi.UpdateDeviceCellularGeolocations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularGeolocations`: InlineResponse20025
+    // response from `UpdateDeviceCellularGeolocations`: InlineResponse20026
     fmt.Fprintf(os.Stdout, "Response from `GeolocationsApi.UpdateDeviceCellularGeolocations`: %v\n", resp)
 }
 ```
@@ -139,11 +139,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGeoloc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGeolocations** | [**InlineObject13**](InlineObject13.md) |  | 
+ **updateDeviceCellularGeolocations** | [**InlineObject14**](InlineObject14.md) |  | 
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 

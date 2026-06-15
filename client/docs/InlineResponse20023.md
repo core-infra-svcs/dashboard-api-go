@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | URL to the camera video stream | [optional] 
-**VisionUrl** | Pointer to **string** | URL to the Meraki Vision camera view | [optional] 
+**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
+**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse20023WithDefaults instantiates a new InlineResponse20023 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetExternalRtspEnabled
 
-`func (o *InlineResponse20023) GetUrl() string`
+`func (o *InlineResponse20023) GetExternalRtspEnabled() bool`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetExternalRtspEnabledOk
 
-`func (o *InlineResponse20023) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20023) GetExternalRtspEnabledOk() (*bool, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetExternalRtspEnabled
 
-`func (o *InlineResponse20023) SetUrl(v string)`
+`func (o *InlineResponse20023) SetExternalRtspEnabled(v bool)`
 
-SetUrl sets Url field to given value.
+SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
 
-### HasUrl
+### HasExternalRtspEnabled
 
-`func (o *InlineResponse20023) HasUrl() bool`
+`func (o *InlineResponse20023) HasExternalRtspEnabled() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasExternalRtspEnabled returns a boolean if a field has been set.
 
-### GetVisionUrl
+### GetRtspUrl
 
-`func (o *InlineResponse20023) GetVisionUrl() string`
+`func (o *InlineResponse20023) GetRtspUrl() string`
 
-GetVisionUrl returns the VisionUrl field if non-nil, zero value otherwise.
+GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
 
-### GetVisionUrlOk
+### GetRtspUrlOk
 
-`func (o *InlineResponse20023) GetVisionUrlOk() (*string, bool)`
+`func (o *InlineResponse20023) GetRtspUrlOk() (*string, bool)`
 
-GetVisionUrlOk returns a tuple with the VisionUrl field if it's non-nil, zero value otherwise
+GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVisionUrl
+### SetRtspUrl
 
-`func (o *InlineResponse20023) SetVisionUrl(v string)`
+`func (o *InlineResponse20023) SetRtspUrl(v string)`
 
-SetVisionUrl sets VisionUrl field to given value.
+SetRtspUrl sets RtspUrl field to given value.
 
-### HasVisionUrl
+### HasRtspUrl
 
-`func (o *InlineResponse20023) HasVisionUrl() bool`
+`func (o *InlineResponse20023) HasRtspUrl() bool`
 
-HasVisionUrl returns a boolean if a field has been set.
+HasRtspUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
-**Address** | Pointer to **string** | IP for the DNS record | [optional] 
-**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
+**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1.md) |  | [optional] 
+**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1.md) |  | [optional] 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineObject237WithDefaults instantiates a new InlineObject237 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetSourceGroup
 
-`func (o *InlineObject237) GetHostname() string`
+`func (o *InlineObject237) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetSourceGroupOk
 
-`func (o *InlineObject237) GetHostnameOk() (*string, bool)`
+`func (o *InlineObject237) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetSourceGroup
 
-`func (o *InlineObject237) SetHostname(v string)`
+`func (o *InlineObject237) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1)`
 
-SetHostname sets Hostname field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
-### HasHostname
+### HasSourceGroup
 
-`func (o *InlineObject237) HasHostname() bool`
+`func (o *InlineObject237) HasSourceGroup() bool`
 
-HasHostname returns a boolean if a field has been set.
+HasSourceGroup returns a boolean if a field has been set.
 
-### GetAddress
+### GetDestinationGroup
 
-`func (o *InlineObject237) GetAddress() string`
+`func (o *InlineObject237) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetDestinationGroupOk
 
-`func (o *InlineObject237) GetAddressOk() (*string, bool)`
+`func (o *InlineObject237) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetDestinationGroup
 
-`func (o *InlineObject237) SetAddress(v string)`
+`func (o *InlineObject237) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1)`
 
-SetAddress sets Address field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
-### HasAddress
+### HasDestinationGroup
 
-`func (o *InlineObject237) HasAddress() bool`
+`func (o *InlineObject237) HasDestinationGroup() bool`
 
-HasAddress returns a boolean if a field has been set.
+HasDestinationGroup returns a boolean if a field has been set.
 
-### GetProfile
+### GetAcls
 
-`func (o *InlineObject237) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
+`func (o *InlineObject237) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1`
 
-GetProfile returns the Profile field if non-nil, zero value otherwise.
+GetAcls returns the Acls field if non-nil, zero value otherwise.
 
-### GetProfileOk
+### GetAclsOk
 
-`func (o *InlineObject237) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
+`func (o *InlineObject237) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1, bool)`
 
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfile
+### SetAcls
 
-`func (o *InlineObject237) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
+`func (o *InlineObject237) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1)`
 
-SetProfile sets Profile field to given value.
+SetAcls sets Acls field to given value.
 
-### HasProfile
+### HasAcls
 
-`func (o *InlineObject237) HasProfile() bool`
+`func (o *InlineObject237) HasAcls() bool`
 
-HasProfile returns a boolean if a field has been set.
+HasAcls returns a boolean if a field has been set.
+
+### GetLastEntryRule
+
+`func (o *InlineObject237) GetLastEntryRule() string`
+
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+
+### GetLastEntryRuleOk
+
+`func (o *InlineObject237) GetLastEntryRuleOk() (*string, bool)`
+
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastEntryRule
+
+`func (o *InlineObject237) SetLastEntryRule(v string)`
+
+SetLastEntryRule sets LastEntryRule field to given value.
+
+### HasLastEntryRule
+
+`func (o *InlineObject237) HasLastEntryRule() bool`
+
+HasLastEntryRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

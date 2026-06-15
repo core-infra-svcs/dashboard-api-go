@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules**](NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Enabled** | **bool** | Enable warm spare | 
+**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
+**Designations** | Pointer to [**[]NetworksNetworkIdApplianceDevicesRedundancyDesignations**](NetworksNetworkIdApplianceDevicesRedundancyDesignations.md) | Ordered warm spare roles | [optional] 
+**Uplink** | Pointer to [**NetworksNetworkIdApplianceDevicesRedundancyUplink**](NetworksNetworkIdApplianceDevicesRedundancyUplink.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject52
 
-`func NewInlineObject52() *InlineObject52`
+`func NewInlineObject52(enabled bool, ) *InlineObject52`
 
 NewInlineObject52 instantiates a new InlineObject52 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,100 @@ NewInlineObject52WithDefaults instantiates a new InlineObject52 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetEnabled
 
-`func (o *InlineObject52) GetRules() []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules`
+`func (o *InlineObject52) GetEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetEnabledOk
 
-`func (o *InlineObject52) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules, bool)`
+`func (o *InlineObject52) GetEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetEnabled
 
-`func (o *InlineObject52) SetRules(v []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules)`
+`func (o *InlineObject52) SetEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRules
 
-`func (o *InlineObject52) HasRules() bool`
+### GetMode
 
-HasRules returns a boolean if a field has been set.
+`func (o *InlineObject52) GetMode() string`
 
-### GetSyslogDefaultRule
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-`func (o *InlineObject52) GetSyslogDefaultRule() bool`
+### GetModeOk
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+`func (o *InlineObject52) GetModeOk() (*string, bool)`
 
-### GetSyslogDefaultRuleOk
-
-`func (o *InlineObject52) GetSyslogDefaultRuleOk() (*bool, bool)`
-
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetMode
 
-`func (o *InlineObject52) SetSyslogDefaultRule(v bool)`
+`func (o *InlineObject52) SetMode(v string)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetMode sets Mode field to given value.
 
-### HasSyslogDefaultRule
+### HasMode
 
-`func (o *InlineObject52) HasSyslogDefaultRule() bool`
+`func (o *InlineObject52) HasMode() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
+
+### GetDesignations
+
+`func (o *InlineObject52) GetDesignations() []NetworksNetworkIdApplianceDevicesRedundancyDesignations`
+
+GetDesignations returns the Designations field if non-nil, zero value otherwise.
+
+### GetDesignationsOk
+
+`func (o *InlineObject52) GetDesignationsOk() (*[]NetworksNetworkIdApplianceDevicesRedundancyDesignations, bool)`
+
+GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDesignations
+
+`func (o *InlineObject52) SetDesignations(v []NetworksNetworkIdApplianceDevicesRedundancyDesignations)`
+
+SetDesignations sets Designations field to given value.
+
+### HasDesignations
+
+`func (o *InlineObject52) HasDesignations() bool`
+
+HasDesignations returns a boolean if a field has been set.
+
+### GetUplink
+
+`func (o *InlineObject52) GetUplink() NetworksNetworkIdApplianceDevicesRedundancyUplink`
+
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
+
+### GetUplinkOk
+
+`func (o *InlineObject52) GetUplinkOk() (*NetworksNetworkIdApplianceDevicesRedundancyUplink, bool)`
+
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplink
+
+`func (o *InlineObject52) SetUplink(v NetworksNetworkIdApplianceDevicesRedundancyUplink)`
+
+SetUplink sets Uplink field to given value.
+
+### HasUplink
+
+`func (o *InlineObject52) HasUplink() bool`
+
+HasUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

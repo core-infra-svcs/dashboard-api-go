@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
-**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200148WithDefaults instantiates a new InlineResponse200148 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMqttBrokerId
+### GetReportingEnabled
 
-`func (o *InlineResponse200148) GetMqttBrokerId() string`
+`func (o *InlineResponse200148) GetReportingEnabled() bool`
 
-GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetMqttBrokerIdOk
+### GetReportingEnabledOk
 
-`func (o *InlineResponse200148) GetMqttBrokerIdOk() (*string, bool)`
+`func (o *InlineResponse200148) GetReportingEnabledOk() (*bool, bool)`
 
-GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttBrokerId
+### SetReportingEnabled
 
-`func (o *InlineResponse200148) SetMqttBrokerId(v string)`
+`func (o *InlineResponse200148) SetReportingEnabled(v bool)`
 
-SetMqttBrokerId sets MqttBrokerId field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasMqttBrokerId
+### HasReportingEnabled
 
-`func (o *InlineResponse200148) HasMqttBrokerId() bool`
+`func (o *InlineResponse200148) HasReportingEnabled() bool`
 
-HasMqttBrokerId returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetEnabled
+### GetCollectorIp
 
-`func (o *InlineResponse200148) GetEnabled() bool`
+`func (o *InlineResponse200148) GetCollectorIp() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetCollectorIpOk
 
-`func (o *InlineResponse200148) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200148) GetCollectorIpOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetCollectorIp
 
-`func (o *InlineResponse200148) SetEnabled(v bool)`
+`func (o *InlineResponse200148) SetCollectorIp(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasEnabled
+### HasCollectorIp
 
-`func (o *InlineResponse200148) HasEnabled() bool`
+`func (o *InlineResponse200148) HasCollectorIp() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
+
+### GetCollectorPort
+
+`func (o *InlineResponse200148) GetCollectorPort() int32`
+
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
+
+### GetCollectorPortOk
+
+`func (o *InlineResponse200148) GetCollectorPortOk() (*int32, bool)`
+
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCollectorPort
+
+`func (o *InlineResponse200148) SetCollectorPort(v int32)`
+
+SetCollectorPort sets CollectorPort field to given value.
+
+### HasCollectorPort
+
+`func (o *InlineResponse200148) HasCollectorPort() bool`
+
+HasCollectorPort returns a boolean if a field has been set.
+
+### GetEtaEnabled
+
+`func (o *InlineResponse200148) GetEtaEnabled() bool`
+
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
+
+### GetEtaEnabledOk
+
+`func (o *InlineResponse200148) GetEtaEnabledOk() (*bool, bool)`
+
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtaEnabled
+
+`func (o *InlineResponse200148) SetEtaEnabled(v bool)`
+
+SetEtaEnabled sets EtaEnabled field to given value.
+
+### HasEtaEnabled
+
+`func (o *InlineResponse200148) HasEtaEnabled() bool`
+
+HasEtaEnabled returns a boolean if a field has been set.
+
+### GetEtaDstPort
+
+`func (o *InlineResponse200148) GetEtaDstPort() int32`
+
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
+
+### GetEtaDstPortOk
+
+`func (o *InlineResponse200148) GetEtaDstPortOk() (*int32, bool)`
+
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtaDstPort
+
+`func (o *InlineResponse200148) SetEtaDstPort(v int32)`
+
+SetEtaDstPort sets EtaDstPort field to given value.
+
+### HasEtaDstPort
+
+`func (o *InlineResponse200148) HasEtaDstPort() bool`
+
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

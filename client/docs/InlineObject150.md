@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
-**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
+**AppIds** | **[]string** | ids of applications to be installed | 
+**Force** | Pointer to **bool** | By default, installation of an app which is believed to already be present on the device will be skipped. If you&#39;d like to force the installation of the app, set this parameter to true. | [optional] 
 
 ## Methods
 
 ### NewInlineObject150
 
-`func NewInlineObject150() *InlineObject150`
+`func NewInlineObject150(appIds []string, ) *InlineObject150`
 
 NewInlineObject150 instantiates a new InlineObject150 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject150WithDefaults instantiates a new InlineObject150 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetAppIds
 
-`func (o *InlineObject150) GetMac() string`
+`func (o *InlineObject150) GetAppIds() []string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetAppIds returns the AppIds field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetAppIdsOk
 
-`func (o *InlineObject150) GetMacOk() (*string, bool)`
+`func (o *InlineObject150) GetAppIdsOk() (*[]string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetAppIds
 
-`func (o *InlineObject150) SetMac(v string)`
+`func (o *InlineObject150) SetAppIds(v []string)`
 
-SetMac sets Mac field to given value.
+SetAppIds sets AppIds field to given value.
 
-### HasMac
 
-`func (o *InlineObject150) HasMac() bool`
+### GetForce
 
-HasMac returns a boolean if a field has been set.
+`func (o *InlineObject150) GetForce() bool`
 
-### GetVlan
+GetForce returns the Force field if non-nil, zero value otherwise.
 
-`func (o *InlineObject150) GetVlan() int32`
+### GetForceOk
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+`func (o *InlineObject150) GetForceOk() (*bool, bool)`
 
-### GetVlanOk
-
-`func (o *InlineObject150) GetVlanOk() (*int32, bool)`
-
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetForceOk returns a tuple with the Force field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetForce
 
-`func (o *InlineObject150) SetVlan(v int32)`
+`func (o *InlineObject150) SetForce(v bool)`
 
-SetVlan sets Vlan field to given value.
+SetForce sets Force field to given value.
 
-### HasVlan
+### HasForce
 
-`func (o *InlineObject150) HasVlan() bool`
+`func (o *InlineObject150) HasForce() bool`
 
-HasVlan returns a boolean if a field has been set.
-
-### GetIpv4
-
-`func (o *InlineObject150) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
-
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
-
-### GetIpv4Ok
-
-`func (o *InlineObject150) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
-
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv4
-
-`func (o *InlineObject150) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
-
-SetIpv4 sets Ipv4 field to given value.
-
-### HasIpv4
-
-`func (o *InlineObject150) HasIpv4() bool`
-
-HasIpv4 returns a boolean if a field has been set.
+HasForce returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

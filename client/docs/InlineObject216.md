@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
-**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
-**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
-**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**Identity** | Pointer to [**InlineResponse200245Identity**](InlineResponse200245Identity.md) |  | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200245EapolKey**](InlineResponse200245EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineObject216WithDefaults instantiates a new InlineObject216 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetTimeout
 
-`func (o *InlineObject216) GetEnabled() bool`
+`func (o *InlineObject216) GetTimeout() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTimeoutOk
 
-`func (o *InlineObject216) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject216) GetTimeoutOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTimeout
 
-`func (o *InlineObject216) SetEnabled(v bool)`
+`func (o *InlineObject216) SetTimeout(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasEnabled
+### HasTimeout
 
-`func (o *InlineObject216) HasEnabled() bool`
+`func (o *InlineObject216) HasTimeout() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetIotController
+### GetIdentity
 
-`func (o *InlineObject216) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
+`func (o *InlineObject216) GetIdentity() InlineResponse200245Identity`
 
-GetIotController returns the IotController field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetIotControllerOk
+### GetIdentityOk
 
-`func (o *InlineObject216) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
+`func (o *InlineObject216) GetIdentityOk() (*InlineResponse200245Identity, bool)`
 
-GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIotController
+### SetIdentity
 
-`func (o *InlineObject216) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
+`func (o *InlineObject216) SetIdentity(v InlineResponse200245Identity)`
 
-SetIotController sets IotController field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasIotController
+### HasIdentity
 
-`func (o *InlineObject216) HasIotController() bool`
+`func (o *InlineObject216) HasIdentity() bool`
 
-HasIotController returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
 
-### GetLockManagement
+### GetMaxRetries
 
-`func (o *InlineObject216) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
+`func (o *InlineObject216) GetMaxRetries() int32`
 
-GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetLockManagementOk
+### GetMaxRetriesOk
 
-`func (o *InlineObject216) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
+`func (o *InlineObject216) GetMaxRetriesOk() (*int32, bool)`
 
-GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLockManagement
+### SetMaxRetries
 
-`func (o *InlineObject216) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
+`func (o *InlineObject216) SetMaxRetries(v int32)`
 
-SetLockManagement sets LockManagement field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasLockManagement
+### HasMaxRetries
 
-`func (o *InlineObject216) HasLockManagement() bool`
+`func (o *InlineObject216) HasMaxRetries() bool`
 
-HasLockManagement returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
 
-### GetDefaults
+### GetEapolKey
 
-`func (o *InlineObject216) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
+`func (o *InlineObject216) GetEapolKey() InlineResponse200245EapolKey`
 
-GetDefaults returns the Defaults field if non-nil, zero value otherwise.
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
-### GetDefaultsOk
+### GetEapolKeyOk
 
-`func (o *InlineObject216) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
+`func (o *InlineObject216) GetEapolKeyOk() (*InlineResponse200245EapolKey, bool)`
 
-GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaults
+### SetEapolKey
 
-`func (o *InlineObject216) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
+`func (o *InlineObject216) SetEapolKey(v InlineResponse200245EapolKey)`
 
-SetDefaults sets Defaults field to given value.
+SetEapolKey sets EapolKey field to given value.
 
-### HasDefaults
+### HasEapolKey
 
-`func (o *InlineObject216) HasDefaults() bool`
+`func (o *InlineObject216) HasEapolKey() bool`
 
-HasDefaults returns a boolean if a field has been set.
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

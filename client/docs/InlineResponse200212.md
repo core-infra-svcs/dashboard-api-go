@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse200212Plans**](InlineResponse200212Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200212CustomPieChartItems**](InlineResponse200212CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200212WithDefaults instantiates a new InlineResponse200212 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetMode
 
-`func (o *InlineResponse200212) GetCurrency() string`
+`func (o *InlineResponse200212) GetMode() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetModeOk
 
-`func (o *InlineResponse200212) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse200212) GetModeOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetMode
 
-`func (o *InlineResponse200212) SetCurrency(v string)`
+`func (o *InlineResponse200212) SetMode(v string)`
 
-SetCurrency sets Currency field to given value.
+SetMode sets Mode field to given value.
 
-### HasCurrency
+### HasMode
 
-`func (o *InlineResponse200212) HasCurrency() bool`
+`func (o *InlineResponse200212) HasMode() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetPlans
+### GetCustomPieChartItems
 
-`func (o *InlineResponse200212) GetPlans() []InlineResponse200212Plans`
+`func (o *InlineResponse200212) GetCustomPieChartItems() []InlineResponse200212CustomPieChartItems`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineResponse200212) GetPlansOk() (*[]InlineResponse200212Plans, bool)`
+`func (o *InlineResponse200212) GetCustomPieChartItemsOk() (*[]InlineResponse200212CustomPieChartItems, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetCustomPieChartItems
 
-`func (o *InlineResponse200212) SetPlans(v []InlineResponse200212Plans)`
+`func (o *InlineResponse200212) SetCustomPieChartItems(v []InlineResponse200212CustomPieChartItems)`
 
-SetPlans sets Plans field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
-### HasPlans
+### HasCustomPieChartItems
 
-`func (o *InlineResponse200212) HasPlans() bool`
+`func (o *InlineResponse200212) HasCustomPieChartItems() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

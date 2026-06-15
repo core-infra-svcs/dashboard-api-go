@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesDetachItems**](OrganizationsOrganizationIdSaseSitesDetachItems.md) | List of Secure Access sites to be detached. | [optional] 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
+**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject324
 
-`func NewInlineObject324() *InlineObject324`
+`func NewInlineObject324(name string, ) *InlineObject324`
 
 NewInlineObject324 instantiates a new InlineObject324 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,75 @@ NewInlineObject324WithDefaults instantiates a new InlineObject324 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject324) GetItems() []OrganizationsOrganizationIdSaseSitesDetachItems`
+`func (o *InlineObject324) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject324) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesDetachItems, bool)`
+`func (o *InlineObject324) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject324) SetItems(v []OrganizationsOrganizationIdSaseSitesDetachItems)`
+`func (o *InlineObject324) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
-### HasItems
 
-`func (o *InlineObject324) HasItems() bool`
+### GetCategory
 
-HasItems returns a boolean if a field has been set.
+`func (o *InlineObject324) GetCategory() string`
 
-### GetCallback
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-`func (o *InlineObject324) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+### GetCategoryOk
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+`func (o *InlineObject324) GetCategoryOk() (*string, bool)`
 
-### GetCallbackOk
-
-`func (o *InlineObject324) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetCategory
 
-`func (o *InlineObject324) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+`func (o *InlineObject324) SetCategory(v string)`
 
-SetCallback sets Callback field to given value.
+SetCategory sets Category field to given value.
 
-### HasCallback
+### HasCategory
 
-`func (o *InlineObject324) HasCallback() bool`
+`func (o *InlineObject324) HasCategory() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
+
+### GetObjectIds
+
+`func (o *InlineObject324) GetObjectIds() []string`
+
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+
+### GetObjectIdsOk
+
+`func (o *InlineObject324) GetObjectIdsOk() (*[]string, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetObjectIds
+
+`func (o *InlineObject324) SetObjectIds(v []string)`
+
+SetObjectIds sets ObjectIds field to given value.
+
+### HasObjectIds
+
+`func (o *InlineObject324) HasObjectIds() bool`
+
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

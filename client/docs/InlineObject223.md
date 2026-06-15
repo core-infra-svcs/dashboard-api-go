@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the group | 
-**Sgt** | **int32** | SGT value of the group | 
-**Description** | Pointer to **string** | Description of the group (default: \&quot;\&quot;) | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) (default: []) | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200251Ranges**](InlineResponse200251Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200251RangesInSeconds**](InlineResponse200251RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
 ### NewInlineObject223
 
-`func NewInlineObject223(name string, sgt int32, ) *InlineObject223`
+`func NewInlineObject223() *InlineObject223`
 
 NewInlineObject223 instantiates a new InlineObject223 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,80 @@ NewInlineObject223WithDefaults instantiates a new InlineObject223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject223) GetName() string`
+`func (o *InlineObject223) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject223) GetNameOk() (*string, bool)`
+`func (o *InlineObject223) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject223) SetName(v string)`
+`func (o *InlineObject223) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetSgt
+`func (o *InlineObject223) HasEnabled() bool`
 
-`func (o *InlineObject223) GetSgt() int32`
+HasEnabled returns a boolean if a field has been set.
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+### GetRanges
 
-### GetSgtOk
+`func (o *InlineObject223) GetRanges() []InlineResponse200251Ranges`
 
-`func (o *InlineObject223) GetSgtOk() (*int32, bool)`
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+### GetRangesOk
+
+`func (o *InlineObject223) GetRangesOk() (*[]InlineResponse200251Ranges, bool)`
+
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetRanges
 
-`func (o *InlineObject223) SetSgt(v int32)`
+`func (o *InlineObject223) SetRanges(v []InlineResponse200251Ranges)`
 
-SetSgt sets Sgt field to given value.
+SetRanges sets Ranges field to given value.
 
+### HasRanges
 
-### GetDescription
+`func (o *InlineObject223) HasRanges() bool`
 
-`func (o *InlineObject223) GetDescription() string`
+HasRanges returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetRangesInSeconds
 
-### GetDescriptionOk
+`func (o *InlineObject223) GetRangesInSeconds() []InlineResponse200251RangesInSeconds`
 
-`func (o *InlineObject223) GetDescriptionOk() (*string, bool)`
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetRangesInSecondsOk
+
+`func (o *InlineObject223) GetRangesInSecondsOk() (*[]InlineResponse200251RangesInSeconds, bool)`
+
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetRangesInSeconds
 
-`func (o *InlineObject223) SetDescription(v string)`
+`func (o *InlineObject223) SetRangesInSeconds(v []InlineResponse200251RangesInSeconds)`
 
-SetDescription sets Description field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasDescription
+### HasRangesInSeconds
 
-`func (o *InlineObject223) HasDescription() bool`
+`func (o *InlineObject223) HasRangesInSeconds() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetPolicyObjects
-
-`func (o *InlineObject223) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
-
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
-
-### GetPolicyObjectsOk
-
-`func (o *InlineObject223) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
-
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicyObjects
-
-`func (o *InlineObject223) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
-
-SetPolicyObjects sets PolicyObjects field to given value.
-
-### HasPolicyObjects
-
-`func (o *InlineObject223) HasPolicyObjects() bool`
-
-HasPolicyObjects returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

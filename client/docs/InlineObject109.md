@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the Staged Upgrade Group. Length must be 1 to 255 characters | 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group. Length must be 1 to 255 characters | [optional] 
-**IsDefault** | **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1.md) |  | [optional] 
+**Clients** | [**[]NetworksNetworkIdClientsProvisionClients**](NetworksNetworkIdClientsProvisionClients.md) | The array of clients to provision | 
+**DevicePolicy** | **string** | The policy to apply to the specified client. Can be &#39;Group policy&#39;, &#39;Allowed&#39;, &#39;Blocked&#39;, &#39;Per connection&#39; or &#39;Normal&#39;. Required. | 
+**GroupPolicyId** | Pointer to **string** | The ID of the desired group policy to apply to the client. Required if &#39;devicePolicy&#39; is set to \&quot;Group policy\&quot;. Otherwise this is ignored. | [optional] 
+**PoliciesBySecurityAppliance** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance**](NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance.md) |  | [optional] 
+**PoliciesBySsid** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySsid**](NetworksNetworkIdClientsProvisionPoliciesBySsid.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject109
 
-`func NewInlineObject109(name string, isDefault bool, ) *InlineObject109`
+`func NewInlineObject109(clients []NetworksNetworkIdClientsProvisionClients, devicePolicy string, ) *InlineObject109`
 
 NewInlineObject109 instantiates a new InlineObject109 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +29,120 @@ NewInlineObject109WithDefaults instantiates a new InlineObject109 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetClients
 
-`func (o *InlineObject109) GetName() string`
+`func (o *InlineObject109) GetClients() []NetworksNetworkIdClientsProvisionClients`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClientsOk
 
-`func (o *InlineObject109) GetNameOk() (*string, bool)`
+`func (o *InlineObject109) GetClientsOk() (*[]NetworksNetworkIdClientsProvisionClients, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetClients
 
-`func (o *InlineObject109) SetName(v string)`
+`func (o *InlineObject109) SetClients(v []NetworksNetworkIdClientsProvisionClients)`
 
-SetName sets Name field to given value.
+SetClients sets Clients field to given value.
 
 
-### GetDescription
+### GetDevicePolicy
 
-`func (o *InlineObject109) GetDescription() string`
+`func (o *InlineObject109) GetDevicePolicy() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetDevicePolicyOk
 
-`func (o *InlineObject109) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject109) GetDevicePolicyOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetDevicePolicy
 
-`func (o *InlineObject109) SetDescription(v string)`
+`func (o *InlineObject109) SetDevicePolicy(v string)`
 
-SetDescription sets Description field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasDescription
 
-`func (o *InlineObject109) HasDescription() bool`
+### GetGroupPolicyId
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject109) GetGroupPolicyId() string`
 
-### GetIsDefault
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject109) GetIsDefault() bool`
+### GetGroupPolicyIdOk
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+`func (o *InlineObject109) GetGroupPolicyIdOk() (*string, bool)`
 
-### GetIsDefaultOk
-
-`func (o *InlineObject109) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetGroupPolicyId
 
-`func (o *InlineObject109) SetIsDefault(v bool)`
+`func (o *InlineObject109) SetGroupPolicyId(v string)`
 
-SetIsDefault sets IsDefault field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
+### HasGroupPolicyId
 
-### GetAssignedDevices
+`func (o *InlineObject109) HasGroupPolicyId() bool`
 
-`func (o *InlineObject109) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1`
+HasGroupPolicyId returns a boolean if a field has been set.
 
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
+### GetPoliciesBySecurityAppliance
 
-### GetAssignedDevicesOk
+`func (o *InlineObject109) GetPoliciesBySecurityAppliance() NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance`
 
-`func (o *InlineObject109) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1, bool)`
+GetPoliciesBySecurityAppliance returns the PoliciesBySecurityAppliance field if non-nil, zero value otherwise.
 
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
+### GetPoliciesBySecurityApplianceOk
+
+`func (o *InlineObject109) GetPoliciesBySecurityApplianceOk() (*NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance, bool)`
+
+GetPoliciesBySecurityApplianceOk returns a tuple with the PoliciesBySecurityAppliance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignedDevices
+### SetPoliciesBySecurityAppliance
 
-`func (o *InlineObject109) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1)`
+`func (o *InlineObject109) SetPoliciesBySecurityAppliance(v NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance)`
 
-SetAssignedDevices sets AssignedDevices field to given value.
+SetPoliciesBySecurityAppliance sets PoliciesBySecurityAppliance field to given value.
 
-### HasAssignedDevices
+### HasPoliciesBySecurityAppliance
 
-`func (o *InlineObject109) HasAssignedDevices() bool`
+`func (o *InlineObject109) HasPoliciesBySecurityAppliance() bool`
 
-HasAssignedDevices returns a boolean if a field has been set.
+HasPoliciesBySecurityAppliance returns a boolean if a field has been set.
+
+### GetPoliciesBySsid
+
+`func (o *InlineObject109) GetPoliciesBySsid() NetworksNetworkIdClientsProvisionPoliciesBySsid`
+
+GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+
+### GetPoliciesBySsidOk
+
+`func (o *InlineObject109) GetPoliciesBySsidOk() (*NetworksNetworkIdClientsProvisionPoliciesBySsid, bool)`
+
+GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySsid
+
+`func (o *InlineObject109) SetPoliciesBySsid(v NetworksNetworkIdClientsProvisionPoliciesBySsid)`
+
+SetPoliciesBySsid sets PoliciesBySsid field to given value.
+
+### HasPoliciesBySsid
+
+`func (o *InlineObject109) HasPoliciesBySsid() bool`
+
+HasPoliciesBySsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

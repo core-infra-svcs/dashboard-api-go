@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mappings** | [**[]NetworksNetworkIdSwitchDscpToCosMappingsMappings**](NetworksNetworkIdSwitchDscpToCosMappingsMappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | 
+**AppIds** | **[]string** | ids of applications to be uninstalled | 
 
 ## Methods
 
 ### NewInlineObject151
 
-`func NewInlineObject151(mappings []NetworksNetworkIdSwitchDscpToCosMappingsMappings, ) *InlineObject151`
+`func NewInlineObject151(appIds []string, ) *InlineObject151`
 
 NewInlineObject151 instantiates a new InlineObject151 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject151WithDefaults instantiates a new InlineObject151 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMappings
+### GetAppIds
 
-`func (o *InlineObject151) GetMappings() []NetworksNetworkIdSwitchDscpToCosMappingsMappings`
+`func (o *InlineObject151) GetAppIds() []string`
 
-GetMappings returns the Mappings field if non-nil, zero value otherwise.
+GetAppIds returns the AppIds field if non-nil, zero value otherwise.
 
-### GetMappingsOk
+### GetAppIdsOk
 
-`func (o *InlineObject151) GetMappingsOk() (*[]NetworksNetworkIdSwitchDscpToCosMappingsMappings, bool)`
+`func (o *InlineObject151) GetAppIdsOk() (*[]string, bool)`
 
-GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
+GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMappings
+### SetAppIds
 
-`func (o *InlineObject151) SetMappings(v []NetworksNetworkIdSwitchDscpToCosMappingsMappings)`
+`func (o *InlineObject151) SetAppIds(v []string)`
 
-SetMappings sets Mappings field to given value.
+SetAppIds sets AppIds field to given value.
 
 
 

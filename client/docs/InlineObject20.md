@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Duration** | **int32** | The duration in seconds to blink LEDs. | 
+**Ports** | **[]string** | A list of ports for which to perform the cable test.  For Catalyst switches, IOS interface names are also supported, such as \&quot;GigabitEthernet1/0/8\&quot;, \&quot;Gi1/0/8\&quot;, or even \&quot;1/0/8\&quot;. | 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject20
 
-`func NewInlineObject20(duration int32, ) *InlineObject20`
+`func NewInlineObject20(ports []string, ) *InlineObject20`
 
 NewInlineObject20 instantiates a new InlineObject20 object
 This constructor will assign default values to properties that have it defined,
@@ -26,24 +26,24 @@ NewInlineObject20WithDefaults instantiates a new InlineObject20 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDuration
+### GetPorts
 
-`func (o *InlineObject20) GetDuration() int32`
+`func (o *InlineObject20) GetPorts() []string`
 
-GetDuration returns the Duration field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetDurationOk
+### GetPortsOk
 
-`func (o *InlineObject20) GetDurationOk() (*int32, bool)`
+`func (o *InlineObject20) GetPortsOk() (*[]string, bool)`
 
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDuration
+### SetPorts
 
-`func (o *InlineObject20) SetDuration(v int32)`
+`func (o *InlineObject20) SetPorts(v []string)`
 
-SetDuration sets Duration field to given value.
+SetPorts sets Ports field to given value.
 
 
 ### GetCallback

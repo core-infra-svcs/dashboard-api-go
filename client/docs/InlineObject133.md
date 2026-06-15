@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be locked. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be locked. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be locked. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be locked. | [optional] 
-**Pin** | Pointer to **int32** | The pin number for locking macOS devices (a six digit number). Required only for macOS devices. | [optional] 
+**Name** | **string** | Name of the MQTT broker. | 
+**Host** | **string** | Host name/IP address where the MQTT broker runs. | 
+**Port** | **int32** | Host port though which the MQTT broker can be reached. | 
+**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity1**](NetworksNetworkIdMqttBrokersSecurity1.md) |  | [optional] 
+**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication1**](NetworksNetworkIdMqttBrokersAuthentication1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject133
 
-`func NewInlineObject133() *InlineObject133`
+`func NewInlineObject133(name string, host string, port int32, ) *InlineObject133`
 
 NewInlineObject133 instantiates a new InlineObject133 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +29,115 @@ NewInlineObject133WithDefaults instantiates a new InlineObject133 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetName
 
-`func (o *InlineObject133) GetWifiMacs() []string`
+`func (o *InlineObject133) GetName() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetNameOk
 
-`func (o *InlineObject133) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject133) GetNameOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetName
 
-`func (o *InlineObject133) SetWifiMacs(v []string)`
+`func (o *InlineObject133) SetName(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMacs
 
-`func (o *InlineObject133) HasWifiMacs() bool`
+### GetHost
 
-HasWifiMacs returns a boolean if a field has been set.
+`func (o *InlineObject133) GetHost() string`
 
-### GetIds
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-`func (o *InlineObject133) GetIds() []string`
+### GetHostOk
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+`func (o *InlineObject133) GetHostOk() (*string, bool)`
 
-### GetIdsOk
-
-`func (o *InlineObject133) GetIdsOk() (*[]string, bool)`
-
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetHost
 
-`func (o *InlineObject133) SetIds(v []string)`
+`func (o *InlineObject133) SetHost(v string)`
 
-SetIds sets Ids field to given value.
+SetHost sets Host field to given value.
 
-### HasIds
 
-`func (o *InlineObject133) HasIds() bool`
+### GetPort
 
-HasIds returns a boolean if a field has been set.
+`func (o *InlineObject133) GetPort() int32`
 
-### GetSerials
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-`func (o *InlineObject133) GetSerials() []string`
+### GetPortOk
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+`func (o *InlineObject133) GetPortOk() (*int32, bool)`
 
-### GetSerialsOk
-
-`func (o *InlineObject133) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetPort
 
-`func (o *InlineObject133) SetSerials(v []string)`
+`func (o *InlineObject133) SetPort(v int32)`
 
-SetSerials sets Serials field to given value.
+SetPort sets Port field to given value.
 
-### HasSerials
 
-`func (o *InlineObject133) HasSerials() bool`
+### GetSecurity
 
-HasSerials returns a boolean if a field has been set.
+`func (o *InlineObject133) GetSecurity() NetworksNetworkIdMqttBrokersSecurity1`
 
-### GetScope
+GetSecurity returns the Security field if non-nil, zero value otherwise.
 
-`func (o *InlineObject133) GetScope() []string`
+### GetSecurityOk
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+`func (o *InlineObject133) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity1, bool)`
 
-### GetScopeOk
-
-`func (o *InlineObject133) GetScopeOk() (*[]string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetSecurity
 
-`func (o *InlineObject133) SetScope(v []string)`
+`func (o *InlineObject133) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity1)`
 
-SetScope sets Scope field to given value.
+SetSecurity sets Security field to given value.
 
-### HasScope
+### HasSecurity
 
-`func (o *InlineObject133) HasScope() bool`
+`func (o *InlineObject133) HasSecurity() bool`
 
-HasScope returns a boolean if a field has been set.
+HasSecurity returns a boolean if a field has been set.
 
-### GetPin
+### GetAuthentication
 
-`func (o *InlineObject133) GetPin() int32`
+`func (o *InlineObject133) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication1`
 
-GetPin returns the Pin field if non-nil, zero value otherwise.
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
-### GetPinOk
+### GetAuthenticationOk
 
-`func (o *InlineObject133) GetPinOk() (*int32, bool)`
+`func (o *InlineObject133) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication1, bool)`
 
-GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPin
+### SetAuthentication
 
-`func (o *InlineObject133) SetPin(v int32)`
+`func (o *InlineObject133) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication1)`
 
-SetPin sets Pin field to given value.
+SetAuthentication sets Authentication field to given value.
 
-### HasPin
+### HasAuthentication
 
-`func (o *InlineObject133) HasPin() bool`
+`func (o *InlineObject133) HasAuthentication() bool`
 
-HasPin returns a boolean if a field has been set.
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

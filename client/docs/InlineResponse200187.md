@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID for the link aggregation. | [optional] 
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | The ID for the link aggregation. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200187Rules**](InlineResponse200187Rules.md) | An ordered array of the access control list rules | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200187WithDefaults instantiates a new InlineResponse200187 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetRules
 
-`func (o *InlineResponse200187) GetId() string`
+`func (o *InlineResponse200187) GetRules() []InlineResponse200187Rules`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetRulesOk
 
-`func (o *InlineResponse200187) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200187) GetRulesOk() (*[]InlineResponse200187Rules, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetRules
 
-`func (o *InlineResponse200187) SetId(v string)`
+`func (o *InlineResponse200187) SetRules(v []InlineResponse200187Rules)`
 
-SetId sets Id field to given value.
+SetRules sets Rules field to given value.
 
-### HasId
+### HasRules
 
-`func (o *InlineResponse200187) HasId() bool`
+`func (o *InlineResponse200187) HasRules() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetSwitchPorts
-
-`func (o *InlineResponse200187) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
-
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
-
-### GetSwitchPortsOk
-
-`func (o *InlineResponse200187) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
-
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSwitchPorts
-
-`func (o *InlineResponse200187) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
-
-SetSwitchPorts sets SwitchPorts field to given value.
-
-### HasSwitchPorts
-
-`func (o *InlineResponse200187) HasSwitchPorts() bool`
-
-HasSwitchPorts returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
-**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
+**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
+**Subnet** | Pointer to **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | [optional] 
+**NextHopIp** | Pointer to **string** | IP address of the next hop device to which the device sends its traffic for the subnet | [optional] 
+**ManagementNextHop** | Pointer to **NullableString** | Optional fallback IP address for management traffic | [optional] 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
@@ -27,90 +31,190 @@ NewInlineObject42WithDefaults instantiates a new InlineObject42 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRfProfileId
+### GetName
 
-`func (o *InlineObject42) GetRfProfileId() string`
+`func (o *InlineObject42) GetName() string`
 
-GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRfProfileIdOk
+### GetNameOk
 
-`func (o *InlineObject42) GetRfProfileIdOk() (*string, bool)`
+`func (o *InlineObject42) GetNameOk() (*string, bool)`
 
-GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfileId
+### SetName
 
-`func (o *InlineObject42) SetRfProfileId(v string)`
+`func (o *InlineObject42) SetName(v string)`
 
-SetRfProfileId sets RfProfileId field to given value.
+SetName sets Name field to given value.
 
-### HasRfProfileId
+### HasName
 
-`func (o *InlineObject42) HasRfProfileId() bool`
+`func (o *InlineObject42) HasName() bool`
 
-HasRfProfileId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### SetRfProfileIdNil
+### GetSubnet
 
-`func (o *InlineObject42) SetRfProfileIdNil(b bool)`
+`func (o *InlineObject42) GetSubnet() string`
 
- SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### UnsetRfProfileId
-`func (o *InlineObject42) UnsetRfProfileId()`
+### GetSubnetOk
 
-UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
-### GetTwoFourGhzSettings
+`func (o *InlineObject42) GetSubnetOk() (*string, bool)`
 
-`func (o *InlineObject42) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject42) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetSubnet
 
-`func (o *InlineObject42) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
+`func (o *InlineObject42) SetSubnet(v string)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasTwoFourGhzSettings
+### HasSubnet
 
-`func (o *InlineObject42) HasTwoFourGhzSettings() bool`
+`func (o *InlineObject42) HasSubnet() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetFiveGhzSettings
+### GetNextHopIp
 
-`func (o *InlineObject42) GetFiveGhzSettings() DevicesSerialApplianceRadioSettingsFiveGhzSettings`
+`func (o *InlineObject42) GetNextHopIp() string`
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-### GetFiveGhzSettingsOk
+### GetNextHopIpOk
 
-`func (o *InlineObject42) GetFiveGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsFiveGhzSettings, bool)`
+`func (o *InlineObject42) GetNextHopIpOk() (*string, bool)`
 
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetNextHopIp
 
-`func (o *InlineObject42) SetFiveGhzSettings(v DevicesSerialApplianceRadioSettingsFiveGhzSettings)`
+`func (o *InlineObject42) SetNextHopIp(v string)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasFiveGhzSettings
+### HasNextHopIp
 
-`func (o *InlineObject42) HasFiveGhzSettings() bool`
+`func (o *InlineObject42) HasNextHopIp() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasNextHopIp returns a boolean if a field has been set.
+
+### GetManagementNextHop
+
+`func (o *InlineObject42) GetManagementNextHop() string`
+
+GetManagementNextHop returns the ManagementNextHop field if non-nil, zero value otherwise.
+
+### GetManagementNextHopOk
+
+`func (o *InlineObject42) GetManagementNextHopOk() (*string, bool)`
+
+GetManagementNextHopOk returns a tuple with the ManagementNextHop field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManagementNextHop
+
+`func (o *InlineObject42) SetManagementNextHop(v string)`
+
+SetManagementNextHop sets ManagementNextHop field to given value.
+
+### HasManagementNextHop
+
+`func (o *InlineObject42) HasManagementNextHop() bool`
+
+HasManagementNextHop returns a boolean if a field has been set.
+
+### SetManagementNextHopNil
+
+`func (o *InlineObject42) SetManagementNextHopNil(b bool)`
+
+ SetManagementNextHopNil sets the value for ManagementNextHop to be an explicit nil
+
+### UnsetManagementNextHop
+`func (o *InlineObject42) UnsetManagementNextHop()`
+
+UnsetManagementNextHop ensures that no value is present for ManagementNextHop, not even an explicit nil
+### GetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject42) GetAdvertiseViaOspfEnabled() bool`
+
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+
+### GetAdvertiseViaOspfEnabledOk
+
+`func (o *InlineObject42) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject42) SetAdvertiseViaOspfEnabled(v bool)`
+
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+
+### HasAdvertiseViaOspfEnabled
+
+`func (o *InlineObject42) HasAdvertiseViaOspfEnabled() bool`
+
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject42) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineObject42) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject42) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject42) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject42) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject42) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject42) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject42) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

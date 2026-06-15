@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1.md) |  | [optional] 
-**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1.md) |  | [optional] 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200254Failover**](InlineResponse200254Failover.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject226WithDefaults instantiates a new InlineObject226 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceGroup
+### GetConcentrator
 
-`func (o *InlineObject226) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1`
+`func (o *InlineObject226) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetConcentratorOk
 
-`func (o *InlineObject226) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, bool)`
+`func (o *InlineObject226) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetConcentrator
 
-`func (o *InlineObject226) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1)`
+`func (o *InlineObject226) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasSourceGroup
+### HasConcentrator
 
-`func (o *InlineObject226) HasSourceGroup() bool`
+`func (o *InlineObject226) HasConcentrator() bool`
 
-HasSourceGroup returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetDestinationGroup
+### GetSplitTunnel
 
-`func (o *InlineObject226) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1`
+`func (o *InlineObject226) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetDestinationGroupOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject226) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, bool)`
+`func (o *InlineObject226) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetSplitTunnel
 
-`func (o *InlineObject226) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1)`
+`func (o *InlineObject226) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasDestinationGroup
+### HasSplitTunnel
 
-`func (o *InlineObject226) HasDestinationGroup() bool`
+`func (o *InlineObject226) HasSplitTunnel() bool`
 
-HasDestinationGroup returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
-### GetAcls
+### GetFailover
 
-`func (o *InlineObject226) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1`
+`func (o *InlineObject226) GetFailover() InlineResponse200254Failover`
 
-GetAcls returns the Acls field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetAclsOk
+### GetFailoverOk
 
-`func (o *InlineObject226) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1, bool)`
+`func (o *InlineObject226) GetFailoverOk() (*InlineResponse200254Failover, bool)`
 
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAcls
+### SetFailover
 
-`func (o *InlineObject226) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1)`
+`func (o *InlineObject226) SetFailover(v InlineResponse200254Failover)`
 
-SetAcls sets Acls field to given value.
+SetFailover sets Failover field to given value.
 
-### HasAcls
+### HasFailover
 
-`func (o *InlineObject226) HasAcls() bool`
+`func (o *InlineObject226) HasFailover() bool`
 
-HasAcls returns a boolean if a field has been set.
-
-### GetLastEntryRule
-
-`func (o *InlineObject226) GetLastEntryRule() string`
-
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
-
-### GetLastEntryRuleOk
-
-`func (o *InlineObject226) GetLastEntryRuleOk() (*string, bool)`
-
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastEntryRule
-
-`func (o *InlineObject226) SetLastEntryRule(v string)`
-
-SetLastEntryRule sets LastEntryRule field to given value.
-
-### HasLastEntryRule
-
-`func (o *InlineObject226) HasLastEntryRule() bool`
-
-HasLastEntryRule returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

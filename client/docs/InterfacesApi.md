@@ -4,9 +4,12 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CreateDeviceApplianceInterfacesPortsUpdate**](InterfacesApi.md#CreateDeviceApplianceInterfacesPortsUpdate) | **Post** /devices/{serial}/appliance/interfaces/ports/update | Update configurations for an appliance&#39;s specified port
 [**CreateDeviceSwitchRoutingInterface**](InterfacesApi.md#CreateDeviceSwitchRoutingInterface) | **Post** /devices/{serial}/switch/routing/interfaces | Create a layer 3 interface for a switch
+[**CreateNetworkApplianceInterfacesL3**](InterfacesApi.md#CreateNetworkApplianceInterfacesL3) | **Post** /networks/{networkId}/appliance/interfaces/l3 | Create wired L3 interface
 [**CreateNetworkSwitchStackRoutingInterface**](InterfacesApi.md#CreateNetworkSwitchStackRoutingInterface) | **Post** /networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces | Create a layer 3 interface for a switch stack
 [**DeleteDeviceSwitchRoutingInterface**](InterfacesApi.md#DeleteDeviceSwitchRoutingInterface) | **Delete** /devices/{serial}/switch/routing/interfaces/{interfaceId} | Delete a layer 3 interface from the switch
+[**DeleteNetworkApplianceInterfacesL3**](InterfacesApi.md#DeleteNetworkApplianceInterfacesL3) | **Delete** /networks/{networkId}/appliance/interfaces/l3/{interfaceId} | Delete wired L3 interface
 [**DeleteNetworkSwitchStackRoutingInterface**](InterfacesApi.md#DeleteNetworkSwitchStackRoutingInterface) | **Delete** /networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId} | Delete a layer 3 interface from a switch stack
 [**GetDeviceSwitchRoutingInterface**](InterfacesApi.md#GetDeviceSwitchRoutingInterface) | **Get** /devices/{serial}/switch/routing/interfaces/{interfaceId} | Return a layer 3 interface for a switch
 [**GetDeviceSwitchRoutingInterfaceDhcp**](InterfacesApi.md#GetDeviceSwitchRoutingInterfaceDhcp) | **Get** /devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp | Return a layer 3 interface DHCP configuration for a switch
@@ -14,6 +17,9 @@ Method | HTTP request | Description
 [**GetNetworkSwitchStackRoutingInterface**](InterfacesApi.md#GetNetworkSwitchStackRoutingInterface) | **Get** /networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId} | Return a layer 3 interface from a switch stack
 [**GetNetworkSwitchStackRoutingInterfaceDhcp**](InterfacesApi.md#GetNetworkSwitchStackRoutingInterfaceDhcp) | **Get** /networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp | Return a layer 3 interface DHCP configuration for a switch stack
 [**GetNetworkSwitchStackRoutingInterfaces**](InterfacesApi.md#GetNetworkSwitchStackRoutingInterfaces) | **Get** /networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces | List layer 3 interfaces for a switch stack
+[**GetOrganizationApplianceDevicesInterfacesL3**](InterfacesApi.md#GetOrganizationApplianceDevicesInterfacesL3) | **Get** /organizations/{organizationId}/appliance/devices/interfaces/l3 | List L3 interfaces across networks for the organization
+[**GetOrganizationApplianceDevicesInterfacesPortsByDevice**](InterfacesApi.md#GetOrganizationApplianceDevicesInterfacesPortsByDevice) | **Get** /organizations/{organizationId}/appliance/devices/interfaces/ports/byDevice | Returns port configurations for appliances in a given organization
+[**GetOrganizationApplianceInterfacesPacketsOverviewsByDevice**](InterfacesApi.md#GetOrganizationApplianceInterfacesPacketsOverviewsByDevice) | **Get** /organizations/{organizationId}/appliance/interfaces/packets/overviews/byDevice | Returns packet counter overviews for all interfaces on Secure Routers in the organization, including totals and average rates by packet type over the requested timespan.
 [**GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice**](InterfacesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l2/byDevice | List wireless LAN controller layer 2 interfaces in an organization
 [**GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice**](InterfacesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l2/statuses/changeHistory/byDevice | List wireless LAN controller layer 2 interfaces history status in an organization
 [**GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval**](InterfacesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l2/usage/history/byInterval | List wireless LAN controller layer 2 interfaces history usage in an organization
@@ -24,14 +30,87 @@ Method | HTTP request | Description
 [**GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval**](InterfacesApi.md#GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/usage/history/byInterval | Retrieve the traffic for the interfaces of a Wireless LAN controller
 [**UpdateDeviceSwitchRoutingInterface**](InterfacesApi.md#UpdateDeviceSwitchRoutingInterface) | **Put** /devices/{serial}/switch/routing/interfaces/{interfaceId} | Update a layer 3 interface for a switch
 [**UpdateDeviceSwitchRoutingInterfaceDhcp**](InterfacesApi.md#UpdateDeviceSwitchRoutingInterfaceDhcp) | **Put** /devices/{serial}/switch/routing/interfaces/{interfaceId}/dhcp | Update a layer 3 interface DHCP configuration for a switch
+[**UpdateNetworkApplianceInterfacesL3**](InterfacesApi.md#UpdateNetworkApplianceInterfacesL3) | **Put** /networks/{networkId}/appliance/interfaces/l3/{interfaceId} | Update wired L3 interface
 [**UpdateNetworkSwitchStackRoutingInterface**](InterfacesApi.md#UpdateNetworkSwitchStackRoutingInterface) | **Put** /networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId} | Update a layer 3 interface for a switch stack
 [**UpdateNetworkSwitchStackRoutingInterfaceDhcp**](InterfacesApi.md#UpdateNetworkSwitchStackRoutingInterfaceDhcp) | **Put** /networks/{networkId}/switch/stacks/{switchStackId}/routing/interfaces/{interfaceId}/dhcp | Update a layer 3 interface DHCP configuration for a switch stack
 
 
 
+## CreateDeviceApplianceInterfacesPortsUpdate
+
+> InlineResponse2008 CreateDeviceApplianceInterfacesPortsUpdate(ctx, serial).CreateDeviceApplianceInterfacesPortsUpdate(createDeviceApplianceInterfacesPortsUpdate).Execute()
+
+Update configurations for an appliance's specified port
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceApplianceInterfacesPortsUpdate := *openapiclient.NewInlineObject4() // InlineObject4 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.InterfacesApi.CreateDeviceApplianceInterfacesPortsUpdate(context.Background(), serial).CreateDeviceApplianceInterfacesPortsUpdate(createDeviceApplianceInterfacesPortsUpdate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.CreateDeviceApplianceInterfacesPortsUpdate``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceApplianceInterfacesPortsUpdate`: InlineResponse2008
+    fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.CreateDeviceApplianceInterfacesPortsUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceApplianceInterfacesPortsUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceApplianceInterfacesPortsUpdate** | [**InlineObject4**](InlineObject4.md) |  | 
+
+### Return type
+
+[**InlineResponse2008**](InlineResponse2008.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateDeviceSwitchRoutingInterface
 
-> InlineResponse20050 CreateDeviceSwitchRoutingInterface(ctx, serial).CreateDeviceSwitchRoutingInterface(createDeviceSwitchRoutingInterface).Execute()
+> InlineResponse20055 CreateDeviceSwitchRoutingInterface(ctx, serial).CreateDeviceSwitchRoutingInterface(createDeviceSwitchRoutingInterface).Execute()
 
 Create a layer 3 interface for a switch
 
@@ -51,7 +130,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject33("Name_example") // InlineObject33 | 
+    createDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject38("Name_example") // InlineObject38 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -60,7 +139,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.CreateDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceSwitchRoutingInterface`: InlineResponse20050
+    // response from `CreateDeviceSwitchRoutingInterface`: InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.CreateDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -81,11 +160,83 @@ Other parameters are passed through a pointer to a apiCreateDeviceSwitchRoutingI
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceSwitchRoutingInterface** | [**InlineObject33**](InlineObject33.md) |  | 
+ **createDeviceSwitchRoutingInterface** | [**InlineObject38**](InlineObject38.md) |  | 
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20055**](InlineResponse20055.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateNetworkApplianceInterfacesL3
+
+> InlineResponse20116 CreateNetworkApplianceInterfacesL3(ctx, networkId).CreateNetworkApplianceInterfacesL3(createNetworkApplianceInterfacesL3).Execute()
+
+Create wired L3 interface
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    createNetworkApplianceInterfacesL3 := *openapiclient.NewInlineObject64(*openapiclient.NewNetworksNetworkIdApplianceInterfacesL3Ipv4("Address_example", "Subnet_example")) // InlineObject64 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.InterfacesApi.CreateNetworkApplianceInterfacesL3(context.Background(), networkId).CreateNetworkApplianceInterfacesL3(createNetworkApplianceInterfacesL3).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.CreateNetworkApplianceInterfacesL3``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateNetworkApplianceInterfacesL3`: InlineResponse20116
+    fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.CreateNetworkApplianceInterfacesL3`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateNetworkApplianceInterfacesL3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createNetworkApplianceInterfacesL3** | [**InlineObject64**](InlineObject64.md) |  | 
+
+### Return type
+
+[**InlineResponse20116**](InlineResponse20116.md)
 
 ### Authorization
 
@@ -103,7 +254,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchStackRoutingInterface
 
-> InlineResponse20050 CreateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId).CreateNetworkSwitchStackRoutingInterface(createNetworkSwitchStackRoutingInterface).Execute()
+> InlineResponse20055 CreateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId).CreateNetworkSwitchStackRoutingInterface(createNetworkSwitchStackRoutingInterface).Execute()
 
 Create a layer 3 interface for a switch stack
 
@@ -124,7 +275,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject168("Name_example") // InlineObject168 | 
+    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject179("Name_example") // InlineObject179 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -133,7 +284,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.CreateNetworkSwitchStackRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchStackRoutingInterface`: InlineResponse20050
+    // response from `CreateNetworkSwitchStackRoutingInterface`: InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.CreateNetworkSwitchStackRoutingInterface`: %v\n", resp)
 }
 ```
@@ -156,11 +307,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingInterface** | [**InlineObject168**](InlineObject168.md) |  | 
+ **createNetworkSwitchStackRoutingInterface** | [**InlineObject179**](InlineObject179.md) |  | 
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -222,6 +373,77 @@ Name | Type | Description  | Notes
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteDeviceSwitchRoutingInterfaceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteNetworkApplianceInterfacesL3
+
+> DeleteNetworkApplianceInterfacesL3(ctx, networkId, interfaceId).Execute()
+
+Delete wired L3 interface
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    interfaceId := "interfaceId_example" // string | Interface ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.InterfacesApi.DeleteNetworkApplianceInterfacesL3(context.Background(), networkId, interfaceId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.DeleteNetworkApplianceInterfacesL3``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**interfaceId** | **string** | Interface ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteNetworkApplianceInterfacesL3Request struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -323,7 +545,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingInterface
 
-> InlineResponse20050 GetDeviceSwitchRoutingInterface(ctx, serial, interfaceId).Execute()
+> InlineResponse20055 GetDeviceSwitchRoutingInterface(ctx, serial, interfaceId).Execute()
 
 Return a layer 3 interface for a switch
 
@@ -352,7 +574,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingInterface`: InlineResponse20050
+    // response from `GetDeviceSwitchRoutingInterface`: InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -378,7 +600,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -396,7 +618,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingInterfaceDhcp
 
-> InlineResponse20051 GetDeviceSwitchRoutingInterfaceDhcp(ctx, serial, interfaceId).Execute()
+> InlineResponse20056 GetDeviceSwitchRoutingInterfaceDhcp(ctx, serial, interfaceId).Execute()
 
 Return a layer 3 interface DHCP configuration for a switch
 
@@ -425,7 +647,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetDeviceSwitchRoutingInterfaceDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingInterfaceDhcp`: InlineResponse20051
+    // response from `GetDeviceSwitchRoutingInterfaceDhcp`: InlineResponse20056
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetDeviceSwitchRoutingInterfaceDhcp`: %v\n", resp)
 }
 ```
@@ -451,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20056**](InlineResponse20056.md)
 
 ### Authorization
 
@@ -469,7 +691,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingInterfaces
 
-> []InlineResponse20050 GetDeviceSwitchRoutingInterfaces(ctx, serial).Mode(mode).Protocol(protocol).Execute()
+> []InlineResponse20055 GetDeviceSwitchRoutingInterfaces(ctx, serial).Mode(mode).Protocol(protocol).Execute()
 
 List layer 3 interfaces for a switch
 
@@ -499,7 +721,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetDeviceSwitchRoutingInterfaces``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingInterfaces`: []InlineResponse20050
+    // response from `GetDeviceSwitchRoutingInterfaces`: []InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetDeviceSwitchRoutingInterfaces`: %v\n", resp)
 }
 ```
@@ -525,7 +747,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20050**](InlineResponse20050.md)
+[**[]InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -543,7 +765,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingInterface
 
-> InlineResponse20050 GetNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).Execute()
+> InlineResponse20055 GetNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).Execute()
 
 Return a layer 3 interface from a switch stack
 
@@ -573,7 +795,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetNetworkSwitchStackRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStackRoutingInterface`: InlineResponse20050
+    // response from `GetNetworkSwitchStackRoutingInterface`: InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetNetworkSwitchStackRoutingInterface`: %v\n", resp)
 }
 ```
@@ -601,7 +823,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -619,7 +841,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingInterfaceDhcp
 
-> InlineResponse20051 GetNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).Execute()
+> InlineResponse20056 GetNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).Execute()
 
 Return a layer 3 interface DHCP configuration for a switch stack
 
@@ -649,7 +871,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetNetworkSwitchStackRoutingInterfaceDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20051
+    // response from `GetNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20056
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetNetworkSwitchStackRoutingInterfaceDhcp`: %v\n", resp)
 }
 ```
@@ -677,7 +899,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20056**](InlineResponse20056.md)
 
 ### Authorization
 
@@ -695,7 +917,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingInterfaces
 
-> []InlineResponse20050 GetNetworkSwitchStackRoutingInterfaces(ctx, networkId, switchStackId).Mode(mode).Protocol(protocol).Execute()
+> []InlineResponse20055 GetNetworkSwitchStackRoutingInterfaces(ctx, networkId, switchStackId).Mode(mode).Protocol(protocol).Execute()
 
 List layer 3 interfaces for a switch stack
 
@@ -726,7 +948,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetNetworkSwitchStackRoutingInterfaces``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStackRoutingInterfaces`: []InlineResponse20050
+    // response from `GetNetworkSwitchStackRoutingInterfaces`: []InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetNetworkSwitchStackRoutingInterfaces`: %v\n", resp)
 }
 ```
@@ -754,7 +976,245 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20050**](InlineResponse20050.md)
+[**[]InlineResponse20055**](InlineResponse20055.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceDevicesInterfacesL3
+
+> InlineResponse200270 GetOrganizationApplianceDevicesInterfacesL3(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List L3 interfaces across networks for the organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | Optional Network IDs to filter results (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.InterfacesApi.GetOrganizationApplianceDevicesInterfacesL3(context.Background(), organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationApplianceDevicesInterfacesL3``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceDevicesInterfacesL3`: InlineResponse200270
+    fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationApplianceDevicesInterfacesL3`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceDevicesInterfacesL3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | Optional Network IDs to filter results | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200270**](InlineResponse200270.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceDevicesInterfacesPortsByDevice
+
+> InlineResponse200271 GetOrganizationApplianceDevicesInterfacesPortsByDevice(ctx, organizationId).Serials(serials).Numbers(numbers).Execute()
+
+Returns port configurations for appliances in a given organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Parameter to filter the results by device serials (optional)
+    numbers := []string{"Inner_example"} // []string | Parameter to filter the results by specific ports (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.InterfacesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice(context.Background(), organizationId).Serials(serials).Numbers(numbers).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceDevicesInterfacesPortsByDevice`: InlineResponse200271
+    fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceDevicesInterfacesPortsByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Parameter to filter the results by device serials | 
+ **numbers** | **[]string** | Parameter to filter the results by specific ports | 
+
+### Return type
+
+[**InlineResponse200271**](InlineResponse200271.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceInterfacesPacketsOverviewsByDevice
+
+> InlineResponse200281 GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+
+Returns packet counter overviews for all interfaces on Secure Routers in the organization, including totals and average rates by packet type over the requested timespan.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 14 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 14 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 days. The default is 1 day. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 50. Default is 10. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    networkIds := []string{"Inner_example"} // []string | Optional parameter to filter Secure Routers in the provided networks (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter Secure Routers by their serial numbers (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.InterfacesApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(context.Background(), organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: InlineResponse200281
+    fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceInterfacesPacketsOverviewsByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 14 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 14 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 14 days. The default is 1 day. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 50. Default is 10. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **networkIds** | **[]string** | Optional parameter to filter Secure Routers in the provided networks | 
+ **serials** | **[]string** | Optional parameter to filter Secure Routers by their serial numbers | 
+
+### Return type
+
+[**InlineResponse200281**](InlineResponse200281.md)
 
 ### Authorization
 
@@ -772,7 +1232,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice
 
-> InlineResponse200460 GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200472 GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces in an organization
 
@@ -807,7 +1267,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: InlineResponse200460
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: InlineResponse200472
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: %v\n", resp)
 }
 ```
@@ -838,7 +1298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200460**](InlineResponse200460.md)
+[**InlineResponse200472**](InlineResponse200472.md)
 
 ### Authorization
 
@@ -856,7 +1316,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice
 
-> InlineResponse200461 GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200473 GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history status in an organization
 
@@ -892,7 +1352,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: InlineResponse200461
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: InlineResponse200473
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -924,7 +1384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200461**](InlineResponse200461.md)
+[**InlineResponse200473**](InlineResponse200473.md)
 
 ### Authorization
 
@@ -942,7 +1402,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval
 
-> InlineResponse200462 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200474 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history usage in an organization
 
@@ -977,7 +1437,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200462
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200474
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -1008,7 +1468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200462**](InlineResponse200462.md)
+[**InlineResponse200474**](InlineResponse200474.md)
 
 ### Authorization
 
@@ -1026,7 +1486,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice
 
-> InlineResponse200463 GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200475 GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces in an organization
 
@@ -1061,7 +1521,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: InlineResponse200463
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: InlineResponse200475
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: %v\n", resp)
 }
 ```
@@ -1092,7 +1552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200463**](InlineResponse200463.md)
+[**InlineResponse200475**](InlineResponse200475.md)
 
 ### Authorization
 
@@ -1110,7 +1570,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice
 
-> InlineResponse200464 GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200476 GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history status in an organization
 
@@ -1146,7 +1606,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: InlineResponse200464
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: InlineResponse200476
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -1178,7 +1638,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200464**](InlineResponse200464.md)
+[**InlineResponse200476**](InlineResponse200476.md)
 
 ### Authorization
 
@@ -1196,7 +1656,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval
 
-> InlineResponse200465 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200477 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history usage in an organization
 
@@ -1231,7 +1691,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200465
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200477
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -1262,7 +1722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200465**](InlineResponse200465.md)
+[**InlineResponse200477**](InlineResponse200477.md)
 
 ### Authorization
 
@@ -1280,7 +1740,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice
 
-> InlineResponse200466 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200478 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the packet counters for the interfaces of a Wireless LAN controller
 
@@ -1316,7 +1776,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200466
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200478
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -1348,7 +1808,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200466**](InlineResponse200466.md)
+[**InlineResponse200478**](InlineResponse200478.md)
 
 ### Authorization
 
@@ -1366,7 +1826,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval
 
-> InlineResponse200467 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200479 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the traffic for the interfaces of a Wireless LAN controller
 
@@ -1402,7 +1862,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200467
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200479
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -1434,7 +1894,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200467**](InlineResponse200467.md)
+[**InlineResponse200479**](InlineResponse200479.md)
 
 ### Authorization
 
@@ -1452,7 +1912,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSwitchRoutingInterface
 
-> InlineResponse20050 UpdateDeviceSwitchRoutingInterface(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterface(updateDeviceSwitchRoutingInterface).Execute()
+> InlineResponse20055 UpdateDeviceSwitchRoutingInterface(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterface(updateDeviceSwitchRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch
 
@@ -1473,7 +1933,7 @@ import (
 func main() {
     serial := "serial_example" // string | Serial
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject34() // InlineObject34 |  (optional)
+    updateDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject39() // InlineObject39 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1482,7 +1942,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.UpdateDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSwitchRoutingInterface`: InlineResponse20050
+    // response from `UpdateDeviceSwitchRoutingInterface`: InlineResponse20055
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.UpdateDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -1505,11 +1965,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateDeviceSwitchRoutingInterface** | [**InlineObject34**](InlineObject34.md) |  | 
+ **updateDeviceSwitchRoutingInterface** | [**InlineObject39**](InlineObject39.md) |  | 
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20055**](InlineResponse20055.md)
 
 ### Authorization
 
@@ -1527,7 +1987,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSwitchRoutingInterfaceDhcp
 
-> InlineResponse20051 UpdateDeviceSwitchRoutingInterfaceDhcp(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterfaceDhcp(updateDeviceSwitchRoutingInterfaceDhcp).Execute()
+> InlineResponse20056 UpdateDeviceSwitchRoutingInterfaceDhcp(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterfaceDhcp(updateDeviceSwitchRoutingInterfaceDhcp).Execute()
 
 Update a layer 3 interface DHCP configuration for a switch
 
@@ -1548,7 +2008,7 @@ import (
 func main() {
     serial := "serial_example" // string | Serial
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateDeviceSwitchRoutingInterfaceDhcp := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
+    updateDeviceSwitchRoutingInterfaceDhcp := *openapiclient.NewInlineObject40() // InlineObject40 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1557,7 +2017,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.UpdateDeviceSwitchRoutingInterfaceDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSwitchRoutingInterfaceDhcp`: InlineResponse20051
+    // response from `UpdateDeviceSwitchRoutingInterfaceDhcp`: InlineResponse20056
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.UpdateDeviceSwitchRoutingInterfaceDhcp`: %v\n", resp)
 }
 ```
@@ -1580,11 +2040,86 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateDeviceSwitchRoutingInterfaceDhcp** | [**InlineObject35**](InlineObject35.md) |  | 
+ **updateDeviceSwitchRoutingInterfaceDhcp** | [**InlineObject40**](InlineObject40.md) |  | 
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20056**](InlineResponse20056.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateNetworkApplianceInterfacesL3
+
+> InlineResponse20116 UpdateNetworkApplianceInterfacesL3(ctx, networkId, interfaceId).UpdateNetworkApplianceInterfacesL3(updateNetworkApplianceInterfacesL3).Execute()
+
+Update wired L3 interface
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    interfaceId := "interfaceId_example" // string | Interface ID
+    updateNetworkApplianceInterfacesL3 := *openapiclient.NewInlineObject65() // InlineObject65 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.InterfacesApi.UpdateNetworkApplianceInterfacesL3(context.Background(), networkId, interfaceId).UpdateNetworkApplianceInterfacesL3(updateNetworkApplianceInterfacesL3).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.UpdateNetworkApplianceInterfacesL3``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateNetworkApplianceInterfacesL3`: InlineResponse20116
+    fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.UpdateNetworkApplianceInterfacesL3`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**interfaceId** | **string** | Interface ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateNetworkApplianceInterfacesL3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **updateNetworkApplianceInterfacesL3** | [**InlineObject65**](InlineObject65.md) |  | 
+
+### Return type
+
+[**InlineResponse20116**](InlineResponse20116.md)
 
 ### Authorization
 
@@ -1602,7 +2137,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStackRoutingInterface
 
-> InlineResponse200198 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
+> InlineResponse200206 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch stack
 
@@ -1624,7 +2159,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject169() // InlineObject169 |  (optional)
+    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject180() // InlineObject180 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1633,7 +2168,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.UpdateNetworkSwitchStackRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200198
+    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200206
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.UpdateNetworkSwitchStackRoutingInterface`: %v\n", resp)
 }
 ```
@@ -1658,11 +2193,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterface** | [**InlineObject169**](InlineObject169.md) |  | 
+ **updateNetworkSwitchStackRoutingInterface** | [**InlineObject180**](InlineObject180.md) |  | 
 
 ### Return type
 
-[**InlineResponse200198**](InlineResponse200198.md)
+[**InlineResponse200206**](InlineResponse200206.md)
 
 ### Authorization
 
@@ -1680,7 +2215,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStackRoutingInterfaceDhcp
 
-> InlineResponse20051 UpdateNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterfaceDhcp(updateNetworkSwitchStackRoutingInterfaceDhcp).Execute()
+> InlineResponse20056 UpdateNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterfaceDhcp(updateNetworkSwitchStackRoutingInterfaceDhcp).Execute()
 
 Update a layer 3 interface DHCP configuration for a switch stack
 
@@ -1702,7 +2237,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject170() // InlineObject170 |  (optional)
+    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject181() // InlineObject181 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1711,7 +2246,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.UpdateNetworkSwitchStackRoutingInterfaceDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20051
+    // response from `UpdateNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20056
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.UpdateNetworkSwitchStackRoutingInterfaceDhcp`: %v\n", resp)
 }
 ```
@@ -1736,11 +2271,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject170**](InlineObject170.md) |  | 
+ **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject181**](InlineObject181.md) |  | 
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20056**](InlineResponse20056.md)
 
 ### Authorization
 

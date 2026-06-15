@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse20118Network**](InlineResponse20118Network.md) |  | [optional] 
-**Enabled** | Pointer to **bool** | If Zigbee is enabled for the network | [optional] 
-**IotController** | Pointer to [**InlineResponse20118IotController**](InlineResponse20118IotController.md) |  | [optional] 
-**LockManagement** | Pointer to [**InlineResponse20118LockManagement**](InlineResponse20118LockManagement.md) |  | [optional] 
-**Defaults** | Pointer to [**InlineResponse20118Defaults**](InlineResponse20118Defaults.md) |  | [optional] 
+**ClusterId** | Pointer to **string** | ID of the cluster | [optional] 
+**Name** | Pointer to **string** | Name of the cluster | [optional] 
+**Uplinks** | Pointer to [**[]InlineResponse20118Uplinks**](InlineResponse20118Uplinks.md) | Uplink settings of the cluster | [optional] 
+**Tunnels** | Pointer to [**[]InlineResponse20118Tunnels**](InlineResponse20118Tunnels.md) | Tunnel settings of the cluster | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20118Nameservers**](InlineResponse20118Nameservers.md) |  | [optional] 
+**PortChannels** | Pointer to [**[]InlineResponse20118PortChannels**](InlineResponse20118PortChannels.md) | Port channel settings of the cluster | [optional] 
+**Devices** | Pointer to [**[]InlineResponse20118Devices**](InlineResponse20118Devices.md) | Devices in the cluster | [optional] 
+**Notes** | Pointer to **string** | Notes about cluster | [optional] 
+**Url** | Pointer to **string** | URL to display cluster details | [optional] 
 
 ## Methods
 
@@ -29,130 +33,230 @@ NewInlineResponse20118WithDefaults instantiates a new InlineResponse20118 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetClusterId
 
-`func (o *InlineResponse20118) GetNetwork() InlineResponse20118Network`
+`func (o *InlineResponse20118) GetClusterId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetClusterIdOk
 
-`func (o *InlineResponse20118) GetNetworkOk() (*InlineResponse20118Network, bool)`
+`func (o *InlineResponse20118) GetClusterIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetClusterId
 
-`func (o *InlineResponse20118) SetNetwork(v InlineResponse20118Network)`
+`func (o *InlineResponse20118) SetClusterId(v string)`
 
-SetNetwork sets Network field to given value.
+SetClusterId sets ClusterId field to given value.
 
-### HasNetwork
+### HasClusterId
 
-`func (o *InlineResponse20118) HasNetwork() bool`
+`func (o *InlineResponse20118) HasClusterId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasClusterId returns a boolean if a field has been set.
 
-### GetEnabled
+### GetName
 
-`func (o *InlineResponse20118) GetEnabled() bool`
+`func (o *InlineResponse20118) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineResponse20118) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20118) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineResponse20118) SetEnabled(v bool)`
+`func (o *InlineResponse20118) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineResponse20118) HasEnabled() bool`
+`func (o *InlineResponse20118) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIotController
+### GetUplinks
 
-`func (o *InlineResponse20118) GetIotController() InlineResponse20118IotController`
+`func (o *InlineResponse20118) GetUplinks() []InlineResponse20118Uplinks`
 
-GetIotController returns the IotController field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetIotControllerOk
+### GetUplinksOk
 
-`func (o *InlineResponse20118) GetIotControllerOk() (*InlineResponse20118IotController, bool)`
+`func (o *InlineResponse20118) GetUplinksOk() (*[]InlineResponse20118Uplinks, bool)`
 
-GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIotController
+### SetUplinks
 
-`func (o *InlineResponse20118) SetIotController(v InlineResponse20118IotController)`
+`func (o *InlineResponse20118) SetUplinks(v []InlineResponse20118Uplinks)`
 
-SetIotController sets IotController field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasIotController
+### HasUplinks
 
-`func (o *InlineResponse20118) HasIotController() bool`
+`func (o *InlineResponse20118) HasUplinks() bool`
 
-HasIotController returns a boolean if a field has been set.
+HasUplinks returns a boolean if a field has been set.
 
-### GetLockManagement
+### GetTunnels
 
-`func (o *InlineResponse20118) GetLockManagement() InlineResponse20118LockManagement`
+`func (o *InlineResponse20118) GetTunnels() []InlineResponse20118Tunnels`
 
-GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
 
-### GetLockManagementOk
+### GetTunnelsOk
 
-`func (o *InlineResponse20118) GetLockManagementOk() (*InlineResponse20118LockManagement, bool)`
+`func (o *InlineResponse20118) GetTunnelsOk() (*[]InlineResponse20118Tunnels, bool)`
 
-GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLockManagement
+### SetTunnels
 
-`func (o *InlineResponse20118) SetLockManagement(v InlineResponse20118LockManagement)`
+`func (o *InlineResponse20118) SetTunnels(v []InlineResponse20118Tunnels)`
 
-SetLockManagement sets LockManagement field to given value.
+SetTunnels sets Tunnels field to given value.
 
-### HasLockManagement
+### HasTunnels
 
-`func (o *InlineResponse20118) HasLockManagement() bool`
+`func (o *InlineResponse20118) HasTunnels() bool`
 
-HasLockManagement returns a boolean if a field has been set.
+HasTunnels returns a boolean if a field has been set.
 
-### GetDefaults
+### GetNameservers
 
-`func (o *InlineResponse20118) GetDefaults() InlineResponse20118Defaults`
+`func (o *InlineResponse20118) GetNameservers() InlineResponse20118Nameservers`
 
-GetDefaults returns the Defaults field if non-nil, zero value otherwise.
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
 
-### GetDefaultsOk
+### GetNameserversOk
 
-`func (o *InlineResponse20118) GetDefaultsOk() (*InlineResponse20118Defaults, bool)`
+`func (o *InlineResponse20118) GetNameserversOk() (*InlineResponse20118Nameservers, bool)`
 
-GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaults
+### SetNameservers
 
-`func (o *InlineResponse20118) SetDefaults(v InlineResponse20118Defaults)`
+`func (o *InlineResponse20118) SetNameservers(v InlineResponse20118Nameservers)`
 
-SetDefaults sets Defaults field to given value.
+SetNameservers sets Nameservers field to given value.
 
-### HasDefaults
+### HasNameservers
 
-`func (o *InlineResponse20118) HasDefaults() bool`
+`func (o *InlineResponse20118) HasNameservers() bool`
 
-HasDefaults returns a boolean if a field has been set.
+HasNameservers returns a boolean if a field has been set.
+
+### GetPortChannels
+
+`func (o *InlineResponse20118) GetPortChannels() []InlineResponse20118PortChannels`
+
+GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
+
+### GetPortChannelsOk
+
+`func (o *InlineResponse20118) GetPortChannelsOk() (*[]InlineResponse20118PortChannels, bool)`
+
+GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannels
+
+`func (o *InlineResponse20118) SetPortChannels(v []InlineResponse20118PortChannels)`
+
+SetPortChannels sets PortChannels field to given value.
+
+### HasPortChannels
+
+`func (o *InlineResponse20118) HasPortChannels() bool`
+
+HasPortChannels returns a boolean if a field has been set.
+
+### GetDevices
+
+`func (o *InlineResponse20118) GetDevices() []InlineResponse20118Devices`
+
+GetDevices returns the Devices field if non-nil, zero value otherwise.
+
+### GetDevicesOk
+
+`func (o *InlineResponse20118) GetDevicesOk() (*[]InlineResponse20118Devices, bool)`
+
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevices
+
+`func (o *InlineResponse20118) SetDevices(v []InlineResponse20118Devices)`
+
+SetDevices sets Devices field to given value.
+
+### HasDevices
+
+`func (o *InlineResponse20118) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20118) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20118) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20118) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20118) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse20118) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse20118) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse20118) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse20118) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

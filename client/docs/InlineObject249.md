@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the Dashboard branding policy. | 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo1**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo1.md) |  | [optional] 
+**Name** | **string** | Name of profile | 
+**Hostnames** | **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | 
+**Nameservers** | [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1.md) |  | 
 
 ## Methods
 
 ### NewInlineObject249
 
-`func NewInlineObject249(name string, ) *InlineObject249`
+`func NewInlineObject249(name string, hostnames []string, nameservers OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, ) *InlineObject249`
 
 NewInlineObject249 instantiates a new InlineObject249 object
 This constructor will assign default values to properties that have it defined,
@@ -49,105 +47,45 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetEnabled
+### GetHostnames
 
-`func (o *InlineObject249) GetEnabled() bool`
+`func (o *InlineObject249) GetHostnames() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetHostnamesOk
 
-`func (o *InlineObject249) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject249) GetHostnamesOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetHostnames
 
-`func (o *InlineObject249) SetEnabled(v bool)`
+`func (o *InlineObject249) SetHostnames(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetHostnames sets Hostnames field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject249) HasEnabled() bool`
+### GetNameservers
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject249) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1`
 
-### GetAdminSettings
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
 
-`func (o *InlineObject249) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+### GetNameserversOk
 
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject249) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, bool)`
 
-### GetAdminSettingsOk
-
-`func (o *InlineObject249) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
-
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminSettings
+### SetNameservers
 
-`func (o *InlineObject249) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+`func (o *InlineObject249) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1)`
 
-SetAdminSettings sets AdminSettings field to given value.
+SetNameservers sets Nameservers field to given value.
 
-### HasAdminSettings
-
-`func (o *InlineObject249) HasAdminSettings() bool`
-
-HasAdminSettings returns a boolean if a field has been set.
-
-### GetHelpSettings
-
-`func (o *InlineObject249) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings1`
-
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
-
-### GetHelpSettingsOk
-
-`func (o *InlineObject249) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings1, bool)`
-
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHelpSettings
-
-`func (o *InlineObject249) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings1)`
-
-SetHelpSettings sets HelpSettings field to given value.
-
-### HasHelpSettings
-
-`func (o *InlineObject249) HasHelpSettings() bool`
-
-HasHelpSettings returns a boolean if a field has been set.
-
-### GetCustomLogo
-
-`func (o *InlineObject249) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo1`
-
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
-
-### GetCustomLogoOk
-
-`func (o *InlineObject249) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo1, bool)`
-
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomLogo
-
-`func (o *InlineObject249) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo1)`
-
-SetCustomLogo sets CustomLogo field to given value.
-
-### HasCustomLogo
-
-`func (o *InlineObject249) HasCustomLogo() bool`
-
-HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApplianceFirewallMulticastForwardingByNetwork
 
-> InlineResponse200269 GetOrganizationApplianceFirewallMulticastForwardingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200280 GetOrganizationApplianceFirewallMulticastForwardingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List Static Multicasting forwarding settings for MX networks
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MulticastForwardingApi.GetOrganizationApplianceFirewallMulticastForwardingByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: InlineResponse200269
+    // response from `GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `MulticastForwardingApi.GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200269**](InlineResponse200269.md)
+[**InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallMulticastForwarding
 
-> InlineResponse20074 UpdateNetworkApplianceFirewallMulticastForwarding(ctx, networkId).UpdateNetworkApplianceFirewallMulticastForwarding(updateNetworkApplianceFirewallMulticastForwarding).Execute()
+> InlineResponse20079 UpdateNetworkApplianceFirewallMulticastForwarding(ctx, networkId).UpdateNetworkApplianceFirewallMulticastForwarding(updateNetworkApplianceFirewallMulticastForwarding).Execute()
 
 Update static multicast forward rules for a network
 
@@ -109,7 +109,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallMulticastForwarding := *openapiclient.NewInlineObject54([]openapiclient.NetworksNetworkIdApplianceFirewallMulticastForwardingRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallMulticastForwardingRules("Description_example", "Address_example", []string{"VlanIds_example"})}) // InlineObject54 | 
+    updateNetworkApplianceFirewallMulticastForwarding := *openapiclient.NewInlineObject59([]openapiclient.NetworksNetworkIdApplianceFirewallMulticastForwardingRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallMulticastForwardingRules("Description_example", "Address_example", []string{"VlanIds_example"})}) // InlineObject59 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MulticastForwardingApi.UpdateNetworkApplianceFirewallMulticastForwarding``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallMulticastForwarding`: InlineResponse20074
+    // response from `UpdateNetworkApplianceFirewallMulticastForwarding`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `MulticastForwardingApi.UpdateNetworkApplianceFirewallMulticastForwarding`: %v\n", resp)
 }
 ```
@@ -139,11 +139,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallMulticastForwarding** | [**InlineObject54**](InlineObject54.md) |  | 
+ **updateNetworkApplianceFirewallMulticastForwarding** | [**InlineObject59**](InlineObject59.md) |  | 
 
 ### Return type
 
-[**InlineResponse20074**](InlineResponse20074.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 

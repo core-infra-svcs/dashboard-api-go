@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
-**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
+**RuleIds** | Pointer to **[]string** | Qos Rule ids | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200199WithDefaults instantiates a new InlineResponse200199 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetRuleIds
 
-`func (o *InlineResponse200199) GetBroadcastThreshold() int32`
+`func (o *InlineResponse200199) GetRuleIds() []string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetRuleIdsOk
 
-`func (o *InlineResponse200199) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200199) GetRuleIdsOk() (*[]string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetRuleIds
 
-`func (o *InlineResponse200199) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse200199) SetRuleIds(v []string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetRuleIds sets RuleIds field to given value.
 
-### HasBroadcastThreshold
+### HasRuleIds
 
-`func (o *InlineResponse200199) HasBroadcastThreshold() bool`
+`func (o *InlineResponse200199) HasRuleIds() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
-
-### GetMulticastThreshold
-
-`func (o *InlineResponse200199) GetMulticastThreshold() int32`
-
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
-
-### GetMulticastThresholdOk
-
-`func (o *InlineResponse200199) GetMulticastThresholdOk() (*int32, bool)`
-
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastThreshold
-
-`func (o *InlineResponse200199) SetMulticastThreshold(v int32)`
-
-SetMulticastThreshold sets MulticastThreshold field to given value.
-
-### HasMulticastThreshold
-
-`func (o *InlineResponse200199) HasMulticastThreshold() bool`
-
-HasMulticastThreshold returns a boolean if a field has been set.
-
-### GetUnknownUnicastThreshold
-
-`func (o *InlineResponse200199) GetUnknownUnicastThreshold() int32`
-
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
-
-### GetUnknownUnicastThresholdOk
-
-`func (o *InlineResponse200199) GetUnknownUnicastThresholdOk() (*int32, bool)`
-
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUnknownUnicastThreshold
-
-`func (o *InlineResponse200199) SetUnknownUnicastThreshold(v int32)`
-
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
-
-### HasUnknownUnicastThreshold
-
-`func (o *InlineResponse200199) HasUnknownUnicastThreshold() bool`
-
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
-
-### GetTreatTheseTrafficTypesAsOneThreshold
-
-`func (o *InlineResponse200199) GetTreatTheseTrafficTypesAsOneThreshold() []string`
-
-GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
-
-### GetTreatTheseTrafficTypesAsOneThresholdOk
-
-`func (o *InlineResponse200199) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
-
-GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTreatTheseTrafficTypesAsOneThreshold
-
-`func (o *InlineResponse200199) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
-
-SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
-
-### HasTreatTheseTrafficTypesAsOneThreshold
-
-`func (o *InlineResponse200199) HasTreatTheseTrafficTypesAsOneThreshold() bool`
-
-HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
+HasRuleIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

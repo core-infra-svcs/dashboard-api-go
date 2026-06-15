@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the configuration template | 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
+**Name** | **string** | Name of the Dashboard branding policy. | 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo1**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo1.md) |  | [optional] 
 
 ## Methods
 
@@ -47,55 +49,105 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetTimeZone
+### GetEnabled
 
-`func (o *InlineObject262) GetTimeZone() string`
+`func (o *InlineObject262) GetEnabled() bool`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetEnabledOk
 
-`func (o *InlineObject262) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineObject262) GetEnabledOk() (*bool, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetEnabled
 
-`func (o *InlineObject262) SetTimeZone(v string)`
+`func (o *InlineObject262) SetEnabled(v bool)`
 
-SetTimeZone sets TimeZone field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTimeZone
+### HasEnabled
 
-`func (o *InlineObject262) HasTimeZone() bool`
+`func (o *InlineObject262) HasEnabled() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetCopyFromNetworkId
+### GetAdminSettings
 
-`func (o *InlineObject262) GetCopyFromNetworkId() string`
+`func (o *InlineObject262) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-### GetCopyFromNetworkIdOk
+### GetAdminSettingsOk
 
-`func (o *InlineObject262) GetCopyFromNetworkIdOk() (*string, bool)`
+`func (o *InlineObject262) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
 
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCopyFromNetworkId
+### SetAdminSettings
 
-`func (o *InlineObject262) SetCopyFromNetworkId(v string)`
+`func (o *InlineObject262) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasCopyFromNetworkId
+### HasAdminSettings
 
-`func (o *InlineObject262) HasCopyFromNetworkId() bool`
+`func (o *InlineObject262) HasAdminSettings() bool`
 
-HasCopyFromNetworkId returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
+
+### GetHelpSettings
+
+`func (o *InlineObject262) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+
+### GetHelpSettingsOk
+
+`func (o *InlineObject262) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpSettings
+
+`func (o *InlineObject262) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+
+SetHelpSettings sets HelpSettings field to given value.
+
+### HasHelpSettings
+
+`func (o *InlineObject262) HasHelpSettings() bool`
+
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineObject262) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo1`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineObject262) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo1, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineObject262) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo1)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineObject262) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

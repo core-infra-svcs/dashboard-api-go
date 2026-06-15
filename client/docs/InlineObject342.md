@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Name** | Pointer to **string** | File name. Will overwrite files with same name. | [optional] 
+**Content** | Pointer to **string** | a file containing the asset content | [optional] 
 
 ## Methods
 
 ### NewInlineObject342
 
-`func NewInlineObject342(enrolled bool, ) *InlineObject342`
+`func NewInlineObject342() *InlineObject342`
 
 NewInlineObject342 instantiates a new InlineObject342 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject342WithDefaults instantiates a new InlineObject342 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetName
 
-`func (o *InlineObject342) GetEnrolled() bool`
+`func (o *InlineObject342) GetName() string`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetNameOk
 
-`func (o *InlineObject342) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject342) GetNameOk() (*string, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetName
 
-`func (o *InlineObject342) SetEnrolled(v bool)`
+`func (o *InlineObject342) SetName(v string)`
 
-SetEnrolled sets Enrolled field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetChannel
+`func (o *InlineObject342) HasName() bool`
 
-`func (o *InlineObject342) GetChannel() string`
+HasName returns a boolean if a field has been set.
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+### GetContent
 
-### GetChannelOk
+`func (o *InlineObject342) GetContent() string`
 
-`func (o *InlineObject342) GetChannelOk() (*string, bool)`
+GetContent returns the Content field if non-nil, zero value otherwise.
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+### GetContentOk
+
+`func (o *InlineObject342) GetContentOk() (*string, bool)`
+
+GetContentOk returns a tuple with the Content field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetContent
 
-`func (o *InlineObject342) SetChannel(v string)`
+`func (o *InlineObject342) SetContent(v string)`
 
-SetChannel sets Channel field to given value.
+SetContent sets Content field to given value.
 
-### HasChannel
+### HasContent
 
-`func (o *InlineObject342) HasChannel() bool`
+`func (o *InlineObject342) HasContent() bool`
 
-HasChannel returns a boolean if a field has been set.
+HasContent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

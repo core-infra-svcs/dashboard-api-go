@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. An empty array will clear the rules. | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | [optional] 
+**Enabled** | Pointer to **bool** | If true, OpenRoaming is enabled on this SSID. | [optional] 
+**TenantId** | Pointer to **string** | The OpenRoaming DNA Spaces tenant ID. | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject222WithDefaults instantiates a new InlineObject222 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject222) GetName() string`
+`func (o *InlineObject222) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject222) GetNameOk() (*string, bool)`
+`func (o *InlineObject222) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject222) SetName(v string)`
+`func (o *InlineObject222) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject222) HasName() bool`
+`func (o *InlineObject222) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDescription
+### GetTenantId
 
-`func (o *InlineObject222) GetDescription() string`
+`func (o *InlineObject222) GetTenantId() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetTenantId returns the TenantId field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetTenantIdOk
 
-`func (o *InlineObject222) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject222) GetTenantIdOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetTenantIdOk returns a tuple with the TenantId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetTenantId
 
-`func (o *InlineObject222) SetDescription(v string)`
+`func (o *InlineObject222) SetTenantId(v string)`
 
-SetDescription sets Description field to given value.
+SetTenantId sets TenantId field to given value.
 
-### HasDescription
+### HasTenantId
 
-`func (o *InlineObject222) HasDescription() bool`
+`func (o *InlineObject222) HasTenantId() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineObject222) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineObject222) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineObject222) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineObject222) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
-
-### GetIpVersion
-
-`func (o *InlineObject222) GetIpVersion() string`
-
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
-
-### GetIpVersionOk
-
-`func (o *InlineObject222) GetIpVersionOk() (*string, bool)`
-
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpVersion
-
-`func (o *InlineObject222) SetIpVersion(v string)`
-
-SetIpVersion sets IpVersion field to given value.
-
-### HasIpVersion
-
-`func (o *InlineObject222) HasIpVersion() bool`
-
-HasIpVersion returns a boolean if a field has been set.
+HasTenantId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

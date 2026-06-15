@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | [**InlineResponse200452Client**](InlineResponse200452Client.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
-**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
+**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
+**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
+**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
+**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
+**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
+**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
+**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
 
 ## Methods
 
 ### NewInlineObject340
 
-`func NewInlineObject340(client InlineResponse200452Client, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject340`
+`func NewInlineObject340() *InlineObject340`
 
 NewInlineObject340 instantiates a new InlineObject340 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +31,180 @@ NewInlineObject340WithDefaults instantiates a new InlineObject340 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetV2cEnabled
 
-`func (o *InlineObject340) GetDescription() string`
+`func (o *InlineObject340) GetV2cEnabled() bool`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetV2cEnabledOk
 
-`func (o *InlineObject340) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject340) GetV2cEnabledOk() (*bool, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetV2cEnabled
 
-`func (o *InlineObject340) SetDescription(v string)`
+`func (o *InlineObject340) SetV2cEnabled(v bool)`
 
-SetDescription sets Description field to given value.
+SetV2cEnabled sets V2cEnabled field to given value.
 
-### HasDescription
+### HasV2cEnabled
 
-`func (o *InlineObject340) HasDescription() bool`
+`func (o *InlineObject340) HasV2cEnabled() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasV2cEnabled returns a boolean if a field has been set.
 
-### GetClient
+### GetV3Enabled
 
-`func (o *InlineObject340) GetClient() InlineResponse200452Client`
+`func (o *InlineObject340) GetV3Enabled() bool`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetV3EnabledOk
 
-`func (o *InlineObject340) GetClientOk() (*InlineResponse200452Client, bool)`
+`func (o *InlineObject340) GetV3EnabledOk() (*bool, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetV3Enabled
 
-`func (o *InlineObject340) SetClient(v InlineResponse200452Client)`
+`func (o *InlineObject340) SetV3Enabled(v bool)`
 
-SetClient sets Client field to given value.
+SetV3Enabled sets V3Enabled field to given value.
 
+### HasV3Enabled
 
-### GetSsid
+`func (o *InlineObject340) HasV3Enabled() bool`
 
-`func (o *InlineObject340) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
+HasV3Enabled returns a boolean if a field has been set.
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+### GetV3AuthMode
 
-### GetSsidOk
+`func (o *InlineObject340) GetV3AuthMode() string`
 
-`func (o *InlineObject340) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
+GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+### GetV3AuthModeOk
+
+`func (o *InlineObject340) GetV3AuthModeOk() (*string, bool)`
+
+GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetV3AuthMode
 
-`func (o *InlineObject340) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
+`func (o *InlineObject340) SetV3AuthMode(v string)`
 
-SetSsid sets Ssid field to given value.
+SetV3AuthMode sets V3AuthMode field to given value.
 
+### HasV3AuthMode
 
-### GetNetwork
+`func (o *InlineObject340) HasV3AuthMode() bool`
 
-`func (o *InlineObject340) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
+HasV3AuthMode returns a boolean if a field has been set.
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+### GetV3AuthPass
 
-### GetNetworkOk
+`func (o *InlineObject340) GetV3AuthPass() string`
 
-`func (o *InlineObject340) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
+GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+### GetV3AuthPassOk
+
+`func (o *InlineObject340) GetV3AuthPassOk() (*string, bool)`
+
+GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetV3AuthPass
 
-`func (o *InlineObject340) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
+`func (o *InlineObject340) SetV3AuthPass(v string)`
 
-SetNetwork sets Network field to given value.
+SetV3AuthPass sets V3AuthPass field to given value.
 
+### HasV3AuthPass
+
+`func (o *InlineObject340) HasV3AuthPass() bool`
+
+HasV3AuthPass returns a boolean if a field has been set.
+
+### GetV3PrivMode
+
+`func (o *InlineObject340) GetV3PrivMode() string`
+
+GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
+
+### GetV3PrivModeOk
+
+`func (o *InlineObject340) GetV3PrivModeOk() (*string, bool)`
+
+GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivMode
+
+`func (o *InlineObject340) SetV3PrivMode(v string)`
+
+SetV3PrivMode sets V3PrivMode field to given value.
+
+### HasV3PrivMode
+
+`func (o *InlineObject340) HasV3PrivMode() bool`
+
+HasV3PrivMode returns a boolean if a field has been set.
+
+### GetV3PrivPass
+
+`func (o *InlineObject340) GetV3PrivPass() string`
+
+GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
+
+### GetV3PrivPassOk
+
+`func (o *InlineObject340) GetV3PrivPassOk() (*string, bool)`
+
+GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivPass
+
+`func (o *InlineObject340) SetV3PrivPass(v string)`
+
+SetV3PrivPass sets V3PrivPass field to given value.
+
+### HasV3PrivPass
+
+`func (o *InlineObject340) HasV3PrivPass() bool`
+
+HasV3PrivPass returns a boolean if a field has been set.
+
+### GetPeerIps
+
+`func (o *InlineObject340) GetPeerIps() []string`
+
+GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
+
+### GetPeerIpsOk
+
+`func (o *InlineObject340) GetPeerIpsOk() (*[]string, bool)`
+
+GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPeerIps
+
+`func (o *InlineObject340) SetPeerIps(v []string)`
+
+SetPeerIps sets PeerIps field to given value.
+
+### HasPeerIps
+
+`func (o *InlineObject340) HasPeerIps() bool`
+
+HasPeerIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

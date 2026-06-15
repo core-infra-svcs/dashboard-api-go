@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessRadioRrmByNetwork
 
-> InlineResponse200450 GetOrganizationWirelessRadioRrmByNetwork(ctx, organizationId).NetworkIds(networkIds).StartingAfter(startingAfter).EndingBefore(endingBefore).PerPage(perPage).SortOrder(sortOrder).Execute()
+> InlineResponse200462 GetOrganizationWirelessRadioRrmByNetwork(ctx, organizationId).NetworkIds(networkIds).StartingAfter(startingAfter).EndingBefore(endingBefore).PerPage(perPage).SortOrder(sortOrder).Execute()
 
 List the AutoRF settings of an organization by network
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RrmApi.GetOrganizationWirelessRadioRrmByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRadioRrmByNetwork`: InlineResponse200450
+    // response from `GetOrganizationWirelessRadioRrmByNetwork`: InlineResponse200462
     fmt.Fprintf(os.Stdout, "Response from `RrmApi.GetOrganizationWirelessRadioRrmByNetwork`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200450**](InlineResponse200450.md)
+[**InlineResponse200462**](InlineResponse200462.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessRadioRrm
 
-> InlineResponse200231 UpdateNetworkWirelessRadioRrm(ctx, networkId).UpdateNetworkWirelessRadioRrm(updateNetworkWirelessRadioRrm).Execute()
+> InlineResponse200239 UpdateNetworkWirelessRadioRrm(ctx, networkId).UpdateNetworkWirelessRadioRrm(updateNetworkWirelessRadioRrm).Execute()
 
 Update the AutoRF settings for a wireless network
 
@@ -111,7 +111,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessRadioRrm := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
+    updateNetworkWirelessRadioRrm := *openapiclient.NewInlineObject209() // InlineObject209 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RrmApi.UpdateNetworkWirelessRadioRrm``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessRadioRrm`: InlineResponse200231
+    // response from `UpdateNetworkWirelessRadioRrm`: InlineResponse200239
     fmt.Fprintf(os.Stdout, "Response from `RrmApi.UpdateNetworkWirelessRadioRrm`: %v\n", resp)
 }
 ```
@@ -141,11 +141,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessRadio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessRadioRrm** | [**InlineObject198**](InlineObject198.md) |  | 
+ **updateNetworkWirelessRadioRrm** | [**InlineObject209**](InlineObject209.md) |  | 
 
 ### Return type
 
-[**InlineResponse200231**](InlineResponse200231.md)
+[**InlineResponse200239**](InlineResponse200239.md)
 
 ### Authorization
 

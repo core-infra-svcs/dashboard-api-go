@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1.md) |  | 
-**DestinationGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1.md) |  | 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: []) | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL (default: \&quot;default\&quot;) | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200253Rules**](InlineResponse200253Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineObject225
 
-`func NewInlineObject225(sourceGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, destinationGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, ) *InlineObject225`
+`func NewInlineObject225() *InlineObject225`
 
 NewInlineObject225 instantiates a new InlineObject225 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,80 @@ NewInlineObject225WithDefaults instantiates a new InlineObject225 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceGroup
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject225) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1`
+`func (o *InlineObject225) GetTrafficShapingEnabled() bool`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject225) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, bool)`
+`func (o *InlineObject225) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject225) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1)`
+`func (o *InlineObject225) SetTrafficShapingEnabled(v bool)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
+### HasTrafficShapingEnabled
 
-### GetDestinationGroup
+`func (o *InlineObject225) HasTrafficShapingEnabled() bool`
 
-`func (o *InlineObject225) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1`
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+### GetDefaultRulesEnabled
 
-### GetDestinationGroupOk
+`func (o *InlineObject225) GetDefaultRulesEnabled() bool`
 
-`func (o *InlineObject225) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, bool)`
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+### GetDefaultRulesEnabledOk
+
+`func (o *InlineObject225) GetDefaultRulesEnabledOk() (*bool, bool)`
+
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject225) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1)`
+`func (o *InlineObject225) SetDefaultRulesEnabled(v bool)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
+### HasDefaultRulesEnabled
 
-### GetAcls
+`func (o *InlineObject225) HasDefaultRulesEnabled() bool`
 
-`func (o *InlineObject225) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1`
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-GetAcls returns the Acls field if non-nil, zero value otherwise.
+### GetRules
 
-### GetAclsOk
+`func (o *InlineObject225) GetRules() []InlineResponse200253Rules`
 
-`func (o *InlineObject225) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1, bool)`
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+### GetRulesOk
+
+`func (o *InlineObject225) GetRulesOk() (*[]InlineResponse200253Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAcls
+### SetRules
 
-`func (o *InlineObject225) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1)`
+`func (o *InlineObject225) SetRules(v []InlineResponse200253Rules)`
 
-SetAcls sets Acls field to given value.
+SetRules sets Rules field to given value.
 
-### HasAcls
+### HasRules
 
-`func (o *InlineObject225) HasAcls() bool`
+`func (o *InlineObject225) HasRules() bool`
 
-HasAcls returns a boolean if a field has been set.
-
-### GetLastEntryRule
-
-`func (o *InlineObject225) GetLastEntryRule() string`
-
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
-
-### GetLastEntryRuleOk
-
-`func (o *InlineObject225) GetLastEntryRuleOk() (*string, bool)`
-
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastEntryRule
-
-`func (o *InlineObject225) SetLastEntryRule(v string)`
-
-SetLastEntryRule sets LastEntryRule field to given value.
-
-### HasLastEntryRule
-
-`func (o *InlineObject225) HasLastEntryRule() bool`
-
-HasLastEntryRule returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

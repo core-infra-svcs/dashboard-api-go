@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSaseNetworksEligible
 
-> InlineResponse200387 GetOrganizationSaseNetworksEligible(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).Execute()
+> InlineResponse200399 GetOrganizationSaseNetworksEligible(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).Execute()
 
 List of MX networks or templates that can be enrolled into Secure Access
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EligibleApi.GetOrganizationSaseNetworksEligible``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseNetworksEligible`: InlineResponse200387
+    // response from `GetOrganizationSaseNetworksEligible`: InlineResponse200399
     fmt.Fprintf(os.Stdout, "Response from `EligibleApi.GetOrganizationSaseNetworksEligible`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200387**](InlineResponse200387.md)
+[**InlineResponse200399**](InlineResponse200399.md)
 
 ### Authorization
 

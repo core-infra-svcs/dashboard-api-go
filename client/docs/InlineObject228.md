@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** | The email of the dashboard administrator. This attribute can not be updated. | 
-**Name** | **string** | The name of the dashboard administrator | 
-**OrgAccess** | **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
-**AuthenticationMethod** | Pointer to **string** | No longer used as of Cisco SecureX end-of-life. Can be one of &#39;Email&#39;. The default is Email authentication. | [optional] 
+**Name** | **string** | The name of the organization | 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject228
 
-`func NewInlineObject228(email string, name string, orgAccess string, ) *InlineObject228`
+`func NewInlineObject228(name string, ) *InlineObject228`
 
 NewInlineObject228 instantiates a new InlineObject228 object
 This constructor will assign default values to properties that have it defined,
@@ -29,26 +25,6 @@ will change when the set of required properties is changed
 NewInlineObject228WithDefaults instantiates a new InlineObject228 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEmail
-
-`func (o *InlineObject228) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineObject228) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineObject228) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
 
 ### GetName
 
@@ -70,100 +46,30 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetOrgAccess
+### GetManagement
 
-`func (o *InlineObject228) GetOrgAccess() string`
+`func (o *InlineObject228) GetManagement() OrganizationsManagement1`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetManagementOk
 
-`func (o *InlineObject228) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject228) GetManagementOk() (*OrganizationsManagement1, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetManagement
 
-`func (o *InlineObject228) SetOrgAccess(v string)`
+`func (o *InlineObject228) SetManagement(v OrganizationsManagement1)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetManagement sets Management field to given value.
 
+### HasManagement
 
-### GetTags
+`func (o *InlineObject228) HasManagement() bool`
 
-`func (o *InlineObject228) GetTags() []OrganizationsOrganizationIdAdminsTags1`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject228) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject228) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject228) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject228) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject228) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject228) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject228) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
-
-### GetAuthenticationMethod
-
-`func (o *InlineObject228) GetAuthenticationMethod() string`
-
-GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
-
-### GetAuthenticationMethodOk
-
-`func (o *InlineObject228) GetAuthenticationMethodOk() (*string, bool)`
-
-GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthenticationMethod
-
-`func (o *InlineObject228) SetAuthenticationMethod(v string)`
-
-SetAuthenticationMethod sets AuthenticationMethod field to given value.
-
-### HasAuthenticationMethod
-
-`func (o *InlineObject228) HasAuthenticationMethod() bool`
-
-HasAuthenticationMethod returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -23,6 +23,10 @@ Method | HTTP request | Description
 [**CreateDeviceLiveToolsPing**](DevicesApi.md#CreateDeviceLiveToolsPing) | **Post** /devices/{serial}/liveTools/ping | Enqueue a job to ping a target host from the device
 [**CreateDeviceLiveToolsPingDevice**](DevicesApi.md#CreateDeviceLiveToolsPingDevice) | **Post** /devices/{serial}/liveTools/pingDevice | Enqueue a job to check connectivity status to the device
 [**CreateDeviceLiveToolsPortsCycle**](DevicesApi.md#CreateDeviceLiveToolsPortsCycle) | **Post** /devices/{serial}/liveTools/ports/cycle | Enqueue a job to perform a cycle port for the device on the specified ports
+[**CreateDeviceLiveToolsPortsStatus**](DevicesApi.md#CreateDeviceLiveToolsPortsStatus) | **Post** /devices/{serial}/liveTools/ports/status | Enqueue a job to retrieve port status for a device
+[**CreateDeviceLiveToolsPowerUsage**](DevicesApi.md#CreateDeviceLiveToolsPowerUsage) | **Post** /devices/{serial}/liveTools/power/usage | Enqueues a live tool job that retrieves details about a device&#39;s overall power usage
+[**CreateDeviceLiveToolsRoutingTableLookup**](DevicesApi.md#CreateDeviceLiveToolsRoutingTableLookup) | **Post** /devices/{serial}/liveTools/routingTable/lookups | Enqueue a job to perform a routing table lookup request for a device
+[**CreateDeviceLiveToolsRoutingTableSummary**](DevicesApi.md#CreateDeviceLiveToolsRoutingTableSummary) | **Post** /devices/{serial}/liveTools/routingTable/summaries | Enqueue a routing table summary job for a device
 [**CreateDeviceLiveToolsThroughputTest**](DevicesApi.md#CreateDeviceLiveToolsThroughputTest) | **Post** /devices/{serial}/liveTools/throughputTest | Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
 [**CreateDeviceLiveToolsWakeOnLan**](DevicesApi.md#CreateDeviceLiveToolsWakeOnLan) | **Post** /devices/{serial}/liveTools/wakeOnLan | Enqueue a job to send a Wake-on-LAN packet from the device
 [**CreateNetworkApplianceDevicesRedundancySwap**](DevicesApi.md#CreateNetworkApplianceDevicesRedundancySwap) | **Post** /networks/{networkId}/appliance/devices/redundancy/swap | Swap MX primary and warm spare appliances
@@ -32,7 +36,7 @@ Method | HTTP request | Description
 [**CreateOrganizationDevicesPacketCaptureSchedule**](DevicesApi.md#CreateOrganizationDevicesPacketCaptureSchedule) | **Post** /organizations/{organizationId}/devices/packetCapture/schedules | Create a schedule for packet capture
 [**CreateOrganizationInventoryDevicesSwapsBulk**](DevicesApi.md#CreateOrganizationInventoryDevicesSwapsBulk) | **Post** /organizations/{organizationId}/inventory/devices/swaps/bulk | Swap the devices identified by devices.old with a devices.new, then perform the :afterAction on the devices.old.
 [**CreateOrganizationWirelessDevicesProvisioningDeployment**](DevicesApi.md#CreateOrganizationWirelessDevicesProvisioningDeployment) | **Post** /organizations/{organizationId}/wireless/devices/provisioning/deployments | Create a zero touch deployment for a wireless access point
-[**CreateOrganizationWirelessDevicesRadsecCertificatesAuthority**](DevicesApi.md#CreateOrganizationWirelessDevicesRadsecCertificatesAuthority) | **Post** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities | Create an organization&#39;s RADSEC device Certificate Authority (CA)
+[**CreateOrganizationWirelessDevicesRadsecCertificatesAuthority**](DevicesApi.md#CreateOrganizationWirelessDevicesRadsecCertificatesAuthority) | **Post** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities | Create an organization&#39;s RadSec device Certificate Authority (CA)
 [**DeleteOrganizationDevicesCellularDataProfile**](DevicesApi.md#DeleteOrganizationDevicesCellularDataProfile) | **Delete** /organizations/{organizationId}/devices/cellular/data/profiles/{profileId} | Delete a cellular data management profile from this organization
 [**DeleteOrganizationDevicesPacketCaptureCapture**](DevicesApi.md#DeleteOrganizationDevicesPacketCaptureCapture) | **Delete** /organizations/{organizationId}/devices/packetCapture/captures/{captureId} | Delete a single packet capture from cloud using captureId
 [**DeleteOrganizationDevicesPacketCaptureSchedule**](DevicesApi.md#DeleteOrganizationDevicesPacketCaptureSchedule) | **Delete** /organizations/{organizationId}/devices/packetCapture/schedules/{scheduleId} | Delete schedule from cloud
@@ -49,6 +53,10 @@ Method | HTTP request | Description
 [**GetDeviceLiveToolsPing**](DevicesApi.md#GetDeviceLiveToolsPing) | **Get** /devices/{serial}/liveTools/ping/{id} | Return a ping job
 [**GetDeviceLiveToolsPingDevice**](DevicesApi.md#GetDeviceLiveToolsPingDevice) | **Get** /devices/{serial}/liveTools/pingDevice/{id} | Return a ping device job
 [**GetDeviceLiveToolsPortsCycle**](DevicesApi.md#GetDeviceLiveToolsPortsCycle) | **Get** /devices/{serial}/liveTools/ports/cycle/{id} | Return a cycle port live tool job.
+[**GetDeviceLiveToolsPortsStatus**](DevicesApi.md#GetDeviceLiveToolsPortsStatus) | **Get** /devices/{serial}/liveTools/ports/status/{jobId} | Return a port status live tool job.
+[**GetDeviceLiveToolsPowerUsage**](DevicesApi.md#GetDeviceLiveToolsPowerUsage) | **Get** /devices/{serial}/liveTools/power/usage/{jobId} | Retrieve the status and results of a previously created live tool job fetching details about a device&#39;s overall power usage.
+[**GetDeviceLiveToolsRoutingTableLookup**](DevicesApi.md#GetDeviceLiveToolsRoutingTableLookup) | **Get** /devices/{serial}/liveTools/routingTable/lookups/{id} | Return a routing table live tool lookup job for a device
+[**GetDeviceLiveToolsRoutingTableSummary**](DevicesApi.md#GetDeviceLiveToolsRoutingTableSummary) | **Get** /devices/{serial}/liveTools/routingTable/summaries/{id} | Return the status and result of a routing table summary job
 [**GetDeviceLiveToolsThroughputTest**](DevicesApi.md#GetDeviceLiveToolsThroughputTest) | **Get** /devices/{serial}/liveTools/throughputTest/{throughputTestId} | Return a throughput test job
 [**GetDeviceLiveToolsWakeOnLan**](DevicesApi.md#GetDeviceLiveToolsWakeOnLan) | **Get** /devices/{serial}/liveTools/wakeOnLan/{wakeOnLanId} | Return a Wake-on-LAN job
 [**GetDeviceLldpCdp**](DevicesApi.md#GetDeviceLldpCdp) | **Get** /devices/{serial}/lldpCdp | List LLDP and CDP information for a device
@@ -70,6 +78,9 @@ Method | HTTP request | Description
 [**GetNetworkSmDevices**](DevicesApi.md#GetNetworkSmDevices) | **Get** /networks/{networkId}/sm/devices | List the devices enrolled in an SM network with various specified fields and filters
 [**GetNetworkWirelessDevicesConnectionStats**](DevicesApi.md#GetNetworkWirelessDevicesConnectionStats) | **Get** /networks/{networkId}/wireless/devices/connectionStats | Aggregated connectivity info for this network, grouped by node
 [**GetNetworkWirelessDevicesLatencyStats**](DevicesApi.md#GetNetworkWirelessDevicesLatencyStats) | **Get** /networks/{networkId}/wireless/devices/latencyStats | Aggregated latency info for this network, grouped by node
+[**GetOrganizationApplianceDevicesInterfacesL3**](DevicesApi.md#GetOrganizationApplianceDevicesInterfacesL3) | **Get** /organizations/{organizationId}/appliance/devices/interfaces/l3 | List L3 interfaces across networks for the organization
+[**GetOrganizationApplianceDevicesInterfacesPortsByDevice**](DevicesApi.md#GetOrganizationApplianceDevicesInterfacesPortsByDevice) | **Get** /organizations/{organizationId}/appliance/devices/interfaces/ports/byDevice | Returns port configurations for appliances in a given organization
+[**GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice**](DevicesApi.md#GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice) | **Get** /organizations/{organizationId}/appliance/devices/ports/transceivers/readings/history/byDevice | Return time-series digital optical monitoring (DOM) readings for ports on each DOM-enabled Catalyst appliance in an organization.
 [**GetOrganizationApplianceDevicesRedundancyByNetwork**](DevicesApi.md#GetOrganizationApplianceDevicesRedundancyByNetwork) | **Get** /organizations/{organizationId}/appliance/devices/redundancy/byNetwork | Return MX warm spare settings
 [**GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice**](DevicesApi.md#GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice) | **Get** /organizations/{organizationId}/campusGateway/devices/uplinks/localOverrides/byDevice | Uplink overrides configured locally on Campus Gateway devices in an organization.
 [**GetOrganizationDevices**](DevicesApi.md#GetOrganizationDevices) | **Get** /organizations/{organizationId}/devices | List the devices in an organization that have been assigned to a network.
@@ -122,9 +133,9 @@ Method | HTTP request | Description
 [**GetOrganizationWirelessDevicesPacketLossByNetwork**](DevicesApi.md#GetOrganizationWirelessDevicesPacketLossByNetwork) | **Get** /organizations/{organizationId}/wireless/devices/packetLoss/byNetwork | Get average packet loss for the given timespan for all networks in the organization.
 [**GetOrganizationWirelessDevicesPowerModeHistory**](DevicesApi.md#GetOrganizationWirelessDevicesPowerModeHistory) | **Get** /organizations/{organizationId}/wireless/devices/power/mode/history | Return a record of power mode changes for wireless devices in the organization
 [**GetOrganizationWirelessDevicesProvisioningDeployments**](DevicesApi.md#GetOrganizationWirelessDevicesProvisioningDeployments) | **Get** /organizations/{organizationId}/wireless/devices/provisioning/deployments | List the zero touch deployments for wireless access points in an organization
-[**GetOrganizationWirelessDevicesRadsecCertificatesAuthorities**](DevicesApi.md#GetOrganizationWirelessDevicesRadsecCertificatesAuthorities) | **Get** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities | Query for details on the organization&#39;s RADSEC device Certificate Authority certificates (CAs)
-[**GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls**](DevicesApi.md#GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls) | **Get** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities/crls | Query for certificate revocation list (CRL) for the organization&#39;s RADSEC device Certificate Authorities (CAs).
-[**GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas**](DevicesApi.md#GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas) | **Get** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities/crls/deltas | Query for all delta certificate revocation list (CRL) for the organization&#39;s RADSEC device Certificate Authority (CA) with the given id.
+[**GetOrganizationWirelessDevicesRadsecCertificatesAuthorities**](DevicesApi.md#GetOrganizationWirelessDevicesRadsecCertificatesAuthorities) | **Get** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities | Query for details on the organization&#39;s RadSec device Certificate Authority certificates (CAs)
+[**GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls**](DevicesApi.md#GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls) | **Get** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities/crls | Query for certificate revocation list (CRL) for the organization&#39;s RadSec device Certificate Authorities (CAs).
+[**GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas**](DevicesApi.md#GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas) | **Get** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities/crls/deltas | Query for all delta certificate revocation list (CRL) for the organization&#39;s RadSec device Certificate Authority (CA) with the given id.
 [**GetOrganizationWirelessDevicesSystemCpuLoadHistory**](DevicesApi.md#GetOrganizationWirelessDevicesSystemCpuLoadHistory) | **Get** /organizations/{organizationId}/wireless/devices/system/cpu/load/history | Return the CPU Load history for a list of wireless devices in the organization.
 [**GetOrganizationWirelessDevicesWirelessControllersByDevice**](DevicesApi.md#GetOrganizationWirelessDevicesWirelessControllersByDevice) | **Get** /organizations/{organizationId}/wireless/devices/wirelessControllers/byDevice | List of Catalyst access points information
 [**GetOrganizationWirelessZigbeeDevices**](DevicesApi.md#GetOrganizationWirelessZigbeeDevices) | **Get** /organizations/{organizationId}/wireless/zigbee/devices | List the Zigbee wireless devices for an organization or the supplied network(s)
@@ -150,7 +161,7 @@ Method | HTTP request | Description
 [**UpdateOrganizationDevicesCellularDataProfile**](DevicesApi.md#UpdateOrganizationDevicesCellularDataProfile) | **Put** /organizations/{organizationId}/devices/cellular/data/profiles/{profileId} | Update a Cellular Data Management Profile
 [**UpdateOrganizationDevicesPacketCaptureSchedule**](DevicesApi.md#UpdateOrganizationDevicesPacketCaptureSchedule) | **Put** /organizations/{organizationId}/devices/packetCapture/schedules/{scheduleId} | Update a schedule for packet capture
 [**UpdateOrganizationWirelessDevicesProvisioningDeployments**](DevicesApi.md#UpdateOrganizationWirelessDevicesProvisioningDeployments) | **Put** /organizations/{organizationId}/wireless/devices/provisioning/deployments | Update a zero touch deployment
-[**UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities**](DevicesApi.md#UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities) | **Put** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities | Update an organization&#39;s RADSEC device Certificate Authority (CA) state
+[**UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities**](DevicesApi.md#UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities) | **Put** /organizations/{organizationId}/wireless/devices/radsec/certificates/authorities | Update an organization&#39;s RadSec device Certificate Authority (CA) state
 [**UpdateOrganizationWirelessZigbeeDevice**](DevicesApi.md#UpdateOrganizationWirelessZigbeeDevice) | **Put** /organizations/{organizationId}/wireless/zigbee/devices/{id} | Endpoint to update zigbee gateways
 [**VmxNetworkDevicesClaim**](DevicesApi.md#VmxNetworkDevicesClaim) | **Post** /networks/{networkId}/devices/claim/vmx | Claim a vMX into a network
 [**WipeNetworkSmDevices**](DevicesApi.md#WipeNetworkSmDevices) | **Post** /networks/{networkId}/sm/devices/wipe | Wipe a device
@@ -159,7 +170,7 @@ Method | HTTP request | Description
 
 ## BatchNetworkFloorPlansDevicesUpdate
 
-> InlineResponse200134 BatchNetworkFloorPlansDevicesUpdate(ctx, networkId).BatchNetworkFloorPlansDevicesUpdate(batchNetworkFloorPlansDevicesUpdate).Execute()
+> InlineResponse200142 BatchNetworkFloorPlansDevicesUpdate(ctx, networkId).BatchNetworkFloorPlansDevicesUpdate(batchNetworkFloorPlansDevicesUpdate).Execute()
 
 Update floorplan assignments for a batch of devices
 
@@ -179,7 +190,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    batchNetworkFloorPlansDevicesUpdate := *openapiclient.NewInlineObject116([]openapiclient.NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments{*openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments("Serial_example", *openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan("Id_example"))}) // InlineObject116 | 
+    batchNetworkFloorPlansDevicesUpdate := *openapiclient.NewInlineObject127([]openapiclient.NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments{*openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments("Serial_example", *openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan("Id_example"))}) // InlineObject127 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -188,7 +199,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.BatchNetworkFloorPlansDevicesUpdate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchNetworkFloorPlansDevicesUpdate`: InlineResponse200134
+    // response from `BatchNetworkFloorPlansDevicesUpdate`: InlineResponse200142
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.BatchNetworkFloorPlansDevicesUpdate`: %v\n", resp)
 }
 ```
@@ -209,11 +220,11 @@ Other parameters are passed through a pointer to a apiBatchNetworkFloorPlansDevi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchNetworkFloorPlansDevicesUpdate** | [**InlineObject116**](InlineObject116.md) |  | 
+ **batchNetworkFloorPlansDevicesUpdate** | [**InlineObject127**](InlineObject127.md) |  | 
 
 ### Return type
 
-[**InlineResponse200134**](InlineResponse200134.md)
+[**InlineResponse200142**](InlineResponse200142.md)
 
 ### Authorization
 
@@ -231,7 +242,7 @@ Name | Type | Description  | Notes
 
 ## BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate
 
-> InlineResponse200322 BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(ctx, organizationId).BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(batchOrganizationDevicesCellularDataProfilesAssignmentsCreate).Execute()
+> InlineResponse200334 BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(ctx, organizationId).BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(batchOrganizationDevicesCellularDataProfilesAssignmentsCreate).Execute()
 
 Assign devices to a Cellular Data Management Profile in batch
 
@@ -251,7 +262,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    batchOrganizationDevicesCellularDataProfilesAssignmentsCreate := *openapiclient.NewInlineObject266([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateDevice("Serial_example"))}) // InlineObject266 | 
+    batchOrganizationDevicesCellularDataProfilesAssignmentsCreate := *openapiclient.NewInlineObject277([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateDevice("Serial_example"))}) // InlineObject277 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -260,7 +271,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: InlineResponse200322
+    // response from `BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: InlineResponse200334
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: %v\n", resp)
 }
 ```
@@ -281,11 +292,11 @@ Other parameters are passed through a pointer to a apiBatchOrganizationDevicesCe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchOrganizationDevicesCellularDataProfilesAssignmentsCreate** | [**InlineObject266**](InlineObject266.md) |  | 
+ **batchOrganizationDevicesCellularDataProfilesAssignmentsCreate** | [**InlineObject277**](InlineObject277.md) |  | 
 
 ### Return type
 
-[**InlineResponse200322**](InlineResponse200322.md)
+[**InlineResponse200334**](InlineResponse200334.md)
 
 ### Authorization
 
@@ -323,7 +334,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    blinkDeviceLeds := *openapiclient.NewInlineObject6() // InlineObject6 |  (optional)
+    blinkDeviceLeds := *openapiclient.NewInlineObject7() // InlineObject7 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -353,7 +364,7 @@ Other parameters are passed through a pointer to a apiBlinkDeviceLedsRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **blinkDeviceLeds** | [**InlineObject6**](InlineObject6.md) |  | 
+ **blinkDeviceLeds** | [**InlineObject7**](InlineObject7.md) |  | 
 
 ### Return type
 
@@ -395,7 +406,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete := *openapiclient.NewInlineObject267([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteDevice("Serial_example"))}) // InlineObject267 | 
+    bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete := *openapiclient.NewInlineObject278([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteDevice("Serial_example"))}) // InlineObject278 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -423,7 +434,7 @@ Other parameters are passed through a pointer to a apiBulkOrganizationDevicesCel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete** | [**InlineObject267**](InlineObject267.md) |  | 
+ **bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete** | [**InlineObject278**](InlineObject278.md) |  | 
 
 ### Return type
 
@@ -445,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## BulkOrganizationDevicesPacketCaptureCapturesCreate
 
-> InlineResponse20122 BulkOrganizationDevicesPacketCaptureCapturesCreate(ctx, organizationId).BulkOrganizationDevicesPacketCaptureCapturesCreate(bulkOrganizationDevicesPacketCaptureCapturesCreate).Execute()
+> InlineResponse20127 BulkOrganizationDevicesPacketCaptureCapturesCreate(ctx, organizationId).BulkOrganizationDevicesPacketCaptureCapturesCreate(bulkOrganizationDevicesPacketCaptureCapturesCreate).Execute()
 
 Perform a packet capture on multiple devices and store in Meraki Cloud.
 
@@ -465,7 +476,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkOrganizationDevicesPacketCaptureCapturesCreate := *openapiclient.NewInlineObject272([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices()}, "Name_example") // InlineObject272 | 
+    bulkOrganizationDevicesPacketCaptureCapturesCreate := *openapiclient.NewInlineObject283([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices()}, "Name_example") // InlineObject283 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -474,7 +485,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.BulkOrganizationDevicesPacketCaptureCapturesCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkOrganizationDevicesPacketCaptureCapturesCreate`: InlineResponse20122
+    // response from `BulkOrganizationDevicesPacketCaptureCapturesCreate`: InlineResponse20127
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.BulkOrganizationDevicesPacketCaptureCapturesCreate`: %v\n", resp)
 }
 ```
@@ -495,11 +506,11 @@ Other parameters are passed through a pointer to a apiBulkOrganizationDevicesPac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkOrganizationDevicesPacketCaptureCapturesCreate** | [**InlineObject272**](InlineObject272.md) |  | 
+ **bulkOrganizationDevicesPacketCaptureCapturesCreate** | [**InlineObject283**](InlineObject283.md) |  | 
 
 ### Return type
 
-[**InlineResponse20122**](InlineResponse20122.md)
+[**InlineResponse20127**](InlineResponse20127.md)
 
 ### Authorization
 
@@ -537,7 +548,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkOrganizationDevicesPacketCaptureCapturesDelete := *openapiclient.NewInlineObject273([]string{"CaptureIds_example"}) // InlineObject273 | 
+    bulkOrganizationDevicesPacketCaptureCapturesDelete := *openapiclient.NewInlineObject284([]string{"CaptureIds_example"}) // InlineObject284 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -565,7 +576,7 @@ Other parameters are passed through a pointer to a apiBulkOrganizationDevicesPac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkOrganizationDevicesPacketCaptureCapturesDelete** | [**InlineObject273**](InlineObject273.md) |  | 
+ **bulkOrganizationDevicesPacketCaptureCapturesDelete** | [**InlineObject284**](InlineObject284.md) |  | 
 
 ### Return type
 
@@ -587,7 +598,7 @@ Name | Type | Description  | Notes
 
 ## BulkUpdateOrganizationDevicesDetails
 
-> InlineResponse200330 BulkUpdateOrganizationDevicesDetails(ctx, organizationId).BulkUpdateOrganizationDevicesDetails(bulkUpdateOrganizationDevicesDetails).Execute()
+> InlineResponse200342 BulkUpdateOrganizationDevicesDetails(ctx, organizationId).BulkUpdateOrganizationDevicesDetails(bulkUpdateOrganizationDevicesDetails).Execute()
 
 Updating device details (currently only used for Catalyst devices)
 
@@ -607,7 +618,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkUpdateOrganizationDevicesDetails := *openapiclient.NewInlineObject270([]string{"Serials_example"}, []openapiclient.NetworksNetworkIdDevicesClaimDetails{*openapiclient.NewNetworksNetworkIdDevicesClaimDetails("Name_example")}) // InlineObject270 | 
+    bulkUpdateOrganizationDevicesDetails := *openapiclient.NewInlineObject281([]string{"Serials_example"}, []openapiclient.NetworksNetworkIdDevicesClaimDetails{*openapiclient.NewNetworksNetworkIdDevicesClaimDetails("Name_example")}) // InlineObject281 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -616,7 +627,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.BulkUpdateOrganizationDevicesDetails``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkUpdateOrganizationDevicesDetails`: InlineResponse200330
+    // response from `BulkUpdateOrganizationDevicesDetails`: InlineResponse200342
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.BulkUpdateOrganizationDevicesDetails`: %v\n", resp)
 }
 ```
@@ -637,11 +648,11 @@ Other parameters are passed through a pointer to a apiBulkUpdateOrganizationDevi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkUpdateOrganizationDevicesDetails** | [**InlineObject270**](InlineObject270.md) |  | 
+ **bulkUpdateOrganizationDevicesDetails** | [**InlineObject281**](InlineObject281.md) |  | 
 
 ### Return type
 
-[**InlineResponse200330**](InlineResponse200330.md)
+[**InlineResponse200342**](InlineResponse200342.md)
 
 ### Authorization
 
@@ -659,7 +670,7 @@ Name | Type | Description  | Notes
 
 ## CheckinNetworkSmDevices
 
-> InlineResponse200152 CheckinNetworkSmDevices(ctx, networkId).CheckinNetworkSmDevices(checkinNetworkSmDevices).Execute()
+> InlineResponse200160 CheckinNetworkSmDevices(ctx, networkId).CheckinNetworkSmDevices(checkinNetworkSmDevices).Execute()
 
 Force check-in a set of devices
 
@@ -679,7 +690,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    checkinNetworkSmDevices := *openapiclient.NewInlineObject131() // InlineObject131 |  (optional)
+    checkinNetworkSmDevices := *openapiclient.NewInlineObject142() // InlineObject142 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -688,7 +699,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CheckinNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CheckinNetworkSmDevices`: InlineResponse200152
+    // response from `CheckinNetworkSmDevices`: InlineResponse200160
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CheckinNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -709,11 +720,11 @@ Other parameters are passed through a pointer to a apiCheckinNetworkSmDevicesReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **checkinNetworkSmDevices** | [**InlineObject131**](InlineObject131.md) |  | 
+ **checkinNetworkSmDevices** | [**InlineObject142**](InlineObject142.md) |  | 
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200160**](InlineResponse200160.md)
 
 ### Authorization
 
@@ -731,7 +742,7 @@ Name | Type | Description  | Notes
 
 ## ClaimNetworkDevices
 
-> InlineResponse200121 ClaimNetworkDevices(ctx, networkId).ClaimNetworkDevices(claimNetworkDevices).AddAtomically(addAtomically).Execute()
+> InlineResponse200129 ClaimNetworkDevices(ctx, networkId).ClaimNetworkDevices(claimNetworkDevices).AddAtomically(addAtomically).Execute()
 
 Claim devices into a network. (Note: for recently claimed devices, it may take a few minutes for API requests against that device to succeed)
 
@@ -751,7 +762,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    claimNetworkDevices := *openapiclient.NewInlineObject101([]string{"Serials_example"}) // InlineObject101 | 
+    claimNetworkDevices := *openapiclient.NewInlineObject112([]string{"Serials_example"}) // InlineObject112 | 
     addAtomically := true // bool | Whether to claim devices atomically. If true, all devices will be claimed or none will be claimed. Default is true. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -761,7 +772,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.ClaimNetworkDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ClaimNetworkDevices`: InlineResponse200121
+    // response from `ClaimNetworkDevices`: InlineResponse200129
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.ClaimNetworkDevices`: %v\n", resp)
 }
 ```
@@ -782,12 +793,12 @@ Other parameters are passed through a pointer to a apiClaimNetworkDevicesRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimNetworkDevices** | [**InlineObject101**](InlineObject101.md) |  | 
+ **claimNetworkDevices** | [**InlineObject112**](InlineObject112.md) |  | 
  **addAtomically** | **bool** | Whether to claim devices atomically. If true, all devices will be claimed or none will be claimed. Default is true. | 
 
 ### Return type
 
-[**InlineResponse200121**](InlineResponse200121.md)
+[**InlineResponse200129**](InlineResponse200129.md)
 
 ### Authorization
 
@@ -805,7 +816,7 @@ Name | Type | Description  | Notes
 
 ## CloneOrganizationSwitchDevices
 
-> InlineResponse200417 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
+> InlineResponse200429 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
 
 Clone port-level and some switch-level configuration settings from a source switch to one or more target switches
 
@@ -825,7 +836,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject332("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject332 | 
+    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject343("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject343 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -834,7 +845,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CloneOrganizationSwitchDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CloneOrganizationSwitchDevices`: InlineResponse200417
+    // response from `CloneOrganizationSwitchDevices`: InlineResponse200429
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CloneOrganizationSwitchDevices`: %v\n", resp)
 }
 ```
@@ -855,11 +866,11 @@ Other parameters are passed through a pointer to a apiCloneOrganizationSwitchDev
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cloneOrganizationSwitchDevices** | [**InlineObject332**](InlineObject332.md) |  | 
+ **cloneOrganizationSwitchDevices** | [**InlineObject343**](InlineObject343.md) |  | 
 
 ### Return type
 
-[**InlineResponse200417**](InlineResponse200417.md)
+[**InlineResponse200429**](InlineResponse200429.md)
 
 ### Authorization
 
@@ -877,7 +888,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceCellularUplinksBandsMasksUpdate
 
-> InlineResponse20027 CreateDeviceCellularUplinksBandsMasksUpdate(ctx, serial).CreateDeviceCellularUplinksBandsMasksUpdate(createDeviceCellularUplinksBandsMasksUpdate).Execute()
+> InlineResponse20028 CreateDeviceCellularUplinksBandsMasksUpdate(ctx, serial).CreateDeviceCellularUplinksBandsMasksUpdate(createDeviceCellularUplinksBandsMasksUpdate).Execute()
 
 Update the cellular band masks for a device
 
@@ -897,7 +908,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceCellularUplinksBandsMasksUpdate := *openapiclient.NewInlineObject15("Slot_example", "Type_example", []string{"Masked_example"}) // InlineObject15 | 
+    createDeviceCellularUplinksBandsMasksUpdate := *openapiclient.NewInlineObject16("Slot_example", "Type_example", []string{"Masked_example"}) // InlineObject16 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -906,7 +917,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceCellularUplinksBandsMasksUpdate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceCellularUplinksBandsMasksUpdate`: InlineResponse20027
+    // response from `CreateDeviceCellularUplinksBandsMasksUpdate`: InlineResponse20028
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceCellularUplinksBandsMasksUpdate`: %v\n", resp)
 }
 ```
@@ -927,11 +938,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceCellularUplink
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceCellularUplinksBandsMasksUpdate** | [**InlineObject15**](InlineObject15.md) |  | 
+ **createDeviceCellularUplinksBandsMasksUpdate** | [**InlineObject16**](InlineObject16.md) |  | 
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 
@@ -969,7 +980,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsArpTable := *openapiclient.NewInlineObject18() // InlineObject18 |  (optional)
+    createDeviceLiveToolsArpTable := *openapiclient.NewInlineObject19() // InlineObject19 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -999,7 +1010,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsArpTa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsArpTable** | [**InlineObject18**](InlineObject18.md) |  | 
+ **createDeviceLiveToolsArpTable** | [**InlineObject19**](InlineObject19.md) |  | 
 
 ### Return type
 
@@ -1041,7 +1052,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsCableTest := *openapiclient.NewInlineObject19([]string{"Ports_example"}) // InlineObject19 | 
+    createDeviceLiveToolsCableTest := *openapiclient.NewInlineObject20([]string{"Ports_example"}) // InlineObject20 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1071,7 +1082,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsCable
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsCableTest** | [**InlineObject19**](InlineObject19.md) |  | 
+ **createDeviceLiveToolsCableTest** | [**InlineObject20**](InlineObject20.md) |  | 
 
 ### Return type
 
@@ -1113,7 +1124,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject20(int32(123)) // InlineObject20 | 
+    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject21(int32(123)) // InlineObject21 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1143,7 +1154,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsLedsB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsLedsBlink** | [**InlineObject20**](InlineObject20.md) |  | 
+ **createDeviceLiveToolsLedsBlink** | [**InlineObject21**](InlineObject21.md) |  | 
 
 ### Return type
 
@@ -1185,7 +1196,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsMacTable := *openapiclient.NewInlineObject21() // InlineObject21 |  (optional)
+    createDeviceLiveToolsMacTable := *openapiclient.NewInlineObject22() // InlineObject22 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1215,7 +1226,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsMacTa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsMacTable** | [**InlineObject21**](InlineObject21.md) |  | 
+ **createDeviceLiveToolsMacTable** | [**InlineObject22**](InlineObject22.md) |  | 
 
 ### Return type
 
@@ -1257,7 +1268,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject22() // InlineObject22 |  (optional)
+    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1287,7 +1298,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsMulti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsMulticastRouting** | [**InlineObject22**](InlineObject22.md) |  | 
+ **createDeviceLiveToolsMulticastRouting** | [**InlineObject23**](InlineObject23.md) |  | 
 
 ### Return type
 
@@ -1329,7 +1340,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPing := *openapiclient.NewInlineObject23("Target_example") // InlineObject23 | 
+    createDeviceLiveToolsPing := *openapiclient.NewInlineObject24("Target_example") // InlineObject24 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1359,7 +1370,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPing** | [**InlineObject23**](InlineObject23.md) |  | 
+ **createDeviceLiveToolsPing** | [**InlineObject24**](InlineObject24.md) |  | 
 
 ### Return type
 
@@ -1401,7 +1412,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject24() // InlineObject24 |  (optional)
+    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject25() // InlineObject25 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1431,7 +1442,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingD
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPingDevice** | [**InlineObject24**](InlineObject24.md) |  | 
+ **createDeviceLiveToolsPingDevice** | [**InlineObject25**](InlineObject25.md) |  | 
 
 ### Return type
 
@@ -1473,7 +1484,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject25([]string{"Ports_example"}) // InlineObject25 | 
+    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject26([]string{"Ports_example"}) // InlineObject26 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1503,7 +1514,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPorts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPortsCycle** | [**InlineObject25**](InlineObject25.md) |  | 
+ **createDeviceLiveToolsPortsCycle** | [**InlineObject26**](InlineObject26.md) |  | 
 
 ### Return type
 
@@ -1523,9 +1534,297 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## CreateDeviceLiveToolsPortsStatus
+
+> InlineResponse2019 CreateDeviceLiveToolsPortsStatus(ctx, serial).CreateDeviceLiveToolsPortsStatus(createDeviceLiveToolsPortsStatus).Execute()
+
+Enqueue a job to retrieve port status for a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceLiveToolsPortsStatus := *openapiclient.NewInlineObject27() // InlineObject27 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.CreateDeviceLiveToolsPortsStatus(context.Background(), serial).CreateDeviceLiveToolsPortsStatus(createDeviceLiveToolsPortsStatus).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsPortsStatus``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceLiveToolsPortsStatus`: InlineResponse2019
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsPortsStatus`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPortsStatusRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceLiveToolsPortsStatus** | [**InlineObject27**](InlineObject27.md) |  | 
+
+### Return type
+
+[**InlineResponse2019**](InlineResponse2019.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateDeviceLiveToolsPowerUsage
+
+> InlineResponse20110 CreateDeviceLiveToolsPowerUsage(ctx, serial).CreateDeviceLiveToolsPowerUsage(createDeviceLiveToolsPowerUsage).Execute()
+
+Enqueues a live tool job that retrieves details about a device's overall power usage
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceLiveToolsPowerUsage := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.CreateDeviceLiveToolsPowerUsage(context.Background(), serial).CreateDeviceLiveToolsPowerUsage(createDeviceLiveToolsPowerUsage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsPowerUsage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceLiveToolsPowerUsage`: InlineResponse20110
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsPowerUsage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPowerUsageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceLiveToolsPowerUsage** | [**InlineObject28**](InlineObject28.md) |  | 
+
+### Return type
+
+[**InlineResponse20110**](InlineResponse20110.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateDeviceLiveToolsRoutingTableLookup
+
+> InlineResponse20111 CreateDeviceLiveToolsRoutingTableLookup(ctx, serial).CreateDeviceLiveToolsRoutingTableLookup(createDeviceLiveToolsRoutingTableLookup).Execute()
+
+Enqueue a job to perform a routing table lookup request for a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceLiveToolsRoutingTableLookup := *openapiclient.NewInlineObject29() // InlineObject29 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.CreateDeviceLiveToolsRoutingTableLookup(context.Background(), serial).CreateDeviceLiveToolsRoutingTableLookup(createDeviceLiveToolsRoutingTableLookup).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsRoutingTableLookup``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceLiveToolsRoutingTableLookup`: InlineResponse20111
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsRoutingTableLookup`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsRoutingTableLookupRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceLiveToolsRoutingTableLookup** | [**InlineObject29**](InlineObject29.md) |  | 
+
+### Return type
+
+[**InlineResponse20111**](InlineResponse20111.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateDeviceLiveToolsRoutingTableSummary
+
+> InlineResponse20112 CreateDeviceLiveToolsRoutingTableSummary(ctx, serial).CreateDeviceLiveToolsRoutingTableSummary(createDeviceLiveToolsRoutingTableSummary).Execute()
+
+Enqueue a routing table summary job for a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceLiveToolsRoutingTableSummary := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.CreateDeviceLiveToolsRoutingTableSummary(context.Background(), serial).CreateDeviceLiveToolsRoutingTableSummary(createDeviceLiveToolsRoutingTableSummary).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsRoutingTableSummary``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceLiveToolsRoutingTableSummary`: InlineResponse20112
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsRoutingTableSummary`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsRoutingTableSummaryRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceLiveToolsRoutingTableSummary** | [**InlineObject30**](InlineObject30.md) |  | 
+
+### Return type
+
+[**InlineResponse20112**](InlineResponse20112.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateDeviceLiveToolsThroughputTest
 
-> InlineResponse2019 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
+> InlineResponse20113 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
 
 Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
 
@@ -1545,7 +1844,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject26() // InlineObject26 |  (optional)
+    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject31() // InlineObject31 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1554,7 +1853,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2019
+    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse20113
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -1575,11 +1874,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsThrou
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsThroughputTest** | [**InlineObject26**](InlineObject26.md) |  | 
+ **createDeviceLiveToolsThroughputTest** | [**InlineObject31**](InlineObject31.md) |  | 
 
 ### Return type
 
-[**InlineResponse2019**](InlineResponse2019.md)
+[**InlineResponse20113**](InlineResponse20113.md)
 
 ### Authorization
 
@@ -1597,7 +1896,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsWakeOnLan
 
-> InlineResponse20110 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
+> InlineResponse20114 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
 
 Enqueue a job to send a Wake-on-LAN packet from the device
 
@@ -1617,7 +1916,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject27(int32(123), "Mac_example") // InlineObject27 | 
+    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject32(int32(123), "Mac_example") // InlineObject32 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1626,7 +1925,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse20110
+    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse20114
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -1647,11 +1946,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsWakeO
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsWakeOnLan** | [**InlineObject27**](InlineObject27.md) |  | 
+ **createDeviceLiveToolsWakeOnLan** | [**InlineObject32**](InlineObject32.md) |  | 
 
 ### Return type
 
-[**InlineResponse20110**](InlineResponse20110.md)
+[**InlineResponse20114**](InlineResponse20114.md)
 
 ### Authorization
 
@@ -1669,7 +1968,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkApplianceDevicesRedundancySwap
 
-> InlineResponse20067 CreateNetworkApplianceDevicesRedundancySwap(ctx, networkId).Execute()
+> InlineResponse20072 CreateNetworkApplianceDevicesRedundancySwap(ctx, networkId).Execute()
 
 Swap MX primary and warm spare appliances
 
@@ -1697,7 +1996,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateNetworkApplianceDevicesRedundancySwap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceDevicesRedundancySwap`: InlineResponse20067
+    // response from `CreateNetworkApplianceDevicesRedundancySwap`: InlineResponse20072
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateNetworkApplianceDevicesRedundancySwap`: %v\n", resp)
 }
 ```
@@ -1721,7 +2020,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20067**](InlineResponse20067.md)
+[**InlineResponse20072**](InlineResponse20072.md)
 
 ### Authorization
 
@@ -1739,7 +2038,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationDevicesCellularDataProfile
 
-> InlineResponse200320 CreateOrganizationDevicesCellularDataProfile(ctx, organizationId).CreateOrganizationDevicesCellularDataProfile(createOrganizationDevicesCellularDataProfile).Execute()
+> InlineResponse200332 CreateOrganizationDevicesCellularDataProfile(ctx, organizationId).CreateOrganizationDevicesCellularDataProfile(createOrganizationDevicesCellularDataProfile).Execute()
 
 Add a cellular data management profile to this organization
 
@@ -1759,7 +2058,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject265("Name_example", "Description_example", []openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject265 | 
+    createOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject276("Name_example", "Description_example", []openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject276 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1768,7 +2067,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateOrganizationDevicesCellularDataProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesCellularDataProfile`: InlineResponse200320
+    // response from `CreateOrganizationDevicesCellularDataProfile`: InlineResponse200332
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateOrganizationDevicesCellularDataProfile`: %v\n", resp)
 }
 ```
@@ -1789,11 +2088,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesCellularDataProfile** | [**InlineObject265**](InlineObject265.md) |  | 
+ **createOrganizationDevicesCellularDataProfile** | [**InlineObject276**](InlineObject276.md) |  | 
 
 ### Return type
 
-[**InlineResponse200320**](InlineResponse200320.md)
+[**InlineResponse200332**](InlineResponse200332.md)
 
 ### Authorization
 
@@ -1811,7 +2110,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationDevicesControllerMigration
 
-> []InlineResponse200329Items CreateOrganizationDevicesControllerMigration(ctx, organizationId).CreateOrganizationDevicesControllerMigration(createOrganizationDevicesControllerMigration).Execute()
+> []InlineResponse200341Items CreateOrganizationDevicesControllerMigration(ctx, organizationId).CreateOrganizationDevicesControllerMigration(createOrganizationDevicesControllerMigration).Execute()
 
 Migrate devices to another controller or management mode
 
@@ -1831,7 +2130,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesControllerMigration := *openapiclient.NewInlineObject269([]string{"Serials_example"}, "Target_example") // InlineObject269 | 
+    createOrganizationDevicesControllerMigration := *openapiclient.NewInlineObject280([]string{"Serials_example"}, "Target_example") // InlineObject280 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1840,7 +2139,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateOrganizationDevicesControllerMigration``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesControllerMigration`: []InlineResponse200329Items
+    // response from `CreateOrganizationDevicesControllerMigration`: []InlineResponse200341Items
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateOrganizationDevicesControllerMigration`: %v\n", resp)
 }
 ```
@@ -1861,11 +2160,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesControllerMigration** | [**InlineObject269**](InlineObject269.md) |  | 
+ **createOrganizationDevicesControllerMigration** | [**InlineObject280**](InlineObject280.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200329Items**](InlineResponse200329Items.md)
+[**[]InlineResponse200341Items**](InlineResponse200341Items.md)
 
 ### Authorization
 
@@ -1883,7 +2182,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationDevicesPacketCaptureCapture
 
-> InlineResponse200332Items CreateOrganizationDevicesPacketCaptureCapture(ctx, organizationId).CreateOrganizationDevicesPacketCaptureCapture(createOrganizationDevicesPacketCaptureCapture).Execute()
+> InlineResponse200344Items CreateOrganizationDevicesPacketCaptureCapture(ctx, organizationId).CreateOrganizationDevicesPacketCaptureCapture(createOrganizationDevicesPacketCaptureCapture).Execute()
 
 Perform a packet capture on a device and store in Meraki Cloud
 
@@ -1903,7 +2202,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject271([]string{"Serials_example"}, "Name_example") // InlineObject271 | 
+    createOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject282([]string{"Serials_example"}, "Name_example") // InlineObject282 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1912,7 +2211,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateOrganizationDevicesPacketCaptureCapture``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesPacketCaptureCapture`: InlineResponse200332Items
+    // response from `CreateOrganizationDevicesPacketCaptureCapture`: InlineResponse200344Items
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateOrganizationDevicesPacketCaptureCapture`: %v\n", resp)
 }
 ```
@@ -1933,11 +2232,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesPacketCaptureCapture** | [**InlineObject271**](InlineObject271.md) |  | 
+ **createOrganizationDevicesPacketCaptureCapture** | [**InlineObject282**](InlineObject282.md) |  | 
 
 ### Return type
 
-[**InlineResponse200332Items**](InlineResponse200332Items.md)
+[**InlineResponse200344Items**](InlineResponse200344Items.md)
 
 ### Authorization
 
@@ -1955,7 +2254,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationDevicesPacketCaptureSchedule
 
-> InlineResponse200334Items CreateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId).CreateOrganizationDevicesPacketCaptureSchedule(createOrganizationDevicesPacketCaptureSchedule).Execute()
+> InlineResponse200346Items CreateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId).CreateOrganizationDevicesPacketCaptureSchedule(createOrganizationDevicesPacketCaptureSchedule).Execute()
 
 Create a schedule for packet capture
 
@@ -1975,7 +2274,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject275([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject275 | 
+    createOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject286([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject286 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1984,7 +2283,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateOrganizationDevicesPacketCaptureSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200334Items
+    // response from `CreateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200346Items
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateOrganizationDevicesPacketCaptureSchedule`: %v\n", resp)
 }
 ```
@@ -2005,11 +2304,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesPacketCaptureSchedule** | [**InlineObject275**](InlineObject275.md) |  | 
+ **createOrganizationDevicesPacketCaptureSchedule** | [**InlineObject286**](InlineObject286.md) |  | 
 
 ### Return type
 
-[**InlineResponse200334Items**](InlineResponse200334Items.md)
+[**InlineResponse200346Items**](InlineResponse200346Items.md)
 
 ### Authorization
 
@@ -2047,7 +2346,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryDevicesSwapsBulk := *openapiclient.NewInlineObject286([]openapiclient.OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps{*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps(*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkDevices("Old_example", "New_example"), "AfterAction_example")}) // InlineObject286 | 
+    createOrganizationInventoryDevicesSwapsBulk := *openapiclient.NewInlineObject297([]openapiclient.OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps{*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps(*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkDevices("Old_example", "New_example"), "AfterAction_example")}) // InlineObject297 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2077,7 +2376,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryDevicesSwapsBulk** | [**InlineObject286**](InlineObject286.md) |  | 
+ **createOrganizationInventoryDevicesSwapsBulk** | [**InlineObject297**](InlineObject297.md) |  | 
 
 ### Return type
 
@@ -2099,7 +2398,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationWirelessDevicesProvisioningDeployment
 
-> InlineResponse200440 CreateOrganizationWirelessDevicesProvisioningDeployment(ctx, organizationId).CreateOrganizationWirelessDevicesProvisioningDeployment(createOrganizationWirelessDevicesProvisioningDeployment).Execute()
+> InlineResponse200452 CreateOrganizationWirelessDevicesProvisioningDeployment(ctx, organizationId).CreateOrganizationWirelessDevicesProvisioningDeployment(createOrganizationWirelessDevicesProvisioningDeployment).Execute()
 
 Create a zero touch deployment for a wireless access point
 
@@ -2119,7 +2418,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationWirelessDevicesProvisioningDeployment := *openapiclient.NewInlineObject334([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject334 | 
+    createOrganizationWirelessDevicesProvisioningDeployment := *openapiclient.NewInlineObject345([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject345 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2128,7 +2427,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateOrganizationWirelessDevicesProvisioningDeployment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationWirelessDevicesProvisioningDeployment`: InlineResponse200440
+    // response from `CreateOrganizationWirelessDevicesProvisioningDeployment`: InlineResponse200452
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateOrganizationWirelessDevicesProvisioningDeployment`: %v\n", resp)
 }
 ```
@@ -2149,11 +2448,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationWirelessDevicesProvisioningDeployment** | [**InlineObject334**](InlineObject334.md) |  | 
+ **createOrganizationWirelessDevicesProvisioningDeployment** | [**InlineObject345**](InlineObject345.md) |  | 
 
 ### Return type
 
-[**InlineResponse200440**](InlineResponse200440.md)
+[**InlineResponse200452**](InlineResponse200452.md)
 
 ### Authorization
 
@@ -2171,9 +2470,9 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationWirelessDevicesRadsecCertificatesAuthority
 
-> InlineResponse200442 CreateOrganizationWirelessDevicesRadsecCertificatesAuthority(ctx, organizationId).Execute()
+> InlineResponse200454 CreateOrganizationWirelessDevicesRadsecCertificatesAuthority(ctx, organizationId).Execute()
 
-Create an organization's RADSEC device Certificate Authority (CA)
+Create an organization's RadSec device Certificate Authority (CA)
 
 
 
@@ -2199,7 +2498,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateOrganizationWirelessDevicesRadsecCertificatesAuthority``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationWirelessDevicesRadsecCertificatesAuthority`: InlineResponse200442
+    // response from `CreateOrganizationWirelessDevicesRadsecCertificatesAuthority`: InlineResponse200454
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateOrganizationWirelessDevicesRadsecCertificatesAuthority`: %v\n", resp)
 }
 ```
@@ -2223,7 +2522,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200442**](InlineResponse200442.md)
+[**InlineResponse200454**](InlineResponse200454.md)
 
 ### Authorization
 
@@ -2404,7 +2703,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     scheduleId := "scheduleId_example" // string | Schedule ID
-    deleteOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject278("ScheduleId_example") // InlineObject278 | 
+    deleteOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject289("ScheduleId_example") // InlineObject289 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2434,7 +2733,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **deleteOrganizationDevicesPacketCaptureSchedule** | [**InlineObject278**](InlineObject278.md) |  | 
+ **deleteOrganizationDevicesPacketCaptureSchedule** | [**InlineObject289**](InlineObject289.md) |  | 
 
 ### Return type
 
@@ -2527,7 +2826,7 @@ Name | Type | Description  | Notes
 
 ## GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl
 
-> InlineResponse200333 GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl(ctx, organizationId, captureId).Execute()
+> InlineResponse200345 GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl(ctx, organizationId, captureId).Execute()
 
 Get presigned download URL for given packet capture id
 
@@ -2556,7 +2855,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: InlineResponse200333
+    // response from `GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: InlineResponse200345
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: %v\n", resp)
 }
 ```
@@ -2582,7 +2881,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200333**](InlineResponse200333.md)
+[**InlineResponse200345**](InlineResponse200345.md)
 
 ### Authorization
 
@@ -2670,7 +2969,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCellularSims
 
-> InlineResponse20026 GetDeviceCellularSims(ctx, serial).Execute()
+> InlineResponse20027 GetDeviceCellularSims(ctx, serial).Execute()
 
 Return the SIM and APN configurations for a cellular device.
 
@@ -2698,7 +2997,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceCellularSims``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularSims`: InlineResponse20026
+    // response from `GetDeviceCellularSims`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceCellularSims`: %v\n", resp)
 }
 ```
@@ -2722,7 +3021,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -2740,7 +3039,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceClients
 
-> []InlineResponse20030 GetDeviceClients(ctx, serial).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20031 GetDeviceClients(ctx, serial).T0(t0).Timespan(timespan).Execute()
 
 List the clients of a device, up to a maximum of a month ago
 
@@ -2770,7 +3069,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceClients``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceClients`: []InlineResponse20030
+    // response from `GetDeviceClients`: []InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceClients`: %v\n", resp)
 }
 ```
@@ -2796,7 +3095,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20030**](InlineResponse20030.md)
+[**[]InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -2814,7 +3113,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsArpTable
 
-> InlineResponse20031 GetDeviceLiveToolsArpTable(ctx, serial, arpTableId).Execute()
+> InlineResponse20032 GetDeviceLiveToolsArpTable(ctx, serial, arpTableId).Execute()
 
 Return an ARP table live tool job.
 
@@ -2843,7 +3142,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsArpTable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsArpTable`: InlineResponse20031
+    // response from `GetDeviceLiveToolsArpTable`: InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsArpTable`: %v\n", resp)
 }
 ```
@@ -2869,7 +3168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20031**](InlineResponse20031.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -2887,7 +3186,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsCableTest
 
-> InlineResponse20032 GetDeviceLiveToolsCableTest(ctx, serial, id).Execute()
+> InlineResponse20033 GetDeviceLiveToolsCableTest(ctx, serial, id).Execute()
 
 Return a cable test live tool job.
 
@@ -2916,7 +3215,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsCableTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsCableTest`: InlineResponse20032
+    // response from `GetDeviceLiveToolsCableTest`: InlineResponse20033
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsCableTest`: %v\n", resp)
 }
 ```
@@ -2942,7 +3241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -2960,7 +3259,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsLedsBlink
 
-> InlineResponse20033 GetDeviceLiveToolsLedsBlink(ctx, serial, ledsBlinkId).Execute()
+> InlineResponse20034 GetDeviceLiveToolsLedsBlink(ctx, serial, ledsBlinkId).Execute()
 
 Return a blink LEDs job
 
@@ -2989,7 +3288,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsLedsBlink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsLedsBlink`: InlineResponse20033
+    // response from `GetDeviceLiveToolsLedsBlink`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsLedsBlink`: %v\n", resp)
 }
 ```
@@ -3015,7 +3314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -3033,7 +3332,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsMacTable
 
-> InlineResponse20034 GetDeviceLiveToolsMacTable(ctx, serial, macTableId).Execute()
+> InlineResponse20035 GetDeviceLiveToolsMacTable(ctx, serial, macTableId).Execute()
 
 Return a MAC table live tool job.
 
@@ -3062,7 +3361,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsMacTable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsMacTable`: InlineResponse20034
+    // response from `GetDeviceLiveToolsMacTable`: InlineResponse20035
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsMacTable`: %v\n", resp)
 }
 ```
@@ -3088,7 +3387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -3106,7 +3405,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsMulticastRouting
 
-> InlineResponse20035 GetDeviceLiveToolsMulticastRouting(ctx, serial, multicastRoutingId).Execute()
+> InlineResponse20036 GetDeviceLiveToolsMulticastRouting(ctx, serial, multicastRoutingId).Execute()
 
 Return a Multicast routing live tool job.
 
@@ -3135,7 +3434,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsMulticastRouting``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsMulticastRouting`: InlineResponse20035
+    // response from `GetDeviceLiveToolsMulticastRouting`: InlineResponse20036
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsMulticastRouting`: %v\n", resp)
 }
 ```
@@ -3161,7 +3460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 
@@ -3179,7 +3478,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPing
 
-> InlineResponse20036 GetDeviceLiveToolsPing(ctx, serial, id).Execute()
+> InlineResponse20037 GetDeviceLiveToolsPing(ctx, serial, id).Execute()
 
 Return a ping job
 
@@ -3208,7 +3507,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsPing``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPing`: InlineResponse20036
+    // response from `GetDeviceLiveToolsPing`: InlineResponse20037
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsPing`: %v\n", resp)
 }
 ```
@@ -3234,7 +3533,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -3252,7 +3551,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPingDevice
 
-> InlineResponse20037 GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
+> InlineResponse20038 GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
 
 Return a ping device job
 
@@ -3281,7 +3580,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPingDevice`: InlineResponse20037
+    // response from `GetDeviceLiveToolsPingDevice`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -3307,7 +3606,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -3325,7 +3624,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPortsCycle
 
-> InlineResponse20038 GetDeviceLiveToolsPortsCycle(ctx, serial, id).Execute()
+> InlineResponse20039 GetDeviceLiveToolsPortsCycle(ctx, serial, id).Execute()
 
 Return a cycle port live tool job.
 
@@ -3354,7 +3653,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsPortsCycle``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPortsCycle`: InlineResponse20038
+    // response from `GetDeviceLiveToolsPortsCycle`: InlineResponse20039
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsPortsCycle`: %v\n", resp)
 }
 ```
@@ -3380,7 +3679,299 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20039**](InlineResponse20039.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDeviceLiveToolsPortsStatus
+
+> InlineResponse20040 GetDeviceLiveToolsPortsStatus(ctx, serial, jobId).Execute()
+
+Return a port status live tool job.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    jobId := "jobId_example" // string | Job ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetDeviceLiveToolsPortsStatus(context.Background(), serial, jobId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsPortsStatus``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDeviceLiveToolsPortsStatus`: InlineResponse20040
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsPortsStatus`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+**jobId** | **string** | Job ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDeviceLiveToolsPortsStatusRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20040**](InlineResponse20040.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDeviceLiveToolsPowerUsage
+
+> InlineResponse20041 GetDeviceLiveToolsPowerUsage(ctx, serial, jobId).Execute()
+
+Retrieve the status and results of a previously created live tool job fetching details about a device's overall power usage.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    jobId := "jobId_example" // string | Job ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetDeviceLiveToolsPowerUsage(context.Background(), serial, jobId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsPowerUsage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDeviceLiveToolsPowerUsage`: InlineResponse20041
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsPowerUsage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+**jobId** | **string** | Job ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDeviceLiveToolsPowerUsageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20041**](InlineResponse20041.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDeviceLiveToolsRoutingTableLookup
+
+> InlineResponse20042 GetDeviceLiveToolsRoutingTableLookup(ctx, serial, id).Execute()
+
+Return a routing table live tool lookup job for a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    id := "id_example" // string | ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetDeviceLiveToolsRoutingTableLookup(context.Background(), serial, id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsRoutingTableLookup``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDeviceLiveToolsRoutingTableLookup`: InlineResponse20042
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsRoutingTableLookup`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+**id** | **string** | ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDeviceLiveToolsRoutingTableLookupRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20042**](InlineResponse20042.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDeviceLiveToolsRoutingTableSummary
+
+> InlineResponse20043 GetDeviceLiveToolsRoutingTableSummary(ctx, serial, id).Execute()
+
+Return the status and result of a routing table summary job
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    id := "id_example" // string | ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetDeviceLiveToolsRoutingTableSummary(context.Background(), serial, id).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsRoutingTableSummary``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDeviceLiveToolsRoutingTableSummary`: InlineResponse20043
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsRoutingTableSummary`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+**id** | **string** | ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDeviceLiveToolsRoutingTableSummaryRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -3398,7 +3989,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsThroughputTest
 
-> InlineResponse20039 GetDeviceLiveToolsThroughputTest(ctx, serial, throughputTestId).Execute()
+> InlineResponse20044 GetDeviceLiveToolsThroughputTest(ctx, serial, throughputTestId).Execute()
 
 Return a throughput test job
 
@@ -3427,7 +4018,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsThroughputTest`: InlineResponse20039
+    // response from `GetDeviceLiveToolsThroughputTest`: InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -3453,7 +4044,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -3471,7 +4062,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsWakeOnLan
 
-> InlineResponse20040 GetDeviceLiveToolsWakeOnLan(ctx, serial, wakeOnLanId).Execute()
+> InlineResponse20045 GetDeviceLiveToolsWakeOnLan(ctx, serial, wakeOnLanId).Execute()
 
 Return a Wake-on-LAN job
 
@@ -3500,7 +4091,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsWakeOnLan`: InlineResponse20040
+    // response from `GetDeviceLiveToolsWakeOnLan`: InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -3526,7 +4117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -3544,7 +4135,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLldpCdp
 
-> InlineResponse20041 GetDeviceLldpCdp(ctx, serial).Execute()
+> InlineResponse20046 GetDeviceLldpCdp(ctx, serial).Execute()
 
 List LLDP and CDP information for a device
 
@@ -3572,7 +4163,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLldpCdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLldpCdp`: InlineResponse20041
+    // response from `GetDeviceLldpCdp`: InlineResponse20046
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLldpCdp`: %v\n", resp)
 }
 ```
@@ -3596,7 +4187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 
@@ -3614,7 +4205,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLossAndLatencyHistory
 
-> []InlineResponse20042 GetDeviceLossAndLatencyHistory(ctx, serial).Ip(ip).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Uplink(uplink).Execute()
+> []InlineResponse20047 GetDeviceLossAndLatencyHistory(ctx, serial).Ip(ip).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Uplink(uplink).Execute()
 
 Get the uplink loss percentage and latency in milliseconds, and goodput in kilobits per second for MX, MG and Z devices.
 
@@ -3648,7 +4239,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceLossAndLatencyHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLossAndLatencyHistory`: []InlineResponse20042
+    // response from `GetDeviceLossAndLatencyHistory`: []InlineResponse20047
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceLossAndLatencyHistory`: %v\n", resp)
 }
 ```
@@ -3678,7 +4269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20042**](InlineResponse20042.md)
+[**[]InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -3696,7 +4287,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceManagementInterface
 
-> InlineResponse20043 GetDeviceManagementInterface(ctx, serial).Execute()
+> InlineResponse20048 GetDeviceManagementInterface(ctx, serial).Execute()
 
 Return the management interface settings for a device
 
@@ -3724,7 +4315,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetDeviceManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceManagementInterface`: InlineResponse20043
+    // response from `GetDeviceManagementInterface`: InlineResponse20048
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetDeviceManagementInterface`: %v\n", resp)
 }
 ```
@@ -3748,7 +4339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -3836,7 +4427,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceCellularUsageHistory
 
-> []InlineResponse200158 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
+> []InlineResponse200166 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
 
 Return the client's daily cellular data usage history
 
@@ -3865,7 +4456,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceCellularUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200158
+    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200166
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceCellularUsageHistory`: %v\n", resp)
 }
 ```
@@ -3891,7 +4482,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200158**](InlineResponse200158.md)
+[**[]InlineResponse200166**](InlineResponse200166.md)
 
 ### Authorization
 
@@ -3909,7 +4500,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceCerts
 
-> []InlineResponse200159 GetNetworkSmDeviceCerts(ctx, networkId, deviceId).Execute()
+> []InlineResponse200167 GetNetworkSmDeviceCerts(ctx, networkId, deviceId).Execute()
 
 List the certs on a device
 
@@ -3938,7 +4529,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceCerts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceCerts`: []InlineResponse200159
+    // response from `GetNetworkSmDeviceCerts`: []InlineResponse200167
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceCerts`: %v\n", resp)
 }
 ```
@@ -3964,7 +4555,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200159**](InlineResponse200159.md)
+[**[]InlineResponse200167**](InlineResponse200167.md)
 
 ### Authorization
 
@@ -3982,7 +4573,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceConnectivity
 
-> []InlineResponse200160 GetNetworkSmDeviceConnectivity(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200168 GetNetworkSmDeviceConnectivity(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
 
@@ -4014,7 +4605,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceConnectivity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceConnectivity`: []InlineResponse200160
+    // response from `GetNetworkSmDeviceConnectivity`: []InlineResponse200168
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceConnectivity`: %v\n", resp)
 }
 ```
@@ -4043,7 +4634,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200160**](InlineResponse200160.md)
+[**[]InlineResponse200168**](InlineResponse200168.md)
 
 ### Authorization
 
@@ -4061,7 +4652,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDesktopLogs
 
-> []InlineResponse200161 GetNetworkSmDeviceDesktopLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200169 GetNetworkSmDeviceDesktopLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of various Systems Manager network connection details for desktop devices.
 
@@ -4093,7 +4684,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceDesktopLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDesktopLogs`: []InlineResponse200161
+    // response from `GetNetworkSmDeviceDesktopLogs`: []InlineResponse200169
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceDesktopLogs`: %v\n", resp)
 }
 ```
@@ -4122,7 +4713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200161**](InlineResponse200161.md)
+[**[]InlineResponse200169**](InlineResponse200169.md)
 
 ### Authorization
 
@@ -4140,7 +4731,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDeviceCommandLogs
 
-> []InlineResponse200162 GetNetworkSmDeviceDeviceCommandLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200170 GetNetworkSmDeviceDeviceCommandLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of commands sent to Systems Manager devices
 
@@ -4172,7 +4763,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceDeviceCommandLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDeviceCommandLogs`: []InlineResponse200162
+    // response from `GetNetworkSmDeviceDeviceCommandLogs`: []InlineResponse200170
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceDeviceCommandLogs`: %v\n", resp)
 }
 ```
@@ -4201,7 +4792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200162**](InlineResponse200162.md)
+[**[]InlineResponse200170**](InlineResponse200170.md)
 
 ### Authorization
 
@@ -4219,7 +4810,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDeviceProfiles
 
-> []InlineResponse200163 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
+> []InlineResponse200171 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
 
 Get the installed profiles associated with a device
 
@@ -4248,7 +4839,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse200163
+    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse200171
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -4274,7 +4865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200163**](InlineResponse200163.md)
+[**[]InlineResponse200171**](InlineResponse200171.md)
 
 ### Authorization
 
@@ -4292,7 +4883,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceNetworkAdapters
 
-> []InlineResponse200164 GetNetworkSmDeviceNetworkAdapters(ctx, networkId, deviceId).Execute()
+> []InlineResponse200172 GetNetworkSmDeviceNetworkAdapters(ctx, networkId, deviceId).Execute()
 
 List the network adapters of a device
 
@@ -4321,7 +4912,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceNetworkAdapters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceNetworkAdapters`: []InlineResponse200164
+    // response from `GetNetworkSmDeviceNetworkAdapters`: []InlineResponse200172
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceNetworkAdapters`: %v\n", resp)
 }
 ```
@@ -4347,7 +4938,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200164**](InlineResponse200164.md)
+[**[]InlineResponse200172**](InlineResponse200172.md)
 
 ### Authorization
 
@@ -4365,7 +4956,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDevicePerformanceHistory
 
-> []InlineResponse200165 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200173 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of various Systems Manager client metrics for desktop devices.
 
@@ -4397,7 +4988,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDevicePerformanceHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse200165
+    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse200173
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDevicePerformanceHistory`: %v\n", resp)
 }
 ```
@@ -4426,7 +5017,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200165**](InlineResponse200165.md)
+[**[]InlineResponse200173**](InlineResponse200173.md)
 
 ### Authorization
 
@@ -4444,7 +5035,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceRestrictions
 
-> InlineResponse200166 GetNetworkSmDeviceRestrictions(ctx, networkId, deviceId).Execute()
+> InlineResponse200174 GetNetworkSmDeviceRestrictions(ctx, networkId, deviceId).Execute()
 
 List the restrictions on a device
 
@@ -4473,7 +5064,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceRestrictions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceRestrictions`: InlineResponse200166
+    // response from `GetNetworkSmDeviceRestrictions`: InlineResponse200174
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceRestrictions`: %v\n", resp)
 }
 ```
@@ -4499,7 +5090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200166**](InlineResponse200166.md)
+[**InlineResponse200174**](InlineResponse200174.md)
 
 ### Authorization
 
@@ -4517,7 +5108,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceSecurityCenters
 
-> []InlineResponse200167 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
+> []InlineResponse200175 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
 
 List the security centers on a device
 
@@ -4546,7 +5137,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceSecurityCenters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse200167
+    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse200175
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceSecurityCenters`: %v\n", resp)
 }
 ```
@@ -4572,7 +5163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200167**](InlineResponse200167.md)
+[**[]InlineResponse200175**](InlineResponse200175.md)
 
 ### Authorization
 
@@ -4590,7 +5181,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceSoftwares
 
-> []InlineResponse200168 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
+> []InlineResponse200176 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
 
 Get a list of softwares associated with a device
 
@@ -4619,7 +5210,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceSoftwares``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse200168
+    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse200176
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceSoftwares`: %v\n", resp)
 }
 ```
@@ -4645,7 +5236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200168**](InlineResponse200168.md)
+[**[]InlineResponse200176**](InlineResponse200176.md)
 
 ### Authorization
 
@@ -4663,7 +5254,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceWlanLists
 
-> []InlineResponse200170 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
+> []InlineResponse200178 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
 
 List the saved SSID names on a device
 
@@ -4692,7 +5283,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceWlanLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse200170
+    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse200178
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceWlanLists`: %v\n", resp)
 }
 ```
@@ -4718,7 +5309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200170**](InlineResponse200170.md)
+[**[]InlineResponse200178**](InlineResponse200178.md)
 
 ### Authorization
 
@@ -4736,7 +5327,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDevices
 
-> []InlineResponse200151 GetNetworkSmDevices(ctx, networkId).Fields(fields).WifiMacs(wifiMacs).Serials(serials).Ids(ids).Uuids(uuids).SystemTypes(systemTypes).Scope(scope).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200159 GetNetworkSmDevices(ctx, networkId).Fields(fields).WifiMacs(wifiMacs).Serials(serials).Ids(ids).Uuids(uuids).SystemTypes(systemTypes).Scope(scope).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the devices enrolled in an SM network with various specified fields and filters
 
@@ -4774,7 +5365,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDevices`: []InlineResponse200151
+    // response from `GetNetworkSmDevices`: []InlineResponse200159
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -4808,7 +5399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200151**](InlineResponse200151.md)
+[**[]InlineResponse200159**](InlineResponse200159.md)
 
 ### Authorization
 
@@ -4826,7 +5417,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessDevicesConnectionStats
 
-> []InlineResponse20056 GetNetworkWirelessDevicesConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Execute()
+> []InlineResponse20061 GetNetworkWirelessDevicesConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Execute()
 
 Aggregated connectivity info for this network, grouped by node
 
@@ -4860,7 +5451,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkWirelessDevicesConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessDevicesConnectionStats`: []InlineResponse20056
+    // response from `GetNetworkWirelessDevicesConnectionStats`: []InlineResponse20061
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkWirelessDevicesConnectionStats`: %v\n", resp)
 }
 ```
@@ -4890,7 +5481,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20056**](InlineResponse20056.md)
+[**[]InlineResponse20061**](InlineResponse20061.md)
 
 ### Authorization
 
@@ -4908,7 +5499,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessDevicesLatencyStats
 
-> []InlineResponse20058 GetNetworkWirelessDevicesLatencyStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
+> []InlineResponse20063 GetNetworkWirelessDevicesLatencyStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
 
 Aggregated latency info for this network, grouped by node
 
@@ -4944,7 +5535,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkWirelessDevicesLatencyStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessDevicesLatencyStats`: []InlineResponse20058
+    // response from `GetNetworkWirelessDevicesLatencyStats`: []InlineResponse20063
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkWirelessDevicesLatencyStats`: %v\n", resp)
 }
 ```
@@ -4976,7 +5567,249 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20058**](InlineResponse20058.md)
+[**[]InlineResponse20063**](InlineResponse20063.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceDevicesInterfacesL3
+
+> InlineResponse200270 GetOrganizationApplianceDevicesInterfacesL3(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List L3 interfaces across networks for the organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | Optional Network IDs to filter results (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationApplianceDevicesInterfacesL3(context.Background(), organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationApplianceDevicesInterfacesL3``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceDevicesInterfacesL3`: InlineResponse200270
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationApplianceDevicesInterfacesL3`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceDevicesInterfacesL3Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | Optional Network IDs to filter results | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200270**](InlineResponse200270.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceDevicesInterfacesPortsByDevice
+
+> InlineResponse200271 GetOrganizationApplianceDevicesInterfacesPortsByDevice(ctx, organizationId).Serials(serials).Numbers(numbers).Execute()
+
+Returns port configurations for appliances in a given organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Parameter to filter the results by device serials (optional)
+    numbers := []string{"Inner_example"} // []string | Parameter to filter the results by specific ports (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice(context.Background(), organizationId).Serials(serials).Numbers(numbers).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceDevicesInterfacesPortsByDevice`: InlineResponse200271
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceDevicesInterfacesPortsByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Parameter to filter the results by device serials | 
+ **numbers** | **[]string** | Parameter to filter the results by specific ports | 
+
+### Return type
+
+[**InlineResponse200271**](InlineResponse200271.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice
+
+> InlineResponse200272 GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
+
+Return time-series digital optical monitoring (DOM) readings for ports on each DOM-enabled Catalyst appliance in an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 10. Default is 5. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 30 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 30 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 30 days. The default is 1 day. If interval is provided, the timespan will be autocalculated. (optional)
+    interval := int32(56) // int32 | The time interval in seconds for returned data. The valid intervals are: 300, 1200, 14400, 86400. The default is 1200. Interval is calculated if time params are provided. (optional)
+    networkIds := []string{"Inner_example"} // []string | Networks for which information should be gathered. (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter usage by appliance serial. (optional)
+    portIds := []string{"Inner_example"} // []string | Optional parameter to filter usage by port ID. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: InlineResponse200272
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 10. Default is 5. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 30 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 30 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 30 days. The default is 1 day. If interval is provided, the timespan will be autocalculated. | 
+ **interval** | **int32** | The time interval in seconds for returned data. The valid intervals are: 300, 1200, 14400, 86400. The default is 1200. Interval is calculated if time params are provided. | 
+ **networkIds** | **[]string** | Networks for which information should be gathered. | 
+ **serials** | **[]string** | Optional parameter to filter usage by appliance serial. | 
+ **portIds** | **[]string** | Optional parameter to filter usage by port ID. | 
+
+### Return type
+
+[**InlineResponse200272**](InlineResponse200272.md)
 
 ### Authorization
 
@@ -4994,7 +5827,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDevicesRedundancyByNetwork
 
-> InlineResponse20067 GetOrganizationApplianceDevicesRedundancyByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse20072 GetOrganizationApplianceDevicesRedundancyByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return MX warm spare settings
 
@@ -5025,7 +5858,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationApplianceDevicesRedundancyByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDevicesRedundancyByNetwork`: InlineResponse20067
+    // response from `GetOrganizationApplianceDevicesRedundancyByNetwork`: InlineResponse20072
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationApplianceDevicesRedundancyByNetwork`: %v\n", resp)
 }
 ```
@@ -5052,7 +5885,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20067**](InlineResponse20067.md)
+[**InlineResponse20072**](InlineResponse20072.md)
 
 ### Authorization
 
@@ -5070,7 +5903,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice
 
-> InlineResponse200300 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200312 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Uplink overrides configured locally on Campus Gateway devices in an organization.
 
@@ -5102,7 +5935,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200300
+    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200312
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: %v\n", resp)
 }
 ```
@@ -5130,7 +5963,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200300**](InlineResponse200300.md)
+[**InlineResponse200312**](InlineResponse200312.md)
 
 ### Authorization
 
@@ -5148,7 +5981,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevices
 
-> []InlineResponse200122 GetOrganizationDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).NetworkIds(networkIds).ProductTypes(productTypes).Tags(tags).TagsFilterType(tagsFilterType).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).SensorMetrics(sensorMetrics).SensorAlertProfileIds(sensorAlertProfileIds).Models(models).Execute()
+> []InlineResponse200130 GetOrganizationDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).NetworkIds(networkIds).ProductTypes(productTypes).Tags(tags).TagsFilterType(tagsFilterType).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).SensorMetrics(sensorMetrics).SensorAlertProfileIds(sensorAlertProfileIds).Models(models).Execute()
 
 List the devices in an organization that have been assigned to a network.
 
@@ -5193,7 +6026,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevices`: []InlineResponse200122
+    // response from `GetOrganizationDevices`: []InlineResponse200130
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevices`: %v\n", resp)
 }
 ```
@@ -5234,7 +6067,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200122**](InlineResponse200122.md)
+[**[]InlineResponse200130**](InlineResponse200130.md)
 
 ### Authorization
 
@@ -5252,7 +6085,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesAvailabilities
 
-> []InlineResponse200316 GetOrganizationDevicesAvailabilities(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Statuses(statuses).Execute()
+> []InlineResponse200328 GetOrganizationDevicesAvailabilities(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Statuses(statuses).Execute()
 
 List the availability information for devices in an organization
 
@@ -5289,7 +6122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesAvailabilities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesAvailabilities`: []InlineResponse200316
+    // response from `GetOrganizationDevicesAvailabilities`: []InlineResponse200328
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesAvailabilities`: %v\n", resp)
 }
 ```
@@ -5322,7 +6155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200316**](InlineResponse200316.md)
+[**[]InlineResponse200328**](InlineResponse200328.md)
 
 ### Authorization
 
@@ -5340,7 +6173,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesAvailabilitiesChangeHistory
 
-> []InlineResponse200317 GetOrganizationDevicesAvailabilitiesChangeHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Serials(serials).ProductTypes(productTypes).NetworkIds(networkIds).Statuses(statuses).Execute()
+> []InlineResponse200329 GetOrganizationDevicesAvailabilitiesChangeHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Serials(serials).ProductTypes(productTypes).NetworkIds(networkIds).Statuses(statuses).Execute()
 
 List the availability history information for devices in an organization.
 
@@ -5378,7 +6211,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesAvailabilitiesChangeHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesAvailabilitiesChangeHistory`: []InlineResponse200317
+    // response from `GetOrganizationDevicesAvailabilitiesChangeHistory`: []InlineResponse200329
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesAvailabilitiesChangeHistory`: %v\n", resp)
 }
 ```
@@ -5412,7 +6245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200317**](InlineResponse200317.md)
+[**[]InlineResponse200329**](InlineResponse200329.md)
 
 ### Authorization
 
@@ -5430,7 +6263,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataDevices
 
-> InlineResponse200318 GetOrganizationDevicesCellularDataDevices(ctx, organizationId).IncludeAssigned(includeAssigned).IncludedSerials(includedSerials).ExcludedSerials(excludedSerials).IncludedProfileIds(includedProfileIds).ExcludedProfileIds(excludedProfileIds).DeviceTypes(deviceTypes).Slots(slots).Name(name).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200330 GetOrganizationDevicesCellularDataDevices(ctx, organizationId).IncludeAssigned(includeAssigned).IncludedSerials(includedSerials).ExcludedSerials(excludedSerials).IncludedProfileIds(includedProfileIds).ExcludedProfileIds(excludedProfileIds).DeviceTypes(deviceTypes).Slots(slots).Name(name).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List devices eligible for Cellular Data Management profile assignment in this organization
 
@@ -5470,7 +6303,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularDataDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataDevices`: InlineResponse200318
+    // response from `GetOrganizationDevicesCellularDataDevices`: InlineResponse200330
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularDataDevices`: %v\n", resp)
 }
 ```
@@ -5506,7 +6339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200318**](InlineResponse200318.md)
+[**InlineResponse200330**](InlineResponse200330.md)
 
 ### Authorization
 
@@ -5524,7 +6357,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataProfiles
 
-> InlineResponse200319 GetOrganizationDevicesCellularDataProfiles(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200331 GetOrganizationDevicesCellularDataProfiles(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List cellular data management profiles in this organization
 
@@ -5557,7 +6390,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularDataProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataProfiles`: InlineResponse200319
+    // response from `GetOrganizationDevicesCellularDataProfiles`: InlineResponse200331
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularDataProfiles`: %v\n", resp)
 }
 ```
@@ -5586,7 +6419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200319**](InlineResponse200319.md)
+[**InlineResponse200331**](InlineResponse200331.md)
 
 ### Authorization
 
@@ -5604,7 +6437,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataProfilesAssignments
 
-> InlineResponse200321 GetOrganizationDevicesCellularDataProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200333 GetOrganizationDevicesCellularDataProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Cellular Data Management Profile assignments in this organization
 
@@ -5637,7 +6470,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularDataProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataProfilesAssignments`: InlineResponse200321
+    // response from `GetOrganizationDevicesCellularDataProfilesAssignments`: InlineResponse200333
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularDataProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -5666,7 +6499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200321**](InlineResponse200321.md)
+[**InlineResponse200333**](InlineResponse200333.md)
 
 ### Authorization
 
@@ -5684,7 +6517,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataUsageByDevice
 
-> InlineResponse200324 GetOrganizationDevicesCellularDataUsageByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200336 GetOrganizationDevicesCellularDataUsageByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List current cellular data usage for devices in this organization
 
@@ -5716,7 +6549,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularDataUsageByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataUsageByDevice`: InlineResponse200324
+    // response from `GetOrganizationDevicesCellularDataUsageByDevice`: InlineResponse200336
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularDataUsageByDevice`: %v\n", resp)
 }
 ```
@@ -5744,7 +6577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200324**](InlineResponse200324.md)
+[**InlineResponse200336**](InlineResponse200336.md)
 
 ### Authorization
 
@@ -5762,7 +6595,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval
 
-> InlineResponse200325 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> InlineResponse200337 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 List historical cellular data usage grouped by device and interval in this organization
 
@@ -5798,7 +6631,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200325
+    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200337
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -5830,7 +6663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200325**](InlineResponse200325.md)
+[**InlineResponse200337**](InlineResponse200337.md)
 
 ### Authorization
 
@@ -5848,7 +6681,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularGeolocations
 
-> InlineResponse200326 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200338 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular geolocation telemetry for devices in an organization
 
@@ -5880,7 +6713,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularGeolocations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200326
+    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200338
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularGeolocations`: %v\n", resp)
 }
 ```
@@ -5908,7 +6741,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200326**](InlineResponse200326.md)
+[**InlineResponse200338**](InlineResponse200338.md)
 
 ### Authorization
 
@@ -5926,7 +6759,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularUplinksBandsByDevice
 
-> InlineResponse200327 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200339 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular uplink signal information for devices in an organization
 
@@ -5958,7 +6791,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularUplinksBandsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200327
+    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200339
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularUplinksBandsByDevice`: %v\n", resp)
 }
 ```
@@ -5986,7 +6819,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200327**](InlineResponse200327.md)
+[**InlineResponse200339**](InlineResponse200339.md)
 
 ### Authorization
 
@@ -6004,7 +6837,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularUplinksTowersByDevice
 
-> InlineResponse200328 GetOrganizationDevicesCellularUplinksTowersByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200340 GetOrganizationDevicesCellularUplinksTowersByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular tower information for devices in an organization
 
@@ -6036,7 +6869,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesCellularUplinksTowersByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularUplinksTowersByDevice`: InlineResponse200328
+    // response from `GetOrganizationDevicesCellularUplinksTowersByDevice`: InlineResponse200340
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesCellularUplinksTowersByDevice`: %v\n", resp)
 }
 ```
@@ -6064,7 +6897,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200328**](InlineResponse200328.md)
+[**InlineResponse200340**](InlineResponse200340.md)
 
 ### Authorization
 
@@ -6082,7 +6915,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesControllerMigrations
 
-> InlineResponse200329 GetOrganizationDevicesControllerMigrations(ctx, organizationId).Serials(serials).NetworkIds(networkIds).Target(target).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200341 GetOrganizationDevicesControllerMigrations(ctx, organizationId).Serials(serials).NetworkIds(networkIds).Target(target).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve device migration statuses in an organization
 
@@ -6116,7 +6949,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesControllerMigrations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesControllerMigrations`: InlineResponse200329
+    // response from `GetOrganizationDevicesControllerMigrations`: InlineResponse200341
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesControllerMigrations`: %v\n", resp)
 }
 ```
@@ -6146,7 +6979,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200329**](InlineResponse200329.md)
+[**InlineResponse200341**](InlineResponse200341.md)
 
 ### Authorization
 
@@ -6164,7 +6997,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesOverviewByModel
 
-> InlineResponse200331 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
+> InlineResponse200343 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
 
 Lists the count for each device model
 
@@ -6195,7 +7028,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesOverviewByModel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200331
+    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200343
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesOverviewByModel`: %v\n", resp)
 }
 ```
@@ -6222,7 +7055,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200331**](InlineResponse200331.md)
+[**InlineResponse200343**](InlineResponse200343.md)
 
 ### Authorization
 
@@ -6240,7 +7073,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPacketCaptureCaptures
 
-> InlineResponse200332 GetOrganizationDevicesPacketCaptureCaptures(ctx, organizationId).CaptureIds(captureIds).NetworkIds(networkIds).Serials(serials).Process(process).CaptureStatus(captureStatus).Name(name).ClientMac(clientMac).Notes(notes).DeviceName(deviceName).AdminName(adminName).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).Execute()
+> InlineResponse200344 GetOrganizationDevicesPacketCaptureCaptures(ctx, organizationId).CaptureIds(captureIds).NetworkIds(networkIds).Serials(serials).Process(process).CaptureStatus(captureStatus).Name(name).ClientMac(clientMac).Notes(notes).DeviceName(deviceName).AdminName(adminName).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).Execute()
 
 List Packet Captures
 
@@ -6285,7 +7118,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesPacketCaptureCaptures``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPacketCaptureCaptures`: InlineResponse200332
+    // response from `GetOrganizationDevicesPacketCaptureCaptures`: InlineResponse200344
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesPacketCaptureCaptures`: %v\n", resp)
 }
 ```
@@ -6326,7 +7159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200332**](InlineResponse200332.md)
+[**InlineResponse200344**](InlineResponse200344.md)
 
 ### Authorization
 
@@ -6344,7 +7177,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPacketCaptureSchedules
 
-> InlineResponse200334 GetOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ScheduleIds(scheduleIds).NetworkIds(networkIds).DeviceIds(deviceIds).Execute()
+> InlineResponse200346 GetOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ScheduleIds(scheduleIds).NetworkIds(networkIds).DeviceIds(deviceIds).Execute()
 
 List the Packet Capture Schedules
 
@@ -6375,7 +7208,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesPacketCaptureSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPacketCaptureSchedules`: InlineResponse200334
+    // response from `GetOrganizationDevicesPacketCaptureSchedules`: InlineResponse200346
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesPacketCaptureSchedules`: %v\n", resp)
 }
 ```
@@ -6402,7 +7235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200334**](InlineResponse200334.md)
+[**InlineResponse200346**](InlineResponse200346.md)
 
 ### Authorization
 
@@ -6420,7 +7253,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPowerModulesStatusesByDevice
 
-> []InlineResponse200336 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200348 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the most recent status information for power modules in rackmount MX and MS devices that support them
 
@@ -6456,7 +7289,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesPowerModulesStatusesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200336
+    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200348
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesPowerModulesStatusesByDevice`: %v\n", resp)
 }
 ```
@@ -6488,7 +7321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200336**](InlineResponse200336.md)
+[**[]InlineResponse200348**](InlineResponse200348.md)
 
 ### Authorization
 
@@ -6506,7 +7339,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesProvisioningStatuses
 
-> []InlineResponse200337 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200349 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the provisioning statuses information for devices in an organization.
 
@@ -6543,7 +7376,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesProvisioningStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200337
+    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200349
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesProvisioningStatuses`: %v\n", resp)
 }
 ```
@@ -6576,7 +7409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200337**](InlineResponse200337.md)
+[**[]InlineResponse200349**](InlineResponse200349.md)
 
 ### Authorization
 
@@ -6594,7 +7427,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatuses
 
-> []InlineResponse200338 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200350 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the status of every Meraki device in the organization
 
@@ -6632,7 +7465,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200338
+    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200350
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesStatuses`: %v\n", resp)
 }
 ```
@@ -6666,7 +7499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200338**](InlineResponse200338.md)
+[**[]InlineResponse200350**](InlineResponse200350.md)
 
 ### Authorization
 
@@ -6684,7 +7517,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatusesOverview
 
-> InlineResponse200339 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
+> InlineResponse200351 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
 
 Return an overview of current device statuses
 
@@ -6714,7 +7547,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200339
+    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200351
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesStatusesOverview`: %v\n", resp)
 }
 ```
@@ -6740,7 +7573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200339**](InlineResponse200339.md)
+[**InlineResponse200351**](InlineResponse200351.md)
 
 ### Authorization
 
@@ -6758,7 +7591,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesSystemMemoryUsageHistoryByInterval
 
-> InlineResponse200340 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
+> InlineResponse200352 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
 
 Return the memory utilization history in kB for devices in the organization.
 
@@ -6796,7 +7629,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200340
+    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200352
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -6830,7 +7663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200340**](InlineResponse200340.md)
+[**InlineResponse200352**](InlineResponse200352.md)
 
 ### Authorization
 
@@ -6848,7 +7681,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksAddressesByDevice
 
-> []InlineResponse200341 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200353 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the current uplink addresses for devices in an organization.
 
@@ -6884,7 +7717,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesUplinksAddressesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200341
+    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200353
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesUplinksAddressesByDevice`: %v\n", resp)
 }
 ```
@@ -6916,7 +7749,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200341**](InlineResponse200341.md)
+[**[]InlineResponse200353**](InlineResponse200353.md)
 
 ### Authorization
 
@@ -6934,7 +7767,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksLossAndLatency
 
-> []InlineResponse200342 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
+> []InlineResponse200354 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
 
 Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 
@@ -6967,7 +7800,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesUplinksLossAndLatency``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200342
+    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200354
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesUplinksLossAndLatency`: %v\n", resp)
 }
 ```
@@ -6996,7 +7829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200342**](InlineResponse200342.md)
+[**[]InlineResponse200354**](InlineResponse200354.md)
 
 ### Authorization
 
@@ -7014,7 +7847,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFloorPlansAutoLocateDevices
 
-> []InlineResponse200347 GetOrganizationFloorPlansAutoLocateDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
+> []InlineResponse200359 GetOrganizationFloorPlansAutoLocateDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
 
 List auto locate details for each device in your organization
 
@@ -7047,7 +7880,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationFloorPlansAutoLocateDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFloorPlansAutoLocateDevices`: []InlineResponse200347
+    // response from `GetOrganizationFloorPlansAutoLocateDevices`: []InlineResponse200359
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationFloorPlansAutoLocateDevices`: %v\n", resp)
 }
 ```
@@ -7076,7 +7909,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200347**](InlineResponse200347.md)
+[**[]InlineResponse200359**](InlineResponse200359.md)
 
 ### Authorization
 
@@ -7094,7 +7927,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevice
 
-> InlineResponse200356 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
+> InlineResponse200368 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
 
 Return a single device from the inventory of an organization
 
@@ -7123,7 +7956,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationInventoryDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevice`: InlineResponse200356
+    // response from `GetOrganizationInventoryDevice`: InlineResponse200368
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationInventoryDevice`: %v\n", resp)
 }
 ```
@@ -7149,7 +7982,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200356**](InlineResponse200356.md)
+[**InlineResponse200368**](InlineResponse200368.md)
 
 ### Authorization
 
@@ -7167,7 +8000,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevices
 
-> []InlineResponse200356 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).EoxStatuses(eoxStatuses).Execute()
+> []InlineResponse200368 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).EoxStatuses(eoxStatuses).Execute()
 
 Return the device inventory for an organization
 
@@ -7209,7 +8042,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationInventoryDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevices`: []InlineResponse200356
+    // response from `GetOrganizationInventoryDevices`: []InlineResponse200368
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationInventoryDevices`: %v\n", resp)
 }
 ```
@@ -7247,7 +8080,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200356**](InlineResponse200356.md)
+[**[]InlineResponse200368**](InlineResponse200368.md)
 
 ### Authorization
 
@@ -7265,7 +8098,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevicesEoxOverview
 
-> InlineResponse200357 GetOrganizationInventoryDevicesEoxOverview(ctx, organizationId).Execute()
+> InlineResponse200369 GetOrganizationInventoryDevicesEoxOverview(ctx, organizationId).Execute()
 
 Fetch the EOX summary for an organization, including counts of devices that are end-of-sale, end-of-support, and end-of-support-soon.
 
@@ -7293,7 +8126,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationInventoryDevicesEoxOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevicesEoxOverview`: InlineResponse200357
+    // response from `GetOrganizationInventoryDevicesEoxOverview`: InlineResponse200369
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationInventoryDevicesEoxOverview`: %v\n", resp)
 }
 ```
@@ -7317,7 +8150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200357**](InlineResponse200357.md)
+[**InlineResponse200369**](InlineResponse200369.md)
 
 ### Authorization
 
@@ -7408,7 +8241,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesByUsage
 
-> []InlineResponse200412 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200424 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 devices sorted by data usage over given time range
 
@@ -7444,7 +8277,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationSummaryTopDevicesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200412
+    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200424
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationSummaryTopDevicesByUsage`: %v\n", resp)
 }
 ```
@@ -7476,7 +8309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200412**](InlineResponse200412.md)
+[**[]InlineResponse200424**](InlineResponse200424.md)
 
 ### Authorization
 
@@ -7494,7 +8327,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesModelsByUsage
 
-> []InlineResponse200413 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200425 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 device models sorted by data usage over given time range
 
@@ -7530,7 +8363,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationSummaryTopDevicesModelsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200413
+    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200425
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationSummaryTopDevicesModelsByUsage`: %v\n", resp)
 }
 ```
@@ -7562,7 +8395,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200413**](InlineResponse200413.md)
+[**[]InlineResponse200425**](InlineResponse200425.md)
 
 ### Authorization
 
@@ -7580,7 +8413,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice
 
-> InlineResponse200460 GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200472 GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces in an organization
 
@@ -7615,7 +8448,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: InlineResponse200460
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: InlineResponse200472
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: %v\n", resp)
 }
 ```
@@ -7646,7 +8479,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200460**](InlineResponse200460.md)
+[**InlineResponse200472**](InlineResponse200472.md)
 
 ### Authorization
 
@@ -7664,7 +8497,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice
 
-> InlineResponse200461 GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200473 GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history status in an organization
 
@@ -7700,7 +8533,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: InlineResponse200461
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: InlineResponse200473
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -7732,7 +8565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200461**](InlineResponse200461.md)
+[**InlineResponse200473**](InlineResponse200473.md)
 
 ### Authorization
 
@@ -7750,7 +8583,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval
 
-> InlineResponse200462 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200474 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history usage in an organization
 
@@ -7785,7 +8618,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200462
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200474
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -7816,7 +8649,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200462**](InlineResponse200462.md)
+[**InlineResponse200474**](InlineResponse200474.md)
 
 ### Authorization
 
@@ -7834,7 +8667,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice
 
-> InlineResponse200463 GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200475 GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces in an organization
 
@@ -7869,7 +8702,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: InlineResponse200463
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: InlineResponse200475
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: %v\n", resp)
 }
 ```
@@ -7900,7 +8733,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200463**](InlineResponse200463.md)
+[**InlineResponse200475**](InlineResponse200475.md)
 
 ### Authorization
 
@@ -7918,7 +8751,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice
 
-> InlineResponse200464 GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200476 GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history status in an organization
 
@@ -7954,7 +8787,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: InlineResponse200464
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: InlineResponse200476
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -7986,7 +8819,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200464**](InlineResponse200464.md)
+[**InlineResponse200476**](InlineResponse200476.md)
 
 ### Authorization
 
@@ -8004,7 +8837,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval
 
-> InlineResponse200465 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200477 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history usage in an organization
 
@@ -8039,7 +8872,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200465
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200477
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -8070,7 +8903,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200465**](InlineResponse200465.md)
+[**InlineResponse200477**](InlineResponse200477.md)
 
 ### Authorization
 
@@ -8088,7 +8921,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice
 
-> InlineResponse200466 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200478 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the packet counters for the interfaces of a Wireless LAN controller
 
@@ -8124,7 +8957,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200466
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200478
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -8156,7 +8989,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200466**](InlineResponse200466.md)
+[**InlineResponse200478**](InlineResponse200478.md)
 
 ### Authorization
 
@@ -8174,7 +9007,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval
 
-> InlineResponse200467 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200479 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the traffic for the interfaces of a Wireless LAN controller
 
@@ -8210,7 +9043,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200467
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200479
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -8242,7 +9075,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200467**](InlineResponse200467.md)
+[**InlineResponse200479**](InlineResponse200479.md)
 
 ### Authorization
 
@@ -8260,7 +9093,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory
 
-> []InlineResponse200468 GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200480 GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the failover events of wireless LAN controllers in an organization
 
@@ -8295,7 +9128,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: []InlineResponse200468
+    // response from `GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: []InlineResponse200480
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: %v\n", resp)
 }
 ```
@@ -8326,7 +9159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200468**](InlineResponse200468.md)
+[**[]InlineResponse200480**](InlineResponse200480.md)
 
 ### Authorization
 
@@ -8344,7 +9177,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesRedundancyStatuses
 
-> InlineResponse200469 GetOrganizationWirelessControllerDevicesRedundancyStatuses(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200481 GetOrganizationWirelessControllerDevicesRedundancyStatuses(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List redundancy details of wireless LAN controllers in an organization
 
@@ -8376,7 +9209,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesRedundancyStatuses`: InlineResponse200469
+    // response from `GetOrganizationWirelessControllerDevicesRedundancyStatuses`: InlineResponse200481
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyStatuses`: %v\n", resp)
 }
 ```
@@ -8404,7 +9237,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200469**](InlineResponse200469.md)
+[**InlineResponse200481**](InlineResponse200481.md)
 
 ### Authorization
 
@@ -8422,7 +9255,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval
 
-> InlineResponse200470 GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200482 GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List cpu utilization data of wireless LAN controllers in an organization
 
@@ -8457,7 +9290,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: InlineResponse200470
+    // response from `GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: InlineResponse200482
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -8488,7 +9321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200470**](InlineResponse200470.md)
+[**InlineResponse200482**](InlineResponse200482.md)
 
 ### Authorization
 
@@ -8506,7 +9339,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByDevice
 
-> []InlineResponse200431 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200443 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization for all bands in a network, split by AP
 
@@ -8543,7 +9376,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200431
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200443
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice`: %v\n", resp)
 }
 ```
@@ -8576,7 +9409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200431**](InlineResponse200431.md)
+[**[]InlineResponse200443**](InlineResponse200443.md)
 
 ### Authorization
 
@@ -8594,7 +9427,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByNetwork
 
-> []InlineResponse200432 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200444 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization across all bands for all networks in the organization
 
@@ -8631,7 +9464,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200432
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200444
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: %v\n", resp)
 }
 ```
@@ -8664,7 +9497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200432**](InlineResponse200432.md)
+[**[]InlineResponse200444**](InlineResponse200444.md)
 
 ### Authorization
 
@@ -8682,7 +9515,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval
 
-> []InlineResponse200433 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200445 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands, segmented by device.
 
@@ -8719,7 +9552,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200433
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200445
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -8752,7 +9585,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200433**](InlineResponse200433.md)
+[**[]InlineResponse200445**](InlineResponse200445.md)
 
 ### Authorization
 
@@ -8770,7 +9603,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval
 
-> []InlineResponse200434 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200446 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands
 
@@ -8807,7 +9640,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200434
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200446
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: %v\n", resp)
 }
 ```
@@ -8840,7 +9673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200434**](InlineResponse200434.md)
+[**[]InlineResponse200446**](InlineResponse200446.md)
 
 ### Authorization
 
@@ -8858,7 +9691,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesEthernetStatuses
 
-> []InlineResponse200435 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200447 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the most recent Ethernet link speed, duplex, aggregation and power mode and status information for wireless devices.
 
@@ -8890,7 +9723,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesEthernetStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200435
+    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200447
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesEthernetStatuses`: %v\n", resp)
 }
 ```
@@ -8918,7 +9751,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200435**](InlineResponse200435.md)
+[**[]InlineResponse200447**](InlineResponse200447.md)
 
 ### Authorization
 
@@ -8936,7 +9769,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByClient
 
-> []InlineResponse200436 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200448 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all clients in the organization.
 
@@ -8974,7 +9807,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesPacketLossByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200436
+    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200448
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesPacketLossByClient`: %v\n", resp)
 }
 ```
@@ -9008,7 +9841,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200436**](InlineResponse200436.md)
+[**[]InlineResponse200448**](InlineResponse200448.md)
 
 ### Authorization
 
@@ -9026,7 +9859,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByDevice
 
-> []InlineResponse200437 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200449 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all devices in the organization
 
@@ -9064,7 +9897,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesPacketLossByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200437
+    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200449
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesPacketLossByDevice`: %v\n", resp)
 }
 ```
@@ -9098,7 +9931,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200437**](InlineResponse200437.md)
+[**[]InlineResponse200449**](InlineResponse200449.md)
 
 ### Authorization
 
@@ -9116,7 +9949,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByNetwork
 
-> []InlineResponse200438 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200450 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all networks in the organization.
 
@@ -9154,7 +9987,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesPacketLossByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200438
+    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200450
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesPacketLossByNetwork`: %v\n", resp)
 }
 ```
@@ -9188,7 +10021,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200438**](InlineResponse200438.md)
+[**[]InlineResponse200450**](InlineResponse200450.md)
 
 ### Authorization
 
@@ -9206,7 +10039,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPowerModeHistory
 
-> InlineResponse200439 GetOrganizationWirelessDevicesPowerModeHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+> InlineResponse200451 GetOrganizationWirelessDevicesPowerModeHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
 
 Return a record of power mode changes for wireless devices in the organization
 
@@ -9242,7 +10075,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesPowerModeHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPowerModeHistory`: InlineResponse200439
+    // response from `GetOrganizationWirelessDevicesPowerModeHistory`: InlineResponse200451
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesPowerModeHistory`: %v\n", resp)
 }
 ```
@@ -9274,7 +10107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200439**](InlineResponse200439.md)
+[**InlineResponse200451**](InlineResponse200451.md)
 
 ### Authorization
 
@@ -9292,7 +10125,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesProvisioningDeployments
 
-> []InlineResponse200440 GetOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).SortBy(sortBy).SortOrder(sortOrder).DeploymentType(deploymentType).Execute()
+> []InlineResponse200452 GetOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).SortBy(sortBy).SortOrder(sortOrder).DeploymentType(deploymentType).Execute()
 
 List the zero touch deployments for wireless access points in an organization
 
@@ -9327,7 +10160,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesProvisioningDeployments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesProvisioningDeployments`: []InlineResponse200440
+    // response from `GetOrganizationWirelessDevicesProvisioningDeployments`: []InlineResponse200452
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesProvisioningDeployments`: %v\n", resp)
 }
 ```
@@ -9358,7 +10191,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200440**](InlineResponse200440.md)
+[**[]InlineResponse200452**](InlineResponse200452.md)
 
 ### Authorization
 
@@ -9376,9 +10209,9 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesRadsecCertificatesAuthorities
 
-> []InlineResponse200441 GetOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
+> []InlineResponse200453 GetOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
 
-Query for details on the organization's RADSEC device Certificate Authority certificates (CAs)
+Query for details on the organization's RadSec device Certificate Authority certificates (CAs)
 
 
 
@@ -9405,7 +10238,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthorities`: []InlineResponse200441
+    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthorities`: []InlineResponse200453
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthorities`: %v\n", resp)
 }
 ```
@@ -9430,7 +10263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200441**](InlineResponse200441.md)
+[**[]InlineResponse200453**](InlineResponse200453.md)
 
 ### Authorization
 
@@ -9448,9 +10281,9 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls
 
-> InlineResponse200443 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
+> InlineResponse200455 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
 
-Query for certificate revocation list (CRL) for the organization's RADSEC device Certificate Authorities (CAs).
+Query for certificate revocation list (CRL) for the organization's RadSec device Certificate Authorities (CAs).
 
 
 
@@ -9477,7 +10310,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls`: InlineResponse200443
+    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls`: InlineResponse200455
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls`: %v\n", resp)
 }
 ```
@@ -9502,7 +10335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200443**](InlineResponse200443.md)
+[**InlineResponse200455**](InlineResponse200455.md)
 
 ### Authorization
 
@@ -9520,9 +10353,9 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas
 
-> InlineResponse200443 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
+> InlineResponse200455 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
 
-Query for all delta certificate revocation list (CRL) for the organization's RADSEC device Certificate Authority (CA) with the given id.
+Query for all delta certificate revocation list (CRL) for the organization's RadSec device Certificate Authority (CA) with the given id.
 
 
 
@@ -9549,7 +10382,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas`: InlineResponse200443
+    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas`: InlineResponse200455
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas`: %v\n", resp)
 }
 ```
@@ -9574,7 +10407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200443**](InlineResponse200443.md)
+[**InlineResponse200455**](InlineResponse200455.md)
 
 ### Authorization
 
@@ -9592,7 +10425,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesSystemCpuLoadHistory
 
-> InlineResponse200444 GetOrganizationWirelessDevicesSystemCpuLoadHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+> InlineResponse200456 GetOrganizationWirelessDevicesSystemCpuLoadHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
 
 Return the CPU Load history for a list of wireless devices in the organization.
 
@@ -9628,7 +10461,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesSystemCpuLoadHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesSystemCpuLoadHistory`: InlineResponse200444
+    // response from `GetOrganizationWirelessDevicesSystemCpuLoadHistory`: InlineResponse200456
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesSystemCpuLoadHistory`: %v\n", resp)
 }
 ```
@@ -9660,7 +10493,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200444**](InlineResponse200444.md)
+[**InlineResponse200456**](InlineResponse200456.md)
 
 ### Authorization
 
@@ -9678,7 +10511,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesWirelessControllersByDevice
 
-> InlineResponse200445 GetOrganizationWirelessDevicesWirelessControllersByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200457 GetOrganizationWirelessDevicesWirelessControllersByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List of Catalyst access points information
 
@@ -9712,7 +10545,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesWirelessControllersByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesWirelessControllersByDevice`: InlineResponse200445
+    // response from `GetOrganizationWirelessDevicesWirelessControllersByDevice`: InlineResponse200457
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesWirelessControllersByDevice`: %v\n", resp)
 }
 ```
@@ -9742,7 +10575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200445**](InlineResponse200445.md)
+[**InlineResponse200457**](InlineResponse200457.md)
 
 ### Authorization
 
@@ -9760,7 +10593,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeDevices
 
-> []InlineResponse200455 GetOrganizationWirelessZigbeeDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IsEnrolled(isEnrolled).Search(search).Execute()
+> []InlineResponse200467 GetOrganizationWirelessZigbeeDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IsEnrolled(isEnrolled).Search(search).Execute()
 
 List the Zigbee wireless devices for an organization or the supplied network(s)
 
@@ -9794,7 +10627,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessZigbeeDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDevices`: []InlineResponse200455
+    // response from `GetOrganizationWirelessZigbeeDevices`: []InlineResponse200467
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessZigbeeDevices`: %v\n", resp)
 }
 ```
@@ -9824,7 +10657,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200455**](InlineResponse200455.md)
+[**[]InlineResponse200467**](InlineResponse200467.md)
 
 ### Authorization
 
@@ -9863,7 +10696,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     deviceId := "deviceId_example" // string | Device ID
-    installNetworkSmDeviceApps := *openapiclient.NewInlineObject139([]string{"AppIds_example"}) // InlineObject139 | 
+    installNetworkSmDeviceApps := *openapiclient.NewInlineObject150([]string{"AppIds_example"}) // InlineObject150 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9895,7 +10728,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **installNetworkSmDeviceApps** | [**InlineObject139**](InlineObject139.md) |  | 
+ **installNetworkSmDeviceApps** | [**InlineObject150**](InlineObject150.md) |  | 
 
 ### Return type
 
@@ -9917,7 +10750,7 @@ Name | Type | Description  | Notes
 
 ## LockNetworkSmDevices
 
-> InlineResponse200152 LockNetworkSmDevices(ctx, networkId).LockNetworkSmDevices(lockNetworkSmDevices).Execute()
+> InlineResponse200160 LockNetworkSmDevices(ctx, networkId).LockNetworkSmDevices(lockNetworkSmDevices).Execute()
 
 Lock a set of devices
 
@@ -9937,7 +10770,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    lockNetworkSmDevices := *openapiclient.NewInlineObject133() // InlineObject133 |  (optional)
+    lockNetworkSmDevices := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9946,7 +10779,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.LockNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `LockNetworkSmDevices`: InlineResponse200152
+    // response from `LockNetworkSmDevices`: InlineResponse200160
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.LockNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -9967,11 +10800,11 @@ Other parameters are passed through a pointer to a apiLockNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **lockNetworkSmDevices** | [**InlineObject133**](InlineObject133.md) |  | 
+ **lockNetworkSmDevices** | [**InlineObject144**](InlineObject144.md) |  | 
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200160**](InlineResponse200160.md)
 
 ### Authorization
 
@@ -9989,7 +10822,7 @@ Name | Type | Description  | Notes
 
 ## ModifyNetworkSmDevicesTags
 
-> []InlineResponse200154 ModifyNetworkSmDevicesTags(ctx, networkId).ModifyNetworkSmDevicesTags(modifyNetworkSmDevicesTags).Execute()
+> []InlineResponse200162 ModifyNetworkSmDevicesTags(ctx, networkId).ModifyNetworkSmDevicesTags(modifyNetworkSmDevicesTags).Execute()
 
 Add, delete, or update the tags of a set of devices
 
@@ -10009,7 +10842,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    modifyNetworkSmDevicesTags := *openapiclient.NewInlineObject134([]string{"Tags_example"}, "UpdateAction_example") // InlineObject134 | 
+    modifyNetworkSmDevicesTags := *openapiclient.NewInlineObject145([]string{"Tags_example"}, "UpdateAction_example") // InlineObject145 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10018,7 +10851,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.ModifyNetworkSmDevicesTags``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ModifyNetworkSmDevicesTags`: []InlineResponse200154
+    // response from `ModifyNetworkSmDevicesTags`: []InlineResponse200162
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.ModifyNetworkSmDevicesTags`: %v\n", resp)
 }
 ```
@@ -10039,11 +10872,11 @@ Other parameters are passed through a pointer to a apiModifyNetworkSmDevicesTags
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **modifyNetworkSmDevicesTags** | [**InlineObject134**](InlineObject134.md) |  | 
+ **modifyNetworkSmDevicesTags** | [**InlineObject145**](InlineObject145.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200154**](InlineResponse200154.md)
+[**[]InlineResponse200162**](InlineResponse200162.md)
 
 ### Authorization
 
@@ -10061,7 +10894,7 @@ Name | Type | Description  | Notes
 
 ## MoveNetworkSmDevices
 
-> InlineResponse200155 MoveNetworkSmDevices(ctx, networkId).MoveNetworkSmDevices(moveNetworkSmDevices).Execute()
+> InlineResponse200163 MoveNetworkSmDevices(ctx, networkId).MoveNetworkSmDevices(moveNetworkSmDevices).Execute()
 
 Move a set of devices to a new network
 
@@ -10081,7 +10914,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    moveNetworkSmDevices := *openapiclient.NewInlineObject135("NewNetwork_example") // InlineObject135 | 
+    moveNetworkSmDevices := *openapiclient.NewInlineObject146("NewNetwork_example") // InlineObject146 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10090,7 +10923,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.MoveNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveNetworkSmDevices`: InlineResponse200155
+    // response from `MoveNetworkSmDevices`: InlineResponse200163
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.MoveNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -10111,11 +10944,11 @@ Other parameters are passed through a pointer to a apiMoveNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveNetworkSmDevices** | [**InlineObject135**](InlineObject135.md) |  | 
+ **moveNetworkSmDevices** | [**InlineObject146**](InlineObject146.md) |  | 
 
 ### Return type
 
-[**InlineResponse200155**](InlineResponse200155.md)
+[**InlineResponse200163**](InlineResponse200163.md)
 
 ### Authorization
 
@@ -10203,7 +11036,7 @@ Name | Type | Description  | Notes
 
 ## RebootNetworkSmDevices
 
-> InlineResponse200156 RebootNetworkSmDevices(ctx, networkId).RebootNetworkSmDevices(rebootNetworkSmDevices).Execute()
+> InlineResponse200164 RebootNetworkSmDevices(ctx, networkId).RebootNetworkSmDevices(rebootNetworkSmDevices).Execute()
 
 Reboot a set of endpoints
 
@@ -10223,7 +11056,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    rebootNetworkSmDevices := *openapiclient.NewInlineObject136() // InlineObject136 |  (optional)
+    rebootNetworkSmDevices := *openapiclient.NewInlineObject147() // InlineObject147 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10232,7 +11065,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.RebootNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RebootNetworkSmDevices`: InlineResponse200156
+    // response from `RebootNetworkSmDevices`: InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.RebootNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -10253,11 +11086,11 @@ Other parameters are passed through a pointer to a apiRebootNetworkSmDevicesRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **rebootNetworkSmDevices** | [**InlineObject136**](InlineObject136.md) |  | 
+ **rebootNetworkSmDevices** | [**InlineObject147**](InlineObject147.md) |  | 
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 
@@ -10368,7 +11201,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    removeNetworkDevices := *openapiclient.NewInlineObject103("Serial_example") // InlineObject103 | 
+    removeNetworkDevices := *openapiclient.NewInlineObject114("Serial_example") // InlineObject114 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10396,7 +11229,7 @@ Other parameters are passed through a pointer to a apiRemoveNetworkDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **removeNetworkDevices** | [**InlineObject103**](InlineObject103.md) |  | 
+ **removeNetworkDevices** | [**InlineObject114**](InlineObject114.md) |  | 
 
 ### Return type
 
@@ -10418,7 +11251,7 @@ Name | Type | Description  | Notes
 
 ## ReorderOrganizationDevicesPacketCaptureSchedules
 
-> InlineResponse200335 ReorderOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ReorderOrganizationDevicesPacketCaptureSchedules(reorderOrganizationDevicesPacketCaptureSchedules).Execute()
+> InlineResponse200347 ReorderOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ReorderOrganizationDevicesPacketCaptureSchedules(reorderOrganizationDevicesPacketCaptureSchedules).Execute()
 
 Bulk update priorities of pcap schedules
 
@@ -10438,7 +11271,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    reorderOrganizationDevicesPacketCaptureSchedules := *openapiclient.NewInlineObject276([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder()}) // InlineObject276 | 
+    reorderOrganizationDevicesPacketCaptureSchedules := *openapiclient.NewInlineObject287([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder()}) // InlineObject287 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10447,7 +11280,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.ReorderOrganizationDevicesPacketCaptureSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReorderOrganizationDevicesPacketCaptureSchedules`: InlineResponse200335
+    // response from `ReorderOrganizationDevicesPacketCaptureSchedules`: InlineResponse200347
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.ReorderOrganizationDevicesPacketCaptureSchedules`: %v\n", resp)
 }
 ```
@@ -10468,11 +11301,11 @@ Other parameters are passed through a pointer to a apiReorderOrganizationDevices
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **reorderOrganizationDevicesPacketCaptureSchedules** | [**InlineObject276**](InlineObject276.md) |  | 
+ **reorderOrganizationDevicesPacketCaptureSchedules** | [**InlineObject287**](InlineObject287.md) |  | 
 
 ### Return type
 
-[**InlineResponse200335**](InlineResponse200335.md)
+[**InlineResponse200347**](InlineResponse200347.md)
 
 ### Authorization
 
@@ -10490,7 +11323,7 @@ Name | Type | Description  | Notes
 
 ## ShutdownNetworkSmDevices
 
-> InlineResponse200156 ShutdownNetworkSmDevices(ctx, networkId).ShutdownNetworkSmDevices(shutdownNetworkSmDevices).Execute()
+> InlineResponse200164 ShutdownNetworkSmDevices(ctx, networkId).ShutdownNetworkSmDevices(shutdownNetworkSmDevices).Execute()
 
 Shutdown a set of endpoints
 
@@ -10510,7 +11343,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    shutdownNetworkSmDevices := *openapiclient.NewInlineObject137() // InlineObject137 |  (optional)
+    shutdownNetworkSmDevices := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10519,7 +11352,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.ShutdownNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ShutdownNetworkSmDevices`: InlineResponse200156
+    // response from `ShutdownNetworkSmDevices`: InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.ShutdownNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -10540,11 +11373,11 @@ Other parameters are passed through a pointer to a apiShutdownNetworkSmDevicesRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **shutdownNetworkSmDevices** | [**InlineObject137**](InlineObject137.md) |  | 
+ **shutdownNetworkSmDevices** | [**InlineObject148**](InlineObject148.md) |  | 
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 
@@ -10562,7 +11395,7 @@ Name | Type | Description  | Notes
 
 ## StopOrganizationDevicesPacketCaptureCapture
 
-> InlineResponse200332Items StopOrganizationDevicesPacketCaptureCapture(ctx, organizationId, captureId).StopOrganizationDevicesPacketCaptureCapture(stopOrganizationDevicesPacketCaptureCapture).Execute()
+> InlineResponse200344Items StopOrganizationDevicesPacketCaptureCapture(ctx, organizationId, captureId).StopOrganizationDevicesPacketCaptureCapture(stopOrganizationDevicesPacketCaptureCapture).Execute()
 
 Stop a specific packet capture (not supported for Catalyst devices)
 
@@ -10583,7 +11416,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     captureId := "captureId_example" // string | Capture ID
-    stopOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject274([]string{"Serials_example"}) // InlineObject274 | 
+    stopOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject285([]string{"Serials_example"}) // InlineObject285 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10592,7 +11425,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.StopOrganizationDevicesPacketCaptureCapture``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `StopOrganizationDevicesPacketCaptureCapture`: InlineResponse200332Items
+    // response from `StopOrganizationDevicesPacketCaptureCapture`: InlineResponse200344Items
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.StopOrganizationDevicesPacketCaptureCapture`: %v\n", resp)
 }
 ```
@@ -10615,11 +11448,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **stopOrganizationDevicesPacketCaptureCapture** | [**InlineObject274**](InlineObject274.md) |  | 
+ **stopOrganizationDevicesPacketCaptureCapture** | [**InlineObject285**](InlineObject285.md) |  | 
 
 ### Return type
 
-[**InlineResponse200332Items**](InlineResponse200332Items.md)
+[**InlineResponse200344Items**](InlineResponse200344Items.md)
 
 ### Authorization
 
@@ -10637,7 +11470,7 @@ Name | Type | Description  | Notes
 
 ## UnenrollNetworkSmDevice
 
-> InlineResponse200169 UnenrollNetworkSmDevice(ctx, networkId, deviceId).Execute()
+> InlineResponse200177 UnenrollNetworkSmDevice(ctx, networkId, deviceId).Execute()
 
 Unenroll a device
 
@@ -10666,7 +11499,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UnenrollNetworkSmDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UnenrollNetworkSmDevice`: InlineResponse200169
+    // response from `UnenrollNetworkSmDevice`: InlineResponse200177
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UnenrollNetworkSmDevice`: %v\n", resp)
 }
 ```
@@ -10692,7 +11525,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200169**](InlineResponse200169.md)
+[**InlineResponse200177**](InlineResponse200177.md)
 
 ### Authorization
 
@@ -10731,7 +11564,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     deviceId := "deviceId_example" // string | Device ID
-    uninstallNetworkSmDeviceApps := *openapiclient.NewInlineObject140([]string{"AppIds_example"}) // InlineObject140 | 
+    uninstallNetworkSmDeviceApps := *openapiclient.NewInlineObject151([]string{"AppIds_example"}) // InlineObject151 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10763,7 +11596,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **uninstallNetworkSmDeviceApps** | [**InlineObject140**](InlineObject140.md) |  | 
+ **uninstallNetworkSmDeviceApps** | [**InlineObject151**](InlineObject151.md) |  | 
 
 ### Return type
 
@@ -10857,7 +11690,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularGeolocations
 
-> InlineResponse20025 UpdateDeviceCellularGeolocations(ctx, serial).UpdateDeviceCellularGeolocations(updateDeviceCellularGeolocations).Execute()
+> InlineResponse20026 UpdateDeviceCellularGeolocations(ctx, serial).UpdateDeviceCellularGeolocations(updateDeviceCellularGeolocations).Execute()
 
 Update the enablement of the geolocation feature for a device
 
@@ -10877,7 +11710,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGeolocations := *openapiclient.NewInlineObject13(false) // InlineObject13 | 
+    updateDeviceCellularGeolocations := *openapiclient.NewInlineObject14(false) // InlineObject14 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10886,7 +11719,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateDeviceCellularGeolocations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularGeolocations`: InlineResponse20025
+    // response from `UpdateDeviceCellularGeolocations`: InlineResponse20026
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateDeviceCellularGeolocations`: %v\n", resp)
 }
 ```
@@ -10907,11 +11740,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGeoloc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGeolocations** | [**InlineObject13**](InlineObject13.md) |  | 
+ **updateDeviceCellularGeolocations** | [**InlineObject14**](InlineObject14.md) |  | 
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 
@@ -10929,7 +11762,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularSims
 
-> InlineResponse20026 UpdateDeviceCellularSims(ctx, serial).UpdateDeviceCellularSims(updateDeviceCellularSims).Execute()
+> InlineResponse20027 UpdateDeviceCellularSims(ctx, serial).UpdateDeviceCellularSims(updateDeviceCellularSims).Execute()
 
 Updates the SIM and APN configurations for a cellular device.
 
@@ -10949,7 +11782,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularSims := *openapiclient.NewInlineObject14() // InlineObject14 |  (optional)
+    updateDeviceCellularSims := *openapiclient.NewInlineObject15() // InlineObject15 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10958,7 +11791,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateDeviceCellularSims``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularSims`: InlineResponse20026
+    // response from `UpdateDeviceCellularSims`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateDeviceCellularSims`: %v\n", resp)
 }
 ```
@@ -10979,11 +11812,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularSimsRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularSims** | [**InlineObject14**](InlineObject14.md) |  | 
+ **updateDeviceCellularSims** | [**InlineObject15**](InlineObject15.md) |  | 
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -11001,7 +11834,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceManagementInterface
 
-> InlineResponse20043 UpdateDeviceManagementInterface(ctx, serial).UpdateDeviceManagementInterface(updateDeviceManagementInterface).Execute()
+> InlineResponse20048 UpdateDeviceManagementInterface(ctx, serial).UpdateDeviceManagementInterface(updateDeviceManagementInterface).Execute()
 
 Update the management interface settings for a device
 
@@ -11021,7 +11854,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceManagementInterface := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
+    updateDeviceManagementInterface := *openapiclient.NewInlineObject33() // InlineObject33 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11030,7 +11863,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateDeviceManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceManagementInterface`: InlineResponse20043
+    // response from `UpdateDeviceManagementInterface`: InlineResponse20048
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateDeviceManagementInterface`: %v\n", resp)
 }
 ```
@@ -11051,11 +11884,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceManagementInte
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceManagementInterface** | [**InlineObject28**](InlineObject28.md) |  | 
+ **updateDeviceManagementInterface** | [**InlineObject33**](InlineObject33.md) |  | 
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -11073,7 +11906,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceDevicesRedundancy
 
-> InlineResponse20067 UpdateNetworkApplianceDevicesRedundancy(ctx, networkId).UpdateNetworkApplianceDevicesRedundancy(updateNetworkApplianceDevicesRedundancy).Execute()
+> InlineResponse20072 UpdateNetworkApplianceDevicesRedundancy(ctx, networkId).UpdateNetworkApplianceDevicesRedundancy(updateNetworkApplianceDevicesRedundancy).Execute()
 
 Update MX warm spare settings
 
@@ -11093,7 +11926,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceDevicesRedundancy := *openapiclient.NewInlineObject47(false) // InlineObject47 | 
+    updateNetworkApplianceDevicesRedundancy := *openapiclient.NewInlineObject52(false) // InlineObject52 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11102,7 +11935,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateNetworkApplianceDevicesRedundancy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceDevicesRedundancy`: InlineResponse20067
+    // response from `UpdateNetworkApplianceDevicesRedundancy`: InlineResponse20072
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateNetworkApplianceDevicesRedundancy`: %v\n", resp)
 }
 ```
@@ -11123,11 +11956,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceDevi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceDevicesRedundancy** | [**InlineObject47**](InlineObject47.md) |  | 
+ **updateNetworkApplianceDevicesRedundancy** | [**InlineObject52**](InlineObject52.md) |  | 
 
 ### Return type
 
-[**InlineResponse20067**](InlineResponse20067.md)
+[**InlineResponse20072**](InlineResponse20072.md)
 
 ### Authorization
 
@@ -11145,7 +11978,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSmDevicesFields
 
-> []InlineResponse200153 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
+> []InlineResponse200161 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
 
 Modify the fields of a device
 
@@ -11165,7 +11998,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject132(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject132 | 
+    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject143(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject143 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11174,7 +12007,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateNetworkSmDevicesFields``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse200153
+    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateNetworkSmDevicesFields`: %v\n", resp)
 }
 ```
@@ -11195,11 +12028,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSmDevicesFiel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSmDevicesFields** | [**InlineObject132**](InlineObject132.md) |  | 
+ **updateNetworkSmDevicesFields** | [**InlineObject143**](InlineObject143.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200153**](InlineResponse200153.md)
+[**[]InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -11217,7 +12050,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationDevicesCellularDataProfile
 
-> InlineResponse200323 UpdateOrganizationDevicesCellularDataProfile(ctx, organizationId, profileId).UpdateOrganizationDevicesCellularDataProfile(updateOrganizationDevicesCellularDataProfile).Execute()
+> InlineResponse200335 UpdateOrganizationDevicesCellularDataProfile(ctx, organizationId, profileId).UpdateOrganizationDevicesCellularDataProfile(updateOrganizationDevicesCellularDataProfile).Execute()
 
 Update a Cellular Data Management Profile
 
@@ -11238,7 +12071,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     profileId := "profileId_example" // string | Profile ID
-    updateOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject268([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject268 | 
+    updateOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject279([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject279 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11247,7 +12080,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateOrganizationDevicesCellularDataProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationDevicesCellularDataProfile`: InlineResponse200323
+    // response from `UpdateOrganizationDevicesCellularDataProfile`: InlineResponse200335
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateOrganizationDevicesCellularDataProfile`: %v\n", resp)
 }
 ```
@@ -11270,11 +12103,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationDevicesCellularDataProfile** | [**InlineObject268**](InlineObject268.md) |  | 
+ **updateOrganizationDevicesCellularDataProfile** | [**InlineObject279**](InlineObject279.md) |  | 
 
 ### Return type
 
-[**InlineResponse200323**](InlineResponse200323.md)
+[**InlineResponse200335**](InlineResponse200335.md)
 
 ### Authorization
 
@@ -11292,7 +12125,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationDevicesPacketCaptureSchedule
 
-> InlineResponse200334Items UpdateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId, scheduleId).UpdateOrganizationDevicesPacketCaptureSchedule(updateOrganizationDevicesPacketCaptureSchedule).Execute()
+> InlineResponse200346Items UpdateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId, scheduleId).UpdateOrganizationDevicesPacketCaptureSchedule(updateOrganizationDevicesPacketCaptureSchedule).Execute()
 
 Update a schedule for packet capture
 
@@ -11313,7 +12146,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     scheduleId := "scheduleId_example" // string | Schedule ID
-    updateOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject277([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject277 | 
+    updateOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject288([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject288 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11322,7 +12155,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateOrganizationDevicesPacketCaptureSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200334Items
+    // response from `UpdateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200346Items
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateOrganizationDevicesPacketCaptureSchedule`: %v\n", resp)
 }
 ```
@@ -11345,11 +12178,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationDevicesPacketCaptureSchedule** | [**InlineObject277**](InlineObject277.md) |  | 
+ **updateOrganizationDevicesPacketCaptureSchedule** | [**InlineObject288**](InlineObject288.md) |  | 
 
 ### Return type
 
-[**InlineResponse200334Items**](InlineResponse200334Items.md)
+[**InlineResponse200346Items**](InlineResponse200346Items.md)
 
 ### Authorization
 
@@ -11367,7 +12200,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessDevicesProvisioningDeployments
 
-> InlineResponse200440 UpdateOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).UpdateOrganizationWirelessDevicesProvisioningDeployments(updateOrganizationWirelessDevicesProvisioningDeployments).Execute()
+> InlineResponse200452 UpdateOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).UpdateOrganizationWirelessDevicesProvisioningDeployments(updateOrganizationWirelessDevicesProvisioningDeployments).Execute()
 
 Update a zero touch deployment
 
@@ -11387,7 +12220,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationWirelessDevicesProvisioningDeployments := *openapiclient.NewInlineObject333([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject333 | 
+    updateOrganizationWirelessDevicesProvisioningDeployments := *openapiclient.NewInlineObject344([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject344 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11396,7 +12229,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateOrganizationWirelessDevicesProvisioningDeployments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessDevicesProvisioningDeployments`: InlineResponse200440
+    // response from `UpdateOrganizationWirelessDevicesProvisioningDeployments`: InlineResponse200452
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateOrganizationWirelessDevicesProvisioningDeployments`: %v\n", resp)
 }
 ```
@@ -11417,11 +12250,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationWirelessDevicesProvisioningDeployments** | [**InlineObject333**](InlineObject333.md) |  | 
+ **updateOrganizationWirelessDevicesProvisioningDeployments** | [**InlineObject344**](InlineObject344.md) |  | 
 
 ### Return type
 
-[**InlineResponse200440**](InlineResponse200440.md)
+[**InlineResponse200452**](InlineResponse200452.md)
 
 ### Authorization
 
@@ -11439,9 +12272,9 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities
 
-> InlineResponse200442 UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(updateOrganizationWirelessDevicesRadsecCertificatesAuthorities).Execute()
+> InlineResponse200454 UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(updateOrganizationWirelessDevicesRadsecCertificatesAuthorities).Execute()
 
-Update an organization's RADSEC device Certificate Authority (CA) state
+Update an organization's RadSec device Certificate Authority (CA) state
 
 
 
@@ -11459,7 +12292,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationWirelessDevicesRadsecCertificatesAuthorities := *openapiclient.NewInlineObject335() // InlineObject335 |  (optional)
+    updateOrganizationWirelessDevicesRadsecCertificatesAuthorities := *openapiclient.NewInlineObject346() // InlineObject346 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11468,7 +12301,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities`: InlineResponse200442
+    // response from `UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities`: InlineResponse200454
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities`: %v\n", resp)
 }
 ```
@@ -11489,11 +12322,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationWirelessDevicesRadsecCertificatesAuthorities** | [**InlineObject335**](InlineObject335.md) |  | 
+ **updateOrganizationWirelessDevicesRadsecCertificatesAuthorities** | [**InlineObject346**](InlineObject346.md) |  | 
 
 ### Return type
 
-[**InlineResponse200442**](InlineResponse200442.md)
+[**InlineResponse200454**](InlineResponse200454.md)
 
 ### Authorization
 
@@ -11511,7 +12344,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessZigbeeDevice
 
-> InlineResponse200455 UpdateOrganizationWirelessZigbeeDevice(ctx, organizationId, id).UpdateOrganizationWirelessZigbeeDevice(updateOrganizationWirelessZigbeeDevice).Execute()
+> InlineResponse200467 UpdateOrganizationWirelessZigbeeDevice(ctx, organizationId, id).UpdateOrganizationWirelessZigbeeDevice(updateOrganizationWirelessZigbeeDevice).Execute()
 
 Endpoint to update zigbee gateways
 
@@ -11532,7 +12365,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationWirelessZigbeeDevice := *openapiclient.NewInlineObject342(false) // InlineObject342 | 
+    updateOrganizationWirelessZigbeeDevice := *openapiclient.NewInlineObject353(false) // InlineObject353 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11541,7 +12374,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateOrganizationWirelessZigbeeDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessZigbeeDevice`: InlineResponse200455
+    // response from `UpdateOrganizationWirelessZigbeeDevice`: InlineResponse200467
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateOrganizationWirelessZigbeeDevice`: %v\n", resp)
 }
 ```
@@ -11564,11 +12397,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessZigbeeDevice** | [**InlineObject342**](InlineObject342.md) |  | 
+ **updateOrganizationWirelessZigbeeDevice** | [**InlineObject353**](InlineObject353.md) |  | 
 
 ### Return type
 
-[**InlineResponse200455**](InlineResponse200455.md)
+[**InlineResponse200467**](InlineResponse200467.md)
 
 ### Authorization
 
@@ -11586,7 +12419,7 @@ Name | Type | Description  | Notes
 
 ## VmxNetworkDevicesClaim
 
-> InlineResponse200122 VmxNetworkDevicesClaim(ctx, networkId).VmxNetworkDevicesClaim(vmxNetworkDevicesClaim).Execute()
+> InlineResponse200130 VmxNetworkDevicesClaim(ctx, networkId).VmxNetworkDevicesClaim(vmxNetworkDevicesClaim).Execute()
 
 Claim a vMX into a network
 
@@ -11606,7 +12439,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject102("Size_example") // InlineObject102 | 
+    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject113("Size_example") // InlineObject113 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11615,7 +12448,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.VmxNetworkDevicesClaim``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `VmxNetworkDevicesClaim`: InlineResponse200122
+    // response from `VmxNetworkDevicesClaim`: InlineResponse200130
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.VmxNetworkDevicesClaim`: %v\n", resp)
 }
 ```
@@ -11636,11 +12469,11 @@ Other parameters are passed through a pointer to a apiVmxNetworkDevicesClaimRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **vmxNetworkDevicesClaim** | [**InlineObject102**](InlineObject102.md) |  | 
+ **vmxNetworkDevicesClaim** | [**InlineObject113**](InlineObject113.md) |  | 
 
 ### Return type
 
-[**InlineResponse200122**](InlineResponse200122.md)
+[**InlineResponse200130**](InlineResponse200130.md)
 
 ### Authorization
 
@@ -11658,7 +12491,7 @@ Name | Type | Description  | Notes
 
 ## WipeNetworkSmDevices
 
-> InlineResponse200157 WipeNetworkSmDevices(ctx, networkId).WipeNetworkSmDevices(wipeNetworkSmDevices).Execute()
+> InlineResponse200165 WipeNetworkSmDevices(ctx, networkId).WipeNetworkSmDevices(wipeNetworkSmDevices).Execute()
 
 Wipe a device
 
@@ -11678,7 +12511,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    wipeNetworkSmDevices := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
+    wipeNetworkSmDevices := *openapiclient.NewInlineObject149() // InlineObject149 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11687,7 +12520,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.WipeNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `WipeNetworkSmDevices`: InlineResponse200157
+    // response from `WipeNetworkSmDevices`: InlineResponse200165
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.WipeNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -11708,11 +12541,11 @@ Other parameters are passed through a pointer to a apiWipeNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **wipeNetworkSmDevices** | [**InlineObject138**](InlineObject138.md) |  | 
+ **wipeNetworkSmDevices** | [**InlineObject149**](InlineObject149.md) |  | 
 
 ### Return type
 
-[**InlineResponse200157**](InlineResponse200157.md)
+[**InlineResponse200165**](InlineResponse200165.md)
 
 ### Authorization
 

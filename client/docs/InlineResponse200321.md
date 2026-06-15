@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200321Items**](InlineResponse200321Items.md) | List of Cellular Data Management Profile device assignments. Maximum 1000 assignments per page. | [optional] 
-**Meta** | Pointer to [**InlineResponse200321Meta**](InlineResponse200321Meta.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
+**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
+**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
+**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200321WithDefaults instantiates a new InlineResponse200321 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetTs
 
-`func (o *InlineResponse200321) GetItems() []InlineResponse200321Items`
+`func (o *InlineResponse200321) GetTs() time.Time`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetTsOk
 
-`func (o *InlineResponse200321) GetItemsOk() (*[]InlineResponse200321Items, bool)`
+`func (o *InlineResponse200321) GetTsOk() (*time.Time, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetTs
 
-`func (o *InlineResponse200321) SetItems(v []InlineResponse200321Items)`
+`func (o *InlineResponse200321) SetTs(v time.Time)`
 
-SetItems sets Items field to given value.
+SetTs sets Ts field to given value.
 
-### HasItems
+### HasTs
 
-`func (o *InlineResponse200321) HasItems() bool`
+`func (o *InlineResponse200321) HasTs() bool`
 
-HasItems returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetMeta
+### GetTotal
 
-`func (o *InlineResponse200321) GetMeta() InlineResponse200321Meta`
+`func (o *InlineResponse200321) GetTotal() int32`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetTotalOk
 
-`func (o *InlineResponse200321) GetMetaOk() (*InlineResponse200321Meta, bool)`
+`func (o *InlineResponse200321) GetTotalOk() (*int32, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetTotal
 
-`func (o *InlineResponse200321) SetMeta(v InlineResponse200321Meta)`
+`func (o *InlineResponse200321) SetTotal(v int32)`
 
-SetMeta sets Meta field to given value.
+SetTotal sets Total field to given value.
 
-### HasMeta
+### HasTotal
 
-`func (o *InlineResponse200321) HasMeta() bool`
+`func (o *InlineResponse200321) HasTotal() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse200321) GetUpstream() int32`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse200321) GetUpstreamOk() (*int32, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse200321) SetUpstream(v int32)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse200321) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetDownstream
+
+`func (o *InlineResponse200321) GetDownstream() int32`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse200321) GetDownstreamOk() (*int32, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse200321) SetDownstream(v int32)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse200321) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

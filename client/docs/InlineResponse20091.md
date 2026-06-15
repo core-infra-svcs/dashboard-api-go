@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**CustomPerformanceClassId** | Pointer to **string** | ID of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
+**DynamicDns** | Pointer to [**InlineResponse20091DynamicDns**](InlineResponse20091DynamicDns.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20091WithDefaults instantiates a new InlineResponse20091 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetClientTrackingMethod
 
-`func (o *InlineResponse20091) GetName() string`
+`func (o *InlineResponse20091) GetClientTrackingMethod() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClientTrackingMethodOk
 
-`func (o *InlineResponse20091) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20091) GetClientTrackingMethodOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetClientTrackingMethod
 
-`func (o *InlineResponse20091) SetName(v string)`
+`func (o *InlineResponse20091) SetClientTrackingMethod(v string)`
 
-SetName sets Name field to given value.
+SetClientTrackingMethod sets ClientTrackingMethod field to given value.
 
-### HasName
+### HasClientTrackingMethod
 
-`func (o *InlineResponse20091) HasName() bool`
+`func (o *InlineResponse20091) HasClientTrackingMethod() bool`
 
-HasName returns a boolean if a field has been set.
+HasClientTrackingMethod returns a boolean if a field has been set.
 
-### GetCustomPerformanceClassId
+### GetDeploymentMode
 
-`func (o *InlineResponse20091) GetCustomPerformanceClassId() string`
+`func (o *InlineResponse20091) GetDeploymentMode() string`
 
-GetCustomPerformanceClassId returns the CustomPerformanceClassId field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetCustomPerformanceClassIdOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse20091) GetCustomPerformanceClassIdOk() (*string, bool)`
+`func (o *InlineResponse20091) GetDeploymentModeOk() (*string, bool)`
 
-GetCustomPerformanceClassIdOk returns a tuple with the CustomPerformanceClassId field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPerformanceClassId
+### SetDeploymentMode
 
-`func (o *InlineResponse20091) SetCustomPerformanceClassId(v string)`
+`func (o *InlineResponse20091) SetDeploymentMode(v string)`
 
-SetCustomPerformanceClassId sets CustomPerformanceClassId field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasCustomPerformanceClassId
+### HasDeploymentMode
 
-`func (o *InlineResponse20091) HasCustomPerformanceClassId() bool`
+`func (o *InlineResponse20091) HasDeploymentMode() bool`
 
-HasCustomPerformanceClassId returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetMaxLatency
+### GetDynamicDns
 
-`func (o *InlineResponse20091) GetMaxLatency() int32`
+`func (o *InlineResponse20091) GetDynamicDns() InlineResponse20091DynamicDns`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetDynamicDnsOk
 
-`func (o *InlineResponse20091) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineResponse20091) GetDynamicDnsOk() (*InlineResponse20091DynamicDns, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetDynamicDns
 
-`func (o *InlineResponse20091) SetMaxLatency(v int32)`
+`func (o *InlineResponse20091) SetDynamicDns(v InlineResponse20091DynamicDns)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetDynamicDns sets DynamicDns field to given value.
 
-### HasMaxLatency
+### HasDynamicDns
 
-`func (o *InlineResponse20091) HasMaxLatency() bool`
+`func (o *InlineResponse20091) HasDynamicDns() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
-
-### GetMaxJitter
-
-`func (o *InlineResponse20091) GetMaxJitter() int32`
-
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
-
-### GetMaxJitterOk
-
-`func (o *InlineResponse20091) GetMaxJitterOk() (*int32, bool)`
-
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxJitter
-
-`func (o *InlineResponse20091) SetMaxJitter(v int32)`
-
-SetMaxJitter sets MaxJitter field to given value.
-
-### HasMaxJitter
-
-`func (o *InlineResponse20091) HasMaxJitter() bool`
-
-HasMaxJitter returns a boolean if a field has been set.
-
-### GetMaxLossPercentage
-
-`func (o *InlineResponse20091) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineResponse20091) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxLossPercentage
-
-`func (o *InlineResponse20091) SetMaxLossPercentage(v int32)`
-
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
-
-### HasMaxLossPercentage
-
-`func (o *InlineResponse20091) HasMaxLossPercentage() bool`
-
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasDynamicDns returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

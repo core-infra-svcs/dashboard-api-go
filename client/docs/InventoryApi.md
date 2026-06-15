@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## ClaimIntoOrganizationInventory
 
-> InlineResponse200308 ClaimIntoOrganizationInventory(ctx, organizationId).ClaimIntoOrganizationInventory(claimIntoOrganizationInventory).Execute()
+> InlineResponse200320 ClaimIntoOrganizationInventory(ctx, organizationId).ClaimIntoOrganizationInventory(claimIntoOrganizationInventory).Execute()
 
 Claim a list of devices, licenses, and/or orders into an organization inventory
 
@@ -40,7 +40,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    claimIntoOrganizationInventory := *openapiclient.NewInlineObject285() // InlineObject285 |  (optional)
+    claimIntoOrganizationInventory := *openapiclient.NewInlineObject296() // InlineObject296 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -49,7 +49,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ClaimIntoOrganizationInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ClaimIntoOrganizationInventory`: InlineResponse200308
+    // response from `ClaimIntoOrganizationInventory`: InlineResponse200320
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ClaimIntoOrganizationInventory`: %v\n", resp)
 }
 ```
@@ -70,11 +70,11 @@ Other parameters are passed through a pointer to a apiClaimIntoOrganizationInven
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimIntoOrganizationInventory** | [**InlineObject285**](InlineObject285.md) |  | 
+ **claimIntoOrganizationInventory** | [**InlineObject296**](InlineObject296.md) |  | 
 
 ### Return type
 
-[**InlineResponse200308**](InlineResponse200308.md)
+[**InlineResponse200320**](InlineResponse200320.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## ClaimOrganizationInventoryOrders
 
-> InlineResponse200358 ClaimOrganizationInventoryOrders(ctx, organizationId).ClaimOrganizationInventoryOrders(claimOrganizationInventoryOrders).Execute()
+> InlineResponse200370 ClaimOrganizationInventoryOrders(ctx, organizationId).ClaimOrganizationInventoryOrders(claimOrganizationInventoryOrders).Execute()
 
 Claim an order by the secure unique order claim number, the order claim id
 
@@ -112,7 +112,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    claimOrganizationInventoryOrders := *openapiclient.NewInlineObject287("ClaimId_example") // InlineObject287 | 
+    claimOrganizationInventoryOrders := *openapiclient.NewInlineObject298("ClaimId_example") // InlineObject298 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ClaimOrganizationInventoryOrders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ClaimOrganizationInventoryOrders`: InlineResponse200358
+    // response from `ClaimOrganizationInventoryOrders`: InlineResponse200370
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ClaimOrganizationInventoryOrders`: %v\n", resp)
 }
 ```
@@ -142,11 +142,11 @@ Other parameters are passed through a pointer to a apiClaimOrganizationInventory
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimOrganizationInventoryOrders** | [**InlineObject287**](InlineObject287.md) |  | 
+ **claimOrganizationInventoryOrders** | [**InlineObject298**](InlineObject298.md) |  | 
 
 ### Return type
 
-[**InlineResponse200358**](InlineResponse200358.md)
+[**InlineResponse200370**](InlineResponse200370.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryDevicesSwapsBulk := *openapiclient.NewInlineObject286([]openapiclient.OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps{*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps(*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkDevices("Old_example", "New_example"), "AfterAction_example")}) // InlineObject286 | 
+    createOrganizationInventoryDevicesSwapsBulk := *openapiclient.NewInlineObject297([]openapiclient.OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps{*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps(*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkDevices("Old_example", "New_example"), "AfterAction_example")}) // InlineObject297 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -214,7 +214,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryDevicesSwapsBulk** | [**InlineObject286**](InlineObject286.md) |  | 
+ **createOrganizationInventoryDevicesSwapsBulk** | [**InlineObject297**](InlineObject297.md) |  | 
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsInventory
 
-> InlineResponse200301 GetOrganizationCellularGatewayEsimsInventory(ctx, organizationId).Eids(eids).Execute()
+> InlineResponse200313 GetOrganizationCellularGatewayEsimsInventory(ctx, organizationId).Eids(eids).Execute()
 
 The eSIM inventory of a given organization.
 
@@ -265,7 +265,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationCellularGatewayEsimsInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsInventory`: InlineResponse200301
+    // response from `GetOrganizationCellularGatewayEsimsInventory`: InlineResponse200313
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationCellularGatewayEsimsInventory`: %v\n", resp)
 }
 ```
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200301**](InlineResponse200301.md)
+[**InlineResponse200313**](InlineResponse200313.md)
 
 ### Authorization
 
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevice
 
-> InlineResponse200356 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
+> InlineResponse200368 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
 
 Return a single device from the inventory of an organization
 
@@ -337,7 +337,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationInventoryDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevice`: InlineResponse200356
+    // response from `GetOrganizationInventoryDevice`: InlineResponse200368
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationInventoryDevice`: %v\n", resp)
 }
 ```
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200356**](InlineResponse200356.md)
+[**InlineResponse200368**](InlineResponse200368.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevices
 
-> []InlineResponse200356 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).EoxStatuses(eoxStatuses).Execute()
+> []InlineResponse200368 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).EoxStatuses(eoxStatuses).Execute()
 
 Return the device inventory for an organization
 
@@ -423,7 +423,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationInventoryDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevices`: []InlineResponse200356
+    // response from `GetOrganizationInventoryDevices`: []InlineResponse200368
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationInventoryDevices`: %v\n", resp)
 }
 ```
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200356**](InlineResponse200356.md)
+[**[]InlineResponse200368**](InlineResponse200368.md)
 
 ### Authorization
 
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevicesEoxOverview
 
-> InlineResponse200357 GetOrganizationInventoryDevicesEoxOverview(ctx, organizationId).Execute()
+> InlineResponse200369 GetOrganizationInventoryDevicesEoxOverview(ctx, organizationId).Execute()
 
 Fetch the EOX summary for an organization, including counts of devices that are end-of-sale, end-of-support, and end-of-support-soon.
 
@@ -507,7 +507,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationInventoryDevicesEoxOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevicesEoxOverview`: InlineResponse200357
+    // response from `GetOrganizationInventoryDevicesEoxOverview`: InlineResponse200369
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationInventoryDevicesEoxOverview`: %v\n", resp)
 }
 ```
@@ -531,7 +531,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200357**](InlineResponse200357.md)
+[**InlineResponse200369**](InlineResponse200369.md)
 
 ### Authorization
 
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 
 ## PreviewOrganizationInventoryOrders
 
-> InlineResponse200359 PreviewOrganizationInventoryOrders(ctx, organizationId).PreviewOrganizationInventoryOrders(previewOrganizationInventoryOrders).Execute()
+> InlineResponse200371 PreviewOrganizationInventoryOrders(ctx, organizationId).PreviewOrganizationInventoryOrders(previewOrganizationInventoryOrders).Execute()
 
 Preview the results and status of an order claim by the secure order id
 
@@ -642,7 +642,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    previewOrganizationInventoryOrders := *openapiclient.NewInlineObject288("ClaimId_example") // InlineObject288 | 
+    previewOrganizationInventoryOrders := *openapiclient.NewInlineObject299("ClaimId_example") // InlineObject299 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -651,7 +651,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.PreviewOrganizationInventoryOrders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `PreviewOrganizationInventoryOrders`: InlineResponse200359
+    // response from `PreviewOrganizationInventoryOrders`: InlineResponse200371
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.PreviewOrganizationInventoryOrders`: %v\n", resp)
 }
 ```
@@ -672,11 +672,11 @@ Other parameters are passed through a pointer to a apiPreviewOrganizationInvento
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **previewOrganizationInventoryOrders** | [**InlineObject288**](InlineObject288.md) |  | 
+ **previewOrganizationInventoryOrders** | [**InlineObject299**](InlineObject299.md) |  | 
 
 ### Return type
 
-[**InlineResponse200359**](InlineResponse200359.md)
+[**InlineResponse200371**](InlineResponse200371.md)
 
 ### Authorization
 
@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 
 ## ReleaseFromOrganizationInventory
 
-> InlineResponse200360 ReleaseFromOrganizationInventory(ctx, organizationId).ReleaseFromOrganizationInventory(releaseFromOrganizationInventory).Execute()
+> InlineResponse200372 ReleaseFromOrganizationInventory(ctx, organizationId).ReleaseFromOrganizationInventory(releaseFromOrganizationInventory).Execute()
 
 Release a list of claimed devices from an organization.
 
@@ -714,7 +714,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    releaseFromOrganizationInventory := *openapiclient.NewInlineObject289() // InlineObject289 |  (optional)
+    releaseFromOrganizationInventory := *openapiclient.NewInlineObject300() // InlineObject300 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -723,7 +723,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.ReleaseFromOrganizationInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReleaseFromOrganizationInventory`: InlineResponse200360
+    // response from `ReleaseFromOrganizationInventory`: InlineResponse200372
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.ReleaseFromOrganizationInventory`: %v\n", resp)
 }
 ```
@@ -744,11 +744,11 @@ Other parameters are passed through a pointer to a apiReleaseFromOrganizationInv
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **releaseFromOrganizationInventory** | [**InlineObject289**](InlineObject289.md) |  | 
+ **releaseFromOrganizationInventory** | [**InlineObject300**](InlineObject300.md) |  | 
 
 ### Return type
 
-[**InlineResponse200360**](InlineResponse200360.md)
+[**InlineResponse200372**](InlineResponse200372.md)
 
 ### Authorization
 
@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationCellularGatewayEsimsInventory
 
-> InlineResponse200301Items UpdateOrganizationCellularGatewayEsimsInventory(ctx, organizationId, id).UpdateOrganizationCellularGatewayEsimsInventory(updateOrganizationCellularGatewayEsimsInventory).Execute()
+> InlineResponse200313Items UpdateOrganizationCellularGatewayEsimsInventory(ctx, organizationId, id).UpdateOrganizationCellularGatewayEsimsInventory(updateOrganizationCellularGatewayEsimsInventory).Execute()
 
 Toggle the status of an eSIM
 
@@ -787,7 +787,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationCellularGatewayEsimsInventory := *openapiclient.NewInlineObject256() // InlineObject256 |  (optional)
+    updateOrganizationCellularGatewayEsimsInventory := *openapiclient.NewInlineObject267() // InlineObject267 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -796,7 +796,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.UpdateOrganizationCellularGatewayEsimsInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationCellularGatewayEsimsInventory`: InlineResponse200301Items
+    // response from `UpdateOrganizationCellularGatewayEsimsInventory`: InlineResponse200313Items
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.UpdateOrganizationCellularGatewayEsimsInventory`: %v\n", resp)
 }
 ```
@@ -819,11 +819,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCellularGatewayEsimsInventory** | [**InlineObject256**](InlineObject256.md) |  | 
+ **updateOrganizationCellularGatewayEsimsInventory** | [**InlineObject267**](InlineObject267.md) |  | 
 
 ### Return type
 
-[**InlineResponse200301Items**](InlineResponse200301Items.md)
+[**InlineResponse200313Items**](InlineResponse200313Items.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSpacesIntegrateStatus
 
-> InlineResponse200402 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
+> InlineResponse200414 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
 
 Get the status of the Spaces integration in Meraki
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntegrateApi.GetOrganizationSpacesIntegrateStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200402
+    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200414
     fmt.Fprintf(os.Stdout, "Response from `IntegrateApi.GetOrganizationSpacesIntegrateStatus`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200402**](InlineResponse200402.md)
+[**InlineResponse200414**](InlineResponse200414.md)
 
 ### Authorization
 

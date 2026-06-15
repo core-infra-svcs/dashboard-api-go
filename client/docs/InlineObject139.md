@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppIds** | **[]string** | ids of applications to be installed | 
-**Force** | Pointer to **bool** | By default, installation of an app which is believed to already be present on the device will be skipped. If you&#39;d like to force the installation of the app, set this parameter to true. | [optional] 
+**Enabled** | **bool** | Set to true to enable MQTT broker for sensor network | 
 
 ## Methods
 
 ### NewInlineObject139
 
-`func NewInlineObject139(appIds []string, ) *InlineObject139`
+`func NewInlineObject139(enabled bool, ) *InlineObject139`
 
 NewInlineObject139 instantiates a new InlineObject139 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,25 @@ NewInlineObject139WithDefaults instantiates a new InlineObject139 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAppIds
+### GetEnabled
 
-`func (o *InlineObject139) GetAppIds() []string`
+`func (o *InlineObject139) GetEnabled() bool`
 
-GetAppIds returns the AppIds field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAppIdsOk
+### GetEnabledOk
 
-`func (o *InlineObject139) GetAppIdsOk() (*[]string, bool)`
+`func (o *InlineObject139) GetEnabledOk() (*bool, bool)`
 
-GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppIds
+### SetEnabled
 
-`func (o *InlineObject139) SetAppIds(v []string)`
+`func (o *InlineObject139) SetEnabled(v bool)`
 
-SetAppIds sets AppIds field to given value.
+SetEnabled sets Enabled field to given value.
 
-
-### GetForce
-
-`func (o *InlineObject139) GetForce() bool`
-
-GetForce returns the Force field if non-nil, zero value otherwise.
-
-### GetForceOk
-
-`func (o *InlineObject139) GetForceOk() (*bool, bool)`
-
-GetForceOk returns a tuple with the Force field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetForce
-
-`func (o *InlineObject139) SetForce(v bool)`
-
-SetForce sets Force field to given value.
-
-### HasForce
-
-`func (o *InlineObject139) HasForce() bool`
-
-HasForce returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

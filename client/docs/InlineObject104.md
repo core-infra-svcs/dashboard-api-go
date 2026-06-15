@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**NetworksNetworkIdFirmwareUpgradesUpgradeWindow**](NetworksNetworkIdFirmwareUpgradesUpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the cluster | [optional] 
+**Uplinks** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks**](NetworksNetworkIdCampusGatewayClustersClusterIdUplinks.md) | Uplink interface settings of the cluster | [optional] 
+**Tunnels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels**](NetworksNetworkIdCampusGatewayClustersClusterIdTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20118Nameservers**](InlineResponse20118Nameservers.md) |  | [optional] 
+**PortChannels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels**](NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels.md) | Port channel settings of the cluster | [optional] 
+**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices**](NetworksNetworkIdCampusGatewayClustersClusterIdDevices.md) | Devices in the cluster | [optional] 
+**Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineObject104WithDefaults instantiates a new InlineObject104 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetName
 
-`func (o *InlineObject104) GetUpgradeWindow() NetworksNetworkIdFirmwareUpgradesUpgradeWindow`
+`func (o *InlineObject104) GetName() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetNameOk
 
-`func (o *InlineObject104) GetUpgradeWindowOk() (*NetworksNetworkIdFirmwareUpgradesUpgradeWindow, bool)`
+`func (o *InlineObject104) GetNameOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetName
 
-`func (o *InlineObject104) SetUpgradeWindow(v NetworksNetworkIdFirmwareUpgradesUpgradeWindow)`
+`func (o *InlineObject104) SetName(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetName sets Name field to given value.
 
-### HasUpgradeWindow
+### HasName
 
-`func (o *InlineObject104) HasUpgradeWindow() bool`
+`func (o *InlineObject104) HasName() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetTimezone
+### GetUplinks
 
-`func (o *InlineObject104) GetTimezone() string`
+`func (o *InlineObject104) GetUplinks() []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks`
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetTimezoneOk
+### GetUplinksOk
 
-`func (o *InlineObject104) GetTimezoneOk() (*string, bool)`
+`func (o *InlineObject104) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks, bool)`
 
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetUplinks
 
-`func (o *InlineObject104) SetTimezone(v string)`
+`func (o *InlineObject104) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks)`
 
-SetTimezone sets Timezone field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasTimezone
+### HasUplinks
 
-`func (o *InlineObject104) HasTimezone() bool`
+`func (o *InlineObject104) HasUplinks() bool`
 
-HasTimezone returns a boolean if a field has been set.
+HasUplinks returns a boolean if a field has been set.
 
-### GetProducts
+### GetTunnels
 
-`func (o *InlineObject104) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
+`func (o *InlineObject104) GetTunnels() []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetTunnelsOk
 
-`func (o *InlineObject104) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
+`func (o *InlineObject104) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetTunnels
 
-`func (o *InlineObject104) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
+`func (o *InlineObject104) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels)`
 
-SetProducts sets Products field to given value.
+SetTunnels sets Tunnels field to given value.
 
-### HasProducts
+### HasTunnels
 
-`func (o *InlineObject104) HasProducts() bool`
+`func (o *InlineObject104) HasTunnels() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasTunnels returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *InlineObject104) GetNameservers() InlineResponse20118Nameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject104) GetNameserversOk() (*InlineResponse20118Nameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject104) SetNameservers(v InlineResponse20118Nameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *InlineObject104) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
+
+### GetPortChannels
+
+`func (o *InlineObject104) GetPortChannels() []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels`
+
+GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
+
+### GetPortChannelsOk
+
+`func (o *InlineObject104) GetPortChannelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels, bool)`
+
+GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannels
+
+`func (o *InlineObject104) SetPortChannels(v []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels)`
+
+SetPortChannels sets PortChannels field to given value.
+
+### HasPortChannels
+
+`func (o *InlineObject104) HasPortChannels() bool`
+
+HasPortChannels returns a boolean if a field has been set.
+
+### GetDevices
+
+`func (o *InlineObject104) GetDevices() []NetworksNetworkIdCampusGatewayClustersClusterIdDevices`
+
+GetDevices returns the Devices field if non-nil, zero value otherwise.
+
+### GetDevicesOk
+
+`func (o *InlineObject104) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices, bool)`
+
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevices
+
+`func (o *InlineObject104) SetDevices(v []NetworksNetworkIdCampusGatewayClustersClusterIdDevices)`
+
+SetDevices sets Devices field to given value.
+
+### HasDevices
+
+`func (o *InlineObject104) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject104) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject104) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject104) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject104) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

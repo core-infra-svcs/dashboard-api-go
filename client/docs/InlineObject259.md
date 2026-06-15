@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
+**AlertIds** | **[]string** | Array of alert IDs to restore | 
 
 ## Methods
 
 ### NewInlineObject259
 
-`func NewInlineObject259(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject259`
+`func NewInlineObject259(alertIds []string, ) *InlineObject259`
 
 NewInlineObject259 instantiates a new InlineObject259 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject259WithDefaults instantiates a new InlineObject259 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetAlertIds
 
-`func (o *InlineObject259) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
+`func (o *InlineObject259) GetAlertIds() []string`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetAlertIdsOk
 
-`func (o *InlineObject259) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
+`func (o *InlineObject259) GetAlertIdsOk() (*[]string, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetAlertIds
 
-`func (o *InlineObject259) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
+`func (o *InlineObject259) SetAlertIds(v []string)`
 
-SetSwaps sets Swaps field to given value.
+SetAlertIds sets AlertIds field to given value.
 
 
 

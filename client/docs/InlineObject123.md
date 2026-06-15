@@ -4,17 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the MQTT broker. | [optional] 
-**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
-**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity1**](NetworksNetworkIdMqttBrokersSecurity1.md) |  | [optional] 
-**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication1**](NetworksNetworkIdMqttBrokersAuthentication1.md) |  | [optional] 
+**Name** | **string** | The name of your floor plan. | 
+**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter1**](NetworksNetworkIdFloorPlansCenter1.md) |  | [optional] 
+**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner1**](NetworksNetworkIdFloorPlansBottomLeftCorner1.md) |  | [optional] 
+**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner1**](NetworksNetworkIdFloorPlansBottomRightCorner1.md) |  | [optional] 
+**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner1**](NetworksNetworkIdFloorPlansTopLeftCorner1.md) |  | [optional] 
+**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner1**](NetworksNetworkIdFloorPlansTopRightCorner1.md) |  | [optional] 
+**FloorNumber** | Pointer to **float32** | The floor number of the floors within the building | [optional] 
+**ImageContents** | **string** | The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | 
 
 ## Methods
 
 ### NewInlineObject123
 
-`func NewInlineObject123() *InlineObject123`
+`func NewInlineObject123(name string, imageContents string, ) *InlineObject123`
 
 NewInlineObject123 instantiates a new InlineObject123 object
 This constructor will assign default values to properties that have it defined,
@@ -48,111 +51,176 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject123) HasName() bool`
+### GetCenter
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject123) GetCenter() NetworksNetworkIdFloorPlansCenter1`
 
-### GetHost
+GetCenter returns the Center field if non-nil, zero value otherwise.
 
-`func (o *InlineObject123) GetHost() string`
+### GetCenterOk
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+`func (o *InlineObject123) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter1, bool)`
 
-### GetHostOk
-
-`func (o *InlineObject123) GetHostOk() (*string, bool)`
-
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetCenter
 
-`func (o *InlineObject123) SetHost(v string)`
+`func (o *InlineObject123) SetCenter(v NetworksNetworkIdFloorPlansCenter1)`
 
-SetHost sets Host field to given value.
+SetCenter sets Center field to given value.
 
-### HasHost
+### HasCenter
 
-`func (o *InlineObject123) HasHost() bool`
+`func (o *InlineObject123) HasCenter() bool`
 
-HasHost returns a boolean if a field has been set.
+HasCenter returns a boolean if a field has been set.
 
-### GetPort
+### GetBottomLeftCorner
 
-`func (o *InlineObject123) GetPort() int32`
+`func (o *InlineObject123) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner1`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetBottomLeftCornerOk
 
-`func (o *InlineObject123) GetPortOk() (*int32, bool)`
+`func (o *InlineObject123) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner1, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetBottomLeftCorner
 
-`func (o *InlineObject123) SetPort(v int32)`
+`func (o *InlineObject123) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner1)`
 
-SetPort sets Port field to given value.
+SetBottomLeftCorner sets BottomLeftCorner field to given value.
 
-### HasPort
+### HasBottomLeftCorner
 
-`func (o *InlineObject123) HasPort() bool`
+`func (o *InlineObject123) HasBottomLeftCorner() bool`
 
-HasPort returns a boolean if a field has been set.
+HasBottomLeftCorner returns a boolean if a field has been set.
 
-### GetSecurity
+### GetBottomRightCorner
 
-`func (o *InlineObject123) GetSecurity() NetworksNetworkIdMqttBrokersSecurity1`
+`func (o *InlineObject123) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner1`
 
-GetSecurity returns the Security field if non-nil, zero value otherwise.
+GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
 
-### GetSecurityOk
+### GetBottomRightCornerOk
 
-`func (o *InlineObject123) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity1, bool)`
+`func (o *InlineObject123) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner1, bool)`
 
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
+GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurity
+### SetBottomRightCorner
 
-`func (o *InlineObject123) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity1)`
+`func (o *InlineObject123) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner1)`
 
-SetSecurity sets Security field to given value.
+SetBottomRightCorner sets BottomRightCorner field to given value.
 
-### HasSecurity
+### HasBottomRightCorner
 
-`func (o *InlineObject123) HasSecurity() bool`
+`func (o *InlineObject123) HasBottomRightCorner() bool`
 
-HasSecurity returns a boolean if a field has been set.
+HasBottomRightCorner returns a boolean if a field has been set.
 
-### GetAuthentication
+### GetTopLeftCorner
 
-`func (o *InlineObject123) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication1`
+`func (o *InlineObject123) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner1`
 
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
 
-### GetAuthenticationOk
+### GetTopLeftCornerOk
 
-`func (o *InlineObject123) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication1, bool)`
+`func (o *InlineObject123) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner1, bool)`
 
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthentication
+### SetTopLeftCorner
 
-`func (o *InlineObject123) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication1)`
+`func (o *InlineObject123) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner1)`
 
-SetAuthentication sets Authentication field to given value.
+SetTopLeftCorner sets TopLeftCorner field to given value.
 
-### HasAuthentication
+### HasTopLeftCorner
 
-`func (o *InlineObject123) HasAuthentication() bool`
+`func (o *InlineObject123) HasTopLeftCorner() bool`
 
-HasAuthentication returns a boolean if a field has been set.
+HasTopLeftCorner returns a boolean if a field has been set.
+
+### GetTopRightCorner
+
+`func (o *InlineObject123) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner1`
+
+GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
+
+### GetTopRightCornerOk
+
+`func (o *InlineObject123) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner1, bool)`
+
+GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopRightCorner
+
+`func (o *InlineObject123) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner1)`
+
+SetTopRightCorner sets TopRightCorner field to given value.
+
+### HasTopRightCorner
+
+`func (o *InlineObject123) HasTopRightCorner() bool`
+
+HasTopRightCorner returns a boolean if a field has been set.
+
+### GetFloorNumber
+
+`func (o *InlineObject123) GetFloorNumber() float32`
+
+GetFloorNumber returns the FloorNumber field if non-nil, zero value otherwise.
+
+### GetFloorNumberOk
+
+`func (o *InlineObject123) GetFloorNumberOk() (*float32, bool)`
+
+GetFloorNumberOk returns a tuple with the FloorNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFloorNumber
+
+`func (o *InlineObject123) SetFloorNumber(v float32)`
+
+SetFloorNumber sets FloorNumber field to given value.
+
+### HasFloorNumber
+
+`func (o *InlineObject123) HasFloorNumber() bool`
+
+HasFloorNumber returns a boolean if a field has been set.
+
+### GetImageContents
+
+`func (o *InlineObject123) GetImageContents() string`
+
+GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
+
+### GetImageContentsOk
+
+`func (o *InlineObject123) GetImageContentsOk() (*string, bool)`
+
+GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageContents
+
+`func (o *InlineObject123) SetImageContents(v string)`
+
+SetImageContents sets ImageContents field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

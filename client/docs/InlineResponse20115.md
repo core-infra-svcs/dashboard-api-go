@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Webhook delivery identifier | [optional] 
-**Url** | Pointer to **string** | URL where the webhook was delivered | [optional] 
-**Status** | Pointer to **string** | Current status of the webhook delivery | [optional] 
+**EnrollmentId** | Pointer to **string** | Id to check the status of your enrollment | [optional] 
+**Url** | Pointer to **string** | Url to check the status of your enrollment | [optional] 
+**Request** | Pointer to [**InlineResponse20115Request**](InlineResponse20115Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the enrollment | [optional] 
 
 ## Methods
 
@@ -27,30 +28,30 @@ NewInlineResponse20115WithDefaults instantiates a new InlineResponse20115 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnrollmentId
 
-`func (o *InlineResponse20115) GetId() string`
+`func (o *InlineResponse20115) GetEnrollmentId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnrollmentId returns the EnrollmentId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnrollmentIdOk
 
-`func (o *InlineResponse20115) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20115) GetEnrollmentIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnrollmentIdOk returns a tuple with the EnrollmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnrollmentId
 
-`func (o *InlineResponse20115) SetId(v string)`
+`func (o *InlineResponse20115) SetEnrollmentId(v string)`
 
-SetId sets Id field to given value.
+SetEnrollmentId sets EnrollmentId field to given value.
 
-### HasId
+### HasEnrollmentId
 
-`func (o *InlineResponse20115) HasId() bool`
+`func (o *InlineResponse20115) HasEnrollmentId() bool`
 
-HasId returns a boolean if a field has been set.
+HasEnrollmentId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -76,6 +77,31 @@ SetUrl sets Url field to given value.
 `func (o *InlineResponse20115) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20115) GetRequest() InlineResponse20115Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20115) GetRequestOk() (*InlineResponse20115Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20115) SetRequest(v InlineResponse20115Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20115) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
 
 ### GetStatus
 

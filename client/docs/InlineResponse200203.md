@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Application** | Pointer to **string** | Traffic application | [optional] 
-**Destination** | Pointer to **string** | Traffic destination | [optional] 
-**Protocol** | Pointer to **string** | Traffic protocol | [optional] 
-**Port** | Pointer to **int32** | Traffic port | [optional] 
-**Sent** | Pointer to **float32** | Traffic sent in kb | [optional] 
-**Recv** | Pointer to **float32** | Traffic received in kb | [optional] 
-**NumClients** | Pointer to **int32** | Number of clients with traffic | [optional] 
-**ActiveTime** | Pointer to **int32** | Active time with traffic | [optional] 
-**Flows** | Pointer to **int32** | Number of traffic flows | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse200203PowerExceptions**](InlineResponse200203PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**InlineResponse200203UplinkClientSampling**](InlineResponse200203UplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**InlineResponse200203MacBlocklist**](InlineResponse200203MacBlocklist.md) |  | [optional] 
+**PortChannelFallback** | Pointer to **bool** | Enable port channel fallback on Catalyst MS switches. | [optional] 
+**UplinkSelection** | Pointer to [**InlineResponse200203UplinkSelection**](InlineResponse200203UplinkSelection.md) |  | [optional] 
 
 ## Methods
 
@@ -33,230 +31,180 @@ NewInlineResponse200203WithDefaults instantiates a new InlineResponse200203 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplication
+### GetVlan
 
-`func (o *InlineResponse200203) GetApplication() string`
+`func (o *InlineResponse200203) GetVlan() int32`
 
-GetApplication returns the Application field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetApplicationOk
+### GetVlanOk
 
-`func (o *InlineResponse200203) GetApplicationOk() (*string, bool)`
+`func (o *InlineResponse200203) GetVlanOk() (*int32, bool)`
 
-GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplication
+### SetVlan
 
-`func (o *InlineResponse200203) SetApplication(v string)`
+`func (o *InlineResponse200203) SetVlan(v int32)`
 
-SetApplication sets Application field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasApplication
+### HasVlan
 
-`func (o *InlineResponse200203) HasApplication() bool`
+`func (o *InlineResponse200203) HasVlan() bool`
 
-HasApplication returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetDestination
+### GetUseCombinedPower
 
-`func (o *InlineResponse200203) GetDestination() string`
+`func (o *InlineResponse200203) GetUseCombinedPower() bool`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse200203) GetDestinationOk() (*string, bool)`
+`func (o *InlineResponse200203) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetUseCombinedPower
 
-`func (o *InlineResponse200203) SetDestination(v string)`
+`func (o *InlineResponse200203) SetUseCombinedPower(v bool)`
 
-SetDestination sets Destination field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasDestination
+### HasUseCombinedPower
 
-`func (o *InlineResponse200203) HasDestination() bool`
+`func (o *InlineResponse200203) HasUseCombinedPower() bool`
 
-HasDestination returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetProtocol
+### GetPowerExceptions
 
-`func (o *InlineResponse200203) GetProtocol() string`
+`func (o *InlineResponse200203) GetPowerExceptions() []InlineResponse200203PowerExceptions`
 
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetProtocolOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse200203) GetProtocolOk() (*string, bool)`
+`func (o *InlineResponse200203) GetPowerExceptionsOk() (*[]InlineResponse200203PowerExceptions, bool)`
 
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocol
+### SetPowerExceptions
 
-`func (o *InlineResponse200203) SetProtocol(v string)`
+`func (o *InlineResponse200203) SetPowerExceptions(v []InlineResponse200203PowerExceptions)`
 
-SetProtocol sets Protocol field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasProtocol
+### HasPowerExceptions
 
-`func (o *InlineResponse200203) HasProtocol() bool`
+`func (o *InlineResponse200203) HasPowerExceptions() bool`
 
-HasProtocol returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### GetPort
+### GetUplinkClientSampling
 
-`func (o *InlineResponse200203) GetPort() int32`
+`func (o *InlineResponse200203) GetUplinkClientSampling() InlineResponse200203UplinkClientSampling`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetUplinkClientSamplingOk
 
-`func (o *InlineResponse200203) GetPortOk() (*int32, bool)`
+`func (o *InlineResponse200203) GetUplinkClientSamplingOk() (*InlineResponse200203UplinkClientSampling, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetUplinkClientSampling
 
-`func (o *InlineResponse200203) SetPort(v int32)`
+`func (o *InlineResponse200203) SetUplinkClientSampling(v InlineResponse200203UplinkClientSampling)`
 
-SetPort sets Port field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasPort
+### HasUplinkClientSampling
 
-`func (o *InlineResponse200203) HasPort() bool`
+`func (o *InlineResponse200203) HasUplinkClientSampling() bool`
 
-HasPort returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
 
-### GetSent
+### GetMacBlocklist
 
-`func (o *InlineResponse200203) GetSent() float32`
+`func (o *InlineResponse200203) GetMacBlocklist() InlineResponse200203MacBlocklist`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetMacBlocklistOk
 
-`func (o *InlineResponse200203) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse200203) GetMacBlocklistOk() (*InlineResponse200203MacBlocklist, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetMacBlocklist
 
-`func (o *InlineResponse200203) SetSent(v float32)`
+`func (o *InlineResponse200203) SetMacBlocklist(v InlineResponse200203MacBlocklist)`
 
-SetSent sets Sent field to given value.
+SetMacBlocklist sets MacBlocklist field to given value.
 
-### HasSent
+### HasMacBlocklist
 
-`func (o *InlineResponse200203) HasSent() bool`
+`func (o *InlineResponse200203) HasMacBlocklist() bool`
 
-HasSent returns a boolean if a field has been set.
+HasMacBlocklist returns a boolean if a field has been set.
 
-### GetRecv
+### GetPortChannelFallback
 
-`func (o *InlineResponse200203) GetRecv() float32`
+`func (o *InlineResponse200203) GetPortChannelFallback() bool`
 
-GetRecv returns the Recv field if non-nil, zero value otherwise.
+GetPortChannelFallback returns the PortChannelFallback field if non-nil, zero value otherwise.
 
-### GetRecvOk
+### GetPortChannelFallbackOk
 
-`func (o *InlineResponse200203) GetRecvOk() (*float32, bool)`
+`func (o *InlineResponse200203) GetPortChannelFallbackOk() (*bool, bool)`
 
-GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+GetPortChannelFallbackOk returns a tuple with the PortChannelFallback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecv
+### SetPortChannelFallback
 
-`func (o *InlineResponse200203) SetRecv(v float32)`
+`func (o *InlineResponse200203) SetPortChannelFallback(v bool)`
 
-SetRecv sets Recv field to given value.
+SetPortChannelFallback sets PortChannelFallback field to given value.
 
-### HasRecv
+### HasPortChannelFallback
 
-`func (o *InlineResponse200203) HasRecv() bool`
+`func (o *InlineResponse200203) HasPortChannelFallback() bool`
 
-HasRecv returns a boolean if a field has been set.
+HasPortChannelFallback returns a boolean if a field has been set.
 
-### GetNumClients
+### GetUplinkSelection
 
-`func (o *InlineResponse200203) GetNumClients() int32`
+`func (o *InlineResponse200203) GetUplinkSelection() InlineResponse200203UplinkSelection`
 
-GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+GetUplinkSelection returns the UplinkSelection field if non-nil, zero value otherwise.
 
-### GetNumClientsOk
+### GetUplinkSelectionOk
 
-`func (o *InlineResponse200203) GetNumClientsOk() (*int32, bool)`
+`func (o *InlineResponse200203) GetUplinkSelectionOk() (*InlineResponse200203UplinkSelection, bool)`
 
-GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+GetUplinkSelectionOk returns a tuple with the UplinkSelection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumClients
+### SetUplinkSelection
 
-`func (o *InlineResponse200203) SetNumClients(v int32)`
+`func (o *InlineResponse200203) SetUplinkSelection(v InlineResponse200203UplinkSelection)`
 
-SetNumClients sets NumClients field to given value.
+SetUplinkSelection sets UplinkSelection field to given value.
 
-### HasNumClients
+### HasUplinkSelection
 
-`func (o *InlineResponse200203) HasNumClients() bool`
+`func (o *InlineResponse200203) HasUplinkSelection() bool`
 
-HasNumClients returns a boolean if a field has been set.
-
-### GetActiveTime
-
-`func (o *InlineResponse200203) GetActiveTime() int32`
-
-GetActiveTime returns the ActiveTime field if non-nil, zero value otherwise.
-
-### GetActiveTimeOk
-
-`func (o *InlineResponse200203) GetActiveTimeOk() (*int32, bool)`
-
-GetActiveTimeOk returns a tuple with the ActiveTime field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActiveTime
-
-`func (o *InlineResponse200203) SetActiveTime(v int32)`
-
-SetActiveTime sets ActiveTime field to given value.
-
-### HasActiveTime
-
-`func (o *InlineResponse200203) HasActiveTime() bool`
-
-HasActiveTime returns a boolean if a field has been set.
-
-### GetFlows
-
-`func (o *InlineResponse200203) GetFlows() int32`
-
-GetFlows returns the Flows field if non-nil, zero value otherwise.
-
-### GetFlowsOk
-
-`func (o *InlineResponse200203) GetFlowsOk() (*int32, bool)`
-
-GetFlowsOk returns a tuple with the Flows field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFlows
-
-`func (o *InlineResponse200203) SetFlows(v int32)`
-
-SetFlows sets Flows field to given value.
-
-### HasFlows
-
-`func (o *InlineResponse200203) HasFlows() bool`
-
-HasFlows returns a boolean if a field has been set.
+HasUplinkSelection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

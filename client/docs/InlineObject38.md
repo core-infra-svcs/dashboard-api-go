@@ -4,14 +4,25 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable or disable warm spare for a switch | 
-**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
+**Name** | **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | 
+**Mode** | Pointer to **string** | L3 Interface mode, can be one of &#39;vlan&#39;, &#39;routed&#39;, &#39;loopback&#39;. Default is &#39;vlan&#39;. CS 17.18 or higher is required for &#39;routed&#39; mode.  | [optional] 
+**Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**SwitchPortId** | Pointer to **NullableString** | Switch Port ID when in Routed mode (CS 17.18 or higher required) | [optional] 
+**InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
+**Mtu** | Pointer to **NullableInt32** | The interface MTU. Applies to native switch layer 3 interfaces, including VLAN and routed modes. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
+**VlanId** | Pointer to **NullableInt32** | The VLAN this L3 interface is on. VLAN must be between 1 and 4094. | [optional] 
+**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a L3 interface. Required if this is the first IPv4 interface. | [optional] 
+**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
+**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf1**](DevicesSerialSwitchRoutingInterfacesVrf1.md) |  | [optional] 
+**Loopback** | Pointer to **map[string]interface{}** | The loopback settings of the interface. | [optional] 
 
 ## Methods
 
 ### NewInlineObject38
 
-`func NewInlineObject38(enabled bool, ) *InlineObject38`
+`func NewInlineObject38(name string, ) *InlineObject38`
 
 NewInlineObject38 instantiates a new InlineObject38 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +37,375 @@ NewInlineObject38WithDefaults instantiates a new InlineObject38 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject38) GetEnabled() bool`
+`func (o *InlineObject38) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject38) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject38) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject38) SetEnabled(v bool)`
+`func (o *InlineObject38) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
 
-### GetSpareSerial
+### GetMode
 
-`func (o *InlineObject38) GetSpareSerial() string`
+`func (o *InlineObject38) GetMode() string`
 
-GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetSpareSerialOk
+### GetModeOk
 
-`func (o *InlineObject38) GetSpareSerialOk() (*string, bool)`
+`func (o *InlineObject38) GetModeOk() (*string, bool)`
 
-GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpareSerial
+### SetMode
 
-`func (o *InlineObject38) SetSpareSerial(v string)`
+`func (o *InlineObject38) SetMode(v string)`
 
-SetSpareSerial sets SpareSerial field to given value.
+SetMode sets Mode field to given value.
 
-### HasSpareSerial
+### HasMode
 
-`func (o *InlineObject38) HasSpareSerial() bool`
+`func (o *InlineObject38) HasMode() bool`
 
-HasSpareSerial returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
+
+### GetSubnet
+
+`func (o *InlineObject38) GetSubnet() string`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineObject38) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineObject38) SetSubnet(v string)`
+
+SetSubnet sets Subnet field to given value.
+
+### HasSubnet
+
+`func (o *InlineObject38) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### SetSubnetNil
+
+`func (o *InlineObject38) SetSubnetNil(b bool)`
+
+ SetSubnetNil sets the value for Subnet to be an explicit nil
+
+### UnsetSubnet
+`func (o *InlineObject38) UnsetSubnet()`
+
+UnsetSubnet ensures that no value is present for Subnet, not even an explicit nil
+### GetSwitchPortId
+
+`func (o *InlineObject38) GetSwitchPortId() string`
+
+GetSwitchPortId returns the SwitchPortId field if non-nil, zero value otherwise.
+
+### GetSwitchPortIdOk
+
+`func (o *InlineObject38) GetSwitchPortIdOk() (*string, bool)`
+
+GetSwitchPortIdOk returns a tuple with the SwitchPortId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitchPortId
+
+`func (o *InlineObject38) SetSwitchPortId(v string)`
+
+SetSwitchPortId sets SwitchPortId field to given value.
+
+### HasSwitchPortId
+
+`func (o *InlineObject38) HasSwitchPortId() bool`
+
+HasSwitchPortId returns a boolean if a field has been set.
+
+### SetSwitchPortIdNil
+
+`func (o *InlineObject38) SetSwitchPortIdNil(b bool)`
+
+ SetSwitchPortIdNil sets the value for SwitchPortId to be an explicit nil
+
+### UnsetSwitchPortId
+`func (o *InlineObject38) UnsetSwitchPortId()`
+
+UnsetSwitchPortId ensures that no value is present for SwitchPortId, not even an explicit nil
+### GetInterfaceIp
+
+`func (o *InlineObject38) GetInterfaceIp() string`
+
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+
+### GetInterfaceIpOk
+
+`func (o *InlineObject38) GetInterfaceIpOk() (*string, bool)`
+
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterfaceIp
+
+`func (o *InlineObject38) SetInterfaceIp(v string)`
+
+SetInterfaceIp sets InterfaceIp field to given value.
+
+### HasInterfaceIp
+
+`func (o *InlineObject38) HasInterfaceIp() bool`
+
+HasInterfaceIp returns a boolean if a field has been set.
+
+### SetInterfaceIpNil
+
+`func (o *InlineObject38) SetInterfaceIpNil(b bool)`
+
+ SetInterfaceIpNil sets the value for InterfaceIp to be an explicit nil
+
+### UnsetInterfaceIp
+`func (o *InlineObject38) UnsetInterfaceIp()`
+
+UnsetInterfaceIp ensures that no value is present for InterfaceIp, not even an explicit nil
+### GetMtu
+
+`func (o *InlineObject38) GetMtu() int32`
+
+GetMtu returns the Mtu field if non-nil, zero value otherwise.
+
+### GetMtuOk
+
+`func (o *InlineObject38) GetMtuOk() (*int32, bool)`
+
+GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMtu
+
+`func (o *InlineObject38) SetMtu(v int32)`
+
+SetMtu sets Mtu field to given value.
+
+### HasMtu
+
+`func (o *InlineObject38) HasMtu() bool`
+
+HasMtu returns a boolean if a field has been set.
+
+### SetMtuNil
+
+`func (o *InlineObject38) SetMtuNil(b bool)`
+
+ SetMtuNil sets the value for Mtu to be an explicit nil
+
+### UnsetMtu
+`func (o *InlineObject38) UnsetMtu()`
+
+UnsetMtu ensures that no value is present for Mtu, not even an explicit nil
+### GetMulticastRouting
+
+`func (o *InlineObject38) GetMulticastRouting() string`
+
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
+
+### GetMulticastRoutingOk
+
+`func (o *InlineObject38) GetMulticastRoutingOk() (*string, bool)`
+
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastRouting
+
+`func (o *InlineObject38) SetMulticastRouting(v string)`
+
+SetMulticastRouting sets MulticastRouting field to given value.
+
+### HasMulticastRouting
+
+`func (o *InlineObject38) HasMulticastRouting() bool`
+
+HasMulticastRouting returns a boolean if a field has been set.
+
+### GetVlanId
+
+`func (o *InlineObject38) GetVlanId() int32`
+
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+
+### GetVlanIdOk
+
+`func (o *InlineObject38) GetVlanIdOk() (*int32, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanId
+
+`func (o *InlineObject38) SetVlanId(v int32)`
+
+SetVlanId sets VlanId field to given value.
+
+### HasVlanId
+
+`func (o *InlineObject38) HasVlanId() bool`
+
+HasVlanId returns a boolean if a field has been set.
+
+### SetVlanIdNil
+
+`func (o *InlineObject38) SetVlanIdNil(b bool)`
+
+ SetVlanIdNil sets the value for VlanId to be an explicit nil
+
+### UnsetVlanId
+`func (o *InlineObject38) UnsetVlanId()`
+
+UnsetVlanId ensures that no value is present for VlanId, not even an explicit nil
+### GetDefaultGateway
+
+`func (o *InlineObject38) GetDefaultGateway() string`
+
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+
+### GetDefaultGatewayOk
+
+`func (o *InlineObject38) GetDefaultGatewayOk() (*string, bool)`
+
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultGateway
+
+`func (o *InlineObject38) SetDefaultGateway(v string)`
+
+SetDefaultGateway sets DefaultGateway field to given value.
+
+### HasDefaultGateway
+
+`func (o *InlineObject38) HasDefaultGateway() bool`
+
+HasDefaultGateway returns a boolean if a field has been set.
+
+### GetOspfSettings
+
+`func (o *InlineObject38) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings1`
+
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+
+### GetOspfSettingsOk
+
+`func (o *InlineObject38) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings1, bool)`
+
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfSettings
+
+`func (o *InlineObject38) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings1)`
+
+SetOspfSettings sets OspfSettings field to given value.
+
+### HasOspfSettings
+
+`func (o *InlineObject38) HasOspfSettings() bool`
+
+HasOspfSettings returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineObject38) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv61`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineObject38) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv61, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineObject38) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv61)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineObject38) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject38) GetVrf() DevicesSerialSwitchRoutingInterfacesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject38) GetVrfOk() (*DevicesSerialSwitchRoutingInterfacesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject38) SetVrf(v DevicesSerialSwitchRoutingInterfacesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject38) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
+
+### GetLoopback
+
+`func (o *InlineObject38) GetLoopback() map[string]interface{}`
+
+GetLoopback returns the Loopback field if non-nil, zero value otherwise.
+
+### GetLoopbackOk
+
+`func (o *InlineObject38) GetLoopbackOk() (*map[string]interface{}, bool)`
+
+GetLoopbackOk returns a tuple with the Loopback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLoopback
+
+`func (o *InlineObject38) SetLoopback(v map[string]interface{})`
+
+SetLoopback sets Loopback field to given value.
+
+### HasLoopback
+
+`func (o *InlineObject38) HasLoopback() bool`
+
+HasLoopback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

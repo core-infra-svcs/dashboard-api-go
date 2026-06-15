@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device | [optional] 
-**LatencyStats** | Pointer to [**InlineResponse20058LatencyStats**](InlineResponse20058LatencyStats.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Enable or disable warm spare for a switch | [optional] 
+**PrimarySerial** | Pointer to **string** | Serial number of the primary switch | [optional] 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20058WithDefaults instantiates a new InlineResponse20058 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetEnabled
 
-`func (o *InlineResponse20058) GetSerial() string`
+`func (o *InlineResponse20058) GetEnabled() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEnabledOk
 
-`func (o *InlineResponse20058) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20058) GetEnabledOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEnabled
 
-`func (o *InlineResponse20058) SetSerial(v string)`
+`func (o *InlineResponse20058) SetEnabled(v bool)`
 
-SetSerial sets Serial field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSerial
+### HasEnabled
 
-`func (o *InlineResponse20058) HasSerial() bool`
+`func (o *InlineResponse20058) HasEnabled() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetLatencyStats
+### GetPrimarySerial
 
-`func (o *InlineResponse20058) GetLatencyStats() InlineResponse20058LatencyStats`
+`func (o *InlineResponse20058) GetPrimarySerial() string`
 
-GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
+GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
 
-### GetLatencyStatsOk
+### GetPrimarySerialOk
 
-`func (o *InlineResponse20058) GetLatencyStatsOk() (*InlineResponse20058LatencyStats, bool)`
+`func (o *InlineResponse20058) GetPrimarySerialOk() (*string, bool)`
 
-GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
+GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyStats
+### SetPrimarySerial
 
-`func (o *InlineResponse20058) SetLatencyStats(v InlineResponse20058LatencyStats)`
+`func (o *InlineResponse20058) SetPrimarySerial(v string)`
 
-SetLatencyStats sets LatencyStats field to given value.
+SetPrimarySerial sets PrimarySerial field to given value.
 
-### HasLatencyStats
+### HasPrimarySerial
 
-`func (o *InlineResponse20058) HasLatencyStats() bool`
+`func (o *InlineResponse20058) HasPrimarySerial() bool`
 
-HasLatencyStats returns a boolean if a field has been set.
+HasPrimarySerial returns a boolean if a field has been set.
+
+### GetSpareSerial
+
+`func (o *InlineResponse20058) GetSpareSerial() string`
+
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+
+### GetSpareSerialOk
+
+`func (o *InlineResponse20058) GetSpareSerialOk() (*string, bool)`
+
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpareSerial
+
+`func (o *InlineResponse20058) SetSpareSerial(v string)`
+
+SetSpareSerial sets SpareSerial field to given value.
+
+### HasSpareSerial
+
+`func (o *InlineResponse20058) HasSpareSerial() bool`
+
+HasSpareSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

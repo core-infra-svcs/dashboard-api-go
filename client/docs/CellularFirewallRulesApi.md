@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceFirewallCellularFirewallRules
 
-> InlineResponse20068 GetNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).Execute()
+> InlineResponse20073 GetNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).Execute()
 
 Return the cellular firewall rules for an MX network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularFirewallRulesApi.GetNetworkApplianceFirewallCellularFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20068
+    // response from `GetNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `CellularFirewallRulesApi.GetNetworkApplianceFirewallCellularFirewallRules`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallCellularFirewallRules
 
-> InlineResponse20068 UpdateNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallCellularFirewallRules(updateNetworkApplianceFirewallCellularFirewallRules).Execute()
+> InlineResponse20073 UpdateNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallCellularFirewallRules(updateNetworkApplianceFirewallCellularFirewallRules).Execute()
 
 Update the cellular firewall rules of an MX network
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject48() // InlineObject48 |  (optional)
+    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularFirewallRulesApi.UpdateNetworkApplianceFirewallCellularFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20068
+    // response from `UpdateNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `CellularFirewallRulesApi.UpdateNetworkApplianceFirewallCellularFirewallRules`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject48**](InlineObject48.md) |  | 
+ **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject53**](InlineObject53.md) |  | 
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 

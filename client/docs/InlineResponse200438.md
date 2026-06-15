@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
+**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
+**Status** | Pointer to **string** | The status of the callback | [optional] 
+**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
+**CreatedBy** | Pointer to [**InlineResponse200438CreatedBy**](InlineResponse200438CreatedBy.md) |  | [optional] 
+**Webhook** | Pointer to [**InlineResponse200438Webhook**](InlineResponse200438Webhook.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200438WithDefaults instantiates a new InlineResponse200438 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetCallbackId
 
-`func (o *InlineResponse200438) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200438) GetCallbackId() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetCallbackIdOk
 
-`func (o *InlineResponse200438) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200438) GetCallbackIdOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetCallbackId
 
-`func (o *InlineResponse200438) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200438) SetCallbackId(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetCallbackId sets CallbackId field to given value.
 
-### HasDownstream
+### HasCallbackId
 
-`func (o *InlineResponse200438) HasDownstream() bool`
+`func (o *InlineResponse200438) HasCallbackId() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasCallbackId returns a boolean if a field has been set.
 
-### GetUpstream
+### GetStatus
 
-`func (o *InlineResponse200438) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200438) GetStatus() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetStatusOk
 
-`func (o *InlineResponse200438) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200438) GetStatusOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetStatus
 
-`func (o *InlineResponse200438) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200438) SetStatus(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetStatus sets Status field to given value.
 
-### HasUpstream
+### HasStatus
 
-`func (o *InlineResponse200438) HasUpstream() bool`
+`func (o *InlineResponse200438) HasStatus() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetNetwork
+### GetErrors
 
-`func (o *InlineResponse200438) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200438) GetErrors() []string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetErrorsOk
 
-`func (o *InlineResponse200438) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200438) GetErrorsOk() (*[]string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetErrors
 
-`func (o *InlineResponse200438) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200438) SetErrors(v []string)`
 
-SetNetwork sets Network field to given value.
+SetErrors sets Errors field to given value.
 
-### HasNetwork
+### HasErrors
 
-`func (o *InlineResponse200438) HasNetwork() bool`
+`func (o *InlineResponse200438) HasErrors() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
+
+### GetCreatedBy
+
+`func (o *InlineResponse200438) GetCreatedBy() InlineResponse200438CreatedBy`
+
+GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
+
+### GetCreatedByOk
+
+`func (o *InlineResponse200438) GetCreatedByOk() (*InlineResponse200438CreatedBy, bool)`
+
+GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedBy
+
+`func (o *InlineResponse200438) SetCreatedBy(v InlineResponse200438CreatedBy)`
+
+SetCreatedBy sets CreatedBy field to given value.
+
+### HasCreatedBy
+
+`func (o *InlineResponse200438) HasCreatedBy() bool`
+
+HasCreatedBy returns a boolean if a field has been set.
+
+### GetWebhook
+
+`func (o *InlineResponse200438) GetWebhook() InlineResponse200438Webhook`
+
+GetWebhook returns the Webhook field if non-nil, zero value otherwise.
+
+### GetWebhookOk
+
+`func (o *InlineResponse200438) GetWebhookOk() (*InlineResponse200438Webhook, bool)`
+
+GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWebhook
+
+`func (o *InlineResponse200438) SetWebhook(v InlineResponse200438Webhook)`
+
+SetWebhook sets Webhook field to given value.
+
+### HasWebhook
+
+`func (o *InlineResponse200438) HasWebhook() bool`
+
+HasWebhook returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

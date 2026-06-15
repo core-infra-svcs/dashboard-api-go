@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**InlineResponse200192DefaultSettings**](InlineResponse200192DefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse200192Overrides**](InlineResponse200192Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
+**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
+**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
+**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200192WithDefaults instantiates a new InlineResponse200192 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetTrustedServerId
 
-`func (o *InlineResponse200192) GetDefaultSettings() InlineResponse200192DefaultSettings`
+`func (o *InlineResponse200192) GetTrustedServerId() string`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetTrustedServerIdOk
 
-`func (o *InlineResponse200192) GetDefaultSettingsOk() (*InlineResponse200192DefaultSettings, bool)`
+`func (o *InlineResponse200192) GetTrustedServerIdOk() (*string, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetTrustedServerId
 
-`func (o *InlineResponse200192) SetDefaultSettings(v InlineResponse200192DefaultSettings)`
+`func (o *InlineResponse200192) SetTrustedServerId(v string)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetTrustedServerId sets TrustedServerId field to given value.
 
-### HasDefaultSettings
+### HasTrustedServerId
 
-`func (o *InlineResponse200192) HasDefaultSettings() bool`
+`func (o *InlineResponse200192) HasTrustedServerId() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
+HasTrustedServerId returns a boolean if a field has been set.
 
-### GetOverrides
+### GetMac
 
-`func (o *InlineResponse200192) GetOverrides() []InlineResponse200192Overrides`
+`func (o *InlineResponse200192) GetMac() string`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetMacOk
 
-`func (o *InlineResponse200192) GetOverridesOk() (*[]InlineResponse200192Overrides, bool)`
+`func (o *InlineResponse200192) GetMacOk() (*string, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetMac
 
-`func (o *InlineResponse200192) SetOverrides(v []InlineResponse200192Overrides)`
+`func (o *InlineResponse200192) SetMac(v string)`
 
-SetOverrides sets Overrides field to given value.
+SetMac sets Mac field to given value.
 
-### HasOverrides
+### HasMac
 
-`func (o *InlineResponse200192) HasOverrides() bool`
+`func (o *InlineResponse200192) HasMac() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse200192) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse200192) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse200192) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse200192) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetIpv4
+
+`func (o *InlineResponse200192) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineResponse200192) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv4
+
+`func (o *InlineResponse200192) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
+
+SetIpv4 sets Ipv4 field to given value.
+
+### HasIpv4
+
+`func (o *InlineResponse200192) HasIpv4() bool`
+
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

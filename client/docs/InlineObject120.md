@@ -4,19 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** | Email address of the user | 
-**Name** | Pointer to **string** | Name of the user. Only required If the user is not a Dashboard administrator. | [optional] 
-**Password** | Pointer to **string** | The password for this user account. Only required If the user is not a Dashboard administrator. | [optional] 
-**AccountType** | Pointer to **string** | Authorization type for user. Can be &#39;Guest&#39; or &#39;802.1X&#39; for wireless networks, or &#39;Client VPN&#39; for MX networks. Defaults to &#39;802.1X&#39;. | [optional] [default to "802.1X"]
-**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
-**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator. | [optional] 
-**Authorizations** | [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations1**](NetworksNetworkIdMerakiAuthUsersAuthorizations1.md) | Authorization zones and expiration dates for the user. | 
+**Name** | **string** | Name of the Staged Upgrade Group. Length must be 1 to 255 characters | 
+**Description** | Pointer to **string** | Description of the Staged Upgrade Group. Length must be 1 to 255 characters | [optional] 
+**IsDefault** | **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | 
+**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject120
 
-`func NewInlineObject120(email string, authorizations []NetworksNetworkIdMerakiAuthUsersAuthorizations1, ) *InlineObject120`
+`func NewInlineObject120(name string, isDefault bool, ) *InlineObject120`
 
 NewInlineObject120 instantiates a new InlineObject120 object
 This constructor will assign default values to properties that have it defined,
@@ -30,26 +27,6 @@ will change when the set of required properties is changed
 NewInlineObject120WithDefaults instantiates a new InlineObject120 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEmail
-
-`func (o *InlineObject120) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineObject120) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineObject120) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
 
 ### GetName
 
@@ -70,131 +47,76 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject120) HasName() bool`
+### GetDescription
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject120) GetDescription() string`
 
-### GetPassword
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-`func (o *InlineObject120) GetPassword() string`
+### GetDescriptionOk
 
-GetPassword returns the Password field if non-nil, zero value otherwise.
+`func (o *InlineObject120) GetDescriptionOk() (*string, bool)`
 
-### GetPasswordOk
-
-`func (o *InlineObject120) GetPasswordOk() (*string, bool)`
-
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassword
+### SetDescription
 
-`func (o *InlineObject120) SetPassword(v string)`
+`func (o *InlineObject120) SetDescription(v string)`
 
-SetPassword sets Password field to given value.
+SetDescription sets Description field to given value.
 
-### HasPassword
+### HasDescription
 
-`func (o *InlineObject120) HasPassword() bool`
+`func (o *InlineObject120) HasDescription() bool`
 
-HasPassword returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetAccountType
+### GetIsDefault
 
-`func (o *InlineObject120) GetAccountType() string`
+`func (o *InlineObject120) GetIsDefault() bool`
 
-GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetAccountTypeOk
+### GetIsDefaultOk
 
-`func (o *InlineObject120) GetAccountTypeOk() (*string, bool)`
+`func (o *InlineObject120) GetIsDefaultOk() (*bool, bool)`
 
-GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountType
+### SetIsDefault
 
-`func (o *InlineObject120) SetAccountType(v string)`
+`func (o *InlineObject120) SetIsDefault(v bool)`
 
-SetAccountType sets AccountType field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasAccountType
 
-`func (o *InlineObject120) HasAccountType() bool`
+### GetAssignedDevices
 
-HasAccountType returns a boolean if a field has been set.
+`func (o *InlineObject120) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1`
 
-### GetEmailPasswordToUser
+GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
 
-`func (o *InlineObject120) GetEmailPasswordToUser() bool`
+### GetAssignedDevicesOk
 
-GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+`func (o *InlineObject120) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1, bool)`
 
-### GetEmailPasswordToUserOk
-
-`func (o *InlineObject120) GetEmailPasswordToUserOk() (*bool, bool)`
-
-GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmailPasswordToUser
+### SetAssignedDevices
 
-`func (o *InlineObject120) SetEmailPasswordToUser(v bool)`
+`func (o *InlineObject120) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1)`
 
-SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+SetAssignedDevices sets AssignedDevices field to given value.
 
-### HasEmailPasswordToUser
+### HasAssignedDevices
 
-`func (o *InlineObject120) HasEmailPasswordToUser() bool`
+`func (o *InlineObject120) HasAssignedDevices() bool`
 
-HasEmailPasswordToUser returns a boolean if a field has been set.
-
-### GetIsAdmin
-
-`func (o *InlineObject120) GetIsAdmin() bool`
-
-GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
-
-### GetIsAdminOk
-
-`func (o *InlineObject120) GetIsAdminOk() (*bool, bool)`
-
-GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsAdmin
-
-`func (o *InlineObject120) SetIsAdmin(v bool)`
-
-SetIsAdmin sets IsAdmin field to given value.
-
-### HasIsAdmin
-
-`func (o *InlineObject120) HasIsAdmin() bool`
-
-HasIsAdmin returns a boolean if a field has been set.
-
-### GetAuthorizations
-
-`func (o *InlineObject120) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations1`
-
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
-
-### GetAuthorizationsOk
-
-`func (o *InlineObject120) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations1, bool)`
-
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthorizations
-
-`func (o *InlineObject120) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations1)`
-
-SetAuthorizations sets Authorizations field to given value.
-
+HasAssignedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

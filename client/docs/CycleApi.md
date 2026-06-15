@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject25([]string{"Ports_example"}) // InlineObject25 | 
+    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject26([]string{"Ports_example"}) // InlineObject26 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPorts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPortsCycle** | [**InlineObject25**](InlineObject25.md) |  | 
+ **createDeviceLiveToolsPortsCycle** | [**InlineObject26**](InlineObject26.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPortsCycle
 
-> InlineResponse20038 GetDeviceLiveToolsPortsCycle(ctx, serial, id).Execute()
+> InlineResponse20039 GetDeviceLiveToolsPortsCycle(ctx, serial, id).Execute()
 
 Return a cycle port live tool job.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CycleApi.GetDeviceLiveToolsPortsCycle``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPortsCycle`: InlineResponse20038
+    // response from `GetDeviceLiveToolsPortsCycle`: InlineResponse20039
     fmt.Fprintf(os.Stdout, "Response from `CycleApi.GetDeviceLiveToolsPortsCycle`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
+**Mac** | **string** | The mac address of the trusted server being added | 
+**Vlan** | **int32** | The VLAN of the trusted server being added. It must be between 1 and 4094 | 
+**Ipv4** | [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41.md) |  | 
 
 ## Methods
 
 ### NewInlineObject160
 
-`func NewInlineObject160() *InlineObject160`
+`func NewInlineObject160(mac string, vlan int32, ipv4 NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, ) *InlineObject160`
 
 NewInlineObject160 instantiates a new InlineObject160 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,65 @@ NewInlineObject160WithDefaults instantiates a new InlineObject160 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetMac
 
-`func (o *InlineObject160) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
+`func (o *InlineObject160) GetMac() string`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetMacOk
 
-`func (o *InlineObject160) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
+`func (o *InlineObject160) GetMacOk() (*string, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetMac
 
-`func (o *InlineObject160) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
+`func (o *InlineObject160) SetMac(v string)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetMac sets Mac field to given value.
 
-### HasDefaultSettings
 
-`func (o *InlineObject160) HasDefaultSettings() bool`
+### GetVlan
 
-HasDefaultSettings returns a boolean if a field has been set.
+`func (o *InlineObject160) GetVlan() int32`
 
-### GetOverrides
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-`func (o *InlineObject160) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
+### GetVlanOk
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+`func (o *InlineObject160) GetVlanOk() (*int32, bool)`
 
-### GetOverridesOk
-
-`func (o *InlineObject160) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
-
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetVlan
 
-`func (o *InlineObject160) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
+`func (o *InlineObject160) SetVlan(v int32)`
 
-SetOverrides sets Overrides field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasOverrides
 
-`func (o *InlineObject160) HasOverrides() bool`
+### GetIpv4
 
-HasOverrides returns a boolean if a field has been set.
+`func (o *InlineObject160) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineObject160) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv4
+
+`func (o *InlineObject160) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41)`
+
+SetIpv4 sets Ipv4 field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

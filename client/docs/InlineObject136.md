@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be rebooted. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the endpoints to be rebooted. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the endpoints to be rebooted. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted. | [optional] 
-**KextPaths** | Pointer to **[]string** | The KextPaths of the endpoints to be rebooted. Available for macOS 11+ | [optional] 
-**NotifyUser** | Pointer to **bool** | Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+ | [optional] 
-**RebuildKernelCache** | Pointer to **bool** | Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+ | [optional] 
-**RequestRequiresNetworkTether** | Pointer to **bool** | Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS | [optional] 
+**Type** | Pointer to **string** | One of \&quot;delete\&quot; or \&quot;restrict processing\&quot; | [optional] 
+**Datasets** | Pointer to **[]string** | The datasets related to the provided key that should be deleted. Only applies to \&quot;delete\&quot; requests. The value \&quot;all\&quot; will be expanded to all datasets applicable to this type. The datasets by applicable to each type are: mac (usage, events, traffic), email (users, loginAttempts), username (users, loginAttempts), bluetoothMac (client, connectivity), smDeviceId (device), smUserId (user) | [optional] 
+**Username** | Pointer to **string** | The username of a network log in. Only applies to \&quot;delete\&quot; requests. | [optional] 
+**Email** | Pointer to **string** | The email of a network user account. Only applies to \&quot;delete\&quot; requests. | [optional] 
+**Mac** | Pointer to **string** | The MAC of a network client device. Applies to both \&quot;restrict processing\&quot; and \&quot;delete\&quot; requests. | [optional] 
+**SmDeviceId** | Pointer to **string** | The sm_device_id of a Systems Manager device. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager device. Must include \&quot;device\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the device. | [optional] 
+**SmUserId** | Pointer to **string** | The sm_user_id of a Systems Manager user. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager user. Must include \&quot;user\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the user. | [optional] 
 
 ## Methods
 
@@ -32,205 +31,180 @@ NewInlineObject136WithDefaults instantiates a new InlineObject136 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetType
 
-`func (o *InlineObject136) GetWifiMacs() []string`
+`func (o *InlineObject136) GetType() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetTypeOk
 
-`func (o *InlineObject136) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject136) GetTypeOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetType
 
-`func (o *InlineObject136) SetWifiMacs(v []string)`
+`func (o *InlineObject136) SetType(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetType sets Type field to given value.
 
-### HasWifiMacs
+### HasType
 
-`func (o *InlineObject136) HasWifiMacs() bool`
+`func (o *InlineObject136) HasType() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetIds
+### GetDatasets
 
-`func (o *InlineObject136) GetIds() []string`
+`func (o *InlineObject136) GetDatasets() []string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetDatasets returns the Datasets field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetDatasetsOk
 
-`func (o *InlineObject136) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject136) GetDatasetsOk() (*[]string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetDatasetsOk returns a tuple with the Datasets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetDatasets
 
-`func (o *InlineObject136) SetIds(v []string)`
+`func (o *InlineObject136) SetDatasets(v []string)`
 
-SetIds sets Ids field to given value.
+SetDatasets sets Datasets field to given value.
 
-### HasIds
+### HasDatasets
 
-`func (o *InlineObject136) HasIds() bool`
+`func (o *InlineObject136) HasDatasets() bool`
 
-HasIds returns a boolean if a field has been set.
+HasDatasets returns a boolean if a field has been set.
 
-### GetSerials
+### GetUsername
 
-`func (o *InlineObject136) GetSerials() []string`
+`func (o *InlineObject136) GetUsername() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetUsername returns the Username field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetUsernameOk
 
-`func (o *InlineObject136) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject136) GetUsernameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetUsername
 
-`func (o *InlineObject136) SetSerials(v []string)`
+`func (o *InlineObject136) SetUsername(v string)`
 
-SetSerials sets Serials field to given value.
+SetUsername sets Username field to given value.
 
-### HasSerials
+### HasUsername
 
-`func (o *InlineObject136) HasSerials() bool`
+`func (o *InlineObject136) HasUsername() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasUsername returns a boolean if a field has been set.
 
-### GetScope
+### GetEmail
 
-`func (o *InlineObject136) GetScope() []string`
+`func (o *InlineObject136) GetEmail() string`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetEmailOk
 
-`func (o *InlineObject136) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject136) GetEmailOk() (*string, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetEmail
 
-`func (o *InlineObject136) SetScope(v []string)`
+`func (o *InlineObject136) SetEmail(v string)`
 
-SetScope sets Scope field to given value.
+SetEmail sets Email field to given value.
 
-### HasScope
+### HasEmail
 
-`func (o *InlineObject136) HasScope() bool`
+`func (o *InlineObject136) HasEmail() bool`
 
-HasScope returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetKextPaths
+### GetMac
 
-`func (o *InlineObject136) GetKextPaths() []string`
+`func (o *InlineObject136) GetMac() string`
 
-GetKextPaths returns the KextPaths field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetKextPathsOk
+### GetMacOk
 
-`func (o *InlineObject136) GetKextPathsOk() (*[]string, bool)`
+`func (o *InlineObject136) GetMacOk() (*string, bool)`
 
-GetKextPathsOk returns a tuple with the KextPaths field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetKextPaths
+### SetMac
 
-`func (o *InlineObject136) SetKextPaths(v []string)`
+`func (o *InlineObject136) SetMac(v string)`
 
-SetKextPaths sets KextPaths field to given value.
+SetMac sets Mac field to given value.
 
-### HasKextPaths
+### HasMac
 
-`func (o *InlineObject136) HasKextPaths() bool`
+`func (o *InlineObject136) HasMac() bool`
 
-HasKextPaths returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetNotifyUser
+### GetSmDeviceId
 
-`func (o *InlineObject136) GetNotifyUser() bool`
+`func (o *InlineObject136) GetSmDeviceId() string`
 
-GetNotifyUser returns the NotifyUser field if non-nil, zero value otherwise.
+GetSmDeviceId returns the SmDeviceId field if non-nil, zero value otherwise.
 
-### GetNotifyUserOk
+### GetSmDeviceIdOk
 
-`func (o *InlineObject136) GetNotifyUserOk() (*bool, bool)`
+`func (o *InlineObject136) GetSmDeviceIdOk() (*string, bool)`
 
-GetNotifyUserOk returns a tuple with the NotifyUser field if it's non-nil, zero value otherwise
+GetSmDeviceIdOk returns a tuple with the SmDeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotifyUser
+### SetSmDeviceId
 
-`func (o *InlineObject136) SetNotifyUser(v bool)`
+`func (o *InlineObject136) SetSmDeviceId(v string)`
 
-SetNotifyUser sets NotifyUser field to given value.
+SetSmDeviceId sets SmDeviceId field to given value.
 
-### HasNotifyUser
+### HasSmDeviceId
 
-`func (o *InlineObject136) HasNotifyUser() bool`
+`func (o *InlineObject136) HasSmDeviceId() bool`
 
-HasNotifyUser returns a boolean if a field has been set.
+HasSmDeviceId returns a boolean if a field has been set.
 
-### GetRebuildKernelCache
+### GetSmUserId
 
-`func (o *InlineObject136) GetRebuildKernelCache() bool`
+`func (o *InlineObject136) GetSmUserId() string`
 
-GetRebuildKernelCache returns the RebuildKernelCache field if non-nil, zero value otherwise.
+GetSmUserId returns the SmUserId field if non-nil, zero value otherwise.
 
-### GetRebuildKernelCacheOk
+### GetSmUserIdOk
 
-`func (o *InlineObject136) GetRebuildKernelCacheOk() (*bool, bool)`
+`func (o *InlineObject136) GetSmUserIdOk() (*string, bool)`
 
-GetRebuildKernelCacheOk returns a tuple with the RebuildKernelCache field if it's non-nil, zero value otherwise
+GetSmUserIdOk returns a tuple with the SmUserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRebuildKernelCache
+### SetSmUserId
 
-`func (o *InlineObject136) SetRebuildKernelCache(v bool)`
+`func (o *InlineObject136) SetSmUserId(v string)`
 
-SetRebuildKernelCache sets RebuildKernelCache field to given value.
+SetSmUserId sets SmUserId field to given value.
 
-### HasRebuildKernelCache
+### HasSmUserId
 
-`func (o *InlineObject136) HasRebuildKernelCache() bool`
+`func (o *InlineObject136) HasSmUserId() bool`
 
-HasRebuildKernelCache returns a boolean if a field has been set.
-
-### GetRequestRequiresNetworkTether
-
-`func (o *InlineObject136) GetRequestRequiresNetworkTether() bool`
-
-GetRequestRequiresNetworkTether returns the RequestRequiresNetworkTether field if non-nil, zero value otherwise.
-
-### GetRequestRequiresNetworkTetherOk
-
-`func (o *InlineObject136) GetRequestRequiresNetworkTetherOk() (*bool, bool)`
-
-GetRequestRequiresNetworkTetherOk returns a tuple with the RequestRequiresNetworkTether field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequestRequiresNetworkTether
-
-`func (o *InlineObject136) SetRequestRequiresNetworkTether(v bool)`
-
-SetRequestRequiresNetworkTether sets RequestRequiresNetworkTether field to given value.
-
-### HasRequestRequiresNetworkTether
-
-`func (o *InlineObject136) HasRequestRequiresNetworkTether() bool`
-
-HasRequestRequiresNetworkTether returns a boolean if a field has been set.
+HasSmUserId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

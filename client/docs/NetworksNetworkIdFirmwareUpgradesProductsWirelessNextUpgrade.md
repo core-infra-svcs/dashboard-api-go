@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Predownload** | Pointer to [**InlineResponse200125ProductsWirelessNextUpgradePredownload**](InlineResponse200125ProductsWirelessNextUpgradePredownload.md) |  | [optional] 
+**Predownload** | Pointer to [**InlineResponse200133ProductsWirelessNextUpgradePredownload**](InlineResponse200133ProductsWirelessNextUpgradePredownload.md) |  | [optional] 
 **Time** | Pointer to **string** | The time of the last successful upgrade | [optional] 
 **ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgradeToVersion**](NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgradeToVersion.md) |  | [optional] 
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPredownload
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownload() InlineResponse200125ProductsWirelessNextUpgradePredownload`
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownload() InlineResponse200133ProductsWirelessNextUpgradePredownload`
 
 GetPredownload returns the Predownload field if non-nil, zero value otherwise.
 
 ### GetPredownloadOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownloadOk() (*InlineResponse200125ProductsWirelessNextUpgradePredownload, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownloadOk() (*InlineResponse200133ProductsWirelessNextUpgradePredownload, bool)`
 
 GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPredownload
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) SetPredownload(v InlineResponse200125ProductsWirelessNextUpgradePredownload)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) SetPredownload(v InlineResponse200133ProductsWirelessNextUpgradePredownload)`
 
 SetPredownload sets Predownload field to given value.
 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetDeviceSensorRelationships
 
-> InlineResponse20045 GetDeviceSensorRelationships(ctx, serial).Execute()
+> InlineResponse20050 GetDeviceSensorRelationships(ctx, serial).Execute()
 
 List the sensor roles for a given sensor or camera device.
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RelationshipsApi.GetDeviceSensorRelationships``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSensorRelationships`: InlineResponse20045
+    // response from `GetDeviceSensorRelationships`: InlineResponse20050
     fmt.Fprintf(os.Stdout, "Response from `RelationshipsApi.GetDeviceSensorRelationships`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorRelationships
 
-> []InlineResponse200149 GetNetworkSensorRelationships(ctx, networkId).Execute()
+> []InlineResponse200157 GetNetworkSensorRelationships(ctx, networkId).Execute()
 
 List the sensor roles for devices in a given network
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RelationshipsApi.GetNetworkSensorRelationships``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorRelationships`: []InlineResponse200149
+    // response from `GetNetworkSensorRelationships`: []InlineResponse200157
     fmt.Fprintf(os.Stdout, "Response from `RelationshipsApi.GetNetworkSensorRelationships`: %v\n", resp)
 }
 ```
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200149**](InlineResponse200149.md)
+[**[]InlineResponse200157**](InlineResponse200157.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSensorRelationships
 
-> InlineResponse20045 UpdateDeviceSensorRelationships(ctx, serial).UpdateDeviceSensorRelationships(updateDeviceSensorRelationships).Execute()
+> InlineResponse20050 UpdateDeviceSensorRelationships(ctx, serial).UpdateDeviceSensorRelationships(updateDeviceSensorRelationships).Execute()
 
 Assign one or more sensor roles to a given sensor or camera device.
 
@@ -172,7 +172,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceSensorRelationships := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
+    updateDeviceSensorRelationships := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -181,7 +181,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RelationshipsApi.UpdateDeviceSensorRelationships``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSensorRelationships`: InlineResponse20045
+    // response from `UpdateDeviceSensorRelationships`: InlineResponse20050
     fmt.Fprintf(os.Stdout, "Response from `RelationshipsApi.UpdateDeviceSensorRelationships`: %v\n", resp)
 }
 ```
@@ -202,11 +202,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceSensorRelation
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceSensorRelationships** | [**InlineObject30**](InlineObject30.md) |  | 
+ **updateDeviceSensorRelationships** | [**InlineObject35**](InlineObject35.md) |  | 
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 

@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
-**Url** | **string** | Receiver Url | 
-**Version** | **string** | Scanning API Version | 
-**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
-**SharedSecret** | **string** | Secret Value for Receiver | 
+**SiteId** | **string** | Site ID of the site to update | 
+**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject336
 
-`func NewInlineObject336(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject336`
+`func NewInlineObject336(siteId string, ) *InlineObject336`
 
 NewInlineObject336 instantiates a new InlineObject336 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +26,50 @@ NewInlineObject336WithDefaults instantiates a new InlineObject336 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetSiteId
 
-`func (o *InlineObject336) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
+`func (o *InlineObject336) GetSiteId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetSiteIdOk
 
-`func (o *InlineObject336) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
+`func (o *InlineObject336) GetSiteIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetSiteId
 
-`func (o *InlineObject336) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
+`func (o *InlineObject336) SetSiteId(v string)`
 
-SetNetwork sets Network field to given value.
+SetSiteId sets SiteId field to given value.
 
 
-### GetUrl
+### GetRouting
 
-`func (o *InlineObject336) GetUrl() string`
+`func (o *InlineObject336) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetRouting returns the Routing field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetRoutingOk
 
-`func (o *InlineObject336) GetUrlOk() (*string, bool)`
+`func (o *InlineObject336) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetRouting
 
-`func (o *InlineObject336) SetUrl(v string)`
+`func (o *InlineObject336) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
 
-SetUrl sets Url field to given value.
+SetRouting sets Routing field to given value.
 
+### HasRouting
 
-### GetVersion
+`func (o *InlineObject336) HasRouting() bool`
 
-`func (o *InlineObject336) GetVersion() string`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineObject336) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineObject336) SetVersion(v string)`
-
-SetVersion sets Version field to given value.
-
-
-### GetRadio
-
-`func (o *InlineObject336) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject336) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject336) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
-
-SetRadio sets Radio field to given value.
-
-
-### GetSharedSecret
-
-`func (o *InlineObject336) GetSharedSecret() string`
-
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
-
-### GetSharedSecretOk
-
-`func (o *InlineObject336) GetSharedSecretOk() (*string, bool)`
-
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharedSecret
-
-`func (o *InlineObject336) SetSharedSecret(v string)`
-
-SetSharedSecret sets SharedSecret field to given value.
-
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

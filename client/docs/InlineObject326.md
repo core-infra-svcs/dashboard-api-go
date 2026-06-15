@@ -4,15 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Limited Access Role | 
-**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
+**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
+**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
+**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
+**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to | [optional] 
 
 ## Methods
 
 ### NewInlineObject326
 
-`func NewInlineObject326(name string, ) *InlineObject326`
+`func NewInlineObject326() *InlineObject326`
 
 NewInlineObject326 instantiates a new InlineObject326 object
 This constructor will assign default values to properties that have it defined,
@@ -46,56 +49,136 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetScope
+`func (o *InlineObject326) HasName() bool`
 
-`func (o *InlineObject326) GetScope() string`
+HasName returns a boolean if a field has been set.
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+### GetCidr
 
-### GetScopeOk
+`func (o *InlineObject326) GetCidr() string`
 
-`func (o *InlineObject326) GetScopeOk() (*string, bool)`
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+### GetCidrOk
+
+`func (o *InlineObject326) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetCidr
 
-`func (o *InlineObject326) SetScope(v string)`
+`func (o *InlineObject326) SetCidr(v string)`
 
-SetScope sets Scope field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasScope
+### HasCidr
 
-`func (o *InlineObject326) HasScope() bool`
+`func (o *InlineObject326) HasCidr() bool`
 
-HasScope returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetTags
+### GetFqdn
 
-`func (o *InlineObject326) GetTags() []string`
+`func (o *InlineObject326) GetFqdn() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetFqdnOk
 
-`func (o *InlineObject326) GetTagsOk() (*[]string, bool)`
+`func (o *InlineObject326) GetFqdnOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetFqdn
 
-`func (o *InlineObject326) SetTags(v []string)`
+`func (o *InlineObject326) SetFqdn(v string)`
 
-SetTags sets Tags field to given value.
+SetFqdn sets Fqdn field to given value.
 
-### HasTags
+### HasFqdn
 
-`func (o *InlineObject326) HasTags() bool`
+`func (o *InlineObject326) HasFqdn() bool`
 
-HasTags returns a boolean if a field has been set.
+HasFqdn returns a boolean if a field has been set.
+
+### GetMask
+
+`func (o *InlineObject326) GetMask() string`
+
+GetMask returns the Mask field if non-nil, zero value otherwise.
+
+### GetMaskOk
+
+`func (o *InlineObject326) GetMaskOk() (*string, bool)`
+
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMask
+
+`func (o *InlineObject326) SetMask(v string)`
+
+SetMask sets Mask field to given value.
+
+### HasMask
+
+`func (o *InlineObject326) HasMask() bool`
+
+HasMask returns a boolean if a field has been set.
+
+### GetIp
+
+`func (o *InlineObject326) GetIp() string`
+
+GetIp returns the Ip field if non-nil, zero value otherwise.
+
+### GetIpOk
+
+`func (o *InlineObject326) GetIpOk() (*string, bool)`
+
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp
+
+`func (o *InlineObject326) SetIp(v string)`
+
+SetIp sets Ip field to given value.
+
+### HasIp
+
+`func (o *InlineObject326) HasIp() bool`
+
+HasIp returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineObject326) GetGroupIds() []string`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineObject326) GetGroupIdsOk() (*[]string, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineObject326) SetGroupIds(v []string)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineObject326) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

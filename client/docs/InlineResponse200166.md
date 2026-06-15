@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Restrictions** | Pointer to [**[]InlineResponse200166Restrictions**](InlineResponse200166Restrictions.md) | The list of restrictions for the device | [optional] 
+**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
+**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
+**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200166WithDefaults instantiates a new InlineResponse200166 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRestrictions
+### GetReceived
 
-`func (o *InlineResponse200166) GetRestrictions() []InlineResponse200166Restrictions`
+`func (o *InlineResponse200166) GetReceived() float32`
 
-GetRestrictions returns the Restrictions field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetRestrictionsOk
+### GetReceivedOk
 
-`func (o *InlineResponse200166) GetRestrictionsOk() (*[]InlineResponse200166Restrictions, bool)`
+`func (o *InlineResponse200166) GetReceivedOk() (*float32, bool)`
 
-GetRestrictionsOk returns a tuple with the Restrictions field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictions
+### SetReceived
 
-`func (o *InlineResponse200166) SetRestrictions(v []InlineResponse200166Restrictions)`
+`func (o *InlineResponse200166) SetReceived(v float32)`
 
-SetRestrictions sets Restrictions field to given value.
+SetReceived sets Received field to given value.
 
-### HasRestrictions
+### HasReceived
 
-`func (o *InlineResponse200166) HasRestrictions() bool`
+`func (o *InlineResponse200166) HasReceived() bool`
 
-HasRestrictions returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse200166) GetSent() float32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse200166) GetSentOk() (*float32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse200166) SetSent(v float32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse200166) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetTs
+
+`func (o *InlineResponse200166) GetTs() string`
+
+GetTs returns the Ts field if non-nil, zero value otherwise.
+
+### GetTsOk
+
+`func (o *InlineResponse200166) GetTsOk() (*string, bool)`
+
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTs
+
+`func (o *InlineResponse200166) SetTs(v string)`
+
+SetTs sets Ts field to given value.
+
+### HasTs
+
+`func (o *InlineResponse200166) HasTs() bool`
+
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

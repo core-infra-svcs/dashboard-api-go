@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]InlineResponse200208StpBridgePriority**](InlineResponse200208StpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200208WithDefaults instantiates a new InlineResponse200208 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetRstpEnabled
 
-`func (o *InlineResponse200208) GetId() string`
+`func (o *InlineResponse200208) GetRstpEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetRstpEnabledOk
 
-`func (o *InlineResponse200208) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200208) GetRstpEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetRstpEnabled
 
-`func (o *InlineResponse200208) SetId(v string)`
+`func (o *InlineResponse200208) SetRstpEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
-### HasId
+### HasRstpEnabled
 
-`func (o *InlineResponse200208) HasId() bool`
+`func (o *InlineResponse200208) HasRstpEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasRstpEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetStpBridgePriority
 
-`func (o *InlineResponse200208) GetName() string`
+`func (o *InlineResponse200208) GetStpBridgePriority() []InlineResponse200208StpBridgePriority`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStpBridgePriorityOk
 
-`func (o *InlineResponse200208) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200208) GetStpBridgePriorityOk() (*[]InlineResponse200208StpBridgePriority, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStpBridgePriority
 
-`func (o *InlineResponse200208) SetName(v string)`
+`func (o *InlineResponse200208) SetStpBridgePriority(v []InlineResponse200208StpBridgePriority)`
 
-SetName sets Name field to given value.
+SetStpBridgePriority sets StpBridgePriority field to given value.
 
-### HasName
+### HasStpBridgePriority
 
-`func (o *InlineResponse200208) HasName() bool`
+`func (o *InlineResponse200208) HasStpBridgePriority() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200208) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200208) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200208) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200208) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200208) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200208) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200208) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200208) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineResponse200208) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineResponse200208) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineResponse200208) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineResponse200208) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

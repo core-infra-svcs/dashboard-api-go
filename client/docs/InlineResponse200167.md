@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsRooted** | Pointer to **bool** | Boolean indicating if the device is rooted. | [optional] 
-**HasAntiVirus** | Pointer to **bool** | Boolean indicating if the device has Antivirus. | [optional] 
-**AntiVirusName** | Pointer to **string** | The name of the Antivirus. | [optional] 
-**IsFireWallEnabled** | Pointer to **bool** | Boolean indicating if the device has a Firewall enabled. | [optional] 
-**HasFireWallInstalled** | Pointer to **bool** | Boolean indicating if the device has a Firewall installed. | [optional] 
-**FireWallName** | Pointer to **string** | The name of the Firewall. | [optional] 
-**IsDiskEncrypted** | Pointer to **bool** | Boolean indicating if the device has disk encryption. | [optional] 
-**IsAutoLoginDisabled** | Pointer to **bool** | Boolean indicating if the device has auto login disabled. | [optional] 
-**Id** | Pointer to **string** | The Meraki identifier for the security center record. | [optional] 
-**RunningProcs** | Pointer to **string** | A comma seperated list of procs running on the device. | [optional] 
+**Name** | Pointer to **string** | The name of the certificate. | [optional] 
+**NotValidAfter** | Pointer to **string** | The date after which the certificate is no longer valid. | [optional] 
+**NotValidBefore** | Pointer to **string** | The date before which the certificate is not valid. | [optional] 
+**CertPem** | Pointer to **string** | The PEM of the certificate. | [optional] 
+**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
+**Issuer** | Pointer to **string** | The certificate issuer. | [optional] 
+**Subject** | Pointer to **string** | The subject of the certificate. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the certificate record. | [optional] 
 
 ## Methods
 
@@ -34,205 +32,180 @@ NewInlineResponse200167WithDefaults instantiates a new InlineResponse200167 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIsRooted
+### GetName
 
-`func (o *InlineResponse200167) GetIsRooted() bool`
+`func (o *InlineResponse200167) GetName() string`
 
-GetIsRooted returns the IsRooted field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetIsRootedOk
+### GetNameOk
 
-`func (o *InlineResponse200167) GetIsRootedOk() (*bool, bool)`
+`func (o *InlineResponse200167) GetNameOk() (*string, bool)`
 
-GetIsRootedOk returns a tuple with the IsRooted field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsRooted
+### SetName
 
-`func (o *InlineResponse200167) SetIsRooted(v bool)`
+`func (o *InlineResponse200167) SetName(v string)`
 
-SetIsRooted sets IsRooted field to given value.
+SetName sets Name field to given value.
 
-### HasIsRooted
+### HasName
 
-`func (o *InlineResponse200167) HasIsRooted() bool`
+`func (o *InlineResponse200167) HasName() bool`
 
-HasIsRooted returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetHasAntiVirus
+### GetNotValidAfter
 
-`func (o *InlineResponse200167) GetHasAntiVirus() bool`
+`func (o *InlineResponse200167) GetNotValidAfter() string`
 
-GetHasAntiVirus returns the HasAntiVirus field if non-nil, zero value otherwise.
+GetNotValidAfter returns the NotValidAfter field if non-nil, zero value otherwise.
 
-### GetHasAntiVirusOk
+### GetNotValidAfterOk
 
-`func (o *InlineResponse200167) GetHasAntiVirusOk() (*bool, bool)`
+`func (o *InlineResponse200167) GetNotValidAfterOk() (*string, bool)`
 
-GetHasAntiVirusOk returns a tuple with the HasAntiVirus field if it's non-nil, zero value otherwise
+GetNotValidAfterOk returns a tuple with the NotValidAfter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHasAntiVirus
+### SetNotValidAfter
 
-`func (o *InlineResponse200167) SetHasAntiVirus(v bool)`
+`func (o *InlineResponse200167) SetNotValidAfter(v string)`
 
-SetHasAntiVirus sets HasAntiVirus field to given value.
+SetNotValidAfter sets NotValidAfter field to given value.
 
-### HasHasAntiVirus
+### HasNotValidAfter
 
-`func (o *InlineResponse200167) HasHasAntiVirus() bool`
+`func (o *InlineResponse200167) HasNotValidAfter() bool`
 
-HasHasAntiVirus returns a boolean if a field has been set.
+HasNotValidAfter returns a boolean if a field has been set.
 
-### GetAntiVirusName
+### GetNotValidBefore
 
-`func (o *InlineResponse200167) GetAntiVirusName() string`
+`func (o *InlineResponse200167) GetNotValidBefore() string`
 
-GetAntiVirusName returns the AntiVirusName field if non-nil, zero value otherwise.
+GetNotValidBefore returns the NotValidBefore field if non-nil, zero value otherwise.
 
-### GetAntiVirusNameOk
+### GetNotValidBeforeOk
 
-`func (o *InlineResponse200167) GetAntiVirusNameOk() (*string, bool)`
+`func (o *InlineResponse200167) GetNotValidBeforeOk() (*string, bool)`
 
-GetAntiVirusNameOk returns a tuple with the AntiVirusName field if it's non-nil, zero value otherwise
+GetNotValidBeforeOk returns a tuple with the NotValidBefore field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAntiVirusName
+### SetNotValidBefore
 
-`func (o *InlineResponse200167) SetAntiVirusName(v string)`
+`func (o *InlineResponse200167) SetNotValidBefore(v string)`
 
-SetAntiVirusName sets AntiVirusName field to given value.
+SetNotValidBefore sets NotValidBefore field to given value.
 
-### HasAntiVirusName
+### HasNotValidBefore
 
-`func (o *InlineResponse200167) HasAntiVirusName() bool`
+`func (o *InlineResponse200167) HasNotValidBefore() bool`
 
-HasAntiVirusName returns a boolean if a field has been set.
+HasNotValidBefore returns a boolean if a field has been set.
 
-### GetIsFireWallEnabled
+### GetCertPem
 
-`func (o *InlineResponse200167) GetIsFireWallEnabled() bool`
+`func (o *InlineResponse200167) GetCertPem() string`
 
-GetIsFireWallEnabled returns the IsFireWallEnabled field if non-nil, zero value otherwise.
+GetCertPem returns the CertPem field if non-nil, zero value otherwise.
 
-### GetIsFireWallEnabledOk
+### GetCertPemOk
 
-`func (o *InlineResponse200167) GetIsFireWallEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200167) GetCertPemOk() (*string, bool)`
 
-GetIsFireWallEnabledOk returns a tuple with the IsFireWallEnabled field if it's non-nil, zero value otherwise
+GetCertPemOk returns a tuple with the CertPem field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsFireWallEnabled
+### SetCertPem
 
-`func (o *InlineResponse200167) SetIsFireWallEnabled(v bool)`
+`func (o *InlineResponse200167) SetCertPem(v string)`
 
-SetIsFireWallEnabled sets IsFireWallEnabled field to given value.
+SetCertPem sets CertPem field to given value.
 
-### HasIsFireWallEnabled
+### HasCertPem
 
-`func (o *InlineResponse200167) HasIsFireWallEnabled() bool`
+`func (o *InlineResponse200167) HasCertPem() bool`
 
-HasIsFireWallEnabled returns a boolean if a field has been set.
+HasCertPem returns a boolean if a field has been set.
 
-### GetHasFireWallInstalled
+### GetDeviceId
 
-`func (o *InlineResponse200167) GetHasFireWallInstalled() bool`
+`func (o *InlineResponse200167) GetDeviceId() string`
 
-GetHasFireWallInstalled returns the HasFireWallInstalled field if non-nil, zero value otherwise.
+GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
 
-### GetHasFireWallInstalledOk
+### GetDeviceIdOk
 
-`func (o *InlineResponse200167) GetHasFireWallInstalledOk() (*bool, bool)`
+`func (o *InlineResponse200167) GetDeviceIdOk() (*string, bool)`
 
-GetHasFireWallInstalledOk returns a tuple with the HasFireWallInstalled field if it's non-nil, zero value otherwise
+GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHasFireWallInstalled
+### SetDeviceId
 
-`func (o *InlineResponse200167) SetHasFireWallInstalled(v bool)`
+`func (o *InlineResponse200167) SetDeviceId(v string)`
 
-SetHasFireWallInstalled sets HasFireWallInstalled field to given value.
+SetDeviceId sets DeviceId field to given value.
 
-### HasHasFireWallInstalled
+### HasDeviceId
 
-`func (o *InlineResponse200167) HasHasFireWallInstalled() bool`
+`func (o *InlineResponse200167) HasDeviceId() bool`
 
-HasHasFireWallInstalled returns a boolean if a field has been set.
+HasDeviceId returns a boolean if a field has been set.
 
-### GetFireWallName
+### GetIssuer
 
-`func (o *InlineResponse200167) GetFireWallName() string`
+`func (o *InlineResponse200167) GetIssuer() string`
 
-GetFireWallName returns the FireWallName field if non-nil, zero value otherwise.
+GetIssuer returns the Issuer field if non-nil, zero value otherwise.
 
-### GetFireWallNameOk
+### GetIssuerOk
 
-`func (o *InlineResponse200167) GetFireWallNameOk() (*string, bool)`
+`func (o *InlineResponse200167) GetIssuerOk() (*string, bool)`
 
-GetFireWallNameOk returns a tuple with the FireWallName field if it's non-nil, zero value otherwise
+GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFireWallName
+### SetIssuer
 
-`func (o *InlineResponse200167) SetFireWallName(v string)`
+`func (o *InlineResponse200167) SetIssuer(v string)`
 
-SetFireWallName sets FireWallName field to given value.
+SetIssuer sets Issuer field to given value.
 
-### HasFireWallName
+### HasIssuer
 
-`func (o *InlineResponse200167) HasFireWallName() bool`
+`func (o *InlineResponse200167) HasIssuer() bool`
 
-HasFireWallName returns a boolean if a field has been set.
+HasIssuer returns a boolean if a field has been set.
 
-### GetIsDiskEncrypted
+### GetSubject
 
-`func (o *InlineResponse200167) GetIsDiskEncrypted() bool`
+`func (o *InlineResponse200167) GetSubject() string`
 
-GetIsDiskEncrypted returns the IsDiskEncrypted field if non-nil, zero value otherwise.
+GetSubject returns the Subject field if non-nil, zero value otherwise.
 
-### GetIsDiskEncryptedOk
+### GetSubjectOk
 
-`func (o *InlineResponse200167) GetIsDiskEncryptedOk() (*bool, bool)`
+`func (o *InlineResponse200167) GetSubjectOk() (*string, bool)`
 
-GetIsDiskEncryptedOk returns a tuple with the IsDiskEncrypted field if it's non-nil, zero value otherwise
+GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDiskEncrypted
+### SetSubject
 
-`func (o *InlineResponse200167) SetIsDiskEncrypted(v bool)`
+`func (o *InlineResponse200167) SetSubject(v string)`
 
-SetIsDiskEncrypted sets IsDiskEncrypted field to given value.
+SetSubject sets Subject field to given value.
 
-### HasIsDiskEncrypted
+### HasSubject
 
-`func (o *InlineResponse200167) HasIsDiskEncrypted() bool`
+`func (o *InlineResponse200167) HasSubject() bool`
 
-HasIsDiskEncrypted returns a boolean if a field has been set.
-
-### GetIsAutoLoginDisabled
-
-`func (o *InlineResponse200167) GetIsAutoLoginDisabled() bool`
-
-GetIsAutoLoginDisabled returns the IsAutoLoginDisabled field if non-nil, zero value otherwise.
-
-### GetIsAutoLoginDisabledOk
-
-`func (o *InlineResponse200167) GetIsAutoLoginDisabledOk() (*bool, bool)`
-
-GetIsAutoLoginDisabledOk returns a tuple with the IsAutoLoginDisabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsAutoLoginDisabled
-
-`func (o *InlineResponse200167) SetIsAutoLoginDisabled(v bool)`
-
-SetIsAutoLoginDisabled sets IsAutoLoginDisabled field to given value.
-
-### HasIsAutoLoginDisabled
-
-`func (o *InlineResponse200167) HasIsAutoLoginDisabled() bool`
-
-HasIsAutoLoginDisabled returns a boolean if a field has been set.
+HasSubject returns a boolean if a field has been set.
 
 ### GetId
 
@@ -258,31 +231,6 @@ SetId sets Id field to given value.
 `func (o *InlineResponse200167) HasId() bool`
 
 HasId returns a boolean if a field has been set.
-
-### GetRunningProcs
-
-`func (o *InlineResponse200167) GetRunningProcs() string`
-
-GetRunningProcs returns the RunningProcs field if non-nil, zero value otherwise.
-
-### GetRunningProcsOk
-
-`func (o *InlineResponse200167) GetRunningProcsOk() (*string, bool)`
-
-GetRunningProcsOk returns a tuple with the RunningProcs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRunningProcs
-
-`func (o *InlineResponse200167) SetRunningProcs(v string)`
-
-SetRunningProcs sets RunningProcs field to given value.
-
-### HasRunningProcs
-
-`func (o *InlineResponse200167) HasRunningProcs() bool`
-
-HasRunningProcs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

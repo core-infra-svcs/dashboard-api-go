@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
+**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems.md) | List of device-to-profile assignments to remove. | 
 
 ## Methods
 
 ### NewInlineObject278
 
-`func NewInlineObject278(scheduleId string, ) *InlineObject278`
+`func NewInlineObject278(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, ) *InlineObject278`
 
 NewInlineObject278 instantiates a new InlineObject278 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject278WithDefaults instantiates a new InlineObject278 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScheduleId
+### GetItems
 
-`func (o *InlineObject278) GetScheduleId() string`
+`func (o *InlineObject278) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems`
 
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetScheduleIdOk
+### GetItemsOk
 
-`func (o *InlineObject278) GetScheduleIdOk() (*string, bool)`
+`func (o *InlineObject278) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, bool)`
 
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduleId
+### SetItems
 
-`func (o *InlineObject278) SetScheduleId(v string)`
+`func (o *InlineObject278) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems)`
 
-SetScheduleId sets ScheduleId field to given value.
+SetItems sets Items field to given value.
 
 
 

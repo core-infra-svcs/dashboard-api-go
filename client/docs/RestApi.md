@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApiRestProvisioningPipelinesJobs
 
-> InlineResponse200257 GetOrganizationApiRestProvisioningPipelinesJobs(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PipelineIds(pipelineIds).Status(status).Execute()
+> InlineResponse200265 GetOrganizationApiRestProvisioningPipelinesJobs(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PipelineIds(pipelineIds).Status(status).Execute()
 
 List pipeline jobs, with optional status filtering
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RestApi.GetOrganizationApiRestProvisioningPipelinesJobs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRestProvisioningPipelinesJobs`: InlineResponse200257
+    // response from `GetOrganizationApiRestProvisioningPipelinesJobs`: InlineResponse200265
     fmt.Fprintf(os.Stdout, "Response from `RestApi.GetOrganizationApiRestProvisioningPipelinesJobs`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200257**](InlineResponse200257.md)
+[**InlineResponse200265**](InlineResponse200265.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline
 
-> InlineResponse200258 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
+> InlineResponse200266 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
 
 Retrieves pipeline overviews with aggregated job status counts
 
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RestApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200258
+    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200266
     fmt.Fprintf(os.Stdout, "Response from `RestApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: %v\n", resp)
 }
 ```
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200258**](InlineResponse200258.md)
+[**InlineResponse200266**](InlineResponse200266.md)
 
 ### Authorization
 

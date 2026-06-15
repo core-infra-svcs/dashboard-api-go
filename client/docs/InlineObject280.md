@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Serials** | **[]string** | A list of Meraki Serials to migrate | 
+**Target** | **string** | The controller or management mode to which the devices will be migrated | 
 
 ## Methods
 
 ### NewInlineObject280
 
-`func NewInlineObject280() *InlineObject280`
+`func NewInlineObject280(serials []string, target string, ) *InlineObject280`
 
 NewInlineObject280 instantiates a new InlineObject280 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineObject280WithDefaults instantiates a new InlineObject280 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLimitScopeToNetworks
+### GetSerials
 
-`func (o *InlineObject280) GetLimitScopeToNetworks() []string`
+`func (o *InlineObject280) GetSerials() []string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetSerialsOk
 
-`func (o *InlineObject280) GetLimitScopeToNetworksOk() (*[]string, bool)`
+`func (o *InlineObject280) GetSerialsOk() (*[]string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetSerials
 
-`func (o *InlineObject280) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject280) SetSerials(v []string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetSerials sets Serials field to given value.
 
-### HasLimitScopeToNetworks
 
-`func (o *InlineObject280) HasLimitScopeToNetworks() bool`
+### GetTarget
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+`func (o *InlineObject280) GetTarget() string`
+
+GetTarget returns the Target field if non-nil, zero value otherwise.
+
+### GetTargetOk
+
+`func (o *InlineObject280) GetTargetOk() (*string, bool)`
+
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTarget
+
+`func (o *InlineObject280) SetTarget(v string)`
+
+SetTarget sets Target field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

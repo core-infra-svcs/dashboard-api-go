@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | The serial(s) of the device(s) to stop the capture on | 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
 
 ## Methods
 
 ### NewInlineObject274
 
-`func NewInlineObject274(serials []string, ) *InlineObject274`
+`func NewInlineObject274() *InlineObject274`
 
 NewInlineObject274 instantiates a new InlineObject274 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject274WithDefaults instantiates a new InlineObject274 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject274) GetSerials() []string`
+`func (o *InlineObject274) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject274) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject274) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject274) SetSerials(v []string)`
+`func (o *InlineObject274) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject274) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetTimeZone
+
+`func (o *InlineObject274) GetTimeZone() string`
+
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+
+### GetTimeZoneOk
+
+`func (o *InlineObject274) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeZone
+
+`func (o *InlineObject274) SetTimeZone(v string)`
+
+SetTimeZone sets TimeZone field to given value.
+
+### HasTimeZone
+
+`func (o *InlineObject274) HasTimeZone() bool`
+
+HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

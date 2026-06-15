@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCellularSims
 
-> InlineResponse20026 GetDeviceCellularSims(ctx, serial).Execute()
+> InlineResponse20027 GetDeviceCellularSims(ctx, serial).Execute()
 
 Return the SIM and APN configurations for a cellular device.
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SimsApi.GetDeviceCellularSims``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularSims`: InlineResponse20026
+    // response from `GetDeviceCellularSims`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `SimsApi.GetDeviceCellularSims`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularSims
 
-> InlineResponse20026 UpdateDeviceCellularSims(ctx, serial).UpdateDeviceCellularSims(updateDeviceCellularSims).Execute()
+> InlineResponse20027 UpdateDeviceCellularSims(ctx, serial).UpdateDeviceCellularSims(updateDeviceCellularSims).Execute()
 
 Updates the SIM and APN configurations for a cellular device.
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularSims := *openapiclient.NewInlineObject14() // InlineObject14 |  (optional)
+    updateDeviceCellularSims := *openapiclient.NewInlineObject15() // InlineObject15 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SimsApi.UpdateDeviceCellularSims``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularSims`: InlineResponse20026
+    // response from `UpdateDeviceCellularSims`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `SimsApi.UpdateDeviceCellularSims`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularSimsRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularSims** | [**InlineObject14**](InlineObject14.md) |  | 
+ **updateDeviceCellularSims** | [**InlineObject15**](InlineObject15.md) |  | 
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 

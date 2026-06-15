@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the SSID | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**Message** | Pointer to **string** | The error message of the API | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200415WithDefaults instantiates a new InlineResponse200415 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStatus
 
-`func (o *InlineResponse200415) GetName() string`
+`func (o *InlineResponse200415) GetStatus() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStatusOk
 
-`func (o *InlineResponse200415) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200415) GetStatusOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStatus
 
-`func (o *InlineResponse200415) SetName(v string)`
+`func (o *InlineResponse200415) SetStatus(v bool)`
 
-SetName sets Name field to given value.
+SetStatus sets Status field to given value.
 
-### HasName
+### HasStatus
 
-`func (o *InlineResponse200415) HasName() bool`
+`func (o *InlineResponse200415) HasStatus() bool`
 
-HasName returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetUsage
+### GetMessage
 
-`func (o *InlineResponse200415) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
+`func (o *InlineResponse200415) GetMessage() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetMessageOk
 
-`func (o *InlineResponse200415) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
+`func (o *InlineResponse200415) GetMessageOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetMessage
 
-`func (o *InlineResponse200415) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
+`func (o *InlineResponse200415) SetMessage(v string)`
 
-SetUsage sets Usage field to given value.
+SetMessage sets Message field to given value.
 
-### HasUsage
+### HasMessage
 
-`func (o *InlineResponse200415) HasUsage() bool`
+`func (o *InlineResponse200415) HasMessage() bool`
 
-HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200415) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200415) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200415) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200415) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

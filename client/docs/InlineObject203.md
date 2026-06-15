@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
-**Exception** | Pointer to [**InlineResponse200236Exception**](InlineResponse200236Exception.md) |  | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
 
 ## Methods
 
@@ -26,6 +26,31 @@ will change when the set of required properties is changed
 NewInlineObject203WithDefaults instantiates a new InlineObject203 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetHostname
+
+`func (o *InlineObject203) GetHostname() string`
+
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
+
+### GetHostnameOk
+
+`func (o *InlineObject203) GetHostnameOk() (*string, bool)`
+
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostname
+
+`func (o *InlineObject203) SetHostname(v string)`
+
+SetHostname sets Hostname field to given value.
+
+### HasHostname
+
+`func (o *InlineObject203) HasHostname() bool`
+
+HasHostname returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -52,55 +77,30 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetRules
+### GetMode
 
-`func (o *InlineObject203) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
+`func (o *InlineObject203) GetMode() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetModeOk
 
-`func (o *InlineObject203) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
+`func (o *InlineObject203) GetModeOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetMode
 
-`func (o *InlineObject203) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
+`func (o *InlineObject203) SetMode(v string)`
 
-SetRules sets Rules field to given value.
+SetMode sets Mode field to given value.
 
-### HasRules
+### HasMode
 
-`func (o *InlineObject203) HasRules() bool`
+`func (o *InlineObject203) HasMode() bool`
 
-HasRules returns a boolean if a field has been set.
-
-### GetException
-
-`func (o *InlineObject203) GetException() InlineResponse200236Exception`
-
-GetException returns the Exception field if non-nil, zero value otherwise.
-
-### GetExceptionOk
-
-`func (o *InlineObject203) GetExceptionOk() (*InlineResponse200236Exception, bool)`
-
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetException
-
-`func (o *InlineObject203) SetException(v InlineResponse200236Exception)`
-
-SetException sets Exception field to given value.
-
-### HasException
-
-`func (o *InlineObject203) HasException() bool`
-
-HasException returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

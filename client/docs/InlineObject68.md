@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN configuration | [optional] 
-**ApplianceIp** | Pointer to **string** | The appliance IP address of the single LAN | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
-**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceSingleLanMandatoryDhcp**](NetworksNetworkIdApplianceSingleLanMandatoryDhcp.md) |  | [optional] 
+**Prefix** | Pointer to **string** | A static IPv6 prefix | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
+**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject68WithDefaults instantiates a new InlineObject68 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetPrefix
 
-`func (o *InlineObject68) GetSubnet() string`
+`func (o *InlineObject68) GetPrefix() string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetPrefixOk
 
-`func (o *InlineObject68) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject68) GetPrefixOk() (*string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetPrefix
 
-`func (o *InlineObject68) SetSubnet(v string)`
+`func (o *InlineObject68) SetPrefix(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasSubnet
+### HasPrefix
 
-`func (o *InlineObject68) HasSubnet() bool`
+`func (o *InlineObject68) HasPrefix() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasPrefix returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetOrigin
 
-`func (o *InlineObject68) GetApplianceIp() string`
+`func (o *InlineObject68) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetOriginOk
 
-`func (o *InlineObject68) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineObject68) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetOrigin
 
-`func (o *InlineObject68) SetApplianceIp(v string)`
+`func (o *InlineObject68) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasApplianceIp
+### HasOrigin
 
-`func (o *InlineObject68) HasApplianceIp() bool`
+`func (o *InlineObject68) HasOrigin() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasOrigin returns a boolean if a field has been set.
 
-### GetIpv6
+### GetDescription
 
-`func (o *InlineObject68) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
+`func (o *InlineObject68) GetDescription() string`
 
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetIpv6Ok
+### GetDescriptionOk
 
-`func (o *InlineObject68) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
+`func (o *InlineObject68) GetDescriptionOk() (*string, bool)`
 
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6
+### SetDescription
 
-`func (o *InlineObject68) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
+`func (o *InlineObject68) SetDescription(v string)`
 
-SetIpv6 sets Ipv6 field to given value.
+SetDescription sets Description field to given value.
 
-### HasIpv6
+### HasDescription
 
-`func (o *InlineObject68) HasIpv6() bool`
+`func (o *InlineObject68) HasDescription() bool`
 
-HasIpv6 returns a boolean if a field has been set.
-
-### GetMandatoryDhcp
-
-`func (o *InlineObject68) GetMandatoryDhcp() NetworksNetworkIdApplianceSingleLanMandatoryDhcp`
-
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
-
-### GetMandatoryDhcpOk
-
-`func (o *InlineObject68) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceSingleLanMandatoryDhcp, bool)`
-
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMandatoryDhcp
-
-`func (o *InlineObject68) SetMandatoryDhcp(v NetworksNetworkIdApplianceSingleLanMandatoryDhcp)`
-
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
-
-### HasMandatoryDhcp
-
-`func (o *InlineObject68) HasMandatoryDhcp() bool`
-
-HasMandatoryDhcp returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

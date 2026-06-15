@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
-**SpInitiated** | Pointer to [**InlineResponse200383SpInitiated**](InlineResponse200383SpInitiated.md) |  | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy.md) |  | 
+**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to assign | 
 
 ## Methods
 
 ### NewInlineObject316
 
-`func NewInlineObject316() *InlineObject316`
+`func NewInlineObject316(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject316`
 
 NewInlineObject316 instantiates a new InlineObject316 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject316WithDefaults instantiates a new InlineObject316 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetPolicy
 
-`func (o *InlineObject316) GetEnabled() bool`
+`func (o *InlineObject316) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetPolicyOk
 
-`func (o *InlineObject316) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject316) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetPolicy
 
-`func (o *InlineObject316) SetEnabled(v bool)`
+`func (o *InlineObject316) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy)`
 
-SetEnabled sets Enabled field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject316) HasEnabled() bool`
+### GetAdaptivePolicyGroups
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject316) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
 
-### GetSpInitiated
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject316) GetSpInitiated() InlineResponse200383SpInitiated`
+### GetAdaptivePolicyGroupsOk
 
-GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+`func (o *InlineObject316) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
 
-### GetSpInitiatedOk
-
-`func (o *InlineObject316) GetSpInitiatedOk() (*InlineResponse200383SpInitiated, bool)`
-
-GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpInitiated
+### SetAdaptivePolicyGroups
 
-`func (o *InlineObject316) SetSpInitiated(v InlineResponse200383SpInitiated)`
+`func (o *InlineObject316) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
 
-SetSpInitiated sets SpInitiated field to given value.
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
 
-### HasSpInitiated
-
-`func (o *InlineObject316) HasSpInitiated() bool`
-
-HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

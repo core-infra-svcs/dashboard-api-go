@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceSecurityIntrusion
 
-> InlineResponse20083 GetNetworkApplianceSecurityIntrusion(ctx, networkId).Execute()
+> InlineResponse20088 GetNetworkApplianceSecurityIntrusion(ctx, networkId).Execute()
 
 Returns all supported intrusion settings for an MX network
 
@@ -217,7 +217,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SecurityApi.GetNetworkApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSecurityIntrusion`: InlineResponse20083
+    // response from `GetNetworkApplianceSecurityIntrusion`: InlineResponse20088
     fmt.Fprintf(os.Stdout, "Response from `SecurityApi.GetNetworkApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20083**](InlineResponse20083.md)
+[**InlineResponse20088**](InlineResponse20088.md)
 
 ### Authorization
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceSecurityMalware
 
-> InlineResponse20085 GetNetworkApplianceSecurityMalware(ctx, networkId).Execute()
+> InlineResponse20090 GetNetworkApplianceSecurityMalware(ctx, networkId).Execute()
 
 Returns all supported malware settings for an MX network
 
@@ -287,7 +287,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SecurityApi.GetNetworkApplianceSecurityMalware``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSecurityMalware`: InlineResponse20085
+    // response from `GetNetworkApplianceSecurityMalware`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `SecurityApi.GetNetworkApplianceSecurityMalware`: %v\n", resp)
 }
 ```
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20085**](InlineResponse20085.md)
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceSecurityIntrusion
 
-> InlineResponse200271 GetOrganizationApplianceSecurityIntrusion(ctx, organizationId).Execute()
+> InlineResponse200283 GetOrganizationApplianceSecurityIntrusion(ctx, organizationId).Execute()
 
 Returns all supported intrusion settings for an organization
 
@@ -441,7 +441,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SecurityApi.GetOrganizationApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceSecurityIntrusion`: InlineResponse200271
+    // response from `GetOrganizationApplianceSecurityIntrusion`: InlineResponse200283
     fmt.Fprintf(os.Stdout, "Response from `SecurityApi.GetOrganizationApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200271**](InlineResponse200271.md)
+[**InlineResponse200283**](InlineResponse200283.md)
 
 ### Authorization
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceSecurityIntrusion
 
-> InlineResponse20084 UpdateNetworkApplianceSecurityIntrusion(ctx, networkId).UpdateNetworkApplianceSecurityIntrusion(updateNetworkApplianceSecurityIntrusion).Execute()
+> InlineResponse20089 UpdateNetworkApplianceSecurityIntrusion(ctx, networkId).UpdateNetworkApplianceSecurityIntrusion(updateNetworkApplianceSecurityIntrusion).Execute()
 
 Set the supported intrusion settings for an MX network
 
@@ -503,7 +503,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSecurityIntrusion := *openapiclient.NewInlineObject65() // InlineObject65 |  (optional)
+    updateNetworkApplianceSecurityIntrusion := *openapiclient.NewInlineObject72() // InlineObject72 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -512,7 +512,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SecurityApi.UpdateNetworkApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSecurityIntrusion`: InlineResponse20084
+    // response from `UpdateNetworkApplianceSecurityIntrusion`: InlineResponse20089
     fmt.Fprintf(os.Stdout, "Response from `SecurityApi.UpdateNetworkApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -533,11 +533,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSecu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSecurityIntrusion** | [**InlineObject65**](InlineObject65.md) |  | 
+ **updateNetworkApplianceSecurityIntrusion** | [**InlineObject72**](InlineObject72.md) |  | 
 
 ### Return type
 
-[**InlineResponse20084**](InlineResponse20084.md)
+[**InlineResponse20089**](InlineResponse20089.md)
 
 ### Authorization
 
@@ -555,7 +555,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceSecurityMalware
 
-> InlineResponse20085 UpdateNetworkApplianceSecurityMalware(ctx, networkId).UpdateNetworkApplianceSecurityMalware(updateNetworkApplianceSecurityMalware).Execute()
+> InlineResponse20090 UpdateNetworkApplianceSecurityMalware(ctx, networkId).UpdateNetworkApplianceSecurityMalware(updateNetworkApplianceSecurityMalware).Execute()
 
 Set the supported malware settings for an MX network
 
@@ -575,7 +575,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSecurityMalware := *openapiclient.NewInlineObject66("Mode_example") // InlineObject66 | 
+    updateNetworkApplianceSecurityMalware := *openapiclient.NewInlineObject73("Mode_example") // InlineObject73 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -584,7 +584,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SecurityApi.UpdateNetworkApplianceSecurityMalware``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSecurityMalware`: InlineResponse20085
+    // response from `UpdateNetworkApplianceSecurityMalware`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `SecurityApi.UpdateNetworkApplianceSecurityMalware`: %v\n", resp)
 }
 ```
@@ -605,11 +605,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSecu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSecurityMalware** | [**InlineObject66**](InlineObject66.md) |  | 
+ **updateNetworkApplianceSecurityMalware** | [**InlineObject73**](InlineObject73.md) |  | 
 
 ### Return type
 
-[**InlineResponse20085**](InlineResponse20085.md)
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -627,7 +627,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceSecurityIntrusion
 
-> InlineResponse200271 UpdateOrganizationApplianceSecurityIntrusion(ctx, organizationId).UpdateOrganizationApplianceSecurityIntrusion(updateOrganizationApplianceSecurityIntrusion).Execute()
+> InlineResponse200283 UpdateOrganizationApplianceSecurityIntrusion(ctx, organizationId).UpdateOrganizationApplianceSecurityIntrusion(updateOrganizationApplianceSecurityIntrusion).Execute()
 
 Sets supported intrusion settings for an organization
 
@@ -647,7 +647,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject243([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject243 | 
+    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject254([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject254 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -656,7 +656,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SecurityApi.UpdateOrganizationApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceSecurityIntrusion`: InlineResponse200271
+    // response from `UpdateOrganizationApplianceSecurityIntrusion`: InlineResponse200283
     fmt.Fprintf(os.Stdout, "Response from `SecurityApi.UpdateOrganizationApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -677,11 +677,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject243**](InlineObject243.md) |  | 
+ **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject254**](InlineObject254.md) |  | 
 
 ### Return type
 
-[**InlineResponse200271**](InlineResponse200271.md)
+[**InlineResponse200283**](InlineResponse200283.md)
 
 ### Authorization
 

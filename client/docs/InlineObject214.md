@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200245Rules**](InlineResponse200245Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
+**Exception** | Pointer to [**InlineResponse200244Exception**](InlineResponse200244Exception.md) |  | [optional] 
 
 ## Methods
 
@@ -27,72 +27,47 @@ NewInlineObject214WithDefaults instantiates a new InlineObject214 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetEnabled
 
-`func (o *InlineObject214) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject214) GetEnabled() bool`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject214) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject214) GetEnabledOk() (*bool, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetEnabled
 
-`func (o *InlineObject214) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject214) SetEnabled(v bool)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTrafficShapingEnabled
+### HasEnabled
 
-`func (o *InlineObject214) HasTrafficShapingEnabled() bool`
+`func (o *InlineObject214) HasEnabled() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
-
-### GetDefaultRulesEnabled
-
-`func (o *InlineObject214) GetDefaultRulesEnabled() bool`
-
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
-
-### GetDefaultRulesEnabledOk
-
-`func (o *InlineObject214) GetDefaultRulesEnabledOk() (*bool, bool)`
-
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaultRulesEnabled
-
-`func (o *InlineObject214) SetDefaultRulesEnabled(v bool)`
-
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
-
-### HasDefaultRulesEnabled
-
-`func (o *InlineObject214) HasDefaultRulesEnabled() bool`
-
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 ### GetRules
 
-`func (o *InlineObject214) GetRules() []InlineResponse200245Rules`
+`func (o *InlineObject214) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject214) GetRulesOk() (*[]InlineResponse200245Rules, bool)`
+`func (o *InlineObject214) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject214) SetRules(v []InlineResponse200245Rules)`
+`func (o *InlineObject214) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
 
 SetRules sets Rules field to given value.
 
@@ -101,6 +76,31 @@ SetRules sets Rules field to given value.
 `func (o *InlineObject214) HasRules() bool`
 
 HasRules returns a boolean if a field has been set.
+
+### GetException
+
+`func (o *InlineObject214) GetException() InlineResponse200244Exception`
+
+GetException returns the Exception field if non-nil, zero value otherwise.
+
+### GetExceptionOk
+
+`func (o *InlineObject214) GetExceptionOk() (*InlineResponse200244Exception, bool)`
+
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetException
+
+`func (o *InlineObject214) SetException(v InlineResponse200244Exception)`
+
+SetException sets Exception field to given value.
+
+### HasException
+
+`func (o *InlineObject214) HasException() bool`
+
+HasException returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

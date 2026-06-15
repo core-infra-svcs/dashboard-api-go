@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject22() // InlineObject22 |  (optional)
+    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsMulti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsMulticastRouting** | [**InlineObject22**](InlineObject22.md) |  | 
+ **createDeviceLiveToolsMulticastRouting** | [**InlineObject23**](InlineObject23.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsMulticastRouting
 
-> InlineResponse20035 GetDeviceLiveToolsMulticastRouting(ctx, serial, multicastRoutingId).Execute()
+> InlineResponse20036 GetDeviceLiveToolsMulticastRouting(ctx, serial, multicastRoutingId).Execute()
 
 Return a Multicast routing live tool job.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MulticastRoutingApi.GetDeviceLiveToolsMulticastRouting``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsMulticastRouting`: InlineResponse20035
+    // response from `GetDeviceLiveToolsMulticastRouting`: InlineResponse20036
     fmt.Fprintf(os.Stdout, "Response from `MulticastRoutingApi.GetDeviceLiveToolsMulticastRouting`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 

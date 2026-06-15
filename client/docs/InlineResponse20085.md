@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
-**AllowedUrls** | Pointer to [**[]InlineResponse20085AllowedUrls**](InlineResponse20085AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
-**AllowedFiles** | Pointer to [**[]InlineResponse20085AllowedFiles**](InlineResponse20085AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
+**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
+**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
+**Description** | Pointer to **NullableString** | Identifying description for the prefix. | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
 
 ## Methods
 
@@ -27,80 +30,165 @@ NewInlineResponse20085WithDefaults instantiates a new InlineResponse20085 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20085) GetMode() string`
+`func (o *InlineResponse20085) GetStaticDelegatedPrefixId() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetStaticDelegatedPrefixIdOk
 
-`func (o *InlineResponse20085) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20085) GetStaticDelegatedPrefixIdOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20085) SetMode(v string)`
+`func (o *InlineResponse20085) SetStaticDelegatedPrefixId(v string)`
 
-SetMode sets Mode field to given value.
+SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
 
-### HasMode
+### HasStaticDelegatedPrefixId
 
-`func (o *InlineResponse20085) HasMode() bool`
+`func (o *InlineResponse20085) HasStaticDelegatedPrefixId() bool`
 
-HasMode returns a boolean if a field has been set.
+HasStaticDelegatedPrefixId returns a boolean if a field has been set.
 
-### GetAllowedUrls
+### GetPrefix
 
-`func (o *InlineResponse20085) GetAllowedUrls() []InlineResponse20085AllowedUrls`
+`func (o *InlineResponse20085) GetPrefix() string`
 
-GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetAllowedUrlsOk
+### GetPrefixOk
 
-`func (o *InlineResponse20085) GetAllowedUrlsOk() (*[]InlineResponse20085AllowedUrls, bool)`
+`func (o *InlineResponse20085) GetPrefixOk() (*string, bool)`
 
-GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrls
+### SetPrefix
 
-`func (o *InlineResponse20085) SetAllowedUrls(v []InlineResponse20085AllowedUrls)`
+`func (o *InlineResponse20085) SetPrefix(v string)`
 
-SetAllowedUrls sets AllowedUrls field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasAllowedUrls
+### HasPrefix
 
-`func (o *InlineResponse20085) HasAllowedUrls() bool`
+`func (o *InlineResponse20085) HasPrefix() bool`
 
-HasAllowedUrls returns a boolean if a field has been set.
+HasPrefix returns a boolean if a field has been set.
 
-### GetAllowedFiles
+### GetOrigin
 
-`func (o *InlineResponse20085) GetAllowedFiles() []InlineResponse20085AllowedFiles`
+`func (o *InlineResponse20085) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
 
-GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetAllowedFilesOk
+### GetOriginOk
 
-`func (o *InlineResponse20085) GetAllowedFilesOk() (*[]InlineResponse20085AllowedFiles, bool)`
+`func (o *InlineResponse20085) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
 
-GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedFiles
+### SetOrigin
 
-`func (o *InlineResponse20085) SetAllowedFiles(v []InlineResponse20085AllowedFiles)`
+`func (o *InlineResponse20085) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
 
-SetAllowedFiles sets AllowedFiles field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasAllowedFiles
+### HasOrigin
 
-`func (o *InlineResponse20085) HasAllowedFiles() bool`
+`func (o *InlineResponse20085) HasOrigin() bool`
 
-HasAllowedFiles returns a boolean if a field has been set.
+HasOrigin returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse20085) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse20085) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse20085) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse20085) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### SetDescriptionNil
+
+`func (o *InlineResponse20085) SetDescriptionNil(b bool)`
+
+ SetDescriptionNil sets the value for Description to be an explicit nil
+
+### UnsetDescription
+`func (o *InlineResponse20085) UnsetDescription()`
+
+UnsetDescription ensures that no value is present for Description, not even an explicit nil
+### GetCreatedAt
+
+`func (o *InlineResponse20085) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse20085) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse20085) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse20085) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse20085) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse20085) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse20085) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse20085) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the organization | 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules**](NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules.md) | An ordered array of the firewall rules for this SSID. | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
 
 ## Methods
 
 ### NewInlineObject217
 
-`func NewInlineObject217(name string, ) *InlineObject217`
+`func NewInlineObject217() *InlineObject217`
 
 NewInlineObject217 instantiates a new InlineObject217 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject217WithDefaults instantiates a new InlineObject217 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject217) GetName() string`
+`func (o *InlineObject217) GetRules() []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject217) GetNameOk() (*string, bool)`
+`func (o *InlineObject217) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject217) SetName(v string)`
+`func (o *InlineObject217) SetRules(v []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetManagement
+`func (o *InlineObject217) HasRules() bool`
 
-`func (o *InlineObject217) GetManagement() OrganizationsManagement1`
+HasRules returns a boolean if a field has been set.
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+### GetAllowLanAccess
 
-### GetManagementOk
+`func (o *InlineObject217) GetAllowLanAccess() bool`
 
-`func (o *InlineObject217) GetManagementOk() (*OrganizationsManagement1, bool)`
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+### GetAllowLanAccessOk
+
+`func (o *InlineObject217) GetAllowLanAccessOk() (*bool, bool)`
+
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetAllowLanAccess
 
-`func (o *InlineObject217) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject217) SetAllowLanAccess(v bool)`
 
-SetManagement sets Management field to given value.
+SetAllowLanAccess sets AllowLanAccess field to given value.
 
-### HasManagement
+### HasAllowLanAccess
 
-`func (o *InlineObject217) HasManagement() bool`
+`func (o *InlineObject217) HasAllowLanAccess() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

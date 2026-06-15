@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | Pointer to [**[]InlineResponse20097Uplinks**](InlineResponse20097Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20097Rules**](InlineResponse20097Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20097WithDefaults instantiates a new InlineResponse20097 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse20097) GetUplinks() []InlineResponse20097Uplinks`
+`func (o *InlineResponse20097) GetDefaultRulesEnabled() bool`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse20097) GetUplinksOk() (*[]InlineResponse20097Uplinks, bool)`
+`func (o *InlineResponse20097) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse20097) SetUplinks(v []InlineResponse20097Uplinks)`
+`func (o *InlineResponse20097) SetDefaultRulesEnabled(v bool)`
 
-SetUplinks sets Uplinks field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasUplinks
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse20097) HasUplinks() bool`
+`func (o *InlineResponse20097) HasDefaultRulesEnabled() bool`
 
-HasUplinks returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse20097) GetRules() []InlineResponse20097Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse20097) GetRulesOk() (*[]InlineResponse20097Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse20097) SetRules(v []InlineResponse20097Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse20097) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

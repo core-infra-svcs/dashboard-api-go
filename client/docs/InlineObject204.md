@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
-**DeviceTypePolicies** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies**](NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies.md) | List of device type policies. | [optional] 
+**Name** | **string** | AP port profile name | 
+**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
 
 ## Methods
 
 ### NewInlineObject204
 
-`func NewInlineObject204() *InlineObject204`
+`func NewInlineObject204(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject204`
 
 NewInlineObject204 instantiates a new InlineObject204 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,70 @@ NewInlineObject204WithDefaults instantiates a new InlineObject204 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject204) GetEnabled() bool`
+`func (o *InlineObject204) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject204) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject204) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject204) SetEnabled(v bool)`
+`func (o *InlineObject204) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject204) HasEnabled() bool`
+### GetPorts
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject204) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
 
-### GetDeviceTypePolicies
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-`func (o *InlineObject204) GetDeviceTypePolicies() []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies`
+### GetPortsOk
 
-GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
+`func (o *InlineObject204) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
 
-### GetDeviceTypePoliciesOk
-
-`func (o *InlineObject204) GetDeviceTypePoliciesOk() (*[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies, bool)`
-
-GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceTypePolicies
+### SetPorts
 
-`func (o *InlineObject204) SetDeviceTypePolicies(v []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies)`
+`func (o *InlineObject204) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
 
-SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
+SetPorts sets Ports field to given value.
 
-### HasDeviceTypePolicies
 
-`func (o *InlineObject204) HasDeviceTypePolicies() bool`
+### GetUsbPorts
 
-HasDeviceTypePolicies returns a boolean if a field has been set.
+`func (o *InlineObject204) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+
+### GetUsbPortsOk
+
+`func (o *InlineObject204) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsbPorts
+
+`func (o *InlineObject204) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+
+SetUsbPorts sets UsbPorts field to given value.
+
+### HasUsbPorts
+
+`func (o *InlineObject204) HasUsbPorts() bool`
+
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

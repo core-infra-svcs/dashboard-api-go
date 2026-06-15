@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **Host** | **string** | IP address (or FQDN) to which the APs will send RADIUS accounting messages | 
 **Port** | Pointer to **int32** | Port on the RADIUS server that is listening for accounting messages | [optional] 
 **Secret** | Pointer to **string** | Shared key used to authenticate messages between the APs and RADIUS server | [optional] 
-**RadsecEnabled** | Pointer to **bool** | Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled. | [optional] 
-**CaCertificate** | Pointer to **NullableString** | Certificate used for authorization for the RADSEC Server | [optional] 
+**RadsecEnabled** | Pointer to **bool** | Use RadSec (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled. | [optional] 
+**CaCertificate** | Pointer to **NullableString** | Certificate used for authorization for the RadSec Server | [optional] 
 
 ## Methods
 

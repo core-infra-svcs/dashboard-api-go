@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]InlineResponse200204CustomPieChartItems**](InlineResponse200204CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
+**IsMonitorOnly** | Pointer to **bool** | Tells if stack is Monitored Stack. | [optional] 
+**VirtualMac** | Pointer to **string** | The virtual MAC address of the switch stack | [optional] 
+**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksMembers**](NetworksNetworkIdSwitchStacksMembers.md) | Members of the Stack | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineResponse200204WithDefaults instantiates a new InlineResponse200204 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetId
 
-`func (o *InlineResponse200204) GetMode() string`
+`func (o *InlineResponse200204) GetId() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetIdOk
 
-`func (o *InlineResponse200204) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200204) GetIdOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetId
 
-`func (o *InlineResponse200204) SetMode(v string)`
+`func (o *InlineResponse200204) SetId(v string)`
 
-SetMode sets Mode field to given value.
+SetId sets Id field to given value.
 
-### HasMode
+### HasId
 
-`func (o *InlineResponse200204) HasMode() bool`
+`func (o *InlineResponse200204) HasId() bool`
 
-HasMode returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCustomPieChartItems
+### GetName
 
-`func (o *InlineResponse200204) GetCustomPieChartItems() []InlineResponse200204CustomPieChartItems`
+`func (o *InlineResponse200204) GetName() string`
 
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCustomPieChartItemsOk
+### GetNameOk
 
-`func (o *InlineResponse200204) GetCustomPieChartItemsOk() (*[]InlineResponse200204CustomPieChartItems, bool)`
+`func (o *InlineResponse200204) GetNameOk() (*string, bool)`
 
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPieChartItems
+### SetName
 
-`func (o *InlineResponse200204) SetCustomPieChartItems(v []InlineResponse200204CustomPieChartItems)`
+`func (o *InlineResponse200204) SetName(v string)`
 
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
+SetName sets Name field to given value.
 
-### HasCustomPieChartItems
+### HasName
 
-`func (o *InlineResponse200204) HasCustomPieChartItems() bool`
+`func (o *InlineResponse200204) HasName() bool`
 
-HasCustomPieChartItems returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200204) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200204) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200204) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200204) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetIsMonitorOnly
+
+`func (o *InlineResponse200204) GetIsMonitorOnly() bool`
+
+GetIsMonitorOnly returns the IsMonitorOnly field if non-nil, zero value otherwise.
+
+### GetIsMonitorOnlyOk
+
+`func (o *InlineResponse200204) GetIsMonitorOnlyOk() (*bool, bool)`
+
+GetIsMonitorOnlyOk returns a tuple with the IsMonitorOnly field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsMonitorOnly
+
+`func (o *InlineResponse200204) SetIsMonitorOnly(v bool)`
+
+SetIsMonitorOnly sets IsMonitorOnly field to given value.
+
+### HasIsMonitorOnly
+
+`func (o *InlineResponse200204) HasIsMonitorOnly() bool`
+
+HasIsMonitorOnly returns a boolean if a field has been set.
+
+### GetVirtualMac
+
+`func (o *InlineResponse200204) GetVirtualMac() string`
+
+GetVirtualMac returns the VirtualMac field if non-nil, zero value otherwise.
+
+### GetVirtualMacOk
+
+`func (o *InlineResponse200204) GetVirtualMacOk() (*string, bool)`
+
+GetVirtualMacOk returns a tuple with the VirtualMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualMac
+
+`func (o *InlineResponse200204) SetVirtualMac(v string)`
+
+SetVirtualMac sets VirtualMac field to given value.
+
+### HasVirtualMac
+
+`func (o *InlineResponse200204) HasVirtualMac() bool`
+
+HasVirtualMac returns a boolean if a field has been set.
+
+### GetMembers
+
+`func (o *InlineResponse200204) GetMembers() []NetworksNetworkIdSwitchStacksMembers`
+
+GetMembers returns the Members field if non-nil, zero value otherwise.
+
+### GetMembersOk
+
+`func (o *InlineResponse200204) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksMembers, bool)`
+
+GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMembers
+
+`func (o *InlineResponse200204) SetMembers(v []NetworksNetworkIdSwitchStacksMembers)`
+
+SetMembers sets Members field to given value.
+
+### HasMembers
+
+`func (o *InlineResponse200204) HasMembers() bool`
+
+HasMembers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

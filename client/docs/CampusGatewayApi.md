@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkCampusGatewayCluster
 
-> InlineResponse20113 CreateNetworkCampusGatewayCluster(ctx, networkId).CreateNetworkCampusGatewayCluster(createNetworkCampusGatewayCluster).Execute()
+> InlineResponse20118 CreateNetworkCampusGatewayCluster(ctx, networkId).CreateNetworkCampusGatewayCluster(createNetworkCampusGatewayCluster).Execute()
 
 Create a cluster and add campus gateways to it
 
@@ -33,7 +33,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkCampusGatewayCluster := *openapiclient.NewInlineObject92("Name_example", []openapiclient.NetworksNetworkIdCampusGatewayClustersUplinks{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersUplinks("Interface_example", int32(123), []openapiclient.NetworksNetworkIdCampusGatewayClustersAddresses{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersAddresses("AssignmentMode_example")})}, []openapiclient.NetworksNetworkIdCampusGatewayClustersTunnels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersTunnels()}, *openapiclient.NewNetworksNetworkIdCampusGatewayClustersNameservers([]string{"Addresses_example"}), []openapiclient.NetworksNetworkIdCampusGatewayClustersPortChannels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersPortChannels("Name_example", int32(123), "AllowedVlans_example")}) // InlineObject92 | 
+    createNetworkCampusGatewayCluster := *openapiclient.NewInlineObject103("Name_example", []openapiclient.NetworksNetworkIdCampusGatewayClustersUplinks{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersUplinks("Interface_example", int32(123), []openapiclient.NetworksNetworkIdCampusGatewayClustersAddresses{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersAddresses("AssignmentMode_example")})}, []openapiclient.NetworksNetworkIdCampusGatewayClustersTunnels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersTunnels()}, *openapiclient.NewNetworksNetworkIdCampusGatewayClustersNameservers([]string{"Addresses_example"}), []openapiclient.NetworksNetworkIdCampusGatewayClustersPortChannels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersPortChannels("Name_example", int32(123), "AllowedVlans_example")}) // InlineObject103 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.CreateNetworkCampusGatewayCluster``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkCampusGatewayCluster`: InlineResponse20113
+    // response from `CreateNetworkCampusGatewayCluster`: InlineResponse20118
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.CreateNetworkCampusGatewayCluster`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkCampusGateway
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCampusGatewayCluster** | [**InlineObject92**](InlineObject92.md) |  | 
+ **createNetworkCampusGatewayCluster** | [**InlineObject103**](InlineObject103.md) |  | 
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**InlineResponse20118**](InlineResponse20118.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClusters
 
-> InlineResponse200299 GetOrganizationCampusGatewayClusters(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200311 GetOrganizationCampusGatewayClusters(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Get the details of campus gateway clusters
 
@@ -117,7 +117,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClusters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClusters`: InlineResponse200299
+    // response from `GetOrganizationCampusGatewayClusters`: InlineResponse200311
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClusters`: %v\n", resp)
 }
 ```
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200299**](InlineResponse200299.md)
+[**InlineResponse200311**](InlineResponse200311.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice
 
-> InlineResponse200300 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200312 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Uplink overrides configured locally on Campus Gateway devices in an organization.
 
@@ -195,7 +195,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200300
+    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200312
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: %v\n", resp)
 }
 ```
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200300**](InlineResponse200300.md)
+[**InlineResponse200312**](InlineResponse200312.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCampusGatewayCluster
 
-> InlineResponse20113 UpdateNetworkCampusGatewayCluster(ctx, networkId, clusterId).UpdateNetworkCampusGatewayCluster(updateNetworkCampusGatewayCluster).Execute()
+> InlineResponse20118 UpdateNetworkCampusGatewayCluster(ctx, networkId, clusterId).UpdateNetworkCampusGatewayCluster(updateNetworkCampusGatewayCluster).Execute()
 
 Update a cluster and add/remove campus gateways to/from it
 
@@ -262,7 +262,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clusterId := "clusterId_example" // string | Cluster ID
-    updateNetworkCampusGatewayCluster := *openapiclient.NewInlineObject93() // InlineObject93 |  (optional)
+    updateNetworkCampusGatewayCluster := *openapiclient.NewInlineObject104() // InlineObject104 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -271,7 +271,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.UpdateNetworkCampusGatewayCluster``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCampusGatewayCluster`: InlineResponse20113
+    // response from `UpdateNetworkCampusGatewayCluster`: InlineResponse20118
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.UpdateNetworkCampusGatewayCluster`: %v\n", resp)
 }
 ```
@@ -294,11 +294,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCampusGatewayCluster** | [**InlineObject93**](InlineObject93.md) |  | 
+ **updateNetworkCampusGatewayCluster** | [**InlineObject104**](InlineObject104.md) |  | 
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**InlineResponse20118**](InlineResponse20118.md)
 
 ### Authorization
 

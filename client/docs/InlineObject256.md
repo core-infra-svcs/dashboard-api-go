@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | Status the eSIM will be updated to | [optional] 
+**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
 
 ## Methods
 
 ### NewInlineObject256
 
-`func NewInlineObject256() *InlineObject256`
+`func NewInlineObject256(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject256`
 
 NewInlineObject256 instantiates a new InlineObject256 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject256WithDefaults instantiates a new InlineObject256 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetPeers
 
-`func (o *InlineObject256) GetStatus() string`
+`func (o *InlineObject256) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetPeersOk
 
-`func (o *InlineObject256) GetStatusOk() (*string, bool)`
+`func (o *InlineObject256) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetPeers
 
-`func (o *InlineObject256) SetStatus(v string)`
+`func (o *InlineObject256) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
 
-SetStatus sets Status field to given value.
+SetPeers sets Peers field to given value.
 
-### HasStatus
-
-`func (o *InlineObject256) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

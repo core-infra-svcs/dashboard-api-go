@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTime** | Pointer to **time.Time** | Start time of interval | [optional] 
-**EndTime** | Pointer to **time.Time** | End time of interval | [optional] 
-**ByInterface** | Pointer to [**[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface**](NetworksNetworkIdApplianceUplinksUsageHistoryByInterface.md) | List of usage data for each interface | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse20098BandwidthLimits**](InlineResponse20098BandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20098WithDefaults instantiates a new InlineResponse20098 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTime
+### GetBandwidthLimits
 
-`func (o *InlineResponse20098) GetStartTime() time.Time`
+`func (o *InlineResponse20098) GetBandwidthLimits() InlineResponse20098BandwidthLimits`
 
-GetStartTime returns the StartTime field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetStartTimeOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineResponse20098) GetStartTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20098) GetBandwidthLimitsOk() (*InlineResponse20098BandwidthLimits, bool)`
 
-GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTime
+### SetBandwidthLimits
 
-`func (o *InlineResponse20098) SetStartTime(v time.Time)`
+`func (o *InlineResponse20098) SetBandwidthLimits(v InlineResponse20098BandwidthLimits)`
 
-SetStartTime sets StartTime field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasStartTime
+### HasBandwidthLimits
 
-`func (o *InlineResponse20098) HasStartTime() bool`
+`func (o *InlineResponse20098) HasBandwidthLimits() bool`
 
-HasStartTime returns a boolean if a field has been set.
-
-### GetEndTime
-
-`func (o *InlineResponse20098) GetEndTime() time.Time`
-
-GetEndTime returns the EndTime field if non-nil, zero value otherwise.
-
-### GetEndTimeOk
-
-`func (o *InlineResponse20098) GetEndTimeOk() (*time.Time, bool)`
-
-GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndTime
-
-`func (o *InlineResponse20098) SetEndTime(v time.Time)`
-
-SetEndTime sets EndTime field to given value.
-
-### HasEndTime
-
-`func (o *InlineResponse20098) HasEndTime() bool`
-
-HasEndTime returns a boolean if a field has been set.
-
-### GetByInterface
-
-`func (o *InlineResponse20098) GetByInterface() []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface`
-
-GetByInterface returns the ByInterface field if non-nil, zero value otherwise.
-
-### GetByInterfaceOk
-
-`func (o *InlineResponse20098) GetByInterfaceOk() (*[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface, bool)`
-
-GetByInterfaceOk returns a tuple with the ByInterface field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByInterface
-
-`func (o *InlineResponse20098) SetByInterface(v []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface)`
-
-SetByInterface sets ByInterface field to given value.
-
-### HasByInterface
-
-`func (o *InlineResponse20098) HasByInterface() bool`
-
-HasByInterface returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

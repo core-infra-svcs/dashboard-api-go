@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
+**Description** | Pointer to **string** | New description of the profile. | [optional] 
+**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
 
 ## Methods
 
 ### NewInlineObject279
 
-`func NewInlineObject279(shortName string, ) *InlineObject279`
+`func NewInlineObject279(rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject279`
 
 NewInlineObject279 instantiates a new InlineObject279 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,75 @@ NewInlineObject279WithDefaults instantiates a new InlineObject279 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetProfileId
 
-`func (o *InlineObject279) GetShortName() string`
+`func (o *InlineObject279) GetProfileId() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetProfileIdOk
 
-`func (o *InlineObject279) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject279) GetProfileIdOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetProfileId
 
-`func (o *InlineObject279) SetShortName(v string)`
+`func (o *InlineObject279) SetProfileId(v string)`
 
-SetShortName sets ShortName field to given value.
+SetProfileId sets ProfileId field to given value.
 
+### HasProfileId
 
-### GetLimitScopeToNetworks
+`func (o *InlineObject279) HasProfileId() bool`
 
-`func (o *InlineObject279) GetLimitScopeToNetworks() []string`
+HasProfileId returns a boolean if a field has been set.
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+### GetDescription
 
-### GetLimitScopeToNetworksOk
+`func (o *InlineObject279) GetDescription() string`
 
-`func (o *InlineObject279) GetLimitScopeToNetworksOk() (*[]string, bool)`
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+### GetDescriptionOk
+
+`func (o *InlineObject279) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetDescription
 
-`func (o *InlineObject279) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject279) SetDescription(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetDescription sets Description field to given value.
 
-### HasLimitScopeToNetworks
+### HasDescription
 
-`func (o *InlineObject279) HasLimitScopeToNetworks() bool`
+`func (o *InlineObject279) HasDescription() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject279) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject279) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject279) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+
+SetRules sets Rules field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

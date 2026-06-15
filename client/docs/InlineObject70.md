@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the route | 
-**Subnet** | **string** | Subnet of the route | 
-**GatewayIp** | **string** | Gateway IP address (next hop) | 
-**GatewayVlanId** | Pointer to **int32** | Gateway VLAN ID | [optional] 
+**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
+**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
+**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject70
 
-`func NewInlineObject70(name string, subnet string, gatewayIp string, ) *InlineObject70`
+`func NewInlineObject70() *InlineObject70`
 
 NewInlineObject70 instantiates a new InlineObject70 object
 This constructor will assign default values to properties that have it defined,
@@ -47,71 +47,86 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetSubnet
+`func (o *InlineObject70) HasName() bool`
 
-`func (o *InlineObject70) GetSubnet() string`
+HasName returns a boolean if a field has been set.
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+### GetTwoFourGhzSettings
 
-### GetSubnetOk
+`func (o *InlineObject70) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings`
 
-`func (o *InlineObject70) GetSubnetOk() (*string, bool)`
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+### GetTwoFourGhzSettingsOk
+
+`func (o *InlineObject70) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
+
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetTwoFourGhzSettings
 
-`func (o *InlineObject70) SetSubnet(v string)`
+`func (o *InlineObject70) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings)`
 
-SetSubnet sets Subnet field to given value.
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
+### HasTwoFourGhzSettings
 
-### GetGatewayIp
+`func (o *InlineObject70) HasTwoFourGhzSettings() bool`
 
-`func (o *InlineObject70) GetGatewayIp() string`
+HasTwoFourGhzSettings returns a boolean if a field has been set.
 
-GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+### GetFiveGhzSettings
 
-### GetGatewayIpOk
+`func (o *InlineObject70) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings`
 
-`func (o *InlineObject70) GetGatewayIpOk() (*string, bool)`
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
-GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+### GetFiveGhzSettingsOk
+
+`func (o *InlineObject70) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings, bool)`
+
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGatewayIp
+### SetFiveGhzSettings
 
-`func (o *InlineObject70) SetGatewayIp(v string)`
+`func (o *InlineObject70) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings)`
 
-SetGatewayIp sets GatewayIp field to given value.
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
+### HasFiveGhzSettings
 
-### GetGatewayVlanId
+`func (o *InlineObject70) HasFiveGhzSettings() bool`
 
-`func (o *InlineObject70) GetGatewayVlanId() int32`
+HasFiveGhzSettings returns a boolean if a field has been set.
 
-GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
+### GetPerSsidSettings
 
-### GetGatewayVlanIdOk
+`func (o *InlineObject70) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
 
-`func (o *InlineObject70) GetGatewayVlanIdOk() (*int32, bool)`
+GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
 
-GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
+### GetPerSsidSettingsOk
+
+`func (o *InlineObject70) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
+
+GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGatewayVlanId
+### SetPerSsidSettings
 
-`func (o *InlineObject70) SetGatewayVlanId(v int32)`
+`func (o *InlineObject70) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
 
-SetGatewayVlanId sets GatewayVlanId field to given value.
+SetPerSsidSettings sets PerSsidSettings field to given value.
 
-### HasGatewayVlanId
+### HasPerSsidSettings
 
-`func (o *InlineObject70) HasGatewayVlanId() bool`
+`func (o *InlineObject70) HasPerSsidSettings() bool`
 
-HasGatewayVlanId returns a boolean if a field has been set.
+HasPerSsidSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

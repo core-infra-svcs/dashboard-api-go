@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **Host** | **string** | IP address (or FQDN) of your RADIUS server | 
 **Port** | Pointer to **int32** | UDP port the RADIUS server listens on for Access-requests | [optional] 
 **Secret** | Pointer to **string** | RADIUS client shared secret | [optional] 
-**RadsecEnabled** | Pointer to **bool** | Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled. | [optional] 
+**RadsecEnabled** | Pointer to **bool** | Use RadSec (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled. | [optional] 
 **OpenRoamingCertificateId** | Pointer to **NullableInt32** | The ID of the Openroaming Certificate attached to radius server. | [optional] 
-**CaCertificate** | Pointer to **NullableString** | Certificate used for authorization for the RADSEC Server | [optional] 
+**CaCertificate** | Pointer to **NullableString** | Certificate used for authorization for the RadSec Server | [optional] 
 
 ## Methods
 

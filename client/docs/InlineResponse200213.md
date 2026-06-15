@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
+**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
+**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
+**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
+**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
 
 ## Methods
 
@@ -31,180 +29,130 @@ NewInlineResponse200213WithDefaults instantiates a new InlineResponse200213 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetIname
 
-`func (o *InlineResponse200213) GetScanningEnabled() bool`
+`func (o *InlineResponse200213) GetIname() string`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetIname returns the Iname field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetInameOk
 
-`func (o *InlineResponse200213) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200213) GetInameOk() (*string, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetIname
 
-`func (o *InlineResponse200213) SetScanningEnabled(v bool)`
+`func (o *InlineResponse200213) SetIname(v string)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetIname sets Iname field to given value.
 
-### HasScanningEnabled
+### HasIname
 
-`func (o *InlineResponse200213) HasScanningEnabled() bool`
+`func (o *InlineResponse200213) HasIname() bool`
 
-HasScanningEnabled returns a boolean if a field has been set.
+HasIname returns a boolean if a field has been set.
 
-### GetAdvertisingEnabled
+### GetName
 
-`func (o *InlineResponse200213) GetAdvertisingEnabled() bool`
+`func (o *InlineResponse200213) GetName() string`
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAdvertisingEnabledOk
+### GetNameOk
 
-`func (o *InlineResponse200213) GetAdvertisingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200213) GetNameOk() (*string, bool)`
 
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetName
 
-`func (o *InlineResponse200213) SetAdvertisingEnabled(v bool)`
+`func (o *InlineResponse200213) SetName(v string)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasAdvertisingEnabled
+### HasName
 
-`func (o *InlineResponse200213) HasAdvertisingEnabled() bool`
+`func (o *InlineResponse200213) HasName() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUuid
+### GetIsDefault
 
-`func (o *InlineResponse200213) GetUuid() string`
+`func (o *InlineResponse200213) GetIsDefault() bool`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200213) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse200213) GetIsDefaultOk() (*bool, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetIsDefault
 
-`func (o *InlineResponse200213) SetUuid(v string)`
+`func (o *InlineResponse200213) SetIsDefault(v bool)`
 
-SetUuid sets Uuid field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasUuid
+### HasIsDefault
 
-`func (o *InlineResponse200213) HasUuid() bool`
+`func (o *InlineResponse200213) HasIsDefault() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetMajorMinorAssignmentMode
+### GetVlanNames
 
-`func (o *InlineResponse200213) GetMajorMinorAssignmentMode() string`
+`func (o *InlineResponse200213) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
 
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-### GetMajorMinorAssignmentModeOk
+### GetVlanNamesOk
 
-`func (o *InlineResponse200213) GetMajorMinorAssignmentModeOk() (*string, bool)`
+`func (o *InlineResponse200213) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
 
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorMinorAssignmentMode
+### SetVlanNames
 
-`func (o *InlineResponse200213) SetMajorMinorAssignmentMode(v string)`
+`func (o *InlineResponse200213) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
 
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasMajorMinorAssignmentMode
+### HasVlanNames
 
-`func (o *InlineResponse200213) HasMajorMinorAssignmentMode() bool`
+`func (o *InlineResponse200213) HasVlanNames() bool`
 
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+HasVlanNames returns a boolean if a field has been set.
 
-### GetMajor
+### GetVlanGroups
 
-`func (o *InlineResponse200213) GetMajor() int32`
+`func (o *InlineResponse200213) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetVlanGroupsOk
 
-`func (o *InlineResponse200213) GetMajorOk() (*int32, bool)`
+`func (o *InlineResponse200213) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetVlanGroups
 
-`func (o *InlineResponse200213) SetMajor(v int32)`
+`func (o *InlineResponse200213) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
 
-SetMajor sets Major field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasMajor
+### HasVlanGroups
 
-`func (o *InlineResponse200213) HasMajor() bool`
+`func (o *InlineResponse200213) HasVlanGroups() bool`
 
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineResponse200213) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineResponse200213) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineResponse200213) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineResponse200213) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
-
-### GetEslEnabled
-
-`func (o *InlineResponse200213) GetEslEnabled() bool`
-
-GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
-
-### GetEslEnabledOk
-
-`func (o *InlineResponse200213) GetEslEnabledOk() (*bool, bool)`
-
-GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEslEnabled
-
-`func (o *InlineResponse200213) SetEslEnabled(v bool)`
-
-SetEslEnabled sets EslEnabled field to given value.
-
-### HasEslEnabled
-
-`func (o *InlineResponse200213) HasEslEnabled() bool`
-
-HasEslEnabled returns a boolean if a field has been set.
+HasVlanGroups returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

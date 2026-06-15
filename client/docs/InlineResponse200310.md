@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200310Usage**](InlineResponse200310Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200310Counts**](InlineResponse200310Counts.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the role | [optional] 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices.md) | Devices the role is applied to | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks.md) | Networks the role is applied to | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide.md) | Organization-wide permissions | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200310WithDefaults instantiates a new InlineResponse200310 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetName
 
-`func (o *InlineResponse200310) GetUsage() InlineResponse200310Usage`
+`func (o *InlineResponse200310) GetName() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetNameOk
 
-`func (o *InlineResponse200310) GetUsageOk() (*InlineResponse200310Usage, bool)`
+`func (o *InlineResponse200310) GetNameOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetName
 
-`func (o *InlineResponse200310) SetUsage(v InlineResponse200310Usage)`
+`func (o *InlineResponse200310) SetName(v string)`
 
-SetUsage sets Usage field to given value.
+SetName sets Name field to given value.
 
-### HasUsage
+### HasName
 
-`func (o *InlineResponse200310) HasUsage() bool`
+`func (o *InlineResponse200310) HasName() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCounts
+### GetAppliedOnDevices
 
-`func (o *InlineResponse200310) GetCounts() InlineResponse200310Counts`
+`func (o *InlineResponse200310) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetAppliedOnDevicesOk
 
-`func (o *InlineResponse200310) GetCountsOk() (*InlineResponse200310Counts, bool)`
+`func (o *InlineResponse200310) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetAppliedOnDevices
 
-`func (o *InlineResponse200310) SetCounts(v InlineResponse200310Counts)`
+`func (o *InlineResponse200310) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices)`
 
-SetCounts sets Counts field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
-### HasCounts
+### HasAppliedOnDevices
 
-`func (o *InlineResponse200310) HasCounts() bool`
+`func (o *InlineResponse200310) HasAppliedOnDevices() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasAppliedOnDevices returns a boolean if a field has been set.
+
+### GetAppliedOnNetworks
+
+`func (o *InlineResponse200310) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks`
+
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
+
+### GetAppliedOnNetworksOk
+
+`func (o *InlineResponse200310) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks, bool)`
+
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOnNetworks
+
+`func (o *InlineResponse200310) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks)`
+
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
+
+### HasAppliedOnNetworks
+
+`func (o *InlineResponse200310) HasAppliedOnNetworks() bool`
+
+HasAppliedOnNetworks returns a boolean if a field has been set.
+
+### GetAppliedOrgWide
+
+`func (o *InlineResponse200310) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide`
+
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+
+### GetAppliedOrgWideOk
+
+`func (o *InlineResponse200310) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOrgWide
+
+`func (o *InlineResponse200310) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide)`
+
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
+
+### HasAppliedOrgWide
+
+`func (o *InlineResponse200310) HasAppliedOrgWide() bool`
+
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

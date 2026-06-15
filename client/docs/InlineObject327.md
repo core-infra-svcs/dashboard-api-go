@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
-**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
+**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**SpInitiated** | Pointer to [**InlineResponse200395SpInitiated**](InlineResponse200395SpInitiated.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject327WithDefaults instantiates a new InlineObject327 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject327) GetName() string`
+`func (o *InlineObject327) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject327) GetNameOk() (*string, bool)`
+`func (o *InlineObject327) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject327) SetName(v string)`
+`func (o *InlineObject327) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject327) HasName() bool`
+`func (o *InlineObject327) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetScope
+### GetSpInitiated
 
-`func (o *InlineObject327) GetScope() string`
+`func (o *InlineObject327) GetSpInitiated() InlineResponse200395SpInitiated`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetSpInitiatedOk
 
-`func (o *InlineObject327) GetScopeOk() (*string, bool)`
+`func (o *InlineObject327) GetSpInitiatedOk() (*InlineResponse200395SpInitiated, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetSpInitiated
 
-`func (o *InlineObject327) SetScope(v string)`
+`func (o *InlineObject327) SetSpInitiated(v InlineResponse200395SpInitiated)`
 
-SetScope sets Scope field to given value.
+SetSpInitiated sets SpInitiated field to given value.
 
-### HasScope
+### HasSpInitiated
 
-`func (o *InlineObject327) HasScope() bool`
+`func (o *InlineObject327) HasSpInitiated() bool`
 
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject327) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject327) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject327) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject327) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

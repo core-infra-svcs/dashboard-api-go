@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceAppliancePrefixesDelegatedVlanAssignments
 
-> []InlineResponse20010 GetDeviceAppliancePrefixesDelegatedVlanAssignments(ctx, serial).Execute()
+> []InlineResponse20011 GetDeviceAppliancePrefixesDelegatedVlanAssignments(ctx, serial).Execute()
 
 Return prefixes assigned to all IPv6 enabled VLANs on an appliance.
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlanAssignmentsApi.GetDeviceAppliancePrefixesDelegatedVlanAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceAppliancePrefixesDelegatedVlanAssignments`: []InlineResponse20010
+    // response from `GetDeviceAppliancePrefixesDelegatedVlanAssignments`: []InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `VlanAssignmentsApi.GetDeviceAppliancePrefixesDelegatedVlanAssignments`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20010**](InlineResponse20010.md)
+[**[]InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 

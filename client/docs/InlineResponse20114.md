@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Clients** | Pointer to [**[]InlineResponse20114Clients**](InlineResponse20114Clients.md) | The list of clients to provision | [optional] 
-**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
+**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
+**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
+**Request** | Pointer to [**InlineResponse20114Request**](InlineResponse20114Request.md) |  | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse20114WithDefaults instantiates a new InlineResponse20114 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClients
+### GetWakeOnLanId
 
-`func (o *InlineResponse20114) GetClients() []InlineResponse20114Clients`
+`func (o *InlineResponse20114) GetWakeOnLanId() string`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetWakeOnLanIdOk
 
-`func (o *InlineResponse20114) GetClientsOk() (*[]InlineResponse20114Clients, bool)`
+`func (o *InlineResponse20114) GetWakeOnLanIdOk() (*string, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetWakeOnLanId
 
-`func (o *InlineResponse20114) SetClients(v []InlineResponse20114Clients)`
+`func (o *InlineResponse20114) SetWakeOnLanId(v string)`
 
-SetClients sets Clients field to given value.
+SetWakeOnLanId sets WakeOnLanId field to given value.
 
-### HasClients
+### HasWakeOnLanId
 
-`func (o *InlineResponse20114) HasClients() bool`
+`func (o *InlineResponse20114) HasWakeOnLanId() bool`
 
-HasClients returns a boolean if a field has been set.
+HasWakeOnLanId returns a boolean if a field has been set.
 
-### GetDevicePolicy
+### GetUrl
 
-`func (o *InlineResponse20114) GetDevicePolicy() string`
+`func (o *InlineResponse20114) GetUrl() string`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetUrlOk
 
-`func (o *InlineResponse20114) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineResponse20114) GetUrlOk() (*string, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetUrl
 
-`func (o *InlineResponse20114) SetDevicePolicy(v string)`
+`func (o *InlineResponse20114) SetUrl(v string)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetUrl sets Url field to given value.
 
-### HasDevicePolicy
+### HasUrl
 
-`func (o *InlineResponse20114) HasDevicePolicy() bool`
+`func (o *InlineResponse20114) HasUrl() bool`
 
-HasDevicePolicy returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetStatus
 
-`func (o *InlineResponse20114) GetGroupPolicyId() string`
+`func (o *InlineResponse20114) GetStatus() string`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetStatusOk
 
-`func (o *InlineResponse20114) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse20114) GetStatusOk() (*string, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetStatus
 
-`func (o *InlineResponse20114) SetGroupPolicyId(v string)`
+`func (o *InlineResponse20114) SetStatus(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetStatus sets Status field to given value.
 
-### HasGroupPolicyId
+### HasStatus
 
-`func (o *InlineResponse20114) HasGroupPolicyId() bool`
+`func (o *InlineResponse20114) HasStatus() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20114) GetRequest() InlineResponse20114Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20114) GetRequestOk() (*InlineResponse20114Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20114) SetRequest(v InlineResponse20114Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20114) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
+### GetError
+
+`func (o *InlineResponse20114) GetError() string`
+
+GetError returns the Error field if non-nil, zero value otherwise.
+
+### GetErrorOk
+
+`func (o *InlineResponse20114) GetErrorOk() (*string, bool)`
+
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetError
+
+`func (o *InlineResponse20114) SetError(v string)`
+
+SetError sets Error field to given value.
+
+### HasError
+
+`func (o *InlineResponse20114) HasError() bool`
+
+HasError returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineResponse20114) GetCallback() InlineResponse2011Callback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineResponse20114) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineResponse20114) SetCallback(v InlineResponse2011Callback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineResponse20114) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

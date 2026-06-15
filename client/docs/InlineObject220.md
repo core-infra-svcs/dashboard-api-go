@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject220
 
-`func NewInlineObject220() *InlineObject220`
+`func NewInlineObject220(name string, groupPolicyId string, ) *InlineObject220`
 
 NewInlineObject220 instantiates a new InlineObject220 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,95 @@ NewInlineObject220WithDefaults instantiates a new InlineObject220 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetName
 
-`func (o *InlineObject220) GetConfirmed() bool`
+`func (o *InlineObject220) GetName() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetNameOk
 
-`func (o *InlineObject220) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject220) GetNameOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetName
 
-`func (o *InlineObject220) SetConfirmed(v bool)`
+`func (o *InlineObject220) SetName(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetName sets Name field to given value.
 
-### HasConfirmed
 
-`func (o *InlineObject220) HasConfirmed() bool`
+### GetPassphrase
 
-HasConfirmed returns a boolean if a field has been set.
+`func (o *InlineObject220) GetPassphrase() string`
 
-### GetSynchronous
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-`func (o *InlineObject220) GetSynchronous() bool`
+### GetPassphraseOk
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+`func (o *InlineObject220) GetPassphraseOk() (*string, bool)`
 
-### GetSynchronousOk
-
-`func (o *InlineObject220) GetSynchronousOk() (*bool, bool)`
-
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetPassphrase
 
-`func (o *InlineObject220) SetSynchronous(v bool)`
+`func (o *InlineObject220) SetPassphrase(v string)`
 
-SetSynchronous sets Synchronous field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasSynchronous
+### HasPassphrase
 
-`func (o *InlineObject220) HasSynchronous() bool`
+`func (o *InlineObject220) HasPassphrase() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineObject220) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject220) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject220) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+
+### GetExpiresAt
+
+`func (o *InlineObject220) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject220) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject220) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject220) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

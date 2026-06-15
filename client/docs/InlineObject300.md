@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the firewall ruleset | 
-**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
 
 ## Methods
 
 ### NewInlineObject300
 
-`func NewInlineObject300(name string, ) *InlineObject300`
+`func NewInlineObject300() *InlineObject300`
 
 NewInlineObject300 instantiates a new InlineObject300 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,30 @@ NewInlineObject300WithDefaults instantiates a new InlineObject300 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSerials
 
-`func (o *InlineObject300) GetName() string`
+`func (o *InlineObject300) GetSerials() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialsOk
 
-`func (o *InlineObject300) GetNameOk() (*string, bool)`
+`func (o *InlineObject300) GetSerialsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerials
 
-`func (o *InlineObject300) SetName(v string)`
+`func (o *InlineObject300) SetSerials(v []string)`
 
-SetName sets Name field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
 
-### GetDescription
+`func (o *InlineObject300) HasSerials() bool`
 
-`func (o *InlineObject300) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject300) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject300) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject300) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

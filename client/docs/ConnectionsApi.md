@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSensorGatewaysConnectionsLatest
 
-> InlineResponse200393 GetOrganizationSensorGatewaysConnectionsLatest(ctx, organizationId).SensorSerials(sensorSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200405 GetOrganizationSensorGatewaysConnectionsLatest(ctx, organizationId).SensorSerials(sensorSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns latest sensor-gateway connectivity data.
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionsApi.GetOrganizationSensorGatewaysConnectionsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorGatewaysConnectionsLatest`: InlineResponse200393
+    // response from `GetOrganizationSensorGatewaysConnectionsLatest`: InlineResponse200405
     fmt.Fprintf(os.Stdout, "Response from `ConnectionsApi.GetOrganizationSensorGatewaysConnectionsLatest`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200393**](InlineResponse200393.md)
+[**InlineResponse200405**](InlineResponse200405.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerConnections
 
-> InlineResponse200459 GetOrganizationWirelessControllerConnections(ctx, organizationId).NetworkIds(networkIds).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200471 GetOrganizationWirelessControllerConnections(ctx, organizationId).NetworkIds(networkIds).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List all access points associated with wireless LAN controllers in an organization
 
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionsApi.GetOrganizationWirelessControllerConnections``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerConnections`: InlineResponse200459
+    // response from `GetOrganizationWirelessControllerConnections`: InlineResponse200471
     fmt.Fprintf(os.Stdout, "Response from `ConnectionsApi.GetOrganizationWirelessControllerConnections`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200459**](InlineResponse200459.md)
+[**InlineResponse200471**](InlineResponse200471.md)
 
 ### Authorization
 

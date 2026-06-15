@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | **string** | The mac address of the trusted server being added | 
-**Vlan** | **int32** | The VLAN of the trusted server being added. It must be between 1 and 4094 | 
-**Ipv4** | [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41.md) |  | 
+**WifiMac** | Pointer to **string** | The wifiMac of the device to be wiped. | [optional] 
+**Id** | Pointer to **string** | The id of the device to be wiped. | [optional] 
+**Serial** | Pointer to **string** | The serial of the device to be wiped. | [optional] 
+**Pin** | Pointer to **int32** | The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices. | [optional] 
 
 ## Methods
 
 ### NewInlineObject149
 
-`func NewInlineObject149(mac string, vlan int32, ipv4 NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, ) *InlineObject149`
+`func NewInlineObject149() *InlineObject149`
 
 NewInlineObject149 instantiates a new InlineObject149 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +28,105 @@ NewInlineObject149WithDefaults instantiates a new InlineObject149 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetWifiMac
 
-`func (o *InlineObject149) GetMac() string`
+`func (o *InlineObject149) GetWifiMac() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetWifiMacOk
 
-`func (o *InlineObject149) GetMacOk() (*string, bool)`
+`func (o *InlineObject149) GetWifiMacOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetWifiMac
 
-`func (o *InlineObject149) SetMac(v string)`
+`func (o *InlineObject149) SetWifiMac(v string)`
 
-SetMac sets Mac field to given value.
+SetWifiMac sets WifiMac field to given value.
 
+### HasWifiMac
 
-### GetVlan
+`func (o *InlineObject149) HasWifiMac() bool`
 
-`func (o *InlineObject149) GetVlan() int32`
+HasWifiMac returns a boolean if a field has been set.
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+### GetId
 
-### GetVlanOk
+`func (o *InlineObject149) GetId() string`
 
-`func (o *InlineObject149) GetVlanOk() (*int32, bool)`
+GetId returns the Id field if non-nil, zero value otherwise.
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+### GetIdOk
+
+`func (o *InlineObject149) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetId
 
-`func (o *InlineObject149) SetVlan(v int32)`
+`func (o *InlineObject149) SetId(v string)`
 
-SetVlan sets Vlan field to given value.
+SetId sets Id field to given value.
 
+### HasId
 
-### GetIpv4
+`func (o *InlineObject149) HasId() bool`
 
-`func (o *InlineObject149) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41`
+HasId returns a boolean if a field has been set.
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+### GetSerial
 
-### GetIpv4Ok
+`func (o *InlineObject149) GetSerial() string`
 
-`func (o *InlineObject149) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, bool)`
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+### GetSerialOk
+
+`func (o *InlineObject149) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetSerial
 
-`func (o *InlineObject149) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41)`
+`func (o *InlineObject149) SetSerial(v string)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetSerial sets Serial field to given value.
 
+### HasSerial
+
+`func (o *InlineObject149) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetPin
+
+`func (o *InlineObject149) GetPin() int32`
+
+GetPin returns the Pin field if non-nil, zero value otherwise.
+
+### GetPinOk
+
+`func (o *InlineObject149) GetPinOk() (*int32, bool)`
+
+GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPin
+
+`func (o *InlineObject149) SetPin(v int32)`
+
+SetPin sets Pin field to given value.
+
+### HasPin
+
+`func (o *InlineObject149) HasPin() bool`
+
+HasPin returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

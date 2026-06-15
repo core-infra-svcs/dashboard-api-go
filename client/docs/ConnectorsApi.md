@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## BatchOrganizationSaseConnectorsDelete
 
-> InlineResponse200258 BatchOrganizationSaseConnectorsDelete(ctx, organizationId).BatchOrganizationSaseConnectorsDelete(batchOrganizationSaseConnectorsDelete).Execute()
+> InlineResponse2024 BatchOrganizationSaseConnectorsDelete(ctx, organizationId).BatchOrganizationSaseConnectorsDelete(batchOrganizationSaseConnectorsDelete).Execute()
 
 Delete SSE Connectors by ID
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    batchOrganizationSaseConnectorsDelete := *openapiclient.NewInlineObject321() // InlineObject321 |  (optional)
+    batchOrganizationSaseConnectorsDelete := *openapiclient.NewInlineObject332() // InlineObject332 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectorsApi.BatchOrganizationSaseConnectorsDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchOrganizationSaseConnectorsDelete`: InlineResponse200258
+    // response from `BatchOrganizationSaseConnectorsDelete`: InlineResponse2024
     fmt.Fprintf(os.Stdout, "Response from `ConnectorsApi.BatchOrganizationSaseConnectorsDelete`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiBatchOrganizationSaseConne
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchOrganizationSaseConnectorsDelete** | [**InlineObject321**](InlineObject321.md) |  | 
+ **batchOrganizationSaseConnectorsDelete** | [**InlineObject332**](InlineObject332.md) |  | 
 
 ### Return type
 
-[**InlineResponse200258**](InlineResponse200258.md)
+[**InlineResponse2024**](InlineResponse2024.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseConnectors
 
-> InlineResponse200386 GetOrganizationSaseConnectors(ctx, organizationId).Execute()
+> InlineResponse200398 GetOrganizationSaseConnectors(ctx, organizationId).Execute()
 
 List SSE Connectors for an organization
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectorsApi.GetOrganizationSaseConnectors``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseConnectors`: InlineResponse200386
+    // response from `GetOrganizationSaseConnectors`: InlineResponse200398
     fmt.Fprintf(os.Stdout, "Response from `ConnectorsApi.GetOrganizationSaseConnectors`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200386**](InlineResponse200386.md)
+[**InlineResponse200398**](InlineResponse200398.md)
 
 ### Authorization
 

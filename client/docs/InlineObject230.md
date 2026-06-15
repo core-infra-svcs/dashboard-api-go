@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | The alert type | 
-**AlertCondition** | [**OrganizationsOrganizationIdAlertsProfilesAlertCondition1**](OrganizationsOrganizationIdAlertsProfilesAlertCondition1.md) |  | 
-**Recipients** | [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | 
-**NetworkTags** | **[]string** | Networks with these tags will be monitored for the alert | 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject230
 
-`func NewInlineObject230(type_ string, alertCondition OrganizationsOrganizationIdAlertsProfilesAlertCondition1, recipients OrganizationsOrganizationIdAlertsProfilesRecipients, networkTags []string, ) *InlineObject230`
+`func NewInlineObject230(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject230`
 
 NewInlineObject230 instantiates a new InlineObject230 object
 This constructor will assign default values to properties that have it defined,
@@ -29,110 +28,100 @@ NewInlineObject230WithDefaults instantiates a new InlineObject230 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetConfirmed
 
-`func (o *InlineObject230) GetType() string`
+`func (o *InlineObject230) GetConfirmed() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetConfirmedOk
 
-`func (o *InlineObject230) GetTypeOk() (*string, bool)`
+`func (o *InlineObject230) GetConfirmedOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetConfirmed
 
-`func (o *InlineObject230) SetType(v string)`
+`func (o *InlineObject230) SetConfirmed(v bool)`
 
-SetType sets Type field to given value.
+SetConfirmed sets Confirmed field to given value.
 
+### HasConfirmed
 
-### GetAlertCondition
+`func (o *InlineObject230) HasConfirmed() bool`
 
-`func (o *InlineObject230) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition1`
+HasConfirmed returns a boolean if a field has been set.
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+### GetSynchronous
 
-### GetAlertConditionOk
+`func (o *InlineObject230) GetSynchronous() bool`
 
-`func (o *InlineObject230) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition1, bool)`
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+### GetSynchronousOk
+
+`func (o *InlineObject230) GetSynchronousOk() (*bool, bool)`
+
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetSynchronous
 
-`func (o *InlineObject230) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition1)`
+`func (o *InlineObject230) SetSynchronous(v bool)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetSynchronous sets Synchronous field to given value.
 
+### HasSynchronous
 
-### GetRecipients
+`func (o *InlineObject230) HasSynchronous() bool`
 
-`func (o *InlineObject230) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+HasSynchronous returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetActions
 
-### GetRecipientsOk
+`func (o *InlineObject230) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
 
-`func (o *InlineObject230) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetActionsOk
+
+`func (o *InlineObject230) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
+
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetActions
 
-`func (o *InlineObject230) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+`func (o *InlineObject230) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
 
-SetRecipients sets Recipients field to given value.
+SetActions sets Actions field to given value.
 
 
-### GetNetworkTags
+### GetCallback
 
-`func (o *InlineObject230) GetNetworkTags() []string`
+`func (o *InlineObject230) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetNetworkTagsOk
+### GetCallbackOk
 
-`func (o *InlineObject230) GetNetworkTagsOk() (*[]string, bool)`
+`func (o *InlineObject230) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkTags
+### SetCallback
 
-`func (o *InlineObject230) SetNetworkTags(v []string)`
+`func (o *InlineObject230) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetNetworkTags sets NetworkTags field to given value.
+SetCallback sets Callback field to given value.
 
+### HasCallback
 
-### GetDescription
+`func (o *InlineObject230) HasCallback() bool`
 
-`func (o *InlineObject230) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject230) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject230) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject230) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,18 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
+**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
+**ExpiresAt** | Pointer to **NullableTime** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200249
 
-`func NewInlineResponse200249(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200249`
+`func NewInlineResponse200249() *InlineResponse200249`
 
 NewInlineResponse200249 instantiates a new InlineResponse200249 object
 This constructor will assign default values to properties that have it defined,
@@ -29,6 +30,31 @@ will change when the set of required properties is changed
 NewInlineResponse200249WithDefaults instantiates a new InlineResponse200249 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetName
+
+`func (o *InlineResponse200249) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200249) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200249) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200249) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetId
 
@@ -55,126 +81,141 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetGroupPolicyId
 
-`func (o *InlineResponse200249) GetOrganizationId() string`
+`func (o *InlineResponse200249) GetGroupPolicyId() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse200249) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200249) GetGroupPolicyIdOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetGroupPolicyId
 
-`func (o *InlineResponse200249) SetOrganizationId(v string)`
+`func (o *InlineResponse200249) SetGroupPolicyId(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasOrganizationId
+### HasGroupPolicyId
 
-`func (o *InlineResponse200249) HasOrganizationId() bool`
+`func (o *InlineResponse200249) HasGroupPolicyId() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetPassphrase
 
-`func (o *InlineResponse200249) GetConfirmed() bool`
+`func (o *InlineResponse200249) GetPassphrase() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetPassphraseOk
 
-`func (o *InlineResponse200249) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse200249) GetPassphraseOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetPassphrase
 
-`func (o *InlineResponse200249) SetConfirmed(v bool)`
+`func (o *InlineResponse200249) SetPassphrase(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasConfirmed
+### HasPassphrase
 
-`func (o *InlineResponse200249) HasConfirmed() bool`
+`func (o *InlineResponse200249) HasPassphrase() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetWifiPersonalNetworkId
 
-`func (o *InlineResponse200249) GetSynchronous() bool`
+`func (o *InlineResponse200249) GetWifiPersonalNetworkId() string`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetWifiPersonalNetworkIdOk
 
-`func (o *InlineResponse200249) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineResponse200249) GetWifiPersonalNetworkIdOk() (*string, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetWifiPersonalNetworkId
 
-`func (o *InlineResponse200249) SetSynchronous(v bool)`
+`func (o *InlineResponse200249) SetWifiPersonalNetworkId(v string)`
 
-SetSynchronous sets Synchronous field to given value.
+SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
 
-### HasSynchronous
+### HasWifiPersonalNetworkId
 
-`func (o *InlineResponse200249) HasSynchronous() bool`
+`func (o *InlineResponse200249) HasWifiPersonalNetworkId() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasWifiPersonalNetworkId returns a boolean if a field has been set.
 
-### GetStatus
+### GetEmail
 
-`func (o *InlineResponse200249) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
+`func (o *InlineResponse200249) GetEmail() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetEmailOk
 
-`func (o *InlineResponse200249) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
+`func (o *InlineResponse200249) GetEmailOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetEmail
 
-`func (o *InlineResponse200249) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
+`func (o *InlineResponse200249) SetEmail(v string)`
 
-SetStatus sets Status field to given value.
+SetEmail sets Email field to given value.
 
-### HasStatus
+### HasEmail
 
-`func (o *InlineResponse200249) HasStatus() bool`
+`func (o *InlineResponse200249) HasEmail() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetActions
+### GetExpiresAt
 
-`func (o *InlineResponse200249) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
+`func (o *InlineResponse200249) GetExpiresAt() time.Time`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetExpiresAtOk
 
-`func (o *InlineResponse200249) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+`func (o *InlineResponse200249) GetExpiresAtOk() (*time.Time, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetExpiresAt
 
-`func (o *InlineResponse200249) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
+`func (o *InlineResponse200249) SetExpiresAt(v time.Time)`
 
-SetActions sets Actions field to given value.
+SetExpiresAt sets ExpiresAt field to given value.
 
+### HasExpiresAt
 
+`func (o *InlineResponse200249) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
+
+### SetExpiresAtNil
+
+`func (o *InlineResponse200249) SetExpiresAtNil(b bool)`
+
+ SetExpiresAtNil sets the value for ExpiresAt to be an explicit nil
+
+### UnsetExpiresAt
+`func (o *InlineResponse200249) UnsetExpiresAt()`
+
+UnsetExpiresAt ensures that no value is present for ExpiresAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

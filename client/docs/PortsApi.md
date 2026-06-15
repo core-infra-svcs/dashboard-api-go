@@ -5,11 +5,14 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AssignNetworkWirelessEthernetPortsProfiles**](PortsApi.md#AssignNetworkWirelessEthernetPortsProfiles) | **Post** /networks/{networkId}/wireless/ethernet/ports/profiles/assign | Assign AP port profile to list of APs
+[**CreateDeviceApplianceInterfacesPortsUpdate**](PortsApi.md#CreateDeviceApplianceInterfacesPortsUpdate) | **Post** /devices/{serial}/appliance/interfaces/ports/update | Update configurations for an appliance&#39;s specified port
 [**CreateDeviceLiveToolsPortsCycle**](PortsApi.md#CreateDeviceLiveToolsPortsCycle) | **Post** /devices/{serial}/liveTools/ports/cycle | Enqueue a job to perform a cycle port for the device on the specified ports
+[**CreateDeviceLiveToolsPortsStatus**](PortsApi.md#CreateDeviceLiveToolsPortsStatus) | **Post** /devices/{serial}/liveTools/ports/status | Enqueue a job to retrieve port status for a device
 [**CreateNetworkWirelessEthernetPortsProfile**](PortsApi.md#CreateNetworkWirelessEthernetPortsProfile) | **Post** /networks/{networkId}/wireless/ethernet/ports/profiles | Create an AP port profile
 [**CycleDeviceSwitchPorts**](PortsApi.md#CycleDeviceSwitchPorts) | **Post** /devices/{serial}/switch/ports/cycle | Cycle a set of switch ports on non-Catalyst MS devices
 [**DeleteNetworkWirelessEthernetPortsProfile**](PortsApi.md#DeleteNetworkWirelessEthernetPortsProfile) | **Delete** /networks/{networkId}/wireless/ethernet/ports/profiles/{profileId} | Delete an AP port profile
 [**GetDeviceLiveToolsPortsCycle**](PortsApi.md#GetDeviceLiveToolsPortsCycle) | **Get** /devices/{serial}/liveTools/ports/cycle/{id} | Return a cycle port live tool job.
+[**GetDeviceLiveToolsPortsStatus**](PortsApi.md#GetDeviceLiveToolsPortsStatus) | **Get** /devices/{serial}/liveTools/ports/status/{jobId} | Return a port status live tool job.
 [**GetDeviceSwitchPort**](PortsApi.md#GetDeviceSwitchPort) | **Get** /devices/{serial}/switch/ports/{portId} | Return a switch port
 [**GetDeviceSwitchPorts**](PortsApi.md#GetDeviceSwitchPorts) | **Get** /devices/{serial}/switch/ports | List the switch ports for a switch
 [**GetDeviceSwitchPortsStatuses**](PortsApi.md#GetDeviceSwitchPortsStatuses) | **Get** /devices/{serial}/switch/ports/statuses | Return the status for all the ports of a switch
@@ -18,6 +21,8 @@ Method | HTTP request | Description
 [**GetNetworkAppliancePorts**](PortsApi.md#GetNetworkAppliancePorts) | **Get** /networks/{networkId}/appliance/ports | List per-port VLAN settings for all ports of a secure router or security appliance.
 [**GetNetworkWirelessEthernetPortsProfile**](PortsApi.md#GetNetworkWirelessEthernetPortsProfile) | **Get** /networks/{networkId}/wireless/ethernet/ports/profiles/{profileId} | Show the AP port profile by ID for this network
 [**GetNetworkWirelessEthernetPortsProfiles**](PortsApi.md#GetNetworkWirelessEthernetPortsProfiles) | **Get** /networks/{networkId}/wireless/ethernet/ports/profiles | List the AP port profiles for this network
+[**GetOrganizationApplianceDevicesInterfacesPortsByDevice**](PortsApi.md#GetOrganizationApplianceDevicesInterfacesPortsByDevice) | **Get** /organizations/{organizationId}/appliance/devices/interfaces/ports/byDevice | Returns port configurations for appliances in a given organization
+[**GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice**](PortsApi.md#GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice) | **Get** /organizations/{organizationId}/appliance/devices/ports/transceivers/readings/history/byDevice | Return time-series digital optical monitoring (DOM) readings for ports on each DOM-enabled Catalyst appliance in an organization.
 [**GetOrganizationConfigTemplateSwitchProfilePort**](PortsApi.md#GetOrganizationConfigTemplateSwitchProfilePort) | **Get** /organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports/{portId} | Return a switch template port
 [**GetOrganizationConfigTemplateSwitchProfilePorts**](PortsApi.md#GetOrganizationConfigTemplateSwitchProfilePorts) | **Get** /organizations/{organizationId}/configTemplates/{configTemplateId}/switch/profiles/{profileId}/ports | Return all the ports of a switch template
 [**GetOrganizationSwitchPortsBySwitch**](PortsApi.md#GetOrganizationSwitchPortsBySwitch) | **Get** /organizations/{organizationId}/switch/ports/bySwitch | List the switchports in an organization by switch
@@ -36,7 +41,7 @@ Method | HTTP request | Description
 
 ## AssignNetworkWirelessEthernetPortsProfiles
 
-> InlineResponse20117 AssignNetworkWirelessEthernetPortsProfiles(ctx, networkId).AssignNetworkWirelessEthernetPortsProfiles(assignNetworkWirelessEthernetPortsProfiles).Execute()
+> InlineResponse20122 AssignNetworkWirelessEthernetPortsProfiles(ctx, networkId).AssignNetworkWirelessEthernetPortsProfiles(assignNetworkWirelessEthernetPortsProfiles).Execute()
 
 Assign AP port profile to list of APs
 
@@ -56,7 +61,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    assignNetworkWirelessEthernetPortsProfiles := *openapiclient.NewInlineObject194([]string{"Serials_example"}, "ProfileId_example") // InlineObject194 | 
+    assignNetworkWirelessEthernetPortsProfiles := *openapiclient.NewInlineObject205([]string{"Serials_example"}, "ProfileId_example") // InlineObject205 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -65,7 +70,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.AssignNetworkWirelessEthernetPortsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AssignNetworkWirelessEthernetPortsProfiles`: InlineResponse20117
+    // response from `AssignNetworkWirelessEthernetPortsProfiles`: InlineResponse20122
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.AssignNetworkWirelessEthernetPortsProfiles`: %v\n", resp)
 }
 ```
@@ -86,11 +91,83 @@ Other parameters are passed through a pointer to a apiAssignNetworkWirelessEther
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **assignNetworkWirelessEthernetPortsProfiles** | [**InlineObject194**](InlineObject194.md) |  | 
+ **assignNetworkWirelessEthernetPortsProfiles** | [**InlineObject205**](InlineObject205.md) |  | 
 
 ### Return type
 
-[**InlineResponse20117**](InlineResponse20117.md)
+[**InlineResponse20122**](InlineResponse20122.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateDeviceApplianceInterfacesPortsUpdate
+
+> InlineResponse2008 CreateDeviceApplianceInterfacesPortsUpdate(ctx, serial).CreateDeviceApplianceInterfacesPortsUpdate(createDeviceApplianceInterfacesPortsUpdate).Execute()
+
+Update configurations for an appliance's specified port
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceApplianceInterfacesPortsUpdate := *openapiclient.NewInlineObject4() // InlineObject4 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PortsApi.CreateDeviceApplianceInterfacesPortsUpdate(context.Background(), serial).CreateDeviceApplianceInterfacesPortsUpdate(createDeviceApplianceInterfacesPortsUpdate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.CreateDeviceApplianceInterfacesPortsUpdate``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceApplianceInterfacesPortsUpdate`: InlineResponse2008
+    fmt.Fprintf(os.Stdout, "Response from `PortsApi.CreateDeviceApplianceInterfacesPortsUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceApplianceInterfacesPortsUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceApplianceInterfacesPortsUpdate** | [**InlineObject4**](InlineObject4.md) |  | 
+
+### Return type
+
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -128,7 +205,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject25([]string{"Ports_example"}) // InlineObject25 | 
+    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject26([]string{"Ports_example"}) // InlineObject26 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -158,7 +235,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPorts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPortsCycle** | [**InlineObject25**](InlineObject25.md) |  | 
+ **createDeviceLiveToolsPortsCycle** | [**InlineObject26**](InlineObject26.md) |  | 
 
 ### Return type
 
@@ -178,9 +255,81 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## CreateDeviceLiveToolsPortsStatus
+
+> InlineResponse2019 CreateDeviceLiveToolsPortsStatus(ctx, serial).CreateDeviceLiveToolsPortsStatus(createDeviceLiveToolsPortsStatus).Execute()
+
+Enqueue a job to retrieve port status for a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceLiveToolsPortsStatus := *openapiclient.NewInlineObject27() // InlineObject27 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PortsApi.CreateDeviceLiveToolsPortsStatus(context.Background(), serial).CreateDeviceLiveToolsPortsStatus(createDeviceLiveToolsPortsStatus).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.CreateDeviceLiveToolsPortsStatus``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceLiveToolsPortsStatus`: InlineResponse2019
+    fmt.Fprintf(os.Stdout, "Response from `PortsApi.CreateDeviceLiveToolsPortsStatus`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPortsStatusRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceLiveToolsPortsStatus** | [**InlineObject27**](InlineObject27.md) |  | 
+
+### Return type
+
+[**InlineResponse2019**](InlineResponse2019.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateNetworkWirelessEthernetPortsProfile
 
-> InlineResponse200224 CreateNetworkWirelessEthernetPortsProfile(ctx, networkId).CreateNetworkWirelessEthernetPortsProfile(createNetworkWirelessEthernetPortsProfile).Execute()
+> InlineResponse200232 CreateNetworkWirelessEthernetPortsProfile(ctx, networkId).CreateNetworkWirelessEthernetPortsProfile(createNetworkWirelessEthernetPortsProfile).Execute()
 
 Create an AP port profile
 
@@ -200,7 +349,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject193("Name_example", []openapiclient.NetworksNetworkIdWirelessEthernetPortsProfilesPorts1{*openapiclient.NewNetworksNetworkIdWirelessEthernetPortsProfilesPorts1("Name_example")}) // InlineObject193 | 
+    createNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject204("Name_example", []openapiclient.NetworksNetworkIdWirelessEthernetPortsProfilesPorts1{*openapiclient.NewNetworksNetworkIdWirelessEthernetPortsProfilesPorts1("Name_example")}) // InlineObject204 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -209,7 +358,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.CreateNetworkWirelessEthernetPortsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWirelessEthernetPortsProfile`: InlineResponse200224
+    // response from `CreateNetworkWirelessEthernetPortsProfile`: InlineResponse200232
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.CreateNetworkWirelessEthernetPortsProfile`: %v\n", resp)
 }
 ```
@@ -230,11 +379,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWirelessEther
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWirelessEthernetPortsProfile** | [**InlineObject193**](InlineObject193.md) |  | 
+ **createNetworkWirelessEthernetPortsProfile** | [**InlineObject204**](InlineObject204.md) |  | 
 
 ### Return type
 
-[**InlineResponse200224**](InlineResponse200224.md)
+[**InlineResponse200232**](InlineResponse200232.md)
 
 ### Authorization
 
@@ -252,7 +401,7 @@ Name | Type | Description  | Notes
 
 ## CycleDeviceSwitchPorts
 
-> InlineResponse20047 CycleDeviceSwitchPorts(ctx, serial).CycleDeviceSwitchPorts(cycleDeviceSwitchPorts).Execute()
+> InlineResponse20052 CycleDeviceSwitchPorts(ctx, serial).CycleDeviceSwitchPorts(cycleDeviceSwitchPorts).Execute()
 
 Cycle a set of switch ports on non-Catalyst MS devices
 
@@ -272,7 +421,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject31([]string{"Ports_example"}) // InlineObject31 | 
+    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject36([]string{"Ports_example"}) // InlineObject36 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -281,7 +430,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.CycleDeviceSwitchPorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CycleDeviceSwitchPorts`: InlineResponse20047
+    // response from `CycleDeviceSwitchPorts`: InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.CycleDeviceSwitchPorts`: %v\n", resp)
 }
 ```
@@ -302,11 +451,11 @@ Other parameters are passed through a pointer to a apiCycleDeviceSwitchPortsRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cycleDeviceSwitchPorts** | [**InlineObject31**](InlineObject31.md) |  | 
+ **cycleDeviceSwitchPorts** | [**InlineObject36**](InlineObject36.md) |  | 
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -395,7 +544,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPortsCycle
 
-> InlineResponse20038 GetDeviceLiveToolsPortsCycle(ctx, serial, id).Execute()
+> InlineResponse20039 GetDeviceLiveToolsPortsCycle(ctx, serial, id).Execute()
 
 Return a cycle port live tool job.
 
@@ -424,7 +573,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetDeviceLiveToolsPortsCycle``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPortsCycle`: InlineResponse20038
+    // response from `GetDeviceLiveToolsPortsCycle`: InlineResponse20039
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetDeviceLiveToolsPortsCycle`: %v\n", resp)
 }
 ```
@@ -450,7 +599,80 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20039**](InlineResponse20039.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDeviceLiveToolsPortsStatus
+
+> InlineResponse20040 GetDeviceLiveToolsPortsStatus(ctx, serial, jobId).Execute()
+
+Return a port status live tool job.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    jobId := "jobId_example" // string | Job ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PortsApi.GetDeviceLiveToolsPortsStatus(context.Background(), serial, jobId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetDeviceLiveToolsPortsStatus``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDeviceLiveToolsPortsStatus`: InlineResponse20040
+    fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetDeviceLiveToolsPortsStatus`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+**jobId** | **string** | Job ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDeviceLiveToolsPortsStatusRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 
@@ -468,7 +690,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchPort
 
-> InlineResponse20046 GetDeviceSwitchPort(ctx, serial, portId).Execute()
+> InlineResponse20051 GetDeviceSwitchPort(ctx, serial, portId).Execute()
 
 Return a switch port
 
@@ -497,7 +719,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetDeviceSwitchPort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchPort`: InlineResponse20046
+    // response from `GetDeviceSwitchPort`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetDeviceSwitchPort`: %v\n", resp)
 }
 ```
@@ -523,7 +745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -541,7 +763,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchPorts
 
-> []InlineResponse20046 GetDeviceSwitchPorts(ctx, serial).Execute()
+> []InlineResponse20051 GetDeviceSwitchPorts(ctx, serial).Execute()
 
 List the switch ports for a switch
 
@@ -569,7 +791,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetDeviceSwitchPorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchPorts`: []InlineResponse20046
+    // response from `GetDeviceSwitchPorts`: []InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetDeviceSwitchPorts`: %v\n", resp)
 }
 ```
@@ -593,7 +815,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20046**](InlineResponse20046.md)
+[**[]InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -611,7 +833,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchPortsStatuses
 
-> []InlineResponse20048 GetDeviceSwitchPortsStatuses(ctx, serial).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20053 GetDeviceSwitchPortsStatuses(ctx, serial).T0(t0).Timespan(timespan).Execute()
 
 Return the status for all the ports of a switch
 
@@ -641,7 +863,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetDeviceSwitchPortsStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchPortsStatuses`: []InlineResponse20048
+    // response from `GetDeviceSwitchPortsStatuses`: []InlineResponse20053
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetDeviceSwitchPortsStatuses`: %v\n", resp)
 }
 ```
@@ -667,7 +889,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20048**](InlineResponse20048.md)
+[**[]InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -685,7 +907,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchPortsStatusesPackets
 
-> []InlineResponse20049 GetDeviceSwitchPortsStatusesPackets(ctx, serial).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20054 GetDeviceSwitchPortsStatusesPackets(ctx, serial).T0(t0).Timespan(timespan).Execute()
 
 Return the packet counters for all the ports of a switch
 
@@ -715,7 +937,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetDeviceSwitchPortsStatusesPackets``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchPortsStatusesPackets`: []InlineResponse20049
+    // response from `GetDeviceSwitchPortsStatusesPackets`: []InlineResponse20054
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetDeviceSwitchPortsStatusesPackets`: %v\n", resp)
 }
 ```
@@ -741,7 +963,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20049**](InlineResponse20049.md)
+[**[]InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -759,7 +981,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePort
 
-> InlineResponse20079 GetNetworkAppliancePort(ctx, networkId, portId).Execute()
+> InlineResponse20084 GetNetworkAppliancePort(ctx, networkId, portId).Execute()
 
 Return per-port VLAN settings for a single secure router or security appliance port.
 
@@ -788,7 +1010,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetNetworkAppliancePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePort`: InlineResponse20079
+    // response from `GetNetworkAppliancePort`: InlineResponse20084
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetNetworkAppliancePort`: %v\n", resp)
 }
 ```
@@ -814,7 +1036,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20079**](InlineResponse20079.md)
+[**InlineResponse20084**](InlineResponse20084.md)
 
 ### Authorization
 
@@ -832,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePorts
 
-> []InlineResponse20079 GetNetworkAppliancePorts(ctx, networkId).Execute()
+> []InlineResponse20084 GetNetworkAppliancePorts(ctx, networkId).Execute()
 
 List per-port VLAN settings for all ports of a secure router or security appliance.
 
@@ -860,7 +1082,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetNetworkAppliancePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePorts`: []InlineResponse20079
+    // response from `GetNetworkAppliancePorts`: []InlineResponse20084
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetNetworkAppliancePorts`: %v\n", resp)
 }
 ```
@@ -884,7 +1106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20079**](InlineResponse20079.md)
+[**[]InlineResponse20084**](InlineResponse20084.md)
 
 ### Authorization
 
@@ -902,7 +1124,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessEthernetPortsProfile
 
-> InlineResponse200224 GetNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).Execute()
+> InlineResponse200232 GetNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).Execute()
 
 Show the AP port profile by ID for this network
 
@@ -931,7 +1153,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetNetworkWirelessEthernetPortsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessEthernetPortsProfile`: InlineResponse200224
+    // response from `GetNetworkWirelessEthernetPortsProfile`: InlineResponse200232
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetNetworkWirelessEthernetPortsProfile`: %v\n", resp)
 }
 ```
@@ -957,7 +1179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200224**](InlineResponse200224.md)
+[**InlineResponse200232**](InlineResponse200232.md)
 
 ### Authorization
 
@@ -975,7 +1197,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessEthernetPortsProfiles
 
-> []InlineResponse200224 GetNetworkWirelessEthernetPortsProfiles(ctx, networkId).Execute()
+> []InlineResponse200232 GetNetworkWirelessEthernetPortsProfiles(ctx, networkId).Execute()
 
 List the AP port profiles for this network
 
@@ -1003,7 +1225,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetNetworkWirelessEthernetPortsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessEthernetPortsProfiles`: []InlineResponse200224
+    // response from `GetNetworkWirelessEthernetPortsProfiles`: []InlineResponse200232
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetNetworkWirelessEthernetPortsProfiles`: %v\n", resp)
 }
 ```
@@ -1027,7 +1249,171 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200224**](InlineResponse200224.md)
+[**[]InlineResponse200232**](InlineResponse200232.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceDevicesInterfacesPortsByDevice
+
+> InlineResponse200271 GetOrganizationApplianceDevicesInterfacesPortsByDevice(ctx, organizationId).Serials(serials).Numbers(numbers).Execute()
+
+Returns port configurations for appliances in a given organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Parameter to filter the results by device serials (optional)
+    numbers := []string{"Inner_example"} // []string | Parameter to filter the results by specific ports (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PortsApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice(context.Background(), organizationId).Serials(serials).Numbers(numbers).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceDevicesInterfacesPortsByDevice`: InlineResponse200271
+    fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceDevicesInterfacesPortsByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Parameter to filter the results by device serials | 
+ **numbers** | **[]string** | Parameter to filter the results by specific ports | 
+
+### Return type
+
+[**InlineResponse200271**](InlineResponse200271.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice
+
+> InlineResponse200272 GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
+
+Return time-series digital optical monitoring (DOM) readings for ports on each DOM-enabled Catalyst appliance in an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 10. Default is 5. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 30 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 30 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 30 days. The default is 1 day. If interval is provided, the timespan will be autocalculated. (optional)
+    interval := int32(56) // int32 | The time interval in seconds for returned data. The valid intervals are: 300, 1200, 14400, 86400. The default is 1200. Interval is calculated if time params are provided. (optional)
+    networkIds := []string{"Inner_example"} // []string | Networks for which information should be gathered. (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter usage by appliance serial. (optional)
+    portIds := []string{"Inner_example"} // []string | Optional parameter to filter usage by port ID. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PortsApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: InlineResponse200272
+    fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 10. Default is 5. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 30 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 30 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 30 days. The default is 1 day. If interval is provided, the timespan will be autocalculated. | 
+ **interval** | **int32** | The time interval in seconds for returned data. The valid intervals are: 300, 1200, 14400, 86400. The default is 1200. Interval is calculated if time params are provided. | 
+ **networkIds** | **[]string** | Networks for which information should be gathered. | 
+ **serials** | **[]string** | Optional parameter to filter usage by appliance serial. | 
+ **portIds** | **[]string** | Optional parameter to filter usage by port ID. | 
+
+### Return type
+
+[**InlineResponse200272**](InlineResponse200272.md)
 
 ### Authorization
 
@@ -1045,7 +1431,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200314 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse200326 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch template port
 
@@ -1076,7 +1462,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200314
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200326
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -1106,7 +1492,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200314**](InlineResponse200314.md)
+[**InlineResponse200326**](InlineResponse200326.md)
 
 ### Authorization
 
@@ -1124,7 +1510,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse200314 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse200326 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch template
 
@@ -1154,7 +1540,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200314
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200326
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -1182,7 +1568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200314**](InlineResponse200314.md)
+[**[]InlineResponse200326**](InlineResponse200326.md)
 
 ### Authorization
 
@@ -1200,7 +1586,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsBySwitch
 
-> InlineResponse200418 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200430 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the switchports in an organization by switch
 
@@ -1240,7 +1626,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationSwitchPortsBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsBySwitch`: InlineResponse200418
+    // response from `GetOrganizationSwitchPortsBySwitch`: InlineResponse200430
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationSwitchPortsBySwitch`: %v\n", resp)
 }
 ```
@@ -1275,7 +1661,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200418**](InlineResponse200418.md)
+[**InlineResponse200430**](InlineResponse200430.md)
 
 ### Authorization
 
@@ -1293,7 +1679,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsClientsOverviewByDevice
 
-> InlineResponse200419 GetOrganizationSwitchPortsClientsOverviewByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200431 GetOrganizationSwitchPortsClientsOverviewByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the number of clients for all switchports with at least one online client in an organization.
 
@@ -1335,7 +1721,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationSwitchPortsClientsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsClientsOverviewByDevice`: InlineResponse200419
+    // response from `GetOrganizationSwitchPortsClientsOverviewByDevice`: InlineResponse200431
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationSwitchPortsClientsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -1372,7 +1758,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200419**](InlineResponse200419.md)
+[**InlineResponse200431**](InlineResponse200431.md)
 
 ### Authorization
 
@@ -1390,7 +1776,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsOverview
 
-> InlineResponse200420 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200432 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the counts of all active ports for the requested timespan, grouped by speed
 
@@ -1421,7 +1807,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationSwitchPortsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200420
+    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200432
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationSwitchPortsOverview`: %v\n", resp)
 }
 ```
@@ -1448,7 +1834,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200420**](InlineResponse200420.md)
+[**InlineResponse200432**](InlineResponse200432.md)
 
 ### Authorization
 
@@ -1466,7 +1852,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsStatusesBySwitch
 
-> InlineResponse200421 GetOrganizationSwitchPortsStatusesBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200433 GetOrganizationSwitchPortsStatusesBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the switchports in an organization
 
@@ -1506,7 +1892,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationSwitchPortsStatusesBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsStatusesBySwitch`: InlineResponse200421
+    // response from `GetOrganizationSwitchPortsStatusesBySwitch`: InlineResponse200433
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationSwitchPortsStatusesBySwitch`: %v\n", resp)
 }
 ```
@@ -1541,7 +1927,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200421**](InlineResponse200421.md)
+[**InlineResponse200433**](InlineResponse200433.md)
 
 ### Authorization
 
@@ -1559,7 +1945,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsTopologyDiscoveryByDevice
 
-> InlineResponse200422 GetOrganizationSwitchPortsTopologyDiscoveryByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200434 GetOrganizationSwitchPortsTopologyDiscoveryByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List most recently seen LLDP/CDP discovery and topology information per switch port in an organization.
 
@@ -1601,7 +1987,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationSwitchPortsTopologyDiscoveryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsTopologyDiscoveryByDevice`: InlineResponse200422
+    // response from `GetOrganizationSwitchPortsTopologyDiscoveryByDevice`: InlineResponse200434
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationSwitchPortsTopologyDiscoveryByDevice`: %v\n", resp)
 }
 ```
@@ -1638,7 +2024,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200422**](InlineResponse200422.md)
+[**InlineResponse200434**](InlineResponse200434.md)
 
 ### Authorization
 
@@ -1656,7 +2042,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval
 
-> InlineResponse200423 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200435 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the historical usage and traffic data of switchports in an organization.
 
@@ -1700,7 +2086,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200423
+    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200435
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -1739,7 +2125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200423**](InlineResponse200423.md)
+[**InlineResponse200435**](InlineResponse200435.md)
 
 ### Authorization
 
@@ -1757,7 +2143,7 @@ Name | Type | Description  | Notes
 
 ## SetNetworkWirelessEthernetPortsProfilesDefault
 
-> InlineResponse200225 SetNetworkWirelessEthernetPortsProfilesDefault(ctx, networkId).SetNetworkWirelessEthernetPortsProfilesDefault(setNetworkWirelessEthernetPortsProfilesDefault).Execute()
+> InlineResponse200233 SetNetworkWirelessEthernetPortsProfilesDefault(ctx, networkId).SetNetworkWirelessEthernetPortsProfilesDefault(setNetworkWirelessEthernetPortsProfilesDefault).Execute()
 
 Set the AP port profile to be default for this network
 
@@ -1777,7 +2163,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    setNetworkWirelessEthernetPortsProfilesDefault := *openapiclient.NewInlineObject195("ProfileId_example") // InlineObject195 | 
+    setNetworkWirelessEthernetPortsProfilesDefault := *openapiclient.NewInlineObject206("ProfileId_example") // InlineObject206 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1786,7 +2172,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.SetNetworkWirelessEthernetPortsProfilesDefault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SetNetworkWirelessEthernetPortsProfilesDefault`: InlineResponse200225
+    // response from `SetNetworkWirelessEthernetPortsProfilesDefault`: InlineResponse200233
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.SetNetworkWirelessEthernetPortsProfilesDefault`: %v\n", resp)
 }
 ```
@@ -1807,11 +2193,11 @@ Other parameters are passed through a pointer to a apiSetNetworkWirelessEthernet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **setNetworkWirelessEthernetPortsProfilesDefault** | [**InlineObject195**](InlineObject195.md) |  | 
+ **setNetworkWirelessEthernetPortsProfilesDefault** | [**InlineObject206**](InlineObject206.md) |  | 
 
 ### Return type
 
-[**InlineResponse200225**](InlineResponse200225.md)
+[**InlineResponse200233**](InlineResponse200233.md)
 
 ### Authorization
 
@@ -1829,7 +2215,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSwitchPort
 
-> InlineResponse20046 UpdateDeviceSwitchPort(ctx, serial, portId).UpdateDeviceSwitchPort(updateDeviceSwitchPort).Execute()
+> InlineResponse20051 UpdateDeviceSwitchPort(ctx, serial, portId).UpdateDeviceSwitchPort(updateDeviceSwitchPort).Execute()
 
 Update a switch port
 
@@ -1850,7 +2236,7 @@ import (
 func main() {
     serial := "serial_example" // string | Serial
     portId := "portId_example" // string | Port ID
-    updateDeviceSwitchPort := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
+    updateDeviceSwitchPort := *openapiclient.NewInlineObject37() // InlineObject37 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1859,7 +2245,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.UpdateDeviceSwitchPort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSwitchPort`: InlineResponse20046
+    // response from `UpdateDeviceSwitchPort`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.UpdateDeviceSwitchPort`: %v\n", resp)
 }
 ```
@@ -1882,11 +2268,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateDeviceSwitchPort** | [**InlineObject32**](InlineObject32.md) |  | 
+ **updateDeviceSwitchPort** | [**InlineObject37**](InlineObject37.md) |  | 
 
 ### Return type
 
-[**InlineResponse20046**](InlineResponse20046.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -1904,7 +2290,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkAppliancePort
 
-> InlineResponse20079 UpdateNetworkAppliancePort(ctx, networkId, portId).UpdateNetworkAppliancePort(updateNetworkAppliancePort).Execute()
+> InlineResponse20084 UpdateNetworkAppliancePort(ctx, networkId, portId).UpdateNetworkAppliancePort(updateNetworkAppliancePort).Execute()
 
 Update the per-port VLAN settings for a single secure router or security appliance port.
 
@@ -1925,7 +2311,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     portId := "portId_example" // string | Port ID
-    updateNetworkAppliancePort := *openapiclient.NewInlineObject59() // InlineObject59 |  (optional)
+    updateNetworkAppliancePort := *openapiclient.NewInlineObject66() // InlineObject66 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1934,7 +2320,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.UpdateNetworkAppliancePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkAppliancePort`: InlineResponse20079
+    // response from `UpdateNetworkAppliancePort`: InlineResponse20084
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.UpdateNetworkAppliancePort`: %v\n", resp)
 }
 ```
@@ -1957,11 +2343,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkAppliancePort** | [**InlineObject59**](InlineObject59.md) |  | 
+ **updateNetworkAppliancePort** | [**InlineObject66**](InlineObject66.md) |  | 
 
 ### Return type
 
-[**InlineResponse20079**](InlineResponse20079.md)
+[**InlineResponse20084**](InlineResponse20084.md)
 
 ### Authorization
 
@@ -1979,7 +2365,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessEthernetPortsProfile
 
-> InlineResponse200224 UpdateNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).UpdateNetworkWirelessEthernetPortsProfile(updateNetworkWirelessEthernetPortsProfile).Execute()
+> InlineResponse200232 UpdateNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).UpdateNetworkWirelessEthernetPortsProfile(updateNetworkWirelessEthernetPortsProfile).Execute()
 
 Update the AP port profile by ID for this network
 
@@ -2000,7 +2386,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     profileId := "profileId_example" // string | Profile ID
-    updateNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject196() // InlineObject196 |  (optional)
+    updateNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject207() // InlineObject207 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2009,7 +2395,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.UpdateNetworkWirelessEthernetPortsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessEthernetPortsProfile`: InlineResponse200224
+    // response from `UpdateNetworkWirelessEthernetPortsProfile`: InlineResponse200232
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.UpdateNetworkWirelessEthernetPortsProfile`: %v\n", resp)
 }
 ```
@@ -2032,11 +2418,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessEthernetPortsProfile** | [**InlineObject196**](InlineObject196.md) |  | 
+ **updateNetworkWirelessEthernetPortsProfile** | [**InlineObject207**](InlineObject207.md) |  | 
 
 ### Return type
 
-[**InlineResponse200224**](InlineResponse200224.md)
+[**InlineResponse200232**](InlineResponse200232.md)
 
 ### Authorization
 
@@ -2054,7 +2440,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200314 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse200326 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch template port
 
@@ -2077,7 +2463,7 @@ func main() {
     configTemplateId := "configTemplateId_example" // string | Config template ID
     profileId := "profileId_example" // string | Profile ID
     portId := "portId_example" // string | Port ID
-    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject264() // InlineObject264 |  (optional)
+    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject275() // InlineObject275 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2086,7 +2472,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200314
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200326
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -2113,11 +2499,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject264**](InlineObject264.md) |  | 
+ **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject275**](InlineObject275.md) |  | 
 
 ### Return type
 
-[**InlineResponse200314**](InlineResponse200314.md)
+[**InlineResponse200326**](InlineResponse200326.md)
 
 ### Authorization
 

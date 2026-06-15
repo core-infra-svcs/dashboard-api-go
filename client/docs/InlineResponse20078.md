@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SpoofingProtection** | Pointer to [**InlineResponse20078SpoofingProtection**](InlineResponse20078SpoofingProtection.md) |  | [optional] 
+**ApplicationCategories** | Pointer to [**[]InlineResponse20078ApplicationCategories**](InlineResponse20078ApplicationCategories.md) |  The L7 firewall application categories and their associated applications for an MX network | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20078WithDefaults instantiates a new InlineResponse20078 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSpoofingProtection
+### GetApplicationCategories
 
-`func (o *InlineResponse20078) GetSpoofingProtection() InlineResponse20078SpoofingProtection`
+`func (o *InlineResponse20078) GetApplicationCategories() []InlineResponse20078ApplicationCategories`
 
-GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
+GetApplicationCategories returns the ApplicationCategories field if non-nil, zero value otherwise.
 
-### GetSpoofingProtectionOk
+### GetApplicationCategoriesOk
 
-`func (o *InlineResponse20078) GetSpoofingProtectionOk() (*InlineResponse20078SpoofingProtection, bool)`
+`func (o *InlineResponse20078) GetApplicationCategoriesOk() (*[]InlineResponse20078ApplicationCategories, bool)`
 
-GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
+GetApplicationCategoriesOk returns a tuple with the ApplicationCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpoofingProtection
+### SetApplicationCategories
 
-`func (o *InlineResponse20078) SetSpoofingProtection(v InlineResponse20078SpoofingProtection)`
+`func (o *InlineResponse20078) SetApplicationCategories(v []InlineResponse20078ApplicationCategories)`
 
-SetSpoofingProtection sets SpoofingProtection field to given value.
+SetApplicationCategories sets ApplicationCategories field to given value.
 
-### HasSpoofingProtection
+### HasApplicationCategories
 
-`func (o *InlineResponse20078) HasSpoofingProtection() bool`
+`func (o *InlineResponse20078) HasApplicationCategories() bool`
 
-HasSpoofingProtection returns a boolean if a field has been set.
+HasApplicationCategories returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

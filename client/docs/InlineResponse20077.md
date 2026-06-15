@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20077Rules**](InlineResponse20077Rules.md) | An array of port forwarding rules | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20077Rules**](InlineResponse20077Rules.md) | An ordered array of the MX L7 firewall rules. Each rule is an object with &#39;policy&#39;, &#39;type&#39;, and &#39;value&#39;. The &#39;value&#39; shape depends on &#39;type&#39;: object for application/applicationCategory, string for host/port/ipRange, and an array of 2-letter ISO 3166-1 alpha-2 country codes for allowedCountries/blockedCountries. For backward compatibility, request types also accept whitelistedCountries/blacklistedCountries. | [optional] 
 
 ## Methods
 

@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be shutdown. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the endpoints to be shutdown. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the endpoints to be shutdown. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be shutdown. | [optional] 
+**Name** | **string** | Name of the sensor alert profile. | 
+**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
+**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
+**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] [default to true]
+**Message** | Pointer to **NullableString** | A custom message that will appear in email and text message alerts. | [optional] 
 
 ## Methods
 
 ### NewInlineObject137
 
-`func NewInlineObject137() *InlineObject137`
+`func NewInlineObject137(name string, conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineObject137`
 
 NewInlineObject137 instantiates a new InlineObject137 object
 This constructor will assign default values to properties that have it defined,
@@ -28,55 +31,95 @@ NewInlineObject137WithDefaults instantiates a new InlineObject137 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetName
 
-`func (o *InlineObject137) GetWifiMacs() []string`
+`func (o *InlineObject137) GetName() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetNameOk
 
-`func (o *InlineObject137) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject137) GetNameOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetName
 
-`func (o *InlineObject137) SetWifiMacs(v []string)`
+`func (o *InlineObject137) SetName(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMacs
 
-`func (o *InlineObject137) HasWifiMacs() bool`
+### GetSchedule
 
-HasWifiMacs returns a boolean if a field has been set.
+`func (o *InlineObject137) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
 
-### GetIds
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
 
-`func (o *InlineObject137) GetIds() []string`
+### GetScheduleOk
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+`func (o *InlineObject137) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
 
-### GetIdsOk
-
-`func (o *InlineObject137) GetIdsOk() (*[]string, bool)`
-
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetSchedule
 
-`func (o *InlineObject137) SetIds(v []string)`
+`func (o *InlineObject137) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
 
-SetIds sets Ids field to given value.
+SetSchedule sets Schedule field to given value.
 
-### HasIds
+### HasSchedule
 
-`func (o *InlineObject137) HasIds() bool`
+`func (o *InlineObject137) HasSchedule() bool`
 
-HasIds returns a boolean if a field has been set.
+HasSchedule returns a boolean if a field has been set.
+
+### GetConditions
+
+`func (o *InlineObject137) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+
+GetConditions returns the Conditions field if non-nil, zero value otherwise.
+
+### GetConditionsOk
+
+`func (o *InlineObject137) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+
+GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConditions
+
+`func (o *InlineObject137) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+
+SetConditions sets Conditions field to given value.
+
+
+### GetRecipients
+
+`func (o *InlineObject137) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineObject137) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineObject137) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+### HasRecipients
+
+`func (o *InlineObject137) HasRecipients() bool`
+
+HasRecipients returns a boolean if a field has been set.
 
 ### GetSerials
 
@@ -103,31 +146,66 @@ SetSerials sets Serials field to given value.
 
 HasSerials returns a boolean if a field has been set.
 
-### GetScope
+### GetIncludeSensorUrl
 
-`func (o *InlineObject137) GetScope() []string`
+`func (o *InlineObject137) GetIncludeSensorUrl() bool`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetIncludeSensorUrl returns the IncludeSensorUrl field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetIncludeSensorUrlOk
 
-`func (o *InlineObject137) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject137) GetIncludeSensorUrlOk() (*bool, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetIncludeSensorUrlOk returns a tuple with the IncludeSensorUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetIncludeSensorUrl
 
-`func (o *InlineObject137) SetScope(v []string)`
+`func (o *InlineObject137) SetIncludeSensorUrl(v bool)`
 
-SetScope sets Scope field to given value.
+SetIncludeSensorUrl sets IncludeSensorUrl field to given value.
 
-### HasScope
+### HasIncludeSensorUrl
 
-`func (o *InlineObject137) HasScope() bool`
+`func (o *InlineObject137) HasIncludeSensorUrl() bool`
 
-HasScope returns a boolean if a field has been set.
+HasIncludeSensorUrl returns a boolean if a field has been set.
 
+### GetMessage
+
+`func (o *InlineObject137) GetMessage() string`
+
+GetMessage returns the Message field if non-nil, zero value otherwise.
+
+### GetMessageOk
+
+`func (o *InlineObject137) GetMessageOk() (*string, bool)`
+
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMessage
+
+`func (o *InlineObject137) SetMessage(v string)`
+
+SetMessage sets Message field to given value.
+
+### HasMessage
+
+`func (o *InlineObject137) HasMessage() bool`
+
+HasMessage returns a boolean if a field has been set.
+
+### SetMessageNil
+
+`func (o *InlineObject137) SetMessageNil(b bool)`
+
+ SetMessageNil sets the value for Message to be an explicit nil
+
+### UnsetMessage
+`func (o *InlineObject137) UnsetMessage()`
+
+UnsetMessage ensures that no value is present for Message, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

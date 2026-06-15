@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | **string** | Site ID of the site to update | 
-**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
+**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject325
 
-`func NewInlineObject325(siteId string, ) *InlineObject325`
+`func NewInlineObject325() *InlineObject325`
 
 NewInlineObject325 instantiates a new InlineObject325 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject325WithDefaults instantiates a new InlineObject325 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetName
 
-`func (o *InlineObject325) GetSiteId() string`
+`func (o *InlineObject325) GetName() string`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetNameOk
 
-`func (o *InlineObject325) GetSiteIdOk() (*string, bool)`
+`func (o *InlineObject325) GetNameOk() (*string, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetName
 
-`func (o *InlineObject325) SetSiteId(v string)`
+`func (o *InlineObject325) SetName(v string)`
 
-SetSiteId sets SiteId field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetRouting
+`func (o *InlineObject325) HasName() bool`
 
-`func (o *InlineObject325) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
+HasName returns a boolean if a field has been set.
 
-GetRouting returns the Routing field if non-nil, zero value otherwise.
+### GetObjectIds
 
-### GetRoutingOk
+`func (o *InlineObject325) GetObjectIds() []string`
 
-`func (o *InlineObject325) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
 
-GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+### GetObjectIdsOk
+
+`func (o *InlineObject325) GetObjectIdsOk() (*[]string, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRouting
+### SetObjectIds
 
-`func (o *InlineObject325) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
+`func (o *InlineObject325) SetObjectIds(v []string)`
 
-SetRouting sets Routing field to given value.
+SetObjectIds sets ObjectIds field to given value.
 
-### HasRouting
+### HasObjectIds
 
-`func (o *InlineObject325) HasRouting() bool`
+`func (o *InlineObject325) HasObjectIds() bool`
 
-HasRouting returns a boolean if a field has been set.
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

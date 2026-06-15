@@ -4,16 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**InlineResponse200248Operator**](InlineResponse200248Operator.md) |  | [optional] 
+**Venue** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Venue**](NetworksNetworkIdWirelessSsidsNumberHotspot20Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID (&#39;Private network&#39;, &#39;Private network with guest access&#39;, &#39;Chargeable public network&#39;, &#39;Free public network&#39;, &#39;Personal device network&#39;, &#39;Emergency services only network&#39;, &#39;Test or experimental&#39;, &#39;Wildcard&#39;) | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]InlineResponse200248MccMncs**](InlineResponse200248MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms**](NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
 ### NewInlineObject219
 
-`func NewInlineObject219(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject219`
+`func NewInlineObject219() *InlineObject219`
 
 NewInlineObject219 instantiates a new InlineObject219 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +32,205 @@ NewInlineObject219WithDefaults instantiates a new InlineObject219 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetEnabled
 
-`func (o *InlineObject219) GetConfirmed() bool`
+`func (o *InlineObject219) GetEnabled() bool`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetEnabledOk
 
-`func (o *InlineObject219) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject219) GetEnabledOk() (*bool, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetEnabled
 
-`func (o *InlineObject219) SetConfirmed(v bool)`
+`func (o *InlineObject219) SetEnabled(v bool)`
 
-SetConfirmed sets Confirmed field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConfirmed
+### HasEnabled
 
-`func (o *InlineObject219) HasConfirmed() bool`
+`func (o *InlineObject219) HasEnabled() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetOperator
 
-`func (o *InlineObject219) GetSynchronous() bool`
+`func (o *InlineObject219) GetOperator() InlineResponse200248Operator`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetOperatorOk
 
-`func (o *InlineObject219) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject219) GetOperatorOk() (*InlineResponse200248Operator, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetOperator
 
-`func (o *InlineObject219) SetSynchronous(v bool)`
+`func (o *InlineObject219) SetOperator(v InlineResponse200248Operator)`
 
-SetSynchronous sets Synchronous field to given value.
+SetOperator sets Operator field to given value.
 
-### HasSynchronous
+### HasOperator
 
-`func (o *InlineObject219) HasSynchronous() bool`
+`func (o *InlineObject219) HasOperator() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasOperator returns a boolean if a field has been set.
 
-### GetActions
+### GetVenue
 
-`func (o *InlineObject219) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
+`func (o *InlineObject219) GetVenue() NetworksNetworkIdWirelessSsidsNumberHotspot20Venue`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetVenueOk
 
-`func (o *InlineObject219) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
+`func (o *InlineObject219) GetVenueOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Venue, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetVenue
 
-`func (o *InlineObject219) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
+`func (o *InlineObject219) SetVenue(v NetworksNetworkIdWirelessSsidsNumberHotspot20Venue)`
 
-SetActions sets Actions field to given value.
+SetVenue sets Venue field to given value.
 
+### HasVenue
 
-### GetCallback
+`func (o *InlineObject219) HasVenue() bool`
 
-`func (o *InlineObject219) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+HasVenue returns a boolean if a field has been set.
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+### GetNetworkAccessType
 
-### GetCallbackOk
+`func (o *InlineObject219) GetNetworkAccessType() string`
 
-`func (o *InlineObject219) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+### GetNetworkAccessTypeOk
+
+`func (o *InlineObject219) GetNetworkAccessTypeOk() (*string, bool)`
+
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetNetworkAccessType
 
-`func (o *InlineObject219) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+`func (o *InlineObject219) SetNetworkAccessType(v string)`
 
-SetCallback sets Callback field to given value.
+SetNetworkAccessType sets NetworkAccessType field to given value.
 
-### HasCallback
+### HasNetworkAccessType
 
-`func (o *InlineObject219) HasCallback() bool`
+`func (o *InlineObject219) HasNetworkAccessType() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasNetworkAccessType returns a boolean if a field has been set.
+
+### GetDomains
+
+`func (o *InlineObject219) GetDomains() []string`
+
+GetDomains returns the Domains field if non-nil, zero value otherwise.
+
+### GetDomainsOk
+
+`func (o *InlineObject219) GetDomainsOk() (*[]string, bool)`
+
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDomains
+
+`func (o *InlineObject219) SetDomains(v []string)`
+
+SetDomains sets Domains field to given value.
+
+### HasDomains
+
+`func (o *InlineObject219) HasDomains() bool`
+
+HasDomains returns a boolean if a field has been set.
+
+### GetRoamConsortOis
+
+`func (o *InlineObject219) GetRoamConsortOis() []string`
+
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
+
+### GetRoamConsortOisOk
+
+`func (o *InlineObject219) GetRoamConsortOisOk() (*[]string, bool)`
+
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRoamConsortOis
+
+`func (o *InlineObject219) SetRoamConsortOis(v []string)`
+
+SetRoamConsortOis sets RoamConsortOis field to given value.
+
+### HasRoamConsortOis
+
+`func (o *InlineObject219) HasRoamConsortOis() bool`
+
+HasRoamConsortOis returns a boolean if a field has been set.
+
+### GetMccMncs
+
+`func (o *InlineObject219) GetMccMncs() []InlineResponse200248MccMncs`
+
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
+
+### GetMccMncsOk
+
+`func (o *InlineObject219) GetMccMncsOk() (*[]InlineResponse200248MccMncs, bool)`
+
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMccMncs
+
+`func (o *InlineObject219) SetMccMncs(v []InlineResponse200248MccMncs)`
+
+SetMccMncs sets MccMncs field to given value.
+
+### HasMccMncs
+
+`func (o *InlineObject219) HasMccMncs() bool`
+
+HasMccMncs returns a boolean if a field has been set.
+
+### GetNaiRealms
+
+`func (o *InlineObject219) GetNaiRealms() []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms`
+
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
+
+### GetNaiRealmsOk
+
+`func (o *InlineObject219) GetNaiRealmsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms, bool)`
+
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNaiRealms
+
+`func (o *InlineObject219) SetNaiRealms(v []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms)`
+
+SetNaiRealms sets NaiRealms field to given value.
+
+### HasNaiRealms
+
+`func (o *InlineObject219) HasNaiRealms() bool`
+
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

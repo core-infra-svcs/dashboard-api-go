@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceFirewallOneToOneNatRules
 
-> InlineResponse20076 GetNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).Execute()
+> InlineResponse20081 GetNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).Execute()
 
 Return the 1:1 NAT mapping rules for an MX network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OneToOneNatRulesApi.GetNetworkApplianceFirewallOneToOneNatRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20076
+    // response from `GetNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20081
     fmt.Fprintf(os.Stdout, "Response from `OneToOneNatRulesApi.GetNetworkApplianceFirewallOneToOneNatRules`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20081**](InlineResponse20081.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallOneToOneNatRules
 
-> InlineResponse20076 UpdateNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).UpdateNetworkApplianceFirewallOneToOneNatRules(updateNetworkApplianceFirewallOneToOneNatRules).Execute()
+> InlineResponse20081 UpdateNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).UpdateNetworkApplianceFirewallOneToOneNatRules(updateNetworkApplianceFirewallOneToOneNatRules).Execute()
 
 Set the 1:1 NAT mapping rules for an MX network
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject56([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject56 | 
+    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject61([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject61 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OneToOneNatRulesApi.UpdateNetworkApplianceFirewallOneToOneNatRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20076
+    // response from `UpdateNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20081
     fmt.Fprintf(os.Stdout, "Response from `OneToOneNatRulesApi.UpdateNetworkApplianceFirewallOneToOneNatRules`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject56**](InlineObject56.md) |  | 
+ **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject61**](InlineObject61.md) |  | 
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20081**](InlineResponse20081.md)
 
 ### Authorization
 

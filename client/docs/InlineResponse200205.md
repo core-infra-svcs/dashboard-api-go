@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
-**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
-**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
-**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | The name af the new stack | [optional] 
+**Serials** | Pointer to **[]string** | An array of switch serials added to the stack | [optional] 
+**WorkflowId** | Pointer to **string** | ID of the workflow | [optional] 
 
 ## Methods
 
@@ -29,30 +28,30 @@ NewInlineResponse200205WithDefaults instantiates a new InlineResponse200205 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIname
+### GetId
 
-`func (o *InlineResponse200205) GetIname() string`
+`func (o *InlineResponse200205) GetId() string`
 
-GetIname returns the Iname field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetInameOk
+### GetIdOk
 
-`func (o *InlineResponse200205) GetInameOk() (*string, bool)`
+`func (o *InlineResponse200205) GetIdOk() (*string, bool)`
 
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIname
+### SetId
 
-`func (o *InlineResponse200205) SetIname(v string)`
+`func (o *InlineResponse200205) SetId(v string)`
 
-SetIname sets Iname field to given value.
+SetId sets Id field to given value.
 
-### HasIname
+### HasId
 
-`func (o *InlineResponse200205) HasIname() bool`
+`func (o *InlineResponse200205) HasId() bool`
 
-HasIname returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -79,80 +78,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetSerials
 
-`func (o *InlineResponse200205) GetIsDefault() bool`
+`func (o *InlineResponse200205) GetSerials() []string`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetSerialsOk
 
-`func (o *InlineResponse200205) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200205) GetSerialsOk() (*[]string, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetSerials
 
-`func (o *InlineResponse200205) SetIsDefault(v bool)`
+`func (o *InlineResponse200205) SetSerials(v []string)`
 
-SetIsDefault sets IsDefault field to given value.
+SetSerials sets Serials field to given value.
 
-### HasIsDefault
+### HasSerials
 
-`func (o *InlineResponse200205) HasIsDefault() bool`
+`func (o *InlineResponse200205) HasSerials() bool`
 
-HasIsDefault returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetVlanNames
+### GetWorkflowId
 
-`func (o *InlineResponse200205) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
+`func (o *InlineResponse200205) GetWorkflowId() string`
 
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
+GetWorkflowId returns the WorkflowId field if non-nil, zero value otherwise.
 
-### GetVlanNamesOk
+### GetWorkflowIdOk
 
-`func (o *InlineResponse200205) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
+`func (o *InlineResponse200205) GetWorkflowIdOk() (*string, bool)`
 
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
+GetWorkflowIdOk returns a tuple with the WorkflowId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanNames
+### SetWorkflowId
 
-`func (o *InlineResponse200205) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
+`func (o *InlineResponse200205) SetWorkflowId(v string)`
 
-SetVlanNames sets VlanNames field to given value.
+SetWorkflowId sets WorkflowId field to given value.
 
-### HasVlanNames
+### HasWorkflowId
 
-`func (o *InlineResponse200205) HasVlanNames() bool`
+`func (o *InlineResponse200205) HasWorkflowId() bool`
 
-HasVlanNames returns a boolean if a field has been set.
-
-### GetVlanGroups
-
-`func (o *InlineResponse200205) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineResponse200205) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineResponse200205) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-### HasVlanGroups
-
-`func (o *InlineResponse200205) HasVlanGroups() bool`
-
-HasVlanGroups returns a boolean if a field has been set.
+HasWorkflowId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

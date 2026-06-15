@@ -4,12 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**InlineResponse200183Alerts**](InlineResponse200183Alerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
-**AlwaysAllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers that are always allowed on the network. These are the MAC addresses of switches, switch stacks, and VRRP groups in the network. These servers cannot be blocked. | [optional] 
-**ArpInspection** | Pointer to [**InlineResponse200183ArpInspection**](InlineResponse200183ArpInspection.md) |  | [optional] 
+**Id** | Pointer to **string** | The Meraki managed Id of the user record. | [optional] 
+**Email** | Pointer to **string** | User email. | [optional] 
+**FullName** | Pointer to **string** | User full name. | [optional] 
+**Username** | Pointer to **string** | The users username. | [optional] 
+**HasPassword** | Pointer to **bool** | A boolean denoting if the user has a password associated with the record. | [optional] 
+**Tags** | Pointer to **string** | The set of tags the user is scoped to. | [optional] 
+**AdGroups** | Pointer to **[]string** | Active Directory Groups the user belongs to. | [optional] 
+**AzureAdGroups** | Pointer to **[]string** | Azure Active Directory Groups the user belongs to. | [optional] 
+**SamlGroups** | Pointer to **[]string** | SAML Groups the user belongs to. | [optional] 
+**AsmGroups** | Pointer to **[]string** | Apple School Manager Groups the user belongs to. | [optional] 
+**IsExternal** | Pointer to **bool** | Whether the user was created using an external integration, or via the Meraki Dashboard. | [optional] 
+**DisplayName** | Pointer to **string** | The user display name. | [optional] 
+**HasIdentityCertificate** | Pointer to **bool** | A boolean indicating if the user has an associated identity certificate.. | [optional] 
+**UserThumbnail** | Pointer to **string** | The url where the users thumbnail is hosted. | [optional] 
 
 ## Methods
 
@@ -30,155 +38,355 @@ NewInlineResponse200183WithDefaults instantiates a new InlineResponse200183 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetId
 
-`func (o *InlineResponse200183) GetAlerts() InlineResponse200183Alerts`
+`func (o *InlineResponse200183) GetId() string`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetIdOk
 
-`func (o *InlineResponse200183) GetAlertsOk() (*InlineResponse200183Alerts, bool)`
+`func (o *InlineResponse200183) GetIdOk() (*string, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetId
 
-`func (o *InlineResponse200183) SetAlerts(v InlineResponse200183Alerts)`
+`func (o *InlineResponse200183) SetId(v string)`
 
-SetAlerts sets Alerts field to given value.
+SetId sets Id field to given value.
 
-### HasAlerts
+### HasId
 
-`func (o *InlineResponse200183) HasAlerts() bool`
+`func (o *InlineResponse200183) HasId() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetEmail
 
-`func (o *InlineResponse200183) GetDefaultPolicy() string`
+`func (o *InlineResponse200183) GetEmail() string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetEmailOk
 
-`func (o *InlineResponse200183) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse200183) GetEmailOk() (*string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetEmail
 
-`func (o *InlineResponse200183) SetDefaultPolicy(v string)`
+`func (o *InlineResponse200183) SetEmail(v string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetEmail sets Email field to given value.
 
-### HasDefaultPolicy
+### HasEmail
 
-`func (o *InlineResponse200183) HasDefaultPolicy() bool`
+`func (o *InlineResponse200183) HasEmail() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetBlockedServers
+### GetFullName
 
-`func (o *InlineResponse200183) GetBlockedServers() []string`
+`func (o *InlineResponse200183) GetFullName() string`
 
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+GetFullName returns the FullName field if non-nil, zero value otherwise.
 
-### GetBlockedServersOk
+### GetFullNameOk
 
-`func (o *InlineResponse200183) GetBlockedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200183) GetFullNameOk() (*string, bool)`
 
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+GetFullNameOk returns a tuple with the FullName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedServers
+### SetFullName
 
-`func (o *InlineResponse200183) SetBlockedServers(v []string)`
+`func (o *InlineResponse200183) SetFullName(v string)`
 
-SetBlockedServers sets BlockedServers field to given value.
+SetFullName sets FullName field to given value.
 
-### HasBlockedServers
+### HasFullName
 
-`func (o *InlineResponse200183) HasBlockedServers() bool`
+`func (o *InlineResponse200183) HasFullName() bool`
 
-HasBlockedServers returns a boolean if a field has been set.
+HasFullName returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetUsername
 
-`func (o *InlineResponse200183) GetAllowedServers() []string`
+`func (o *InlineResponse200183) GetUsername() string`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetUsername returns the Username field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetUsernameOk
 
-`func (o *InlineResponse200183) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200183) GetUsernameOk() (*string, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetUsername
 
-`func (o *InlineResponse200183) SetAllowedServers(v []string)`
+`func (o *InlineResponse200183) SetUsername(v string)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetUsername sets Username field to given value.
 
-### HasAllowedServers
+### HasUsername
 
-`func (o *InlineResponse200183) HasAllowedServers() bool`
+`func (o *InlineResponse200183) HasUsername() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
+HasUsername returns a boolean if a field has been set.
 
-### GetAlwaysAllowedServers
+### GetHasPassword
 
-`func (o *InlineResponse200183) GetAlwaysAllowedServers() []string`
+`func (o *InlineResponse200183) GetHasPassword() bool`
 
-GetAlwaysAllowedServers returns the AlwaysAllowedServers field if non-nil, zero value otherwise.
+GetHasPassword returns the HasPassword field if non-nil, zero value otherwise.
 
-### GetAlwaysAllowedServersOk
+### GetHasPasswordOk
 
-`func (o *InlineResponse200183) GetAlwaysAllowedServersOk() (*[]string, bool)`
+`func (o *InlineResponse200183) GetHasPasswordOk() (*bool, bool)`
 
-GetAlwaysAllowedServersOk returns a tuple with the AlwaysAllowedServers field if it's non-nil, zero value otherwise
+GetHasPasswordOk returns a tuple with the HasPassword field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlwaysAllowedServers
+### SetHasPassword
 
-`func (o *InlineResponse200183) SetAlwaysAllowedServers(v []string)`
+`func (o *InlineResponse200183) SetHasPassword(v bool)`
 
-SetAlwaysAllowedServers sets AlwaysAllowedServers field to given value.
+SetHasPassword sets HasPassword field to given value.
 
-### HasAlwaysAllowedServers
+### HasHasPassword
 
-`func (o *InlineResponse200183) HasAlwaysAllowedServers() bool`
+`func (o *InlineResponse200183) HasHasPassword() bool`
 
-HasAlwaysAllowedServers returns a boolean if a field has been set.
+HasHasPassword returns a boolean if a field has been set.
 
-### GetArpInspection
+### GetTags
 
-`func (o *InlineResponse200183) GetArpInspection() InlineResponse200183ArpInspection`
+`func (o *InlineResponse200183) GetTags() string`
 
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetArpInspectionOk
+### GetTagsOk
 
-`func (o *InlineResponse200183) GetArpInspectionOk() (*InlineResponse200183ArpInspection, bool)`
+`func (o *InlineResponse200183) GetTagsOk() (*string, bool)`
 
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArpInspection
+### SetTags
 
-`func (o *InlineResponse200183) SetArpInspection(v InlineResponse200183ArpInspection)`
+`func (o *InlineResponse200183) SetTags(v string)`
 
-SetArpInspection sets ArpInspection field to given value.
+SetTags sets Tags field to given value.
 
-### HasArpInspection
+### HasTags
 
-`func (o *InlineResponse200183) HasArpInspection() bool`
+`func (o *InlineResponse200183) HasTags() bool`
 
-HasArpInspection returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetAdGroups
+
+`func (o *InlineResponse200183) GetAdGroups() []string`
+
+GetAdGroups returns the AdGroups field if non-nil, zero value otherwise.
+
+### GetAdGroupsOk
+
+`func (o *InlineResponse200183) GetAdGroupsOk() (*[]string, bool)`
+
+GetAdGroupsOk returns a tuple with the AdGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdGroups
+
+`func (o *InlineResponse200183) SetAdGroups(v []string)`
+
+SetAdGroups sets AdGroups field to given value.
+
+### HasAdGroups
+
+`func (o *InlineResponse200183) HasAdGroups() bool`
+
+HasAdGroups returns a boolean if a field has been set.
+
+### GetAzureAdGroups
+
+`func (o *InlineResponse200183) GetAzureAdGroups() []string`
+
+GetAzureAdGroups returns the AzureAdGroups field if non-nil, zero value otherwise.
+
+### GetAzureAdGroupsOk
+
+`func (o *InlineResponse200183) GetAzureAdGroupsOk() (*[]string, bool)`
+
+GetAzureAdGroupsOk returns a tuple with the AzureAdGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAzureAdGroups
+
+`func (o *InlineResponse200183) SetAzureAdGroups(v []string)`
+
+SetAzureAdGroups sets AzureAdGroups field to given value.
+
+### HasAzureAdGroups
+
+`func (o *InlineResponse200183) HasAzureAdGroups() bool`
+
+HasAzureAdGroups returns a boolean if a field has been set.
+
+### GetSamlGroups
+
+`func (o *InlineResponse200183) GetSamlGroups() []string`
+
+GetSamlGroups returns the SamlGroups field if non-nil, zero value otherwise.
+
+### GetSamlGroupsOk
+
+`func (o *InlineResponse200183) GetSamlGroupsOk() (*[]string, bool)`
+
+GetSamlGroupsOk returns a tuple with the SamlGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSamlGroups
+
+`func (o *InlineResponse200183) SetSamlGroups(v []string)`
+
+SetSamlGroups sets SamlGroups field to given value.
+
+### HasSamlGroups
+
+`func (o *InlineResponse200183) HasSamlGroups() bool`
+
+HasSamlGroups returns a boolean if a field has been set.
+
+### GetAsmGroups
+
+`func (o *InlineResponse200183) GetAsmGroups() []string`
+
+GetAsmGroups returns the AsmGroups field if non-nil, zero value otherwise.
+
+### GetAsmGroupsOk
+
+`func (o *InlineResponse200183) GetAsmGroupsOk() (*[]string, bool)`
+
+GetAsmGroupsOk returns a tuple with the AsmGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAsmGroups
+
+`func (o *InlineResponse200183) SetAsmGroups(v []string)`
+
+SetAsmGroups sets AsmGroups field to given value.
+
+### HasAsmGroups
+
+`func (o *InlineResponse200183) HasAsmGroups() bool`
+
+HasAsmGroups returns a boolean if a field has been set.
+
+### GetIsExternal
+
+`func (o *InlineResponse200183) GetIsExternal() bool`
+
+GetIsExternal returns the IsExternal field if non-nil, zero value otherwise.
+
+### GetIsExternalOk
+
+`func (o *InlineResponse200183) GetIsExternalOk() (*bool, bool)`
+
+GetIsExternalOk returns a tuple with the IsExternal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsExternal
+
+`func (o *InlineResponse200183) SetIsExternal(v bool)`
+
+SetIsExternal sets IsExternal field to given value.
+
+### HasIsExternal
+
+`func (o *InlineResponse200183) HasIsExternal() bool`
+
+HasIsExternal returns a boolean if a field has been set.
+
+### GetDisplayName
+
+`func (o *InlineResponse200183) GetDisplayName() string`
+
+GetDisplayName returns the DisplayName field if non-nil, zero value otherwise.
+
+### GetDisplayNameOk
+
+`func (o *InlineResponse200183) GetDisplayNameOk() (*string, bool)`
+
+GetDisplayNameOk returns a tuple with the DisplayName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDisplayName
+
+`func (o *InlineResponse200183) SetDisplayName(v string)`
+
+SetDisplayName sets DisplayName field to given value.
+
+### HasDisplayName
+
+`func (o *InlineResponse200183) HasDisplayName() bool`
+
+HasDisplayName returns a boolean if a field has been set.
+
+### GetHasIdentityCertificate
+
+`func (o *InlineResponse200183) GetHasIdentityCertificate() bool`
+
+GetHasIdentityCertificate returns the HasIdentityCertificate field if non-nil, zero value otherwise.
+
+### GetHasIdentityCertificateOk
+
+`func (o *InlineResponse200183) GetHasIdentityCertificateOk() (*bool, bool)`
+
+GetHasIdentityCertificateOk returns a tuple with the HasIdentityCertificate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasIdentityCertificate
+
+`func (o *InlineResponse200183) SetHasIdentityCertificate(v bool)`
+
+SetHasIdentityCertificate sets HasIdentityCertificate field to given value.
+
+### HasHasIdentityCertificate
+
+`func (o *InlineResponse200183) HasHasIdentityCertificate() bool`
+
+HasHasIdentityCertificate returns a boolean if a field has been set.
+
+### GetUserThumbnail
+
+`func (o *InlineResponse200183) GetUserThumbnail() string`
+
+GetUserThumbnail returns the UserThumbnail field if non-nil, zero value otherwise.
+
+### GetUserThumbnailOk
+
+`func (o *InlineResponse200183) GetUserThumbnailOk() (*string, bool)`
+
+GetUserThumbnailOk returns a tuple with the UserThumbnail field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUserThumbnail
+
+`func (o *InlineResponse200183) SetUserThumbnail(v string)`
+
+SetUserThumbnail sets UserThumbnail field to given value.
+
+### HasUserThumbnail
+
+`func (o *InlineResponse200183) HasUserThumbnail() bool`
+
+HasUserThumbnail returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

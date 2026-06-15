@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
-**LicenseId** | **string** | The ID of the SM license to move the seats from | 
-**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
+**Name** | **string** | The name of the VoIP provider | 
+**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
 
 ## Methods
 
 ### NewInlineObject292
 
-`func NewInlineObject292(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject292`
+`func NewInlineObject292(name string, address string, ) *InlineObject292`
 
 NewInlineObject292 instantiates a new InlineObject292 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +27,70 @@ NewInlineObject292WithDefaults instantiates a new InlineObject292 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetName
 
-`func (o *InlineObject292) GetDestOrganizationId() string`
+`func (o *InlineObject292) GetName() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetNameOk
 
-`func (o *InlineObject292) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject292) GetNameOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetName
 
-`func (o *InlineObject292) SetDestOrganizationId(v string)`
+`func (o *InlineObject292) SetName(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetName sets Name field to given value.
 
 
-### GetLicenseId
+### GetAddress
 
-`func (o *InlineObject292) GetLicenseId() string`
+`func (o *InlineObject292) GetAddress() string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetAddressOk
 
-`func (o *InlineObject292) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject292) GetAddressOk() (*string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetAddress
 
-`func (o *InlineObject292) SetLicenseId(v string)`
+`func (o *InlineObject292) SetAddress(v string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetAddress sets Address field to given value.
 
 
-### GetSeatCount
+### GetBestEffortMonitoringEnabled
 
-`func (o *InlineObject292) GetSeatCount() int32`
+`func (o *InlineObject292) GetBestEffortMonitoringEnabled() bool`
 
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
 
-### GetSeatCountOk
+### GetBestEffortMonitoringEnabledOk
 
-`func (o *InlineObject292) GetSeatCountOk() (*int32, bool)`
+`func (o *InlineObject292) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
 
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeatCount
+### SetBestEffortMonitoringEnabled
 
-`func (o *InlineObject292) SetSeatCount(v int32)`
+`func (o *InlineObject292) SetBestEffortMonitoringEnabled(v bool)`
 
-SetSeatCount sets SeatCount field to given value.
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
 
+### HasBestEffortMonitoringEnabled
+
+`func (o *InlineObject292) HasBestEffortMonitoringEnabled() bool`
+
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

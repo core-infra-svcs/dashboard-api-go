@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Integrated** | Pointer to [**InlineResponse20123Integrated**](InlineResponse20123Integrated.md) |  | [optional] 
-**LastUsedAt** | Pointer to **string** | ISO8601Z timestamp when integration was last used | [optional] 
-**External** | Pointer to [**InlineResponse20123External**](InlineResponse20123External.md) |  | [optional] 
-**Status** | Pointer to **string** | Integration status | [optional] 
+**Network** | Pointer to [**InlineResponse20123Network**](InlineResponse20123Network.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If Zigbee is enabled for the network | [optional] 
+**IotController** | Pointer to [**InlineResponse20123IotController**](InlineResponse20123IotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**InlineResponse20123LockManagement**](InlineResponse20123LockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**InlineResponse20123Defaults**](InlineResponse20123Defaults.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse20123WithDefaults instantiates a new InlineResponse20123 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIntegrated
+### GetNetwork
 
-`func (o *InlineResponse20123) GetIntegrated() InlineResponse20123Integrated`
+`func (o *InlineResponse20123) GetNetwork() InlineResponse20123Network`
 
-GetIntegrated returns the Integrated field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetIntegratedOk
+### GetNetworkOk
 
-`func (o *InlineResponse20123) GetIntegratedOk() (*InlineResponse20123Integrated, bool)`
+`func (o *InlineResponse20123) GetNetworkOk() (*InlineResponse20123Network, bool)`
 
-GetIntegratedOk returns a tuple with the Integrated field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntegrated
+### SetNetwork
 
-`func (o *InlineResponse20123) SetIntegrated(v InlineResponse20123Integrated)`
+`func (o *InlineResponse20123) SetNetwork(v InlineResponse20123Network)`
 
-SetIntegrated sets Integrated field to given value.
+SetNetwork sets Network field to given value.
 
-### HasIntegrated
+### HasNetwork
 
-`func (o *InlineResponse20123) HasIntegrated() bool`
+`func (o *InlineResponse20123) HasNetwork() bool`
 
-HasIntegrated returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetLastUsedAt
+### GetEnabled
 
-`func (o *InlineResponse20123) GetLastUsedAt() string`
+`func (o *InlineResponse20123) GetEnabled() bool`
 
-GetLastUsedAt returns the LastUsedAt field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetLastUsedAtOk
+### GetEnabledOk
 
-`func (o *InlineResponse20123) GetLastUsedAtOk() (*string, bool)`
+`func (o *InlineResponse20123) GetEnabledOk() (*bool, bool)`
 
-GetLastUsedAtOk returns a tuple with the LastUsedAt field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUsedAt
+### SetEnabled
 
-`func (o *InlineResponse20123) SetLastUsedAt(v string)`
+`func (o *InlineResponse20123) SetEnabled(v bool)`
 
-SetLastUsedAt sets LastUsedAt field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasLastUsedAt
+### HasEnabled
 
-`func (o *InlineResponse20123) HasLastUsedAt() bool`
+`func (o *InlineResponse20123) HasEnabled() bool`
 
-HasLastUsedAt returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetExternal
+### GetIotController
 
-`func (o *InlineResponse20123) GetExternal() InlineResponse20123External`
+`func (o *InlineResponse20123) GetIotController() InlineResponse20123IotController`
 
-GetExternal returns the External field if non-nil, zero value otherwise.
+GetIotController returns the IotController field if non-nil, zero value otherwise.
 
-### GetExternalOk
+### GetIotControllerOk
 
-`func (o *InlineResponse20123) GetExternalOk() (*InlineResponse20123External, bool)`
+`func (o *InlineResponse20123) GetIotControllerOk() (*InlineResponse20123IotController, bool)`
 
-GetExternalOk returns a tuple with the External field if it's non-nil, zero value otherwise
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExternal
+### SetIotController
 
-`func (o *InlineResponse20123) SetExternal(v InlineResponse20123External)`
+`func (o *InlineResponse20123) SetIotController(v InlineResponse20123IotController)`
 
-SetExternal sets External field to given value.
+SetIotController sets IotController field to given value.
 
-### HasExternal
+### HasIotController
 
-`func (o *InlineResponse20123) HasExternal() bool`
+`func (o *InlineResponse20123) HasIotController() bool`
 
-HasExternal returns a boolean if a field has been set.
+HasIotController returns a boolean if a field has been set.
 
-### GetStatus
+### GetLockManagement
 
-`func (o *InlineResponse20123) GetStatus() string`
+`func (o *InlineResponse20123) GetLockManagement() InlineResponse20123LockManagement`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetLockManagementOk
 
-`func (o *InlineResponse20123) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20123) GetLockManagementOk() (*InlineResponse20123LockManagement, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetLockManagement
 
-`func (o *InlineResponse20123) SetStatus(v string)`
+`func (o *InlineResponse20123) SetLockManagement(v InlineResponse20123LockManagement)`
 
-SetStatus sets Status field to given value.
+SetLockManagement sets LockManagement field to given value.
 
-### HasStatus
+### HasLockManagement
 
-`func (o *InlineResponse20123) HasStatus() bool`
+`func (o *InlineResponse20123) HasLockManagement() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasLockManagement returns a boolean if a field has been set.
+
+### GetDefaults
+
+`func (o *InlineResponse20123) GetDefaults() InlineResponse20123Defaults`
+
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
+
+### GetDefaultsOk
+
+`func (o *InlineResponse20123) GetDefaultsOk() (*InlineResponse20123Defaults, bool)`
+
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaults
+
+`func (o *InlineResponse20123) SetDefaults(v InlineResponse20123Defaults)`
+
+SetDefaults sets Defaults field to given value.
+
+### HasDefaults
+
+`func (o *InlineResponse20123) HasDefaults() bool`
+
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

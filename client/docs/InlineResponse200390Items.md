@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | Pointer to **string** | Site ID | [optional] 
-**Name** | Pointer to **string** | Site name | [optional] 
-**History** | Pointer to [**[]InlineResponse200390History**](InlineResponse200390History.md) | Site level connectivity history | [optional] 
-**Devices** | Pointer to [**InlineResponse200390Devices**](InlineResponse200390Devices.md) |  | [optional] 
+**AssignmentId** | Pointer to **string** | ID of the assignment | [optional] 
+**PolicyId** | Pointer to **string** | ID of the assigned policy | [optional] 
+**InterfaceId** | Pointer to **string** | Interface ID of the VLAN | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200390ItemsWithDefaults instantiates a new InlineResponse200390
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetAssignmentId
 
-`func (o *InlineResponse200390Items) GetSiteId() string`
+`func (o *InlineResponse200390Items) GetAssignmentId() string`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetAssignmentIdOk
 
-`func (o *InlineResponse200390Items) GetSiteIdOk() (*string, bool)`
+`func (o *InlineResponse200390Items) GetAssignmentIdOk() (*string, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetAssignmentId
 
-`func (o *InlineResponse200390Items) SetSiteId(v string)`
+`func (o *InlineResponse200390Items) SetAssignmentId(v string)`
 
-SetSiteId sets SiteId field to given value.
+SetAssignmentId sets AssignmentId field to given value.
 
-### HasSiteId
+### HasAssignmentId
 
-`func (o *InlineResponse200390Items) HasSiteId() bool`
+`func (o *InlineResponse200390Items) HasAssignmentId() bool`
 
-HasSiteId returns a boolean if a field has been set.
+HasAssignmentId returns a boolean if a field has been set.
 
-### GetName
+### GetPolicyId
 
-`func (o *InlineResponse200390Items) GetName() string`
+`func (o *InlineResponse200390Items) GetPolicyId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPolicyIdOk
 
-`func (o *InlineResponse200390Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200390Items) GetPolicyIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPolicyId
 
-`func (o *InlineResponse200390Items) SetName(v string)`
+`func (o *InlineResponse200390Items) SetPolicyId(v string)`
 
-SetName sets Name field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasName
+### HasPolicyId
 
-`func (o *InlineResponse200390Items) HasName() bool`
+`func (o *InlineResponse200390Items) HasPolicyId() bool`
 
-HasName returns a boolean if a field has been set.
+HasPolicyId returns a boolean if a field has been set.
 
-### GetHistory
+### GetInterfaceId
 
-`func (o *InlineResponse200390Items) GetHistory() []InlineResponse200390History`
+`func (o *InlineResponse200390Items) GetInterfaceId() string`
 
-GetHistory returns the History field if non-nil, zero value otherwise.
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
 
-### GetHistoryOk
+### GetInterfaceIdOk
 
-`func (o *InlineResponse200390Items) GetHistoryOk() (*[]InlineResponse200390History, bool)`
+`func (o *InlineResponse200390Items) GetInterfaceIdOk() (*string, bool)`
 
-GetHistoryOk returns a tuple with the History field if it's non-nil, zero value otherwise
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHistory
+### SetInterfaceId
 
-`func (o *InlineResponse200390Items) SetHistory(v []InlineResponse200390History)`
+`func (o *InlineResponse200390Items) SetInterfaceId(v string)`
 
-SetHistory sets History field to given value.
+SetInterfaceId sets InterfaceId field to given value.
 
-### HasHistory
+### HasInterfaceId
 
-`func (o *InlineResponse200390Items) HasHistory() bool`
+`func (o *InlineResponse200390Items) HasInterfaceId() bool`
 
-HasHistory returns a boolean if a field has been set.
-
-### GetDevices
-
-`func (o *InlineResponse200390Items) GetDevices() InlineResponse200390Devices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineResponse200390Items) GetDevicesOk() (*InlineResponse200390Devices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineResponse200390Items) SetDevices(v InlineResponse200390Devices)`
-
-SetDevices sets Devices field to given value.
-
-### HasDevices
-
-`func (o *InlineResponse200390Items) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
+HasInterfaceId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

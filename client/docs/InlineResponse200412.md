@@ -4,14 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Mac** | Pointer to **string** | Mac address of the device | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageClients**](OrganizationsOrganizationIdSummaryTopDevicesByUsageClients.md) |  | [optional] 
+**VppAccountId** | Pointer to **string** | The id of the VPP Account | [optional] 
+**ContentToken** | Pointer to **string** | The VPP service token | [optional] 
+**Email** | Pointer to **string** | The email address associated with the VPP account | [optional] 
+**Name** | Pointer to **string** | The name of the VPP account | [optional] 
+**AllowedAdmins** | Pointer to **string** | The allowed admins for the VPP account | [optional] 
+**NetworkIdAdmins** | Pointer to **string** | The network IDs of the admins for the VPP account | [optional] 
+**AssignableNetworks** | Pointer to **string** | The assignable networks for the VPP account | [optional] 
+**AssignableNetworkIds** | Pointer to **[]string** | The network IDs of the assignable networks for the VPP account | [optional] 
+**VppLocationId** | Pointer to **string** | The VPP location ID | [optional] 
+**VppLocationName** | Pointer to **string** | The VPP location name | [optional] 
+**LastSyncedAt** | Pointer to **string** | The last time the VPP account was synced | [optional] 
+**LastForceSyncedAt** | Pointer to **string** | The last time the VPP account was force synced | [optional] 
+**ParsedToken** | Pointer to [**OrganizationsOrganizationIdSmVppAccountsParsedToken**](OrganizationsOrganizationIdSmVppAccountsParsedToken.md) |  | [optional] 
+**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
+**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
 
 ## Methods
 
@@ -31,6 +38,81 @@ will change when the set of required properties is changed
 NewInlineResponse200412WithDefaults instantiates a new InlineResponse200412 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetVppAccountId
+
+`func (o *InlineResponse200412) GetVppAccountId() string`
+
+GetVppAccountId returns the VppAccountId field if non-nil, zero value otherwise.
+
+### GetVppAccountIdOk
+
+`func (o *InlineResponse200412) GetVppAccountIdOk() (*string, bool)`
+
+GetVppAccountIdOk returns a tuple with the VppAccountId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVppAccountId
+
+`func (o *InlineResponse200412) SetVppAccountId(v string)`
+
+SetVppAccountId sets VppAccountId field to given value.
+
+### HasVppAccountId
+
+`func (o *InlineResponse200412) HasVppAccountId() bool`
+
+HasVppAccountId returns a boolean if a field has been set.
+
+### GetContentToken
+
+`func (o *InlineResponse200412) GetContentToken() string`
+
+GetContentToken returns the ContentToken field if non-nil, zero value otherwise.
+
+### GetContentTokenOk
+
+`func (o *InlineResponse200412) GetContentTokenOk() (*string, bool)`
+
+GetContentTokenOk returns a tuple with the ContentToken field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContentToken
+
+`func (o *InlineResponse200412) SetContentToken(v string)`
+
+SetContentToken sets ContentToken field to given value.
+
+### HasContentToken
+
+`func (o *InlineResponse200412) HasContentToken() bool`
+
+HasContentToken returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse200412) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse200412) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse200412) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse200412) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
 
 ### GetName
 
@@ -57,180 +139,280 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetModel
+### GetAllowedAdmins
 
-`func (o *InlineResponse200412) GetModel() string`
+`func (o *InlineResponse200412) GetAllowedAdmins() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetAllowedAdmins returns the AllowedAdmins field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetAllowedAdminsOk
 
-`func (o *InlineResponse200412) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200412) GetAllowedAdminsOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetAllowedAdminsOk returns a tuple with the AllowedAdmins field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetAllowedAdmins
 
-`func (o *InlineResponse200412) SetModel(v string)`
+`func (o *InlineResponse200412) SetAllowedAdmins(v string)`
 
-SetModel sets Model field to given value.
+SetAllowedAdmins sets AllowedAdmins field to given value.
 
-### HasModel
+### HasAllowedAdmins
 
-`func (o *InlineResponse200412) HasModel() bool`
+`func (o *InlineResponse200412) HasAllowedAdmins() bool`
 
-HasModel returns a boolean if a field has been set.
+HasAllowedAdmins returns a boolean if a field has been set.
 
-### GetSerial
+### GetNetworkIdAdmins
 
-`func (o *InlineResponse200412) GetSerial() string`
+`func (o *InlineResponse200412) GetNetworkIdAdmins() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetworkIdAdmins returns the NetworkIdAdmins field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkIdAdminsOk
 
-`func (o *InlineResponse200412) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200412) GetNetworkIdAdminsOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkIdAdminsOk returns a tuple with the NetworkIdAdmins field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetworkIdAdmins
 
-`func (o *InlineResponse200412) SetSerial(v string)`
+`func (o *InlineResponse200412) SetNetworkIdAdmins(v string)`
 
-SetSerial sets Serial field to given value.
+SetNetworkIdAdmins sets NetworkIdAdmins field to given value.
 
-### HasSerial
+### HasNetworkIdAdmins
 
-`func (o *InlineResponse200412) HasSerial() bool`
+`func (o *InlineResponse200412) HasNetworkIdAdmins() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetworkIdAdmins returns a boolean if a field has been set.
 
-### GetMac
+### GetAssignableNetworks
 
-`func (o *InlineResponse200412) GetMac() string`
+`func (o *InlineResponse200412) GetAssignableNetworks() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetAssignableNetworks returns the AssignableNetworks field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetAssignableNetworksOk
 
-`func (o *InlineResponse200412) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200412) GetAssignableNetworksOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetAssignableNetworksOk returns a tuple with the AssignableNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetAssignableNetworks
 
-`func (o *InlineResponse200412) SetMac(v string)`
+`func (o *InlineResponse200412) SetAssignableNetworks(v string)`
 
-SetMac sets Mac field to given value.
+SetAssignableNetworks sets AssignableNetworks field to given value.
 
-### HasMac
+### HasAssignableNetworks
 
-`func (o *InlineResponse200412) HasMac() bool`
+`func (o *InlineResponse200412) HasAssignableNetworks() bool`
 
-HasMac returns a boolean if a field has been set.
+HasAssignableNetworks returns a boolean if a field has been set.
 
-### GetProductType
+### GetAssignableNetworkIds
 
-`func (o *InlineResponse200412) GetProductType() string`
+`func (o *InlineResponse200412) GetAssignableNetworkIds() []string`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetAssignableNetworkIds returns the AssignableNetworkIds field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetAssignableNetworkIdsOk
 
-`func (o *InlineResponse200412) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse200412) GetAssignableNetworkIdsOk() (*[]string, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetAssignableNetworkIdsOk returns a tuple with the AssignableNetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetAssignableNetworkIds
 
-`func (o *InlineResponse200412) SetProductType(v string)`
+`func (o *InlineResponse200412) SetAssignableNetworkIds(v []string)`
 
-SetProductType sets ProductType field to given value.
+SetAssignableNetworkIds sets AssignableNetworkIds field to given value.
 
-### HasProductType
+### HasAssignableNetworkIds
 
-`func (o *InlineResponse200412) HasProductType() bool`
+`func (o *InlineResponse200412) HasAssignableNetworkIds() bool`
 
-HasProductType returns a boolean if a field has been set.
+HasAssignableNetworkIds returns a boolean if a field has been set.
 
-### GetNetwork
+### GetVppLocationId
 
-`func (o *InlineResponse200412) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200412) GetVppLocationId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetVppLocationId returns the VppLocationId field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetVppLocationIdOk
 
-`func (o *InlineResponse200412) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200412) GetVppLocationIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetVppLocationIdOk returns a tuple with the VppLocationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetVppLocationId
 
-`func (o *InlineResponse200412) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200412) SetVppLocationId(v string)`
 
-SetNetwork sets Network field to given value.
+SetVppLocationId sets VppLocationId field to given value.
 
-### HasNetwork
+### HasVppLocationId
 
-`func (o *InlineResponse200412) HasNetwork() bool`
+`func (o *InlineResponse200412) HasVppLocationId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasVppLocationId returns a boolean if a field has been set.
 
-### GetUsage
+### GetVppLocationName
 
-`func (o *InlineResponse200412) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage`
+`func (o *InlineResponse200412) GetVppLocationName() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetVppLocationName returns the VppLocationName field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetVppLocationNameOk
 
-`func (o *InlineResponse200412) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage, bool)`
+`func (o *InlineResponse200412) GetVppLocationNameOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetVppLocationNameOk returns a tuple with the VppLocationName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetVppLocationName
 
-`func (o *InlineResponse200412) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage)`
+`func (o *InlineResponse200412) SetVppLocationName(v string)`
 
-SetUsage sets Usage field to given value.
+SetVppLocationName sets VppLocationName field to given value.
 
-### HasUsage
+### HasVppLocationName
 
-`func (o *InlineResponse200412) HasUsage() bool`
+`func (o *InlineResponse200412) HasVppLocationName() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasVppLocationName returns a boolean if a field has been set.
 
-### GetClients
+### GetLastSyncedAt
 
-`func (o *InlineResponse200412) GetClients() OrganizationsOrganizationIdSummaryTopDevicesByUsageClients`
+`func (o *InlineResponse200412) GetLastSyncedAt() string`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetLastSyncedAt returns the LastSyncedAt field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetLastSyncedAtOk
 
-`func (o *InlineResponse200412) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageClients, bool)`
+`func (o *InlineResponse200412) GetLastSyncedAtOk() (*string, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetLastSyncedAtOk returns a tuple with the LastSyncedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetLastSyncedAt
 
-`func (o *InlineResponse200412) SetClients(v OrganizationsOrganizationIdSummaryTopDevicesByUsageClients)`
+`func (o *InlineResponse200412) SetLastSyncedAt(v string)`
 
-SetClients sets Clients field to given value.
+SetLastSyncedAt sets LastSyncedAt field to given value.
 
-### HasClients
+### HasLastSyncedAt
 
-`func (o *InlineResponse200412) HasClients() bool`
+`func (o *InlineResponse200412) HasLastSyncedAt() bool`
 
-HasClients returns a boolean if a field has been set.
+HasLastSyncedAt returns a boolean if a field has been set.
+
+### GetLastForceSyncedAt
+
+`func (o *InlineResponse200412) GetLastForceSyncedAt() string`
+
+GetLastForceSyncedAt returns the LastForceSyncedAt field if non-nil, zero value otherwise.
+
+### GetLastForceSyncedAtOk
+
+`func (o *InlineResponse200412) GetLastForceSyncedAtOk() (*string, bool)`
+
+GetLastForceSyncedAtOk returns a tuple with the LastForceSyncedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastForceSyncedAt
+
+`func (o *InlineResponse200412) SetLastForceSyncedAt(v string)`
+
+SetLastForceSyncedAt sets LastForceSyncedAt field to given value.
+
+### HasLastForceSyncedAt
+
+`func (o *InlineResponse200412) HasLastForceSyncedAt() bool`
+
+HasLastForceSyncedAt returns a boolean if a field has been set.
+
+### GetParsedToken
+
+`func (o *InlineResponse200412) GetParsedToken() OrganizationsOrganizationIdSmVppAccountsParsedToken`
+
+GetParsedToken returns the ParsedToken field if non-nil, zero value otherwise.
+
+### GetParsedTokenOk
+
+`func (o *InlineResponse200412) GetParsedTokenOk() (*OrganizationsOrganizationIdSmVppAccountsParsedToken, bool)`
+
+GetParsedTokenOk returns a tuple with the ParsedToken field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetParsedToken
+
+`func (o *InlineResponse200412) SetParsedToken(v OrganizationsOrganizationIdSmVppAccountsParsedToken)`
+
+SetParsedToken sets ParsedToken field to given value.
+
+### HasParsedToken
+
+`func (o *InlineResponse200412) HasParsedToken() bool`
+
+HasParsedToken returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *InlineResponse200412) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200412) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200412) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200412) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetVppServiceToken
+
+`func (o *InlineResponse200412) GetVppServiceToken() string`
+
+GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
+
+### GetVppServiceTokenOk
+
+`func (o *InlineResponse200412) GetVppServiceTokenOk() (*string, bool)`
+
+GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVppServiceToken
+
+`func (o *InlineResponse200412) SetVppServiceToken(v string)`
+
+SetVppServiceToken sets VppServiceToken field to given value.
+
+### HasVppServiceToken
+
+`func (o *InlineResponse200412) HasVppServiceToken() bool`
+
+HasVppServiceToken returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

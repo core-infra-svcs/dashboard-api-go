@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
-**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
-**Result** | Pointer to [**InlineResponse2019Result**](InlineResponse2019Result.md) |  | [optional] 
+**JobId** | Pointer to **string** | Id of the port status request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your port status request. | [optional] 
 **Request** | Pointer to [**InlineResponse2019Request**](InlineResponse2019Request.md) |  | [optional] 
-**Error** | Pointer to **string** | Description of the error. | [optional] 
+**Status** | Pointer to **string** | Status of the port status request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -31,30 +29,30 @@ NewInlineResponse2019WithDefaults instantiates a new InlineResponse2019 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetThroughputTestId
+### GetJobId
 
-`func (o *InlineResponse2019) GetThroughputTestId() string`
+`func (o *InlineResponse2019) GetJobId() string`
 
-GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
+GetJobId returns the JobId field if non-nil, zero value otherwise.
 
-### GetThroughputTestIdOk
+### GetJobIdOk
 
-`func (o *InlineResponse2019) GetThroughputTestIdOk() (*string, bool)`
+`func (o *InlineResponse2019) GetJobIdOk() (*string, bool)`
 
-GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
+GetJobIdOk returns a tuple with the JobId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThroughputTestId
+### SetJobId
 
-`func (o *InlineResponse2019) SetThroughputTestId(v string)`
+`func (o *InlineResponse2019) SetJobId(v string)`
 
-SetThroughputTestId sets ThroughputTestId field to given value.
+SetJobId sets JobId field to given value.
 
-### HasThroughputTestId
+### HasJobId
 
-`func (o *InlineResponse2019) HasThroughputTestId() bool`
+`func (o *InlineResponse2019) HasJobId() bool`
 
-HasThroughputTestId returns a boolean if a field has been set.
+HasJobId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -81,56 +79,6 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
-### GetStatus
-
-`func (o *InlineResponse2019) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse2019) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse2019) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse2019) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetResult
-
-`func (o *InlineResponse2019) GetResult() InlineResponse2019Result`
-
-GetResult returns the Result field if non-nil, zero value otherwise.
-
-### GetResultOk
-
-`func (o *InlineResponse2019) GetResultOk() (*InlineResponse2019Result, bool)`
-
-GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResult
-
-`func (o *InlineResponse2019) SetResult(v InlineResponse2019Result)`
-
-SetResult sets Result field to given value.
-
-### HasResult
-
-`func (o *InlineResponse2019) HasResult() bool`
-
-HasResult returns a boolean if a field has been set.
-
 ### GetRequest
 
 `func (o *InlineResponse2019) GetRequest() InlineResponse2019Request`
@@ -156,30 +104,30 @@ SetRequest sets Request field to given value.
 
 HasRequest returns a boolean if a field has been set.
 
-### GetError
+### GetStatus
 
-`func (o *InlineResponse2019) GetError() string`
+`func (o *InlineResponse2019) GetStatus() string`
 
-GetError returns the Error field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetErrorOk
+### GetStatusOk
 
-`func (o *InlineResponse2019) GetErrorOk() (*string, bool)`
+`func (o *InlineResponse2019) GetStatusOk() (*string, bool)`
 
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetError
+### SetStatus
 
-`func (o *InlineResponse2019) SetError(v string)`
+`func (o *InlineResponse2019) SetStatus(v string)`
 
-SetError sets Error field to given value.
+SetStatus sets Status field to given value.
 
-### HasError
+### HasStatus
 
-`func (o *InlineResponse2019) HasError() bool`
+`func (o *InlineResponse2019) HasStatus() bool`
 
-HasError returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 ### GetCallback
 

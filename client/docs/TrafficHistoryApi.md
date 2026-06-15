@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkClientTrafficHistory
 
-> []InlineResponse200120 GetNetworkClientTrafficHistory(ctx, networkId, clientId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200128 GetNetworkClientTrafficHistory(ctx, networkId, clientId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the client's network traffic data over time
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficHistoryApi.GetNetworkClientTrafficHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientTrafficHistory`: []InlineResponse200120
+    // response from `GetNetworkClientTrafficHistory`: []InlineResponse200128
     fmt.Fprintf(os.Stdout, "Response from `TrafficHistoryApi.GetNetworkClientTrafficHistory`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200120**](InlineResponse200120.md)
+[**[]InlineResponse200128**](InlineResponse200128.md)
 
 ### Authorization
 

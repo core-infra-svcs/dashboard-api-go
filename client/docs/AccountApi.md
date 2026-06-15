@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## ConnectNetworkApplianceUmbrellaAccount
 
-> InlineResponse20096 ConnectNetworkApplianceUmbrellaAccount(ctx, networkId).ConnectNetworkApplianceUmbrellaAccount(connectNetworkApplianceUmbrellaAccount).Execute()
+> InlineResponse200101 ConnectNetworkApplianceUmbrellaAccount(ctx, networkId).ConnectNetworkApplianceUmbrellaAccount(connectNetworkApplianceUmbrellaAccount).Execute()
 
 Connect a Cisco Umbrella account to this network
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    connectNetworkApplianceUmbrellaAccount := *openapiclient.NewInlineObject79(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaAccountConnectApi("Key_example", "Secret_example")) // InlineObject79 | 
+    connectNetworkApplianceUmbrellaAccount := *openapiclient.NewInlineObject86(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaAccountConnectApi("Key_example", "Secret_example")) // InlineObject86 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccountApi.ConnectNetworkApplianceUmbrellaAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ConnectNetworkApplianceUmbrellaAccount`: InlineResponse20096
+    // response from `ConnectNetworkApplianceUmbrellaAccount`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `AccountApi.ConnectNetworkApplianceUmbrellaAccount`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiConnectNetworkApplianceUmb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **connectNetworkApplianceUmbrellaAccount** | [**InlineObject79**](InlineObject79.md) |  | 
+ **connectNetworkApplianceUmbrellaAccount** | [**InlineObject86**](InlineObject86.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 

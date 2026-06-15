@@ -4,15 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | **string** | Set mode to &#39;enabled&#39; to enable malware prevention, otherwise &#39;disabled&#39; | 
-**AllowedUrls** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls**](NetworksNetworkIdApplianceSecurityMalwareAllowedUrls.md) | The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
-**AllowedFiles** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles**](NetworksNetworkIdApplianceSecurityMalwareAllowedFiles.md) | The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Trunk port can Drop all Untagged traffic. When true, no VLAN is required. Access ports cannot have dropUntaggedTraffic set to true. | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of VLAN IDs (e.g. &#39;2,15&#39;) for all devices. Secure Routers also support VLAN ranges (e.g. &#39;2-10,15&#39;). Use &#39;all&#39; to permit all VLANs on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. Valid values are: &#39;open&#39;, &#39;8021x-radius&#39;, &#39;mac-radius&#39;, &#39;hybris-radius&#39; for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, &#39;open&#39; is the only valid value and &#39;open&#39; is the default value if the field is missing. | [optional] 
+**Sgt** | Pointer to [**NetworksNetworkIdAppliancePortsSgt**](NetworksNetworkIdAppliancePortsSgt.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject66
 
-`func NewInlineObject66(mode string, ) *InlineObject66`
+`func NewInlineObject66() *InlineObject66`
 
 NewInlineObject66 instantiates a new InlineObject66 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +31,180 @@ NewInlineObject66WithDefaults instantiates a new InlineObject66 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetEnabled
 
-`func (o *InlineObject66) GetMode() string`
+`func (o *InlineObject66) GetEnabled() bool`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetEnabledOk
 
-`func (o *InlineObject66) GetModeOk() (*string, bool)`
+`func (o *InlineObject66) GetEnabledOk() (*bool, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetEnabled
 
-`func (o *InlineObject66) SetMode(v string)`
+`func (o *InlineObject66) SetEnabled(v bool)`
 
-SetMode sets Mode field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetAllowedUrls
+`func (o *InlineObject66) HasEnabled() bool`
 
-`func (o *InlineObject66) GetAllowedUrls() []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls`
+HasEnabled returns a boolean if a field has been set.
 
-GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
+### GetDropUntaggedTraffic
 
-### GetAllowedUrlsOk
+`func (o *InlineObject66) GetDropUntaggedTraffic() bool`
 
-`func (o *InlineObject66) GetAllowedUrlsOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls, bool)`
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
+### GetDropUntaggedTrafficOk
+
+`func (o *InlineObject66) GetDropUntaggedTrafficOk() (*bool, bool)`
+
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrls
+### SetDropUntaggedTraffic
 
-`func (o *InlineObject66) SetAllowedUrls(v []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls)`
+`func (o *InlineObject66) SetDropUntaggedTraffic(v bool)`
 
-SetAllowedUrls sets AllowedUrls field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
-### HasAllowedUrls
+### HasDropUntaggedTraffic
 
-`func (o *InlineObject66) HasAllowedUrls() bool`
+`func (o *InlineObject66) HasDropUntaggedTraffic() bool`
 
-HasAllowedUrls returns a boolean if a field has been set.
+HasDropUntaggedTraffic returns a boolean if a field has been set.
 
-### GetAllowedFiles
+### GetType
 
-`func (o *InlineObject66) GetAllowedFiles() []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles`
+`func (o *InlineObject66) GetType() string`
 
-GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetAllowedFilesOk
+### GetTypeOk
 
-`func (o *InlineObject66) GetAllowedFilesOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles, bool)`
+`func (o *InlineObject66) GetTypeOk() (*string, bool)`
 
-GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedFiles
+### SetType
 
-`func (o *InlineObject66) SetAllowedFiles(v []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles)`
+`func (o *InlineObject66) SetType(v string)`
 
-SetAllowedFiles sets AllowedFiles field to given value.
+SetType sets Type field to given value.
 
-### HasAllowedFiles
+### HasType
 
-`func (o *InlineObject66) HasAllowedFiles() bool`
+`func (o *InlineObject66) HasType() bool`
 
-HasAllowedFiles returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineObject66) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineObject66) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineObject66) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineObject66) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineObject66) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineObject66) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineObject66) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineObject66) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineObject66) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineObject66) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineObject66) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineObject66) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineObject66) GetSgt() NetworksNetworkIdAppliancePortsSgt`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineObject66) GetSgtOk() (*NetworksNetworkIdAppliancePortsSgt, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineObject66) SetSgt(v NetworksNetworkIdAppliancePortsSgt)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineObject66) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

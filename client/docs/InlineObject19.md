@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | **[]string** | A list of ports for which to perform the cable test.  For Catalyst switches, IOS interface names are also supported, such as \&quot;GigabitEthernet1/0/8\&quot;, \&quot;Gi1/0/8\&quot;, or even \&quot;1/0/8\&quot;. | 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject19
 
-`func NewInlineObject19(ports []string, ) *InlineObject19`
+`func NewInlineObject19() *InlineObject19`
 
 NewInlineObject19 instantiates a new InlineObject19 object
 This constructor will assign default values to properties that have it defined,
@@ -25,26 +24,6 @@ will change when the set of required properties is changed
 NewInlineObject19WithDefaults instantiates a new InlineObject19 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetPorts
-
-`func (o *InlineObject19) GetPorts() []string`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineObject19) GetPortsOk() (*[]string, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineObject19) SetPorts(v []string)`
-
-SetPorts sets Ports field to given value.
-
 
 ### GetCallback
 

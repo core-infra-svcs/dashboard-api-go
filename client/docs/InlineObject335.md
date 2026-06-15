@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesDetachItems**](OrganizationsOrganizationIdSaseSitesDetachItems.md) | List of Secure Access sites to be detached. | [optional] 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject335WithDefaults instantiates a new InlineObject335 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetItems
 
-`func (o *InlineObject335) GetStatus() string`
+`func (o *InlineObject335) GetItems() []OrganizationsOrganizationIdSaseSitesDetachItems`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetItemsOk
 
-`func (o *InlineObject335) GetStatusOk() (*string, bool)`
+`func (o *InlineObject335) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesDetachItems, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetItems
 
-`func (o *InlineObject335) SetStatus(v string)`
+`func (o *InlineObject335) SetItems(v []OrganizationsOrganizationIdSaseSitesDetachItems)`
 
-SetStatus sets Status field to given value.
+SetItems sets Items field to given value.
 
-### HasStatus
+### HasItems
 
-`func (o *InlineObject335) HasStatus() bool`
+`func (o *InlineObject335) HasItems() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetCertificateAuthorityId
+### GetCallback
 
-`func (o *InlineObject335) GetCertificateAuthorityId() string`
+`func (o *InlineObject335) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetCallbackOk
 
-`func (o *InlineObject335) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineObject335) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetCallback
 
-`func (o *InlineObject335) SetCertificateAuthorityId(v string)`
+`func (o *InlineObject335) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetCallback sets Callback field to given value.
 
-### HasCertificateAuthorityId
+### HasCallback
 
-`func (o *InlineObject335) HasCertificateAuthorityId() bool`
+`func (o *InlineObject335) HasCallback() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

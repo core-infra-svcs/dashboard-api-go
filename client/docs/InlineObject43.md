@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the network | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
-**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. | [optional] 
-**Notes** | Pointer to **NullableString** | Add any notes or additional information about this network here. | [optional] 
+**Enabled** | **bool** | Enable or disable warm spare for a switch | 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
 ### NewInlineObject43
 
-`func NewInlineObject43() *InlineObject43`
+`func NewInlineObject43(enabled bool, ) *InlineObject43`
 
 NewInlineObject43 instantiates a new InlineObject43 object
 This constructor will assign default values to properties that have it defined,
@@ -29,141 +26,51 @@ NewInlineObject43WithDefaults instantiates a new InlineObject43 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject43) GetName() string`
+`func (o *InlineObject43) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject43) GetNameOk() (*string, bool)`
+`func (o *InlineObject43) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject43) SetName(v string)`
+`func (o *InlineObject43) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
 
-`func (o *InlineObject43) HasName() bool`
+### GetSpareSerial
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject43) GetSpareSerial() string`
 
-### GetTimeZone
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-`func (o *InlineObject43) GetTimeZone() string`
+### GetSpareSerialOk
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+`func (o *InlineObject43) GetSpareSerialOk() (*string, bool)`
 
-### GetTimeZoneOk
-
-`func (o *InlineObject43) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetSpareSerial
 
-`func (o *InlineObject43) SetTimeZone(v string)`
+`func (o *InlineObject43) SetSpareSerial(v string)`
 
-SetTimeZone sets TimeZone field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasTimeZone
+### HasSpareSerial
 
-`func (o *InlineObject43) HasTimeZone() bool`
+`func (o *InlineObject43) HasSpareSerial() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
-### GetTags
-
-`func (o *InlineObject43) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject43) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject43) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject43) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetEnrollmentString
-
-`func (o *InlineObject43) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineObject43) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineObject43) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineObject43) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject43) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject43) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject43) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject43) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### SetNotesNil
-
-`func (o *InlineObject43) SetNotesNil(b bool)`
-
- SetNotesNil sets the value for Notes to be an explicit nil
-
-### UnsetNotes
-`func (o *InlineObject43) UnsetNotes()`
-
-UnsetNotes ensures that no value is present for Notes, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

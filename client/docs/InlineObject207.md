@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200239Rules**](InlineResponse200239Rules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
+**Name** | Pointer to **string** | AP port profile name | [optional] 
+**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts.md) | AP ports configuration | [optional] 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineObject207WithDefaults instantiates a new InlineObject207 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetName
 
-`func (o *InlineObject207) GetRules() []InlineResponse200239Rules`
+`func (o *InlineObject207) GetName() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetNameOk
 
-`func (o *InlineObject207) GetRulesOk() (*[]InlineResponse200239Rules, bool)`
+`func (o *InlineObject207) GetNameOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetName
 
-`func (o *InlineObject207) SetRules(v []InlineResponse200239Rules)`
+`func (o *InlineObject207) SetName(v string)`
 
-SetRules sets Rules field to given value.
+SetName sets Name field to given value.
 
-### HasRules
+### HasName
 
-`func (o *InlineObject207) HasRules() bool`
+`func (o *InlineObject207) HasName() bool`
 
-HasRules returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineObject207) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineObject207) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineObject207) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineObject207) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
+
+### GetUsbPorts
+
+`func (o *InlineObject207) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+
+### GetUsbPortsOk
+
+`func (o *InlineObject207) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsbPorts
+
+`func (o *InlineObject207) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+
+SetUsbPorts sets UsbPorts field to given value.
+
+### HasUsbPorts
+
+`func (o *InlineObject207) HasUsbPorts() bool`
+
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

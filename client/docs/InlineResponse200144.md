@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
+**Category** | Pointer to **string** | Category of the alert | [optional] 
+**Type** | Pointer to **string** | Alert type | [optional] 
+**Severity** | Pointer to **string** | Severity of the alert | [optional] 
+**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200144WithDefaults instantiates a new InlineResponse200144 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetId
 
-`func (o *InlineResponse200144) GetName() string`
+`func (o *InlineResponse200144) GetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdOk
 
-`func (o *InlineResponse200144) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200144) GetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetId
 
-`func (o *InlineResponse200144) SetName(v string)`
+`func (o *InlineResponse200144) SetId(v string)`
 
-SetName sets Name field to given value.
+SetId sets Id field to given value.
 
-### HasName
+### HasId
 
-`func (o *InlineResponse200144) HasName() bool`
+`func (o *InlineResponse200144) HasId() bool`
 
-HasName returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetClientId
+### GetCategory
 
-`func (o *InlineResponse200144) GetClientId() string`
+`func (o *InlineResponse200144) GetCategory() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetCategoryOk
 
-`func (o *InlineResponse200144) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200144) GetCategoryOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetCategory
 
-`func (o *InlineResponse200144) SetClientId(v string)`
+`func (o *InlineResponse200144) SetCategory(v string)`
 
-SetClientId sets ClientId field to given value.
+SetCategory sets Category field to given value.
 
-### HasClientId
+### HasCategory
 
-`func (o *InlineResponse200144) HasClientId() bool`
+`func (o *InlineResponse200144) HasCategory() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetAssigned
+### GetType
 
-`func (o *InlineResponse200144) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse200144) GetType() string`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetTypeOk
 
-`func (o *InlineResponse200144) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse200144) GetTypeOk() (*string, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetType
 
-`func (o *InlineResponse200144) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse200144) SetType(v string)`
 
-SetAssigned sets Assigned field to given value.
+SetType sets Type field to given value.
 
-### HasAssigned
+### HasType
 
-`func (o *InlineResponse200144) HasAssigned() bool`
+`func (o *InlineResponse200144) HasType() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetSeverity
+
+`func (o *InlineResponse200144) GetSeverity() string`
+
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
+
+### GetSeverityOk
+
+`func (o *InlineResponse200144) GetSeverityOk() (*string, bool)`
+
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverity
+
+`func (o *InlineResponse200144) SetSeverity(v string)`
+
+SetSeverity sets Severity field to given value.
+
+### HasSeverity
+
+`func (o *InlineResponse200144) HasSeverity() bool`
+
+HasSeverity returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineResponse200144) GetScope() NetworksNetworkIdHealthAlertsScope`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineResponse200144) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineResponse200144) SetScope(v NetworksNetworkIdHealthAlertsScope)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineResponse200144) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

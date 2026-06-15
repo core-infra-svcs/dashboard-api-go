@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
-**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
+**Servers** | [**[]NetworksNetworkIdSyslogServersServers**](NetworksNetworkIdSyslogServersServers.md) | A list of the syslog servers for this network | 
 
 ## Methods
 
 ### NewInlineObject186
 
-`func NewInlineObject186(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject186`
+`func NewInlineObject186(servers []NetworksNetworkIdSyslogServersServers, ) *InlineObject186`
 
 NewInlineObject186 instantiates a new InlineObject186 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject186WithDefaults instantiates a new InlineObject186 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetServers
 
-`func (o *InlineObject186) GetType() string`
+`func (o *InlineObject186) GetServers() []NetworksNetworkIdSyslogServersServers`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetServersOk
 
-`func (o *InlineObject186) GetTypeOk() (*string, bool)`
+`func (o *InlineObject186) GetServersOk() (*[]NetworksNetworkIdSyslogServersServers, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetServers
 
-`func (o *InlineObject186) SetType(v string)`
+`func (o *InlineObject186) SetServers(v []NetworksNetworkIdSyslogServersServers)`
 
-SetType sets Type field to given value.
-
-
-### GetMatch
-
-`func (o *InlineObject186) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
-
-GetMatch returns the Match field if non-nil, zero value otherwise.
-
-### GetMatchOk
-
-`func (o *InlineObject186) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
-
-GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMatch
-
-`func (o *InlineObject186) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
-
-SetMatch sets Match field to given value.
+SetServers sets Servers field to given value.
 
 
 

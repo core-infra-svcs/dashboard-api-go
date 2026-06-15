@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy.md) |  | 
-**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to remove | 
+**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
+**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
 
 ## Methods
 
 ### NewInlineObject306
 
-`func NewInlineObject306(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject306`
+`func NewInlineObject306(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject306`
 
 NewInlineObject306 instantiates a new InlineObject306 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +26,44 @@ NewInlineObject306WithDefaults instantiates a new InlineObject306 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetDestination
 
-`func (o *InlineObject306) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy`
+`func (o *InlineObject306) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetDestinationOk
 
-`func (o *InlineObject306) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, bool)`
+`func (o *InlineObject306) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetDestination
 
-`func (o *InlineObject306) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy)`
+`func (o *InlineObject306) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
 
-SetPolicy sets Policy field to given value.
+SetDestination sets Destination field to given value.
 
 
-### GetAdaptivePolicyGroups
+### GetLicenses
 
-`func (o *InlineObject306) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
+`func (o *InlineObject306) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
 
-GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetAdaptivePolicyGroupsOk
+### GetLicensesOk
 
-`func (o *InlineObject306) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
+`func (o *InlineObject306) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
 
-GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyGroups
+### SetLicenses
 
-`func (o *InlineObject306) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
+`func (o *InlineObject306) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
 
-SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
+SetLicenses sets Licenses field to given value.
 
 
 

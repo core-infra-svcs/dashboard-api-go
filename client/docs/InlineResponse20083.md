@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
-**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
-**ProtectedNetworks** | Pointer to [**InlineResponse20083ProtectedNetworks**](InlineResponse20083ProtectedNetworks.md) |  | [optional] 
+**SpoofingProtection** | Pointer to [**InlineResponse20083SpoofingProtection**](InlineResponse20083SpoofingProtection.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20083WithDefaults instantiates a new InlineResponse20083 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetSpoofingProtection
 
-`func (o *InlineResponse20083) GetMode() string`
+`func (o *InlineResponse20083) GetSpoofingProtection() InlineResponse20083SpoofingProtection`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetSpoofingProtectionOk
 
-`func (o *InlineResponse20083) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20083) GetSpoofingProtectionOk() (*InlineResponse20083SpoofingProtection, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetSpoofingProtection
 
-`func (o *InlineResponse20083) SetMode(v string)`
+`func (o *InlineResponse20083) SetSpoofingProtection(v InlineResponse20083SpoofingProtection)`
 
-SetMode sets Mode field to given value.
+SetSpoofingProtection sets SpoofingProtection field to given value.
 
-### HasMode
+### HasSpoofingProtection
 
-`func (o *InlineResponse20083) HasMode() bool`
+`func (o *InlineResponse20083) HasSpoofingProtection() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetIdsRulesets
-
-`func (o *InlineResponse20083) GetIdsRulesets() string`
-
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
-
-### GetIdsRulesetsOk
-
-`func (o *InlineResponse20083) GetIdsRulesetsOk() (*string, bool)`
-
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdsRulesets
-
-`func (o *InlineResponse20083) SetIdsRulesets(v string)`
-
-SetIdsRulesets sets IdsRulesets field to given value.
-
-### HasIdsRulesets
-
-`func (o *InlineResponse20083) HasIdsRulesets() bool`
-
-HasIdsRulesets returns a boolean if a field has been set.
-
-### GetProtectedNetworks
-
-`func (o *InlineResponse20083) GetProtectedNetworks() InlineResponse20083ProtectedNetworks`
-
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
-
-### GetProtectedNetworksOk
-
-`func (o *InlineResponse20083) GetProtectedNetworksOk() (*InlineResponse20083ProtectedNetworks, bool)`
-
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtectedNetworks
-
-`func (o *InlineResponse20083) SetProtectedNetworks(v InlineResponse20083ProtectedNetworks)`
-
-SetProtectedNetworks sets ProtectedNetworks field to given value.
-
-### HasProtectedNetworks
-
-`func (o *InlineResponse20083) HasProtectedNetworks() bool`
-
-HasProtectedNetworks returns a boolean if a field has been set.
+HasSpoofingProtection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

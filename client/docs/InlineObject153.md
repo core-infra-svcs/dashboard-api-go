@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1.md) | Array of switch or stack ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
-**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**Name** | Pointer to **string** | The name of this target group | [optional] 
+**Scope** | Pointer to **string** | The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject153WithDefaults instantiates a new InlineObject153 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchPorts
+### GetName
 
-`func (o *InlineObject153) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1`
+`func (o *InlineObject153) GetName() string`
 
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSwitchPortsOk
+### GetNameOk
 
-`func (o *InlineObject153) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1, bool)`
+`func (o *InlineObject153) GetNameOk() (*string, bool)`
 
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPorts
+### SetName
 
-`func (o *InlineObject153) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1)`
+`func (o *InlineObject153) SetName(v string)`
 
-SetSwitchPorts sets SwitchPorts field to given value.
+SetName sets Name field to given value.
 
-### HasSwitchPorts
+### HasName
 
-`func (o *InlineObject153) HasSwitchPorts() bool`
+`func (o *InlineObject153) HasName() bool`
 
-HasSwitchPorts returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSwitchProfilePorts
+### GetScope
 
-`func (o *InlineObject153) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
+`func (o *InlineObject153) GetScope() string`
 
-GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetSwitchProfilePortsOk
+### GetScopeOk
 
-`func (o *InlineObject153) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
+`func (o *InlineObject153) GetScopeOk() (*string, bool)`
 
-GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfilePorts
+### SetScope
 
-`func (o *InlineObject153) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
+`func (o *InlineObject153) SetScope(v string)`
 
-SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
+SetScope sets Scope field to given value.
 
-### HasSwitchProfilePorts
+### HasScope
 
-`func (o *InlineObject153) HasSwitchProfilePorts() bool`
+`func (o *InlineObject153) HasScope() bool`
 
-HasSwitchProfilePorts returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be moved. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be moved. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be moved. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be moved. | [optional] 
-**NewNetwork** | **string** | The new network to which the devices will be moved. | 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
 ### NewInlineObject135
 
-`func NewInlineObject135(newNetwork string, ) *InlineObject135`
+`func NewInlineObject135() *InlineObject135`
 
 NewInlineObject135 instantiates a new InlineObject135 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +29,130 @@ NewInlineObject135WithDefaults instantiates a new InlineObject135 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetReportingEnabled
 
-`func (o *InlineObject135) GetWifiMacs() []string`
+`func (o *InlineObject135) GetReportingEnabled() bool`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetReportingEnabledOk
 
-`func (o *InlineObject135) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject135) GetReportingEnabledOk() (*bool, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetReportingEnabled
 
-`func (o *InlineObject135) SetWifiMacs(v []string)`
+`func (o *InlineObject135) SetReportingEnabled(v bool)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasWifiMacs
+### HasReportingEnabled
 
-`func (o *InlineObject135) HasWifiMacs() bool`
+`func (o *InlineObject135) HasReportingEnabled() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetIds
+### GetCollectorIp
 
-`func (o *InlineObject135) GetIds() []string`
+`func (o *InlineObject135) GetCollectorIp() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetCollectorIpOk
 
-`func (o *InlineObject135) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject135) GetCollectorIpOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetCollectorIp
 
-`func (o *InlineObject135) SetIds(v []string)`
+`func (o *InlineObject135) SetCollectorIp(v string)`
 
-SetIds sets Ids field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasIds
+### HasCollectorIp
 
-`func (o *InlineObject135) HasIds() bool`
+`func (o *InlineObject135) HasCollectorIp() bool`
 
-HasIds returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetSerials
+### GetCollectorPort
 
-`func (o *InlineObject135) GetSerials() []string`
+`func (o *InlineObject135) GetCollectorPort() int32`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetCollectorPortOk
 
-`func (o *InlineObject135) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject135) GetCollectorPortOk() (*int32, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetCollectorPort
 
-`func (o *InlineObject135) SetSerials(v []string)`
+`func (o *InlineObject135) SetCollectorPort(v int32)`
 
-SetSerials sets Serials field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
-### HasSerials
+### HasCollectorPort
 
-`func (o *InlineObject135) HasSerials() bool`
+`func (o *InlineObject135) HasCollectorPort() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasCollectorPort returns a boolean if a field has been set.
 
-### GetScope
+### GetEtaEnabled
 
-`func (o *InlineObject135) GetScope() []string`
+`func (o *InlineObject135) GetEtaEnabled() bool`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetEtaEnabledOk
 
-`func (o *InlineObject135) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject135) GetEtaEnabledOk() (*bool, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetEtaEnabled
 
-`func (o *InlineObject135) SetScope(v []string)`
+`func (o *InlineObject135) SetEtaEnabled(v bool)`
 
-SetScope sets Scope field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasScope
+### HasEtaEnabled
 
-`func (o *InlineObject135) HasScope() bool`
+`func (o *InlineObject135) HasEtaEnabled() bool`
 
-HasScope returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
 
-### GetNewNetwork
+### GetEtaDstPort
 
-`func (o *InlineObject135) GetNewNetwork() string`
+`func (o *InlineObject135) GetEtaDstPort() int32`
 
-GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
 
-### GetNewNetworkOk
+### GetEtaDstPortOk
 
-`func (o *InlineObject135) GetNewNetworkOk() (*string, bool)`
+`func (o *InlineObject135) GetEtaDstPortOk() (*int32, bool)`
 
-GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNewNetwork
+### SetEtaDstPort
 
-`func (o *InlineObject135) SetNewNetwork(v string)`
+`func (o *InlineObject135) SetEtaDstPort(v int32)`
 
-SetNewNetwork sets NewNetwork field to given value.
+SetEtaDstPort sets EtaDstPort field to given value.
 
+### HasEtaDstPort
+
+`func (o *InlineObject135) HasEtaDstPort() bool`
+
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

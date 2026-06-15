@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **PublicIp** | Pointer to **string** | The IP address that will be used to access the internal resource from the WAN | [optional] 
 **LanIp** | **string** | The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN | 
 **Uplink** | Pointer to **string** | The physical WAN interface on which the traffic will arrive, formatted as &#39;internetN&#39; where N is an integer representing a valid uplink for the network&#39;s appliance | [optional] 
-**AllowedInbound** | Pointer to [**[]InlineResponse20076AllowedInbound**](InlineResponse20076AllowedInbound.md) | The ports this mapping will provide access on, and the remote IPs that will be allowed access to the resource | [optional] 
+**AllowedInbound** | Pointer to [**[]InlineResponse20081AllowedInbound**](InlineResponse20081AllowedInbound.md) | The ports this mapping will provide access on, and the remote IPs that will be allowed access to the resource | [optional] 
 
 ## Methods
 
@@ -126,20 +126,20 @@ HasUplink returns a boolean if a field has been set.
 
 ### GetAllowedInbound
 
-`func (o *NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules) GetAllowedInbound() []InlineResponse20076AllowedInbound`
+`func (o *NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules) GetAllowedInbound() []InlineResponse20081AllowedInbound`
 
 GetAllowedInbound returns the AllowedInbound field if non-nil, zero value otherwise.
 
 ### GetAllowedInboundOk
 
-`func (o *NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules) GetAllowedInboundOk() (*[]InlineResponse20076AllowedInbound, bool)`
+`func (o *NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules) GetAllowedInboundOk() (*[]InlineResponse20081AllowedInbound, bool)`
 
 GetAllowedInboundOk returns a tuple with the AllowedInbound field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllowedInbound
 
-`func (o *NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules) SetAllowedInbound(v []InlineResponse20076AllowedInbound)`
+`func (o *NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules) SetAllowedInbound(v []InlineResponse20081AllowedInbound)`
 
 SetAllowedInbound sets AllowedInbound field to given value.
 

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
+**Serials** | **[]string** | Array of Device Serials | 
+**StackIds** | **[]string** | Array of Switch Stack IDs | 
 
 ## Methods
 
 ### NewInlineObject190
 
-`func NewInlineObject190() *InlineObject190`
+`func NewInlineObject190(serials []string, stackIds []string, ) *InlineObject190`
 
 NewInlineObject190 instantiates a new InlineObject190 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,70 @@ NewInlineObject190WithDefaults instantiates a new InlineObject190 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetVlanProfile
 
-`func (o *InlineObject190) GetCurrency() string`
+`func (o *InlineObject190) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetVlanProfileOk
 
-`func (o *InlineObject190) GetCurrencyOk() (*string, bool)`
+`func (o *InlineObject190) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetVlanProfile
 
-`func (o *InlineObject190) SetCurrency(v string)`
+`func (o *InlineObject190) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
 
-SetCurrency sets Currency field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasCurrency
+### HasVlanProfile
 
-`func (o *InlineObject190) HasCurrency() bool`
+`func (o *InlineObject190) HasVlanProfile() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetPlans
+### GetSerials
 
-`func (o *InlineObject190) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
+`func (o *InlineObject190) GetSerials() []string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetSerialsOk
 
-`func (o *InlineObject190) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
+`func (o *InlineObject190) GetSerialsOk() (*[]string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetSerials
 
-`func (o *InlineObject190) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
+`func (o *InlineObject190) SetSerials(v []string)`
 
-SetPlans sets Plans field to given value.
+SetSerials sets Serials field to given value.
 
-### HasPlans
 
-`func (o *InlineObject190) HasPlans() bool`
+### GetStackIds
 
-HasPlans returns a boolean if a field has been set.
+`func (o *InlineObject190) GetStackIds() []string`
+
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
+
+### GetStackIdsOk
+
+`func (o *InlineObject190) GetStackIdsOk() (*[]string, bool)`
+
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStackIds
+
+`func (o *InlineObject190) SetStackIds(v []string)`
+
+SetStackIds sets StackIds field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

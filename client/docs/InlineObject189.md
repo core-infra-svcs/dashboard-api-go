@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
-**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
+**Iname** | **string** | IName of the profile | 
 
 ## Methods
 
 ### NewInlineObject189
 
-`func NewInlineObject189() *InlineObject189`
+`func NewInlineObject189(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, iname string, ) *InlineObject189`
 
 NewInlineObject189 instantiates a new InlineObject189 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,85 @@ NewInlineObject189WithDefaults instantiates a new InlineObject189 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject189) GetEnabled() bool`
+`func (o *InlineObject189) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject189) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject189) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject189) SetEnabled(v bool)`
+`func (o *InlineObject189) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject189) HasEnabled() bool`
+### GetVlanNames
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject189) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-### GetVlanId
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-`func (o *InlineObject189) GetVlanId() int32`
+### GetVlanNamesOk
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+`func (o *InlineObject189) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
 
-### GetVlanIdOk
-
-`func (o *InlineObject189) GetVlanIdOk() (*int32, bool)`
-
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetVlanNames
 
-`func (o *InlineObject189) SetVlanId(v int32)`
+`func (o *InlineObject189) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetVlanId sets VlanId field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasVlanId
 
-`func (o *InlineObject189) HasVlanId() bool`
+### GetVlanGroups
 
-HasVlanId returns a boolean if a field has been set.
+`func (o *InlineObject189) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
 
-### GetProtocols
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject189) GetProtocols() []string`
+### GetVlanGroupsOk
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+`func (o *InlineObject189) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
 
-### GetProtocolsOk
-
-`func (o *InlineObject189) GetProtocolsOk() (*[]string, bool)`
-
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetVlanGroups
 
-`func (o *InlineObject189) SetProtocols(v []string)`
+`func (o *InlineObject189) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
-SetProtocols sets Protocols field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasProtocols
 
-`func (o *InlineObject189) HasProtocols() bool`
+### GetIname
 
-HasProtocols returns a boolean if a field has been set.
+`func (o *InlineObject189) GetIname() string`
 
-### GetAccessPoints
+GetIname returns the Iname field if non-nil, zero value otherwise.
 
-`func (o *InlineObject189) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
+### GetInameOk
 
-GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
+`func (o *InlineObject189) GetInameOk() (*string, bool)`
 
-### GetAccessPointsOk
-
-`func (o *InlineObject189) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
-
-GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccessPoints
+### SetIname
 
-`func (o *InlineObject189) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
+`func (o *InlineObject189) SetIname(v string)`
 
-SetAccessPoints sets AccessPoints field to given value.
+SetIname sets Iname field to given value.
 
-### HasAccessPoints
-
-`func (o *InlineObject189) HasAccessPoints() bool`
-
-HasAccessPoints returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

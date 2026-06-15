@@ -4,13 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Meraki auth user id | [optional] 
-**Email** | Pointer to **string** | Email address of the user | [optional] 
-**Name** | Pointer to **string** | Name of the user | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
-**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
-**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
+**FloorPlanId** | Pointer to **string** | Floor plan ID | [optional] 
+**ImageUrl** | Pointer to **string** | The url link for the floor plan image. | [optional] 
+**ImageUrlExpiresAt** | Pointer to **string** | The time the image url link will expire. | [optional] 
+**ImageExtension** | Pointer to **string** | The format type of the image. | [optional] 
+**ImageMd5** | Pointer to **string** | The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields (&#39;center, &#39;topLeftCorner&#39;, etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image. | [optional] 
+**Name** | Pointer to **string** | The name of your floor plan. | [optional] 
+**Devices** | Pointer to [**[]InlineResponse200130**](InlineResponse200130.md) | List of devices for the floorplan | [optional] 
+**Width** | Pointer to **float32** | The width of your floor plan. | [optional] 
+**Height** | Pointer to **float32** | The height of your floor plan. | [optional] 
+**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter**](NetworksNetworkIdFloorPlansCenter.md) |  | [optional] 
+**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
+**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
+**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
+**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
+**FloorNumber** | Pointer to **float32** | The floor number of the floor within the building. | [optional] 
 
 ## Methods
 
@@ -31,55 +39,130 @@ NewInlineResponse200138WithDefaults instantiates a new InlineResponse200138 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetFloorPlanId
 
-`func (o *InlineResponse200138) GetId() string`
+`func (o *InlineResponse200138) GetFloorPlanId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetFloorPlanId returns the FloorPlanId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetFloorPlanIdOk
 
-`func (o *InlineResponse200138) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200138) GetFloorPlanIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetFloorPlanIdOk returns a tuple with the FloorPlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetFloorPlanId
 
-`func (o *InlineResponse200138) SetId(v string)`
+`func (o *InlineResponse200138) SetFloorPlanId(v string)`
 
-SetId sets Id field to given value.
+SetFloorPlanId sets FloorPlanId field to given value.
 
-### HasId
+### HasFloorPlanId
 
-`func (o *InlineResponse200138) HasId() bool`
+`func (o *InlineResponse200138) HasFloorPlanId() bool`
 
-HasId returns a boolean if a field has been set.
+HasFloorPlanId returns a boolean if a field has been set.
 
-### GetEmail
+### GetImageUrl
 
-`func (o *InlineResponse200138) GetEmail() string`
+`func (o *InlineResponse200138) GetImageUrl() string`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetImageUrl returns the ImageUrl field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetImageUrlOk
 
-`func (o *InlineResponse200138) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse200138) GetImageUrlOk() (*string, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetImageUrlOk returns a tuple with the ImageUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetImageUrl
 
-`func (o *InlineResponse200138) SetEmail(v string)`
+`func (o *InlineResponse200138) SetImageUrl(v string)`
 
-SetEmail sets Email field to given value.
+SetImageUrl sets ImageUrl field to given value.
 
-### HasEmail
+### HasImageUrl
 
-`func (o *InlineResponse200138) HasEmail() bool`
+`func (o *InlineResponse200138) HasImageUrl() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasImageUrl returns a boolean if a field has been set.
+
+### GetImageUrlExpiresAt
+
+`func (o *InlineResponse200138) GetImageUrlExpiresAt() string`
+
+GetImageUrlExpiresAt returns the ImageUrlExpiresAt field if non-nil, zero value otherwise.
+
+### GetImageUrlExpiresAtOk
+
+`func (o *InlineResponse200138) GetImageUrlExpiresAtOk() (*string, bool)`
+
+GetImageUrlExpiresAtOk returns a tuple with the ImageUrlExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageUrlExpiresAt
+
+`func (o *InlineResponse200138) SetImageUrlExpiresAt(v string)`
+
+SetImageUrlExpiresAt sets ImageUrlExpiresAt field to given value.
+
+### HasImageUrlExpiresAt
+
+`func (o *InlineResponse200138) HasImageUrlExpiresAt() bool`
+
+HasImageUrlExpiresAt returns a boolean if a field has been set.
+
+### GetImageExtension
+
+`func (o *InlineResponse200138) GetImageExtension() string`
+
+GetImageExtension returns the ImageExtension field if non-nil, zero value otherwise.
+
+### GetImageExtensionOk
+
+`func (o *InlineResponse200138) GetImageExtensionOk() (*string, bool)`
+
+GetImageExtensionOk returns a tuple with the ImageExtension field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageExtension
+
+`func (o *InlineResponse200138) SetImageExtension(v string)`
+
+SetImageExtension sets ImageExtension field to given value.
+
+### HasImageExtension
+
+`func (o *InlineResponse200138) HasImageExtension() bool`
+
+HasImageExtension returns a boolean if a field has been set.
+
+### GetImageMd5
+
+`func (o *InlineResponse200138) GetImageMd5() string`
+
+GetImageMd5 returns the ImageMd5 field if non-nil, zero value otherwise.
+
+### GetImageMd5Ok
+
+`func (o *InlineResponse200138) GetImageMd5Ok() (*string, bool)`
+
+GetImageMd5Ok returns a tuple with the ImageMd5 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageMd5
+
+`func (o *InlineResponse200138) SetImageMd5(v string)`
+
+SetImageMd5 sets ImageMd5 field to given value.
+
+### HasImageMd5
+
+`func (o *InlineResponse200138) HasImageMd5() bool`
+
+HasImageMd5 returns a boolean if a field has been set.
 
 ### GetName
 
@@ -106,105 +189,230 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetDevices
 
-`func (o *InlineResponse200138) GetCreatedAt() time.Time`
+`func (o *InlineResponse200138) GetDevices() []InlineResponse200130`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetDevicesOk
 
-`func (o *InlineResponse200138) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200138) GetDevicesOk() (*[]InlineResponse200130, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetDevices
 
-`func (o *InlineResponse200138) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200138) SetDevices(v []InlineResponse200130)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetDevices sets Devices field to given value.
 
-### HasCreatedAt
+### HasDevices
 
-`func (o *InlineResponse200138) HasCreatedAt() bool`
+`func (o *InlineResponse200138) HasDevices() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasDevices returns a boolean if a field has been set.
 
-### GetAccountType
+### GetWidth
 
-`func (o *InlineResponse200138) GetAccountType() string`
+`func (o *InlineResponse200138) GetWidth() float32`
 
-GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+GetWidth returns the Width field if non-nil, zero value otherwise.
 
-### GetAccountTypeOk
+### GetWidthOk
 
-`func (o *InlineResponse200138) GetAccountTypeOk() (*string, bool)`
+`func (o *InlineResponse200138) GetWidthOk() (*float32, bool)`
 
-GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountType
+### SetWidth
 
-`func (o *InlineResponse200138) SetAccountType(v string)`
+`func (o *InlineResponse200138) SetWidth(v float32)`
 
-SetAccountType sets AccountType field to given value.
+SetWidth sets Width field to given value.
 
-### HasAccountType
+### HasWidth
 
-`func (o *InlineResponse200138) HasAccountType() bool`
+`func (o *InlineResponse200138) HasWidth() bool`
 
-HasAccountType returns a boolean if a field has been set.
+HasWidth returns a boolean if a field has been set.
 
-### GetIsAdmin
+### GetHeight
 
-`func (o *InlineResponse200138) GetIsAdmin() bool`
+`func (o *InlineResponse200138) GetHeight() float32`
 
-GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+GetHeight returns the Height field if non-nil, zero value otherwise.
 
-### GetIsAdminOk
+### GetHeightOk
 
-`func (o *InlineResponse200138) GetIsAdminOk() (*bool, bool)`
+`func (o *InlineResponse200138) GetHeightOk() (*float32, bool)`
 
-GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsAdmin
+### SetHeight
 
-`func (o *InlineResponse200138) SetIsAdmin(v bool)`
+`func (o *InlineResponse200138) SetHeight(v float32)`
 
-SetIsAdmin sets IsAdmin field to given value.
+SetHeight sets Height field to given value.
 
-### HasIsAdmin
+### HasHeight
 
-`func (o *InlineResponse200138) HasIsAdmin() bool`
+`func (o *InlineResponse200138) HasHeight() bool`
 
-HasIsAdmin returns a boolean if a field has been set.
+HasHeight returns a boolean if a field has been set.
 
-### GetAuthorizations
+### GetCenter
 
-`func (o *InlineResponse200138) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
+`func (o *InlineResponse200138) GetCenter() NetworksNetworkIdFloorPlansCenter`
 
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+GetCenter returns the Center field if non-nil, zero value otherwise.
 
-### GetAuthorizationsOk
+### GetCenterOk
 
-`func (o *InlineResponse200138) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
+`func (o *InlineResponse200138) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter, bool)`
 
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthorizations
+### SetCenter
 
-`func (o *InlineResponse200138) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
+`func (o *InlineResponse200138) SetCenter(v NetworksNetworkIdFloorPlansCenter)`
 
-SetAuthorizations sets Authorizations field to given value.
+SetCenter sets Center field to given value.
 
-### HasAuthorizations
+### HasCenter
 
-`func (o *InlineResponse200138) HasAuthorizations() bool`
+`func (o *InlineResponse200138) HasCenter() bool`
 
-HasAuthorizations returns a boolean if a field has been set.
+HasCenter returns a boolean if a field has been set.
+
+### GetBottomLeftCorner
+
+`func (o *InlineResponse200138) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
+
+GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
+
+### GetBottomLeftCornerOk
+
+`func (o *InlineResponse200138) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
+
+GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBottomLeftCorner
+
+`func (o *InlineResponse200138) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
+
+SetBottomLeftCorner sets BottomLeftCorner field to given value.
+
+### HasBottomLeftCorner
+
+`func (o *InlineResponse200138) HasBottomLeftCorner() bool`
+
+HasBottomLeftCorner returns a boolean if a field has been set.
+
+### GetBottomRightCorner
+
+`func (o *InlineResponse200138) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
+
+GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
+
+### GetBottomRightCornerOk
+
+`func (o *InlineResponse200138) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
+
+GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBottomRightCorner
+
+`func (o *InlineResponse200138) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
+
+SetBottomRightCorner sets BottomRightCorner field to given value.
+
+### HasBottomRightCorner
+
+`func (o *InlineResponse200138) HasBottomRightCorner() bool`
+
+HasBottomRightCorner returns a boolean if a field has been set.
+
+### GetTopLeftCorner
+
+`func (o *InlineResponse200138) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
+
+GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
+
+### GetTopLeftCornerOk
+
+`func (o *InlineResponse200138) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
+
+GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopLeftCorner
+
+`func (o *InlineResponse200138) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
+
+SetTopLeftCorner sets TopLeftCorner field to given value.
+
+### HasTopLeftCorner
+
+`func (o *InlineResponse200138) HasTopLeftCorner() bool`
+
+HasTopLeftCorner returns a boolean if a field has been set.
+
+### GetTopRightCorner
+
+`func (o *InlineResponse200138) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
+
+GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
+
+### GetTopRightCornerOk
+
+`func (o *InlineResponse200138) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
+
+GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopRightCorner
+
+`func (o *InlineResponse200138) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
+
+SetTopRightCorner sets TopRightCorner field to given value.
+
+### HasTopRightCorner
+
+`func (o *InlineResponse200138) HasTopRightCorner() bool`
+
+HasTopRightCorner returns a boolean if a field has been set.
+
+### GetFloorNumber
+
+`func (o *InlineResponse200138) GetFloorNumber() float32`
+
+GetFloorNumber returns the FloorNumber field if non-nil, zero value otherwise.
+
+### GetFloorNumberOk
+
+`func (o *InlineResponse200138) GetFloorNumberOk() (*float32, bool)`
+
+GetFloorNumberOk returns a tuple with the FloorNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFloorNumber
+
+`func (o *InlineResponse200138) SetFloorNumber(v float32)`
+
+SetFloorNumber sets FloorNumber field to given value.
+
+### HasFloorNumber
+
+`func (o *InlineResponse200138) HasFloorNumber() bool`
+
+HasFloorNumber returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

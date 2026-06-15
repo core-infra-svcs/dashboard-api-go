@@ -4,11 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
-**UseOobMgmt** | Pointer to **bool** | Boolean value to use out-of-band management interface when configured | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
-**Switches** | Pointer to [**[]InlineResponse200181Switches**](InlineResponse200181Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
+**Id** | Pointer to **string** | device ID | [optional] 
+**SsidName** | Pointer to **string** | SSID name | [optional] 
+**Name** | Pointer to **string** | device name | [optional] 
+**Scope** | Pointer to **string** | scope | [optional] 
+**Tags** | Pointer to **[]string** | device tags | [optional] 
+**TimeboundType** | Pointer to **string** | type of access period, either a static range or a dynamic period | [optional] 
+**SendExpirationEmails** | Pointer to **bool** | Send Email Notifications | [optional] 
+**NotifyTimeBeforeAccessEnds** | Pointer to **int32** | Time before access expiration reminder email sends | [optional] 
+**AdditionalEmailText** | Pointer to **string** | Optional email text | [optional] 
+**AccessStartAt** | Pointer to **time.Time** | time that access starts | [optional] 
+**AccessEndAt** | Pointer to **time.Time** | time that access ends | [optional] 
 
 ## Methods
 
@@ -29,130 +35,280 @@ NewInlineResponse200181WithDefaults instantiates a new InlineResponse200181 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetId
 
-`func (o *InlineResponse200181) GetEnabled() bool`
+`func (o *InlineResponse200181) GetId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse200181) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200181) GetIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetId
 
-`func (o *InlineResponse200181) SetEnabled(v bool)`
+`func (o *InlineResponse200181) SetId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetId sets Id field to given value.
 
-### HasEnabled
+### HasId
 
-`func (o *InlineResponse200181) HasEnabled() bool`
+`func (o *InlineResponse200181) HasId() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUseOobMgmt
+### GetSsidName
 
-`func (o *InlineResponse200181) GetUseOobMgmt() bool`
+`func (o *InlineResponse200181) GetSsidName() string`
 
-GetUseOobMgmt returns the UseOobMgmt field if non-nil, zero value otherwise.
+GetSsidName returns the SsidName field if non-nil, zero value otherwise.
 
-### GetUseOobMgmtOk
+### GetSsidNameOk
 
-`func (o *InlineResponse200181) GetUseOobMgmtOk() (*bool, bool)`
+`func (o *InlineResponse200181) GetSsidNameOk() (*string, bool)`
 
-GetUseOobMgmtOk returns a tuple with the UseOobMgmt field if it's non-nil, zero value otherwise
+GetSsidNameOk returns a tuple with the SsidName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseOobMgmt
+### SetSsidName
 
-`func (o *InlineResponse200181) SetUseOobMgmt(v bool)`
+`func (o *InlineResponse200181) SetSsidName(v string)`
 
-SetUseOobMgmt sets UseOobMgmt field to given value.
+SetSsidName sets SsidName field to given value.
 
-### HasUseOobMgmt
+### HasSsidName
 
-`func (o *InlineResponse200181) HasUseOobMgmt() bool`
+`func (o *InlineResponse200181) HasSsidName() bool`
 
-HasUseOobMgmt returns a boolean if a field has been set.
+HasSsidName returns a boolean if a field has been set.
 
-### GetVlanId
+### GetName
 
-`func (o *InlineResponse200181) GetVlanId() int32`
+`func (o *InlineResponse200181) GetName() string`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetNameOk
 
-`func (o *InlineResponse200181) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineResponse200181) GetNameOk() (*string, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetName
 
-`func (o *InlineResponse200181) SetVlanId(v int32)`
+`func (o *InlineResponse200181) SetName(v string)`
 
-SetVlanId sets VlanId field to given value.
+SetName sets Name field to given value.
 
-### HasVlanId
+### HasName
 
-`func (o *InlineResponse200181) HasVlanId() bool`
+`func (o *InlineResponse200181) HasName() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetProtocols
+### GetScope
 
-`func (o *InlineResponse200181) GetProtocols() []string`
+`func (o *InlineResponse200181) GetScope() string`
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetProtocolsOk
+### GetScopeOk
 
-`func (o *InlineResponse200181) GetProtocolsOk() (*[]string, bool)`
+`func (o *InlineResponse200181) GetScopeOk() (*string, bool)`
 
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetScope
 
-`func (o *InlineResponse200181) SetProtocols(v []string)`
+`func (o *InlineResponse200181) SetScope(v string)`
 
-SetProtocols sets Protocols field to given value.
+SetScope sets Scope field to given value.
 
-### HasProtocols
+### HasScope
 
-`func (o *InlineResponse200181) HasProtocols() bool`
+`func (o *InlineResponse200181) HasScope() bool`
 
-HasProtocols returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
-### GetSwitches
+### GetTags
 
-`func (o *InlineResponse200181) GetSwitches() []InlineResponse200181Switches`
+`func (o *InlineResponse200181) GetTags() []string`
 
-GetSwitches returns the Switches field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetSwitchesOk
+### GetTagsOk
 
-`func (o *InlineResponse200181) GetSwitchesOk() (*[]InlineResponse200181Switches, bool)`
+`func (o *InlineResponse200181) GetTagsOk() (*[]string, bool)`
 
-GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitches
+### SetTags
 
-`func (o *InlineResponse200181) SetSwitches(v []InlineResponse200181Switches)`
+`func (o *InlineResponse200181) SetTags(v []string)`
 
-SetSwitches sets Switches field to given value.
+SetTags sets Tags field to given value.
 
-### HasSwitches
+### HasTags
 
-`func (o *InlineResponse200181) HasSwitches() bool`
+`func (o *InlineResponse200181) HasTags() bool`
 
-HasSwitches returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetTimeboundType
+
+`func (o *InlineResponse200181) GetTimeboundType() string`
+
+GetTimeboundType returns the TimeboundType field if non-nil, zero value otherwise.
+
+### GetTimeboundTypeOk
+
+`func (o *InlineResponse200181) GetTimeboundTypeOk() (*string, bool)`
+
+GetTimeboundTypeOk returns a tuple with the TimeboundType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeboundType
+
+`func (o *InlineResponse200181) SetTimeboundType(v string)`
+
+SetTimeboundType sets TimeboundType field to given value.
+
+### HasTimeboundType
+
+`func (o *InlineResponse200181) HasTimeboundType() bool`
+
+HasTimeboundType returns a boolean if a field has been set.
+
+### GetSendExpirationEmails
+
+`func (o *InlineResponse200181) GetSendExpirationEmails() bool`
+
+GetSendExpirationEmails returns the SendExpirationEmails field if non-nil, zero value otherwise.
+
+### GetSendExpirationEmailsOk
+
+`func (o *InlineResponse200181) GetSendExpirationEmailsOk() (*bool, bool)`
+
+GetSendExpirationEmailsOk returns a tuple with the SendExpirationEmails field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSendExpirationEmails
+
+`func (o *InlineResponse200181) SetSendExpirationEmails(v bool)`
+
+SetSendExpirationEmails sets SendExpirationEmails field to given value.
+
+### HasSendExpirationEmails
+
+`func (o *InlineResponse200181) HasSendExpirationEmails() bool`
+
+HasSendExpirationEmails returns a boolean if a field has been set.
+
+### GetNotifyTimeBeforeAccessEnds
+
+`func (o *InlineResponse200181) GetNotifyTimeBeforeAccessEnds() int32`
+
+GetNotifyTimeBeforeAccessEnds returns the NotifyTimeBeforeAccessEnds field if non-nil, zero value otherwise.
+
+### GetNotifyTimeBeforeAccessEndsOk
+
+`func (o *InlineResponse200181) GetNotifyTimeBeforeAccessEndsOk() (*int32, bool)`
+
+GetNotifyTimeBeforeAccessEndsOk returns a tuple with the NotifyTimeBeforeAccessEnds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotifyTimeBeforeAccessEnds
+
+`func (o *InlineResponse200181) SetNotifyTimeBeforeAccessEnds(v int32)`
+
+SetNotifyTimeBeforeAccessEnds sets NotifyTimeBeforeAccessEnds field to given value.
+
+### HasNotifyTimeBeforeAccessEnds
+
+`func (o *InlineResponse200181) HasNotifyTimeBeforeAccessEnds() bool`
+
+HasNotifyTimeBeforeAccessEnds returns a boolean if a field has been set.
+
+### GetAdditionalEmailText
+
+`func (o *InlineResponse200181) GetAdditionalEmailText() string`
+
+GetAdditionalEmailText returns the AdditionalEmailText field if non-nil, zero value otherwise.
+
+### GetAdditionalEmailTextOk
+
+`func (o *InlineResponse200181) GetAdditionalEmailTextOk() (*string, bool)`
+
+GetAdditionalEmailTextOk returns a tuple with the AdditionalEmailText field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdditionalEmailText
+
+`func (o *InlineResponse200181) SetAdditionalEmailText(v string)`
+
+SetAdditionalEmailText sets AdditionalEmailText field to given value.
+
+### HasAdditionalEmailText
+
+`func (o *InlineResponse200181) HasAdditionalEmailText() bool`
+
+HasAdditionalEmailText returns a boolean if a field has been set.
+
+### GetAccessStartAt
+
+`func (o *InlineResponse200181) GetAccessStartAt() time.Time`
+
+GetAccessStartAt returns the AccessStartAt field if non-nil, zero value otherwise.
+
+### GetAccessStartAtOk
+
+`func (o *InlineResponse200181) GetAccessStartAtOk() (*time.Time, bool)`
+
+GetAccessStartAtOk returns a tuple with the AccessStartAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessStartAt
+
+`func (o *InlineResponse200181) SetAccessStartAt(v time.Time)`
+
+SetAccessStartAt sets AccessStartAt field to given value.
+
+### HasAccessStartAt
+
+`func (o *InlineResponse200181) HasAccessStartAt() bool`
+
+HasAccessStartAt returns a boolean if a field has been set.
+
+### GetAccessEndAt
+
+`func (o *InlineResponse200181) GetAccessEndAt() time.Time`
+
+GetAccessEndAt returns the AccessEndAt field if non-nil, zero value otherwise.
+
+### GetAccessEndAtOk
+
+`func (o *InlineResponse200181) GetAccessEndAtOk() (*time.Time, bool)`
+
+GetAccessEndAtOk returns a tuple with the AccessEndAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessEndAt
+
+`func (o *InlineResponse200181) SetAccessEndAt(v time.Time)`
+
+SetAccessEndAt sets AccessEndAt field to given value.
+
+### HasAccessEndAt
+
+`func (o *InlineResponse200181) HasAccessEndAt() bool`
+
+HasAccessEndAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

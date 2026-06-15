@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Rules** | Pointer to [**[]DevicesSerialCellularGatewayPortForwardingRulesRules**](DevicesSerialCellularGatewayPortForwardingRulesRules.md) | An array of port forwarding params | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject18WithDefaults instantiates a new InlineObject18 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCallback
+### GetRules
 
-`func (o *InlineObject18) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+`func (o *InlineObject18) GetRules() []DevicesSerialCellularGatewayPortForwardingRulesRules`
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetCallbackOk
+### GetRulesOk
 
-`func (o *InlineObject18) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+`func (o *InlineObject18) GetRulesOk() (*[]DevicesSerialCellularGatewayPortForwardingRulesRules, bool)`
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetRules
 
-`func (o *InlineObject18) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+`func (o *InlineObject18) SetRules(v []DevicesSerialCellularGatewayPortForwardingRulesRules)`
 
-SetCallback sets Callback field to given value.
+SetRules sets Rules field to given value.
 
-### HasCallback
+### HasRules
 
-`func (o *InlineObject18) HasCallback() bool`
+`func (o *InlineObject18) HasRules() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

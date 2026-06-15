@@ -4,9 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
-**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
-**ProtectedNetworks** | Pointer to [**InlineResponse20083ProtectedNetworks**](InlineResponse20083ProtectedNetworks.md) |  | [optional] 
+**Number** | Pointer to **int32** | Number of the port | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Whether the trunk port can drop all untagged traffic. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of VLAN IDs and/or ranges (for example, &#39;2-10,15&#39;), or &#39;all&#39; to permit all VLANs on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. | [optional] 
+**Sgt** | Pointer to [**NetworksNetworkIdAppliancePortsSgt**](NetworksNetworkIdAppliancePortsSgt.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +32,205 @@ NewInlineResponse20084WithDefaults instantiates a new InlineResponse20084 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetNumber
 
-`func (o *InlineResponse20084) GetMode() string`
+`func (o *InlineResponse20084) GetNumber() int32`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNumberOk
 
-`func (o *InlineResponse20084) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20084) GetNumberOk() (*int32, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetNumber
 
-`func (o *InlineResponse20084) SetMode(v string)`
+`func (o *InlineResponse20084) SetNumber(v int32)`
 
-SetMode sets Mode field to given value.
+SetNumber sets Number field to given value.
 
-### HasMode
+### HasNumber
 
-`func (o *InlineResponse20084) HasMode() bool`
+`func (o *InlineResponse20084) HasNumber() bool`
 
-HasMode returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
 
-### GetIdsRulesets
+### GetEnabled
 
-`func (o *InlineResponse20084) GetIdsRulesets() string`
+`func (o *InlineResponse20084) GetEnabled() bool`
 
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdsRulesetsOk
+### GetEnabledOk
 
-`func (o *InlineResponse20084) GetIdsRulesetsOk() (*string, bool)`
+`func (o *InlineResponse20084) GetEnabledOk() (*bool, bool)`
 
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdsRulesets
+### SetEnabled
 
-`func (o *InlineResponse20084) SetIdsRulesets(v string)`
+`func (o *InlineResponse20084) SetEnabled(v bool)`
 
-SetIdsRulesets sets IdsRulesets field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasIdsRulesets
+### HasEnabled
 
-`func (o *InlineResponse20084) HasIdsRulesets() bool`
+`func (o *InlineResponse20084) HasEnabled() bool`
 
-HasIdsRulesets returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetProtectedNetworks
+### GetType
 
-`func (o *InlineResponse20084) GetProtectedNetworks() InlineResponse20083ProtectedNetworks`
+`func (o *InlineResponse20084) GetType() string`
 
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetProtectedNetworksOk
+### GetTypeOk
 
-`func (o *InlineResponse20084) GetProtectedNetworksOk() (*InlineResponse20083ProtectedNetworks, bool)`
+`func (o *InlineResponse20084) GetTypeOk() (*string, bool)`
 
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtectedNetworks
+### SetType
 
-`func (o *InlineResponse20084) SetProtectedNetworks(v InlineResponse20083ProtectedNetworks)`
+`func (o *InlineResponse20084) SetType(v string)`
 
-SetProtectedNetworks sets ProtectedNetworks field to given value.
+SetType sets Type field to given value.
 
-### HasProtectedNetworks
+### HasType
 
-`func (o *InlineResponse20084) HasProtectedNetworks() bool`
+`func (o *InlineResponse20084) HasType() bool`
 
-HasProtectedNetworks returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetDropUntaggedTraffic
+
+`func (o *InlineResponse20084) GetDropUntaggedTraffic() bool`
+
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
+
+### GetDropUntaggedTrafficOk
+
+`func (o *InlineResponse20084) GetDropUntaggedTrafficOk() (*bool, bool)`
+
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDropUntaggedTraffic
+
+`func (o *InlineResponse20084) SetDropUntaggedTraffic(v bool)`
+
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
+
+### HasDropUntaggedTraffic
+
+`func (o *InlineResponse20084) HasDropUntaggedTraffic() bool`
+
+HasDropUntaggedTraffic returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse20084) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse20084) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse20084) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse20084) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineResponse20084) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineResponse20084) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineResponse20084) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineResponse20084) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineResponse20084) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineResponse20084) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineResponse20084) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineResponse20084) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineResponse20084) GetSgt() NetworksNetworkIdAppliancePortsSgt`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineResponse20084) GetSgtOk() (*NetworksNetworkIdAppliancePortsSgt, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineResponse20084) SetSgt(v NetworksNetworkIdAppliancePortsSgt)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineResponse20084) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

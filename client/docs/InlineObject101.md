@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to claim | 
-**DetailsByDevice** | Pointer to [**[]NetworksNetworkIdDevicesClaimDetailsByDevice**](NetworksNetworkIdDevicesClaimDetailsByDevice.md) | Optional details for claimed devices (currently only used for Catalyst devices) | [optional] 
+**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
+**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject101
 
-`func NewInlineObject101(serials []string, ) *InlineObject101`
+`func NewInlineObject101(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid1, ) *InlineObject101`
 
 NewInlineObject101 instantiates a new InlineObject101 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,70 @@ NewInlineObject101WithDefaults instantiates a new InlineObject101 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject101) GetSerials() []string`
+`func (o *InlineObject101) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject101) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject101) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject101) SetSerials(v []string)`
+`func (o *InlineObject101) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
 
-### GetDetailsByDevice
+### GetSsid
 
-`func (o *InlineObject101) GetDetailsByDevice() []NetworksNetworkIdDevicesClaimDetailsByDevice`
+`func (o *InlineObject101) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid1`
 
-GetDetailsByDevice returns the DetailsByDevice field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetDetailsByDeviceOk
+### GetSsidOk
 
-`func (o *InlineObject101) GetDetailsByDeviceOk() (*[]NetworksNetworkIdDevicesClaimDetailsByDevice, bool)`
+`func (o *InlineObject101) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid1, bool)`
 
-GetDetailsByDeviceOk returns a tuple with the DetailsByDevice field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetailsByDevice
+### SetSsid
 
-`func (o *InlineObject101) SetDetailsByDevice(v []NetworksNetworkIdDevicesClaimDetailsByDevice)`
+`func (o *InlineObject101) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid1)`
 
-SetDetailsByDevice sets DetailsByDevice field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasDetailsByDevice
 
-`func (o *InlineObject101) HasDetailsByDevice() bool`
+### GetIdentity
 
-HasDetailsByDevice returns a boolean if a field has been set.
+`func (o *InlineObject101) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineObject101) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineObject101) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineObject101) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | List of updated AP serials | [optional] 
-**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
+**Id** | Pointer to **string** | The VLAN ID of the VLAN | [optional] 
+**InterfaceId** | Pointer to **string** | The interface ID of the VLAN | [optional] 
+**Name** | Pointer to **string** | The name of the VLAN | [optional] 
+**Subnet** | Pointer to **string** | The subnet of the VLAN | [optional] 
+**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the VLAN | [optional] 
+**GroupPolicyId** | Pointer to **string** | The id of the desired group policy to apply to the VLAN | [optional] 
+**TemplateVlanType** | Pointer to **string** | Type of subnetting of the VLAN. Applicable only for template network. | [optional] [default to "same"]
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
+**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
+**Sgt** | Pointer to [**NetworksNetworkIdApplianceVlansSgt**](NetworksNetworkIdApplianceVlansSgt.md) |  | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdApplianceVlansIpv6**](NetworksNetworkIdApplianceVlansIpv6.md) |  | [optional] 
+**Vrf** | Pointer to [**NetworksNetworkIdApplianceVlansVrf**](NetworksNetworkIdApplianceVlansVrf.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +37,330 @@ NewInlineResponse20117WithDefaults instantiates a new InlineResponse20117 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetId
 
-`func (o *InlineResponse20117) GetSerials() []string`
+`func (o *InlineResponse20117) GetId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetIdOk
 
-`func (o *InlineResponse20117) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20117) GetIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetId
 
-`func (o *InlineResponse20117) SetSerials(v []string)`
+`func (o *InlineResponse20117) SetId(v string)`
 
-SetSerials sets Serials field to given value.
+SetId sets Id field to given value.
 
-### HasSerials
+### HasId
 
-`func (o *InlineResponse20117) HasSerials() bool`
+`func (o *InlineResponse20117) HasId() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetProfileId
+### GetInterfaceId
 
-`func (o *InlineResponse20117) GetProfileId() string`
+`func (o *InlineResponse20117) GetInterfaceId() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetInterfaceIdOk
 
-`func (o *InlineResponse20117) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20117) GetInterfaceIdOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetInterfaceId
 
-`func (o *InlineResponse20117) SetProfileId(v string)`
+`func (o *InlineResponse20117) SetInterfaceId(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetInterfaceId sets InterfaceId field to given value.
 
-### HasProfileId
+### HasInterfaceId
 
-`func (o *InlineResponse20117) HasProfileId() bool`
+`func (o *InlineResponse20117) HasInterfaceId() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasInterfaceId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20117) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20117) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20117) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20117) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetSubnet
+
+`func (o *InlineResponse20117) GetSubnet() string`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineResponse20117) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineResponse20117) SetSubnet(v string)`
+
+SetSubnet sets Subnet field to given value.
+
+### HasSubnet
+
+`func (o *InlineResponse20117) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### GetApplianceIp
+
+`func (o *InlineResponse20117) GetApplianceIp() string`
+
+GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+
+### GetApplianceIpOk
+
+`func (o *InlineResponse20117) GetApplianceIpOk() (*string, bool)`
+
+GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplianceIp
+
+`func (o *InlineResponse20117) SetApplianceIp(v string)`
+
+SetApplianceIp sets ApplianceIp field to given value.
+
+### HasApplianceIp
+
+`func (o *InlineResponse20117) HasApplianceIp() bool`
+
+HasApplianceIp returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineResponse20117) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineResponse20117) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineResponse20117) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineResponse20117) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetTemplateVlanType
+
+`func (o *InlineResponse20117) GetTemplateVlanType() string`
+
+GetTemplateVlanType returns the TemplateVlanType field if non-nil, zero value otherwise.
+
+### GetTemplateVlanTypeOk
+
+`func (o *InlineResponse20117) GetTemplateVlanTypeOk() (*string, bool)`
+
+GetTemplateVlanTypeOk returns a tuple with the TemplateVlanType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTemplateVlanType
+
+`func (o *InlineResponse20117) SetTemplateVlanType(v string)`
+
+SetTemplateVlanType sets TemplateVlanType field to given value.
+
+### HasTemplateVlanType
+
+`func (o *InlineResponse20117) HasTemplateVlanType() bool`
+
+HasTemplateVlanType returns a boolean if a field has been set.
+
+### GetCidr
+
+`func (o *InlineResponse20117) GetCidr() string`
+
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
+
+### GetCidrOk
+
+`func (o *InlineResponse20117) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCidr
+
+`func (o *InlineResponse20117) SetCidr(v string)`
+
+SetCidr sets Cidr field to given value.
+
+### HasCidr
+
+`func (o *InlineResponse20117) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
+
+### GetMask
+
+`func (o *InlineResponse20117) GetMask() int32`
+
+GetMask returns the Mask field if non-nil, zero value otherwise.
+
+### GetMaskOk
+
+`func (o *InlineResponse20117) GetMaskOk() (*int32, bool)`
+
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMask
+
+`func (o *InlineResponse20117) SetMask(v int32)`
+
+SetMask sets Mask field to given value.
+
+### HasMask
+
+`func (o *InlineResponse20117) HasMask() bool`
+
+HasMask returns a boolean if a field has been set.
+
+### GetMandatoryDhcp
+
+`func (o *InlineResponse20117) GetMandatoryDhcp() NetworksNetworkIdApplianceVlansMandatoryDhcp`
+
+GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+
+### GetMandatoryDhcpOk
+
+`func (o *InlineResponse20117) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceVlansMandatoryDhcp, bool)`
+
+GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMandatoryDhcp
+
+`func (o *InlineResponse20117) SetMandatoryDhcp(v NetworksNetworkIdApplianceVlansMandatoryDhcp)`
+
+SetMandatoryDhcp sets MandatoryDhcp field to given value.
+
+### HasMandatoryDhcp
+
+`func (o *InlineResponse20117) HasMandatoryDhcp() bool`
+
+HasMandatoryDhcp returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineResponse20117) GetSgt() NetworksNetworkIdApplianceVlansSgt`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineResponse20117) GetSgtOk() (*NetworksNetworkIdApplianceVlansSgt, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineResponse20117) SetSgt(v NetworksNetworkIdApplianceVlansSgt)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineResponse20117) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineResponse20117) GetIpv6() NetworksNetworkIdApplianceVlansIpv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineResponse20117) GetIpv6Ok() (*NetworksNetworkIdApplianceVlansIpv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineResponse20117) SetIpv6(v NetworksNetworkIdApplianceVlansIpv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineResponse20117) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineResponse20117) GetVrf() NetworksNetworkIdApplianceVlansVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineResponse20117) GetVrfOk() (*NetworksNetworkIdApplianceVlansVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineResponse20117) SetVrf(v NetworksNetworkIdApplianceVlansVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineResponse20117) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

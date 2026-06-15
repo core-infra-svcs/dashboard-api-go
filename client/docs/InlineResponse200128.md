@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
-**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | The start time from which daily traffic data was collected | [optional] 
+**Application** | Pointer to **string** | The name of the application the client is connected to | [optional] 
+**Destination** | Pointer to **string** | The IP or web address the client is connected to | [optional] 
+**Protocol** | Pointer to **string** | The client protocol | [optional] 
+**Port** | Pointer to **int32** | The port the client is connected to | [optional] 
+**Recv** | Pointer to **float32** | Usage received by the client | [optional] 
+**Sent** | Pointer to **float32** | Usage sent by the client | [optional] 
+**NumFlows** | Pointer to **int32** | The number of flows the client has | [optional] 
+**ActiveSeconds** | Pointer to **int32** | The amount of seconds the client was active | [optional] 
 
 ## Methods
 
@@ -29,130 +33,230 @@ NewInlineResponse200128WithDefaults instantiates a new InlineResponse200128 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroupId
+### GetTs
 
-`func (o *InlineResponse200128) GetGroupId() string`
+`func (o *InlineResponse200128) GetTs() time.Time`
 
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetGroupIdOk
+### GetTsOk
 
-`func (o *InlineResponse200128) GetGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200128) GetTsOk() (*time.Time, bool)`
 
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupId
+### SetTs
 
-`func (o *InlineResponse200128) SetGroupId(v string)`
+`func (o *InlineResponse200128) SetTs(v time.Time)`
 
-SetGroupId sets GroupId field to given value.
+SetTs sets Ts field to given value.
 
-### HasGroupId
+### HasTs
 
-`func (o *InlineResponse200128) HasGroupId() bool`
+`func (o *InlineResponse200128) HasTs() bool`
 
-HasGroupId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetName
+### GetApplication
 
-`func (o *InlineResponse200128) GetName() string`
+`func (o *InlineResponse200128) GetApplication() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetApplication returns the Application field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetApplicationOk
 
-`func (o *InlineResponse200128) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200128) GetApplicationOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetApplication
 
-`func (o *InlineResponse200128) SetName(v string)`
+`func (o *InlineResponse200128) SetApplication(v string)`
 
-SetName sets Name field to given value.
+SetApplication sets Application field to given value.
 
-### HasName
+### HasApplication
 
-`func (o *InlineResponse200128) HasName() bool`
+`func (o *InlineResponse200128) HasApplication() bool`
 
-HasName returns a boolean if a field has been set.
+HasApplication returns a boolean if a field has been set.
 
-### GetDescription
+### GetDestination
 
-`func (o *InlineResponse200128) GetDescription() string`
+`func (o *InlineResponse200128) GetDestination() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetDestinationOk
 
-`func (o *InlineResponse200128) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200128) GetDestinationOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetDestination
 
-`func (o *InlineResponse200128) SetDescription(v string)`
+`func (o *InlineResponse200128) SetDestination(v string)`
 
-SetDescription sets Description field to given value.
+SetDestination sets Destination field to given value.
 
-### HasDescription
+### HasDestination
 
-`func (o *InlineResponse200128) HasDescription() bool`
+`func (o *InlineResponse200128) HasDestination() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasDestination returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetProtocol
 
-`func (o *InlineResponse200128) GetIsDefault() bool`
+`func (o *InlineResponse200128) GetProtocol() string`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetProtocolOk
 
-`func (o *InlineResponse200128) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200128) GetProtocolOk() (*string, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetProtocol
 
-`func (o *InlineResponse200128) SetIsDefault(v bool)`
+`func (o *InlineResponse200128) SetProtocol(v string)`
 
-SetIsDefault sets IsDefault field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasIsDefault
+### HasProtocol
 
-`func (o *InlineResponse200128) HasIsDefault() bool`
+`func (o *InlineResponse200128) HasProtocol() bool`
 
-HasIsDefault returns a boolean if a field has been set.
+HasProtocol returns a boolean if a field has been set.
 
-### GetAssignedDevices
+### GetPort
 
-`func (o *InlineResponse200128) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
+`func (o *InlineResponse200128) GetPort() int32`
 
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetAssignedDevicesOk
+### GetPortOk
 
-`func (o *InlineResponse200128) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
+`func (o *InlineResponse200128) GetPortOk() (*int32, bool)`
 
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignedDevices
+### SetPort
 
-`func (o *InlineResponse200128) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
+`func (o *InlineResponse200128) SetPort(v int32)`
 
-SetAssignedDevices sets AssignedDevices field to given value.
+SetPort sets Port field to given value.
 
-### HasAssignedDevices
+### HasPort
 
-`func (o *InlineResponse200128) HasAssignedDevices() bool`
+`func (o *InlineResponse200128) HasPort() bool`
 
-HasAssignedDevices returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse200128) GetRecv() float32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse200128) GetRecvOk() (*float32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse200128) SetRecv(v float32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse200128) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse200128) GetSent() float32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse200128) GetSentOk() (*float32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse200128) SetSent(v float32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse200128) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetNumFlows
+
+`func (o *InlineResponse200128) GetNumFlows() int32`
+
+GetNumFlows returns the NumFlows field if non-nil, zero value otherwise.
+
+### GetNumFlowsOk
+
+`func (o *InlineResponse200128) GetNumFlowsOk() (*int32, bool)`
+
+GetNumFlowsOk returns a tuple with the NumFlows field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumFlows
+
+`func (o *InlineResponse200128) SetNumFlows(v int32)`
+
+SetNumFlows sets NumFlows field to given value.
+
+### HasNumFlows
+
+`func (o *InlineResponse200128) HasNumFlows() bool`
+
+HasNumFlows returns a boolean if a field has been set.
+
+### GetActiveSeconds
+
+`func (o *InlineResponse200128) GetActiveSeconds() int32`
+
+GetActiveSeconds returns the ActiveSeconds field if non-nil, zero value otherwise.
+
+### GetActiveSecondsOk
+
+`func (o *InlineResponse200128) GetActiveSecondsOk() (*int32, bool)`
+
+GetActiveSecondsOk returns a tuple with the ActiveSeconds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActiveSeconds
+
+`func (o *InlineResponse200128) SetActiveSeconds(v int32)`
+
+SetActiveSeconds sets ActiveSeconds field to given value.
+
+### HasActiveSeconds
+
+`func (o *InlineResponse200128) HasActiveSeconds() bool`
+
+HasActiveSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

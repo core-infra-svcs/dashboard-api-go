@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RulesetId** | **string** | ID of the ruleset to assign | 
-**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Name** | **string** | The name of the combined network | 
+**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
 
 ## Methods
 
 ### NewInlineObject309
 
-`func NewInlineObject309(rulesetId string, policyId string, ) *InlineObject309`
+`func NewInlineObject309(name string, networkIds []string, ) *InlineObject309`
 
 NewInlineObject309 instantiates a new InlineObject309 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +27,70 @@ NewInlineObject309WithDefaults instantiates a new InlineObject309 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRulesetId
+### GetName
 
-`func (o *InlineObject309) GetRulesetId() string`
+`func (o *InlineObject309) GetName() string`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetNameOk
 
-`func (o *InlineObject309) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject309) GetNameOk() (*string, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetName
 
-`func (o *InlineObject309) SetRulesetId(v string)`
+`func (o *InlineObject309) SetName(v string)`
 
-SetRulesetId sets RulesetId field to given value.
+SetName sets Name field to given value.
 
 
-### GetPolicyId
+### GetNetworkIds
 
-`func (o *InlineObject309) GetPolicyId() string`
+`func (o *InlineObject309) GetNetworkIds() []string`
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetPolicyIdOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject309) GetPolicyIdOk() (*string, bool)`
+`func (o *InlineObject309) GetNetworkIdsOk() (*[]string, bool)`
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetNetworkIds
 
-`func (o *InlineObject309) SetPolicyId(v string)`
+`func (o *InlineObject309) SetNetworkIds(v []string)`
 
-SetPolicyId sets PolicyId field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
 
-### GetPriority
+### GetEnrollmentString
 
-`func (o *InlineObject309) GetPriority() int32`
+`func (o *InlineObject309) GetEnrollmentString() string`
 
-GetPriority returns the Priority field if non-nil, zero value otherwise.
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-### GetPriorityOk
+### GetEnrollmentStringOk
 
-`func (o *InlineObject309) GetPriorityOk() (*int32, bool)`
+`func (o *InlineObject309) GetEnrollmentStringOk() (*string, bool)`
 
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPriority
+### SetEnrollmentString
 
-`func (o *InlineObject309) SetPriority(v int32)`
+`func (o *InlineObject309) SetEnrollmentString(v string)`
 
-SetPriority sets Priority field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
-### HasPriority
+### HasEnrollmentString
 
-`func (o *InlineObject309) HasPriority() bool`
+`func (o *InlineObject309) HasEnrollmentString() bool`
 
-HasPriority returns a boolean if a field has been set.
+HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessMqttSettings
 
-> InlineResponse200448 GetOrganizationWirelessMqttSettings(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200460 GetOrganizationWirelessMqttSettings(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Return MQTT Settings for networks
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MqttApi.GetOrganizationWirelessMqttSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessMqttSettings`: InlineResponse200448
+    // response from `GetOrganizationWirelessMqttSettings`: InlineResponse200460
     fmt.Fprintf(os.Stdout, "Response from `MqttApi.GetOrganizationWirelessMqttSettings`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200448**](InlineResponse200448.md)
+[**InlineResponse200460**](InlineResponse200460.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessMqttSettings
 
-> InlineResponse200448Items UpdateOrganizationWirelessMqttSettings(ctx, organizationId).UpdateOrganizationWirelessMqttSettings(updateOrganizationWirelessMqttSettings).Execute()
+> InlineResponse200460Items UpdateOrganizationWirelessMqttSettings(ctx, organizationId).UpdateOrganizationWirelessMqttSettings(updateOrganizationWirelessMqttSettings).Execute()
 
 Add new broker config for wireless MQTT
 
@@ -109,7 +109,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationWirelessMqttSettings := *openapiclient.NewInlineObject338(*openapiclient.NewOrganizationsOrganizationIdWirelessMqttSettingsNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdWirelessMqttSettingsMqtt(false)) // InlineObject338 | 
+    updateOrganizationWirelessMqttSettings := *openapiclient.NewInlineObject349(*openapiclient.NewOrganizationsOrganizationIdWirelessMqttSettingsNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdWirelessMqttSettingsMqtt(false)) // InlineObject349 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MqttApi.UpdateOrganizationWirelessMqttSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessMqttSettings`: InlineResponse200448Items
+    // response from `UpdateOrganizationWirelessMqttSettings`: InlineResponse200460Items
     fmt.Fprintf(os.Stdout, "Response from `MqttApi.UpdateOrganizationWirelessMqttSettings`: %v\n", resp)
 }
 ```
@@ -139,11 +139,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationWirelessMqttSettings** | [**InlineObject338**](InlineObject338.md) |  | 
+ **updateOrganizationWirelessMqttSettings** | [**InlineObject349**](InlineObject349.md) |  | 
 
 ### Return type
 
-[**InlineResponse200448Items**](InlineResponse200448Items.md)
+[**InlineResponse200460Items**](InlineResponse200460Items.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchQosRulesOrder
 
-> InlineResponse200191 GetNetworkSwitchQosRulesOrder(ctx, networkId).Execute()
+> InlineResponse200199 GetNetworkSwitchQosRulesOrder(ctx, networkId).Execute()
 
 Return the quality of service rule IDs by order in which they will be processed by the switch
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OrderApi.GetNetworkSwitchQosRulesOrder``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchQosRulesOrder`: InlineResponse200191
+    // response from `GetNetworkSwitchQosRulesOrder`: InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `OrderApi.GetNetworkSwitchQosRulesOrder`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200191**](InlineResponse200191.md)
+[**InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchQosRulesOrder
 
-> InlineResponse200191 UpdateNetworkSwitchQosRulesOrder(ctx, networkId).UpdateNetworkSwitchQosRulesOrder(updateNetworkSwitchQosRulesOrder).Execute()
+> InlineResponse200199 UpdateNetworkSwitchQosRulesOrder(ctx, networkId).UpdateNetworkSwitchQosRulesOrder(updateNetworkSwitchQosRulesOrder).Execute()
 
 Update the order in which the rules should be processed by the switch
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject158([]string{"RuleIds_example"}) // InlineObject158 | 
+    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject169([]string{"RuleIds_example"}) // InlineObject169 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OrderApi.UpdateNetworkSwitchQosRulesOrder``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchQosRulesOrder`: InlineResponse200191
+    // response from `UpdateNetworkSwitchQosRulesOrder`: InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `OrderApi.UpdateNetworkSwitchQosRulesOrder`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchQosRulesOrder** | [**InlineObject158**](InlineObject158.md) |  | 
+ **updateNetworkSwitchQosRulesOrder** | [**InlineObject169**](InlineObject169.md) |  | 
 
 ### Return type
 
-[**InlineResponse200191**](InlineResponse200191.md)
+[**InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 

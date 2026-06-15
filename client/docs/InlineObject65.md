@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Set mode to &#39;disabled&#39;/&#39;detection&#39;/&#39;prevention&#39; (optional - omitting will leave current config unchanged) | [optional] 
-**IdsRulesets** | Pointer to **string** | Set the detection ruleset &#39;connectivity&#39;/&#39;balanced&#39;/&#39;security&#39; (optional - omitting will leave current config unchanged). Default value is &#39;balanced&#39; if none currently saved | [optional] 
-**ProtectedNetworks** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks**](NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks.md) |  | [optional] 
+**Port** | Pointer to [**NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort**](NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort.md) |  | [optional] 
+**Ipv4** | Pointer to [**InlineResponse20116Ipv4**](InlineResponse20116Ipv4.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject65WithDefaults instantiates a new InlineObject65 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetPort
 
-`func (o *InlineObject65) GetMode() string`
+`func (o *InlineObject65) GetPort() NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetPortOk
 
-`func (o *InlineObject65) GetModeOk() (*string, bool)`
+`func (o *InlineObject65) GetPortOk() (*NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetPort
 
-`func (o *InlineObject65) SetMode(v string)`
+`func (o *InlineObject65) SetPort(v NetworksNetworkIdApplianceInterfacesL3InterfaceIdPort)`
 
-SetMode sets Mode field to given value.
+SetPort sets Port field to given value.
 
-### HasMode
+### HasPort
 
-`func (o *InlineObject65) HasMode() bool`
+`func (o *InlineObject65) HasPort() bool`
 
-HasMode returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
-### GetIdsRulesets
+### GetIpv4
 
-`func (o *InlineObject65) GetIdsRulesets() string`
+`func (o *InlineObject65) GetIpv4() InlineResponse20116Ipv4`
 
-GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-### GetIdsRulesetsOk
+### GetIpv4Ok
 
-`func (o *InlineObject65) GetIdsRulesetsOk() (*string, bool)`
+`func (o *InlineObject65) GetIpv4Ok() (*InlineResponse20116Ipv4, bool)`
 
-GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdsRulesets
+### SetIpv4
 
-`func (o *InlineObject65) SetIdsRulesets(v string)`
+`func (o *InlineObject65) SetIpv4(v InlineResponse20116Ipv4)`
 
-SetIdsRulesets sets IdsRulesets field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasIdsRulesets
+### HasIpv4
 
-`func (o *InlineObject65) HasIdsRulesets() bool`
+`func (o *InlineObject65) HasIpv4() bool`
 
-HasIdsRulesets returns a boolean if a field has been set.
-
-### GetProtectedNetworks
-
-`func (o *InlineObject65) GetProtectedNetworks() NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks`
-
-GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
-
-### GetProtectedNetworksOk
-
-`func (o *InlineObject65) GetProtectedNetworksOk() (*NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks, bool)`
-
-GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtectedNetworks
-
-`func (o *InlineObject65) SetProtectedNetworks(v NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks)`
-
-SetProtectedNetworks sets ProtectedNetworks field to given value.
-
-### HasProtectedNetworks
-
-`func (o *InlineObject65) HasProtectedNetworks() bool`
-
-HasProtectedNetworks returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

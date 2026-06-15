@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMac** | Pointer to **string** | The wifiMac of the device to be modified. | [optional] 
-**Id** | Pointer to **string** | The id of the device to be modified. | [optional] 
-**Serial** | Pointer to **string** | The serial of the device to be modified. | [optional] 
-**DeviceFields** | [**NetworksNetworkIdSmDevicesFieldsDeviceFields**](NetworksNetworkIdSmDevicesFieldsDeviceFields.md) |  | 
+**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
+**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
 
 ## Methods
 
 ### NewInlineObject132
 
-`func NewInlineObject132(deviceFields NetworksNetworkIdSmDevicesFieldsDeviceFields, ) *InlineObject132`
+`func NewInlineObject132() *InlineObject132`
 
 NewInlineObject132 instantiates a new InlineObject132 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +28,105 @@ NewInlineObject132WithDefaults instantiates a new InlineObject132 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMac
+### GetName
 
-`func (o *InlineObject132) GetWifiMac() string`
+`func (o *InlineObject132) GetName() string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetNameOk
 
-`func (o *InlineObject132) GetWifiMacOk() (*string, bool)`
+`func (o *InlineObject132) GetNameOk() (*string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetName
 
-`func (o *InlineObject132) SetWifiMac(v string)`
+`func (o *InlineObject132) SetName(v string)`
 
-SetWifiMac sets WifiMac field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMac
+### HasName
 
-`func (o *InlineObject132) HasWifiMac() bool`
+`func (o *InlineObject132) HasName() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetId
+### GetPassword
 
-`func (o *InlineObject132) GetId() string`
+`func (o *InlineObject132) GetPassword() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetPassword returns the Password field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetPasswordOk
 
-`func (o *InlineObject132) GetIdOk() (*string, bool)`
+`func (o *InlineObject132) GetPasswordOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetPassword
 
-`func (o *InlineObject132) SetId(v string)`
+`func (o *InlineObject132) SetPassword(v string)`
 
-SetId sets Id field to given value.
+SetPassword sets Password field to given value.
 
-### HasId
+### HasPassword
 
-`func (o *InlineObject132) HasId() bool`
+`func (o *InlineObject132) HasPassword() bool`
 
-HasId returns a boolean if a field has been set.
+HasPassword returns a boolean if a field has been set.
 
-### GetSerial
+### GetEmailPasswordToUser
 
-`func (o *InlineObject132) GetSerial() string`
+`func (o *InlineObject132) GetEmailPasswordToUser() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEmailPasswordToUserOk
 
-`func (o *InlineObject132) GetSerialOk() (*string, bool)`
+`func (o *InlineObject132) GetEmailPasswordToUserOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEmailPasswordToUser
 
-`func (o *InlineObject132) SetSerial(v string)`
+`func (o *InlineObject132) SetEmailPasswordToUser(v bool)`
 
-SetSerial sets Serial field to given value.
+SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
 
-### HasSerial
+### HasEmailPasswordToUser
 
-`func (o *InlineObject132) HasSerial() bool`
+`func (o *InlineObject132) HasEmailPasswordToUser() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasEmailPasswordToUser returns a boolean if a field has been set.
 
-### GetDeviceFields
+### GetAuthorizations
 
-`func (o *InlineObject132) GetDeviceFields() NetworksNetworkIdSmDevicesFieldsDeviceFields`
+`func (o *InlineObject132) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
 
-GetDeviceFields returns the DeviceFields field if non-nil, zero value otherwise.
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
-### GetDeviceFieldsOk
+### GetAuthorizationsOk
 
-`func (o *InlineObject132) GetDeviceFieldsOk() (*NetworksNetworkIdSmDevicesFieldsDeviceFields, bool)`
+`func (o *InlineObject132) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
 
-GetDeviceFieldsOk returns a tuple with the DeviceFields field if it's non-nil, zero value otherwise
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceFields
+### SetAuthorizations
 
-`func (o *InlineObject132) SetDeviceFields(v NetworksNetworkIdSmDevicesFieldsDeviceFields)`
+`func (o *InlineObject132) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
 
-SetDeviceFields sets DeviceFields field to given value.
+SetAuthorizations sets Authorizations field to given value.
 
+### HasAuthorizations
+
+`func (o *InlineObject132) HasAuthorizations() bool`
+
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | The ID of the adaptive policy group | [optional] 
-**Name** | Pointer to **string** | The name of the adaptive policy group | [optional] 
-**Sgt** | Pointer to **int32** | The security group tag for the adaptive policy group | [optional] 
-**Description** | Pointer to **string** | The description for the adaptive policy group | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects for the adaptive policy group | [optional] 
-**IsDefaultGroup** | Pointer to **bool** | Whether the adaptive policy group is the default group | [optional] 
-**RequiredIpMappings** | Pointer to **[]string** | List of required IP mappings for the adaptive policy group | [optional] 
-**CreatedAt** | Pointer to **string** | Created at timestamp for the adaptive policy group | [optional] 
-**UpdatedAt** | Pointer to **string** | Updated at timestamp for the adaptive policy group | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200251Ranges**](InlineResponse200251Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200251RangesInSeconds**](InlineResponse200251RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -33,230 +27,80 @@ NewInlineResponse200251WithDefaults instantiates a new InlineResponse200251 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroupId
+### GetEnabled
 
-`func (o *InlineResponse200251) GetGroupId() string`
+`func (o *InlineResponse200251) GetEnabled() bool`
 
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetGroupIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200251) GetGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200251) GetEnabledOk() (*bool, bool)`
 
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupId
+### SetEnabled
 
-`func (o *InlineResponse200251) SetGroupId(v string)`
+`func (o *InlineResponse200251) SetEnabled(v bool)`
 
-SetGroupId sets GroupId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasGroupId
+### HasEnabled
 
-`func (o *InlineResponse200251) HasGroupId() bool`
+`func (o *InlineResponse200251) HasEnabled() bool`
 
-HasGroupId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetRanges
 
-`func (o *InlineResponse200251) GetName() string`
+`func (o *InlineResponse200251) GetRanges() []InlineResponse200251Ranges`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRangesOk
 
-`func (o *InlineResponse200251) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200251) GetRangesOk() (*[]InlineResponse200251Ranges, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRanges
 
-`func (o *InlineResponse200251) SetName(v string)`
+`func (o *InlineResponse200251) SetRanges(v []InlineResponse200251Ranges)`
 
-SetName sets Name field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasName
+### HasRanges
 
-`func (o *InlineResponse200251) HasName() bool`
+`func (o *InlineResponse200251) HasRanges() bool`
 
-HasName returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetSgt
+### GetRangesInSeconds
 
-`func (o *InlineResponse200251) GetSgt() int32`
+`func (o *InlineResponse200251) GetRangesInSeconds() []InlineResponse200251RangesInSeconds`
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetSgtOk
+### GetRangesInSecondsOk
 
-`func (o *InlineResponse200251) GetSgtOk() (*int32, bool)`
+`func (o *InlineResponse200251) GetRangesInSecondsOk() (*[]InlineResponse200251RangesInSeconds, bool)`
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetRangesInSeconds
 
-`func (o *InlineResponse200251) SetSgt(v int32)`
+`func (o *InlineResponse200251) SetRangesInSeconds(v []InlineResponse200251RangesInSeconds)`
 
-SetSgt sets Sgt field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasSgt
+### HasRangesInSeconds
 
-`func (o *InlineResponse200251) HasSgt() bool`
+`func (o *InlineResponse200251) HasRangesInSeconds() bool`
 
-HasSgt returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200251) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200251) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200251) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200251) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetPolicyObjects
-
-`func (o *InlineResponse200251) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
-
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
-
-### GetPolicyObjectsOk
-
-`func (o *InlineResponse200251) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
-
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicyObjects
-
-`func (o *InlineResponse200251) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
-
-SetPolicyObjects sets PolicyObjects field to given value.
-
-### HasPolicyObjects
-
-`func (o *InlineResponse200251) HasPolicyObjects() bool`
-
-HasPolicyObjects returns a boolean if a field has been set.
-
-### GetIsDefaultGroup
-
-`func (o *InlineResponse200251) GetIsDefaultGroup() bool`
-
-GetIsDefaultGroup returns the IsDefaultGroup field if non-nil, zero value otherwise.
-
-### GetIsDefaultGroupOk
-
-`func (o *InlineResponse200251) GetIsDefaultGroupOk() (*bool, bool)`
-
-GetIsDefaultGroupOk returns a tuple with the IsDefaultGroup field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefaultGroup
-
-`func (o *InlineResponse200251) SetIsDefaultGroup(v bool)`
-
-SetIsDefaultGroup sets IsDefaultGroup field to given value.
-
-### HasIsDefaultGroup
-
-`func (o *InlineResponse200251) HasIsDefaultGroup() bool`
-
-HasIsDefaultGroup returns a boolean if a field has been set.
-
-### GetRequiredIpMappings
-
-`func (o *InlineResponse200251) GetRequiredIpMappings() []string`
-
-GetRequiredIpMappings returns the RequiredIpMappings field if non-nil, zero value otherwise.
-
-### GetRequiredIpMappingsOk
-
-`func (o *InlineResponse200251) GetRequiredIpMappingsOk() (*[]string, bool)`
-
-GetRequiredIpMappingsOk returns a tuple with the RequiredIpMappings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequiredIpMappings
-
-`func (o *InlineResponse200251) SetRequiredIpMappings(v []string)`
-
-SetRequiredIpMappings sets RequiredIpMappings field to given value.
-
-### HasRequiredIpMappings
-
-`func (o *InlineResponse200251) HasRequiredIpMappings() bool`
-
-HasRequiredIpMappings returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200251) GetCreatedAt() string`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200251) GetCreatedAtOk() (*string, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200251) SetCreatedAt(v string)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200251) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200251) GetUpdatedAt() string`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200251) GetUpdatedAtOk() (*string, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200251) SetUpdatedAt(v string)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200251) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

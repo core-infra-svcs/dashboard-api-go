@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationInventoryDevicesEoxOverview
 
-> InlineResponse200357 GetOrganizationInventoryDevicesEoxOverview(ctx, organizationId).Execute()
+> InlineResponse200369 GetOrganizationInventoryDevicesEoxOverview(ctx, organizationId).Execute()
 
 Fetch the EOX summary for an organization, including counts of devices that are end-of-sale, end-of-support, and end-of-support-soon.
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EoxApi.GetOrganizationInventoryDevicesEoxOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevicesEoxOverview`: InlineResponse200357
+    // response from `GetOrganizationInventoryDevicesEoxOverview`: InlineResponse200369
     fmt.Fprintf(os.Stdout, "Response from `EoxApi.GetOrganizationInventoryDevicesEoxOverview`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200357**](InlineResponse200357.md)
+[**InlineResponse200369**](InlineResponse200369.md)
 
 ### Authorization
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Collect location and scanning analytics | [optional] 
-**Api** | Pointer to [**NetworksNetworkIdWirelessLocationScanningApi**](NetworksNetworkIdWirelessLocationScanningApi.md) |  | [optional] 
+**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
+**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
 
 ## Methods
 
 ### NewInlineObject197
 
-`func NewInlineObject197() *InlineObject197`
+`func NewInlineObject197(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject197`
 
 NewInlineObject197 instantiates a new InlineObject197 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject197WithDefaults instantiates a new InlineObject197 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetType
 
-`func (o *InlineObject197) GetEnabled() bool`
+`func (o *InlineObject197) GetType() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTypeOk
 
-`func (o *InlineObject197) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject197) GetTypeOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetType
 
-`func (o *InlineObject197) SetEnabled(v bool)`
+`func (o *InlineObject197) SetType(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetType sets Type field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject197) HasEnabled() bool`
+### GetMatch
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject197) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
 
-### GetApi
+GetMatch returns the Match field if non-nil, zero value otherwise.
 
-`func (o *InlineObject197) GetApi() NetworksNetworkIdWirelessLocationScanningApi`
+### GetMatchOk
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+`func (o *InlineObject197) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
 
-### GetApiOk
-
-`func (o *InlineObject197) GetApiOk() (*NetworksNetworkIdWirelessLocationScanningApi, bool)`
-
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetMatch
 
-`func (o *InlineObject197) SetApi(v NetworksNetworkIdWirelessLocationScanningApi)`
+`func (o *InlineObject197) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
 
-SetApi sets Api field to given value.
+SetMatch sets Match field to given value.
 
-### HasApi
-
-`func (o *InlineObject197) HasApi() bool`
-
-HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

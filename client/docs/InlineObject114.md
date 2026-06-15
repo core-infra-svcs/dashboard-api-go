@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | Pointer to [**[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices**](NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices.md) | The list of devices to publish positions for | [optional] 
+**Serial** | **string** | The serial of a device | 
 
 ## Methods
 
 ### NewInlineObject114
 
-`func NewInlineObject114() *InlineObject114`
+`func NewInlineObject114(serial string, ) *InlineObject114`
 
 NewInlineObject114 instantiates a new InlineObject114 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject114WithDefaults instantiates a new InlineObject114 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetSerial
 
-`func (o *InlineObject114) GetDevices() []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices`
+`func (o *InlineObject114) GetSerial() string`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetSerialOk
 
-`func (o *InlineObject114) GetDevicesOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices, bool)`
+`func (o *InlineObject114) GetSerialOk() (*string, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetSerial
 
-`func (o *InlineObject114) SetDevices(v []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices)`
+`func (o *InlineObject114) SetSerial(v string)`
 
-SetDevices sets Devices field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDevices
-
-`func (o *InlineObject114) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

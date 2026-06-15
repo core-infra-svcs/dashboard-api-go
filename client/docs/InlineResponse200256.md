@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The alert config ID | [optional] 
-**Type** | Pointer to **string** | The alert type | [optional] 
-**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
-**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | [optional] 
-**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
-**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
+**Privacy** | Pointer to **map[string]interface{}** | Privacy-related settings for the organization. | [optional] 
 
 ## Methods
 
@@ -56,155 +57,180 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetType
+### GetName
 
-`func (o *InlineResponse200256) GetType() string`
+`func (o *InlineResponse200256) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineResponse200256) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200256) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineResponse200256) SetType(v string)`
+`func (o *InlineResponse200256) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
-### HasType
+### HasName
 
-`func (o *InlineResponse200256) HasType() bool`
+`func (o *InlineResponse200256) HasName() bool`
 
-HasType returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetEnabled
+### GetUrl
 
-`func (o *InlineResponse200256) GetEnabled() bool`
+`func (o *InlineResponse200256) GetUrl() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetUrlOk
 
-`func (o *InlineResponse200256) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200256) GetUrlOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetUrl
 
-`func (o *InlineResponse200256) SetEnabled(v bool)`
+`func (o *InlineResponse200256) SetUrl(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetUrl sets Url field to given value.
 
-### HasEnabled
+### HasUrl
 
-`func (o *InlineResponse200256) HasEnabled() bool`
+`func (o *InlineResponse200256) HasUrl() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetAlertCondition
+### GetApi
 
-`func (o *InlineResponse200256) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
+`func (o *InlineResponse200256) GetApi() OrganizationsApi`
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetAlertConditionOk
+### GetApiOk
 
-`func (o *InlineResponse200256) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
+`func (o *InlineResponse200256) GetApiOk() (*OrganizationsApi, bool)`
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetApi
 
-`func (o *InlineResponse200256) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
+`func (o *InlineResponse200256) SetApi(v OrganizationsApi)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetApi sets Api field to given value.
 
-### HasAlertCondition
+### HasApi
 
-`func (o *InlineResponse200256) HasAlertCondition() bool`
+`func (o *InlineResponse200256) HasApi() bool`
 
-HasAlertCondition returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
-### GetRecipients
+### GetLicensing
 
-`func (o *InlineResponse200256) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+`func (o *InlineResponse200256) GetLicensing() OrganizationsLicensing`
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
 
-### GetRecipientsOk
+### GetLicensingOk
 
-`func (o *InlineResponse200256) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+`func (o *InlineResponse200256) GetLicensingOk() (*OrganizationsLicensing, bool)`
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetLicensing
 
-`func (o *InlineResponse200256) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+`func (o *InlineResponse200256) SetLicensing(v OrganizationsLicensing)`
 
-SetRecipients sets Recipients field to given value.
+SetLicensing sets Licensing field to given value.
 
-### HasRecipients
+### HasLicensing
 
-`func (o *InlineResponse200256) HasRecipients() bool`
+`func (o *InlineResponse200256) HasLicensing() bool`
 
-HasRecipients returns a boolean if a field has been set.
+HasLicensing returns a boolean if a field has been set.
 
-### GetNetworkTags
+### GetCloud
 
-`func (o *InlineResponse200256) GetNetworkTags() []string`
+`func (o *InlineResponse200256) GetCloud() OrganizationsCloud`
 
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
 
-### GetNetworkTagsOk
+### GetCloudOk
 
-`func (o *InlineResponse200256) GetNetworkTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200256) GetCloudOk() (*OrganizationsCloud, bool)`
 
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkTags
+### SetCloud
 
-`func (o *InlineResponse200256) SetNetworkTags(v []string)`
+`func (o *InlineResponse200256) SetCloud(v OrganizationsCloud)`
 
-SetNetworkTags sets NetworkTags field to given value.
+SetCloud sets Cloud field to given value.
 
-### HasNetworkTags
+### HasCloud
 
-`func (o *InlineResponse200256) HasNetworkTags() bool`
+`func (o *InlineResponse200256) HasCloud() bool`
 
-HasNetworkTags returns a boolean if a field has been set.
+HasCloud returns a boolean if a field has been set.
 
-### GetDescription
+### GetManagement
 
-`func (o *InlineResponse200256) GetDescription() string`
+`func (o *InlineResponse200256) GetManagement() OrganizationsManagement`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetManagementOk
 
-`func (o *InlineResponse200256) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200256) GetManagementOk() (*OrganizationsManagement, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetManagement
 
-`func (o *InlineResponse200256) SetDescription(v string)`
+`func (o *InlineResponse200256) SetManagement(v OrganizationsManagement)`
 
-SetDescription sets Description field to given value.
+SetManagement sets Management field to given value.
 
-### HasDescription
+### HasManagement
 
-`func (o *InlineResponse200256) HasDescription() bool`
+`func (o *InlineResponse200256) HasManagement() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
+
+### GetPrivacy
+
+`func (o *InlineResponse200256) GetPrivacy() map[string]interface{}`
+
+GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
+
+### GetPrivacyOk
+
+`func (o *InlineResponse200256) GetPrivacyOk() (*map[string]interface{}, bool)`
+
+GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrivacy
+
+`func (o *InlineResponse200256) SetPrivacy(v map[string]interface{})`
+
+SetPrivacy sets Privacy field to given value.
+
+### HasPrivacy
+
+`func (o *InlineResponse200256) HasPrivacy() bool`
+
+HasPrivacy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

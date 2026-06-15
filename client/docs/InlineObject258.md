@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
-**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
+**AlertIds** | **[]string** | Array of alert IDs to dismiss | 
 
 ## Methods
 
 ### NewInlineObject258
 
-`func NewInlineObject258() *InlineObject258`
+`func NewInlineObject258(alertIds []string, ) *InlineObject258`
 
 NewInlineObject258 instantiates a new InlineObject258 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject258WithDefaults instantiates a new InlineObject258 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTitle
+### GetAlertIds
 
-`func (o *InlineObject258) GetTitle() string`
+`func (o *InlineObject258) GetAlertIds() []string`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetAlertIdsOk
 
-`func (o *InlineObject258) GetTitleOk() (*string, bool)`
+`func (o *InlineObject258) GetAlertIdsOk() (*[]string, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetAlertIds
 
-`func (o *InlineObject258) SetTitle(v string)`
+`func (o *InlineObject258) SetAlertIds(v []string)`
 
-SetTitle sets Title field to given value.
+SetAlertIds sets AlertIds field to given value.
 
-### HasTitle
-
-`func (o *InlineObject258) HasTitle() bool`
-
-HasTitle returns a boolean if a field has been set.
-
-### GetApiKey
-
-`func (o *InlineObject258) GetApiKey() string`
-
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
-
-### GetApiKeyOk
-
-`func (o *InlineObject258) GetApiKeyOk() (*string, bool)`
-
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApiKey
-
-`func (o *InlineObject258) SetApiKey(v string)`
-
-SetApiKey sets ApiKey field to given value.
-
-### HasApiKey
-
-`func (o *InlineObject258) HasApiKey() bool`
-
-HasApiKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

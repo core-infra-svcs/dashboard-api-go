@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetDeviceSwitchWarmSpare
 
-> InlineResponse20053 GetDeviceSwitchWarmSpare(ctx, serial).Execute()
+> InlineResponse20058 GetDeviceSwitchWarmSpare(ctx, serial).Execute()
 
 Return warm spare configuration for a switch
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.GetDeviceSwitchWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchWarmSpare`: InlineResponse20053
+    // response from `GetDeviceSwitchWarmSpare`: InlineResponse20058
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.GetDeviceSwitchWarmSpare`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20053**](InlineResponse20053.md)
+[**InlineResponse20058**](InlineResponse20058.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceWarmSpare
 
-> InlineResponse200103 GetNetworkApplianceWarmSpare(ctx, networkId).Execute()
+> InlineResponse200111 GetNetworkApplianceWarmSpare(ctx, networkId).Execute()
 
 Return MX warm spare settings
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.GetNetworkApplianceWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceWarmSpare`: InlineResponse200103
+    // response from `GetNetworkApplianceWarmSpare`: InlineResponse200111
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.GetNetworkApplianceWarmSpare`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200103**](InlineResponse200103.md)
+[**InlineResponse200111**](InlineResponse200111.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ## SwapNetworkApplianceWarmSpare
 
-> InlineResponse200103 SwapNetworkApplianceWarmSpare(ctx, networkId).Execute()
+> InlineResponse200111 SwapNetworkApplianceWarmSpare(ctx, networkId).Execute()
 
 Swap MX primary and warm spare appliances
 
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.SwapNetworkApplianceWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SwapNetworkApplianceWarmSpare`: InlineResponse200103
+    // response from `SwapNetworkApplianceWarmSpare`: InlineResponse200111
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.SwapNetworkApplianceWarmSpare`: %v\n", resp)
 }
 ```
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200103**](InlineResponse200103.md)
+[**InlineResponse200111**](InlineResponse200111.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSwitchWarmSpare
 
-> InlineResponse20053 UpdateDeviceSwitchWarmSpare(ctx, serial).UpdateDeviceSwitchWarmSpare(updateDeviceSwitchWarmSpare).Execute()
+> InlineResponse20058 UpdateDeviceSwitchWarmSpare(ctx, serial).UpdateDeviceSwitchWarmSpare(updateDeviceSwitchWarmSpare).Execute()
 
 Update warm spare configuration for a switch
 
@@ -244,7 +244,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceSwitchWarmSpare := *openapiclient.NewInlineObject38(false) // InlineObject38 | 
+    updateDeviceSwitchWarmSpare := *openapiclient.NewInlineObject43(false) // InlineObject43 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -253,7 +253,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.UpdateDeviceSwitchWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSwitchWarmSpare`: InlineResponse20053
+    // response from `UpdateDeviceSwitchWarmSpare`: InlineResponse20058
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.UpdateDeviceSwitchWarmSpare`: %v\n", resp)
 }
 ```
@@ -274,11 +274,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceSwitchWarmSpar
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceSwitchWarmSpare** | [**InlineObject38**](InlineObject38.md) |  | 
+ **updateDeviceSwitchWarmSpare** | [**InlineObject43**](InlineObject43.md) |  | 
 
 ### Return type
 
-[**InlineResponse20053**](InlineResponse20053.md)
+[**InlineResponse20058**](InlineResponse20058.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceWarmSpare
 
-> InlineResponse200103 UpdateNetworkApplianceWarmSpare(ctx, networkId).UpdateNetworkApplianceWarmSpare(updateNetworkApplianceWarmSpare).Execute()
+> InlineResponse200111 UpdateNetworkApplianceWarmSpare(ctx, networkId).UpdateNetworkApplianceWarmSpare(updateNetworkApplianceWarmSpare).Execute()
 
 Update MX warm spare settings
 
@@ -316,7 +316,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceWarmSpare := *openapiclient.NewInlineObject86(false) // InlineObject86 | 
+    updateNetworkApplianceWarmSpare := *openapiclient.NewInlineObject97(false) // InlineObject97 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -325,7 +325,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.UpdateNetworkApplianceWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceWarmSpare`: InlineResponse200103
+    // response from `UpdateNetworkApplianceWarmSpare`: InlineResponse200111
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.UpdateNetworkApplianceWarmSpare`: %v\n", resp)
 }
 ```
@@ -346,11 +346,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceWarm
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceWarmSpare** | [**InlineObject86**](InlineObject86.md) |  | 
+ **updateNetworkApplianceWarmSpare** | [**InlineObject97**](InlineObject97.md) |  | 
 
 ### Return type
 
-[**InlineResponse200103**](InlineResponse200103.md)
+[**InlineResponse200111**](InlineResponse200111.md)
 
 ### Authorization
 

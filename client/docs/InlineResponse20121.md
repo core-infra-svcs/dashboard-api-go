@@ -4,13 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
-**UploadId** | Pointer to **string** | Upload ID | [optional] 
-**UploadUrl** | Pointer to **string** | Upload URL | [optional] 
-**UploadUrlExpiry** | Pointer to **time.Time** | Upload URL expiry time | [optional] 
+**Network** | Pointer to [**InlineResponse20121Network**](InlineResponse20121Network.md) |  | [optional] 
+**RuleId** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**Type** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Updated at timestamp | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Created at timestamp | [optional] 
+**Match** | Pointer to [**InlineResponse20121Match**](InlineResponse20121Match.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +30,155 @@ NewInlineResponse20121WithDefaults instantiates a new InlineResponse20121 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetArtifactId
+### GetNetwork
 
-`func (o *InlineResponse20121) GetArtifactId() string`
+`func (o *InlineResponse20121) GetNetwork() InlineResponse20121Network`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse20121) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineResponse20121) GetNetworkOk() (*InlineResponse20121Network, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetNetwork
 
-`func (o *InlineResponse20121) SetArtifactId(v string)`
+`func (o *InlineResponse20121) SetNetwork(v InlineResponse20121Network)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasArtifactId
+### HasNetwork
 
-`func (o *InlineResponse20121) HasArtifactId() bool`
+`func (o *InlineResponse20121) HasNetwork() bool`
 
-HasArtifactId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetRuleId
 
-`func (o *InlineResponse20121) GetOrganizationId() string`
+`func (o *InlineResponse20121) GetRuleId() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetRuleId returns the RuleId field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetRuleIdOk
 
-`func (o *InlineResponse20121) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse20121) GetRuleIdOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetRuleId
 
-`func (o *InlineResponse20121) SetOrganizationId(v string)`
+`func (o *InlineResponse20121) SetRuleId(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetRuleId sets RuleId field to given value.
 
-### HasOrganizationId
+### HasRuleId
 
-`func (o *InlineResponse20121) HasOrganizationId() bool`
+`func (o *InlineResponse20121) HasRuleId() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasRuleId returns a boolean if a field has been set.
 
-### GetName
+### GetType
 
-`func (o *InlineResponse20121) GetName() string`
+`func (o *InlineResponse20121) GetType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTypeOk
 
-`func (o *InlineResponse20121) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20121) GetTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetType
 
-`func (o *InlineResponse20121) SetName(v string)`
+`func (o *InlineResponse20121) SetType(v string)`
 
-SetName sets Name field to given value.
+SetType sets Type field to given value.
 
-### HasName
+### HasType
 
-`func (o *InlineResponse20121) HasName() bool`
+`func (o *InlineResponse20121) HasType() bool`
 
-HasName returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetStatus
+### GetUpdatedAt
 
-`func (o *InlineResponse20121) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
+`func (o *InlineResponse20121) GetUpdatedAt() time.Time`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetUpdatedAtOk
 
-`func (o *InlineResponse20121) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
+`func (o *InlineResponse20121) GetUpdatedAtOk() (*time.Time, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetUpdatedAt
 
-`func (o *InlineResponse20121) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
+`func (o *InlineResponse20121) SetUpdatedAt(v time.Time)`
 
-SetStatus sets Status field to given value.
+SetUpdatedAt sets UpdatedAt field to given value.
 
-### HasStatus
+### HasUpdatedAt
 
-`func (o *InlineResponse20121) HasStatus() bool`
+`func (o *InlineResponse20121) HasUpdatedAt() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasUpdatedAt returns a boolean if a field has been set.
 
-### GetUploadId
+### GetCreatedAt
 
-`func (o *InlineResponse20121) GetUploadId() string`
+`func (o *InlineResponse20121) GetCreatedAt() time.Time`
 
-GetUploadId returns the UploadId field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetUploadIdOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse20121) GetUploadIdOk() (*string, bool)`
+`func (o *InlineResponse20121) GetCreatedAtOk() (*time.Time, bool)`
 
-GetUploadIdOk returns a tuple with the UploadId field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadId
+### SetCreatedAt
 
-`func (o *InlineResponse20121) SetUploadId(v string)`
+`func (o *InlineResponse20121) SetCreatedAt(v time.Time)`
 
-SetUploadId sets UploadId field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasUploadId
+### HasCreatedAt
 
-`func (o *InlineResponse20121) HasUploadId() bool`
+`func (o *InlineResponse20121) HasCreatedAt() bool`
 
-HasUploadId returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetUploadUrl
+### GetMatch
 
-`func (o *InlineResponse20121) GetUploadUrl() string`
+`func (o *InlineResponse20121) GetMatch() InlineResponse20121Match`
 
-GetUploadUrl returns the UploadUrl field if non-nil, zero value otherwise.
+GetMatch returns the Match field if non-nil, zero value otherwise.
 
-### GetUploadUrlOk
+### GetMatchOk
 
-`func (o *InlineResponse20121) GetUploadUrlOk() (*string, bool)`
+`func (o *InlineResponse20121) GetMatchOk() (*InlineResponse20121Match, bool)`
 
-GetUploadUrlOk returns a tuple with the UploadUrl field if it's non-nil, zero value otherwise
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadUrl
+### SetMatch
 
-`func (o *InlineResponse20121) SetUploadUrl(v string)`
+`func (o *InlineResponse20121) SetMatch(v InlineResponse20121Match)`
 
-SetUploadUrl sets UploadUrl field to given value.
+SetMatch sets Match field to given value.
 
-### HasUploadUrl
+### HasMatch
 
-`func (o *InlineResponse20121) HasUploadUrl() bool`
+`func (o *InlineResponse20121) HasMatch() bool`
 
-HasUploadUrl returns a boolean if a field has been set.
-
-### GetUploadUrlExpiry
-
-`func (o *InlineResponse20121) GetUploadUrlExpiry() time.Time`
-
-GetUploadUrlExpiry returns the UploadUrlExpiry field if non-nil, zero value otherwise.
-
-### GetUploadUrlExpiryOk
-
-`func (o *InlineResponse20121) GetUploadUrlExpiryOk() (*time.Time, bool)`
-
-GetUploadUrlExpiryOk returns a tuple with the UploadUrlExpiry field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadUrlExpiry
-
-`func (o *InlineResponse20121) SetUploadUrlExpiry(v time.Time)`
-
-SetUploadUrlExpiry sets UploadUrlExpiry field to given value.
-
-### HasUploadUrlExpiry
-
-`func (o *InlineResponse20121) HasUploadUrlExpiry() bool`
-
-HasUploadUrlExpiry returns a boolean if a field has been set.
+HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

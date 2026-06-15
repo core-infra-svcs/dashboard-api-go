@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | List of AP serials | 
-**ProfileId** | **NullableString** | AP profile ID | 
+**Name** | **string** | The name of the new template | 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A Base64 encoded file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**HeadersFile** | Pointer to **string** | A Base64 encoded file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject194
 
-`func NewInlineObject194(serials []string, profileId NullableString, ) *InlineObject194`
+`func NewInlineObject194(name string, ) *InlineObject194`
 
 NewInlineObject194 instantiates a new InlineObject194 object
 This constructor will assign default values to properties that have it defined,
@@ -26,56 +29,136 @@ NewInlineObject194WithDefaults instantiates a new InlineObject194 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject194) GetSerials() []string`
+`func (o *InlineObject194) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject194) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject194) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject194) SetSerials(v []string)`
+`func (o *InlineObject194) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
 
-### GetProfileId
+### GetBody
 
-`func (o *InlineObject194) GetProfileId() string`
+`func (o *InlineObject194) GetBody() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetBodyOk
 
-`func (o *InlineObject194) GetProfileIdOk() (*string, bool)`
+`func (o *InlineObject194) GetBodyOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetBody
 
-`func (o *InlineObject194) SetProfileId(v string)`
+`func (o *InlineObject194) SetBody(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetBody sets Body field to given value.
 
+### HasBody
 
-### SetProfileIdNil
+`func (o *InlineObject194) HasBody() bool`
 
-`func (o *InlineObject194) SetProfileIdNil(b bool)`
+HasBody returns a boolean if a field has been set.
 
- SetProfileIdNil sets the value for ProfileId to be an explicit nil
+### GetHeaders
 
-### UnsetProfileId
-`func (o *InlineObject194) UnsetProfileId()`
+`func (o *InlineObject194) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
 
-UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
+
+### GetHeadersOk
+
+`func (o *InlineObject194) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeaders
+
+`func (o *InlineObject194) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+
+SetHeaders sets Headers field to given value.
+
+### HasHeaders
+
+`func (o *InlineObject194) HasHeaders() bool`
+
+HasHeaders returns a boolean if a field has been set.
+
+### SetHeadersNil
+
+`func (o *InlineObject194) SetHeadersNil(b bool)`
+
+ SetHeadersNil sets the value for Headers to be an explicit nil
+
+### UnsetHeaders
+`func (o *InlineObject194) UnsetHeaders()`
+
+UnsetHeaders ensures that no value is present for Headers, not even an explicit nil
+### GetBodyFile
+
+`func (o *InlineObject194) GetBodyFile() string`
+
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+
+### GetBodyFileOk
+
+`func (o *InlineObject194) GetBodyFileOk() (*string, bool)`
+
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBodyFile
+
+`func (o *InlineObject194) SetBodyFile(v string)`
+
+SetBodyFile sets BodyFile field to given value.
+
+### HasBodyFile
+
+`func (o *InlineObject194) HasBodyFile() bool`
+
+HasBodyFile returns a boolean if a field has been set.
+
+### GetHeadersFile
+
+`func (o *InlineObject194) GetHeadersFile() string`
+
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+
+### GetHeadersFileOk
+
+`func (o *InlineObject194) GetHeadersFileOk() (*string, bool)`
+
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeadersFile
+
+`func (o *InlineObject194) SetHeadersFile(v string)`
+
+SetHeadersFile sets HeadersFile field to given value.
+
+### HasHeadersFile
+
+`func (o *InlineObject194) HasHeadersFile() bool`
+
+HasHeadersFile returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

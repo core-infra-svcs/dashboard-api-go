@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The Id of the Network | [optional] 
-**Policies** | Pointer to [**[]InlineResponse200398Policies**](InlineResponse200398Policies.md) | Array of Sentry Group Policies for the Network | [optional] 
+**Id** | Pointer to **string** | Connector ID | [optional] 
+**Name** | Pointer to **string** | Connector name | [optional] 
+**Region** | Pointer to [**InlineResponse200398Region**](InlineResponse200398Region.md) |  | [optional] 
+**State** | Pointer to **string** | Connector state | [optional] 
+**Counts** | Pointer to [**InlineResponse200398Counts**](InlineResponse200398Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200398ItemsWithDefaults instantiates a new InlineResponse200398
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetId
 
-`func (o *InlineResponse200398Items) GetNetworkId() string`
+`func (o *InlineResponse200398Items) GetId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetIdOk
 
-`func (o *InlineResponse200398Items) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200398Items) GetIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetId
 
-`func (o *InlineResponse200398Items) SetNetworkId(v string)`
+`func (o *InlineResponse200398Items) SetId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetId sets Id field to given value.
 
-### HasNetworkId
+### HasId
 
-`func (o *InlineResponse200398Items) HasNetworkId() bool`
+`func (o *InlineResponse200398Items) HasId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetPolicies
+### GetName
 
-`func (o *InlineResponse200398Items) GetPolicies() []InlineResponse200398Policies`
+`func (o *InlineResponse200398Items) GetName() string`
 
-GetPolicies returns the Policies field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPoliciesOk
+### GetNameOk
 
-`func (o *InlineResponse200398Items) GetPoliciesOk() (*[]InlineResponse200398Policies, bool)`
+`func (o *InlineResponse200398Items) GetNameOk() (*string, bool)`
 
-GetPoliciesOk returns a tuple with the Policies field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicies
+### SetName
 
-`func (o *InlineResponse200398Items) SetPolicies(v []InlineResponse200398Policies)`
+`func (o *InlineResponse200398Items) SetName(v string)`
 
-SetPolicies sets Policies field to given value.
+SetName sets Name field to given value.
 
-### HasPolicies
+### HasName
 
-`func (o *InlineResponse200398Items) HasPolicies() bool`
+`func (o *InlineResponse200398Items) HasName() bool`
 
-HasPolicies returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetRegion
+
+`func (o *InlineResponse200398Items) GetRegion() InlineResponse200398Region`
+
+GetRegion returns the Region field if non-nil, zero value otherwise.
+
+### GetRegionOk
+
+`func (o *InlineResponse200398Items) GetRegionOk() (*InlineResponse200398Region, bool)`
+
+GetRegionOk returns a tuple with the Region field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRegion
+
+`func (o *InlineResponse200398Items) SetRegion(v InlineResponse200398Region)`
+
+SetRegion sets Region field to given value.
+
+### HasRegion
+
+`func (o *InlineResponse200398Items) HasRegion() bool`
+
+HasRegion returns a boolean if a field has been set.
+
+### GetState
+
+`func (o *InlineResponse200398Items) GetState() string`
+
+GetState returns the State field if non-nil, zero value otherwise.
+
+### GetStateOk
+
+`func (o *InlineResponse200398Items) GetStateOk() (*string, bool)`
+
+GetStateOk returns a tuple with the State field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetState
+
+`func (o *InlineResponse200398Items) SetState(v string)`
+
+SetState sets State field to given value.
+
+### HasState
+
+`func (o *InlineResponse200398Items) HasState() bool`
+
+HasState returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200398Items) GetCounts() InlineResponse200398Counts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200398Items) GetCountsOk() (*InlineResponse200398Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200398Items) SetCounts(v InlineResponse200398Counts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200398Items) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DdnsHostnames** | Pointer to [**InlineResponse20043DdnsHostnames**](InlineResponse20043DdnsHostnames.md) |  | [optional] 
-**Wan1** | Pointer to [**InlineResponse20043Wan1**](InlineResponse20043Wan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse20043Wan2**](InlineResponse20043Wan2.md) |  | [optional] 
+**SummaryId** | Pointer to **string** | Id of the route table summary request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your routing table summary request. | [optional] 
+**Status** | Pointer to **string** | Status of the routing table summary request. | [optional] 
+**Counts** | Pointer to [**InlineResponse20043Counts**](InlineResponse20043Counts.md) |  | [optional] 
+**Errors** | Pointer to **[]string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20043WithDefaults instantiates a new InlineResponse20043 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDdnsHostnames
+### GetSummaryId
 
-`func (o *InlineResponse20043) GetDdnsHostnames() InlineResponse20043DdnsHostnames`
+`func (o *InlineResponse20043) GetSummaryId() string`
 
-GetDdnsHostnames returns the DdnsHostnames field if non-nil, zero value otherwise.
+GetSummaryId returns the SummaryId field if non-nil, zero value otherwise.
 
-### GetDdnsHostnamesOk
+### GetSummaryIdOk
 
-`func (o *InlineResponse20043) GetDdnsHostnamesOk() (*InlineResponse20043DdnsHostnames, bool)`
+`func (o *InlineResponse20043) GetSummaryIdOk() (*string, bool)`
 
-GetDdnsHostnamesOk returns a tuple with the DdnsHostnames field if it's non-nil, zero value otherwise
+GetSummaryIdOk returns a tuple with the SummaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDdnsHostnames
+### SetSummaryId
 
-`func (o *InlineResponse20043) SetDdnsHostnames(v InlineResponse20043DdnsHostnames)`
+`func (o *InlineResponse20043) SetSummaryId(v string)`
 
-SetDdnsHostnames sets DdnsHostnames field to given value.
+SetSummaryId sets SummaryId field to given value.
 
-### HasDdnsHostnames
+### HasSummaryId
 
-`func (o *InlineResponse20043) HasDdnsHostnames() bool`
+`func (o *InlineResponse20043) HasSummaryId() bool`
 
-HasDdnsHostnames returns a boolean if a field has been set.
+HasSummaryId returns a boolean if a field has been set.
 
-### GetWan1
+### GetUrl
 
-`func (o *InlineResponse20043) GetWan1() InlineResponse20043Wan1`
+`func (o *InlineResponse20043) GetUrl() string`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetUrlOk
 
-`func (o *InlineResponse20043) GetWan1Ok() (*InlineResponse20043Wan1, bool)`
+`func (o *InlineResponse20043) GetUrlOk() (*string, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetUrl
 
-`func (o *InlineResponse20043) SetWan1(v InlineResponse20043Wan1)`
+`func (o *InlineResponse20043) SetUrl(v string)`
 
-SetWan1 sets Wan1 field to given value.
+SetUrl sets Url field to given value.
 
-### HasWan1
+### HasUrl
 
-`func (o *InlineResponse20043) HasWan1() bool`
+`func (o *InlineResponse20043) HasUrl() bool`
 
-HasWan1 returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetWan2
+### GetStatus
 
-`func (o *InlineResponse20043) GetWan2() InlineResponse20043Wan2`
+`func (o *InlineResponse20043) GetStatus() string`
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetWan2Ok
+### GetStatusOk
 
-`func (o *InlineResponse20043) GetWan2Ok() (*InlineResponse20043Wan2, bool)`
+`func (o *InlineResponse20043) GetStatusOk() (*string, bool)`
 
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetStatus
 
-`func (o *InlineResponse20043) SetWan2(v InlineResponse20043Wan2)`
+`func (o *InlineResponse20043) SetStatus(v string)`
 
-SetWan2 sets Wan2 field to given value.
+SetStatus sets Status field to given value.
 
-### HasWan2
+### HasStatus
 
-`func (o *InlineResponse20043) HasWan2() bool`
+`func (o *InlineResponse20043) HasStatus() bool`
 
-HasWan2 returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse20043) GetCounts() InlineResponse20043Counts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse20043) GetCountsOk() (*InlineResponse20043Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse20043) SetCounts(v InlineResponse20043Counts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse20043) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
+
+### GetErrors
+
+`func (o *InlineResponse20043) GetErrors() []string`
+
+GetErrors returns the Errors field if non-nil, zero value otherwise.
+
+### GetErrorsOk
+
+`func (o *InlineResponse20043) GetErrorsOk() (*[]string, bool)`
+
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetErrors
+
+`func (o *InlineResponse20043) SetErrors(v []string)`
+
+SetErrors sets Errors field to given value.
+
+### HasErrors
+
+`func (o *InlineResponse20043) HasErrors() bool`
+
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

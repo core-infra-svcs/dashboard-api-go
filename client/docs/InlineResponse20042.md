@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTime** | Pointer to **time.Time** | Start time of the sample | [optional] 
-**EndTime** | Pointer to **time.Time** | End time of the sample | [optional] 
-**LossPercent** | Pointer to **float32** | Percentage of packets lost | [optional] 
-**LatencyMs** | Pointer to **float32** | Latency in milliseconds | [optional] 
-**Goodput** | Pointer to **int32** | Number of useful information bits delivered | [optional] 
-**Jitter** | Pointer to **float32** | Jitter, in milliseconds | [optional] 
+**LookupId** | Pointer to **string** | Id of the route table lookup request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your routing table lookup request. | [optional] 
+**Request** | Pointer to [**InlineResponse20111Request**](InlineResponse20111Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the routing table lookup request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse20042Entries**](InlineResponse20042Entries.md) | Routing table entries that match the search criteria | [optional] 
+**Errors** | Pointer to **[]string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -30,155 +30,155 @@ NewInlineResponse20042WithDefaults instantiates a new InlineResponse20042 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTime
+### GetLookupId
 
-`func (o *InlineResponse20042) GetStartTime() time.Time`
+`func (o *InlineResponse20042) GetLookupId() string`
 
-GetStartTime returns the StartTime field if non-nil, zero value otherwise.
+GetLookupId returns the LookupId field if non-nil, zero value otherwise.
 
-### GetStartTimeOk
+### GetLookupIdOk
 
-`func (o *InlineResponse20042) GetStartTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20042) GetLookupIdOk() (*string, bool)`
 
-GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
+GetLookupIdOk returns a tuple with the LookupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTime
+### SetLookupId
 
-`func (o *InlineResponse20042) SetStartTime(v time.Time)`
+`func (o *InlineResponse20042) SetLookupId(v string)`
 
-SetStartTime sets StartTime field to given value.
+SetLookupId sets LookupId field to given value.
 
-### HasStartTime
+### HasLookupId
 
-`func (o *InlineResponse20042) HasStartTime() bool`
+`func (o *InlineResponse20042) HasLookupId() bool`
 
-HasStartTime returns a boolean if a field has been set.
+HasLookupId returns a boolean if a field has been set.
 
-### GetEndTime
+### GetUrl
 
-`func (o *InlineResponse20042) GetEndTime() time.Time`
+`func (o *InlineResponse20042) GetUrl() string`
 
-GetEndTime returns the EndTime field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetEndTimeOk
+### GetUrlOk
 
-`func (o *InlineResponse20042) GetEndTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20042) GetUrlOk() (*string, bool)`
 
-GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTime
+### SetUrl
 
-`func (o *InlineResponse20042) SetEndTime(v time.Time)`
+`func (o *InlineResponse20042) SetUrl(v string)`
 
-SetEndTime sets EndTime field to given value.
+SetUrl sets Url field to given value.
 
-### HasEndTime
+### HasUrl
 
-`func (o *InlineResponse20042) HasEndTime() bool`
+`func (o *InlineResponse20042) HasUrl() bool`
 
-HasEndTime returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetLossPercent
+### GetRequest
 
-`func (o *InlineResponse20042) GetLossPercent() float32`
+`func (o *InlineResponse20042) GetRequest() InlineResponse20111Request`
 
-GetLossPercent returns the LossPercent field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetLossPercentOk
+### GetRequestOk
 
-`func (o *InlineResponse20042) GetLossPercentOk() (*float32, bool)`
+`func (o *InlineResponse20042) GetRequestOk() (*InlineResponse20111Request, bool)`
 
-GetLossPercentOk returns a tuple with the LossPercent field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLossPercent
+### SetRequest
 
-`func (o *InlineResponse20042) SetLossPercent(v float32)`
+`func (o *InlineResponse20042) SetRequest(v InlineResponse20111Request)`
 
-SetLossPercent sets LossPercent field to given value.
+SetRequest sets Request field to given value.
 
-### HasLossPercent
+### HasRequest
 
-`func (o *InlineResponse20042) HasLossPercent() bool`
+`func (o *InlineResponse20042) HasRequest() bool`
 
-HasLossPercent returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
 
-### GetLatencyMs
+### GetStatus
 
-`func (o *InlineResponse20042) GetLatencyMs() float32`
+`func (o *InlineResponse20042) GetStatus() string`
 
-GetLatencyMs returns the LatencyMs field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetLatencyMsOk
+### GetStatusOk
 
-`func (o *InlineResponse20042) GetLatencyMsOk() (*float32, bool)`
+`func (o *InlineResponse20042) GetStatusOk() (*string, bool)`
 
-GetLatencyMsOk returns a tuple with the LatencyMs field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyMs
+### SetStatus
 
-`func (o *InlineResponse20042) SetLatencyMs(v float32)`
+`func (o *InlineResponse20042) SetStatus(v string)`
 
-SetLatencyMs sets LatencyMs field to given value.
+SetStatus sets Status field to given value.
 
-### HasLatencyMs
+### HasStatus
 
-`func (o *InlineResponse20042) HasLatencyMs() bool`
+`func (o *InlineResponse20042) HasStatus() bool`
 
-HasLatencyMs returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetGoodput
+### GetEntries
 
-`func (o *InlineResponse20042) GetGoodput() int32`
+`func (o *InlineResponse20042) GetEntries() []InlineResponse20042Entries`
 
-GetGoodput returns the Goodput field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetGoodputOk
+### GetEntriesOk
 
-`func (o *InlineResponse20042) GetGoodputOk() (*int32, bool)`
+`func (o *InlineResponse20042) GetEntriesOk() (*[]InlineResponse20042Entries, bool)`
 
-GetGoodputOk returns a tuple with the Goodput field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGoodput
+### SetEntries
 
-`func (o *InlineResponse20042) SetGoodput(v int32)`
+`func (o *InlineResponse20042) SetEntries(v []InlineResponse20042Entries)`
 
-SetGoodput sets Goodput field to given value.
+SetEntries sets Entries field to given value.
 
-### HasGoodput
+### HasEntries
 
-`func (o *InlineResponse20042) HasGoodput() bool`
+`func (o *InlineResponse20042) HasEntries() bool`
 
-HasGoodput returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
 
-### GetJitter
+### GetErrors
 
-`func (o *InlineResponse20042) GetJitter() float32`
+`func (o *InlineResponse20042) GetErrors() []string`
 
-GetJitter returns the Jitter field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetJitterOk
+### GetErrorsOk
 
-`func (o *InlineResponse20042) GetJitterOk() (*float32, bool)`
+`func (o *InlineResponse20042) GetErrorsOk() (*[]string, bool)`
 
-GetJitterOk returns a tuple with the Jitter field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJitter
+### SetErrors
 
-`func (o *InlineResponse20042) SetJitter(v float32)`
+`func (o *InlineResponse20042) SetErrors(v []string)`
 
-SetJitter sets Jitter field to given value.
+SetErrors sets Errors field to given value.
 
-### HasJitter
+### HasErrors
 
-`func (o *InlineResponse20042) HasJitter() bool`
+`func (o *InlineResponse20042) HasErrors() bool`
 
-HasJitter returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

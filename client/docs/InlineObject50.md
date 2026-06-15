@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules**](NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**Destinations** | Pointer to [**[]NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations**](NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations.md) | The list of connectivity monitoring destinations | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject50WithDefaults instantiates a new InlineObject50 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetDestinations
 
-`func (o *InlineObject50) GetRules() []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules`
+`func (o *InlineObject50) GetDestinations() []NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetDestinationsOk
 
-`func (o *InlineObject50) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules, bool)`
+`func (o *InlineObject50) GetDestinationsOk() (*[]NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetDestinations
 
-`func (o *InlineObject50) SetRules(v []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules)`
+`func (o *InlineObject50) SetDestinations(v []NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations)`
 
-SetRules sets Rules field to given value.
+SetDestinations sets Destinations field to given value.
 
-### HasRules
+### HasDestinations
 
-`func (o *InlineObject50) HasRules() bool`
+`func (o *InlineObject50) HasDestinations() bool`
 
-HasRules returns a boolean if a field has been set.
+HasDestinations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

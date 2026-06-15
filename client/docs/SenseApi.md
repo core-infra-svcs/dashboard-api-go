@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraSense
 
-> InlineResponse20020 GetDeviceCameraSense(ctx, serial).Execute()
+> InlineResponse20021 GetDeviceCameraSense(ctx, serial).Execute()
 
 Returns sense settings for a given camera
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SenseApi.GetDeviceCameraSense``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraSense`: InlineResponse20020
+    // response from `GetDeviceCameraSense`: InlineResponse20021
     fmt.Fprintf(os.Stdout, "Response from `SenseApi.GetDeviceCameraSense`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraSenseObjectDetectionModels
 
-> []InlineResponse20021 GetDeviceCameraSenseObjectDetectionModels(ctx, serial).Execute()
+> []InlineResponse20022 GetDeviceCameraSenseObjectDetectionModels(ctx, serial).Execute()
 
 Returns the MV Sense object detection model list for the given camera
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SenseApi.GetDeviceCameraSenseObjectDetectionModels``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraSenseObjectDetectionModels`: []InlineResponse20021
+    // response from `GetDeviceCameraSenseObjectDetectionModels`: []InlineResponse20022
     fmt.Fprintf(os.Stdout, "Response from `SenseApi.GetDeviceCameraSenseObjectDetectionModels`: %v\n", resp)
 }
 ```
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20021**](InlineResponse20021.md)
+[**[]InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCameraSense
 
-> InlineResponse20020 UpdateDeviceCameraSense(ctx, serial).UpdateDeviceCameraSense(updateDeviceCameraSense).Execute()
+> InlineResponse20021 UpdateDeviceCameraSense(ctx, serial).UpdateDeviceCameraSense(updateDeviceCameraSense).Execute()
 
 Update sense settings for the given camera
 
@@ -172,7 +172,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraSense := *openapiclient.NewInlineObject10() // InlineObject10 |  (optional)
+    updateDeviceCameraSense := *openapiclient.NewInlineObject11() // InlineObject11 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -181,7 +181,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SenseApi.UpdateDeviceCameraSense``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCameraSense`: InlineResponse20020
+    // response from `UpdateDeviceCameraSense`: InlineResponse20021
     fmt.Fprintf(os.Stdout, "Response from `SenseApi.UpdateDeviceCameraSense`: %v\n", resp)
 }
 ```
@@ -202,11 +202,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraSenseReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraSense** | [**InlineObject10**](InlineObject10.md) |  | 
+ **updateDeviceCameraSense** | [**InlineObject11**](InlineObject11.md) |  | 
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 

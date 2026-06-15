@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject341WithDefaults instantiates a new InlineObject341 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetName
 
-`func (o *InlineObject341) GetDescription() string`
+`func (o *InlineObject341) GetName() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetNameOk
 
-`func (o *InlineObject341) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject341) GetNameOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetName
 
-`func (o *InlineObject341) SetDescription(v string)`
+`func (o *InlineObject341) SetName(v string)`
 
-SetDescription sets Description field to given value.
+SetName sets Name field to given value.
 
-### HasDescription
+### HasName
 
-`func (o *InlineObject341) HasDescription() bool`
+`func (o *InlineObject341) HasName() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetClient
+### GetBaseTheme
 
-`func (o *InlineObject341) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
+`func (o *InlineObject341) GetBaseTheme() string`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetBaseThemeOk
 
-`func (o *InlineObject341) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
+`func (o *InlineObject341) GetBaseThemeOk() (*string, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetBaseTheme
 
-`func (o *InlineObject341) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
+`func (o *InlineObject341) SetBaseTheme(v string)`
 
-SetClient sets Client field to given value.
+SetBaseTheme sets BaseTheme field to given value.
 
-### HasClient
+### HasBaseTheme
 
-`func (o *InlineObject341) HasClient() bool`
+`func (o *InlineObject341) HasBaseTheme() bool`
 
-HasClient returns a boolean if a field has been set.
+HasBaseTheme returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

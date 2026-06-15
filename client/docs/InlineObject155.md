@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name for your port schedule. Required | 
-**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
+**Rules** | [**[]NetworksNetworkIdSwitchAccessControlListsRules**](NetworksNetworkIdSwitchAccessControlListsRules.md) | An ordered array of the access control list rules (not including the default rule). An empty array will clear the rules. | 
 
 ## Methods
 
 ### NewInlineObject155
 
-`func NewInlineObject155(name string, ) *InlineObject155`
+`func NewInlineObject155(rules []NetworksNetworkIdSwitchAccessControlListsRules, ) *InlineObject155`
 
 NewInlineObject155 instantiates a new InlineObject155 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,25 @@ NewInlineObject155WithDefaults instantiates a new InlineObject155 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject155) GetName() string`
+`func (o *InlineObject155) GetRules() []NetworksNetworkIdSwitchAccessControlListsRules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject155) GetNameOk() (*string, bool)`
+`func (o *InlineObject155) GetRulesOk() (*[]NetworksNetworkIdSwitchAccessControlListsRules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject155) SetName(v string)`
+`func (o *InlineObject155) SetRules(v []NetworksNetworkIdSwitchAccessControlListsRules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
-
-### GetPortSchedule
-
-`func (o *InlineObject155) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
-
-GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
-
-### GetPortScheduleOk
-
-`func (o *InlineObject155) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
-
-GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPortSchedule
-
-`func (o *InlineObject155) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
-
-SetPortSchedule sets PortSchedule field to given value.
-
-### HasPortSchedule
-
-`func (o *InlineObject155) HasPortSchedule() bool`
-
-HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

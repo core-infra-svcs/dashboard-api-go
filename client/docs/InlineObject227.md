@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
+**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
+**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineObject227WithDefaults instantiates a new InlineObject227 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabledNetworks
+### GetEnabled
 
-`func (o *InlineObject227) GetEnabledNetworks() []string`
+`func (o *InlineObject227) GetEnabled() bool`
 
-GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetEnabledNetworksOk
+### GetEnabledOk
 
-`func (o *InlineObject227) GetEnabledNetworksOk() (*[]string, bool)`
+`func (o *InlineObject227) GetEnabledOk() (*bool, bool)`
 
-GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabledNetworks
+### SetEnabled
 
-`func (o *InlineObject227) SetEnabledNetworks(v []string)`
+`func (o *InlineObject227) SetEnabled(v bool)`
 
-SetEnabledNetworks sets EnabledNetworks field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasEnabledNetworks
+### HasEnabled
 
-`func (o *InlineObject227) HasEnabledNetworks() bool`
+`func (o *InlineObject227) HasEnabled() bool`
 
-HasEnabledNetworks returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetIotController
+
+`func (o *InlineObject227) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
+
+GetIotController returns the IotController field if non-nil, zero value otherwise.
+
+### GetIotControllerOk
+
+`func (o *InlineObject227) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
+
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIotController
+
+`func (o *InlineObject227) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
+
+SetIotController sets IotController field to given value.
+
+### HasIotController
+
+`func (o *InlineObject227) HasIotController() bool`
+
+HasIotController returns a boolean if a field has been set.
+
+### GetLockManagement
+
+`func (o *InlineObject227) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
+
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+
+### GetLockManagementOk
+
+`func (o *InlineObject227) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
+
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLockManagement
+
+`func (o *InlineObject227) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
+
+SetLockManagement sets LockManagement field to given value.
+
+### HasLockManagement
+
+`func (o *InlineObject227) HasLockManagement() bool`
+
+HasLockManagement returns a boolean if a field has been set.
+
+### GetDefaults
+
+`func (o *InlineObject227) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
+
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
+
+### GetDefaultsOk
+
+`func (o *InlineObject227) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
+
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaults
+
+`func (o *InlineObject227) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
+
+SetDefaults sets Defaults field to given value.
+
+### HasDefaults
+
+`func (o *InlineObject227) HasDefaults() bool`
+
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

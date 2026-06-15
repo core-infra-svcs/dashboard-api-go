@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCellularGatewayPortForwardingRules
 
-> InlineResponse20029 GetDeviceCellularGatewayPortForwardingRules(ctx, serial).Execute()
+> InlineResponse20030 GetDeviceCellularGatewayPortForwardingRules(ctx, serial).Execute()
 
 Returns the port forwarding rules for a single MG.
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortForwardingRulesApi.GetDeviceCellularGatewayPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularGatewayPortForwardingRules`: InlineResponse20029
+    // response from `GetDeviceCellularGatewayPortForwardingRules`: InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `PortForwardingRulesApi.GetDeviceCellularGatewayPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallPortForwardingRules
 
-> InlineResponse20077 GetNetworkApplianceFirewallPortForwardingRules(ctx, networkId).Execute()
+> InlineResponse20082 GetNetworkApplianceFirewallPortForwardingRules(ctx, networkId).Execute()
 
 Return the port forwarding rules for an MX network
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortForwardingRulesApi.GetNetworkApplianceFirewallPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallPortForwardingRules`: InlineResponse20077
+    // response from `GetNetworkApplianceFirewallPortForwardingRules`: InlineResponse20082
     fmt.Fprintf(os.Stdout, "Response from `PortForwardingRulesApi.GetNetworkApplianceFirewallPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20077**](InlineResponse20077.md)
+[**InlineResponse20082**](InlineResponse20082.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularGatewayPortForwardingRules
 
-> InlineResponse20029 UpdateDeviceCellularGatewayPortForwardingRules(ctx, serial).UpdateDeviceCellularGatewayPortForwardingRules(updateDeviceCellularGatewayPortForwardingRules).Execute()
+> InlineResponse20030 UpdateDeviceCellularGatewayPortForwardingRules(ctx, serial).UpdateDeviceCellularGatewayPortForwardingRules(updateDeviceCellularGatewayPortForwardingRules).Execute()
 
 Updates the port forwarding rules for a single MG.
 
@@ -173,7 +173,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject17() // InlineObject17 |  (optional)
+    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject18() // InlineObject18 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortForwardingRulesApi.UpdateDeviceCellularGatewayPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularGatewayPortForwardingRules`: InlineResponse20029
+    // response from `UpdateDeviceCellularGatewayPortForwardingRules`: InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `PortForwardingRulesApi.UpdateDeviceCellularGatewayPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -203,11 +203,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject17**](InlineObject17.md) |  | 
+ **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject18**](InlineObject18.md) |  | 
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallPortForwardingRules
 
-> InlineResponse20077 UpdateNetworkApplianceFirewallPortForwardingRules(ctx, networkId).UpdateNetworkApplianceFirewallPortForwardingRules(updateNetworkApplianceFirewallPortForwardingRules).Execute()
+> InlineResponse20082 UpdateNetworkApplianceFirewallPortForwardingRules(ctx, networkId).UpdateNetworkApplianceFirewallPortForwardingRules(updateNetworkApplianceFirewallPortForwardingRules).Execute()
 
 Update the port forwarding rules for an MX network
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject57([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject57 | 
+    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject62([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject62 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortForwardingRulesApi.UpdateNetworkApplianceFirewallPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallPortForwardingRules`: InlineResponse20077
+    // response from `UpdateNetworkApplianceFirewallPortForwardingRules`: InlineResponse20082
     fmt.Fprintf(os.Stdout, "Response from `PortForwardingRulesApi.UpdateNetworkApplianceFirewallPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -275,11 +275,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject57**](InlineObject57.md) |  | 
+ **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject62**](InlineObject62.md) |  | 
 
 ### Return type
 
-[**InlineResponse20077**](InlineResponse20077.md)
+[**InlineResponse20082**](InlineResponse20082.md)
 
 ### Authorization
 

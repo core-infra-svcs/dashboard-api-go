@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSpacesIntegrateStatus
 
-> InlineResponse200402 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
+> InlineResponse200414 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
 
 Get the status of the Spaces integration in Meraki
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SpacesApi.GetOrganizationSpacesIntegrateStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200402
+    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200414
     fmt.Fprintf(os.Stdout, "Response from `SpacesApi.GetOrganizationSpacesIntegrateStatus`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200402**](InlineResponse200402.md)
+[**InlineResponse200414**](InlineResponse200414.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## RemoveOrganizationSpacesIntegration
 
-> InlineResponse200403 RemoveOrganizationSpacesIntegration(ctx, organizationId).Execute()
+> InlineResponse200415 RemoveOrganizationSpacesIntegration(ctx, organizationId).Execute()
 
 Remove the Spaces integration from Meraki
 
@@ -109,7 +109,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SpacesApi.RemoveOrganizationSpacesIntegration``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RemoveOrganizationSpacesIntegration`: InlineResponse200403
+    // response from `RemoveOrganizationSpacesIntegration`: InlineResponse200415
     fmt.Fprintf(os.Stdout, "Response from `SpacesApi.RemoveOrganizationSpacesIntegration`: %v\n", resp)
 }
 ```
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200403**](InlineResponse200403.md)
+[**InlineResponse200415**](InlineResponse200415.md)
 
 ### Authorization
 

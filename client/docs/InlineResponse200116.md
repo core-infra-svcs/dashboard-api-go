@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
-**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
-**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
-**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
+**Id** | Pointer to **string** | The ID of the camera wireless profile. | [optional] 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**AppliedDeviceCount** | Pointer to **int32** | The count of the applied devices. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200116WithDefaults instantiates a new InlineResponse200116 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientId
+### GetId
 
-`func (o *InlineResponse200116) GetClientId() string`
+`func (o *InlineResponse200116) GetId() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetIdOk
 
-`func (o *InlineResponse200116) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200116) GetIdOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetId
 
-`func (o *InlineResponse200116) SetClientId(v string)`
+`func (o *InlineResponse200116) SetId(v string)`
 
-SetClientId sets ClientId field to given value.
+SetId sets Id field to given value.
 
-### HasClientId
+### HasId
 
-`func (o *InlineResponse200116) HasClientId() bool`
+`func (o *InlineResponse200116) HasId() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetClientIp
+### GetName
 
-`func (o *InlineResponse200116) GetClientIp() string`
+`func (o *InlineResponse200116) GetName() string`
 
-GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetClientIpOk
+### GetNameOk
 
-`func (o *InlineResponse200116) GetClientIpOk() (*string, bool)`
+`func (o *InlineResponse200116) GetNameOk() (*string, bool)`
 
-GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientIp
+### SetName
 
-`func (o *InlineResponse200116) SetClientIp(v string)`
+`func (o *InlineResponse200116) SetName(v string)`
 
-SetClientIp sets ClientIp field to given value.
+SetName sets Name field to given value.
 
-### HasClientIp
+### HasName
 
-`func (o *InlineResponse200116) HasClientIp() bool`
+`func (o *InlineResponse200116) HasName() bool`
 
-HasClientIp returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetClientMac
+### GetAppliedDeviceCount
 
-`func (o *InlineResponse200116) GetClientMac() string`
+`func (o *InlineResponse200116) GetAppliedDeviceCount() int32`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetAppliedDeviceCount returns the AppliedDeviceCount field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetAppliedDeviceCountOk
 
-`func (o *InlineResponse200116) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse200116) GetAppliedDeviceCountOk() (*int32, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetAppliedDeviceCountOk returns a tuple with the AppliedDeviceCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetAppliedDeviceCount
 
-`func (o *InlineResponse200116) SetClientMac(v string)`
+`func (o *InlineResponse200116) SetAppliedDeviceCount(v int32)`
 
-SetClientMac sets ClientMac field to given value.
+SetAppliedDeviceCount sets AppliedDeviceCount field to given value.
 
-### HasClientMac
+### HasAppliedDeviceCount
 
-`func (o *InlineResponse200116) HasClientMac() bool`
+`func (o *InlineResponse200116) HasAppliedDeviceCount() bool`
 
-HasClientMac returns a boolean if a field has been set.
+HasAppliedDeviceCount returns a boolean if a field has been set.
 
-### GetUsageHistory
+### GetSsid
 
-`func (o *InlineResponse200116) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
+`func (o *InlineResponse200116) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
 
-GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetUsageHistoryOk
+### GetSsidOk
 
-`func (o *InlineResponse200116) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
+`func (o *InlineResponse200116) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
 
-GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsageHistory
+### SetSsid
 
-`func (o *InlineResponse200116) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
+`func (o *InlineResponse200116) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
 
-SetUsageHistory sets UsageHistory field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasUsageHistory
+### HasSsid
 
-`func (o *InlineResponse200116) HasUsageHistory() bool`
+`func (o *InlineResponse200116) HasSsid() bool`
 
-HasUsageHistory returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineResponse200116) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineResponse200116) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineResponse200116) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineResponse200116) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

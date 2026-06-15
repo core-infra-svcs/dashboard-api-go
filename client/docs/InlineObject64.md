@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences.md) | policies with respective traffic filters for an MX network | [optional] 
+**Port** | Pointer to [**NetworksNetworkIdApplianceInterfacesL3Port**](NetworksNetworkIdApplianceInterfacesL3Port.md) |  | [optional] 
+**Ipv4** | [**NetworksNetworkIdApplianceInterfacesL3Ipv4**](NetworksNetworkIdApplianceInterfacesL3Ipv4.md) |  | 
 
 ## Methods
 
 ### NewInlineObject64
 
-`func NewInlineObject64() *InlineObject64`
+`func NewInlineObject64(ipv4 NetworksNetworkIdApplianceInterfacesL3Ipv4, ) *InlineObject64`
 
 NewInlineObject64 instantiates a new InlineObject64 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,50 @@ NewInlineObject64WithDefaults instantiates a new InlineObject64 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWanTrafficUplinkPreferences
+### GetPort
 
-`func (o *InlineObject64) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences`
+`func (o *InlineObject64) GetPort() NetworksNetworkIdApplianceInterfacesL3Port`
 
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetWanTrafficUplinkPreferencesOk
+### GetPortOk
 
-`func (o *InlineObject64) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences, bool)`
+`func (o *InlineObject64) GetPortOk() (*NetworksNetworkIdApplianceInterfacesL3Port, bool)`
 
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanTrafficUplinkPreferences
+### SetPort
 
-`func (o *InlineObject64) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences)`
+`func (o *InlineObject64) SetPort(v NetworksNetworkIdApplianceInterfacesL3Port)`
 
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+SetPort sets Port field to given value.
 
-### HasWanTrafficUplinkPreferences
+### HasPort
 
-`func (o *InlineObject64) HasWanTrafficUplinkPreferences() bool`
+`func (o *InlineObject64) HasPort() bool`
 
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
+
+### GetIpv4
+
+`func (o *InlineObject64) GetIpv4() NetworksNetworkIdApplianceInterfacesL3Ipv4`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineObject64) GetIpv4Ok() (*NetworksNetworkIdApplianceInterfacesL3Ipv4, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv4
+
+`func (o *InlineObject64) SetIpv4(v NetworksNetworkIdApplianceInterfacesL3Ipv4)`
+
+SetIpv4 sets Ipv4 field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

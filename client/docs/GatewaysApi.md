@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSensorGatewaysConnectionsLatest
 
-> InlineResponse200393 GetOrganizationSensorGatewaysConnectionsLatest(ctx, organizationId).SensorSerials(sensorSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200405 GetOrganizationSensorGatewaysConnectionsLatest(ctx, organizationId).SensorSerials(sensorSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns latest sensor-gateway connectivity data.
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GatewaysApi.GetOrganizationSensorGatewaysConnectionsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorGatewaysConnectionsLatest`: InlineResponse200393
+    // response from `GetOrganizationSensorGatewaysConnectionsLatest`: InlineResponse200405
     fmt.Fprintf(os.Stdout, "Response from `GatewaysApi.GetOrganizationSensorGatewaysConnectionsLatest`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200393**](InlineResponse200393.md)
+[**InlineResponse200405**](InlineResponse200405.md)
 
 ### Authorization
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]InlineResponse200200StpBridgePriority**](InlineResponse200200StpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
+**DefaultSettings** | Pointer to [**InlineResponse200200DefaultSettings**](InlineResponse200200DefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200200Overrides**](InlineResponse200200Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200200WithDefaults instantiates a new InlineResponse200200 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetDefaultSettings
 
-`func (o *InlineResponse200200) GetRstpEnabled() bool`
+`func (o *InlineResponse200200) GetDefaultSettings() InlineResponse200200DefaultSettings`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetDefaultSettingsOk
 
-`func (o *InlineResponse200200) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200200) GetDefaultSettingsOk() (*InlineResponse200200DefaultSettings, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetDefaultSettings
 
-`func (o *InlineResponse200200) SetRstpEnabled(v bool)`
+`func (o *InlineResponse200200) SetDefaultSettings(v InlineResponse200200DefaultSettings)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasRstpEnabled
+### HasDefaultSettings
 
-`func (o *InlineResponse200200) HasRstpEnabled() bool`
+`func (o *InlineResponse200200) HasDefaultSettings() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetOverrides
 
-`func (o *InlineResponse200200) GetStpBridgePriority() []InlineResponse200200StpBridgePriority`
+`func (o *InlineResponse200200) GetOverrides() []InlineResponse200200Overrides`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetOverridesOk
 
-`func (o *InlineResponse200200) GetStpBridgePriorityOk() (*[]InlineResponse200200StpBridgePriority, bool)`
+`func (o *InlineResponse200200) GetOverridesOk() (*[]InlineResponse200200Overrides, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetOverrides
 
-`func (o *InlineResponse200200) SetStpBridgePriority(v []InlineResponse200200StpBridgePriority)`
+`func (o *InlineResponse200200) SetOverrides(v []InlineResponse200200Overrides)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasStpBridgePriority
+### HasOverrides
 
-`func (o *InlineResponse200200) HasStpBridgePriority() bool`
+`func (o *InlineResponse200200) HasOverrides() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

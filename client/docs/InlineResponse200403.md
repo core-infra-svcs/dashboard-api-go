@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
-**Message** | Pointer to **string** | The error message of the API | [optional] 
+**Counts** | Pointer to [**InlineResponse200403Counts**](InlineResponse200403Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200403WithDefaults instantiates a new InlineResponse200403 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetCounts
 
-`func (o *InlineResponse200403) GetStatus() bool`
+`func (o *InlineResponse200403) GetCounts() InlineResponse200403Counts`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetCountsOk
 
-`func (o *InlineResponse200403) GetStatusOk() (*bool, bool)`
+`func (o *InlineResponse200403) GetCountsOk() (*InlineResponse200403Counts, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetCounts
 
-`func (o *InlineResponse200403) SetStatus(v bool)`
+`func (o *InlineResponse200403) SetCounts(v InlineResponse200403Counts)`
 
-SetStatus sets Status field to given value.
+SetCounts sets Counts field to given value.
 
-### HasStatus
+### HasCounts
 
-`func (o *InlineResponse200403) HasStatus() bool`
+`func (o *InlineResponse200403) HasCounts() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetMessage
-
-`func (o *InlineResponse200403) GetMessage() string`
-
-GetMessage returns the Message field if non-nil, zero value otherwise.
-
-### GetMessageOk
-
-`func (o *InlineResponse200403) GetMessageOk() (*string, bool)`
-
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMessage
-
-`func (o *InlineResponse200403) SetMessage(v string)`
-
-SetMessage sets Message field to given value.
-
-### HasMessage
-
-`func (o *InlineResponse200403) HasMessage() bool`
-
-HasMessage returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

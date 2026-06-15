@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReservedIpRanges** | Pointer to [**[]DevicesSerialCellularGatewayLanReservedIpRanges**](DevicesSerialCellularGatewayLanReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
-**FixedIpAssignments** | Pointer to [**[]DevicesSerialCellularGatewayLanFixedIpAssignments**](DevicesSerialCellularGatewayLanFixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
+**Slot** | **string** | Required parameter for the SIM slot to update the cellular band mask for | 
+**Type** | **string** | Required parameter for the signal type to update the cellular band mask for | 
+**Masked** | **[]string** | Required parameter for the band identifiers to mask for the given SIM slot and signal type. For LTE use bands identifiers like &#39;30&#39; and for 5G use band identifiers like &#39;n30&#39;. Maximum 256 bands. | 
 
 ## Methods
 
 ### NewInlineObject16
 
-`func NewInlineObject16() *InlineObject16`
+`func NewInlineObject16(slot string, type_ string, masked []string, ) *InlineObject16`
 
 NewInlineObject16 instantiates a new InlineObject16 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,65 @@ NewInlineObject16WithDefaults instantiates a new InlineObject16 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReservedIpRanges
+### GetSlot
 
-`func (o *InlineObject16) GetReservedIpRanges() []DevicesSerialCellularGatewayLanReservedIpRanges`
+`func (o *InlineObject16) GetSlot() string`
 
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+GetSlot returns the Slot field if non-nil, zero value otherwise.
 
-### GetReservedIpRangesOk
+### GetSlotOk
 
-`func (o *InlineObject16) GetReservedIpRangesOk() (*[]DevicesSerialCellularGatewayLanReservedIpRanges, bool)`
+`func (o *InlineObject16) GetSlotOk() (*string, bool)`
 
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+GetSlotOk returns a tuple with the Slot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReservedIpRanges
+### SetSlot
 
-`func (o *InlineObject16) SetReservedIpRanges(v []DevicesSerialCellularGatewayLanReservedIpRanges)`
+`func (o *InlineObject16) SetSlot(v string)`
 
-SetReservedIpRanges sets ReservedIpRanges field to given value.
+SetSlot sets Slot field to given value.
 
-### HasReservedIpRanges
 
-`func (o *InlineObject16) HasReservedIpRanges() bool`
+### GetType
 
-HasReservedIpRanges returns a boolean if a field has been set.
+`func (o *InlineObject16) GetType() string`
 
-### GetFixedIpAssignments
+GetType returns the Type field if non-nil, zero value otherwise.
 
-`func (o *InlineObject16) GetFixedIpAssignments() []DevicesSerialCellularGatewayLanFixedIpAssignments`
+### GetTypeOk
 
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+`func (o *InlineObject16) GetTypeOk() (*string, bool)`
 
-### GetFixedIpAssignmentsOk
-
-`func (o *InlineObject16) GetFixedIpAssignmentsOk() (*[]DevicesSerialCellularGatewayLanFixedIpAssignments, bool)`
-
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFixedIpAssignments
+### SetType
 
-`func (o *InlineObject16) SetFixedIpAssignments(v []DevicesSerialCellularGatewayLanFixedIpAssignments)`
+`func (o *InlineObject16) SetType(v string)`
 
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
+SetType sets Type field to given value.
 
-### HasFixedIpAssignments
 
-`func (o *InlineObject16) HasFixedIpAssignments() bool`
+### GetMasked
 
-HasFixedIpAssignments returns a boolean if a field has been set.
+`func (o *InlineObject16) GetMasked() []string`
+
+GetMasked returns the Masked field if non-nil, zero value otherwise.
+
+### GetMaskedOk
+
+`func (o *InlineObject16) GetMaskedOk() (*[]string, bool)`
+
+GetMaskedOk returns a tuple with the Masked field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMasked
+
+`func (o *InlineObject16) SetMasked(v []string)`
+
+SetMasked sets Masked field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

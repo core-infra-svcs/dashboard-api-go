@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
-**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
+**JobId** | Pointer to **string** | Id of the power usage request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your power usage request. | [optional] 
 **Request** | Pointer to [**InlineResponse20110Request**](InlineResponse20110Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**Status** | Pointer to **string** | Status of the power usage request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -30,30 +29,30 @@ NewInlineResponse20110WithDefaults instantiates a new InlineResponse20110 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWakeOnLanId
+### GetJobId
 
-`func (o *InlineResponse20110) GetWakeOnLanId() string`
+`func (o *InlineResponse20110) GetJobId() string`
 
-GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
+GetJobId returns the JobId field if non-nil, zero value otherwise.
 
-### GetWakeOnLanIdOk
+### GetJobIdOk
 
-`func (o *InlineResponse20110) GetWakeOnLanIdOk() (*string, bool)`
+`func (o *InlineResponse20110) GetJobIdOk() (*string, bool)`
 
-GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
+GetJobIdOk returns a tuple with the JobId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWakeOnLanId
+### SetJobId
 
-`func (o *InlineResponse20110) SetWakeOnLanId(v string)`
+`func (o *InlineResponse20110) SetJobId(v string)`
 
-SetWakeOnLanId sets WakeOnLanId field to given value.
+SetJobId sets JobId field to given value.
 
-### HasWakeOnLanId
+### HasJobId
 
-`func (o *InlineResponse20110) HasWakeOnLanId() bool`
+`func (o *InlineResponse20110) HasJobId() bool`
 
-HasWakeOnLanId returns a boolean if a field has been set.
+HasJobId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -80,31 +79,6 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
-### GetStatus
-
-`func (o *InlineResponse20110) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20110) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20110) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20110) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
 ### GetRequest
 
 `func (o *InlineResponse20110) GetRequest() InlineResponse20110Request`
@@ -130,30 +104,30 @@ SetRequest sets Request field to given value.
 
 HasRequest returns a boolean if a field has been set.
 
-### GetError
+### GetStatus
 
-`func (o *InlineResponse20110) GetError() string`
+`func (o *InlineResponse20110) GetStatus() string`
 
-GetError returns the Error field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetErrorOk
+### GetStatusOk
 
-`func (o *InlineResponse20110) GetErrorOk() (*string, bool)`
+`func (o *InlineResponse20110) GetStatusOk() (*string, bool)`
 
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetError
+### SetStatus
 
-`func (o *InlineResponse20110) SetError(v string)`
+`func (o *InlineResponse20110) SetStatus(v string)`
 
-SetError sets Error field to given value.
+SetStatus sets Status field to given value.
 
-### HasError
+### HasStatus
 
-`func (o *InlineResponse20110) HasError() bool`
+`func (o *InlineResponse20110) HasStatus() bool`
 
-HasError returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 ### GetCallback
 

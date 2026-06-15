@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The device serial | [optional] 
-**RfProfileId** | Pointer to **string** | RF Profile ID | [optional] 
-**TwoFourGhzSettings** | Pointer to [**InlineResponse20011TwoFourGhzSettings**](InlineResponse20011TwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**InlineResponse20011FiveGhzSettings**](InlineResponse20011FiveGhzSettings.md) |  | [optional] 
+**Vlan** | Pointer to [**DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan**](DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan.md) |  | [optional] 
+**Origin** | Pointer to [**DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin**](DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin.md) |  | [optional] 
+**Status** | **string** | Current assignment status. | 
+**Ipv6** | Pointer to [**DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6**](DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20011
 
-`func NewInlineResponse20011() *InlineResponse20011`
+`func NewInlineResponse20011(status string, ) *InlineResponse20011`
 
 NewInlineResponse20011 instantiates a new InlineResponse20011 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,100 @@ NewInlineResponse20011WithDefaults instantiates a new InlineResponse20011 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetVlan
 
-`func (o *InlineResponse20011) GetSerial() string`
+`func (o *InlineResponse20011) GetVlan() DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetVlanOk
 
-`func (o *InlineResponse20011) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20011) GetVlanOk() (*DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetVlan
 
-`func (o *InlineResponse20011) SetSerial(v string)`
+`func (o *InlineResponse20011) SetVlan(v DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsVlan)`
 
-SetSerial sets Serial field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasSerial
+### HasVlan
 
-`func (o *InlineResponse20011) HasSerial() bool`
+`func (o *InlineResponse20011) HasVlan() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetRfProfileId
+### GetOrigin
 
-`func (o *InlineResponse20011) GetRfProfileId() string`
+`func (o *InlineResponse20011) GetOrigin() DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin`
 
-GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetRfProfileIdOk
+### GetOriginOk
 
-`func (o *InlineResponse20011) GetRfProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20011) GetOriginOk() (*DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin, bool)`
 
-GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfileId
+### SetOrigin
 
-`func (o *InlineResponse20011) SetRfProfileId(v string)`
+`func (o *InlineResponse20011) SetOrigin(v DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsOrigin)`
 
-SetRfProfileId sets RfProfileId field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasRfProfileId
+### HasOrigin
 
-`func (o *InlineResponse20011) HasRfProfileId() bool`
+`func (o *InlineResponse20011) HasOrigin() bool`
 
-HasRfProfileId returns a boolean if a field has been set.
+HasOrigin returns a boolean if a field has been set.
 
-### GetTwoFourGhzSettings
+### GetStatus
 
-`func (o *InlineResponse20011) GetTwoFourGhzSettings() InlineResponse20011TwoFourGhzSettings`
+`func (o *InlineResponse20011) GetStatus() string`
 
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetTwoFourGhzSettingsOk
+### GetStatusOk
 
-`func (o *InlineResponse20011) GetTwoFourGhzSettingsOk() (*InlineResponse20011TwoFourGhzSettings, bool)`
+`func (o *InlineResponse20011) GetStatusOk() (*string, bool)`
 
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetStatus
 
-`func (o *InlineResponse20011) SetTwoFourGhzSettings(v InlineResponse20011TwoFourGhzSettings)`
+`func (o *InlineResponse20011) SetStatus(v string)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetStatus sets Status field to given value.
 
-### HasTwoFourGhzSettings
 
-`func (o *InlineResponse20011) HasTwoFourGhzSettings() bool`
+### GetIpv6
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+`func (o *InlineResponse20011) GetIpv6() DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6`
 
-### GetFiveGhzSettings
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20011) GetFiveGhzSettings() InlineResponse20011FiveGhzSettings`
+### GetIpv6Ok
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+`func (o *InlineResponse20011) GetIpv6Ok() (*DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6, bool)`
 
-### GetFiveGhzSettingsOk
-
-`func (o *InlineResponse20011) GetFiveGhzSettingsOk() (*InlineResponse20011FiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetIpv6
 
-`func (o *InlineResponse20011) SetFiveGhzSettings(v InlineResponse20011FiveGhzSettings)`
+`func (o *InlineResponse20011) SetIpv6(v DevicesSerialAppliancePrefixesDelegatedVlanAssignmentsIpv6)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetIpv6 sets Ipv6 field to given value.
 
-### HasFiveGhzSettings
+### HasIpv6
 
-`func (o *InlineResponse20011) HasFiveGhzSettings() bool`
+`func (o *InlineResponse20011) HasIpv6() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

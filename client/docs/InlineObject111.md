@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Json** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson**](NetworksNetworkIdFirmwareUpgradesStagedStagesJson.md) | Array of Staged Upgrade Groups | [optional] 
+**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
 
 ## Methods
 
 ### NewInlineObject111
 
-`func NewInlineObject111() *InlineObject111`
+`func NewInlineObject111(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject111`
 
 NewInlineObject111 instantiates a new InlineObject111 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject111WithDefaults instantiates a new InlineObject111 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJson
+### GetSsids
 
-`func (o *InlineObject111) GetJson() []NetworksNetworkIdFirmwareUpgradesStagedStagesJson`
+`func (o *InlineObject111) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
 
-GetJson returns the Json field if non-nil, zero value otherwise.
+GetSsids returns the Ssids field if non-nil, zero value otherwise.
 
-### GetJsonOk
+### GetSsidsOk
 
-`func (o *InlineObject111) GetJsonOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson, bool)`
+`func (o *InlineObject111) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
 
-GetJsonOk returns a tuple with the Json field if it's non-nil, zero value otherwise
+GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJson
+### SetSsids
 
-`func (o *InlineObject111) SetJson(v []NetworksNetworkIdFirmwareUpgradesStagedStagesJson)`
+`func (o *InlineObject111) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
 
-SetJson sets Json field to given value.
+SetSsids sets Ssids field to given value.
 
-### HasJson
-
-`func (o *InlineObject111) HasJson() bool`
-
-HasJson returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

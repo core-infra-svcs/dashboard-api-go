@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | **string** | The URL where the test webhook will be sent | 
-**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to HTTP server&#39;s shared secret. Otherwise, defaults to an empty string. | [optional] 
-**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
-**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
-**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
 ### NewInlineObject185
 
-`func NewInlineObject185(url string, ) *InlineObject185`
+`func NewInlineObject185() *InlineObject185`
 
 NewInlineObject185 instantiates a new InlineObject185 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +26,55 @@ NewInlineObject185WithDefaults instantiates a new InlineObject185 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetRstpEnabled
 
-`func (o *InlineObject185) GetUrl() string`
+`func (o *InlineObject185) GetRstpEnabled() bool`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetRstpEnabledOk
 
-`func (o *InlineObject185) GetUrlOk() (*string, bool)`
+`func (o *InlineObject185) GetRstpEnabledOk() (*bool, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetRstpEnabled
 
-`func (o *InlineObject185) SetUrl(v string)`
+`func (o *InlineObject185) SetRstpEnabled(v bool)`
 
-SetUrl sets Url field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
+### HasRstpEnabled
 
-### GetSharedSecret
+`func (o *InlineObject185) HasRstpEnabled() bool`
 
-`func (o *InlineObject185) GetSharedSecret() string`
+HasRstpEnabled returns a boolean if a field has been set.
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+### GetStpBridgePriority
 
-### GetSharedSecretOk
+`func (o *InlineObject185) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
 
-`func (o *InlineObject185) GetSharedSecretOk() (*string, bool)`
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+### GetStpBridgePriorityOk
+
+`func (o *InlineObject185) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
+
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetStpBridgePriority
 
-`func (o *InlineObject185) SetSharedSecret(v string)`
+`func (o *InlineObject185) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetStpBridgePriority sets StpBridgePriority field to given value.
 
-### HasSharedSecret
+### HasStpBridgePriority
 
-`func (o *InlineObject185) HasSharedSecret() bool`
+`func (o *InlineObject185) HasStpBridgePriority() bool`
 
-HasSharedSecret returns a boolean if a field has been set.
-
-### GetPayloadTemplateId
-
-`func (o *InlineObject185) GetPayloadTemplateId() string`
-
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateIdOk
-
-`func (o *InlineObject185) GetPayloadTemplateIdOk() (*string, bool)`
-
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplateId
-
-`func (o *InlineObject185) SetPayloadTemplateId(v string)`
-
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
-
-### HasPayloadTemplateId
-
-`func (o *InlineObject185) HasPayloadTemplateId() bool`
-
-HasPayloadTemplateId returns a boolean if a field has been set.
-
-### GetPayloadTemplateName
-
-`func (o *InlineObject185) GetPayloadTemplateName() string`
-
-GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateNameOk
-
-`func (o *InlineObject185) GetPayloadTemplateNameOk() (*string, bool)`
-
-GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplateName
-
-`func (o *InlineObject185) SetPayloadTemplateName(v string)`
-
-SetPayloadTemplateName sets PayloadTemplateName field to given value.
-
-### HasPayloadTemplateName
-
-`func (o *InlineObject185) HasPayloadTemplateName() bool`
-
-HasPayloadTemplateName returns a boolean if a field has been set.
-
-### GetAlertTypeId
-
-`func (o *InlineObject185) GetAlertTypeId() string`
-
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
-
-### GetAlertTypeIdOk
-
-`func (o *InlineObject185) GetAlertTypeIdOk() (*string, bool)`
-
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertTypeId
-
-`func (o *InlineObject185) SetAlertTypeId(v string)`
-
-SetAlertTypeId sets AlertTypeId field to given value.
-
-### HasAlertTypeId
-
-`func (o *InlineObject185) HasAlertTypeId() bool`
-
-HasAlertTypeId returns a boolean if a field has been set.
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

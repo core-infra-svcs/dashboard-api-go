@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClusterId** | Pointer to **string** | ID of the cluster | [optional] 
-**Name** | Pointer to **string** | Name of the cluster | [optional] 
-**Uplinks** | Pointer to [**[]InlineResponse20113Uplinks**](InlineResponse20113Uplinks.md) | Uplink settings of the cluster | [optional] 
-**Tunnels** | Pointer to [**[]InlineResponse20113Tunnels**](InlineResponse20113Tunnels.md) | Tunnel settings of the cluster | [optional] 
-**Nameservers** | Pointer to [**InlineResponse20113Nameservers**](InlineResponse20113Nameservers.md) |  | [optional] 
-**PortChannels** | Pointer to [**[]InlineResponse20113PortChannels**](InlineResponse20113PortChannels.md) | Port channel settings of the cluster | [optional] 
-**Devices** | Pointer to [**[]InlineResponse20113Devices**](InlineResponse20113Devices.md) | Devices in the cluster | [optional] 
-**Notes** | Pointer to **string** | Notes about cluster | [optional] 
-**Url** | Pointer to **string** | URL to display cluster details | [optional] 
+**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
+**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
+**Result** | Pointer to [**InlineResponse20113Result**](InlineResponse20113Result.md) |  | [optional] 
+**Request** | Pointer to [**InlineResponse20113Request**](InlineResponse20113Request.md) |  | [optional] 
+**Error** | Pointer to **string** | Description of the error. | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -33,205 +31,30 @@ NewInlineResponse20113WithDefaults instantiates a new InlineResponse20113 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClusterId
+### GetThroughputTestId
 
-`func (o *InlineResponse20113) GetClusterId() string`
+`func (o *InlineResponse20113) GetThroughputTestId() string`
 
-GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
+GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
 
-### GetClusterIdOk
+### GetThroughputTestIdOk
 
-`func (o *InlineResponse20113) GetClusterIdOk() (*string, bool)`
+`func (o *InlineResponse20113) GetThroughputTestIdOk() (*string, bool)`
 
-GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
+GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClusterId
+### SetThroughputTestId
 
-`func (o *InlineResponse20113) SetClusterId(v string)`
+`func (o *InlineResponse20113) SetThroughputTestId(v string)`
 
-SetClusterId sets ClusterId field to given value.
+SetThroughputTestId sets ThroughputTestId field to given value.
 
-### HasClusterId
+### HasThroughputTestId
 
-`func (o *InlineResponse20113) HasClusterId() bool`
+`func (o *InlineResponse20113) HasThroughputTestId() bool`
 
-HasClusterId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse20113) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse20113) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse20113) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse20113) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse20113) GetUplinks() []InlineResponse20113Uplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse20113) GetUplinksOk() (*[]InlineResponse20113Uplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse20113) SetUplinks(v []InlineResponse20113Uplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse20113) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
-
-### GetTunnels
-
-`func (o *InlineResponse20113) GetTunnels() []InlineResponse20113Tunnels`
-
-GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
-
-### GetTunnelsOk
-
-`func (o *InlineResponse20113) GetTunnelsOk() (*[]InlineResponse20113Tunnels, bool)`
-
-GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTunnels
-
-`func (o *InlineResponse20113) SetTunnels(v []InlineResponse20113Tunnels)`
-
-SetTunnels sets Tunnels field to given value.
-
-### HasTunnels
-
-`func (o *InlineResponse20113) HasTunnels() bool`
-
-HasTunnels returns a boolean if a field has been set.
-
-### GetNameservers
-
-`func (o *InlineResponse20113) GetNameservers() InlineResponse20113Nameservers`
-
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
-
-### GetNameserversOk
-
-`func (o *InlineResponse20113) GetNameserversOk() (*InlineResponse20113Nameservers, bool)`
-
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNameservers
-
-`func (o *InlineResponse20113) SetNameservers(v InlineResponse20113Nameservers)`
-
-SetNameservers sets Nameservers field to given value.
-
-### HasNameservers
-
-`func (o *InlineResponse20113) HasNameservers() bool`
-
-HasNameservers returns a boolean if a field has been set.
-
-### GetPortChannels
-
-`func (o *InlineResponse20113) GetPortChannels() []InlineResponse20113PortChannels`
-
-GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
-
-### GetPortChannelsOk
-
-`func (o *InlineResponse20113) GetPortChannelsOk() (*[]InlineResponse20113PortChannels, bool)`
-
-GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPortChannels
-
-`func (o *InlineResponse20113) SetPortChannels(v []InlineResponse20113PortChannels)`
-
-SetPortChannels sets PortChannels field to given value.
-
-### HasPortChannels
-
-`func (o *InlineResponse20113) HasPortChannels() bool`
-
-HasPortChannels returns a boolean if a field has been set.
-
-### GetDevices
-
-`func (o *InlineResponse20113) GetDevices() []InlineResponse20113Devices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineResponse20113) GetDevicesOk() (*[]InlineResponse20113Devices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineResponse20113) SetDevices(v []InlineResponse20113Devices)`
-
-SetDevices sets Devices field to given value.
-
-### HasDevices
-
-`func (o *InlineResponse20113) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineResponse20113) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineResponse20113) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineResponse20113) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineResponse20113) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
+HasThroughputTestId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -257,6 +80,131 @@ SetUrl sets Url field to given value.
 `func (o *InlineResponse20113) HasUrl() bool`
 
 HasUrl returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20113) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20113) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20113) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20113) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetResult
+
+`func (o *InlineResponse20113) GetResult() InlineResponse20113Result`
+
+GetResult returns the Result field if non-nil, zero value otherwise.
+
+### GetResultOk
+
+`func (o *InlineResponse20113) GetResultOk() (*InlineResponse20113Result, bool)`
+
+GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResult
+
+`func (o *InlineResponse20113) SetResult(v InlineResponse20113Result)`
+
+SetResult sets Result field to given value.
+
+### HasResult
+
+`func (o *InlineResponse20113) HasResult() bool`
+
+HasResult returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20113) GetRequest() InlineResponse20113Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20113) GetRequestOk() (*InlineResponse20113Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20113) SetRequest(v InlineResponse20113Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20113) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
+### GetError
+
+`func (o *InlineResponse20113) GetError() string`
+
+GetError returns the Error field if non-nil, zero value otherwise.
+
+### GetErrorOk
+
+`func (o *InlineResponse20113) GetErrorOk() (*string, bool)`
+
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetError
+
+`func (o *InlineResponse20113) SetError(v string)`
+
+SetError sets Error field to given value.
+
+### HasError
+
+`func (o *InlineResponse20113) HasError() bool`
+
+HasError returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineResponse20113) GetCallback() InlineResponse2011Callback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineResponse20113) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineResponse20113) SetCallback(v InlineResponse2011Callback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineResponse20113) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

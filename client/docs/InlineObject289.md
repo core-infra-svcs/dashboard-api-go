@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
 
 ## Methods
 
 ### NewInlineObject289
 
-`func NewInlineObject289() *InlineObject289`
+`func NewInlineObject289(scheduleId string, ) *InlineObject289`
 
 NewInlineObject289 instantiates a new InlineObject289 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject289WithDefaults instantiates a new InlineObject289 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetScheduleId
 
-`func (o *InlineObject289) GetSerials() []string`
+`func (o *InlineObject289) GetScheduleId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetScheduleIdOk
 
-`func (o *InlineObject289) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject289) GetScheduleIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetScheduleId
 
-`func (o *InlineObject289) SetSerials(v []string)`
+`func (o *InlineObject289) SetScheduleId(v string)`
 
-SetSerials sets Serials field to given value.
+SetScheduleId sets ScheduleId field to given value.
 
-### HasSerials
-
-`func (o *InlineObject289) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,19 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
-**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
+**Clients** | Pointer to [**[]InlineResponse20119Clients**](InlineResponse20119Clients.md) | The list of clients to provision | [optional] 
+**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20119
 
-`func NewInlineResponse20119(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse20119`
+`func NewInlineResponse20119() *InlineResponse20119`
 
 NewInlineResponse20119 instantiates a new InlineResponse20119 object
 This constructor will assign default values to properties that have it defined,
@@ -31,175 +27,80 @@ NewInlineResponse20119WithDefaults instantiates a new InlineResponse20119 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetClients
 
-`func (o *InlineResponse20119) GetId() string`
+`func (o *InlineResponse20119) GetClients() []InlineResponse20119Clients`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetClientsOk
 
-`func (o *InlineResponse20119) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20119) GetClientsOk() (*[]InlineResponse20119Clients, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetClients
 
-`func (o *InlineResponse20119) SetId(v string)`
+`func (o *InlineResponse20119) SetClients(v []InlineResponse20119Clients)`
 
-SetId sets Id field to given value.
+SetClients sets Clients field to given value.
 
-### HasId
+### HasClients
 
-`func (o *InlineResponse20119) HasId() bool`
+`func (o *InlineResponse20119) HasClients() bool`
 
-HasId returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetDevicePolicy
 
-`func (o *InlineResponse20119) GetOrganizationId() string`
+`func (o *InlineResponse20119) GetDevicePolicy() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetDevicePolicyOk
 
-`func (o *InlineResponse20119) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse20119) GetDevicePolicyOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetDevicePolicy
 
-`func (o *InlineResponse20119) SetOrganizationId(v string)`
+`func (o *InlineResponse20119) SetDevicePolicy(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasOrganizationId
+### HasDevicePolicy
 
-`func (o *InlineResponse20119) HasOrganizationId() bool`
+`func (o *InlineResponse20119) HasDevicePolicy() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasDevicePolicy returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetGroupPolicyId
 
-`func (o *InlineResponse20119) GetConfirmed() bool`
+`func (o *InlineResponse20119) GetGroupPolicyId() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse20119) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse20119) GetGroupPolicyIdOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetGroupPolicyId
 
-`func (o *InlineResponse20119) SetConfirmed(v bool)`
+`func (o *InlineResponse20119) SetGroupPolicyId(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasConfirmed
+### HasGroupPolicyId
 
-`func (o *InlineResponse20119) HasConfirmed() bool`
+`func (o *InlineResponse20119) HasGroupPolicyId() bool`
 
-HasConfirmed returns a boolean if a field has been set.
-
-### GetSynchronous
-
-`func (o *InlineResponse20119) GetSynchronous() bool`
-
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
-
-### GetSynchronousOk
-
-`func (o *InlineResponse20119) GetSynchronousOk() (*bool, bool)`
-
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSynchronous
-
-`func (o *InlineResponse20119) SetSynchronous(v bool)`
-
-SetSynchronous sets Synchronous field to given value.
-
-### HasSynchronous
-
-`func (o *InlineResponse20119) HasSynchronous() bool`
-
-HasSynchronous returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse20119) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20119) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20119) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20119) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetActions
-
-`func (o *InlineResponse20119) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *InlineResponse20119) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *InlineResponse20119) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
-
-SetActions sets Actions field to given value.
-
-
-### GetCallback
-
-`func (o *InlineResponse20119) GetCallback() InlineResponse2011Callback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineResponse20119) GetCallbackOk() (*InlineResponse2011Callback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineResponse20119) SetCallback(v InlineResponse2011Callback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineResponse20119) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

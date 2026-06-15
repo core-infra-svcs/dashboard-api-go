@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**ClientId** | Pointer to **string** | ID of client | [optional] 
+**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200152WithDefaults instantiates a new InlineResponse200152 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetName
 
-`func (o *InlineResponse200152) GetIds() []string`
+`func (o *InlineResponse200152) GetName() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetNameOk
 
-`func (o *InlineResponse200152) GetIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200152) GetNameOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetName
 
-`func (o *InlineResponse200152) SetIds(v []string)`
+`func (o *InlineResponse200152) SetName(v string)`
 
-SetIds sets Ids field to given value.
+SetName sets Name field to given value.
 
-### HasIds
+### HasName
 
-`func (o *InlineResponse200152) HasIds() bool`
+`func (o *InlineResponse200152) HasName() bool`
 
-HasIds returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetClientId
+
+`func (o *InlineResponse200152) GetClientId() string`
+
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
+
+### GetClientIdOk
+
+`func (o *InlineResponse200152) GetClientIdOk() (*string, bool)`
+
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientId
+
+`func (o *InlineResponse200152) SetClientId(v string)`
+
+SetClientId sets ClientId field to given value.
+
+### HasClientId
+
+`func (o *InlineResponse200152) HasClientId() bool`
+
+HasClientId returns a boolean if a field has been set.
+
+### GetAssigned
+
+`func (o *InlineResponse200152) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+
+### GetAssignedOk
+
+`func (o *InlineResponse200152) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssigned
+
+`func (o *InlineResponse200152) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+
+SetAssigned sets Assigned field to given value.
+
+### HasAssigned
+
+`func (o *InlineResponse200152) HasAssigned() bool`
+
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

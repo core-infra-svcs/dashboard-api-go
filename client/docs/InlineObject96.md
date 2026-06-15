@@ -4,14 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
+**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
+**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
+**Sgt** | Pointer to [**InlineResponse200110Sgt**](InlineResponse200110Sgt.md) |  | [optional] 
+**Subnet** | Pointer to [**InlineResponse200110Subnet**](InlineResponse200110Subnet.md) |  | [optional] 
+**HostTranslations** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
 
 ## Methods
 
 ### NewInlineObject96
 
-`func NewInlineObject96() *InlineObject96`
+`func NewInlineObject96(mode string, ) *InlineObject96`
 
 NewInlineObject96 instantiates a new InlineObject96 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +30,150 @@ NewInlineObject96WithDefaults instantiates a new InlineObject96 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMask
+### GetMode
 
-`func (o *InlineObject96) GetMask() int32`
+`func (o *InlineObject96) GetMode() string`
 
-GetMask returns the Mask field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetMaskOk
+### GetModeOk
 
-`func (o *InlineObject96) GetMaskOk() (*int32, bool)`
+`func (o *InlineObject96) GetModeOk() (*string, bool)`
 
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMask
+### SetMode
 
-`func (o *InlineObject96) SetMask(v int32)`
+`func (o *InlineObject96) SetMode(v string)`
 
-SetMask sets Mask field to given value.
+SetMode sets Mode field to given value.
 
-### HasMask
 
-`func (o *InlineObject96) HasMask() bool`
+### GetHubs
 
-HasMask returns a boolean if a field has been set.
+`func (o *InlineObject96) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
 
-### GetCidr
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-`func (o *InlineObject96) GetCidr() string`
+### GetHubsOk
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+`func (o *InlineObject96) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
 
-### GetCidrOk
-
-`func (o *InlineObject96) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetHubs
 
-`func (o *InlineObject96) SetCidr(v string)`
+`func (o *InlineObject96) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
 
-SetCidr sets Cidr field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasCidr
+### HasHubs
 
-`func (o *InlineObject96) HasCidr() bool`
+`func (o *InlineObject96) HasHubs() bool`
 
-HasCidr returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
+
+### GetSubnets
+
+`func (o *InlineObject96) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
+
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+
+### GetSubnetsOk
+
+`func (o *InlineObject96) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
+
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnets
+
+`func (o *InlineObject96) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
+
+SetSubnets sets Subnets field to given value.
+
+### HasSubnets
+
+`func (o *InlineObject96) HasSubnets() bool`
+
+HasSubnets returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineObject96) GetSgt() InlineResponse200110Sgt`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineObject96) GetSgtOk() (*InlineResponse200110Sgt, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineObject96) SetSgt(v InlineResponse200110Sgt)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineObject96) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
+
+### GetSubnet
+
+`func (o *InlineObject96) GetSubnet() InlineResponse200110Subnet`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineObject96) GetSubnetOk() (*InlineResponse200110Subnet, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineObject96) SetSubnet(v InlineResponse200110Subnet)`
+
+SetSubnet sets Subnet field to given value.
+
+### HasSubnet
+
+`func (o *InlineObject96) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### GetHostTranslations
+
+`func (o *InlineObject96) GetHostTranslations() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations`
+
+GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
+
+### GetHostTranslationsOk
+
+`func (o *InlineObject96) GetHostTranslationsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations, bool)`
+
+GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostTranslations
+
+`func (o *InlineObject96) SetHostTranslations(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations)`
+
+SetHostTranslations sets HostTranslations field to given value.
+
+### HasHostTranslations
+
+`func (o *InlineObject96) HasHostTranslations() bool`
+
+HasHostTranslations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

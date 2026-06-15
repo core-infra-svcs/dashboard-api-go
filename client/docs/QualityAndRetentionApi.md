@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraQualityAndRetention
 
-> InlineResponse20019 GetDeviceCameraQualityAndRetention(ctx, serial).Execute()
+> InlineResponse20020 GetDeviceCameraQualityAndRetention(ctx, serial).Execute()
 
 Returns quality and retention settings for the given camera
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityAndRetentionApi.GetDeviceCameraQualityAndRetention``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraQualityAndRetention`: InlineResponse20019
+    // response from `GetDeviceCameraQualityAndRetention`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `QualityAndRetentionApi.GetDeviceCameraQualityAndRetention`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCameraQualityAndRetention
 
-> InlineResponse20019 UpdateDeviceCameraQualityAndRetention(ctx, serial).UpdateDeviceCameraQualityAndRetention(updateDeviceCameraQualityAndRetention).Execute()
+> InlineResponse20020 UpdateDeviceCameraQualityAndRetention(ctx, serial).UpdateDeviceCameraQualityAndRetention(updateDeviceCameraQualityAndRetention).Execute()
 
 Update quality and retention settings for the given camera
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraQualityAndRetention := *openapiclient.NewInlineObject9() // InlineObject9 |  (optional)
+    updateDeviceCameraQualityAndRetention := *openapiclient.NewInlineObject10() // InlineObject10 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityAndRetentionApi.UpdateDeviceCameraQualityAndRetention``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCameraQualityAndRetention`: InlineResponse20019
+    // response from `UpdateDeviceCameraQualityAndRetention`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `QualityAndRetentionApi.UpdateDeviceCameraQualityAndRetention`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraQualityA
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraQualityAndRetention** | [**InlineObject9**](InlineObject9.md) |  | 
+ **updateDeviceCameraQualityAndRetention** | [**InlineObject10**](InlineObject10.md) |  | 
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 

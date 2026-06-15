@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | The interval (in seconds) to determines how long a TLS session can remain idle for a RADSec server before it is automatically terminated | [optional] 
+**Timeout** | Pointer to **int32** | The interval (in seconds) to determines how long a TLS session can remain idle for a RadSec server before it is automatically terminated | [optional] 
 
 ## Methods
 

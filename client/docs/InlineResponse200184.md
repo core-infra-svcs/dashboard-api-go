@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
-**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
-**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
+**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
+**CommunityString** | Pointer to **string** | SNMP community string if access is &#39;community&#39;. | [optional] 
+**Users** | Pointer to [**[]InlineResponse200184Users**](InlineResponse200184Users.md) | SNMP settings if access is &#39;users&#39;. | [optional] 
+**Authentication** | Pointer to [**InlineResponse200184Authentication**](InlineResponse200184Authentication.md) |  | [optional] 
+**Privacy** | Pointer to [**InlineResponse200184Privacy**](InlineResponse200184Privacy.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200184WithDefaults instantiates a new InlineResponse200184 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrustedServerId
+### GetAccess
 
-`func (o *InlineResponse200184) GetTrustedServerId() string`
+`func (o *InlineResponse200184) GetAccess() string`
 
-GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetTrustedServerIdOk
+### GetAccessOk
 
-`func (o *InlineResponse200184) GetTrustedServerIdOk() (*string, bool)`
+`func (o *InlineResponse200184) GetAccessOk() (*string, bool)`
 
-GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrustedServerId
+### SetAccess
 
-`func (o *InlineResponse200184) SetTrustedServerId(v string)`
+`func (o *InlineResponse200184) SetAccess(v string)`
 
-SetTrustedServerId sets TrustedServerId field to given value.
+SetAccess sets Access field to given value.
 
-### HasTrustedServerId
+### HasAccess
 
-`func (o *InlineResponse200184) HasTrustedServerId() bool`
+`func (o *InlineResponse200184) HasAccess() bool`
 
-HasTrustedServerId returns a boolean if a field has been set.
+HasAccess returns a boolean if a field has been set.
 
-### GetMac
+### GetCommunityString
 
-`func (o *InlineResponse200184) GetMac() string`
+`func (o *InlineResponse200184) GetCommunityString() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetCommunityStringOk
 
-`func (o *InlineResponse200184) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200184) GetCommunityStringOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetCommunityString
 
-`func (o *InlineResponse200184) SetMac(v string)`
+`func (o *InlineResponse200184) SetCommunityString(v string)`
 
-SetMac sets Mac field to given value.
+SetCommunityString sets CommunityString field to given value.
 
-### HasMac
+### HasCommunityString
 
-`func (o *InlineResponse200184) HasMac() bool`
+`func (o *InlineResponse200184) HasCommunityString() bool`
 
-HasMac returns a boolean if a field has been set.
+HasCommunityString returns a boolean if a field has been set.
 
-### GetVlan
+### GetUsers
 
-`func (o *InlineResponse200184) GetVlan() int32`
+`func (o *InlineResponse200184) GetUsers() []InlineResponse200184Users`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetUsers returns the Users field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetUsersOk
 
-`func (o *InlineResponse200184) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200184) GetUsersOk() (*[]InlineResponse200184Users, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetUsers
 
-`func (o *InlineResponse200184) SetVlan(v int32)`
+`func (o *InlineResponse200184) SetUsers(v []InlineResponse200184Users)`
 
-SetVlan sets Vlan field to given value.
+SetUsers sets Users field to given value.
 
-### HasVlan
+### HasUsers
 
-`func (o *InlineResponse200184) HasVlan() bool`
+`func (o *InlineResponse200184) HasUsers() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasUsers returns a boolean if a field has been set.
 
-### GetIpv4
+### GetAuthentication
 
-`func (o *InlineResponse200184) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
+`func (o *InlineResponse200184) GetAuthentication() InlineResponse200184Authentication`
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
-### GetIpv4Ok
+### GetAuthenticationOk
 
-`func (o *InlineResponse200184) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
+`func (o *InlineResponse200184) GetAuthenticationOk() (*InlineResponse200184Authentication, bool)`
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetAuthentication
 
-`func (o *InlineResponse200184) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
+`func (o *InlineResponse200184) SetAuthentication(v InlineResponse200184Authentication)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetAuthentication sets Authentication field to given value.
 
-### HasIpv4
+### HasAuthentication
 
-`func (o *InlineResponse200184) HasIpv4() bool`
+`func (o *InlineResponse200184) HasAuthentication() bool`
 
-HasIpv4 returns a boolean if a field has been set.
+HasAuthentication returns a boolean if a field has been set.
+
+### GetPrivacy
+
+`func (o *InlineResponse200184) GetPrivacy() InlineResponse200184Privacy`
+
+GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
+
+### GetPrivacyOk
+
+`func (o *InlineResponse200184) GetPrivacyOk() (*InlineResponse200184Privacy, bool)`
+
+GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrivacy
+
+`func (o *InlineResponse200184) SetPrivacy(v InlineResponse200184Privacy)`
+
+SetPrivacy sets Privacy field to given value.
+
+### HasPrivacy
+
+`func (o *InlineResponse200184) HasPrivacy() bool`
+
+HasPrivacy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

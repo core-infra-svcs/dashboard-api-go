@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | Device model | [optional] 
-**Total** | Pointer to **int32** | Total number of devices for the model | [optional] 
+**Devices** | Pointer to [**InlineResponse200331CountsDevices**](InlineResponse200331CountsDevices.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200331CountsWithDefaults instantiates a new InlineResponse20033
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetDevices
 
-`func (o *InlineResponse200331Counts) GetModel() string`
+`func (o *InlineResponse200331Counts) GetDevices() InlineResponse200331CountsDevices`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetDevicesOk
 
-`func (o *InlineResponse200331Counts) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200331Counts) GetDevicesOk() (*InlineResponse200331CountsDevices, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetDevices
 
-`func (o *InlineResponse200331Counts) SetModel(v string)`
+`func (o *InlineResponse200331Counts) SetDevices(v InlineResponse200331CountsDevices)`
 
-SetModel sets Model field to given value.
+SetDevices sets Devices field to given value.
 
-### HasModel
+### HasDevices
 
-`func (o *InlineResponse200331Counts) HasModel() bool`
+`func (o *InlineResponse200331Counts) HasDevices() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetTotal
-
-`func (o *InlineResponse200331Counts) GetTotal() int32`
-
-GetTotal returns the Total field if non-nil, zero value otherwise.
-
-### GetTotalOk
-
-`func (o *InlineResponse200331Counts) GetTotalOk() (*int32, bool)`
-
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTotal
-
-`func (o *InlineResponse200331Counts) SetTotal(v int32)`
-
-SetTotal sets Total field to given value.
-
-### HasTotal
-
-`func (o *InlineResponse200331Counts) HasTotal() bool`
-
-HasTotal returns a boolean if a field has been set.
+HasDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

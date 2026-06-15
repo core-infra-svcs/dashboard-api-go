@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
-**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
-**Sepioo** | Pointer to [**InlineResponse200223Sepioo**](InlineResponse200223Sepioo.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200223WithDefaults instantiates a new InlineResponse200223 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetStartTs
 
-`func (o *InlineResponse200223) GetHostname() string`
+`func (o *InlineResponse200223) GetStartTs() time.Time`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetStartTsOk
 
-`func (o *InlineResponse200223) GetHostnameOk() (*string, bool)`
+`func (o *InlineResponse200223) GetStartTsOk() (*time.Time, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetStartTs
 
-`func (o *InlineResponse200223) SetHostname(v string)`
+`func (o *InlineResponse200223) SetStartTs(v time.Time)`
 
-SetHostname sets Hostname field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasHostname
+### HasStartTs
 
-`func (o *InlineResponse200223) HasHostname() bool`
+`func (o *InlineResponse200223) HasStartTs() bool`
 
-HasHostname returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetEnabled
+### GetEndTs
 
-`func (o *InlineResponse200223) GetEnabled() bool`
+`func (o *InlineResponse200223) GetEndTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetEndTsOk
 
-`func (o *InlineResponse200223) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200223) GetEndTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetEndTs
 
-`func (o *InlineResponse200223) SetEnabled(v bool)`
+`func (o *InlineResponse200223) SetEndTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasEnabled
+### HasEndTs
 
-`func (o *InlineResponse200223) HasEnabled() bool`
+`func (o *InlineResponse200223) HasEndTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetMode
+### GetClientCount
 
-`func (o *InlineResponse200223) GetMode() string`
+`func (o *InlineResponse200223) GetClientCount() int32`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetClientCountOk
 
-`func (o *InlineResponse200223) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200223) GetClientCountOk() (*int32, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetClientCount
 
-`func (o *InlineResponse200223) SetMode(v string)`
+`func (o *InlineResponse200223) SetClientCount(v int32)`
 
-SetMode sets Mode field to given value.
+SetClientCount sets ClientCount field to given value.
 
-### HasMode
+### HasClientCount
 
-`func (o *InlineResponse200223) HasMode() bool`
+`func (o *InlineResponse200223) HasClientCount() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetSepioo
-
-`func (o *InlineResponse200223) GetSepioo() InlineResponse200223Sepioo`
-
-GetSepioo returns the Sepioo field if non-nil, zero value otherwise.
-
-### GetSepiooOk
-
-`func (o *InlineResponse200223) GetSepiooOk() (*InlineResponse200223Sepioo, bool)`
-
-GetSepiooOk returns a tuple with the Sepioo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSepioo
-
-`func (o *InlineResponse200223) SetSepioo(v InlineResponse200223Sepioo)`
-
-SetSepioo sets Sepioo field to given value.
-
-### HasSepioo
-
-`func (o *InlineResponse200223) HasSepioo() bool`
-
-HasSepioo returns a boolean if a field has been set.
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

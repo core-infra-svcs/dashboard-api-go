@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems.md) | List of device-to-profile assignments to remove. | 
+**Status** | Pointer to **string** | Status the eSIM will be updated to | [optional] 
 
 ## Methods
 
 ### NewInlineObject267
 
-`func NewInlineObject267(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, ) *InlineObject267`
+`func NewInlineObject267() *InlineObject267`
 
 NewInlineObject267 instantiates a new InlineObject267 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject267WithDefaults instantiates a new InlineObject267 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetStatus
 
-`func (o *InlineObject267) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems`
+`func (o *InlineObject267) GetStatus() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetStatusOk
 
-`func (o *InlineObject267) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, bool)`
+`func (o *InlineObject267) GetStatusOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetStatus
 
-`func (o *InlineObject267) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems)`
+`func (o *InlineObject267) SetStatus(v string)`
 
-SetItems sets Items field to given value.
+SetStatus sets Status field to given value.
 
+### HasStatus
+
+`func (o *InlineObject267) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

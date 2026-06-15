@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **string** | The current time | [optional] 
-**Zones** | Pointer to [**InlineResponse20013Zones**](InlineResponse20013Zones.md) |  | [optional] 
+**Interfaces** | Pointer to [**InlineResponse20013Interfaces**](InlineResponse20013Interfaces.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20013WithDefaults instantiates a new InlineResponse20013 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetInterfaces
 
-`func (o *InlineResponse20013) GetTs() string`
+`func (o *InlineResponse20013) GetInterfaces() InlineResponse20013Interfaces`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetInterfacesOk
 
-`func (o *InlineResponse20013) GetTsOk() (*string, bool)`
+`func (o *InlineResponse20013) GetInterfacesOk() (*InlineResponse20013Interfaces, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetInterfaces
 
-`func (o *InlineResponse20013) SetTs(v string)`
+`func (o *InlineResponse20013) SetInterfaces(v InlineResponse20013Interfaces)`
 
-SetTs sets Ts field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasTs
+### HasInterfaces
 
-`func (o *InlineResponse20013) HasTs() bool`
+`func (o *InlineResponse20013) HasInterfaces() bool`
 
-HasTs returns a boolean if a field has been set.
-
-### GetZones
-
-`func (o *InlineResponse20013) GetZones() InlineResponse20013Zones`
-
-GetZones returns the Zones field if non-nil, zero value otherwise.
-
-### GetZonesOk
-
-`func (o *InlineResponse20013) GetZonesOk() (*InlineResponse20013Zones, bool)`
-
-GetZonesOk returns a tuple with the Zones field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetZones
-
-`func (o *InlineResponse20013) SetZones(v InlineResponse20013Zones)`
-
-SetZones sets Zones field to given value.
-
-### HasZones
-
-`func (o *InlineResponse20013) HasZones() bool`
-
-HasZones returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

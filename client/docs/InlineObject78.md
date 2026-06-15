@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Custom** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom.md) | Custom VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
-**MajorApplications** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications.md) | Major Application based VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
+**Name** | Pointer to **string** | Name of the route | [optional] 
+**Subnet** | Pointer to **string** | Subnet of the route | [optional] 
+**GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
+**GatewayVlanId** | Pointer to **NullableInt32** | Gateway VLAN ID | [optional] 
+**Enabled** | Pointer to **bool** | Whether the route should be enabled or not | [optional] 
+**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
+**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
 
 ## Methods
 
@@ -26,55 +31,190 @@ NewInlineObject78WithDefaults instantiates a new InlineObject78 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCustom
+### GetName
 
-`func (o *InlineObject78) GetCustom() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom`
+`func (o *InlineObject78) GetName() string`
 
-GetCustom returns the Custom field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCustomOk
+### GetNameOk
 
-`func (o *InlineObject78) GetCustomOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom, bool)`
+`func (o *InlineObject78) GetNameOk() (*string, bool)`
 
-GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustom
+### SetName
 
-`func (o *InlineObject78) SetCustom(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom)`
+`func (o *InlineObject78) SetName(v string)`
 
-SetCustom sets Custom field to given value.
+SetName sets Name field to given value.
 
-### HasCustom
+### HasName
 
-`func (o *InlineObject78) HasCustom() bool`
+`func (o *InlineObject78) HasName() bool`
 
-HasCustom returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMajorApplications
+### GetSubnet
 
-`func (o *InlineObject78) GetMajorApplications() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications`
+`func (o *InlineObject78) GetSubnet() string`
 
-GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetMajorApplicationsOk
+### GetSubnetOk
 
-`func (o *InlineObject78) GetMajorApplicationsOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications, bool)`
+`func (o *InlineObject78) GetSubnetOk() (*string, bool)`
 
-GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorApplications
+### SetSubnet
 
-`func (o *InlineObject78) SetMajorApplications(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications)`
+`func (o *InlineObject78) SetSubnet(v string)`
 
-SetMajorApplications sets MajorApplications field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMajorApplications
+### HasSubnet
 
-`func (o *InlineObject78) HasMajorApplications() bool`
+`func (o *InlineObject78) HasSubnet() bool`
 
-HasMajorApplications returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
+
+### GetGatewayIp
+
+`func (o *InlineObject78) GetGatewayIp() string`
+
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+
+### GetGatewayIpOk
+
+`func (o *InlineObject78) GetGatewayIpOk() (*string, bool)`
+
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayIp
+
+`func (o *InlineObject78) SetGatewayIp(v string)`
+
+SetGatewayIp sets GatewayIp field to given value.
+
+### HasGatewayIp
+
+`func (o *InlineObject78) HasGatewayIp() bool`
+
+HasGatewayIp returns a boolean if a field has been set.
+
+### GetGatewayVlanId
+
+`func (o *InlineObject78) GetGatewayVlanId() int32`
+
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
+
+### GetGatewayVlanIdOk
+
+`func (o *InlineObject78) GetGatewayVlanIdOk() (*int32, bool)`
+
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayVlanId
+
+`func (o *InlineObject78) SetGatewayVlanId(v int32)`
+
+SetGatewayVlanId sets GatewayVlanId field to given value.
+
+### HasGatewayVlanId
+
+`func (o *InlineObject78) HasGatewayVlanId() bool`
+
+HasGatewayVlanId returns a boolean if a field has been set.
+
+### SetGatewayVlanIdNil
+
+`func (o *InlineObject78) SetGatewayVlanIdNil(b bool)`
+
+ SetGatewayVlanIdNil sets the value for GatewayVlanId to be an explicit nil
+
+### UnsetGatewayVlanId
+`func (o *InlineObject78) UnsetGatewayVlanId()`
+
+UnsetGatewayVlanId ensures that no value is present for GatewayVlanId, not even an explicit nil
+### GetEnabled
+
+`func (o *InlineObject78) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject78) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject78) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject78) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineObject78) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineObject78) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineObject78) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments)`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineObject78) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineObject78) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineObject78) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineObject78) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineObject78) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

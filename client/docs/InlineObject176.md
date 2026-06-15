@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]InlineResponse200204CustomPieChartItems**](InlineResponse200204CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**Name** | **string** | The name of the new stack | 
+**Serials** | **[]string** | An array of switch serials to be added into the new stack | 
 
 ## Methods
 
 ### NewInlineObject176
 
-`func NewInlineObject176() *InlineObject176`
+`func NewInlineObject176(name string, serials []string, ) *InlineObject176`
 
 NewInlineObject176 instantiates a new InlineObject176 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject176WithDefaults instantiates a new InlineObject176 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetName
 
-`func (o *InlineObject176) GetMode() string`
+`func (o *InlineObject176) GetName() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNameOk
 
-`func (o *InlineObject176) GetModeOk() (*string, bool)`
+`func (o *InlineObject176) GetNameOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetName
 
-`func (o *InlineObject176) SetMode(v string)`
+`func (o *InlineObject176) SetName(v string)`
 
-SetMode sets Mode field to given value.
+SetName sets Name field to given value.
 
-### HasMode
 
-`func (o *InlineObject176) HasMode() bool`
+### GetSerials
 
-HasMode returns a boolean if a field has been set.
+`func (o *InlineObject176) GetSerials() []string`
 
-### GetCustomPieChartItems
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-`func (o *InlineObject176) GetCustomPieChartItems() []InlineResponse200204CustomPieChartItems`
+### GetSerialsOk
 
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
+`func (o *InlineObject176) GetSerialsOk() (*[]string, bool)`
 
-### GetCustomPieChartItemsOk
-
-`func (o *InlineObject176) GetCustomPieChartItemsOk() (*[]InlineResponse200204CustomPieChartItems, bool)`
-
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPieChartItems
+### SetSerials
 
-`func (o *InlineObject176) SetCustomPieChartItems(v []InlineResponse200204CustomPieChartItems)`
+`func (o *InlineObject176) SetSerials(v []string)`
 
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
+SetSerials sets Serials field to given value.
 
-### HasCustomPieChartItems
-
-`func (o *InlineObject176) HasCustomPieChartItems() bool`
-
-HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

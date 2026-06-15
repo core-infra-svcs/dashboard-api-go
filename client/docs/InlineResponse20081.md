@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assigned** | Pointer to [**[]InlineResponse20081Assigned**](InlineResponse20081Assigned.md) | RF Profiles | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20081Rules**](InlineResponse20081Rules.md) | An array of 1:1 nat rules | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20081WithDefaults instantiates a new InlineResponse20081 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssigned
+### GetRules
 
-`func (o *InlineResponse20081) GetAssigned() []InlineResponse20081Assigned`
+`func (o *InlineResponse20081) GetRules() []InlineResponse20081Rules`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetRulesOk
 
-`func (o *InlineResponse20081) GetAssignedOk() (*[]InlineResponse20081Assigned, bool)`
+`func (o *InlineResponse20081) GetRulesOk() (*[]InlineResponse20081Rules, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetRules
 
-`func (o *InlineResponse20081) SetAssigned(v []InlineResponse20081Assigned)`
+`func (o *InlineResponse20081) SetRules(v []InlineResponse20081Rules)`
 
-SetAssigned sets Assigned field to given value.
+SetRules sets Rules field to given value.
 
-### HasAssigned
+### HasRules
 
-`func (o *InlineResponse20081) HasAssigned() bool`
+`func (o *InlineResponse20081) HasRules() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

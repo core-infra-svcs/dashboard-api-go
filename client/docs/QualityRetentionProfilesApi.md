@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkCameraQualityRetentionProfile
 
-> InlineResponse200106 CreateNetworkCameraQualityRetentionProfile(ctx, networkId).CreateNetworkCameraQualityRetentionProfile(createNetworkCameraQualityRetentionProfile).Execute()
+> InlineResponse200114 CreateNetworkCameraQualityRetentionProfile(ctx, networkId).CreateNetworkCameraQualityRetentionProfile(createNetworkCameraQualityRetentionProfile).Execute()
 
 Creates new quality retention profile for this network.
 
@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject88("Name_example") // InlineObject88 | 
+    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject99("Name_example") // InlineObject99 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityRetentionProfilesApi.CreateNetworkCameraQualityRetentionProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkCameraQualityRetentionProfile`: InlineResponse200106
+    // response from `CreateNetworkCameraQualityRetentionProfile`: InlineResponse200114
     fmt.Fprintf(os.Stdout, "Response from `QualityRetentionProfilesApi.CreateNetworkCameraQualityRetentionProfile`: %v\n", resp)
 }
 ```
@@ -64,11 +64,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraQuality
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraQualityRetentionProfile** | [**InlineObject88**](InlineObject88.md) |  | 
+ **createNetworkCameraQualityRetentionProfile** | [**InlineObject99**](InlineObject99.md) |  | 
 
 ### Return type
 
-[**InlineResponse200106**](InlineResponse200106.md)
+[**InlineResponse200114**](InlineResponse200114.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCameraQualityRetentionProfile
 
-> InlineResponse200106 GetNetworkCameraQualityRetentionProfile(ctx, networkId, qualityRetentionProfileId).Execute()
+> InlineResponse200114 GetNetworkCameraQualityRetentionProfile(ctx, networkId, qualityRetentionProfileId).Execute()
 
 Retrieve a single quality retention profile
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityRetentionProfilesApi.GetNetworkCameraQualityRetentionProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraQualityRetentionProfile`: InlineResponse200106
+    // response from `GetNetworkCameraQualityRetentionProfile`: InlineResponse200114
     fmt.Fprintf(os.Stdout, "Response from `QualityRetentionProfilesApi.GetNetworkCameraQualityRetentionProfile`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200106**](InlineResponse200106.md)
+[**InlineResponse200114**](InlineResponse200114.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCameraQualityRetentionProfiles
 
-> []InlineResponse200106 GetNetworkCameraQualityRetentionProfiles(ctx, networkId).Execute()
+> []InlineResponse200114 GetNetworkCameraQualityRetentionProfiles(ctx, networkId).Execute()
 
 List the quality retention profiles for this network
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityRetentionProfilesApi.GetNetworkCameraQualityRetentionProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraQualityRetentionProfiles`: []InlineResponse200106
+    // response from `GetNetworkCameraQualityRetentionProfiles`: []InlineResponse200114
     fmt.Fprintf(os.Stdout, "Response from `QualityRetentionProfilesApi.GetNetworkCameraQualityRetentionProfiles`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200106**](InlineResponse200106.md)
+[**[]InlineResponse200114**](InlineResponse200114.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCameraQualityRetentionProfile
 
-> InlineResponse200106 UpdateNetworkCameraQualityRetentionProfile(ctx, networkId, qualityRetentionProfileId).UpdateNetworkCameraQualityRetentionProfile(updateNetworkCameraQualityRetentionProfile).Execute()
+> InlineResponse200114 UpdateNetworkCameraQualityRetentionProfile(ctx, networkId, qualityRetentionProfileId).UpdateNetworkCameraQualityRetentionProfile(updateNetworkCameraQualityRetentionProfile).Execute()
 
 Update an existing quality retention profile for this network.
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | Quality retention profile ID
-    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject89() // InlineObject89 |  (optional)
+    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject100() // InlineObject100 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QualityRetentionProfilesApi.UpdateNetworkCameraQualityRetentionProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCameraQualityRetentionProfile`: InlineResponse200106
+    // response from `UpdateNetworkCameraQualityRetentionProfile`: InlineResponse200114
     fmt.Fprintf(os.Stdout, "Response from `QualityRetentionProfilesApi.UpdateNetworkCameraQualityRetentionProfile`: %v\n", resp)
 }
 ```
@@ -353,11 +353,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraQualityRetentionProfile** | [**InlineObject89**](InlineObject89.md) |  | 
+ **updateNetworkCameraQualityRetentionProfile** | [**InlineObject100**](InlineObject100.md) |  | 
 
 ### Return type
 
-[**InlineResponse200106**](InlineResponse200106.md)
+[**InlineResponse200114**](InlineResponse200114.md)
 
 ### Authorization
 

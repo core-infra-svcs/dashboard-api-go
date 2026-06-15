@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchStp
 
-> InlineResponse200200 GetNetworkSwitchStp(ctx, networkId).Execute()
+> InlineResponse200208 GetNetworkSwitchStp(ctx, networkId).Execute()
 
 Returns STP settings
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StpApi.GetNetworkSwitchStp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStp`: InlineResponse200200
+    // response from `GetNetworkSwitchStp`: InlineResponse200208
     fmt.Fprintf(os.Stdout, "Response from `StpApi.GetNetworkSwitchStp`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200200**](InlineResponse200200.md)
+[**InlineResponse200208**](InlineResponse200208.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStp
 
-> InlineResponse200200 UpdateNetworkSwitchStp(ctx, networkId).UpdateNetworkSwitchStp(updateNetworkSwitchStp).Execute()
+> InlineResponse200208 UpdateNetworkSwitchStp(ctx, networkId).UpdateNetworkSwitchStp(updateNetworkSwitchStp).Execute()
 
 Updates STP settings
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchStp := *openapiclient.NewInlineObject174() // InlineObject174 |  (optional)
+    updateNetworkSwitchStp := *openapiclient.NewInlineObject185() // InlineObject185 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StpApi.UpdateNetworkSwitchStp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStp`: InlineResponse200200
+    // response from `UpdateNetworkSwitchStp`: InlineResponse200208
     fmt.Fprintf(os.Stdout, "Response from `StpApi.UpdateNetworkSwitchStp`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchStpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchStp** | [**InlineObject174**](InlineObject174.md) |  | 
+ **updateNetworkSwitchStp** | [**InlineObject185**](InlineObject185.md) |  | 
 
 ### Return type
 
-[**InlineResponse200200**](InlineResponse200200.md)
+[**InlineResponse200208**](InlineResponse200208.md)
 
 ### Authorization
 

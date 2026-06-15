@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProducts**](NetworksNetworkIdFirmwareUpgradesStagedEventsProducts.md) |  | [optional] 
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
 
 ## Methods
 
 ### NewInlineObject107
 
-`func NewInlineObject107(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject107`
+`func NewInlineObject107() *InlineObject107`
 
 NewInlineObject107 instantiates a new InlineObject107 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject107WithDefaults instantiates a new InlineObject107 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetMask
 
-`func (o *InlineObject107) GetProducts() NetworksNetworkIdFirmwareUpgradesStagedEventsProducts`
+`func (o *InlineObject107) GetMask() int32`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetMaskOk
 
-`func (o *InlineObject107) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProducts, bool)`
+`func (o *InlineObject107) GetMaskOk() (*int32, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetMask
 
-`func (o *InlineObject107) SetProducts(v NetworksNetworkIdFirmwareUpgradesStagedEventsProducts)`
+`func (o *InlineObject107) SetMask(v int32)`
 
-SetProducts sets Products field to given value.
+SetMask sets Mask field to given value.
 
-### HasProducts
+### HasMask
 
-`func (o *InlineObject107) HasProducts() bool`
+`func (o *InlineObject107) HasMask() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
 
-### GetStages
+### GetCidr
 
-`func (o *InlineObject107) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
+`func (o *InlineObject107) GetCidr() string`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetCidrOk
 
-`func (o *InlineObject107) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
+`func (o *InlineObject107) GetCidrOk() (*string, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetCidr
 
-`func (o *InlineObject107) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
+`func (o *InlineObject107) SetCidr(v string)`
 
-SetStages sets Stages field to given value.
+SetCidr sets Cidr field to given value.
 
+### HasCidr
+
+`func (o *InlineObject107) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

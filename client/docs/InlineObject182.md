@@ -4,15 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
+**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
+**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject182
 
-`func NewInlineObject182() *InlineObject182`
+`func NewInlineObject182(subnet string, nextHopIp string, ) *InlineObject182`
 
 NewInlineObject182 instantiates a new InlineObject182 object
 This constructor will assign default values to properties that have it defined,
@@ -52,55 +55,120 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSharedSecret
+### GetSubnet
 
-`func (o *InlineObject182) GetSharedSecret() string`
+`func (o *InlineObject182) GetSubnet() string`
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetSharedSecretOk
+### GetSubnetOk
 
-`func (o *InlineObject182) GetSharedSecretOk() (*string, bool)`
+`func (o *InlineObject182) GetSubnetOk() (*string, bool)`
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetSubnet
 
-`func (o *InlineObject182) SetSharedSecret(v string)`
+`func (o *InlineObject182) SetSubnet(v string)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasSharedSecret
 
-`func (o *InlineObject182) HasSharedSecret() bool`
+### GetNextHopIp
 
-HasSharedSecret returns a boolean if a field has been set.
+`func (o *InlineObject182) GetNextHopIp() string`
 
-### GetPayloadTemplate
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-`func (o *InlineObject182) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
+### GetNextHopIpOk
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+`func (o *InlineObject182) GetNextHopIpOk() (*string, bool)`
 
-### GetPayloadTemplateOk
-
-`func (o *InlineObject182) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetNextHopIp
 
-`func (o *InlineObject182) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
+`func (o *InlineObject182) SetNextHopIp(v string)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasPayloadTemplate
 
-`func (o *InlineObject182) HasPayloadTemplate() bool`
+### GetAdvertiseViaOspfEnabled
 
-HasPayloadTemplate returns a boolean if a field has been set.
+`func (o *InlineObject182) GetAdvertiseViaOspfEnabled() bool`
+
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+
+### GetAdvertiseViaOspfEnabledOk
+
+`func (o *InlineObject182) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject182) SetAdvertiseViaOspfEnabled(v bool)`
+
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+
+### HasAdvertiseViaOspfEnabled
+
+`func (o *InlineObject182) HasAdvertiseViaOspfEnabled() bool`
+
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject182) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineObject182) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject182) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject182) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject182) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject182) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject182) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject182) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

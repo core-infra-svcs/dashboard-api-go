@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to [**InlineResponse20024Ids**](InlineResponse20024Ids.md) |  | [optional] 
+**Url** | Pointer to **string** | URL to the camera video stream | [optional] 
+**VisionUrl** | Pointer to **string** | URL to the Meraki Vision camera view | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20024WithDefaults instantiates a new InlineResponse20024 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetUrl
 
-`func (o *InlineResponse20024) GetIds() InlineResponse20024Ids`
+`func (o *InlineResponse20024) GetUrl() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetUrlOk
 
-`func (o *InlineResponse20024) GetIdsOk() (*InlineResponse20024Ids, bool)`
+`func (o *InlineResponse20024) GetUrlOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetUrl
 
-`func (o *InlineResponse20024) SetIds(v InlineResponse20024Ids)`
+`func (o *InlineResponse20024) SetUrl(v string)`
 
-SetIds sets Ids field to given value.
+SetUrl sets Url field to given value.
 
-### HasIds
+### HasUrl
 
-`func (o *InlineResponse20024) HasIds() bool`
+`func (o *InlineResponse20024) HasUrl() bool`
 
-HasIds returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetVisionUrl
+
+`func (o *InlineResponse20024) GetVisionUrl() string`
+
+GetVisionUrl returns the VisionUrl field if non-nil, zero value otherwise.
+
+### GetVisionUrlOk
+
+`func (o *InlineResponse20024) GetVisionUrlOk() (*string, bool)`
+
+GetVisionUrlOk returns a tuple with the VisionUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisionUrl
+
+`func (o *InlineResponse20024) SetVisionUrl(v string)`
+
+SetVisionUrl sets VisionUrl field to given value.
+
+### HasVisionUrl
+
+`func (o *InlineResponse20024) HasVisionUrl() bool`
+
+HasVisionUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Api** | [**OrganizationsOrganizationIdSaseIntegrationsApi**](OrganizationsOrganizationIdSaseIntegrationsApi.md) |  | 
+**Name** | Pointer to **string** | Name of the policy | [optional] 
+**Description** | Pointer to **string** | Description of the policy | [optional] 
 
 ## Methods
 
 ### NewInlineObject322
 
-`func NewInlineObject322(api OrganizationsOrganizationIdSaseIntegrationsApi, ) *InlineObject322`
+`func NewInlineObject322() *InlineObject322`
 
 NewInlineObject322 instantiates a new InlineObject322 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject322WithDefaults instantiates a new InlineObject322 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApi
+### GetName
 
-`func (o *InlineObject322) GetApi() OrganizationsOrganizationIdSaseIntegrationsApi`
+`func (o *InlineObject322) GetName() string`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetNameOk
 
-`func (o *InlineObject322) GetApiOk() (*OrganizationsOrganizationIdSaseIntegrationsApi, bool)`
+`func (o *InlineObject322) GetNameOk() (*string, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetName
 
-`func (o *InlineObject322) SetApi(v OrganizationsOrganizationIdSaseIntegrationsApi)`
+`func (o *InlineObject322) SetName(v string)`
 
-SetApi sets Api field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject322) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineObject322) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject322) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject322) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject322) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

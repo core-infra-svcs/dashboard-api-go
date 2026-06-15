@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Network** | Pointer to [**InlineResponse200458Network**](InlineResponse200458Network.md) |  | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200458Readings**](InlineResponse200458Readings.md) | Overview history of a wireless LAN controller | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Network Name | [optional] 
+**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
+**Api** | Pointer to [**InlineResponse200237Api**](InlineResponse200237Api.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200458ItemsWithDefaults instantiates a new InlineResponse200458
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetNetworkId
 
-`func (o *InlineResponse200458Items) GetSerial() string`
+`func (o *InlineResponse200458Items) GetNetworkId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200458Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200458Items) GetNetworkIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetworkId
 
-`func (o *InlineResponse200458Items) SetSerial(v string)`
+`func (o *InlineResponse200458Items) SetNetworkId(v string)`
 
-SetSerial sets Serial field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasSerial
+### HasNetworkId
 
-`func (o *InlineResponse200458Items) HasSerial() bool`
+`func (o *InlineResponse200458Items) HasNetworkId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetNetwork
+### GetName
 
-`func (o *InlineResponse200458Items) GetNetwork() InlineResponse200458Network`
+`func (o *InlineResponse200458Items) GetName() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNameOk
 
-`func (o *InlineResponse200458Items) GetNetworkOk() (*InlineResponse200458Network, bool)`
+`func (o *InlineResponse200458Items) GetNameOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetName
 
-`func (o *InlineResponse200458Items) SetNetwork(v InlineResponse200458Network)`
+`func (o *InlineResponse200458Items) SetName(v string)`
 
-SetNetwork sets Network field to given value.
+SetName sets Name field to given value.
 
-### HasNetwork
+### HasName
 
-`func (o *InlineResponse200458Items) HasNetwork() bool`
+`func (o *InlineResponse200458Items) HasName() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetReadings
+### GetEnabled
 
-`func (o *InlineResponse200458Items) GetReadings() []InlineResponse200458Readings`
+`func (o *InlineResponse200458Items) GetEnabled() bool`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200458Items) GetReadingsOk() (*[]InlineResponse200458Readings, bool)`
+`func (o *InlineResponse200458Items) GetEnabledOk() (*bool, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetEnabled
 
-`func (o *InlineResponse200458Items) SetReadings(v []InlineResponse200458Readings)`
+`func (o *InlineResponse200458Items) SetEnabled(v bool)`
 
-SetReadings sets Readings field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasReadings
+### HasEnabled
 
-`func (o *InlineResponse200458Items) HasReadings() bool`
+`func (o *InlineResponse200458Items) HasEnabled() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetApi
+
+`func (o *InlineResponse200458Items) GetApi() InlineResponse200237Api`
+
+GetApi returns the Api field if non-nil, zero value otherwise.
+
+### GetApiOk
+
+`func (o *InlineResponse200458Items) GetApiOk() (*InlineResponse200237Api, bool)`
+
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApi
+
+`func (o *InlineResponse200458Items) SetApi(v InlineResponse200237Api)`
+
+SetApi sets Api field to given value.
+
+### HasApi
+
+`func (o *InlineResponse200458Items) HasApi() bool`
+
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

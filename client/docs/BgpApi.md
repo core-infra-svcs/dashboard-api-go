@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceVpnBgp
 
-> InlineResponse200101 GetNetworkApplianceVpnBgp(ctx, networkId).Execute()
+> InlineResponse200109 GetNetworkApplianceVpnBgp(ctx, networkId).Execute()
 
 Return a Hub BGP Configuration
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BgpApi.GetNetworkApplianceVpnBgp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVpnBgp`: InlineResponse200101
+    // response from `GetNetworkApplianceVpnBgp`: InlineResponse200109
     fmt.Fprintf(os.Stdout, "Response from `BgpApi.GetNetworkApplianceVpnBgp`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200101**](InlineResponse200101.md)
+[**InlineResponse200109**](InlineResponse200109.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVpnBgp
 
-> InlineResponse200101 UpdateNetworkApplianceVpnBgp(ctx, networkId).UpdateNetworkApplianceVpnBgp(updateNetworkApplianceVpnBgp).Execute()
+> InlineResponse200109 UpdateNetworkApplianceVpnBgp(ctx, networkId).UpdateNetworkApplianceVpnBgp(updateNetworkApplianceVpnBgp).Execute()
 
 Update a Hub BGP Configuration
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceVpnBgp := *openapiclient.NewInlineObject84(false) // InlineObject84 | 
+    updateNetworkApplianceVpnBgp := *openapiclient.NewInlineObject95(false) // InlineObject95 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BgpApi.UpdateNetworkApplianceVpnBgp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVpnBgp`: InlineResponse200101
+    // response from `UpdateNetworkApplianceVpnBgp`: InlineResponse200109
     fmt.Fprintf(os.Stdout, "Response from `BgpApi.UpdateNetworkApplianceVpnBgp`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceVpnB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceVpnBgp** | [**InlineObject84**](InlineObject84.md) |  | 
+ **updateNetworkApplianceVpnBgp** | [**InlineObject95**](InlineObject95.md) |  | 
 
 ### Return type
 
-[**InlineResponse200101**](InlineResponse200101.md)
+[**InlineResponse200109**](InlineResponse200109.md)
 
 ### Authorization
 

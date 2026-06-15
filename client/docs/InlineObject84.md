@@ -4,17 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
-**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
-**IbgpHoldTimer** | Pointer to **int32** | The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
-**RouterId** | Pointer to **NullableString** | The router ID of the appliance | [optional] 
-**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
+**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Toggle for enabling or disabling active-active AutoVPN | [optional] 
+**DefaultUplink** | Pointer to **string** | The default uplink. Must be a WAN interface &#39;wanX&#39; | [optional] 
+**LoadBalancingEnabled** | Pointer to **bool** | Toggle for enabling or disabling load balancing | [optional] 
+**FailoverAndFailback** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback.md) |  | [optional] 
+**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences.md) | Array of uplink preference rules for WAN traffic | [optional] 
+**VpnTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences.md) | Array of uplink preference rules for VPN traffic | [optional] 
 
 ## Methods
 
 ### NewInlineObject84
 
-`func NewInlineObject84(enabled bool, ) *InlineObject84`
+`func NewInlineObject84() *InlineObject84`
 
 NewInlineObject84 instantiates a new InlineObject84 object
 This constructor will assign default values to properties that have it defined,
@@ -29,135 +30,155 @@ NewInlineObject84WithDefaults instantiates a new InlineObject84 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetActiveActiveAutoVpnEnabled
 
-`func (o *InlineObject84) GetEnabled() bool`
+`func (o *InlineObject84) GetActiveActiveAutoVpnEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetActiveActiveAutoVpnEnabledOk
 
-`func (o *InlineObject84) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject84) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetActiveActiveAutoVpnEnabled
 
-`func (o *InlineObject84) SetEnabled(v bool)`
+`func (o *InlineObject84) SetActiveActiveAutoVpnEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
 
+### HasActiveActiveAutoVpnEnabled
 
-### GetAsNumber
+`func (o *InlineObject84) HasActiveActiveAutoVpnEnabled() bool`
 
-`func (o *InlineObject84) GetAsNumber() int32`
+HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
 
-GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
+### GetDefaultUplink
 
-### GetAsNumberOk
+`func (o *InlineObject84) GetDefaultUplink() string`
 
-`func (o *InlineObject84) GetAsNumberOk() (*int32, bool)`
+GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
 
-GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
+### GetDefaultUplinkOk
+
+`func (o *InlineObject84) GetDefaultUplinkOk() (*string, bool)`
+
+GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAsNumber
+### SetDefaultUplink
 
-`func (o *InlineObject84) SetAsNumber(v int32)`
+`func (o *InlineObject84) SetDefaultUplink(v string)`
 
-SetAsNumber sets AsNumber field to given value.
+SetDefaultUplink sets DefaultUplink field to given value.
 
-### HasAsNumber
+### HasDefaultUplink
 
-`func (o *InlineObject84) HasAsNumber() bool`
+`func (o *InlineObject84) HasDefaultUplink() bool`
 
-HasAsNumber returns a boolean if a field has been set.
+HasDefaultUplink returns a boolean if a field has been set.
 
-### GetIbgpHoldTimer
+### GetLoadBalancingEnabled
 
-`func (o *InlineObject84) GetIbgpHoldTimer() int32`
+`func (o *InlineObject84) GetLoadBalancingEnabled() bool`
 
-GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
+GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
 
-### GetIbgpHoldTimerOk
+### GetLoadBalancingEnabledOk
 
-`func (o *InlineObject84) GetIbgpHoldTimerOk() (*int32, bool)`
+`func (o *InlineObject84) GetLoadBalancingEnabledOk() (*bool, bool)`
 
-GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
+GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIbgpHoldTimer
+### SetLoadBalancingEnabled
 
-`func (o *InlineObject84) SetIbgpHoldTimer(v int32)`
+`func (o *InlineObject84) SetLoadBalancingEnabled(v bool)`
 
-SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
+SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
 
-### HasIbgpHoldTimer
+### HasLoadBalancingEnabled
 
-`func (o *InlineObject84) HasIbgpHoldTimer() bool`
+`func (o *InlineObject84) HasLoadBalancingEnabled() bool`
 
-HasIbgpHoldTimer returns a boolean if a field has been set.
+HasLoadBalancingEnabled returns a boolean if a field has been set.
 
-### GetRouterId
+### GetFailoverAndFailback
 
-`func (o *InlineObject84) GetRouterId() string`
+`func (o *InlineObject84) GetFailoverAndFailback() NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback`
 
-GetRouterId returns the RouterId field if non-nil, zero value otherwise.
+GetFailoverAndFailback returns the FailoverAndFailback field if non-nil, zero value otherwise.
 
-### GetRouterIdOk
+### GetFailoverAndFailbackOk
 
-`func (o *InlineObject84) GetRouterIdOk() (*string, bool)`
+`func (o *InlineObject84) GetFailoverAndFailbackOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback, bool)`
 
-GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
+GetFailoverAndFailbackOk returns a tuple with the FailoverAndFailback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRouterId
+### SetFailoverAndFailback
 
-`func (o *InlineObject84) SetRouterId(v string)`
+`func (o *InlineObject84) SetFailoverAndFailback(v NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback)`
 
-SetRouterId sets RouterId field to given value.
+SetFailoverAndFailback sets FailoverAndFailback field to given value.
 
-### HasRouterId
+### HasFailoverAndFailback
 
-`func (o *InlineObject84) HasRouterId() bool`
+`func (o *InlineObject84) HasFailoverAndFailback() bool`
 
-HasRouterId returns a boolean if a field has been set.
+HasFailoverAndFailback returns a boolean if a field has been set.
 
-### SetRouterIdNil
+### GetWanTrafficUplinkPreferences
 
-`func (o *InlineObject84) SetRouterIdNil(b bool)`
+`func (o *InlineObject84) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences`
 
- SetRouterIdNil sets the value for RouterId to be an explicit nil
+GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
 
-### UnsetRouterId
-`func (o *InlineObject84) UnsetRouterId()`
+### GetWanTrafficUplinkPreferencesOk
 
-UnsetRouterId ensures that no value is present for RouterId, not even an explicit nil
-### GetNeighbors
+`func (o *InlineObject84) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences, bool)`
 
-`func (o *InlineObject84) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
-
-GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
-
-### GetNeighborsOk
-
-`func (o *InlineObject84) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
-
-GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNeighbors
+### SetWanTrafficUplinkPreferences
 
-`func (o *InlineObject84) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
+`func (o *InlineObject84) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences)`
 
-SetNeighbors sets Neighbors field to given value.
+SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
 
-### HasNeighbors
+### HasWanTrafficUplinkPreferences
 
-`func (o *InlineObject84) HasNeighbors() bool`
+`func (o *InlineObject84) HasWanTrafficUplinkPreferences() bool`
 
-HasNeighbors returns a boolean if a field has been set.
+HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+
+### GetVpnTrafficUplinkPreferences
+
+`func (o *InlineObject84) GetVpnTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences`
+
+GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
+
+### GetVpnTrafficUplinkPreferencesOk
+
+`func (o *InlineObject84) GetVpnTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences, bool)`
+
+GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpnTrafficUplinkPreferences
+
+`func (o *InlineObject84) SetVpnTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences)`
+
+SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
+
+### HasVpnTrafficUplinkPreferences
+
+`func (o *InlineObject84) HasVpnTrafficUplinkPreferences() bool`
+
+HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

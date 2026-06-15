@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
+**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
+**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
+**Areas** | Pointer to [**[]NetworksNetworkIdSwitchRoutingOspfAreas**](NetworksNetworkIdSwitchRoutingOspfAreas.md) | OSPF areas | [optional] 
+**V3** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfV3**](NetworksNetworkIdSwitchRoutingOspfV3.md) |  | [optional] 
+**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
+**Md5AuthenticationKey** | Pointer to [**InlineResponse200202Md5AuthenticationKey**](InlineResponse200202Md5AuthenticationKey.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineObject174WithDefaults instantiates a new InlineObject174 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetEnabled
 
-`func (o *InlineObject174) GetRstpEnabled() bool`
+`func (o *InlineObject174) GetEnabled() bool`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject174) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineObject174) GetEnabledOk() (*bool, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetEnabled
 
-`func (o *InlineObject174) SetRstpEnabled(v bool)`
+`func (o *InlineObject174) SetEnabled(v bool)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRstpEnabled
+### HasEnabled
 
-`func (o *InlineObject174) HasRstpEnabled() bool`
+`func (o *InlineObject174) HasEnabled() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetHelloTimerInSeconds
 
-`func (o *InlineObject174) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
+`func (o *InlineObject174) GetHelloTimerInSeconds() int32`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetHelloTimerInSecondsOk
 
-`func (o *InlineObject174) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
+`func (o *InlineObject174) GetHelloTimerInSecondsOk() (*int32, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetHelloTimerInSeconds
 
-`func (o *InlineObject174) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
+`func (o *InlineObject174) SetHelloTimerInSeconds(v int32)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
 
-### HasStpBridgePriority
+### HasHelloTimerInSeconds
 
-`func (o *InlineObject174) HasStpBridgePriority() bool`
+`func (o *InlineObject174) HasHelloTimerInSeconds() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasHelloTimerInSeconds returns a boolean if a field has been set.
+
+### GetDeadTimerInSeconds
+
+`func (o *InlineObject174) GetDeadTimerInSeconds() int32`
+
+GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
+
+### GetDeadTimerInSecondsOk
+
+`func (o *InlineObject174) GetDeadTimerInSecondsOk() (*int32, bool)`
+
+GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeadTimerInSeconds
+
+`func (o *InlineObject174) SetDeadTimerInSeconds(v int32)`
+
+SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
+
+### HasDeadTimerInSeconds
+
+`func (o *InlineObject174) HasDeadTimerInSeconds() bool`
+
+HasDeadTimerInSeconds returns a boolean if a field has been set.
+
+### GetAreas
+
+`func (o *InlineObject174) GetAreas() []NetworksNetworkIdSwitchRoutingOspfAreas`
+
+GetAreas returns the Areas field if non-nil, zero value otherwise.
+
+### GetAreasOk
+
+`func (o *InlineObject174) GetAreasOk() (*[]NetworksNetworkIdSwitchRoutingOspfAreas, bool)`
+
+GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAreas
+
+`func (o *InlineObject174) SetAreas(v []NetworksNetworkIdSwitchRoutingOspfAreas)`
+
+SetAreas sets Areas field to given value.
+
+### HasAreas
+
+`func (o *InlineObject174) HasAreas() bool`
+
+HasAreas returns a boolean if a field has been set.
+
+### GetV3
+
+`func (o *InlineObject174) GetV3() NetworksNetworkIdSwitchRoutingOspfV3`
+
+GetV3 returns the V3 field if non-nil, zero value otherwise.
+
+### GetV3Ok
+
+`func (o *InlineObject174) GetV3Ok() (*NetworksNetworkIdSwitchRoutingOspfV3, bool)`
+
+GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3
+
+`func (o *InlineObject174) SetV3(v NetworksNetworkIdSwitchRoutingOspfV3)`
+
+SetV3 sets V3 field to given value.
+
+### HasV3
+
+`func (o *InlineObject174) HasV3() bool`
+
+HasV3 returns a boolean if a field has been set.
+
+### GetMd5AuthenticationEnabled
+
+`func (o *InlineObject174) GetMd5AuthenticationEnabled() bool`
+
+GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationEnabledOk
+
+`func (o *InlineObject174) GetMd5AuthenticationEnabledOk() (*bool, bool)`
+
+GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationEnabled
+
+`func (o *InlineObject174) SetMd5AuthenticationEnabled(v bool)`
+
+SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
+
+### HasMd5AuthenticationEnabled
+
+`func (o *InlineObject174) HasMd5AuthenticationEnabled() bool`
+
+HasMd5AuthenticationEnabled returns a boolean if a field has been set.
+
+### GetMd5AuthenticationKey
+
+`func (o *InlineObject174) GetMd5AuthenticationKey() InlineResponse200202Md5AuthenticationKey`
+
+GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationKeyOk
+
+`func (o *InlineObject174) GetMd5AuthenticationKeyOk() (*InlineResponse200202Md5AuthenticationKey, bool)`
+
+GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationKey
+
+`func (o *InlineObject174) SetMd5AuthenticationKey(v InlineResponse200202Md5AuthenticationKey)`
+
+SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
+
+### HasMd5AuthenticationKey
+
+`func (o *InlineObject174) HasMd5AuthenticationKey() bool`
+
+HasMd5AuthenticationKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

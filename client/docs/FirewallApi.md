@@ -54,7 +54,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationPoliciesGlobalFirewallRuleset
 
-> InlineResponse200373Items CreateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRuleset(createOrganizationPoliciesGlobalFirewallRuleset).Execute()
+> InlineResponse200385Items CreateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRuleset(createOrganizationPoliciesGlobalFirewallRuleset).Execute()
 
 Create an Organization-Wide Policy Firewall Ruleset
 
@@ -74,7 +74,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject300("Name_example") // InlineObject300 | 
+    createOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject311("Name_example") // InlineObject311 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -83,7 +83,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.CreateOrganizationPoliciesGlobalFirewallRuleset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200373Items
+    // response from `CreateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200385Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.CreateOrganizationPoliciesGlobalFirewallRuleset`: %v\n", resp)
 }
 ```
@@ -104,11 +104,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject300**](InlineObject300.md) |  | 
+ **createOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject311**](InlineObject311.md) |  | 
 
 ### Return type
 
-[**InlineResponse200373Items**](InlineResponse200373Items.md)
+[**InlineResponse200385Items**](InlineResponse200385Items.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationPoliciesGlobalFirewallRulesetsRule
 
-> InlineResponse200374Items CreateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRulesetsRule(createOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
+> InlineResponse200386Items CreateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRulesetsRule(createOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
 
 Create an Organization-Wide Policy Firewall Rule
 
@@ -146,7 +146,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject301("Name_example", "RulesetId_example", "Policy_example", *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources([]string{"MatchCriteria_example"}), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations([]string{"MatchCriteria_example"})) // InlineObject301 | 
+    createOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject312("Name_example", "RulesetId_example", "Policy_example", *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources([]string{"MatchCriteria_example"}), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations([]string{"MatchCriteria_example"})) // InlineObject312 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -155,7 +155,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.CreateOrganizationPoliciesGlobalFirewallRulesetsRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200374Items
+    // response from `CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200386Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: %v\n", resp)
 }
 ```
@@ -176,11 +176,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject301**](InlineObject301.md) |  | 
+ **createOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject312**](InlineObject312.md) |  | 
 
 ### Return type
 
-[**InlineResponse200374Items**](InlineResponse200374Items.md)
+[**InlineResponse200386Items**](InlineResponse200386Items.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment
 
-> InlineResponse200380Items CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId).CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
+> InlineResponse200392Items CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId).CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
 
 Create an Organization-Wide Policy Ruleset Assignment
 
@@ -218,7 +218,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject309("RulesetId_example", "PolicyId_example") // InlineObject309 | 
+    createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject320("RulesetId_example", "PolicyId_example") // InlineObject320 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -227,7 +227,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200380Items
+    // response from `CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200392Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: %v\n", resp)
 }
 ```
@@ -248,11 +248,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject309**](InlineObject309.md) |  | 
+ **createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject320**](InlineObject320.md) |  | 
 
 ### Return type
 
-[**InlineResponse200380Items**](InlineResponse200380Items.md)
+[**InlineResponse200392Items**](InlineResponse200392Items.md)
 
 ### Authorization
 
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry
 
-> InlineResponse200452Items CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(ctx, organizationId).CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(createOrganizationWirelessSsidsFirewallIsolationAllowlistEntry).Execute()
+> InlineResponse200464Items CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(ctx, organizationId).CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(createOrganizationWirelessSsidsFirewallIsolationAllowlistEntry).Execute()
 
 Create isolation allow list MAC entry for this organization
 
@@ -290,7 +290,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationWirelessSsidsFirewallIsolationAllowlistEntry := *openapiclient.NewInlineObject340(*openapiclient.NewInlineResponse200452Client("Mac_example"), *openapiclient.NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid(int32(123)), *openapiclient.NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork("Id_example")) // InlineObject340 | 
+    createOrganizationWirelessSsidsFirewallIsolationAllowlistEntry := *openapiclient.NewInlineObject351(*openapiclient.NewInlineResponse200464Client("Mac_example"), *openapiclient.NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid(int32(123)), *openapiclient.NewOrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork("Id_example")) // InlineObject351 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -299,7 +299,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry`: InlineResponse200452Items
+    // response from `CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry`: InlineResponse200464Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.CreateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry`: %v\n", resp)
 }
 ```
@@ -320,11 +320,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationWirelessSsidsFirewallIsolationAllowlistEntry** | [**InlineObject340**](InlineObject340.md) |  | 
+ **createOrganizationWirelessSsidsFirewallIsolationAllowlistEntry** | [**InlineObject351**](InlineObject351.md) |  | 
 
 ### Return type
 
-[**InlineResponse200452Items**](InlineResponse200452Items.md)
+[**InlineResponse200464Items**](InlineResponse200464Items.md)
 
 ### Authorization
 
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallCellularFirewallRules
 
-> InlineResponse20068 GetNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).Execute()
+> InlineResponse20073 GetNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).Execute()
 
 Return the cellular firewall rules for an MX network
 
@@ -654,7 +654,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallCellularFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20068
+    // response from `GetNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallCellularFirewallRules`: %v\n", resp)
 }
 ```
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -696,7 +696,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallFirewalledService
 
-> InlineResponse20070 GetNetworkApplianceFirewallFirewalledService(ctx, networkId, service).Execute()
+> InlineResponse20075 GetNetworkApplianceFirewallFirewalledService(ctx, networkId, service).Execute()
 
 Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
 
@@ -725,7 +725,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallFirewalledService``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallFirewalledService`: InlineResponse20070
+    // response from `GetNetworkApplianceFirewallFirewalledService`: InlineResponse20075
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallFirewalledService`: %v\n", resp)
 }
 ```
@@ -751,7 +751,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20070**](InlineResponse20070.md)
+[**InlineResponse20075**](InlineResponse20075.md)
 
 ### Authorization
 
@@ -769,7 +769,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallFirewalledServices
 
-> []InlineResponse20069 GetNetworkApplianceFirewallFirewalledServices(ctx, networkId).Execute()
+> []InlineResponse20074 GetNetworkApplianceFirewallFirewalledServices(ctx, networkId).Execute()
 
 List the appliance services and their accessibility rules
 
@@ -797,7 +797,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallFirewalledServices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallFirewalledServices`: []InlineResponse20069
+    // response from `GetNetworkApplianceFirewallFirewalledServices`: []InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallFirewalledServices`: %v\n", resp)
 }
 ```
@@ -821,7 +821,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20069**](InlineResponse20069.md)
+[**[]InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 
@@ -839,7 +839,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallInboundCellularFirewallRules
 
-> InlineResponse20068 GetNetworkApplianceFirewallInboundCellularFirewallRules(ctx, networkId).Execute()
+> InlineResponse20073 GetNetworkApplianceFirewallInboundCellularFirewallRules(ctx, networkId).Execute()
 
 Return the inbound cellular firewall rules for an MX network
 
@@ -867,7 +867,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallInboundCellularFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallInboundCellularFirewallRules`: InlineResponse20068
+    // response from `GetNetworkApplianceFirewallInboundCellularFirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallInboundCellularFirewallRules`: %v\n", resp)
 }
 ```
@@ -891,7 +891,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -909,7 +909,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallInboundFirewallRules
 
-> InlineResponse20071 GetNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).Execute()
+> InlineResponse20076 GetNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).Execute()
 
 Return the inbound firewall rules for an MX network
 
@@ -937,7 +937,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallInboundFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20071
+    // response from `GetNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallInboundFirewallRules`: %v\n", resp)
 }
 ```
@@ -961,7 +961,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 
@@ -979,7 +979,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallL3FirewallRules
 
-> InlineResponse20068 GetNetworkApplianceFirewallL3FirewallRules(ctx, networkId).Execute()
+> InlineResponse20073 GetNetworkApplianceFirewallL3FirewallRules(ctx, networkId).Execute()
 
 Return the L3 firewall rules for an MX network
 
@@ -1007,7 +1007,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallL3FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallL3FirewallRules`: InlineResponse20068
+    // response from `GetNetworkApplianceFirewallL3FirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallL3FirewallRules`: %v\n", resp)
 }
 ```
@@ -1031,7 +1031,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -1049,7 +1049,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallL7FirewallRules
 
-> InlineResponse20072 GetNetworkApplianceFirewallL7FirewallRules(ctx, networkId).Execute()
+> InlineResponse20077 GetNetworkApplianceFirewallL7FirewallRules(ctx, networkId).Execute()
 
 List the MX L7 firewall rules for an MX network
 
@@ -1077,7 +1077,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallL7FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallL7FirewallRules`: InlineResponse20072
+    // response from `GetNetworkApplianceFirewallL7FirewallRules`: InlineResponse20077
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallL7FirewallRules`: %v\n", resp)
 }
 ```
@@ -1101,7 +1101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20077**](InlineResponse20077.md)
 
 ### Authorization
 
@@ -1119,7 +1119,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories
 
-> InlineResponse20073 GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx, networkId).Execute()
+> InlineResponse20078 GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx, networkId).Execute()
 
 Return the L7 firewall application categories and their associated applications for an MX network
 
@@ -1147,7 +1147,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: InlineResponse20073
+    // response from `GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: InlineResponse20078
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: %v\n", resp)
 }
 ```
@@ -1171,7 +1171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20073**](InlineResponse20073.md)
+[**InlineResponse20078**](InlineResponse20078.md)
 
 ### Authorization
 
@@ -1189,7 +1189,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallOneToManyNatRules
 
-> InlineResponse20075 GetNetworkApplianceFirewallOneToManyNatRules(ctx, networkId).Execute()
+> InlineResponse20080 GetNetworkApplianceFirewallOneToManyNatRules(ctx, networkId).Execute()
 
 Return the 1:Many NAT mapping rules for an MX network
 
@@ -1217,7 +1217,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallOneToManyNatRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallOneToManyNatRules`: InlineResponse20075
+    // response from `GetNetworkApplianceFirewallOneToManyNatRules`: InlineResponse20080
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallOneToManyNatRules`: %v\n", resp)
 }
 ```
@@ -1241,7 +1241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20075**](InlineResponse20075.md)
+[**InlineResponse20080**](InlineResponse20080.md)
 
 ### Authorization
 
@@ -1259,7 +1259,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallOneToOneNatRules
 
-> InlineResponse20076 GetNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).Execute()
+> InlineResponse20081 GetNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).Execute()
 
 Return the 1:1 NAT mapping rules for an MX network
 
@@ -1287,7 +1287,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallOneToOneNatRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20076
+    // response from `GetNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20081
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallOneToOneNatRules`: %v\n", resp)
 }
 ```
@@ -1311,7 +1311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20081**](InlineResponse20081.md)
 
 ### Authorization
 
@@ -1329,7 +1329,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallPortForwardingRules
 
-> InlineResponse20077 GetNetworkApplianceFirewallPortForwardingRules(ctx, networkId).Execute()
+> InlineResponse20082 GetNetworkApplianceFirewallPortForwardingRules(ctx, networkId).Execute()
 
 Return the port forwarding rules for an MX network
 
@@ -1357,7 +1357,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallPortForwardingRules`: InlineResponse20077
+    // response from `GetNetworkApplianceFirewallPortForwardingRules`: InlineResponse20082
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -1381,7 +1381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20077**](InlineResponse20077.md)
+[**InlineResponse20082**](InlineResponse20082.md)
 
 ### Authorization
 
@@ -1399,7 +1399,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallSettings
 
-> InlineResponse20078 GetNetworkApplianceFirewallSettings(ctx, networkId).Execute()
+> InlineResponse20083 GetNetworkApplianceFirewallSettings(ctx, networkId).Execute()
 
 Return the firewall settings for this network
 
@@ -1427,7 +1427,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallSettings`: InlineResponse20078
+    // response from `GetNetworkApplianceFirewallSettings`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallSettings`: %v\n", resp)
 }
 ```
@@ -1451,7 +1451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20078**](InlineResponse20078.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -1469,7 +1469,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidFirewallL3FirewallRules
 
-> InlineResponse200238 GetNetworkWirelessSsidFirewallL3FirewallRules(ctx, networkId, number).Execute()
+> InlineResponse200246 GetNetworkWirelessSsidFirewallL3FirewallRules(ctx, networkId, number).Execute()
 
 Return the L3 firewall rules for an SSID on an MR network
 
@@ -1498,7 +1498,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkWirelessSsidFirewallL3FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidFirewallL3FirewallRules`: InlineResponse200238
+    // response from `GetNetworkWirelessSsidFirewallL3FirewallRules`: InlineResponse200246
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkWirelessSsidFirewallL3FirewallRules`: %v\n", resp)
 }
 ```
@@ -1524,7 +1524,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200238**](InlineResponse200238.md)
+[**InlineResponse200246**](InlineResponse200246.md)
 
 ### Authorization
 
@@ -1542,7 +1542,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidFirewallL7FirewallRules
 
-> InlineResponse200239 GetNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).Execute()
+> InlineResponse200247 GetNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).Execute()
 
 Return the L7 firewall rules for an SSID on an MR network
 
@@ -1571,7 +1571,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkWirelessSsidFirewallL7FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200239
+    // response from `GetNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200247
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkWirelessSsidFirewallL7FirewallRules`: %v\n", resp)
 }
 ```
@@ -1597,7 +1597,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200239**](InlineResponse200239.md)
+[**InlineResponse200247**](InlineResponse200247.md)
 
 ### Authorization
 
@@ -1615,7 +1615,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceFirewallMulticastForwardingByNetwork
 
-> InlineResponse200269 GetOrganizationApplianceFirewallMulticastForwardingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200280 GetOrganizationApplianceFirewallMulticastForwardingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List Static Multicasting forwarding settings for MX networks
 
@@ -1647,7 +1647,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetOrganizationApplianceFirewallMulticastForwardingByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: InlineResponse200269
+    // response from `GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: %v\n", resp)
 }
 ```
@@ -1675,7 +1675,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200269**](InlineResponse200269.md)
+[**InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -1693,7 +1693,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalFirewallApplicationCategories
 
-> []InlineResponse200372 GetOrganizationPoliciesGlobalFirewallApplicationCategories(ctx, organizationId).Execute()
+> []InlineResponse200384 GetOrganizationPoliciesGlobalFirewallApplicationCategories(ctx, organizationId).Execute()
 
 List application categories with their associated applications
 
@@ -1721,7 +1721,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetOrganizationPoliciesGlobalFirewallApplicationCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalFirewallApplicationCategories`: []InlineResponse200372
+    // response from `GetOrganizationPoliciesGlobalFirewallApplicationCategories`: []InlineResponse200384
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetOrganizationPoliciesGlobalFirewallApplicationCategories`: %v\n", resp)
 }
 ```
@@ -1745,7 +1745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200372**](InlineResponse200372.md)
+[**[]InlineResponse200384**](InlineResponse200384.md)
 
 ### Authorization
 
@@ -1763,7 +1763,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalFirewallRulesets
 
-> InlineResponse200373 GetOrganizationPoliciesGlobalFirewallRulesets(ctx, organizationId).RulesetIds(rulesetIds).Name(name).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200385 GetOrganizationPoliciesGlobalFirewallRulesets(ctx, organizationId).RulesetIds(rulesetIds).Name(name).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Firewall Rulesets
 
@@ -1796,7 +1796,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetOrganizationPoliciesGlobalFirewallRulesets``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalFirewallRulesets`: InlineResponse200373
+    // response from `GetOrganizationPoliciesGlobalFirewallRulesets`: InlineResponse200385
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetOrganizationPoliciesGlobalFirewallRulesets`: %v\n", resp)
 }
 ```
@@ -1825,7 +1825,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200373**](InlineResponse200373.md)
+[**InlineResponse200385**](InlineResponse200385.md)
 
 ### Authorization
 
@@ -1843,7 +1843,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalFirewallRulesetsRules
 
-> InlineResponse200374 GetOrganizationPoliciesGlobalFirewallRulesetsRules(ctx, organizationId).RulesetIds(rulesetIds).RuleIds(ruleIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200386 GetOrganizationPoliciesGlobalFirewallRulesetsRules(ctx, organizationId).RulesetIds(rulesetIds).RuleIds(ruleIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Firewall Rules
 
@@ -1876,7 +1876,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetOrganizationPoliciesGlobalFirewallRulesetsRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalFirewallRulesetsRules`: InlineResponse200374
+    // response from `GetOrganizationPoliciesGlobalFirewallRulesetsRules`: InlineResponse200386
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetOrganizationPoliciesGlobalFirewallRulesetsRules`: %v\n", resp)
 }
 ```
@@ -1905,7 +1905,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200374**](InlineResponse200374.md)
+[**InlineResponse200386**](InlineResponse200386.md)
 
 ### Authorization
 
@@ -1923,7 +1923,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments
 
-> InlineResponse200380 GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments(ctx, organizationId).RulesetIds(rulesetIds).PolicyIds(policyIds).AssignmentIds(assignmentIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200392 GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments(ctx, organizationId).RulesetIds(rulesetIds).PolicyIds(policyIds).AssignmentIds(assignmentIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Ruleset Assignments
 
@@ -1957,7 +1957,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: InlineResponse200380
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: InlineResponse200392
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: %v\n", resp)
 }
 ```
@@ -1987,7 +1987,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200380**](InlineResponse200380.md)
+[**InlineResponse200392**](InlineResponse200392.md)
 
 ### Authorization
 
@@ -2005,7 +2005,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessSsidsFirewallIsolationAllowlistEntries
 
-> InlineResponse200452 GetOrganizationWirelessSsidsFirewallIsolationAllowlistEntries(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Ssids(ssids).Execute()
+> InlineResponse200464 GetOrganizationWirelessSsidsFirewallIsolationAllowlistEntries(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Ssids(ssids).Execute()
 
 List the L2 isolation allow list MAC entry in an organization
 
@@ -2038,7 +2038,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetOrganizationWirelessSsidsFirewallIsolationAllowlistEntries``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessSsidsFirewallIsolationAllowlistEntries`: InlineResponse200452
+    // response from `GetOrganizationWirelessSsidsFirewallIsolationAllowlistEntries`: InlineResponse200464
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetOrganizationWirelessSsidsFirewallIsolationAllowlistEntries`: %v\n", resp)
 }
 ```
@@ -2067,7 +2067,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200452**](InlineResponse200452.md)
+[**InlineResponse200464**](InlineResponse200464.md)
 
 ### Authorization
 
@@ -2085,7 +2085,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallCellularFirewallRules
 
-> InlineResponse20068 UpdateNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallCellularFirewallRules(updateNetworkApplianceFirewallCellularFirewallRules).Execute()
+> InlineResponse20073 UpdateNetworkApplianceFirewallCellularFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallCellularFirewallRules(updateNetworkApplianceFirewallCellularFirewallRules).Execute()
 
 Update the cellular firewall rules of an MX network
 
@@ -2105,7 +2105,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject48() // InlineObject48 |  (optional)
+    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2114,7 +2114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallCellularFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20068
+    // response from `UpdateNetworkApplianceFirewallCellularFirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallCellularFirewallRules`: %v\n", resp)
 }
 ```
@@ -2135,11 +2135,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject48**](InlineObject48.md) |  | 
+ **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject53**](InlineObject53.md) |  | 
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -2157,7 +2157,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallFirewalledService
 
-> InlineResponse20069 UpdateNetworkApplianceFirewallFirewalledService(ctx, networkId, service).UpdateNetworkApplianceFirewallFirewalledService(updateNetworkApplianceFirewallFirewalledService).Execute()
+> InlineResponse20074 UpdateNetworkApplianceFirewallFirewalledService(ctx, networkId, service).UpdateNetworkApplianceFirewallFirewalledService(updateNetworkApplianceFirewallFirewalledService).Execute()
 
 Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
 
@@ -2178,7 +2178,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     service := "service_example" // string | Service
-    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject49("Access_example") // InlineObject49 | 
+    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject54("Access_example") // InlineObject54 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2187,7 +2187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallFirewalledService``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallFirewalledService`: InlineResponse20069
+    // response from `UpdateNetworkApplianceFirewallFirewalledService`: InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallFirewalledService`: %v\n", resp)
 }
 ```
@@ -2210,11 +2210,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject49**](InlineObject49.md) |  | 
+ **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject54**](InlineObject54.md) |  | 
 
 ### Return type
 
-[**InlineResponse20069**](InlineResponse20069.md)
+[**InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 
@@ -2232,7 +2232,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallInboundCellularFirewallRules
 
-> InlineResponse20068 UpdateNetworkApplianceFirewallInboundCellularFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundCellularFirewallRules(updateNetworkApplianceFirewallInboundCellularFirewallRules).Execute()
+> InlineResponse20073 UpdateNetworkApplianceFirewallInboundCellularFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundCellularFirewallRules(updateNetworkApplianceFirewallInboundCellularFirewallRules).Execute()
 
 Update the inbound cellular firewall rules of an MX network
 
@@ -2252,7 +2252,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallInboundCellularFirewallRules := *openapiclient.NewInlineObject50() // InlineObject50 |  (optional)
+    updateNetworkApplianceFirewallInboundCellularFirewallRules := *openapiclient.NewInlineObject55() // InlineObject55 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2261,7 +2261,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallInboundCellularFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallInboundCellularFirewallRules`: InlineResponse20068
+    // response from `UpdateNetworkApplianceFirewallInboundCellularFirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallInboundCellularFirewallRules`: %v\n", resp)
 }
 ```
@@ -2282,11 +2282,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallInboundCellularFirewallRules** | [**InlineObject50**](InlineObject50.md) |  | 
+ **updateNetworkApplianceFirewallInboundCellularFirewallRules** | [**InlineObject55**](InlineObject55.md) |  | 
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -2304,7 +2304,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallInboundFirewallRules
 
-> InlineResponse20071 UpdateNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundFirewallRules(updateNetworkApplianceFirewallInboundFirewallRules).Execute()
+> InlineResponse20076 UpdateNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundFirewallRules(updateNetworkApplianceFirewallInboundFirewallRules).Execute()
 
 Update the inbound firewall rules of an MX network
 
@@ -2324,7 +2324,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject51() // InlineObject51 |  (optional)
+    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject56() // InlineObject56 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2333,7 +2333,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallInboundFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20071
+    // response from `UpdateNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallInboundFirewallRules`: %v\n", resp)
 }
 ```
@@ -2354,11 +2354,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject51**](InlineObject51.md) |  | 
+ **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject56**](InlineObject56.md) |  | 
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 
@@ -2376,7 +2376,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallL3FirewallRules
 
-> InlineResponse20068 UpdateNetworkApplianceFirewallL3FirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallL3FirewallRules(updateNetworkApplianceFirewallL3FirewallRules).Execute()
+> InlineResponse20073 UpdateNetworkApplianceFirewallL3FirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallL3FirewallRules(updateNetworkApplianceFirewallL3FirewallRules).Execute()
 
 Update the L3 firewall rules of an MX network
 
@@ -2396,7 +2396,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject52() // InlineObject52 |  (optional)
+    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject57() // InlineObject57 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2405,7 +2405,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallL3FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallL3FirewallRules`: InlineResponse20068
+    // response from `UpdateNetworkApplianceFirewallL3FirewallRules`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallL3FirewallRules`: %v\n", resp)
 }
 ```
@@ -2426,11 +2426,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject52**](InlineObject52.md) |  | 
+ **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject57**](InlineObject57.md) |  | 
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -2448,7 +2448,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallL7FirewallRules
 
-> InlineResponse20072 UpdateNetworkApplianceFirewallL7FirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallL7FirewallRules(updateNetworkApplianceFirewallL7FirewallRules).Execute()
+> InlineResponse20077 UpdateNetworkApplianceFirewallL7FirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallL7FirewallRules(updateNetworkApplianceFirewallL7FirewallRules).Execute()
 
 Update the MX L7 firewall rules for an MX network
 
@@ -2468,7 +2468,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallL7FirewallRules := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
+    updateNetworkApplianceFirewallL7FirewallRules := *openapiclient.NewInlineObject58() // InlineObject58 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2477,7 +2477,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallL7FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallL7FirewallRules`: InlineResponse20072
+    // response from `UpdateNetworkApplianceFirewallL7FirewallRules`: InlineResponse20077
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallL7FirewallRules`: %v\n", resp)
 }
 ```
@@ -2498,11 +2498,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallL7FirewallRules** | [**InlineObject53**](InlineObject53.md) |  | 
+ **updateNetworkApplianceFirewallL7FirewallRules** | [**InlineObject58**](InlineObject58.md) |  | 
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20077**](InlineResponse20077.md)
 
 ### Authorization
 
@@ -2520,7 +2520,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallMulticastForwarding
 
-> InlineResponse20074 UpdateNetworkApplianceFirewallMulticastForwarding(ctx, networkId).UpdateNetworkApplianceFirewallMulticastForwarding(updateNetworkApplianceFirewallMulticastForwarding).Execute()
+> InlineResponse20079 UpdateNetworkApplianceFirewallMulticastForwarding(ctx, networkId).UpdateNetworkApplianceFirewallMulticastForwarding(updateNetworkApplianceFirewallMulticastForwarding).Execute()
 
 Update static multicast forward rules for a network
 
@@ -2540,7 +2540,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallMulticastForwarding := *openapiclient.NewInlineObject54([]openapiclient.NetworksNetworkIdApplianceFirewallMulticastForwardingRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallMulticastForwardingRules("Description_example", "Address_example", []string{"VlanIds_example"})}) // InlineObject54 | 
+    updateNetworkApplianceFirewallMulticastForwarding := *openapiclient.NewInlineObject59([]openapiclient.NetworksNetworkIdApplianceFirewallMulticastForwardingRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallMulticastForwardingRules("Description_example", "Address_example", []string{"VlanIds_example"})}) // InlineObject59 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2549,7 +2549,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallMulticastForwarding``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallMulticastForwarding`: InlineResponse20074
+    // response from `UpdateNetworkApplianceFirewallMulticastForwarding`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallMulticastForwarding`: %v\n", resp)
 }
 ```
@@ -2570,11 +2570,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallMulticastForwarding** | [**InlineObject54**](InlineObject54.md) |  | 
+ **updateNetworkApplianceFirewallMulticastForwarding** | [**InlineObject59**](InlineObject59.md) |  | 
 
 ### Return type
 
-[**InlineResponse20074**](InlineResponse20074.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 
@@ -2592,7 +2592,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallOneToManyNatRules
 
-> InlineResponse20075 UpdateNetworkApplianceFirewallOneToManyNatRules(ctx, networkId).UpdateNetworkApplianceFirewallOneToManyNatRules(updateNetworkApplianceFirewallOneToManyNatRules).Execute()
+> InlineResponse20080 UpdateNetworkApplianceFirewallOneToManyNatRules(ctx, networkId).UpdateNetworkApplianceFirewallOneToManyNatRules(updateNetworkApplianceFirewallOneToManyNatRules).Execute()
 
 Set the 1:Many NAT mapping rules for an MX network
 
@@ -2612,7 +2612,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallOneToManyNatRules := *openapiclient.NewInlineObject55([]openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules("PublicIp_example", "Uplink_example", []openapiclient.InlineResponse20075PortRules{*openapiclient.NewInlineResponse20075PortRules()})}) // InlineObject55 | 
+    updateNetworkApplianceFirewallOneToManyNatRules := *openapiclient.NewInlineObject60([]openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules("PublicIp_example", "Uplink_example", []openapiclient.InlineResponse20080PortRules{*openapiclient.NewInlineResponse20080PortRules()})}) // InlineObject60 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2621,7 +2621,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallOneToManyNatRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallOneToManyNatRules`: InlineResponse20075
+    // response from `UpdateNetworkApplianceFirewallOneToManyNatRules`: InlineResponse20080
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallOneToManyNatRules`: %v\n", resp)
 }
 ```
@@ -2642,11 +2642,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallOneToManyNatRules** | [**InlineObject55**](InlineObject55.md) |  | 
+ **updateNetworkApplianceFirewallOneToManyNatRules** | [**InlineObject60**](InlineObject60.md) |  | 
 
 ### Return type
 
-[**InlineResponse20075**](InlineResponse20075.md)
+[**InlineResponse20080**](InlineResponse20080.md)
 
 ### Authorization
 
@@ -2664,7 +2664,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallOneToOneNatRules
 
-> InlineResponse20076 UpdateNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).UpdateNetworkApplianceFirewallOneToOneNatRules(updateNetworkApplianceFirewallOneToOneNatRules).Execute()
+> InlineResponse20081 UpdateNetworkApplianceFirewallOneToOneNatRules(ctx, networkId).UpdateNetworkApplianceFirewallOneToOneNatRules(updateNetworkApplianceFirewallOneToOneNatRules).Execute()
 
 Set the 1:1 NAT mapping rules for an MX network
 
@@ -2684,7 +2684,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject56([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject56 | 
+    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject61([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject61 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2693,7 +2693,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallOneToOneNatRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20076
+    // response from `UpdateNetworkApplianceFirewallOneToOneNatRules`: InlineResponse20081
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallOneToOneNatRules`: %v\n", resp)
 }
 ```
@@ -2714,11 +2714,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject56**](InlineObject56.md) |  | 
+ **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject61**](InlineObject61.md) |  | 
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20081**](InlineResponse20081.md)
 
 ### Authorization
 
@@ -2736,7 +2736,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallPortForwardingRules
 
-> InlineResponse20077 UpdateNetworkApplianceFirewallPortForwardingRules(ctx, networkId).UpdateNetworkApplianceFirewallPortForwardingRules(updateNetworkApplianceFirewallPortForwardingRules).Execute()
+> InlineResponse20082 UpdateNetworkApplianceFirewallPortForwardingRules(ctx, networkId).UpdateNetworkApplianceFirewallPortForwardingRules(updateNetworkApplianceFirewallPortForwardingRules).Execute()
 
 Update the port forwarding rules for an MX network
 
@@ -2756,7 +2756,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject57([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject57 | 
+    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject62([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject62 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2765,7 +2765,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallPortForwardingRules`: InlineResponse20077
+    // response from `UpdateNetworkApplianceFirewallPortForwardingRules`: InlineResponse20082
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -2786,11 +2786,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject57**](InlineObject57.md) |  | 
+ **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject62**](InlineObject62.md) |  | 
 
 ### Return type
 
-[**InlineResponse20077**](InlineResponse20077.md)
+[**InlineResponse20082**](InlineResponse20082.md)
 
 ### Authorization
 
@@ -2808,7 +2808,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallSettings
 
-> InlineResponse20078 UpdateNetworkApplianceFirewallSettings(ctx, networkId).UpdateNetworkApplianceFirewallSettings(updateNetworkApplianceFirewallSettings).Execute()
+> InlineResponse20083 UpdateNetworkApplianceFirewallSettings(ctx, networkId).UpdateNetworkApplianceFirewallSettings(updateNetworkApplianceFirewallSettings).Execute()
 
 Update the firewall settings for this network
 
@@ -2828,7 +2828,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallSettings := *openapiclient.NewInlineObject58() // InlineObject58 |  (optional)
+    updateNetworkApplianceFirewallSettings := *openapiclient.NewInlineObject63() // InlineObject63 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2837,7 +2837,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallSettings`: InlineResponse20078
+    // response from `UpdateNetworkApplianceFirewallSettings`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallSettings`: %v\n", resp)
 }
 ```
@@ -2858,11 +2858,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallSettings** | [**InlineObject58**](InlineObject58.md) |  | 
+ **updateNetworkApplianceFirewallSettings** | [**InlineObject63**](InlineObject63.md) |  | 
 
 ### Return type
 
-[**InlineResponse20078**](InlineResponse20078.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -2880,7 +2880,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidFirewallL3FirewallRules
 
-> InlineResponse200238 UpdateNetworkWirelessSsidFirewallL3FirewallRules(ctx, networkId, number).UpdateNetworkWirelessSsidFirewallL3FirewallRules(updateNetworkWirelessSsidFirewallL3FirewallRules).Execute()
+> InlineResponse200246 UpdateNetworkWirelessSsidFirewallL3FirewallRules(ctx, networkId, number).UpdateNetworkWirelessSsidFirewallL3FirewallRules(updateNetworkWirelessSsidFirewallL3FirewallRules).Execute()
 
 Update the L3 firewall rules of an SSID on an MR network
 
@@ -2901,7 +2901,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject206() // InlineObject206 |  (optional)
+    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject217() // InlineObject217 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2910,7 +2910,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkWirelessSsidFirewallL3FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidFirewallL3FirewallRules`: InlineResponse200238
+    // response from `UpdateNetworkWirelessSsidFirewallL3FirewallRules`: InlineResponse200246
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkWirelessSsidFirewallL3FirewallRules`: %v\n", resp)
 }
 ```
@@ -2933,11 +2933,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject206**](InlineObject206.md) |  | 
+ **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject217**](InlineObject217.md) |  | 
 
 ### Return type
 
-[**InlineResponse200238**](InlineResponse200238.md)
+[**InlineResponse200246**](InlineResponse200246.md)
 
 ### Authorization
 
@@ -2955,7 +2955,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidFirewallL7FirewallRules
 
-> InlineResponse200239 UpdateNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).UpdateNetworkWirelessSsidFirewallL7FirewallRules(updateNetworkWirelessSsidFirewallL7FirewallRules).Execute()
+> InlineResponse200247 UpdateNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).UpdateNetworkWirelessSsidFirewallL7FirewallRules(updateNetworkWirelessSsidFirewallL7FirewallRules).Execute()
 
 Update the L7 firewall rules of an SSID on an MR network
 
@@ -2976,7 +2976,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject207() // InlineObject207 |  (optional)
+    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject218() // InlineObject218 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2985,7 +2985,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkWirelessSsidFirewallL7FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200239
+    // response from `UpdateNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200247
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkWirelessSsidFirewallL7FirewallRules`: %v\n", resp)
 }
 ```
@@ -3008,11 +3008,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject207**](InlineObject207.md) |  | 
+ **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject218**](InlineObject218.md) |  | 
 
 ### Return type
 
-[**InlineResponse200239**](InlineResponse200239.md)
+[**InlineResponse200247**](InlineResponse200247.md)
 
 ### Authorization
 
@@ -3030,7 +3030,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalFirewallRuleset
 
-> InlineResponse200373Items UpdateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId, rulesetId).UpdateOrganizationPoliciesGlobalFirewallRuleset(updateOrganizationPoliciesGlobalFirewallRuleset).Execute()
+> InlineResponse200385Items UpdateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId, rulesetId).UpdateOrganizationPoliciesGlobalFirewallRuleset(updateOrganizationPoliciesGlobalFirewallRuleset).Execute()
 
 Update an Organization-Wide Policy Firewall Ruleset
 
@@ -3051,7 +3051,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     rulesetId := "rulesetId_example" // string | Ruleset ID
-    updateOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject303() // InlineObject303 |  (optional)
+    updateOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject314() // InlineObject314 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3060,7 +3060,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateOrganizationPoliciesGlobalFirewallRuleset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200373Items
+    // response from `UpdateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200385Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateOrganizationPoliciesGlobalFirewallRuleset`: %v\n", resp)
 }
 ```
@@ -3083,11 +3083,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject303**](InlineObject303.md) |  | 
+ **updateOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject314**](InlineObject314.md) |  | 
 
 ### Return type
 
-[**InlineResponse200373Items**](InlineResponse200373Items.md)
+[**InlineResponse200385Items**](InlineResponse200385Items.md)
 
 ### Authorization
 
@@ -3105,7 +3105,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalFirewallRulesetsRule
 
-> InlineResponse200374Items UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId, ruleId).UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(updateOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
+> InlineResponse200386Items UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId, ruleId).UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(updateOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
 
 Update an Organization-Wide Policy Firewall Rule
 
@@ -3126,7 +3126,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     ruleId := "ruleId_example" // string | Rule ID
-    updateOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject302() // InlineObject302 |  (optional)
+    updateOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject313() // InlineObject313 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3135,7 +3135,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateOrganizationPoliciesGlobalFirewallRulesetsRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200374Items
+    // response from `UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200386Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: %v\n", resp)
 }
 ```
@@ -3158,11 +3158,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject302**](InlineObject302.md) |  | 
+ **updateOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject313**](InlineObject313.md) |  | 
 
 ### Return type
 
-[**InlineResponse200374Items**](InlineResponse200374Items.md)
+[**InlineResponse200386Items**](InlineResponse200386Items.md)
 
 ### Authorization
 
@@ -3180,7 +3180,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment
 
-> InlineResponse200380Items UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId, assignmentId).UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
+> InlineResponse200392Items UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId, assignmentId).UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
 
 Update an Organization-Wide Policy Ruleset Assignment
 
@@ -3201,7 +3201,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     assignmentId := "assignmentId_example" // string | Assignment ID
-    updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject310() // InlineObject310 |  (optional)
+    updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject321() // InlineObject321 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3210,7 +3210,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200380Items
+    // response from `UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200392Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: %v\n", resp)
 }
 ```
@@ -3233,11 +3233,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject310**](InlineObject310.md) |  | 
+ **updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject321**](InlineObject321.md) |  | 
 
 ### Return type
 
-[**InlineResponse200380Items**](InlineResponse200380Items.md)
+[**InlineResponse200392Items**](InlineResponse200392Items.md)
 
 ### Authorization
 
@@ -3255,7 +3255,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry
 
-> InlineResponse200452Items UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(ctx, organizationId, entryId).UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(updateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry).Execute()
+> InlineResponse200464Items UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(ctx, organizationId, entryId).UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry(updateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry).Execute()
 
 Update isolation allow list MAC entry info
 
@@ -3276,7 +3276,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     entryId := "entryId_example" // string | Entry ID
-    updateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry := *openapiclient.NewInlineObject341() // InlineObject341 |  (optional)
+    updateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry := *openapiclient.NewInlineObject352() // InlineObject352 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3285,7 +3285,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry`: InlineResponse200452Items
+    // response from `UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry`: InlineResponse200464Items
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry`: %v\n", resp)
 }
 ```
@@ -3308,11 +3308,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry** | [**InlineObject341**](InlineObject341.md) |  | 
+ **updateOrganizationWirelessSsidsFirewallIsolationAllowlistEntry** | [**InlineObject352**](InlineObject352.md) |  | 
 
 ### Return type
 
-[**InlineResponse200452Items**](InlineResponse200452Items.md)
+[**InlineResponse200464Items**](InlineResponse200464Items.md)
 
 ### Authorization
 

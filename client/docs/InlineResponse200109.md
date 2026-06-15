@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG in the network. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG in the network. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | List of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39;. | [optional] 
+**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
+**AsNumber** | Pointer to **int32** | Organization-specific number of the Autonomous System to which the appliance belongs | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
+**RouterId** | Pointer to **string** | The router ID of the appliance | [optional] 
+**Neighbors** | Pointer to [**[]InlineResponse200109Neighbors**](InlineResponse200109Neighbors.md) | List of eBGP neighbor configurations | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200109WithDefaults instantiates a new InlineResponse200109 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetEnabled
 
-`func (o *InlineResponse200109) GetDhcpLeaseTime() string`
+`func (o *InlineResponse200109) GetEnabled() bool`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetEnabledOk
 
-`func (o *InlineResponse200109) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineResponse200109) GetEnabledOk() (*bool, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetEnabled
 
-`func (o *InlineResponse200109) SetDhcpLeaseTime(v string)`
+`func (o *InlineResponse200109) SetEnabled(v bool)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasDhcpLeaseTime
+### HasEnabled
 
-`func (o *InlineResponse200109) HasDhcpLeaseTime() bool`
+`func (o *InlineResponse200109) HasEnabled() bool`
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDnsNameservers
+### GetAsNumber
 
-`func (o *InlineResponse200109) GetDnsNameservers() string`
+`func (o *InlineResponse200109) GetAsNumber() int32`
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetDnsNameserversOk
+### GetAsNumberOk
 
-`func (o *InlineResponse200109) GetDnsNameserversOk() (*string, bool)`
+`func (o *InlineResponse200109) GetAsNumberOk() (*int32, bool)`
 
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetAsNumber
 
-`func (o *InlineResponse200109) SetDnsNameservers(v string)`
+`func (o *InlineResponse200109) SetAsNumber(v int32)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasDnsNameservers
+### HasAsNumber
 
-`func (o *InlineResponse200109) HasDnsNameservers() bool`
+`func (o *InlineResponse200109) HasAsNumber() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetDnsCustomNameservers
+### GetIbgpHoldTimer
 
-`func (o *InlineResponse200109) GetDnsCustomNameservers() []string`
+`func (o *InlineResponse200109) GetIbgpHoldTimer() int32`
 
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetDnsCustomNameserversOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineResponse200109) GetDnsCustomNameserversOk() (*[]string, bool)`
+`func (o *InlineResponse200109) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsCustomNameservers
+### SetIbgpHoldTimer
 
-`func (o *InlineResponse200109) SetDnsCustomNameservers(v []string)`
+`func (o *InlineResponse200109) SetIbgpHoldTimer(v int32)`
 
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasDnsCustomNameservers
+### HasIbgpHoldTimer
 
-`func (o *InlineResponse200109) HasDnsCustomNameservers() bool`
+`func (o *InlineResponse200109) HasIbgpHoldTimer() bool`
 
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
+
+### GetRouterId
+
+`func (o *InlineResponse200109) GetRouterId() string`
+
+GetRouterId returns the RouterId field if non-nil, zero value otherwise.
+
+### GetRouterIdOk
+
+`func (o *InlineResponse200109) GetRouterIdOk() (*string, bool)`
+
+GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRouterId
+
+`func (o *InlineResponse200109) SetRouterId(v string)`
+
+SetRouterId sets RouterId field to given value.
+
+### HasRouterId
+
+`func (o *InlineResponse200109) HasRouterId() bool`
+
+HasRouterId returns a boolean if a field has been set.
+
+### GetNeighbors
+
+`func (o *InlineResponse200109) GetNeighbors() []InlineResponse200109Neighbors`
+
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+
+### GetNeighborsOk
+
+`func (o *InlineResponse200109) GetNeighborsOk() (*[]InlineResponse200109Neighbors, bool)`
+
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNeighbors
+
+`func (o *InlineResponse200109) SetNeighbors(v []InlineResponse200109Neighbors)`
+
+SetNeighbors sets Neighbors field to given value.
+
+### HasNeighbors
+
+`func (o *InlineResponse200109) HasNeighbors() bool`
+
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

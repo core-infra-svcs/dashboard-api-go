@@ -53,7 +53,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject257("AccountId_example", "ApiKey_example", *openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1("Name_example"), "Title_example", "Username_example") // InlineObject257 | 
+    createOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject268("AccountId_example", "ApiKey_example", *openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1("Name_example"), "Title_example", "Username_example") // InlineObject268 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -83,7 +83,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCellular
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject257**](InlineObject257.md) |  | 
+ **createOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject268**](InlineObject268.md) |  | 
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationCellularGatewayEsimsSwap
 
-> InlineResponse200306 CreateOrganizationCellularGatewayEsimsSwap(ctx, organizationId).CreateOrganizationCellularGatewayEsimsSwap(createOrganizationCellularGatewayEsimsSwap).Execute()
+> InlineResponse200318 CreateOrganizationCellularGatewayEsimsSwap(ctx, organizationId).CreateOrganizationCellularGatewayEsimsSwap(createOrganizationCellularGatewayEsimsSwap).Execute()
 
 Swap which profile an eSIM uses.
 
@@ -125,7 +125,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCellularGatewayEsimsSwap := *openapiclient.NewInlineObject259([]openapiclient.OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps{*openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps("Eid_example")}) // InlineObject259 | 
+    createOrganizationCellularGatewayEsimsSwap := *openapiclient.NewInlineObject270([]openapiclient.OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps{*openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps("Eid_example")}) // InlineObject270 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -134,7 +134,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.CreateOrganizationCellularGatewayEsimsSwap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationCellularGatewayEsimsSwap`: InlineResponse200306
+    // response from `CreateOrganizationCellularGatewayEsimsSwap`: InlineResponse200318
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.CreateOrganizationCellularGatewayEsimsSwap`: %v\n", resp)
 }
 ```
@@ -155,11 +155,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCellular
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCellularGatewayEsimsSwap** | [**InlineObject259**](InlineObject259.md) |  | 
+ **createOrganizationCellularGatewayEsimsSwap** | [**InlineObject270**](InlineObject270.md) |  | 
 
 ### Return type
 
-[**InlineResponse200306**](InlineResponse200306.md)
+[**InlineResponse200318**](InlineResponse200318.md)
 
 ### Authorization
 
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCellularGatewayLan
 
-> InlineResponse20028 GetDeviceCellularGatewayLan(ctx, serial).Execute()
+> InlineResponse20029 GetDeviceCellularGatewayLan(ctx, serial).Execute()
 
 Show the LAN Settings of a MG
 
@@ -276,7 +276,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetDeviceCellularGatewayLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularGatewayLan`: InlineResponse20028
+    // response from `GetDeviceCellularGatewayLan`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetDeviceCellularGatewayLan`: %v\n", resp)
 }
 ```
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCellularGatewayPortForwardingRules
 
-> InlineResponse20029 GetDeviceCellularGatewayPortForwardingRules(ctx, serial).Execute()
+> InlineResponse20030 GetDeviceCellularGatewayPortForwardingRules(ctx, serial).Execute()
 
 Returns the port forwarding rules for a single MG.
 
@@ -346,7 +346,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetDeviceCellularGatewayPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularGatewayPortForwardingRules`: InlineResponse20029
+    // response from `GetDeviceCellularGatewayPortForwardingRules`: InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetDeviceCellularGatewayPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayConnectivityMonitoringDestinations
 
-> InlineResponse20064 GetNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).Execute()
+> InlineResponse20069 GetNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).Execute()
 
 Return the connectivity testing destinations for an MG network
 
@@ -416,7 +416,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetNetworkCellularGatewayConnectivityMonitoringDestinations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20064
+    // response from `GetNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetNetworkCellularGatewayConnectivityMonitoringDestinations`: %v\n", resp)
 }
 ```
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20064**](InlineResponse20064.md)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayDhcp
 
-> InlineResponse200109 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
+> InlineResponse200117 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
 
 List common DHCP settings of MGs
 
@@ -486,7 +486,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse200109
+    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse200117
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200109**](InlineResponse200109.md)
+[**InlineResponse200117**](InlineResponse200117.md)
 
 ### Authorization
 
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewaySubnetPool
 
-> InlineResponse200110 GetNetworkCellularGatewaySubnetPool(ctx, networkId).Execute()
+> InlineResponse200118 GetNetworkCellularGatewaySubnetPool(ctx, networkId).Execute()
 
 Return the subnet pool and mask configured for MGs in the network.
 
@@ -556,7 +556,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetNetworkCellularGatewaySubnetPool``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewaySubnetPool`: InlineResponse200110
+    // response from `GetNetworkCellularGatewaySubnetPool`: InlineResponse200118
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetNetworkCellularGatewaySubnetPool`: %v\n", resp)
 }
 ```
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200110**](InlineResponse200110.md)
+[**InlineResponse200118**](InlineResponse200118.md)
 
 ### Authorization
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayUplink
 
-> InlineResponse200111 GetNetworkCellularGatewayUplink(ctx, networkId).Execute()
+> InlineResponse200119 GetNetworkCellularGatewayUplink(ctx, networkId).Execute()
 
 Returns the uplink settings for your MG network.
 
@@ -626,7 +626,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetNetworkCellularGatewayUplink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayUplink`: InlineResponse200111
+    // response from `GetNetworkCellularGatewayUplink`: InlineResponse200119
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetNetworkCellularGatewayUplink`: %v\n", resp)
 }
 ```
@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200111**](InlineResponse200111.md)
+[**InlineResponse200119**](InlineResponse200119.md)
 
 ### Authorization
 
@@ -668,7 +668,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsInventory
 
-> InlineResponse200301 GetOrganizationCellularGatewayEsimsInventory(ctx, organizationId).Eids(eids).Execute()
+> InlineResponse200313 GetOrganizationCellularGatewayEsimsInventory(ctx, organizationId).Eids(eids).Execute()
 
 The eSIM inventory of a given organization.
 
@@ -697,7 +697,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsInventory`: InlineResponse200301
+    // response from `GetOrganizationCellularGatewayEsimsInventory`: InlineResponse200313
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsInventory`: %v\n", resp)
 }
 ```
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200301**](InlineResponse200301.md)
+[**InlineResponse200313**](InlineResponse200313.md)
 
 ### Authorization
 
@@ -740,7 +740,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProviders
 
-> InlineResponse200302 GetOrganizationCellularGatewayEsimsServiceProviders(ctx, organizationId).Execute()
+> InlineResponse200314 GetOrganizationCellularGatewayEsimsServiceProviders(ctx, organizationId).Execute()
 
 Service providers customers can add accounts for.
 
@@ -768,7 +768,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProviders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProviders`: InlineResponse200302
+    // response from `GetOrganizationCellularGatewayEsimsServiceProviders`: InlineResponse200314
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProviders`: %v\n", resp)
 }
 ```
@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200302**](InlineResponse200302.md)
+[**InlineResponse200314**](InlineResponse200314.md)
 
 ### Authorization
 
@@ -810,7 +810,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccounts
 
-> []InlineResponse200303 GetOrganizationCellularGatewayEsimsServiceProvidersAccounts(ctx, organizationId).AccountIds(accountIds).Execute()
+> []InlineResponse200315 GetOrganizationCellularGatewayEsimsServiceProvidersAccounts(ctx, organizationId).AccountIds(accountIds).Execute()
 
 Inventory of service provider accounts tied to the organization.
 
@@ -839,7 +839,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: []InlineResponse200303
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: []InlineResponse200315
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: %v\n", resp)
 }
 ```
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200303**](InlineResponse200303.md)
+[**[]InlineResponse200315**](InlineResponse200315.md)
 
 ### Authorization
 
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans
 
-> InlineResponse200304 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
+> InlineResponse200316 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
 
 The communication plans available for a given provider.
 
@@ -911,7 +911,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200304
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200316
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: %v\n", resp)
 }
 ```
@@ -936,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200304**](InlineResponse200304.md)
+[**InlineResponse200316**](InlineResponse200316.md)
 
 ### Authorization
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans
 
-> InlineResponse200305 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans(ctx, organizationId).AccountIds(accountIds).Execute()
+> InlineResponse200317 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans(ctx, organizationId).AccountIds(accountIds).Execute()
 
 The rate plans available for a given provider.
 
@@ -983,7 +983,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: InlineResponse200305
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: InlineResponse200317
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: %v\n", resp)
 }
 ```
@@ -1008,7 +1008,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200305**](InlineResponse200305.md)
+[**InlineResponse200317**](InlineResponse200317.md)
 
 ### Authorization
 
@@ -1026,7 +1026,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse200307 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200319 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -1060,7 +1060,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200307
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200319
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -1090,7 +1090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200307**](InlineResponse200307.md)
+[**[]InlineResponse200319**](InlineResponse200319.md)
 
 ### Authorization
 
@@ -1108,7 +1108,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularGatewayLan
 
-> InlineResponse20028 UpdateDeviceCellularGatewayLan(ctx, serial).UpdateDeviceCellularGatewayLan(updateDeviceCellularGatewayLan).Execute()
+> InlineResponse20029 UpdateDeviceCellularGatewayLan(ctx, serial).UpdateDeviceCellularGatewayLan(updateDeviceCellularGatewayLan).Execute()
 
 Update the LAN Settings for a single MG.
 
@@ -1128,7 +1128,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject16() // InlineObject16 |  (optional)
+    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject17() // InlineObject17 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1137,7 +1137,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateDeviceCellularGatewayLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularGatewayLan`: InlineResponse20028
+    // response from `UpdateDeviceCellularGatewayLan`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateDeviceCellularGatewayLan`: %v\n", resp)
 }
 ```
@@ -1158,11 +1158,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayLan** | [**InlineObject16**](InlineObject16.md) |  | 
+ **updateDeviceCellularGatewayLan** | [**InlineObject17**](InlineObject17.md) |  | 
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -1180,7 +1180,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularGatewayPortForwardingRules
 
-> InlineResponse20029 UpdateDeviceCellularGatewayPortForwardingRules(ctx, serial).UpdateDeviceCellularGatewayPortForwardingRules(updateDeviceCellularGatewayPortForwardingRules).Execute()
+> InlineResponse20030 UpdateDeviceCellularGatewayPortForwardingRules(ctx, serial).UpdateDeviceCellularGatewayPortForwardingRules(updateDeviceCellularGatewayPortForwardingRules).Execute()
 
 Updates the port forwarding rules for a single MG.
 
@@ -1200,7 +1200,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject17() // InlineObject17 |  (optional)
+    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject18() // InlineObject18 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1209,7 +1209,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateDeviceCellularGatewayPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularGatewayPortForwardingRules`: InlineResponse20029
+    // response from `UpdateDeviceCellularGatewayPortForwardingRules`: InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateDeviceCellularGatewayPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -1230,11 +1230,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject17**](InlineObject17.md) |  | 
+ **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject18**](InlineObject18.md) |  | 
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -1252,7 +1252,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayConnectivityMonitoringDestinations
 
-> InlineResponse20064 UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(updateNetworkCellularGatewayConnectivityMonitoringDestinations).Execute()
+> InlineResponse20069 UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(updateNetworkCellularGatewayConnectivityMonitoringDestinations).Execute()
 
 Update the connectivity testing destinations for an MG network
 
@@ -1272,7 +1272,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject94() // InlineObject94 |  (optional)
+    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject105() // InlineObject105 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1281,7 +1281,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateNetworkCellularGatewayConnectivityMonitoringDestinations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20064
+    // response from `UpdateNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateNetworkCellularGatewayConnectivityMonitoringDestinations`: %v\n", resp)
 }
 ```
@@ -1302,11 +1302,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject94**](InlineObject94.md) |  | 
+ **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject105**](InlineObject105.md) |  | 
 
 ### Return type
 
-[**InlineResponse20064**](InlineResponse20064.md)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -1324,7 +1324,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayDhcp
 
-> InlineResponse200109 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
+> InlineResponse200117 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
 
 Update common DHCP settings of MGs
 
@@ -1344,7 +1344,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayDhcp := *openapiclient.NewInlineObject95() // InlineObject95 |  (optional)
+    updateNetworkCellularGatewayDhcp := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1353,7 +1353,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse200109
+    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse200117
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -1374,11 +1374,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayDhcp** | [**InlineObject95**](InlineObject95.md) |  | 
+ **updateNetworkCellularGatewayDhcp** | [**InlineObject106**](InlineObject106.md) |  | 
 
 ### Return type
 
-[**InlineResponse200109**](InlineResponse200109.md)
+[**InlineResponse200117**](InlineResponse200117.md)
 
 ### Authorization
 
@@ -1396,7 +1396,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewaySubnetPool
 
-> InlineResponse200110 UpdateNetworkCellularGatewaySubnetPool(ctx, networkId).UpdateNetworkCellularGatewaySubnetPool(updateNetworkCellularGatewaySubnetPool).Execute()
+> InlineResponse200118 UpdateNetworkCellularGatewaySubnetPool(ctx, networkId).UpdateNetworkCellularGatewaySubnetPool(updateNetworkCellularGatewaySubnetPool).Execute()
 
 Update the subnet pool and mask configuration for MGs in the network.
 
@@ -1416,7 +1416,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject96() // InlineObject96 |  (optional)
+    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject107() // InlineObject107 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1425,7 +1425,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateNetworkCellularGatewaySubnetPool``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewaySubnetPool`: InlineResponse200110
+    // response from `UpdateNetworkCellularGatewaySubnetPool`: InlineResponse200118
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateNetworkCellularGatewaySubnetPool`: %v\n", resp)
 }
 ```
@@ -1446,11 +1446,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewaySubnetPool** | [**InlineObject96**](InlineObject96.md) |  | 
+ **updateNetworkCellularGatewaySubnetPool** | [**InlineObject107**](InlineObject107.md) |  | 
 
 ### Return type
 
-[**InlineResponse200110**](InlineResponse200110.md)
+[**InlineResponse200118**](InlineResponse200118.md)
 
 ### Authorization
 
@@ -1468,7 +1468,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayUplink
 
-> InlineResponse200111 UpdateNetworkCellularGatewayUplink(ctx, networkId).UpdateNetworkCellularGatewayUplink(updateNetworkCellularGatewayUplink).Execute()
+> InlineResponse200119 UpdateNetworkCellularGatewayUplink(ctx, networkId).UpdateNetworkCellularGatewayUplink(updateNetworkCellularGatewayUplink).Execute()
 
 Updates the uplink settings for your MG network.
 
@@ -1488,7 +1488,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject97() // InlineObject97 |  (optional)
+    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject108() // InlineObject108 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1497,7 +1497,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateNetworkCellularGatewayUplink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayUplink`: InlineResponse200111
+    // response from `UpdateNetworkCellularGatewayUplink`: InlineResponse200119
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateNetworkCellularGatewayUplink`: %v\n", resp)
 }
 ```
@@ -1518,11 +1518,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayUplink** | [**InlineObject97**](InlineObject97.md) |  | 
+ **updateNetworkCellularGatewayUplink** | [**InlineObject108**](InlineObject108.md) |  | 
 
 ### Return type
 
-[**InlineResponse200111**](InlineResponse200111.md)
+[**InlineResponse200119**](InlineResponse200119.md)
 
 ### Authorization
 
@@ -1540,7 +1540,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationCellularGatewayEsimsInventory
 
-> InlineResponse200301Items UpdateOrganizationCellularGatewayEsimsInventory(ctx, organizationId, id).UpdateOrganizationCellularGatewayEsimsInventory(updateOrganizationCellularGatewayEsimsInventory).Execute()
+> InlineResponse200313Items UpdateOrganizationCellularGatewayEsimsInventory(ctx, organizationId, id).UpdateOrganizationCellularGatewayEsimsInventory(updateOrganizationCellularGatewayEsimsInventory).Execute()
 
 Toggle the status of an eSIM
 
@@ -1561,7 +1561,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationCellularGatewayEsimsInventory := *openapiclient.NewInlineObject256() // InlineObject256 |  (optional)
+    updateOrganizationCellularGatewayEsimsInventory := *openapiclient.NewInlineObject267() // InlineObject267 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1570,7 +1570,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationCellularGatewayEsimsInventory`: InlineResponse200301Items
+    // response from `UpdateOrganizationCellularGatewayEsimsInventory`: InlineResponse200313Items
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsInventory`: %v\n", resp)
 }
 ```
@@ -1593,11 +1593,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCellularGatewayEsimsInventory** | [**InlineObject256**](InlineObject256.md) |  | 
+ **updateOrganizationCellularGatewayEsimsInventory** | [**InlineObject267**](InlineObject267.md) |  | 
 
 ### Return type
 
-[**InlineResponse200301Items**](InlineResponse200301Items.md)
+[**InlineResponse200313Items**](InlineResponse200313Items.md)
 
 ### Authorization
 
@@ -1636,7 +1636,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     accountId := "accountId_example" // string | Account ID
-    updateOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject258() // InlineObject258 |  (optional)
+    updateOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject269() // InlineObject269 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1668,7 +1668,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject258**](InlineObject258.md) |  | 
+ **updateOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject269**](InlineObject269.md) |  | 
 
 ### Return type
 
@@ -1690,7 +1690,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationCellularGatewayEsimsSwap
 
-> InlineResponse200306 UpdateOrganizationCellularGatewayEsimsSwap(ctx, id, organizationId).Execute()
+> InlineResponse200318 UpdateOrganizationCellularGatewayEsimsSwap(ctx, id, organizationId).Execute()
 
 Get the status of a profile swap.
 
@@ -1719,7 +1719,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsSwap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationCellularGatewayEsimsSwap`: InlineResponse200306
+    // response from `UpdateOrganizationCellularGatewayEsimsSwap`: InlineResponse200318
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsSwap`: %v\n", resp)
 }
 ```
@@ -1745,7 +1745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200306**](InlineResponse200306.md)
+[**InlineResponse200318**](InlineResponse200318.md)
 
 ### Authorization
 

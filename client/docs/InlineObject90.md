@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
-**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | 
-**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
+**Enabled** | **bool** | Enable or disable umbrella protection | 
 
 ## Methods
 
 ### NewInlineObject90
 
-`func NewInlineObject90(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid1, ) *InlineObject90`
+`func NewInlineObject90(enabled bool, ) *InlineObject90`
 
 NewInlineObject90 instantiates a new InlineObject90 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +25,25 @@ NewInlineObject90WithDefaults instantiates a new InlineObject90 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject90) GetName() string`
+`func (o *InlineObject90) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject90) GetNameOk() (*string, bool)`
+`func (o *InlineObject90) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject90) SetName(v string)`
+`func (o *InlineObject90) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-
-### GetSsid
-
-`func (o *InlineObject90) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid1`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineObject90) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid1, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineObject90) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid1)`
-
-SetSsid sets Ssid field to given value.
-
-
-### GetIdentity
-
-`func (o *InlineObject90) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
-
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
-
-### GetIdentityOk
-
-`func (o *InlineObject90) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
-
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdentity
-
-`func (o *InlineObject90) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
-
-SetIdentity sets Identity field to given value.
-
-### HasIdentity
-
-`func (o *InlineObject90) HasIdentity() bool`
-
-HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

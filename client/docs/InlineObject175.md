@@ -4,13 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | [**[]NetworksNetworkIdSyslogServersServers**](NetworksNetworkIdSyslogServersServers.md) | A list of the syslog servers for this network | 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]NetworksNetworkIdSwitchSettingsPowerExceptions**](NetworksNetworkIdSwitchSettingsPowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkClientSampling**](NetworksNetworkIdSwitchSettingsUplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**NetworksNetworkIdSwitchSettingsMacBlocklist**](NetworksNetworkIdSwitchSettingsMacBlocklist.md) |  | [optional] 
+**PortChannelFallback** | Pointer to **bool** | Port channel fallback | [optional] 
+**UplinkSelection** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkSelection**](NetworksNetworkIdSwitchSettingsUplinkSelection.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject175
 
-`func NewInlineObject175(servers []NetworksNetworkIdSyslogServersServers, ) *InlineObject175`
+`func NewInlineObject175() *InlineObject175`
 
 NewInlineObject175 instantiates a new InlineObject175 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +31,180 @@ NewInlineObject175WithDefaults instantiates a new InlineObject175 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetVlan
 
-`func (o *InlineObject175) GetServers() []NetworksNetworkIdSyslogServersServers`
+`func (o *InlineObject175) GetVlan() int32`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetVlanOk
 
-`func (o *InlineObject175) GetServersOk() (*[]NetworksNetworkIdSyslogServersServers, bool)`
+`func (o *InlineObject175) GetVlanOk() (*int32, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetVlan
 
-`func (o *InlineObject175) SetServers(v []NetworksNetworkIdSyslogServersServers)`
+`func (o *InlineObject175) SetVlan(v int32)`
 
-SetServers sets Servers field to given value.
+SetVlan sets Vlan field to given value.
 
+### HasVlan
+
+`func (o *InlineObject175) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetUseCombinedPower
+
+`func (o *InlineObject175) GetUseCombinedPower() bool`
+
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
+
+### GetUseCombinedPowerOk
+
+`func (o *InlineObject175) GetUseCombinedPowerOk() (*bool, bool)`
+
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUseCombinedPower
+
+`func (o *InlineObject175) SetUseCombinedPower(v bool)`
+
+SetUseCombinedPower sets UseCombinedPower field to given value.
+
+### HasUseCombinedPower
+
+`func (o *InlineObject175) HasUseCombinedPower() bool`
+
+HasUseCombinedPower returns a boolean if a field has been set.
+
+### GetPowerExceptions
+
+`func (o *InlineObject175) GetPowerExceptions() []NetworksNetworkIdSwitchSettingsPowerExceptions`
+
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
+
+### GetPowerExceptionsOk
+
+`func (o *InlineObject175) GetPowerExceptionsOk() (*[]NetworksNetworkIdSwitchSettingsPowerExceptions, bool)`
+
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPowerExceptions
+
+`func (o *InlineObject175) SetPowerExceptions(v []NetworksNetworkIdSwitchSettingsPowerExceptions)`
+
+SetPowerExceptions sets PowerExceptions field to given value.
+
+### HasPowerExceptions
+
+`func (o *InlineObject175) HasPowerExceptions() bool`
+
+HasPowerExceptions returns a boolean if a field has been set.
+
+### GetUplinkClientSampling
+
+`func (o *InlineObject175) GetUplinkClientSampling() NetworksNetworkIdSwitchSettingsUplinkClientSampling`
+
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
+
+### GetUplinkClientSamplingOk
+
+`func (o *InlineObject175) GetUplinkClientSamplingOk() (*NetworksNetworkIdSwitchSettingsUplinkClientSampling, bool)`
+
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinkClientSampling
+
+`func (o *InlineObject175) SetUplinkClientSampling(v NetworksNetworkIdSwitchSettingsUplinkClientSampling)`
+
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
+
+### HasUplinkClientSampling
+
+`func (o *InlineObject175) HasUplinkClientSampling() bool`
+
+HasUplinkClientSampling returns a boolean if a field has been set.
+
+### GetMacBlocklist
+
+`func (o *InlineObject175) GetMacBlocklist() NetworksNetworkIdSwitchSettingsMacBlocklist`
+
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
+
+### GetMacBlocklistOk
+
+`func (o *InlineObject175) GetMacBlocklistOk() (*NetworksNetworkIdSwitchSettingsMacBlocklist, bool)`
+
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMacBlocklist
+
+`func (o *InlineObject175) SetMacBlocklist(v NetworksNetworkIdSwitchSettingsMacBlocklist)`
+
+SetMacBlocklist sets MacBlocklist field to given value.
+
+### HasMacBlocklist
+
+`func (o *InlineObject175) HasMacBlocklist() bool`
+
+HasMacBlocklist returns a boolean if a field has been set.
+
+### GetPortChannelFallback
+
+`func (o *InlineObject175) GetPortChannelFallback() bool`
+
+GetPortChannelFallback returns the PortChannelFallback field if non-nil, zero value otherwise.
+
+### GetPortChannelFallbackOk
+
+`func (o *InlineObject175) GetPortChannelFallbackOk() (*bool, bool)`
+
+GetPortChannelFallbackOk returns a tuple with the PortChannelFallback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannelFallback
+
+`func (o *InlineObject175) SetPortChannelFallback(v bool)`
+
+SetPortChannelFallback sets PortChannelFallback field to given value.
+
+### HasPortChannelFallback
+
+`func (o *InlineObject175) HasPortChannelFallback() bool`
+
+HasPortChannelFallback returns a boolean if a field has been set.
+
+### GetUplinkSelection
+
+`func (o *InlineObject175) GetUplinkSelection() NetworksNetworkIdSwitchSettingsUplinkSelection`
+
+GetUplinkSelection returns the UplinkSelection field if non-nil, zero value otherwise.
+
+### GetUplinkSelectionOk
+
+`func (o *InlineObject175) GetUplinkSelectionOk() (*NetworksNetworkIdSwitchSettingsUplinkSelection, bool)`
+
+GetUplinkSelectionOk returns a tuple with the UplinkSelection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinkSelection
+
+`func (o *InlineObject175) SetUplinkSelection(v NetworksNetworkIdSwitchSettingsUplinkSelection)`
+
+SetUplinkSelection sets UplinkSelection field to given value.
+
+### HasUplinkSelection
+
+`func (o *InlineObject175) HasUplinkSelection() bool`
+
+HasUplinkSelection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

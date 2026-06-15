@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200247Rules**](InlineResponse200247Rules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject218WithDefaults instantiates a new InlineObject218 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject218) GetName() string`
+`func (o *InlineObject218) GetRules() []InlineResponse200247Rules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject218) GetNameOk() (*string, bool)`
+`func (o *InlineObject218) GetRulesOk() (*[]InlineResponse200247Rules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject218) SetName(v string)`
+`func (o *InlineObject218) SetRules(v []InlineResponse200247Rules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
-### HasName
+### HasRules
 
-`func (o *InlineObject218) HasName() bool`
+`func (o *InlineObject218) HasRules() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetManagement
-
-`func (o *InlineObject218) GetManagement() OrganizationsManagement1`
-
-GetManagement returns the Management field if non-nil, zero value otherwise.
-
-### GetManagementOk
-
-`func (o *InlineObject218) GetManagementOk() (*OrganizationsManagement1, bool)`
-
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetManagement
-
-`func (o *InlineObject218) SetManagement(v OrganizationsManagement1)`
-
-SetManagement sets Management field to given value.
-
-### HasManagement
-
-`func (o *InlineObject218) HasManagement() bool`
-
-HasManagement returns a boolean if a field has been set.
-
-### GetApi
-
-`func (o *InlineObject218) GetApi() OrganizationsOrganizationIdApi`
-
-GetApi returns the Api field if non-nil, zero value otherwise.
-
-### GetApiOk
-
-`func (o *InlineObject218) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
-
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApi
-
-`func (o *InlineObject218) SetApi(v OrganizationsOrganizationIdApi)`
-
-SetApi sets Api field to given value.
-
-### HasApi
-
-`func (o *InlineObject218) HasApi() bool`
-
-HasApi returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

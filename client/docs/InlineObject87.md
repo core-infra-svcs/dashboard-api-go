@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigTemplateId** | **string** | The ID of the template to which the network should be bound. | 
-**AutoBind** | Pointer to **bool** | Optional boolean indicating whether the network&#39;s switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model. | [optional] 
+**Domains** | **[]string** | Domain names to exclude from Umbrella DNS routing (e.g., &#39;example.com&#39;, &#39;corp.example.org&#39;). Standard FQDNs only — wildcards are not supported. Values are lowercased before saving. Each call replaces the full exclusion list. | 
 
 ## Methods
 
 ### NewInlineObject87
 
-`func NewInlineObject87(configTemplateId string, ) *InlineObject87`
+`func NewInlineObject87(domains []string, ) *InlineObject87`
 
 NewInlineObject87 instantiates a new InlineObject87 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,25 @@ NewInlineObject87WithDefaults instantiates a new InlineObject87 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfigTemplateId
+### GetDomains
 
-`func (o *InlineObject87) GetConfigTemplateId() string`
+`func (o *InlineObject87) GetDomains() []string`
 
-GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetConfigTemplateIdOk
+### GetDomainsOk
 
-`func (o *InlineObject87) GetConfigTemplateIdOk() (*string, bool)`
+`func (o *InlineObject87) GetDomainsOk() (*[]string, bool)`
 
-GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfigTemplateId
+### SetDomains
 
-`func (o *InlineObject87) SetConfigTemplateId(v string)`
+`func (o *InlineObject87) SetDomains(v []string)`
 
-SetConfigTemplateId sets ConfigTemplateId field to given value.
+SetDomains sets Domains field to given value.
 
-
-### GetAutoBind
-
-`func (o *InlineObject87) GetAutoBind() bool`
-
-GetAutoBind returns the AutoBind field if non-nil, zero value otherwise.
-
-### GetAutoBindOk
-
-`func (o *InlineObject87) GetAutoBindOk() (*bool, bool)`
-
-GetAutoBindOk returns a tuple with the AutoBind field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAutoBind
-
-`func (o *InlineObject87) SetAutoBind(v bool)`
-
-SetAutoBind sets AutoBind field to given value.
-
-### HasAutoBind
-
-`func (o *InlineObject87) HasAutoBind() bool`
-
-HasAutoBind returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

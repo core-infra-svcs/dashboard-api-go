@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse20092Rules**](InlineResponse20092Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Subnet** | Pointer to **string** | The subnet of the single LAN | [optional] 
+**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the single LAN | [optional] 
+**MandatoryDhcp** | Pointer to [**InlineResponse20092MandatoryDhcp**](InlineResponse20092MandatoryDhcp.md) |  | [optional] 
+**Ipv6** | Pointer to [**InlineResponse20092Ipv6**](InlineResponse20092Ipv6.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultRulesEnabled
+### GetSubnet
 
-`func (o *InlineResponse20092) GetDefaultRulesEnabled() bool`
+`func (o *InlineResponse20092) GetSubnet() string`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetSubnetOk
 
-`func (o *InlineResponse20092) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20092) GetSubnetOk() (*string, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetSubnet
 
-`func (o *InlineResponse20092) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineResponse20092) SetSubnet(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasDefaultRulesEnabled
+### HasSubnet
 
-`func (o *InlineResponse20092) HasDefaultRulesEnabled() bool`
+`func (o *InlineResponse20092) HasSubnet() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetRules
+### GetApplianceIp
 
-`func (o *InlineResponse20092) GetRules() []InlineResponse20092Rules`
+`func (o *InlineResponse20092) GetApplianceIp() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetApplianceIpOk
 
-`func (o *InlineResponse20092) GetRulesOk() (*[]InlineResponse20092Rules, bool)`
+`func (o *InlineResponse20092) GetApplianceIpOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetApplianceIp
 
-`func (o *InlineResponse20092) SetRules(v []InlineResponse20092Rules)`
+`func (o *InlineResponse20092) SetApplianceIp(v string)`
 
-SetRules sets Rules field to given value.
+SetApplianceIp sets ApplianceIp field to given value.
 
-### HasRules
+### HasApplianceIp
 
-`func (o *InlineResponse20092) HasRules() bool`
+`func (o *InlineResponse20092) HasApplianceIp() bool`
 
-HasRules returns a boolean if a field has been set.
+HasApplianceIp returns a boolean if a field has been set.
+
+### GetMandatoryDhcp
+
+`func (o *InlineResponse20092) GetMandatoryDhcp() InlineResponse20092MandatoryDhcp`
+
+GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+
+### GetMandatoryDhcpOk
+
+`func (o *InlineResponse20092) GetMandatoryDhcpOk() (*InlineResponse20092MandatoryDhcp, bool)`
+
+GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMandatoryDhcp
+
+`func (o *InlineResponse20092) SetMandatoryDhcp(v InlineResponse20092MandatoryDhcp)`
+
+SetMandatoryDhcp sets MandatoryDhcp field to given value.
+
+### HasMandatoryDhcp
+
+`func (o *InlineResponse20092) HasMandatoryDhcp() bool`
+
+HasMandatoryDhcp returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineResponse20092) GetIpv6() InlineResponse20092Ipv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineResponse20092) GetIpv6Ok() (*InlineResponse20092Ipv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineResponse20092) SetIpv6(v InlineResponse20092Ipv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineResponse20092) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are allowed | [optional] 
-**BlockedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are blocked | [optional] 
-**BlockedUrlCategories** | Pointer to **[]string** | A list of URL categories to block | [optional] 
-**UrlCategoryListSize** | Pointer to **string** | URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39; | [optional] 
+**Channel** | Pointer to **string** | Desired ESL channel for the device, or &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject46WithDefaults instantiates a new InlineObject46 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedUrlPatterns
+### GetChannel
 
-`func (o *InlineObject46) GetAllowedUrlPatterns() []string`
+`func (o *InlineObject46) GetChannel() string`
 
-GetAllowedUrlPatterns returns the AllowedUrlPatterns field if non-nil, zero value otherwise.
+GetChannel returns the Channel field if non-nil, zero value otherwise.
 
-### GetAllowedUrlPatternsOk
+### GetChannelOk
 
-`func (o *InlineObject46) GetAllowedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineObject46) GetChannelOk() (*string, bool)`
 
-GetAllowedUrlPatternsOk returns a tuple with the AllowedUrlPatterns field if it's non-nil, zero value otherwise
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrlPatterns
+### SetChannel
 
-`func (o *InlineObject46) SetAllowedUrlPatterns(v []string)`
+`func (o *InlineObject46) SetChannel(v string)`
 
-SetAllowedUrlPatterns sets AllowedUrlPatterns field to given value.
+SetChannel sets Channel field to given value.
 
-### HasAllowedUrlPatterns
+### HasChannel
 
-`func (o *InlineObject46) HasAllowedUrlPatterns() bool`
+`func (o *InlineObject46) HasChannel() bool`
 
-HasAllowedUrlPatterns returns a boolean if a field has been set.
+HasChannel returns a boolean if a field has been set.
 
-### GetBlockedUrlPatterns
+### GetEnabled
 
-`func (o *InlineObject46) GetBlockedUrlPatterns() []string`
+`func (o *InlineObject46) GetEnabled() bool`
 
-GetBlockedUrlPatterns returns the BlockedUrlPatterns field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetBlockedUrlPatternsOk
+### GetEnabledOk
 
-`func (o *InlineObject46) GetBlockedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineObject46) GetEnabledOk() (*bool, bool)`
 
-GetBlockedUrlPatternsOk returns a tuple with the BlockedUrlPatterns field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedUrlPatterns
+### SetEnabled
 
-`func (o *InlineObject46) SetBlockedUrlPatterns(v []string)`
+`func (o *InlineObject46) SetEnabled(v bool)`
 
-SetBlockedUrlPatterns sets BlockedUrlPatterns field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasBlockedUrlPatterns
+### HasEnabled
 
-`func (o *InlineObject46) HasBlockedUrlPatterns() bool`
+`func (o *InlineObject46) HasEnabled() bool`
 
-HasBlockedUrlPatterns returns a boolean if a field has been set.
-
-### GetBlockedUrlCategories
-
-`func (o *InlineObject46) GetBlockedUrlCategories() []string`
-
-GetBlockedUrlCategories returns the BlockedUrlCategories field if non-nil, zero value otherwise.
-
-### GetBlockedUrlCategoriesOk
-
-`func (o *InlineObject46) GetBlockedUrlCategoriesOk() (*[]string, bool)`
-
-GetBlockedUrlCategoriesOk returns a tuple with the BlockedUrlCategories field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBlockedUrlCategories
-
-`func (o *InlineObject46) SetBlockedUrlCategories(v []string)`
-
-SetBlockedUrlCategories sets BlockedUrlCategories field to given value.
-
-### HasBlockedUrlCategories
-
-`func (o *InlineObject46) HasBlockedUrlCategories() bool`
-
-HasBlockedUrlCategories returns a boolean if a field has been set.
-
-### GetUrlCategoryListSize
-
-`func (o *InlineObject46) GetUrlCategoryListSize() string`
-
-GetUrlCategoryListSize returns the UrlCategoryListSize field if non-nil, zero value otherwise.
-
-### GetUrlCategoryListSizeOk
-
-`func (o *InlineObject46) GetUrlCategoryListSizeOk() (*string, bool)`
-
-GetUrlCategoryListSizeOk returns a tuple with the UrlCategoryListSize field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrlCategoryListSize
-
-`func (o *InlineObject46) SetUrlCategoryListSize(v string)`
-
-SetUrlCategoryListSize sets UrlCategoryListSize field to given value.
-
-### HasUrlCategoryListSize
-
-`func (o *InlineObject46) HasUrlCategoryListSize() bool`
-
-HasUrlCategoryListSize returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

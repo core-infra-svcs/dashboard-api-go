@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
+**Concentrator** | Pointer to [**InlineResponse200254Concentrator**](InlineResponse200254Concentrator.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200254Failover**](InlineResponse200254Failover.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**InlineResponse200254SplitTunnel**](InlineResponse200254SplitTunnel.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200254WithDefaults instantiates a new InlineResponse200254 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabledNetworks
+### GetConcentrator
 
-`func (o *InlineResponse200254) GetEnabledNetworks() []string`
+`func (o *InlineResponse200254) GetConcentrator() InlineResponse200254Concentrator`
 
-GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetEnabledNetworksOk
+### GetConcentratorOk
 
-`func (o *InlineResponse200254) GetEnabledNetworksOk() (*[]string, bool)`
+`func (o *InlineResponse200254) GetConcentratorOk() (*InlineResponse200254Concentrator, bool)`
 
-GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabledNetworks
+### SetConcentrator
 
-`func (o *InlineResponse200254) SetEnabledNetworks(v []string)`
+`func (o *InlineResponse200254) SetConcentrator(v InlineResponse200254Concentrator)`
 
-SetEnabledNetworks sets EnabledNetworks field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasEnabledNetworks
+### HasConcentrator
 
-`func (o *InlineResponse200254) HasEnabledNetworks() bool`
+`func (o *InlineResponse200254) HasConcentrator() bool`
 
-HasEnabledNetworks returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
+
+### GetFailover
+
+`func (o *InlineResponse200254) GetFailover() InlineResponse200254Failover`
+
+GetFailover returns the Failover field if non-nil, zero value otherwise.
+
+### GetFailoverOk
+
+`func (o *InlineResponse200254) GetFailoverOk() (*InlineResponse200254Failover, bool)`
+
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailover
+
+`func (o *InlineResponse200254) SetFailover(v InlineResponse200254Failover)`
+
+SetFailover sets Failover field to given value.
+
+### HasFailover
+
+`func (o *InlineResponse200254) HasFailover() bool`
+
+HasFailover returns a boolean if a field has been set.
+
+### GetSplitTunnel
+
+`func (o *InlineResponse200254) GetSplitTunnel() InlineResponse200254SplitTunnel`
+
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+
+### GetSplitTunnelOk
+
+`func (o *InlineResponse200254) GetSplitTunnelOk() (*InlineResponse200254SplitTunnel, bool)`
+
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplitTunnel
+
+`func (o *InlineResponse200254) SetSplitTunnel(v InlineResponse200254SplitTunnel)`
+
+SetSplitTunnel sets SplitTunnel field to given value.
+
+### HasSplitTunnel
+
+`func (o *InlineResponse200254) HasSplitTunnel() bool`
+
+HasSplitTunnel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

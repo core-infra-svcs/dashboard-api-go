@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCellularGatewayLan
 
-> InlineResponse20028 GetDeviceCellularGatewayLan(ctx, serial).Execute()
+> InlineResponse20029 GetDeviceCellularGatewayLan(ctx, serial).Execute()
 
 Show the LAN Settings of a MG
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LanApi.GetDeviceCellularGatewayLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularGatewayLan`: InlineResponse20028
+    // response from `GetDeviceCellularGatewayLan`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `LanApi.GetDeviceCellularGatewayLan`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularGatewayLan
 
-> InlineResponse20028 UpdateDeviceCellularGatewayLan(ctx, serial).UpdateDeviceCellularGatewayLan(updateDeviceCellularGatewayLan).Execute()
+> InlineResponse20029 UpdateDeviceCellularGatewayLan(ctx, serial).UpdateDeviceCellularGatewayLan(updateDeviceCellularGatewayLan).Execute()
 
 Update the LAN Settings for a single MG.
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject16() // InlineObject16 |  (optional)
+    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject17() // InlineObject17 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LanApi.UpdateDeviceCellularGatewayLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularGatewayLan`: InlineResponse20028
+    // response from `UpdateDeviceCellularGatewayLan`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `LanApi.UpdateDeviceCellularGatewayLan`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayLan** | [**InlineObject16**](InlineObject16.md) |  | 
+ **updateDeviceCellularGatewayLan** | [**InlineObject17**](InlineObject17.md) |  | 
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 

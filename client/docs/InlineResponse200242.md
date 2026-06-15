@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, OpenRoaming is enabled on the SSID. | [optional] 
-**TenantId** | Pointer to **string** | The OpenRoaming DNA Spaces tenant ID. | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
+**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200242WithDefaults instantiates a new InlineResponse200242 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetStartTs
 
-`func (o *InlineResponse200242) GetEnabled() bool`
+`func (o *InlineResponse200242) GetStartTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse200242) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200242) GetStartTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetStartTs
 
-`func (o *InlineResponse200242) SetEnabled(v bool)`
+`func (o *InlineResponse200242) SetStartTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasEnabled
+### HasStartTs
 
-`func (o *InlineResponse200242) HasEnabled() bool`
+`func (o *InlineResponse200242) HasStartTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetTenantId
+### GetEndTs
 
-`func (o *InlineResponse200242) GetTenantId() string`
+`func (o *InlineResponse200242) GetEndTs() time.Time`
 
-GetTenantId returns the TenantId field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetTenantIdOk
+### GetEndTsOk
 
-`func (o *InlineResponse200242) GetTenantIdOk() (*string, bool)`
+`func (o *InlineResponse200242) GetEndTsOk() (*time.Time, bool)`
 
-GetTenantIdOk returns a tuple with the TenantId field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTenantId
+### SetEndTs
 
-`func (o *InlineResponse200242) SetTenantId(v string)`
+`func (o *InlineResponse200242) SetEndTs(v time.Time)`
 
-SetTenantId sets TenantId field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasTenantId
+### HasEndTs
 
-`func (o *InlineResponse200242) HasTenantId() bool`
+`func (o *InlineResponse200242) HasEndTs() bool`
 
-HasTenantId returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetSnr
+
+`func (o *InlineResponse200242) GetSnr() int32`
+
+GetSnr returns the Snr field if non-nil, zero value otherwise.
+
+### GetSnrOk
+
+`func (o *InlineResponse200242) GetSnrOk() (*int32, bool)`
+
+GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSnr
+
+`func (o *InlineResponse200242) SetSnr(v int32)`
+
+SetSnr sets Snr field to given value.
+
+### HasSnr
+
+`func (o *InlineResponse200242) HasSnr() bool`
+
+HasSnr returns a boolean if a field has been set.
+
+### GetRssi
+
+`func (o *InlineResponse200242) GetRssi() int32`
+
+GetRssi returns the Rssi field if non-nil, zero value otherwise.
+
+### GetRssiOk
+
+`func (o *InlineResponse200242) GetRssiOk() (*int32, bool)`
+
+GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRssi
+
+`func (o *InlineResponse200242) SetRssi(v int32)`
+
+SetRssi sets Rssi field to given value.
+
+### HasRssi
+
+`func (o *InlineResponse200242) HasRssi() bool`
+
+HasRssi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

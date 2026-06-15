@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
+**InterfaceIp** | **string** | The IP address of the interface where the RP needs to be created. | 
+**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
+**Vrf** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf**](NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject173
 
-`func NewInlineObject173() *InlineObject173`
+`func NewInlineObject173(interfaceIp string, multicastGroup string, ) *InlineObject173`
 
 NewInlineObject173 instantiates a new InlineObject173 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,70 @@ NewInlineObject173WithDefaults instantiates a new InlineObject173 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetInterfaceIp
 
-`func (o *InlineObject173) GetBroadcastThreshold() int32`
+`func (o *InlineObject173) GetInterfaceIp() string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject173) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineObject173) GetInterfaceIpOk() (*string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetInterfaceIp
 
-`func (o *InlineObject173) SetBroadcastThreshold(v int32)`
+`func (o *InlineObject173) SetInterfaceIp(v string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasBroadcastThreshold
 
-`func (o *InlineObject173) HasBroadcastThreshold() bool`
+### GetMulticastGroup
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+`func (o *InlineObject173) GetMulticastGroup() string`
 
-### GetMulticastThreshold
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
 
-`func (o *InlineObject173) GetMulticastThreshold() int32`
+### GetMulticastGroupOk
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+`func (o *InlineObject173) GetMulticastGroupOk() (*string, bool)`
 
-### GetMulticastThresholdOk
-
-`func (o *InlineObject173) GetMulticastThresholdOk() (*int32, bool)`
-
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetMulticastGroup
 
-`func (o *InlineObject173) SetMulticastThreshold(v int32)`
+`func (o *InlineObject173) SetMulticastGroup(v string)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetMulticastGroup sets MulticastGroup field to given value.
 
-### HasMulticastThreshold
 
-`func (o *InlineObject173) HasMulticastThreshold() bool`
+### GetVrf
 
-HasMulticastThreshold returns a boolean if a field has been set.
+`func (o *InlineObject173) GetVrf() NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf`
 
-### GetUnknownUnicastThreshold
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
 
-`func (o *InlineObject173) GetUnknownUnicastThreshold() int32`
+### GetVrfOk
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+`func (o *InlineObject173) GetVrfOk() (*NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf, bool)`
 
-### GetUnknownUnicastThresholdOk
-
-`func (o *InlineObject173) GetUnknownUnicastThresholdOk() (*int32, bool)`
-
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetVrf
 
-`func (o *InlineObject173) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineObject173) SetVrf(v NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetVrf sets Vrf field to given value.
 
-### HasUnknownUnicastThreshold
+### HasVrf
 
-`func (o *InlineObject173) HasUnknownUnicastThreshold() bool`
+`func (o *InlineObject173) HasVrf() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
-
-### GetTreatTheseTrafficTypesAsOneThreshold
-
-`func (o *InlineObject173) GetTreatTheseTrafficTypesAsOneThreshold() []string`
-
-GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
-
-### GetTreatTheseTrafficTypesAsOneThresholdOk
-
-`func (o *InlineObject173) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
-
-GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTreatTheseTrafficTypesAsOneThreshold
-
-`func (o *InlineObject173) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
-
-SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
-
-### HasTreatTheseTrafficTypesAsOneThreshold
-
-`func (o *InlineObject173) HasTreatTheseTrafficTypesAsOneThreshold() bool`
-
-HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

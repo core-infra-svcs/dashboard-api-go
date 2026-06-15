@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SenseEnabled** | Pointer to **bool** | Whether MV Sense is enabled on the camera | [optional] 
-**MqttBrokerId** | Pointer to **NullableString** | ID of the MQTT broker; null if MQTT is disabled | [optional] 
-**MqttTopics** | Pointer to **[]string** | MQTT topics the camera publishes to | [optional] 
-**AudioDetection** | Pointer to [**InlineResponse20020AudioDetection**](InlineResponse20020AudioDetection.md) |  | [optional] 
-**DetectionModelId** | Pointer to **NullableString** | ID of the object detection model | [optional] 
+**ProfileId** | Pointer to **NullableString** | Quality and retention profile ID; null if not using a profile | [optional] 
+**MotionBasedRetentionEnabled** | Pointer to **bool** | Whether motion-based retention is enabled | [optional] 
+**AudioRecordingEnabled** | Pointer to **bool** | Whether audio recording is enabled | [optional] 
+**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Whether restricted bandwidth mode is enabled | [optional] 
+**Quality** | Pointer to **NullableString** | Video quality; null when the camera&#39;s stored configuration cannot be decoded into a documented quality value | [optional] 
+**Resolution** | Pointer to **NullableString** | Video resolution; null when the camera&#39;s stored configuration cannot be decoded into a documented resolution value | [optional] 
+**MotionDetectorVersion** | Pointer to **int32** | Motion detector version | [optional] 
 
 ## Methods
 
@@ -29,151 +31,211 @@ NewInlineResponse20020WithDefaults instantiates a new InlineResponse20020 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSenseEnabled
+### GetProfileId
 
-`func (o *InlineResponse20020) GetSenseEnabled() bool`
+`func (o *InlineResponse20020) GetProfileId() string`
 
-GetSenseEnabled returns the SenseEnabled field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetSenseEnabledOk
+### GetProfileIdOk
 
-`func (o *InlineResponse20020) GetSenseEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20020) GetProfileIdOk() (*string, bool)`
 
-GetSenseEnabledOk returns a tuple with the SenseEnabled field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSenseEnabled
+### SetProfileId
 
-`func (o *InlineResponse20020) SetSenseEnabled(v bool)`
+`func (o *InlineResponse20020) SetProfileId(v string)`
 
-SetSenseEnabled sets SenseEnabled field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasSenseEnabled
+### HasProfileId
 
-`func (o *InlineResponse20020) HasSenseEnabled() bool`
+`func (o *InlineResponse20020) HasProfileId() bool`
 
-HasSenseEnabled returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetMqttBrokerId
+### SetProfileIdNil
 
-`func (o *InlineResponse20020) GetMqttBrokerId() string`
+`func (o *InlineResponse20020) SetProfileIdNil(b bool)`
 
-GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+ SetProfileIdNil sets the value for ProfileId to be an explicit nil
 
-### GetMqttBrokerIdOk
+### UnsetProfileId
+`func (o *InlineResponse20020) UnsetProfileId()`
 
-`func (o *InlineResponse20020) GetMqttBrokerIdOk() (*string, bool)`
+UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
+### GetMotionBasedRetentionEnabled
 
-GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+`func (o *InlineResponse20020) GetMotionBasedRetentionEnabled() bool`
+
+GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
+
+### GetMotionBasedRetentionEnabledOk
+
+`func (o *InlineResponse20020) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+
+GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttBrokerId
+### SetMotionBasedRetentionEnabled
 
-`func (o *InlineResponse20020) SetMqttBrokerId(v string)`
+`func (o *InlineResponse20020) SetMotionBasedRetentionEnabled(v bool)`
 
-SetMqttBrokerId sets MqttBrokerId field to given value.
+SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
 
-### HasMqttBrokerId
+### HasMotionBasedRetentionEnabled
 
-`func (o *InlineResponse20020) HasMqttBrokerId() bool`
+`func (o *InlineResponse20020) HasMotionBasedRetentionEnabled() bool`
 
-HasMqttBrokerId returns a boolean if a field has been set.
+HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
 
-### SetMqttBrokerIdNil
+### GetAudioRecordingEnabled
 
-`func (o *InlineResponse20020) SetMqttBrokerIdNil(b bool)`
+`func (o *InlineResponse20020) GetAudioRecordingEnabled() bool`
 
- SetMqttBrokerIdNil sets the value for MqttBrokerId to be an explicit nil
+GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
 
-### UnsetMqttBrokerId
-`func (o *InlineResponse20020) UnsetMqttBrokerId()`
+### GetAudioRecordingEnabledOk
 
-UnsetMqttBrokerId ensures that no value is present for MqttBrokerId, not even an explicit nil
-### GetMqttTopics
+`func (o *InlineResponse20020) GetAudioRecordingEnabledOk() (*bool, bool)`
 
-`func (o *InlineResponse20020) GetMqttTopics() []string`
-
-GetMqttTopics returns the MqttTopics field if non-nil, zero value otherwise.
-
-### GetMqttTopicsOk
-
-`func (o *InlineResponse20020) GetMqttTopicsOk() (*[]string, bool)`
-
-GetMqttTopicsOk returns a tuple with the MqttTopics field if it's non-nil, zero value otherwise
+GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttTopics
+### SetAudioRecordingEnabled
 
-`func (o *InlineResponse20020) SetMqttTopics(v []string)`
+`func (o *InlineResponse20020) SetAudioRecordingEnabled(v bool)`
 
-SetMqttTopics sets MqttTopics field to given value.
+SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
 
-### HasMqttTopics
+### HasAudioRecordingEnabled
 
-`func (o *InlineResponse20020) HasMqttTopics() bool`
+`func (o *InlineResponse20020) HasAudioRecordingEnabled() bool`
 
-HasMqttTopics returns a boolean if a field has been set.
+HasAudioRecordingEnabled returns a boolean if a field has been set.
 
-### GetAudioDetection
+### GetRestrictedBandwidthModeEnabled
 
-`func (o *InlineResponse20020) GetAudioDetection() InlineResponse20020AudioDetection`
+`func (o *InlineResponse20020) GetRestrictedBandwidthModeEnabled() bool`
 
-GetAudioDetection returns the AudioDetection field if non-nil, zero value otherwise.
+GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
 
-### GetAudioDetectionOk
+### GetRestrictedBandwidthModeEnabledOk
 
-`func (o *InlineResponse20020) GetAudioDetectionOk() (*InlineResponse20020AudioDetection, bool)`
+`func (o *InlineResponse20020) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
 
-GetAudioDetectionOk returns a tuple with the AudioDetection field if it's non-nil, zero value otherwise
+GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioDetection
+### SetRestrictedBandwidthModeEnabled
 
-`func (o *InlineResponse20020) SetAudioDetection(v InlineResponse20020AudioDetection)`
+`func (o *InlineResponse20020) SetRestrictedBandwidthModeEnabled(v bool)`
 
-SetAudioDetection sets AudioDetection field to given value.
+SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
 
-### HasAudioDetection
+### HasRestrictedBandwidthModeEnabled
 
-`func (o *InlineResponse20020) HasAudioDetection() bool`
+`func (o *InlineResponse20020) HasRestrictedBandwidthModeEnabled() bool`
 
-HasAudioDetection returns a boolean if a field has been set.
+HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
 
-### GetDetectionModelId
+### GetQuality
 
-`func (o *InlineResponse20020) GetDetectionModelId() string`
+`func (o *InlineResponse20020) GetQuality() string`
 
-GetDetectionModelId returns the DetectionModelId field if non-nil, zero value otherwise.
+GetQuality returns the Quality field if non-nil, zero value otherwise.
 
-### GetDetectionModelIdOk
+### GetQualityOk
 
-`func (o *InlineResponse20020) GetDetectionModelIdOk() (*string, bool)`
+`func (o *InlineResponse20020) GetQualityOk() (*string, bool)`
 
-GetDetectionModelIdOk returns a tuple with the DetectionModelId field if it's non-nil, zero value otherwise
+GetQualityOk returns a tuple with the Quality field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetectionModelId
+### SetQuality
 
-`func (o *InlineResponse20020) SetDetectionModelId(v string)`
+`func (o *InlineResponse20020) SetQuality(v string)`
 
-SetDetectionModelId sets DetectionModelId field to given value.
+SetQuality sets Quality field to given value.
 
-### HasDetectionModelId
+### HasQuality
 
-`func (o *InlineResponse20020) HasDetectionModelId() bool`
+`func (o *InlineResponse20020) HasQuality() bool`
 
-HasDetectionModelId returns a boolean if a field has been set.
+HasQuality returns a boolean if a field has been set.
 
-### SetDetectionModelIdNil
+### SetQualityNil
 
-`func (o *InlineResponse20020) SetDetectionModelIdNil(b bool)`
+`func (o *InlineResponse20020) SetQualityNil(b bool)`
 
- SetDetectionModelIdNil sets the value for DetectionModelId to be an explicit nil
+ SetQualityNil sets the value for Quality to be an explicit nil
 
-### UnsetDetectionModelId
-`func (o *InlineResponse20020) UnsetDetectionModelId()`
+### UnsetQuality
+`func (o *InlineResponse20020) UnsetQuality()`
 
-UnsetDetectionModelId ensures that no value is present for DetectionModelId, not even an explicit nil
+UnsetQuality ensures that no value is present for Quality, not even an explicit nil
+### GetResolution
+
+`func (o *InlineResponse20020) GetResolution() string`
+
+GetResolution returns the Resolution field if non-nil, zero value otherwise.
+
+### GetResolutionOk
+
+`func (o *InlineResponse20020) GetResolutionOk() (*string, bool)`
+
+GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResolution
+
+`func (o *InlineResponse20020) SetResolution(v string)`
+
+SetResolution sets Resolution field to given value.
+
+### HasResolution
+
+`func (o *InlineResponse20020) HasResolution() bool`
+
+HasResolution returns a boolean if a field has been set.
+
+### SetResolutionNil
+
+`func (o *InlineResponse20020) SetResolutionNil(b bool)`
+
+ SetResolutionNil sets the value for Resolution to be an explicit nil
+
+### UnsetResolution
+`func (o *InlineResponse20020) UnsetResolution()`
+
+UnsetResolution ensures that no value is present for Resolution, not even an explicit nil
+### GetMotionDetectorVersion
+
+`func (o *InlineResponse20020) GetMotionDetectorVersion() int32`
+
+GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
+
+### GetMotionDetectorVersionOk
+
+`func (o *InlineResponse20020) GetMotionDetectorVersionOk() (*int32, bool)`
+
+GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMotionDetectorVersion
+
+`func (o *InlineResponse20020) SetMotionDetectorVersion(v int32)`
+
+SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
+
+### HasMotionDetectorVersion
+
+`func (o *InlineResponse20020) HasMotionDetectorVersion() bool`
+
+HasMotionDetectorVersion returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

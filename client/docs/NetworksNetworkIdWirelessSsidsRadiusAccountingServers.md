@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Host** | Pointer to **string** | IP address (or FQDN) to which the APs will send RADIUS accounting messages | [optional] 
 **Port** | Pointer to **int32** | Port on the RADIUS server that is listening for accounting messages | [optional] 
 **OpenRoamingCertificateId** | Pointer to **int32** | The ID of the Openroaming Certificate attached to radius server | [optional] 
-**CaCertificate** | Pointer to **string** | Certificate used for authorization for the RADSEC Server | [optional] 
+**CaCertificate** | Pointer to **string** | Certificate used for authorization for the RadSec Server | [optional] 
 
 ## Methods
 

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlansEnabled** | Pointer to **bool** | Boolean indicating whether to enable (true) or disable (false) VLANs for the network | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20097Rules**](InlineResponse20097Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject82WithDefaults instantiates a new InlineObject82 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlansEnabled
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject82) GetVlansEnabled() bool`
+`func (o *InlineObject82) GetDefaultRulesEnabled() bool`
 
-GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetVlansEnabledOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject82) GetVlansEnabledOk() (*bool, bool)`
+`func (o *InlineObject82) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlansEnabled
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject82) SetVlansEnabled(v bool)`
+`func (o *InlineObject82) SetDefaultRulesEnabled(v bool)`
 
-SetVlansEnabled sets VlansEnabled field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasVlansEnabled
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject82) HasVlansEnabled() bool`
+`func (o *InlineObject82) HasDefaultRulesEnabled() bool`
 
-HasVlansEnabled returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject82) GetRules() []InlineResponse20097Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject82) GetRulesOk() (*[]InlineResponse20097Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject82) SetRules(v []InlineResponse20097Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineObject82) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

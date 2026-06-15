@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mappings** | Pointer to [**[]InlineResponse200186Mappings**](InlineResponse200186Mappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | [optional] 
+**ResultingNetworks** | Pointer to [**[]InlineResponse20066**](InlineResponse20066.md) | Networks after the split | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200186WithDefaults instantiates a new InlineResponse200186 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMappings
+### GetResultingNetworks
 
-`func (o *InlineResponse200186) GetMappings() []InlineResponse200186Mappings`
+`func (o *InlineResponse200186) GetResultingNetworks() []InlineResponse20066`
 
-GetMappings returns the Mappings field if non-nil, zero value otherwise.
+GetResultingNetworks returns the ResultingNetworks field if non-nil, zero value otherwise.
 
-### GetMappingsOk
+### GetResultingNetworksOk
 
-`func (o *InlineResponse200186) GetMappingsOk() (*[]InlineResponse200186Mappings, bool)`
+`func (o *InlineResponse200186) GetResultingNetworksOk() (*[]InlineResponse20066, bool)`
 
-GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
+GetResultingNetworksOk returns a tuple with the ResultingNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMappings
+### SetResultingNetworks
 
-`func (o *InlineResponse200186) SetMappings(v []InlineResponse200186Mappings)`
+`func (o *InlineResponse200186) SetResultingNetworks(v []InlineResponse20066)`
 
-SetMappings sets Mappings field to given value.
+SetResultingNetworks sets ResultingNetworks field to given value.
 
-### HasMappings
+### HasResultingNetworks
 
-`func (o *InlineResponse200186) HasMappings() bool`
+`func (o *InlineResponse200186) HasResultingNetworks() bool`
 
-HasMappings returns a boolean if a field has been set.
+HasResultingNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

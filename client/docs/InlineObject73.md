@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the custom performance class | 
-**MaxLatency** | Pointer to **NullableInt32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **NullableInt32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **NullableInt32** | Maximum percentage of packet loss | [optional] 
+**Mode** | **string** | Set mode to &#39;enabled&#39; to enable malware prevention, otherwise &#39;disabled&#39; | 
+**AllowedUrls** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls**](NetworksNetworkIdApplianceSecurityMalwareAllowedUrls.md) | The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
+**AllowedFiles** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles**](NetworksNetworkIdApplianceSecurityMalwareAllowedFiles.md) | The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
 
 ## Methods
 
 ### NewInlineObject73
 
-`func NewInlineObject73(name string, ) *InlineObject73`
+`func NewInlineObject73(mode string, ) *InlineObject73`
 
 NewInlineObject73 instantiates a new InlineObject73 object
 This constructor will assign default values to properties that have it defined,
@@ -28,131 +27,76 @@ NewInlineObject73WithDefaults instantiates a new InlineObject73 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMode
 
-`func (o *InlineObject73) GetName() string`
+`func (o *InlineObject73) GetMode() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetModeOk
 
-`func (o *InlineObject73) GetNameOk() (*string, bool)`
+`func (o *InlineObject73) GetModeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMode
 
-`func (o *InlineObject73) SetName(v string)`
+`func (o *InlineObject73) SetMode(v string)`
 
-SetName sets Name field to given value.
+SetMode sets Mode field to given value.
 
 
-### GetMaxLatency
+### GetAllowedUrls
 
-`func (o *InlineObject73) GetMaxLatency() int32`
+`func (o *InlineObject73) GetAllowedUrls() []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetAllowedUrlsOk
 
-`func (o *InlineObject73) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineObject73) GetAllowedUrlsOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetAllowedUrls
 
-`func (o *InlineObject73) SetMaxLatency(v int32)`
+`func (o *InlineObject73) SetAllowedUrls(v []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasMaxLatency
+### HasAllowedUrls
 
-`func (o *InlineObject73) HasMaxLatency() bool`
+`func (o *InlineObject73) HasAllowedUrls() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### SetMaxLatencyNil
+### GetAllowedFiles
 
-`func (o *InlineObject73) SetMaxLatencyNil(b bool)`
+`func (o *InlineObject73) GetAllowedFiles() []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles`
 
- SetMaxLatencyNil sets the value for MaxLatency to be an explicit nil
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### UnsetMaxLatency
-`func (o *InlineObject73) UnsetMaxLatency()`
+### GetAllowedFilesOk
 
-UnsetMaxLatency ensures that no value is present for MaxLatency, not even an explicit nil
-### GetMaxJitter
+`func (o *InlineObject73) GetAllowedFilesOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles, bool)`
 
-`func (o *InlineObject73) GetMaxJitter() int32`
-
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
-
-### GetMaxJitterOk
-
-`func (o *InlineObject73) GetMaxJitterOk() (*int32, bool)`
-
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetAllowedFiles
 
-`func (o *InlineObject73) SetMaxJitter(v int32)`
+`func (o *InlineObject73) SetAllowedFiles(v []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasMaxJitter
+### HasAllowedFiles
 
-`func (o *InlineObject73) HasMaxJitter() bool`
+`func (o *InlineObject73) HasAllowedFiles() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
-### SetMaxJitterNil
-
-`func (o *InlineObject73) SetMaxJitterNil(b bool)`
-
- SetMaxJitterNil sets the value for MaxJitter to be an explicit nil
-
-### UnsetMaxJitter
-`func (o *InlineObject73) UnsetMaxJitter()`
-
-UnsetMaxJitter ensures that no value is present for MaxJitter, not even an explicit nil
-### GetMaxLossPercentage
-
-`func (o *InlineObject73) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineObject73) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxLossPercentage
-
-`func (o *InlineObject73) SetMaxLossPercentage(v int32)`
-
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
-
-### HasMaxLossPercentage
-
-`func (o *InlineObject73) HasMaxLossPercentage() bool`
-
-HasMaxLossPercentage returns a boolean if a field has been set.
-
-### SetMaxLossPercentageNil
-
-`func (o *InlineObject73) SetMaxLossPercentageNil(b bool)`
-
- SetMaxLossPercentageNil sets the value for MaxLossPercentage to be an explicit nil
-
-### UnsetMaxLossPercentage
-`func (o *InlineObject73) UnsetMaxLossPercentage()`
-
-UnsetMaxLossPercentage ensures that no value is present for MaxLossPercentage, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

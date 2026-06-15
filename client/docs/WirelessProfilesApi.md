@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkCameraWirelessProfile
 
-> InlineResponse200108 CreateNetworkCameraWirelessProfile(ctx, networkId).CreateNetworkCameraWirelessProfile(createNetworkCameraWirelessProfile).Execute()
+> InlineResponse200116 CreateNetworkCameraWirelessProfile(ctx, networkId).CreateNetworkCameraWirelessProfile(createNetworkCameraWirelessProfile).Execute()
 
 Creates a new camera wireless profile for this network.
 
@@ -36,7 +36,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject90("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid1("Name_example", "AuthMode_example")) // InlineObject90 | 
+    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject101("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid1("Name_example", "AuthMode_example")) // InlineObject101 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.CreateNetworkCameraWirelessProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkCameraWirelessProfile`: InlineResponse200108
+    // response from `CreateNetworkCameraWirelessProfile`: InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.CreateNetworkCameraWirelessProfile`: %v\n", resp)
 }
 ```
@@ -66,11 +66,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraWireles
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraWirelessProfile** | [**InlineObject90**](InlineObject90.md) |  | 
+ **createNetworkCameraWirelessProfile** | [**InlineObject101**](InlineObject101.md) |  | 
 
 ### Return type
 
-[**InlineResponse200108**](InlineResponse200108.md)
+[**InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraWirelessProfiles
 
-> InlineResponse20024 GetDeviceCameraWirelessProfiles(ctx, serial).Execute()
+> InlineResponse20025 GetDeviceCameraWirelessProfiles(ctx, serial).Execute()
 
 Returns wireless profile assigned to the given camera
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.GetDeviceCameraWirelessProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraWirelessProfiles`: InlineResponse20024
+    // response from `GetDeviceCameraWirelessProfiles`: InlineResponse20025
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.GetDeviceCameraWirelessProfiles`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCameraWirelessProfile
 
-> InlineResponse200108 GetNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).Execute()
+> InlineResponse200116 GetNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).Execute()
 
 Retrieve a single camera wireless profile.
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.GetNetworkCameraWirelessProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraWirelessProfile`: InlineResponse200108
+    // response from `GetNetworkCameraWirelessProfile`: InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.GetNetworkCameraWirelessProfile`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200108**](InlineResponse200108.md)
+[**InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCameraWirelessProfiles
 
-> []InlineResponse200108 GetNetworkCameraWirelessProfiles(ctx, networkId).Execute()
+> []InlineResponse200116 GetNetworkCameraWirelessProfiles(ctx, networkId).Execute()
 
 List the camera wireless profiles for this network.
 
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.GetNetworkCameraWirelessProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraWirelessProfiles`: []InlineResponse200108
+    // response from `GetNetworkCameraWirelessProfiles`: []InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.GetNetworkCameraWirelessProfiles`: %v\n", resp)
 }
 ```
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200108**](InlineResponse200108.md)
+[**[]InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCameraWirelessProfiles
 
-> InlineResponse20024 UpdateDeviceCameraWirelessProfiles(ctx, serial).UpdateDeviceCameraWirelessProfiles(updateDeviceCameraWirelessProfiles).Execute()
+> InlineResponse20025 UpdateDeviceCameraWirelessProfiles(ctx, serial).UpdateDeviceCameraWirelessProfiles(updateDeviceCameraWirelessProfiles).Execute()
 
 Assign wireless profiles to the given camera
 
@@ -392,7 +392,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraWirelessProfiles := *openapiclient.NewInlineObject12(*openapiclient.NewDevicesSerialCameraWirelessProfilesIds("Primary_example", "Secondary_example")) // InlineObject12 | 
+    updateDeviceCameraWirelessProfiles := *openapiclient.NewInlineObject13(*openapiclient.NewDevicesSerialCameraWirelessProfilesIds("Primary_example", "Secondary_example")) // InlineObject13 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -401,7 +401,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.UpdateDeviceCameraWirelessProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCameraWirelessProfiles`: InlineResponse20024
+    // response from `UpdateDeviceCameraWirelessProfiles`: InlineResponse20025
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.UpdateDeviceCameraWirelessProfiles`: %v\n", resp)
 }
 ```
@@ -422,11 +422,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraWirelessProfiles** | [**InlineObject12**](InlineObject12.md) |  | 
+ **updateDeviceCameraWirelessProfiles** | [**InlineObject13**](InlineObject13.md) |  | 
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCameraWirelessProfile
 
-> InlineResponse200108 UpdateNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).UpdateNetworkCameraWirelessProfile(updateNetworkCameraWirelessProfile).Execute()
+> InlineResponse200116 UpdateNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).UpdateNetworkCameraWirelessProfile(updateNetworkCameraWirelessProfile).Execute()
 
 Update an existing camera wireless profile in this network.
 
@@ -465,7 +465,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     wirelessProfileId := "wirelessProfileId_example" // string | Wireless profile ID
-    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject91() // InlineObject91 |  (optional)
+    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject102() // InlineObject102 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -474,7 +474,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.UpdateNetworkCameraWirelessProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCameraWirelessProfile`: InlineResponse200108
+    // response from `UpdateNetworkCameraWirelessProfile`: InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.UpdateNetworkCameraWirelessProfile`: %v\n", resp)
 }
 ```
@@ -497,11 +497,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraWirelessProfile** | [**InlineObject91**](InlineObject91.md) |  | 
+ **updateNetworkCameraWirelessProfile** | [**InlineObject102**](InlineObject102.md) |  | 
 
 ### Return type
 
-[**InlineResponse200108**](InlineResponse200108.md)
+[**InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 

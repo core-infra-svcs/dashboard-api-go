@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | **[]string** | List of switch ports | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject31
 
-`func NewInlineObject31(ports []string, ) *InlineObject31`
+`func NewInlineObject31() *InlineObject31`
 
 NewInlineObject31 instantiates a new InlineObject31 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject31WithDefaults instantiates a new InlineObject31 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetCallback
 
-`func (o *InlineObject31) GetPorts() []string`
+`func (o *InlineObject31) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetCallbackOk
 
-`func (o *InlineObject31) GetPortsOk() (*[]string, bool)`
+`func (o *InlineObject31) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetCallback
 
-`func (o *InlineObject31) SetPorts(v []string)`
+`func (o *InlineObject31) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetPorts sets Ports field to given value.
+SetCallback sets Callback field to given value.
 
+### HasCallback
+
+`func (o *InlineObject31) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsCableTest := *openapiclient.NewInlineObject19([]string{"Ports_example"}) // InlineObject19 | 
+    createDeviceLiveToolsCableTest := *openapiclient.NewInlineObject20([]string{"Ports_example"}) // InlineObject20 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsCable
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsCableTest** | [**InlineObject19**](InlineObject19.md) |  | 
+ **createDeviceLiveToolsCableTest** | [**InlineObject20**](InlineObject20.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsCableTest
 
-> InlineResponse20032 GetDeviceLiveToolsCableTest(ctx, serial, id).Execute()
+> InlineResponse20033 GetDeviceLiveToolsCableTest(ctx, serial, id).Execute()
 
 Return a cable test live tool job.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CableTestApi.GetDeviceLiveToolsCableTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsCableTest`: InlineResponse20032
+    // response from `GetDeviceLiveToolsCableTest`: InlineResponse20033
     fmt.Fprintf(os.Stdout, "Response from `CableTestApi.GetDeviceLiveToolsCableTest`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 

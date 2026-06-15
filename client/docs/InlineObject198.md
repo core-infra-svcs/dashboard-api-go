@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BusyHour** | Pointer to [**NetworksNetworkIdWirelessRadioRrmBusyHour**](NetworksNetworkIdWirelessRadioRrmBusyHour.md) |  | [optional] 
-**Channel** | Pointer to [**NetworksNetworkIdWirelessRadioRrmChannel**](NetworksNetworkIdWirelessRadioRrmChannel.md) |  | [optional] 
-**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
-**Ai** | Pointer to [**NetworksNetworkIdWirelessRadioRrmAi**](NetworksNetworkIdWirelessRadioRrmAi.md) |  | [optional] 
+**Type** | Pointer to **string** | Indicates if this rule will allow, block, or alert. | [optional] 
+**Match** | Pointer to [**NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch**](NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject198WithDefaults instantiates a new InlineObject198 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBusyHour
+### GetType
 
-`func (o *InlineObject198) GetBusyHour() NetworksNetworkIdWirelessRadioRrmBusyHour`
+`func (o *InlineObject198) GetType() string`
 
-GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetBusyHourOk
+### GetTypeOk
 
-`func (o *InlineObject198) GetBusyHourOk() (*NetworksNetworkIdWirelessRadioRrmBusyHour, bool)`
+`func (o *InlineObject198) GetTypeOk() (*string, bool)`
 
-GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBusyHour
+### SetType
 
-`func (o *InlineObject198) SetBusyHour(v NetworksNetworkIdWirelessRadioRrmBusyHour)`
+`func (o *InlineObject198) SetType(v string)`
 
-SetBusyHour sets BusyHour field to given value.
+SetType sets Type field to given value.
 
-### HasBusyHour
+### HasType
 
-`func (o *InlineObject198) HasBusyHour() bool`
+`func (o *InlineObject198) HasType() bool`
 
-HasBusyHour returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetChannel
+### GetMatch
 
-`func (o *InlineObject198) GetChannel() NetworksNetworkIdWirelessRadioRrmChannel`
+`func (o *InlineObject198) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetMatch returns the Match field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetMatchOk
 
-`func (o *InlineObject198) GetChannelOk() (*NetworksNetworkIdWirelessRadioRrmChannel, bool)`
+`func (o *InlineObject198) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetMatch
 
-`func (o *InlineObject198) SetChannel(v NetworksNetworkIdWirelessRadioRrmChannel)`
+`func (o *InlineObject198) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch)`
 
-SetChannel sets Channel field to given value.
+SetMatch sets Match field to given value.
 
-### HasChannel
+### HasMatch
 
-`func (o *InlineObject198) HasChannel() bool`
+`func (o *InlineObject198) HasMatch() bool`
 
-HasChannel returns a boolean if a field has been set.
-
-### GetFra
-
-`func (o *InlineObject198) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
-
-GetFra returns the Fra field if non-nil, zero value otherwise.
-
-### GetFraOk
-
-`func (o *InlineObject198) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
-
-GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFra
-
-`func (o *InlineObject198) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
-
-SetFra sets Fra field to given value.
-
-### HasFra
-
-`func (o *InlineObject198) HasFra() bool`
-
-HasFra returns a boolean if a field has been set.
-
-### GetAi
-
-`func (o *InlineObject198) GetAi() NetworksNetworkIdWirelessRadioRrmAi`
-
-GetAi returns the Ai field if non-nil, zero value otherwise.
-
-### GetAiOk
-
-`func (o *InlineObject198) GetAiOk() (*NetworksNetworkIdWirelessRadioRrmAi, bool)`
-
-GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAi
-
-`func (o *InlineObject198) SetAi(v NetworksNetworkIdWirelessRadioRrmAi)`
-
-SetAi sets Ai field to given value.
-
-### HasAi
-
-`func (o *InlineObject198) HasAi() bool`
-
-HasAi returns a boolean if a field has been set.
+HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

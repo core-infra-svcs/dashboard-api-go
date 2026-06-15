@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200386Items**](InlineResponse200386Items.md) | List of connectors | [optional] 
+**Items** | Pointer to [**[]InlineResponse200386Items**](InlineResponse200386Items.md) | List of Firewall Rules | [optional] 
+**Meta** | Pointer to [**InlineResponse200274Meta**](InlineResponse200274Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200386) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200386) GetMeta() InlineResponse200274Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200386) GetMetaOk() (*InlineResponse200274Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200386) SetMeta(v InlineResponse200274Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200386) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

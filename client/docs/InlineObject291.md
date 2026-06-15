@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject291
 
-`func NewInlineObject291(destOrganizationId string, licenseIds []string, ) *InlineObject291`
+`func NewInlineObject291() *InlineObject291`
 
 NewInlineObject291 instantiates a new InlineObject291 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineObject291WithDefaults instantiates a new InlineObject291 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject291) GetDestOrganizationId() string`
+`func (o *InlineObject291) GetLimitScopeToNetworks() []string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject291) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject291) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject291) SetDestOrganizationId(v string)`
+`func (o *InlineObject291) SetLimitScopeToNetworks(v []string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
+### HasLimitScopeToNetworks
 
-### GetLicenseIds
+`func (o *InlineObject291) HasLimitScopeToNetworks() bool`
 
-`func (o *InlineObject291) GetLicenseIds() []string`
-
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
-
-### GetLicenseIdsOk
-
-`func (o *InlineObject291) GetLicenseIdsOk() (*[]string, bool)`
-
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseIds
-
-`func (o *InlineObject291) SetLicenseIds(v []string)`
-
-SetLicenseIds sets LicenseIds field to given value.
-
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**Identity** | Pointer to [**InlineResponse200237Identity**](InlineResponse200237Identity.md) |  | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200237EapolKey**](InlineResponse200237EapolKey.md) |  | [optional] 
+**Serials** | **[]string** | List of AP serials | 
+**ProfileId** | **NullableString** | AP profile ID | 
 
 ## Methods
 
 ### NewInlineObject205
 
-`func NewInlineObject205() *InlineObject205`
+`func NewInlineObject205(serials []string, profileId NullableString, ) *InlineObject205`
 
 NewInlineObject205 instantiates a new InlineObject205 object
 This constructor will assign default values to properties that have it defined,
@@ -28,106 +26,56 @@ NewInlineObject205WithDefaults instantiates a new InlineObject205 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetSerials
 
-`func (o *InlineObject205) GetTimeout() int32`
+`func (o *InlineObject205) GetSerials() []string`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetSerialsOk
 
-`func (o *InlineObject205) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineObject205) GetSerialsOk() (*[]string, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetSerials
 
-`func (o *InlineObject205) SetTimeout(v int32)`
+`func (o *InlineObject205) SetSerials(v []string)`
 
-SetTimeout sets Timeout field to given value.
+SetSerials sets Serials field to given value.
 
-### HasTimeout
 
-`func (o *InlineObject205) HasTimeout() bool`
+### GetProfileId
 
-HasTimeout returns a boolean if a field has been set.
+`func (o *InlineObject205) GetProfileId() string`
 
-### GetIdentity
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject205) GetIdentity() InlineResponse200237Identity`
+### GetProfileIdOk
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+`func (o *InlineObject205) GetProfileIdOk() (*string, bool)`
 
-### GetIdentityOk
-
-`func (o *InlineObject205) GetIdentityOk() (*InlineResponse200237Identity, bool)`
-
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetProfileId
 
-`func (o *InlineObject205) SetIdentity(v InlineResponse200237Identity)`
+`func (o *InlineObject205) SetProfileId(v string)`
 
-SetIdentity sets Identity field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasIdentity
 
-`func (o *InlineObject205) HasIdentity() bool`
+### SetProfileIdNil
 
-HasIdentity returns a boolean if a field has been set.
+`func (o *InlineObject205) SetProfileIdNil(b bool)`
 
-### GetMaxRetries
+ SetProfileIdNil sets the value for ProfileId to be an explicit nil
 
-`func (o *InlineObject205) GetMaxRetries() int32`
+### UnsetProfileId
+`func (o *InlineObject205) UnsetProfileId()`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
-
-### GetMaxRetriesOk
-
-`func (o *InlineObject205) GetMaxRetriesOk() (*int32, bool)`
-
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxRetries
-
-`func (o *InlineObject205) SetMaxRetries(v int32)`
-
-SetMaxRetries sets MaxRetries field to given value.
-
-### HasMaxRetries
-
-`func (o *InlineObject205) HasMaxRetries() bool`
-
-HasMaxRetries returns a boolean if a field has been set.
-
-### GetEapolKey
-
-`func (o *InlineObject205) GetEapolKey() InlineResponse200237EapolKey`
-
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
-
-### GetEapolKeyOk
-
-`func (o *InlineObject205) GetEapolKeyOk() (*InlineResponse200237EapolKey, bool)`
-
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEapolKey
-
-`func (o *InlineObject205) SetEapolKey(v InlineResponse200237EapolKey)`
-
-SetEapolKey sets EapolKey field to given value.
-
-### HasEapolKey
-
-`func (o *InlineObject205) HasEapolKey() bool`
-
-HasEapolKey returns a boolean if a field has been set.
-
+UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

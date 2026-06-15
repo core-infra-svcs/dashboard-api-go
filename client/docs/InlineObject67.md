@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**NetworksNetworkIdApplianceSettingsDynamicDns**](NetworksNetworkIdApplianceSettingsDynamicDns.md) |  | [optional] 
+**Prefix** | **string** | A static IPv6 prefix | 
+**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
+**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
 
 ## Methods
 
 ### NewInlineObject67
 
-`func NewInlineObject67() *InlineObject67`
+`func NewInlineObject67(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject67`
 
 NewInlineObject67 instantiates a new InlineObject67 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,70 @@ NewInlineObject67WithDefaults instantiates a new InlineObject67 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetPrefix
 
-`func (o *InlineObject67) GetClientTrackingMethod() string`
+`func (o *InlineObject67) GetPrefix() string`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetPrefixOk
 
-`func (o *InlineObject67) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineObject67) GetPrefixOk() (*string, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetPrefix
 
-`func (o *InlineObject67) SetClientTrackingMethod(v string)`
+`func (o *InlineObject67) SetPrefix(v string)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasClientTrackingMethod
 
-`func (o *InlineObject67) HasClientTrackingMethod() bool`
+### GetOrigin
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+`func (o *InlineObject67) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
 
-### GetDeploymentMode
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-`func (o *InlineObject67) GetDeploymentMode() string`
+### GetOriginOk
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+`func (o *InlineObject67) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
 
-### GetDeploymentModeOk
-
-`func (o *InlineObject67) GetDeploymentModeOk() (*string, bool)`
-
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetOrigin
 
-`func (o *InlineObject67) SetDeploymentMode(v string)`
+`func (o *InlineObject67) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasDeploymentMode
 
-`func (o *InlineObject67) HasDeploymentMode() bool`
+### GetDescription
 
-HasDeploymentMode returns a boolean if a field has been set.
+`func (o *InlineObject67) GetDescription() string`
 
-### GetDynamicDns
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-`func (o *InlineObject67) GetDynamicDns() NetworksNetworkIdApplianceSettingsDynamicDns`
+### GetDescriptionOk
 
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
+`func (o *InlineObject67) GetDescriptionOk() (*string, bool)`
 
-### GetDynamicDnsOk
-
-`func (o *InlineObject67) GetDynamicDnsOk() (*NetworksNetworkIdApplianceSettingsDynamicDns, bool)`
-
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicDns
+### SetDescription
 
-`func (o *InlineObject67) SetDynamicDns(v NetworksNetworkIdApplianceSettingsDynamicDns)`
+`func (o *InlineObject67) SetDescription(v string)`
 
-SetDynamicDns sets DynamicDns field to given value.
+SetDescription sets Description field to given value.
 
-### HasDynamicDns
+### HasDescription
 
-`func (o *InlineObject67) HasDynamicDns() bool`
+`func (o *InlineObject67) HasDescription() bool`
 
-HasDynamicDns returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | Indicates if this rule will allow, block, or alert. | [optional] 
-**Match** | Pointer to [**NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch**](NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch.md) |  | [optional] 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200212CustomPieChartItems**](InlineResponse200212CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject187WithDefaults instantiates a new InlineObject187 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetMode
 
-`func (o *InlineObject187) GetType() string`
+`func (o *InlineObject187) GetMode() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetModeOk
 
-`func (o *InlineObject187) GetTypeOk() (*string, bool)`
+`func (o *InlineObject187) GetModeOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetMode
 
-`func (o *InlineObject187) SetType(v string)`
+`func (o *InlineObject187) SetMode(v string)`
 
-SetType sets Type field to given value.
+SetMode sets Mode field to given value.
 
-### HasType
+### HasMode
 
-`func (o *InlineObject187) HasType() bool`
+`func (o *InlineObject187) HasMode() bool`
 
-HasType returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetMatch
+### GetCustomPieChartItems
 
-`func (o *InlineObject187) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch`
+`func (o *InlineObject187) GetCustomPieChartItems() []InlineResponse200212CustomPieChartItems`
 
-GetMatch returns the Match field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetMatchOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineObject187) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch, bool)`
+`func (o *InlineObject187) GetCustomPieChartItemsOk() (*[]InlineResponse200212CustomPieChartItems, bool)`
 
-GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMatch
+### SetCustomPieChartItems
 
-`func (o *InlineObject187) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesRuleIdMatch)`
+`func (o *InlineObject187) SetCustomPieChartItems(v []InlineResponse200212CustomPieChartItems)`
 
-SetMatch sets Match field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
-### HasMatch
+### HasCustomPieChartItems
 
-`func (o *InlineObject187) HasMatch() bool`
+`func (o *InlineObject187) HasCustomPieChartItems() bool`
 
-HasMatch returns a boolean if a field has been set.
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

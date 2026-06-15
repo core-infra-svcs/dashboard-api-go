@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | [**[]NetworksNetworkIdApplianceUplinksNatUplinks**](NetworksNetworkIdApplianceUplinksNatUplinks.md) | Per-uplink NAT exception configuration on the network. | 
+**Name** | **string** | Name of the custom performance class | 
+**MaxLatency** | Pointer to **NullableInt32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **NullableInt32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **NullableInt32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
 ### NewInlineObject80
 
-`func NewInlineObject80(uplinks []NetworksNetworkIdApplianceUplinksNatUplinks, ) *InlineObject80`
+`func NewInlineObject80(name string, ) *InlineObject80`
 
 NewInlineObject80 instantiates a new InlineObject80 object
 This constructor will assign default values to properties that have it defined,
@@ -25,26 +28,131 @@ NewInlineObject80WithDefaults instantiates a new InlineObject80 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetName
 
-`func (o *InlineObject80) GetUplinks() []NetworksNetworkIdApplianceUplinksNatUplinks`
+`func (o *InlineObject80) GetName() string`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetNameOk
 
-`func (o *InlineObject80) GetUplinksOk() (*[]NetworksNetworkIdApplianceUplinksNatUplinks, bool)`
+`func (o *InlineObject80) GetNameOk() (*string, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetName
 
-`func (o *InlineObject80) SetUplinks(v []NetworksNetworkIdApplianceUplinksNatUplinks)`
+`func (o *InlineObject80) SetName(v string)`
 
-SetUplinks sets Uplinks field to given value.
+SetName sets Name field to given value.
 
 
+### GetMaxLatency
+
+`func (o *InlineObject80) GetMaxLatency() int32`
+
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+
+### GetMaxLatencyOk
+
+`func (o *InlineObject80) GetMaxLatencyOk() (*int32, bool)`
+
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLatency
+
+`func (o *InlineObject80) SetMaxLatency(v int32)`
+
+SetMaxLatency sets MaxLatency field to given value.
+
+### HasMaxLatency
+
+`func (o *InlineObject80) HasMaxLatency() bool`
+
+HasMaxLatency returns a boolean if a field has been set.
+
+### SetMaxLatencyNil
+
+`func (o *InlineObject80) SetMaxLatencyNil(b bool)`
+
+ SetMaxLatencyNil sets the value for MaxLatency to be an explicit nil
+
+### UnsetMaxLatency
+`func (o *InlineObject80) UnsetMaxLatency()`
+
+UnsetMaxLatency ensures that no value is present for MaxLatency, not even an explicit nil
+### GetMaxJitter
+
+`func (o *InlineObject80) GetMaxJitter() int32`
+
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+
+### GetMaxJitterOk
+
+`func (o *InlineObject80) GetMaxJitterOk() (*int32, bool)`
+
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxJitter
+
+`func (o *InlineObject80) SetMaxJitter(v int32)`
+
+SetMaxJitter sets MaxJitter field to given value.
+
+### HasMaxJitter
+
+`func (o *InlineObject80) HasMaxJitter() bool`
+
+HasMaxJitter returns a boolean if a field has been set.
+
+### SetMaxJitterNil
+
+`func (o *InlineObject80) SetMaxJitterNil(b bool)`
+
+ SetMaxJitterNil sets the value for MaxJitter to be an explicit nil
+
+### UnsetMaxJitter
+`func (o *InlineObject80) UnsetMaxJitter()`
+
+UnsetMaxJitter ensures that no value is present for MaxJitter, not even an explicit nil
+### GetMaxLossPercentage
+
+`func (o *InlineObject80) GetMaxLossPercentage() int32`
+
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+
+### GetMaxLossPercentageOk
+
+`func (o *InlineObject80) GetMaxLossPercentageOk() (*int32, bool)`
+
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLossPercentage
+
+`func (o *InlineObject80) SetMaxLossPercentage(v int32)`
+
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
+
+### HasMaxLossPercentage
+
+`func (o *InlineObject80) HasMaxLossPercentage() bool`
+
+HasMaxLossPercentage returns a boolean if a field has been set.
+
+### SetMaxLossPercentageNil
+
+`func (o *InlineObject80) SetMaxLossPercentageNil(b bool)`
+
+ SetMaxLossPercentageNil sets the value for MaxLossPercentage to be an explicit nil
+
+### UnsetMaxLossPercentage
+`func (o *InlineObject80) UnsetMaxLossPercentage()`
+
+UnsetMaxLossPercentage ensures that no value is present for MaxLossPercentage, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

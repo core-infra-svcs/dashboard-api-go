@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
-**Type** | Pointer to **string** | The alert type | [optional] 
-**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition1**](OrganizationsOrganizationIdAlertsProfilesAlertCondition1.md) |  | [optional] 
-**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
-**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineObject231WithDefaults instantiates a new InlineObject231 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetConfirmed
 
-`func (o *InlineObject231) GetEnabled() bool`
+`func (o *InlineObject231) GetConfirmed() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetConfirmedOk
 
-`func (o *InlineObject231) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject231) GetConfirmedOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetConfirmed
 
-`func (o *InlineObject231) SetEnabled(v bool)`
+`func (o *InlineObject231) SetConfirmed(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasEnabled
+### HasConfirmed
 
-`func (o *InlineObject231) HasEnabled() bool`
+`func (o *InlineObject231) HasConfirmed() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetType
+### GetSynchronous
 
-`func (o *InlineObject231) GetType() string`
+`func (o *InlineObject231) GetSynchronous() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetSynchronousOk
 
-`func (o *InlineObject231) GetTypeOk() (*string, bool)`
+`func (o *InlineObject231) GetSynchronousOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetSynchronous
 
-`func (o *InlineObject231) SetType(v string)`
+`func (o *InlineObject231) SetSynchronous(v bool)`
 
-SetType sets Type field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasType
+### HasSynchronous
 
-`func (o *InlineObject231) HasType() bool`
+`func (o *InlineObject231) HasSynchronous() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetAlertCondition
-
-`func (o *InlineObject231) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition1`
-
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
-
-### GetAlertConditionOk
-
-`func (o *InlineObject231) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition1, bool)`
-
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertCondition
-
-`func (o *InlineObject231) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition1)`
-
-SetAlertCondition sets AlertCondition field to given value.
-
-### HasAlertCondition
-
-`func (o *InlineObject231) HasAlertCondition() bool`
-
-HasAlertCondition returns a boolean if a field has been set.
-
-### GetRecipients
-
-`func (o *InlineObject231) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
-
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
-
-### GetRecipientsOk
-
-`func (o *InlineObject231) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
-
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecipients
-
-`func (o *InlineObject231) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
-
-SetRecipients sets Recipients field to given value.
-
-### HasRecipients
-
-`func (o *InlineObject231) HasRecipients() bool`
-
-HasRecipients returns a boolean if a field has been set.
-
-### GetNetworkTags
-
-`func (o *InlineObject231) GetNetworkTags() []string`
-
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
-
-### GetNetworkTagsOk
-
-`func (o *InlineObject231) GetNetworkTagsOk() (*[]string, bool)`
-
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkTags
-
-`func (o *InlineObject231) SetNetworkTags(v []string)`
-
-SetNetworkTags sets NetworkTags field to given value.
-
-### HasNetworkTags
-
-`func (o *InlineObject231) HasNetworkTags() bool`
-
-HasNetworkTags returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineObject231) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject231) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject231) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject231) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

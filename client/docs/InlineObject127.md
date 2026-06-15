@@ -4,19 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
-**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
-**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] 
-**Message** | Pointer to **NullableString** | A custom message that will appear in email and text message alerts. | [optional] 
+**Assignments** | [**[]NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments**](NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments.md) | List of floorplan assignments to update. Up to 100 floor plan assignments can be provided in a request. | 
 
 ## Methods
 
 ### NewInlineObject127
 
-`func NewInlineObject127() *InlineObject127`
+`func NewInlineObject127(assignments []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments, ) *InlineObject127`
 
 NewInlineObject127 instantiates a new InlineObject127 object
 This constructor will assign default values to properties that have it defined,
@@ -31,191 +25,26 @@ NewInlineObject127WithDefaults instantiates a new InlineObject127 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetAssignments
 
-`func (o *InlineObject127) GetName() string`
+`func (o *InlineObject127) GetAssignments() []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAssignments returns the Assignments field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAssignmentsOk
 
-`func (o *InlineObject127) GetNameOk() (*string, bool)`
+`func (o *InlineObject127) GetAssignmentsOk() (*[]NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAssignmentsOk returns a tuple with the Assignments field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAssignments
 
-`func (o *InlineObject127) SetName(v string)`
+`func (o *InlineObject127) SetAssignments(v []NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments)`
 
-SetName sets Name field to given value.
+SetAssignments sets Assignments field to given value.
 
-### HasName
 
-`func (o *InlineObject127) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetSchedule
-
-`func (o *InlineObject127) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
-
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
-
-### GetScheduleOk
-
-`func (o *InlineObject127) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
-
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSchedule
-
-`func (o *InlineObject127) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
-
-SetSchedule sets Schedule field to given value.
-
-### HasSchedule
-
-`func (o *InlineObject127) HasSchedule() bool`
-
-HasSchedule returns a boolean if a field has been set.
-
-### GetConditions
-
-`func (o *InlineObject127) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
-
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
-
-### GetConditionsOk
-
-`func (o *InlineObject127) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
-
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetConditions
-
-`func (o *InlineObject127) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
-
-SetConditions sets Conditions field to given value.
-
-### HasConditions
-
-`func (o *InlineObject127) HasConditions() bool`
-
-HasConditions returns a boolean if a field has been set.
-
-### GetRecipients
-
-`func (o *InlineObject127) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
-
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
-
-### GetRecipientsOk
-
-`func (o *InlineObject127) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
-
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecipients
-
-`func (o *InlineObject127) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
-
-SetRecipients sets Recipients field to given value.
-
-### HasRecipients
-
-`func (o *InlineObject127) HasRecipients() bool`
-
-HasRecipients returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject127) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject127) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject127) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineObject127) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetIncludeSensorUrl
-
-`func (o *InlineObject127) GetIncludeSensorUrl() bool`
-
-GetIncludeSensorUrl returns the IncludeSensorUrl field if non-nil, zero value otherwise.
-
-### GetIncludeSensorUrlOk
-
-`func (o *InlineObject127) GetIncludeSensorUrlOk() (*bool, bool)`
-
-GetIncludeSensorUrlOk returns a tuple with the IncludeSensorUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIncludeSensorUrl
-
-`func (o *InlineObject127) SetIncludeSensorUrl(v bool)`
-
-SetIncludeSensorUrl sets IncludeSensorUrl field to given value.
-
-### HasIncludeSensorUrl
-
-`func (o *InlineObject127) HasIncludeSensorUrl() bool`
-
-HasIncludeSensorUrl returns a boolean if a field has been set.
-
-### GetMessage
-
-`func (o *InlineObject127) GetMessage() string`
-
-GetMessage returns the Message field if non-nil, zero value otherwise.
-
-### GetMessageOk
-
-`func (o *InlineObject127) GetMessageOk() (*string, bool)`
-
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMessage
-
-`func (o *InlineObject127) SetMessage(v string)`
-
-SetMessage sets Message field to given value.
-
-### HasMessage
-
-`func (o *InlineObject127) HasMessage() bool`
-
-HasMessage returns a boolean if a field has been set.
-
-### SetMessageNil
-
-`func (o *InlineObject127) SetMessageNil(b bool)`
-
- SetMessageNil sets the value for Message to be an explicit nil
-
-### UnsetMessage
-`func (o *InlineObject127) UnsetMessage()`
-
-UnsetMessage ensures that no value is present for Message, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

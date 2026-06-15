@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destinations** | Pointer to [**[]NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations**](NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations.md) | The list of connectivity monitoring destinations | [optional] 
+**Uuid** | Pointer to **NullableString** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s           automatically generated value. | [optional] 
+**Major** | Pointer to **NullableInt32** | Desired major value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **NullableInt32** | Desired minor value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -25,31 +27,111 @@ NewInlineObject45WithDefaults instantiates a new InlineObject45 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestinations
+### GetUuid
 
-`func (o *InlineObject45) GetDestinations() []NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations`
+`func (o *InlineObject45) GetUuid() string`
 
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetDestinationsOk
+### GetUuidOk
 
-`func (o *InlineObject45) GetDestinationsOk() (*[]NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations, bool)`
+`func (o *InlineObject45) GetUuidOk() (*string, bool)`
 
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinations
+### SetUuid
 
-`func (o *InlineObject45) SetDestinations(v []NetworksNetworkIdApplianceConnectivityMonitoringDestinationsDestinations)`
+`func (o *InlineObject45) SetUuid(v string)`
 
-SetDestinations sets Destinations field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasDestinations
+### HasUuid
 
-`func (o *InlineObject45) HasDestinations() bool`
+`func (o *InlineObject45) HasUuid() bool`
 
-HasDestinations returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
+### SetUuidNil
+
+`func (o *InlineObject45) SetUuidNil(b bool)`
+
+ SetUuidNil sets the value for Uuid to be an explicit nil
+
+### UnsetUuid
+`func (o *InlineObject45) UnsetUuid()`
+
+UnsetUuid ensures that no value is present for Uuid, not even an explicit nil
+### GetMajor
+
+`func (o *InlineObject45) GetMajor() int32`
+
+GetMajor returns the Major field if non-nil, zero value otherwise.
+
+### GetMajorOk
+
+`func (o *InlineObject45) GetMajorOk() (*int32, bool)`
+
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajor
+
+`func (o *InlineObject45) SetMajor(v int32)`
+
+SetMajor sets Major field to given value.
+
+### HasMajor
+
+`func (o *InlineObject45) HasMajor() bool`
+
+HasMajor returns a boolean if a field has been set.
+
+### SetMajorNil
+
+`func (o *InlineObject45) SetMajorNil(b bool)`
+
+ SetMajorNil sets the value for Major to be an explicit nil
+
+### UnsetMajor
+`func (o *InlineObject45) UnsetMajor()`
+
+UnsetMajor ensures that no value is present for Major, not even an explicit nil
+### GetMinor
+
+`func (o *InlineObject45) GetMinor() int32`
+
+GetMinor returns the Minor field if non-nil, zero value otherwise.
+
+### GetMinorOk
+
+`func (o *InlineObject45) GetMinorOk() (*int32, bool)`
+
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMinor
+
+`func (o *InlineObject45) SetMinor(v int32)`
+
+SetMinor sets Minor field to given value.
+
+### HasMinor
+
+`func (o *InlineObject45) HasMinor() bool`
+
+HasMinor returns a boolean if a field has been set.
+
+### SetMinorNil
+
+`func (o *InlineObject45) SetMinorNil(b bool)`
+
+ SetMinorNil sets the value for Minor to be an explicit nil
+
+### UnsetMinor
+`func (o *InlineObject45) UnsetMinor()`
+
+UnsetMinor ensures that no value is present for Minor, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

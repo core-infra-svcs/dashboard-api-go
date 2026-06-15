@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyAlerts**](NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspection**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspection.md) |  | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be shutdown. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the endpoints to be shutdown. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the endpoints to be shutdown. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be shutdown. | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineObject148WithDefaults instantiates a new InlineObject148 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetWifiMacs
 
-`func (o *InlineObject148) GetAlerts() NetworksNetworkIdSwitchDhcpServerPolicyAlerts`
+`func (o *InlineObject148) GetWifiMacs() []string`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetWifiMacsOk
 
-`func (o *InlineObject148) GetAlertsOk() (*NetworksNetworkIdSwitchDhcpServerPolicyAlerts, bool)`
+`func (o *InlineObject148) GetWifiMacsOk() (*[]string, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetWifiMacs
 
-`func (o *InlineObject148) SetAlerts(v NetworksNetworkIdSwitchDhcpServerPolicyAlerts)`
+`func (o *InlineObject148) SetWifiMacs(v []string)`
 
-SetAlerts sets Alerts field to given value.
+SetWifiMacs sets WifiMacs field to given value.
 
-### HasAlerts
+### HasWifiMacs
 
-`func (o *InlineObject148) HasAlerts() bool`
+`func (o *InlineObject148) HasWifiMacs() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasWifiMacs returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetIds
 
-`func (o *InlineObject148) GetDefaultPolicy() string`
+`func (o *InlineObject148) GetIds() []string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetIdsOk
 
-`func (o *InlineObject148) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject148) GetIdsOk() (*[]string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetIds
 
-`func (o *InlineObject148) SetDefaultPolicy(v string)`
+`func (o *InlineObject148) SetIds(v []string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetIds sets Ids field to given value.
 
-### HasDefaultPolicy
+### HasIds
 
-`func (o *InlineObject148) HasDefaultPolicy() bool`
+`func (o *InlineObject148) HasIds() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetSerials
 
-`func (o *InlineObject148) GetAllowedServers() []string`
+`func (o *InlineObject148) GetSerials() []string`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetSerialsOk
 
-`func (o *InlineObject148) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineObject148) GetSerialsOk() (*[]string, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetSerials
 
-`func (o *InlineObject148) SetAllowedServers(v []string)`
+`func (o *InlineObject148) SetSerials(v []string)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetSerials sets Serials field to given value.
 
-### HasAllowedServers
+### HasSerials
 
-`func (o *InlineObject148) HasAllowedServers() bool`
+`func (o *InlineObject148) HasSerials() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetBlockedServers
+### GetScope
 
-`func (o *InlineObject148) GetBlockedServers() []string`
+`func (o *InlineObject148) GetScope() []string`
 
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetBlockedServersOk
+### GetScopeOk
 
-`func (o *InlineObject148) GetBlockedServersOk() (*[]string, bool)`
+`func (o *InlineObject148) GetScopeOk() (*[]string, bool)`
 
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedServers
+### SetScope
 
-`func (o *InlineObject148) SetBlockedServers(v []string)`
+`func (o *InlineObject148) SetScope(v []string)`
 
-SetBlockedServers sets BlockedServers field to given value.
+SetScope sets Scope field to given value.
 
-### HasBlockedServers
+### HasScope
 
-`func (o *InlineObject148) HasBlockedServers() bool`
+`func (o *InlineObject148) HasScope() bool`
 
-HasBlockedServers returns a boolean if a field has been set.
-
-### GetArpInspection
-
-`func (o *InlineObject148) GetArpInspection() NetworksNetworkIdSwitchDhcpServerPolicyArpInspection`
-
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
-
-### GetArpInspectionOk
-
-`func (o *InlineObject148) GetArpInspectionOk() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspection, bool)`
-
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetArpInspection
-
-`func (o *InlineObject148) SetArpInspection(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspection)`
-
-SetArpInspection sets ArpInspection field to given value.
-
-### HasArpInspection
-
-`func (o *InlineObject148) HasArpInspection() bool`
-
-HasArpInspection returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkApplianceTrafficShapingCustomPerformanceClass
 
-> InlineResponse20091 CreateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId).CreateNetworkApplianceTrafficShapingCustomPerformanceClass(createNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
+> InlineResponse20096 CreateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId).CreateNetworkApplianceTrafficShapingCustomPerformanceClass(createNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
 
 Add a custom performance class for an MX network
 
@@ -48,7 +48,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject73("Name_example") // InlineObject73 | 
+    createNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject80("Name_example") // InlineObject80 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -57,7 +57,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.CreateNetworkApplianceTrafficShapingCustomPerformanceClass``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20091
+    // response from `CreateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.CreateNetworkApplianceTrafficShapingCustomPerformanceClass`: %v\n", resp)
 }
 ```
@@ -78,11 +78,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject73**](InlineObject73.md) |  | 
+ **createNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject80**](InlineObject80.md) |  | 
 
 ### Return type
 
-[**InlineResponse20091**](InlineResponse20091.md)
+[**InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShaping
 
-> InlineResponse20090 GetNetworkApplianceTrafficShaping(ctx, networkId).Execute()
+> InlineResponse20095 GetNetworkApplianceTrafficShaping(ctx, networkId).Execute()
 
 Display the traffic shaping settings for an MX network
 
@@ -199,7 +199,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkApplianceTrafficShaping``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShaping`: InlineResponse20090
+    // response from `GetNetworkApplianceTrafficShaping`: InlineResponse20095
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkApplianceTrafficShaping`: %v\n", resp)
 }
 ```
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20090**](InlineResponse20090.md)
+[**InlineResponse20095**](InlineResponse20095.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingCustomPerformanceClass
 
-> InlineResponse20091 GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).Execute()
+> InlineResponse20096 GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).Execute()
 
 Return a custom performance class for an MX network
 
@@ -270,7 +270,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkApplianceTrafficShapingCustomPerformanceClass``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20091
+    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkApplianceTrafficShapingCustomPerformanceClass`: %v\n", resp)
 }
 ```
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20091**](InlineResponse20091.md)
+[**InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingCustomPerformanceClasses
 
-> []InlineResponse20091 GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ctx, networkId).Execute()
+> []InlineResponse20096 GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ctx, networkId).Execute()
 
 List all custom performance classes for an MX network
 
@@ -342,7 +342,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkApplianceTrafficShapingCustomPerformanceClasses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClasses`: []InlineResponse20091
+    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClasses`: []InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkApplianceTrafficShapingCustomPerformanceClasses`: %v\n", resp)
 }
 ```
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20091**](InlineResponse20091.md)
+[**[]InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingRules
 
-> InlineResponse20092 GetNetworkApplianceTrafficShapingRules(ctx, networkId).Execute()
+> InlineResponse20097 GetNetworkApplianceTrafficShapingRules(ctx, networkId).Execute()
 
 Display the traffic shaping settings rules for an MX network
 
@@ -412,7 +412,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkApplianceTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingRules`: InlineResponse20092
+    // response from `GetNetworkApplianceTrafficShapingRules`: InlineResponse20097
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkApplianceTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20092**](InlineResponse20092.md)
+[**InlineResponse20097**](InlineResponse20097.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingUplinkBandwidth
 
-> InlineResponse20093 GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).Execute()
+> InlineResponse20098 GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).Execute()
 
 Returns the uplink bandwidth limits for your MX network
 
@@ -482,7 +482,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkApplianceTrafficShapingUplinkBandwidth``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20093
+    // response from `GetNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkApplianceTrafficShapingUplinkBandwidth`: %v\n", resp)
 }
 ```
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingUplinkSelection
 
-> InlineResponse20094 GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
+> InlineResponse20099 GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
 
 Show uplink selection settings for an MX network
 
@@ -552,7 +552,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20094
+    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20094**](InlineResponse20094.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkTrafficShapingApplicationCategories
 
-> InlineResponse20073 GetNetworkTrafficShapingApplicationCategories(ctx, networkId).Execute()
+> InlineResponse20078 GetNetworkTrafficShapingApplicationCategories(ctx, networkId).Execute()
 
 Returns the application categories for traffic shaping rules
 
@@ -622,7 +622,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkTrafficShapingApplicationCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkTrafficShapingApplicationCategories`: InlineResponse20073
+    // response from `GetNetworkTrafficShapingApplicationCategories`: InlineResponse20078
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkTrafficShapingApplicationCategories`: %v\n", resp)
 }
 ```
@@ -646,7 +646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20073**](InlineResponse20073.md)
+[**InlineResponse20078**](InlineResponse20078.md)
 
 ### Authorization
 
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200245 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
+> InlineResponse200253 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
 
 Display the traffic shaping settings for a SSID on an MR network
 
@@ -763,7 +763,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200245
+    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200253
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -789,7 +789,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200245**](InlineResponse200245.md)
+[**InlineResponse200253**](InlineResponse200253.md)
 
 ### Authorization
 
@@ -807,7 +807,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> InlineResponse200272 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200284 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -839,7 +839,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200272
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200284
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -867,7 +867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200272**](InlineResponse200272.md)
+[**InlineResponse200284**](InlineResponse200284.md)
 
 ### Authorization
 
@@ -885,7 +885,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShaping
 
-> InlineResponse20090 UpdateNetworkApplianceTrafficShaping(ctx, networkId).UpdateNetworkApplianceTrafficShaping(updateNetworkApplianceTrafficShaping).Execute()
+> InlineResponse20095 UpdateNetworkApplianceTrafficShaping(ctx, networkId).UpdateNetworkApplianceTrafficShaping(updateNetworkApplianceTrafficShaping).Execute()
 
 Update the traffic shaping settings for an MX network
 
@@ -905,7 +905,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShaping := *openapiclient.NewInlineObject72(*openapiclient.NewInlineResponse20090GlobalBandwidthLimits(int32(123), int32(123))) // InlineObject72 | 
+    updateNetworkApplianceTrafficShaping := *openapiclient.NewInlineObject79(*openapiclient.NewInlineResponse20095GlobalBandwidthLimits(int32(123), int32(123))) // InlineObject79 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -914,7 +914,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkApplianceTrafficShaping``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShaping`: InlineResponse20090
+    // response from `UpdateNetworkApplianceTrafficShaping`: InlineResponse20095
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkApplianceTrafficShaping`: %v\n", resp)
 }
 ```
@@ -935,11 +935,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShaping** | [**InlineObject72**](InlineObject72.md) |  | 
+ **updateNetworkApplianceTrafficShaping** | [**InlineObject79**](InlineObject79.md) |  | 
 
 ### Return type
 
-[**InlineResponse20090**](InlineResponse20090.md)
+[**InlineResponse20095**](InlineResponse20095.md)
 
 ### Authorization
 
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingCustomPerformanceClass
 
-> InlineResponse20091 UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(updateNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
+> InlineResponse20096 UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(updateNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
 
 Update a custom performance class for an MX network
 
@@ -978,7 +978,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     customPerformanceClassId := "customPerformanceClassId_example" // string | Custom performance class ID
-    updateNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject74() // InlineObject74 |  (optional)
+    updateNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject81() // InlineObject81 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -987,7 +987,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingCustomPerformanceClass``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20091
+    // response from `UpdateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingCustomPerformanceClass`: %v\n", resp)
 }
 ```
@@ -1010,11 +1010,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject74**](InlineObject74.md) |  | 
+ **updateNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject81**](InlineObject81.md) |  | 
 
 ### Return type
 
-[**InlineResponse20091**](InlineResponse20091.md)
+[**InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -1032,7 +1032,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingRules
 
-> InlineResponse20092 UpdateNetworkApplianceTrafficShapingRules(ctx, networkId).UpdateNetworkApplianceTrafficShapingRules(updateNetworkApplianceTrafficShapingRules).Execute()
+> InlineResponse20097 UpdateNetworkApplianceTrafficShapingRules(ctx, networkId).UpdateNetworkApplianceTrafficShapingRules(updateNetworkApplianceTrafficShapingRules).Execute()
 
 Update the traffic shaping settings rules for an MX network
 
@@ -1052,7 +1052,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingRules := *openapiclient.NewInlineObject75() // InlineObject75 |  (optional)
+    updateNetworkApplianceTrafficShapingRules := *openapiclient.NewInlineObject82() // InlineObject82 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1061,7 +1061,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingRules`: InlineResponse20092
+    // response from `UpdateNetworkApplianceTrafficShapingRules`: InlineResponse20097
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -1082,11 +1082,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingRules** | [**InlineObject75**](InlineObject75.md) |  | 
+ **updateNetworkApplianceTrafficShapingRules** | [**InlineObject82**](InlineObject82.md) |  | 
 
 ### Return type
 
-[**InlineResponse20092**](InlineResponse20092.md)
+[**InlineResponse20097**](InlineResponse20097.md)
 
 ### Authorization
 
@@ -1104,7 +1104,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingUplinkBandwidth
 
-> InlineResponse20093 UpdateNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkBandwidth(updateNetworkApplianceTrafficShapingUplinkBandwidth).Execute()
+> InlineResponse20098 UpdateNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkBandwidth(updateNetworkApplianceTrafficShapingUplinkBandwidth).Execute()
 
 Updates the uplink bandwidth settings for your MX network.
 
@@ -1124,7 +1124,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingUplinkBandwidth := *openapiclient.NewInlineObject76() // InlineObject76 |  (optional)
+    updateNetworkApplianceTrafficShapingUplinkBandwidth := *openapiclient.NewInlineObject83() // InlineObject83 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1133,7 +1133,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingUplinkBandwidth``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20093
+    // response from `UpdateNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingUplinkBandwidth`: %v\n", resp)
 }
 ```
@@ -1154,11 +1154,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingUplinkBandwidth** | [**InlineObject76**](InlineObject76.md) |  | 
+ **updateNetworkApplianceTrafficShapingUplinkBandwidth** | [**InlineObject83**](InlineObject83.md) |  | 
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -1176,7 +1176,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingUplinkSelection
 
-> InlineResponse20094 UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
+> InlineResponse20099 UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
 
 Update uplink selection settings for an MX network
 
@@ -1196,7 +1196,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingUplinkSelection := *openapiclient.NewInlineObject77() // InlineObject77 |  (optional)
+    updateNetworkApplianceTrafficShapingUplinkSelection := *openapiclient.NewInlineObject84() // InlineObject84 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1205,7 +1205,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20094
+    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
@@ -1226,11 +1226,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingUplinkSelection** | [**InlineObject77**](InlineObject77.md) |  | 
+ **updateNetworkApplianceTrafficShapingUplinkSelection** | [**InlineObject84**](InlineObject84.md) |  | 
 
 ### Return type
 
-[**InlineResponse20094**](InlineResponse20094.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -1248,7 +1248,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingVpnExclusions
 
-> InlineResponse20095 UpdateNetworkApplianceTrafficShapingVpnExclusions(ctx, networkId).UpdateNetworkApplianceTrafficShapingVpnExclusions(updateNetworkApplianceTrafficShapingVpnExclusions).Execute()
+> InlineResponse200100 UpdateNetworkApplianceTrafficShapingVpnExclusions(ctx, networkId).UpdateNetworkApplianceTrafficShapingVpnExclusions(updateNetworkApplianceTrafficShapingVpnExclusions).Execute()
 
 Update VPN exclusion rules for an MX network.
 
@@ -1268,7 +1268,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingVpnExclusions := *openapiclient.NewInlineObject78() // InlineObject78 |  (optional)
+    updateNetworkApplianceTrafficShapingVpnExclusions := *openapiclient.NewInlineObject85() // InlineObject85 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1277,7 +1277,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingVpnExclusions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingVpnExclusions`: InlineResponse20095
+    // response from `UpdateNetworkApplianceTrafficShapingVpnExclusions`: InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkApplianceTrafficShapingVpnExclusions`: %v\n", resp)
 }
 ```
@@ -1298,11 +1298,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingVpnExclusions** | [**InlineObject78**](InlineObject78.md) |  | 
+ **updateNetworkApplianceTrafficShapingVpnExclusions** | [**InlineObject85**](InlineObject85.md) |  | 
 
 ### Return type
 
-[**InlineResponse20095**](InlineResponse20095.md)
+[**InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 
@@ -1320,7 +1320,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200245 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
+> InlineResponse200253 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
 
 Update the traffic shaping rules for an SSID on an MR network.
 
@@ -1341,7 +1341,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject214() // InlineObject214 |  (optional)
+    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject225() // InlineObject225 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1350,7 +1350,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200245
+    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200253
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -1373,11 +1373,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject214**](InlineObject214.md) |  | 
+ **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject225**](InlineObject225.md) |  | 
 
 ### Return type
 
-[**InlineResponse200245**](InlineResponse200245.md)
+[**InlineResponse200253**](InlineResponse200253.md)
 
 ### Authorization
 

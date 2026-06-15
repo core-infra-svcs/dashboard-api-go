@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Jobs** | Pointer to [**[]InlineResponse200131Jobs**](InlineResponse200131Jobs.md) | The newly created jobs | [optional] 
+**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
+**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
+**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
+**Events** | Pointer to [**[]InlineResponse200131Events**](InlineResponse200131Events.md) | An array of events that took place in the network. | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJobs
+### GetMessage
 
-`func (o *InlineResponse200131) GetJobs() []InlineResponse200131Jobs`
+`func (o *InlineResponse200131) GetMessage() string`
 
-GetJobs returns the Jobs field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetJobsOk
+### GetMessageOk
 
-`func (o *InlineResponse200131) GetJobsOk() (*[]InlineResponse200131Jobs, bool)`
+`func (o *InlineResponse200131) GetMessageOk() (*string, bool)`
 
-GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJobs
+### SetMessage
 
-`func (o *InlineResponse200131) SetJobs(v []InlineResponse200131Jobs)`
+`func (o *InlineResponse200131) SetMessage(v string)`
 
-SetJobs sets Jobs field to given value.
+SetMessage sets Message field to given value.
 
-### HasJobs
+### HasMessage
 
-`func (o *InlineResponse200131) HasJobs() bool`
+`func (o *InlineResponse200131) HasMessage() bool`
 
-HasJobs returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
+
+### GetPageStartAt
+
+`func (o *InlineResponse200131) GetPageStartAt() string`
+
+GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+
+### GetPageStartAtOk
+
+`func (o *InlineResponse200131) GetPageStartAtOk() (*string, bool)`
+
+GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPageStartAt
+
+`func (o *InlineResponse200131) SetPageStartAt(v string)`
+
+SetPageStartAt sets PageStartAt field to given value.
+
+### HasPageStartAt
+
+`func (o *InlineResponse200131) HasPageStartAt() bool`
+
+HasPageStartAt returns a boolean if a field has been set.
+
+### GetPageEndAt
+
+`func (o *InlineResponse200131) GetPageEndAt() string`
+
+GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
+
+### GetPageEndAtOk
+
+`func (o *InlineResponse200131) GetPageEndAtOk() (*string, bool)`
+
+GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPageEndAt
+
+`func (o *InlineResponse200131) SetPageEndAt(v string)`
+
+SetPageEndAt sets PageEndAt field to given value.
+
+### HasPageEndAt
+
+`func (o *InlineResponse200131) HasPageEndAt() bool`
+
+HasPageEndAt returns a boolean if a field has been set.
+
+### GetEvents
+
+`func (o *InlineResponse200131) GetEvents() []InlineResponse200131Events`
+
+GetEvents returns the Events field if non-nil, zero value otherwise.
+
+### GetEventsOk
+
+`func (o *InlineResponse200131) GetEventsOk() (*[]InlineResponse200131Events, bool)`
+
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEvents
+
+`func (o *InlineResponse200131) SetEvents(v []InlineResponse200131Events)`
+
+SetEvents sets Events field to given value.
+
+### HasEvents
+
+`func (o *InlineResponse200131) HasEvents() bool`
+
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

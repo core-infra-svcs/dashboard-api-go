@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedRules** | Pointer to [**[]InlineResponse200271AllowedRules**](InlineResponse200271AllowedRules.md) | Sets a list of specific SNORT signatures to allow | [optional] 
+**Items** | Pointer to [**[]InlineResponse200271Items**](InlineResponse200271Items.md) | Port configurations by appliance | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200271WithDefaults instantiates a new InlineResponse200271 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedRules
+### GetItems
 
-`func (o *InlineResponse200271) GetAllowedRules() []InlineResponse200271AllowedRules`
+`func (o *InlineResponse200271) GetItems() []InlineResponse200271Items`
 
-GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetAllowedRulesOk
+### GetItemsOk
 
-`func (o *InlineResponse200271) GetAllowedRulesOk() (*[]InlineResponse200271AllowedRules, bool)`
+`func (o *InlineResponse200271) GetItemsOk() (*[]InlineResponse200271Items, bool)`
 
-GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedRules
+### SetItems
 
-`func (o *InlineResponse200271) SetAllowedRules(v []InlineResponse200271AllowedRules)`
+`func (o *InlineResponse200271) SetItems(v []InlineResponse200271Items)`
 
-SetAllowedRules sets AllowedRules field to given value.
+SetItems sets Items field to given value.
 
-### HasAllowedRules
+### HasItems
 
-`func (o *InlineResponse200271) HasAllowedRules() bool`
+`func (o *InlineResponse200271) HasItems() bool`
 
-HasAllowedRules returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

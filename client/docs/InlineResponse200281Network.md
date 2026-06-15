@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Names** | Pointer to **[]string** | [optional] A list of network Names. Supported only for MX 19.1 and above. The order of items matches the order of IDs. | [optional] 
-**Ids** | Pointer to **[]string** | [optional] A list of network IDs. | [optional] 
+**Id** | Pointer to **string** | The network ID | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200281NetworkWithDefaults instantiates a new InlineResponse2002
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNames
+### GetId
 
-`func (o *InlineResponse200281Network) GetNames() []string`
+`func (o *InlineResponse200281Network) GetId() string`
 
-GetNames returns the Names field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNamesOk
+### GetIdOk
 
-`func (o *InlineResponse200281Network) GetNamesOk() (*[]string, bool)`
+`func (o *InlineResponse200281Network) GetIdOk() (*string, bool)`
 
-GetNamesOk returns a tuple with the Names field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNames
+### SetId
 
-`func (o *InlineResponse200281Network) SetNames(v []string)`
+`func (o *InlineResponse200281Network) SetId(v string)`
 
-SetNames sets Names field to given value.
+SetId sets Id field to given value.
 
-### HasNames
+### HasId
 
-`func (o *InlineResponse200281Network) HasNames() bool`
+`func (o *InlineResponse200281Network) HasId() bool`
 
-HasNames returns a boolean if a field has been set.
-
-### GetIds
-
-`func (o *InlineResponse200281Network) GetIds() []string`
-
-GetIds returns the Ids field if non-nil, zero value otherwise.
-
-### GetIdsOk
-
-`func (o *InlineResponse200281Network) GetIdsOk() (*[]string, bool)`
-
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIds
-
-`func (o *InlineResponse200281Network) SetIds(v []string)`
-
-SetIds sets Ids field to given value.
-
-### HasIds
-
-`func (o *InlineResponse200281Network) HasIds() bool`
-
-HasIds returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

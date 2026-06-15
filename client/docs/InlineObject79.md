@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Api** | [**NetworksNetworkIdApplianceUmbrellaAccountConnectApi**](NetworksNetworkIdApplianceUmbrellaAccountConnectApi.md) |  | 
+**GlobalBandwidthLimits** | [**InlineResponse20095GlobalBandwidthLimits**](InlineResponse20095GlobalBandwidthLimits.md) |  | 
 
 ## Methods
 
 ### NewInlineObject79
 
-`func NewInlineObject79(api NetworksNetworkIdApplianceUmbrellaAccountConnectApi, ) *InlineObject79`
+`func NewInlineObject79(globalBandwidthLimits InlineResponse20095GlobalBandwidthLimits, ) *InlineObject79`
 
 NewInlineObject79 instantiates a new InlineObject79 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject79WithDefaults instantiates a new InlineObject79 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApi
+### GetGlobalBandwidthLimits
 
-`func (o *InlineObject79) GetApi() NetworksNetworkIdApplianceUmbrellaAccountConnectApi`
+`func (o *InlineObject79) GetGlobalBandwidthLimits() InlineResponse20095GlobalBandwidthLimits`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetGlobalBandwidthLimitsOk
 
-`func (o *InlineObject79) GetApiOk() (*NetworksNetworkIdApplianceUmbrellaAccountConnectApi, bool)`
+`func (o *InlineObject79) GetGlobalBandwidthLimitsOk() (*InlineResponse20095GlobalBandwidthLimits, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetGlobalBandwidthLimits
 
-`func (o *InlineObject79) SetApi(v NetworksNetworkIdApplianceUmbrellaAccountConnectApi)`
+`func (o *InlineObject79) SetGlobalBandwidthLimits(v InlineResponse20095GlobalBandwidthLimits)`
 
-SetApi sets Api field to given value.
+SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
 
 
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200115Counts**](InlineResponse200115Counts.md) |  | [optional] 
-**Usages** | Pointer to [**InlineResponse200115Usages**](InlineResponse200115Usages.md) |  | [optional] 
+**Id** | Pointer to **string** | Schedule id | [optional] 
+**Name** | Pointer to **string** | Schedule name | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetId
 
-`func (o *InlineResponse200115) GetCounts() InlineResponse200115Counts`
+`func (o *InlineResponse200115) GetId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetIdOk
 
-`func (o *InlineResponse200115) GetCountsOk() (*InlineResponse200115Counts, bool)`
+`func (o *InlineResponse200115) GetIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetId
 
-`func (o *InlineResponse200115) SetCounts(v InlineResponse200115Counts)`
+`func (o *InlineResponse200115) SetId(v string)`
 
-SetCounts sets Counts field to given value.
+SetId sets Id field to given value.
 
-### HasCounts
+### HasId
 
-`func (o *InlineResponse200115) HasCounts() bool`
+`func (o *InlineResponse200115) HasId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUsages
+### GetName
 
-`func (o *InlineResponse200115) GetUsages() InlineResponse200115Usages`
+`func (o *InlineResponse200115) GetName() string`
 
-GetUsages returns the Usages field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUsagesOk
+### GetNameOk
 
-`func (o *InlineResponse200115) GetUsagesOk() (*InlineResponse200115Usages, bool)`
+`func (o *InlineResponse200115) GetNameOk() (*string, bool)`
 
-GetUsagesOk returns a tuple with the Usages field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsages
+### SetName
 
-`func (o *InlineResponse200115) SetUsages(v InlineResponse200115Usages)`
+`func (o *InlineResponse200115) SetName(v string)`
 
-SetUsages sets Usages field to given value.
+SetName sets Name field to given value.
 
-### HasUsages
+### HasName
 
-`func (o *InlineResponse200115) HasUsages() bool`
+`func (o *InlineResponse200115) HasName() bool`
 
-HasUsages returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

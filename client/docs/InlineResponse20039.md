@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
-**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
-**Result** | Pointer to [**InlineResponse2019Result**](InlineResponse2019Result.md) |  | [optional] 
-**Request** | Pointer to [**InlineResponse2019Request**](InlineResponse2019Request.md) |  | [optional] 
-**Error** | Pointer to **string** | Description of the error. | [optional] 
+**CyclePortId** | Pointer to **string** | ID of the cycle port request | [optional] 
+**Url** | Pointer to **string** | GET this URL to check the status of your cycle port request. | [optional] 
+**Request** | Pointer to [**InlineResponse2018Request**](InlineResponse2018Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the cycle port request | [optional] 
+**Error** | Pointer to **string** | An error message for a failed cycle port execution, if present | [optional] 
 
 ## Methods
 
@@ -30,30 +29,30 @@ NewInlineResponse20039WithDefaults instantiates a new InlineResponse20039 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetThroughputTestId
+### GetCyclePortId
 
-`func (o *InlineResponse20039) GetThroughputTestId() string`
+`func (o *InlineResponse20039) GetCyclePortId() string`
 
-GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
+GetCyclePortId returns the CyclePortId field if non-nil, zero value otherwise.
 
-### GetThroughputTestIdOk
+### GetCyclePortIdOk
 
-`func (o *InlineResponse20039) GetThroughputTestIdOk() (*string, bool)`
+`func (o *InlineResponse20039) GetCyclePortIdOk() (*string, bool)`
 
-GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
+GetCyclePortIdOk returns a tuple with the CyclePortId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThroughputTestId
+### SetCyclePortId
 
-`func (o *InlineResponse20039) SetThroughputTestId(v string)`
+`func (o *InlineResponse20039) SetCyclePortId(v string)`
 
-SetThroughputTestId sets ThroughputTestId field to given value.
+SetCyclePortId sets CyclePortId field to given value.
 
-### HasThroughputTestId
+### HasCyclePortId
 
-`func (o *InlineResponse20039) HasThroughputTestId() bool`
+`func (o *InlineResponse20039) HasCyclePortId() bool`
 
-HasThroughputTestId returns a boolean if a field has been set.
+HasCyclePortId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -80,6 +79,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20039) GetRequest() InlineResponse2018Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20039) GetRequestOk() (*InlineResponse2018Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20039) SetRequest(v InlineResponse2018Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20039) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20039) GetStatus() string`
@@ -104,56 +128,6 @@ SetStatus sets Status field to given value.
 `func (o *InlineResponse20039) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
-
-### GetResult
-
-`func (o *InlineResponse20039) GetResult() InlineResponse2019Result`
-
-GetResult returns the Result field if non-nil, zero value otherwise.
-
-### GetResultOk
-
-`func (o *InlineResponse20039) GetResultOk() (*InlineResponse2019Result, bool)`
-
-GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResult
-
-`func (o *InlineResponse20039) SetResult(v InlineResponse2019Result)`
-
-SetResult sets Result field to given value.
-
-### HasResult
-
-`func (o *InlineResponse20039) HasResult() bool`
-
-HasResult returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineResponse20039) GetRequest() InlineResponse2019Request`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineResponse20039) GetRequestOk() (*InlineResponse2019Request, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineResponse20039) SetRequest(v InlineResponse2019Request)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineResponse20039) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
 
 ### GetError
 

@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
+**Name** | **string** | Name of the profile to be added. This must be unique. | 
+**Description** | **string** | Description of the profile to be added. | 
+**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
 
 ## Methods
 
 ### NewInlineObject276
 
-`func NewInlineObject276(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject276`
+`func NewInlineObject276(name string, description string, rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject276`
 
 NewInlineObject276 instantiates a new InlineObject276 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject276WithDefaults instantiates a new InlineObject276 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrder
+### GetName
 
-`func (o *InlineObject276) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
+`func (o *InlineObject276) GetName() string`
 
-GetOrder returns the Order field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOrderOk
+### GetNameOk
 
-`func (o *InlineObject276) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
+`func (o *InlineObject276) GetNameOk() (*string, bool)`
 
-GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrder
+### SetName
 
-`func (o *InlineObject276) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
+`func (o *InlineObject276) SetName(v string)`
 
-SetOrder sets Order field to given value.
+SetName sets Name field to given value.
+
+
+### GetDescription
+
+`func (o *InlineObject276) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject276) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject276) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+
+### GetRules
+
+`func (o *InlineObject276) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject276) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject276) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+
+SetRules sets Rules field to given value.
 
 
 

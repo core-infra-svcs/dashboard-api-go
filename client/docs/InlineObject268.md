@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
-**Description** | Pointer to **string** | New description of the profile. | [optional] 
-**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
+**AccountId** | **string** | Service provider account ID | 
+**ApiKey** | **string** | Service provider account API key | 
+**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
+**Title** | **string** | Service provider account name | 
+**Username** | **string** | Service provider account username | 
 
 ## Methods
 
 ### NewInlineObject268
 
-`func NewInlineObject268(rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject268`
+`func NewInlineObject268(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject268`
 
 NewInlineObject268 instantiates a new InlineObject268 object
 This constructor will assign default values to properties that have it defined,
@@ -27,74 +29,104 @@ NewInlineObject268WithDefaults instantiates a new InlineObject268 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetAccountId
 
-`func (o *InlineObject268) GetProfileId() string`
+`func (o *InlineObject268) GetAccountId() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetAccountId returns the AccountId field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetAccountIdOk
 
-`func (o *InlineObject268) GetProfileIdOk() (*string, bool)`
+`func (o *InlineObject268) GetAccountIdOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetAccountId
 
-`func (o *InlineObject268) SetProfileId(v string)`
+`func (o *InlineObject268) SetAccountId(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetAccountId sets AccountId field to given value.
 
-### HasProfileId
 
-`func (o *InlineObject268) HasProfileId() bool`
+### GetApiKey
 
-HasProfileId returns a boolean if a field has been set.
+`func (o *InlineObject268) GetApiKey() string`
 
-### GetDescription
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-`func (o *InlineObject268) GetDescription() string`
+### GetApiKeyOk
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+`func (o *InlineObject268) GetApiKeyOk() (*string, bool)`
 
-### GetDescriptionOk
-
-`func (o *InlineObject268) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetApiKey
 
-`func (o *InlineObject268) SetDescription(v string)`
+`func (o *InlineObject268) SetApiKey(v string)`
 
-SetDescription sets Description field to given value.
+SetApiKey sets ApiKey field to given value.
 
-### HasDescription
 
-`func (o *InlineObject268) HasDescription() bool`
+### GetServiceProvider
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject268) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
 
-### GetRules
+GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
 
-`func (o *InlineObject268) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+### GetServiceProviderOk
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+`func (o *InlineObject268) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
 
-### GetRulesOk
-
-`func (o *InlineObject268) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetServiceProvider
 
-`func (o *InlineObject268) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+`func (o *InlineObject268) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
 
-SetRules sets Rules field to given value.
+SetServiceProvider sets ServiceProvider field to given value.
+
+
+### GetTitle
+
+`func (o *InlineObject268) GetTitle() string`
+
+GetTitle returns the Title field if non-nil, zero value otherwise.
+
+### GetTitleOk
+
+`func (o *InlineObject268) GetTitleOk() (*string, bool)`
+
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTitle
+
+`func (o *InlineObject268) SetTitle(v string)`
+
+SetTitle sets Title field to given value.
+
+
+### GetUsername
+
+`func (o *InlineObject268) GetUsername() string`
+
+GetUsername returns the Username field if non-nil, zero value otherwise.
+
+### GetUsernameOk
+
+`func (o *InlineObject268) GetUsernameOk() (*string, bool)`
+
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsername
+
+`func (o *InlineObject268) SetUsername(v string)`
+
+SetUsername sets Username field to given value.
 
 
 

@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPing := *openapiclient.NewInlineObject23("Target_example") // InlineObject23 | 
+    createDeviceLiveToolsPing := *openapiclient.NewInlineObject24("Target_example") // InlineObject24 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPing** | [**InlineObject23**](InlineObject23.md) |  | 
+ **createDeviceLiveToolsPing** | [**InlineObject24**](InlineObject24.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPing
 
-> InlineResponse20036 GetDeviceLiveToolsPing(ctx, serial, id).Execute()
+> InlineResponse20037 GetDeviceLiveToolsPing(ctx, serial, id).Execute()
 
 Return a ping job
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PingApi.GetDeviceLiveToolsPing``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPing`: InlineResponse20036
+    // response from `GetDeviceLiveToolsPing`: InlineResponse20037
     fmt.Fprintf(os.Stdout, "Response from `PingApi.GetDeviceLiveToolsPing`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20036**](InlineResponse20036.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 

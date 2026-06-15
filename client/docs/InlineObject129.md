@@ -4,17 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**NetworksNetworkIdSettingsLocalStatusPage**](NetworksNetworkIdSettingsLocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse200150SecurePort**](InlineResponse200150SecurePort.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse200150NamedVlans**](InlineResponse200150NamedVlans.md) |  | [optional] 
+**Name** | **string** | The name for your group policy. Required. | 
+**Scheduling** | Pointer to [**NetworksNetworkIdGroupPoliciesScheduling**](NetworksNetworkIdGroupPoliciesScheduling.md) |  | [optional] 
+**Bandwidth** | Pointer to [**NetworksNetworkIdGroupPoliciesBandwidth**](NetworksNetworkIdGroupPoliciesBandwidth.md) |  | [optional] 
+**FirewallAndTrafficShaping** | Pointer to [**NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping.md) |  | [optional] 
+**ContentFiltering** | Pointer to [**NetworksNetworkIdGroupPoliciesContentFiltering**](NetworksNetworkIdGroupPoliciesContentFiltering.md) |  | [optional] 
+**SplashAuthSettings** | Pointer to **string** | Whether clients bound to your policy will bypass splash authorization or behave according to the network&#39;s rules. Can be one of &#39;network default&#39; or &#39;bypass&#39;. Only available if your network has a wireless configuration. | [optional] 
+**VlanTagging** | Pointer to [**NetworksNetworkIdGroupPoliciesVlanTagging**](NetworksNetworkIdGroupPoliciesVlanTagging.md) |  | [optional] 
+**BonjourForwarding** | Pointer to [**NetworksNetworkIdGroupPoliciesBonjourForwarding**](NetworksNetworkIdGroupPoliciesBonjourForwarding.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject129
 
-`func NewInlineObject129() *InlineObject129`
+`func NewInlineObject129(name string, ) *InlineObject129`
 
 NewInlineObject129 instantiates a new InlineObject129 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +32,200 @@ NewInlineObject129WithDefaults instantiates a new InlineObject129 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetName
 
-`func (o *InlineObject129) GetLocalStatusPageEnabled() bool`
+`func (o *InlineObject129) GetName() string`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetNameOk
 
-`func (o *InlineObject129) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineObject129) GetNameOk() (*string, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetName
 
-`func (o *InlineObject129) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineObject129) SetName(v string)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasLocalStatusPageEnabled
 
-`func (o *InlineObject129) HasLocalStatusPageEnabled() bool`
+### GetScheduling
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+`func (o *InlineObject129) GetScheduling() NetworksNetworkIdGroupPoliciesScheduling`
 
-### GetRemoteStatusPageEnabled
+GetScheduling returns the Scheduling field if non-nil, zero value otherwise.
 
-`func (o *InlineObject129) GetRemoteStatusPageEnabled() bool`
+### GetSchedulingOk
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject129) GetSchedulingOk() (*NetworksNetworkIdGroupPoliciesScheduling, bool)`
 
-### GetRemoteStatusPageEnabledOk
-
-`func (o *InlineObject129) GetRemoteStatusPageEnabledOk() (*bool, bool)`
-
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetSchedulingOk returns a tuple with the Scheduling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetScheduling
 
-`func (o *InlineObject129) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineObject129) SetScheduling(v NetworksNetworkIdGroupPoliciesScheduling)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetScheduling sets Scheduling field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasScheduling
 
-`func (o *InlineObject129) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineObject129) HasScheduling() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
+HasScheduling returns a boolean if a field has been set.
 
-### GetLocalStatusPage
+### GetBandwidth
 
-`func (o *InlineObject129) GetLocalStatusPage() NetworksNetworkIdSettingsLocalStatusPage`
+`func (o *InlineObject129) GetBandwidth() NetworksNetworkIdGroupPoliciesBandwidth`
 
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
+GetBandwidth returns the Bandwidth field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageOk
+### GetBandwidthOk
 
-`func (o *InlineObject129) GetLocalStatusPageOk() (*NetworksNetworkIdSettingsLocalStatusPage, bool)`
+`func (o *InlineObject129) GetBandwidthOk() (*NetworksNetworkIdGroupPoliciesBandwidth, bool)`
 
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
+GetBandwidthOk returns a tuple with the Bandwidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPage
+### SetBandwidth
 
-`func (o *InlineObject129) SetLocalStatusPage(v NetworksNetworkIdSettingsLocalStatusPage)`
+`func (o *InlineObject129) SetBandwidth(v NetworksNetworkIdGroupPoliciesBandwidth)`
 
-SetLocalStatusPage sets LocalStatusPage field to given value.
+SetBandwidth sets Bandwidth field to given value.
 
-### HasLocalStatusPage
+### HasBandwidth
 
-`func (o *InlineObject129) HasLocalStatusPage() bool`
+`func (o *InlineObject129) HasBandwidth() bool`
 
-HasLocalStatusPage returns a boolean if a field has been set.
+HasBandwidth returns a boolean if a field has been set.
 
-### GetSecurePort
+### GetFirewallAndTrafficShaping
 
-`func (o *InlineObject129) GetSecurePort() InlineResponse200150SecurePort`
+`func (o *InlineObject129) GetFirewallAndTrafficShaping() NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping`
 
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
+GetFirewallAndTrafficShaping returns the FirewallAndTrafficShaping field if non-nil, zero value otherwise.
 
-### GetSecurePortOk
+### GetFirewallAndTrafficShapingOk
 
-`func (o *InlineObject129) GetSecurePortOk() (*InlineResponse200150SecurePort, bool)`
+`func (o *InlineObject129) GetFirewallAndTrafficShapingOk() (*NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping, bool)`
 
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
+GetFirewallAndTrafficShapingOk returns a tuple with the FirewallAndTrafficShaping field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurePort
+### SetFirewallAndTrafficShaping
 
-`func (o *InlineObject129) SetSecurePort(v InlineResponse200150SecurePort)`
+`func (o *InlineObject129) SetFirewallAndTrafficShaping(v NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping)`
 
-SetSecurePort sets SecurePort field to given value.
+SetFirewallAndTrafficShaping sets FirewallAndTrafficShaping field to given value.
 
-### HasSecurePort
+### HasFirewallAndTrafficShaping
 
-`func (o *InlineObject129) HasSecurePort() bool`
+`func (o *InlineObject129) HasFirewallAndTrafficShaping() bool`
 
-HasSecurePort returns a boolean if a field has been set.
+HasFirewallAndTrafficShaping returns a boolean if a field has been set.
 
-### GetNamedVlans
+### GetContentFiltering
 
-`func (o *InlineObject129) GetNamedVlans() InlineResponse200150NamedVlans`
+`func (o *InlineObject129) GetContentFiltering() NetworksNetworkIdGroupPoliciesContentFiltering`
 
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+GetContentFiltering returns the ContentFiltering field if non-nil, zero value otherwise.
 
-### GetNamedVlansOk
+### GetContentFilteringOk
 
-`func (o *InlineObject129) GetNamedVlansOk() (*InlineResponse200150NamedVlans, bool)`
+`func (o *InlineObject129) GetContentFilteringOk() (*NetworksNetworkIdGroupPoliciesContentFiltering, bool)`
 
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+GetContentFilteringOk returns a tuple with the ContentFiltering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNamedVlans
+### SetContentFiltering
 
-`func (o *InlineObject129) SetNamedVlans(v InlineResponse200150NamedVlans)`
+`func (o *InlineObject129) SetContentFiltering(v NetworksNetworkIdGroupPoliciesContentFiltering)`
 
-SetNamedVlans sets NamedVlans field to given value.
+SetContentFiltering sets ContentFiltering field to given value.
 
-### HasNamedVlans
+### HasContentFiltering
 
-`func (o *InlineObject129) HasNamedVlans() bool`
+`func (o *InlineObject129) HasContentFiltering() bool`
 
-HasNamedVlans returns a boolean if a field has been set.
+HasContentFiltering returns a boolean if a field has been set.
+
+### GetSplashAuthSettings
+
+`func (o *InlineObject129) GetSplashAuthSettings() string`
+
+GetSplashAuthSettings returns the SplashAuthSettings field if non-nil, zero value otherwise.
+
+### GetSplashAuthSettingsOk
+
+`func (o *InlineObject129) GetSplashAuthSettingsOk() (*string, bool)`
+
+GetSplashAuthSettingsOk returns a tuple with the SplashAuthSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashAuthSettings
+
+`func (o *InlineObject129) SetSplashAuthSettings(v string)`
+
+SetSplashAuthSettings sets SplashAuthSettings field to given value.
+
+### HasSplashAuthSettings
+
+`func (o *InlineObject129) HasSplashAuthSettings() bool`
+
+HasSplashAuthSettings returns a boolean if a field has been set.
+
+### GetVlanTagging
+
+`func (o *InlineObject129) GetVlanTagging() NetworksNetworkIdGroupPoliciesVlanTagging`
+
+GetVlanTagging returns the VlanTagging field if non-nil, zero value otherwise.
+
+### GetVlanTaggingOk
+
+`func (o *InlineObject129) GetVlanTaggingOk() (*NetworksNetworkIdGroupPoliciesVlanTagging, bool)`
+
+GetVlanTaggingOk returns a tuple with the VlanTagging field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanTagging
+
+`func (o *InlineObject129) SetVlanTagging(v NetworksNetworkIdGroupPoliciesVlanTagging)`
+
+SetVlanTagging sets VlanTagging field to given value.
+
+### HasVlanTagging
+
+`func (o *InlineObject129) HasVlanTagging() bool`
+
+HasVlanTagging returns a boolean if a field has been set.
+
+### GetBonjourForwarding
+
+`func (o *InlineObject129) GetBonjourForwarding() NetworksNetworkIdGroupPoliciesBonjourForwarding`
+
+GetBonjourForwarding returns the BonjourForwarding field if non-nil, zero value otherwise.
+
+### GetBonjourForwardingOk
+
+`func (o *InlineObject129) GetBonjourForwardingOk() (*NetworksNetworkIdGroupPoliciesBonjourForwarding, bool)`
+
+GetBonjourForwardingOk returns a tuple with the BonjourForwarding field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBonjourForwarding
+
+`func (o *InlineObject129) SetBonjourForwarding(v NetworksNetworkIdGroupPoliciesBonjourForwarding)`
+
+SetBonjourForwarding sets BonjourForwarding field to given value.
+
+### HasBonjourForwarding
+
+`func (o *InlineObject129) HasBonjourForwarding() bool`
+
+HasBonjourForwarding returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

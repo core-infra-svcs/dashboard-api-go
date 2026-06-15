@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the profile to be added. This must be unique. | 
-**Description** | **string** | Description of the profile to be added. | 
-**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
+**Name** | **string** | The name of the new role. Must be unique. This parameter is required. | 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices1.md) | Device tag on which this specified permission is applied. | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1.md) | Network tag on which this specified permission is applied. | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide1.md) | Permissions to be applied org wide. | [optional] 
 
 ## Methods
 
 ### NewInlineObject265
 
-`func NewInlineObject265(name string, description string, rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject265`
+`func NewInlineObject265(name string, ) *InlineObject265`
 
 NewInlineObject265 instantiates a new InlineObject265 object
 This constructor will assign default values to properties that have it defined,
@@ -47,45 +48,80 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetDescription
+### GetAppliedOnDevices
 
-`func (o *InlineObject265) GetDescription() string`
+`func (o *InlineObject265) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetAppliedOnDevicesOk
 
-`func (o *InlineObject265) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject265) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetAppliedOnDevices
 
-`func (o *InlineObject265) SetDescription(v string)`
+`func (o *InlineObject265) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1)`
 
-SetDescription sets Description field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
+### HasAppliedOnDevices
 
-### GetRules
+`func (o *InlineObject265) HasAppliedOnDevices() bool`
 
-`func (o *InlineObject265) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+HasAppliedOnDevices returns a boolean if a field has been set.
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+### GetAppliedOnNetworks
 
-### GetRulesOk
+`func (o *InlineObject265) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1`
 
-`func (o *InlineObject265) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+### GetAppliedOnNetworksOk
+
+`func (o *InlineObject265) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1, bool)`
+
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetAppliedOnNetworks
 
-`func (o *InlineObject265) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+`func (o *InlineObject265) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1)`
 
-SetRules sets Rules field to given value.
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
 
+### HasAppliedOnNetworks
+
+`func (o *InlineObject265) HasAppliedOnNetworks() bool`
+
+HasAppliedOnNetworks returns a boolean if a field has been set.
+
+### GetAppliedOrgWide
+
+`func (o *InlineObject265) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1`
+
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+
+### GetAppliedOrgWideOk
+
+`func (o *InlineObject265) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOrgWide
+
+`func (o *InlineObject265) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1)`
+
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
+
+### HasAppliedOrgWide
+
+`func (o *InlineObject265) HasAppliedOrgWide() bool`
+
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraAnalyticsZoneHistory
 
-> []InlineResponse20017 GetDeviceCameraAnalyticsZoneHistory(ctx, serial, zoneId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).ObjectType(objectType).Execute()
+> []InlineResponse20018 GetDeviceCameraAnalyticsZoneHistory(ctx, serial, zoneId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).ObjectType(objectType).Execute()
 
 Return historical records for analytic zones
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZonesApi.GetDeviceCameraAnalyticsZoneHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsZoneHistory`: []InlineResponse20017
+    // response from `GetDeviceCameraAnalyticsZoneHistory`: []InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `ZonesApi.GetDeviceCameraAnalyticsZoneHistory`: %v\n", resp)
 }
 ```
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20017**](InlineResponse20017.md)
+[**[]InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraAnalyticsZones
 
-> []InlineResponse20016 GetDeviceCameraAnalyticsZones(ctx, serial).Execute()
+> []InlineResponse20017 GetDeviceCameraAnalyticsZones(ctx, serial).Execute()
 
 Returns all configured analytic zones for this camera
 
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZonesApi.GetDeviceCameraAnalyticsZones``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsZones`: []InlineResponse20016
+    // response from `GetDeviceCameraAnalyticsZones`: []InlineResponse20017
     fmt.Fprintf(os.Stdout, "Response from `ZonesApi.GetDeviceCameraAnalyticsZones`: %v\n", resp)
 }
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20016**](InlineResponse20016.md)
+[**[]InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 

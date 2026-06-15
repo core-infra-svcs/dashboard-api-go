@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
+**BusyHour** | Pointer to [**NetworksNetworkIdWirelessRadioRrmBusyHour**](NetworksNetworkIdWirelessRadioRrmBusyHour.md) |  | [optional] 
+**Channel** | Pointer to [**NetworksNetworkIdWirelessRadioRrmChannel**](NetworksNetworkIdWirelessRadioRrmChannel.md) |  | [optional] 
+**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
+**Ai** | Pointer to [**NetworksNetworkIdWirelessRadioRrmAi**](NetworksNetworkIdWirelessRadioRrmAi.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject209
 
-`func NewInlineObject209(name string, groupPolicyId string, ) *InlineObject209`
+`func NewInlineObject209() *InlineObject209`
 
 NewInlineObject209 instantiates a new InlineObject209 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +28,105 @@ NewInlineObject209WithDefaults instantiates a new InlineObject209 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetBusyHour
 
-`func (o *InlineObject209) GetName() string`
+`func (o *InlineObject209) GetBusyHour() NetworksNetworkIdWirelessRadioRrmBusyHour`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBusyHourOk
 
-`func (o *InlineObject209) GetNameOk() (*string, bool)`
+`func (o *InlineObject209) GetBusyHourOk() (*NetworksNetworkIdWirelessRadioRrmBusyHour, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBusyHour
 
-`func (o *InlineObject209) SetName(v string)`
+`func (o *InlineObject209) SetBusyHour(v NetworksNetworkIdWirelessRadioRrmBusyHour)`
 
-SetName sets Name field to given value.
+SetBusyHour sets BusyHour field to given value.
 
+### HasBusyHour
 
-### GetPassphrase
+`func (o *InlineObject209) HasBusyHour() bool`
 
-`func (o *InlineObject209) GetPassphrase() string`
+HasBusyHour returns a boolean if a field has been set.
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+### GetChannel
 
-### GetPassphraseOk
+`func (o *InlineObject209) GetChannel() NetworksNetworkIdWirelessRadioRrmChannel`
 
-`func (o *InlineObject209) GetPassphraseOk() (*string, bool)`
+GetChannel returns the Channel field if non-nil, zero value otherwise.
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+### GetChannelOk
+
+`func (o *InlineObject209) GetChannelOk() (*NetworksNetworkIdWirelessRadioRrmChannel, bool)`
+
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetChannel
 
-`func (o *InlineObject209) SetPassphrase(v string)`
+`func (o *InlineObject209) SetChannel(v NetworksNetworkIdWirelessRadioRrmChannel)`
 
-SetPassphrase sets Passphrase field to given value.
+SetChannel sets Channel field to given value.
 
-### HasPassphrase
+### HasChannel
 
-`func (o *InlineObject209) HasPassphrase() bool`
+`func (o *InlineObject209) HasChannel() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasChannel returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetFra
 
-`func (o *InlineObject209) GetGroupPolicyId() string`
+`func (o *InlineObject209) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetFra returns the Fra field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetFraOk
 
-`func (o *InlineObject209) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject209) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetFra
 
-`func (o *InlineObject209) SetGroupPolicyId(v string)`
+`func (o *InlineObject209) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetFra sets Fra field to given value.
 
+### HasFra
 
-### GetExpiresAt
+`func (o *InlineObject209) HasFra() bool`
 
-`func (o *InlineObject209) GetExpiresAt() time.Time`
+HasFra returns a boolean if a field has been set.
 
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+### GetAi
 
-### GetExpiresAtOk
+`func (o *InlineObject209) GetAi() NetworksNetworkIdWirelessRadioRrmAi`
 
-`func (o *InlineObject209) GetExpiresAtOk() (*time.Time, bool)`
+GetAi returns the Ai field if non-nil, zero value otherwise.
 
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+### GetAiOk
+
+`func (o *InlineObject209) GetAiOk() (*NetworksNetworkIdWirelessRadioRrmAi, bool)`
+
+GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExpiresAt
+### SetAi
 
-`func (o *InlineObject209) SetExpiresAt(v time.Time)`
+`func (o *InlineObject209) SetAi(v NetworksNetworkIdWirelessRadioRrmAi)`
 
-SetExpiresAt sets ExpiresAt field to given value.
+SetAi sets Ai field to given value.
 
-### HasExpiresAt
+### HasAi
 
-`func (o *InlineObject209) HasExpiresAt() bool`
+`func (o *InlineObject209) HasAi() bool`
 
-HasExpiresAt returns a boolean if a field has been set.
+HasAi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

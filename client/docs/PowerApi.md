@@ -4,14 +4,161 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CreateDeviceLiveToolsPowerUsage**](PowerApi.md#CreateDeviceLiveToolsPowerUsage) | **Post** /devices/{serial}/liveTools/power/usage | Enqueues a live tool job that retrieves details about a device&#39;s overall power usage
+[**GetDeviceLiveToolsPowerUsage**](PowerApi.md#GetDeviceLiveToolsPowerUsage) | **Get** /devices/{serial}/liveTools/power/usage/{jobId} | Retrieve the status and results of a previously created live tool job fetching details about a device&#39;s overall power usage.
 [**GetOrganizationSummarySwitchPowerHistory**](PowerApi.md#GetOrganizationSummarySwitchPowerHistory) | **Get** /organizations/{organizationId}/summary/switch/power/history | Returns the total PoE power draw for all switch ports in the organization over the requested timespan (by default the last 24 hours)
 [**GetOrganizationWirelessDevicesPowerModeHistory**](PowerApi.md#GetOrganizationWirelessDevicesPowerModeHistory) | **Get** /organizations/{organizationId}/wireless/devices/power/mode/history | Return a record of power mode changes for wireless devices in the organization
 
 
 
+## CreateDeviceLiveToolsPowerUsage
+
+> InlineResponse20110 CreateDeviceLiveToolsPowerUsage(ctx, serial).CreateDeviceLiveToolsPowerUsage(createDeviceLiveToolsPowerUsage).Execute()
+
+Enqueues a live tool job that retrieves details about a device's overall power usage
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceLiveToolsPowerUsage := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PowerApi.CreateDeviceLiveToolsPowerUsage(context.Background(), serial).CreateDeviceLiveToolsPowerUsage(createDeviceLiveToolsPowerUsage).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PowerApi.CreateDeviceLiveToolsPowerUsage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceLiveToolsPowerUsage`: InlineResponse20110
+    fmt.Fprintf(os.Stdout, "Response from `PowerApi.CreateDeviceLiveToolsPowerUsage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPowerUsageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceLiveToolsPowerUsage** | [**InlineObject28**](InlineObject28.md) |  | 
+
+### Return type
+
+[**InlineResponse20110**](InlineResponse20110.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetDeviceLiveToolsPowerUsage
+
+> InlineResponse20041 GetDeviceLiveToolsPowerUsage(ctx, serial, jobId).Execute()
+
+Retrieve the status and results of a previously created live tool job fetching details about a device's overall power usage.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    jobId := "jobId_example" // string | Job ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.PowerApi.GetDeviceLiveToolsPowerUsage(context.Background(), serial, jobId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `PowerApi.GetDeviceLiveToolsPowerUsage``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDeviceLiveToolsPowerUsage`: InlineResponse20041
+    fmt.Fprintf(os.Stdout, "Response from `PowerApi.GetDeviceLiveToolsPowerUsage`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+**jobId** | **string** | Job ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDeviceLiveToolsPowerUsageRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20041**](InlineResponse20041.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetOrganizationSummarySwitchPowerHistory
 
-> []InlineResponse200406 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200418 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the total PoE power draw for all switch ports in the organization over the requested timespan (by default the last 24 hours)
 
@@ -42,7 +189,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PowerApi.GetOrganizationSummarySwitchPowerHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200406
+    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200418
     fmt.Fprintf(os.Stdout, "Response from `PowerApi.GetOrganizationSummarySwitchPowerHistory`: %v\n", resp)
 }
 ```
@@ -69,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200406**](InlineResponse200406.md)
+[**[]InlineResponse200418**](InlineResponse200418.md)
 
 ### Authorization
 
@@ -87,7 +234,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPowerModeHistory
 
-> InlineResponse200439 GetOrganizationWirelessDevicesPowerModeHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+> InlineResponse200451 GetOrganizationWirelessDevicesPowerModeHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
 
 Return a record of power mode changes for wireless devices in the organization
 
@@ -123,7 +270,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PowerApi.GetOrganizationWirelessDevicesPowerModeHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPowerModeHistory`: InlineResponse200439
+    // response from `GetOrganizationWirelessDevicesPowerModeHistory`: InlineResponse200451
     fmt.Fprintf(os.Stdout, "Response from `PowerApi.GetOrganizationWirelessDevicesPowerModeHistory`: %v\n", resp)
 }
 ```
@@ -155,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200439**](InlineResponse200439.md)
+[**InlineResponse200451**](InlineResponse200451.md)
 
 ### Authorization
 

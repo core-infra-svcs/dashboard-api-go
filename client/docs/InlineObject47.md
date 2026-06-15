@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable warm spare | 
-**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
-**Designations** | Pointer to [**[]NetworksNetworkIdApplianceDevicesRedundancyDesignations**](NetworksNetworkIdApplianceDevicesRedundancyDesignations.md) | Ordered warm spare roles | [optional] 
-**Uplink** | Pointer to [**NetworksNetworkIdApplianceDevicesRedundancyUplink**](NetworksNetworkIdApplianceDevicesRedundancyUplink.md) |  | [optional] 
+**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
+**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject47
 
-`func NewInlineObject47(enabled bool, ) *InlineObject47`
+`func NewInlineObject47() *InlineObject47`
 
 NewInlineObject47 instantiates a new InlineObject47 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,90 @@ NewInlineObject47WithDefaults instantiates a new InlineObject47 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRfProfileId
 
-`func (o *InlineObject47) GetEnabled() bool`
+`func (o *InlineObject47) GetRfProfileId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRfProfileIdOk
 
-`func (o *InlineObject47) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject47) GetRfProfileIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRfProfileId
 
-`func (o *InlineObject47) SetEnabled(v bool)`
+`func (o *InlineObject47) SetRfProfileId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetRfProfileId sets RfProfileId field to given value.
 
+### HasRfProfileId
 
-### GetMode
+`func (o *InlineObject47) HasRfProfileId() bool`
 
-`func (o *InlineObject47) GetMode() string`
+HasRfProfileId returns a boolean if a field has been set.
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+### SetRfProfileIdNil
 
-### GetModeOk
+`func (o *InlineObject47) SetRfProfileIdNil(b bool)`
 
-`func (o *InlineObject47) GetModeOk() (*string, bool)`
+ SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+### UnsetRfProfileId
+`func (o *InlineObject47) UnsetRfProfileId()`
+
+UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
+### GetTwoFourGhzSettings
+
+`func (o *InlineObject47) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
+
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+
+### GetTwoFourGhzSettingsOk
+
+`func (o *InlineObject47) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
+
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetTwoFourGhzSettings
 
-`func (o *InlineObject47) SetMode(v string)`
+`func (o *InlineObject47) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
 
-SetMode sets Mode field to given value.
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
-### HasMode
+### HasTwoFourGhzSettings
 
-`func (o *InlineObject47) HasMode() bool`
+`func (o *InlineObject47) HasTwoFourGhzSettings() bool`
 
-HasMode returns a boolean if a field has been set.
+HasTwoFourGhzSettings returns a boolean if a field has been set.
 
-### GetDesignations
+### GetFiveGhzSettings
 
-`func (o *InlineObject47) GetDesignations() []NetworksNetworkIdApplianceDevicesRedundancyDesignations`
+`func (o *InlineObject47) GetFiveGhzSettings() DevicesSerialApplianceRadioSettingsFiveGhzSettings`
 
-GetDesignations returns the Designations field if non-nil, zero value otherwise.
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
-### GetDesignationsOk
+### GetFiveGhzSettingsOk
 
-`func (o *InlineObject47) GetDesignationsOk() (*[]NetworksNetworkIdApplianceDevicesRedundancyDesignations, bool)`
+`func (o *InlineObject47) GetFiveGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsFiveGhzSettings, bool)`
 
-GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDesignations
+### SetFiveGhzSettings
 
-`func (o *InlineObject47) SetDesignations(v []NetworksNetworkIdApplianceDevicesRedundancyDesignations)`
+`func (o *InlineObject47) SetFiveGhzSettings(v DevicesSerialApplianceRadioSettingsFiveGhzSettings)`
 
-SetDesignations sets Designations field to given value.
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
-### HasDesignations
+### HasFiveGhzSettings
 
-`func (o *InlineObject47) HasDesignations() bool`
+`func (o *InlineObject47) HasFiveGhzSettings() bool`
 
-HasDesignations returns a boolean if a field has been set.
-
-### GetUplink
-
-`func (o *InlineObject47) GetUplink() NetworksNetworkIdApplianceDevicesRedundancyUplink`
-
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
-
-### GetUplinkOk
-
-`func (o *InlineObject47) GetUplinkOk() (*NetworksNetworkIdApplianceDevicesRedundancyUplink, bool)`
-
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplink
-
-`func (o *InlineObject47) SetUplink(v NetworksNetworkIdApplianceDevicesRedundancyUplink)`
-
-SetUplink sets Uplink field to given value.
-
-### HasUplink
-
-`func (o *InlineObject47) HasUplink() bool`
-
-HasUplink returns a boolean if a field has been set.
+HasFiveGhzSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

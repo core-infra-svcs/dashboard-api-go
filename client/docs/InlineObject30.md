@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Livestream** | Pointer to [**DevicesSerialSensorRelationshipsLivestream**](DevicesSerialSensorRelationshipsLivestream.md) |  | [optional] 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject30WithDefaults instantiates a new InlineObject30 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLivestream
+### GetCallback
 
-`func (o *InlineObject30) GetLivestream() DevicesSerialSensorRelationshipsLivestream`
+`func (o *InlineObject30) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-GetLivestream returns the Livestream field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetLivestreamOk
+### GetCallbackOk
 
-`func (o *InlineObject30) GetLivestreamOk() (*DevicesSerialSensorRelationshipsLivestream, bool)`
+`func (o *InlineObject30) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-GetLivestreamOk returns a tuple with the Livestream field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLivestream
+### SetCallback
 
-`func (o *InlineObject30) SetLivestream(v DevicesSerialSensorRelationshipsLivestream)`
+`func (o *InlineObject30) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetLivestream sets Livestream field to given value.
+SetCallback sets Callback field to given value.
 
-### HasLivestream
+### HasCallback
 
-`func (o *InlineObject30) HasLivestream() bool`
+`func (o *InlineObject30) HasCallback() bool`
 
-HasLivestream returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

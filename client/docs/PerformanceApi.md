@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceAppliancePerformance
 
-> InlineResponse2008 GetDeviceAppliancePerformance(ctx, serial).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse2009 GetDeviceAppliancePerformance(ctx, serial).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the performance score for a single MX
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PerformanceApi.GetDeviceAppliancePerformance``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceAppliancePerformance`: InlineResponse2008
+    // response from `GetDeviceAppliancePerformance`: InlineResponse2009
     fmt.Fprintf(os.Stdout, "Response from `PerformanceApi.GetDeviceAppliancePerformance`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 

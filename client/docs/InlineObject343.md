@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
+**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
+**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
 
 ## Methods
 
 ### NewInlineObject343
 
-`func NewInlineObject343() *InlineObject343`
+`func NewInlineObject343(sourceSerial string, targetSerials []string, ) *InlineObject343`
 
 NewInlineObject343 instantiates a new InlineObject343 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineObject343WithDefaults instantiates a new InlineObject343 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDoorLockIds
+### GetSourceSerial
 
-`func (o *InlineObject343) GetDoorLockIds() []string`
+`func (o *InlineObject343) GetSourceSerial() string`
 
-GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetDoorLockIdsOk
+### GetSourceSerialOk
 
-`func (o *InlineObject343) GetDoorLockIdsOk() (*[]string, bool)`
+`func (o *InlineObject343) GetSourceSerialOk() (*string, bool)`
 
-GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLockIds
+### SetSourceSerial
 
-`func (o *InlineObject343) SetDoorLockIds(v []string)`
+`func (o *InlineObject343) SetSourceSerial(v string)`
 
-SetDoorLockIds sets DoorLockIds field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
-### HasDoorLockIds
 
-`func (o *InlineObject343) HasDoorLockIds() bool`
+### GetTargetSerials
 
-HasDoorLockIds returns a boolean if a field has been set.
+`func (o *InlineObject343) GetTargetSerials() []string`
+
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+
+### GetTargetSerialsOk
+
+`func (o *InlineObject343) GetTargetSerialsOk() (*[]string, bool)`
+
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTargetSerials
+
+`func (o *InlineObject343) SetTargetSerials(v []string)`
+
+SetTargetSerials sets TargetSerials field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
-**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
-**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
-**Areas** | Pointer to [**[]NetworksNetworkIdSwitchRoutingOspfAreas**](NetworksNetworkIdSwitchRoutingOspfAreas.md) | OSPF areas | [optional] 
-**V3** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfV3**](NetworksNetworkIdSwitchRoutingOspfV3.md) |  | [optional] 
-**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
-**Md5AuthenticationKey** | Pointer to [**InlineResponse200194Md5AuthenticationKey**](InlineResponse200194Md5AuthenticationKey.md) |  | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1.md) | Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineObject163WithDefaults instantiates a new InlineObject163 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetSwitchPorts
 
-`func (o *InlineObject163) GetEnabled() bool`
+`func (o *InlineObject163) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSwitchPortsOk
 
-`func (o *InlineObject163) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject163) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSwitchPorts
 
-`func (o *InlineObject163) SetEnabled(v bool)`
+`func (o *InlineObject163) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts1)`
 
-SetEnabled sets Enabled field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasEnabled
+### HasSwitchPorts
 
-`func (o *InlineObject163) HasEnabled() bool`
+`func (o *InlineObject163) HasSwitchPorts() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
-### GetHelloTimerInSeconds
+### GetSwitchProfilePorts
 
-`func (o *InlineObject163) GetHelloTimerInSeconds() int32`
+`func (o *InlineObject163) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
 
-GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
+GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
 
-### GetHelloTimerInSecondsOk
+### GetSwitchProfilePortsOk
 
-`func (o *InlineObject163) GetHelloTimerInSecondsOk() (*int32, bool)`
+`func (o *InlineObject163) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
 
-GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
+GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelloTimerInSeconds
+### SetSwitchProfilePorts
 
-`func (o *InlineObject163) SetHelloTimerInSeconds(v int32)`
+`func (o *InlineObject163) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
 
-SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
+SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
 
-### HasHelloTimerInSeconds
+### HasSwitchProfilePorts
 
-`func (o *InlineObject163) HasHelloTimerInSeconds() bool`
+`func (o *InlineObject163) HasSwitchProfilePorts() bool`
 
-HasHelloTimerInSeconds returns a boolean if a field has been set.
-
-### GetDeadTimerInSeconds
-
-`func (o *InlineObject163) GetDeadTimerInSeconds() int32`
-
-GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
-
-### GetDeadTimerInSecondsOk
-
-`func (o *InlineObject163) GetDeadTimerInSecondsOk() (*int32, bool)`
-
-GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeadTimerInSeconds
-
-`func (o *InlineObject163) SetDeadTimerInSeconds(v int32)`
-
-SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
-
-### HasDeadTimerInSeconds
-
-`func (o *InlineObject163) HasDeadTimerInSeconds() bool`
-
-HasDeadTimerInSeconds returns a boolean if a field has been set.
-
-### GetAreas
-
-`func (o *InlineObject163) GetAreas() []NetworksNetworkIdSwitchRoutingOspfAreas`
-
-GetAreas returns the Areas field if non-nil, zero value otherwise.
-
-### GetAreasOk
-
-`func (o *InlineObject163) GetAreasOk() (*[]NetworksNetworkIdSwitchRoutingOspfAreas, bool)`
-
-GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAreas
-
-`func (o *InlineObject163) SetAreas(v []NetworksNetworkIdSwitchRoutingOspfAreas)`
-
-SetAreas sets Areas field to given value.
-
-### HasAreas
-
-`func (o *InlineObject163) HasAreas() bool`
-
-HasAreas returns a boolean if a field has been set.
-
-### GetV3
-
-`func (o *InlineObject163) GetV3() NetworksNetworkIdSwitchRoutingOspfV3`
-
-GetV3 returns the V3 field if non-nil, zero value otherwise.
-
-### GetV3Ok
-
-`func (o *InlineObject163) GetV3Ok() (*NetworksNetworkIdSwitchRoutingOspfV3, bool)`
-
-GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3
-
-`func (o *InlineObject163) SetV3(v NetworksNetworkIdSwitchRoutingOspfV3)`
-
-SetV3 sets V3 field to given value.
-
-### HasV3
-
-`func (o *InlineObject163) HasV3() bool`
-
-HasV3 returns a boolean if a field has been set.
-
-### GetMd5AuthenticationEnabled
-
-`func (o *InlineObject163) GetMd5AuthenticationEnabled() bool`
-
-GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
-
-### GetMd5AuthenticationEnabledOk
-
-`func (o *InlineObject163) GetMd5AuthenticationEnabledOk() (*bool, bool)`
-
-GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMd5AuthenticationEnabled
-
-`func (o *InlineObject163) SetMd5AuthenticationEnabled(v bool)`
-
-SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
-
-### HasMd5AuthenticationEnabled
-
-`func (o *InlineObject163) HasMd5AuthenticationEnabled() bool`
-
-HasMd5AuthenticationEnabled returns a boolean if a field has been set.
-
-### GetMd5AuthenticationKey
-
-`func (o *InlineObject163) GetMd5AuthenticationKey() InlineResponse200194Md5AuthenticationKey`
-
-GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
-
-### GetMd5AuthenticationKeyOk
-
-`func (o *InlineObject163) GetMd5AuthenticationKeyOk() (*InlineResponse200194Md5AuthenticationKey, bool)`
-
-GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMd5AuthenticationKey
-
-`func (o *InlineObject163) SetMd5AuthenticationKey(v InlineResponse200194Md5AuthenticationKey)`
-
-SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
-
-### HasMd5AuthenticationKey
-
-`func (o *InlineObject163) HasMd5AuthenticationKey() bool`
-
-HasMd5AuthenticationKey returns a boolean if a field has been set.
+HasSwitchProfilePorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

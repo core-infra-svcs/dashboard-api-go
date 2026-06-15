@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. Possible values are &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. Possible values are: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
+**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
+**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
+**RouterId** | Pointer to **NullableString** | The router ID of the appliance | [optional] 
+**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
 
 ## Methods
 
 ### NewInlineObject95
 
-`func NewInlineObject95() *InlineObject95`
+`func NewInlineObject95(enabled bool, ) *InlineObject95`
 
 NewInlineObject95 instantiates a new InlineObject95 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +29,135 @@ NewInlineObject95WithDefaults instantiates a new InlineObject95 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetEnabled
 
-`func (o *InlineObject95) GetDhcpLeaseTime() string`
+`func (o *InlineObject95) GetEnabled() bool`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetEnabledOk
 
-`func (o *InlineObject95) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineObject95) GetEnabledOk() (*bool, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetEnabled
 
-`func (o *InlineObject95) SetDhcpLeaseTime(v string)`
+`func (o *InlineObject95) SetEnabled(v bool)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasDhcpLeaseTime
 
-`func (o *InlineObject95) HasDhcpLeaseTime() bool`
+### GetAsNumber
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+`func (o *InlineObject95) GetAsNumber() int32`
 
-### GetDnsNameservers
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-`func (o *InlineObject95) GetDnsNameservers() string`
+### GetAsNumberOk
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+`func (o *InlineObject95) GetAsNumberOk() (*int32, bool)`
 
-### GetDnsNameserversOk
-
-`func (o *InlineObject95) GetDnsNameserversOk() (*string, bool)`
-
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetAsNumber
 
-`func (o *InlineObject95) SetDnsNameservers(v string)`
+`func (o *InlineObject95) SetAsNumber(v int32)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasDnsNameservers
+### HasAsNumber
 
-`func (o *InlineObject95) HasDnsNameservers() bool`
+`func (o *InlineObject95) HasAsNumber() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetDnsCustomNameservers
+### GetIbgpHoldTimer
 
-`func (o *InlineObject95) GetDnsCustomNameservers() []string`
+`func (o *InlineObject95) GetIbgpHoldTimer() int32`
 
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetDnsCustomNameserversOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineObject95) GetDnsCustomNameserversOk() (*[]string, bool)`
+`func (o *InlineObject95) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsCustomNameservers
+### SetIbgpHoldTimer
 
-`func (o *InlineObject95) SetDnsCustomNameservers(v []string)`
+`func (o *InlineObject95) SetIbgpHoldTimer(v int32)`
 
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasDnsCustomNameservers
+### HasIbgpHoldTimer
 
-`func (o *InlineObject95) HasDnsCustomNameservers() bool`
+`func (o *InlineObject95) HasIbgpHoldTimer() bool`
 
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
+
+### GetRouterId
+
+`func (o *InlineObject95) GetRouterId() string`
+
+GetRouterId returns the RouterId field if non-nil, zero value otherwise.
+
+### GetRouterIdOk
+
+`func (o *InlineObject95) GetRouterIdOk() (*string, bool)`
+
+GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRouterId
+
+`func (o *InlineObject95) SetRouterId(v string)`
+
+SetRouterId sets RouterId field to given value.
+
+### HasRouterId
+
+`func (o *InlineObject95) HasRouterId() bool`
+
+HasRouterId returns a boolean if a field has been set.
+
+### SetRouterIdNil
+
+`func (o *InlineObject95) SetRouterIdNil(b bool)`
+
+ SetRouterIdNil sets the value for RouterId to be an explicit nil
+
+### UnsetRouterId
+`func (o *InlineObject95) UnsetRouterId()`
+
+UnsetRouterId ensures that no value is present for RouterId, not even an explicit nil
+### GetNeighbors
+
+`func (o *InlineObject95) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
+
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+
+### GetNeighborsOk
+
+`func (o *InlineObject95) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
+
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNeighbors
+
+`func (o *InlineObject95) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
+
+SetNeighbors sets Neighbors field to given value.
+
+### HasNeighbors
+
+`func (o *InlineObject95) HasNeighbors() bool`
+
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

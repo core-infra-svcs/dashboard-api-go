@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Enable or disable the interface. | [optional] 
-**VlanTagging** | Pointer to [**InlineResponse20012InterfacesWan1VlanTagging**](InlineResponse20012InterfacesWan1VlanTagging.md) |  | [optional] 
-**Svis** | Pointer to [**InlineResponse20012InterfacesWan1Svis**](InlineResponse20012InterfacesWan1Svis.md) |  | [optional] 
+**VlanTagging** | Pointer to [**InlineResponse20013InterfacesWan1VlanTagging**](InlineResponse20013InterfacesWan1VlanTagging.md) |  | [optional] 
+**Svis** | Pointer to [**InlineResponse20013InterfacesWan1Svis**](InlineResponse20013InterfacesWan1Svis.md) |  | [optional] 
 **Pppoe** | Pointer to [**DevicesSerialApplianceUplinksSettingsInterfacesWan1Pppoe**](DevicesSerialApplianceUplinksSettingsInterfacesWan1Pppoe.md) |  | [optional] 
 
 ## Methods
@@ -55,20 +55,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetVlanTagging
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetVlanTagging() InlineResponse20012InterfacesWan1VlanTagging`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetVlanTagging() InlineResponse20013InterfacesWan1VlanTagging`
 
 GetVlanTagging returns the VlanTagging field if non-nil, zero value otherwise.
 
 ### GetVlanTaggingOk
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetVlanTaggingOk() (*InlineResponse20012InterfacesWan1VlanTagging, bool)`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetVlanTaggingOk() (*InlineResponse20013InterfacesWan1VlanTagging, bool)`
 
 GetVlanTaggingOk returns a tuple with the VlanTagging field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetVlanTagging
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) SetVlanTagging(v InlineResponse20012InterfacesWan1VlanTagging)`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) SetVlanTagging(v InlineResponse20013InterfacesWan1VlanTagging)`
 
 SetVlanTagging sets VlanTagging field to given value.
 
@@ -80,20 +80,20 @@ HasVlanTagging returns a boolean if a field has been set.
 
 ### GetSvis
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvis() InlineResponse20012InterfacesWan1Svis`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvis() InlineResponse20013InterfacesWan1Svis`
 
 GetSvis returns the Svis field if non-nil, zero value otherwise.
 
 ### GetSvisOk
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvisOk() (*InlineResponse20012InterfacesWan1Svis, bool)`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvisOk() (*InlineResponse20013InterfacesWan1Svis, bool)`
 
 GetSvisOk returns a tuple with the Svis field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSvis
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) SetSvis(v InlineResponse20012InterfacesWan1Svis)`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) SetSvis(v InlineResponse20013InterfacesWan1Svis)`
 
 SetSvis sets Svis field to given value.
 

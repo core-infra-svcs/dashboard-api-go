@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkInsightApplicationHealthByTime
 
-> []InlineResponse200137 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> []InlineResponse200145 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Get application health by time
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `HealthByTimeApi.GetNetworkInsightApplicationHealthByTime``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse200137
+    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `HealthByTimeApi.GetNetworkInsightApplicationHealthByTime`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200137**](InlineResponse200137.md)
+[**[]InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 

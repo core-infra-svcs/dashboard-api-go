@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be modified. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be modified. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be modified. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified. | [optional] 
-**Tags** | **[]string** | The tags to be added, deleted, or updated. | 
-**UpdateAction** | **string** | One of add, delete, or update. Only devices that have been modified will be returned. | 
+**Name** | Pointer to **string** | Name of the MQTT broker. | [optional] 
+**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
+**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
+**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity1**](NetworksNetworkIdMqttBrokersSecurity1.md) |  | [optional] 
+**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication1**](NetworksNetworkIdMqttBrokersAuthentication1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject134
 
-`func NewInlineObject134(tags []string, updateAction string, ) *InlineObject134`
+`func NewInlineObject134() *InlineObject134`
 
 NewInlineObject134 instantiates a new InlineObject134 object
 This constructor will assign default values to properties that have it defined,
@@ -30,145 +29,130 @@ NewInlineObject134WithDefaults instantiates a new InlineObject134 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetName
 
-`func (o *InlineObject134) GetWifiMacs() []string`
+`func (o *InlineObject134) GetName() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetNameOk
 
-`func (o *InlineObject134) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject134) GetNameOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetName
 
-`func (o *InlineObject134) SetWifiMacs(v []string)`
+`func (o *InlineObject134) SetName(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMacs
+### HasName
 
-`func (o *InlineObject134) HasWifiMacs() bool`
+`func (o *InlineObject134) HasName() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIds
+### GetHost
 
-`func (o *InlineObject134) GetIds() []string`
+`func (o *InlineObject134) GetHost() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetHostOk
 
-`func (o *InlineObject134) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject134) GetHostOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetHost
 
-`func (o *InlineObject134) SetIds(v []string)`
+`func (o *InlineObject134) SetHost(v string)`
 
-SetIds sets Ids field to given value.
+SetHost sets Host field to given value.
 
-### HasIds
+### HasHost
 
-`func (o *InlineObject134) HasIds() bool`
+`func (o *InlineObject134) HasHost() bool`
 
-HasIds returns a boolean if a field has been set.
+HasHost returns a boolean if a field has been set.
 
-### GetSerials
+### GetPort
 
-`func (o *InlineObject134) GetSerials() []string`
+`func (o *InlineObject134) GetPort() int32`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetPortOk
 
-`func (o *InlineObject134) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject134) GetPortOk() (*int32, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetPort
 
-`func (o *InlineObject134) SetSerials(v []string)`
+`func (o *InlineObject134) SetPort(v int32)`
 
-SetSerials sets Serials field to given value.
+SetPort sets Port field to given value.
 
-### HasSerials
+### HasPort
 
-`func (o *InlineObject134) HasSerials() bool`
+`func (o *InlineObject134) HasPort() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
-### GetScope
+### GetSecurity
 
-`func (o *InlineObject134) GetScope() []string`
+`func (o *InlineObject134) GetSecurity() NetworksNetworkIdMqttBrokersSecurity1`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetSecurity returns the Security field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetSecurityOk
 
-`func (o *InlineObject134) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject134) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity1, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetSecurity
 
-`func (o *InlineObject134) SetScope(v []string)`
+`func (o *InlineObject134) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity1)`
 
-SetScope sets Scope field to given value.
+SetSecurity sets Security field to given value.
 
-### HasScope
+### HasSecurity
 
-`func (o *InlineObject134) HasScope() bool`
+`func (o *InlineObject134) HasSecurity() bool`
 
-HasScope returns a boolean if a field has been set.
+HasSecurity returns a boolean if a field has been set.
 
-### GetTags
+### GetAuthentication
 
-`func (o *InlineObject134) GetTags() []string`
+`func (o *InlineObject134) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication1`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetAuthenticationOk
 
-`func (o *InlineObject134) GetTagsOk() (*[]string, bool)`
+`func (o *InlineObject134) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication1, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetAuthentication
 
-`func (o *InlineObject134) SetTags(v []string)`
+`func (o *InlineObject134) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication1)`
 
-SetTags sets Tags field to given value.
+SetAuthentication sets Authentication field to given value.
 
+### HasAuthentication
 
-### GetUpdateAction
+`func (o *InlineObject134) HasAuthentication() bool`
 
-`func (o *InlineObject134) GetUpdateAction() string`
-
-GetUpdateAction returns the UpdateAction field if non-nil, zero value otherwise.
-
-### GetUpdateActionOk
-
-`func (o *InlineObject134) GetUpdateActionOk() (*string, bool)`
-
-GetUpdateActionOk returns a tuple with the UpdateAction field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdateAction
-
-`func (o *InlineObject134) SetUpdateAction(v string)`
-
-SetUpdateAction sets UpdateAction field to given value.
-
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

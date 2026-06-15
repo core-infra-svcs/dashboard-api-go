@@ -4,18 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique identifier for the quality retention profile | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Name of the quality retention profile | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Whether restricted bandwidth mode is enabled | [optional] 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Whether motion-based retention is enabled | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether audio recording is enabled | [optional] 
-**CloudArchiveEnabled** | Pointer to **bool** | Whether cloud archive is enabled | [optional] 
-**MaxRetentionDays** | Pointer to **int32** | Maximum retention days | [optional] 
-**ScheduleId** | Pointer to **NullableString** | Schedule ID | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | Motion detector version | [optional] 
-**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention.md) |  | [optional] 
-**VideoSettings** | Pointer to [**map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) | Video quality and resolution settings for camera models | [optional] 
+**StartTime** | Pointer to **time.Time** | Start time of interval | [optional] 
+**EndTime** | Pointer to **time.Time** | End time of interval | [optional] 
+**ByInterface** | Pointer to [**[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface**](NetworksNetworkIdApplianceUplinksUsageHistoryByInterface.md) | List of usage data for each interface | [optional] 
 
 ## Methods
 
@@ -36,315 +27,80 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStartTime
 
-`func (o *InlineResponse200106) GetId() string`
+`func (o *InlineResponse200106) GetStartTime() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStartTime returns the StartTime field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStartTimeOk
 
-`func (o *InlineResponse200106) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200106) GetStartTimeOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStartTime
 
-`func (o *InlineResponse200106) SetId(v string)`
+`func (o *InlineResponse200106) SetStartTime(v time.Time)`
 
-SetId sets Id field to given value.
+SetStartTime sets StartTime field to given value.
 
-### HasId
+### HasStartTime
 
-`func (o *InlineResponse200106) HasId() bool`
+`func (o *InlineResponse200106) HasStartTime() bool`
 
-HasId returns a boolean if a field has been set.
+HasStartTime returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetEndTime
 
-`func (o *InlineResponse200106) GetNetworkId() string`
+`func (o *InlineResponse200106) GetEndTime() time.Time`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetEndTime returns the EndTime field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetEndTimeOk
 
-`func (o *InlineResponse200106) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200106) GetEndTimeOk() (*time.Time, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetEndTime
 
-`func (o *InlineResponse200106) SetNetworkId(v string)`
+`func (o *InlineResponse200106) SetEndTime(v time.Time)`
 
-SetNetworkId sets NetworkId field to given value.
+SetEndTime sets EndTime field to given value.
 
-### HasNetworkId
+### HasEndTime
 
-`func (o *InlineResponse200106) HasNetworkId() bool`
+`func (o *InlineResponse200106) HasEndTime() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasEndTime returns a boolean if a field has been set.
 
-### GetName
+### GetByInterface
 
-`func (o *InlineResponse200106) GetName() string`
+`func (o *InlineResponse200106) GetByInterface() []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetByInterface returns the ByInterface field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetByInterfaceOk
 
-`func (o *InlineResponse200106) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200106) GetByInterfaceOk() (*[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetByInterfaceOk returns a tuple with the ByInterface field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetByInterface
 
-`func (o *InlineResponse200106) SetName(v string)`
+`func (o *InlineResponse200106) SetByInterface(v []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface)`
 
-SetName sets Name field to given value.
+SetByInterface sets ByInterface field to given value.
 
-### HasName
+### HasByInterface
 
-`func (o *InlineResponse200106) HasName() bool`
+`func (o *InlineResponse200106) HasByInterface() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetRestrictedBandwidthModeEnabled
-
-`func (o *InlineResponse200106) GetRestrictedBandwidthModeEnabled() bool`
-
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
-
-### GetRestrictedBandwidthModeEnabledOk
-
-`func (o *InlineResponse200106) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
-
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRestrictedBandwidthModeEnabled
-
-`func (o *InlineResponse200106) SetRestrictedBandwidthModeEnabled(v bool)`
-
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
-
-### HasRestrictedBandwidthModeEnabled
-
-`func (o *InlineResponse200106) HasRestrictedBandwidthModeEnabled() bool`
-
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
-
-### GetMotionBasedRetentionEnabled
-
-`func (o *InlineResponse200106) GetMotionBasedRetentionEnabled() bool`
-
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
-
-### GetMotionBasedRetentionEnabledOk
-
-`func (o *InlineResponse200106) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
-
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMotionBasedRetentionEnabled
-
-`func (o *InlineResponse200106) SetMotionBasedRetentionEnabled(v bool)`
-
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
-
-### HasMotionBasedRetentionEnabled
-
-`func (o *InlineResponse200106) HasMotionBasedRetentionEnabled() bool`
-
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
-
-### GetAudioRecordingEnabled
-
-`func (o *InlineResponse200106) GetAudioRecordingEnabled() bool`
-
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
-
-### GetAudioRecordingEnabledOk
-
-`func (o *InlineResponse200106) GetAudioRecordingEnabledOk() (*bool, bool)`
-
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAudioRecordingEnabled
-
-`func (o *InlineResponse200106) SetAudioRecordingEnabled(v bool)`
-
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
-
-### HasAudioRecordingEnabled
-
-`func (o *InlineResponse200106) HasAudioRecordingEnabled() bool`
-
-HasAudioRecordingEnabled returns a boolean if a field has been set.
-
-### GetCloudArchiveEnabled
-
-`func (o *InlineResponse200106) GetCloudArchiveEnabled() bool`
-
-GetCloudArchiveEnabled returns the CloudArchiveEnabled field if non-nil, zero value otherwise.
-
-### GetCloudArchiveEnabledOk
-
-`func (o *InlineResponse200106) GetCloudArchiveEnabledOk() (*bool, bool)`
-
-GetCloudArchiveEnabledOk returns a tuple with the CloudArchiveEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCloudArchiveEnabled
-
-`func (o *InlineResponse200106) SetCloudArchiveEnabled(v bool)`
-
-SetCloudArchiveEnabled sets CloudArchiveEnabled field to given value.
-
-### HasCloudArchiveEnabled
-
-`func (o *InlineResponse200106) HasCloudArchiveEnabled() bool`
-
-HasCloudArchiveEnabled returns a boolean if a field has been set.
-
-### GetMaxRetentionDays
-
-`func (o *InlineResponse200106) GetMaxRetentionDays() int32`
-
-GetMaxRetentionDays returns the MaxRetentionDays field if non-nil, zero value otherwise.
-
-### GetMaxRetentionDaysOk
-
-`func (o *InlineResponse200106) GetMaxRetentionDaysOk() (*int32, bool)`
-
-GetMaxRetentionDaysOk returns a tuple with the MaxRetentionDays field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxRetentionDays
-
-`func (o *InlineResponse200106) SetMaxRetentionDays(v int32)`
-
-SetMaxRetentionDays sets MaxRetentionDays field to given value.
-
-### HasMaxRetentionDays
-
-`func (o *InlineResponse200106) HasMaxRetentionDays() bool`
-
-HasMaxRetentionDays returns a boolean if a field has been set.
-
-### GetScheduleId
-
-`func (o *InlineResponse200106) GetScheduleId() string`
-
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
-
-### GetScheduleIdOk
-
-`func (o *InlineResponse200106) GetScheduleIdOk() (*string, bool)`
-
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScheduleId
-
-`func (o *InlineResponse200106) SetScheduleId(v string)`
-
-SetScheduleId sets ScheduleId field to given value.
-
-### HasScheduleId
-
-`func (o *InlineResponse200106) HasScheduleId() bool`
-
-HasScheduleId returns a boolean if a field has been set.
-
-### SetScheduleIdNil
-
-`func (o *InlineResponse200106) SetScheduleIdNil(b bool)`
-
- SetScheduleIdNil sets the value for ScheduleId to be an explicit nil
-
-### UnsetScheduleId
-`func (o *InlineResponse200106) UnsetScheduleId()`
-
-UnsetScheduleId ensures that no value is present for ScheduleId, not even an explicit nil
-### GetMotionDetectorVersion
-
-`func (o *InlineResponse200106) GetMotionDetectorVersion() int32`
-
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
-
-### GetMotionDetectorVersionOk
-
-`func (o *InlineResponse200106) GetMotionDetectorVersionOk() (*int32, bool)`
-
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMotionDetectorVersion
-
-`func (o *InlineResponse200106) SetMotionDetectorVersion(v int32)`
-
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
-
-### HasMotionDetectorVersion
-
-`func (o *InlineResponse200106) HasMotionDetectorVersion() bool`
-
-HasMotionDetectorVersion returns a boolean if a field has been set.
-
-### GetSmartRetention
-
-`func (o *InlineResponse200106) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention`
-
-GetSmartRetention returns the SmartRetention field if non-nil, zero value otherwise.
-
-### GetSmartRetentionOk
-
-`func (o *InlineResponse200106) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention, bool)`
-
-GetSmartRetentionOk returns a tuple with the SmartRetention field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmartRetention
-
-`func (o *InlineResponse200106) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention)`
-
-SetSmartRetention sets SmartRetention field to given value.
-
-### HasSmartRetention
-
-`func (o *InlineResponse200106) HasSmartRetention() bool`
-
-HasSmartRetention returns a boolean if a field has been set.
-
-### GetVideoSettings
-
-`func (o *InlineResponse200106) GetVideoSettings() map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings`
-
-GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
-
-### GetVideoSettingsOk
-
-`func (o *InlineResponse200106) GetVideoSettingsOk() (*map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings, bool)`
-
-GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVideoSettings
-
-`func (o *InlineResponse200106) SetVideoSettings(v map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings)`
-
-SetVideoSettings sets VideoSettings field to given value.
-
-### HasVideoSettings
-
-`func (o *InlineResponse200106) HasVideoSettings() bool`
-
-HasVideoSettings returns a boolean if a field has been set.
+HasByInterface returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

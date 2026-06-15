@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Device** | Pointer to [**NetworksNetworkIdSensorRelationshipsDevice**](NetworksNetworkIdSensorRelationshipsDevice.md) |  | [optional] 
-**Relationships** | Pointer to [**NetworksNetworkIdSensorRelationshipsRelationships**](NetworksNetworkIdSensorRelationshipsRelationships.md) |  | [optional] 
+**Serial** | Pointer to **string** | Device serial | [optional] 
+**Model** | Pointer to **string** | Device model. | [optional] 
+**Tags** | Pointer to **string** | Device tags. | [optional] 
+**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
+**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200149WithDefaults instantiates a new InlineResponse200149 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevice
+### GetSerial
 
-`func (o *InlineResponse200149) GetDevice() NetworksNetworkIdSensorRelationshipsDevice`
+`func (o *InlineResponse200149) GetSerial() string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetSerialOk
 
-`func (o *InlineResponse200149) GetDeviceOk() (*NetworksNetworkIdSensorRelationshipsDevice, bool)`
+`func (o *InlineResponse200149) GetSerialOk() (*string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetSerial
 
-`func (o *InlineResponse200149) SetDevice(v NetworksNetworkIdSensorRelationshipsDevice)`
+`func (o *InlineResponse200149) SetSerial(v string)`
 
-SetDevice sets Device field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDevice
+### HasSerial
 
-`func (o *InlineResponse200149) HasDevice() bool`
+`func (o *InlineResponse200149) HasSerial() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetRelationships
+### GetModel
 
-`func (o *InlineResponse200149) GetRelationships() NetworksNetworkIdSensorRelationshipsRelationships`
+`func (o *InlineResponse200149) GetModel() string`
 
-GetRelationships returns the Relationships field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetRelationshipsOk
+### GetModelOk
 
-`func (o *InlineResponse200149) GetRelationshipsOk() (*NetworksNetworkIdSensorRelationshipsRelationships, bool)`
+`func (o *InlineResponse200149) GetModelOk() (*string, bool)`
 
-GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRelationships
+### SetModel
 
-`func (o *InlineResponse200149) SetRelationships(v NetworksNetworkIdSensorRelationshipsRelationships)`
+`func (o *InlineResponse200149) SetModel(v string)`
 
-SetRelationships sets Relationships field to given value.
+SetModel sets Model field to given value.
 
-### HasRelationships
+### HasModel
 
-`func (o *InlineResponse200149) HasRelationships() bool`
+`func (o *InlineResponse200149) HasModel() bool`
 
-HasRelationships returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200149) GetTags() string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200149) GetTagsOk() (*string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200149) SetTags(v string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200149) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetWifi0
+
+`func (o *InlineResponse200149) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+
+GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+
+### GetWifi0Ok
+
+`func (o *InlineResponse200149) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+
+GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi0
+
+`func (o *InlineResponse200149) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+
+SetWifi0 sets Wifi0 field to given value.
+
+### HasWifi0
+
+`func (o *InlineResponse200149) HasWifi0() bool`
+
+HasWifi0 returns a boolean if a field has been set.
+
+### GetWifi1
+
+`func (o *InlineResponse200149) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+
+GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+
+### GetWifi1Ok
+
+`func (o *InlineResponse200149) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+
+GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi1
+
+`func (o *InlineResponse200149) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+
+SetWifi1 sets Wifi1 field to given value.
+
+### HasWifi1
+
+`func (o *InlineResponse200149) HasWifi1() bool`
+
+HasWifi1 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid**](NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject102
 
-`func NewInlineObject102(size string, ) *InlineObject102`
+`func NewInlineObject102() *InlineObject102`
 
 NewInlineObject102 instantiates a new InlineObject102 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineObject102WithDefaults instantiates a new InlineObject102 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSize
+### GetName
 
-`func (o *InlineObject102) GetSize() string`
+`func (o *InlineObject102) GetName() string`
 
-GetSize returns the Size field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSizeOk
+### GetNameOk
 
-`func (o *InlineObject102) GetSizeOk() (*string, bool)`
+`func (o *InlineObject102) GetNameOk() (*string, bool)`
 
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSize
+### SetName
 
-`func (o *InlineObject102) SetSize(v string)`
+`func (o *InlineObject102) SetName(v string)`
 
-SetSize sets Size field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject102) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineObject102) GetSsid() NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineObject102) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineObject102) SetSsid(v NetworksNetworkIdCameraWirelessProfilesWirelessProfileIdSsid)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineObject102) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineObject102) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineObject102) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineObject102) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineObject102) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

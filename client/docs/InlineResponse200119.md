@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssids** | Pointer to [**InlineResponse200119Ssids**](InlineResponse200119Ssids.md) |  | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse200119BandwidthLimits**](InlineResponse200119BandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200119WithDefaults instantiates a new InlineResponse200119 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsids
+### GetBandwidthLimits
 
-`func (o *InlineResponse200119) GetSsids() InlineResponse200119Ssids`
+`func (o *InlineResponse200119) GetBandwidthLimits() InlineResponse200119BandwidthLimits`
 
-GetSsids returns the Ssids field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetSsidsOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineResponse200119) GetSsidsOk() (*InlineResponse200119Ssids, bool)`
+`func (o *InlineResponse200119) GetBandwidthLimitsOk() (*InlineResponse200119BandwidthLimits, bool)`
 
-GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsids
+### SetBandwidthLimits
 
-`func (o *InlineResponse200119) SetSsids(v InlineResponse200119Ssids)`
+`func (o *InlineResponse200119) SetBandwidthLimits(v InlineResponse200119BandwidthLimits)`
 
-SetSsids sets Ssids field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasSsids
+### HasBandwidthLimits
 
-`func (o *InlineResponse200119) HasSsids() bool`
+`func (o *InlineResponse200119) HasBandwidthLimits() bool`
 
-HasSsids returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
-**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
+**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
+**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200230WithDefaults instantiates a new InlineResponse200230 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetStartTs
 
-`func (o *InlineResponse200230) GetSerial() string`
+`func (o *InlineResponse200230) GetStartTs() time.Time`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetStartTsOk
 
-`func (o *InlineResponse200230) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200230) GetStartTsOk() (*time.Time, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetStartTs
 
-`func (o *InlineResponse200230) SetSerial(v string)`
+`func (o *InlineResponse200230) SetStartTs(v time.Time)`
 
-SetSerial sets Serial field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasSerial
+### HasStartTs
 
-`func (o *InlineResponse200230) HasSerial() bool`
+`func (o *InlineResponse200230) HasStartTs() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetMeshRoute
+### GetEndTs
 
-`func (o *InlineResponse200230) GetMeshRoute() []string`
+`func (o *InlineResponse200230) GetEndTs() time.Time`
 
-GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetMeshRouteOk
+### GetEndTsOk
 
-`func (o *InlineResponse200230) GetMeshRouteOk() (*[]string, bool)`
+`func (o *InlineResponse200230) GetEndTsOk() (*time.Time, bool)`
 
-GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshRoute
+### SetEndTs
 
-`func (o *InlineResponse200230) SetMeshRoute(v []string)`
+`func (o *InlineResponse200230) SetEndTs(v time.Time)`
 
-SetMeshRoute sets MeshRoute field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasMeshRoute
+### HasEndTs
 
-`func (o *InlineResponse200230) HasMeshRoute() bool`
+`func (o *InlineResponse200230) HasEndTs() bool`
 
-HasMeshRoute returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLatestMeshPerformance
+### GetAverageKbps
 
-`func (o *InlineResponse200230) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
+`func (o *InlineResponse200230) GetAverageKbps() int32`
 
-GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
+GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
 
-### GetLatestMeshPerformanceOk
+### GetAverageKbpsOk
 
-`func (o *InlineResponse200230) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
+`func (o *InlineResponse200230) GetAverageKbpsOk() (*int32, bool)`
 
-GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
+GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatestMeshPerformance
+### SetAverageKbps
 
-`func (o *InlineResponse200230) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
+`func (o *InlineResponse200230) SetAverageKbps(v int32)`
 
-SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
+SetAverageKbps sets AverageKbps field to given value.
 
-### HasLatestMeshPerformance
+### HasAverageKbps
 
-`func (o *InlineResponse200230) HasLatestMeshPerformance() bool`
+`func (o *InlineResponse200230) HasAverageKbps() bool`
 
-HasLatestMeshPerformance returns a boolean if a field has been set.
+HasAverageKbps returns a boolean if a field has been set.
+
+### GetDownloadKbps
+
+`func (o *InlineResponse200230) GetDownloadKbps() int32`
+
+GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
+
+### GetDownloadKbpsOk
+
+`func (o *InlineResponse200230) GetDownloadKbpsOk() (*int32, bool)`
+
+GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownloadKbps
+
+`func (o *InlineResponse200230) SetDownloadKbps(v int32)`
+
+SetDownloadKbps sets DownloadKbps field to given value.
+
+### HasDownloadKbps
+
+`func (o *InlineResponse200230) HasDownloadKbps() bool`
+
+HasDownloadKbps returns a boolean if a field has been set.
+
+### GetUploadKbps
+
+`func (o *InlineResponse200230) GetUploadKbps() int32`
+
+GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
+
+### GetUploadKbpsOk
+
+`func (o *InlineResponse200230) GetUploadKbpsOk() (*int32, bool)`
+
+GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadKbps
+
+`func (o *InlineResponse200230) SetUploadKbps(v int32)`
+
+SetUploadKbps sets UploadKbps field to given value.
+
+### HasUploadKbps
+
+`func (o *InlineResponse200230) HasUploadKbps() bool`
+
+HasUploadKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

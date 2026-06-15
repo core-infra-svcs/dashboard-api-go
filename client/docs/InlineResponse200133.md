@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Status of attempt to trigger auto locate recalculation | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse200133UpgradeWindow**](InlineResponse200133UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**InlineResponse200133Products**](InlineResponse200133Products.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200133WithDefaults instantiates a new InlineResponse200133 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetUpgradeWindow
 
-`func (o *InlineResponse200133) GetSuccess() bool`
+`func (o *InlineResponse200133) GetUpgradeWindow() InlineResponse200133UpgradeWindow`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetUpgradeWindowOk
 
-`func (o *InlineResponse200133) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200133) GetUpgradeWindowOk() (*InlineResponse200133UpgradeWindow, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetUpgradeWindow
 
-`func (o *InlineResponse200133) SetSuccess(v bool)`
+`func (o *InlineResponse200133) SetUpgradeWindow(v InlineResponse200133UpgradeWindow)`
 
-SetSuccess sets Success field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasSuccess
+### HasUpgradeWindow
 
-`func (o *InlineResponse200133) HasSuccess() bool`
+`func (o *InlineResponse200133) HasUpgradeWindow() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
+
+### GetTimezone
+
+`func (o *InlineResponse200133) GetTimezone() string`
+
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+
+### GetTimezoneOk
+
+`func (o *InlineResponse200133) GetTimezoneOk() (*string, bool)`
+
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimezone
+
+`func (o *InlineResponse200133) SetTimezone(v string)`
+
+SetTimezone sets Timezone field to given value.
+
+### HasTimezone
+
+`func (o *InlineResponse200133) HasTimezone() bool`
+
+HasTimezone returns a boolean if a field has been set.
+
+### GetProducts
+
+`func (o *InlineResponse200133) GetProducts() InlineResponse200133Products`
+
+GetProducts returns the Products field if non-nil, zero value otherwise.
+
+### GetProductsOk
+
+`func (o *InlineResponse200133) GetProductsOk() (*InlineResponse200133Products, bool)`
+
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProducts
+
+`func (o *InlineResponse200133) SetProducts(v InlineResponse200133Products)`
+
+SetProducts sets Products field to given value.
+
+### HasProducts
+
+`func (o *InlineResponse200133) HasProducts() bool`
+
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

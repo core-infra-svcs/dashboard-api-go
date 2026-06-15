@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200245Rules**](InlineResponse200245Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**Identity** | Pointer to [**InlineResponse200245Identity**](InlineResponse200245Identity.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200245EapolKey**](InlineResponse200245EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200245WithDefaults instantiates a new InlineResponse200245 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetTimeout
 
-`func (o *InlineResponse200245) GetTrafficShapingEnabled() bool`
+`func (o *InlineResponse200245) GetTimeout() int32`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetTimeoutOk
 
-`func (o *InlineResponse200245) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200245) GetTimeoutOk() (*int32, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetTimeout
 
-`func (o *InlineResponse200245) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineResponse200245) SetTimeout(v int32)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasTrafficShapingEnabled
+### HasTimeout
 
-`func (o *InlineResponse200245) HasTrafficShapingEnabled() bool`
+`func (o *InlineResponse200245) HasTimeout() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetDefaultRulesEnabled
+### GetMaxRetries
 
-`func (o *InlineResponse200245) GetDefaultRulesEnabled() bool`
+`func (o *InlineResponse200245) GetMaxRetries() int32`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetMaxRetriesOk
 
-`func (o *InlineResponse200245) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200245) GetMaxRetriesOk() (*int32, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetMaxRetries
 
-`func (o *InlineResponse200245) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineResponse200245) SetMaxRetries(v int32)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasDefaultRulesEnabled
+### HasMaxRetries
 
-`func (o *InlineResponse200245) HasDefaultRulesEnabled() bool`
+`func (o *InlineResponse200245) HasMaxRetries() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
 
-### GetRules
+### GetIdentity
 
-`func (o *InlineResponse200245) GetRules() []InlineResponse200245Rules`
+`func (o *InlineResponse200245) GetIdentity() InlineResponse200245Identity`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetIdentityOk
 
-`func (o *InlineResponse200245) GetRulesOk() (*[]InlineResponse200245Rules, bool)`
+`func (o *InlineResponse200245) GetIdentityOk() (*InlineResponse200245Identity, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetIdentity
 
-`func (o *InlineResponse200245) SetRules(v []InlineResponse200245Rules)`
+`func (o *InlineResponse200245) SetIdentity(v InlineResponse200245Identity)`
 
-SetRules sets Rules field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasRules
+### HasIdentity
 
-`func (o *InlineResponse200245) HasRules() bool`
+`func (o *InlineResponse200245) HasIdentity() bool`
 
-HasRules returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
+
+### GetEapolKey
+
+`func (o *InlineResponse200245) GetEapolKey() InlineResponse200245EapolKey`
+
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+
+### GetEapolKeyOk
+
+`func (o *InlineResponse200245) GetEapolKeyOk() (*InlineResponse200245EapolKey, bool)`
+
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEapolKey
+
+`func (o *InlineResponse200245) SetEapolKey(v InlineResponse200245EapolKey)`
+
+SetEapolKey sets EapolKey field to given value.
+
+### HasEapolKey
+
+`func (o *InlineResponse200245) HasEapolKey() bool`
+
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

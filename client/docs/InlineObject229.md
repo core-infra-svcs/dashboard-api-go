@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
+**Name** | Pointer to **string** | The name of the organization | [optional] 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Privacy** | Pointer to **map[string]interface{}** | Privacy-related settings for the organization. | [optional] 
 
 ## Methods
 
@@ -53,80 +53,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetManagement
 
-`func (o *InlineObject229) GetOrgAccess() string`
+`func (o *InlineObject229) GetManagement() OrganizationsManagement1`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetManagementOk
 
-`func (o *InlineObject229) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject229) GetManagementOk() (*OrganizationsManagement1, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetManagement
 
-`func (o *InlineObject229) SetOrgAccess(v string)`
+`func (o *InlineObject229) SetManagement(v OrganizationsManagement1)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetManagement sets Management field to given value.
 
-### HasOrgAccess
+### HasManagement
 
-`func (o *InlineObject229) HasOrgAccess() bool`
+`func (o *InlineObject229) HasManagement() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
-### GetTags
+### GetApi
 
-`func (o *InlineObject229) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+`func (o *InlineObject229) GetApi() OrganizationsOrganizationIdApi`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetApiOk
 
-`func (o *InlineObject229) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+`func (o *InlineObject229) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetApi
 
-`func (o *InlineObject229) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+`func (o *InlineObject229) SetApi(v OrganizationsOrganizationIdApi)`
 
-SetTags sets Tags field to given value.
+SetApi sets Api field to given value.
 
-### HasTags
+### HasApi
 
-`func (o *InlineObject229) HasTags() bool`
+`func (o *InlineObject229) HasApi() bool`
 
-HasTags returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
-### GetNetworks
+### GetPrivacy
 
-`func (o *InlineObject229) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
+`func (o *InlineObject229) GetPrivacy() map[string]interface{}`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetPrivacyOk
 
-`func (o *InlineObject229) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+`func (o *InlineObject229) GetPrivacyOk() (*map[string]interface{}, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetPrivacy
 
-`func (o *InlineObject229) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
+`func (o *InlineObject229) SetPrivacy(v map[string]interface{})`
 
-SetNetworks sets Networks field to given value.
+SetPrivacy sets Privacy field to given value.
 
-### HasNetworks
+### HasPrivacy
 
-`func (o *InlineObject229) HasNetworks() bool`
+`func (o *InlineObject229) HasPrivacy() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasPrivacy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

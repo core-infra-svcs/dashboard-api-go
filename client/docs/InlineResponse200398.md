@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200398Items**](InlineResponse200398Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
+**Items** | Pointer to [**[]InlineResponse200398Items**](InlineResponse200398Items.md) | List of connectors | [optional] 
 
 ## Methods
 

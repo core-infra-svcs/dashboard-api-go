@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnrollmentId** | Pointer to **string** | Id to check the status of your enrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your enrollment | [optional] 
+**LookupId** | Pointer to **string** | Id of the route table lookup request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your routing table lookup request. | [optional] 
 **Request** | Pointer to [**InlineResponse20111Request**](InlineResponse20111Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the enrollment | [optional] 
+**Status** | Pointer to **string** | Status of the routing table lookup request. | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -28,30 +29,30 @@ NewInlineResponse20111WithDefaults instantiates a new InlineResponse20111 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrollmentId
+### GetLookupId
 
-`func (o *InlineResponse20111) GetEnrollmentId() string`
+`func (o *InlineResponse20111) GetLookupId() string`
 
-GetEnrollmentId returns the EnrollmentId field if non-nil, zero value otherwise.
+GetLookupId returns the LookupId field if non-nil, zero value otherwise.
 
-### GetEnrollmentIdOk
+### GetLookupIdOk
 
-`func (o *InlineResponse20111) GetEnrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse20111) GetLookupIdOk() (*string, bool)`
 
-GetEnrollmentIdOk returns a tuple with the EnrollmentId field if it's non-nil, zero value otherwise
+GetLookupIdOk returns a tuple with the LookupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrollmentId
+### SetLookupId
 
-`func (o *InlineResponse20111) SetEnrollmentId(v string)`
+`func (o *InlineResponse20111) SetLookupId(v string)`
 
-SetEnrollmentId sets EnrollmentId field to given value.
+SetLookupId sets LookupId field to given value.
 
-### HasEnrollmentId
+### HasLookupId
 
-`func (o *InlineResponse20111) HasEnrollmentId() bool`
+`func (o *InlineResponse20111) HasLookupId() bool`
 
-HasEnrollmentId returns a boolean if a field has been set.
+HasLookupId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -127,6 +128,31 @@ SetStatus sets Status field to given value.
 `func (o *InlineResponse20111) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineResponse20111) GetCallback() InlineResponse2011Callback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineResponse20111) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineResponse20111) SetCallback(v InlineResponse2011Callback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineResponse20111) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

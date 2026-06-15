@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The zone ID | [optional] 
-**Type** | Pointer to **string** | The zone type | [optional] 
-**Label** | Pointer to **string** | The zone label | [optional] 
-**RegionOfInterest** | Pointer to [**DevicesSerialCameraAnalyticsZonesRegionOfInterest**](DevicesSerialCameraAnalyticsZonesRegionOfInterest.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time | [optional] 
+**ZoneId** | Pointer to **int32** | The zone id | [optional] 
+**Entrances** | Pointer to **int32** | The number of entrances | [optional] 
+**AverageCount** | Pointer to **float32** | The average count | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse20016WithDefaults instantiates a new InlineResponse20016 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStartTs
 
-`func (o *InlineResponse20016) GetId() string`
+`func (o *InlineResponse20016) GetStartTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20016) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20016) GetStartTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStartTs
 
-`func (o *InlineResponse20016) SetId(v string)`
+`func (o *InlineResponse20016) SetStartTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasId
+### HasStartTs
 
-`func (o *InlineResponse20016) HasId() bool`
+`func (o *InlineResponse20016) HasStartTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetType
+### GetEndTs
 
-`func (o *InlineResponse20016) GetType() string`
+`func (o *InlineResponse20016) GetEndTs() time.Time`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetEndTsOk
 
-`func (o *InlineResponse20016) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20016) GetEndTsOk() (*time.Time, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetEndTs
 
-`func (o *InlineResponse20016) SetType(v string)`
+`func (o *InlineResponse20016) SetEndTs(v time.Time)`
 
-SetType sets Type field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasType
+### HasEndTs
 
-`func (o *InlineResponse20016) HasType() bool`
+`func (o *InlineResponse20016) HasEndTs() bool`
 
-HasType returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLabel
+### GetZoneId
 
-`func (o *InlineResponse20016) GetLabel() string`
+`func (o *InlineResponse20016) GetZoneId() int32`
 
-GetLabel returns the Label field if non-nil, zero value otherwise.
+GetZoneId returns the ZoneId field if non-nil, zero value otherwise.
 
-### GetLabelOk
+### GetZoneIdOk
 
-`func (o *InlineResponse20016) GetLabelOk() (*string, bool)`
+`func (o *InlineResponse20016) GetZoneIdOk() (*int32, bool)`
 
-GetLabelOk returns a tuple with the Label field if it's non-nil, zero value otherwise
+GetZoneIdOk returns a tuple with the ZoneId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLabel
+### SetZoneId
 
-`func (o *InlineResponse20016) SetLabel(v string)`
+`func (o *InlineResponse20016) SetZoneId(v int32)`
 
-SetLabel sets Label field to given value.
+SetZoneId sets ZoneId field to given value.
 
-### HasLabel
+### HasZoneId
 
-`func (o *InlineResponse20016) HasLabel() bool`
+`func (o *InlineResponse20016) HasZoneId() bool`
 
-HasLabel returns a boolean if a field has been set.
+HasZoneId returns a boolean if a field has been set.
 
-### GetRegionOfInterest
+### GetEntrances
 
-`func (o *InlineResponse20016) GetRegionOfInterest() DevicesSerialCameraAnalyticsZonesRegionOfInterest`
+`func (o *InlineResponse20016) GetEntrances() int32`
 
-GetRegionOfInterest returns the RegionOfInterest field if non-nil, zero value otherwise.
+GetEntrances returns the Entrances field if non-nil, zero value otherwise.
 
-### GetRegionOfInterestOk
+### GetEntrancesOk
 
-`func (o *InlineResponse20016) GetRegionOfInterestOk() (*DevicesSerialCameraAnalyticsZonesRegionOfInterest, bool)`
+`func (o *InlineResponse20016) GetEntrancesOk() (*int32, bool)`
 
-GetRegionOfInterestOk returns a tuple with the RegionOfInterest field if it's non-nil, zero value otherwise
+GetEntrancesOk returns a tuple with the Entrances field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRegionOfInterest
+### SetEntrances
 
-`func (o *InlineResponse20016) SetRegionOfInterest(v DevicesSerialCameraAnalyticsZonesRegionOfInterest)`
+`func (o *InlineResponse20016) SetEntrances(v int32)`
 
-SetRegionOfInterest sets RegionOfInterest field to given value.
+SetEntrances sets Entrances field to given value.
 
-### HasRegionOfInterest
+### HasEntrances
 
-`func (o *InlineResponse20016) HasRegionOfInterest() bool`
+`func (o *InlineResponse20016) HasEntrances() bool`
 
-HasRegionOfInterest returns a boolean if a field has been set.
+HasEntrances returns a boolean if a field has been set.
+
+### GetAverageCount
+
+`func (o *InlineResponse20016) GetAverageCount() float32`
+
+GetAverageCount returns the AverageCount field if non-nil, zero value otherwise.
+
+### GetAverageCountOk
+
+`func (o *InlineResponse20016) GetAverageCountOk() (*float32, bool)`
+
+GetAverageCountOk returns a tuple with the AverageCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAverageCount
+
+`func (o *InlineResponse20016) SetAverageCount(v float32)`
+
+SetAverageCount sets AverageCount field to given value.
+
+### HasAverageCount
+
+`func (o *InlineResponse20016) HasAverageCount() bool`
+
+HasAverageCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

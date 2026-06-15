@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems.md) | List containing the network ID and Profile ID | 
+**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. An empty array will clear the rules. | [optional] 
+**IpVersion** | Pointer to **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineObject233
 
-`func NewInlineObject233(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, ) *InlineObject233`
+`func NewInlineObject233() *InlineObject233`
 
 NewInlineObject233 instantiates a new InlineObject233 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +28,105 @@ NewInlineObject233WithDefaults instantiates a new InlineObject233 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject233) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems`
+`func (o *InlineObject233) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject233) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, bool)`
+`func (o *InlineObject233) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject233) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems)`
+`func (o *InlineObject233) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject233) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineObject233) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject233) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject233) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject233) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject233) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject233) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject233) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineObject233) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
+
+### GetIpVersion
+
+`func (o *InlineObject233) GetIpVersion() string`
+
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+
+### GetIpVersionOk
+
+`func (o *InlineObject233) GetIpVersionOk() (*string, bool)`
+
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpVersion
+
+`func (o *InlineObject233) SetIpVersion(v string)`
+
+SetIpVersion sets IpVersion field to given value.
+
+### HasIpVersion
+
+`func (o *InlineObject233) HasIpVersion() bool`
+
+HasIpVersion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

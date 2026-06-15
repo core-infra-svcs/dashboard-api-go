@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## AttachOrganizationSaseSites
 
-> InlineResponse200258 AttachOrganizationSaseSites(ctx, organizationId).AttachOrganizationSaseSites(attachOrganizationSaseSites).Execute()
+> InlineResponse2024 AttachOrganizationSaseSites(ctx, organizationId).AttachOrganizationSaseSites(attachOrganizationSaseSites).Execute()
 
 Attach sites in this organization to Secure Access
 
@@ -35,7 +35,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    attachOrganizationSaseSites := *openapiclient.NewInlineObject323() // InlineObject323 |  (optional)
+    attachOrganizationSaseSites := *openapiclient.NewInlineObject334() // InlineObject334 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SitesApi.AttachOrganizationSaseSites``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AttachOrganizationSaseSites`: InlineResponse200258
+    // response from `AttachOrganizationSaseSites`: InlineResponse2024
     fmt.Fprintf(os.Stdout, "Response from `SitesApi.AttachOrganizationSaseSites`: %v\n", resp)
 }
 ```
@@ -65,11 +65,11 @@ Other parameters are passed through a pointer to a apiAttachOrganizationSaseSite
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **attachOrganizationSaseSites** | [**InlineObject323**](InlineObject323.md) |  | 
+ **attachOrganizationSaseSites** | [**InlineObject334**](InlineObject334.md) |  | 
 
 ### Return type
 
-[**InlineResponse200258**](InlineResponse200258.md)
+[**InlineResponse2024**](InlineResponse2024.md)
 
 ### Authorization
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## DetachOrganizationSaseSites
 
-> InlineResponse200258 DetachOrganizationSaseSites(ctx, organizationId).DetachOrganizationSaseSites(detachOrganizationSaseSites).Execute()
+> InlineResponse2024 DetachOrganizationSaseSites(ctx, organizationId).DetachOrganizationSaseSites(detachOrganizationSaseSites).Execute()
 
 Detach sites in this organization from Secure Access
 
@@ -107,7 +107,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    detachOrganizationSaseSites := *openapiclient.NewInlineObject324() // InlineObject324 |  (optional)
+    detachOrganizationSaseSites := *openapiclient.NewInlineObject335() // InlineObject335 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -116,7 +116,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SitesApi.DetachOrganizationSaseSites``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DetachOrganizationSaseSites`: InlineResponse200258
+    // response from `DetachOrganizationSaseSites`: InlineResponse2024
     fmt.Fprintf(os.Stdout, "Response from `SitesApi.DetachOrganizationSaseSites`: %v\n", resp)
 }
 ```
@@ -137,11 +137,11 @@ Other parameters are passed through a pointer to a apiDetachOrganizationSaseSite
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **detachOrganizationSaseSites** | [**InlineObject324**](InlineObject324.md) |  | 
+ **detachOrganizationSaseSites** | [**InlineObject335**](InlineObject335.md) |  | 
 
 ### Return type
 
-[**InlineResponse200258**](InlineResponse200258.md)
+[**InlineResponse2024**](InlineResponse2024.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseSites
 
-> InlineResponse200389 GetOrganizationSaseSites(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).Status(status).SiteId(siteId).Execute()
+> InlineResponse200401 GetOrganizationSaseSites(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).Status(status).SiteId(siteId).Execute()
 
 List of enrolled SASE sites in this organization
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SitesApi.GetOrganizationSaseSites``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseSites`: InlineResponse200389
+    // response from `GetOrganizationSaseSites`: InlineResponse200401
     fmt.Fprintf(os.Stdout, "Response from `SitesApi.GetOrganizationSaseSites`: %v\n", resp)
 }
 ```
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200389**](InlineResponse200389.md)
+[**InlineResponse200401**](InlineResponse200401.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseSitesConnectivityHistoryBySite
 
-> InlineResponse200390 GetOrganizationSaseSitesConnectivityHistoryBySite(ctx, organizationId).SiteIds(siteIds).Timespan(timespan).Execute()
+> InlineResponse200402 GetOrganizationSaseSitesConnectivityHistoryBySite(ctx, organizationId).SiteIds(siteIds).Timespan(timespan).Execute()
 
 Get the connectivity history of SASE sites in this organization
 
@@ -271,7 +271,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SitesApi.GetOrganizationSaseSitesConnectivityHistoryBySite``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseSitesConnectivityHistoryBySite`: InlineResponse200390
+    // response from `GetOrganizationSaseSitesConnectivityHistoryBySite`: InlineResponse200402
     fmt.Fprintf(os.Stdout, "Response from `SitesApi.GetOrganizationSaseSitesConnectivityHistoryBySite`: %v\n", resp)
 }
 ```
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200390**](InlineResponse200390.md)
+[**InlineResponse200402**](InlineResponse200402.md)
 
 ### Authorization
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseSitesConnectivityOverview
 
-> InlineResponse200391 GetOrganizationSaseSitesConnectivityOverview(ctx, organizationId).Execute()
+> InlineResponse200403 GetOrganizationSaseSitesConnectivityOverview(ctx, organizationId).Execute()
 
 List high-level SASE site statuses (healthy, degraded, offline)
 
@@ -343,7 +343,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SitesApi.GetOrganizationSaseSitesConnectivityOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseSitesConnectivityOverview`: InlineResponse200391
+    // response from `GetOrganizationSaseSitesConnectivityOverview`: InlineResponse200403
     fmt.Fprintf(os.Stdout, "Response from `SitesApi.GetOrganizationSaseSitesConnectivityOverview`: %v\n", resp)
 }
 ```
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200391**](InlineResponse200391.md)
+[**InlineResponse200403**](InlineResponse200403.md)
 
 ### Authorization
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSaseSite
 
-> InlineResponse200392 UpdateOrganizationSaseSite(ctx, organizationId, siteId).UpdateOrganizationSaseSite(updateOrganizationSaseSite).Execute()
+> InlineResponse200404 UpdateOrganizationSaseSite(ctx, organizationId, siteId).UpdateOrganizationSaseSite(updateOrganizationSaseSite).Execute()
 
 Update the configuration for a site
 
@@ -406,7 +406,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     siteId := "siteId_example" // string | Site ID
-    updateOrganizationSaseSite := *openapiclient.NewInlineObject325("SiteId_example") // InlineObject325 | 
+    updateOrganizationSaseSite := *openapiclient.NewInlineObject336("SiteId_example") // InlineObject336 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -415,7 +415,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SitesApi.UpdateOrganizationSaseSite``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSaseSite`: InlineResponse200392
+    // response from `UpdateOrganizationSaseSite`: InlineResponse200404
     fmt.Fprintf(os.Stdout, "Response from `SitesApi.UpdateOrganizationSaseSite`: %v\n", resp)
 }
 ```
@@ -438,11 +438,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSaseSite** | [**InlineObject325**](InlineObject325.md) |  | 
+ **updateOrganizationSaseSite** | [**InlineObject336**](InlineObject336.md) |  | 
 
 ### Return type
 
-[**InlineResponse200392**](InlineResponse200392.md)
+[**InlineResponse200404**](InlineResponse200404.md)
 
 ### Authorization
 

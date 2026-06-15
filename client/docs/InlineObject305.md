@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy.md) |  | 
-**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to assign | 
+**DeviceSerial** | Pointer to **NullableString** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
 
 ## Methods
 
 ### NewInlineObject305
 
-`func NewInlineObject305(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject305`
+`func NewInlineObject305() *InlineObject305`
 
 NewInlineObject305 instantiates a new InlineObject305 object
 This constructor will assign default values to properties that have it defined,
@@ -26,46 +25,41 @@ NewInlineObject305WithDefaults instantiates a new InlineObject305 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetDeviceSerial
 
-`func (o *InlineObject305) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy`
+`func (o *InlineObject305) GetDeviceSerial() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetDeviceSerialOk
 
-`func (o *InlineObject305) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, bool)`
+`func (o *InlineObject305) GetDeviceSerialOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetDeviceSerial
 
-`func (o *InlineObject305) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy)`
+`func (o *InlineObject305) SetDeviceSerial(v string)`
 
-SetPolicy sets Policy field to given value.
+SetDeviceSerial sets DeviceSerial field to given value.
 
+### HasDeviceSerial
 
-### GetAdaptivePolicyGroups
+`func (o *InlineObject305) HasDeviceSerial() bool`
 
-`func (o *InlineObject305) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
+HasDeviceSerial returns a boolean if a field has been set.
 
-GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
+### SetDeviceSerialNil
 
-### GetAdaptivePolicyGroupsOk
+`func (o *InlineObject305) SetDeviceSerialNil(b bool)`
 
-`func (o *InlineObject305) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
+ SetDeviceSerialNil sets the value for DeviceSerial to be an explicit nil
 
-GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+### UnsetDeviceSerial
+`func (o *InlineObject305) UnsetDeviceSerial()`
 
-### SetAdaptivePolicyGroups
-
-`func (o *InlineObject305) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
-
-SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
-
-
+UnsetDeviceSerial ensures that no value is present for DeviceSerial, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

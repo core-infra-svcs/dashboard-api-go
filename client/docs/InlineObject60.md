@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | **string** | A static IPv6 prefix | 
-**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
-**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
+**Rules** | [**[]NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules**](NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules.md) | An array of 1:Many nat rules | 
 
 ## Methods
 
 ### NewInlineObject60
 
-`func NewInlineObject60(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject60`
+`func NewInlineObject60(rules []NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules, ) *InlineObject60`
 
 NewInlineObject60 instantiates a new InlineObject60 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +25,25 @@ NewInlineObject60WithDefaults instantiates a new InlineObject60 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPrefix
+### GetRules
 
-`func (o *InlineObject60) GetPrefix() string`
+`func (o *InlineObject60) GetRules() []NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetRulesOk
 
-`func (o *InlineObject60) GetPrefixOk() (*string, bool)`
+`func (o *InlineObject60) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetRules
 
-`func (o *InlineObject60) SetPrefix(v string)`
+`func (o *InlineObject60) SetRules(v []NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules)`
 
-SetPrefix sets Prefix field to given value.
+SetRules sets Rules field to given value.
 
-
-### GetOrigin
-
-`func (o *InlineObject60) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
-
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
-
-### GetOriginOk
-
-`func (o *InlineObject60) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
-
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrigin
-
-`func (o *InlineObject60) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
-
-SetOrigin sets Origin field to given value.
-
-
-### GetDescription
-
-`func (o *InlineObject60) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject60) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject60) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject60) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

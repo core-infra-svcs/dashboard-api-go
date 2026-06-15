@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InterfaceIp** | **string** | The IP address of the interface where the RP needs to be created. | 
-**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
-**Vrf** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf**](NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf.md) |  | [optional] 
+**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
+**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject161
 
-`func NewInlineObject161(interfaceIp string, multicastGroup string, ) *InlineObject161`
+`func NewInlineObject161() *InlineObject161`
 
 NewInlineObject161 instantiates a new InlineObject161 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +27,80 @@ NewInlineObject161WithDefaults instantiates a new InlineObject161 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaceIp
+### GetMac
 
-`func (o *InlineObject161) GetInterfaceIp() string`
+`func (o *InlineObject161) GetMac() string`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetMacOk
 
-`func (o *InlineObject161) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineObject161) GetMacOk() (*string, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetMac
 
-`func (o *InlineObject161) SetInterfaceIp(v string)`
+`func (o *InlineObject161) SetMac(v string)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetMac sets Mac field to given value.
 
+### HasMac
 
-### GetMulticastGroup
+`func (o *InlineObject161) HasMac() bool`
 
-`func (o *InlineObject161) GetMulticastGroup() string`
+HasMac returns a boolean if a field has been set.
 
-GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
+### GetVlan
 
-### GetMulticastGroupOk
+`func (o *InlineObject161) GetVlan() int32`
 
-`func (o *InlineObject161) GetMulticastGroupOk() (*string, bool)`
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
+### GetVlanOk
+
+`func (o *InlineObject161) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastGroup
+### SetVlan
 
-`func (o *InlineObject161) SetMulticastGroup(v string)`
+`func (o *InlineObject161) SetVlan(v int32)`
 
-SetMulticastGroup sets MulticastGroup field to given value.
+SetVlan sets Vlan field to given value.
 
+### HasVlan
 
-### GetVrf
+`func (o *InlineObject161) HasVlan() bool`
 
-`func (o *InlineObject161) GetVrf() NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf`
+HasVlan returns a boolean if a field has been set.
 
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
+### GetIpv4
 
-### GetVrfOk
+`func (o *InlineObject161) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
 
-`func (o *InlineObject161) GetVrfOk() (*NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf, bool)`
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+### GetIpv4Ok
+
+`func (o *InlineObject161) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVrf
+### SetIpv4
 
-`func (o *InlineObject161) SetVrf(v NetworksNetworkIdSwitchRoutingMulticastRendezvousPointsVrf)`
+`func (o *InlineObject161) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
 
-SetVrf sets Vrf field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasVrf
+### HasIpv4
 
-`func (o *InlineObject161) HasVrf() bool`
+`func (o *InlineObject161) HasIpv4() bool`
 
-HasVrf returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

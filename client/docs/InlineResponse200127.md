@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**InlineResponse200127Products**](InlineResponse200127Products.md) |  | [optional] 
-**Stages** | Pointer to [**[]InlineResponse200127Stages**](InlineResponse200127Stages.md) | The ordered stages in the network | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse200126Reasons**](InlineResponse200126Reasons.md) | Reasons for the rollback | [optional] 
+**Ssids** | Pointer to [**InlineResponse200127Ssids**](InlineResponse200127Ssids.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200127WithDefaults instantiates a new InlineResponse200127 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetSsids
 
-`func (o *InlineResponse200127) GetProducts() InlineResponse200127Products`
+`func (o *InlineResponse200127) GetSsids() InlineResponse200127Ssids`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetSsids returns the Ssids field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetSsidsOk
 
-`func (o *InlineResponse200127) GetProductsOk() (*InlineResponse200127Products, bool)`
+`func (o *InlineResponse200127) GetSsidsOk() (*InlineResponse200127Ssids, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetSsids
 
-`func (o *InlineResponse200127) SetProducts(v InlineResponse200127Products)`
+`func (o *InlineResponse200127) SetSsids(v InlineResponse200127Ssids)`
 
-SetProducts sets Products field to given value.
+SetSsids sets Ssids field to given value.
 
-### HasProducts
+### HasSsids
 
-`func (o *InlineResponse200127) HasProducts() bool`
+`func (o *InlineResponse200127) HasSsids() bool`
 
-HasProducts returns a boolean if a field has been set.
-
-### GetStages
-
-`func (o *InlineResponse200127) GetStages() []InlineResponse200127Stages`
-
-GetStages returns the Stages field if non-nil, zero value otherwise.
-
-### GetStagesOk
-
-`func (o *InlineResponse200127) GetStagesOk() (*[]InlineResponse200127Stages, bool)`
-
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStages
-
-`func (o *InlineResponse200127) SetStages(v []InlineResponse200127Stages)`
-
-SetStages sets Stages field to given value.
-
-### HasStages
-
-`func (o *InlineResponse200127) HasStages() bool`
-
-HasStages returns a boolean if a field has been set.
-
-### GetReasons
-
-`func (o *InlineResponse200127) GetReasons() []InlineResponse200126Reasons`
-
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
-
-### GetReasonsOk
-
-`func (o *InlineResponse200127) GetReasonsOk() (*[]InlineResponse200126Reasons, bool)`
-
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReasons
-
-`func (o *InlineResponse200127) SetReasons(v []InlineResponse200126Reasons)`
-
-SetReasons sets Reasons field to given value.
-
-### HasReasons
-
-`func (o *InlineResponse200127) HasReasons() bool`
-
-HasReasons returns a boolean if a field has been set.
+HasSsids returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessMqttSettingsNetwork**](OrganizationsOrganizationIdWirelessMqttSettingsNetwork.md) |  | 
-**Mqtt** | [**OrganizationsOrganizationIdWirelessMqttSettingsMqtt**](OrganizationsOrganizationIdWirelessMqttSettingsMqtt.md) |  | 
-**Ble** | Pointer to [**InlineResponse200448Ble**](InlineResponse200448Ble.md) |  | [optional] 
-**Wifi** | Pointer to [**InlineResponse200448Wifi**](InlineResponse200448Wifi.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
 ### NewInlineObject338
 
-`func NewInlineObject338(network OrganizationsOrganizationIdWirelessMqttSettingsNetwork, mqtt OrganizationsOrganizationIdWirelessMqttSettingsMqtt, ) *InlineObject338`
+`func NewInlineObject338() *InlineObject338`
 
 NewInlineObject338 instantiates a new InlineObject338 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,80 @@ NewInlineObject338WithDefaults instantiates a new InlineObject338 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetName
 
-`func (o *InlineObject338) GetNetwork() OrganizationsOrganizationIdWirelessMqttSettingsNetwork`
+`func (o *InlineObject338) GetName() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNameOk
 
-`func (o *InlineObject338) GetNetworkOk() (*OrganizationsOrganizationIdWirelessMqttSettingsNetwork, bool)`
+`func (o *InlineObject338) GetNameOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetName
 
-`func (o *InlineObject338) SetNetwork(v OrganizationsOrganizationIdWirelessMqttSettingsNetwork)`
+`func (o *InlineObject338) SetName(v string)`
 
-SetNetwork sets Network field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetMqtt
+`func (o *InlineObject338) HasName() bool`
 
-`func (o *InlineObject338) GetMqtt() OrganizationsOrganizationIdWirelessMqttSettingsMqtt`
+HasName returns a boolean if a field has been set.
 
-GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+### GetScope
 
-### GetMqttOk
+`func (o *InlineObject338) GetScope() string`
 
-`func (o *InlineObject338) GetMqttOk() (*OrganizationsOrganizationIdWirelessMqttSettingsMqtt, bool)`
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+### GetScopeOk
+
+`func (o *InlineObject338) GetScopeOk() (*string, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqtt
+### SetScope
 
-`func (o *InlineObject338) SetMqtt(v OrganizationsOrganizationIdWirelessMqttSettingsMqtt)`
+`func (o *InlineObject338) SetScope(v string)`
 
-SetMqtt sets Mqtt field to given value.
+SetScope sets Scope field to given value.
 
+### HasScope
 
-### GetBle
+`func (o *InlineObject338) HasScope() bool`
 
-`func (o *InlineObject338) GetBle() InlineResponse200448Ble`
+HasScope returns a boolean if a field has been set.
 
-GetBle returns the Ble field if non-nil, zero value otherwise.
+### GetTags
 
-### GetBleOk
+`func (o *InlineObject338) GetTags() []string`
 
-`func (o *InlineObject338) GetBleOk() (*InlineResponse200448Ble, bool)`
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+### GetTagsOk
+
+`func (o *InlineObject338) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBle
+### SetTags
 
-`func (o *InlineObject338) SetBle(v InlineResponse200448Ble)`
+`func (o *InlineObject338) SetTags(v []string)`
 
-SetBle sets Ble field to given value.
+SetTags sets Tags field to given value.
 
-### HasBle
+### HasTags
 
-`func (o *InlineObject338) HasBle() bool`
+`func (o *InlineObject338) HasTags() bool`
 
-HasBle returns a boolean if a field has been set.
-
-### GetWifi
-
-`func (o *InlineObject338) GetWifi() InlineResponse200448Wifi`
-
-GetWifi returns the Wifi field if non-nil, zero value otherwise.
-
-### GetWifiOk
-
-`func (o *InlineObject338) GetWifiOk() (*InlineResponse200448Wifi, bool)`
-
-GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifi
-
-`func (o *InlineObject338) SetWifi(v InlineResponse200448Wifi)`
-
-SetWifi sets Wifi field to given value.
-
-### HasWifi
-
-`func (o *InlineObject338) HasWifi() bool`
-
-HasWifi returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

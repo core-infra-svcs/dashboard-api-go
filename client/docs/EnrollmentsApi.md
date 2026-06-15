@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceWirelessZigbeeEnrollment
 
-> InlineResponse20111 CreateDeviceWirelessZigbeeEnrollment(ctx, serial).Execute()
+> InlineResponse20115 CreateDeviceWirelessZigbeeEnrollment(ctx, serial).Execute()
 
 Enqueue a job to start enrolling door locks on zigbee configured wireless devices
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EnrollmentsApi.CreateDeviceWirelessZigbeeEnrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceWirelessZigbeeEnrollment`: InlineResponse20111
+    // response from `CreateDeviceWirelessZigbeeEnrollment`: InlineResponse20115
     fmt.Fprintf(os.Stdout, "Response from `EnrollmentsApi.CreateDeviceWirelessZigbeeEnrollment`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20111**](InlineResponse20111.md)
+[**InlineResponse20115**](InlineResponse20115.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceWirelessZigbeeEnrollment
 
-> InlineResponse20060 GetDeviceWirelessZigbeeEnrollment(ctx, serial, enrollmentId).Execute()
+> InlineResponse20065 GetDeviceWirelessZigbeeEnrollment(ctx, serial, enrollmentId).Execute()
 
 Return an enrollment
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EnrollmentsApi.GetDeviceWirelessZigbeeEnrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessZigbeeEnrollment`: InlineResponse20060
+    // response from `GetDeviceWirelessZigbeeEnrollment`: InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `EnrollmentsApi.GetDeviceWirelessZigbeeEnrollment`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20060**](InlineResponse20060.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 

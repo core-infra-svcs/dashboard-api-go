@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems.md) | List containing the assignment ID | 
+**Name** | **string** | Name of the group | 
+**Sgt** | **int32** | SGT value of the group | 
+**Description** | Pointer to **string** | Description of the group (default: \&quot;\&quot;) | [optional] 
+**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) (default: []) | [optional] 
 
 ## Methods
 
 ### NewInlineObject234
 
-`func NewInlineObject234(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, ) *InlineObject234`
+`func NewInlineObject234(name string, sgt int32, ) *InlineObject234`
 
 NewInlineObject234 instantiates a new InlineObject234 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +28,95 @@ NewInlineObject234WithDefaults instantiates a new InlineObject234 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject234) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems`
+`func (o *InlineObject234) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject234) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, bool)`
+`func (o *InlineObject234) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject234) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems)`
+`func (o *InlineObject234) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
+
+### GetSgt
+
+`func (o *InlineObject234) GetSgt() int32`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineObject234) GetSgtOk() (*int32, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineObject234) SetSgt(v int32)`
+
+SetSgt sets Sgt field to given value.
+
+
+### GetDescription
+
+`func (o *InlineObject234) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject234) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject234) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject234) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetPolicyObjects
+
+`func (o *InlineObject234) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
+
+GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
+
+### GetPolicyObjectsOk
+
+`func (o *InlineObject234) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
+
+GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicyObjects
+
+`func (o *InlineObject234) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
+
+SetPolicyObjects sets PolicyObjects field to given value.
+
+### HasPolicyObjects
+
+`func (o *InlineObject234) HasPolicyObjects() bool`
+
+HasPolicyObjects returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

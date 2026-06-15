@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
-**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
-**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
+**Action** | Pointer to **string** | The type of command sent to the device. | [optional] 
+**Name** | Pointer to **string** | The name of the device to which the command is sent. | [optional] 
+**Details** | Pointer to **string** | A JSON string object containing command details. | [optional] 
+**DashboardUser** | Pointer to **string** | The Meraki dashboard user who initiated the command. | [optional] 
+**Ts** | Pointer to **string** | The time the command was sent to the device. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200170WithDefaults instantiates a new InlineResponse200170 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCreatedAt
+### GetAction
 
-`func (o *InlineResponse200170) GetCreatedAt() string`
+`func (o *InlineResponse200170) GetAction() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetAction returns the Action field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetActionOk
 
-`func (o *InlineResponse200170) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse200170) GetActionOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetAction
 
-`func (o *InlineResponse200170) SetCreatedAt(v string)`
+`func (o *InlineResponse200170) SetAction(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetAction sets Action field to given value.
 
-### HasCreatedAt
+### HasAction
 
-`func (o *InlineResponse200170) HasCreatedAt() bool`
+`func (o *InlineResponse200170) HasAction() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasAction returns a boolean if a field has been set.
 
-### GetId
+### GetName
 
-`func (o *InlineResponse200170) GetId() string`
+`func (o *InlineResponse200170) GetName() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNameOk
 
-`func (o *InlineResponse200170) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200170) GetNameOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetName
 
-`func (o *InlineResponse200170) SetId(v string)`
+`func (o *InlineResponse200170) SetName(v string)`
 
-SetId sets Id field to given value.
+SetName sets Name field to given value.
 
-### HasId
+### HasName
 
-`func (o *InlineResponse200170) HasId() bool`
+`func (o *InlineResponse200170) HasName() bool`
 
-HasId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetXml
+### GetDetails
 
-`func (o *InlineResponse200170) GetXml() string`
+`func (o *InlineResponse200170) GetDetails() string`
 
-GetXml returns the Xml field if non-nil, zero value otherwise.
+GetDetails returns the Details field if non-nil, zero value otherwise.
 
-### GetXmlOk
+### GetDetailsOk
 
-`func (o *InlineResponse200170) GetXmlOk() (*string, bool)`
+`func (o *InlineResponse200170) GetDetailsOk() (*string, bool)`
 
-GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetXml
+### SetDetails
 
-`func (o *InlineResponse200170) SetXml(v string)`
+`func (o *InlineResponse200170) SetDetails(v string)`
 
-SetXml sets Xml field to given value.
+SetDetails sets Details field to given value.
 
-### HasXml
+### HasDetails
 
-`func (o *InlineResponse200170) HasXml() bool`
+`func (o *InlineResponse200170) HasDetails() bool`
 
-HasXml returns a boolean if a field has been set.
+HasDetails returns a boolean if a field has been set.
+
+### GetDashboardUser
+
+`func (o *InlineResponse200170) GetDashboardUser() string`
+
+GetDashboardUser returns the DashboardUser field if non-nil, zero value otherwise.
+
+### GetDashboardUserOk
+
+`func (o *InlineResponse200170) GetDashboardUserOk() (*string, bool)`
+
+GetDashboardUserOk returns a tuple with the DashboardUser field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDashboardUser
+
+`func (o *InlineResponse200170) SetDashboardUser(v string)`
+
+SetDashboardUser sets DashboardUser field to given value.
+
+### HasDashboardUser
+
+`func (o *InlineResponse200170) HasDashboardUser() bool`
+
+HasDashboardUser returns a boolean if a field has been set.
+
+### GetTs
+
+`func (o *InlineResponse200170) GetTs() string`
+
+GetTs returns the Ts field if non-nil, zero value otherwise.
+
+### GetTsOk
+
+`func (o *InlineResponse200170) GetTsOk() (*string, bool)`
+
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTs
+
+`func (o *InlineResponse200170) SetTs(v string)`
+
+SetTs sets Ts field to given value.
+
+### HasTs
+
+`func (o *InlineResponse200170) HasTs() bool`
+
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

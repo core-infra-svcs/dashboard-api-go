@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to update | 
-**Details** | [**[]NetworksNetworkIdDevicesClaimDetails**](NetworksNetworkIdDevicesClaimDetails.md) | An array of details | 
+**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
 
 ## Methods
 
 ### NewInlineObject270
 
-`func NewInlineObject270(serials []string, details []NetworksNetworkIdDevicesClaimDetails, ) *InlineObject270`
+`func NewInlineObject270(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject270`
 
 NewInlineObject270 instantiates a new InlineObject270 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject270WithDefaults instantiates a new InlineObject270 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetSwaps
 
-`func (o *InlineObject270) GetSerials() []string`
+`func (o *InlineObject270) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSwapsOk
 
-`func (o *InlineObject270) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject270) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSwaps
 
-`func (o *InlineObject270) SetSerials(v []string)`
+`func (o *InlineObject270) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
 
-SetSerials sets Serials field to given value.
-
-
-### GetDetails
-
-`func (o *InlineObject270) GetDetails() []NetworksNetworkIdDevicesClaimDetails`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineObject270) GetDetailsOk() (*[]NetworksNetworkIdDevicesClaimDetails, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineObject270) SetDetails(v []NetworksNetworkIdDevicesClaimDetails)`
-
-SetDetails sets Details field to given value.
+SetSwaps sets Swaps field to given value.
 
 
 

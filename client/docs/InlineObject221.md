@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the adaptive policy ACL | 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
-**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. | 
-**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**ExpiresAt** | Pointer to **NullableTime** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
 ### NewInlineObject221
 
-`func NewInlineObject221(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules1, ipVersion string, ) *InlineObject221`
+`func NewInlineObject221() *InlineObject221`
 
 NewInlineObject221 instantiates a new InlineObject221 object
 This constructor will assign default values to properties that have it defined,
@@ -47,72 +47,97 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetDescription
+`func (o *InlineObject221) HasName() bool`
 
-`func (o *InlineObject221) GetDescription() string`
+HasName returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetPassphrase
 
-### GetDescriptionOk
+`func (o *InlineObject221) GetPassphrase() string`
 
-`func (o *InlineObject221) GetDescriptionOk() (*string, bool)`
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetPassphraseOk
+
+`func (o *InlineObject221) GetPassphraseOk() (*string, bool)`
+
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetPassphrase
 
-`func (o *InlineObject221) SetDescription(v string)`
+`func (o *InlineObject221) SetPassphrase(v string)`
 
-SetDescription sets Description field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasDescription
+### HasPassphrase
 
-`func (o *InlineObject221) HasDescription() bool`
+`func (o *InlineObject221) HasPassphrase() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetRules
+### GetGroupPolicyId
 
-`func (o *InlineObject221) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
+`func (o *InlineObject221) GetGroupPolicyId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject221) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
+`func (o *InlineObject221) GetGroupPolicyIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetGroupPolicyId
 
-`func (o *InlineObject221) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
+`func (o *InlineObject221) SetGroupPolicyId(v string)`
 
-SetRules sets Rules field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
+### HasGroupPolicyId
 
-### GetIpVersion
+`func (o *InlineObject221) HasGroupPolicyId() bool`
 
-`func (o *InlineObject221) GetIpVersion() string`
+HasGroupPolicyId returns a boolean if a field has been set.
 
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+### GetExpiresAt
 
-### GetIpVersionOk
+`func (o *InlineObject221) GetExpiresAt() time.Time`
 
-`func (o *InlineObject221) GetIpVersionOk() (*string, bool)`
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
 
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+### GetExpiresAtOk
+
+`func (o *InlineObject221) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVersion
+### SetExpiresAt
 
-`func (o *InlineObject221) SetIpVersion(v string)`
+`func (o *InlineObject221) SetExpiresAt(v time.Time)`
 
-SetIpVersion sets IpVersion field to given value.
+SetExpiresAt sets ExpiresAt field to given value.
 
+### HasExpiresAt
 
+`func (o *InlineObject221) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
+
+### SetExpiresAtNil
+
+`func (o *InlineObject221) SetExpiresAtNil(b bool)`
+
+ SetExpiresAtNil sets the value for ExpiresAt to be an explicit nil
+
+### UnsetExpiresAt
+`func (o *InlineObject221) UnsetExpiresAt()`
+
+UnsetExpiresAt ensures that no value is present for ExpiresAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

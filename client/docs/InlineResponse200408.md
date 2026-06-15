@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Application** | Pointer to **string** | Name of the Application | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application | [optional] 
+**Items** | Pointer to [**[]InlineResponse200408Items**](InlineResponse200408Items.md) | Array of Limited Access Roles | [optional] 
+**Meta** | Pointer to [**InlineResponse200274Meta**](InlineResponse200274Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200408WithDefaults instantiates a new InlineResponse200408 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplication
+### GetItems
 
-`func (o *InlineResponse200408) GetApplication() string`
+`func (o *InlineResponse200408) GetItems() []InlineResponse200408Items`
 
-GetApplication returns the Application field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetApplicationOk
+### GetItemsOk
 
-`func (o *InlineResponse200408) GetApplicationOk() (*string, bool)`
+`func (o *InlineResponse200408) GetItemsOk() (*[]InlineResponse200408Items, bool)`
 
-GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplication
+### SetItems
 
-`func (o *InlineResponse200408) SetApplication(v string)`
+`func (o *InlineResponse200408) SetItems(v []InlineResponse200408Items)`
 
-SetApplication sets Application field to given value.
+SetItems sets Items field to given value.
 
-### HasApplication
+### HasItems
 
-`func (o *InlineResponse200408) HasApplication() bool`
+`func (o *InlineResponse200408) HasItems() bool`
 
-HasApplication returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetTotal
+### GetMeta
 
-`func (o *InlineResponse200408) GetTotal() float32`
+`func (o *InlineResponse200408) GetMeta() InlineResponse200274Meta`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetMetaOk
 
-`func (o *InlineResponse200408) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200408) GetMetaOk() (*InlineResponse200274Meta, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetMeta
 
-`func (o *InlineResponse200408) SetTotal(v float32)`
+`func (o *InlineResponse200408) SetMeta(v InlineResponse200274Meta)`
 
-SetTotal sets Total field to given value.
+SetMeta sets Meta field to given value.
 
-### HasTotal
+### HasMeta
 
-`func (o *InlineResponse200408) HasTotal() bool`
+`func (o *InlineResponse200408) HasMeta() bool`
 
-HasTotal returns a boolean if a field has been set.
-
-### GetDownstream
-
-`func (o *InlineResponse200408) GetDownstream() float32`
-
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
-
-### GetDownstreamOk
-
-`func (o *InlineResponse200408) GetDownstreamOk() (*float32, bool)`
-
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownstream
-
-`func (o *InlineResponse200408) SetDownstream(v float32)`
-
-SetDownstream sets Downstream field to given value.
-
-### HasDownstream
-
-`func (o *InlineResponse200408) HasDownstream() bool`
-
-HasDownstream returns a boolean if a field has been set.
-
-### GetUpstream
-
-`func (o *InlineResponse200408) GetUpstream() float32`
-
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
-
-### GetUpstreamOk
-
-`func (o *InlineResponse200408) GetUpstreamOk() (*float32, bool)`
-
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpstream
-
-`func (o *InlineResponse200408) SetUpstream(v float32)`
-
-SetUpstream sets Upstream field to given value.
-
-### HasUpstream
-
-`func (o *InlineResponse200408) HasUpstream() bool`
-
-HasUpstream returns a boolean if a field has been set.
-
-### GetPercentage
-
-`func (o *InlineResponse200408) GetPercentage() float32`
-
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
-
-### GetPercentageOk
-
-`func (o *InlineResponse200408) GetPercentageOk() (*float32, bool)`
-
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPercentage
-
-`func (o *InlineResponse200408) SetPercentage(v float32)`
-
-SetPercentage sets Percentage field to given value.
-
-### HasPercentage
-
-`func (o *InlineResponse200408) HasPercentage() bool`
-
-HasPercentage returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

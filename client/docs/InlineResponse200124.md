@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Event category | [optional] 
-**Type** | Pointer to **string** | Event type | [optional] 
-**Description** | Pointer to **string** | Description of the event | [optional] 
+**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
+**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
+**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
+**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200124WithDefaults instantiates a new InlineResponse200124 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetClientId
 
-`func (o *InlineResponse200124) GetCategory() string`
+`func (o *InlineResponse200124) GetClientId() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetClientIdOk
 
-`func (o *InlineResponse200124) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200124) GetClientIdOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetClientId
 
-`func (o *InlineResponse200124) SetCategory(v string)`
+`func (o *InlineResponse200124) SetClientId(v string)`
 
-SetCategory sets Category field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasCategory
+### HasClientId
 
-`func (o *InlineResponse200124) HasCategory() bool`
+`func (o *InlineResponse200124) HasClientId() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetType
+### GetClientIp
 
-`func (o *InlineResponse200124) GetType() string`
+`func (o *InlineResponse200124) GetClientIp() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetClientIpOk
 
-`func (o *InlineResponse200124) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200124) GetClientIpOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetClientIp
 
-`func (o *InlineResponse200124) SetType(v string)`
+`func (o *InlineResponse200124) SetClientIp(v string)`
 
-SetType sets Type field to given value.
+SetClientIp sets ClientIp field to given value.
 
-### HasType
+### HasClientIp
 
-`func (o *InlineResponse200124) HasType() bool`
+`func (o *InlineResponse200124) HasClientIp() bool`
 
-HasType returns a boolean if a field has been set.
+HasClientIp returns a boolean if a field has been set.
 
-### GetDescription
+### GetClientMac
 
-`func (o *InlineResponse200124) GetDescription() string`
+`func (o *InlineResponse200124) GetClientMac() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetClientMacOk
 
-`func (o *InlineResponse200124) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200124) GetClientMacOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetClientMac
 
-`func (o *InlineResponse200124) SetDescription(v string)`
+`func (o *InlineResponse200124) SetClientMac(v string)`
 
-SetDescription sets Description field to given value.
+SetClientMac sets ClientMac field to given value.
 
-### HasDescription
+### HasClientMac
 
-`func (o *InlineResponse200124) HasDescription() bool`
+`func (o *InlineResponse200124) HasClientMac() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasClientMac returns a boolean if a field has been set.
+
+### GetUsageHistory
+
+`func (o *InlineResponse200124) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
+
+GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
+
+### GetUsageHistoryOk
+
+`func (o *InlineResponse200124) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
+
+GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsageHistory
+
+`func (o *InlineResponse200124) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
+
+SetUsageHistory sets UsageHistory field to given value.
+
+### HasUsageHistory
+
+`func (o *InlineResponse200124) HasUsageHistory() bool`
+
+HasUsageHistory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

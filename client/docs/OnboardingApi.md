@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationCameraOnboardingStatuses
 
-> []InlineResponse200295 GetOrganizationCameraOnboardingStatuses(ctx, organizationId).Serials(serials).NetworkIds(networkIds).Execute()
+> []InlineResponse200307 GetOrganizationCameraOnboardingStatuses(ctx, organizationId).Serials(serials).NetworkIds(networkIds).Execute()
 
 Fetch onboarding status of cameras
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OnboardingApi.GetOrganizationCameraOnboardingStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraOnboardingStatuses`: []InlineResponse200295
+    // response from `GetOrganizationCameraOnboardingStatuses`: []InlineResponse200307
     fmt.Fprintf(os.Stdout, "Response from `OnboardingApi.GetOrganizationCameraOnboardingStatuses`: %v\n", resp)
 }
 ```
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200295**](InlineResponse200295.md)
+[**[]InlineResponse200307**](InlineResponse200307.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationCameraOnboardingStatuses
 
-> InlineResponse200296 UpdateOrganizationCameraOnboardingStatuses(ctx, organizationId).UpdateOrganizationCameraOnboardingStatuses(updateOrganizationCameraOnboardingStatuses).Execute()
+> InlineResponse200308 UpdateOrganizationCameraOnboardingStatuses(ctx, organizationId).UpdateOrganizationCameraOnboardingStatuses(updateOrganizationCameraOnboardingStatuses).Execute()
 
 Notify that credential handoff to camera has completed
 
@@ -105,7 +105,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject253() // InlineObject253 |  (optional)
+    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject264() // InlineObject264 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OnboardingApi.UpdateOrganizationCameraOnboardingStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationCameraOnboardingStatuses`: InlineResponse200296
+    // response from `UpdateOrganizationCameraOnboardingStatuses`: InlineResponse200308
     fmt.Fprintf(os.Stdout, "Response from `OnboardingApi.UpdateOrganizationCameraOnboardingStatuses`: %v\n", resp)
 }
 ```
@@ -135,11 +135,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationCameraOn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationCameraOnboardingStatuses** | [**InlineObject253**](InlineObject253.md) |  | 
+ **updateOrganizationCameraOnboardingStatuses** | [**InlineObject264**](InlineObject264.md) |  | 
 
 ### Return type
 
-[**InlineResponse200296**](InlineResponse200296.md)
+[**InlineResponse200308**](InlineResponse200308.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraAnalyticsRecent
 
-> []InlineResponse20015 GetDeviceCameraAnalyticsRecent(ctx, serial).ObjectType(objectType).Execute()
+> []InlineResponse20016 GetDeviceCameraAnalyticsRecent(ctx, serial).ObjectType(objectType).Execute()
 
 Returns most recent record for analytics zones
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RecentApi.GetDeviceCameraAnalyticsRecent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsRecent`: []InlineResponse20015
+    // response from `GetDeviceCameraAnalyticsRecent`: []InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `RecentApi.GetDeviceCameraAnalyticsRecent`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20015**](InlineResponse20015.md)
+[**[]InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 

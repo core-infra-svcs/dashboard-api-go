@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**InlineResponse200246Concentrator**](InlineResponse200246Concentrator.md) |  | [optional] 
-**Failover** | Pointer to [**InlineResponse200246Failover**](InlineResponse200246Failover.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**InlineResponse200246SplitTunnel**](InlineResponse200246SplitTunnel.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200246Rules**](InlineResponse200246Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allows wireless client access to local LAN (boolean value - true allows access and false denies access) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200246WithDefaults instantiates a new InlineResponse200246 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetRules
 
-`func (o *InlineResponse200246) GetConcentrator() InlineResponse200246Concentrator`
+`func (o *InlineResponse200246) GetRules() []InlineResponse200246Rules`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetRulesOk
 
-`func (o *InlineResponse200246) GetConcentratorOk() (*InlineResponse200246Concentrator, bool)`
+`func (o *InlineResponse200246) GetRulesOk() (*[]InlineResponse200246Rules, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetRules
 
-`func (o *InlineResponse200246) SetConcentrator(v InlineResponse200246Concentrator)`
+`func (o *InlineResponse200246) SetRules(v []InlineResponse200246Rules)`
 
-SetConcentrator sets Concentrator field to given value.
+SetRules sets Rules field to given value.
 
-### HasConcentrator
+### HasRules
 
-`func (o *InlineResponse200246) HasConcentrator() bool`
+`func (o *InlineResponse200246) HasRules() bool`
 
-HasConcentrator returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetFailover
+### GetAllowLanAccess
 
-`func (o *InlineResponse200246) GetFailover() InlineResponse200246Failover`
+`func (o *InlineResponse200246) GetAllowLanAccess() bool`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetAllowLanAccessOk
 
-`func (o *InlineResponse200246) GetFailoverOk() (*InlineResponse200246Failover, bool)`
+`func (o *InlineResponse200246) GetAllowLanAccessOk() (*bool, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetAllowLanAccess
 
-`func (o *InlineResponse200246) SetFailover(v InlineResponse200246Failover)`
+`func (o *InlineResponse200246) SetAllowLanAccess(v bool)`
 
-SetFailover sets Failover field to given value.
+SetAllowLanAccess sets AllowLanAccess field to given value.
 
-### HasFailover
+### HasAllowLanAccess
 
-`func (o *InlineResponse200246) HasFailover() bool`
+`func (o *InlineResponse200246) HasAllowLanAccess() bool`
 
-HasFailover returns a boolean if a field has been set.
-
-### GetSplitTunnel
-
-`func (o *InlineResponse200246) GetSplitTunnel() InlineResponse200246SplitTunnel`
-
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
-
-### GetSplitTunnelOk
-
-`func (o *InlineResponse200246) GetSplitTunnelOk() (*InlineResponse200246SplitTunnel, bool)`
-
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSplitTunnel
-
-`func (o *InlineResponse200246) SetSplitTunnel(v InlineResponse200246SplitTunnel)`
-
-SetSplitTunnel sets SplitTunnel field to given value.
-
-### HasSplitTunnel
-
-`func (o *InlineResponse200246) HasSplitTunnel() bool`
-
-HasSplitTunnel returns a boolean if a field has been set.
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

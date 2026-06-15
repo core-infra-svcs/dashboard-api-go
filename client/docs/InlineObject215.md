@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
-**Failover** | Pointer to [**InlineResponse200246Failover**](InlineResponse200246Failover.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
+**DeviceTypePolicies** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies**](NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies.md) | List of device type policies. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject215WithDefaults instantiates a new InlineObject215 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetEnabled
 
-`func (o *InlineObject215) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
+`func (o *InlineObject215) GetEnabled() bool`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetEnabledOk
 
-`func (o *InlineObject215) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
+`func (o *InlineObject215) GetEnabledOk() (*bool, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetEnabled
 
-`func (o *InlineObject215) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
+`func (o *InlineObject215) SetEnabled(v bool)`
 
-SetConcentrator sets Concentrator field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConcentrator
+### HasEnabled
 
-`func (o *InlineObject215) HasConcentrator() bool`
+`func (o *InlineObject215) HasEnabled() bool`
 
-HasConcentrator returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSplitTunnel
+### GetDeviceTypePolicies
 
-`func (o *InlineObject215) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
+`func (o *InlineObject215) GetDeviceTypePolicies() []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies`
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
 
-### GetSplitTunnelOk
+### GetDeviceTypePoliciesOk
 
-`func (o *InlineObject215) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
+`func (o *InlineObject215) GetDeviceTypePoliciesOk() (*[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies, bool)`
 
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetDeviceTypePolicies
 
-`func (o *InlineObject215) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
+`func (o *InlineObject215) SetDeviceTypePolicies(v []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
 
-### HasSplitTunnel
+### HasDeviceTypePolicies
 
-`func (o *InlineObject215) HasSplitTunnel() bool`
+`func (o *InlineObject215) HasDeviceTypePolicies() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
-
-### GetFailover
-
-`func (o *InlineObject215) GetFailover() InlineResponse200246Failover`
-
-GetFailover returns the Failover field if non-nil, zero value otherwise.
-
-### GetFailoverOk
-
-`func (o *InlineObject215) GetFailoverOk() (*InlineResponse200246Failover, bool)`
-
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailover
-
-`func (o *InlineObject215) SetFailover(v InlineResponse200246Failover)`
-
-SetFailover sets Failover field to given value.
-
-### HasFailover
-
-`func (o *InlineObject215) HasFailover() bool`
-
-HasFailover returns a boolean if a field has been set.
+HasDeviceTypePolicies returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

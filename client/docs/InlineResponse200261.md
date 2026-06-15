@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
+**AdaptivePolicyId** | Pointer to **string** | The ID for the adaptive policy | [optional] 
+**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | [optional] 
+**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | [optional] 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | The access control lists for the adaptive policy | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
+**CreatedAt** | Pointer to **string** | The created at timestamp for the adaptive policy | [optional] 
+**UpdatedAt** | Pointer to **string** | The updated at timestamp for the adaptive policy | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineResponse200261WithDefaults instantiates a new InlineResponse200261 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetAdaptivePolicyId
 
-`func (o *InlineResponse200261) GetStartTs() time.Time`
+`func (o *InlineResponse200261) GetAdaptivePolicyId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetAdaptivePolicyId returns the AdaptivePolicyId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetAdaptivePolicyIdOk
 
-`func (o *InlineResponse200261) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200261) GetAdaptivePolicyIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetAdaptivePolicyIdOk returns a tuple with the AdaptivePolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetAdaptivePolicyId
 
-`func (o *InlineResponse200261) SetStartTs(v time.Time)`
+`func (o *InlineResponse200261) SetAdaptivePolicyId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetAdaptivePolicyId sets AdaptivePolicyId field to given value.
 
-### HasStartTs
+### HasAdaptivePolicyId
 
-`func (o *InlineResponse200261) HasStartTs() bool`
+`func (o *InlineResponse200261) HasAdaptivePolicyId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasAdaptivePolicyId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetSourceGroup
 
-`func (o *InlineResponse200261) GetEndTs() time.Time`
+`func (o *InlineResponse200261) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetSourceGroupOk
 
-`func (o *InlineResponse200261) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200261) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetSourceGroup
 
-`func (o *InlineResponse200261) SetEndTs(v time.Time)`
+`func (o *InlineResponse200261) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
 
-SetEndTs sets EndTs field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
-### HasEndTs
+### HasSourceGroup
 
-`func (o *InlineResponse200261) HasEndTs() bool`
+`func (o *InlineResponse200261) HasSourceGroup() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasSourceGroup returns a boolean if a field has been set.
 
-### GetCounts
+### GetDestinationGroup
 
-`func (o *InlineResponse200261) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
+`func (o *InlineResponse200261) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetDestinationGroupOk
 
-`func (o *InlineResponse200261) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
+`func (o *InlineResponse200261) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetDestinationGroup
 
-`func (o *InlineResponse200261) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
+`func (o *InlineResponse200261) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
 
-SetCounts sets Counts field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
-### HasCounts
+### HasDestinationGroup
 
-`func (o *InlineResponse200261) HasCounts() bool`
+`func (o *InlineResponse200261) HasDestinationGroup() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasDestinationGroup returns a boolean if a field has been set.
+
+### GetAcls
+
+`func (o *InlineResponse200261) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
+
+GetAcls returns the Acls field if non-nil, zero value otherwise.
+
+### GetAclsOk
+
+`func (o *InlineResponse200261) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
+
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAcls
+
+`func (o *InlineResponse200261) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
+
+SetAcls sets Acls field to given value.
+
+### HasAcls
+
+`func (o *InlineResponse200261) HasAcls() bool`
+
+HasAcls returns a boolean if a field has been set.
+
+### GetLastEntryRule
+
+`func (o *InlineResponse200261) GetLastEntryRule() string`
+
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+
+### GetLastEntryRuleOk
+
+`func (o *InlineResponse200261) GetLastEntryRuleOk() (*string, bool)`
+
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastEntryRule
+
+`func (o *InlineResponse200261) SetLastEntryRule(v string)`
+
+SetLastEntryRule sets LastEntryRule field to given value.
+
+### HasLastEntryRule
+
+`func (o *InlineResponse200261) HasLastEntryRule() bool`
+
+HasLastEntryRule returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200261) GetCreatedAt() string`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200261) GetCreatedAtOk() (*string, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200261) SetCreatedAt(v string)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200261) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200261) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200261) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200261) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200261) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

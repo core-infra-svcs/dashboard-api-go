@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RulesetId** | Pointer to **string** | ID of the ruleset to assign | [optional] 
-**PolicyId** | Pointer to **string** | ID of the policy to assign the ruleset to | [optional] 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Network** | [**OrganizationsOrganizationIdNetworksMovesNetwork**](OrganizationsOrganizationIdNetworksMovesNetwork.md) |  | 
+**Organizations** | [**OrganizationsOrganizationIdNetworksMovesOrganizations**](OrganizationsOrganizationIdNetworksMovesOrganizations.md) |  | 
+**Simulate** | Pointer to **bool** | If true, simulates the network move and validates the operation without committing changes. The network will remain in the source organization. | [optional] 
 
 ## Methods
 
 ### NewInlineObject310
 
-`func NewInlineObject310() *InlineObject310`
+`func NewInlineObject310(network OrganizationsOrganizationIdNetworksMovesNetwork, organizations OrganizationsOrganizationIdNetworksMovesOrganizations, ) *InlineObject310`
 
 NewInlineObject310 instantiates a new InlineObject310 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,70 @@ NewInlineObject310WithDefaults instantiates a new InlineObject310 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRulesetId
+### GetNetwork
 
-`func (o *InlineObject310) GetRulesetId() string`
+`func (o *InlineObject310) GetNetwork() OrganizationsOrganizationIdNetworksMovesNetwork`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetNetworkOk
 
-`func (o *InlineObject310) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject310) GetNetworkOk() (*OrganizationsOrganizationIdNetworksMovesNetwork, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetNetwork
 
-`func (o *InlineObject310) SetRulesetId(v string)`
+`func (o *InlineObject310) SetNetwork(v OrganizationsOrganizationIdNetworksMovesNetwork)`
 
-SetRulesetId sets RulesetId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasRulesetId
 
-`func (o *InlineObject310) HasRulesetId() bool`
+### GetOrganizations
 
-HasRulesetId returns a boolean if a field has been set.
+`func (o *InlineObject310) GetOrganizations() OrganizationsOrganizationIdNetworksMovesOrganizations`
 
-### GetPolicyId
+GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
 
-`func (o *InlineObject310) GetPolicyId() string`
+### GetOrganizationsOk
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+`func (o *InlineObject310) GetOrganizationsOk() (*OrganizationsOrganizationIdNetworksMovesOrganizations, bool)`
 
-### GetPolicyIdOk
-
-`func (o *InlineObject310) GetPolicyIdOk() (*string, bool)`
-
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetOrganizations
 
-`func (o *InlineObject310) SetPolicyId(v string)`
+`func (o *InlineObject310) SetOrganizations(v OrganizationsOrganizationIdNetworksMovesOrganizations)`
 
-SetPolicyId sets PolicyId field to given value.
+SetOrganizations sets Organizations field to given value.
 
-### HasPolicyId
 
-`func (o *InlineObject310) HasPolicyId() bool`
+### GetSimulate
 
-HasPolicyId returns a boolean if a field has been set.
+`func (o *InlineObject310) GetSimulate() bool`
 
-### GetPriority
+GetSimulate returns the Simulate field if non-nil, zero value otherwise.
 
-`func (o *InlineObject310) GetPriority() int32`
+### GetSimulateOk
 
-GetPriority returns the Priority field if non-nil, zero value otherwise.
+`func (o *InlineObject310) GetSimulateOk() (*bool, bool)`
 
-### GetPriorityOk
-
-`func (o *InlineObject310) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+GetSimulateOk returns a tuple with the Simulate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPriority
+### SetSimulate
 
-`func (o *InlineObject310) SetPriority(v int32)`
+`func (o *InlineObject310) SetSimulate(v bool)`
 
-SetPriority sets Priority field to given value.
+SetSimulate sets Simulate field to given value.
 
-### HasPriority
+### HasSimulate
 
-`func (o *InlineObject310) HasPriority() bool`
+`func (o *InlineObject310) HasSimulate() bool`
 
-HasPriority returns a boolean if a field has been set.
+HasSimulate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,17 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new template | 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A Base64 encoded file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**HeadersFile** | Pointer to **string** | A Base64 encoded file containing the liquid template used with the webhook headers. | [optional] 
+**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
+**Subnet** | Pointer to **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | [optional] 
+**NextHopIp** | Pointer to **string** | IP address of the next hop device to which the device sends its traffic for the subnet | [optional] 
+**ManagementNextHop** | Pointer to **NullableString** | Optional fallback IP address for management traffic | [optional] 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183(name string, ) *InlineObject183`
+`func NewInlineObject183() *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -48,116 +50,171 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetBody
+`func (o *InlineObject183) HasName() bool`
 
-`func (o *InlineObject183) GetBody() string`
+HasName returns a boolean if a field has been set.
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+### GetSubnet
 
-### GetBodyOk
+`func (o *InlineObject183) GetSubnet() string`
 
-`func (o *InlineObject183) GetBodyOk() (*string, bool)`
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+### GetSubnetOk
+
+`func (o *InlineObject183) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetSubnet
 
-`func (o *InlineObject183) SetBody(v string)`
+`func (o *InlineObject183) SetSubnet(v string)`
 
-SetBody sets Body field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasBody
+### HasSubnet
 
-`func (o *InlineObject183) HasBody() bool`
+`func (o *InlineObject183) HasSubnet() bool`
 
-HasBody returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetHeaders
+### GetNextHopIp
 
-`func (o *InlineObject183) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+`func (o *InlineObject183) GetNextHopIp() string`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetNextHopIpOk
 
-`func (o *InlineObject183) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+`func (o *InlineObject183) GetNextHopIpOk() (*string, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetNextHopIp
 
-`func (o *InlineObject183) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+`func (o *InlineObject183) SetNextHopIp(v string)`
 
-SetHeaders sets Headers field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasHeaders
+### HasNextHopIp
 
-`func (o *InlineObject183) HasHeaders() bool`
+`func (o *InlineObject183) HasNextHopIp() bool`
 
-HasHeaders returns a boolean if a field has been set.
+HasNextHopIp returns a boolean if a field has been set.
 
-### SetHeadersNil
+### GetManagementNextHop
 
-`func (o *InlineObject183) SetHeadersNil(b bool)`
+`func (o *InlineObject183) GetManagementNextHop() string`
 
- SetHeadersNil sets the value for Headers to be an explicit nil
+GetManagementNextHop returns the ManagementNextHop field if non-nil, zero value otherwise.
 
-### UnsetHeaders
-`func (o *InlineObject183) UnsetHeaders()`
+### GetManagementNextHopOk
 
-UnsetHeaders ensures that no value is present for Headers, not even an explicit nil
-### GetBodyFile
+`func (o *InlineObject183) GetManagementNextHopOk() (*string, bool)`
 
-`func (o *InlineObject183) GetBodyFile() string`
-
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
-
-### GetBodyFileOk
-
-`func (o *InlineObject183) GetBodyFileOk() (*string, bool)`
-
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+GetManagementNextHopOk returns a tuple with the ManagementNextHop field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBodyFile
+### SetManagementNextHop
 
-`func (o *InlineObject183) SetBodyFile(v string)`
+`func (o *InlineObject183) SetManagementNextHop(v string)`
 
-SetBodyFile sets BodyFile field to given value.
+SetManagementNextHop sets ManagementNextHop field to given value.
 
-### HasBodyFile
+### HasManagementNextHop
 
-`func (o *InlineObject183) HasBodyFile() bool`
+`func (o *InlineObject183) HasManagementNextHop() bool`
 
-HasBodyFile returns a boolean if a field has been set.
+HasManagementNextHop returns a boolean if a field has been set.
 
-### GetHeadersFile
+### SetManagementNextHopNil
 
-`func (o *InlineObject183) GetHeadersFile() string`
+`func (o *InlineObject183) SetManagementNextHopNil(b bool)`
 
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+ SetManagementNextHopNil sets the value for ManagementNextHop to be an explicit nil
 
-### GetHeadersFileOk
+### UnsetManagementNextHop
+`func (o *InlineObject183) UnsetManagementNextHop()`
 
-`func (o *InlineObject183) GetHeadersFileOk() (*string, bool)`
+UnsetManagementNextHop ensures that no value is present for ManagementNextHop, not even an explicit nil
+### GetAdvertiseViaOspfEnabled
 
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+`func (o *InlineObject183) GetAdvertiseViaOspfEnabled() bool`
+
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+
+### GetAdvertiseViaOspfEnabledOk
+
+`func (o *InlineObject183) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeadersFile
+### SetAdvertiseViaOspfEnabled
 
-`func (o *InlineObject183) SetHeadersFile(v string)`
+`func (o *InlineObject183) SetAdvertiseViaOspfEnabled(v bool)`
 
-SetHeadersFile sets HeadersFile field to given value.
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
 
-### HasHeadersFile
+### HasAdvertiseViaOspfEnabled
 
-`func (o *InlineObject183) HasHeadersFile() bool`
+`func (o *InlineObject183) HasAdvertiseViaOspfEnabled() bool`
 
-HasHeadersFile returns a boolean if a field has been set.
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject183) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineObject183) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject183) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject183) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject183) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject183) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject183) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject183) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

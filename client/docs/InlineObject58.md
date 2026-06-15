@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SpoofingProtection** | Pointer to [**InlineResponse20078SpoofingProtection**](InlineResponse20078SpoofingProtection.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20077Rules**](InlineResponse20077Rules.md) | An ordered array of the MX L7 firewall rules. Each rule is an object with &#39;policy&#39;, &#39;type&#39;, and &#39;value&#39;. The &#39;value&#39; shape depends on &#39;type&#39;: object for application/applicationCategory, string for host/port/ipRange, and an array of 2-letter ISO 3166-1 alpha-2 country codes for allowedCountries/blockedCountries. For backward compatibility, request types also accept whitelistedCountries/blacklistedCountries. | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject58WithDefaults instantiates a new InlineObject58 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSpoofingProtection
+### GetRules
 
-`func (o *InlineObject58) GetSpoofingProtection() InlineResponse20078SpoofingProtection`
+`func (o *InlineObject58) GetRules() []InlineResponse20077Rules`
 
-GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSpoofingProtectionOk
+### GetRulesOk
 
-`func (o *InlineObject58) GetSpoofingProtectionOk() (*InlineResponse20078SpoofingProtection, bool)`
+`func (o *InlineObject58) GetRulesOk() (*[]InlineResponse20077Rules, bool)`
 
-GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpoofingProtection
+### SetRules
 
-`func (o *InlineObject58) SetSpoofingProtection(v InlineResponse20078SpoofingProtection)`
+`func (o *InlineObject58) SetRules(v []InlineResponse20077Rules)`
 
-SetSpoofingProtection sets SpoofingProtection field to given value.
+SetRules sets Rules field to given value.
 
-### HasSpoofingProtection
+### HasRules
 
-`func (o *InlineObject58) HasSpoofingProtection() bool`
+`func (o *InlineObject58) HasRules() bool`
 
-HasSpoofingProtection returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

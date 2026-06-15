@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **NullableString** | Quality and retention profile ID; null if not using a profile | [optional] 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Whether motion-based retention is enabled | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether audio recording is enabled | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Whether restricted bandwidth mode is enabled | [optional] 
-**Quality** | Pointer to **string** | Video quality | [optional] 
-**Resolution** | Pointer to **string** | Video resolution | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | Motion detector version | [optional] 
+**Enabled** | Pointer to **bool** | Whether custom analytics is enabled | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**Parameters** | Pointer to [**[]InlineResponse20019Parameters**](InlineResponse20019Parameters.md) | Parameters for the custom analytics workload | [optional] 
 
 ## Methods
 
@@ -31,190 +27,80 @@ NewInlineResponse20019WithDefaults instantiates a new InlineResponse20019 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetEnabled
 
-`func (o *InlineResponse20019) GetProfileId() string`
+`func (o *InlineResponse20019) GetEnabled() bool`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20019) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20019) GetEnabledOk() (*bool, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetEnabled
 
-`func (o *InlineResponse20019) SetProfileId(v string)`
+`func (o *InlineResponse20019) SetEnabled(v bool)`
 
-SetProfileId sets ProfileId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasProfileId
+### HasEnabled
 
-`func (o *InlineResponse20019) HasProfileId() bool`
+`func (o *InlineResponse20019) HasEnabled() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### SetProfileIdNil
+### GetArtifactId
 
-`func (o *InlineResponse20019) SetProfileIdNil(b bool)`
+`func (o *InlineResponse20019) GetArtifactId() string`
 
- SetProfileIdNil sets the value for ProfileId to be an explicit nil
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### UnsetProfileId
-`func (o *InlineResponse20019) UnsetProfileId()`
+### GetArtifactIdOk
 
-UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
-### GetMotionBasedRetentionEnabled
+`func (o *InlineResponse20019) GetArtifactIdOk() (*string, bool)`
 
-`func (o *InlineResponse20019) GetMotionBasedRetentionEnabled() bool`
-
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
-
-### GetMotionBasedRetentionEnabledOk
-
-`func (o *InlineResponse20019) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
-
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionBasedRetentionEnabled
+### SetArtifactId
 
-`func (o *InlineResponse20019) SetMotionBasedRetentionEnabled(v bool)`
+`func (o *InlineResponse20019) SetArtifactId(v string)`
 
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasMotionBasedRetentionEnabled
+### HasArtifactId
 
-`func (o *InlineResponse20019) HasMotionBasedRetentionEnabled() bool`
+`func (o *InlineResponse20019) HasArtifactId() bool`
 
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
 
-### GetAudioRecordingEnabled
+### GetParameters
 
-`func (o *InlineResponse20019) GetAudioRecordingEnabled() bool`
+`func (o *InlineResponse20019) GetParameters() []InlineResponse20019Parameters`
 
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
+GetParameters returns the Parameters field if non-nil, zero value otherwise.
 
-### GetAudioRecordingEnabledOk
+### GetParametersOk
 
-`func (o *InlineResponse20019) GetAudioRecordingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20019) GetParametersOk() (*[]InlineResponse20019Parameters, bool)`
 
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
+GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioRecordingEnabled
+### SetParameters
 
-`func (o *InlineResponse20019) SetAudioRecordingEnabled(v bool)`
+`func (o *InlineResponse20019) SetParameters(v []InlineResponse20019Parameters)`
 
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
+SetParameters sets Parameters field to given value.
 
-### HasAudioRecordingEnabled
+### HasParameters
 
-`func (o *InlineResponse20019) HasAudioRecordingEnabled() bool`
+`func (o *InlineResponse20019) HasParameters() bool`
 
-HasAudioRecordingEnabled returns a boolean if a field has been set.
-
-### GetRestrictedBandwidthModeEnabled
-
-`func (o *InlineResponse20019) GetRestrictedBandwidthModeEnabled() bool`
-
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
-
-### GetRestrictedBandwidthModeEnabledOk
-
-`func (o *InlineResponse20019) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
-
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRestrictedBandwidthModeEnabled
-
-`func (o *InlineResponse20019) SetRestrictedBandwidthModeEnabled(v bool)`
-
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
-
-### HasRestrictedBandwidthModeEnabled
-
-`func (o *InlineResponse20019) HasRestrictedBandwidthModeEnabled() bool`
-
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
-
-### GetQuality
-
-`func (o *InlineResponse20019) GetQuality() string`
-
-GetQuality returns the Quality field if non-nil, zero value otherwise.
-
-### GetQualityOk
-
-`func (o *InlineResponse20019) GetQualityOk() (*string, bool)`
-
-GetQualityOk returns a tuple with the Quality field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetQuality
-
-`func (o *InlineResponse20019) SetQuality(v string)`
-
-SetQuality sets Quality field to given value.
-
-### HasQuality
-
-`func (o *InlineResponse20019) HasQuality() bool`
-
-HasQuality returns a boolean if a field has been set.
-
-### GetResolution
-
-`func (o *InlineResponse20019) GetResolution() string`
-
-GetResolution returns the Resolution field if non-nil, zero value otherwise.
-
-### GetResolutionOk
-
-`func (o *InlineResponse20019) GetResolutionOk() (*string, bool)`
-
-GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResolution
-
-`func (o *InlineResponse20019) SetResolution(v string)`
-
-SetResolution sets Resolution field to given value.
-
-### HasResolution
-
-`func (o *InlineResponse20019) HasResolution() bool`
-
-HasResolution returns a boolean if a field has been set.
-
-### GetMotionDetectorVersion
-
-`func (o *InlineResponse20019) GetMotionDetectorVersion() int32`
-
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
-
-### GetMotionDetectorVersionOk
-
-`func (o *InlineResponse20019) GetMotionDetectorVersionOk() (*int32, bool)`
-
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMotionDetectorVersion
-
-`func (o *InlineResponse20019) SetMotionDetectorVersion(v int32)`
-
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
-
-### HasMotionDetectorVersion
-
-`func (o *InlineResponse20019) HasMotionDetectorVersion() bool`
-
-HasMotionDetectorVersion returns a boolean if a field has been set.
+HasParameters returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

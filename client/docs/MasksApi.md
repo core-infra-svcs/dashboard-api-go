@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceCellularUplinksBandsMasksUpdate
 
-> InlineResponse20027 CreateDeviceCellularUplinksBandsMasksUpdate(ctx, serial).CreateDeviceCellularUplinksBandsMasksUpdate(createDeviceCellularUplinksBandsMasksUpdate).Execute()
+> InlineResponse20028 CreateDeviceCellularUplinksBandsMasksUpdate(ctx, serial).CreateDeviceCellularUplinksBandsMasksUpdate(createDeviceCellularUplinksBandsMasksUpdate).Execute()
 
 Update the cellular band masks for a device
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceCellularUplinksBandsMasksUpdate := *openapiclient.NewInlineObject15("Slot_example", "Type_example", []string{"Masked_example"}) // InlineObject15 | 
+    createDeviceCellularUplinksBandsMasksUpdate := *openapiclient.NewInlineObject16("Slot_example", "Type_example", []string{"Masked_example"}) // InlineObject16 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MasksApi.CreateDeviceCellularUplinksBandsMasksUpdate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceCellularUplinksBandsMasksUpdate`: InlineResponse20027
+    // response from `CreateDeviceCellularUplinksBandsMasksUpdate`: InlineResponse20028
     fmt.Fprintf(os.Stdout, "Response from `MasksApi.CreateDeviceCellularUplinksBandsMasksUpdate`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceCellularUplink
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceCellularUplinksBandsMasksUpdate** | [**InlineObject15**](InlineObject15.md) |  | 
+ **createDeviceCellularUplinksBandsMasksUpdate** | [**InlineObject16**](InlineObject16.md) |  | 
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 

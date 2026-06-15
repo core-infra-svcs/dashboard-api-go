@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMac** | Pointer to **string** | The wifiMac of the device to be wiped. | [optional] 
-**Id** | Pointer to **string** | The id of the device to be wiped. | [optional] 
-**Serial** | Pointer to **string** | The serial of the device to be wiped. | [optional] 
-**Pin** | Pointer to **int32** | The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices. | [optional] 
+**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
+**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
+**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] 
+**Message** | Pointer to **NullableString** | A custom message that will appear in email and text message alerts. | [optional] 
 
 ## Methods
 
@@ -28,106 +31,191 @@ NewInlineObject138WithDefaults instantiates a new InlineObject138 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMac
+### GetName
 
-`func (o *InlineObject138) GetWifiMac() string`
+`func (o *InlineObject138) GetName() string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetNameOk
 
-`func (o *InlineObject138) GetWifiMacOk() (*string, bool)`
+`func (o *InlineObject138) GetNameOk() (*string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetName
 
-`func (o *InlineObject138) SetWifiMac(v string)`
+`func (o *InlineObject138) SetName(v string)`
 
-SetWifiMac sets WifiMac field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMac
+### HasName
 
-`func (o *InlineObject138) HasWifiMac() bool`
+`func (o *InlineObject138) HasName() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetId
+### GetSchedule
 
-`func (o *InlineObject138) GetId() string`
+`func (o *InlineObject138) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetScheduleOk
 
-`func (o *InlineObject138) GetIdOk() (*string, bool)`
+`func (o *InlineObject138) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSchedule
 
-`func (o *InlineObject138) SetId(v string)`
+`func (o *InlineObject138) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
 
-SetId sets Id field to given value.
+SetSchedule sets Schedule field to given value.
 
-### HasId
+### HasSchedule
 
-`func (o *InlineObject138) HasId() bool`
+`func (o *InlineObject138) HasSchedule() bool`
 
-HasId returns a boolean if a field has been set.
+HasSchedule returns a boolean if a field has been set.
 
-### GetSerial
+### GetConditions
 
-`func (o *InlineObject138) GetSerial() string`
+`func (o *InlineObject138) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetConditions returns the Conditions field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetConditionsOk
 
-`func (o *InlineObject138) GetSerialOk() (*string, bool)`
+`func (o *InlineObject138) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetConditions
 
-`func (o *InlineObject138) SetSerial(v string)`
+`func (o *InlineObject138) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
 
-SetSerial sets Serial field to given value.
+SetConditions sets Conditions field to given value.
 
-### HasSerial
+### HasConditions
 
-`func (o *InlineObject138) HasSerial() bool`
+`func (o *InlineObject138) HasConditions() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasConditions returns a boolean if a field has been set.
 
-### GetPin
+### GetRecipients
 
-`func (o *InlineObject138) GetPin() int32`
+`func (o *InlineObject138) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
 
-GetPin returns the Pin field if non-nil, zero value otherwise.
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
 
-### GetPinOk
+### GetRecipientsOk
 
-`func (o *InlineObject138) GetPinOk() (*int32, bool)`
+`func (o *InlineObject138) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
 
-GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPin
+### SetRecipients
 
-`func (o *InlineObject138) SetPin(v int32)`
+`func (o *InlineObject138) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
 
-SetPin sets Pin field to given value.
+SetRecipients sets Recipients field to given value.
 
-### HasPin
+### HasRecipients
 
-`func (o *InlineObject138) HasPin() bool`
+`func (o *InlineObject138) HasRecipients() bool`
 
-HasPin returns a boolean if a field has been set.
+HasRecipients returns a boolean if a field has been set.
 
+### GetSerials
+
+`func (o *InlineObject138) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject138) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject138) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineObject138) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetIncludeSensorUrl
+
+`func (o *InlineObject138) GetIncludeSensorUrl() bool`
+
+GetIncludeSensorUrl returns the IncludeSensorUrl field if non-nil, zero value otherwise.
+
+### GetIncludeSensorUrlOk
+
+`func (o *InlineObject138) GetIncludeSensorUrlOk() (*bool, bool)`
+
+GetIncludeSensorUrlOk returns a tuple with the IncludeSensorUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIncludeSensorUrl
+
+`func (o *InlineObject138) SetIncludeSensorUrl(v bool)`
+
+SetIncludeSensorUrl sets IncludeSensorUrl field to given value.
+
+### HasIncludeSensorUrl
+
+`func (o *InlineObject138) HasIncludeSensorUrl() bool`
+
+HasIncludeSensorUrl returns a boolean if a field has been set.
+
+### GetMessage
+
+`func (o *InlineObject138) GetMessage() string`
+
+GetMessage returns the Message field if non-nil, zero value otherwise.
+
+### GetMessageOk
+
+`func (o *InlineObject138) GetMessageOk() (*string, bool)`
+
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMessage
+
+`func (o *InlineObject138) SetMessage(v string)`
+
+SetMessage sets Message field to given value.
+
+### HasMessage
+
+`func (o *InlineObject138) HasMessage() bool`
+
+HasMessage returns a boolean if a field has been set.
+
+### SetMessageNil
+
+`func (o *InlineObject138) SetMessageNil(b bool)`
+
+ SetMessageNil sets the value for Message to be an explicit nil
+
+### UnsetMessage
+`func (o *InlineObject138) UnsetMessage()`
+
+UnsetMessage ensures that no value is present for Message, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

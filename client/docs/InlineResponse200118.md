@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
-**PoliciesBySsid** | Pointer to [**[]InlineResponse200118PoliciesBySsid**](InlineResponse200118PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode for the cellular gateways in the network. (Passthrough/Routed) | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse200118Subnets**](InlineResponse200118Subnets.md) | List of subnets of all MGs in this network. | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200118WithDefaults instantiates a new InlineResponse200118 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetDeploymentMode
 
-`func (o *InlineResponse200118) GetMac() string`
+`func (o *InlineResponse200118) GetDeploymentMode() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse200118) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200118) GetDeploymentModeOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetDeploymentMode
 
-`func (o *InlineResponse200118) SetMac(v string)`
+`func (o *InlineResponse200118) SetDeploymentMode(v string)`
 
-SetMac sets Mac field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasMac
+### HasDeploymentMode
 
-`func (o *InlineResponse200118) HasMac() bool`
+`func (o *InlineResponse200118) HasDeploymentMode() bool`
 
-HasMac returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetDevicePolicy
+### GetCidr
 
-`func (o *InlineResponse200118) GetDevicePolicy() string`
+`func (o *InlineResponse200118) GetCidr() string`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetCidrOk
 
-`func (o *InlineResponse200118) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineResponse200118) GetCidrOk() (*string, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetCidr
 
-`func (o *InlineResponse200118) SetDevicePolicy(v string)`
+`func (o *InlineResponse200118) SetCidr(v string)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasDevicePolicy
+### HasCidr
 
-`func (o *InlineResponse200118) HasDevicePolicy() bool`
+`func (o *InlineResponse200118) HasCidr() bool`
 
-HasDevicePolicy returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetMask
 
-`func (o *InlineResponse200118) GetGroupPolicyId() string`
+`func (o *InlineResponse200118) GetMask() int32`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetMaskOk
 
-`func (o *InlineResponse200118) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200118) GetMaskOk() (*int32, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetMask
 
-`func (o *InlineResponse200118) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200118) SetMask(v int32)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetMask sets Mask field to given value.
 
-### HasGroupPolicyId
+### HasMask
 
-`func (o *InlineResponse200118) HasGroupPolicyId() bool`
+`func (o *InlineResponse200118) HasMask() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
 
-### GetPoliciesBySsid
+### GetSubnets
 
-`func (o *InlineResponse200118) GetPoliciesBySsid() []InlineResponse200118PoliciesBySsid`
+`func (o *InlineResponse200118) GetSubnets() []InlineResponse200118Subnets`
 
-GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetPoliciesBySsidOk
+### GetSubnetsOk
 
-`func (o *InlineResponse200118) GetPoliciesBySsidOk() (*[]InlineResponse200118PoliciesBySsid, bool)`
+`func (o *InlineResponse200118) GetSubnetsOk() (*[]InlineResponse200118Subnets, bool)`
 
-GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPoliciesBySsid
+### SetSubnets
 
-`func (o *InlineResponse200118) SetPoliciesBySsid(v []InlineResponse200118PoliciesBySsid)`
+`func (o *InlineResponse200118) SetSubnets(v []InlineResponse200118Subnets)`
 
-SetPoliciesBySsid sets PoliciesBySsid field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasPoliciesBySsid
+### HasSubnets
 
-`func (o *InlineResponse200118) HasPoliciesBySsid() bool`
+`func (o *InlineResponse200118) HasSubnets() bool`
 
-HasPoliciesBySsid returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

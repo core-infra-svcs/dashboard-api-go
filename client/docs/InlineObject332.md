@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
-**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems**](OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems.md) | List of connectors to delete (maximum 20 items) | [optional] 
 
 ## Methods
 
 ### NewInlineObject332
 
-`func NewInlineObject332(sourceSerial string, targetSerials []string, ) *InlineObject332`
+`func NewInlineObject332() *InlineObject332`
 
 NewInlineObject332 instantiates a new InlineObject332 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineObject332WithDefaults instantiates a new InlineObject332 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetItems
 
-`func (o *InlineObject332) GetSourceSerial() string`
+`func (o *InlineObject332) GetItems() []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetItemsOk
 
-`func (o *InlineObject332) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineObject332) GetItemsOk() (*[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetItems
 
-`func (o *InlineObject332) SetSourceSerial(v string)`
+`func (o *InlineObject332) SetItems(v []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
 
-### GetTargetSerials
+`func (o *InlineObject332) HasItems() bool`
 
-`func (o *InlineObject332) GetTargetSerials() []string`
-
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
-
-### GetTargetSerialsOk
-
-`func (o *InlineObject332) GetTargetSerialsOk() (*[]string, bool)`
-
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTargetSerials
-
-`func (o *InlineObject332) SetTargetSerials(v []string)`
-
-SetTargetSerials sets TargetSerials field to given value.
-
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

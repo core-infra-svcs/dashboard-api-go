@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Dashboard network ID | [optional] 
-**Name** | Pointer to **string** | Dashboard network name | [optional] 
-**Enabled** | Pointer to **bool** | Is warm spare enabled | [optional] 
-**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
-**Designations** | Pointer to [**[]InlineResponse20067Designations**](InlineResponse20067Designations.md) | Ordered HA roles (1&#x3D;primary, 2&#x3D;spare) | [optional] 
-**Uplink** | Pointer to [**InlineResponse20067Uplink**](InlineResponse20067Uplink.md) |  | [optional] 
+**OccurredAt** | Pointer to **string** | time when the event occurred | [optional] 
+**AlertTypeId** | Pointer to **string** | type of alert | [optional] 
+**AlertType** | Pointer to **string** | user friendly alert type | [optional] 
+**Device** | Pointer to [**NetworksNetworkIdAlertsHistoryDevice**](NetworksNetworkIdAlertsHistoryDevice.md) |  | [optional] 
+**Destinations** | Pointer to [**NetworksNetworkIdAlertsHistoryDestinations**](NetworksNetworkIdAlertsHistoryDestinations.md) |  | [optional] 
+**AlertData** | Pointer to **map[string]interface{}** | relevant data about the event that caused the alert | [optional] 
 
 ## Methods
 
@@ -30,155 +30,155 @@ NewInlineResponse20067WithDefaults instantiates a new InlineResponse20067 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetOccurredAt
 
-`func (o *InlineResponse20067) GetNetworkId() string`
+`func (o *InlineResponse20067) GetOccurredAt() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetOccurredAt returns the OccurredAt field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetOccurredAtOk
 
-`func (o *InlineResponse20067) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20067) GetOccurredAtOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetOccurredAtOk returns a tuple with the OccurredAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetOccurredAt
 
-`func (o *InlineResponse20067) SetNetworkId(v string)`
+`func (o *InlineResponse20067) SetOccurredAt(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetOccurredAt sets OccurredAt field to given value.
 
-### HasNetworkId
+### HasOccurredAt
 
-`func (o *InlineResponse20067) HasNetworkId() bool`
+`func (o *InlineResponse20067) HasOccurredAt() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasOccurredAt returns a boolean if a field has been set.
 
-### GetName
+### GetAlertTypeId
 
-`func (o *InlineResponse20067) GetName() string`
+`func (o *InlineResponse20067) GetAlertTypeId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse20067) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20067) GetAlertTypeIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAlertTypeId
 
-`func (o *InlineResponse20067) SetName(v string)`
+`func (o *InlineResponse20067) SetAlertTypeId(v string)`
 
-SetName sets Name field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasName
+### HasAlertTypeId
 
-`func (o *InlineResponse20067) HasName() bool`
+`func (o *InlineResponse20067) HasAlertTypeId() bool`
 
-HasName returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetEnabled
+### GetAlertType
 
-`func (o *InlineResponse20067) GetEnabled() bool`
+`func (o *InlineResponse20067) GetAlertType() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse20067) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20067) GetAlertTypeOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetAlertType
 
-`func (o *InlineResponse20067) SetEnabled(v bool)`
+`func (o *InlineResponse20067) SetAlertType(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasEnabled
+### HasAlertType
 
-`func (o *InlineResponse20067) HasEnabled() bool`
+`func (o *InlineResponse20067) HasAlertType() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
 
-### GetMode
+### GetDevice
 
-`func (o *InlineResponse20067) GetMode() string`
+`func (o *InlineResponse20067) GetDevice() NetworksNetworkIdAlertsHistoryDevice`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetDeviceOk
 
-`func (o *InlineResponse20067) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20067) GetDeviceOk() (*NetworksNetworkIdAlertsHistoryDevice, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetDevice
 
-`func (o *InlineResponse20067) SetMode(v string)`
+`func (o *InlineResponse20067) SetDevice(v NetworksNetworkIdAlertsHistoryDevice)`
 
-SetMode sets Mode field to given value.
+SetDevice sets Device field to given value.
 
-### HasMode
+### HasDevice
 
-`func (o *InlineResponse20067) HasMode() bool`
+`func (o *InlineResponse20067) HasDevice() bool`
 
-HasMode returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetDesignations
+### GetDestinations
 
-`func (o *InlineResponse20067) GetDesignations() []InlineResponse20067Designations`
+`func (o *InlineResponse20067) GetDestinations() NetworksNetworkIdAlertsHistoryDestinations`
 
-GetDesignations returns the Designations field if non-nil, zero value otherwise.
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
 
-### GetDesignationsOk
+### GetDestinationsOk
 
-`func (o *InlineResponse20067) GetDesignationsOk() (*[]InlineResponse20067Designations, bool)`
+`func (o *InlineResponse20067) GetDestinationsOk() (*NetworksNetworkIdAlertsHistoryDestinations, bool)`
 
-GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDesignations
+### SetDestinations
 
-`func (o *InlineResponse20067) SetDesignations(v []InlineResponse20067Designations)`
+`func (o *InlineResponse20067) SetDestinations(v NetworksNetworkIdAlertsHistoryDestinations)`
 
-SetDesignations sets Designations field to given value.
+SetDestinations sets Destinations field to given value.
 
-### HasDesignations
+### HasDestinations
 
-`func (o *InlineResponse20067) HasDesignations() bool`
+`func (o *InlineResponse20067) HasDestinations() bool`
 
-HasDesignations returns a boolean if a field has been set.
+HasDestinations returns a boolean if a field has been set.
 
-### GetUplink
+### GetAlertData
 
-`func (o *InlineResponse20067) GetUplink() InlineResponse20067Uplink`
+`func (o *InlineResponse20067) GetAlertData() map[string]interface{}`
 
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
+GetAlertData returns the AlertData field if non-nil, zero value otherwise.
 
-### GetUplinkOk
+### GetAlertDataOk
 
-`func (o *InlineResponse20067) GetUplinkOk() (*InlineResponse20067Uplink, bool)`
+`func (o *InlineResponse20067) GetAlertDataOk() (*map[string]interface{}, bool)`
 
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+GetAlertDataOk returns a tuple with the AlertData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplink
+### SetAlertData
 
-`func (o *InlineResponse20067) SetUplink(v InlineResponse20067Uplink)`
+`func (o *InlineResponse20067) SetAlertData(v map[string]interface{})`
 
-SetUplink sets Uplink field to given value.
+SetAlertData sets AlertData field to given value.
 
-### HasUplink
+### HasAlertData
 
-`func (o *InlineResponse20067) HasUplink() bool`
+`func (o *InlineResponse20067) HasAlertData() bool`
 
-HasUplink returns a boolean if a field has been set.
+HasAlertData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
+**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
 
 ## Methods
 
 ### NewInlineObject339
 
-`func NewInlineObject339(networkIds []string, ) *InlineObject339`
+`func NewInlineObject339(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject339`
 
 NewInlineObject339 instantiates a new InlineObject339 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject339WithDefaults instantiates a new InlineObject339 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetItems
 
-`func (o *InlineObject339) GetNetworkIds() []string`
+`func (o *InlineObject339) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetItemsOk
 
-`func (o *InlineObject339) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject339) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetItems
 
-`func (o *InlineObject339) SetNetworkIds(v []string)`
+`func (o *InlineObject339) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetItems sets Items field to given value.
 
 
 

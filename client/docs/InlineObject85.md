@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
-**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
-**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
-**Subnet** | Pointer to [**InlineResponse200102Subnet**](InlineResponse200102Subnet.md) |  | [optional] 
-**HostTranslations** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
+**Custom** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom.md) | Custom VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
+**MajorApplications** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications.md) | Major Application based VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
 
 ## Methods
 
 ### NewInlineObject85
 
-`func NewInlineObject85(mode string, ) *InlineObject85`
+`func NewInlineObject85() *InlineObject85`
 
 NewInlineObject85 instantiates a new InlineObject85 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +26,55 @@ NewInlineObject85WithDefaults instantiates a new InlineObject85 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetCustom
 
-`func (o *InlineObject85) GetMode() string`
+`func (o *InlineObject85) GetCustom() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetCustom returns the Custom field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetCustomOk
 
-`func (o *InlineObject85) GetModeOk() (*string, bool)`
+`func (o *InlineObject85) GetCustomOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetCustom
 
-`func (o *InlineObject85) SetMode(v string)`
+`func (o *InlineObject85) SetCustom(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom)`
 
-SetMode sets Mode field to given value.
+SetCustom sets Custom field to given value.
 
+### HasCustom
 
-### GetHubs
+`func (o *InlineObject85) HasCustom() bool`
 
-`func (o *InlineObject85) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
+HasCustom returns a boolean if a field has been set.
 
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
+### GetMajorApplications
 
-### GetHubsOk
+`func (o *InlineObject85) GetMajorApplications() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications`
 
-`func (o *InlineObject85) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
 
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
+### GetMajorApplicationsOk
+
+`func (o *InlineObject85) GetMajorApplicationsOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications, bool)`
+
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHubs
+### SetMajorApplications
 
-`func (o *InlineObject85) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
+`func (o *InlineObject85) SetMajorApplications(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications)`
 
-SetHubs sets Hubs field to given value.
+SetMajorApplications sets MajorApplications field to given value.
 
-### HasHubs
+### HasMajorApplications
 
-`func (o *InlineObject85) HasHubs() bool`
+`func (o *InlineObject85) HasMajorApplications() bool`
 
-HasHubs returns a boolean if a field has been set.
-
-### GetSubnets
-
-`func (o *InlineObject85) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
-
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
-
-### GetSubnetsOk
-
-`func (o *InlineObject85) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
-
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnets
-
-`func (o *InlineObject85) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
-
-SetSubnets sets Subnets field to given value.
-
-### HasSubnets
-
-`func (o *InlineObject85) HasSubnets() bool`
-
-HasSubnets returns a boolean if a field has been set.
-
-### GetSubnet
-
-`func (o *InlineObject85) GetSubnet() InlineResponse200102Subnet`
-
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
-
-### GetSubnetOk
-
-`func (o *InlineObject85) GetSubnetOk() (*InlineResponse200102Subnet, bool)`
-
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnet
-
-`func (o *InlineObject85) SetSubnet(v InlineResponse200102Subnet)`
-
-SetSubnet sets Subnet field to given value.
-
-### HasSubnet
-
-`func (o *InlineObject85) HasSubnet() bool`
-
-HasSubnet returns a boolean if a field has been set.
-
-### GetHostTranslations
-
-`func (o *InlineObject85) GetHostTranslations() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations`
-
-GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
-
-### GetHostTranslationsOk
-
-`func (o *InlineObject85) GetHostTranslationsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations, bool)`
-
-GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHostTranslations
-
-`func (o *InlineObject85) SetHostTranslations(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations)`
-
-SetHostTranslations sets HostTranslations field to given value.
-
-### HasHostTranslations
-
-`func (o *InlineObject85) HasHostTranslations() bool`
-
-HasHostTranslations returns a boolean if a field has been set.
+HasMajorApplications returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

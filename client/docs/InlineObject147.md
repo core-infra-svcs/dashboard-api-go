@@ -4,10 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
-**Switches** | Pointer to [**[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches**](NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be rebooted. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the endpoints to be rebooted. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the endpoints to be rebooted. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted. | [optional] 
+**KextPaths** | Pointer to **[]string** | The KextPaths of the endpoints to be rebooted. Available for macOS 11+ | [optional] 
+**NotifyUser** | Pointer to **bool** | Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+ | [optional] 
+**RebuildKernelCache** | Pointer to **bool** | Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+ | [optional] 
+**RequestRequiresNetworkTether** | Pointer to **bool** | Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS | [optional] 
 
 ## Methods
 
@@ -28,105 +32,205 @@ NewInlineObject147WithDefaults instantiates a new InlineObject147 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetWifiMacs
 
-`func (o *InlineObject147) GetEnabled() bool`
+`func (o *InlineObject147) GetWifiMacs() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetWifiMacsOk
 
-`func (o *InlineObject147) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject147) GetWifiMacsOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetWifiMacs
 
-`func (o *InlineObject147) SetEnabled(v bool)`
+`func (o *InlineObject147) SetWifiMacs(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetWifiMacs sets WifiMacs field to given value.
 
-### HasEnabled
+### HasWifiMacs
 
-`func (o *InlineObject147) HasEnabled() bool`
+`func (o *InlineObject147) HasWifiMacs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasWifiMacs returns a boolean if a field has been set.
 
-### GetVlanId
+### GetIds
 
-`func (o *InlineObject147) GetVlanId() int32`
+`func (o *InlineObject147) GetIds() []string`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetIdsOk
 
-`func (o *InlineObject147) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject147) GetIdsOk() (*[]string, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetIds
 
-`func (o *InlineObject147) SetVlanId(v int32)`
+`func (o *InlineObject147) SetIds(v []string)`
 
-SetVlanId sets VlanId field to given value.
+SetIds sets Ids field to given value.
 
-### HasVlanId
+### HasIds
 
-`func (o *InlineObject147) HasVlanId() bool`
+`func (o *InlineObject147) HasIds() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
-### GetProtocols
+### GetSerials
 
-`func (o *InlineObject147) GetProtocols() []string`
+`func (o *InlineObject147) GetSerials() []string`
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetProtocolsOk
+### GetSerialsOk
 
-`func (o *InlineObject147) GetProtocolsOk() (*[]string, bool)`
+`func (o *InlineObject147) GetSerialsOk() (*[]string, bool)`
 
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetSerials
 
-`func (o *InlineObject147) SetProtocols(v []string)`
+`func (o *InlineObject147) SetSerials(v []string)`
 
-SetProtocols sets Protocols field to given value.
+SetSerials sets Serials field to given value.
 
-### HasProtocols
+### HasSerials
 
-`func (o *InlineObject147) HasProtocols() bool`
+`func (o *InlineObject147) HasSerials() bool`
 
-HasProtocols returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetSwitches
+### GetScope
 
-`func (o *InlineObject147) GetSwitches() []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches`
+`func (o *InlineObject147) GetScope() []string`
 
-GetSwitches returns the Switches field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetSwitchesOk
+### GetScopeOk
 
-`func (o *InlineObject147) GetSwitchesOk() (*[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches, bool)`
+`func (o *InlineObject147) GetScopeOk() (*[]string, bool)`
 
-GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitches
+### SetScope
 
-`func (o *InlineObject147) SetSwitches(v []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches)`
+`func (o *InlineObject147) SetScope(v []string)`
 
-SetSwitches sets Switches field to given value.
+SetScope sets Scope field to given value.
 
-### HasSwitches
+### HasScope
 
-`func (o *InlineObject147) HasSwitches() bool`
+`func (o *InlineObject147) HasScope() bool`
 
-HasSwitches returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetKextPaths
+
+`func (o *InlineObject147) GetKextPaths() []string`
+
+GetKextPaths returns the KextPaths field if non-nil, zero value otherwise.
+
+### GetKextPathsOk
+
+`func (o *InlineObject147) GetKextPathsOk() (*[]string, bool)`
+
+GetKextPathsOk returns a tuple with the KextPaths field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKextPaths
+
+`func (o *InlineObject147) SetKextPaths(v []string)`
+
+SetKextPaths sets KextPaths field to given value.
+
+### HasKextPaths
+
+`func (o *InlineObject147) HasKextPaths() bool`
+
+HasKextPaths returns a boolean if a field has been set.
+
+### GetNotifyUser
+
+`func (o *InlineObject147) GetNotifyUser() bool`
+
+GetNotifyUser returns the NotifyUser field if non-nil, zero value otherwise.
+
+### GetNotifyUserOk
+
+`func (o *InlineObject147) GetNotifyUserOk() (*bool, bool)`
+
+GetNotifyUserOk returns a tuple with the NotifyUser field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotifyUser
+
+`func (o *InlineObject147) SetNotifyUser(v bool)`
+
+SetNotifyUser sets NotifyUser field to given value.
+
+### HasNotifyUser
+
+`func (o *InlineObject147) HasNotifyUser() bool`
+
+HasNotifyUser returns a boolean if a field has been set.
+
+### GetRebuildKernelCache
+
+`func (o *InlineObject147) GetRebuildKernelCache() bool`
+
+GetRebuildKernelCache returns the RebuildKernelCache field if non-nil, zero value otherwise.
+
+### GetRebuildKernelCacheOk
+
+`func (o *InlineObject147) GetRebuildKernelCacheOk() (*bool, bool)`
+
+GetRebuildKernelCacheOk returns a tuple with the RebuildKernelCache field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRebuildKernelCache
+
+`func (o *InlineObject147) SetRebuildKernelCache(v bool)`
+
+SetRebuildKernelCache sets RebuildKernelCache field to given value.
+
+### HasRebuildKernelCache
+
+`func (o *InlineObject147) HasRebuildKernelCache() bool`
+
+HasRebuildKernelCache returns a boolean if a field has been set.
+
+### GetRequestRequiresNetworkTether
+
+`func (o *InlineObject147) GetRequestRequiresNetworkTether() bool`
+
+GetRequestRequiresNetworkTether returns the RequestRequiresNetworkTether field if non-nil, zero value otherwise.
+
+### GetRequestRequiresNetworkTetherOk
+
+`func (o *InlineObject147) GetRequestRequiresNetworkTetherOk() (*bool, bool)`
+
+GetRequestRequiresNetworkTetherOk returns a tuple with the RequestRequiresNetworkTether field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequestRequiresNetworkTether
+
+`func (o *InlineObject147) SetRequestRequiresNetworkTether(v bool)`
+
+SetRequestRequiresNetworkTether sets RequestRequiresNetworkTether field to given value.
+
+### HasRequestRequiresNetworkTether
+
+`func (o *InlineObject147) HasRequestRequiresNetworkTether() bool`
+
+HasRequestRequiresNetworkTether returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

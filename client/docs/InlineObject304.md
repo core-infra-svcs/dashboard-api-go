@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the policy | 
-**Description** | Pointer to **string** | Description of the policy | [optional] 
+**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
+**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
 
 ## Methods
 
 ### NewInlineObject304
 
-`func NewInlineObject304(name string, ) *InlineObject304`
+`func NewInlineObject304(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject304`
 
 NewInlineObject304 instantiates a new InlineObject304 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,45 @@ NewInlineObject304WithDefaults instantiates a new InlineObject304 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetLicenseIdToRenew
 
-`func (o *InlineObject304) GetName() string`
+`func (o *InlineObject304) GetLicenseIdToRenew() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLicenseIdToRenewOk
 
-`func (o *InlineObject304) GetNameOk() (*string, bool)`
+`func (o *InlineObject304) GetLicenseIdToRenewOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLicenseIdToRenew
 
-`func (o *InlineObject304) SetName(v string)`
+`func (o *InlineObject304) SetLicenseIdToRenew(v string)`
 
-SetName sets Name field to given value.
+SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
 
 
-### GetDescription
+### GetUnusedLicenseId
 
-`func (o *InlineObject304) GetDescription() string`
+`func (o *InlineObject304) GetUnusedLicenseId() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetUnusedLicenseIdOk
 
-`func (o *InlineObject304) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject304) GetUnusedLicenseIdOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetUnusedLicenseId
 
-`func (o *InlineObject304) SetDescription(v string)`
+`func (o *InlineObject304) SetUnusedLicenseId(v string)`
 
-SetDescription sets Description field to given value.
+SetUnusedLicenseId sets UnusedLicenseId field to given value.
 
-### HasDescription
-
-`func (o *InlineObject304) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

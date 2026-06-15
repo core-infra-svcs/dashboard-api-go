@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | AP port profile name | 
-**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject193
 
-`func NewInlineObject193(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject193`
+`func NewInlineObject193() *InlineObject193`
 
 NewInlineObject193 instantiates a new InlineObject193 object
 This constructor will assign default values to properties that have it defined,
@@ -46,51 +46,61 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetPorts
+`func (o *InlineObject193) HasName() bool`
 
-`func (o *InlineObject193) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
+HasName returns a boolean if a field has been set.
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+### GetSharedSecret
 
-### GetPortsOk
+`func (o *InlineObject193) GetSharedSecret() string`
 
-`func (o *InlineObject193) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+### GetSharedSecretOk
+
+`func (o *InlineObject193) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetSharedSecret
 
-`func (o *InlineObject193) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
+`func (o *InlineObject193) SetSharedSecret(v string)`
 
-SetPorts sets Ports field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
+### HasSharedSecret
 
-### GetUsbPorts
+`func (o *InlineObject193) HasSharedSecret() bool`
 
-`func (o *InlineObject193) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+HasSharedSecret returns a boolean if a field has been set.
 
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+### GetPayloadTemplate
 
-### GetUsbPortsOk
+`func (o *InlineObject193) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
 
-`func (o *InlineObject193) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+### GetPayloadTemplateOk
+
+`func (o *InlineObject193) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
+
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsbPorts
+### SetPayloadTemplate
 
-`func (o *InlineObject193) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+`func (o *InlineObject193) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
 
-SetUsbPorts sets UsbPorts field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasUsbPorts
+### HasPayloadTemplate
 
-`func (o *InlineObject193) HasUsbPorts() bool`
+`func (o *InlineObject193) HasPayloadTemplate() bool`
 
-HasUsbPorts returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

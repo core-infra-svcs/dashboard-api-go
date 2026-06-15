@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LanIp** | Pointer to **string** | IP address of the device subject to port forwarding | [optional] 
-**AllowedIps** | Pointer to **[]string** | An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges (or any) | [optional] 
-**Name** | Pointer to **string** | Name of the rule | [optional] 
-**Protocol** | Pointer to **string** | Protocol the rule applies to | [optional] 
-**PublicPort** | Pointer to **string** | The port or port range forwarded to the host on the LAN | [optional] 
-**LocalPort** | Pointer to **string** | The port or port range that receives forwarded traffic from the WAN | [optional] 
-**Uplink** | Pointer to **string** | The physical WAN interface on which the traffic arrives; allowed values vary by appliance model and configuration | [optional] 
+**Policy** | Pointer to **string** | &#39;Deny&#39; traffic specified by this rule | [optional] 
+**Type** | Pointer to **string** | Type of the L7 rule. One of: &#39;application&#39;, &#39;applicationCategory&#39;, &#39;host&#39;, &#39;port&#39;, &#39;ipRange&#39; Country variants accepted: &#39;allowedCountries&#39;/&#39;blockedCountries&#39; (and backward-compatible &#39;whitelistedCountries&#39;/&#39;blacklistedCountries&#39;). | [optional] 
+**Value** | Pointer to **string** | The &#39;value&#39; of what you want to block. Format of &#39;value&#39; varies depending on type of the rule. The application categories and application ids can be retrieved from the the &#39;MX L7 application categories&#39; endpoint. The countries follow the two-letter ISO 3166-1 alpha-2 format. | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineResponse20077RulesWithDefaults instantiates a new InlineResponse20077Ru
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLanIp
+### GetPolicy
 
-`func (o *InlineResponse20077Rules) GetLanIp() string`
+`func (o *InlineResponse20077Rules) GetPolicy() string`
 
-GetLanIp returns the LanIp field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetLanIpOk
+### GetPolicyOk
 
-`func (o *InlineResponse20077Rules) GetLanIpOk() (*string, bool)`
+`func (o *InlineResponse20077Rules) GetPolicyOk() (*string, bool)`
 
-GetLanIpOk returns a tuple with the LanIp field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLanIp
+### SetPolicy
 
-`func (o *InlineResponse20077Rules) SetLanIp(v string)`
+`func (o *InlineResponse20077Rules) SetPolicy(v string)`
 
-SetLanIp sets LanIp field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasLanIp
+### HasPolicy
 
-`func (o *InlineResponse20077Rules) HasLanIp() bool`
+`func (o *InlineResponse20077Rules) HasPolicy() bool`
 
-HasLanIp returns a boolean if a field has been set.
+HasPolicy returns a boolean if a field has been set.
 
-### GetAllowedIps
+### GetType
 
-`func (o *InlineResponse20077Rules) GetAllowedIps() []string`
+`func (o *InlineResponse20077Rules) GetType() string`
 
-GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetAllowedIpsOk
+### GetTypeOk
 
-`func (o *InlineResponse20077Rules) GetAllowedIpsOk() (*[]string, bool)`
+`func (o *InlineResponse20077Rules) GetTypeOk() (*string, bool)`
 
-GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedIps
+### SetType
 
-`func (o *InlineResponse20077Rules) SetAllowedIps(v []string)`
+`func (o *InlineResponse20077Rules) SetType(v string)`
 
-SetAllowedIps sets AllowedIps field to given value.
+SetType sets Type field to given value.
 
-### HasAllowedIps
+### HasType
 
-`func (o *InlineResponse20077Rules) HasAllowedIps() bool`
+`func (o *InlineResponse20077Rules) HasType() bool`
 
-HasAllowedIps returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetName
+### GetValue
 
-`func (o *InlineResponse20077Rules) GetName() string`
+`func (o *InlineResponse20077Rules) GetValue() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetValue returns the Value field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetValueOk
 
-`func (o *InlineResponse20077Rules) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20077Rules) GetValueOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetValue
 
-`func (o *InlineResponse20077Rules) SetName(v string)`
+`func (o *InlineResponse20077Rules) SetValue(v string)`
 
-SetName sets Name field to given value.
+SetValue sets Value field to given value.
 
-### HasName
+### HasValue
 
-`func (o *InlineResponse20077Rules) HasName() bool`
+`func (o *InlineResponse20077Rules) HasValue() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetProtocol
-
-`func (o *InlineResponse20077Rules) GetProtocol() string`
-
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
-
-### GetProtocolOk
-
-`func (o *InlineResponse20077Rules) GetProtocolOk() (*string, bool)`
-
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtocol
-
-`func (o *InlineResponse20077Rules) SetProtocol(v string)`
-
-SetProtocol sets Protocol field to given value.
-
-### HasProtocol
-
-`func (o *InlineResponse20077Rules) HasProtocol() bool`
-
-HasProtocol returns a boolean if a field has been set.
-
-### GetPublicPort
-
-`func (o *InlineResponse20077Rules) GetPublicPort() string`
-
-GetPublicPort returns the PublicPort field if non-nil, zero value otherwise.
-
-### GetPublicPortOk
-
-`func (o *InlineResponse20077Rules) GetPublicPortOk() (*string, bool)`
-
-GetPublicPortOk returns a tuple with the PublicPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPublicPort
-
-`func (o *InlineResponse20077Rules) SetPublicPort(v string)`
-
-SetPublicPort sets PublicPort field to given value.
-
-### HasPublicPort
-
-`func (o *InlineResponse20077Rules) HasPublicPort() bool`
-
-HasPublicPort returns a boolean if a field has been set.
-
-### GetLocalPort
-
-`func (o *InlineResponse20077Rules) GetLocalPort() string`
-
-GetLocalPort returns the LocalPort field if non-nil, zero value otherwise.
-
-### GetLocalPortOk
-
-`func (o *InlineResponse20077Rules) GetLocalPortOk() (*string, bool)`
-
-GetLocalPortOk returns a tuple with the LocalPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocalPort
-
-`func (o *InlineResponse20077Rules) SetLocalPort(v string)`
-
-SetLocalPort sets LocalPort field to given value.
-
-### HasLocalPort
-
-`func (o *InlineResponse20077Rules) HasLocalPort() bool`
-
-HasLocalPort returns a boolean if a field has been set.
-
-### GetUplink
-
-`func (o *InlineResponse20077Rules) GetUplink() string`
-
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
-
-### GetUplinkOk
-
-`func (o *InlineResponse20077Rules) GetUplinkOk() (*string, bool)`
-
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplink
-
-`func (o *InlineResponse20077Rules) SetUplink(v string)`
-
-SetUplink sets Uplink field to given value.
-
-### HasUplink
-
-`func (o *InlineResponse20077Rules) HasUplink() bool`
-
-HasUplink returns a boolean if a field has been set.
+HasValue returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

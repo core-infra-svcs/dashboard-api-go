@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Alert type | 
-**Title** | **string** | Alert type title | 
-**CategoryType** | **string** | Alert category type | 
-**Severities** | [**[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities**](OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities.md) | List of possible severities for the alert type | 
-**DeviceTypes** | **[]string** | List of possible device types for the alert type | 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200288
 
-`func NewInlineResponse200288(type_ string, title string, categoryType string, severities []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, deviceTypes []string, ) *InlineResponse200288`
+`func NewInlineResponse200288() *InlineResponse200288`
 
 NewInlineResponse200288 instantiates a new InlineResponse200288 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +27,80 @@ NewInlineResponse200288WithDefaults instantiates a new InlineResponse200288 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetNetworkId
 
-`func (o *InlineResponse200288) GetType() string`
+`func (o *InlineResponse200288) GetNetworkId() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200288) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200288) GetNetworkIdOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetNetworkId
 
-`func (o *InlineResponse200288) SetType(v string)`
+`func (o *InlineResponse200288) SetNetworkId(v string)`
 
-SetType sets Type field to given value.
+SetNetworkId sets NetworkId field to given value.
 
+### HasNetworkId
 
-### GetTitle
+`func (o *InlineResponse200288) HasNetworkId() bool`
 
-`func (o *InlineResponse200288) GetTitle() string`
+HasNetworkId returns a boolean if a field has been set.
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+### GetName
 
-### GetTitleOk
+`func (o *InlineResponse200288) GetName() string`
 
-`func (o *InlineResponse200288) GetTitleOk() (*string, bool)`
+GetName returns the Name field if non-nil, zero value otherwise.
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+### GetNameOk
+
+`func (o *InlineResponse200288) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetName
 
-`func (o *InlineResponse200288) SetTitle(v string)`
+`func (o *InlineResponse200288) SetName(v string)`
 
-SetTitle sets Title field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetCategoryType
+`func (o *InlineResponse200288) HasName() bool`
 
-`func (o *InlineResponse200288) GetCategoryType() string`
+HasName returns a boolean if a field has been set.
 
-GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
+### GetByUplink
 
-### GetCategoryTypeOk
+`func (o *InlineResponse200288) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
 
-`func (o *InlineResponse200288) GetCategoryTypeOk() (*string, bool)`
+GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
 
-GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
+### GetByUplinkOk
+
+`func (o *InlineResponse200288) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
+
+GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategoryType
+### SetByUplink
 
-`func (o *InlineResponse200288) SetCategoryType(v string)`
+`func (o *InlineResponse200288) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
 
-SetCategoryType sets CategoryType field to given value.
+SetByUplink sets ByUplink field to given value.
 
+### HasByUplink
 
-### GetSeverities
+`func (o *InlineResponse200288) HasByUplink() bool`
 
-`func (o *InlineResponse200288) GetSeverities() []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities`
-
-GetSeverities returns the Severities field if non-nil, zero value otherwise.
-
-### GetSeveritiesOk
-
-`func (o *InlineResponse200288) GetSeveritiesOk() (*[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, bool)`
-
-GetSeveritiesOk returns a tuple with the Severities field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeverities
-
-`func (o *InlineResponse200288) SetSeverities(v []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities)`
-
-SetSeverities sets Severities field to given value.
-
-
-### GetDeviceTypes
-
-`func (o *InlineResponse200288) GetDeviceTypes() []string`
-
-GetDeviceTypes returns the DeviceTypes field if non-nil, zero value otherwise.
-
-### GetDeviceTypesOk
-
-`func (o *InlineResponse200288) GetDeviceTypesOk() (*[]string, bool)`
-
-GetDeviceTypesOk returns a tuple with the DeviceTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceTypes
-
-`func (o *InlineResponse200288) SetDeviceTypes(v []string)`
-
-SetDeviceTypes sets DeviceTypes field to given value.
-
+HasByUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

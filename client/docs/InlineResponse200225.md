@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**LatencyStats** | Pointer to [**NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats**](NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200225WithDefaults instantiates a new InlineResponse200225 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetMac
 
-`func (o *InlineResponse200225) GetProfileId() string`
+`func (o *InlineResponse200225) GetMac() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetMacOk
 
-`func (o *InlineResponse200225) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200225) GetMacOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetMac
 
-`func (o *InlineResponse200225) SetProfileId(v string)`
+`func (o *InlineResponse200225) SetMac(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetMac sets Mac field to given value.
 
-### HasProfileId
+### HasMac
 
-`func (o *InlineResponse200225) HasProfileId() bool`
+`func (o *InlineResponse200225) HasMac() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetLatencyStats
+
+`func (o *InlineResponse200225) GetLatencyStats() NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats`
+
+GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
+
+### GetLatencyStatsOk
+
+`func (o *InlineResponse200225) GetLatencyStatsOk() (*NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats, bool)`
+
+GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLatencyStats
+
+`func (o *InlineResponse200225) SetLatencyStats(v NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats)`
+
+SetLatencyStats sets LatencyStats field to given value.
+
+### HasLatencyStats
+
+`func (o *InlineResponse200225) HasLatencyStats() bool`
+
+HasLatencyStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

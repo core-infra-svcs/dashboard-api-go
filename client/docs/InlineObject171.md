@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
-**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
-**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
-**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
-**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
-**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
+**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
 ### NewInlineObject171
 
-`func NewInlineObject171(subnet string, nextHopIp string, ) *InlineObject171`
+`func NewInlineObject171() *InlineObject171`
 
 NewInlineObject171 instantiates a new InlineObject171 object
 This constructor will assign default values to properties that have it defined,
@@ -30,145 +26,55 @@ NewInlineObject171WithDefaults instantiates a new InlineObject171 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDefaultSettings
 
-`func (o *InlineObject171) GetName() string`
+`func (o *InlineObject171) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultSettingsOk
 
-`func (o *InlineObject171) GetNameOk() (*string, bool)`
+`func (o *InlineObject171) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultSettings
 
-`func (o *InlineObject171) SetName(v string)`
+`func (o *InlineObject171) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
 
-SetName sets Name field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasName
+### HasDefaultSettings
 
-`func (o *InlineObject171) HasName() bool`
+`func (o *InlineObject171) HasDefaultSettings() bool`
 
-HasName returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetSubnet
+### GetOverrides
 
-`func (o *InlineObject171) GetSubnet() string`
+`func (o *InlineObject171) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetOverridesOk
 
-`func (o *InlineObject171) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject171) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetOverrides
 
-`func (o *InlineObject171) SetSubnet(v string)`
+`func (o *InlineObject171) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
 
-SetSubnet sets Subnet field to given value.
+SetOverrides sets Overrides field to given value.
 
+### HasOverrides
 
-### GetNextHopIp
+`func (o *InlineObject171) HasOverrides() bool`
 
-`func (o *InlineObject171) GetNextHopIp() string`
-
-GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
-
-### GetNextHopIpOk
-
-`func (o *InlineObject171) GetNextHopIpOk() (*string, bool)`
-
-GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNextHopIp
-
-`func (o *InlineObject171) SetNextHopIp(v string)`
-
-SetNextHopIp sets NextHopIp field to given value.
-
-
-### GetAdvertiseViaOspfEnabled
-
-`func (o *InlineObject171) GetAdvertiseViaOspfEnabled() bool`
-
-GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
-
-### GetAdvertiseViaOspfEnabledOk
-
-`func (o *InlineObject171) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
-
-GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvertiseViaOspfEnabled
-
-`func (o *InlineObject171) SetAdvertiseViaOspfEnabled(v bool)`
-
-SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
-
-### HasAdvertiseViaOspfEnabled
-
-`func (o *InlineObject171) HasAdvertiseViaOspfEnabled() bool`
-
-HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
-
-### GetPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject171) GetPreferOverOspfRoutesEnabled() bool`
-
-GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
-
-### GetPreferOverOspfRoutesEnabledOk
-
-`func (o *InlineObject171) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
-
-GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject171) SetPreferOverOspfRoutesEnabled(v bool)`
-
-SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
-
-### HasPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject171) HasPreferOverOspfRoutesEnabled() bool`
-
-HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineObject171) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineObject171) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineObject171) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineObject171) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

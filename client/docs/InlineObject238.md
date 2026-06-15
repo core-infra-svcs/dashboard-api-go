@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of profile | 
-**Hostnames** | **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | 
-**Nameservers** | [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1.md) |  | 
+**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
 
 ## Methods
 
 ### NewInlineObject238
 
-`func NewInlineObject238(name string, hostnames []string, nameservers OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, ) *InlineObject238`
+`func NewInlineObject238() *InlineObject238`
 
 NewInlineObject238 instantiates a new InlineObject238 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +25,30 @@ NewInlineObject238WithDefaults instantiates a new InlineObject238 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabledNetworks
 
-`func (o *InlineObject238) GetName() string`
+`func (o *InlineObject238) GetEnabledNetworks() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledNetworksOk
 
-`func (o *InlineObject238) GetNameOk() (*string, bool)`
+`func (o *InlineObject238) GetEnabledNetworksOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabledNetworks
 
-`func (o *InlineObject238) SetName(v string)`
+`func (o *InlineObject238) SetEnabledNetworks(v []string)`
 
-SetName sets Name field to given value.
+SetEnabledNetworks sets EnabledNetworks field to given value.
 
+### HasEnabledNetworks
 
-### GetHostnames
+`func (o *InlineObject238) HasEnabledNetworks() bool`
 
-`func (o *InlineObject238) GetHostnames() []string`
-
-GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
-
-### GetHostnamesOk
-
-`func (o *InlineObject238) GetHostnamesOk() (*[]string, bool)`
-
-GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHostnames
-
-`func (o *InlineObject238) SetHostnames(v []string)`
-
-SetHostnames sets Hostnames field to given value.
-
-
-### GetNameservers
-
-`func (o *InlineObject238) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1`
-
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
-
-### GetNameserversOk
-
-`func (o *InlineObject238) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1, bool)`
-
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNameservers
-
-`func (o *InlineObject238) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers1)`
-
-SetNameservers sets Nameservers field to given value.
-
+HasEnabledNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

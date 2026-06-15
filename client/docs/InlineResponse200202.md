@@ -4,9 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Nodes** | Pointer to [**[]InlineResponse200202Nodes**](InlineResponse200202Nodes.md) | List of nodes in the network topology | [optional] 
-**Links** | Pointer to [**[]InlineResponse200202Links**](InlineResponse200202Links.md) | List of links between nodes | [optional] 
-**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
+**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
+**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
+**Areas** | Pointer to [**[]InlineResponse200202Areas**](InlineResponse200202Areas.md) | OSPF areas | [optional] 
+**V3** | Pointer to [**InlineResponse200202V3**](InlineResponse200202V3.md) |  | [optional] 
+**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
+**Md5AuthenticationKey** | Pointer to [**InlineResponse200202Md5AuthenticationKey**](InlineResponse200202Md5AuthenticationKey.md) |  | [optional] 
+**Vrf** | Pointer to [**InlineResponse200202Vrf**](InlineResponse200202Vrf.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +32,205 @@ NewInlineResponse200202WithDefaults instantiates a new InlineResponse200202 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNodes
+### GetEnabled
 
-`func (o *InlineResponse200202) GetNodes() []InlineResponse200202Nodes`
+`func (o *InlineResponse200202) GetEnabled() bool`
 
-GetNodes returns the Nodes field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNodesOk
+### GetEnabledOk
 
-`func (o *InlineResponse200202) GetNodesOk() (*[]InlineResponse200202Nodes, bool)`
+`func (o *InlineResponse200202) GetEnabledOk() (*bool, bool)`
 
-GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNodes
+### SetEnabled
 
-`func (o *InlineResponse200202) SetNodes(v []InlineResponse200202Nodes)`
+`func (o *InlineResponse200202) SetEnabled(v bool)`
 
-SetNodes sets Nodes field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasNodes
+### HasEnabled
 
-`func (o *InlineResponse200202) HasNodes() bool`
+`func (o *InlineResponse200202) HasEnabled() bool`
 
-HasNodes returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetLinks
+### GetHelloTimerInSeconds
 
-`func (o *InlineResponse200202) GetLinks() []InlineResponse200202Links`
+`func (o *InlineResponse200202) GetHelloTimerInSeconds() int32`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetHelloTimerInSecondsOk
 
-`func (o *InlineResponse200202) GetLinksOk() (*[]InlineResponse200202Links, bool)`
+`func (o *InlineResponse200202) GetHelloTimerInSecondsOk() (*int32, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetHelloTimerInSeconds
 
-`func (o *InlineResponse200202) SetLinks(v []InlineResponse200202Links)`
+`func (o *InlineResponse200202) SetHelloTimerInSeconds(v int32)`
 
-SetLinks sets Links field to given value.
+SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
 
-### HasLinks
+### HasHelloTimerInSeconds
 
-`func (o *InlineResponse200202) HasLinks() bool`
+`func (o *InlineResponse200202) HasHelloTimerInSeconds() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasHelloTimerInSeconds returns a boolean if a field has been set.
 
-### GetErrors
+### GetDeadTimerInSeconds
 
-`func (o *InlineResponse200202) GetErrors() []string`
+`func (o *InlineResponse200202) GetDeadTimerInSeconds() int32`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetDeadTimerInSecondsOk
 
-`func (o *InlineResponse200202) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200202) GetDeadTimerInSecondsOk() (*int32, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetDeadTimerInSeconds
 
-`func (o *InlineResponse200202) SetErrors(v []string)`
+`func (o *InlineResponse200202) SetDeadTimerInSeconds(v int32)`
 
-SetErrors sets Errors field to given value.
+SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
 
-### HasErrors
+### HasDeadTimerInSeconds
 
-`func (o *InlineResponse200202) HasErrors() bool`
+`func (o *InlineResponse200202) HasDeadTimerInSeconds() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasDeadTimerInSeconds returns a boolean if a field has been set.
+
+### GetAreas
+
+`func (o *InlineResponse200202) GetAreas() []InlineResponse200202Areas`
+
+GetAreas returns the Areas field if non-nil, zero value otherwise.
+
+### GetAreasOk
+
+`func (o *InlineResponse200202) GetAreasOk() (*[]InlineResponse200202Areas, bool)`
+
+GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAreas
+
+`func (o *InlineResponse200202) SetAreas(v []InlineResponse200202Areas)`
+
+SetAreas sets Areas field to given value.
+
+### HasAreas
+
+`func (o *InlineResponse200202) HasAreas() bool`
+
+HasAreas returns a boolean if a field has been set.
+
+### GetV3
+
+`func (o *InlineResponse200202) GetV3() InlineResponse200202V3`
+
+GetV3 returns the V3 field if non-nil, zero value otherwise.
+
+### GetV3Ok
+
+`func (o *InlineResponse200202) GetV3Ok() (*InlineResponse200202V3, bool)`
+
+GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3
+
+`func (o *InlineResponse200202) SetV3(v InlineResponse200202V3)`
+
+SetV3 sets V3 field to given value.
+
+### HasV3
+
+`func (o *InlineResponse200202) HasV3() bool`
+
+HasV3 returns a boolean if a field has been set.
+
+### GetMd5AuthenticationEnabled
+
+`func (o *InlineResponse200202) GetMd5AuthenticationEnabled() bool`
+
+GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationEnabledOk
+
+`func (o *InlineResponse200202) GetMd5AuthenticationEnabledOk() (*bool, bool)`
+
+GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationEnabled
+
+`func (o *InlineResponse200202) SetMd5AuthenticationEnabled(v bool)`
+
+SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
+
+### HasMd5AuthenticationEnabled
+
+`func (o *InlineResponse200202) HasMd5AuthenticationEnabled() bool`
+
+HasMd5AuthenticationEnabled returns a boolean if a field has been set.
+
+### GetMd5AuthenticationKey
+
+`func (o *InlineResponse200202) GetMd5AuthenticationKey() InlineResponse200202Md5AuthenticationKey`
+
+GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationKeyOk
+
+`func (o *InlineResponse200202) GetMd5AuthenticationKeyOk() (*InlineResponse200202Md5AuthenticationKey, bool)`
+
+GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationKey
+
+`func (o *InlineResponse200202) SetMd5AuthenticationKey(v InlineResponse200202Md5AuthenticationKey)`
+
+SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
+
+### HasMd5AuthenticationKey
+
+`func (o *InlineResponse200202) HasMd5AuthenticationKey() bool`
+
+HasMd5AuthenticationKey returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineResponse200202) GetVrf() InlineResponse200202Vrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineResponse200202) GetVrfOk() (*InlineResponse200202Vrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineResponse200202) SetVrf(v InlineResponse200202Vrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineResponse200202) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

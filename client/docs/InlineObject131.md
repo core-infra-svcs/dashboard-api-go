@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be checked-in. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be checked-in. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be checked-in. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in. | [optional] 
+**Email** | **string** | Email address of the user | 
+**Name** | Pointer to **string** | Name of the user. Only required If the user is not a Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only required If the user is not a Dashboard administrator. | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. Can be &#39;Guest&#39; or &#39;802.1X&#39; for wireless networks, or &#39;Client VPN&#39; for MX networks. Defaults to &#39;802.1X&#39;. | [optional] [default to "802.1X"]
+**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator. | [optional] 
+**Authorizations** | [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations1**](NetworksNetworkIdMerakiAuthUsersAuthorizations1.md) | Authorization zones and expiration dates for the user. | 
 
 ## Methods
 
 ### NewInlineObject131
 
-`func NewInlineObject131() *InlineObject131`
+`func NewInlineObject131(email string, authorizations []NetworksNetworkIdMerakiAuthUsersAuthorizations1, ) *InlineObject131`
 
 NewInlineObject131 instantiates a new InlineObject131 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +31,170 @@ NewInlineObject131WithDefaults instantiates a new InlineObject131 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetEmail
 
-`func (o *InlineObject131) GetWifiMacs() []string`
+`func (o *InlineObject131) GetEmail() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetEmailOk
 
-`func (o *InlineObject131) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject131) GetEmailOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetEmail
 
-`func (o *InlineObject131) SetWifiMacs(v []string)`
+`func (o *InlineObject131) SetEmail(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetEmail sets Email field to given value.
 
-### HasWifiMacs
 
-`func (o *InlineObject131) HasWifiMacs() bool`
+### GetName
 
-HasWifiMacs returns a boolean if a field has been set.
+`func (o *InlineObject131) GetName() string`
 
-### GetIds
+GetName returns the Name field if non-nil, zero value otherwise.
 
-`func (o *InlineObject131) GetIds() []string`
+### GetNameOk
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+`func (o *InlineObject131) GetNameOk() (*string, bool)`
 
-### GetIdsOk
-
-`func (o *InlineObject131) GetIdsOk() (*[]string, bool)`
-
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetName
 
-`func (o *InlineObject131) SetIds(v []string)`
+`func (o *InlineObject131) SetName(v string)`
 
-SetIds sets Ids field to given value.
+SetName sets Name field to given value.
 
-### HasIds
+### HasName
 
-`func (o *InlineObject131) HasIds() bool`
+`func (o *InlineObject131) HasName() bool`
 
-HasIds returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSerials
+### GetPassword
 
-`func (o *InlineObject131) GetSerials() []string`
+`func (o *InlineObject131) GetPassword() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetPassword returns the Password field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetPasswordOk
 
-`func (o *InlineObject131) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject131) GetPasswordOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetPassword
 
-`func (o *InlineObject131) SetSerials(v []string)`
+`func (o *InlineObject131) SetPassword(v string)`
 
-SetSerials sets Serials field to given value.
+SetPassword sets Password field to given value.
 
-### HasSerials
+### HasPassword
 
-`func (o *InlineObject131) HasSerials() bool`
+`func (o *InlineObject131) HasPassword() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasPassword returns a boolean if a field has been set.
 
-### GetScope
+### GetAccountType
 
-`func (o *InlineObject131) GetScope() []string`
+`func (o *InlineObject131) GetAccountType() string`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetAccountTypeOk
 
-`func (o *InlineObject131) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject131) GetAccountTypeOk() (*string, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetAccountType
 
-`func (o *InlineObject131) SetScope(v []string)`
+`func (o *InlineObject131) SetAccountType(v string)`
 
-SetScope sets Scope field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasScope
+### HasAccountType
 
-`func (o *InlineObject131) HasScope() bool`
+`func (o *InlineObject131) HasAccountType() bool`
 
-HasScope returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
+
+### GetEmailPasswordToUser
+
+`func (o *InlineObject131) GetEmailPasswordToUser() bool`
+
+GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+
+### GetEmailPasswordToUserOk
+
+`func (o *InlineObject131) GetEmailPasswordToUserOk() (*bool, bool)`
+
+GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmailPasswordToUser
+
+`func (o *InlineObject131) SetEmailPasswordToUser(v bool)`
+
+SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+
+### HasEmailPasswordToUser
+
+`func (o *InlineObject131) HasEmailPasswordToUser() bool`
+
+HasEmailPasswordToUser returns a boolean if a field has been set.
+
+### GetIsAdmin
+
+`func (o *InlineObject131) GetIsAdmin() bool`
+
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+
+### GetIsAdminOk
+
+`func (o *InlineObject131) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsAdmin
+
+`func (o *InlineObject131) SetIsAdmin(v bool)`
+
+SetIsAdmin sets IsAdmin field to given value.
+
+### HasIsAdmin
+
+`func (o *InlineObject131) HasIsAdmin() bool`
+
+HasIsAdmin returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineObject131) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations1`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineObject131) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations1, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineObject131) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations1)`
+
+SetAuthorizations sets Authorizations field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

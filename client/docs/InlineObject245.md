@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
+**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems.md) | List containing the assignment ID | 
 
 ## Methods
 
 ### NewInlineObject245
 
-`func NewInlineObject245(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject245`
+`func NewInlineObject245(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, ) *InlineObject245`
 
 NewInlineObject245 instantiates a new InlineObject245 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject245WithDefaults instantiates a new InlineObject245 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetItems
 
-`func (o *InlineObject245) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
+`func (o *InlineObject245) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetItemsOk
 
-`func (o *InlineObject245) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
+`func (o *InlineObject245) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetItems
 
-`func (o *InlineObject245) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
+`func (o *InlineObject245) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems)`
 
-SetPeers sets Peers field to given value.
+SetItems sets Items field to given value.
 
 
 

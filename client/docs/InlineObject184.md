@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the template | [optional] 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. | [optional] 
-**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
 
 ## Methods
 
@@ -29,140 +28,105 @@ NewInlineObject184WithDefaults instantiates a new InlineObject184 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetBroadcastThreshold
 
-`func (o *InlineObject184) GetName() string`
+`func (o *InlineObject184) GetBroadcastThreshold() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineObject184) GetNameOk() (*string, bool)`
+`func (o *InlineObject184) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBroadcastThreshold
 
-`func (o *InlineObject184) SetName(v string)`
+`func (o *InlineObject184) SetBroadcastThreshold(v int32)`
 
-SetName sets Name field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasName
+### HasBroadcastThreshold
 
-`func (o *InlineObject184) HasName() bool`
+`func (o *InlineObject184) HasBroadcastThreshold() bool`
 
-HasName returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetBody
+### GetMulticastThreshold
 
-`func (o *InlineObject184) GetBody() string`
+`func (o *InlineObject184) GetMulticastThreshold() int32`
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetBodyOk
+### GetMulticastThresholdOk
 
-`func (o *InlineObject184) GetBodyOk() (*string, bool)`
+`func (o *InlineObject184) GetMulticastThresholdOk() (*int32, bool)`
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetMulticastThreshold
 
-`func (o *InlineObject184) SetBody(v string)`
+`func (o *InlineObject184) SetMulticastThreshold(v int32)`
 
-SetBody sets Body field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasBody
+### HasMulticastThreshold
 
-`func (o *InlineObject184) HasBody() bool`
+`func (o *InlineObject184) HasMulticastThreshold() bool`
 
-HasBody returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetHeaders
+### GetUnknownUnicastThreshold
 
-`func (o *InlineObject184) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+`func (o *InlineObject184) GetUnknownUnicastThreshold() int32`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineObject184) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+`func (o *InlineObject184) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetUnknownUnicastThreshold
 
-`func (o *InlineObject184) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+`func (o *InlineObject184) SetUnknownUnicastThreshold(v int32)`
 
-SetHeaders sets Headers field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasHeaders
+### HasUnknownUnicastThreshold
 
-`func (o *InlineObject184) HasHeaders() bool`
+`func (o *InlineObject184) HasUnknownUnicastThreshold() bool`
 
-HasHeaders returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
-### SetHeadersNil
+### GetTreatTheseTrafficTypesAsOneThreshold
 
-`func (o *InlineObject184) SetHeadersNil(b bool)`
+`func (o *InlineObject184) GetTreatTheseTrafficTypesAsOneThreshold() []string`
 
- SetHeadersNil sets the value for Headers to be an explicit nil
+GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
 
-### UnsetHeaders
-`func (o *InlineObject184) UnsetHeaders()`
+### GetTreatTheseTrafficTypesAsOneThresholdOk
 
-UnsetHeaders ensures that no value is present for Headers, not even an explicit nil
-### GetBodyFile
+`func (o *InlineObject184) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
 
-`func (o *InlineObject184) GetBodyFile() string`
-
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
-
-### GetBodyFileOk
-
-`func (o *InlineObject184) GetBodyFileOk() (*string, bool)`
-
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBodyFile
+### SetTreatTheseTrafficTypesAsOneThreshold
 
-`func (o *InlineObject184) SetBodyFile(v string)`
+`func (o *InlineObject184) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
 
-SetBodyFile sets BodyFile field to given value.
+SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
 
-### HasBodyFile
+### HasTreatTheseTrafficTypesAsOneThreshold
 
-`func (o *InlineObject184) HasBodyFile() bool`
+`func (o *InlineObject184) HasTreatTheseTrafficTypesAsOneThreshold() bool`
 
-HasBodyFile returns a boolean if a field has been set.
-
-### GetHeadersFile
-
-`func (o *InlineObject184) GetHeadersFile() string`
-
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
-
-### GetHeadersFileOk
-
-`func (o *InlineObject184) GetHeadersFileOk() (*string, bool)`
-
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeadersFile
-
-`func (o *InlineObject184) SetHeadersFile(v string)`
-
-SetHeadersFile sets HeadersFile field to given value.
-
-### HasHeadersFile
-
-`func (o *InlineObject184) HasHeadersFile() bool`
-
-HasHeadersFile returns a boolean if a field has been set.
+HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

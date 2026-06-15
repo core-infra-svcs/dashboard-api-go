@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200332Items**](InlineResponse200332Items.md) | List of packet capture files | [optional] 
+**Serials** | Pointer to **[]string** | List of updated AP serials | [optional] 
+**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20122WithDefaults instantiates a new InlineResponse20122 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSerials
 
-`func (o *InlineResponse20122) GetItems() []InlineResponse200332Items`
+`func (o *InlineResponse20122) GetSerials() []string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSerialsOk
 
-`func (o *InlineResponse20122) GetItemsOk() (*[]InlineResponse200332Items, bool)`
+`func (o *InlineResponse20122) GetSerialsOk() (*[]string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSerials
 
-`func (o *InlineResponse20122) SetItems(v []InlineResponse200332Items)`
+`func (o *InlineResponse20122) SetSerials(v []string)`
 
-SetItems sets Items field to given value.
+SetSerials sets Serials field to given value.
 
-### HasItems
+### HasSerials
 
-`func (o *InlineResponse20122) HasItems() bool`
+`func (o *InlineResponse20122) HasSerials() bool`
 
-HasItems returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetProfileId
+
+`func (o *InlineResponse20122) GetProfileId() string`
+
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+
+### GetProfileIdOk
+
+`func (o *InlineResponse20122) GetProfileIdOk() (*string, bool)`
+
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfileId
+
+`func (o *InlineResponse20122) SetProfileId(v string)`
+
+SetProfileId sets ProfileId field to given value.
+
+### HasProfileId
+
+`func (o *InlineResponse20122) HasProfileId() bool`
+
+HasProfileId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

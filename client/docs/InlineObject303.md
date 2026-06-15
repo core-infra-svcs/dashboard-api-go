@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the firewall ruleset | [optional] 
-**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
+**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
+**LicenseId** | **string** | The ID of the SM license to move the seats from | 
+**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject303
 
-`func NewInlineObject303() *InlineObject303`
+`func NewInlineObject303(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject303`
 
 NewInlineObject303 instantiates a new InlineObject303 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,65 @@ NewInlineObject303WithDefaults instantiates a new InlineObject303 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDestOrganizationId
 
-`func (o *InlineObject303) GetName() string`
+`func (o *InlineObject303) GetDestOrganizationId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject303) GetNameOk() (*string, bool)`
+`func (o *InlineObject303) GetDestOrganizationIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDestOrganizationId
 
-`func (o *InlineObject303) SetName(v string)`
+`func (o *InlineObject303) SetDestOrganizationId(v string)`
 
-SetName sets Name field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasName
 
-`func (o *InlineObject303) HasName() bool`
+### GetLicenseId
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject303) GetLicenseId() string`
 
-### GetDescription
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject303) GetDescription() string`
+### GetLicenseIdOk
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+`func (o *InlineObject303) GetLicenseIdOk() (*string, bool)`
 
-### GetDescriptionOk
-
-`func (o *InlineObject303) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetLicenseId
 
-`func (o *InlineObject303) SetDescription(v string)`
+`func (o *InlineObject303) SetLicenseId(v string)`
 
-SetDescription sets Description field to given value.
+SetLicenseId sets LicenseId field to given value.
 
-### HasDescription
 
-`func (o *InlineObject303) HasDescription() bool`
+### GetSeatCount
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject303) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineObject303) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineObject303) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

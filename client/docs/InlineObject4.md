@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
-**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
+**Interface** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdateInterface**](DevicesSerialApplianceInterfacesPortsUpdateInterface.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Indicates whether the port is enabled | [optional] 
+**Personality** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdatePersonality**](DevicesSerialApplianceInterfacesPortsUpdatePersonality.md) |  | [optional] 
+**Uplink** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdateUplink**](DevicesSerialApplianceInterfacesPortsUpdateUplink.md) |  | [optional] 
+**Downlink** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdateDownlink**](DevicesSerialApplianceInterfacesPortsUpdateDownlink.md) |  | [optional] 
 
 ## Methods
 
@@ -27,90 +29,130 @@ NewInlineObject4WithDefaults instantiates a new InlineObject4 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRfProfileId
+### GetInterface
 
-`func (o *InlineObject4) GetRfProfileId() string`
+`func (o *InlineObject4) GetInterface() DevicesSerialApplianceInterfacesPortsUpdateInterface`
 
-GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
+GetInterface returns the Interface field if non-nil, zero value otherwise.
 
-### GetRfProfileIdOk
+### GetInterfaceOk
 
-`func (o *InlineObject4) GetRfProfileIdOk() (*string, bool)`
+`func (o *InlineObject4) GetInterfaceOk() (*DevicesSerialApplianceInterfacesPortsUpdateInterface, bool)`
 
-GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
+GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfileId
+### SetInterface
 
-`func (o *InlineObject4) SetRfProfileId(v string)`
+`func (o *InlineObject4) SetInterface(v DevicesSerialApplianceInterfacesPortsUpdateInterface)`
 
-SetRfProfileId sets RfProfileId field to given value.
+SetInterface sets Interface field to given value.
 
-### HasRfProfileId
+### HasInterface
 
-`func (o *InlineObject4) HasRfProfileId() bool`
+`func (o *InlineObject4) HasInterface() bool`
 
-HasRfProfileId returns a boolean if a field has been set.
+HasInterface returns a boolean if a field has been set.
 
-### SetRfProfileIdNil
+### GetEnabled
 
-`func (o *InlineObject4) SetRfProfileIdNil(b bool)`
+`func (o *InlineObject4) GetEnabled() bool`
 
- SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### UnsetRfProfileId
-`func (o *InlineObject4) UnsetRfProfileId()`
+### GetEnabledOk
 
-UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
-### GetTwoFourGhzSettings
+`func (o *InlineObject4) GetEnabledOk() (*bool, bool)`
 
-`func (o *InlineObject4) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject4) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetEnabled
 
-`func (o *InlineObject4) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
+`func (o *InlineObject4) SetEnabled(v bool)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTwoFourGhzSettings
+### HasEnabled
 
-`func (o *InlineObject4) HasTwoFourGhzSettings() bool`
+`func (o *InlineObject4) HasEnabled() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetFiveGhzSettings
+### GetPersonality
 
-`func (o *InlineObject4) GetFiveGhzSettings() DevicesSerialApplianceRadioSettingsFiveGhzSettings`
+`func (o *InlineObject4) GetPersonality() DevicesSerialApplianceInterfacesPortsUpdatePersonality`
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+GetPersonality returns the Personality field if non-nil, zero value otherwise.
 
-### GetFiveGhzSettingsOk
+### GetPersonalityOk
 
-`func (o *InlineObject4) GetFiveGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsFiveGhzSettings, bool)`
+`func (o *InlineObject4) GetPersonalityOk() (*DevicesSerialApplianceInterfacesPortsUpdatePersonality, bool)`
 
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetPersonalityOk returns a tuple with the Personality field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetPersonality
 
-`func (o *InlineObject4) SetFiveGhzSettings(v DevicesSerialApplianceRadioSettingsFiveGhzSettings)`
+`func (o *InlineObject4) SetPersonality(v DevicesSerialApplianceInterfacesPortsUpdatePersonality)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetPersonality sets Personality field to given value.
 
-### HasFiveGhzSettings
+### HasPersonality
 
-`func (o *InlineObject4) HasFiveGhzSettings() bool`
+`func (o *InlineObject4) HasPersonality() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasPersonality returns a boolean if a field has been set.
+
+### GetUplink
+
+`func (o *InlineObject4) GetUplink() DevicesSerialApplianceInterfacesPortsUpdateUplink`
+
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
+
+### GetUplinkOk
+
+`func (o *InlineObject4) GetUplinkOk() (*DevicesSerialApplianceInterfacesPortsUpdateUplink, bool)`
+
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplink
+
+`func (o *InlineObject4) SetUplink(v DevicesSerialApplianceInterfacesPortsUpdateUplink)`
+
+SetUplink sets Uplink field to given value.
+
+### HasUplink
+
+`func (o *InlineObject4) HasUplink() bool`
+
+HasUplink returns a boolean if a field has been set.
+
+### GetDownlink
+
+`func (o *InlineObject4) GetDownlink() DevicesSerialApplianceInterfacesPortsUpdateDownlink`
+
+GetDownlink returns the Downlink field if non-nil, zero value otherwise.
+
+### GetDownlinkOk
+
+`func (o *InlineObject4) GetDownlinkOk() (*DevicesSerialApplianceInterfacesPortsUpdateDownlink, bool)`
+
+GetDownlinkOk returns a tuple with the Downlink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownlink
+
+`func (o *InlineObject4) SetDownlink(v DevicesSerialApplianceInterfacesPortsUpdateDownlink)`
+
+SetDownlink sets Downlink field to given value.
+
+### HasDownlink
+
+`func (o *InlineObject4) HasDownlink() bool`
+
+HasDownlink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

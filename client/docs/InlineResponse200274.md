@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Uplinks** | Pointer to [**[]InlineResponse20097Uplinks**](InlineResponse20097Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200274Items**](InlineResponse200274Items.md) | List of local DNS profile assignment | [optional] 
+**Meta** | Pointer to [**InlineResponse200274Meta**](InlineResponse200274Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200274WithDefaults instantiates a new InlineResponse200274 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetItems
 
-`func (o *InlineResponse200274) GetNetworkId() string`
+`func (o *InlineResponse200274) GetItems() []InlineResponse200274Items`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200274) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200274) GetItemsOk() (*[]InlineResponse200274Items, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetItems
 
-`func (o *InlineResponse200274) SetNetworkId(v string)`
+`func (o *InlineResponse200274) SetItems(v []InlineResponse200274Items)`
 
-SetNetworkId sets NetworkId field to given value.
+SetItems sets Items field to given value.
 
-### HasNetworkId
+### HasItems
 
-`func (o *InlineResponse200274) HasNetworkId() bool`
+`func (o *InlineResponse200274) HasItems() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetUplinks
+### GetMeta
 
-`func (o *InlineResponse200274) GetUplinks() []InlineResponse20097Uplinks`
+`func (o *InlineResponse200274) GetMeta() InlineResponse200274Meta`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetMetaOk
 
-`func (o *InlineResponse200274) GetUplinksOk() (*[]InlineResponse20097Uplinks, bool)`
+`func (o *InlineResponse200274) GetMetaOk() (*InlineResponse200274Meta, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetMeta
 
-`func (o *InlineResponse200274) SetUplinks(v []InlineResponse20097Uplinks)`
+`func (o *InlineResponse200274) SetMeta(v InlineResponse200274Meta)`
 
-SetUplinks sets Uplinks field to given value.
+SetMeta sets Meta field to given value.
 
-### HasUplinks
+### HasMeta
 
-`func (o *InlineResponse200274) HasUplinks() bool`
+`func (o *InlineResponse200274) HasMeta() bool`
 
-HasUplinks returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,19 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApEslId** | Pointer to **int32** | An identifier for the device used by the ESL system | [optional] 
-**Serial** | Pointer to **string** | The serial number of the device | [optional] 
-**Channel** | Pointer to **string** | Desired ESL channel for the device, or &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
-**NetworkId** | Pointer to **string** | The identifier for the device&#39;s network | [optional] 
-**Hostname** | Pointer to **string** | Hostname of the ESL management service | [optional] 
-**Provider** | Pointer to **string** | The service providing ESL functionality | [optional] 
+**StaticRouteId** | **string** | The identifier of a layer 3 static route | 
+**Name** | Pointer to **string** | The name or description of the layer 3 static route | [optional] 
+**Subnet** | **string** | The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** | The IP address of the router to which traffic for this destination network should be sent | 
+**ManagementNextHop** | Pointer to **string** | Optional fallback IP address for management traffic | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf**](DevicesSerialSwitchRoutingStaticRoutesVrf.md) |  | [optional] 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static routes via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static routes over OSPF routes | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20057
 
-`func NewInlineResponse20057() *InlineResponse20057`
+`func NewInlineResponse20057(staticRouteId string, subnet string, nextHopIp string, ) *InlineResponse20057`
 
 NewInlineResponse20057 instantiates a new InlineResponse20057 object
 This constructor will assign default values to properties that have it defined,
@@ -31,180 +32,190 @@ NewInlineResponse20057WithDefaults instantiates a new InlineResponse20057 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApEslId
+### GetStaticRouteId
 
-`func (o *InlineResponse20057) GetApEslId() int32`
+`func (o *InlineResponse20057) GetStaticRouteId() string`
 
-GetApEslId returns the ApEslId field if non-nil, zero value otherwise.
+GetStaticRouteId returns the StaticRouteId field if non-nil, zero value otherwise.
 
-### GetApEslIdOk
+### GetStaticRouteIdOk
 
-`func (o *InlineResponse20057) GetApEslIdOk() (*int32, bool)`
+`func (o *InlineResponse20057) GetStaticRouteIdOk() (*string, bool)`
 
-GetApEslIdOk returns a tuple with the ApEslId field if it's non-nil, zero value otherwise
+GetStaticRouteIdOk returns a tuple with the StaticRouteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApEslId
+### SetStaticRouteId
 
-`func (o *InlineResponse20057) SetApEslId(v int32)`
+`func (o *InlineResponse20057) SetStaticRouteId(v string)`
 
-SetApEslId sets ApEslId field to given value.
+SetStaticRouteId sets StaticRouteId field to given value.
 
-### HasApEslId
 
-`func (o *InlineResponse20057) HasApEslId() bool`
+### GetName
 
-HasApEslId returns a boolean if a field has been set.
+`func (o *InlineResponse20057) GetName() string`
 
-### GetSerial
+GetName returns the Name field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20057) GetSerial() string`
+### GetNameOk
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+`func (o *InlineResponse20057) GetNameOk() (*string, bool)`
 
-### GetSerialOk
-
-`func (o *InlineResponse20057) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetName
 
-`func (o *InlineResponse20057) SetSerial(v string)`
+`func (o *InlineResponse20057) SetName(v string)`
 
-SetSerial sets Serial field to given value.
+SetName sets Name field to given value.
 
-### HasSerial
+### HasName
 
-`func (o *InlineResponse20057) HasSerial() bool`
+`func (o *InlineResponse20057) HasName() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetChannel
+### GetSubnet
 
-`func (o *InlineResponse20057) GetChannel() string`
+`func (o *InlineResponse20057) GetSubnet() string`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetSubnetOk
 
-`func (o *InlineResponse20057) GetChannelOk() (*string, bool)`
+`func (o *InlineResponse20057) GetSubnetOk() (*string, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetSubnet
 
-`func (o *InlineResponse20057) SetChannel(v string)`
+`func (o *InlineResponse20057) SetSubnet(v string)`
 
-SetChannel sets Channel field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasChannel
 
-`func (o *InlineResponse20057) HasChannel() bool`
+### GetNextHopIp
 
-HasChannel returns a boolean if a field has been set.
+`func (o *InlineResponse20057) GetNextHopIp() string`
 
-### GetEnabled
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20057) GetEnabled() bool`
+### GetNextHopIpOk
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+`func (o *InlineResponse20057) GetNextHopIpOk() (*string, bool)`
 
-### GetEnabledOk
-
-`func (o *InlineResponse20057) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetNextHopIp
 
-`func (o *InlineResponse20057) SetEnabled(v bool)`
+`func (o *InlineResponse20057) SetNextHopIp(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasEnabled
 
-`func (o *InlineResponse20057) HasEnabled() bool`
+### GetManagementNextHop
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineResponse20057) GetManagementNextHop() string`
 
-### GetNetworkId
+GetManagementNextHop returns the ManagementNextHop field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20057) GetNetworkId() string`
+### GetManagementNextHopOk
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+`func (o *InlineResponse20057) GetManagementNextHopOk() (*string, bool)`
 
-### GetNetworkIdOk
-
-`func (o *InlineResponse20057) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetManagementNextHopOk returns a tuple with the ManagementNextHop field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetManagementNextHop
 
-`func (o *InlineResponse20057) SetNetworkId(v string)`
+`func (o *InlineResponse20057) SetManagementNextHop(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetManagementNextHop sets ManagementNextHop field to given value.
 
-### HasNetworkId
+### HasManagementNextHop
 
-`func (o *InlineResponse20057) HasNetworkId() bool`
+`func (o *InlineResponse20057) HasManagementNextHop() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasManagementNextHop returns a boolean if a field has been set.
 
-### GetHostname
+### GetVrf
 
-`func (o *InlineResponse20057) GetHostname() string`
+`func (o *InlineResponse20057) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetVrfOk
 
-`func (o *InlineResponse20057) GetHostnameOk() (*string, bool)`
+`func (o *InlineResponse20057) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetVrf
 
-`func (o *InlineResponse20057) SetHostname(v string)`
+`func (o *InlineResponse20057) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf)`
 
-SetHostname sets Hostname field to given value.
+SetVrf sets Vrf field to given value.
 
-### HasHostname
+### HasVrf
 
-`func (o *InlineResponse20057) HasHostname() bool`
+`func (o *InlineResponse20057) HasVrf() bool`
 
-HasHostname returns a boolean if a field has been set.
+HasVrf returns a boolean if a field has been set.
 
-### GetProvider
+### GetAdvertiseViaOspfEnabled
 
-`func (o *InlineResponse20057) GetProvider() string`
+`func (o *InlineResponse20057) GetAdvertiseViaOspfEnabled() bool`
 
-GetProvider returns the Provider field if non-nil, zero value otherwise.
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
 
-### GetProviderOk
+### GetAdvertiseViaOspfEnabledOk
 
-`func (o *InlineResponse20057) GetProviderOk() (*string, bool)`
+`func (o *InlineResponse20057) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
 
-GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProvider
+### SetAdvertiseViaOspfEnabled
 
-`func (o *InlineResponse20057) SetProvider(v string)`
+`func (o *InlineResponse20057) SetAdvertiseViaOspfEnabled(v bool)`
 
-SetProvider sets Provider field to given value.
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
 
-### HasProvider
+### HasAdvertiseViaOspfEnabled
 
-`func (o *InlineResponse20057) HasProvider() bool`
+`func (o *InlineResponse20057) HasAdvertiseViaOspfEnabled() bool`
 
-HasProvider returns a boolean if a field has been set.
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineResponse20057) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineResponse20057) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineResponse20057) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineResponse20057) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

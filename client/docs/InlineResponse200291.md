@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
-**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
-**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**NetworkName** | Pointer to **string** | Network name | [optional] 
+**MerakiVpnPeers** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers**](OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers.md) | List of VPN peers with their summaries | [optional] 
 
 ## Methods
 
@@ -52,55 +52,55 @@ SetNetworkId sets NetworkId field to given value.
 
 HasNetworkId returns a boolean if a field has been set.
 
-### GetSerial
+### GetNetworkName
 
-`func (o *InlineResponse200291) GetSerial() string`
+`func (o *InlineResponse200291) GetNetworkName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkNameOk
 
-`func (o *InlineResponse200291) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200291) GetNetworkNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetworkName
 
-`func (o *InlineResponse200291) SetSerial(v string)`
+`func (o *InlineResponse200291) SetNetworkName(v string)`
 
-SetSerial sets Serial field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasSerial
+### HasNetworkName
 
-`func (o *InlineResponse200291) HasSerial() bool`
+`func (o *InlineResponse200291) HasNetworkName() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetworkName returns a boolean if a field has been set.
 
-### GetBoundaries
+### GetMerakiVpnPeers
 
-`func (o *InlineResponse200291) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries`
+`func (o *InlineResponse200291) GetMerakiVpnPeers() []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers`
 
-GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
+GetMerakiVpnPeers returns the MerakiVpnPeers field if non-nil, zero value otherwise.
 
-### GetBoundariesOk
+### GetMerakiVpnPeersOk
 
-`func (o *InlineResponse200291) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries, bool)`
+`func (o *InlineResponse200291) GetMerakiVpnPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers, bool)`
 
-GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
+GetMerakiVpnPeersOk returns a tuple with the MerakiVpnPeers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaries
+### SetMerakiVpnPeers
 
-`func (o *InlineResponse200291) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries)`
+`func (o *InlineResponse200291) SetMerakiVpnPeers(v []OrganizationsOrganizationIdApplianceVpnStatsMerakiVpnPeers)`
 
-SetBoundaries sets Boundaries field to given value.
+SetMerakiVpnPeers sets MerakiVpnPeers field to given value.
 
-### HasBoundaries
+### HasMerakiVpnPeers
 
-`func (o *InlineResponse200291) HasBoundaries() bool`
+`func (o *InlineResponse200291) HasMerakiVpnPeers() bool`
 
-HasBoundaries returns a boolean if a field has been set.
+HasMerakiVpnPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

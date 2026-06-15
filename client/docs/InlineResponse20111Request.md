@@ -5,6 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | Device serial number | [optional] 
+**Type** | Pointer to **string** | The type of route defined | [optional] 
+**Destination** | Pointer to [**InlineResponse20111RequestDestination**](InlineResponse20111RequestDestination.md) |  | [optional] 
+**NextHop** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsNextHop**](DevicesSerialLiveToolsRoutingTableLookupsNextHop.md) |  | [optional] 
+**Vpn** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsVpn**](DevicesSerialLiveToolsRoutingTableLookupsVpn.md) |  | [optional] 
 
 ## Methods
 
@@ -49,6 +53,106 @@ SetSerial sets Serial field to given value.
 `func (o *InlineResponse20111Request) HasSerial() bool`
 
 HasSerial returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse20111Request) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse20111Request) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse20111Request) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse20111Request) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetDestination
+
+`func (o *InlineResponse20111Request) GetDestination() InlineResponse20111RequestDestination`
+
+GetDestination returns the Destination field if non-nil, zero value otherwise.
+
+### GetDestinationOk
+
+`func (o *InlineResponse20111Request) GetDestinationOk() (*InlineResponse20111RequestDestination, bool)`
+
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestination
+
+`func (o *InlineResponse20111Request) SetDestination(v InlineResponse20111RequestDestination)`
+
+SetDestination sets Destination field to given value.
+
+### HasDestination
+
+`func (o *InlineResponse20111Request) HasDestination() bool`
+
+HasDestination returns a boolean if a field has been set.
+
+### GetNextHop
+
+`func (o *InlineResponse20111Request) GetNextHop() DevicesSerialLiveToolsRoutingTableLookupsNextHop`
+
+GetNextHop returns the NextHop field if non-nil, zero value otherwise.
+
+### GetNextHopOk
+
+`func (o *InlineResponse20111Request) GetNextHopOk() (*DevicesSerialLiveToolsRoutingTableLookupsNextHop, bool)`
+
+GetNextHopOk returns a tuple with the NextHop field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNextHop
+
+`func (o *InlineResponse20111Request) SetNextHop(v DevicesSerialLiveToolsRoutingTableLookupsNextHop)`
+
+SetNextHop sets NextHop field to given value.
+
+### HasNextHop
+
+`func (o *InlineResponse20111Request) HasNextHop() bool`
+
+HasNextHop returns a boolean if a field has been set.
+
+### GetVpn
+
+`func (o *InlineResponse20111Request) GetVpn() DevicesSerialLiveToolsRoutingTableLookupsVpn`
+
+GetVpn returns the Vpn field if non-nil, zero value otherwise.
+
+### GetVpnOk
+
+`func (o *InlineResponse20111Request) GetVpnOk() (*DevicesSerialLiveToolsRoutingTableLookupsVpn, bool)`
+
+GetVpnOk returns a tuple with the Vpn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpn
+
+`func (o *InlineResponse20111Request) SetVpn(v DevicesSerialLiveToolsRoutingTableLookupsVpn)`
+
+SetVpn sets Vpn field to given value.
+
+### HasVpn
+
+`func (o *InlineResponse20111Request) HasVpn() bool`
+
+HasVpn returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,18 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new network | 
-**ProductTypes** | **[]string** | The product type(s) of the new network. If more than one type is included, the network will be a combined network. | 
-**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network&#39;s type exactly. | [optional] 
-**Notes** | Pointer to **NullableString** | Add any notes or additional information about this network here. | [optional] 
+**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
 
 ## Methods
 
 ### NewInlineObject297
 
-`func NewInlineObject297(name string, productTypes []string, ) *InlineObject297`
+`func NewInlineObject297(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject297`
 
 NewInlineObject297 instantiates a new InlineObject297 object
 This constructor will assign default values to properties that have it defined,
@@ -30,156 +25,26 @@ NewInlineObject297WithDefaults instantiates a new InlineObject297 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSwaps
 
-`func (o *InlineObject297) GetName() string`
+`func (o *InlineObject297) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSwapsOk
 
-`func (o *InlineObject297) GetNameOk() (*string, bool)`
+`func (o *InlineObject297) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSwaps
 
-`func (o *InlineObject297) SetName(v string)`
+`func (o *InlineObject297) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
 
-SetName sets Name field to given value.
+SetSwaps sets Swaps field to given value.
 
 
-### GetProductTypes
-
-`func (o *InlineObject297) GetProductTypes() []string`
-
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
-
-### GetProductTypesOk
-
-`func (o *InlineObject297) GetProductTypesOk() (*[]string, bool)`
-
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductTypes
-
-`func (o *InlineObject297) SetProductTypes(v []string)`
-
-SetProductTypes sets ProductTypes field to given value.
-
-
-### GetTags
-
-`func (o *InlineObject297) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject297) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject297) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject297) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineObject297) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineObject297) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineObject297) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineObject297) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
-
-### GetCopyFromNetworkId
-
-`func (o *InlineObject297) GetCopyFromNetworkId() string`
-
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
-
-### GetCopyFromNetworkIdOk
-
-`func (o *InlineObject297) GetCopyFromNetworkIdOk() (*string, bool)`
-
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCopyFromNetworkId
-
-`func (o *InlineObject297) SetCopyFromNetworkId(v string)`
-
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
-
-### HasCopyFromNetworkId
-
-`func (o *InlineObject297) HasCopyFromNetworkId() bool`
-
-HasCopyFromNetworkId returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject297) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject297) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject297) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject297) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### SetNotesNil
-
-`func (o *InlineObject297) SetNotesNil(b bool)`
-
- SetNotesNil sets the value for Notes to be an explicit nil
-
-### UnsetNotes
-`func (o *InlineObject297) UnsetNotes()`
-
-UnsetNotes ensures that no value is present for Notes, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

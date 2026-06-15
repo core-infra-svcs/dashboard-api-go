@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **StartTs** | Pointer to **time.Time** | The start time | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time | [optional] 
 **ZoneId** | Pointer to **int32** | The zone id | [optional] 
-**Entrances** | Pointer to **int32** | The number of entrances | [optional] 
+**Entrances** | Pointer to **int32** | The number of sentrances | [optional] 
 **AverageCount** | Pointer to **float32** | The average count | [optional] 
 
 ## Methods

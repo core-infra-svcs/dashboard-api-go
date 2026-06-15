@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200334Items**](InlineResponse200334Items.md) | List of scheduled packet captures | [optional] 
-**Meta** | Pointer to [**InlineResponse200334Meta**](InlineResponse200334Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200333Items**](InlineResponse200333Items.md) | List of created Cellular Data Management Profile device assignments | [optional] 
 
 ## Methods
 
@@ -28,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200334) GetItems() []InlineResponse200334Items`
+`func (o *InlineResponse200334) GetItems() []InlineResponse200333Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200334) GetItemsOk() (*[]InlineResponse200334Items, bool)`
+`func (o *InlineResponse200334) GetItemsOk() (*[]InlineResponse200333Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200334) SetItems(v []InlineResponse200334Items)`
+`func (o *InlineResponse200334) SetItems(v []InlineResponse200333Items)`
 
 SetItems sets Items field to given value.
 
@@ -50,31 +49,6 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200334) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200334) GetMeta() InlineResponse200334Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200334) GetMetaOk() (*InlineResponse200334Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200334) SetMeta(v InlineResponse200334Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200334) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

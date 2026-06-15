@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
-**Api** | Pointer to [**InlineResponse200229Api**](InlineResponse200229Api.md) |  | [optional] 
+**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
+**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
+**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
+**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
+**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200229WithDefaults instantiates a new InlineResponse200229 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetAssoc
 
-`func (o *InlineResponse200229) GetEnabled() bool`
+`func (o *InlineResponse200229) GetAssoc() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetAssoc returns the Assoc field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetAssocOk
 
-`func (o *InlineResponse200229) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200229) GetAssocOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetAssoc
 
-`func (o *InlineResponse200229) SetEnabled(v bool)`
+`func (o *InlineResponse200229) SetAssoc(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetAssoc sets Assoc field to given value.
 
-### HasEnabled
+### HasAssoc
 
-`func (o *InlineResponse200229) HasEnabled() bool`
+`func (o *InlineResponse200229) HasAssoc() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasAssoc returns a boolean if a field has been set.
 
-### GetApi
+### GetAuth
 
-`func (o *InlineResponse200229) GetApi() InlineResponse200229Api`
+`func (o *InlineResponse200229) GetAuth() int32`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetAuth returns the Auth field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetAuthOk
 
-`func (o *InlineResponse200229) GetApiOk() (*InlineResponse200229Api, bool)`
+`func (o *InlineResponse200229) GetAuthOk() (*int32, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetAuth
 
-`func (o *InlineResponse200229) SetApi(v InlineResponse200229Api)`
+`func (o *InlineResponse200229) SetAuth(v int32)`
 
-SetApi sets Api field to given value.
+SetAuth sets Auth field to given value.
 
-### HasApi
+### HasAuth
 
-`func (o *InlineResponse200229) HasApi() bool`
+`func (o *InlineResponse200229) HasAuth() bool`
 
-HasApi returns a boolean if a field has been set.
+HasAuth returns a boolean if a field has been set.
+
+### GetDhcp
+
+`func (o *InlineResponse200229) GetDhcp() int32`
+
+GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+
+### GetDhcpOk
+
+`func (o *InlineResponse200229) GetDhcpOk() (*int32, bool)`
+
+GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcp
+
+`func (o *InlineResponse200229) SetDhcp(v int32)`
+
+SetDhcp sets Dhcp field to given value.
+
+### HasDhcp
+
+`func (o *InlineResponse200229) HasDhcp() bool`
+
+HasDhcp returns a boolean if a field has been set.
+
+### GetDns
+
+`func (o *InlineResponse200229) GetDns() int32`
+
+GetDns returns the Dns field if non-nil, zero value otherwise.
+
+### GetDnsOk
+
+`func (o *InlineResponse200229) GetDnsOk() (*int32, bool)`
+
+GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDns
+
+`func (o *InlineResponse200229) SetDns(v int32)`
+
+SetDns sets Dns field to given value.
+
+### HasDns
+
+`func (o *InlineResponse200229) HasDns() bool`
+
+HasDns returns a boolean if a field has been set.
+
+### GetSuccess
+
+`func (o *InlineResponse200229) GetSuccess() int32`
+
+GetSuccess returns the Success field if non-nil, zero value otherwise.
+
+### GetSuccessOk
+
+`func (o *InlineResponse200229) GetSuccessOk() (*int32, bool)`
+
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSuccess
+
+`func (o *InlineResponse200229) SetSuccess(v int32)`
+
+SetSuccess sets Success field to given value.
+
+### HasSuccess
+
+`func (o *InlineResponse200229) HasSuccess() bool`
+
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

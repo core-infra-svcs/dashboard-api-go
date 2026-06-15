@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
+**SenseEnabled** | Pointer to **bool** | Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera | [optional] 
+**MqttBrokerId** | Pointer to **NullableString** | The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera | [optional] 
+**AudioDetection** | Pointer to [**DevicesSerialCameraSenseAudioDetection**](DevicesSerialCameraSenseAudioDetection.md) |  | [optional] 
+**DetectionModelId** | Pointer to **string** | The ID of the object detection model | [optional] 
 
 ## Methods
 
@@ -25,30 +28,115 @@ NewInlineObject11WithDefaults instantiates a new InlineObject11 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetExternalRtspEnabled
+### GetSenseEnabled
 
-`func (o *InlineObject11) GetExternalRtspEnabled() bool`
+`func (o *InlineObject11) GetSenseEnabled() bool`
 
-GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
+GetSenseEnabled returns the SenseEnabled field if non-nil, zero value otherwise.
 
-### GetExternalRtspEnabledOk
+### GetSenseEnabledOk
 
-`func (o *InlineObject11) GetExternalRtspEnabledOk() (*bool, bool)`
+`func (o *InlineObject11) GetSenseEnabledOk() (*bool, bool)`
 
-GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
+GetSenseEnabledOk returns a tuple with the SenseEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExternalRtspEnabled
+### SetSenseEnabled
 
-`func (o *InlineObject11) SetExternalRtspEnabled(v bool)`
+`func (o *InlineObject11) SetSenseEnabled(v bool)`
 
-SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
+SetSenseEnabled sets SenseEnabled field to given value.
 
-### HasExternalRtspEnabled
+### HasSenseEnabled
 
-`func (o *InlineObject11) HasExternalRtspEnabled() bool`
+`func (o *InlineObject11) HasSenseEnabled() bool`
 
-HasExternalRtspEnabled returns a boolean if a field has been set.
+HasSenseEnabled returns a boolean if a field has been set.
+
+### GetMqttBrokerId
+
+`func (o *InlineObject11) GetMqttBrokerId() string`
+
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+
+### GetMqttBrokerIdOk
+
+`func (o *InlineObject11) GetMqttBrokerIdOk() (*string, bool)`
+
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMqttBrokerId
+
+`func (o *InlineObject11) SetMqttBrokerId(v string)`
+
+SetMqttBrokerId sets MqttBrokerId field to given value.
+
+### HasMqttBrokerId
+
+`func (o *InlineObject11) HasMqttBrokerId() bool`
+
+HasMqttBrokerId returns a boolean if a field has been set.
+
+### SetMqttBrokerIdNil
+
+`func (o *InlineObject11) SetMqttBrokerIdNil(b bool)`
+
+ SetMqttBrokerIdNil sets the value for MqttBrokerId to be an explicit nil
+
+### UnsetMqttBrokerId
+`func (o *InlineObject11) UnsetMqttBrokerId()`
+
+UnsetMqttBrokerId ensures that no value is present for MqttBrokerId, not even an explicit nil
+### GetAudioDetection
+
+`func (o *InlineObject11) GetAudioDetection() DevicesSerialCameraSenseAudioDetection`
+
+GetAudioDetection returns the AudioDetection field if non-nil, zero value otherwise.
+
+### GetAudioDetectionOk
+
+`func (o *InlineObject11) GetAudioDetectionOk() (*DevicesSerialCameraSenseAudioDetection, bool)`
+
+GetAudioDetectionOk returns a tuple with the AudioDetection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAudioDetection
+
+`func (o *InlineObject11) SetAudioDetection(v DevicesSerialCameraSenseAudioDetection)`
+
+SetAudioDetection sets AudioDetection field to given value.
+
+### HasAudioDetection
+
+`func (o *InlineObject11) HasAudioDetection() bool`
+
+HasAudioDetection returns a boolean if a field has been set.
+
+### GetDetectionModelId
+
+`func (o *InlineObject11) GetDetectionModelId() string`
+
+GetDetectionModelId returns the DetectionModelId field if non-nil, zero value otherwise.
+
+### GetDetectionModelIdOk
+
+`func (o *InlineObject11) GetDetectionModelIdOk() (*string, bool)`
+
+GetDetectionModelIdOk returns a tuple with the DetectionModelId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetectionModelId
+
+`func (o *InlineObject11) SetDetectionModelId(v string)`
+
+SetDetectionModelId sets DetectionModelId field to given value.
+
+### HasDetectionModelId
+
+`func (o *InlineObject11) HasDetectionModelId() bool`
+
+HasDetectionModelId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

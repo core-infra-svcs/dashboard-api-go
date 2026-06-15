@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
+**Name** | **string** | The name of the Limited Access Role | 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
 ### NewInlineObject337
 
-`func NewInlineObject337() *InlineObject337`
+`func NewInlineObject337(name string, ) *InlineObject337`
 
 NewInlineObject337 instantiates a new InlineObject337 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,75 @@ NewInlineObject337WithDefaults instantiates a new InlineObject337 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetName
 
-`func (o *InlineObject337) GetUrl() string`
+`func (o *InlineObject337) GetName() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetNameOk
 
-`func (o *InlineObject337) GetUrlOk() (*string, bool)`
+`func (o *InlineObject337) GetNameOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetName
 
-`func (o *InlineObject337) SetUrl(v string)`
+`func (o *InlineObject337) SetName(v string)`
 
-SetUrl sets Url field to given value.
+SetName sets Name field to given value.
 
-### HasUrl
 
-`func (o *InlineObject337) HasUrl() bool`
+### GetScope
 
-HasUrl returns a boolean if a field has been set.
+`func (o *InlineObject337) GetScope() string`
 
-### GetVersion
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-`func (o *InlineObject337) GetVersion() string`
+### GetScopeOk
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+`func (o *InlineObject337) GetScopeOk() (*string, bool)`
 
-### GetVersionOk
-
-`func (o *InlineObject337) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetScope
 
-`func (o *InlineObject337) SetVersion(v string)`
+`func (o *InlineObject337) SetScope(v string)`
 
-SetVersion sets Version field to given value.
+SetScope sets Scope field to given value.
 
-### HasVersion
+### HasScope
 
-`func (o *InlineObject337) HasVersion() bool`
+`func (o *InlineObject337) HasScope() bool`
 
-HasVersion returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
-### GetRadio
+### GetTags
 
-`func (o *InlineObject337) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
+`func (o *InlineObject337) GetTags() []string`
 
-GetRadio returns the Radio field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetRadioOk
+### GetTagsOk
 
-`func (o *InlineObject337) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
+`func (o *InlineObject337) GetTagsOk() (*[]string, bool)`
 
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadio
+### SetTags
 
-`func (o *InlineObject337) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
+`func (o *InlineObject337) SetTags(v []string)`
 
-SetRadio sets Radio field to given value.
+SetTags sets Tags field to given value.
 
-### HasRadio
+### HasTags
 
-`func (o *InlineObject337) HasRadio() bool`
+`func (o *InlineObject337) HasTags() bool`
 
-HasRadio returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationDevicesControllerMigration
 
-> []InlineResponse200329Items CreateOrganizationDevicesControllerMigration(ctx, organizationId).CreateOrganizationDevicesControllerMigration(createOrganizationDevicesControllerMigration).Execute()
+> []InlineResponse200341Items CreateOrganizationDevicesControllerMigration(ctx, organizationId).CreateOrganizationDevicesControllerMigration(createOrganizationDevicesControllerMigration).Execute()
 
 Migrate devices to another controller or management mode
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesControllerMigration := *openapiclient.NewInlineObject269([]string{"Serials_example"}, "Target_example") // InlineObject269 | 
+    createOrganizationDevicesControllerMigration := *openapiclient.NewInlineObject280([]string{"Serials_example"}, "Target_example") // InlineObject280 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MigrationsApi.CreateOrganizationDevicesControllerMigration``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesControllerMigration`: []InlineResponse200329Items
+    // response from `CreateOrganizationDevicesControllerMigration`: []InlineResponse200341Items
     fmt.Fprintf(os.Stdout, "Response from `MigrationsApi.CreateOrganizationDevicesControllerMigration`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesControllerMigration** | [**InlineObject269**](InlineObject269.md) |  | 
+ **createOrganizationDevicesControllerMigration** | [**InlineObject280**](InlineObject280.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200329Items**](InlineResponse200329Items.md)
+[**[]InlineResponse200341Items**](InlineResponse200341Items.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesControllerMigrations
 
-> InlineResponse200329 GetOrganizationDevicesControllerMigrations(ctx, organizationId).Serials(serials).NetworkIds(networkIds).Target(target).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200341 GetOrganizationDevicesControllerMigrations(ctx, organizationId).Serials(serials).NetworkIds(networkIds).Target(target).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve device migration statuses in an organization
 
@@ -117,7 +117,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MigrationsApi.GetOrganizationDevicesControllerMigrations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesControllerMigrations`: InlineResponse200329
+    // response from `GetOrganizationDevicesControllerMigrations`: InlineResponse200341
     fmt.Fprintf(os.Stdout, "Response from `MigrationsApi.GetOrganizationDevicesControllerMigrations`: %v\n", resp)
 }
 ```
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200329**](InlineResponse200329.md)
+[**InlineResponse200341**](InlineResponse200341.md)
 
 ### Authorization
 

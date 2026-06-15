@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
-**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
-**Description** | Pointer to **string** | The description of the profile that was set when it was created. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200320Rules**](InlineResponse200320Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
+**Licenses** | Pointer to [**[]InlineResponse200320Licenses**](InlineResponse200320Licenses.md) | The licenses claimed | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200320WithDefaults instantiates a new InlineResponse200320 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetOrders
 
-`func (o *InlineResponse200320) GetProfileId() string`
+`func (o *InlineResponse200320) GetOrders() []string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetOrdersOk
 
-`func (o *InlineResponse200320) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200320) GetOrdersOk() (*[]string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetOrders
 
-`func (o *InlineResponse200320) SetProfileId(v string)`
+`func (o *InlineResponse200320) SetOrders(v []string)`
 
-SetProfileId sets ProfileId field to given value.
+SetOrders sets Orders field to given value.
 
-### HasProfileId
+### HasOrders
 
-`func (o *InlineResponse200320) HasProfileId() bool`
+`func (o *InlineResponse200320) HasOrders() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
 
-### GetLastUpdatedAt
+### GetSerials
 
-`func (o *InlineResponse200320) GetLastUpdatedAt() string`
+`func (o *InlineResponse200320) GetSerials() []string`
 
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetLastUpdatedAtOk
+### GetSerialsOk
 
-`func (o *InlineResponse200320) GetLastUpdatedAtOk() (*string, bool)`
+`func (o *InlineResponse200320) GetSerialsOk() (*[]string, bool)`
 
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUpdatedAt
+### SetSerials
 
-`func (o *InlineResponse200320) SetLastUpdatedAt(v string)`
+`func (o *InlineResponse200320) SetSerials(v []string)`
 
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
+SetSerials sets Serials field to given value.
 
-### HasLastUpdatedAt
+### HasSerials
 
-`func (o *InlineResponse200320) HasLastUpdatedAt() bool`
+`func (o *InlineResponse200320) HasSerials() bool`
 
-HasLastUpdatedAt returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetName
+### GetLicenses
 
-`func (o *InlineResponse200320) GetName() string`
+`func (o *InlineResponse200320) GetLicenses() []InlineResponse200320Licenses`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLicensesOk
 
-`func (o *InlineResponse200320) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200320) GetLicensesOk() (*[]InlineResponse200320Licenses, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLicenses
 
-`func (o *InlineResponse200320) SetName(v string)`
+`func (o *InlineResponse200320) SetLicenses(v []InlineResponse200320Licenses)`
 
-SetName sets Name field to given value.
+SetLicenses sets Licenses field to given value.
 
-### HasName
+### HasLicenses
 
-`func (o *InlineResponse200320) HasName() bool`
+`func (o *InlineResponse200320) HasLicenses() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200320) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200320) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200320) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200320) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineResponse200320) GetRules() []InlineResponse200320Rules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineResponse200320) GetRulesOk() (*[]InlineResponse200320Rules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineResponse200320) SetRules(v []InlineResponse200320Rules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineResponse200320) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Jobs** | [**[]NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs**](NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs.md) | The list of auto locate jobs to be scheduled. Up to 100 jobs can be provided in a request. | 
+**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
 
 ## Methods
 
 ### NewInlineObject113
 
-`func NewInlineObject113(jobs []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs, ) *InlineObject113`
+`func NewInlineObject113(size string, ) *InlineObject113`
 
 NewInlineObject113 instantiates a new InlineObject113 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject113WithDefaults instantiates a new InlineObject113 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJobs
+### GetSize
 
-`func (o *InlineObject113) GetJobs() []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs`
+`func (o *InlineObject113) GetSize() string`
 
-GetJobs returns the Jobs field if non-nil, zero value otherwise.
+GetSize returns the Size field if non-nil, zero value otherwise.
 
-### GetJobsOk
+### GetSizeOk
 
-`func (o *InlineObject113) GetJobsOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs, bool)`
+`func (o *InlineObject113) GetSizeOk() (*string, bool)`
 
-GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJobs
+### SetSize
 
-`func (o *InlineObject113) SetJobs(v []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs)`
+`func (o *InlineObject113) SetSize(v string)`
 
-SetJobs sets Jobs field to given value.
+SetSize sets Size field to given value.
 
 
 

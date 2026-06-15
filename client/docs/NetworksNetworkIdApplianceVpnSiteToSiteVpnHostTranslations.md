@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the translated host. | [optional] 
-**Local** | Pointer to [**InlineResponse200102Local**](InlineResponse200102Local.md) |  | [optional] 
-**Remote** | Pointer to [**InlineResponse200102Remote**](InlineResponse200102Remote.md) |  | [optional] 
+**Local** | Pointer to [**InlineResponse200110Local**](InlineResponse200110Local.md) |  | [optional] 
+**Remote** | Pointer to [**InlineResponse200110Remote**](InlineResponse200110Remote.md) |  | [optional] 
 
 ## Methods
 
@@ -54,20 +54,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetLocal
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetLocal() InlineResponse200102Local`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetLocal() InlineResponse200110Local`
 
 GetLocal returns the Local field if non-nil, zero value otherwise.
 
 ### GetLocalOk
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetLocalOk() (*InlineResponse200102Local, bool)`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetLocalOk() (*InlineResponse200110Local, bool)`
 
 GetLocalOk returns a tuple with the Local field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocal
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) SetLocal(v InlineResponse200102Local)`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) SetLocal(v InlineResponse200110Local)`
 
 SetLocal sets Local field to given value.
 
@@ -79,20 +79,20 @@ HasLocal returns a boolean if a field has been set.
 
 ### GetRemote
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetRemote() InlineResponse200102Remote`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetRemote() InlineResponse200110Remote`
 
 GetRemote returns the Remote field if non-nil, zero value otherwise.
 
 ### GetRemoteOk
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetRemoteOk() (*InlineResponse200102Remote, bool)`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) GetRemoteOk() (*InlineResponse200110Remote, bool)`
 
 GetRemoteOk returns a tuple with the Remote field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRemote
 
-`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) SetRemote(v InlineResponse200102Remote)`
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations) SetRemote(v InlineResponse200110Remote)`
 
 SetRemote sets Remote field to given value.
 

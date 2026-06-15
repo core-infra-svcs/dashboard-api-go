@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **NullableInt32** | The VLAN of the incoming packet. A null value will match any VLAN. | [optional] 
-**Protocol** | Pointer to **string** | The protocol of the incoming packet. Default value is \&quot;ANY\&quot; | [optional] 
-**SrcPort** | Pointer to **NullableInt32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
-**SrcPortRange** | Pointer to **string** | The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
-**DstPort** | Pointer to **NullableInt32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
-**DstPortRange** | Pointer to **string** | The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
-**Dscp** | Pointer to **int32** | DSCP tag that should be assigned to incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0 | [optional] 
+**Alerts** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyAlerts**](NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md) |  | [optional] 
+**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
+**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
+**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
+**ArpInspection** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspection**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -31,210 +29,130 @@ NewInlineObject159WithDefaults instantiates a new InlineObject159 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlan
+### GetAlerts
 
-`func (o *InlineObject159) GetVlan() int32`
+`func (o *InlineObject159) GetAlerts() NetworksNetworkIdSwitchDhcpServerPolicyAlerts`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetAlertsOk
 
-`func (o *InlineObject159) GetVlanOk() (*int32, bool)`
+`func (o *InlineObject159) GetAlertsOk() (*NetworksNetworkIdSwitchDhcpServerPolicyAlerts, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetAlerts
 
-`func (o *InlineObject159) SetVlan(v int32)`
+`func (o *InlineObject159) SetAlerts(v NetworksNetworkIdSwitchDhcpServerPolicyAlerts)`
 
-SetVlan sets Vlan field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasVlan
+### HasAlerts
 
-`func (o *InlineObject159) HasVlan() bool`
+`func (o *InlineObject159) HasAlerts() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### SetVlanNil
+### GetDefaultPolicy
 
-`func (o *InlineObject159) SetVlanNil(b bool)`
+`func (o *InlineObject159) GetDefaultPolicy() string`
 
- SetVlanNil sets the value for Vlan to be an explicit nil
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### UnsetVlan
-`func (o *InlineObject159) UnsetVlan()`
+### GetDefaultPolicyOk
 
-UnsetVlan ensures that no value is present for Vlan, not even an explicit nil
-### GetProtocol
+`func (o *InlineObject159) GetDefaultPolicyOk() (*string, bool)`
 
-`func (o *InlineObject159) GetProtocol() string`
-
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
-
-### GetProtocolOk
-
-`func (o *InlineObject159) GetProtocolOk() (*string, bool)`
-
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocol
+### SetDefaultPolicy
 
-`func (o *InlineObject159) SetProtocol(v string)`
+`func (o *InlineObject159) SetDefaultPolicy(v string)`
 
-SetProtocol sets Protocol field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasProtocol
+### HasDefaultPolicy
 
-`func (o *InlineObject159) HasProtocol() bool`
+`func (o *InlineObject159) HasDefaultPolicy() bool`
 
-HasProtocol returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
-### GetSrcPort
+### GetAllowedServers
 
-`func (o *InlineObject159) GetSrcPort() int32`
+`func (o *InlineObject159) GetAllowedServers() []string`
 
-GetSrcPort returns the SrcPort field if non-nil, zero value otherwise.
+GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
 
-### GetSrcPortOk
+### GetAllowedServersOk
 
-`func (o *InlineObject159) GetSrcPortOk() (*int32, bool)`
+`func (o *InlineObject159) GetAllowedServersOk() (*[]string, bool)`
 
-GetSrcPortOk returns a tuple with the SrcPort field if it's non-nil, zero value otherwise
+GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSrcPort
+### SetAllowedServers
 
-`func (o *InlineObject159) SetSrcPort(v int32)`
+`func (o *InlineObject159) SetAllowedServers(v []string)`
 
-SetSrcPort sets SrcPort field to given value.
+SetAllowedServers sets AllowedServers field to given value.
 
-### HasSrcPort
+### HasAllowedServers
 
-`func (o *InlineObject159) HasSrcPort() bool`
+`func (o *InlineObject159) HasAllowedServers() bool`
 
-HasSrcPort returns a boolean if a field has been set.
+HasAllowedServers returns a boolean if a field has been set.
 
-### SetSrcPortNil
+### GetBlockedServers
 
-`func (o *InlineObject159) SetSrcPortNil(b bool)`
+`func (o *InlineObject159) GetBlockedServers() []string`
 
- SetSrcPortNil sets the value for SrcPort to be an explicit nil
+GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
 
-### UnsetSrcPort
-`func (o *InlineObject159) UnsetSrcPort()`
+### GetBlockedServersOk
 
-UnsetSrcPort ensures that no value is present for SrcPort, not even an explicit nil
-### GetSrcPortRange
+`func (o *InlineObject159) GetBlockedServersOk() (*[]string, bool)`
 
-`func (o *InlineObject159) GetSrcPortRange() string`
-
-GetSrcPortRange returns the SrcPortRange field if non-nil, zero value otherwise.
-
-### GetSrcPortRangeOk
-
-`func (o *InlineObject159) GetSrcPortRangeOk() (*string, bool)`
-
-GetSrcPortRangeOk returns a tuple with the SrcPortRange field if it's non-nil, zero value otherwise
+GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSrcPortRange
+### SetBlockedServers
 
-`func (o *InlineObject159) SetSrcPortRange(v string)`
+`func (o *InlineObject159) SetBlockedServers(v []string)`
 
-SetSrcPortRange sets SrcPortRange field to given value.
+SetBlockedServers sets BlockedServers field to given value.
 
-### HasSrcPortRange
+### HasBlockedServers
 
-`func (o *InlineObject159) HasSrcPortRange() bool`
+`func (o *InlineObject159) HasBlockedServers() bool`
 
-HasSrcPortRange returns a boolean if a field has been set.
+HasBlockedServers returns a boolean if a field has been set.
 
-### GetDstPort
+### GetArpInspection
 
-`func (o *InlineObject159) GetDstPort() int32`
+`func (o *InlineObject159) GetArpInspection() NetworksNetworkIdSwitchDhcpServerPolicyArpInspection`
 
-GetDstPort returns the DstPort field if non-nil, zero value otherwise.
+GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
 
-### GetDstPortOk
+### GetArpInspectionOk
 
-`func (o *InlineObject159) GetDstPortOk() (*int32, bool)`
+`func (o *InlineObject159) GetArpInspectionOk() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspection, bool)`
 
-GetDstPortOk returns a tuple with the DstPort field if it's non-nil, zero value otherwise
+GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDstPort
+### SetArpInspection
 
-`func (o *InlineObject159) SetDstPort(v int32)`
+`func (o *InlineObject159) SetArpInspection(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspection)`
 
-SetDstPort sets DstPort field to given value.
+SetArpInspection sets ArpInspection field to given value.
 
-### HasDstPort
+### HasArpInspection
 
-`func (o *InlineObject159) HasDstPort() bool`
+`func (o *InlineObject159) HasArpInspection() bool`
 
-HasDstPort returns a boolean if a field has been set.
-
-### SetDstPortNil
-
-`func (o *InlineObject159) SetDstPortNil(b bool)`
-
- SetDstPortNil sets the value for DstPort to be an explicit nil
-
-### UnsetDstPort
-`func (o *InlineObject159) UnsetDstPort()`
-
-UnsetDstPort ensures that no value is present for DstPort, not even an explicit nil
-### GetDstPortRange
-
-`func (o *InlineObject159) GetDstPortRange() string`
-
-GetDstPortRange returns the DstPortRange field if non-nil, zero value otherwise.
-
-### GetDstPortRangeOk
-
-`func (o *InlineObject159) GetDstPortRangeOk() (*string, bool)`
-
-GetDstPortRangeOk returns a tuple with the DstPortRange field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDstPortRange
-
-`func (o *InlineObject159) SetDstPortRange(v string)`
-
-SetDstPortRange sets DstPortRange field to given value.
-
-### HasDstPortRange
-
-`func (o *InlineObject159) HasDstPortRange() bool`
-
-HasDstPortRange returns a boolean if a field has been set.
-
-### GetDscp
-
-`func (o *InlineObject159) GetDscp() int32`
-
-GetDscp returns the Dscp field if non-nil, zero value otherwise.
-
-### GetDscpOk
-
-`func (o *InlineObject159) GetDscpOk() (*int32, bool)`
-
-GetDscpOk returns a tuple with the Dscp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDscp
-
-`func (o *InlineObject159) SetDscp(v int32)`
-
-SetDscp sets Dscp field to given value.
-
-### HasDscp
-
-`func (o *InlineObject159) HasDscp() bool`
-
-HasDscp returns a boolean if a field has been set.
+HasArpInspection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

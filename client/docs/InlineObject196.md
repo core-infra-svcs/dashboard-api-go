@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts.md) | AP ports configuration | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
+**Url** | **string** | The URL where the test webhook will be sent | 
+**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to HTTP server&#39;s shared secret. Otherwise, defaults to an empty string. | [optional] 
+**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
+**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
 
 ## Methods
 
 ### NewInlineObject196
 
-`func NewInlineObject196() *InlineObject196`
+`func NewInlineObject196(url string, ) *InlineObject196`
 
 NewInlineObject196 instantiates a new InlineObject196 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +29,125 @@ NewInlineObject196WithDefaults instantiates a new InlineObject196 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetUrl
 
-`func (o *InlineObject196) GetName() string`
+`func (o *InlineObject196) GetUrl() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUrlOk
 
-`func (o *InlineObject196) GetNameOk() (*string, bool)`
+`func (o *InlineObject196) GetUrlOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUrl
 
-`func (o *InlineObject196) SetName(v string)`
+`func (o *InlineObject196) SetUrl(v string)`
 
-SetName sets Name field to given value.
+SetUrl sets Url field to given value.
 
-### HasName
 
-`func (o *InlineObject196) HasName() bool`
+### GetSharedSecret
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject196) GetSharedSecret() string`
 
-### GetPorts
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject196) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts`
+### GetSharedSecretOk
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+`func (o *InlineObject196) GetSharedSecretOk() (*string, bool)`
 
-### GetPortsOk
-
-`func (o *InlineObject196) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetSharedSecret
 
-`func (o *InlineObject196) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts)`
+`func (o *InlineObject196) SetSharedSecret(v string)`
 
-SetPorts sets Ports field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasPorts
+### HasSharedSecret
 
-`func (o *InlineObject196) HasPorts() bool`
+`func (o *InlineObject196) HasSharedSecret() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
-### GetUsbPorts
+### GetPayloadTemplateId
 
-`func (o *InlineObject196) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+`func (o *InlineObject196) GetPayloadTemplateId() string`
 
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
 
-### GetUsbPortsOk
+### GetPayloadTemplateIdOk
 
-`func (o *InlineObject196) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+`func (o *InlineObject196) GetPayloadTemplateIdOk() (*string, bool)`
 
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsbPorts
+### SetPayloadTemplateId
 
-`func (o *InlineObject196) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+`func (o *InlineObject196) SetPayloadTemplateId(v string)`
 
-SetUsbPorts sets UsbPorts field to given value.
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
 
-### HasUsbPorts
+### HasPayloadTemplateId
 
-`func (o *InlineObject196) HasUsbPorts() bool`
+`func (o *InlineObject196) HasPayloadTemplateId() bool`
 
-HasUsbPorts returns a boolean if a field has been set.
+HasPayloadTemplateId returns a boolean if a field has been set.
+
+### GetPayloadTemplateName
+
+`func (o *InlineObject196) GetPayloadTemplateName() string`
+
+GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateNameOk
+
+`func (o *InlineObject196) GetPayloadTemplateNameOk() (*string, bool)`
+
+GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateName
+
+`func (o *InlineObject196) SetPayloadTemplateName(v string)`
+
+SetPayloadTemplateName sets PayloadTemplateName field to given value.
+
+### HasPayloadTemplateName
+
+`func (o *InlineObject196) HasPayloadTemplateName() bool`
+
+HasPayloadTemplateName returns a boolean if a field has been set.
+
+### GetAlertTypeId
+
+`func (o *InlineObject196) GetAlertTypeId() string`
+
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+
+### GetAlertTypeIdOk
+
+`func (o *InlineObject196) GetAlertTypeIdOk() (*string, bool)`
+
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertTypeId
+
+`func (o *InlineObject196) SetAlertTypeId(v string)`
+
+SetAlertTypeId sets AlertTypeId field to given value.
+
+### HasAlertTypeId
+
+`func (o *InlineObject196) HasAlertTypeId() bool`
+
+HasAlertTypeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

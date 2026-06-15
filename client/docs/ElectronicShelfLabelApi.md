@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetDeviceWirelessElectronicShelfLabel
 
-> InlineResponse20057 GetDeviceWirelessElectronicShelfLabel(ctx, serial).Execute()
+> InlineResponse20062 GetDeviceWirelessElectronicShelfLabel(ctx, serial).Execute()
 
 Return the ESL settings of a device
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.GetDeviceWirelessElectronicShelfLabel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessElectronicShelfLabel`: InlineResponse20057
+    // response from `GetDeviceWirelessElectronicShelfLabel`: InlineResponse20062
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.GetDeviceWirelessElectronicShelfLabel`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20057**](InlineResponse20057.md)
+[**InlineResponse20062**](InlineResponse20062.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessElectronicShelfLabel
 
-> InlineResponse200223 GetNetworkWirelessElectronicShelfLabel(ctx, networkId).Execute()
+> InlineResponse200231 GetNetworkWirelessElectronicShelfLabel(ctx, networkId).Execute()
 
 Return the ESL settings of a wireless network
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessElectronicShelfLabel`: InlineResponse200223
+    // response from `GetNetworkWirelessElectronicShelfLabel`: InlineResponse200231
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabel`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200223**](InlineResponse200223.md)
+[**InlineResponse200231**](InlineResponse200231.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessElectronicShelfLabelConfiguredDevices
 
-> []InlineResponse200223 GetNetworkWirelessElectronicShelfLabelConfiguredDevices(ctx, networkId).Execute()
+> []InlineResponse200231 GetNetworkWirelessElectronicShelfLabelConfiguredDevices(ctx, networkId).Execute()
 
 Get a list of all ESL eligible devices of a network
 
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabelConfiguredDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: []InlineResponse200223
+    // response from `GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: []InlineResponse200231
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: %v\n", resp)
 }
 ```
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200223**](InlineResponse200223.md)
+[**[]InlineResponse200231**](InlineResponse200231.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceWirelessElectronicShelfLabel
 
-> InlineResponse20057 UpdateDeviceWirelessElectronicShelfLabel(ctx, serial).UpdateDeviceWirelessElectronicShelfLabel(updateDeviceWirelessElectronicShelfLabel).Execute()
+> InlineResponse20062 UpdateDeviceWirelessElectronicShelfLabel(ctx, serial).UpdateDeviceWirelessElectronicShelfLabel(updateDeviceWirelessElectronicShelfLabel).Execute()
 
 Update the ESL settings of a device
 
@@ -244,7 +244,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceWirelessElectronicShelfLabel := *openapiclient.NewInlineObject41() // InlineObject41 |  (optional)
+    updateDeviceWirelessElectronicShelfLabel := *openapiclient.NewInlineObject46() // InlineObject46 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -253,7 +253,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.UpdateDeviceWirelessElectronicShelfLabel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceWirelessElectronicShelfLabel`: InlineResponse20057
+    // response from `UpdateDeviceWirelessElectronicShelfLabel`: InlineResponse20062
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.UpdateDeviceWirelessElectronicShelfLabel`: %v\n", resp)
 }
 ```
@@ -274,11 +274,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceWirelessElectr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceWirelessElectronicShelfLabel** | [**InlineObject41**](InlineObject41.md) |  | 
+ **updateDeviceWirelessElectronicShelfLabel** | [**InlineObject46**](InlineObject46.md) |  | 
 
 ### Return type
 
-[**InlineResponse20057**](InlineResponse20057.md)
+[**InlineResponse20062**](InlineResponse20062.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessElectronicShelfLabel
 
-> InlineResponse200223 UpdateNetworkWirelessElectronicShelfLabel(ctx, networkId).UpdateNetworkWirelessElectronicShelfLabel(updateNetworkWirelessElectronicShelfLabel).Execute()
+> InlineResponse200231 UpdateNetworkWirelessElectronicShelfLabel(ctx, networkId).UpdateNetworkWirelessElectronicShelfLabel(updateNetworkWirelessElectronicShelfLabel).Execute()
 
 Update the ESL settings of a wireless network
 
@@ -316,7 +316,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessElectronicShelfLabel := *openapiclient.NewInlineObject192() // InlineObject192 |  (optional)
+    updateNetworkWirelessElectronicShelfLabel := *openapiclient.NewInlineObject203() // InlineObject203 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -325,7 +325,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.UpdateNetworkWirelessElectronicShelfLabel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessElectronicShelfLabel`: InlineResponse200223
+    // response from `UpdateNetworkWirelessElectronicShelfLabel`: InlineResponse200231
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.UpdateNetworkWirelessElectronicShelfLabel`: %v\n", resp)
 }
 ```
@@ -346,11 +346,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessElect
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessElectronicShelfLabel** | [**InlineObject192**](InlineObject192.md) |  | 
+ **updateNetworkWirelessElectronicShelfLabel** | [**InlineObject203**](InlineObject203.md) |  | 
 
 ### Return type
 
-[**InlineResponse200223**](InlineResponse200223.md)
+[**InlineResponse200231**](InlineResponse200231.md)
 
 ### Authorization
 

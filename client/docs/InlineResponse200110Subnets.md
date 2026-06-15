@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial Number of the MG. | [optional] 
-**Name** | Pointer to **string** | Name of the MG. | [optional] 
-**ApplianceIp** | Pointer to **string** | Appliance IP of the MG device. | [optional] 
-**Subnet** | Pointer to **string** | Subnet of MG device. | [optional] 
+**LocalSubnet** | Pointer to **string** | The CIDR notation subnet used within the VPN | [optional] 
+**UseVpn** | Pointer to **bool** | Indicates the presence of the subnet in the VPN | [optional] 
+**Nat** | Pointer to [**InlineResponse200110Nat**](InlineResponse200110Nat.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200110SubnetsWithDefaults instantiates a new InlineResponse2001
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetLocalSubnet
 
-`func (o *InlineResponse200110Subnets) GetSerial() string`
+`func (o *InlineResponse200110Subnets) GetLocalSubnet() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetLocalSubnet returns the LocalSubnet field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetLocalSubnetOk
 
-`func (o *InlineResponse200110Subnets) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200110Subnets) GetLocalSubnetOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetLocalSubnetOk returns a tuple with the LocalSubnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetLocalSubnet
 
-`func (o *InlineResponse200110Subnets) SetSerial(v string)`
+`func (o *InlineResponse200110Subnets) SetLocalSubnet(v string)`
 
-SetSerial sets Serial field to given value.
+SetLocalSubnet sets LocalSubnet field to given value.
 
-### HasSerial
+### HasLocalSubnet
 
-`func (o *InlineResponse200110Subnets) HasSerial() bool`
+`func (o *InlineResponse200110Subnets) HasLocalSubnet() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasLocalSubnet returns a boolean if a field has been set.
 
-### GetName
+### GetUseVpn
 
-`func (o *InlineResponse200110Subnets) GetName() string`
+`func (o *InlineResponse200110Subnets) GetUseVpn() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUseVpn returns the UseVpn field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUseVpnOk
 
-`func (o *InlineResponse200110Subnets) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200110Subnets) GetUseVpnOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUseVpnOk returns a tuple with the UseVpn field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUseVpn
 
-`func (o *InlineResponse200110Subnets) SetName(v string)`
+`func (o *InlineResponse200110Subnets) SetUseVpn(v bool)`
 
-SetName sets Name field to given value.
+SetUseVpn sets UseVpn field to given value.
 
-### HasName
+### HasUseVpn
 
-`func (o *InlineResponse200110Subnets) HasName() bool`
+`func (o *InlineResponse200110Subnets) HasUseVpn() bool`
 
-HasName returns a boolean if a field has been set.
+HasUseVpn returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetNat
 
-`func (o *InlineResponse200110Subnets) GetApplianceIp() string`
+`func (o *InlineResponse200110Subnets) GetNat() InlineResponse200110Nat`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetNat returns the Nat field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetNatOk
 
-`func (o *InlineResponse200110Subnets) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineResponse200110Subnets) GetNatOk() (*InlineResponse200110Nat, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetNatOk returns a tuple with the Nat field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetNat
 
-`func (o *InlineResponse200110Subnets) SetApplianceIp(v string)`
+`func (o *InlineResponse200110Subnets) SetNat(v InlineResponse200110Nat)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetNat sets Nat field to given value.
 
-### HasApplianceIp
+### HasNat
 
-`func (o *InlineResponse200110Subnets) HasApplianceIp() bool`
+`func (o *InlineResponse200110Subnets) HasNat() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
-
-### GetSubnet
-
-`func (o *InlineResponse200110Subnets) GetSubnet() string`
-
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
-
-### GetSubnetOk
-
-`func (o *InlineResponse200110Subnets) GetSubnetOk() (*string, bool)`
-
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnet
-
-`func (o *InlineResponse200110Subnets) SetSubnet(v string)`
-
-SetSubnet sets Subnet field to given value.
-
-### HasSubnet
-
-`func (o *InlineResponse200110Subnets) HasSubnet() bool`
-
-HasSubnet returns a boolean if a field has been set.
+HasNat returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,12 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Whether active-active AutoVPN is enabled | [optional] 
-**DefaultUplink** | Pointer to **string** | The default uplink. Must be a WAN interface &#39;wanX&#39; | [optional] 
-**LoadBalancingEnabled** | Pointer to **bool** | Whether load balancing is enabled | [optional] 
-**FailoverAndFailback** | Pointer to [**InlineResponse20094FailoverAndFailback**](InlineResponse20094FailoverAndFailback.md) |  | [optional] 
-**WanTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20094WanTrafficUplinkPreferences**](InlineResponse20094WanTrafficUplinkPreferences.md) | Uplink preference rules for WAN traffic | [optional] 
-**VpnTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20094VpnTrafficUplinkPreferences**](InlineResponse20094VpnTrafficUplinkPreferences.md) | Uplink preference rules for VPN traffic | [optional] 
+**Id** | Pointer to **string** | Route ID | [optional] 
+**IpVersion** | Pointer to **int32** | IP protocol version | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Enabled** | Pointer to **bool** | Whether the route is enabled or not | [optional] 
+**Name** | Pointer to **string** | Name of the route | [optional] 
+**Subnet** | Pointer to **string** | Subnet of the route | [optional] 
+**GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
+**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
+**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
+**GatewayVlanId** | Pointer to **int32** | Gateway VLAN ID | [optional] 
 
 ## Methods
 
@@ -30,155 +34,255 @@ NewInlineResponse20094WithDefaults instantiates a new InlineResponse20094 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetActiveActiveAutoVpnEnabled
+### GetId
 
-`func (o *InlineResponse20094) GetActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineResponse20094) GetId() string`
 
-GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetActiveActiveAutoVpnEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse20094) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20094) GetIdOk() (*string, bool)`
 
-GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActiveActiveAutoVpnEnabled
+### SetId
 
-`func (o *InlineResponse20094) SetActiveActiveAutoVpnEnabled(v bool)`
+`func (o *InlineResponse20094) SetId(v string)`
 
-SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasActiveActiveAutoVpnEnabled
+### HasId
 
-`func (o *InlineResponse20094) HasActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineResponse20094) HasId() bool`
 
-HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDefaultUplink
+### GetIpVersion
 
-`func (o *InlineResponse20094) GetDefaultUplink() string`
+`func (o *InlineResponse20094) GetIpVersion() int32`
 
-GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
 
-### GetDefaultUplinkOk
+### GetIpVersionOk
 
-`func (o *InlineResponse20094) GetDefaultUplinkOk() (*string, bool)`
+`func (o *InlineResponse20094) GetIpVersionOk() (*int32, bool)`
 
-GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultUplink
+### SetIpVersion
 
-`func (o *InlineResponse20094) SetDefaultUplink(v string)`
+`func (o *InlineResponse20094) SetIpVersion(v int32)`
 
-SetDefaultUplink sets DefaultUplink field to given value.
+SetIpVersion sets IpVersion field to given value.
 
-### HasDefaultUplink
+### HasIpVersion
 
-`func (o *InlineResponse20094) HasDefaultUplink() bool`
+`func (o *InlineResponse20094) HasIpVersion() bool`
 
-HasDefaultUplink returns a boolean if a field has been set.
+HasIpVersion returns a boolean if a field has been set.
 
-### GetLoadBalancingEnabled
+### GetNetworkId
 
-`func (o *InlineResponse20094) GetLoadBalancingEnabled() bool`
+`func (o *InlineResponse20094) GetNetworkId() string`
 
-GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetLoadBalancingEnabledOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20094) GetLoadBalancingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20094) GetNetworkIdOk() (*string, bool)`
 
-GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoadBalancingEnabled
+### SetNetworkId
 
-`func (o *InlineResponse20094) SetLoadBalancingEnabled(v bool)`
+`func (o *InlineResponse20094) SetNetworkId(v string)`
 
-SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasLoadBalancingEnabled
+### HasNetworkId
 
-`func (o *InlineResponse20094) HasLoadBalancingEnabled() bool`
+`func (o *InlineResponse20094) HasNetworkId() bool`
 
-HasLoadBalancingEnabled returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetFailoverAndFailback
+### GetEnabled
 
-`func (o *InlineResponse20094) GetFailoverAndFailback() InlineResponse20094FailoverAndFailback`
+`func (o *InlineResponse20094) GetEnabled() bool`
 
-GetFailoverAndFailback returns the FailoverAndFailback field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetFailoverAndFailbackOk
+### GetEnabledOk
 
-`func (o *InlineResponse20094) GetFailoverAndFailbackOk() (*InlineResponse20094FailoverAndFailback, bool)`
+`func (o *InlineResponse20094) GetEnabledOk() (*bool, bool)`
 
-GetFailoverAndFailbackOk returns a tuple with the FailoverAndFailback field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailoverAndFailback
+### SetEnabled
 
-`func (o *InlineResponse20094) SetFailoverAndFailback(v InlineResponse20094FailoverAndFailback)`
+`func (o *InlineResponse20094) SetEnabled(v bool)`
 
-SetFailoverAndFailback sets FailoverAndFailback field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasFailoverAndFailback
+### HasEnabled
 
-`func (o *InlineResponse20094) HasFailoverAndFailback() bool`
+`func (o *InlineResponse20094) HasEnabled() bool`
 
-HasFailoverAndFailback returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetWanTrafficUplinkPreferences
+### GetName
 
-`func (o *InlineResponse20094) GetWanTrafficUplinkPreferences() []InlineResponse20094WanTrafficUplinkPreferences`
+`func (o *InlineResponse20094) GetName() string`
 
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWanTrafficUplinkPreferencesOk
+### GetNameOk
 
-`func (o *InlineResponse20094) GetWanTrafficUplinkPreferencesOk() (*[]InlineResponse20094WanTrafficUplinkPreferences, bool)`
+`func (o *InlineResponse20094) GetNameOk() (*string, bool)`
 
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanTrafficUplinkPreferences
+### SetName
 
-`func (o *InlineResponse20094) SetWanTrafficUplinkPreferences(v []InlineResponse20094WanTrafficUplinkPreferences)`
+`func (o *InlineResponse20094) SetName(v string)`
 
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+SetName sets Name field to given value.
 
-### HasWanTrafficUplinkPreferences
+### HasName
 
-`func (o *InlineResponse20094) HasWanTrafficUplinkPreferences() bool`
+`func (o *InlineResponse20094) HasName() bool`
 
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetVpnTrafficUplinkPreferences
+### GetSubnet
 
-`func (o *InlineResponse20094) GetVpnTrafficUplinkPreferences() []InlineResponse20094VpnTrafficUplinkPreferences`
+`func (o *InlineResponse20094) GetSubnet() string`
 
-GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetVpnTrafficUplinkPreferencesOk
+### GetSubnetOk
 
-`func (o *InlineResponse20094) GetVpnTrafficUplinkPreferencesOk() (*[]InlineResponse20094VpnTrafficUplinkPreferences, bool)`
+`func (o *InlineResponse20094) GetSubnetOk() (*string, bool)`
 
-GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVpnTrafficUplinkPreferences
+### SetSubnet
 
-`func (o *InlineResponse20094) SetVpnTrafficUplinkPreferences(v []InlineResponse20094VpnTrafficUplinkPreferences)`
+`func (o *InlineResponse20094) SetSubnet(v string)`
 
-SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasVpnTrafficUplinkPreferences
+### HasSubnet
 
-`func (o *InlineResponse20094) HasVpnTrafficUplinkPreferences() bool`
+`func (o *InlineResponse20094) HasSubnet() bool`
 
-HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
+
+### GetGatewayIp
+
+`func (o *InlineResponse20094) GetGatewayIp() string`
+
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+
+### GetGatewayIpOk
+
+`func (o *InlineResponse20094) GetGatewayIpOk() (*string, bool)`
+
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayIp
+
+`func (o *InlineResponse20094) SetGatewayIp(v string)`
+
+SetGatewayIp sets GatewayIp field to given value.
+
+### HasGatewayIp
+
+`func (o *InlineResponse20094) HasGatewayIp() bool`
+
+HasGatewayIp returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineResponse20094) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineResponse20094) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineResponse20094) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments)`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineResponse20094) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineResponse20094) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineResponse20094) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineResponse20094) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineResponse20094) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
+
+### GetGatewayVlanId
+
+`func (o *InlineResponse20094) GetGatewayVlanId() int32`
+
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
+
+### GetGatewayVlanIdOk
+
+`func (o *InlineResponse20094) GetGatewayVlanIdOk() (*int32, bool)`
+
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayVlanId
+
+`func (o *InlineResponse20094) SetGatewayVlanId(v int32)`
+
+SetGatewayVlanId sets GatewayVlanId field to given value.
+
+### HasGatewayVlanId
+
+`func (o *InlineResponse20094) HasGatewayVlanId() bool`
+
+HasGatewayVlanId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

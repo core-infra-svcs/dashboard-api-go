@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
-**Category** | Pointer to **string** | Category of the alert | [optional] 
-**Type** | Pointer to **string** | Alert type | [optional] 
-**Severity** | Pointer to **string** | Severity of the alert | [optional] 
-**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
+**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
+**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
+**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
+**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200136WithDefaults instantiates a new InlineResponse200136 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetGroupId
 
-`func (o *InlineResponse200136) GetId() string`
+`func (o *InlineResponse200136) GetGroupId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetGroupIdOk
 
-`func (o *InlineResponse200136) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200136) GetGroupIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetGroupId
 
-`func (o *InlineResponse200136) SetId(v string)`
+`func (o *InlineResponse200136) SetGroupId(v string)`
 
-SetId sets Id field to given value.
+SetGroupId sets GroupId field to given value.
 
-### HasId
+### HasGroupId
 
-`func (o *InlineResponse200136) HasId() bool`
+`func (o *InlineResponse200136) HasGroupId() bool`
 
-HasId returns a boolean if a field has been set.
+HasGroupId returns a boolean if a field has been set.
 
-### GetCategory
+### GetName
 
-`func (o *InlineResponse200136) GetCategory() string`
+`func (o *InlineResponse200136) GetName() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetNameOk
 
-`func (o *InlineResponse200136) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200136) GetNameOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetName
 
-`func (o *InlineResponse200136) SetCategory(v string)`
+`func (o *InlineResponse200136) SetName(v string)`
 
-SetCategory sets Category field to given value.
+SetName sets Name field to given value.
 
-### HasCategory
+### HasName
 
-`func (o *InlineResponse200136) HasCategory() bool`
+`func (o *InlineResponse200136) HasName() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetType
+### GetDescription
 
-`func (o *InlineResponse200136) GetType() string`
+`func (o *InlineResponse200136) GetDescription() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200136) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200136) GetDescriptionOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetDescription
 
-`func (o *InlineResponse200136) SetType(v string)`
+`func (o *InlineResponse200136) SetDescription(v string)`
 
-SetType sets Type field to given value.
+SetDescription sets Description field to given value.
 
-### HasType
+### HasDescription
 
-`func (o *InlineResponse200136) HasType() bool`
+`func (o *InlineResponse200136) HasDescription() bool`
 
-HasType returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetSeverity
+### GetIsDefault
 
-`func (o *InlineResponse200136) GetSeverity() string`
+`func (o *InlineResponse200136) GetIsDefault() bool`
 
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetSeverityOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200136) GetSeverityOk() (*string, bool)`
+`func (o *InlineResponse200136) GetIsDefaultOk() (*bool, bool)`
 
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeverity
+### SetIsDefault
 
-`func (o *InlineResponse200136) SetSeverity(v string)`
+`func (o *InlineResponse200136) SetIsDefault(v bool)`
 
-SetSeverity sets Severity field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasSeverity
+### HasIsDefault
 
-`func (o *InlineResponse200136) HasSeverity() bool`
+`func (o *InlineResponse200136) HasIsDefault() bool`
 
-HasSeverity returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetScope
+### GetAssignedDevices
 
-`func (o *InlineResponse200136) GetScope() NetworksNetworkIdHealthAlertsScope`
+`func (o *InlineResponse200136) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetAssignedDevicesOk
 
-`func (o *InlineResponse200136) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
+`func (o *InlineResponse200136) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetAssignedDevices
 
-`func (o *InlineResponse200136) SetScope(v NetworksNetworkIdHealthAlertsScope)`
+`func (o *InlineResponse200136) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
 
-SetScope sets Scope field to given value.
+SetAssignedDevices sets AssignedDevices field to given value.
 
-### HasScope
+### HasAssignedDevices
 
-`func (o *InlineResponse200136) HasScope() bool`
+`func (o *InlineResponse200136) HasAssignedDevices() bool`
 
-HasScope returns a boolean if a field has been set.
+HasAssignedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultPolicy** | **string** | Allows clients to access rogue networks. Blocked by default. | 
+**RetainConfigs** | Pointer to **bool** | Optional boolean to retain all the current configs given by the template. | [optional] 
 
 ## Methods
 
 ### NewInlineObject188
 
-`func NewInlineObject188(defaultPolicy string, ) *InlineObject188`
+`func NewInlineObject188() *InlineObject188`
 
 NewInlineObject188 instantiates a new InlineObject188 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject188WithDefaults instantiates a new InlineObject188 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultPolicy
+### GetRetainConfigs
 
-`func (o *InlineObject188) GetDefaultPolicy() string`
+`func (o *InlineObject188) GetRetainConfigs() bool`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetRetainConfigs returns the RetainConfigs field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetRetainConfigsOk
 
-`func (o *InlineObject188) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject188) GetRetainConfigsOk() (*bool, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetRetainConfigsOk returns a tuple with the RetainConfigs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetRetainConfigs
 
-`func (o *InlineObject188) SetDefaultPolicy(v string)`
+`func (o *InlineObject188) SetRetainConfigs(v bool)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetRetainConfigs sets RetainConfigs field to given value.
 
+### HasRetainConfigs
+
+`func (o *InlineObject188) HasRetainConfigs() bool`
+
+HasRetainConfigs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
