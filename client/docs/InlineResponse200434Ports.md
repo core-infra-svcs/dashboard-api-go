@@ -5,9 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PortId** | Pointer to **string** | The string identifier of this port on the switch. This is commonly just the port number but may contain additional identifying information such as the slot and module-type if the port is located on a port module. | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Timestamp for most recent discovery info on this port. | [optional] 
-**Cdp** | Pointer to [**[]InlineResponse200434Cdp**](InlineResponse200434Cdp.md) | The Cisco Discovery Protocol (CDP) information of the connected device. | [optional] 
-**Lldp** | Pointer to [**[]InlineResponse200434Lldp**](InlineResponse200434Lldp.md) | The Link Layer Discovery Protocol (LLDP) information of the connected device. | [optional] 
+**Counts** | Pointer to [**InlineResponse200434Counts**](InlineResponse200434Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -53,80 +51,30 @@ SetPortId sets PortId field to given value.
 
 HasPortId returns a boolean if a field has been set.
 
-### GetLastUpdatedAt
+### GetCounts
 
-`func (o *InlineResponse200434Ports) GetLastUpdatedAt() string`
+`func (o *InlineResponse200434Ports) GetCounts() InlineResponse200434Counts`
 
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetLastUpdatedAtOk
+### GetCountsOk
 
-`func (o *InlineResponse200434Ports) GetLastUpdatedAtOk() (*string, bool)`
+`func (o *InlineResponse200434Ports) GetCountsOk() (*InlineResponse200434Counts, bool)`
 
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUpdatedAt
+### SetCounts
 
-`func (o *InlineResponse200434Ports) SetLastUpdatedAt(v string)`
+`func (o *InlineResponse200434Ports) SetCounts(v InlineResponse200434Counts)`
 
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
+SetCounts sets Counts field to given value.
 
-### HasLastUpdatedAt
+### HasCounts
 
-`func (o *InlineResponse200434Ports) HasLastUpdatedAt() bool`
+`func (o *InlineResponse200434Ports) HasCounts() bool`
 
-HasLastUpdatedAt returns a boolean if a field has been set.
-
-### GetCdp
-
-`func (o *InlineResponse200434Ports) GetCdp() []InlineResponse200434Cdp`
-
-GetCdp returns the Cdp field if non-nil, zero value otherwise.
-
-### GetCdpOk
-
-`func (o *InlineResponse200434Ports) GetCdpOk() (*[]InlineResponse200434Cdp, bool)`
-
-GetCdpOk returns a tuple with the Cdp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCdp
-
-`func (o *InlineResponse200434Ports) SetCdp(v []InlineResponse200434Cdp)`
-
-SetCdp sets Cdp field to given value.
-
-### HasCdp
-
-`func (o *InlineResponse200434Ports) HasCdp() bool`
-
-HasCdp returns a boolean if a field has been set.
-
-### GetLldp
-
-`func (o *InlineResponse200434Ports) GetLldp() []InlineResponse200434Lldp`
-
-GetLldp returns the Lldp field if non-nil, zero value otherwise.
-
-### GetLldpOk
-
-`func (o *InlineResponse200434Ports) GetLldpOk() (*[]InlineResponse200434Lldp, bool)`
-
-GetLldpOk returns a tuple with the Lldp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLldp
-
-`func (o *InlineResponse200434Ports) SetLldp(v []InlineResponse200434Lldp)`
-
-SetLldp sets Lldp field to given value.
-
-### HasLldp
-
-`func (o *InlineResponse200434Ports) HasLldp() bool`
-
-HasLldp returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

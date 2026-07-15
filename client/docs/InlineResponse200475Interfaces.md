@@ -6,16 +6,16 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the wireless LAN controller interface | [optional] 
 **Description** | Pointer to **string** | The description of the wireless LAN controller interface | [optional] 
+**Enabled** | Pointer to **bool** | The status of the wireless LAN controller interface | [optional] 
 **Mac** | Pointer to **string** | The MAC address of the wireless LAN controller interface | [optional] 
 **Status** | Pointer to **string** | The status of the wireless LAN controller interface | [optional] 
 **Speed** | Pointer to **string** | The current data transfer rate which the interface is operating at. enum &#x3D; [1 Gbps, 2 Gbps, 5 Gbps, 10 Gbps, 20 Gbps, 40 Gbps, 100 Gbps] | [optional] 
-**Addresses** | Pointer to [**[]InlineResponse200475Addresses**](InlineResponse200475Addresses.md) | Available addresses for the interface. | [optional] 
-**Vrf** | Pointer to [**InlineResponse200475Vrf**](InlineResponse200475Vrf.md) |  | [optional] 
 **IsUplink** | Pointer to **bool** | Indicate whether the interface is uplink | [optional] 
 **Vlan** | Pointer to **int32** | The VLAN of the switch port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
+**IsRedundancyPort** | Pointer to **bool** | Indicate whether the interface is a redundancy port used to perform HA role negotiation | [optional] 
 **LinkNegotiation** | Pointer to **string** | The interface negotiation mode | [optional] 
-**ChannelGroup** | Pointer to [**InlineResponse200472ChannelGroup**](InlineResponse200472ChannelGroup.md) |  | [optional] 
-**Module** | Pointer to [**InlineResponse200472Module**](InlineResponse200472Module.md) |  | [optional] 
+**ChannelGroup** | Pointer to [**InlineResponse200475ChannelGroup**](InlineResponse200475ChannelGroup.md) |  | [optional] 
+**Module** | Pointer to [**InlineResponse200475Module**](InlineResponse200475Module.md) |  | [optional] 
 
 ## Methods
 
@@ -85,6 +85,31 @@ SetDescription sets Description field to given value.
 `func (o *InlineResponse200475Interfaces) HasDescription() bool`
 
 HasDescription returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse200475Interfaces) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200475Interfaces) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200475Interfaces) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200475Interfaces) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 ### GetMac
 
@@ -161,56 +186,6 @@ SetSpeed sets Speed field to given value.
 
 HasSpeed returns a boolean if a field has been set.
 
-### GetAddresses
-
-`func (o *InlineResponse200475Interfaces) GetAddresses() []InlineResponse200475Addresses`
-
-GetAddresses returns the Addresses field if non-nil, zero value otherwise.
-
-### GetAddressesOk
-
-`func (o *InlineResponse200475Interfaces) GetAddressesOk() (*[]InlineResponse200475Addresses, bool)`
-
-GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAddresses
-
-`func (o *InlineResponse200475Interfaces) SetAddresses(v []InlineResponse200475Addresses)`
-
-SetAddresses sets Addresses field to given value.
-
-### HasAddresses
-
-`func (o *InlineResponse200475Interfaces) HasAddresses() bool`
-
-HasAddresses returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineResponse200475Interfaces) GetVrf() InlineResponse200475Vrf`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineResponse200475Interfaces) GetVrfOk() (*InlineResponse200475Vrf, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineResponse200475Interfaces) SetVrf(v InlineResponse200475Vrf)`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineResponse200475Interfaces) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
-
 ### GetIsUplink
 
 `func (o *InlineResponse200475Interfaces) GetIsUplink() bool`
@@ -261,6 +236,31 @@ SetVlan sets Vlan field to given value.
 
 HasVlan returns a boolean if a field has been set.
 
+### GetIsRedundancyPort
+
+`func (o *InlineResponse200475Interfaces) GetIsRedundancyPort() bool`
+
+GetIsRedundancyPort returns the IsRedundancyPort field if non-nil, zero value otherwise.
+
+### GetIsRedundancyPortOk
+
+`func (o *InlineResponse200475Interfaces) GetIsRedundancyPortOk() (*bool, bool)`
+
+GetIsRedundancyPortOk returns a tuple with the IsRedundancyPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsRedundancyPort
+
+`func (o *InlineResponse200475Interfaces) SetIsRedundancyPort(v bool)`
+
+SetIsRedundancyPort sets IsRedundancyPort field to given value.
+
+### HasIsRedundancyPort
+
+`func (o *InlineResponse200475Interfaces) HasIsRedundancyPort() bool`
+
+HasIsRedundancyPort returns a boolean if a field has been set.
+
 ### GetLinkNegotiation
 
 `func (o *InlineResponse200475Interfaces) GetLinkNegotiation() string`
@@ -288,20 +288,20 @@ HasLinkNegotiation returns a boolean if a field has been set.
 
 ### GetChannelGroup
 
-`func (o *InlineResponse200475Interfaces) GetChannelGroup() InlineResponse200472ChannelGroup`
+`func (o *InlineResponse200475Interfaces) GetChannelGroup() InlineResponse200475ChannelGroup`
 
 GetChannelGroup returns the ChannelGroup field if non-nil, zero value otherwise.
 
 ### GetChannelGroupOk
 
-`func (o *InlineResponse200475Interfaces) GetChannelGroupOk() (*InlineResponse200472ChannelGroup, bool)`
+`func (o *InlineResponse200475Interfaces) GetChannelGroupOk() (*InlineResponse200475ChannelGroup, bool)`
 
 GetChannelGroupOk returns a tuple with the ChannelGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetChannelGroup
 
-`func (o *InlineResponse200475Interfaces) SetChannelGroup(v InlineResponse200472ChannelGroup)`
+`func (o *InlineResponse200475Interfaces) SetChannelGroup(v InlineResponse200475ChannelGroup)`
 
 SetChannelGroup sets ChannelGroup field to given value.
 
@@ -313,20 +313,20 @@ HasChannelGroup returns a boolean if a field has been set.
 
 ### GetModule
 
-`func (o *InlineResponse200475Interfaces) GetModule() InlineResponse200472Module`
+`func (o *InlineResponse200475Interfaces) GetModule() InlineResponse200475Module`
 
 GetModule returns the Module field if non-nil, zero value otherwise.
 
 ### GetModuleOk
 
-`func (o *InlineResponse200475Interfaces) GetModuleOk() (*InlineResponse200472Module, bool)`
+`func (o *InlineResponse200475Interfaces) GetModuleOk() (*InlineResponse200475Module, bool)`
 
 GetModuleOk returns a tuple with the Module field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetModule
 
-`func (o *InlineResponse200475Interfaces) SetModule(v InlineResponse200472Module)`
+`func (o *InlineResponse200475Interfaces) SetModule(v InlineResponse200475Module)`
 
 SetModule sets Module field to given value.
 

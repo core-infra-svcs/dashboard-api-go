@@ -4,8 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network ID | [optional] 
-**DefaultPolicy** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs. (blocked by default) | [optional] 
+**Ssid** | Pointer to **string** | SSID name | [optional] 
+**Bssids** | Pointer to [**[]NetworksNetworkIdWirelessAirMarshalBssids**](NetworksNetworkIdWirelessAirMarshalBssids.md) | BSSIDs broadcasting the SSID | [optional] 
+**Channels** | Pointer to **[]int32** | Channels where the SSID was observed | [optional] 
+**FirstSeen** | Pointer to **int32** | First time the SSID was observed (epoch seconds) | [optional] 
+**LastSeen** | Pointer to **int32** | Most recent time the SSID was observed (epoch seconds) | [optional] 
+**WiredMacs** | Pointer to **[]string** | MAC addresses observed on the SSID | [optional] 
+**WiredVlans** | Pointer to **[]int32** | VLAN IDs observed on the SSID | [optional] 
+**WiredLastSeen** | Pointer to **int32** | Last time observed on the SSID (epoch seconds) | [optional] 
+**Manufacturers** | Pointer to **[]string** | Vendor names resolved from the OUI of each broadcasting BSSID (not the OUI hex prefix itself). Strings come from the IEEE OUI registry and are not casing-normalized -- callers should compare case-insensitively. Example values: \&quot;Linksys\&quot;, \&quot;Cisco Systems\&quot;, \&quot;OMRON TATEISI Electronics\&quot;. Deduplicated and capped at 10 entries; empty when no OUI can be resolved. | [optional] 
+**Encryption** | Pointer to **NullableString** | High-level encryption mode observed for the SSID; null when it cannot be inferred | [optional] 
+**Types** | Pointer to **[]string** | Threat classifications applied to this SSID. \&quot;rogue\&quot;: seen on LAN and not allow-listed by an is_known containment rule. \&quot;spoof\&quot;: SSID name matches an enabled SSID on this network. Empty when no classification applies. | [optional] 
 
 ## Methods
 
@@ -26,55 +35,290 @@ NewInlineResponse200219WithDefaults instantiates a new InlineResponse200219 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetSsid
 
-`func (o *InlineResponse200219) GetNetworkId() string`
+`func (o *InlineResponse200219) GetSsid() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetSsidOk
 
-`func (o *InlineResponse200219) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200219) GetSsidOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSsid
 
-`func (o *InlineResponse200219) SetNetworkId(v string)`
+`func (o *InlineResponse200219) SetSsid(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasNetworkId
+### HasSsid
 
-`func (o *InlineResponse200219) HasNetworkId() bool`
+`func (o *InlineResponse200219) HasSsid() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetBssids
 
-`func (o *InlineResponse200219) GetDefaultPolicy() string`
+`func (o *InlineResponse200219) GetBssids() []NetworksNetworkIdWirelessAirMarshalBssids`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetBssids returns the Bssids field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetBssidsOk
 
-`func (o *InlineResponse200219) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse200219) GetBssidsOk() (*[]NetworksNetworkIdWirelessAirMarshalBssids, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetBssidsOk returns a tuple with the Bssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetBssids
 
-`func (o *InlineResponse200219) SetDefaultPolicy(v string)`
+`func (o *InlineResponse200219) SetBssids(v []NetworksNetworkIdWirelessAirMarshalBssids)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetBssids sets Bssids field to given value.
 
-### HasDefaultPolicy
+### HasBssids
 
-`func (o *InlineResponse200219) HasDefaultPolicy() bool`
+`func (o *InlineResponse200219) HasBssids() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasBssids returns a boolean if a field has been set.
+
+### GetChannels
+
+`func (o *InlineResponse200219) GetChannels() []int32`
+
+GetChannels returns the Channels field if non-nil, zero value otherwise.
+
+### GetChannelsOk
+
+`func (o *InlineResponse200219) GetChannelsOk() (*[]int32, bool)`
+
+GetChannelsOk returns a tuple with the Channels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChannels
+
+`func (o *InlineResponse200219) SetChannels(v []int32)`
+
+SetChannels sets Channels field to given value.
+
+### HasChannels
+
+`func (o *InlineResponse200219) HasChannels() bool`
+
+HasChannels returns a boolean if a field has been set.
+
+### GetFirstSeen
+
+`func (o *InlineResponse200219) GetFirstSeen() int32`
+
+GetFirstSeen returns the FirstSeen field if non-nil, zero value otherwise.
+
+### GetFirstSeenOk
+
+`func (o *InlineResponse200219) GetFirstSeenOk() (*int32, bool)`
+
+GetFirstSeenOk returns a tuple with the FirstSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirstSeen
+
+`func (o *InlineResponse200219) SetFirstSeen(v int32)`
+
+SetFirstSeen sets FirstSeen field to given value.
+
+### HasFirstSeen
+
+`func (o *InlineResponse200219) HasFirstSeen() bool`
+
+HasFirstSeen returns a boolean if a field has been set.
+
+### GetLastSeen
+
+`func (o *InlineResponse200219) GetLastSeen() int32`
+
+GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
+
+### GetLastSeenOk
+
+`func (o *InlineResponse200219) GetLastSeenOk() (*int32, bool)`
+
+GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastSeen
+
+`func (o *InlineResponse200219) SetLastSeen(v int32)`
+
+SetLastSeen sets LastSeen field to given value.
+
+### HasLastSeen
+
+`func (o *InlineResponse200219) HasLastSeen() bool`
+
+HasLastSeen returns a boolean if a field has been set.
+
+### GetWiredMacs
+
+`func (o *InlineResponse200219) GetWiredMacs() []string`
+
+GetWiredMacs returns the WiredMacs field if non-nil, zero value otherwise.
+
+### GetWiredMacsOk
+
+`func (o *InlineResponse200219) GetWiredMacsOk() (*[]string, bool)`
+
+GetWiredMacsOk returns a tuple with the WiredMacs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredMacs
+
+`func (o *InlineResponse200219) SetWiredMacs(v []string)`
+
+SetWiredMacs sets WiredMacs field to given value.
+
+### HasWiredMacs
+
+`func (o *InlineResponse200219) HasWiredMacs() bool`
+
+HasWiredMacs returns a boolean if a field has been set.
+
+### GetWiredVlans
+
+`func (o *InlineResponse200219) GetWiredVlans() []int32`
+
+GetWiredVlans returns the WiredVlans field if non-nil, zero value otherwise.
+
+### GetWiredVlansOk
+
+`func (o *InlineResponse200219) GetWiredVlansOk() (*[]int32, bool)`
+
+GetWiredVlansOk returns a tuple with the WiredVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredVlans
+
+`func (o *InlineResponse200219) SetWiredVlans(v []int32)`
+
+SetWiredVlans sets WiredVlans field to given value.
+
+### HasWiredVlans
+
+`func (o *InlineResponse200219) HasWiredVlans() bool`
+
+HasWiredVlans returns a boolean if a field has been set.
+
+### GetWiredLastSeen
+
+`func (o *InlineResponse200219) GetWiredLastSeen() int32`
+
+GetWiredLastSeen returns the WiredLastSeen field if non-nil, zero value otherwise.
+
+### GetWiredLastSeenOk
+
+`func (o *InlineResponse200219) GetWiredLastSeenOk() (*int32, bool)`
+
+GetWiredLastSeenOk returns a tuple with the WiredLastSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWiredLastSeen
+
+`func (o *InlineResponse200219) SetWiredLastSeen(v int32)`
+
+SetWiredLastSeen sets WiredLastSeen field to given value.
+
+### HasWiredLastSeen
+
+`func (o *InlineResponse200219) HasWiredLastSeen() bool`
+
+HasWiredLastSeen returns a boolean if a field has been set.
+
+### GetManufacturers
+
+`func (o *InlineResponse200219) GetManufacturers() []string`
+
+GetManufacturers returns the Manufacturers field if non-nil, zero value otherwise.
+
+### GetManufacturersOk
+
+`func (o *InlineResponse200219) GetManufacturersOk() (*[]string, bool)`
+
+GetManufacturersOk returns a tuple with the Manufacturers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManufacturers
+
+`func (o *InlineResponse200219) SetManufacturers(v []string)`
+
+SetManufacturers sets Manufacturers field to given value.
+
+### HasManufacturers
+
+`func (o *InlineResponse200219) HasManufacturers() bool`
+
+HasManufacturers returns a boolean if a field has been set.
+
+### GetEncryption
+
+`func (o *InlineResponse200219) GetEncryption() string`
+
+GetEncryption returns the Encryption field if non-nil, zero value otherwise.
+
+### GetEncryptionOk
+
+`func (o *InlineResponse200219) GetEncryptionOk() (*string, bool)`
+
+GetEncryptionOk returns a tuple with the Encryption field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEncryption
+
+`func (o *InlineResponse200219) SetEncryption(v string)`
+
+SetEncryption sets Encryption field to given value.
+
+### HasEncryption
+
+`func (o *InlineResponse200219) HasEncryption() bool`
+
+HasEncryption returns a boolean if a field has been set.
+
+### SetEncryptionNil
+
+`func (o *InlineResponse200219) SetEncryptionNil(b bool)`
+
+ SetEncryptionNil sets the value for Encryption to be an explicit nil
+
+### UnsetEncryption
+`func (o *InlineResponse200219) UnsetEncryption()`
+
+UnsetEncryption ensures that no value is present for Encryption, not even an explicit nil
+### GetTypes
+
+`func (o *InlineResponse200219) GetTypes() []string`
+
+GetTypes returns the Types field if non-nil, zero value otherwise.
+
+### GetTypesOk
+
+`func (o *InlineResponse200219) GetTypesOk() (*[]string, bool)`
+
+GetTypesOk returns a tuple with the Types field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTypes
+
+`func (o *InlineResponse200219) SetTypes(v []string)`
+
+SetTypes sets Types field to given value.
+
+### HasTypes
+
+`func (o *InlineResponse200219) HasTypes() bool`
+
+HasTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

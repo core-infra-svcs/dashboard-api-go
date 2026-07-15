@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that were released | [optional] 
+**Counts** | Pointer to [**InlineResponse200372Counts**](InlineResponse200372Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200372WithDefaults instantiates a new InlineResponse200372 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetCounts
 
-`func (o *InlineResponse200372) GetSerials() []string`
+`func (o *InlineResponse200372) GetCounts() InlineResponse200372Counts`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetCountsOk
 
-`func (o *InlineResponse200372) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200372) GetCountsOk() (*InlineResponse200372Counts, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetCounts
 
-`func (o *InlineResponse200372) SetSerials(v []string)`
+`func (o *InlineResponse200372) SetCounts(v InlineResponse200372Counts)`
 
-SetSerials sets Serials field to given value.
+SetCounts sets Counts field to given value.
 
-### HasSerials
+### HasCounts
 
-`func (o *InlineResponse200372) HasSerials() bool`
+`func (o *InlineResponse200372) HasCounts() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdFloorPlansAutoLocateDevicesItems**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesItems.md) | Items in the paginated dataset | [optional] 
-**Meta** | Pointer to [**InlineResponse200274Meta**](InlineResponse200274Meta.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
+**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
+**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200359LimitScopeToNetworks**](InlineResponse200359LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
+**OptOutEligibility** | Pointer to [**InlineResponse200359OptOutEligibility**](InlineResponse200359OptOutEligibility.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200359WithDefaults instantiates a new InlineResponse200359 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200359) GetItems() []OrganizationsOrganizationIdFloorPlansAutoLocateDevicesItems`
+`func (o *InlineResponse200359) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200359) GetItemsOk() (*[]OrganizationsOrganizationIdFloorPlansAutoLocateDevicesItems, bool)`
+`func (o *InlineResponse200359) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200359) SetItems(v []OrganizationsOrganizationIdFloorPlansAutoLocateDevicesItems)`
+`func (o *InlineResponse200359) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
-### HasItems
+### HasId
 
-`func (o *InlineResponse200359) HasItems() bool`
+`func (o *InlineResponse200359) HasId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMeta
+### GetShortName
 
-`func (o *InlineResponse200359) GetMeta() InlineResponse200274Meta`
+`func (o *InlineResponse200359) GetShortName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetShortNameOk
 
-`func (o *InlineResponse200359) GetMetaOk() (*InlineResponse200274Meta, bool)`
+`func (o *InlineResponse200359) GetShortNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetShortName
 
-`func (o *InlineResponse200359) SetMeta(v InlineResponse200274Meta)`
+`func (o *InlineResponse200359) SetShortName(v string)`
 
-SetMeta sets Meta field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasMeta
+### HasShortName
 
-`func (o *InlineResponse200359) HasMeta() bool`
+`func (o *InlineResponse200359) HasShortName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasShortName returns a boolean if a field has been set.
+
+### GetLimitScopeToNetworks
+
+`func (o *InlineResponse200359) GetLimitScopeToNetworks() []InlineResponse200359LimitScopeToNetworks`
+
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+
+### GetLimitScopeToNetworksOk
+
+`func (o *InlineResponse200359) GetLimitScopeToNetworksOk() (*[]InlineResponse200359LimitScopeToNetworks, bool)`
+
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimitScopeToNetworks
+
+`func (o *InlineResponse200359) SetLimitScopeToNetworks(v []InlineResponse200359LimitScopeToNetworks)`
+
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+
+### HasLimitScopeToNetworks
+
+`func (o *InlineResponse200359) HasLimitScopeToNetworks() bool`
+
+HasLimitScopeToNetworks returns a boolean if a field has been set.
+
+### GetOptOutEligibility
+
+`func (o *InlineResponse200359) GetOptOutEligibility() InlineResponse200359OptOutEligibility`
+
+GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
+
+### GetOptOutEligibilityOk
+
+`func (o *InlineResponse200359) GetOptOutEligibilityOk() (*InlineResponse200359OptOutEligibility, bool)`
+
+GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOptOutEligibility
+
+`func (o *InlineResponse200359) SetOptOutEligibility(v InlineResponse200359OptOutEligibility)`
+
+SetOptOutEligibility sets OptOutEligibility field to given value.
+
+### HasOptOutEligibility
+
+`func (o *InlineResponse200359) HasOptOutEligibility() bool`
+
+HasOptOutEligibility returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200359) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200359) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200359) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200359) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

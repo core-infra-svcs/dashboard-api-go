@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
-**Api** | Pointer to [**InlineResponse200237Api**](InlineResponse200237Api.md) |  | [optional] 
+**BackgroundTraffic** | Pointer to [**InlineResponse20063LatencyStatsBackgroundTraffic**](InlineResponse20063LatencyStatsBackgroundTraffic.md) |  | [optional] 
+**BestEffortTraffic** | Pointer to [**InlineResponse20063LatencyStatsBestEffortTraffic**](InlineResponse20063LatencyStatsBestEffortTraffic.md) |  | [optional] 
+**VideoTraffic** | Pointer to [**InlineResponse20063LatencyStatsVideoTraffic**](InlineResponse20063LatencyStatsVideoTraffic.md) |  | [optional] 
+**VoiceTraffic** | Pointer to [**InlineResponse20063LatencyStatsVoiceTraffic**](InlineResponse20063LatencyStatsVoiceTraffic.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200237WithDefaults instantiates a new InlineResponse200237 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetBackgroundTraffic
 
-`func (o *InlineResponse200237) GetEnabled() bool`
+`func (o *InlineResponse200237) GetBackgroundTraffic() InlineResponse20063LatencyStatsBackgroundTraffic`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetBackgroundTraffic returns the BackgroundTraffic field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetBackgroundTrafficOk
 
-`func (o *InlineResponse200237) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200237) GetBackgroundTrafficOk() (*InlineResponse20063LatencyStatsBackgroundTraffic, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetBackgroundTrafficOk returns a tuple with the BackgroundTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetBackgroundTraffic
 
-`func (o *InlineResponse200237) SetEnabled(v bool)`
+`func (o *InlineResponse200237) SetBackgroundTraffic(v InlineResponse20063LatencyStatsBackgroundTraffic)`
 
-SetEnabled sets Enabled field to given value.
+SetBackgroundTraffic sets BackgroundTraffic field to given value.
 
-### HasEnabled
+### HasBackgroundTraffic
 
-`func (o *InlineResponse200237) HasEnabled() bool`
+`func (o *InlineResponse200237) HasBackgroundTraffic() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasBackgroundTraffic returns a boolean if a field has been set.
 
-### GetApi
+### GetBestEffortTraffic
 
-`func (o *InlineResponse200237) GetApi() InlineResponse200237Api`
+`func (o *InlineResponse200237) GetBestEffortTraffic() InlineResponse20063LatencyStatsBestEffortTraffic`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetBestEffortTraffic returns the BestEffortTraffic field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetBestEffortTrafficOk
 
-`func (o *InlineResponse200237) GetApiOk() (*InlineResponse200237Api, bool)`
+`func (o *InlineResponse200237) GetBestEffortTrafficOk() (*InlineResponse20063LatencyStatsBestEffortTraffic, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetBestEffortTrafficOk returns a tuple with the BestEffortTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetBestEffortTraffic
 
-`func (o *InlineResponse200237) SetApi(v InlineResponse200237Api)`
+`func (o *InlineResponse200237) SetBestEffortTraffic(v InlineResponse20063LatencyStatsBestEffortTraffic)`
 
-SetApi sets Api field to given value.
+SetBestEffortTraffic sets BestEffortTraffic field to given value.
 
-### HasApi
+### HasBestEffortTraffic
 
-`func (o *InlineResponse200237) HasApi() bool`
+`func (o *InlineResponse200237) HasBestEffortTraffic() bool`
 
-HasApi returns a boolean if a field has been set.
+HasBestEffortTraffic returns a boolean if a field has been set.
+
+### GetVideoTraffic
+
+`func (o *InlineResponse200237) GetVideoTraffic() InlineResponse20063LatencyStatsVideoTraffic`
+
+GetVideoTraffic returns the VideoTraffic field if non-nil, zero value otherwise.
+
+### GetVideoTrafficOk
+
+`func (o *InlineResponse200237) GetVideoTrafficOk() (*InlineResponse20063LatencyStatsVideoTraffic, bool)`
+
+GetVideoTrafficOk returns a tuple with the VideoTraffic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVideoTraffic
+
+`func (o *InlineResponse200237) SetVideoTraffic(v InlineResponse20063LatencyStatsVideoTraffic)`
+
+SetVideoTraffic sets VideoTraffic field to given value.
+
+### HasVideoTraffic
+
+`func (o *InlineResponse200237) HasVideoTraffic() bool`
+
+HasVideoTraffic returns a boolean if a field has been set.
+
+### GetVoiceTraffic
+
+`func (o *InlineResponse200237) GetVoiceTraffic() InlineResponse20063LatencyStatsVoiceTraffic`
+
+GetVoiceTraffic returns the VoiceTraffic field if non-nil, zero value otherwise.
+
+### GetVoiceTrafficOk
+
+`func (o *InlineResponse200237) GetVoiceTrafficOk() (*InlineResponse20063LatencyStatsVoiceTraffic, bool)`
+
+GetVoiceTrafficOk returns a tuple with the VoiceTraffic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoiceTraffic
+
+`func (o *InlineResponse200237) SetVoiceTraffic(v InlineResponse20063LatencyStatsVoiceTraffic)`
+
+SetVoiceTraffic sets VoiceTraffic field to given value.
+
+### HasVoiceTraffic
+
+`func (o *InlineResponse200237) HasVoiceTraffic() bool`
+
+HasVoiceTraffic returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

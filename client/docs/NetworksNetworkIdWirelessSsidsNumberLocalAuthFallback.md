@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **CacheTimeout** | Pointer to **int32** | The duration (in seconds) for which auths are cached. The timeout is measured from the user&#39;s most recent non-cached authentication to the network. Between 3600 (1 hour) and 86400 (1 day) | [optional] 
 **Enabled** | Pointer to **bool** | If true, MR devices will cache authentication credentials for EAP-TLS or for MAC based authentication. | [optional] 
-**ServerCaCertificate** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberLocalAuthFallbackServerCaCertificate**](NetworksNetworkIdWirelessSsidsNumberLocalAuthFallbackServerCaCertificate.md) |  | [optional] 
+**ServerCaCertificate** | Pointer to [**NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate**](NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetServerCaCertificate
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback) GetServerCaCertificate() NetworksNetworkIdWirelessSsidsNumberLocalAuthFallbackServerCaCertificate`
+`func (o *NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback) GetServerCaCertificate() NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate`
 
 GetServerCaCertificate returns the ServerCaCertificate field if non-nil, zero value otherwise.
 
 ### GetServerCaCertificateOk
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback) GetServerCaCertificateOk() (*NetworksNetworkIdWirelessSsidsNumberLocalAuthFallbackServerCaCertificate, bool)`
+`func (o *NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback) GetServerCaCertificateOk() (*NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate, bool)`
 
 GetServerCaCertificateOk returns a tuple with the ServerCaCertificate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetServerCaCertificate
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback) SetServerCaCertificate(v NetworksNetworkIdWirelessSsidsNumberLocalAuthFallbackServerCaCertificate)`
+`func (o *NetworksNetworkIdWirelessSsidsNumberLocalAuthFallback) SetServerCaCertificate(v NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate)`
 
 SetServerCaCertificate sets ServerCaCertificate field to given value.
 

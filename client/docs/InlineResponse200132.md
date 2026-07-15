@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Event category | [optional] 
-**Type** | Pointer to **string** | Event type | [optional] 
-**Description** | Pointer to **string** | Description of the event | [optional] 
+**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
+**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
+**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
+**Events** | Pointer to [**[]InlineResponse200132Events**](InlineResponse200132Events.md) | An array of events that took place in the network. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200132WithDefaults instantiates a new InlineResponse200132 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetMessage
 
-`func (o *InlineResponse200132) GetCategory() string`
+`func (o *InlineResponse200132) GetMessage() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetMessageOk
 
-`func (o *InlineResponse200132) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200132) GetMessageOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetMessage
 
-`func (o *InlineResponse200132) SetCategory(v string)`
+`func (o *InlineResponse200132) SetMessage(v string)`
 
-SetCategory sets Category field to given value.
+SetMessage sets Message field to given value.
 
-### HasCategory
+### HasMessage
 
-`func (o *InlineResponse200132) HasCategory() bool`
+`func (o *InlineResponse200132) HasMessage() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
-### GetType
+### GetPageStartAt
 
-`func (o *InlineResponse200132) GetType() string`
+`func (o *InlineResponse200132) GetPageStartAt() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetPageStartAtOk
 
-`func (o *InlineResponse200132) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200132) GetPageStartAtOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetPageStartAt
 
-`func (o *InlineResponse200132) SetType(v string)`
+`func (o *InlineResponse200132) SetPageStartAt(v string)`
 
-SetType sets Type field to given value.
+SetPageStartAt sets PageStartAt field to given value.
 
-### HasType
+### HasPageStartAt
 
-`func (o *InlineResponse200132) HasType() bool`
+`func (o *InlineResponse200132) HasPageStartAt() bool`
 
-HasType returns a boolean if a field has been set.
+HasPageStartAt returns a boolean if a field has been set.
 
-### GetDescription
+### GetPageEndAt
 
-`func (o *InlineResponse200132) GetDescription() string`
+`func (o *InlineResponse200132) GetPageEndAt() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetPageEndAtOk
 
-`func (o *InlineResponse200132) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200132) GetPageEndAtOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetPageEndAt
 
-`func (o *InlineResponse200132) SetDescription(v string)`
+`func (o *InlineResponse200132) SetPageEndAt(v string)`
 
-SetDescription sets Description field to given value.
+SetPageEndAt sets PageEndAt field to given value.
 
-### HasDescription
+### HasPageEndAt
 
-`func (o *InlineResponse200132) HasDescription() bool`
+`func (o *InlineResponse200132) HasPageEndAt() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasPageEndAt returns a boolean if a field has been set.
+
+### GetEvents
+
+`func (o *InlineResponse200132) GetEvents() []InlineResponse200132Events`
+
+GetEvents returns the Events field if non-nil, zero value otherwise.
+
+### GetEventsOk
+
+`func (o *InlineResponse200132) GetEventsOk() (*[]InlineResponse200132Events, bool)`
+
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEvents
+
+`func (o *InlineResponse200132) SetEvents(v []InlineResponse200132Events)`
+
+SetEvents sets Events field to given value.
+
+### HasEvents
+
+`func (o *InlineResponse200132) HasEvents() bool`
+
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

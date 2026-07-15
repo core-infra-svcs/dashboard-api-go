@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
+**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject271WithDefaults instantiates a new InlineObject271 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetTitle
 
-`func (o *InlineObject271) GetOrders() []string`
+`func (o *InlineObject271) GetTitle() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetTitleOk
 
-`func (o *InlineObject271) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject271) GetTitleOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetTitle
 
-`func (o *InlineObject271) SetOrders(v []string)`
+`func (o *InlineObject271) SetTitle(v string)`
 
-SetOrders sets Orders field to given value.
+SetTitle sets Title field to given value.
 
-### HasOrders
+### HasTitle
 
-`func (o *InlineObject271) HasOrders() bool`
+`func (o *InlineObject271) HasTitle() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasTitle returns a boolean if a field has been set.
 
-### GetSerials
+### GetApiKey
 
-`func (o *InlineObject271) GetSerials() []string`
+`func (o *InlineObject271) GetApiKey() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetApiKeyOk
 
-`func (o *InlineObject271) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject271) GetApiKeyOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetApiKey
 
-`func (o *InlineObject271) SetSerials(v []string)`
+`func (o *InlineObject271) SetApiKey(v string)`
 
-SetSerials sets Serials field to given value.
+SetApiKey sets ApiKey field to given value.
 
-### HasSerials
+### HasApiKey
 
-`func (o *InlineObject271) HasSerials() bool`
+`func (o *InlineObject271) HasApiKey() bool`
 
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineObject271) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject271) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject271) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineObject271) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
+HasApiKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

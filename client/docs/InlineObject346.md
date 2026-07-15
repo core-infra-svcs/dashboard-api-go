@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
+**Meta** | Pointer to [**InlineResponse200275Meta**](InlineResponse200275Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject346
 
-`func NewInlineObject346() *InlineObject346`
+`func NewInlineObject346(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject346`
 
 NewInlineObject346 instantiates a new InlineObject346 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject346WithDefaults instantiates a new InlineObject346 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetItems
 
-`func (o *InlineObject346) GetStatus() string`
+`func (o *InlineObject346) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetItemsOk
 
-`func (o *InlineObject346) GetStatusOk() (*string, bool)`
+`func (o *InlineObject346) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetItems
 
-`func (o *InlineObject346) SetStatus(v string)`
+`func (o *InlineObject346) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
 
-SetStatus sets Status field to given value.
+SetItems sets Items field to given value.
 
-### HasStatus
 
-`func (o *InlineObject346) HasStatus() bool`
+### GetMeta
 
-HasStatus returns a boolean if a field has been set.
+`func (o *InlineObject346) GetMeta() InlineResponse200275Meta`
 
-### GetCertificateAuthorityId
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-`func (o *InlineObject346) GetCertificateAuthorityId() string`
+### GetMetaOk
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+`func (o *InlineObject346) GetMetaOk() (*InlineResponse200275Meta, bool)`
 
-### GetCertificateAuthorityIdOk
-
-`func (o *InlineObject346) GetCertificateAuthorityIdOk() (*string, bool)`
-
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetMeta
 
-`func (o *InlineObject346) SetCertificateAuthorityId(v string)`
+`func (o *InlineObject346) SetMeta(v InlineResponse200275Meta)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetMeta sets Meta field to given value.
 
-### HasCertificateAuthorityId
+### HasMeta
 
-`func (o *InlineObject346) HasCertificateAuthorityId() bool`
+`func (o *InlineObject346) HasMeta() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

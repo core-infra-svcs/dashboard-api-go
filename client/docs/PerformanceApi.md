@@ -4,7 +4,7 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetDeviceAppliancePerformance**](PerformanceApi.md#GetDeviceAppliancePerformance) | **Get** /devices/{serial}/appliance/performance | Return the performance score for a single MX
+[**GetDeviceAppliancePerformance**](PerformanceApi.md#GetDeviceAppliancePerformance) | **Get** /devices/{serial}/appliance/performance | Return the performance score for a single Secure Appliance or Secure Router
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > InlineResponse2009 GetDeviceAppliancePerformance(ctx, serial).T0(t0).T1(t1).Timespan(timespan).Execute()
 
-Return the performance score for a single MX
+Return the performance score for a single Secure Appliance or Secure Router
 
 
 

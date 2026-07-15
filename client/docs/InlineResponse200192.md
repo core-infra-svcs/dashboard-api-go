@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
-**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
-**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
+**Alerts** | Pointer to [**InlineResponse200192Alerts**](InlineResponse200192Alerts.md) |  | [optional] 
+**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
+**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
+**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
+**AlwaysAllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers that are always allowed on the network. These are the MAC addresses of switches, switch stacks, and VRRP groups in the network. These servers cannot be blocked. | [optional] 
+**ArpInspection** | Pointer to [**InlineResponse200192ArpInspection**](InlineResponse200192ArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineResponse200192WithDefaults instantiates a new InlineResponse200192 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrustedServerId
+### GetAlerts
 
-`func (o *InlineResponse200192) GetTrustedServerId() string`
+`func (o *InlineResponse200192) GetAlerts() InlineResponse200192Alerts`
 
-GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetTrustedServerIdOk
+### GetAlertsOk
 
-`func (o *InlineResponse200192) GetTrustedServerIdOk() (*string, bool)`
+`func (o *InlineResponse200192) GetAlertsOk() (*InlineResponse200192Alerts, bool)`
 
-GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrustedServerId
+### SetAlerts
 
-`func (o *InlineResponse200192) SetTrustedServerId(v string)`
+`func (o *InlineResponse200192) SetAlerts(v InlineResponse200192Alerts)`
 
-SetTrustedServerId sets TrustedServerId field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasTrustedServerId
+### HasAlerts
 
-`func (o *InlineResponse200192) HasTrustedServerId() bool`
+`func (o *InlineResponse200192) HasAlerts() bool`
 
-HasTrustedServerId returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### GetMac
+### GetDefaultPolicy
 
-`func (o *InlineResponse200192) GetMac() string`
+`func (o *InlineResponse200192) GetDefaultPolicy() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse200192) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200192) GetDefaultPolicyOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetDefaultPolicy
 
-`func (o *InlineResponse200192) SetMac(v string)`
+`func (o *InlineResponse200192) SetDefaultPolicy(v string)`
 
-SetMac sets Mac field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasMac
+### HasDefaultPolicy
 
-`func (o *InlineResponse200192) HasMac() bool`
+`func (o *InlineResponse200192) HasDefaultPolicy() bool`
 
-HasMac returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
-### GetVlan
+### GetBlockedServers
 
-`func (o *InlineResponse200192) GetVlan() int32`
+`func (o *InlineResponse200192) GetBlockedServers() []string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetBlockedServersOk
 
-`func (o *InlineResponse200192) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200192) GetBlockedServersOk() (*[]string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetBlockedServers
 
-`func (o *InlineResponse200192) SetVlan(v int32)`
+`func (o *InlineResponse200192) SetBlockedServers(v []string)`
 
-SetVlan sets Vlan field to given value.
+SetBlockedServers sets BlockedServers field to given value.
 
-### HasVlan
+### HasBlockedServers
 
-`func (o *InlineResponse200192) HasVlan() bool`
+`func (o *InlineResponse200192) HasBlockedServers() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasBlockedServers returns a boolean if a field has been set.
 
-### GetIpv4
+### GetAllowedServers
 
-`func (o *InlineResponse200192) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
+`func (o *InlineResponse200192) GetAllowedServers() []string`
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
 
-### GetIpv4Ok
+### GetAllowedServersOk
 
-`func (o *InlineResponse200192) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
+`func (o *InlineResponse200192) GetAllowedServersOk() (*[]string, bool)`
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetAllowedServers
 
-`func (o *InlineResponse200192) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
+`func (o *InlineResponse200192) SetAllowedServers(v []string)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetAllowedServers sets AllowedServers field to given value.
 
-### HasIpv4
+### HasAllowedServers
 
-`func (o *InlineResponse200192) HasIpv4() bool`
+`func (o *InlineResponse200192) HasAllowedServers() bool`
 
-HasIpv4 returns a boolean if a field has been set.
+HasAllowedServers returns a boolean if a field has been set.
+
+### GetAlwaysAllowedServers
+
+`func (o *InlineResponse200192) GetAlwaysAllowedServers() []string`
+
+GetAlwaysAllowedServers returns the AlwaysAllowedServers field if non-nil, zero value otherwise.
+
+### GetAlwaysAllowedServersOk
+
+`func (o *InlineResponse200192) GetAlwaysAllowedServersOk() (*[]string, bool)`
+
+GetAlwaysAllowedServersOk returns a tuple with the AlwaysAllowedServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlwaysAllowedServers
+
+`func (o *InlineResponse200192) SetAlwaysAllowedServers(v []string)`
+
+SetAlwaysAllowedServers sets AlwaysAllowedServers field to given value.
+
+### HasAlwaysAllowedServers
+
+`func (o *InlineResponse200192) HasAlwaysAllowedServers() bool`
+
+HasAlwaysAllowedServers returns a boolean if a field has been set.
+
+### GetArpInspection
+
+`func (o *InlineResponse200192) GetArpInspection() InlineResponse200192ArpInspection`
+
+GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+
+### GetArpInspectionOk
+
+`func (o *InlineResponse200192) GetArpInspectionOk() (*InlineResponse200192ArpInspection, bool)`
+
+GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArpInspection
+
+`func (o *InlineResponse200192) SetArpInspection(v InlineResponse200192ArpInspection)`
+
+SetArpInspection sets ArpInspection field to given value.
+
+### HasArpInspection
+
+`func (o *InlineResponse200192) HasArpInspection() bool`
+
+HasArpInspection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

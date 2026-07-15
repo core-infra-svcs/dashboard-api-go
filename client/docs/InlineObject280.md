@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of Meraki Serials to migrate | 
-**Target** | **string** | The controller or management mode to which the devices will be migrated | 
+**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems.md) | List of device-to-profile assignments to remove. | 
 
 ## Methods
 
 ### NewInlineObject280
 
-`func NewInlineObject280(serials []string, target string, ) *InlineObject280`
+`func NewInlineObject280(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, ) *InlineObject280`
 
 NewInlineObject280 instantiates a new InlineObject280 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject280WithDefaults instantiates a new InlineObject280 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetItems
 
-`func (o *InlineObject280) GetSerials() []string`
+`func (o *InlineObject280) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetItemsOk
 
-`func (o *InlineObject280) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject280) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetItems
 
-`func (o *InlineObject280) SetSerials(v []string)`
+`func (o *InlineObject280) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems)`
 
-SetSerials sets Serials field to given value.
-
-
-### GetTarget
-
-`func (o *InlineObject280) GetTarget() string`
-
-GetTarget returns the Target field if non-nil, zero value otherwise.
-
-### GetTargetOk
-
-`func (o *InlineObject280) GetTargetOk() (*string, bool)`
-
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTarget
-
-`func (o *InlineObject280) SetTarget(v string)`
-
-SetTarget sets Target field to given value.
+SetItems sets Items field to given value.
 
 
 

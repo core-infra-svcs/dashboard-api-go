@@ -4,22 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Alert Type | 
-**CategoryType** | **string** | Alert category | 
-**Severity** | **string** | Alert severity | 
-**LastAlertedAt** | **time.Time** | Last time an alert of this type was triggered | 
-**LastResolvedAt** | Pointer to **time.Time** | Last time an alert of this type was resolved | [optional] 
-**Count** | **int32** | Total count of the given alert type | 
-**NetworkCount** | **int32** | Number of affected networks for the alert type | 
-**DeviceTypes** | **[]string** | Affected device types for alerts in the group | 
-**DeviceTags** | **[]string** | Unique device tags for alerts in the group | 
-**Networks** | [**[]InlineResponse200297Networks**](InlineResponse200297Networks.md) | Affected networks for alerts in the group | 
+**NetworkId** | **string** | id | 
+**NetworkName** | **string** | Name | 
+**AlertCount** | **int32** | Total Alerts | 
+**LastAlertedAt** | **time.Time** | Last time an alert was seen for this network | 
+**SeverityCounts** | [**[]InlineResponse200297SeverityCounts**](InlineResponse200297SeverityCounts.md) | Alerts By Severity | 
 
 ## Methods
 
 ### NewInlineResponse200297Items
 
-`func NewInlineResponse200297Items(type_ string, categoryType string, severity string, lastAlertedAt time.Time, count int32, networkCount int32, deviceTypes []string, deviceTags []string, networks []InlineResponse200297Networks, ) *InlineResponse200297Items`
+`func NewInlineResponse200297Items(networkId string, networkName string, alertCount int32, lastAlertedAt time.Time, severityCounts []InlineResponse200297SeverityCounts, ) *InlineResponse200297Items`
 
 NewInlineResponse200297Items instantiates a new InlineResponse200297Items object
 This constructor will assign default values to properties that have it defined,
@@ -34,64 +29,64 @@ NewInlineResponse200297ItemsWithDefaults instantiates a new InlineResponse200297
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetNetworkId
 
-`func (o *InlineResponse200297Items) GetType() string`
+`func (o *InlineResponse200297Items) GetNetworkId() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200297Items) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200297Items) GetNetworkIdOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetNetworkId
 
-`func (o *InlineResponse200297Items) SetType(v string)`
+`func (o *InlineResponse200297Items) SetNetworkId(v string)`
 
-SetType sets Type field to given value.
+SetNetworkId sets NetworkId field to given value.
 
 
-### GetCategoryType
+### GetNetworkName
 
-`func (o *InlineResponse200297Items) GetCategoryType() string`
+`func (o *InlineResponse200297Items) GetNetworkName() string`
 
-GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-### GetCategoryTypeOk
+### GetNetworkNameOk
 
-`func (o *InlineResponse200297Items) GetCategoryTypeOk() (*string, bool)`
+`func (o *InlineResponse200297Items) GetNetworkNameOk() (*string, bool)`
 
-GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategoryType
+### SetNetworkName
 
-`func (o *InlineResponse200297Items) SetCategoryType(v string)`
+`func (o *InlineResponse200297Items) SetNetworkName(v string)`
 
-SetCategoryType sets CategoryType field to given value.
+SetNetworkName sets NetworkName field to given value.
 
 
-### GetSeverity
+### GetAlertCount
 
-`func (o *InlineResponse200297Items) GetSeverity() string`
+`func (o *InlineResponse200297Items) GetAlertCount() int32`
 
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
+GetAlertCount returns the AlertCount field if non-nil, zero value otherwise.
 
-### GetSeverityOk
+### GetAlertCountOk
 
-`func (o *InlineResponse200297Items) GetSeverityOk() (*string, bool)`
+`func (o *InlineResponse200297Items) GetAlertCountOk() (*int32, bool)`
 
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+GetAlertCountOk returns a tuple with the AlertCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeverity
+### SetAlertCount
 
-`func (o *InlineResponse200297Items) SetSeverity(v string)`
+`func (o *InlineResponse200297Items) SetAlertCount(v int32)`
 
-SetSeverity sets Severity field to given value.
+SetAlertCount sets AlertCount field to given value.
 
 
 ### GetLastAlertedAt
@@ -114,129 +109,24 @@ and a boolean to check if the value has been set.
 SetLastAlertedAt sets LastAlertedAt field to given value.
 
 
-### GetLastResolvedAt
+### GetSeverityCounts
 
-`func (o *InlineResponse200297Items) GetLastResolvedAt() time.Time`
+`func (o *InlineResponse200297Items) GetSeverityCounts() []InlineResponse200297SeverityCounts`
 
-GetLastResolvedAt returns the LastResolvedAt field if non-nil, zero value otherwise.
+GetSeverityCounts returns the SeverityCounts field if non-nil, zero value otherwise.
 
-### GetLastResolvedAtOk
+### GetSeverityCountsOk
 
-`func (o *InlineResponse200297Items) GetLastResolvedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200297Items) GetSeverityCountsOk() (*[]InlineResponse200297SeverityCounts, bool)`
 
-GetLastResolvedAtOk returns a tuple with the LastResolvedAt field if it's non-nil, zero value otherwise
+GetSeverityCountsOk returns a tuple with the SeverityCounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastResolvedAt
+### SetSeverityCounts
 
-`func (o *InlineResponse200297Items) SetLastResolvedAt(v time.Time)`
+`func (o *InlineResponse200297Items) SetSeverityCounts(v []InlineResponse200297SeverityCounts)`
 
-SetLastResolvedAt sets LastResolvedAt field to given value.
-
-### HasLastResolvedAt
-
-`func (o *InlineResponse200297Items) HasLastResolvedAt() bool`
-
-HasLastResolvedAt returns a boolean if a field has been set.
-
-### GetCount
-
-`func (o *InlineResponse200297Items) GetCount() int32`
-
-GetCount returns the Count field if non-nil, zero value otherwise.
-
-### GetCountOk
-
-`func (o *InlineResponse200297Items) GetCountOk() (*int32, bool)`
-
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCount
-
-`func (o *InlineResponse200297Items) SetCount(v int32)`
-
-SetCount sets Count field to given value.
-
-
-### GetNetworkCount
-
-`func (o *InlineResponse200297Items) GetNetworkCount() int32`
-
-GetNetworkCount returns the NetworkCount field if non-nil, zero value otherwise.
-
-### GetNetworkCountOk
-
-`func (o *InlineResponse200297Items) GetNetworkCountOk() (*int32, bool)`
-
-GetNetworkCountOk returns a tuple with the NetworkCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkCount
-
-`func (o *InlineResponse200297Items) SetNetworkCount(v int32)`
-
-SetNetworkCount sets NetworkCount field to given value.
-
-
-### GetDeviceTypes
-
-`func (o *InlineResponse200297Items) GetDeviceTypes() []string`
-
-GetDeviceTypes returns the DeviceTypes field if non-nil, zero value otherwise.
-
-### GetDeviceTypesOk
-
-`func (o *InlineResponse200297Items) GetDeviceTypesOk() (*[]string, bool)`
-
-GetDeviceTypesOk returns a tuple with the DeviceTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceTypes
-
-`func (o *InlineResponse200297Items) SetDeviceTypes(v []string)`
-
-SetDeviceTypes sets DeviceTypes field to given value.
-
-
-### GetDeviceTags
-
-`func (o *InlineResponse200297Items) GetDeviceTags() []string`
-
-GetDeviceTags returns the DeviceTags field if non-nil, zero value otherwise.
-
-### GetDeviceTagsOk
-
-`func (o *InlineResponse200297Items) GetDeviceTagsOk() (*[]string, bool)`
-
-GetDeviceTagsOk returns a tuple with the DeviceTags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceTags
-
-`func (o *InlineResponse200297Items) SetDeviceTags(v []string)`
-
-SetDeviceTags sets DeviceTags field to given value.
-
-
-### GetNetworks
-
-`func (o *InlineResponse200297Items) GetNetworks() []InlineResponse200297Networks`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineResponse200297Items) GetNetworksOk() (*[]InlineResponse200297Networks, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineResponse200297Items) SetNetworks(v []InlineResponse200297Networks)`
-
-SetNetworks sets Networks field to given value.
+SetSeverityCounts sets SeverityCounts field to given value.
 
 
 

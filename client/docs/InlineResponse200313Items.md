@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Device** | Pointer to [**InlineResponse200313Device**](InlineResponse200313Device.md) |  | [optional] 
-**Active** | Pointer to **bool** | Whether eSIM is currently active SIM on Device | [optional] 
-**Eid** | Pointer to **string** | eSIM EID | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Last update of eSIM | [optional] 
-**Network** | Pointer to [**InlineResponse200313Network**](InlineResponse200313Network.md) |  | [optional] 
-**Profiles** | Pointer to [**[]InlineResponse200313Profiles**](InlineResponse200313Profiles.md) | eSIM Profile Information | [optional] 
+**Serial** | Pointer to **string** | Serial number | [optional] 
+**Uplink** | Pointer to [**InlineResponse200313Uplink**](InlineResponse200313Uplink.md) |  | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20118Nameservers**](InlineResponse20118Nameservers.md) |  | [optional] 
+**Sgt** | Pointer to **int32** | Infra Security Group Tag(sgt) value for Trustsec | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse200313ItemsWithDefaults instantiates a new InlineResponse200313
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevice
+### GetSerial
 
-`func (o *InlineResponse200313Items) GetDevice() InlineResponse200313Device`
+`func (o *InlineResponse200313Items) GetSerial() string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetSerialOk
 
-`func (o *InlineResponse200313Items) GetDeviceOk() (*InlineResponse200313Device, bool)`
+`func (o *InlineResponse200313Items) GetSerialOk() (*string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetSerial
 
-`func (o *InlineResponse200313Items) SetDevice(v InlineResponse200313Device)`
+`func (o *InlineResponse200313Items) SetSerial(v string)`
 
-SetDevice sets Device field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDevice
+### HasSerial
 
-`func (o *InlineResponse200313Items) HasDevice() bool`
+`func (o *InlineResponse200313Items) HasSerial() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetActive
+### GetUplink
 
-`func (o *InlineResponse200313Items) GetActive() bool`
+`func (o *InlineResponse200313Items) GetUplink() InlineResponse200313Uplink`
 
-GetActive returns the Active field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetActiveOk
+### GetUplinkOk
 
-`func (o *InlineResponse200313Items) GetActiveOk() (*bool, bool)`
+`func (o *InlineResponse200313Items) GetUplinkOk() (*InlineResponse200313Uplink, bool)`
 
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActive
+### SetUplink
 
-`func (o *InlineResponse200313Items) SetActive(v bool)`
+`func (o *InlineResponse200313Items) SetUplink(v InlineResponse200313Uplink)`
 
-SetActive sets Active field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasActive
+### HasUplink
 
-`func (o *InlineResponse200313Items) HasActive() bool`
+`func (o *InlineResponse200313Items) HasUplink() bool`
 
-HasActive returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
 
-### GetEid
+### GetNameservers
 
-`func (o *InlineResponse200313Items) GetEid() string`
+`func (o *InlineResponse200313Items) GetNameservers() InlineResponse20118Nameservers`
 
-GetEid returns the Eid field if non-nil, zero value otherwise.
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
 
-### GetEidOk
+### GetNameserversOk
 
-`func (o *InlineResponse200313Items) GetEidOk() (*string, bool)`
+`func (o *InlineResponse200313Items) GetNameserversOk() (*InlineResponse20118Nameservers, bool)`
 
-GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEid
+### SetNameservers
 
-`func (o *InlineResponse200313Items) SetEid(v string)`
+`func (o *InlineResponse200313Items) SetNameservers(v InlineResponse20118Nameservers)`
 
-SetEid sets Eid field to given value.
+SetNameservers sets Nameservers field to given value.
 
-### HasEid
+### HasNameservers
 
-`func (o *InlineResponse200313Items) HasEid() bool`
+`func (o *InlineResponse200313Items) HasNameservers() bool`
 
-HasEid returns a boolean if a field has been set.
+HasNameservers returns a boolean if a field has been set.
 
-### GetLastUpdatedAt
+### GetSgt
 
-`func (o *InlineResponse200313Items) GetLastUpdatedAt() string`
+`func (o *InlineResponse200313Items) GetSgt() int32`
 
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-### GetLastUpdatedAtOk
+### GetSgtOk
 
-`func (o *InlineResponse200313Items) GetLastUpdatedAtOk() (*string, bool)`
+`func (o *InlineResponse200313Items) GetSgtOk() (*int32, bool)`
 
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUpdatedAt
+### SetSgt
 
-`func (o *InlineResponse200313Items) SetLastUpdatedAt(v string)`
+`func (o *InlineResponse200313Items) SetSgt(v int32)`
 
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
+SetSgt sets Sgt field to given value.
 
-### HasLastUpdatedAt
+### HasSgt
 
-`func (o *InlineResponse200313Items) HasLastUpdatedAt() bool`
+`func (o *InlineResponse200313Items) HasSgt() bool`
 
-HasLastUpdatedAt returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200313Items) GetNetwork() InlineResponse200313Network`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200313Items) GetNetworkOk() (*InlineResponse200313Network, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200313Items) SetNetwork(v InlineResponse200313Network)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200313Items) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetProfiles
-
-`func (o *InlineResponse200313Items) GetProfiles() []InlineResponse200313Profiles`
-
-GetProfiles returns the Profiles field if non-nil, zero value otherwise.
-
-### GetProfilesOk
-
-`func (o *InlineResponse200313Items) GetProfilesOk() (*[]InlineResponse200313Profiles, bool)`
-
-GetProfilesOk returns a tuple with the Profiles field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfiles
-
-`func (o *InlineResponse200313Items) SetProfiles(v []InlineResponse200313Profiles)`
-
-SetProfiles sets Profiles field to given value.
-
-### HasProfiles
-
-`func (o *InlineResponse200313Items) HasProfiles() bool`
-
-HasProfiles returns a boolean if a field has been set.
+HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

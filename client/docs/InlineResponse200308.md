@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Whether the update succeeded | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Serial** | Pointer to **string** | Camera serial number | [optional] 
+**Status** | Pointer to **string** | Onboarding status | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | When the status was last updated | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineResponse200308WithDefaults instantiates a new InlineResponse200308 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetNetworkId
 
-`func (o *InlineResponse200308) GetSuccess() bool`
+`func (o *InlineResponse200308) GetNetworkId() string`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200308) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200308) GetNetworkIdOk() (*string, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetNetworkId
 
-`func (o *InlineResponse200308) SetSuccess(v bool)`
+`func (o *InlineResponse200308) SetNetworkId(v string)`
 
-SetSuccess sets Success field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasSuccess
+### HasNetworkId
 
-`func (o *InlineResponse200308) HasSuccess() bool`
+`func (o *InlineResponse200308) HasNetworkId() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse200308) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse200308) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse200308) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse200308) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse200308) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200308) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200308) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200308) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200308) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200308) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200308) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200308) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

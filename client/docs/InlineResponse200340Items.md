@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | Device serial number | [optional] 
-**Connection** | Pointer to [**InlineResponse200340Connection**](InlineResponse200340Connection.md) |  | [optional] 
+**BySlot** | Pointer to [**[]InlineResponse200340BySlot**](InlineResponse200340BySlot.md) | SIMs associated with the device. Maximum 3 SIM slots per device. | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetConnection
+### GetBySlot
 
-`func (o *InlineResponse200340Items) GetConnection() InlineResponse200340Connection`
+`func (o *InlineResponse200340Items) GetBySlot() []InlineResponse200340BySlot`
 
-GetConnection returns the Connection field if non-nil, zero value otherwise.
+GetBySlot returns the BySlot field if non-nil, zero value otherwise.
 
-### GetConnectionOk
+### GetBySlotOk
 
-`func (o *InlineResponse200340Items) GetConnectionOk() (*InlineResponse200340Connection, bool)`
+`func (o *InlineResponse200340Items) GetBySlotOk() (*[]InlineResponse200340BySlot, bool)`
 
-GetConnectionOk returns a tuple with the Connection field if it's non-nil, zero value otherwise
+GetBySlotOk returns a tuple with the BySlot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnection
+### SetBySlot
 
-`func (o *InlineResponse200340Items) SetConnection(v InlineResponse200340Connection)`
+`func (o *InlineResponse200340Items) SetBySlot(v []InlineResponse200340BySlot)`
 
-SetConnection sets Connection field to given value.
+SetBySlot sets BySlot field to given value.
 
-### HasConnection
+### HasBySlot
 
-`func (o *InlineResponse200340Items) HasConnection() bool`
+`func (o *InlineResponse200340Items) HasBySlot() bool`
 
-HasConnection returns a boolean if a field has been set.
+HasBySlot returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

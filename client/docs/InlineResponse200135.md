@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**InlineResponse200135Products**](InlineResponse200135Products.md) |  | [optional] 
-**Stages** | Pointer to [**[]InlineResponse200135Stages**](InlineResponse200135Stages.md) | The ordered stages in the network | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse200134Reasons**](InlineResponse200134Reasons.md) | Reasons for the rollback | [optional] 
+**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
+**Status** | Pointer to **string** | Status of the rollback | [optional] 
+**UpgradeBatchId** | Pointer to **string** | Batch ID of the firmware rollback | [optional] 
+**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
+**ToVersion** | Pointer to [**InlineResponse200135ToVersion**](InlineResponse200135ToVersion.md) |  | [optional] 
+**Reasons** | Pointer to [**[]InlineResponse200135Reasons**](InlineResponse200135Reasons.md) | Reasons for the rollback | [optional] 
+**Predownload** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksPredownload**](NetworksNetworkIdFirmwareUpgradesRollbacksPredownload.md) |  | [optional] 
 
 ## Methods
 
@@ -27,72 +31,147 @@ NewInlineResponse200135WithDefaults instantiates a new InlineResponse200135 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetProduct
 
-`func (o *InlineResponse200135) GetProducts() InlineResponse200135Products`
+`func (o *InlineResponse200135) GetProduct() string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetProduct returns the Product field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetProductOk
 
-`func (o *InlineResponse200135) GetProductsOk() (*InlineResponse200135Products, bool)`
+`func (o *InlineResponse200135) GetProductOk() (*string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetProduct
 
-`func (o *InlineResponse200135) SetProducts(v InlineResponse200135Products)`
+`func (o *InlineResponse200135) SetProduct(v string)`
 
-SetProducts sets Products field to given value.
+SetProduct sets Product field to given value.
 
-### HasProducts
+### HasProduct
 
-`func (o *InlineResponse200135) HasProducts() bool`
+`func (o *InlineResponse200135) HasProduct() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasProduct returns a boolean if a field has been set.
 
-### GetStages
+### GetStatus
 
-`func (o *InlineResponse200135) GetStages() []InlineResponse200135Stages`
+`func (o *InlineResponse200135) GetStatus() string`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetStatusOk
 
-`func (o *InlineResponse200135) GetStagesOk() (*[]InlineResponse200135Stages, bool)`
+`func (o *InlineResponse200135) GetStatusOk() (*string, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetStatus
 
-`func (o *InlineResponse200135) SetStages(v []InlineResponse200135Stages)`
+`func (o *InlineResponse200135) SetStatus(v string)`
 
-SetStages sets Stages field to given value.
+SetStatus sets Status field to given value.
 
-### HasStages
+### HasStatus
 
-`func (o *InlineResponse200135) HasStages() bool`
+`func (o *InlineResponse200135) HasStatus() bool`
 
-HasStages returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetUpgradeBatchId
+
+`func (o *InlineResponse200135) GetUpgradeBatchId() string`
+
+GetUpgradeBatchId returns the UpgradeBatchId field if non-nil, zero value otherwise.
+
+### GetUpgradeBatchIdOk
+
+`func (o *InlineResponse200135) GetUpgradeBatchIdOk() (*string, bool)`
+
+GetUpgradeBatchIdOk returns a tuple with the UpgradeBatchId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgradeBatchId
+
+`func (o *InlineResponse200135) SetUpgradeBatchId(v string)`
+
+SetUpgradeBatchId sets UpgradeBatchId field to given value.
+
+### HasUpgradeBatchId
+
+`func (o *InlineResponse200135) HasUpgradeBatchId() bool`
+
+HasUpgradeBatchId returns a boolean if a field has been set.
+
+### GetTime
+
+`func (o *InlineResponse200135) GetTime() time.Time`
+
+GetTime returns the Time field if non-nil, zero value otherwise.
+
+### GetTimeOk
+
+`func (o *InlineResponse200135) GetTimeOk() (*time.Time, bool)`
+
+GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTime
+
+`func (o *InlineResponse200135) SetTime(v time.Time)`
+
+SetTime sets Time field to given value.
+
+### HasTime
+
+`func (o *InlineResponse200135) HasTime() bool`
+
+HasTime returns a boolean if a field has been set.
+
+### GetToVersion
+
+`func (o *InlineResponse200135) GetToVersion() InlineResponse200135ToVersion`
+
+GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
+
+### GetToVersionOk
+
+`func (o *InlineResponse200135) GetToVersionOk() (*InlineResponse200135ToVersion, bool)`
+
+GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToVersion
+
+`func (o *InlineResponse200135) SetToVersion(v InlineResponse200135ToVersion)`
+
+SetToVersion sets ToVersion field to given value.
+
+### HasToVersion
+
+`func (o *InlineResponse200135) HasToVersion() bool`
+
+HasToVersion returns a boolean if a field has been set.
 
 ### GetReasons
 
-`func (o *InlineResponse200135) GetReasons() []InlineResponse200134Reasons`
+`func (o *InlineResponse200135) GetReasons() []InlineResponse200135Reasons`
 
 GetReasons returns the Reasons field if non-nil, zero value otherwise.
 
 ### GetReasonsOk
 
-`func (o *InlineResponse200135) GetReasonsOk() (*[]InlineResponse200134Reasons, bool)`
+`func (o *InlineResponse200135) GetReasonsOk() (*[]InlineResponse200135Reasons, bool)`
 
 GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReasons
 
-`func (o *InlineResponse200135) SetReasons(v []InlineResponse200134Reasons)`
+`func (o *InlineResponse200135) SetReasons(v []InlineResponse200135Reasons)`
 
 SetReasons sets Reasons field to given value.
 
@@ -101,6 +180,31 @@ SetReasons sets Reasons field to given value.
 `func (o *InlineResponse200135) HasReasons() bool`
 
 HasReasons returns a boolean if a field has been set.
+
+### GetPredownload
+
+`func (o *InlineResponse200135) GetPredownload() NetworksNetworkIdFirmwareUpgradesRollbacksPredownload`
+
+GetPredownload returns the Predownload field if non-nil, zero value otherwise.
+
+### GetPredownloadOk
+
+`func (o *InlineResponse200135) GetPredownloadOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksPredownload, bool)`
+
+GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPredownload
+
+`func (o *InlineResponse200135) SetPredownload(v NetworksNetworkIdFirmwareUpgradesRollbacksPredownload)`
+
+SetPredownload sets Predownload field to given value.
+
+### HasPredownload
+
+`func (o *InlineResponse200135) HasPredownload() bool`
+
+HasPredownload returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
-**Status** | Pointer to **string** | The status of the Certificate Authority | [optional] 
-**Contents** | Pointer to **string** | The PEM encoded contents of the Certificate Authority - with newlines as \&quot; \&quot;. Contents can be null, if the cert has not yet been generated. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200454Items**](InlineResponse200454Items.md) | The top-level property containing all power mode data. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200454WithDefaults instantiates a new InlineResponse200454 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificateAuthorityId
+### GetItems
 
-`func (o *InlineResponse200454) GetCertificateAuthorityId() string`
+`func (o *InlineResponse200454) GetItems() []InlineResponse200454Items`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200454) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineResponse200454) GetItemsOk() (*[]InlineResponse200454Items, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetItems
 
-`func (o *InlineResponse200454) SetCertificateAuthorityId(v string)`
+`func (o *InlineResponse200454) SetItems(v []InlineResponse200454Items)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetItems sets Items field to given value.
 
-### HasCertificateAuthorityId
+### HasItems
 
-`func (o *InlineResponse200454) HasCertificateAuthorityId() bool`
+`func (o *InlineResponse200454) HasItems() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200454) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200454) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200454) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200454) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetContents
-
-`func (o *InlineResponse200454) GetContents() string`
-
-GetContents returns the Contents field if non-nil, zero value otherwise.
-
-### GetContentsOk
-
-`func (o *InlineResponse200454) GetContentsOk() (*string, bool)`
-
-GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetContents
-
-`func (o *InlineResponse200454) SetContents(v string)`
-
-SetContents sets Contents field to given value.
-
-### HasContents
-
-`func (o *InlineResponse200454) HasContents() bool`
-
-HasContents returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

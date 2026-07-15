@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new organization | 
+**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
 
 ## Methods
 
 ### NewInlineObject272
 
-`func NewInlineObject272(name string, ) *InlineObject272`
+`func NewInlineObject272(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject272`
 
 NewInlineObject272 instantiates a new InlineObject272 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject272WithDefaults instantiates a new InlineObject272 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSwaps
 
-`func (o *InlineObject272) GetName() string`
+`func (o *InlineObject272) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSwapsOk
 
-`func (o *InlineObject272) GetNameOk() (*string, bool)`
+`func (o *InlineObject272) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSwaps
 
-`func (o *InlineObject272) SetName(v string)`
+`func (o *InlineObject272) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
 
-SetName sets Name field to given value.
+SetSwaps sets Swaps field to given value.
 
 
 

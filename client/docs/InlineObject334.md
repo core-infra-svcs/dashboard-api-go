@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesAttachItems**](OrganizationsOrganizationIdSaseSitesAttachItems.md) | List of Meraki SD-WAN sites with the associated regions to be attached. | [optional] 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems**](OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems.md) | List of connectors to delete (maximum 20 items) | [optional] 
 
 ## Methods
 
@@ -28,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineObject334) GetItems() []OrganizationsOrganizationIdSaseSitesAttachItems`
+`func (o *InlineObject334) GetItems() []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineObject334) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesAttachItems, bool)`
+`func (o *InlineObject334) GetItemsOk() (*[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineObject334) SetItems(v []OrganizationsOrganizationIdSaseSitesAttachItems)`
+`func (o *InlineObject334) SetItems(v []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems)`
 
 SetItems sets Items field to given value.
 
@@ -50,31 +49,6 @@ SetItems sets Items field to given value.
 `func (o *InlineObject334) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetCallback
-
-`func (o *InlineObject334) GetCallback() DevicesSerialLiveToolsArpTableCallback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineObject334) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineObject334) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineObject334) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

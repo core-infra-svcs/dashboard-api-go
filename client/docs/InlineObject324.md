@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
-**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
-**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**Name** | Pointer to **string** | Name of the policy | [optional] 
+**Description** | Pointer to **string** | Description of the policy | [optional] 
 
 ## Methods
 
 ### NewInlineObject324
 
-`func NewInlineObject324(name string, ) *InlineObject324`
+`func NewInlineObject324() *InlineObject324`
 
 NewInlineObject324 instantiates a new InlineObject324 object
 This constructor will assign default values to properties that have it defined,
@@ -46,56 +45,36 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetCategory
+`func (o *InlineObject324) HasName() bool`
 
-`func (o *InlineObject324) GetCategory() string`
+HasName returns a boolean if a field has been set.
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+### GetDescription
 
-### GetCategoryOk
+`func (o *InlineObject324) GetDescription() string`
 
-`func (o *InlineObject324) GetCategoryOk() (*string, bool)`
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+### GetDescriptionOk
+
+`func (o *InlineObject324) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetDescription
 
-`func (o *InlineObject324) SetCategory(v string)`
+`func (o *InlineObject324) SetDescription(v string)`
 
-SetCategory sets Category field to given value.
+SetDescription sets Description field to given value.
 
-### HasCategory
+### HasDescription
 
-`func (o *InlineObject324) HasCategory() bool`
+`func (o *InlineObject324) HasDescription() bool`
 
-HasCategory returns a boolean if a field has been set.
-
-### GetObjectIds
-
-`func (o *InlineObject324) GetObjectIds() []string`
-
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
-
-### GetObjectIdsOk
-
-`func (o *InlineObject324) GetObjectIdsOk() (*[]string, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetObjectIds
-
-`func (o *InlineObject324) SetObjectIds(v []string)`
-
-SetObjectIds sets ObjectIds field to given value.
-
-### HasObjectIds
-
-`func (o *InlineObject324) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

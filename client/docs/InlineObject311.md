@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the firewall ruleset | 
-**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
+**Name** | **string** | The name of the combined network | 
+**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
 
 ## Methods
 
 ### NewInlineObject311
 
-`func NewInlineObject311(name string, ) *InlineObject311`
+`func NewInlineObject311(name string, networkIds []string, ) *InlineObject311`
 
 NewInlineObject311 instantiates a new InlineObject311 object
 This constructor will assign default values to properties that have it defined,
@@ -46,30 +47,50 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetDescription
+### GetNetworkIds
 
-`func (o *InlineObject311) GetDescription() string`
+`func (o *InlineObject311) GetNetworkIds() []string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject311) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject311) GetNetworkIdsOk() (*[]string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetNetworkIds
 
-`func (o *InlineObject311) SetDescription(v string)`
+`func (o *InlineObject311) SetNetworkIds(v []string)`
 
-SetDescription sets Description field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
-### HasDescription
 
-`func (o *InlineObject311) HasDescription() bool`
+### GetEnrollmentString
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject311) GetEnrollmentString() string`
+
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+
+### GetEnrollmentStringOk
+
+`func (o *InlineObject311) GetEnrollmentStringOk() (*string, bool)`
+
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnrollmentString
+
+`func (o *InlineObject311) SetEnrollmentString(v string)`
+
+SetEnrollmentString sets EnrollmentString field to given value.
+
+### HasEnrollmentString
+
+`func (o *InlineObject311) HasEnrollmentString() bool`
+
+HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

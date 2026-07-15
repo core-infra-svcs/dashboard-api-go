@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **NullableInt32** | Adaptive policy group ID that all traffic originating from this port is assigned to | [optional] 
+**Id** | Pointer to **NullableString** | Adaptive policy group ID that all traffic originating from this port is assigned to | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetId
 
-`func (o *DevicesSerialApplianceInterfacesPortsUpdateDownlinkSgt) GetId() int32`
+`func (o *DevicesSerialApplianceInterfacesPortsUpdateDownlinkSgt) GetId() string`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *DevicesSerialApplianceInterfacesPortsUpdateDownlinkSgt) GetIdOk() (*int32, bool)`
+`func (o *DevicesSerialApplianceInterfacesPortsUpdateDownlinkSgt) GetIdOk() (*string, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *DevicesSerialApplianceInterfacesPortsUpdateDownlinkSgt) SetId(v int32)`
+`func (o *DevicesSerialApplianceInterfacesPortsUpdateDownlinkSgt) SetId(v string)`
 
 SetId sets Id field to given value.
 

@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Description** | Pointer to **string** | The description of mac address | [optional] 
+**Client** | [**InlineResponse200467Client**](InlineResponse200467Client.md) |  | 
+**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
+**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
 
 ## Methods
 
 ### NewInlineObject353
 
-`func NewInlineObject353(enrolled bool, ) *InlineObject353`
+`func NewInlineObject353(client InlineResponse200467Client, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject353`
 
 NewInlineObject353 instantiates a new InlineObject353 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +28,90 @@ NewInlineObject353WithDefaults instantiates a new InlineObject353 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetDescription
 
-`func (o *InlineObject353) GetEnrolled() bool`
+`func (o *InlineObject353) GetDescription() string`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetDescriptionOk
 
-`func (o *InlineObject353) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject353) GetDescriptionOk() (*string, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetDescription
 
-`func (o *InlineObject353) SetEnrolled(v bool)`
+`func (o *InlineObject353) SetDescription(v string)`
 
-SetEnrolled sets Enrolled field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
 
-### GetChannel
+`func (o *InlineObject353) HasDescription() bool`
 
-`func (o *InlineObject353) GetChannel() string`
+HasDescription returns a boolean if a field has been set.
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+### GetClient
 
-### GetChannelOk
+`func (o *InlineObject353) GetClient() InlineResponse200467Client`
 
-`func (o *InlineObject353) GetChannelOk() (*string, bool)`
+GetClient returns the Client field if non-nil, zero value otherwise.
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+### GetClientOk
+
+`func (o *InlineObject353) GetClientOk() (*InlineResponse200467Client, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetClient
 
-`func (o *InlineObject353) SetChannel(v string)`
+`func (o *InlineObject353) SetClient(v InlineResponse200467Client)`
 
-SetChannel sets Channel field to given value.
+SetClient sets Client field to given value.
 
-### HasChannel
 
-`func (o *InlineObject353) HasChannel() bool`
+### GetSsid
 
-HasChannel returns a boolean if a field has been set.
+`func (o *InlineObject353) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineObject353) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineObject353) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
+
+SetSsid sets Ssid field to given value.
+
+
+### GetNetwork
+
+`func (o *InlineObject353) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineObject353) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineObject353) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
+
+SetNetwork sets Network field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

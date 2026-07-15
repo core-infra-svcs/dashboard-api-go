@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **ScheduleId** | Pointer to **NullableString** | Schedule ID | [optional] 
 **MotionDetectorVersion** | Pointer to **int32** | Motion detector version | [optional] 
 **SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention.md) |  | [optional] 
+**AxisVideoQuality** | Pointer to **string** | Video quality settings applied to all Axis cameras | [optional] 
 **VideoSettings** | Pointer to [**map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) | Video quality and resolution settings for camera models | [optional] 
 
 ## Methods
@@ -320,6 +321,31 @@ SetSmartRetention sets SmartRetention field to given value.
 `func (o *InlineResponse200114) HasSmartRetention() bool`
 
 HasSmartRetention returns a boolean if a field has been set.
+
+### GetAxisVideoQuality
+
+`func (o *InlineResponse200114) GetAxisVideoQuality() string`
+
+GetAxisVideoQuality returns the AxisVideoQuality field if non-nil, zero value otherwise.
+
+### GetAxisVideoQualityOk
+
+`func (o *InlineResponse200114) GetAxisVideoQualityOk() (*string, bool)`
+
+GetAxisVideoQualityOk returns a tuple with the AxisVideoQuality field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAxisVideoQuality
+
+`func (o *InlineResponse200114) SetAxisVideoQuality(v string)`
+
+SetAxisVideoQuality sets AxisVideoQuality field to given value.
+
+### HasAxisVideoQuality
+
+`func (o *InlineResponse200114) HasAxisVideoQuality() bool`
+
+HasAxisVideoQuality returns a boolean if a field has been set.
 
 ### GetVideoSettings
 

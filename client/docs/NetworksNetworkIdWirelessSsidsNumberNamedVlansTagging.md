@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Whether or not traffic should be directed to use specific VLAN names. | [optional] 
 **DefaultVlanName** | Pointer to **string** | The default VLAN name used to tag traffic in the absence of a matching AP tag. | [optional] 
-**ByApTags** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberNamedVlansTaggingByApTags**](NetworksNetworkIdWirelessSsidsNumberNamedVlansTaggingByApTags.md) | The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag. | [optional] 
+**ByApTags** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNamedVlansTaggingByApTags**](NetworksNetworkIdWirelessSsidsNamedVlansTaggingByApTags.md) | The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag. | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasDefaultVlanName returns a boolean if a field has been set.
 
 ### GetByApTags
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberNamedVlansTagging) GetByApTags() []NetworksNetworkIdWirelessSsidsNumberNamedVlansTaggingByApTags`
+`func (o *NetworksNetworkIdWirelessSsidsNumberNamedVlansTagging) GetByApTags() []NetworksNetworkIdWirelessSsidsNamedVlansTaggingByApTags`
 
 GetByApTags returns the ByApTags field if non-nil, zero value otherwise.
 
 ### GetByApTagsOk
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberNamedVlansTagging) GetByApTagsOk() (*[]NetworksNetworkIdWirelessSsidsNumberNamedVlansTaggingByApTags, bool)`
+`func (o *NetworksNetworkIdWirelessSsidsNumberNamedVlansTagging) GetByApTagsOk() (*[]NetworksNetworkIdWirelessSsidsNamedVlansTaggingByApTags, bool)`
 
 GetByApTagsOk returns a tuple with the ByApTags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetByApTags
 
-`func (o *NetworksNetworkIdWirelessSsidsNumberNamedVlansTagging) SetByApTags(v []NetworksNetworkIdWirelessSsidsNumberNamedVlansTaggingByApTags)`
+`func (o *NetworksNetworkIdWirelessSsidsNumberNamedVlansTagging) SetByApTags(v []NetworksNetworkIdWirelessSsidsNamedVlansTaggingByApTags)`
 
 SetByApTags sets ByApTags field to given value.
 

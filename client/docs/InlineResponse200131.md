@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
-**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
-**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
-**Events** | Pointer to [**[]InlineResponse200131Events**](InlineResponse200131Events.md) | An array of events that took place in the network. | [optional] 
+**Network** | [**InlineResponse200131Network**](InlineResponse200131Network.md) |  | 
+**Servers** | [**[]InlineResponse200131Servers**](InlineResponse200131Servers.md) | The list of syslog server configurations that are assigned to this network; suggested maximum array size is 10 | 
 
 ## Methods
 
 ### NewInlineResponse200131
 
-`func NewInlineResponse200131() *InlineResponse200131`
+`func NewInlineResponse200131(network InlineResponse200131Network, servers []InlineResponse200131Servers, ) *InlineResponse200131`
 
 NewInlineResponse200131 instantiates a new InlineResponse200131 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +26,45 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetNetwork
 
-`func (o *InlineResponse200131) GetMessage() string`
+`func (o *InlineResponse200131) GetNetwork() InlineResponse200131Network`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetNetworkOk
 
-`func (o *InlineResponse200131) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse200131) GetNetworkOk() (*InlineResponse200131Network, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetNetwork
 
-`func (o *InlineResponse200131) SetMessage(v string)`
+`func (o *InlineResponse200131) SetNetwork(v InlineResponse200131Network)`
 
-SetMessage sets Message field to given value.
+SetNetwork sets Network field to given value.
 
-### HasMessage
 
-`func (o *InlineResponse200131) HasMessage() bool`
+### GetServers
 
-HasMessage returns a boolean if a field has been set.
+`func (o *InlineResponse200131) GetServers() []InlineResponse200131Servers`
 
-### GetPageStartAt
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200131) GetPageStartAt() string`
+### GetServersOk
 
-GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+`func (o *InlineResponse200131) GetServersOk() (*[]InlineResponse200131Servers, bool)`
 
-### GetPageStartAtOk
-
-`func (o *InlineResponse200131) GetPageStartAtOk() (*string, bool)`
-
-GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageStartAt
+### SetServers
 
-`func (o *InlineResponse200131) SetPageStartAt(v string)`
+`func (o *InlineResponse200131) SetServers(v []InlineResponse200131Servers)`
 
-SetPageStartAt sets PageStartAt field to given value.
+SetServers sets Servers field to given value.
 
-### HasPageStartAt
-
-`func (o *InlineResponse200131) HasPageStartAt() bool`
-
-HasPageStartAt returns a boolean if a field has been set.
-
-### GetPageEndAt
-
-`func (o *InlineResponse200131) GetPageEndAt() string`
-
-GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
-
-### GetPageEndAtOk
-
-`func (o *InlineResponse200131) GetPageEndAtOk() (*string, bool)`
-
-GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPageEndAt
-
-`func (o *InlineResponse200131) SetPageEndAt(v string)`
-
-SetPageEndAt sets PageEndAt field to given value.
-
-### HasPageEndAt
-
-`func (o *InlineResponse200131) HasPageEndAt() bool`
-
-HasPageEndAt returns a boolean if a field has been set.
-
-### GetEvents
-
-`func (o *InlineResponse200131) GetEvents() []InlineResponse200131Events`
-
-GetEvents returns the Events field if non-nil, zero value otherwise.
-
-### GetEventsOk
-
-`func (o *InlineResponse200131) GetEventsOk() (*[]InlineResponse200131Events, bool)`
-
-GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEvents
-
-`func (o *InlineResponse200131) SetEvents(v []InlineResponse200131Events)`
-
-SetEvents sets Events field to given value.
-
-### HasEvents
-
-`func (o *InlineResponse200131) HasEvents() bool`
-
-HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

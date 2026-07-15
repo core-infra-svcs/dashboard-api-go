@@ -1,0 +1,66 @@
+# NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Contents** | Pointer to **NullableString** | The contents of the Server CA Certificate. Must be in PEM or DER format. | [optional] 
+
+## Methods
+
+### NewNetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate
+
+`func NewNetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate() *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate`
+
+NewNetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate instantiates a new NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewNetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificateWithDefaults
+
+`func NewNetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificateWithDefaults() *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate`
+
+NewNetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificateWithDefaults instantiates a new NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetContents
+
+`func (o *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate) GetContents() string`
+
+GetContents returns the Contents field if non-nil, zero value otherwise.
+
+### GetContentsOk
+
+`func (o *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate) GetContentsOk() (*string, bool)`
+
+GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContents
+
+`func (o *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate) SetContents(v string)`
+
+SetContents sets Contents field to given value.
+
+### HasContents
+
+`func (o *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate) HasContents() bool`
+
+HasContents returns a boolean if a field has been set.
+
+### SetContentsNil
+
+`func (o *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate) SetContentsNil(b bool)`
+
+ SetContentsNil sets the value for Contents to be an explicit nil
+
+### UnsetContents
+`func (o *NetworksNetworkIdWirelessSsidsLocalAuthFallbackServerCaCertificate) UnsetContents()`
+
+UnsetContents ensures that no value is present for Contents, not even an explicit nil
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

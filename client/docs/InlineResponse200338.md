@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200338Items**](InlineResponse200338Items.md) | List of cellular geolocation telemetry for devices in the organization. Maximum 100 devices per page by default and 1000 maximum per page. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200338Items**](InlineResponse200338Items.md) | Historical cellular data usage grouped by device and interval. Maximum 10 devices per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200338Meta**](InlineResponse200338Meta.md) |  | [optional] 
 
 ## Methods

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Slot** | Pointer to **string** | SIM slot being configured. Must be &#39;sim1&#39; on single-sim devices. Use &#39;sim3&#39; for eSIM. | [optional] 
+**Slot** | Pointer to **string** | SIM slot being configured. Must be &#39;sim1&#39; on single-sim devices. eSIM slots use the raw slot value for the device, such as &#39;sim2&#39; or &#39;sim3&#39;. | [optional] 
 **Iccid** | Pointer to **string** | Integrated Circuit Card Identification Number | [optional] 
 **Imsi** | Pointer to **string** | International Mobile Subscriber Identity | [optional] 
 **Msisdn** | Pointer to **string** | Mobile Station Integrated Services Digital Network | [optional] 

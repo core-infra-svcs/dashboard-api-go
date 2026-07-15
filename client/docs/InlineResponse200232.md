@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
+**Sepioo** | Pointer to [**InlineResponse200232Sepioo**](InlineResponse200232Sepioo.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200232WithDefaults instantiates a new InlineResponse200232 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetHostname
 
-`func (o *InlineResponse200232) GetProfileId() string`
+`func (o *InlineResponse200232) GetHostname() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetHostnameOk
 
-`func (o *InlineResponse200232) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200232) GetHostnameOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetHostname
 
-`func (o *InlineResponse200232) SetProfileId(v string)`
+`func (o *InlineResponse200232) SetHostname(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasProfileId
+### HasHostname
 
-`func (o *InlineResponse200232) HasProfileId() bool`
+`func (o *InlineResponse200232) HasHostname() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
 
-### GetName
+### GetEnabled
 
-`func (o *InlineResponse200232) GetName() string`
+`func (o *InlineResponse200232) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineResponse200232) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200232) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineResponse200232) SetName(v string)`
+`func (o *InlineResponse200232) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineResponse200232) HasName() bool`
+`func (o *InlineResponse200232) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetMode
 
-`func (o *InlineResponse200232) GetIsDefault() bool`
+`func (o *InlineResponse200232) GetMode() string`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetModeOk
 
-`func (o *InlineResponse200232) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200232) GetModeOk() (*string, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetMode
 
-`func (o *InlineResponse200232) SetIsDefault(v bool)`
+`func (o *InlineResponse200232) SetMode(v string)`
 
-SetIsDefault sets IsDefault field to given value.
+SetMode sets Mode field to given value.
 
-### HasIsDefault
+### HasMode
 
-`func (o *InlineResponse200232) HasIsDefault() bool`
+`func (o *InlineResponse200232) HasMode() bool`
 
-HasIsDefault returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetPorts
+### GetSepioo
 
-`func (o *InlineResponse200232) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
+`func (o *InlineResponse200232) GetSepioo() InlineResponse200232Sepioo`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetSepioo returns the Sepioo field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetSepiooOk
 
-`func (o *InlineResponse200232) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
+`func (o *InlineResponse200232) GetSepiooOk() (*InlineResponse200232Sepioo, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetSepiooOk returns a tuple with the Sepioo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetSepioo
 
-`func (o *InlineResponse200232) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
+`func (o *InlineResponse200232) SetSepioo(v InlineResponse200232Sepioo)`
 
-SetPorts sets Ports field to given value.
+SetSepioo sets Sepioo field to given value.
 
-### HasPorts
+### HasSepioo
 
-`func (o *InlineResponse200232) HasPorts() bool`
+`func (o *InlineResponse200232) HasSepioo() bool`
 
-HasPorts returns a boolean if a field has been set.
-
-### GetUsbPorts
-
-`func (o *InlineResponse200232) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
-
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
-
-### GetUsbPortsOk
-
-`func (o *InlineResponse200232) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
-
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsbPorts
-
-`func (o *InlineResponse200232) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
-
-SetUsbPorts sets UsbPorts field to given value.
-
-### HasUsbPorts
-
-`func (o *InlineResponse200232) HasUsbPorts() bool`
-
-HasUsbPorts returns a boolean if a field has been set.
+HasSepioo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

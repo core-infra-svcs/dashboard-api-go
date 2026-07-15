@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | List of AP serials | 
-**ProfileId** | **NullableString** | AP profile ID | 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineObject205
 
-`func NewInlineObject205(serials []string, profileId NullableString, ) *InlineObject205`
+`func NewInlineObject205() *InlineObject205`
 
 NewInlineObject205 instantiates a new InlineObject205 object
 This constructor will assign default values to properties that have it defined,
@@ -26,56 +27,81 @@ NewInlineObject205WithDefaults instantiates a new InlineObject205 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetHostname
 
-`func (o *InlineObject205) GetSerials() []string`
+`func (o *InlineObject205) GetHostname() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetHostnameOk
 
-`func (o *InlineObject205) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject205) GetHostnameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetHostname
 
-`func (o *InlineObject205) SetSerials(v []string)`
+`func (o *InlineObject205) SetHostname(v string)`
 
-SetSerials sets Serials field to given value.
+SetHostname sets Hostname field to given value.
 
+### HasHostname
 
-### GetProfileId
+`func (o *InlineObject205) HasHostname() bool`
 
-`func (o *InlineObject205) GetProfileId() string`
+HasHostname returns a boolean if a field has been set.
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+### GetEnabled
 
-### GetProfileIdOk
+`func (o *InlineObject205) GetEnabled() bool`
 
-`func (o *InlineObject205) GetProfileIdOk() (*string, bool)`
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+### GetEnabledOk
+
+`func (o *InlineObject205) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetEnabled
 
-`func (o *InlineObject205) SetProfileId(v string)`
+`func (o *InlineObject205) SetEnabled(v bool)`
 
-SetProfileId sets ProfileId field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### SetProfileIdNil
+`func (o *InlineObject205) HasEnabled() bool`
 
-`func (o *InlineObject205) SetProfileIdNil(b bool)`
+HasEnabled returns a boolean if a field has been set.
 
- SetProfileIdNil sets the value for ProfileId to be an explicit nil
+### GetMode
 
-### UnsetProfileId
-`func (o *InlineObject205) UnsetProfileId()`
+`func (o *InlineObject205) GetMode() string`
 
-UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
+GetMode returns the Mode field if non-nil, zero value otherwise.
+
+### GetModeOk
+
+`func (o *InlineObject205) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMode
+
+`func (o *InlineObject205) SetMode(v string)`
+
+SetMode sets Mode field to given value.
+
+### HasMode
+
+`func (o *InlineObject205) HasMode() bool`
+
+HasMode returns a boolean if a field has been set.
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

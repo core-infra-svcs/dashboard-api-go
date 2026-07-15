@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
-**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the devices that were released | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200375WithDefaults instantiates a new InlineResponse200375 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetSerials
 
-`func (o *InlineResponse200375) GetDestOrganizationId() string`
+`func (o *InlineResponse200375) GetSerials() []string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetSerialsOk
 
-`func (o *InlineResponse200375) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200375) GetSerialsOk() (*[]string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetSerials
 
-`func (o *InlineResponse200375) SetDestOrganizationId(v string)`
+`func (o *InlineResponse200375) SetSerials(v []string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetSerials sets Serials field to given value.
 
-### HasDestOrganizationId
+### HasSerials
 
-`func (o *InlineResponse200375) HasDestOrganizationId() bool`
+`func (o *InlineResponse200375) HasSerials() bool`
 
-HasDestOrganizationId returns a boolean if a field has been set.
-
-### GetLicenseIds
-
-`func (o *InlineResponse200375) GetLicenseIds() []string`
-
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
-
-### GetLicenseIdsOk
-
-`func (o *InlineResponse200375) GetLicenseIdsOk() (*[]string, bool)`
-
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseIds
-
-`func (o *InlineResponse200375) SetLicenseIds(v []string)`
-
-SetLicenseIds sets LicenseIds field to given value.
-
-### HasLicenseIds
-
-`func (o *InlineResponse200375) HasLicenseIds() bool`
-
-HasLicenseIds returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

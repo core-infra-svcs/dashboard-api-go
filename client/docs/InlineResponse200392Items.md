@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssignmentId** | Pointer to **string** | ID of the ruleset assignment | [optional] 
-**RulesetId** | Pointer to **string** | ID of the ruleset being assigned | [optional] 
-**PolicyId** | Pointer to **string** | ID of the policy the ruleset is assigned to | [optional] 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (higher numbers &#x3D; higher priority) | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Assignment creation time | [optional] 
-**LastUpdatedAt** | Pointer to **time.Time** | Assignment last update time | [optional] 
+**AssignmentId** | Pointer to **string** | ID of the assignment | [optional] 
+**PolicyId** | Pointer to **string** | ID of the assigned policy | [optional] 
+**AdaptivePolicyGroupId** | Pointer to **string** | Adaptive policy group ID | [optional] 
 
 ## Methods
 
@@ -55,31 +52,6 @@ SetAssignmentId sets AssignmentId field to given value.
 
 HasAssignmentId returns a boolean if a field has been set.
 
-### GetRulesetId
-
-`func (o *InlineResponse200392Items) GetRulesetId() string`
-
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
-
-### GetRulesetIdOk
-
-`func (o *InlineResponse200392Items) GetRulesetIdOk() (*string, bool)`
-
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRulesetId
-
-`func (o *InlineResponse200392Items) SetRulesetId(v string)`
-
-SetRulesetId sets RulesetId field to given value.
-
-### HasRulesetId
-
-`func (o *InlineResponse200392Items) HasRulesetId() bool`
-
-HasRulesetId returns a boolean if a field has been set.
-
 ### GetPolicyId
 
 `func (o *InlineResponse200392Items) GetPolicyId() string`
@@ -105,80 +77,30 @@ SetPolicyId sets PolicyId field to given value.
 
 HasPolicyId returns a boolean if a field has been set.
 
-### GetPriority
+### GetAdaptivePolicyGroupId
 
-`func (o *InlineResponse200392Items) GetPriority() int32`
+`func (o *InlineResponse200392Items) GetAdaptivePolicyGroupId() string`
 
-GetPriority returns the Priority field if non-nil, zero value otherwise.
+GetAdaptivePolicyGroupId returns the AdaptivePolicyGroupId field if non-nil, zero value otherwise.
 
-### GetPriorityOk
+### GetAdaptivePolicyGroupIdOk
 
-`func (o *InlineResponse200392Items) GetPriorityOk() (*int32, bool)`
+`func (o *InlineResponse200392Items) GetAdaptivePolicyGroupIdOk() (*string, bool)`
 
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupIdOk returns a tuple with the AdaptivePolicyGroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPriority
+### SetAdaptivePolicyGroupId
 
-`func (o *InlineResponse200392Items) SetPriority(v int32)`
+`func (o *InlineResponse200392Items) SetAdaptivePolicyGroupId(v string)`
 
-SetPriority sets Priority field to given value.
+SetAdaptivePolicyGroupId sets AdaptivePolicyGroupId field to given value.
 
-### HasPriority
+### HasAdaptivePolicyGroupId
 
-`func (o *InlineResponse200392Items) HasPriority() bool`
+`func (o *InlineResponse200392Items) HasAdaptivePolicyGroupId() bool`
 
-HasPriority returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200392Items) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200392Items) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200392Items) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200392Items) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetLastUpdatedAt
-
-`func (o *InlineResponse200392Items) GetLastUpdatedAt() time.Time`
-
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
-
-### GetLastUpdatedAtOk
-
-`func (o *InlineResponse200392Items) GetLastUpdatedAtOk() (*time.Time, bool)`
-
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastUpdatedAt
-
-`func (o *InlineResponse200392Items) SetLastUpdatedAt(v time.Time)`
-
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
-
-### HasLastUpdatedAt
-
-`func (o *InlineResponse200392Items) HasLastUpdatedAt() bool`
-
-HasLastUpdatedAt returns a boolean if a field has been set.
+HasAdaptivePolicyGroupId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

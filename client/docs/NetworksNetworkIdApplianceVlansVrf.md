@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | VRF ID | [optional] 
+**Id** | Pointer to **string** | VRF ID. This is \&quot;0\&quot; for the default VRF. | [optional] 
 **Name** | Pointer to **string** | VRF name | [optional] 
 
 ## Methods

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to update | 
-**Details** | [**[]NetworksNetworkIdDevicesClaimDetails**](NetworksNetworkIdDevicesClaimDetails.md) | An array of details | 
+**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
+**Description** | Pointer to **string** | New description of the profile. | [optional] 
+**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
 
 ## Methods
 
 ### NewInlineObject281
 
-`func NewInlineObject281(serials []string, details []NetworksNetworkIdDevicesClaimDetails, ) *InlineObject281`
+`func NewInlineObject281(rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject281`
 
 NewInlineObject281 instantiates a new InlineObject281 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +27,74 @@ NewInlineObject281WithDefaults instantiates a new InlineObject281 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetProfileId
 
-`func (o *InlineObject281) GetSerials() []string`
+`func (o *InlineObject281) GetProfileId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetProfileIdOk
 
-`func (o *InlineObject281) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject281) GetProfileIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetProfileId
 
-`func (o *InlineObject281) SetSerials(v []string)`
+`func (o *InlineObject281) SetProfileId(v string)`
 
-SetSerials sets Serials field to given value.
+SetProfileId sets ProfileId field to given value.
 
+### HasProfileId
 
-### GetDetails
+`func (o *InlineObject281) HasProfileId() bool`
 
-`func (o *InlineObject281) GetDetails() []NetworksNetworkIdDevicesClaimDetails`
+HasProfileId returns a boolean if a field has been set.
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+### GetDescription
 
-### GetDetailsOk
+`func (o *InlineObject281) GetDescription() string`
 
-`func (o *InlineObject281) GetDetailsOk() (*[]NetworksNetworkIdDevicesClaimDetails, bool)`
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+### GetDescriptionOk
+
+`func (o *InlineObject281) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetDescription
 
-`func (o *InlineObject281) SetDetails(v []NetworksNetworkIdDevicesClaimDetails)`
+`func (o *InlineObject281) SetDescription(v string)`
 
-SetDetails sets Details field to given value.
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject281) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject281) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject281) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject281) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
+
+SetRules sets Rules field to given value.
 
 
 

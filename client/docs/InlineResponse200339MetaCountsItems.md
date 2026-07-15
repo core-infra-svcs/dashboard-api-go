@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of devices with cellular uplink signal information available | [optional] 
-**Remaining** | Pointer to **int32** | Remaining number of devices with cellular uplink signal information (for paginated response) | [optional] 
+**Total** | Pointer to **int32** | Total number of devices with geolocation information available | [optional] 
+**Remaining** | Pointer to **int32** | Remaining number of devices with geolocation information (for paginated response) | [optional] 
 
 ## Methods
 

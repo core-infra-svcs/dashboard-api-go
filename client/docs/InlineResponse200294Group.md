@@ -1,0 +1,108 @@
+# InlineResponse200294Group
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Number** | Pointer to **int32** | [optional] Represents the ordering of primary and backup tunnels group. primary and backup tunnels are grouped by this number. Peers containing same group number belongs to same group. | [optional] 
+**Failover** | Pointer to [**InlineResponse200294GroupFailover**](InlineResponse200294GroupFailover.md) |  | [optional] 
+**ActiveActiveTunnel** | Pointer to **bool** | [optional] Both primary and backup tunnels are active. | [optional] 
+
+## Methods
+
+### NewInlineResponse200294Group
+
+`func NewInlineResponse200294Group() *InlineResponse200294Group`
+
+NewInlineResponse200294Group instantiates a new InlineResponse200294Group object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewInlineResponse200294GroupWithDefaults
+
+`func NewInlineResponse200294GroupWithDefaults() *InlineResponse200294Group`
+
+NewInlineResponse200294GroupWithDefaults instantiates a new InlineResponse200294Group object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetNumber
+
+`func (o *InlineResponse200294Group) GetNumber() int32`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse200294Group) GetNumberOk() (*int32, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse200294Group) SetNumber(v int32)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse200294Group) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
+
+### GetFailover
+
+`func (o *InlineResponse200294Group) GetFailover() InlineResponse200294GroupFailover`
+
+GetFailover returns the Failover field if non-nil, zero value otherwise.
+
+### GetFailoverOk
+
+`func (o *InlineResponse200294Group) GetFailoverOk() (*InlineResponse200294GroupFailover, bool)`
+
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailover
+
+`func (o *InlineResponse200294Group) SetFailover(v InlineResponse200294GroupFailover)`
+
+SetFailover sets Failover field to given value.
+
+### HasFailover
+
+`func (o *InlineResponse200294Group) HasFailover() bool`
+
+HasFailover returns a boolean if a field has been set.
+
+### GetActiveActiveTunnel
+
+`func (o *InlineResponse200294Group) GetActiveActiveTunnel() bool`
+
+GetActiveActiveTunnel returns the ActiveActiveTunnel field if non-nil, zero value otherwise.
+
+### GetActiveActiveTunnelOk
+
+`func (o *InlineResponse200294Group) GetActiveActiveTunnelOk() (*bool, bool)`
+
+GetActiveActiveTunnelOk returns a tuple with the ActiveActiveTunnel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActiveActiveTunnel
+
+`func (o *InlineResponse200294Group) SetActiveActiveTunnel(v bool)`
+
+SetActiveActiveTunnel sets ActiveActiveTunnel field to given value.
+
+### HasActiveActiveTunnel
+
+`func (o *InlineResponse200294Group) HasActiveActiveTunnel() bool`
+
+HasActiveActiveTunnel returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, OpenRoaming is enabled on this SSID. | [optional] 
-**TenantId** | Pointer to **string** | The OpenRoaming DNA Spaces tenant ID. | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject222
 
-`func NewInlineObject222() *InlineObject222`
+`func NewInlineObject222(name string, groupPolicyId string, ) *InlineObject222`
 
 NewInlineObject222 instantiates a new InlineObject222 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,95 @@ NewInlineObject222WithDefaults instantiates a new InlineObject222 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject222) GetEnabled() bool`
+`func (o *InlineObject222) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject222) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject222) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject222) SetEnabled(v bool)`
+`func (o *InlineObject222) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject222) HasEnabled() bool`
+### GetPassphrase
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject222) GetPassphrase() string`
 
-### GetTenantId
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-`func (o *InlineObject222) GetTenantId() string`
+### GetPassphraseOk
 
-GetTenantId returns the TenantId field if non-nil, zero value otherwise.
+`func (o *InlineObject222) GetPassphraseOk() (*string, bool)`
 
-### GetTenantIdOk
-
-`func (o *InlineObject222) GetTenantIdOk() (*string, bool)`
-
-GetTenantIdOk returns a tuple with the TenantId field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTenantId
+### SetPassphrase
 
-`func (o *InlineObject222) SetTenantId(v string)`
+`func (o *InlineObject222) SetPassphrase(v string)`
 
-SetTenantId sets TenantId field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasTenantId
+### HasPassphrase
 
-`func (o *InlineObject222) HasTenantId() bool`
+`func (o *InlineObject222) HasPassphrase() bool`
 
-HasTenantId returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineObject222) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject222) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject222) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+
+### GetExpiresAt
+
+`func (o *InlineObject222) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject222) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject222) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject222) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

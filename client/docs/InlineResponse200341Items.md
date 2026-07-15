@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The device serial | [optional] 
-**Target** | Pointer to **string** | The migration target destination | [optional] 
-**CreatedAt** | Pointer to **time.Time** | The time at which a migration was created | [optional] 
-**MigratedAt** | Pointer to **NullableTime** | The time at which the device initiated migration | [optional] 
+**Serial** | Pointer to **string** | Device serial number | [optional] 
+**Connection** | Pointer to [**InlineResponse200341Connection**](InlineResponse200341Connection.md) |  | [optional] 
 
 ## Methods
 
@@ -53,91 +51,31 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetTarget
+### GetConnection
 
-`func (o *InlineResponse200341Items) GetTarget() string`
+`func (o *InlineResponse200341Items) GetConnection() InlineResponse200341Connection`
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+GetConnection returns the Connection field if non-nil, zero value otherwise.
 
-### GetTargetOk
+### GetConnectionOk
 
-`func (o *InlineResponse200341Items) GetTargetOk() (*string, bool)`
+`func (o *InlineResponse200341Items) GetConnectionOk() (*InlineResponse200341Connection, bool)`
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+GetConnectionOk returns a tuple with the Connection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetConnection
 
-`func (o *InlineResponse200341Items) SetTarget(v string)`
+`func (o *InlineResponse200341Items) SetConnection(v InlineResponse200341Connection)`
 
-SetTarget sets Target field to given value.
+SetConnection sets Connection field to given value.
 
-### HasTarget
+### HasConnection
 
-`func (o *InlineResponse200341Items) HasTarget() bool`
+`func (o *InlineResponse200341Items) HasConnection() bool`
 
-HasTarget returns a boolean if a field has been set.
+HasConnection returns a boolean if a field has been set.
 
-### GetCreatedAt
-
-`func (o *InlineResponse200341Items) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200341Items) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200341Items) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200341Items) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetMigratedAt
-
-`func (o *InlineResponse200341Items) GetMigratedAt() time.Time`
-
-GetMigratedAt returns the MigratedAt field if non-nil, zero value otherwise.
-
-### GetMigratedAtOk
-
-`func (o *InlineResponse200341Items) GetMigratedAtOk() (*time.Time, bool)`
-
-GetMigratedAtOk returns a tuple with the MigratedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMigratedAt
-
-`func (o *InlineResponse200341Items) SetMigratedAt(v time.Time)`
-
-SetMigratedAt sets MigratedAt field to given value.
-
-### HasMigratedAt
-
-`func (o *InlineResponse200341Items) HasMigratedAt() bool`
-
-HasMigratedAt returns a boolean if a field has been set.
-
-### SetMigratedAtNil
-
-`func (o *InlineResponse200341Items) SetMigratedAtNil(b bool)`
-
- SetMigratedAtNil sets the value for MigratedAt to be an explicit nil
-
-### UnsetMigratedAt
-`func (o *InlineResponse200341Items) UnsetMigratedAt()`
-
-UnsetMigratedAt ensures that no value is present for MigratedAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

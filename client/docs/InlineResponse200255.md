@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
-**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
-**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**Concentrator** | Pointer to [**InlineResponse200255Concentrator**](InlineResponse200255Concentrator.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200255Failover**](InlineResponse200255Failover.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**InlineResponse200255SplitTunnel**](InlineResponse200255SplitTunnel.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200255WithDefaults instantiates a new InlineResponse200255 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetConcentrator
 
-`func (o *InlineResponse200255) GetStartTs() time.Time`
+`func (o *InlineResponse200255) GetConcentrator() InlineResponse200255Concentrator`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetConcentratorOk
 
-`func (o *InlineResponse200255) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200255) GetConcentratorOk() (*InlineResponse200255Concentrator, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetConcentrator
 
-`func (o *InlineResponse200255) SetStartTs(v time.Time)`
+`func (o *InlineResponse200255) SetConcentrator(v InlineResponse200255Concentrator)`
 
-SetStartTs sets StartTs field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasStartTs
+### HasConcentrator
 
-`func (o *InlineResponse200255) HasStartTs() bool`
+`func (o *InlineResponse200255) HasConcentrator() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetEndTs
+### GetFailover
 
-`func (o *InlineResponse200255) GetEndTs() time.Time`
+`func (o *InlineResponse200255) GetFailover() InlineResponse200255Failover`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetFailoverOk
 
-`func (o *InlineResponse200255) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200255) GetFailoverOk() (*InlineResponse200255Failover, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetFailover
 
-`func (o *InlineResponse200255) SetEndTs(v time.Time)`
+`func (o *InlineResponse200255) SetFailover(v InlineResponse200255Failover)`
 
-SetEndTs sets EndTs field to given value.
+SetFailover sets Failover field to given value.
 
-### HasEndTs
+### HasFailover
 
-`func (o *InlineResponse200255) HasEndTs() bool`
+`func (o *InlineResponse200255) HasFailover() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
-### GetTotalKbps
+### GetSplitTunnel
 
-`func (o *InlineResponse200255) GetTotalKbps() int32`
+`func (o *InlineResponse200255) GetSplitTunnel() InlineResponse200255SplitTunnel`
 
-GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetTotalKbpsOk
+### GetSplitTunnelOk
 
-`func (o *InlineResponse200255) GetTotalKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200255) GetSplitTunnelOk() (*InlineResponse200255SplitTunnel, bool)`
 
-GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotalKbps
+### SetSplitTunnel
 
-`func (o *InlineResponse200255) SetTotalKbps(v int32)`
+`func (o *InlineResponse200255) SetSplitTunnel(v InlineResponse200255SplitTunnel)`
 
-SetTotalKbps sets TotalKbps field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasTotalKbps
+### HasSplitTunnel
 
-`func (o *InlineResponse200255) HasTotalKbps() bool`
+`func (o *InlineResponse200255) HasSplitTunnel() bool`
 
-HasTotalKbps returns a boolean if a field has been set.
-
-### GetSentKbps
-
-`func (o *InlineResponse200255) GetSentKbps() int32`
-
-GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
-
-### GetSentKbpsOk
-
-`func (o *InlineResponse200255) GetSentKbpsOk() (*int32, bool)`
-
-GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSentKbps
-
-`func (o *InlineResponse200255) SetSentKbps(v int32)`
-
-SetSentKbps sets SentKbps field to given value.
-
-### HasSentKbps
-
-`func (o *InlineResponse200255) HasSentKbps() bool`
-
-HasSentKbps returns a boolean if a field has been set.
-
-### GetReceivedKbps
-
-`func (o *InlineResponse200255) GetReceivedKbps() int32`
-
-GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
-
-### GetReceivedKbpsOk
-
-`func (o *InlineResponse200255) GetReceivedKbpsOk() (*int32, bool)`
-
-GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReceivedKbps
-
-`func (o *InlineResponse200255) SetReceivedKbps(v int32)`
-
-SetReceivedKbps sets ReceivedKbps field to given value.
-
-### HasReceivedKbps
-
-`func (o *InlineResponse200255) HasReceivedKbps() bool`
-
-HasReceivedKbps returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

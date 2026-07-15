@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RuleId** | Pointer to **string** | The unique ID of the rule. | [optional] 
 **Slot** | Pointer to **string** | The SIM slot that the rule is applied to. One of: &#39;sim1&#39;, &#39;sim2&#39;, or &#39;sim3&#39;. | [optional] 
-**Uplink** | Pointer to [**InlineResponse200331Uplink**](InlineResponse200331Uplink.md) |  | [optional] 
+**Uplink** | Pointer to [**InlineResponse200332Uplink**](InlineResponse200332Uplink.md) |  | [optional] 
 **Cap** | Pointer to [**InlineResponse200332Cap**](InlineResponse200332Cap.md) |  | [optional] 
-**Actions** | Pointer to [**[]InlineResponse200331Actions**](InlineResponse200331Actions.md) | The defined actions that will occur when the profile rule is triggered. No more than two actions may be defined for a rule. | [optional] 
+**Actions** | Pointer to [**[]InlineResponse200332Actions**](InlineResponse200332Actions.md) | The defined actions that will occur when the profile rule is triggered. At least one action and no more than two actions may be defined for a rule. | [optional] 
 
 ## Methods
 
@@ -81,20 +81,20 @@ HasSlot returns a boolean if a field has been set.
 
 ### GetUplink
 
-`func (o *InlineResponse200332Rules) GetUplink() InlineResponse200331Uplink`
+`func (o *InlineResponse200332Rules) GetUplink() InlineResponse200332Uplink`
 
 GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
 ### GetUplinkOk
 
-`func (o *InlineResponse200332Rules) GetUplinkOk() (*InlineResponse200331Uplink, bool)`
+`func (o *InlineResponse200332Rules) GetUplinkOk() (*InlineResponse200332Uplink, bool)`
 
 GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUplink
 
-`func (o *InlineResponse200332Rules) SetUplink(v InlineResponse200331Uplink)`
+`func (o *InlineResponse200332Rules) SetUplink(v InlineResponse200332Uplink)`
 
 SetUplink sets Uplink field to given value.
 
@@ -131,20 +131,20 @@ HasCap returns a boolean if a field has been set.
 
 ### GetActions
 
-`func (o *InlineResponse200332Rules) GetActions() []InlineResponse200331Actions`
+`func (o *InlineResponse200332Rules) GetActions() []InlineResponse200332Actions`
 
 GetActions returns the Actions field if non-nil, zero value otherwise.
 
 ### GetActionsOk
 
-`func (o *InlineResponse200332Rules) GetActionsOk() (*[]InlineResponse200331Actions, bool)`
+`func (o *InlineResponse200332Rules) GetActionsOk() (*[]InlineResponse200332Actions, bool)`
 
 GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActions
 
-`func (o *InlineResponse200332Rules) SetActions(v []InlineResponse200331Actions)`
+`func (o *InlineResponse200332Rules) SetActions(v []InlineResponse200332Actions)`
 
 SetActions sets Actions field to given value.
 

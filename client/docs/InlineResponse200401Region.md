@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Slug** | Pointer to **string** | The region identifier slug | [optional] 
+**Name** | Pointer to **string** | Human-readable region name | [optional] 
+**Slug** | Pointer to **string** | Region identifier slug | [optional] 
 
 ## Methods
 
@@ -24,6 +25,31 @@ will change when the set of required properties is changed
 NewInlineResponse200401RegionWithDefaults instantiates a new InlineResponse200401Region object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetName
+
+`func (o *InlineResponse200401Region) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200401Region) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200401Region) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200401Region) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetSlug
 

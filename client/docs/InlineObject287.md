@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
+**Serials** | **[]string** | The serial(s) of the device(s) to stop the capture on | 
 
 ## Methods
 
 ### NewInlineObject287
 
-`func NewInlineObject287(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject287`
+`func NewInlineObject287(serials []string, ) *InlineObject287`
 
 NewInlineObject287 instantiates a new InlineObject287 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject287WithDefaults instantiates a new InlineObject287 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrder
+### GetSerials
 
-`func (o *InlineObject287) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
+`func (o *InlineObject287) GetSerials() []string`
 
-GetOrder returns the Order field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetOrderOk
+### GetSerialsOk
 
-`func (o *InlineObject287) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
+`func (o *InlineObject287) GetSerialsOk() (*[]string, bool)`
 
-GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrder
+### SetSerials
 
-`func (o *InlineObject287) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
+`func (o *InlineObject287) SetSerials(v []string)`
 
-SetOrder sets Order field to given value.
+SetSerials sets Serials field to given value.
 
 
 

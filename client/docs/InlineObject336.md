@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | **string** | Site ID of the site to update | 
-**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesAttachItems**](OrganizationsOrganizationIdSaseSitesAttachItems.md) | List of Meraki SD-WAN sites with the associated regions to be attached. | [optional] 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject336
 
-`func NewInlineObject336(siteId string, ) *InlineObject336`
+`func NewInlineObject336() *InlineObject336`
 
 NewInlineObject336 instantiates a new InlineObject336 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject336WithDefaults instantiates a new InlineObject336 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetItems
 
-`func (o *InlineObject336) GetSiteId() string`
+`func (o *InlineObject336) GetItems() []OrganizationsOrganizationIdSaseSitesAttachItems`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetItemsOk
 
-`func (o *InlineObject336) GetSiteIdOk() (*string, bool)`
+`func (o *InlineObject336) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesAttachItems, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetItems
 
-`func (o *InlineObject336) SetSiteId(v string)`
+`func (o *InlineObject336) SetItems(v []OrganizationsOrganizationIdSaseSitesAttachItems)`
 
-SetSiteId sets SiteId field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
 
-### GetRouting
+`func (o *InlineObject336) HasItems() bool`
 
-`func (o *InlineObject336) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
+HasItems returns a boolean if a field has been set.
 
-GetRouting returns the Routing field if non-nil, zero value otherwise.
+### GetCallback
 
-### GetRoutingOk
+`func (o *InlineObject336) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-`func (o *InlineObject336) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+### GetCallbackOk
+
+`func (o *InlineObject336) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRouting
+### SetCallback
 
-`func (o *InlineObject336) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
+`func (o *InlineObject336) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetRouting sets Routing field to given value.
+SetCallback sets Callback field to given value.
 
-### HasRouting
+### HasCallback
 
-`func (o *InlineObject336) HasRouting() bool`
+`func (o *InlineObject336) HasCallback() bool`
 
-HasRouting returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

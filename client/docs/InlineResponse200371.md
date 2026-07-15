@@ -4,11 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | Pointer to **string** | The secure unique order claim number | [optional] 
-**Resolution** | Pointer to [**InlineResponse200371Resolution**](InlineResponse200371Resolution.md) |  | [optional] 
-**Number** | Pointer to **string** | Order Number | [optional] 
-**Shipping** | Pointer to [**InlineResponse200371Shipping**](InlineResponse200371Shipping.md) |  | [optional] 
-**Subscriptions** | Pointer to [**[]InlineResponse200370Subscriptions**](InlineResponse200370Subscriptions.md) | All subscriptions contained in this order | [optional] 
+**Mac** | Pointer to **string** | MAC address of the device | [optional] 
+**Serial** | Pointer to **string** | Serial number of the device | [optional] 
+**Name** | Pointer to **string** | Name of the device | [optional] 
+**Model** | Pointer to **string** | Model type of the device | [optional] 
+**Sku** | Pointer to **string** | Full product model SKU of the device | [optional] 
+**NetworkId** | Pointer to **string** | Network Id of the device | [optional] 
+**OrderNumber** | Pointer to **string** | Order number of the device | [optional] 
+**ClaimedAt** | Pointer to **time.Time** | Claimed time of the device | [optional] 
+**LicenseExpirationDate** | Pointer to **time.Time** | License expiration date of the device | [optional] 
+**Tags** | Pointer to **[]string** | Device tags | [optional] 
+**ProductType** | Pointer to **string** | Product type of the device | [optional] 
+**CountryCode** | Pointer to **string** | Country/region code from device, network, or store order | [optional] 
+**Details** | Pointer to [**[]InlineResponse2006Details**](InlineResponse2006Details.md) | Additional device information | [optional] 
+**Eox** | Pointer to [**OrganizationsOrganizationIdInventoryDevicesEox**](OrganizationsOrganizationIdInventoryDevicesEox.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +38,355 @@ NewInlineResponse200371WithDefaults instantiates a new InlineResponse200371 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetMac
 
-`func (o *InlineResponse200371) GetClaimId() string`
+`func (o *InlineResponse200371) GetMac() string`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetMacOk
 
-`func (o *InlineResponse200371) GetClaimIdOk() (*string, bool)`
+`func (o *InlineResponse200371) GetMacOk() (*string, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetMac
 
-`func (o *InlineResponse200371) SetClaimId(v string)`
+`func (o *InlineResponse200371) SetMac(v string)`
 
-SetClaimId sets ClaimId field to given value.
+SetMac sets Mac field to given value.
 
-### HasClaimId
+### HasMac
 
-`func (o *InlineResponse200371) HasClaimId() bool`
+`func (o *InlineResponse200371) HasMac() bool`
 
-HasClaimId returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetResolution
+### GetSerial
 
-`func (o *InlineResponse200371) GetResolution() InlineResponse200371Resolution`
+`func (o *InlineResponse200371) GetSerial() string`
 
-GetResolution returns the Resolution field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetResolutionOk
+### GetSerialOk
 
-`func (o *InlineResponse200371) GetResolutionOk() (*InlineResponse200371Resolution, bool)`
+`func (o *InlineResponse200371) GetSerialOk() (*string, bool)`
 
-GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResolution
+### SetSerial
 
-`func (o *InlineResponse200371) SetResolution(v InlineResponse200371Resolution)`
+`func (o *InlineResponse200371) SetSerial(v string)`
 
-SetResolution sets Resolution field to given value.
+SetSerial sets Serial field to given value.
 
-### HasResolution
+### HasSerial
 
-`func (o *InlineResponse200371) HasResolution() bool`
+`func (o *InlineResponse200371) HasSerial() bool`
 
-HasResolution returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetNumber
+### GetName
 
-`func (o *InlineResponse200371) GetNumber() string`
+`func (o *InlineResponse200371) GetName() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetNameOk
 
-`func (o *InlineResponse200371) GetNumberOk() (*string, bool)`
+`func (o *InlineResponse200371) GetNameOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetName
 
-`func (o *InlineResponse200371) SetNumber(v string)`
+`func (o *InlineResponse200371) SetName(v string)`
 
-SetNumber sets Number field to given value.
+SetName sets Name field to given value.
 
-### HasNumber
+### HasName
 
-`func (o *InlineResponse200371) HasNumber() bool`
+`func (o *InlineResponse200371) HasName() bool`
 
-HasNumber returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetShipping
+### GetModel
 
-`func (o *InlineResponse200371) GetShipping() InlineResponse200371Shipping`
+`func (o *InlineResponse200371) GetModel() string`
 
-GetShipping returns the Shipping field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetShippingOk
+### GetModelOk
 
-`func (o *InlineResponse200371) GetShippingOk() (*InlineResponse200371Shipping, bool)`
+`func (o *InlineResponse200371) GetModelOk() (*string, bool)`
 
-GetShippingOk returns a tuple with the Shipping field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShipping
+### SetModel
 
-`func (o *InlineResponse200371) SetShipping(v InlineResponse200371Shipping)`
+`func (o *InlineResponse200371) SetModel(v string)`
 
-SetShipping sets Shipping field to given value.
+SetModel sets Model field to given value.
 
-### HasShipping
+### HasModel
 
-`func (o *InlineResponse200371) HasShipping() bool`
+`func (o *InlineResponse200371) HasModel() bool`
 
-HasShipping returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetSubscriptions
+### GetSku
 
-`func (o *InlineResponse200371) GetSubscriptions() []InlineResponse200370Subscriptions`
+`func (o *InlineResponse200371) GetSku() string`
 
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+GetSku returns the Sku field if non-nil, zero value otherwise.
 
-### GetSubscriptionsOk
+### GetSkuOk
 
-`func (o *InlineResponse200371) GetSubscriptionsOk() (*[]InlineResponse200370Subscriptions, bool)`
+`func (o *InlineResponse200371) GetSkuOk() (*string, bool)`
 
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+GetSkuOk returns a tuple with the Sku field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptions
+### SetSku
 
-`func (o *InlineResponse200371) SetSubscriptions(v []InlineResponse200370Subscriptions)`
+`func (o *InlineResponse200371) SetSku(v string)`
 
-SetSubscriptions sets Subscriptions field to given value.
+SetSku sets Sku field to given value.
 
-### HasSubscriptions
+### HasSku
 
-`func (o *InlineResponse200371) HasSubscriptions() bool`
+`func (o *InlineResponse200371) HasSku() bool`
 
-HasSubscriptions returns a boolean if a field has been set.
+HasSku returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse200371) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200371) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200371) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200371) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetOrderNumber
+
+`func (o *InlineResponse200371) GetOrderNumber() string`
+
+GetOrderNumber returns the OrderNumber field if non-nil, zero value otherwise.
+
+### GetOrderNumberOk
+
+`func (o *InlineResponse200371) GetOrderNumberOk() (*string, bool)`
+
+GetOrderNumberOk returns a tuple with the OrderNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrderNumber
+
+`func (o *InlineResponse200371) SetOrderNumber(v string)`
+
+SetOrderNumber sets OrderNumber field to given value.
+
+### HasOrderNumber
+
+`func (o *InlineResponse200371) HasOrderNumber() bool`
+
+HasOrderNumber returns a boolean if a field has been set.
+
+### GetClaimedAt
+
+`func (o *InlineResponse200371) GetClaimedAt() time.Time`
+
+GetClaimedAt returns the ClaimedAt field if non-nil, zero value otherwise.
+
+### GetClaimedAtOk
+
+`func (o *InlineResponse200371) GetClaimedAtOk() (*time.Time, bool)`
+
+GetClaimedAtOk returns a tuple with the ClaimedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClaimedAt
+
+`func (o *InlineResponse200371) SetClaimedAt(v time.Time)`
+
+SetClaimedAt sets ClaimedAt field to given value.
+
+### HasClaimedAt
+
+`func (o *InlineResponse200371) HasClaimedAt() bool`
+
+HasClaimedAt returns a boolean if a field has been set.
+
+### GetLicenseExpirationDate
+
+`func (o *InlineResponse200371) GetLicenseExpirationDate() time.Time`
+
+GetLicenseExpirationDate returns the LicenseExpirationDate field if non-nil, zero value otherwise.
+
+### GetLicenseExpirationDateOk
+
+`func (o *InlineResponse200371) GetLicenseExpirationDateOk() (*time.Time, bool)`
+
+GetLicenseExpirationDateOk returns a tuple with the LicenseExpirationDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenseExpirationDate
+
+`func (o *InlineResponse200371) SetLicenseExpirationDate(v time.Time)`
+
+SetLicenseExpirationDate sets LicenseExpirationDate field to given value.
+
+### HasLicenseExpirationDate
+
+`func (o *InlineResponse200371) HasLicenseExpirationDate() bool`
+
+HasLicenseExpirationDate returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200371) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200371) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200371) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200371) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetProductType
+
+`func (o *InlineResponse200371) GetProductType() string`
+
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
+
+### GetProductTypeOk
+
+`func (o *InlineResponse200371) GetProductTypeOk() (*string, bool)`
+
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductType
+
+`func (o *InlineResponse200371) SetProductType(v string)`
+
+SetProductType sets ProductType field to given value.
+
+### HasProductType
+
+`func (o *InlineResponse200371) HasProductType() bool`
+
+HasProductType returns a boolean if a field has been set.
+
+### GetCountryCode
+
+`func (o *InlineResponse200371) GetCountryCode() string`
+
+GetCountryCode returns the CountryCode field if non-nil, zero value otherwise.
+
+### GetCountryCodeOk
+
+`func (o *InlineResponse200371) GetCountryCodeOk() (*string, bool)`
+
+GetCountryCodeOk returns a tuple with the CountryCode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCountryCode
+
+`func (o *InlineResponse200371) SetCountryCode(v string)`
+
+SetCountryCode sets CountryCode field to given value.
+
+### HasCountryCode
+
+`func (o *InlineResponse200371) HasCountryCode() bool`
+
+HasCountryCode returns a boolean if a field has been set.
+
+### GetDetails
+
+`func (o *InlineResponse200371) GetDetails() []InlineResponse2006Details`
+
+GetDetails returns the Details field if non-nil, zero value otherwise.
+
+### GetDetailsOk
+
+`func (o *InlineResponse200371) GetDetailsOk() (*[]InlineResponse2006Details, bool)`
+
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetails
+
+`func (o *InlineResponse200371) SetDetails(v []InlineResponse2006Details)`
+
+SetDetails sets Details field to given value.
+
+### HasDetails
+
+`func (o *InlineResponse200371) HasDetails() bool`
+
+HasDetails returns a boolean if a field has been set.
+
+### GetEox
+
+`func (o *InlineResponse200371) GetEox() OrganizationsOrganizationIdInventoryDevicesEox`
+
+GetEox returns the Eox field if non-nil, zero value otherwise.
+
+### GetEoxOk
+
+`func (o *InlineResponse200371) GetEoxOk() (*OrganizationsOrganizationIdInventoryDevicesEox, bool)`
+
+GetEoxOk returns a tuple with the Eox field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEox
+
+`func (o *InlineResponse200371) SetEox(v OrganizationsOrganizationIdInventoryDevicesEox)`
+
+SetEox sets Eox field to given value.
+
+### HasEox
+
+`func (o *InlineResponse200371) HasEox() bool`
+
+HasEox returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

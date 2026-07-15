@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PipelineId** | Pointer to **string** | Pipeline ID | [optional] 
+**Pipeline** | Pointer to [**InlineResponse200266Pipeline**](InlineResponse200266Pipeline.md) |  | [optional] 
+**JobId** | Pointer to **string** | Job ID | [optional] 
 **Operation** | Pointer to [**InlineResponse200266Operation**](InlineResponse200266Operation.md) |  | [optional] 
-**Status** | Pointer to **string** | Pipeline status | [optional] 
-**Counts** | Pointer to [**InlineResponse200266Counts**](InlineResponse200266Counts.md) |  | [optional] 
+**Status** | Pointer to **string** | Job status | [optional] 
+**Errors** | Pointer to [**[]InlineResponse200266Errors**](InlineResponse200266Errors.md) | Job errors | [optional] 
+**Details** | Pointer to [**[]InlineResponse200266Details**](InlineResponse200266Details.md) | Job details (type-specific) | [optional] 
 
 ## Methods
 
@@ -28,30 +30,55 @@ NewInlineResponse200266ItemsWithDefaults instantiates a new InlineResponse200266
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPipelineId
+### GetPipeline
 
-`func (o *InlineResponse200266Items) GetPipelineId() string`
+`func (o *InlineResponse200266Items) GetPipeline() InlineResponse200266Pipeline`
 
-GetPipelineId returns the PipelineId field if non-nil, zero value otherwise.
+GetPipeline returns the Pipeline field if non-nil, zero value otherwise.
 
-### GetPipelineIdOk
+### GetPipelineOk
 
-`func (o *InlineResponse200266Items) GetPipelineIdOk() (*string, bool)`
+`func (o *InlineResponse200266Items) GetPipelineOk() (*InlineResponse200266Pipeline, bool)`
 
-GetPipelineIdOk returns a tuple with the PipelineId field if it's non-nil, zero value otherwise
+GetPipelineOk returns a tuple with the Pipeline field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPipelineId
+### SetPipeline
 
-`func (o *InlineResponse200266Items) SetPipelineId(v string)`
+`func (o *InlineResponse200266Items) SetPipeline(v InlineResponse200266Pipeline)`
 
-SetPipelineId sets PipelineId field to given value.
+SetPipeline sets Pipeline field to given value.
 
-### HasPipelineId
+### HasPipeline
 
-`func (o *InlineResponse200266Items) HasPipelineId() bool`
+`func (o *InlineResponse200266Items) HasPipeline() bool`
 
-HasPipelineId returns a boolean if a field has been set.
+HasPipeline returns a boolean if a field has been set.
+
+### GetJobId
+
+`func (o *InlineResponse200266Items) GetJobId() string`
+
+GetJobId returns the JobId field if non-nil, zero value otherwise.
+
+### GetJobIdOk
+
+`func (o *InlineResponse200266Items) GetJobIdOk() (*string, bool)`
+
+GetJobIdOk returns a tuple with the JobId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJobId
+
+`func (o *InlineResponse200266Items) SetJobId(v string)`
+
+SetJobId sets JobId field to given value.
+
+### HasJobId
+
+`func (o *InlineResponse200266Items) HasJobId() bool`
+
+HasJobId returns a boolean if a field has been set.
 
 ### GetOperation
 
@@ -103,30 +130,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetCounts
+### GetErrors
 
-`func (o *InlineResponse200266Items) GetCounts() InlineResponse200266Counts`
+`func (o *InlineResponse200266Items) GetErrors() []InlineResponse200266Errors`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetErrorsOk
 
-`func (o *InlineResponse200266Items) GetCountsOk() (*InlineResponse200266Counts, bool)`
+`func (o *InlineResponse200266Items) GetErrorsOk() (*[]InlineResponse200266Errors, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetErrors
 
-`func (o *InlineResponse200266Items) SetCounts(v InlineResponse200266Counts)`
+`func (o *InlineResponse200266Items) SetErrors(v []InlineResponse200266Errors)`
 
-SetCounts sets Counts field to given value.
+SetErrors sets Errors field to given value.
 
-### HasCounts
+### HasErrors
 
-`func (o *InlineResponse200266Items) HasCounts() bool`
+`func (o *InlineResponse200266Items) HasErrors() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
+
+### GetDetails
+
+`func (o *InlineResponse200266Items) GetDetails() []InlineResponse200266Details`
+
+GetDetails returns the Details field if non-nil, zero value otherwise.
+
+### GetDetailsOk
+
+`func (o *InlineResponse200266Items) GetDetailsOk() (*[]InlineResponse200266Details, bool)`
+
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetails
+
+`func (o *InlineResponse200266Items) SetDetails(v []InlineResponse200266Details)`
+
+SetDetails sets Details field to given value.
+
+### HasDetails
+
+`func (o *InlineResponse200266Items) HasDetails() bool`
+
+HasDetails returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

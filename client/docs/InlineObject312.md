@@ -4,20 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the firewall rule | 
-**RulesetId** | **string** | Firewall ruleset ID to associate the rule with | 
-**Policy** | **string** | Rule policy - allow or deny traffic | 
-**Enabled** | Pointer to **bool** | Whether the rule is enabled | [optional] 
-**Priority** | Pointer to **int32** | Rule priority (lower numbers &#x3D; higher priority) | [optional] 
-**Description** | Pointer to **string** | Description of the firewall rule | [optional] 
-**Sources** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources.md) |  | 
-**Destinations** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations.md) |  | 
+**Network** | [**OrganizationsOrganizationIdNetworksMovesNetwork**](OrganizationsOrganizationIdNetworksMovesNetwork.md) |  | 
+**Organizations** | [**OrganizationsOrganizationIdNetworksMovesOrganizations**](OrganizationsOrganizationIdNetworksMovesOrganizations.md) |  | 
+**Simulate** | Pointer to **bool** | If true, simulates the network move and validates the operation without committing changes. The network will remain in the source organization. | [optional] 
 
 ## Methods
 
 ### NewInlineObject312
 
-`func NewInlineObject312(name string, rulesetId string, policy string, sources OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, destinations OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, ) *InlineObject312`
+`func NewInlineObject312(network OrganizationsOrganizationIdNetworksMovesNetwork, organizations OrganizationsOrganizationIdNetworksMovesOrganizations, ) *InlineObject312`
 
 NewInlineObject312 instantiates a new InlineObject312 object
 This constructor will assign default values to properties that have it defined,
@@ -32,180 +27,70 @@ NewInlineObject312WithDefaults instantiates a new InlineObject312 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetNetwork
 
-`func (o *InlineObject312) GetName() string`
+`func (o *InlineObject312) GetNetwork() OrganizationsOrganizationIdNetworksMovesNetwork`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkOk
 
-`func (o *InlineObject312) GetNameOk() (*string, bool)`
+`func (o *InlineObject312) GetNetworkOk() (*OrganizationsOrganizationIdNetworksMovesNetwork, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetwork
 
-`func (o *InlineObject312) SetName(v string)`
+`func (o *InlineObject312) SetNetwork(v OrganizationsOrganizationIdNetworksMovesNetwork)`
 
-SetName sets Name field to given value.
+SetNetwork sets Network field to given value.
 
 
-### GetRulesetId
+### GetOrganizations
 
-`func (o *InlineObject312) GetRulesetId() string`
+`func (o *InlineObject312) GetOrganizations() OrganizationsOrganizationIdNetworksMovesOrganizations`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetOrganizationsOk
 
-`func (o *InlineObject312) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject312) GetOrganizationsOk() (*OrganizationsOrganizationIdNetworksMovesOrganizations, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetOrganizations
 
-`func (o *InlineObject312) SetRulesetId(v string)`
+`func (o *InlineObject312) SetOrganizations(v OrganizationsOrganizationIdNetworksMovesOrganizations)`
 
-SetRulesetId sets RulesetId field to given value.
+SetOrganizations sets Organizations field to given value.
 
 
-### GetPolicy
+### GetSimulate
 
-`func (o *InlineObject312) GetPolicy() string`
+`func (o *InlineObject312) GetSimulate() bool`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetSimulate returns the Simulate field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetSimulateOk
 
-`func (o *InlineObject312) GetPolicyOk() (*string, bool)`
+`func (o *InlineObject312) GetSimulateOk() (*bool, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetSimulateOk returns a tuple with the Simulate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetSimulate
 
-`func (o *InlineObject312) SetPolicy(v string)`
+`func (o *InlineObject312) SetSimulate(v bool)`
 
-SetPolicy sets Policy field to given value.
+SetSimulate sets Simulate field to given value.
 
+### HasSimulate
 
-### GetEnabled
+`func (o *InlineObject312) HasSimulate() bool`
 
-`func (o *InlineObject312) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineObject312) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineObject312) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineObject312) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetPriority
-
-`func (o *InlineObject312) GetPriority() int32`
-
-GetPriority returns the Priority field if non-nil, zero value otherwise.
-
-### GetPriorityOk
-
-`func (o *InlineObject312) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPriority
-
-`func (o *InlineObject312) SetPriority(v int32)`
-
-SetPriority sets Priority field to given value.
-
-### HasPriority
-
-`func (o *InlineObject312) HasPriority() bool`
-
-HasPriority returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineObject312) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject312) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject312) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject312) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetSources
-
-`func (o *InlineObject312) GetSources() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources`
-
-GetSources returns the Sources field if non-nil, zero value otherwise.
-
-### GetSourcesOk
-
-`func (o *InlineObject312) GetSourcesOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, bool)`
-
-GetSourcesOk returns a tuple with the Sources field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSources
-
-`func (o *InlineObject312) SetSources(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources)`
-
-SetSources sets Sources field to given value.
-
-
-### GetDestinations
-
-`func (o *InlineObject312) GetDestinations() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations`
-
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
-
-### GetDestinationsOk
-
-`func (o *InlineObject312) GetDestinationsOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, bool)`
-
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestinations
-
-`func (o *InlineObject312) SetDestinations(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations)`
-
-SetDestinations sets Destinations field to given value.
-
+HasSimulate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

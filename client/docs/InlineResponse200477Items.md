@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200474Readings**](InlineResponse200474Readings.md) | The usages of layer 3 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200477Readings**](InlineResponse200477Readings.md) | The usages of layer 2 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasSerial returns a boolean if a field has been set.
 
 ### GetReadings
 
-`func (o *InlineResponse200477Items) GetReadings() []InlineResponse200474Readings`
+`func (o *InlineResponse200477Items) GetReadings() []InlineResponse200477Readings`
 
 GetReadings returns the Readings field if non-nil, zero value otherwise.
 
 ### GetReadingsOk
 
-`func (o *InlineResponse200477Items) GetReadingsOk() (*[]InlineResponse200474Readings, bool)`
+`func (o *InlineResponse200477Items) GetReadingsOk() (*[]InlineResponse200477Readings, bool)`
 
 GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReadings
 
-`func (o *InlineResponse200477Items) SetReadings(v []InlineResponse200474Readings)`
+`func (o *InlineResponse200477Items) SetReadings(v []InlineResponse200477Readings)`
 
 SetReadings sets Readings field to given value.
 

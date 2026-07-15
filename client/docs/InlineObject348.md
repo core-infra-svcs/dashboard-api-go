@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject348WithDefaults instantiates a new InlineObject348 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetStatus
 
-`func (o *InlineObject348) GetUrl() string`
+`func (o *InlineObject348) GetStatus() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetStatusOk
 
-`func (o *InlineObject348) GetUrlOk() (*string, bool)`
+`func (o *InlineObject348) GetStatusOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetStatus
 
-`func (o *InlineObject348) SetUrl(v string)`
+`func (o *InlineObject348) SetStatus(v string)`
 
-SetUrl sets Url field to given value.
+SetStatus sets Status field to given value.
 
-### HasUrl
+### HasStatus
 
-`func (o *InlineObject348) HasUrl() bool`
+`func (o *InlineObject348) HasStatus() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetVersion
+### GetCertificateAuthorityId
 
-`func (o *InlineObject348) GetVersion() string`
+`func (o *InlineObject348) GetCertificateAuthorityId() string`
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetVersionOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineObject348) GetVersionOk() (*string, bool)`
+`func (o *InlineObject348) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetCertificateAuthorityId
 
-`func (o *InlineObject348) SetVersion(v string)`
+`func (o *InlineObject348) SetCertificateAuthorityId(v string)`
 
-SetVersion sets Version field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasVersion
+### HasCertificateAuthorityId
 
-`func (o *InlineObject348) HasVersion() bool`
+`func (o *InlineObject348) HasCertificateAuthorityId() bool`
 
-HasVersion returns a boolean if a field has been set.
-
-### GetRadio
-
-`func (o *InlineObject348) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject348) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject348) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
-
-SetRadio sets Radio field to given value.
-
-### HasRadio
-
-`func (o *InlineObject348) HasRadio() bool`
-
-HasRadio returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

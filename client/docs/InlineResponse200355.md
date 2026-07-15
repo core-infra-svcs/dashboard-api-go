@@ -4,14 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | Pointer to **string** | Short name of the early access feature | [optional] 
-**Name** | Pointer to **string** | Name of the early access feature | [optional] 
-**Descriptions** | Pointer to [**OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions**](OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions.md) |  | [optional] 
-**Topic** | Pointer to **string** | Topic of the early access feature | [optional] 
-**IsOrgScopedOnly** | Pointer to **bool** | If this early access feature can only be opted in for the entire organization | [optional] 
-**DocumentationLink** | Pointer to **string** | Link to the documentation of this early access feature | [optional] 
-**SupportLink** | Pointer to **string** | Link to get support for this early access feature | [optional] 
-**PrivacyLink** | Pointer to **string** | Link to the privacy policy for this early access feature | [optional] 
+**Items** | Pointer to [**[]InlineResponse200355Items**](InlineResponse200355Items.md) | The top-level property containing all memory utilization data. | [optional] 
+**Meta** | Pointer to [**InlineResponse200312Meta**](InlineResponse200312Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +26,55 @@ NewInlineResponse200355WithDefaults instantiates a new InlineResponse200355 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetItems
 
-`func (o *InlineResponse200355) GetShortName() string`
+`func (o *InlineResponse200355) GetItems() []InlineResponse200355Items`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetItemsOk
 
-`func (o *InlineResponse200355) GetShortNameOk() (*string, bool)`
+`func (o *InlineResponse200355) GetItemsOk() (*[]InlineResponse200355Items, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetItems
 
-`func (o *InlineResponse200355) SetShortName(v string)`
+`func (o *InlineResponse200355) SetItems(v []InlineResponse200355Items)`
 
-SetShortName sets ShortName field to given value.
+SetItems sets Items field to given value.
 
-### HasShortName
+### HasItems
 
-`func (o *InlineResponse200355) HasShortName() bool`
+`func (o *InlineResponse200355) HasItems() bool`
 
-HasShortName returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetName
+### GetMeta
 
-`func (o *InlineResponse200355) GetName() string`
+`func (o *InlineResponse200355) GetMeta() InlineResponse200312Meta`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200355) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200355) GetMetaOk() (*InlineResponse200312Meta, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200355) SetName(v string)`
+`func (o *InlineResponse200355) SetMeta(v InlineResponse200312Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200355) HasName() bool`
+`func (o *InlineResponse200355) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDescriptions
-
-`func (o *InlineResponse200355) GetDescriptions() OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions`
-
-GetDescriptions returns the Descriptions field if non-nil, zero value otherwise.
-
-### GetDescriptionsOk
-
-`func (o *InlineResponse200355) GetDescriptionsOk() (*OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions, bool)`
-
-GetDescriptionsOk returns a tuple with the Descriptions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescriptions
-
-`func (o *InlineResponse200355) SetDescriptions(v OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions)`
-
-SetDescriptions sets Descriptions field to given value.
-
-### HasDescriptions
-
-`func (o *InlineResponse200355) HasDescriptions() bool`
-
-HasDescriptions returns a boolean if a field has been set.
-
-### GetTopic
-
-`func (o *InlineResponse200355) GetTopic() string`
-
-GetTopic returns the Topic field if non-nil, zero value otherwise.
-
-### GetTopicOk
-
-`func (o *InlineResponse200355) GetTopicOk() (*string, bool)`
-
-GetTopicOk returns a tuple with the Topic field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopic
-
-`func (o *InlineResponse200355) SetTopic(v string)`
-
-SetTopic sets Topic field to given value.
-
-### HasTopic
-
-`func (o *InlineResponse200355) HasTopic() bool`
-
-HasTopic returns a boolean if a field has been set.
-
-### GetIsOrgScopedOnly
-
-`func (o *InlineResponse200355) GetIsOrgScopedOnly() bool`
-
-GetIsOrgScopedOnly returns the IsOrgScopedOnly field if non-nil, zero value otherwise.
-
-### GetIsOrgScopedOnlyOk
-
-`func (o *InlineResponse200355) GetIsOrgScopedOnlyOk() (*bool, bool)`
-
-GetIsOrgScopedOnlyOk returns a tuple with the IsOrgScopedOnly field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsOrgScopedOnly
-
-`func (o *InlineResponse200355) SetIsOrgScopedOnly(v bool)`
-
-SetIsOrgScopedOnly sets IsOrgScopedOnly field to given value.
-
-### HasIsOrgScopedOnly
-
-`func (o *InlineResponse200355) HasIsOrgScopedOnly() bool`
-
-HasIsOrgScopedOnly returns a boolean if a field has been set.
-
-### GetDocumentationLink
-
-`func (o *InlineResponse200355) GetDocumentationLink() string`
-
-GetDocumentationLink returns the DocumentationLink field if non-nil, zero value otherwise.
-
-### GetDocumentationLinkOk
-
-`func (o *InlineResponse200355) GetDocumentationLinkOk() (*string, bool)`
-
-GetDocumentationLinkOk returns a tuple with the DocumentationLink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDocumentationLink
-
-`func (o *InlineResponse200355) SetDocumentationLink(v string)`
-
-SetDocumentationLink sets DocumentationLink field to given value.
-
-### HasDocumentationLink
-
-`func (o *InlineResponse200355) HasDocumentationLink() bool`
-
-HasDocumentationLink returns a boolean if a field has been set.
-
-### GetSupportLink
-
-`func (o *InlineResponse200355) GetSupportLink() string`
-
-GetSupportLink returns the SupportLink field if non-nil, zero value otherwise.
-
-### GetSupportLinkOk
-
-`func (o *InlineResponse200355) GetSupportLinkOk() (*string, bool)`
-
-GetSupportLinkOk returns a tuple with the SupportLink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportLink
-
-`func (o *InlineResponse200355) SetSupportLink(v string)`
-
-SetSupportLink sets SupportLink field to given value.
-
-### HasSupportLink
-
-`func (o *InlineResponse200355) HasSupportLink() bool`
-
-HasSupportLink returns a boolean if a field has been set.
-
-### GetPrivacyLink
-
-`func (o *InlineResponse200355) GetPrivacyLink() string`
-
-GetPrivacyLink returns the PrivacyLink field if non-nil, zero value otherwise.
-
-### GetPrivacyLinkOk
-
-`func (o *InlineResponse200355) GetPrivacyLinkOk() (*string, bool)`
-
-GetPrivacyLinkOk returns a tuple with the PrivacyLink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrivacyLink
-
-`func (o *InlineResponse200355) SetPrivacyLink(v string)`
-
-SetPrivacyLink sets PrivacyLink field to given value.
-
-### HasPrivacyLink
-
-`func (o *InlineResponse200355) HasPrivacyLink() bool`
-
-HasPrivacyLink returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

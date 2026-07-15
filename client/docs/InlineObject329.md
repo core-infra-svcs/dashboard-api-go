@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**SpInitiated** | Pointer to [**InlineResponse200398SpInitiated**](InlineResponse200398SpInitiated.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject329WithDefaults instantiates a new InlineObject329 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetEnabled
 
-`func (o *InlineObject329) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject329) GetEnabled() bool`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetEnabledOk
 
-`func (o *InlineObject329) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject329) GetEnabledOk() (*bool, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetEnabled
 
-`func (o *InlineObject329) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject329) SetEnabled(v bool)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasX509certSha1Fingerprint
+### HasEnabled
 
-`func (o *InlineObject329) HasX509certSha1Fingerprint() bool`
+`func (o *InlineObject329) HasEnabled() bool`
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSsoLoginUrl
+### GetSpInitiated
 
-`func (o *InlineObject329) GetSsoLoginUrl() string`
+`func (o *InlineObject329) GetSpInitiated() InlineResponse200398SpInitiated`
 
-GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
+GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
 
-### GetSsoLoginUrlOk
+### GetSpInitiatedOk
 
-`func (o *InlineObject329) GetSsoLoginUrlOk() (*string, bool)`
+`func (o *InlineObject329) GetSpInitiatedOk() (*InlineResponse200398SpInitiated, bool)`
 
-GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
+GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsoLoginUrl
+### SetSpInitiated
 
-`func (o *InlineObject329) SetSsoLoginUrl(v string)`
+`func (o *InlineObject329) SetSpInitiated(v InlineResponse200398SpInitiated)`
 
-SetSsoLoginUrl sets SsoLoginUrl field to given value.
+SetSpInitiated sets SpInitiated field to given value.
 
-### HasSsoLoginUrl
+### HasSpInitiated
 
-`func (o *InlineObject329) HasSsoLoginUrl() bool`
+`func (o *InlineObject329) HasSpInitiated() bool`
 
-HasSsoLoginUrl returns a boolean if a field has been set.
-
-### GetSloLogoutUrl
-
-`func (o *InlineObject329) GetSloLogoutUrl() string`
-
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
-
-### GetSloLogoutUrlOk
-
-`func (o *InlineObject329) GetSloLogoutUrlOk() (*string, bool)`
-
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSloLogoutUrl
-
-`func (o *InlineObject329) SetSloLogoutUrl(v string)`
-
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
-
-### HasSloLogoutUrl
-
-`func (o *InlineObject329) HasSloLogoutUrl() bool`
-
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RulesetId** | **string** | ID of the ruleset to assign | 
-**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy.md) |  | 
+**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to assign | 
 
 ## Methods
 
 ### NewInlineObject320
 
-`func NewInlineObject320(rulesetId string, policyId string, ) *InlineObject320`
+`func NewInlineObject320(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject320`
 
 NewInlineObject320 instantiates a new InlineObject320 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,45 @@ NewInlineObject320WithDefaults instantiates a new InlineObject320 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRulesetId
+### GetPolicy
 
-`func (o *InlineObject320) GetRulesetId() string`
+`func (o *InlineObject320) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetPolicyOk
 
-`func (o *InlineObject320) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject320) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetPolicy
 
-`func (o *InlineObject320) SetRulesetId(v string)`
+`func (o *InlineObject320) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy)`
 
-SetRulesetId sets RulesetId field to given value.
+SetPolicy sets Policy field to given value.
 
 
-### GetPolicyId
+### GetVlans
 
-`func (o *InlineObject320) GetPolicyId() string`
+`func (o *InlineObject320) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+GetVlans returns the Vlans field if non-nil, zero value otherwise.
 
-### GetPolicyIdOk
+### GetVlansOk
 
-`func (o *InlineObject320) GetPolicyIdOk() (*string, bool)`
+`func (o *InlineObject320) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetVlans
 
-`func (o *InlineObject320) SetPolicyId(v string)`
+`func (o *InlineObject320) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
 
-SetPolicyId sets PolicyId field to given value.
+SetVlans sets Vlans field to given value.
 
-
-### GetPriority
-
-`func (o *InlineObject320) GetPriority() int32`
-
-GetPriority returns the Priority field if non-nil, zero value otherwise.
-
-### GetPriorityOk
-
-`func (o *InlineObject320) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPriority
-
-`func (o *InlineObject320) SetPriority(v int32)`
-
-SetPriority sets Priority field to given value.
-
-### HasPriority
-
-`func (o *InlineObject320) HasPriority() bool`
-
-HasPriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

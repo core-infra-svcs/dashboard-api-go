@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial number | [optional] 
-**Geolocation** | Pointer to [**InlineResponse200338Geolocation**](InlineResponse200338Geolocation.md) |  | [optional] 
+**Serial** | Pointer to **string** | Serial of device | [optional] 
+**Intervals** | Pointer to [**[]InlineResponse200338Intervals**](InlineResponse200338Intervals.md) | Historical cellular data usage buckets for the device. Maximum 8928 intervals per device based on the 31-day timespan and 5-minute interval limits. | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetGeolocation
+### GetIntervals
 
-`func (o *InlineResponse200338Items) GetGeolocation() InlineResponse200338Geolocation`
+`func (o *InlineResponse200338Items) GetIntervals() []InlineResponse200338Intervals`
 
-GetGeolocation returns the Geolocation field if non-nil, zero value otherwise.
+GetIntervals returns the Intervals field if non-nil, zero value otherwise.
 
-### GetGeolocationOk
+### GetIntervalsOk
 
-`func (o *InlineResponse200338Items) GetGeolocationOk() (*InlineResponse200338Geolocation, bool)`
+`func (o *InlineResponse200338Items) GetIntervalsOk() (*[]InlineResponse200338Intervals, bool)`
 
-GetGeolocationOk returns a tuple with the Geolocation field if it's non-nil, zero value otherwise
+GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGeolocation
+### SetIntervals
 
-`func (o *InlineResponse200338Items) SetGeolocation(v InlineResponse200338Geolocation)`
+`func (o *InlineResponse200338Items) SetIntervals(v []InlineResponse200338Intervals)`
 
-SetGeolocation sets Geolocation field to given value.
+SetIntervals sets Intervals field to given value.
 
-### HasGeolocation
+### HasIntervals
 
-`func (o *InlineResponse200338Items) HasGeolocation() bool`
+`func (o *InlineResponse200338Items) HasIntervals() bool`
 
-HasGeolocation returns a boolean if a field has been set.
+HasIntervals returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**InlineResponse200158LocalStatusPage**](InlineResponse200158LocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse200158SecurePort**](InlineResponse200158SecurePort.md) |  | [optional] 
-**Fips** | Pointer to [**InlineResponse200158Fips**](InlineResponse200158Fips.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse200158NamedVlans**](InlineResponse200158NamedVlans.md) |  | [optional] 
+**Device** | Pointer to [**NetworksNetworkIdSensorRelationshipsDevice**](NetworksNetworkIdSensorRelationshipsDevice.md) |  | [optional] 
+**Relationships** | Pointer to [**NetworksNetworkIdSensorRelationshipsRelationships**](NetworksNetworkIdSensorRelationshipsRelationships.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineResponse200158WithDefaults instantiates a new InlineResponse200158 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetDevice
 
-`func (o *InlineResponse200158) GetLocalStatusPageEnabled() bool`
+`func (o *InlineResponse200158) GetDevice() NetworksNetworkIdSensorRelationshipsDevice`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetDeviceOk
 
-`func (o *InlineResponse200158) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200158) GetDeviceOk() (*NetworksNetworkIdSensorRelationshipsDevice, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetDevice
 
-`func (o *InlineResponse200158) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineResponse200158) SetDevice(v NetworksNetworkIdSensorRelationshipsDevice)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetDevice sets Device field to given value.
 
-### HasLocalStatusPageEnabled
+### HasDevice
 
-`func (o *InlineResponse200158) HasLocalStatusPageEnabled() bool`
+`func (o *InlineResponse200158) HasDevice() bool`
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetRemoteStatusPageEnabled
+### GetRelationships
 
-`func (o *InlineResponse200158) GetRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse200158) GetRelationships() NetworksNetworkIdSensorRelationshipsRelationships`
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+GetRelationships returns the Relationships field if non-nil, zero value otherwise.
 
-### GetRemoteStatusPageEnabledOk
+### GetRelationshipsOk
 
-`func (o *InlineResponse200158) GetRemoteStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200158) GetRelationshipsOk() (*NetworksNetworkIdSensorRelationshipsRelationships, bool)`
 
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetRelationships
 
-`func (o *InlineResponse200158) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineResponse200158) SetRelationships(v NetworksNetworkIdSensorRelationshipsRelationships)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetRelationships sets Relationships field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasRelationships
 
-`func (o *InlineResponse200158) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse200158) HasRelationships() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
-
-### GetLocalStatusPage
-
-`func (o *InlineResponse200158) GetLocalStatusPage() InlineResponse200158LocalStatusPage`
-
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
-
-### GetLocalStatusPageOk
-
-`func (o *InlineResponse200158) GetLocalStatusPageOk() (*InlineResponse200158LocalStatusPage, bool)`
-
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocalStatusPage
-
-`func (o *InlineResponse200158) SetLocalStatusPage(v InlineResponse200158LocalStatusPage)`
-
-SetLocalStatusPage sets LocalStatusPage field to given value.
-
-### HasLocalStatusPage
-
-`func (o *InlineResponse200158) HasLocalStatusPage() bool`
-
-HasLocalStatusPage returns a boolean if a field has been set.
-
-### GetSecurePort
-
-`func (o *InlineResponse200158) GetSecurePort() InlineResponse200158SecurePort`
-
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
-
-### GetSecurePortOk
-
-`func (o *InlineResponse200158) GetSecurePortOk() (*InlineResponse200158SecurePort, bool)`
-
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecurePort
-
-`func (o *InlineResponse200158) SetSecurePort(v InlineResponse200158SecurePort)`
-
-SetSecurePort sets SecurePort field to given value.
-
-### HasSecurePort
-
-`func (o *InlineResponse200158) HasSecurePort() bool`
-
-HasSecurePort returns a boolean if a field has been set.
-
-### GetFips
-
-`func (o *InlineResponse200158) GetFips() InlineResponse200158Fips`
-
-GetFips returns the Fips field if non-nil, zero value otherwise.
-
-### GetFipsOk
-
-`func (o *InlineResponse200158) GetFipsOk() (*InlineResponse200158Fips, bool)`
-
-GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFips
-
-`func (o *InlineResponse200158) SetFips(v InlineResponse200158Fips)`
-
-SetFips sets Fips field to given value.
-
-### HasFips
-
-`func (o *InlineResponse200158) HasFips() bool`
-
-HasFips returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineResponse200158) GetNamedVlans() InlineResponse200158NamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineResponse200158) GetNamedVlansOk() (*InlineResponse200158NamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineResponse200158) SetNamedVlans(v InlineResponse200158NamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineResponse200158) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
+HasRelationships returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

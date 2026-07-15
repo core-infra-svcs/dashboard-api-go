@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PerfScore** | Pointer to **float32** | Utilization for the MX device | [optional] 
+**PerfScore** | Pointer to **float32** | Utilization for the device | [optional] 
 
 ## Methods
 

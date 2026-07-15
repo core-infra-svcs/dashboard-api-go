@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
-**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
+**SiteId** | **string** | Site ID of the site to update | 
+**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject338
 
-`func NewInlineObject338() *InlineObject338`
+`func NewInlineObject338(siteId string, ) *InlineObject338`
 
 NewInlineObject338 instantiates a new InlineObject338 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject338WithDefaults instantiates a new InlineObject338 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSiteId
 
-`func (o *InlineObject338) GetName() string`
+`func (o *InlineObject338) GetSiteId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSiteIdOk
 
-`func (o *InlineObject338) GetNameOk() (*string, bool)`
+`func (o *InlineObject338) GetSiteIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSiteId
 
-`func (o *InlineObject338) SetName(v string)`
+`func (o *InlineObject338) SetSiteId(v string)`
 
-SetName sets Name field to given value.
+SetSiteId sets SiteId field to given value.
 
-### HasName
 
-`func (o *InlineObject338) HasName() bool`
+### GetRouting
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject338) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
 
-### GetScope
+GetRouting returns the Routing field if non-nil, zero value otherwise.
 
-`func (o *InlineObject338) GetScope() string`
+### GetRoutingOk
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+`func (o *InlineObject338) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
 
-### GetScopeOk
-
-`func (o *InlineObject338) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetRouting
 
-`func (o *InlineObject338) SetScope(v string)`
+`func (o *InlineObject338) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
 
-SetScope sets Scope field to given value.
+SetRouting sets Routing field to given value.
 
-### HasScope
+### HasRouting
 
-`func (o *InlineObject338) HasScope() bool`
+`func (o *InlineObject338) HasRouting() bool`
 
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject338) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject338) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject338) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject338) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

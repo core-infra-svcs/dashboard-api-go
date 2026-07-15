@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **NullableString** | VRF ID | [optional] 
+**Id** | Pointer to **NullableString** | VRF ID. Use \&quot;0\&quot; for the default VRF. | [optional] 
 
 ## Methods
 

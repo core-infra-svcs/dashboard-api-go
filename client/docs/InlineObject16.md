@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Slot** | **string** | Required parameter for the SIM slot to update the cellular band mask for | 
 **Type** | **string** | Required parameter for the signal type to update the cellular band mask for | 
-**Masked** | **[]string** | Required parameter for the band identifiers to mask for the given SIM slot and signal type. For LTE use bands identifiers like &#39;30&#39; and for 5G use band identifiers like &#39;n30&#39;. Maximum 256 bands. | 
+**Masked** | **[]string** | Required parameter for the band identifiers to mask for the given SIM slot and signal type. For LTE use bands identifiers like &#39;30&#39;, for 5G use band identifiers like &#39;n30&#39;, or use &#39;all&#39; to mask all bands for that signal type. Maximum 256 bands. | 
 
 ## Methods
 

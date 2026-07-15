@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
+**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
+**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject184
 
-`func NewInlineObject184() *InlineObject184`
+`func NewInlineObject184(subnet string, nextHopIp string, ) *InlineObject184`
 
 NewInlineObject184 instantiates a new InlineObject184 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +30,145 @@ NewInlineObject184WithDefaults instantiates a new InlineObject184 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetName
 
-`func (o *InlineObject184) GetBroadcastThreshold() int32`
+`func (o *InlineObject184) GetName() string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetNameOk
 
-`func (o *InlineObject184) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineObject184) GetNameOk() (*string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetName
 
-`func (o *InlineObject184) SetBroadcastThreshold(v int32)`
+`func (o *InlineObject184) SetName(v string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetName sets Name field to given value.
 
-### HasBroadcastThreshold
+### HasName
 
-`func (o *InlineObject184) HasBroadcastThreshold() bool`
+`func (o *InlineObject184) HasName() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetSubnet
 
-`func (o *InlineObject184) GetMulticastThreshold() int32`
+`func (o *InlineObject184) GetSubnet() string`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetSubnetOk
 
-`func (o *InlineObject184) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineObject184) GetSubnetOk() (*string, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetSubnet
 
-`func (o *InlineObject184) SetMulticastThreshold(v int32)`
+`func (o *InlineObject184) SetSubnet(v string)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMulticastThreshold
 
-`func (o *InlineObject184) HasMulticastThreshold() bool`
+### GetNextHopIp
 
-HasMulticastThreshold returns a boolean if a field has been set.
+`func (o *InlineObject184) GetNextHopIp() string`
 
-### GetUnknownUnicastThreshold
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-`func (o *InlineObject184) GetUnknownUnicastThreshold() int32`
+### GetNextHopIpOk
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+`func (o *InlineObject184) GetNextHopIpOk() (*string, bool)`
 
-### GetUnknownUnicastThresholdOk
-
-`func (o *InlineObject184) GetUnknownUnicastThresholdOk() (*int32, bool)`
-
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetNextHopIp
 
-`func (o *InlineObject184) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineObject184) SetNextHopIp(v string)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasUnknownUnicastThreshold
 
-`func (o *InlineObject184) HasUnknownUnicastThreshold() bool`
+### GetAdvertiseViaOspfEnabled
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+`func (o *InlineObject184) GetAdvertiseViaOspfEnabled() bool`
 
-### GetTreatTheseTrafficTypesAsOneThreshold
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
 
-`func (o *InlineObject184) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+### GetAdvertiseViaOspfEnabledOk
 
-GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+`func (o *InlineObject184) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
 
-### GetTreatTheseTrafficTypesAsOneThresholdOk
-
-`func (o *InlineObject184) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
-
-GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTreatTheseTrafficTypesAsOneThreshold
+### SetAdvertiseViaOspfEnabled
 
-`func (o *InlineObject184) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+`func (o *InlineObject184) SetAdvertiseViaOspfEnabled(v bool)`
 
-SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
 
-### HasTreatTheseTrafficTypesAsOneThreshold
+### HasAdvertiseViaOspfEnabled
 
-`func (o *InlineObject184) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+`func (o *InlineObject184) HasAdvertiseViaOspfEnabled() bool`
 
-HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject184) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineObject184) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject184) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject184) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject184) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject184) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject184) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject184) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

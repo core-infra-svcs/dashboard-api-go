@@ -16,7 +16,8 @@ Name | Type | Description | Notes
 **Mac** | Pointer to **string** | MAC address of the device | [optional] 
 **LanIp** | Pointer to **string** | LAN IP address of the device | [optional] 
 **Firmware** | Pointer to **string** | Firmware version of the device | [optional] 
-**FloorPlanId** | Pointer to **string** | The floor plan to associate to this device. null disassociates the device from the floorplan. | [optional] 
+**FloorPlanId** | Pointer to **NullableString** | The floor plan to associate to this device. null disassociates the device from the floorplan. | [optional] 
+**Url** | Pointer to **string** | URL link to the device in the Meraki Dashboard | [optional] 
 **Details** | Pointer to [**[]InlineResponse2006Details**](InlineResponse2006Details.md) | Additional device information | [optional] 
 **BeaconIdParams** | Pointer to [**InlineResponse2006BeaconIdParams**](InlineResponse2006BeaconIdParams.md) |  | [optional] 
 
@@ -363,6 +364,41 @@ SetFloorPlanId sets FloorPlanId field to given value.
 `func (o *InlineResponse2006) HasFloorPlanId() bool`
 
 HasFloorPlanId returns a boolean if a field has been set.
+
+### SetFloorPlanIdNil
+
+`func (o *InlineResponse2006) SetFloorPlanIdNil(b bool)`
+
+ SetFloorPlanIdNil sets the value for FloorPlanId to be an explicit nil
+
+### UnsetFloorPlanId
+`func (o *InlineResponse2006) UnsetFloorPlanId()`
+
+UnsetFloorPlanId ensures that no value is present for FloorPlanId, not even an explicit nil
+### GetUrl
+
+`func (o *InlineResponse2006) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse2006) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse2006) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse2006) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 ### GetDetails
 

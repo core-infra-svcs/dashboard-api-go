@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedRules** | Pointer to [**[]InlineResponse200283AllowedRules**](InlineResponse200283AllowedRules.md) | Sets a list of specific SNORT signatures to allow | [optional] 
+**Enabled** | Pointer to **bool** | Indicates whether VRFs are enabled for the organization&#39;s appliance configuration. | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200283WithDefaults instantiates a new InlineResponse200283 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedRules
+### GetEnabled
 
-`func (o *InlineResponse200283) GetAllowedRules() []InlineResponse200283AllowedRules`
+`func (o *InlineResponse200283) GetEnabled() bool`
 
-GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAllowedRulesOk
+### GetEnabledOk
 
-`func (o *InlineResponse200283) GetAllowedRulesOk() (*[]InlineResponse200283AllowedRules, bool)`
+`func (o *InlineResponse200283) GetEnabledOk() (*bool, bool)`
 
-GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedRules
+### SetEnabled
 
-`func (o *InlineResponse200283) SetAllowedRules(v []InlineResponse200283AllowedRules)`
+`func (o *InlineResponse200283) SetEnabled(v bool)`
 
-SetAllowedRules sets AllowedRules field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAllowedRules
+### HasEnabled
 
-`func (o *InlineResponse200283) HasAllowedRules() bool`
+`func (o *InlineResponse200283) HasEnabled() bool`
 
-HasAllowedRules returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

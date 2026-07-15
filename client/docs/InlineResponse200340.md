@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200340Items**](InlineResponse200340Items.md) | List of cellular tower information for devices in the organization. Maximum 100 devices per page by default and 1000 maximum per page. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200340Items**](InlineResponse200340Items.md) | List of cellular uplink signal information for devices in the organization. Maximum 1000 devices per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200340Meta**](InlineResponse200340Meta.md) |  | [optional] 
 
 ## Methods

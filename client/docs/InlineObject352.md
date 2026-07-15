@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
+**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
 
 ## Methods
 
 ### NewInlineObject352
 
-`func NewInlineObject352() *InlineObject352`
+`func NewInlineObject352(networkIds []string, ) *InlineObject352`
 
 NewInlineObject352 instantiates a new InlineObject352 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject352WithDefaults instantiates a new InlineObject352 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetNetworkIds
 
-`func (o *InlineObject352) GetDescription() string`
+`func (o *InlineObject352) GetNetworkIds() []string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject352) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject352) GetNetworkIdsOk() (*[]string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetNetworkIds
 
-`func (o *InlineObject352) SetDescription(v string)`
+`func (o *InlineObject352) SetNetworkIds(v []string)`
 
-SetDescription sets Description field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
-### HasDescription
-
-`func (o *InlineObject352) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetClient
-
-`func (o *InlineObject352) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
-
-GetClient returns the Client field if non-nil, zero value otherwise.
-
-### GetClientOk
-
-`func (o *InlineObject352) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClient
-
-`func (o *InlineObject352) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
-
-SetClient sets Client field to given value.
-
-### HasClient
-
-`func (o *InlineObject352) HasClient() bool`
-
-HasClient returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

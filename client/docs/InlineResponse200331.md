@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200331Items**](InlineResponse200331Items.md) | List of Cellular Data Management Profiles | [optional] 
+**Items** | Pointer to [**[]InlineResponse200331Items**](InlineResponse200331Items.md) | Devices available to be assigned to a Cellular Data Management Profile. Maximum 1000 items per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200331Meta**](InlineResponse200331Meta.md) |  | [optional] 
 
 ## Methods

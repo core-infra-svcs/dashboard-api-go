@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Id** | Pointer to **string** | Unique identifier of the RADIUS server | [optional] 
 **Host** | Pointer to **string** | IP address (or FQDN) of your RADIUS server | [optional] 
 **Port** | Pointer to **int32** | UDP port the RADIUS server listens on for Access-requests | [optional] 
+**RadsecEnabled** | Pointer to **bool** | Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled. | [optional] 
 **OpenRoamingCertificateId** | Pointer to **int32** | The ID of the Openroaming Certificate attached to radius server | [optional] 
 **CaCertificate** | Pointer to **string** | Certificate used for authorization for the RadSec Server | [optional] 
 
@@ -27,6 +29,31 @@ will change when the set of required properties is changed
 NewNetworksNetworkIdWirelessSsidsRadiusServersWithDefaults instantiates a new NetworksNetworkIdWirelessSsidsRadiusServers object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetHost
 
@@ -77,6 +104,31 @@ SetPort sets Port field to given value.
 `func (o *NetworksNetworkIdWirelessSsidsRadiusServers) HasPort() bool`
 
 HasPort returns a boolean if a field has been set.
+
+### GetRadsecEnabled
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) GetRadsecEnabled() bool`
+
+GetRadsecEnabled returns the RadsecEnabled field if non-nil, zero value otherwise.
+
+### GetRadsecEnabledOk
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) GetRadsecEnabledOk() (*bool, bool)`
+
+GetRadsecEnabledOk returns a tuple with the RadsecEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadsecEnabled
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) SetRadsecEnabled(v bool)`
+
+SetRadsecEnabled sets RadsecEnabled field to given value.
+
+### HasRadsecEnabled
+
+`func (o *NetworksNetworkIdWirelessSsidsRadiusServers) HasRadsecEnabled() bool`
+
+HasRadsecEnabled returns a boolean if a field has been set.
 
 ### GetOpenRoamingCertificateId
 

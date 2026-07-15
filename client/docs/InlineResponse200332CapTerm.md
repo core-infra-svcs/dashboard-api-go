@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Resets** | Pointer to **string** | How often the device resets the aggregated data count. One of: &#39;daily&#39;, &#39;weekly&#39;, or &#39;monthly&#39;. | [optional] 
-**Starts** | Pointer to [**OrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts**](OrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts.md) |  | [optional] 
+**Starts** | Pointer to [**InlineResponse200332CapTermStarts**](InlineResponse200332CapTermStarts.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasResets returns a boolean if a field has been set.
 
 ### GetStarts
 
-`func (o *InlineResponse200332CapTerm) GetStarts() OrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts`
+`func (o *InlineResponse200332CapTerm) GetStarts() InlineResponse200332CapTermStarts`
 
 GetStarts returns the Starts field if non-nil, zero value otherwise.
 
 ### GetStartsOk
 
-`func (o *InlineResponse200332CapTerm) GetStartsOk() (*OrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts, bool)`
+`func (o *InlineResponse200332CapTerm) GetStartsOk() (*InlineResponse200332CapTermStarts, bool)`
 
 GetStartsOk returns a tuple with the Starts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStarts
 
-`func (o *InlineResponse200332CapTerm) SetStarts(v OrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts)`
+`func (o *InlineResponse200332CapTerm) SetStarts(v InlineResponse200332CapTermStarts)`
 
 SetStarts sets Starts field to given value.
 

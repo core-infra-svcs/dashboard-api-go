@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimId** | **string** | The unique order claim id | 
-**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
+**Licenses** | Pointer to [**[]OrganizationsOrganizationIdInventoryClaimLicenses**](OrganizationsOrganizationIdInventoryClaimLicenses.md) | The licenses that should be claimed | [optional] 
 
 ## Methods
 
 ### NewInlineObject298
 
-`func NewInlineObject298(claimId string, ) *InlineObject298`
+`func NewInlineObject298() *InlineObject298`
 
 NewInlineObject298 instantiates a new InlineObject298 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,80 @@ NewInlineObject298WithDefaults instantiates a new InlineObject298 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClaimId
+### GetOrders
 
-`func (o *InlineObject298) GetClaimId() string`
+`func (o *InlineObject298) GetOrders() []string`
 
-GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetClaimIdOk
+### GetOrdersOk
 
-`func (o *InlineObject298) GetClaimIdOk() (*string, bool)`
+`func (o *InlineObject298) GetOrdersOk() (*[]string, bool)`
 
-GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimId
+### SetOrders
 
-`func (o *InlineObject298) SetClaimId(v string)`
+`func (o *InlineObject298) SetOrders(v []string)`
 
-SetClaimId sets ClaimId field to given value.
+SetOrders sets Orders field to given value.
 
+### HasOrders
 
-### GetSubscriptions
+`func (o *InlineObject298) HasOrders() bool`
 
-`func (o *InlineObject298) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
+HasOrders returns a boolean if a field has been set.
 
-GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+### GetSerials
 
-### GetSubscriptionsOk
+`func (o *InlineObject298) GetSerials() []string`
 
-`func (o *InlineObject298) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+### GetSerialsOk
+
+`func (o *InlineObject298) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptions
+### SetSerials
 
-`func (o *InlineObject298) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
+`func (o *InlineObject298) SetSerials(v []string)`
 
-SetSubscriptions sets Subscriptions field to given value.
+SetSerials sets Serials field to given value.
 
-### HasSubscriptions
+### HasSerials
 
-`func (o *InlineObject298) HasSubscriptions() bool`
+`func (o *InlineObject298) HasSerials() bool`
 
-HasSubscriptions returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetLicenses
+
+`func (o *InlineObject298) GetLicenses() []OrganizationsOrganizationIdInventoryClaimLicenses`
+
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+
+### GetLicensesOk
+
+`func (o *InlineObject298) GetLicensesOk() (*[]OrganizationsOrganizationIdInventoryClaimLicenses, bool)`
+
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenses
+
+`func (o *InlineObject298) SetLicenses(v []OrganizationsOrganizationIdInventoryClaimLicenses)`
+
+SetLicenses sets Licenses field to given value.
+
+### HasLicenses
+
+`func (o *InlineObject298) HasLicenses() bool`
+
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

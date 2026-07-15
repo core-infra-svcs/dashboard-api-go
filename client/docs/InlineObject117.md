@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
+**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
+**Reasons** | [**[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons**](NetworksNetworkIdFirmwareUpgradesRollbacksReasons.md) | Reasons for the rollback | 
+**ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksToVersion**](NetworksNetworkIdFirmwareUpgradesRollbacksToVersion.md) |  | [optional] 
+**Predownload** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksPredownload**](NetworksNetworkIdFirmwareUpgradesRollbacksPredownload.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject117
 
-`func NewInlineObject117(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject117`
+`func NewInlineObject117(reasons []NetworksNetworkIdFirmwareUpgradesRollbacksReasons, ) *InlineObject117`
 
 NewInlineObject117 instantiates a new InlineObject117 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +29,125 @@ NewInlineObject117WithDefaults instantiates a new InlineObject117 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStages
+### GetProduct
 
-`func (o *InlineObject117) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
+`func (o *InlineObject117) GetProduct() string`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetProduct returns the Product field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetProductOk
 
-`func (o *InlineObject117) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
+`func (o *InlineObject117) GetProductOk() (*string, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetProduct
 
-`func (o *InlineObject117) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
+`func (o *InlineObject117) SetProduct(v string)`
 
-SetStages sets Stages field to given value.
+SetProduct sets Product field to given value.
 
+### HasProduct
+
+`func (o *InlineObject117) HasProduct() bool`
+
+HasProduct returns a boolean if a field has been set.
+
+### GetTime
+
+`func (o *InlineObject117) GetTime() time.Time`
+
+GetTime returns the Time field if non-nil, zero value otherwise.
+
+### GetTimeOk
+
+`func (o *InlineObject117) GetTimeOk() (*time.Time, bool)`
+
+GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTime
+
+`func (o *InlineObject117) SetTime(v time.Time)`
+
+SetTime sets Time field to given value.
+
+### HasTime
+
+`func (o *InlineObject117) HasTime() bool`
+
+HasTime returns a boolean if a field has been set.
+
+### GetReasons
+
+`func (o *InlineObject117) GetReasons() []NetworksNetworkIdFirmwareUpgradesRollbacksReasons`
+
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
+
+### GetReasonsOk
+
+`func (o *InlineObject117) GetReasonsOk() (*[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons, bool)`
+
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReasons
+
+`func (o *InlineObject117) SetReasons(v []NetworksNetworkIdFirmwareUpgradesRollbacksReasons)`
+
+SetReasons sets Reasons field to given value.
+
+
+### GetToVersion
+
+`func (o *InlineObject117) GetToVersion() NetworksNetworkIdFirmwareUpgradesRollbacksToVersion`
+
+GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
+
+### GetToVersionOk
+
+`func (o *InlineObject117) GetToVersionOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksToVersion, bool)`
+
+GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetToVersion
+
+`func (o *InlineObject117) SetToVersion(v NetworksNetworkIdFirmwareUpgradesRollbacksToVersion)`
+
+SetToVersion sets ToVersion field to given value.
+
+### HasToVersion
+
+`func (o *InlineObject117) HasToVersion() bool`
+
+HasToVersion returns a boolean if a field has been set.
+
+### GetPredownload
+
+`func (o *InlineObject117) GetPredownload() NetworksNetworkIdFirmwareUpgradesRollbacksPredownload`
+
+GetPredownload returns the Predownload field if non-nil, zero value otherwise.
+
+### GetPredownloadOk
+
+`func (o *InlineObject117) GetPredownloadOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksPredownload, bool)`
+
+GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPredownload
+
+`func (o *InlineObject117) SetPredownload(v NetworksNetworkIdFirmwareUpgradesRollbacksPredownload)`
+
+SetPredownload sets Predownload field to given value.
+
+### HasPredownload
+
+`func (o *InlineObject117) HasPredownload() bool`
+
+HasPredownload returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

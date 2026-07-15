@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | Serial of device | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200337Intervals**](InlineResponse200337Intervals.md) | Historical cellular data usage buckets for the device. Maximum 8928 intervals per device based on the 31-day timespan and 5-minute interval limits. | [optional] 
+**BySlot** | Pointer to [**[]InlineResponse200337BySlot**](InlineResponse200337BySlot.md) | Information about the supported SIM slots for the device. Maximum 3 entries. | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetIntervals
+### GetBySlot
 
-`func (o *InlineResponse200337Items) GetIntervals() []InlineResponse200337Intervals`
+`func (o *InlineResponse200337Items) GetBySlot() []InlineResponse200337BySlot`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetBySlot returns the BySlot field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetBySlotOk
 
-`func (o *InlineResponse200337Items) GetIntervalsOk() (*[]InlineResponse200337Intervals, bool)`
+`func (o *InlineResponse200337Items) GetBySlotOk() (*[]InlineResponse200337BySlot, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetBySlotOk returns a tuple with the BySlot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetBySlot
 
-`func (o *InlineResponse200337Items) SetIntervals(v []InlineResponse200337Intervals)`
+`func (o *InlineResponse200337Items) SetBySlot(v []InlineResponse200337BySlot)`
 
-SetIntervals sets Intervals field to given value.
+SetBySlot sets BySlot field to given value.
 
-### HasIntervals
+### HasBySlot
 
-`func (o *InlineResponse200337Items) HasIntervals() bool`
+`func (o *InlineResponse200337Items) HasBySlot() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasBySlot returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

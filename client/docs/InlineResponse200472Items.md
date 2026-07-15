@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse200472Interfaces**](InlineResponse200472Interfaces.md) | Layer 2 interfaces belongs to the wireless LAN controller | [optional] 
+**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
+**Changes** | Pointer to [**[]InlineResponse200472Changes**](InlineResponse200472Changes.md) | Connectivity information of a wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetChanges
 
-`func (o *InlineResponse200472Items) GetInterfaces() []InlineResponse200472Interfaces`
+`func (o *InlineResponse200472Items) GetChanges() []InlineResponse200472Changes`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetChanges returns the Changes field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetChangesOk
 
-`func (o *InlineResponse200472Items) GetInterfacesOk() (*[]InlineResponse200472Interfaces, bool)`
+`func (o *InlineResponse200472Items) GetChangesOk() (*[]InlineResponse200472Changes, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetChanges
 
-`func (o *InlineResponse200472Items) SetInterfaces(v []InlineResponse200472Interfaces)`
+`func (o *InlineResponse200472Items) SetChanges(v []InlineResponse200472Changes)`
 
-SetInterfaces sets Interfaces field to given value.
+SetChanges sets Changes field to given value.
 
-### HasInterfaces
+### HasChanges
 
-`func (o *InlineResponse200472Items) HasInterfaces() bool`
+`func (o *InlineResponse200472Items) HasChanges() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasChanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

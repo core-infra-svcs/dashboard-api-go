@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | Name of the device | [optional] 
 **Model** | Pointer to **string** | Model of the device | [optional] 
 **Mac** | Pointer to **string** | MAC address of the device | [optional] 
-**Role** | Pointer to **string** | Role of the device | [optional] 
+**Role** | Pointer to **string** | Role of the device in the stack. Possible values are &#39;active&#39;, &#39;member&#39;, and &#39;standby&#39;. | [optional] 
 
 ## Methods
 

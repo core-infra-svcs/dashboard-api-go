@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
-**Name** | Pointer to **string** | The name af the new stack | [optional] 
-**Serials** | Pointer to **[]string** | An array of switch serials added to the stack | [optional] 
-**WorkflowId** | Pointer to **string** | ID of the workflow | [optional] 
+**Id** | Pointer to **string** | ID of the switch stack | [optional] 
+**Name** | Pointer to **string** | Name of the switch stack | [optional] 
+**Serials** | Pointer to **[]string** | Serial numbers of the switches in the switch stack. Minimum 2 and maximum 8 serials. | [optional] 
+**IsMonitorOnly** | Pointer to **bool** | Whether the switch stack contains monitor-only switches. | [optional] 
+**VirtualMac** | Pointer to **string** | The virtual MAC address of the switch stack | [optional] 
+**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksMembers**](NetworksNetworkIdSwitchStacksMembers.md) | Members of the switch stack. Minimum 2 and maximum 8 members. | [optional] 
 
 ## Methods
 
@@ -103,30 +105,80 @@ SetSerials sets Serials field to given value.
 
 HasSerials returns a boolean if a field has been set.
 
-### GetWorkflowId
+### GetIsMonitorOnly
 
-`func (o *InlineResponse200205) GetWorkflowId() string`
+`func (o *InlineResponse200205) GetIsMonitorOnly() bool`
 
-GetWorkflowId returns the WorkflowId field if non-nil, zero value otherwise.
+GetIsMonitorOnly returns the IsMonitorOnly field if non-nil, zero value otherwise.
 
-### GetWorkflowIdOk
+### GetIsMonitorOnlyOk
 
-`func (o *InlineResponse200205) GetWorkflowIdOk() (*string, bool)`
+`func (o *InlineResponse200205) GetIsMonitorOnlyOk() (*bool, bool)`
 
-GetWorkflowIdOk returns a tuple with the WorkflowId field if it's non-nil, zero value otherwise
+GetIsMonitorOnlyOk returns a tuple with the IsMonitorOnly field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWorkflowId
+### SetIsMonitorOnly
 
-`func (o *InlineResponse200205) SetWorkflowId(v string)`
+`func (o *InlineResponse200205) SetIsMonitorOnly(v bool)`
 
-SetWorkflowId sets WorkflowId field to given value.
+SetIsMonitorOnly sets IsMonitorOnly field to given value.
 
-### HasWorkflowId
+### HasIsMonitorOnly
 
-`func (o *InlineResponse200205) HasWorkflowId() bool`
+`func (o *InlineResponse200205) HasIsMonitorOnly() bool`
 
-HasWorkflowId returns a boolean if a field has been set.
+HasIsMonitorOnly returns a boolean if a field has been set.
+
+### GetVirtualMac
+
+`func (o *InlineResponse200205) GetVirtualMac() string`
+
+GetVirtualMac returns the VirtualMac field if non-nil, zero value otherwise.
+
+### GetVirtualMacOk
+
+`func (o *InlineResponse200205) GetVirtualMacOk() (*string, bool)`
+
+GetVirtualMacOk returns a tuple with the VirtualMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualMac
+
+`func (o *InlineResponse200205) SetVirtualMac(v string)`
+
+SetVirtualMac sets VirtualMac field to given value.
+
+### HasVirtualMac
+
+`func (o *InlineResponse200205) HasVirtualMac() bool`
+
+HasVirtualMac returns a boolean if a field has been set.
+
+### GetMembers
+
+`func (o *InlineResponse200205) GetMembers() []NetworksNetworkIdSwitchStacksMembers`
+
+GetMembers returns the Members field if non-nil, zero value otherwise.
+
+### GetMembersOk
+
+`func (o *InlineResponse200205) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksMembers, bool)`
+
+GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMembers
+
+`func (o *InlineResponse200205) SetMembers(v []NetworksNetworkIdSwitchStacksMembers)`
+
+SetMembers sets Members field to given value.
+
+### HasMembers
+
+`func (o *InlineResponse200205) HasMembers() bool`
+
+HasMembers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

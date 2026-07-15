@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200465Items**](InlineResponse200465Items.md) | The paginated dataset | [optional] 
+**Items** | Pointer to [**[]InlineResponse200240**](InlineResponse200240.md) | List of RRM settings | [optional] 
 **Meta** | Pointer to [**InlineResponse200465Meta**](InlineResponse200465Meta.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200465) GetItems() []InlineResponse200465Items`
+`func (o *InlineResponse200465) GetItems() []InlineResponse200240`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200465) GetItemsOk() (*[]InlineResponse200465Items, bool)`
+`func (o *InlineResponse200465) GetItemsOk() (*[]InlineResponse200240, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200465) SetItems(v []InlineResponse200465Items)`
+`func (o *InlineResponse200465) SetItems(v []InlineResponse200240)`
 
 SetItems sets Items field to given value.
 

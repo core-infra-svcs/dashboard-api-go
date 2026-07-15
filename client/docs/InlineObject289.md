@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
+**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
 
 ## Methods
 
 ### NewInlineObject289
 
-`func NewInlineObject289(scheduleId string, ) *InlineObject289`
+`func NewInlineObject289(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject289`
 
 NewInlineObject289 instantiates a new InlineObject289 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject289WithDefaults instantiates a new InlineObject289 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScheduleId
+### GetOrder
 
-`func (o *InlineObject289) GetScheduleId() string`
+`func (o *InlineObject289) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
 
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+GetOrder returns the Order field if non-nil, zero value otherwise.
 
-### GetScheduleIdOk
+### GetOrderOk
 
-`func (o *InlineObject289) GetScheduleIdOk() (*string, bool)`
+`func (o *InlineObject289) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
 
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduleId
+### SetOrder
 
-`func (o *InlineObject289) SetScheduleId(v string)`
+`func (o *InlineObject289) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
 
-SetScheduleId sets ScheduleId field to given value.
+SetOrder sets Order field to given value.
 
 
 

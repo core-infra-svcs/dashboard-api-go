@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssid** | Pointer to **string** | SSID name | [optional] 
-**Bssids** | Pointer to [**[]NetworksNetworkIdWirelessAirMarshalBssids**](NetworksNetworkIdWirelessAirMarshalBssids.md) | BSSIDs broadcasting the SSID | [optional] 
-**Channels** | Pointer to **[]int32** | Channels where the SSID was observed | [optional] 
-**FirstSeen** | Pointer to **int32** | First time the SSID was observed (epoch seconds) | [optional] 
-**LastSeen** | Pointer to **int32** | Most recent time the SSID was observed (epoch seconds) | [optional] 
-**WiredMacs** | Pointer to **[]string** | MAC addresses observed on the SSID | [optional] 
-**WiredVlans** | Pointer to **[]int32** | VLAN IDs observed on the SSID | [optional] 
-**WiredLastSeen** | Pointer to **int32** | Last time observed on the SSID (epoch seconds) | [optional] 
+**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
+**Type** | Pointer to **string** | The type of the payload template | [optional] 
+**Name** | Pointer to **string** | The name of the payload template | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
+**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
+**Sharing** | Pointer to [**NetworksNetworkIdWebhooksPayloadTemplatesSharing**](NetworksNetworkIdWebhooksPayloadTemplatesSharing.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +30,155 @@ NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsid
+### GetPayloadTemplateId
 
-`func (o *InlineResponse200218) GetSsid() string`
+`func (o *InlineResponse200218) GetPayloadTemplateId() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetPayloadTemplateIdOk
 
-`func (o *InlineResponse200218) GetSsidOk() (*string, bool)`
+`func (o *InlineResponse200218) GetPayloadTemplateIdOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetPayloadTemplateId
 
-`func (o *InlineResponse200218) SetSsid(v string)`
+`func (o *InlineResponse200218) SetPayloadTemplateId(v string)`
 
-SetSsid sets Ssid field to given value.
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
 
-### HasSsid
+### HasPayloadTemplateId
 
-`func (o *InlineResponse200218) HasSsid() bool`
+`func (o *InlineResponse200218) HasPayloadTemplateId() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasPayloadTemplateId returns a boolean if a field has been set.
 
-### GetBssids
+### GetType
 
-`func (o *InlineResponse200218) GetBssids() []NetworksNetworkIdWirelessAirMarshalBssids`
+`func (o *InlineResponse200218) GetType() string`
 
-GetBssids returns the Bssids field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetBssidsOk
+### GetTypeOk
 
-`func (o *InlineResponse200218) GetBssidsOk() (*[]NetworksNetworkIdWirelessAirMarshalBssids, bool)`
+`func (o *InlineResponse200218) GetTypeOk() (*string, bool)`
 
-GetBssidsOk returns a tuple with the Bssids field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBssids
+### SetType
 
-`func (o *InlineResponse200218) SetBssids(v []NetworksNetworkIdWirelessAirMarshalBssids)`
+`func (o *InlineResponse200218) SetType(v string)`
 
-SetBssids sets Bssids field to given value.
+SetType sets Type field to given value.
 
-### HasBssids
+### HasType
 
-`func (o *InlineResponse200218) HasBssids() bool`
+`func (o *InlineResponse200218) HasType() bool`
 
-HasBssids returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetChannels
+### GetName
 
-`func (o *InlineResponse200218) GetChannels() []int32`
+`func (o *InlineResponse200218) GetName() string`
 
-GetChannels returns the Channels field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetChannelsOk
+### GetNameOk
 
-`func (o *InlineResponse200218) GetChannelsOk() (*[]int32, bool)`
+`func (o *InlineResponse200218) GetNameOk() (*string, bool)`
 
-GetChannelsOk returns a tuple with the Channels field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannels
+### SetName
 
-`func (o *InlineResponse200218) SetChannels(v []int32)`
+`func (o *InlineResponse200218) SetName(v string)`
 
-SetChannels sets Channels field to given value.
+SetName sets Name field to given value.
 
-### HasChannels
+### HasName
 
-`func (o *InlineResponse200218) HasChannels() bool`
+`func (o *InlineResponse200218) HasName() bool`
 
-HasChannels returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetFirstSeen
+### GetHeaders
 
-`func (o *InlineResponse200218) GetFirstSeen() int32`
+`func (o *InlineResponse200218) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
 
-GetFirstSeen returns the FirstSeen field if non-nil, zero value otherwise.
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-### GetFirstSeenOk
+### GetHeadersOk
 
-`func (o *InlineResponse200218) GetFirstSeenOk() (*int32, bool)`
+`func (o *InlineResponse200218) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
 
-GetFirstSeenOk returns a tuple with the FirstSeen field if it's non-nil, zero value otherwise
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirstSeen
+### SetHeaders
 
-`func (o *InlineResponse200218) SetFirstSeen(v int32)`
+`func (o *InlineResponse200218) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
 
-SetFirstSeen sets FirstSeen field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasFirstSeen
+### HasHeaders
 
-`func (o *InlineResponse200218) HasFirstSeen() bool`
+`func (o *InlineResponse200218) HasHeaders() bool`
 
-HasFirstSeen returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
 
-### GetLastSeen
+### GetBody
 
-`func (o *InlineResponse200218) GetLastSeen() int32`
+`func (o *InlineResponse200218) GetBody() string`
 
-GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-### GetLastSeenOk
+### GetBodyOk
 
-`func (o *InlineResponse200218) GetLastSeenOk() (*int32, bool)`
+`func (o *InlineResponse200218) GetBodyOk() (*string, bool)`
 
-GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastSeen
+### SetBody
 
-`func (o *InlineResponse200218) SetLastSeen(v int32)`
+`func (o *InlineResponse200218) SetBody(v string)`
 
-SetLastSeen sets LastSeen field to given value.
+SetBody sets Body field to given value.
 
-### HasLastSeen
+### HasBody
 
-`func (o *InlineResponse200218) HasLastSeen() bool`
+`func (o *InlineResponse200218) HasBody() bool`
 
-HasLastSeen returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
-### GetWiredMacs
+### GetSharing
 
-`func (o *InlineResponse200218) GetWiredMacs() []string`
+`func (o *InlineResponse200218) GetSharing() NetworksNetworkIdWebhooksPayloadTemplatesSharing`
 
-GetWiredMacs returns the WiredMacs field if non-nil, zero value otherwise.
+GetSharing returns the Sharing field if non-nil, zero value otherwise.
 
-### GetWiredMacsOk
+### GetSharingOk
 
-`func (o *InlineResponse200218) GetWiredMacsOk() (*[]string, bool)`
+`func (o *InlineResponse200218) GetSharingOk() (*NetworksNetworkIdWebhooksPayloadTemplatesSharing, bool)`
 
-GetWiredMacsOk returns a tuple with the WiredMacs field if it's non-nil, zero value otherwise
+GetSharingOk returns a tuple with the Sharing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWiredMacs
+### SetSharing
 
-`func (o *InlineResponse200218) SetWiredMacs(v []string)`
+`func (o *InlineResponse200218) SetSharing(v NetworksNetworkIdWebhooksPayloadTemplatesSharing)`
 
-SetWiredMacs sets WiredMacs field to given value.
+SetSharing sets Sharing field to given value.
 
-### HasWiredMacs
+### HasSharing
 
-`func (o *InlineResponse200218) HasWiredMacs() bool`
+`func (o *InlineResponse200218) HasSharing() bool`
 
-HasWiredMacs returns a boolean if a field has been set.
-
-### GetWiredVlans
-
-`func (o *InlineResponse200218) GetWiredVlans() []int32`
-
-GetWiredVlans returns the WiredVlans field if non-nil, zero value otherwise.
-
-### GetWiredVlansOk
-
-`func (o *InlineResponse200218) GetWiredVlansOk() (*[]int32, bool)`
-
-GetWiredVlansOk returns a tuple with the WiredVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWiredVlans
-
-`func (o *InlineResponse200218) SetWiredVlans(v []int32)`
-
-SetWiredVlans sets WiredVlans field to given value.
-
-### HasWiredVlans
-
-`func (o *InlineResponse200218) HasWiredVlans() bool`
-
-HasWiredVlans returns a boolean if a field has been set.
-
-### GetWiredLastSeen
-
-`func (o *InlineResponse200218) GetWiredLastSeen() int32`
-
-GetWiredLastSeen returns the WiredLastSeen field if non-nil, zero value otherwise.
-
-### GetWiredLastSeenOk
-
-`func (o *InlineResponse200218) GetWiredLastSeenOk() (*int32, bool)`
-
-GetWiredLastSeenOk returns a tuple with the WiredLastSeen field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWiredLastSeen
-
-`func (o *InlineResponse200218) SetWiredLastSeen(v int32)`
-
-SetWiredLastSeen sets WiredLastSeen field to given value.
-
-### HasWiredLastSeen
-
-`func (o *InlineResponse200218) HasWiredLastSeen() bool`
-
-HasWiredLastSeen returns a boolean if a field has been set.
+HasSharing returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

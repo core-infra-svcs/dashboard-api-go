@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the wireless LAN controller interface | [optional] 
 **Mac** | Pointer to **string** | The MAC address of the wireless LAN controller interface | [optional] 
-**Changes** | Pointer to [**[]InlineResponse200473Changes**](InlineResponse200473Changes.md) | The statuses of layer 3 interfaces of the wireless LAN controller | [optional] 
+**Changes** | Pointer to [**[]InlineResponse200476Changes**](InlineResponse200476Changes.md) | The statuses of layer 2 interfaces of the wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasMac returns a boolean if a field has been set.
 
 ### GetChanges
 
-`func (o *InlineResponse200476Interfaces) GetChanges() []InlineResponse200473Changes`
+`func (o *InlineResponse200476Interfaces) GetChanges() []InlineResponse200476Changes`
 
 GetChanges returns the Changes field if non-nil, zero value otherwise.
 
 ### GetChangesOk
 
-`func (o *InlineResponse200476Interfaces) GetChangesOk() (*[]InlineResponse200473Changes, bool)`
+`func (o *InlineResponse200476Interfaces) GetChangesOk() (*[]InlineResponse200476Changes, bool)`
 
 GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetChanges
 
-`func (o *InlineResponse200476Interfaces) SetChanges(v []InlineResponse200473Changes)`
+`func (o *InlineResponse200476Interfaces) SetChanges(v []InlineResponse200476Changes)`
 
 SetChanges sets Changes field to given value.
 

@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the profile to be added. This must be unique. | 
-**Description** | **string** | Description of the profile to be added. | 
-**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
 
 ## Methods
 
 ### NewInlineObject276
 
-`func NewInlineObject276(name string, description string, rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject276`
+`func NewInlineObject276() *InlineObject276`
 
 NewInlineObject276 instantiates a new InlineObject276 object
 This constructor will assign default values to properties that have it defined,
@@ -46,46 +45,36 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetDescription
+`func (o *InlineObject276) HasName() bool`
 
-`func (o *InlineObject276) GetDescription() string`
+HasName returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetTimeZone
 
-### GetDescriptionOk
+`func (o *InlineObject276) GetTimeZone() string`
 
-`func (o *InlineObject276) GetDescriptionOk() (*string, bool)`
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetTimeZoneOk
+
+`func (o *InlineObject276) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetTimeZone
 
-`func (o *InlineObject276) SetDescription(v string)`
+`func (o *InlineObject276) SetTimeZone(v string)`
 
-SetDescription sets Description field to given value.
+SetTimeZone sets TimeZone field to given value.
 
+### HasTimeZone
 
-### GetRules
+`func (o *InlineObject276) HasTimeZone() bool`
 
-`func (o *InlineObject276) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineObject276) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineObject276) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
-
-SetRules sets Rules field to given value.
-
+HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

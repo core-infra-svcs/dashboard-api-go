@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | Device serial number | [optional] 
-**BySlot** | Pointer to [**[]InlineResponse200339BySlot**](InlineResponse200339BySlot.md) | SIMs associated with the device. Maximum 3 SIM slots per device. | [optional] 
+**Geolocation** | Pointer to [**InlineResponse200339Geolocation**](InlineResponse200339Geolocation.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetBySlot
+### GetGeolocation
 
-`func (o *InlineResponse200339Items) GetBySlot() []InlineResponse200339BySlot`
+`func (o *InlineResponse200339Items) GetGeolocation() InlineResponse200339Geolocation`
 
-GetBySlot returns the BySlot field if non-nil, zero value otherwise.
+GetGeolocation returns the Geolocation field if non-nil, zero value otherwise.
 
-### GetBySlotOk
+### GetGeolocationOk
 
-`func (o *InlineResponse200339Items) GetBySlotOk() (*[]InlineResponse200339BySlot, bool)`
+`func (o *InlineResponse200339Items) GetGeolocationOk() (*InlineResponse200339Geolocation, bool)`
 
-GetBySlotOk returns a tuple with the BySlot field if it's non-nil, zero value otherwise
+GetGeolocationOk returns a tuple with the Geolocation field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBySlot
+### SetGeolocation
 
-`func (o *InlineResponse200339Items) SetBySlot(v []InlineResponse200339BySlot)`
+`func (o *InlineResponse200339Items) SetGeolocation(v InlineResponse200339Geolocation)`
 
-SetBySlot sets BySlot field to given value.
+SetGeolocation sets Geolocation field to given value.
 
-### HasBySlot
+### HasGeolocation
 
-`func (o *InlineResponse200339Items) HasBySlot() bool`
+`func (o *InlineResponse200339Items) HasGeolocation() bool`
 
-HasBySlot returns a boolean if a field has been set.
+HasGeolocation returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
