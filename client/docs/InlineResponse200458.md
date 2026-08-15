@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200458Items**](InlineResponse200458Items.md) | List of CRLs for the specified CAs | [optional] 
+**Items** | Pointer to [**[]InlineResponse200458Items**](InlineResponse200458Items.md) | List of rules | [optional] 
 **Meta** | Pointer to [**InlineResponse200458Meta**](InlineResponse200458Meta.md) |  | [optional] 
 
 ## Methods

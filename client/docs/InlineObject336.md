@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesAttachItems**](OrganizationsOrganizationIdSaseSitesAttachItems.md) | List of Meraki SD-WAN sites with the associated regions to be attached. | [optional] 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**SpInitiated** | Pointer to [**InlineResponse200413SpInitiated**](InlineResponse200413SpInitiated.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject336WithDefaults instantiates a new InlineObject336 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetEnabled
 
-`func (o *InlineObject336) GetItems() []OrganizationsOrganizationIdSaseSitesAttachItems`
+`func (o *InlineObject336) GetEnabled() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetEnabledOk
 
-`func (o *InlineObject336) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesAttachItems, bool)`
+`func (o *InlineObject336) GetEnabledOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetEnabled
 
-`func (o *InlineObject336) SetItems(v []OrganizationsOrganizationIdSaseSitesAttachItems)`
+`func (o *InlineObject336) SetEnabled(v bool)`
 
-SetItems sets Items field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasItems
+### HasEnabled
 
-`func (o *InlineObject336) HasItems() bool`
+`func (o *InlineObject336) HasEnabled() bool`
 
-HasItems returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetCallback
+### GetSpInitiated
 
-`func (o *InlineObject336) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+`func (o *InlineObject336) GetSpInitiated() InlineResponse200413SpInitiated`
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
 
-### GetCallbackOk
+### GetSpInitiatedOk
 
-`func (o *InlineObject336) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+`func (o *InlineObject336) GetSpInitiatedOk() (*InlineResponse200413SpInitiated, bool)`
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetSpInitiated
 
-`func (o *InlineObject336) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+`func (o *InlineObject336) SetSpInitiated(v InlineResponse200413SpInitiated)`
 
-SetCallback sets Callback field to given value.
+SetSpInitiated sets SpInitiated field to given value.
 
-### HasCallback
+### HasSpInitiated
 
-`func (o *InlineObject336) HasCallback() bool`
+`func (o *InlineObject336) HasSpInitiated() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

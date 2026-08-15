@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSummaryTopAppliancesByUtilization
 
-> []InlineResponse200422 GetOrganizationSummaryTopAppliancesByUtilization(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200437 GetOrganizationSummaryTopAppliancesByUtilization(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top 10 appliances sorted by utilization over given time range.
 
@@ -55,7 +55,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopAppliancesByUtilization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopAppliancesByUtilization`: []InlineResponse200422
+    // response from `GetOrganizationSummaryTopAppliancesByUtilization`: []InlineResponse200437
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopAppliancesByUtilization`: %v\n", resp)
 }
 ```
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200422**](InlineResponse200422.md)
+[**[]InlineResponse200437**](InlineResponse200437.md)
 
 ### Authorization
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopApplicationsByUsage
 
-> []InlineResponse200423 GetOrganizationSummaryTopApplicationsByUsage(ctx, organizationId).NetworkTag(networkTag).Device(device).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200438 GetOrganizationSummaryTopApplicationsByUsage(ctx, organizationId).NetworkTag(networkTag).Device(device).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top applications sorted by data usage over given time range
 
@@ -142,7 +142,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopApplicationsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopApplicationsByUsage`: []InlineResponse200423
+    // response from `GetOrganizationSummaryTopApplicationsByUsage`: []InlineResponse200438
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopApplicationsByUsage`: %v\n", resp)
 }
 ```
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200423**](InlineResponse200423.md)
+[**[]InlineResponse200438**](InlineResponse200438.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopApplicationsCategoriesByUsage
 
-> []InlineResponse200424 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200439 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top application categories sorted by data usage over given time range
 
@@ -230,7 +230,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200424
+    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200439
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage`: %v\n", resp)
 }
 ```
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200424**](InlineResponse200424.md)
+[**[]InlineResponse200439**](InlineResponse200439.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsByUsage
 
-> []InlineResponse200425 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200440 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 clients by data usage (in mb) over given time range.
 
@@ -317,7 +317,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopClientsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200425
+    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200440
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopClientsByUsage`: %v\n", resp)
 }
 ```
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200425**](InlineResponse200425.md)
+[**[]InlineResponse200440**](InlineResponse200440.md)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsManufacturersByUsage
 
-> []InlineResponse200426 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200441 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 
@@ -403,7 +403,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopClientsManufacturersByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200426
+    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200441
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopClientsManufacturersByUsage`: %v\n", resp)
 }
 ```
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200426**](InlineResponse200426.md)
+[**[]InlineResponse200441**](InlineResponse200441.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesByUsage
 
-> []InlineResponse200427 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200442 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 devices sorted by data usage over given time range
 
@@ -489,7 +489,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopDevicesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200427
+    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200442
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopDevicesByUsage`: %v\n", resp)
 }
 ```
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200427**](InlineResponse200427.md)
+[**[]InlineResponse200442**](InlineResponse200442.md)
 
 ### Authorization
 
@@ -539,7 +539,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesModelsByUsage
 
-> []InlineResponse200428 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200443 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 device models sorted by data usage over given time range
 
@@ -575,7 +575,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopDevicesModelsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200428
+    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200443
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopDevicesModelsByUsage`: %v\n", resp)
 }
 ```
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200428**](InlineResponse200428.md)
+[**[]InlineResponse200443**](InlineResponse200443.md)
 
 ### Authorization
 
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopNetworksByStatus
 
-> []InlineResponse200429 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200444 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the client and status overview information for the networks in an organization
 
@@ -661,7 +661,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopNetworksByStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200429
+    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200444
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopNetworksByStatus`: %v\n", resp)
 }
 ```
@@ -693,7 +693,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200429**](InlineResponse200429.md)
+[**[]InlineResponse200444**](InlineResponse200444.md)
 
 ### Authorization
 
@@ -711,7 +711,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopSsidsByUsage
 
-> []InlineResponse200430 GetOrganizationSummaryTopSsidsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200445 GetOrganizationSummaryTopSsidsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 ssids by data usage over given time range
 
@@ -747,7 +747,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopSsidsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopSsidsByUsage`: []InlineResponse200430
+    // response from `GetOrganizationSummaryTopSsidsByUsage`: []InlineResponse200445
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopSsidsByUsage`: %v\n", resp)
 }
 ```
@@ -779,7 +779,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200430**](InlineResponse200430.md)
+[**[]InlineResponse200445**](InlineResponse200445.md)
 
 ### Authorization
 
@@ -797,7 +797,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopSwitchesByEnergyUsage
 
-> []InlineResponse200431 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200446 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 switches by energy usage over given time range
 
@@ -833,7 +833,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TopApi.GetOrganizationSummaryTopSwitchesByEnergyUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200431
+    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200446
     fmt.Fprintf(os.Stdout, "Response from `TopApi.GetOrganizationSummaryTopSwitchesByEnergyUsage`: %v\n", resp)
 }
 ```
@@ -865,7 +865,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200431**](InlineResponse200431.md)
+[**[]InlineResponse200446**](InlineResponse200446.md)
 
 ### Authorization
 

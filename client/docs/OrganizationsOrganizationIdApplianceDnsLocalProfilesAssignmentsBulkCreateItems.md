@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200275Network**](InlineResponse200275Network.md) |  | [optional] 
-**Profile** | Pointer to [**InlineResponse200275Profile**](InlineResponse200275Profile.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200277Network**](InlineResponse200277Network.md) |  | [optional] 
+**Profile** | Pointer to [**InlineResponse200277Profile**](InlineResponse200277Profile.md) |  | [optional] 
 
 ## Methods
 
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNetwork
 
-`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetNetwork() InlineResponse200275Network`
+`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetNetwork() InlineResponse200277Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetNetworkOk() (*InlineResponse200275Network, bool)`
+`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetNetworkOk() (*InlineResponse200277Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) SetNetwork(v InlineResponse200275Network)`
+`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) SetNetwork(v InlineResponse200277Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -53,20 +53,20 @@ HasNetwork returns a boolean if a field has been set.
 
 ### GetProfile
 
-`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetProfile() InlineResponse200275Profile`
+`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetProfile() InlineResponse200277Profile`
 
 GetProfile returns the Profile field if non-nil, zero value otherwise.
 
 ### GetProfileOk
 
-`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetProfileOk() (*InlineResponse200275Profile, bool)`
+`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) GetProfileOk() (*InlineResponse200277Profile, bool)`
 
 GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProfile
 
-`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) SetProfile(v InlineResponse200275Profile)`
+`func (o *OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems) SetProfile(v InlineResponse200277Profile)`
 
 SetProfile sets Profile field to given value.
 

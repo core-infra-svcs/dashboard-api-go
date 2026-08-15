@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## DisableOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200369 DisableOrganizationIntegrationsXdrNetworks(ctx, organizationId).DisableOrganizationIntegrationsXdrNetworks(disableOrganizationIntegrationsXdrNetworks).Execute()
+> InlineResponse200381 DisableOrganizationIntegrationsXdrNetworks(ctx, organizationId).DisableOrganizationIntegrationsXdrNetworks(disableOrganizationIntegrationsXdrNetworks).Execute()
 
 Disable XDR on networks
 
@@ -32,7 +32,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    disableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject296([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject296 | 
+    disableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject299([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject299 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `XdrApi.DisableOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DisableOrganizationIntegrationsXdrNetworks`: InlineResponse200369
+    // response from `DisableOrganizationIntegrationsXdrNetworks`: InlineResponse200381
     fmt.Fprintf(os.Stdout, "Response from `XdrApi.DisableOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -62,11 +62,11 @@ Other parameters are passed through a pointer to a apiDisableOrganizationIntegra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **disableOrganizationIntegrationsXdrNetworks** | [**InlineObject296**](InlineObject296.md) |  | 
+ **disableOrganizationIntegrationsXdrNetworks** | [**InlineObject299**](InlineObject299.md) |  | 
 
 ### Return type
 
-[**InlineResponse200369**](InlineResponse200369.md)
+[**InlineResponse200381**](InlineResponse200381.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## EnableOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200370 EnableOrganizationIntegrationsXdrNetworks(ctx, organizationId).EnableOrganizationIntegrationsXdrNetworks(enableOrganizationIntegrationsXdrNetworks).Execute()
+> InlineResponse200382 EnableOrganizationIntegrationsXdrNetworks(ctx, organizationId).EnableOrganizationIntegrationsXdrNetworks(enableOrganizationIntegrationsXdrNetworks).Execute()
 
 Enable XDR on networks
 
@@ -104,7 +104,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    enableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject297([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject297 | 
+    enableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject300([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject300 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `XdrApi.EnableOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EnableOrganizationIntegrationsXdrNetworks`: InlineResponse200370
+    // response from `EnableOrganizationIntegrationsXdrNetworks`: InlineResponse200382
     fmt.Fprintf(os.Stdout, "Response from `XdrApi.EnableOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -134,11 +134,11 @@ Other parameters are passed through a pointer to a apiEnableOrganizationIntegrat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **enableOrganizationIntegrationsXdrNetworks** | [**InlineObject297**](InlineObject297.md) |  | 
+ **enableOrganizationIntegrationsXdrNetworks** | [**InlineObject300**](InlineObject300.md) |  | 
 
 ### Return type
 
-[**InlineResponse200370**](InlineResponse200370.md)
+[**InlineResponse200382**](InlineResponse200382.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200368 GetOrganizationIntegrationsXdrNetworks(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200380 GetOrganizationIntegrationsXdrNetworks(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the networks in the organization that have XDR enabled
 
@@ -188,7 +188,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `XdrApi.GetOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationIntegrationsXdrNetworks`: InlineResponse200368
+    // response from `GetOrganizationIntegrationsXdrNetworks`: InlineResponse200380
     fmt.Fprintf(os.Stdout, "Response from `XdrApi.GetOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200368**](InlineResponse200368.md)
+[**InlineResponse200380**](InlineResponse200380.md)
 
 ### Authorization
 

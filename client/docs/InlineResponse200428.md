@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200428Items**](InlineResponse200428Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200428WithDefaults instantiates a new InlineResponse200428 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetItems
 
-`func (o *InlineResponse200428) GetModel() string`
+`func (o *InlineResponse200428) GetItems() []InlineResponse200428Items`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetItemsOk
 
-`func (o *InlineResponse200428) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200428) GetItemsOk() (*[]InlineResponse200428Items, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetItems
 
-`func (o *InlineResponse200428) SetModel(v string)`
+`func (o *InlineResponse200428) SetItems(v []InlineResponse200428Items)`
 
-SetModel sets Model field to given value.
+SetItems sets Items field to given value.
 
-### HasModel
+### HasItems
 
-`func (o *InlineResponse200428) HasModel() bool`
+`func (o *InlineResponse200428) HasItems() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetCount
-
-`func (o *InlineResponse200428) GetCount() int32`
-
-GetCount returns the Count field if non-nil, zero value otherwise.
-
-### GetCountOk
-
-`func (o *InlineResponse200428) GetCountOk() (*int32, bool)`
-
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCount
-
-`func (o *InlineResponse200428) SetCount(v int32)`
-
-SetCount sets Count field to given value.
-
-### HasCount
-
-`func (o *InlineResponse200428) HasCount() bool`
-
-HasCount returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200428) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200428) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200428) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200428) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

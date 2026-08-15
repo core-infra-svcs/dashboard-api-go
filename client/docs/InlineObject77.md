@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Subnet** | **string** | Subnet of the route | 
 **GatewayIp** | **string** | Gateway IP address (next hop) | 
 **GatewayVlanId** | Pointer to **int32** | Gateway VLAN ID | [optional] 
+**Enabled** | Pointer to **bool** | Enable/disable the static route | [optional] 
 
 ## Methods
 
@@ -112,6 +113,31 @@ SetGatewayVlanId sets GatewayVlanId field to given value.
 `func (o *InlineObject77) HasGatewayVlanId() bool`
 
 HasGatewayVlanId returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineObject77) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject77) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject77) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject77) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

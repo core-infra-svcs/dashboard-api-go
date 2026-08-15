@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssignmentId** | Pointer to **string** | ID of the assignment | [optional] 
+**Serial** | Pointer to **string** | Unique serial number for the Catalyst appliance | [optional] 
+**Ports** | Pointer to [**[]InlineResponse200275Ports**](InlineResponse200275Ports.md) | Ports associated with the given appliance | [optional] 
 **Network** | Pointer to [**InlineResponse200275Network**](InlineResponse200275Network.md) |  | [optional] 
-**Profile** | Pointer to [**InlineResponse200275Profile**](InlineResponse200275Profile.md) |  | [optional] 
 
 ## Methods
 
@@ -27,30 +27,55 @@ NewInlineResponse200275ItemsWithDefaults instantiates a new InlineResponse200275
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssignmentId
+### GetSerial
 
-`func (o *InlineResponse200275Items) GetAssignmentId() string`
+`func (o *InlineResponse200275Items) GetSerial() string`
 
-GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetAssignmentIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200275Items) GetAssignmentIdOk() (*string, bool)`
+`func (o *InlineResponse200275Items) GetSerialOk() (*string, bool)`
 
-GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssignmentId
+### SetSerial
 
-`func (o *InlineResponse200275Items) SetAssignmentId(v string)`
+`func (o *InlineResponse200275Items) SetSerial(v string)`
 
-SetAssignmentId sets AssignmentId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasAssignmentId
+### HasSerial
 
-`func (o *InlineResponse200275Items) HasAssignmentId() bool`
+`func (o *InlineResponse200275Items) HasSerial() bool`
 
-HasAssignmentId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineResponse200275Items) GetPorts() []InlineResponse200275Ports`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineResponse200275Items) GetPortsOk() (*[]InlineResponse200275Ports, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineResponse200275Items) SetPorts(v []InlineResponse200275Ports)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineResponse200275Items) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -76,31 +101,6 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200275Items) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
-
-### GetProfile
-
-`func (o *InlineResponse200275Items) GetProfile() InlineResponse200275Profile`
-
-GetProfile returns the Profile field if non-nil, zero value otherwise.
-
-### GetProfileOk
-
-`func (o *InlineResponse200275Items) GetProfileOk() (*InlineResponse200275Profile, bool)`
-
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfile
-
-`func (o *InlineResponse200275Items) SetProfile(v InlineResponse200275Profile)`
-
-SetProfile sets Profile field to given value.
-
-### HasProfile
-
-`func (o *InlineResponse200275Items) HasProfile() bool`
-
-HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
+**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices.md) | device details | 
+**Name** | Pointer to **string** | Name of the packet capture file | [optional] 
+**Notes** | Pointer to **string** | Reason for capture | [optional] 
+**Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
+**FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
+**Enabled** | Pointer to **bool** | Enable or disable the schedule | [optional] 
+**Schedule** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject291
 
-`func NewInlineObject291(scheduleId string, ) *InlineObject291`
+`func NewInlineObject291(devices []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices, ) *InlineObject291`
 
 NewInlineObject291 instantiates a new InlineObject291 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +31,175 @@ NewInlineObject291WithDefaults instantiates a new InlineObject291 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScheduleId
+### GetDevices
 
-`func (o *InlineObject291) GetScheduleId() string`
+`func (o *InlineObject291) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices`
 
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetScheduleIdOk
+### GetDevicesOk
 
-`func (o *InlineObject291) GetScheduleIdOk() (*string, bool)`
+`func (o *InlineObject291) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices, bool)`
 
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduleId
+### SetDevices
 
-`func (o *InlineObject291) SetScheduleId(v string)`
+`func (o *InlineObject291) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices)`
 
-SetScheduleId sets ScheduleId field to given value.
+SetDevices sets Devices field to given value.
 
+
+### GetName
+
+`func (o *InlineObject291) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineObject291) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineObject291) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineObject291) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject291) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject291) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject291) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject291) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetDuration
+
+`func (o *InlineObject291) GetDuration() int32`
+
+GetDuration returns the Duration field if non-nil, zero value otherwise.
+
+### GetDurationOk
+
+`func (o *InlineObject291) GetDurationOk() (*int32, bool)`
+
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDuration
+
+`func (o *InlineObject291) SetDuration(v int32)`
+
+SetDuration sets Duration field to given value.
+
+### HasDuration
+
+`func (o *InlineObject291) HasDuration() bool`
+
+HasDuration returns a boolean if a field has been set.
+
+### GetFilterExpression
+
+`func (o *InlineObject291) GetFilterExpression() string`
+
+GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
+
+### GetFilterExpressionOk
+
+`func (o *InlineObject291) GetFilterExpressionOk() (*string, bool)`
+
+GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilterExpression
+
+`func (o *InlineObject291) SetFilterExpression(v string)`
+
+SetFilterExpression sets FilterExpression field to given value.
+
+### HasFilterExpression
+
+`func (o *InlineObject291) HasFilterExpression() bool`
+
+HasFilterExpression returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineObject291) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject291) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject291) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject291) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetSchedule
+
+`func (o *InlineObject291) GetSchedule() OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule`
+
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+
+### GetScheduleOk
+
+`func (o *InlineObject291) GetScheduleOk() (*OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule, bool)`
+
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSchedule
+
+`func (o *InlineObject291) SetSchedule(v OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule)`
+
+SetSchedule sets Schedule field to given value.
+
+### HasSchedule
+
+`func (o *InlineObject291) HasSchedule() bool`
+
+HasSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

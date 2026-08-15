@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | theme name | [optional] 
-**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdSaseSitesAttachItems**](OrganizationsOrganizationIdSaseSitesAttachItems.md) | List of Meraki SD-WAN sites with the associated regions to be attached. | 
 
 ## Methods
 
 ### NewInlineObject343
 
-`func NewInlineObject343() *InlineObject343`
+`func NewInlineObject343(items []OrganizationsOrganizationIdSaseSitesAttachItems, ) *InlineObject343`
 
 NewInlineObject343 instantiates a new InlineObject343 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject343WithDefaults instantiates a new InlineObject343 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetItems
 
-`func (o *InlineObject343) GetName() string`
+`func (o *InlineObject343) GetItems() []OrganizationsOrganizationIdSaseSitesAttachItems`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetItemsOk
 
-`func (o *InlineObject343) GetNameOk() (*string, bool)`
+`func (o *InlineObject343) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesAttachItems, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetItems
 
-`func (o *InlineObject343) SetName(v string)`
+`func (o *InlineObject343) SetItems(v []OrganizationsOrganizationIdSaseSitesAttachItems)`
 
-SetName sets Name field to given value.
+SetItems sets Items field to given value.
 
-### HasName
-
-`func (o *InlineObject343) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetBaseTheme
-
-`func (o *InlineObject343) GetBaseTheme() string`
-
-GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
-
-### GetBaseThemeOk
-
-`func (o *InlineObject343) GetBaseThemeOk() (*string, bool)`
-
-GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBaseTheme
-
-`func (o *InlineObject343) SetBaseTheme(v string)`
-
-SetBaseTheme sets BaseTheme field to given value.
-
-### HasBaseTheme
-
-`func (o *InlineObject343) HasBaseTheme() bool`
-
-HasBaseTheme returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

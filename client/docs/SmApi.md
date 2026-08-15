@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**GetNetworkSmDeviceSoftwares**](SmApi.md#GetNetworkSmDeviceSoftwares) | **Get** /networks/{networkId}/sm/devices/{deviceId}/softwares | Get a list of softwares associated with a device
 [**GetNetworkSmDeviceWlanLists**](SmApi.md#GetNetworkSmDeviceWlanLists) | **Get** /networks/{networkId}/sm/devices/{deviceId}/wlanLists | List the saved SSID names on a device
 [**GetNetworkSmDevices**](SmApi.md#GetNetworkSmDevices) | **Get** /networks/{networkId}/sm/devices | List the devices enrolled in an SM network with various specified fields and filters
-[**GetNetworkSmProfiles**](SmApi.md#GetNetworkSmProfiles) | **Get** /networks/{networkId}/sm/profiles | List all profiles in a network
+[**GetNetworkSmProfiles**](SmApi.md#GetNetworkSmProfiles) | **Get** /networks/{networkId}/sm/profiles | List profiles in a network
 [**GetNetworkSmTargetGroup**](SmApi.md#GetNetworkSmTargetGroup) | **Get** /networks/{networkId}/sm/targetGroups/{targetGroupId} | Return a target group
 [**GetNetworkSmTargetGroups**](SmApi.md#GetNetworkSmTargetGroups) | **Get** /networks/{networkId}/sm/targetGroups | List the target groups in this network
 [**GetNetworkSmTrustedAccessConfigs**](SmApi.md#GetNetworkSmTrustedAccessConfigs) | **Get** /networks/{networkId}/sm/trustedAccessConfigs | List Trusted Access Configs
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationSmAdminsRole
 
-> InlineResponse200411Items CreateOrganizationSmAdminsRole(ctx, organizationId).CreateOrganizationSmAdminsRole(createOrganizationSmAdminsRole).Execute()
+> InlineResponse200426Items CreateOrganizationSmAdminsRole(ctx, organizationId).CreateOrganizationSmAdminsRole(createOrganizationSmAdminsRole).Execute()
 
 Create a Limited Access Role
 
@@ -294,7 +294,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSmAdminsRole := *openapiclient.NewInlineObject339("Name_example") // InlineObject339 | 
+    createOrganizationSmAdminsRole := *openapiclient.NewInlineObject346("Name_example") // InlineObject346 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -303,7 +303,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.CreateOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSmAdminsRole`: InlineResponse200411Items
+    // response from `CreateOrganizationSmAdminsRole`: InlineResponse200426Items
     fmt.Fprintf(os.Stdout, "Response from `SmApi.CreateOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -324,11 +324,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSmAdmins
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSmAdminsRole** | [**InlineObject339**](InlineObject339.md) |  | 
+ **createOrganizationSmAdminsRole** | [**InlineObject346**](InlineObject346.md) |  | 
 
 ### Return type
 
-[**InlineResponse200411Items**](InlineResponse200411Items.md)
+[**InlineResponse200426Items**](InlineResponse200426Items.md)
 
 ### Authorization
 
@@ -1622,9 +1622,9 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmProfiles
 
-> []InlineResponse200180 GetNetworkSmProfiles(ctx, networkId).PayloadTypes(payloadTypes).Execute()
+> []InlineResponse200180 GetNetworkSmProfiles(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PayloadTypes(payloadTypes).Execute()
 
-List all profiles in a network
+List profiles in a network
 
 
 
@@ -1642,11 +1642,14 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 50. Default is 50. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     payloadTypes := []string{"Inner_example"} // []string | Filter by payload types (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SmApi.GetNetworkSmProfiles(context.Background(), networkId).PayloadTypes(payloadTypes).Execute()
+    resp, r, err := apiClient.SmApi.GetNetworkSmProfiles(context.Background(), networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PayloadTypes(payloadTypes).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetNetworkSmProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1672,6 +1675,9 @@ Other parameters are passed through a pointer to a apiGetNetworkSmProfilesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 50. Default is 50. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **payloadTypes** | **[]string** | Filter by payload types | 
 
 ### Return type
@@ -2217,7 +2223,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmAdminsRole
 
-> InlineResponse200411Items GetOrganizationSmAdminsRole(ctx, organizationId, roleId).Execute()
+> InlineResponse200426Items GetOrganizationSmAdminsRole(ctx, organizationId, roleId).Execute()
 
 Return a Limited Access Role
 
@@ -2246,7 +2252,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmAdminsRole`: InlineResponse200411Items
+    // response from `GetOrganizationSmAdminsRole`: InlineResponse200426Items
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -2272,7 +2278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200411Items**](InlineResponse200411Items.md)
+[**InlineResponse200426Items**](InlineResponse200426Items.md)
 
 ### Authorization
 
@@ -2290,7 +2296,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmAdminsRoles
 
-> InlineResponse200411 GetOrganizationSmAdminsRoles(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200426 GetOrganizationSmAdminsRoles(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the Limited Access Roles for an organization
 
@@ -2321,7 +2327,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmAdminsRoles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmAdminsRoles`: InlineResponse200411
+    // response from `GetOrganizationSmAdminsRoles`: InlineResponse200426
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmAdminsRoles`: %v\n", resp)
 }
 ```
@@ -2348,7 +2354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200411**](InlineResponse200411.md)
+[**InlineResponse200426**](InlineResponse200426.md)
 
 ### Authorization
 
@@ -2366,7 +2372,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmApnsCert
 
-> InlineResponse200412 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
+> InlineResponse200427 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
 
 Get the organization's APNS certificate
 
@@ -2394,7 +2400,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmApnsCert``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmApnsCert`: InlineResponse200412
+    // response from `GetOrganizationSmApnsCert`: InlineResponse200427
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmApnsCert`: %v\n", resp)
 }
 ```
@@ -2418,7 +2424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200412**](InlineResponse200412.md)
+[**InlineResponse200427**](InlineResponse200427.md)
 
 ### Authorization
 
@@ -2436,7 +2442,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200414 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200429 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -2468,7 +2474,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200414
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200429
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -2496,7 +2502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200414**](InlineResponse200414.md)
+[**[]InlineResponse200429**](InlineResponse200429.md)
 
 ### Authorization
 
@@ -2514,7 +2520,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmVppAccount
 
-> InlineResponse200415 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
+> InlineResponse200430 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
 
 Get a hash containing the unparsed token of the VPP account with the given ID
 
@@ -2543,7 +2549,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmVppAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccount`: InlineResponse200415
+    // response from `GetOrganizationSmVppAccount`: InlineResponse200430
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmVppAccount`: %v\n", resp)
 }
 ```
@@ -2569,7 +2575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200415**](InlineResponse200415.md)
+[**InlineResponse200430**](InlineResponse200430.md)
 
 ### Authorization
 
@@ -2587,7 +2593,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmVppAccounts
 
-> []InlineResponse200415 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
+> []InlineResponse200430 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
 
 List the VPP accounts in the organization
 
@@ -2615,7 +2621,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmVppAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200415
+    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200430
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmVppAccounts`: %v\n", resp)
 }
 ```
@@ -2639,7 +2645,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200415**](InlineResponse200415.md)
+[**[]InlineResponse200430**](InlineResponse200430.md)
 
 ### Authorization
 
@@ -3460,7 +3466,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmAdminsRole
 
-> InlineResponse200411Items UpdateOrganizationSmAdminsRole(ctx, organizationId, roleId).UpdateOrganizationSmAdminsRole(updateOrganizationSmAdminsRole).Execute()
+> InlineResponse200426Items UpdateOrganizationSmAdminsRole(ctx, organizationId, roleId).UpdateOrganizationSmAdminsRole(updateOrganizationSmAdminsRole).Execute()
 
 Update a Limited Access Role
 
@@ -3481,7 +3487,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     roleId := "roleId_example" // string | Role ID
-    updateOrganizationSmAdminsRole := *openapiclient.NewInlineObject340() // InlineObject340 |  (optional)
+    updateOrganizationSmAdminsRole := *openapiclient.NewInlineObject347() // InlineObject347 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3490,7 +3496,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.UpdateOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmAdminsRole`: InlineResponse200411Items
+    // response from `UpdateOrganizationSmAdminsRole`: InlineResponse200426Items
     fmt.Fprintf(os.Stdout, "Response from `SmApi.UpdateOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -3513,11 +3519,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSmAdminsRole** | [**InlineObject340**](InlineObject340.md) |  | 
+ **updateOrganizationSmAdminsRole** | [**InlineObject347**](InlineObject347.md) |  | 
 
 ### Return type
 
-[**InlineResponse200411Items**](InlineResponse200411Items.md)
+[**InlineResponse200426Items**](InlineResponse200426Items.md)
 
 ### Authorization
 
@@ -3535,7 +3541,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmSentryPoliciesAssignments
 
-> InlineResponse200413 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
+> InlineResponse200428 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
 
 Update an Organizations Sentry Policies using the provided list
 
@@ -3555,7 +3561,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject341([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject341 | 
+    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject348([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject348 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3564,7 +3570,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.UpdateOrganizationSmSentryPoliciesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200413
+    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200428
     fmt.Fprintf(os.Stdout, "Response from `SmApi.UpdateOrganizationSmSentryPoliciesAssignments`: %v\n", resp)
 }
 ```
@@ -3585,11 +3591,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSmSentry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject341**](InlineObject341.md) |  | 
+ **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject348**](InlineObject348.md) |  | 
 
 ### Return type
 
-[**InlineResponse200413**](InlineResponse200413.md)
+[**InlineResponse200428**](InlineResponse200428.md)
 
 ### Authorization
 

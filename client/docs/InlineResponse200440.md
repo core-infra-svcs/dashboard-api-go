@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**OrganizationsOrganizationIdWebhooksAlertTypesExample**](OrganizationsOrganizationIdWebhooksAlertTypesExample.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**Mac** | Pointer to **string** | MAC address of client | [optional] 
+**Id** | Pointer to **string** | ID of client | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork**](OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork.md) |  | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200440WithDefaults instantiates a new InlineResponse200440 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetName
 
-`func (o *InlineResponse200440) GetAlertTypeId() string`
+`func (o *InlineResponse200440) GetName() string`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetNameOk
 
-`func (o *InlineResponse200440) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200440) GetNameOk() (*string, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetName
 
-`func (o *InlineResponse200440) SetAlertTypeId(v string)`
+`func (o *InlineResponse200440) SetName(v string)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetName sets Name field to given value.
 
-### HasAlertTypeId
+### HasName
 
-`func (o *InlineResponse200440) HasAlertTypeId() bool`
+`func (o *InlineResponse200440) HasName() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetAlertType
+### GetMac
 
-`func (o *InlineResponse200440) GetAlertType() string`
+`func (o *InlineResponse200440) GetMac() string`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetMacOk
 
-`func (o *InlineResponse200440) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200440) GetMacOk() (*string, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetMac
 
-`func (o *InlineResponse200440) SetAlertType(v string)`
+`func (o *InlineResponse200440) SetMac(v string)`
 
-SetAlertType sets AlertType field to given value.
+SetMac sets Mac field to given value.
 
-### HasAlertType
+### HasMac
 
-`func (o *InlineResponse200440) HasAlertType() bool`
+`func (o *InlineResponse200440) HasMac() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetExample
+### GetId
 
-`func (o *InlineResponse200440) GetExample() OrganizationsOrganizationIdWebhooksAlertTypesExample`
+`func (o *InlineResponse200440) GetId() string`
 
-GetExample returns the Example field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetExampleOk
+### GetIdOk
 
-`func (o *InlineResponse200440) GetExampleOk() (*OrganizationsOrganizationIdWebhooksAlertTypesExample, bool)`
+`func (o *InlineResponse200440) GetIdOk() (*string, bool)`
 
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExample
+### SetId
 
-`func (o *InlineResponse200440) SetExample(v OrganizationsOrganizationIdWebhooksAlertTypesExample)`
+`func (o *InlineResponse200440) SetId(v string)`
 
-SetExample sets Example field to given value.
+SetId sets Id field to given value.
 
-### HasExample
+### HasId
 
-`func (o *InlineResponse200440) HasExample() bool`
+`func (o *InlineResponse200440) HasId() bool`
 
-HasExample returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200440) GetNetwork() OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200440) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200440) SetNetwork(v OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200440) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse200440) GetUsage() OrganizationsOrganizationIdSummaryTopClientsByUsageUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200440) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200440) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsByUsageUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200440) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

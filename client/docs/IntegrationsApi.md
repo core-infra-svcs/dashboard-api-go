@@ -37,7 +37,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSaseIntegration := *openapiclient.NewInlineObject335(*openapiclient.NewOrganizationsOrganizationIdSaseIntegrationsApi("Key_example", "Secret_example")) // InlineObject335 | 
+    createOrganizationSaseIntegration := *openapiclient.NewInlineObject342(*openapiclient.NewOrganizationsOrganizationIdSaseIntegrationsApi("Key_example", "Secret_example")) // InlineObject342 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -67,7 +67,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSaseInte
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSaseIntegration** | [**InlineObject335**](InlineObject335.md) |  | 
+ **createOrganizationSaseIntegration** | [**InlineObject342**](InlineObject342.md) |  | 
 
 ### Return type
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## DisableOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200369 DisableOrganizationIntegrationsXdrNetworks(ctx, organizationId).DisableOrganizationIntegrationsXdrNetworks(disableOrganizationIntegrationsXdrNetworks).Execute()
+> InlineResponse200381 DisableOrganizationIntegrationsXdrNetworks(ctx, organizationId).DisableOrganizationIntegrationsXdrNetworks(disableOrganizationIntegrationsXdrNetworks).Execute()
 
 Disable XDR on networks
 
@@ -180,7 +180,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    disableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject296([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject296 | 
+    disableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject299([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject299 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -189,7 +189,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntegrationsApi.DisableOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DisableOrganizationIntegrationsXdrNetworks`: InlineResponse200369
+    // response from `DisableOrganizationIntegrationsXdrNetworks`: InlineResponse200381
     fmt.Fprintf(os.Stdout, "Response from `IntegrationsApi.DisableOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -210,11 +210,11 @@ Other parameters are passed through a pointer to a apiDisableOrganizationIntegra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **disableOrganizationIntegrationsXdrNetworks** | [**InlineObject296**](InlineObject296.md) |  | 
+ **disableOrganizationIntegrationsXdrNetworks** | [**InlineObject299**](InlineObject299.md) |  | 
 
 ### Return type
 
-[**InlineResponse200369**](InlineResponse200369.md)
+[**InlineResponse200381**](InlineResponse200381.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## EnableOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200370 EnableOrganizationIntegrationsXdrNetworks(ctx, organizationId).EnableOrganizationIntegrationsXdrNetworks(enableOrganizationIntegrationsXdrNetworks).Execute()
+> InlineResponse200382 EnableOrganizationIntegrationsXdrNetworks(ctx, organizationId).EnableOrganizationIntegrationsXdrNetworks(enableOrganizationIntegrationsXdrNetworks).Execute()
 
 Enable XDR on networks
 
@@ -252,7 +252,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    enableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject297([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject297 | 
+    enableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject300([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject300 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -261,7 +261,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntegrationsApi.EnableOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EnableOrganizationIntegrationsXdrNetworks`: InlineResponse200370
+    // response from `EnableOrganizationIntegrationsXdrNetworks`: InlineResponse200382
     fmt.Fprintf(os.Stdout, "Response from `IntegrationsApi.EnableOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -282,11 +282,11 @@ Other parameters are passed through a pointer to a apiEnableOrganizationIntegrat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **enableOrganizationIntegrationsXdrNetworks** | [**InlineObject297**](InlineObject297.md) |  | 
+ **enableOrganizationIntegrationsXdrNetworks** | [**InlineObject300**](InlineObject300.md) |  | 
 
 ### Return type
 
-[**InlineResponse200370**](InlineResponse200370.md)
+[**InlineResponse200382**](InlineResponse200382.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationIntegrationsDeployable
 
-> InlineResponse200366 GetOrganizationIntegrationsDeployable(ctx, organizationId).Execute()
+> InlineResponse200378 GetOrganizationIntegrationsDeployable(ctx, organizationId).Execute()
 
 Provides a list of integrations that can be enabled for an Organization.
 
@@ -332,7 +332,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntegrationsApi.GetOrganizationIntegrationsDeployable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationIntegrationsDeployable`: InlineResponse200366
+    // response from `GetOrganizationIntegrationsDeployable`: InlineResponse200378
     fmt.Fprintf(os.Stdout, "Response from `IntegrationsApi.GetOrganizationIntegrationsDeployable`: %v\n", resp)
 }
 ```
@@ -356,7 +356,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200366**](InlineResponse200366.md)
+[**InlineResponse200378**](InlineResponse200378.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationIntegrationsDeployed
 
-> InlineResponse200367 GetOrganizationIntegrationsDeployed(ctx, organizationId).Execute()
+> InlineResponse200379 GetOrganizationIntegrationsDeployed(ctx, organizationId).Execute()
 
 Provides a list of integrations enabled for an Organization.
 
@@ -402,7 +402,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntegrationsApi.GetOrganizationIntegrationsDeployed``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationIntegrationsDeployed`: InlineResponse200367
+    // response from `GetOrganizationIntegrationsDeployed`: InlineResponse200379
     fmt.Fprintf(os.Stdout, "Response from `IntegrationsApi.GetOrganizationIntegrationsDeployed`: %v\n", resp)
 }
 ```
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200367**](InlineResponse200367.md)
+[**InlineResponse200379**](InlineResponse200379.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200368 GetOrganizationIntegrationsXdrNetworks(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200380 GetOrganizationIntegrationsXdrNetworks(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the networks in the organization that have XDR enabled
 
@@ -476,7 +476,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntegrationsApi.GetOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationIntegrationsXdrNetworks`: InlineResponse200368
+    // response from `GetOrganizationIntegrationsXdrNetworks`: InlineResponse200380
     fmt.Fprintf(os.Stdout, "Response from `IntegrationsApi.GetOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200368**](InlineResponse200368.md)
+[**InlineResponse200380**](InlineResponse200380.md)
 
 ### Authorization
 

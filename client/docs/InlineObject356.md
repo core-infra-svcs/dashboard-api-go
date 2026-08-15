@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
+**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
+**Url** | **string** | Receiver Url | 
+**Version** | **string** | Scanning API Version | 
+**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
+**SharedSecret** | **string** | Secret Value for Receiver | 
 
 ## Methods
 
 ### NewInlineObject356
 
-`func NewInlineObject356() *InlineObject356`
+`func NewInlineObject356(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject356`
 
 NewInlineObject356 instantiates a new InlineObject356 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +29,105 @@ NewInlineObject356WithDefaults instantiates a new InlineObject356 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDoorLockIds
+### GetNetwork
 
-`func (o *InlineObject356) GetDoorLockIds() []string`
+`func (o *InlineObject356) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
 
-GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetDoorLockIdsOk
+### GetNetworkOk
 
-`func (o *InlineObject356) GetDoorLockIdsOk() (*[]string, bool)`
+`func (o *InlineObject356) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
 
-GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLockIds
+### SetNetwork
 
-`func (o *InlineObject356) SetDoorLockIds(v []string)`
+`func (o *InlineObject356) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
 
-SetDoorLockIds sets DoorLockIds field to given value.
+SetNetwork sets Network field to given value.
 
-### HasDoorLockIds
 
-`func (o *InlineObject356) HasDoorLockIds() bool`
+### GetUrl
 
-HasDoorLockIds returns a boolean if a field has been set.
+`func (o *InlineObject356) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineObject356) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineObject356) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+
+### GetVersion
+
+`func (o *InlineObject356) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineObject356) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineObject356) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+
+### GetRadio
+
+`func (o *InlineObject356) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineObject356) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineObject356) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
+
+SetRadio sets Radio field to given value.
+
+
+### GetSharedSecret
+
+`func (o *InlineObject356) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *InlineObject356) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *InlineObject356) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

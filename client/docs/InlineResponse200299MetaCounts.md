@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | **int32** | Total Segments | 
+**Items** | **int32** | Total Alerts | 
 
 ## Methods
 

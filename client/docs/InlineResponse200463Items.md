@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200463Network**](InlineResponse200463Network.md) |  | [optional] 
-**Mqtt** | Pointer to [**InlineResponse200463Mqtt**](InlineResponse200463Mqtt.md) |  | [optional] 
-**Ble** | Pointer to [**InlineResponse200463Ble**](InlineResponse200463Ble.md) |  | [optional] 
-**Wifi** | Pointer to [**InlineResponse200463Wifi**](InlineResponse200463Wifi.md) |  | [optional] 
+**Network** | [**InlineResponse200316Network**](InlineResponse200316Network.md) |  | 
+**Ssid** | [**InlineResponse200463Ssid**](InlineResponse200463Ssid.md) |  | 
+**Clients** | [**InlineResponse200463Clients**](InlineResponse200463Clients.md) |  | 
+**Devices** | [**InlineResponse200463Devices**](InlineResponse200463Devices.md) |  | 
+**Usage** | [**InlineResponse200463Usage**](InlineResponse200463Usage.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200463Items
 
-`func NewInlineResponse200463Items() *InlineResponse200463Items`
+`func NewInlineResponse200463Items(network InlineResponse200316Network, ssid InlineResponse200463Ssid, clients InlineResponse200463Clients, devices InlineResponse200463Devices, usage InlineResponse200463Usage, ) *InlineResponse200463Items`
 
 NewInlineResponse200463Items instantiates a new InlineResponse200463Items object
 This constructor will assign default values to properties that have it defined,
@@ -30,103 +31,103 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNetwork
 
-`func (o *InlineResponse200463Items) GetNetwork() InlineResponse200463Network`
+`func (o *InlineResponse200463Items) GetNetwork() InlineResponse200316Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200463Items) GetNetworkOk() (*InlineResponse200463Network, bool)`
+`func (o *InlineResponse200463Items) GetNetworkOk() (*InlineResponse200316Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200463Items) SetNetwork(v InlineResponse200463Network)`
+`func (o *InlineResponse200463Items) SetNetwork(v InlineResponse200316Network)`
 
 SetNetwork sets Network field to given value.
 
-### HasNetwork
 
-`func (o *InlineResponse200463Items) HasNetwork() bool`
+### GetSsid
 
-HasNetwork returns a boolean if a field has been set.
+`func (o *InlineResponse200463Items) GetSsid() InlineResponse200463Ssid`
 
-### GetMqtt
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200463Items) GetMqtt() InlineResponse200463Mqtt`
+### GetSsidOk
 
-GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
+`func (o *InlineResponse200463Items) GetSsidOk() (*InlineResponse200463Ssid, bool)`
 
-### GetMqttOk
-
-`func (o *InlineResponse200463Items) GetMqttOk() (*InlineResponse200463Mqtt, bool)`
-
-GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqtt
+### SetSsid
 
-`func (o *InlineResponse200463Items) SetMqtt(v InlineResponse200463Mqtt)`
+`func (o *InlineResponse200463Items) SetSsid(v InlineResponse200463Ssid)`
 
-SetMqtt sets Mqtt field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasMqtt
 
-`func (o *InlineResponse200463Items) HasMqtt() bool`
+### GetClients
 
-HasMqtt returns a boolean if a field has been set.
+`func (o *InlineResponse200463Items) GetClients() InlineResponse200463Clients`
 
-### GetBle
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200463Items) GetBle() InlineResponse200463Ble`
+### GetClientsOk
 
-GetBle returns the Ble field if non-nil, zero value otherwise.
+`func (o *InlineResponse200463Items) GetClientsOk() (*InlineResponse200463Clients, bool)`
 
-### GetBleOk
-
-`func (o *InlineResponse200463Items) GetBleOk() (*InlineResponse200463Ble, bool)`
-
-GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBle
+### SetClients
 
-`func (o *InlineResponse200463Items) SetBle(v InlineResponse200463Ble)`
+`func (o *InlineResponse200463Items) SetClients(v InlineResponse200463Clients)`
 
-SetBle sets Ble field to given value.
+SetClients sets Clients field to given value.
 
-### HasBle
 
-`func (o *InlineResponse200463Items) HasBle() bool`
+### GetDevices
 
-HasBle returns a boolean if a field has been set.
+`func (o *InlineResponse200463Items) GetDevices() InlineResponse200463Devices`
 
-### GetWifi
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200463Items) GetWifi() InlineResponse200463Wifi`
+### GetDevicesOk
 
-GetWifi returns the Wifi field if non-nil, zero value otherwise.
+`func (o *InlineResponse200463Items) GetDevicesOk() (*InlineResponse200463Devices, bool)`
 
-### GetWifiOk
-
-`func (o *InlineResponse200463Items) GetWifiOk() (*InlineResponse200463Wifi, bool)`
-
-GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi
+### SetDevices
 
-`func (o *InlineResponse200463Items) SetWifi(v InlineResponse200463Wifi)`
+`func (o *InlineResponse200463Items) SetDevices(v InlineResponse200463Devices)`
 
-SetWifi sets Wifi field to given value.
+SetDevices sets Devices field to given value.
 
-### HasWifi
 
-`func (o *InlineResponse200463Items) HasWifi() bool`
+### GetUsage
 
-HasWifi returns a boolean if a field has been set.
+`func (o *InlineResponse200463Items) GetUsage() InlineResponse200463Usage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200463Items) GetUsageOk() (*InlineResponse200463Usage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200463Items) SetUsage(v InlineResponse200463Usage)`
+
+SetUsage sets Usage field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

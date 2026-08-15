@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateNetworkSensorAlertsProfile**](AlertsApi.md#CreateNetworkSensorAlertsProfile) | **Post** /networks/{networkId}/sensor/alerts/profiles | Creates a sensor alert profile for a network.
 [**CreateOrganizationAlertsProfile**](AlertsApi.md#CreateOrganizationAlertsProfile) | **Post** /organizations/{organizationId}/alerts/profiles | Create an organization-wide alert configuration
+[**CreateOrganizationAssuranceAlertsProfile**](AlertsApi.md#CreateOrganizationAssuranceAlertsProfile) | **Post** /organizations/{organizationId}/assurance/alerts/profiles | Create an alert profile
 [**DeleteNetworkSensorAlertsProfile**](AlertsApi.md#DeleteNetworkSensorAlertsProfile) | **Delete** /networks/{networkId}/sensor/alerts/profiles/{id} | Deletes a sensor alert profile from a network.
 [**DeleteOrganizationAlertsProfile**](AlertsApi.md#DeleteOrganizationAlertsProfile) | **Delete** /organizations/{organizationId}/alerts/profiles/{alertConfigId} | Removes an organization-wide alert config
+[**DeleteOrganizationAssuranceAlertsProfile**](AlertsApi.md#DeleteOrganizationAssuranceAlertsProfile) | **Delete** /organizations/{organizationId}/assurance/alerts/profiles/{profileId} | Delete an alert profile for this organization
 [**DismissOrganizationAssuranceAlerts**](AlertsApi.md#DismissOrganizationAssuranceAlerts) | **Post** /organizations/{organizationId}/assurance/alerts/dismiss | Dismiss health alerts
 [**GetNetworkAlertsHistory**](AlertsApi.md#GetNetworkAlertsHistory) | **Get** /networks/{networkId}/alerts/history | Return the alert history for this network
 [**GetNetworkAlertsSettings**](AlertsApi.md#GetNetworkAlertsSettings) | **Get** /networks/{networkId}/alerts/settings | Return the alert configuration for this network
@@ -23,12 +25,14 @@ Method | HTTP request | Description
 [**GetOrganizationAssuranceAlertsOverviewByNetwork**](AlertsApi.md#GetOrganizationAssuranceAlertsOverviewByNetwork) | **Get** /organizations/{organizationId}/assurance/alerts/overview/byNetwork | Return a Summary of Alerts grouped by network and severity
 [**GetOrganizationAssuranceAlertsOverviewByType**](AlertsApi.md#GetOrganizationAssuranceAlertsOverviewByType) | **Get** /organizations/{organizationId}/assurance/alerts/overview/byType | Return a Summary of Alerts grouped by type and severity
 [**GetOrganizationAssuranceAlertsOverviewHistorical**](AlertsApi.md#GetOrganizationAssuranceAlertsOverviewHistorical) | **Get** /organizations/{organizationId}/assurance/alerts/overview/historical | Returns historical health alert overviews
+[**GetOrganizationAssuranceAlertsProfiles**](AlertsApi.md#GetOrganizationAssuranceAlertsProfiles) | **Get** /organizations/{organizationId}/assurance/alerts/profiles | List the alert profiles for this organization
 [**GetOrganizationAssuranceAlertsTaxonomyCategories**](AlertsApi.md#GetOrganizationAssuranceAlertsTaxonomyCategories) | **Get** /organizations/{organizationId}/assurance/alerts/taxonomy/categories | Return a list of Category Types
 [**GetOrganizationAssuranceAlertsTaxonomyTypes**](AlertsApi.md#GetOrganizationAssuranceAlertsTaxonomyTypes) | **Get** /organizations/{organizationId}/assurance/alerts/taxonomy/types | Return a list of alert types
 [**RestoreOrganizationAssuranceAlerts**](AlertsApi.md#RestoreOrganizationAssuranceAlerts) | **Post** /organizations/{organizationId}/assurance/alerts/restore | Restore health alerts from dismissed
 [**UpdateNetworkAlertsSettings**](AlertsApi.md#UpdateNetworkAlertsSettings) | **Put** /networks/{networkId}/alerts/settings | Update the alert configuration for this network
 [**UpdateNetworkSensorAlertsProfile**](AlertsApi.md#UpdateNetworkSensorAlertsProfile) | **Put** /networks/{networkId}/sensor/alerts/profiles/{id} | Updates a sensor alert profile for a network.
 [**UpdateOrganizationAlertsProfile**](AlertsApi.md#UpdateOrganizationAlertsProfile) | **Put** /organizations/{organizationId}/alerts/profiles/{alertConfigId} | Update an organization-wide alert config
+[**UpdateOrganizationAssuranceAlertsProfile**](AlertsApi.md#UpdateOrganizationAssuranceAlertsProfile) | **Put** /organizations/{organizationId}/assurance/alerts/profiles/{profileId} | Update an alert profile
 
 
 
@@ -106,7 +110,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationAlertsProfile
 
-> InlineResponse200265 CreateOrganizationAlertsProfile(ctx, organizationId).CreateOrganizationAlertsProfile(createOrganizationAlertsProfile).Execute()
+> InlineResponse200267 CreateOrganizationAlertsProfile(ctx, organizationId).CreateOrganizationAlertsProfile(createOrganizationAlertsProfile).Execute()
 
 Create an organization-wide alert configuration
 
@@ -135,7 +139,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.CreateOrganizationAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationAlertsProfile`: InlineResponse200265
+    // response from `CreateOrganizationAlertsProfile`: InlineResponse200267
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.CreateOrganizationAlertsProfile`: %v\n", resp)
 }
 ```
@@ -160,7 +164,79 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200265**](InlineResponse200265.md)
+[**InlineResponse200267**](InlineResponse200267.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateOrganizationAssuranceAlertsProfile
+
+> InlineResponse200302Items CreateOrganizationAssuranceAlertsProfile(ctx, organizationId).CreateOrganizationAssuranceAlertsProfile(createOrganizationAssuranceAlertsProfile).Execute()
+
+Create an alert profile
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationAssuranceAlertsProfile := *openapiclient.NewInlineObject261("Name_example", []string{"NetworkIds_example"}, []string{"AlertTypes_example"}, *openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration(false, *openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinations(*openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinationsEmail(false), *openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinationsWebhook(false)))) // InlineObject261 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AlertsApi.CreateOrganizationAssuranceAlertsProfile(context.Background(), organizationId).CreateOrganizationAssuranceAlertsProfile(createOrganizationAssuranceAlertsProfile).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.CreateOrganizationAssuranceAlertsProfile``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateOrganizationAssuranceAlertsProfile`: InlineResponse200302Items
+    fmt.Fprintf(os.Stdout, "Response from `AlertsApi.CreateOrganizationAssuranceAlertsProfile`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateOrganizationAssuranceAlertsProfileRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createOrganizationAssuranceAlertsProfile** | [**InlineObject261**](InlineObject261.md) |  | 
+
+### Return type
+
+[**InlineResponse200302Items**](InlineResponse200302Items.md)
 
 ### Authorization
 
@@ -293,6 +369,77 @@ Name | Type | Description  | Notes
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDeleteOrganizationAlertsProfileRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteOrganizationAssuranceAlertsProfile
+
+> DeleteOrganizationAssuranceAlertsProfile(ctx, organizationId, profileId).Execute()
+
+Delete an alert profile for this organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    profileId := "profileId_example" // string | Profile ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AlertsApi.DeleteOrganizationAssuranceAlertsProfile(context.Background(), organizationId, profileId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.DeleteOrganizationAssuranceAlertsProfile``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+**profileId** | **string** | Profile ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteOrganizationAssuranceAlertsProfileRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -897,7 +1044,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAlertsProfiles
 
-> []InlineResponse200265 GetOrganizationAlertsProfiles(ctx, organizationId).Execute()
+> []InlineResponse200267 GetOrganizationAlertsProfiles(ctx, organizationId).Execute()
 
 List all organization-wide alert configurations
 
@@ -925,7 +1072,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAlertsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAlertsProfiles`: []InlineResponse200265
+    // response from `GetOrganizationAlertsProfiles`: []InlineResponse200267
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAlertsProfiles`: %v\n", resp)
 }
 ```
@@ -949,7 +1096,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200265**](InlineResponse200265.md)
+[**[]InlineResponse200267**](InlineResponse200267.md)
 
 ### Authorization
 
@@ -967,7 +1114,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlert
 
-> InlineResponse200295 GetOrganizationAssuranceAlert(ctx, organizationId, id).Execute()
+> InlineResponse200297 GetOrganizationAssuranceAlert(ctx, organizationId, id).Execute()
 
 Return a singular Health Alert by its id
 
@@ -996,7 +1143,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlert``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlert`: InlineResponse200295
+    // response from `GetOrganizationAssuranceAlert`: InlineResponse200297
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlert`: %v\n", resp)
 }
 ```
@@ -1022,7 +1169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200295**](InlineResponse200295.md)
+[**InlineResponse200297**](InlineResponse200297.md)
 
 ### Authorization
 
@@ -1040,7 +1187,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlerts
 
-> []InlineResponse200295 GetOrganizationAssuranceAlerts(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> []InlineResponse200297 GetOrganizationAssuranceAlerts(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return all health alerts for an organization
 
@@ -1087,7 +1234,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlerts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlerts`: []InlineResponse200295
+    // response from `GetOrganizationAssuranceAlerts`: []InlineResponse200297
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlerts`: %v\n", resp)
 }
 ```
@@ -1129,7 +1276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200295**](InlineResponse200295.md)
+[**[]InlineResponse200297**](InlineResponse200297.md)
 
 ### Authorization
 
@@ -1147,7 +1294,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverview
 
-> InlineResponse200296 GetOrganizationAssuranceAlertsOverview(ctx, organizationId).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200298 GetOrganizationAssuranceAlertsOverview(ctx, organizationId).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return overview of active health alerts for an organization
 
@@ -1189,7 +1336,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlertsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverview`: InlineResponse200296
+    // response from `GetOrganizationAssuranceAlertsOverview`: InlineResponse200298
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlertsOverview`: %v\n", resp)
 }
 ```
@@ -1226,7 +1373,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200296**](InlineResponse200296.md)
+[**InlineResponse200298**](InlineResponse200298.md)
 
 ### Authorization
 
@@ -1244,7 +1391,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverviewByNetwork
 
-> InlineResponse200297 GetOrganizationAssuranceAlertsOverviewByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200299 GetOrganizationAssuranceAlertsOverviewByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return a Summary of Alerts grouped by network and severity
 
@@ -1290,7 +1437,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlertsOverviewByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewByNetwork`: InlineResponse200297
+    // response from `GetOrganizationAssuranceAlertsOverviewByNetwork`: InlineResponse200299
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlertsOverviewByNetwork`: %v\n", resp)
 }
 ```
@@ -1331,7 +1478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200297**](InlineResponse200297.md)
+[**InlineResponse200299**](InlineResponse200299.md)
 
 ### Authorization
 
@@ -1349,7 +1496,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverviewByType
 
-> InlineResponse200298 GetOrganizationAssuranceAlertsOverviewByType(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).IncludeDeviceTags(includeDeviceTags).IncludeNetworks(includeNetworks).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200300 GetOrganizationAssuranceAlertsOverviewByType(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).IncludeDeviceTags(includeDeviceTags).IncludeNetworks(includeNetworks).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return a Summary of Alerts grouped by type and severity
 
@@ -1398,7 +1545,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlertsOverviewByType``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewByType`: InlineResponse200298
+    // response from `GetOrganizationAssuranceAlertsOverviewByType`: InlineResponse200300
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlertsOverviewByType`: %v\n", resp)
 }
 ```
@@ -1442,7 +1589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200298**](InlineResponse200298.md)
+[**InlineResponse200300**](InlineResponse200300.md)
 
 ### Authorization
 
@@ -1460,7 +1607,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverviewHistorical
 
-> InlineResponse200299 GetOrganizationAssuranceAlertsOverviewHistorical(ctx, organizationId).SegmentDuration(segmentDuration).TsStart(tsStart).NetworkId(networkId).Severity(severity).Types(types).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).Execute()
+> InlineResponse200301 GetOrganizationAssuranceAlertsOverviewHistorical(ctx, organizationId).SegmentDuration(segmentDuration).TsStart(tsStart).NetworkId(networkId).Severity(severity).Types(types).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).Execute()
 
 Returns historical health alert overviews
 
@@ -1498,7 +1645,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlertsOverviewHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewHistorical`: InlineResponse200299
+    // response from `GetOrganizationAssuranceAlertsOverviewHistorical`: InlineResponse200301
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlertsOverviewHistorical`: %v\n", resp)
 }
 ```
@@ -1531,7 +1678,77 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200299**](InlineResponse200299.md)
+[**InlineResponse200301**](InlineResponse200301.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationAssuranceAlertsProfiles
+
+> InlineResponse200302 GetOrganizationAssuranceAlertsProfiles(ctx, organizationId).Execute()
+
+List the alert profiles for this organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AlertsApi.GetOrganizationAssuranceAlertsProfiles(context.Background(), organizationId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlertsProfiles``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationAssuranceAlertsProfiles`: InlineResponse200302
+    fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlertsProfiles`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationAssuranceAlertsProfilesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**InlineResponse200302**](InlineResponse200302.md)
 
 ### Authorization
 
@@ -1549,7 +1766,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsTaxonomyCategories
 
-> []InlineResponse200300 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
+> []InlineResponse200303 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
 
 Return a list of Category Types
 
@@ -1577,7 +1794,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlertsTaxonomyCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200300
+    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200303
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlertsTaxonomyCategories`: %v\n", resp)
 }
 ```
@@ -1601,7 +1818,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200300**](InlineResponse200300.md)
+[**[]InlineResponse200303**](InlineResponse200303.md)
 
 ### Authorization
 
@@ -1619,7 +1836,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsTaxonomyTypes
 
-> []InlineResponse200301 GetOrganizationAssuranceAlertsTaxonomyTypes(ctx, organizationId).Execute()
+> []InlineResponse200304 GetOrganizationAssuranceAlertsTaxonomyTypes(ctx, organizationId).Execute()
 
 Return a list of alert types
 
@@ -1647,7 +1864,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetOrganizationAssuranceAlertsTaxonomyTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsTaxonomyTypes`: []InlineResponse200301
+    // response from `GetOrganizationAssuranceAlertsTaxonomyTypes`: []InlineResponse200304
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetOrganizationAssuranceAlertsTaxonomyTypes`: %v\n", resp)
 }
 ```
@@ -1671,7 +1888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200301**](InlineResponse200301.md)
+[**[]InlineResponse200304**](InlineResponse200304.md)
 
 ### Authorization
 
@@ -1709,7 +1926,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    restoreOrganizationAssuranceAlerts := *openapiclient.NewInlineObject261([]string{"AlertIds_example"}) // InlineObject261 | 
+    restoreOrganizationAssuranceAlerts := *openapiclient.NewInlineObject263([]string{"AlertIds_example"}) // InlineObject263 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1737,7 +1954,7 @@ Other parameters are passed through a pointer to a apiRestoreOrganizationAssuran
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **restoreOrganizationAssuranceAlerts** | [**InlineObject261**](InlineObject261.md) |  | 
+ **restoreOrganizationAssuranceAlerts** | [**InlineObject263**](InlineObject263.md) |  | 
 
 ### Return type
 
@@ -1906,7 +2123,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAlertsProfile
 
-> InlineResponse200265 UpdateOrganizationAlertsProfile(ctx, organizationId, alertConfigId).UpdateOrganizationAlertsProfile(updateOrganizationAlertsProfile).Execute()
+> InlineResponse200267 UpdateOrganizationAlertsProfile(ctx, organizationId, alertConfigId).UpdateOrganizationAlertsProfile(updateOrganizationAlertsProfile).Execute()
 
 Update an organization-wide alert config
 
@@ -1936,7 +2153,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.UpdateOrganizationAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAlertsProfile`: InlineResponse200265
+    // response from `UpdateOrganizationAlertsProfile`: InlineResponse200267
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.UpdateOrganizationAlertsProfile`: %v\n", resp)
 }
 ```
@@ -1963,7 +2180,82 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200265**](InlineResponse200265.md)
+[**InlineResponse200267**](InlineResponse200267.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UpdateOrganizationAssuranceAlertsProfile
+
+> InlineResponse200302Items UpdateOrganizationAssuranceAlertsProfile(ctx, organizationId, profileId).UpdateOrganizationAssuranceAlertsProfile(updateOrganizationAssuranceAlertsProfile).Execute()
+
+Update an alert profile
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    profileId := "profileId_example" // string | Profile ID
+    updateOrganizationAssuranceAlertsProfile := *openapiclient.NewInlineObject262("Name_example", []string{"NetworkIds_example"}, []string{"AlertTypes_example"}, *openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration(false, *openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinations(*openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinationsEmail(false), *openapiclient.NewOrganizationsOrganizationIdAssuranceAlertsProfilesConfigurationAlertDestinationsWebhook(false)))) // InlineObject262 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AlertsApi.UpdateOrganizationAssuranceAlertsProfile(context.Background(), organizationId, profileId).UpdateOrganizationAssuranceAlertsProfile(updateOrganizationAssuranceAlertsProfile).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.UpdateOrganizationAssuranceAlertsProfile``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateOrganizationAssuranceAlertsProfile`: InlineResponse200302Items
+    fmt.Fprintf(os.Stdout, "Response from `AlertsApi.UpdateOrganizationAssuranceAlertsProfile`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+**profileId** | **string** | Profile ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateOrganizationAssuranceAlertsProfileRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **updateOrganizationAssuranceAlertsProfile** | [**InlineObject262**](InlineObject262.md) |  | 
+
+### Return type
+
+[**InlineResponse200302Items**](InlineResponse200302Items.md)
 
 ### Authorization
 

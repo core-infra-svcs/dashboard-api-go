@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## ClaimOrganizationInventoryOrders
 
-> InlineResponse200373 ClaimOrganizationInventoryOrders(ctx, organizationId).ClaimOrganizationInventoryOrders(claimOrganizationInventoryOrders).Execute()
+> InlineResponse200385 ClaimOrganizationInventoryOrders(ctx, organizationId).ClaimOrganizationInventoryOrders(claimOrganizationInventoryOrders).Execute()
 
 Claim an order by the secure unique order claim number, the order claim id
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    claimOrganizationInventoryOrders := *openapiclient.NewInlineObject300("ClaimId_example") // InlineObject300 | 
+    claimOrganizationInventoryOrders := *openapiclient.NewInlineObject303("ClaimId_example") // InlineObject303 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.ClaimOrganizationInventoryOrders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ClaimOrganizationInventoryOrders`: InlineResponse200373
+    // response from `ClaimOrganizationInventoryOrders`: InlineResponse200385
     fmt.Fprintf(os.Stdout, "Response from `OrdersApi.ClaimOrganizationInventoryOrders`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiClaimOrganizationInventory
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimOrganizationInventoryOrders** | [**InlineObject300**](InlineObject300.md) |  | 
+ **claimOrganizationInventoryOrders** | [**InlineObject303**](InlineObject303.md) |  | 
 
 ### Return type
 
-[**InlineResponse200373**](InlineResponse200373.md)
+[**InlineResponse200385**](InlineResponse200385.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## PreviewOrganizationInventoryOrders
 
-> InlineResponse200374 PreviewOrganizationInventoryOrders(ctx, organizationId).PreviewOrganizationInventoryOrders(previewOrganizationInventoryOrders).Execute()
+> InlineResponse200386 PreviewOrganizationInventoryOrders(ctx, organizationId).PreviewOrganizationInventoryOrders(previewOrganizationInventoryOrders).Execute()
 
 Preview the results and status of an order claim by the secure order id
 
@@ -103,7 +103,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    previewOrganizationInventoryOrders := *openapiclient.NewInlineObject301("ClaimId_example") // InlineObject301 | 
+    previewOrganizationInventoryOrders := *openapiclient.NewInlineObject304("ClaimId_example") // InlineObject304 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OrdersApi.PreviewOrganizationInventoryOrders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `PreviewOrganizationInventoryOrders`: InlineResponse200374
+    // response from `PreviewOrganizationInventoryOrders`: InlineResponse200386
     fmt.Fprintf(os.Stdout, "Response from `OrdersApi.PreviewOrganizationInventoryOrders`: %v\n", resp)
 }
 ```
@@ -133,11 +133,11 @@ Other parameters are passed through a pointer to a apiPreviewOrganizationInvento
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **previewOrganizationInventoryOrders** | [**InlineObject301**](InlineObject301.md) |  | 
+ **previewOrganizationInventoryOrders** | [**InlineObject304**](InlineObject304.md) |  | 
 
 ### Return type
 
-[**InlineResponse200374**](InlineResponse200374.md)
+[**InlineResponse200386**](InlineResponse200386.md)
 
 ### Authorization
 

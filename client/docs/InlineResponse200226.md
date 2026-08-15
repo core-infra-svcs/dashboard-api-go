@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**LatencyStats** | Pointer to [**NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats**](NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats.md) |  | [optional] 
+**ConnectionStats** | Pointer to [**NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats**](NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetMac sets Mac field to given value.
 
 HasMac returns a boolean if a field has been set.
 
-### GetLatencyStats
+### GetConnectionStats
 
-`func (o *InlineResponse200226) GetLatencyStats() NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats`
+`func (o *InlineResponse200226) GetConnectionStats() NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats`
 
-GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetLatencyStatsOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse200226) GetLatencyStatsOk() (*NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats, bool)`
+`func (o *InlineResponse200226) GetConnectionStatsOk() (*NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats, bool)`
 
-GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyStats
+### SetConnectionStats
 
-`func (o *InlineResponse200226) SetLatencyStats(v NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats)`
+`func (o *InlineResponse200226) SetConnectionStats(v NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats)`
 
-SetLatencyStats sets LatencyStats field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasLatencyStats
+### HasConnectionStats
 
-`func (o *InlineResponse200226) HasLatencyStats() bool`
+`func (o *InlineResponse200226) HasConnectionStats() bool`
 
-HasLatencyStats returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

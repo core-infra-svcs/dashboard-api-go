@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200406Counts**](InlineResponse200406Counts.md) |  | [optional] 
+**Success** | Pointer to **bool** | Whether the operation was successful | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200406WithDefaults instantiates a new InlineResponse200406 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetSuccess
 
-`func (o *InlineResponse200406) GetCounts() InlineResponse200406Counts`
+`func (o *InlineResponse200406) GetSuccess() bool`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetSuccessOk
 
-`func (o *InlineResponse200406) GetCountsOk() (*InlineResponse200406Counts, bool)`
+`func (o *InlineResponse200406) GetSuccessOk() (*bool, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetSuccess
 
-`func (o *InlineResponse200406) SetCounts(v InlineResponse200406Counts)`
+`func (o *InlineResponse200406) SetSuccess(v bool)`
 
-SetCounts sets Counts field to given value.
+SetSuccess sets Success field to given value.
 
-### HasCounts
+### HasSuccess
 
-`func (o *InlineResponse200406) HasCounts() bool`
+`func (o *InlineResponse200406) HasSuccess() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

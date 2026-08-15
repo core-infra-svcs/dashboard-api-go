@@ -112,7 +112,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     doorLockId := "doorLockId_example" // string | Door lock ID
-    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject357() // InlineObject357 |  (optional)
+    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject368() // InlineObject368 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject357**](InlineObject357.md) |  | 
+ **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject368**](InlineObject368.md) |  | 
 
 ### Return type
 

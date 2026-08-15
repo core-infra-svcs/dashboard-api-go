@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200394Items**](InlineResponse200394Items.md) | List of Appliance VLAN Assignments | [optional] 
-**Meta** | Pointer to [**InlineResponse200275Meta**](InlineResponse200275Meta.md) |  | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200393**](InlineResponse200393.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200393**](InlineResponse200393.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200394WithDefaults instantiates a new InlineResponse200394 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetRemainderLicenses
 
-`func (o *InlineResponse200394) GetItems() []InlineResponse200394Items`
+`func (o *InlineResponse200394) GetRemainderLicenses() []InlineResponse200393`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200394) GetItemsOk() (*[]InlineResponse200394Items, bool)`
+`func (o *InlineResponse200394) GetRemainderLicensesOk() (*[]InlineResponse200393, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetRemainderLicenses
 
-`func (o *InlineResponse200394) SetItems(v []InlineResponse200394Items)`
+`func (o *InlineResponse200394) SetRemainderLicenses(v []InlineResponse200393)`
 
-SetItems sets Items field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasItems
+### HasRemainderLicenses
 
-`func (o *InlineResponse200394) HasItems() bool`
+`func (o *InlineResponse200394) HasRemainderLicenses() bool`
 
-HasItems returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
 
-### GetMeta
+### GetMovedLicenses
 
-`func (o *InlineResponse200394) GetMeta() InlineResponse200275Meta`
+`func (o *InlineResponse200394) GetMovedLicenses() []InlineResponse200393`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetMovedLicensesOk
 
-`func (o *InlineResponse200394) GetMetaOk() (*InlineResponse200275Meta, bool)`
+`func (o *InlineResponse200394) GetMovedLicensesOk() (*[]InlineResponse200393, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetMovedLicenses
 
-`func (o *InlineResponse200394) SetMeta(v InlineResponse200275Meta)`
+`func (o *InlineResponse200394) SetMovedLicenses(v []InlineResponse200393)`
 
-SetMeta sets Meta field to given value.
+SetMovedLicenses sets MovedLicenses field to given value.
 
-### HasMeta
+### HasMovedLicenses
 
-`func (o *InlineResponse200394) HasMeta() bool`
+`func (o *InlineResponse200394) HasMovedLicenses() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

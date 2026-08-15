@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 ## BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate
 
-> InlineResponse200276 BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(ctx, organizationId).BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(bulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate).Execute()
+> InlineResponse200278 BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(ctx, organizationId).BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(bulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate).Execute()
 
 Assign the local DNS profile to networks in the organization
 
@@ -49,7 +49,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: InlineResponse200276
+    // response from `BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: %v\n", resp)
 }
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsLocalProfile
 
-> InlineResponse200274 CreateOrganizationApplianceDnsLocalProfile(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfile(createOrganizationApplianceDnsLocalProfile).Execute()
+> InlineResponse200276 CreateOrganizationApplianceDnsLocalProfile(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfile(createOrganizationApplianceDnsLocalProfile).Execute()
 
 Create a new local DNS profile
 
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.CreateOrganizationApplianceDnsLocalProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsLocalProfile`: InlineResponse200274
+    // response from `CreateOrganizationApplianceDnsLocalProfile`: InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.CreateOrganizationApplianceDnsLocalProfile`: %v\n", resp)
 }
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200274**](InlineResponse200274.md)
+[**InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete
 
-> InlineResponse200276 CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete).Execute()
+> InlineResponse200278 CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete).Execute()
 
 Unassign the local DNS profile to networks in the organization
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: InlineResponse200276
+    // response from `CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: %v\n", resp)
 }
 ```
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsLocalRecord
 
-> []InlineResponse200277 CreateOrganizationApplianceDnsLocalRecord(ctx, organizationId).CreateOrganizationApplianceDnsLocalRecord(createOrganizationApplianceDnsLocalRecord).Execute()
+> []InlineResponse200279 CreateOrganizationApplianceDnsLocalRecord(ctx, organizationId).CreateOrganizationApplianceDnsLocalRecord(createOrganizationApplianceDnsLocalRecord).Execute()
 
 Create a new local DNS record
 
@@ -265,7 +265,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.CreateOrganizationApplianceDnsLocalRecord``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsLocalRecord`: []InlineResponse200277
+    // response from `CreateOrganizationApplianceDnsLocalRecord`: []InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.CreateOrganizationApplianceDnsLocalRecord`: %v\n", resp)
 }
 ```
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200277**](InlineResponse200277.md)
+[**[]InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsLocalProfiles
 
-> []InlineResponse200274 GetOrganizationApplianceDnsLocalProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
+> []InlineResponse200276 GetOrganizationApplianceDnsLocalProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
 
 Fetch the local DNS profiles used in the organization
 
@@ -479,7 +479,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.GetOrganizationApplianceDnsLocalProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsLocalProfiles`: []InlineResponse200274
+    // response from `GetOrganizationApplianceDnsLocalProfiles`: []InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.GetOrganizationApplianceDnsLocalProfiles`: %v\n", resp)
 }
 ```
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200274**](InlineResponse200274.md)
+[**[]InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsLocalProfilesAssignments
 
-> InlineResponse200275 GetOrganizationApplianceDnsLocalProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
+> InlineResponse200277 GetOrganizationApplianceDnsLocalProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
 
 Fetch the local DNS profile assignments in the organization
 
@@ -552,7 +552,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.GetOrganizationApplianceDnsLocalProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsLocalProfilesAssignments`: InlineResponse200275
+    // response from `GetOrganizationApplianceDnsLocalProfilesAssignments`: InlineResponse200277
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.GetOrganizationApplianceDnsLocalProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200275**](InlineResponse200275.md)
+[**InlineResponse200277**](InlineResponse200277.md)
 
 ### Authorization
 
@@ -596,7 +596,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsLocalRecords
 
-> []InlineResponse200277 GetOrganizationApplianceDnsLocalRecords(ctx, organizationId).ProfileIds(profileIds).Execute()
+> []InlineResponse200279 GetOrganizationApplianceDnsLocalRecords(ctx, organizationId).ProfileIds(profileIds).Execute()
 
 Fetch the DNS records used in local DNS profiles
 
@@ -625,7 +625,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.GetOrganizationApplianceDnsLocalRecords``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsLocalRecords`: []InlineResponse200277
+    // response from `GetOrganizationApplianceDnsLocalRecords`: []InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.GetOrganizationApplianceDnsLocalRecords`: %v\n", resp)
 }
 ```
@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200277**](InlineResponse200277.md)
+[**[]InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 
@@ -668,7 +668,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceDnsLocalProfile
 
-> InlineResponse200274 UpdateOrganizationApplianceDnsLocalProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsLocalProfile(updateOrganizationApplianceDnsLocalProfile).Execute()
+> InlineResponse200276 UpdateOrganizationApplianceDnsLocalProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsLocalProfile(updateOrganizationApplianceDnsLocalProfile).Execute()
 
 Update a local DNS profile
 
@@ -698,7 +698,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.UpdateOrganizationApplianceDnsLocalProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceDnsLocalProfile`: InlineResponse200274
+    // response from `UpdateOrganizationApplianceDnsLocalProfile`: InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.UpdateOrganizationApplianceDnsLocalProfile`: %v\n", resp)
 }
 ```
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200274**](InlineResponse200274.md)
+[**InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -743,7 +743,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceDnsLocalRecord
 
-> InlineResponse200277 UpdateOrganizationApplianceDnsLocalRecord(ctx, organizationId, recordId).UpdateOrganizationApplianceDnsLocalRecord(updateOrganizationApplianceDnsLocalRecord).Execute()
+> InlineResponse200279 UpdateOrganizationApplianceDnsLocalRecord(ctx, organizationId, recordId).UpdateOrganizationApplianceDnsLocalRecord(updateOrganizationApplianceDnsLocalRecord).Execute()
 
 Updates a local DNS record
 
@@ -773,7 +773,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LocalApi.UpdateOrganizationApplianceDnsLocalRecord``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceDnsLocalRecord`: InlineResponse200277
+    // response from `UpdateOrganizationApplianceDnsLocalRecord`: InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `LocalApi.UpdateOrganizationApplianceDnsLocalRecord`: %v\n", resp)
 }
 ```
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200277**](InlineResponse200277.md)
+[**InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationDevicesUplinksLossAndLatency
 
-> []InlineResponse200357 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
+> []InlineResponse200369 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
 
 Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksLossAndLatencyApi.GetOrganizationDevicesUplinksLossAndLatency``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200357
+    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200369
     fmt.Fprintf(os.Stdout, "Response from `UplinksLossAndLatencyApi.GetOrganizationDevicesUplinksLossAndLatency`: %v\n", resp)
 }
 ```
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200357**](InlineResponse200357.md)
+[**[]InlineResponse200369**](InlineResponse200369.md)
 
 ### Authorization
 

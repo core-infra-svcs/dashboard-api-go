@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**ClaimId** | **string** | The unique order claim id | 
+**Subscriptions** | Pointer to [**[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions**](OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions.md) | The individual subscriptions to claim | [optional] 
 
 ## Methods
 
 ### NewInlineObject303
 
-`func NewInlineObject303(licenseId string, networkId string, seatCount int32, ) *InlineObject303`
+`func NewInlineObject303(claimId string, ) *InlineObject303`
 
 NewInlineObject303 instantiates a new InlineObject303 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +26,50 @@ NewInlineObject303WithDefaults instantiates a new InlineObject303 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetClaimId
 
-`func (o *InlineObject303) GetLicenseId() string`
+`func (o *InlineObject303) GetClaimId() string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetClaimIdOk
 
-`func (o *InlineObject303) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject303) GetClaimIdOk() (*string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetClaimId
 
-`func (o *InlineObject303) SetLicenseId(v string)`
+`func (o *InlineObject303) SetClaimId(v string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetClaimId sets ClaimId field to given value.
 
 
-### GetNetworkId
+### GetSubscriptions
 
-`func (o *InlineObject303) GetNetworkId() string`
+`func (o *InlineObject303) GetSubscriptions() []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetSubscriptionsOk
 
-`func (o *InlineObject303) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineObject303) GetSubscriptionsOk() (*[]OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSubscriptions
 
-`func (o *InlineObject303) SetNetworkId(v string)`
+`func (o *InlineObject303) SetSubscriptions(v []OrganizationsOrganizationIdInventoryOrdersClaimSubscriptions)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSubscriptions sets Subscriptions field to given value.
 
+### HasSubscriptions
 
-### GetSeatCount
+`func (o *InlineObject303) HasSubscriptions() bool`
 
-`func (o *InlineObject303) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject303) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject303) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
-
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200460Items**](InlineResponse200460Items.md) | List of Catalyst access points information | [optional] 
-**Meta** | Pointer to [**InlineResponse200275Meta**](InlineResponse200275Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200460Items**](InlineResponse200460Items.md) | List of networks with SSID-level summaries of wireless clients impacted by connection failures. Results are sorted by impact count, with sort order configurable via the sortOrder parameter. | [optional] 
+**Meta** | Pointer to [**InlineResponse200460Meta**](InlineResponse200460Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200460) GetMeta() InlineResponse200275Meta`
+`func (o *InlineResponse200460) GetMeta() InlineResponse200460Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200460) GetMetaOk() (*InlineResponse200275Meta, bool)`
+`func (o *InlineResponse200460) GetMetaOk() (*InlineResponse200460Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200460) SetMeta(v InlineResponse200275Meta)`
+`func (o *InlineResponse200460) SetMeta(v InlineResponse200460Meta)`
 
 SetMeta sets Meta field to given value.
 

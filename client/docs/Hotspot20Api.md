@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessSsidHotspot20
 
-> InlineResponse200249 GetNetworkWirelessSsidHotspot20(ctx, networkId, number).Execute()
+> InlineResponse200251 GetNetworkWirelessSsidHotspot20(ctx, networkId, number).Execute()
 
 Return the Hotspot 2.0 settings for an SSID
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `Hotspot20Api.GetNetworkWirelessSsidHotspot20``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidHotspot20`: InlineResponse200249
+    // response from `GetNetworkWirelessSsidHotspot20`: InlineResponse200251
     fmt.Fprintf(os.Stdout, "Response from `Hotspot20Api.GetNetworkWirelessSsidHotspot20`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200249**](InlineResponse200249.md)
+[**InlineResponse200251**](InlineResponse200251.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidHotspot20
 
-> InlineResponse200249 UpdateNetworkWirelessSsidHotspot20(ctx, networkId, number).UpdateNetworkWirelessSsidHotspot20(updateNetworkWirelessSsidHotspot20).Execute()
+> InlineResponse200251 UpdateNetworkWirelessSsidHotspot20(ctx, networkId, number).UpdateNetworkWirelessSsidHotspot20(updateNetworkWirelessSsidHotspot20).Execute()
 
 Update the Hotspot 2.0 settings of an SSID
 
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `Hotspot20Api.UpdateNetworkWirelessSsidHotspot20``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidHotspot20`: InlineResponse200249
+    // response from `UpdateNetworkWirelessSsidHotspot20`: InlineResponse200251
     fmt.Fprintf(os.Stdout, "Response from `Hotspot20Api.UpdateNetworkWirelessSsidHotspot20`: %v\n", resp)
 }
 ```
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200249**](InlineResponse200249.md)
+[**InlineResponse200251**](InlineResponse200251.md)
 
 ### Authorization
 

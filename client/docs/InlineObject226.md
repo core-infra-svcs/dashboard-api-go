@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **RedirectUrl** | Pointer to **string** | The custom redirect URL where the users will go after the splash page. | [optional] 
 **UseRedirectUrl** | Pointer to **bool** | The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page. A custom redirect URL must be set if this is true. | [optional] 
 **WelcomeMessage** | Pointer to **string** | The welcome message for the users on the splash page. | [optional] 
-**UserConsent** | Pointer to [**InlineResponse200253UserConsent**](InlineResponse200253UserConsent.md) |  | [optional] 
+**UserConsent** | Pointer to [**InlineResponse200255UserConsent**](InlineResponse200255UserConsent.md) |  | [optional] 
 **ThemeId** | Pointer to **string** | The id of the selected splash theme. | [optional] 
 **SplashLogo** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo.md) |  | [optional] 
 **SplashImage** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashImage**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashImage.md) |  | [optional] 
@@ -194,20 +194,20 @@ HasWelcomeMessage returns a boolean if a field has been set.
 
 ### GetUserConsent
 
-`func (o *InlineObject226) GetUserConsent() InlineResponse200253UserConsent`
+`func (o *InlineObject226) GetUserConsent() InlineResponse200255UserConsent`
 
 GetUserConsent returns the UserConsent field if non-nil, zero value otherwise.
 
 ### GetUserConsentOk
 
-`func (o *InlineObject226) GetUserConsentOk() (*InlineResponse200253UserConsent, bool)`
+`func (o *InlineObject226) GetUserConsentOk() (*InlineResponse200255UserConsent, bool)`
 
 GetUserConsentOk returns a tuple with the UserConsent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUserConsent
 
-`func (o *InlineObject226) SetUserConsent(v InlineResponse200253UserConsent)`
+`func (o *InlineObject226) SetUserConsent(v InlineResponse200255UserConsent)`
 
 SetUserConsent sets UserConsent field to given value.
 

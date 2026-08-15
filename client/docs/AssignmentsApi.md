@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate**](AssignmentsApi.md#CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate) | **Post** /organizations/{organizationId}/appliance/dns/split/profiles/assignments/bulkCreate | Assign the split DNS profile to networks in the organization
 [**CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete**](AssignmentsApi.md#CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete) | **Post** /organizations/{organizationId}/appliance/dns/split/profiles/assignments/bulkDelete | Unassign the split DNS profile to networks in the organization
 [**CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment**](AssignmentsApi.md#CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment) | **Post** /organizations/{organizationId}/policies/global/group/policies/firewall/rulesets/assignments | Create an Organization-Wide Policy Ruleset Assignment
+[**CreateOrganizationWirelessSsidsProfilesAssignment**](AssignmentsApi.md#CreateOrganizationWirelessSsidsProfilesAssignment) | **Post** /organizations/{organizationId}/wireless/ssids/profiles/assignments | Assigns an SSID profile to an SSID in the organization
 [**DeleteOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment**](AssignmentsApi.md#DeleteOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment) | **Delete** /organizations/{organizationId}/policies/global/group/policies/firewall/rulesets/assignments/{assignmentId} | Delete an Organization-Wide Policy Ruleset Assignment
+[**DeleteOrganizationWirelessSsidsProfilesAssignments**](AssignmentsApi.md#DeleteOrganizationWirelessSsidsProfilesAssignments) | **Delete** /organizations/{organizationId}/wireless/ssids/profiles/assignments | Unassigns the SSID profile assigned to an SSID
 [**GetNetworkVlanProfilesAssignmentsByDevice**](AssignmentsApi.md#GetNetworkVlanProfilesAssignmentsByDevice) | **Get** /networks/{networkId}/vlanProfiles/assignments/byDevice | Get the assigned VLAN Profiles for devices in a network
 [**GetOrganizationApplianceDnsLocalProfilesAssignments**](AssignmentsApi.md#GetOrganizationApplianceDnsLocalProfilesAssignments) | **Get** /organizations/{organizationId}/appliance/dns/local/profiles/assignments | Fetch the local DNS profile assignments in the organization
 [**GetOrganizationApplianceDnsSplitProfilesAssignments**](AssignmentsApi.md#GetOrganizationApplianceDnsSplitProfilesAssignments) | **Get** /organizations/{organizationId}/appliance/dns/split/profiles/assignments | Fetch the split DNS profile assignments in the organization
@@ -23,6 +25,8 @@ Method | HTTP request | Description
 [**GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments**](AssignmentsApi.md#GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments) | **Get** /organizations/{organizationId}/policies/global/group/policies/firewall/rulesets/assignments | List Organization-Wide Policy Ruleset Assignments
 [**GetOrganizationSmSentryPoliciesAssignmentsByNetwork**](AssignmentsApi.md#GetOrganizationSmSentryPoliciesAssignmentsByNetwork) | **Get** /organizations/{organizationId}/sm/sentry/policies/assignments/byNetwork | List the Sentry Policies for an organization ordered in ascending order of priority
 [**GetOrganizationWirelessRfProfilesAssignmentsByDevice**](AssignmentsApi.md#GetOrganizationWirelessRfProfilesAssignmentsByDevice) | **Get** /organizations/{organizationId}/wireless/rfProfiles/assignments/byDevice | List the RF profiles of an organization by device
+[**GetOrganizationWirelessSsidsProfilesAssignments**](AssignmentsApi.md#GetOrganizationWirelessSsidsProfilesAssignments) | **Get** /organizations/{organizationId}/wireless/ssids/profiles/assignments | List the SSID profile assignments in an organization
+[**GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork**](AssignmentsApi.md#GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork) | **Get** /organizations/{organizationId}/wireless/ssids/profiles/assignments/byNetwork | List the SSID profile assignments in an organization, grouped by network
 [**ReassignNetworkVlanProfilesAssignments**](AssignmentsApi.md#ReassignNetworkVlanProfilesAssignments) | **Post** /networks/{networkId}/vlanProfiles/assignments/reassign | Update the assigned VLAN Profile for devices in a network
 [**UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment**](AssignmentsApi.md#UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment) | **Put** /organizations/{organizationId}/policies/global/group/policies/firewall/rulesets/assignments/{assignmentId} | Update an Organization-Wide Policy Ruleset Assignment
 [**UpdateOrganizationSmSentryPoliciesAssignments**](AssignmentsApi.md#UpdateOrganizationSmSentryPoliciesAssignments) | **Put** /organizations/{organizationId}/sm/sentry/policies/assignments | Update an Organizations Sentry Policies using the provided list
@@ -31,7 +35,7 @@ Method | HTTP request | Description
 
 ## BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate
 
-> InlineResponse200335 BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(ctx, organizationId).BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(batchOrganizationDevicesCellularDataProfilesAssignmentsCreate).Execute()
+> InlineResponse200347 BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(ctx, organizationId).BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(batchOrganizationDevicesCellularDataProfilesAssignmentsCreate).Execute()
 
 Assign devices to a Cellular Data Management Profile in batch
 
@@ -51,7 +55,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    batchOrganizationDevicesCellularDataProfilesAssignmentsCreate := *openapiclient.NewInlineObject279([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateDevice("Serial_example"))}) // InlineObject279 | 
+    batchOrganizationDevicesCellularDataProfilesAssignmentsCreate := *openapiclient.NewInlineObject282([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateDevice("Serial_example"))}) // InlineObject282 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -60,7 +64,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: InlineResponse200335
+    // response from `BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: InlineResponse200347
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: %v\n", resp)
 }
 ```
@@ -81,11 +85,11 @@ Other parameters are passed through a pointer to a apiBatchOrganizationDevicesCe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchOrganizationDevicesCellularDataProfilesAssignmentsCreate** | [**InlineObject279**](InlineObject279.md) |  | 
+ **batchOrganizationDevicesCellularDataProfilesAssignmentsCreate** | [**InlineObject282**](InlineObject282.md) |  | 
 
 ### Return type
 
-[**InlineResponse200335**](InlineResponse200335.md)
+[**InlineResponse200347**](InlineResponse200347.md)
 
 ### Authorization
 
@@ -103,7 +107,7 @@ Name | Type | Description  | Notes
 
 ## BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate
 
-> InlineResponse200276 BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(ctx, organizationId).BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(bulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate).Execute()
+> InlineResponse200278 BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(ctx, organizationId).BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(bulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate).Execute()
 
 Assign the local DNS profile to networks in the organization
 
@@ -132,7 +136,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: InlineResponse200276
+    // response from `BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: %v\n", resp)
 }
 ```
@@ -157,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -195,7 +199,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete := *openapiclient.NewInlineObject280([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteDevice("Serial_example"))}) // InlineObject280 | 
+    bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete := *openapiclient.NewInlineObject283([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteDevice("Serial_example"))}) // InlineObject283 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -223,7 +227,7 @@ Other parameters are passed through a pointer to a apiBulkOrganizationDevicesCel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete** | [**InlineObject280**](InlineObject280.md) |  | 
+ **bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete** | [**InlineObject283**](InlineObject283.md) |  | 
 
 ### Return type
 
@@ -245,7 +249,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete
 
-> InlineResponse200276 CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete).Execute()
+> InlineResponse200278 CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete).Execute()
 
 Unassign the local DNS profile to networks in the organization
 
@@ -274,7 +278,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: InlineResponse200276
+    // response from `CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: %v\n", resp)
 }
 ```
@@ -299,7 +303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -317,7 +321,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate
 
-> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate).Execute()
+> InlineResponse200282 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate).Execute()
 
 Assign the split DNS profile to networks in the organization
 
@@ -346,7 +350,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: InlineResponse200280
+    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: %v\n", resp)
 }
 ```
@@ -371,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200280**](InlineResponse200280.md)
+[**InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -389,7 +393,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete
 
-> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete).Execute()
+> InlineResponse200282 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete).Execute()
 
 Unassign the split DNS profile to networks in the organization
 
@@ -418,7 +422,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: InlineResponse200280
+    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: %v\n", resp)
 }
 ```
@@ -443,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200280**](InlineResponse200280.md)
+[**InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -461,7 +465,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment
 
-> InlineResponse200395Items CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId).CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
+> InlineResponse200410Items CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId).CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
 
 Create an Organization-Wide Policy Ruleset Assignment
 
@@ -481,7 +485,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject322("RulesetId_example", "PolicyId_example") // InlineObject322 | 
+    createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject329("RulesetId_example", "PolicyId_example") // InlineObject329 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -490,7 +494,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200395Items
+    // response from `CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200410Items
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: %v\n", resp)
 }
 ```
@@ -511,11 +515,83 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject322**](InlineObject322.md) |  | 
+ **createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject329**](InlineObject329.md) |  | 
 
 ### Return type
 
-[**InlineResponse200395Items**](InlineResponse200395Items.md)
+[**InlineResponse200410Items**](InlineResponse200410Items.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CreateOrganizationWirelessSsidsProfilesAssignment
+
+> InlineResponse200489Items CreateOrganizationWirelessSsidsProfilesAssignment(ctx, organizationId).CreateOrganizationWirelessSsidsProfilesAssignment(createOrganizationWirelessSsidsProfilesAssignment).Execute()
+
+Assigns an SSID profile to an SSID in the organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationWirelessSsidsProfilesAssignment := *openapiclient.NewInlineObject363(*openapiclient.NewOrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid()) // InlineObject363 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AssignmentsApi.CreateOrganizationWirelessSsidsProfilesAssignment(context.Background(), organizationId).CreateOrganizationWirelessSsidsProfilesAssignment(createOrganizationWirelessSsidsProfilesAssignment).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.CreateOrganizationWirelessSsidsProfilesAssignment``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateOrganizationWirelessSsidsProfilesAssignment`: InlineResponse200489Items
+    fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.CreateOrganizationWirelessSsidsProfilesAssignment`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateOrganizationWirelessSsidsProfilesAssignmentRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createOrganizationWirelessSsidsProfilesAssignment** | [**InlineObject363**](InlineObject363.md) |  | 
+
+### Return type
+
+[**InlineResponse200489Items**](InlineResponse200489Items.md)
 
 ### Authorization
 
@@ -602,9 +678,79 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## DeleteOrganizationWirelessSsidsProfilesAssignments
+
+> DeleteOrganizationWirelessSsidsProfilesAssignments(ctx, organizationId).DeleteOrganizationWirelessSsidsProfilesAssignments(deleteOrganizationWirelessSsidsProfilesAssignments).Execute()
+
+Unassigns the SSID profile assigned to an SSID
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    deleteOrganizationWirelessSsidsProfilesAssignments := *openapiclient.NewInlineObject364(*openapiclient.NewOrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1()) // InlineObject364 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AssignmentsApi.DeleteOrganizationWirelessSsidsProfilesAssignments(context.Background(), organizationId).DeleteOrganizationWirelessSsidsProfilesAssignments(deleteOrganizationWirelessSsidsProfilesAssignments).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.DeleteOrganizationWirelessSsidsProfilesAssignments``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteOrganizationWirelessSsidsProfilesAssignmentsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **deleteOrganizationWirelessSsidsProfilesAssignments** | [**InlineObject364**](InlineObject364.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkVlanProfilesAssignmentsByDevice
 
-> []InlineResponse200215 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
+> []InlineResponse200216 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
 
 Get the assigned VLAN Profiles for devices in a network
 
@@ -638,7 +784,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200215
+    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200216
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -668,7 +814,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200215**](InlineResponse200215.md)
+[**[]InlineResponse200216**](InlineResponse200216.md)
 
 ### Authorization
 
@@ -686,7 +832,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsLocalProfilesAssignments
 
-> InlineResponse200275 GetOrganizationApplianceDnsLocalProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
+> InlineResponse200277 GetOrganizationApplianceDnsLocalProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
 
 Fetch the local DNS profile assignments in the organization
 
@@ -716,7 +862,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationApplianceDnsLocalProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsLocalProfilesAssignments`: InlineResponse200275
+    // response from `GetOrganizationApplianceDnsLocalProfilesAssignments`: InlineResponse200277
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationApplianceDnsLocalProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -742,7 +888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200275**](InlineResponse200275.md)
+[**InlineResponse200277**](InlineResponse200277.md)
 
 ### Authorization
 
@@ -760,7 +906,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsSplitProfilesAssignments
 
-> InlineResponse200279 GetOrganizationApplianceDnsSplitProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
+> InlineResponse200281 GetOrganizationApplianceDnsSplitProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
 
 Fetch the split DNS profile assignments in the organization
 
@@ -790,7 +936,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationApplianceDnsSplitProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsSplitProfilesAssignments`: InlineResponse200279
+    // response from `GetOrganizationApplianceDnsSplitProfilesAssignments`: InlineResponse200281
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationApplianceDnsSplitProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -816,7 +962,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200279**](InlineResponse200279.md)
+[**InlineResponse200281**](InlineResponse200281.md)
 
 ### Authorization
 
@@ -834,7 +980,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataProfilesAssignments
 
-> InlineResponse200334 GetOrganizationDevicesCellularDataProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200346 GetOrganizationDevicesCellularDataProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Cellular Data Management Profile assignments in this organization
 
@@ -867,7 +1013,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationDevicesCellularDataProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataProfilesAssignments`: InlineResponse200334
+    // response from `GetOrganizationDevicesCellularDataProfilesAssignments`: InlineResponse200346
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationDevicesCellularDataProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -896,7 +1042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200334**](InlineResponse200334.md)
+[**InlineResponse200346**](InlineResponse200346.md)
 
 ### Authorization
 
@@ -914,7 +1060,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesAssignmentsByClient
 
-> []InlineResponse200386 GetOrganizationPoliciesAssignmentsByClient(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).IncludeUndetectedClients(includeUndetectedClients).Execute()
+> []InlineResponse200401 GetOrganizationPoliciesAssignmentsByClient(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).IncludeUndetectedClients(includeUndetectedClients).Execute()
 
 Get policies for all clients with policies
 
@@ -949,7 +1095,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationPoliciesAssignmentsByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesAssignmentsByClient`: []InlineResponse200386
+    // response from `GetOrganizationPoliciesAssignmentsByClient`: []InlineResponse200401
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationPoliciesAssignmentsByClient`: %v\n", resp)
 }
 ```
@@ -980,7 +1126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200386**](InlineResponse200386.md)
+[**[]InlineResponse200401**](InlineResponse200401.md)
 
 ### Authorization
 
@@ -998,7 +1144,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignments
 
-> InlineResponse200392 GetOrganizationPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignments(ctx, organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).AdaptivePolicyGroupIds(adaptivePolicyGroupIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200407 GetOrganizationPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignments(ctx, organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).AdaptivePolicyGroupIds(adaptivePolicyGroupIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List adaptive policy group assignments
 
@@ -1032,7 +1178,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignments`: InlineResponse200392
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignments`: InlineResponse200407
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignments`: %v\n", resp)
 }
 ```
@@ -1062,7 +1208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200392**](InlineResponse200392.md)
+[**InlineResponse200407**](InlineResponse200407.md)
 
 ### Authorization
 
@@ -1080,7 +1226,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments
 
-> InlineResponse200393 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments(ctx, organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200408 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments(ctx, organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List appliance VLAN policy assignments
 
@@ -1114,7 +1260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments`: InlineResponse200393
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments`: InlineResponse200408
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments`: %v\n", resp)
 }
 ```
@@ -1144,7 +1290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200393**](InlineResponse200393.md)
+[**InlineResponse200408**](InlineResponse200408.md)
 
 ### Authorization
 
@@ -1162,7 +1308,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan
 
-> InlineResponse200394 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan(ctx, organizationId).Search(search).VlanIds(vlanIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200409 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan(ctx, organizationId).Search(search).VlanIds(vlanIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List policies by appliance VLANs
 
@@ -1196,7 +1342,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan`: InlineResponse200394
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan`: InlineResponse200409
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan`: %v\n", resp)
 }
 ```
@@ -1226,7 +1372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200394**](InlineResponse200394.md)
+[**InlineResponse200409**](InlineResponse200409.md)
 
 ### Authorization
 
@@ -1244,7 +1390,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments
 
-> InlineResponse200395 GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments(ctx, organizationId).RulesetIds(rulesetIds).PolicyIds(policyIds).AssignmentIds(assignmentIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200410 GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments(ctx, organizationId).RulesetIds(rulesetIds).PolicyIds(policyIds).AssignmentIds(assignmentIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Ruleset Assignments
 
@@ -1278,7 +1424,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: InlineResponse200395
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: InlineResponse200410
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: %v\n", resp)
 }
 ```
@@ -1308,7 +1454,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200395**](InlineResponse200395.md)
+[**InlineResponse200410**](InlineResponse200410.md)
 
 ### Authorization
 
@@ -1326,7 +1472,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200414 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200429 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -1358,7 +1504,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200414
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200429
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -1386,7 +1532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200414**](InlineResponse200414.md)
+[**[]InlineResponse200429**](InlineResponse200429.md)
 
 ### Authorization
 
@@ -1404,7 +1550,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessRfProfilesAssignmentsByDevice
 
-> []InlineResponse200466 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
+> []InlineResponse200485 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
 
 List the RF profiles of an organization by device
 
@@ -1444,7 +1590,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200466
+    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200485
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -1480,7 +1626,181 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200466**](InlineResponse200466.md)
+[**[]InlineResponse200485**](InlineResponse200485.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessSsidsProfilesAssignments
+
+> InlineResponse200489 GetOrganizationWirelessSsidsProfilesAssignments(ctx, organizationId).NetworkIds(networkIds).SsidIds(ssidIds).ProfileIds(profileIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List the SSID profile assignments in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | The network IDs to include in the result set. (optional)
+    ssidIds := []string{"Inner_example"} // []string | The SSID IDs to include in the result set. (optional)
+    profileIds := []string{"Inner_example"} // []string | The SSID profile IDs to include in the result set. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AssignmentsApi.GetOrganizationWirelessSsidsProfilesAssignments(context.Background(), organizationId).NetworkIds(networkIds).SsidIds(ssidIds).ProfileIds(profileIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationWirelessSsidsProfilesAssignments``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessSsidsProfilesAssignments`: InlineResponse200489
+    fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationWirelessSsidsProfilesAssignments`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessSsidsProfilesAssignmentsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | The network IDs to include in the result set. | 
+ **ssidIds** | **[]string** | The SSID IDs to include in the result set. | 
+ **profileIds** | **[]string** | The SSID profile IDs to include in the result set. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200489**](InlineResponse200489.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork
+
+> InlineResponse200490 GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork(ctx, organizationId).NetworkIds(networkIds).ProfileIds(profileIds).NetworkGroupIds(networkGroupIds).IncludeAllNetworks(includeAllNetworks).ExcludeProfileIds(excludeProfileIds).SortBy(sortBy).SortOrder(sortOrder).Search(search).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List the SSID profile assignments in an organization, grouped by network
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | The network IDs to include in the result set. (optional)
+    profileIds := []string{"Inner_example"} // []string | The SSID profile IDs to include in the result set. (optional)
+    networkGroupIds := []string{"Inner_example"} // []string | The network group IDs to include in the result set. (optional)
+    includeAllNetworks := true // bool | When set to true, include all networks in the organization, even those without any SSID profile assignments. Defaults to false. (optional)
+    excludeProfileIds := []string{"Inner_example"} // []string | The SSID profile IDs to exclude from the result set. (optional)
+    sortBy := "sortBy_example" // string | Optional parameter to specify the field used to sort results. (default: network) (optional)
+    sortOrder := "sortOrder_example" // string | Optional parameter to specify the sort order. Default value is asc. (optional)
+    search := "search_example" // string | Optional parameter to search on network name or network group name. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.AssignmentsApi.GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork(context.Background(), organizationId).NetworkIds(networkIds).ProfileIds(profileIds).NetworkGroupIds(networkGroupIds).IncludeAllNetworks(includeAllNetworks).ExcludeProfileIds(excludeProfileIds).SortBy(sortBy).SortOrder(sortOrder).Search(search).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork`: InlineResponse200490
+    fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationWirelessSsidsProfilesAssignmentsByNetwork`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessSsidsProfilesAssignmentsByNetworkRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | The network IDs to include in the result set. | 
+ **profileIds** | **[]string** | The SSID profile IDs to include in the result set. | 
+ **networkGroupIds** | **[]string** | The network group IDs to include in the result set. | 
+ **includeAllNetworks** | **bool** | When set to true, include all networks in the organization, even those without any SSID profile assignments. Defaults to false. | 
+ **excludeProfileIds** | **[]string** | The SSID profile IDs to exclude from the result set. | 
+ **sortBy** | **string** | Optional parameter to specify the field used to sort results. (default: network) | 
+ **sortOrder** | **string** | Optional parameter to specify the sort order. Default value is asc. | 
+ **search** | **string** | Optional parameter to search on network name or network group name. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200490**](InlineResponse200490.md)
 
 ### Authorization
 
@@ -1498,7 +1818,7 @@ Name | Type | Description  | Notes
 
 ## ReassignNetworkVlanProfilesAssignments
 
-> InlineResponse200216 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
+> InlineResponse200217 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
 
 Update the assigned VLAN Profile for devices in a network
 
@@ -1527,7 +1847,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.ReassignNetworkVlanProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200216
+    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200217
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.ReassignNetworkVlanProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -1552,7 +1872,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200216**](InlineResponse200216.md)
+[**InlineResponse200217**](InlineResponse200217.md)
 
 ### Authorization
 
@@ -1570,7 +1890,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment
 
-> InlineResponse200395Items UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId, assignmentId).UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
+> InlineResponse200410Items UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId, assignmentId).UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
 
 Update an Organization-Wide Policy Ruleset Assignment
 
@@ -1591,7 +1911,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     assignmentId := "assignmentId_example" // string | Assignment ID
-    updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject323() // InlineObject323 |  (optional)
+    updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject330() // InlineObject330 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1600,7 +1920,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200395Items
+    // response from `UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200410Items
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: %v\n", resp)
 }
 ```
@@ -1623,11 +1943,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject323**](InlineObject323.md) |  | 
+ **updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject330**](InlineObject330.md) |  | 
 
 ### Return type
 
-[**InlineResponse200395Items**](InlineResponse200395Items.md)
+[**InlineResponse200410Items**](InlineResponse200410Items.md)
 
 ### Authorization
 
@@ -1645,7 +1965,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmSentryPoliciesAssignments
 
-> InlineResponse200413 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
+> InlineResponse200428 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
 
 Update an Organizations Sentry Policies using the provided list
 
@@ -1665,7 +1985,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject341([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject341 | 
+    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject348([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject348 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1674,7 +1994,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.UpdateOrganizationSmSentryPoliciesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200413
+    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200428
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.UpdateOrganizationSmSentryPoliciesAssignments`: %v\n", resp)
 }
 ```
@@ -1695,11 +2015,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSmSentry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject341**](InlineObject341.md) |  | 
+ **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject348**](InlineObject348.md) |  | 
 
 ### Return type
 
-[**InlineResponse200413**](InlineResponse200413.md)
+[**InlineResponse200428**](InlineResponse200428.md)
 
 ### Authorization
 

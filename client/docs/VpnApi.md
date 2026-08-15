@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**GetNetworkApplianceVpnSiteToSiteVpn**](VpnApi.md#GetNetworkApplianceVpnSiteToSiteVpn) | **Get** /networks/{networkId}/appliance/vpn/siteToSiteVpn | Return the site-to-site VPN settings of a network
 [**GetNetworkWirelessSsidVpn**](VpnApi.md#GetNetworkWirelessSsidVpn) | **Get** /networks/{networkId}/wireless/ssids/{number}/vpn | List the VPN settings for the SSID.
 [**GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas**](VpnApi.md#GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas) | **Get** /organizations/{organizationId}/appliance/vpn/siteToSite/ipsec/peers/slas | Get the list of available IPsec SLA policies for an organization
-[**GetOrganizationApplianceVpnStats**](VpnApi.md#GetOrganizationApplianceVpnStats) | **Get** /organizations/{organizationId}/appliance/vpn/stats | Show VPN history stat for networks in an organization
+[**GetOrganizationApplianceVpnStats**](VpnApi.md#GetOrganizationApplianceVpnStats) | **Get** /organizations/{organizationId}/appliance/vpn/stats | Show VPN history stats for networks in an organization
 [**GetOrganizationApplianceVpnStatuses**](VpnApi.md#GetOrganizationApplianceVpnStatuses) | **Get** /organizations/{organizationId}/appliance/vpn/statuses | Show VPN status for networks in an organization
 [**GetOrganizationApplianceVpnThirdPartyVPNPeers**](VpnApi.md#GetOrganizationApplianceVpnThirdPartyVPNPeers) | **Get** /organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers | Return the third party VPN peers for an organization
 [**GetOrganizationApplianceVpnVpnFirewallRules**](VpnApi.md#GetOrganizationApplianceVpnVpnFirewallRules) | **Get** /organizations/{organizationId}/appliance/vpn/vpnFirewallRules | Return the firewall rules for an organization&#39;s site-to-site VPN
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidVpn
 
-> InlineResponse200255 GetNetworkWirelessSsidVpn(ctx, networkId, number).Execute()
+> InlineResponse200257 GetNetworkWirelessSsidVpn(ctx, networkId, number).Execute()
 
 List the VPN settings for the SSID.
 
@@ -192,7 +192,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetNetworkWirelessSsidVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidVpn`: InlineResponse200255
+    // response from `GetNetworkWirelessSsidVpn`: InlineResponse200257
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetNetworkWirelessSsidVpn`: %v\n", resp)
 }
 ```
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200255**](InlineResponse200255.md)
+[**InlineResponse200257**](InlineResponse200257.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas
 
-> InlineResponse200290 GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).Execute()
+> InlineResponse200292 GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).Execute()
 
 Get the list of available IPsec SLA policies for an organization
 
@@ -264,7 +264,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200290
+    // response from `GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200292
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: %v\n", resp)
 }
 ```
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200290**](InlineResponse200290.md)
+[**InlineResponse200292**](InlineResponse200292.md)
 
 ### Authorization
 
@@ -306,9 +306,9 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnStats
 
-> []InlineResponse200292 GetOrganizationApplianceVpnStats(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200294 GetOrganizationApplianceVpnStats(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).T0(t0).T1(t1).Timespan(timespan).Execute()
 
-Show VPN history stat for networks in an organization
+Show VPN history stats for networks in an organization
 
 
 
@@ -341,7 +341,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetOrganizationApplianceVpnStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnStats`: []InlineResponse200292
+    // response from `GetOrganizationApplianceVpnStats`: []InlineResponse200294
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetOrganizationApplianceVpnStats`: %v\n", resp)
 }
 ```
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200292**](InlineResponse200292.md)
+[**[]InlineResponse200294**](InlineResponse200294.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnStatuses
 
-> []InlineResponse200293 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200295 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Show VPN status for networks in an organization
 
@@ -422,7 +422,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetOrganizationApplianceVpnStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnStatuses`: []InlineResponse200293
+    // response from `GetOrganizationApplianceVpnStatuses`: []InlineResponse200295
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetOrganizationApplianceVpnStatuses`: %v\n", resp)
 }
 ```
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200293**](InlineResponse200293.md)
+[**[]InlineResponse200295**](InlineResponse200295.md)
 
 ### Authorization
 
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200294 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse200296 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -496,7 +496,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200294
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200296
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200294**](InlineResponse200294.md)
+[**InlineResponse200296**](InlineResponse200296.md)
 
 ### Authorization
 
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidVpn
 
-> InlineResponse200255 UpdateNetworkWirelessSsidVpn(ctx, networkId, number).UpdateNetworkWirelessSsidVpn(updateNetworkWirelessSsidVpn).Execute()
+> InlineResponse200257 UpdateNetworkWirelessSsidVpn(ctx, networkId, number).UpdateNetworkWirelessSsidVpn(updateNetworkWirelessSsidVpn).Execute()
 
 Update the VPN settings for the SSID
 
@@ -782,7 +782,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.UpdateNetworkWirelessSsidVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidVpn`: InlineResponse200255
+    // response from `UpdateNetworkWirelessSsidVpn`: InlineResponse200257
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.UpdateNetworkWirelessSsidVpn`: %v\n", resp)
 }
 ```
@@ -809,7 +809,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200255**](InlineResponse200255.md)
+[**InlineResponse200257**](InlineResponse200257.md)
 
 ### Authorization
 
@@ -827,7 +827,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas
 
-> InlineResponse200291 UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(updateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas).Execute()
+> InlineResponse200293 UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(updateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas).Execute()
 
 Update the IPsec SLA policies for an organization
 
@@ -856,7 +856,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200291
+    // response from `UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200293
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: %v\n", resp)
 }
 ```
@@ -881,7 +881,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200291**](InlineResponse200291.md)
+[**InlineResponse200293**](InlineResponse200293.md)
 
 ### Authorization
 
@@ -899,7 +899,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200294 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse200296 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -928,7 +928,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200294
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200296
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -953,7 +953,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200294**](InlineResponse200294.md)
+[**InlineResponse200296**](InlineResponse200296.md)
 
 ### Authorization
 

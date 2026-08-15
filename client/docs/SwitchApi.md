@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ## CloneOrganizationSwitchDevices
 
-> InlineResponse200432 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
+> InlineResponse200447 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
 
 Clone port-level and some switch-level configuration settings from a source switch to one or more target switches
 
@@ -206,7 +206,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject345("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject345 | 
+    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject352("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject352 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -215,7 +215,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CloneOrganizationSwitchDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CloneOrganizationSwitchDevices`: InlineResponse200432
+    // response from `CloneOrganizationSwitchDevices`: InlineResponse200447
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CloneOrganizationSwitchDevices`: %v\n", resp)
 }
 ```
@@ -236,11 +236,11 @@ Other parameters are passed through a pointer to a apiCloneOrganizationSwitchDev
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cloneOrganizationSwitchDevices** | [**InlineObject345**](InlineObject345.md) |  | 
+ **cloneOrganizationSwitchDevices** | [**InlineObject352**](InlineObject352.md) |  | 
 
 ### Return type
 
-[**InlineResponse200432**](InlineResponse200432.md)
+[**InlineResponse200447**](InlineResponse200447.md)
 
 ### Authorization
 
@@ -4733,7 +4733,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200327 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse200339 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch template port
 
@@ -4764,7 +4764,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200327
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200339
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -4794,7 +4794,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200327**](InlineResponse200327.md)
+[**InlineResponse200339**](InlineResponse200339.md)
 
 ### Authorization
 
@@ -4812,7 +4812,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse200327 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse200339 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch template
 
@@ -4842,7 +4842,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200327
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200339
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -4870,7 +4870,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200327**](InlineResponse200327.md)
+[**[]InlineResponse200339**](InlineResponse200339.md)
 
 ### Authorization
 
@@ -4888,7 +4888,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfiles
 
-> []InlineResponse200326 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
+> []InlineResponse200338 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
 
 List the switch templates for your switch template configuration
 
@@ -4917,7 +4917,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationConfigTemplateSwitchProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200326
+    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200338
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationConfigTemplateSwitchProfiles`: %v\n", resp)
 }
 ```
@@ -4943,7 +4943,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200326**](InlineResponse200326.md)
+[**[]InlineResponse200338**](InlineResponse200338.md)
 
 ### Authorization
 
@@ -4961,7 +4961,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummarySwitchPowerHistory
 
-> []InlineResponse200421 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200436 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the total PoE power draw for all switch ports in the organization over the requested timespan (by default the last 24 hours)
 
@@ -4992,7 +4992,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSummarySwitchPowerHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200421
+    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200436
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSummarySwitchPowerHistory`: %v\n", resp)
 }
 ```
@@ -5019,7 +5019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200421**](InlineResponse200421.md)
+[**[]InlineResponse200436**](InlineResponse200436.md)
 
 ### Authorization
 
@@ -5037,7 +5037,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsBySwitch
 
-> []InlineResponse200433 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> []InlineResponse200448 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the switchports in an organization by switch
 
@@ -5077,7 +5077,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200433
+    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200448
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsBySwitch`: %v\n", resp)
 }
 ```
@@ -5112,7 +5112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200433**](InlineResponse200433.md)
+[**[]InlineResponse200448**](InlineResponse200448.md)
 
 ### Authorization
 
@@ -5130,7 +5130,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsClientsOverviewByDevice
 
-> InlineResponse200434 GetOrganizationSwitchPortsClientsOverviewByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200449 GetOrganizationSwitchPortsClientsOverviewByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the number of clients for all switchports with at least one online client in an organization.
 
@@ -5172,7 +5172,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsClientsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsClientsOverviewByDevice`: InlineResponse200434
+    // response from `GetOrganizationSwitchPortsClientsOverviewByDevice`: InlineResponse200449
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsClientsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -5209,7 +5209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200434**](InlineResponse200434.md)
+[**InlineResponse200449**](InlineResponse200449.md)
 
 ### Authorization
 
@@ -5227,7 +5227,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsOverview
 
-> InlineResponse200435 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200450 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the counts of all active ports for the requested timespan, grouped by speed
 
@@ -5258,7 +5258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200435
+    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200450
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsOverview`: %v\n", resp)
 }
 ```
@@ -5285,7 +5285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200435**](InlineResponse200435.md)
+[**InlineResponse200450**](InlineResponse200450.md)
 
 ### Authorization
 
@@ -5303,7 +5303,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsStatusesBySwitch
 
-> InlineResponse200436 GetOrganizationSwitchPortsStatusesBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200451 GetOrganizationSwitchPortsStatusesBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the switchports in an organization
 
@@ -5343,7 +5343,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsStatusesBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsStatusesBySwitch`: InlineResponse200436
+    // response from `GetOrganizationSwitchPortsStatusesBySwitch`: InlineResponse200451
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsStatusesBySwitch`: %v\n", resp)
 }
 ```
@@ -5378,7 +5378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200436**](InlineResponse200436.md)
+[**InlineResponse200451**](InlineResponse200451.md)
 
 ### Authorization
 
@@ -5396,7 +5396,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsTopologyDiscoveryByDevice
 
-> InlineResponse200437 GetOrganizationSwitchPortsTopologyDiscoveryByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200452 GetOrganizationSwitchPortsTopologyDiscoveryByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List most recently seen LLDP/CDP discovery and topology information per switch port in an organization.
 
@@ -5438,7 +5438,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsTopologyDiscoveryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsTopologyDiscoveryByDevice`: InlineResponse200437
+    // response from `GetOrganizationSwitchPortsTopologyDiscoveryByDevice`: InlineResponse200452
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsTopologyDiscoveryByDevice`: %v\n", resp)
 }
 ```
@@ -5475,7 +5475,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200437**](InlineResponse200437.md)
+[**InlineResponse200452**](InlineResponse200452.md)
 
 ### Authorization
 
@@ -5493,7 +5493,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval
 
-> InlineResponse200438 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200453 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the historical usage and traffic data of switchports in an organization.
 
@@ -5537,7 +5537,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200438
+    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200453
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -5576,7 +5576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200438**](InlineResponse200438.md)
+[**InlineResponse200453**](InlineResponse200453.md)
 
 ### Authorization
 
@@ -7594,7 +7594,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200327 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse200339 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch template port
 
@@ -7617,7 +7617,7 @@ func main() {
     configTemplateId := "configTemplateId_example" // string | Config template ID
     profileId := "profileId_example" // string | Profile ID
     portId := "portId_example" // string | Port ID
-    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject277() // InlineObject277 |  (optional)
+    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject280() // InlineObject280 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7626,7 +7626,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200327
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200339
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -7653,11 +7653,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject277**](InlineObject277.md) |  | 
+ **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject280**](InlineObject280.md) |  | 
 
 ### Return type
 
-[**InlineResponse200327**](InlineResponse200327.md)
+[**InlineResponse200339**](InlineResponse200339.md)
 
 ### Authorization
 

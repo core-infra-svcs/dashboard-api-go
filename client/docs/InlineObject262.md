@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the Dashboard branding policy. | 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo1**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo1.md) |  | [optional] 
+**Name** | **string** | Name of the alert profile | 
+**NetworkIds** | **[]string** | Networks associated with this alert profile | 
+**AlertTypes** | **[]string** | Alert types associated with this alert profile | 
+**AlertScheduleId** | Pointer to **NullableString** | ID of the alert schedule associated with this profile | [optional] 
+**Configuration** | [**OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration**](OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration.md) |  | 
 
 ## Methods
 
 ### NewInlineObject262
 
-`func NewInlineObject262(name string, ) *InlineObject262`
+`func NewInlineObject262(name string, networkIds []string, alertTypes []string, configuration OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration, ) *InlineObject262`
 
 NewInlineObject262 instantiates a new InlineObject262 object
 This constructor will assign default values to properties that have it defined,
@@ -49,105 +49,100 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetEnabled
+### GetNetworkIds
 
-`func (o *InlineObject262) GetEnabled() bool`
+`func (o *InlineObject262) GetNetworkIds() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject262) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject262) GetNetworkIdsOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetNetworkIds
 
-`func (o *InlineObject262) SetEnabled(v bool)`
+`func (o *InlineObject262) SetNetworkIds(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject262) HasEnabled() bool`
+### GetAlertTypes
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject262) GetAlertTypes() []string`
 
-### GetAdminSettings
+GetAlertTypes returns the AlertTypes field if non-nil, zero value otherwise.
 
-`func (o *InlineObject262) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+### GetAlertTypesOk
 
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject262) GetAlertTypesOk() (*[]string, bool)`
 
-### GetAdminSettingsOk
-
-`func (o *InlineObject262) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
-
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+GetAlertTypesOk returns a tuple with the AlertTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminSettings
+### SetAlertTypes
 
-`func (o *InlineObject262) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+`func (o *InlineObject262) SetAlertTypes(v []string)`
 
-SetAdminSettings sets AdminSettings field to given value.
+SetAlertTypes sets AlertTypes field to given value.
 
-### HasAdminSettings
 
-`func (o *InlineObject262) HasAdminSettings() bool`
+### GetAlertScheduleId
 
-HasAdminSettings returns a boolean if a field has been set.
+`func (o *InlineObject262) GetAlertScheduleId() string`
 
-### GetHelpSettings
+GetAlertScheduleId returns the AlertScheduleId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject262) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings1`
+### GetAlertScheduleIdOk
 
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject262) GetAlertScheduleIdOk() (*string, bool)`
 
-### GetHelpSettingsOk
-
-`func (o *InlineObject262) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings1, bool)`
-
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+GetAlertScheduleIdOk returns a tuple with the AlertScheduleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelpSettings
+### SetAlertScheduleId
 
-`func (o *InlineObject262) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings1)`
+`func (o *InlineObject262) SetAlertScheduleId(v string)`
 
-SetHelpSettings sets HelpSettings field to given value.
+SetAlertScheduleId sets AlertScheduleId field to given value.
 
-### HasHelpSettings
+### HasAlertScheduleId
 
-`func (o *InlineObject262) HasHelpSettings() bool`
+`func (o *InlineObject262) HasAlertScheduleId() bool`
 
-HasHelpSettings returns a boolean if a field has been set.
+HasAlertScheduleId returns a boolean if a field has been set.
 
-### GetCustomLogo
+### SetAlertScheduleIdNil
 
-`func (o *InlineObject262) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo1`
+`func (o *InlineObject262) SetAlertScheduleIdNil(b bool)`
 
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+ SetAlertScheduleIdNil sets the value for AlertScheduleId to be an explicit nil
 
-### GetCustomLogoOk
+### UnsetAlertScheduleId
+`func (o *InlineObject262) UnsetAlertScheduleId()`
 
-`func (o *InlineObject262) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo1, bool)`
+UnsetAlertScheduleId ensures that no value is present for AlertScheduleId, not even an explicit nil
+### GetConfiguration
 
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+`func (o *InlineObject262) GetConfiguration() OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration`
+
+GetConfiguration returns the Configuration field if non-nil, zero value otherwise.
+
+### GetConfigurationOk
+
+`func (o *InlineObject262) GetConfigurationOk() (*OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration, bool)`
+
+GetConfigurationOk returns a tuple with the Configuration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomLogo
+### SetConfiguration
 
-`func (o *InlineObject262) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo1)`
+`func (o *InlineObject262) SetConfiguration(v OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration)`
 
-SetCustomLogo sets CustomLogo field to given value.
+SetConfiguration sets Configuration field to given value.
 
-### HasCustomLogo
-
-`func (o *InlineObject262) HasCustomLogo() bool`
-
-HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

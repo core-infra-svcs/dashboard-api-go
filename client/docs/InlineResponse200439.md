@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Serial** | Pointer to **string** | The uplink serial | [optional] 
-**Model** | Pointer to **string** | The uplink model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**HighAvailability** | Pointer to [**OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability**](OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability.md) |  | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdUplinksStatusesUplinks**](OrganizationsOrganizationIdUplinksStatusesUplinks.md) | Uplinks | [optional] 
+**Category** | Pointer to **string** | Name of the Application Category | [optional] 
+**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
+**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
+**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
+**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse200439WithDefaults instantiates a new InlineResponse200439 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetCategory
 
-`func (o *InlineResponse200439) GetNetworkId() string`
+`func (o *InlineResponse200439) GetCategory() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetCategoryOk
 
-`func (o *InlineResponse200439) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200439) GetCategoryOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetCategory
 
-`func (o *InlineResponse200439) SetNetworkId(v string)`
+`func (o *InlineResponse200439) SetCategory(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetCategory sets Category field to given value.
 
-### HasNetworkId
+### HasCategory
 
-`func (o *InlineResponse200439) HasNetworkId() bool`
+`func (o *InlineResponse200439) HasCategory() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetSerial
+### GetTotal
 
-`func (o *InlineResponse200439) GetSerial() string`
+`func (o *InlineResponse200439) GetTotal() float32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetTotalOk
 
-`func (o *InlineResponse200439) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200439) GetTotalOk() (*float32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetTotal
 
-`func (o *InlineResponse200439) SetSerial(v string)`
+`func (o *InlineResponse200439) SetTotal(v float32)`
 
-SetSerial sets Serial field to given value.
+SetTotal sets Total field to given value.
 
-### HasSerial
+### HasTotal
 
-`func (o *InlineResponse200439) HasSerial() bool`
+`func (o *InlineResponse200439) HasTotal() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetModel
+### GetDownstream
 
-`func (o *InlineResponse200439) GetModel() string`
+`func (o *InlineResponse200439) GetDownstream() float32`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200439) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200439) GetDownstreamOk() (*float32, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetDownstream
 
-`func (o *InlineResponse200439) SetModel(v string)`
+`func (o *InlineResponse200439) SetDownstream(v float32)`
 
-SetModel sets Model field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasModel
+### HasDownstream
 
-`func (o *InlineResponse200439) HasModel() bool`
+`func (o *InlineResponse200439) HasDownstream() bool`
 
-HasModel returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
-### GetLastReportedAt
+### GetUpstream
 
-`func (o *InlineResponse200439) GetLastReportedAt() time.Time`
+`func (o *InlineResponse200439) GetUpstream() float32`
 
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetLastReportedAtOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200439) GetLastReportedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200439) GetUpstreamOk() (*float32, bool)`
 
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastReportedAt
+### SetUpstream
 
-`func (o *InlineResponse200439) SetLastReportedAt(v time.Time)`
+`func (o *InlineResponse200439) SetUpstream(v float32)`
 
-SetLastReportedAt sets LastReportedAt field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasLastReportedAt
+### HasUpstream
 
-`func (o *InlineResponse200439) HasLastReportedAt() bool`
+`func (o *InlineResponse200439) HasUpstream() bool`
 
-HasLastReportedAt returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetHighAvailability
+### GetPercentage
 
-`func (o *InlineResponse200439) GetHighAvailability() OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability`
+`func (o *InlineResponse200439) GetPercentage() float32`
 
-GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
+GetPercentage returns the Percentage field if non-nil, zero value otherwise.
 
-### GetHighAvailabilityOk
+### GetPercentageOk
 
-`func (o *InlineResponse200439) GetHighAvailabilityOk() (*OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability, bool)`
+`func (o *InlineResponse200439) GetPercentageOk() (*float32, bool)`
 
-GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
+GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHighAvailability
+### SetPercentage
 
-`func (o *InlineResponse200439) SetHighAvailability(v OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability)`
+`func (o *InlineResponse200439) SetPercentage(v float32)`
 
-SetHighAvailability sets HighAvailability field to given value.
+SetPercentage sets Percentage field to given value.
 
-### HasHighAvailability
+### HasPercentage
 
-`func (o *InlineResponse200439) HasHighAvailability() bool`
+`func (o *InlineResponse200439) HasPercentage() bool`
 
-HasHighAvailability returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200439) GetUplinks() []OrganizationsOrganizationIdUplinksStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200439) GetUplinksOk() (*[]OrganizationsOrganizationIdUplinksStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200439) SetUplinks(v []OrganizationsOrganizationIdUplinksStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200439) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

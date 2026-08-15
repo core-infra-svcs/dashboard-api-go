@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
+**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject333
 
-`func NewInlineObject333() *InlineObject333`
+`func NewInlineObject333(name string, ) *InlineObject333`
 
 NewInlineObject333 instantiates a new InlineObject333 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,75 @@ NewInlineObject333WithDefaults instantiates a new InlineObject333 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetName
 
-`func (o *InlineObject333) GetRole() string`
+`func (o *InlineObject333) GetName() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetNameOk
 
-`func (o *InlineObject333) GetRoleOk() (*string, bool)`
+`func (o *InlineObject333) GetNameOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetName
 
-`func (o *InlineObject333) SetRole(v string)`
+`func (o *InlineObject333) SetName(v string)`
 
-SetRole sets Role field to given value.
+SetName sets Name field to given value.
 
-### HasRole
 
-`func (o *InlineObject333) HasRole() bool`
+### GetCategory
 
-HasRole returns a boolean if a field has been set.
+`func (o *InlineObject333) GetCategory() string`
 
-### GetOrgAccess
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-`func (o *InlineObject333) GetOrgAccess() string`
+### GetCategoryOk
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+`func (o *InlineObject333) GetCategoryOk() (*string, bool)`
 
-### GetOrgAccessOk
-
-`func (o *InlineObject333) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetCategory
 
-`func (o *InlineObject333) SetOrgAccess(v string)`
+`func (o *InlineObject333) SetCategory(v string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetCategory sets Category field to given value.
 
-### HasOrgAccess
+### HasCategory
 
-`func (o *InlineObject333) HasOrgAccess() bool`
+`func (o *InlineObject333) HasCategory() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetTags
+### GetObjectIds
 
-`func (o *InlineObject333) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
+`func (o *InlineObject333) GetObjectIds() []string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetObjectIdsOk
 
-`func (o *InlineObject333) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
+`func (o *InlineObject333) GetObjectIdsOk() (*[]string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetObjectIds
 
-`func (o *InlineObject333) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
+`func (o *InlineObject333) SetObjectIds(v []string)`
 
-SetTags sets Tags field to given value.
+SetObjectIds sets ObjectIds field to given value.
 
-### HasTags
+### HasObjectIds
 
-`func (o *InlineObject333) HasTags() bool`
+`func (o *InlineObject333) HasObjectIds() bool`
 
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject333) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject333) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject333) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject333) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

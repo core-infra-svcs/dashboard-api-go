@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
-**LicenseId** | **string** | The ID of the SM license to move the seats from | 
-**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
+**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
 
 ## Methods
 
 ### NewInlineObject305
 
-`func NewInlineObject305(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject305`
+`func NewInlineObject305() *InlineObject305`
 
 NewInlineObject305 instantiates a new InlineObject305 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +25,30 @@ NewInlineObject305WithDefaults instantiates a new InlineObject305 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetSerials
 
-`func (o *InlineObject305) GetDestOrganizationId() string`
+`func (o *InlineObject305) GetSerials() []string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetSerialsOk
 
-`func (o *InlineObject305) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject305) GetSerialsOk() (*[]string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetSerials
 
-`func (o *InlineObject305) SetDestOrganizationId(v string)`
+`func (o *InlineObject305) SetSerials(v []string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
 
-### GetLicenseId
+`func (o *InlineObject305) HasSerials() bool`
 
-`func (o *InlineObject305) GetLicenseId() string`
-
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
-
-### GetLicenseIdOk
-
-`func (o *InlineObject305) GetLicenseIdOk() (*string, bool)`
-
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseId
-
-`func (o *InlineObject305) SetLicenseId(v string)`
-
-SetLicenseId sets LicenseId field to given value.
-
-
-### GetSeatCount
-
-`func (o *InlineObject305) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject305) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject305) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
-
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

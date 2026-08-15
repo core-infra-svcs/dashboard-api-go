@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationWirelessDevicesRadsecCertificatesAuthority
 
-> InlineResponse200457 CreateOrganizationWirelessDevicesRadsecCertificatesAuthority(ctx, organizationId).Execute()
+> InlineResponse200476 CreateOrganizationWirelessDevicesRadsecCertificatesAuthority(ctx, organizationId).Execute()
 
 Create an organization's RadSec device Certificate Authority (CA)
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AuthoritiesApi.CreateOrganizationWirelessDevicesRadsecCertificatesAuthority``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationWirelessDevicesRadsecCertificatesAuthority`: InlineResponse200457
+    // response from `CreateOrganizationWirelessDevicesRadsecCertificatesAuthority`: InlineResponse200476
     fmt.Fprintf(os.Stdout, "Response from `AuthoritiesApi.CreateOrganizationWirelessDevicesRadsecCertificatesAuthority`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200457**](InlineResponse200457.md)
+[**InlineResponse200476**](InlineResponse200476.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesRadsecCertificatesAuthorities
 
-> []InlineResponse200456 GetOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
+> []InlineResponse200475 GetOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
 
 Query for details on the organization's RadSec device Certificate Authority certificates (CAs)
 
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AuthoritiesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthorities`: []InlineResponse200456
+    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthorities`: []InlineResponse200475
     fmt.Fprintf(os.Stdout, "Response from `AuthoritiesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthorities`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200456**](InlineResponse200456.md)
+[**[]InlineResponse200475**](InlineResponse200475.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls
 
-> InlineResponse200458 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
+> InlineResponse200477 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
 
 Query for certificate revocation list (CRL) for the organization's RadSec device Certificate Authorities (CAs).
 
@@ -185,7 +185,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AuthoritiesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls`: InlineResponse200458
+    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls`: InlineResponse200477
     fmt.Fprintf(os.Stdout, "Response from `AuthoritiesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrls`: %v\n", resp)
 }
 ```
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200458**](InlineResponse200458.md)
+[**InlineResponse200477**](InlineResponse200477.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas
 
-> InlineResponse200458 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
+> InlineResponse200477 GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas(ctx, organizationId).CertificateAuthorityIds(certificateAuthorityIds).Execute()
 
 Query for all delta certificate revocation list (CRL) for the organization's RadSec device Certificate Authority (CA) with the given id.
 
@@ -257,7 +257,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AuthoritiesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas`: InlineResponse200458
+    // response from `GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas`: InlineResponse200477
     fmt.Fprintf(os.Stdout, "Response from `AuthoritiesApi.GetOrganizationWirelessDevicesRadsecCertificatesAuthoritiesCrlsDeltas`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200458**](InlineResponse200458.md)
+[**InlineResponse200477**](InlineResponse200477.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities
 
-> InlineResponse200457 UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(updateOrganizationWirelessDevicesRadsecCertificatesAuthorities).Execute()
+> InlineResponse200476 UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(ctx, organizationId).UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities(updateOrganizationWirelessDevicesRadsecCertificatesAuthorities).Execute()
 
 Update an organization's RadSec device Certificate Authority (CA) state
 
@@ -320,7 +320,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationWirelessDevicesRadsecCertificatesAuthorities := *openapiclient.NewInlineObject348() // InlineObject348 |  (optional)
+    updateOrganizationWirelessDevicesRadsecCertificatesAuthorities := *openapiclient.NewInlineObject355() // InlineObject355 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -329,7 +329,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AuthoritiesApi.UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities`: InlineResponse200457
+    // response from `UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities`: InlineResponse200476
     fmt.Fprintf(os.Stdout, "Response from `AuthoritiesApi.UpdateOrganizationWirelessDevicesRadsecCertificatesAuthorities`: %v\n", resp)
 }
 ```
@@ -350,11 +350,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationWirelessDevicesRadsecCertificatesAuthorities** | [**InlineObject348**](InlineObject348.md) |  | 
+ **updateOrganizationWirelessDevicesRadsecCertificatesAuthorities** | [**InlineObject355**](InlineObject355.md) |  | 
 
 ### Return type
 
-[**InlineResponse200457**](InlineResponse200457.md)
+[**InlineResponse200476**](InlineResponse200476.md)
 
 ### Authorization
 

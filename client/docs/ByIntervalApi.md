@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApiRequestsOverviewResponseCodesByInterval
 
-> []InlineResponse200270 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
+> []InlineResponse200272 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
 
 Tracks organizations' API requests by response code across a given time period
 
@@ -58,7 +58,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200270
+    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200272
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval`: %v\n", resp)
 }
 ```
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200270**](InlineResponse200270.md)
+[**[]InlineResponse200272**](InlineResponse200272.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraDetectionsHistoryByBoundaryByInterval
 
-> []InlineResponse200307 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
+> []InlineResponse200311 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
 
 Returns analytics data for timespans
 
@@ -141,7 +141,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200307
+    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200311
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: %v\n", resp)
 }
 ```
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200307**](InlineResponse200307.md)
+[**[]InlineResponse200311**](InlineResponse200311.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval
 
-> InlineResponse200338 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> InlineResponse200350 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 List historical cellular data usage grouped by device and interval in this organization
 
@@ -223,7 +223,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200338
+    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200350
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200338**](InlineResponse200338.md)
+[**InlineResponse200350**](InlineResponse200350.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesSystemMemoryUsageHistoryByInterval
 
-> InlineResponse200355 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
+> InlineResponse200367 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
 
 Return the memory utilization history in kB for devices in the organization.
 
@@ -311,7 +311,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200355
+    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200367
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200355**](InlineResponse200355.md)
+[**InlineResponse200367**](InlineResponse200367.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval
 
-> InlineResponse200438 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200453 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the historical usage and traffic data of switchports in an organization.
 
@@ -407,7 +407,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200438
+    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200453
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -446,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200438**](InlineResponse200438.md)
+[**InlineResponse200453**](InlineResponse200453.md)
 
 ### Authorization
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval
 
-> InlineResponse200473 GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Resolution(resolution).Execute()
+> InlineResponse200495 GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Resolution(resolution).Execute()
 
 List wireless client counts of wireless LAN controllers over time in an organization
 
@@ -501,7 +501,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval`: InlineResponse200473
+    // response from `GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval`: InlineResponse200495
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -534,7 +534,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200473**](InlineResponse200473.md)
+[**InlineResponse200495**](InlineResponse200495.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval
 
-> InlineResponse200477 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200499 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history usage in an organization
 
@@ -587,7 +587,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200477
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200499
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200477**](InlineResponse200477.md)
+[**InlineResponse200499**](InlineResponse200499.md)
 
 ### Authorization
 
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval
 
-> InlineResponse200480 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200502 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history usage in an organization
 
@@ -671,7 +671,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200480
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200502
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -702,7 +702,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200480**](InlineResponse200480.md)
+[**InlineResponse200502**](InlineResponse200502.md)
 
 ### Authorization
 
@@ -720,7 +720,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval
 
-> InlineResponse200482 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200504 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the traffic for the interfaces of a Wireless LAN controller
 
@@ -756,7 +756,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200482
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200504
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -788,7 +788,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200482**](InlineResponse200482.md)
+[**InlineResponse200504**](InlineResponse200504.md)
 
 ### Authorization
 
@@ -806,7 +806,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval
 
-> InlineResponse200485 GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200507 GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List cpu utilization data of wireless LAN controllers in an organization
 
@@ -841,7 +841,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: InlineResponse200485
+    // response from `GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: InlineResponse200507
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -872,7 +872,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200485**](InlineResponse200485.md)
+[**InlineResponse200507**](InlineResponse200507.md)
 
 ### Authorization
 
@@ -890,7 +890,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval
 
-> []InlineResponse200448 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200467 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands, segmented by device.
 
@@ -927,7 +927,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200448
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200467
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -960,7 +960,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200448**](InlineResponse200448.md)
+[**[]InlineResponse200467**](InlineResponse200467.md)
 
 ### Authorization
 
@@ -978,7 +978,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval
 
-> []InlineResponse200449 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200468 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands
 
@@ -1015,7 +1015,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200449
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200468
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: %v\n", resp)
 }
 ```
@@ -1048,7 +1048,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200449**](InlineResponse200449.md)
+[**[]InlineResponse200468**](InlineResponse200468.md)
 
 ### Authorization
 

@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationPoliciesGlobalFirewallRulesetsRule
 
-> InlineResponse200389Items CreateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRulesetsRule(createOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
+> InlineResponse200404Items CreateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRulesetsRule(createOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
 
 Create an Organization-Wide Policy Firewall Rule
 
@@ -113,7 +113,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject314("Name_example", "RulesetId_example", "Policy_example", *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources([]string{"MatchCriteria_example"}), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations([]string{"MatchCriteria_example"})) // InlineObject314 | 
+    createOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject321("Name_example", "RulesetId_example", "Policy_example", *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources([]string{"MatchCriteria_example"}), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations([]string{"MatchCriteria_example"})) // InlineObject321 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.CreateOrganizationPoliciesGlobalFirewallRulesetsRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200389Items
+    // response from `CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200404Items
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: %v\n", resp)
 }
 ```
@@ -143,11 +143,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject314**](InlineObject314.md) |  | 
+ **createOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject321**](InlineObject321.md) |  | 
 
 ### Return type
 
-[**InlineResponse200389Items**](InlineResponse200389Items.md)
+[**InlineResponse200404Items**](InlineResponse200404Items.md)
 
 ### Authorization
 
@@ -377,7 +377,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200254 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
+> InlineResponse200256 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
 
 Display the traffic shaping settings for a SSID on an MR network
 
@@ -406,7 +406,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.GetNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200254
+    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200256
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.GetNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200254**](InlineResponse200254.md)
+[**InlineResponse200256**](InlineResponse200256.md)
 
 ### Authorization
 
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalFirewallRulesetsRules
 
-> InlineResponse200389 GetOrganizationPoliciesGlobalFirewallRulesetsRules(ctx, organizationId).RulesetIds(rulesetIds).RuleIds(ruleIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200404 GetOrganizationPoliciesGlobalFirewallRulesetsRules(ctx, organizationId).RulesetIds(rulesetIds).RuleIds(ruleIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Firewall Rules
 
@@ -483,7 +483,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.GetOrganizationPoliciesGlobalFirewallRulesetsRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalFirewallRulesetsRules`: InlineResponse200389
+    // response from `GetOrganizationPoliciesGlobalFirewallRulesetsRules`: InlineResponse200404
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.GetOrganizationPoliciesGlobalFirewallRulesetsRules`: %v\n", resp)
 }
 ```
@@ -512,7 +512,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200389**](InlineResponse200389.md)
+[**InlineResponse200404**](InlineResponse200404.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessAirMarshalRules
 
-> InlineResponse200443 GetOrganizationWirelessAirMarshalRules(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200458 GetOrganizationWirelessAirMarshalRules(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the current Air Marshal rules for this organization
 
@@ -562,7 +562,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.GetOrganizationWirelessAirMarshalRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessAirMarshalRules`: InlineResponse200443
+    // response from `GetOrganizationWirelessAirMarshalRules`: InlineResponse200458
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.GetOrganizationWirelessAirMarshalRules`: %v\n", resp)
 }
 ```
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200443**](InlineResponse200443.md)
+[**InlineResponse200458**](InlineResponse200458.md)
 
 ### Authorization
 
@@ -755,7 +755,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200254 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
+> InlineResponse200256 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
 
 Update the traffic shaping rules for an SSID on an MR network.
 
@@ -785,7 +785,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.UpdateNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200254
+    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200256
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.UpdateNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200254**](InlineResponse200254.md)
+[**InlineResponse200256**](InlineResponse200256.md)
 
 ### Authorization
 
@@ -830,7 +830,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalFirewallRulesetsRule
 
-> InlineResponse200389Items UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId, ruleId).UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(updateOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
+> InlineResponse200404Items UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId, ruleId).UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(updateOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
 
 Update an Organization-Wide Policy Firewall Rule
 
@@ -851,7 +851,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     ruleId := "ruleId_example" // string | Rule ID
-    updateOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject315() // InlineObject315 |  (optional)
+    updateOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject322() // InlineObject322 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -860,7 +860,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.UpdateOrganizationPoliciesGlobalFirewallRulesetsRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200389Items
+    // response from `UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200404Items
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: %v\n", resp)
 }
 ```
@@ -883,11 +883,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject315**](InlineObject315.md) |  | 
+ **updateOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject322**](InlineObject322.md) |  | 
 
 ### Return type
 
-[**InlineResponse200389Items**](InlineResponse200389Items.md)
+[**InlineResponse200404Items**](InlineResponse200404Items.md)
 
 ### Authorization
 

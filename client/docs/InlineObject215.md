@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **WpaEncryptionMode** | Pointer to **string** | The types of WPA encryption. (&#39;WPA1 only&#39;, &#39;WPA1 and WPA2&#39;, &#39;WPA2 only&#39;, &#39;WPA3 Transition Mode&#39;, &#39;WPA3 only&#39; or &#39;WPA3 192-bit Security&#39;) | [optional] 
 **Dot11w** | Pointer to [**NetworksNetworkIdApplianceSsidsNumberDot11w**](NetworksNetworkIdApplianceSsidsNumberDot11w.md) |  | [optional] 
 **Dot11r** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberDot11r**](NetworksNetworkIdWirelessSsidsNumberDot11r.md) |  | [optional] 
-**SplashPage** | Pointer to **string** | The type of splash page for the SSID (&#39;None&#39;, &#39;Click-through splash page&#39;, &#39;Billing&#39;, &#39;Password-protected with Meraki RADIUS&#39;, &#39;Password-protected with custom RADIUS&#39;, &#39;Password-protected with Active Directory&#39;, &#39;Password-protected with LDAP&#39;, &#39;SMS authentication&#39;, &#39;Systems Manager Sentry&#39;, &#39;Facebook Wi-Fi&#39;, &#39;Google OAuth&#39;, &#39;Microsoft Entra ID&#39;, &#39;Sponsored guest&#39;, &#39;Cisco ISE&#39; or &#39;Google Apps domain&#39;).This attribute is not supported for template children. | [optional] 
+**SplashPage** | Pointer to **string** | The type of splash page for the SSID (&#39;None&#39;, &#39;Click-through splash page&#39;, &#39;Billing&#39;, &#39;Password-protected with Meraki RADIUS&#39;, &#39;Password-protected with custom RADIUS&#39;, &#39;Password-protected with Active Directory&#39;, &#39;Password-protected with LDAP&#39;, &#39;SMS authentication&#39;, &#39;Systems Manager Sentry&#39;, &#39;Facebook Wi-Fi&#39;, &#39;Google OAuth&#39;, &#39;Microsoft Entra ID&#39;, &#39;Sponsored guest&#39; or &#39;Cisco ISE&#39;).This attribute is not supported for template children. | [optional] 
 **SplashGuestSponsorDomains** | Pointer to **[]string** | Array of valid sponsor email domains for sponsored guest splash type. | [optional] 
 **Oauth** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberOauth**](NetworksNetworkIdWirelessSsidsNumberOauth.md) |  | [optional] 
 **LocalRadius** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberLocalRadius**](NetworksNetworkIdWirelessSsidsNumberLocalRadius.md) |  | [optional] 
@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **RadiusAccountingInterimInterval** | Pointer to **int32** | The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server. | [optional] 
 **RadiusAttributeForGroupPolicies** | Pointer to **string** | Specify the RADIUS attribute used to look up group policies (&#39;Filter-Id&#39;, &#39;Reply-Message&#39;, &#39;Airespace-ACL-Name&#39; or &#39;Aruba-User-Role&#39;). Access points must receive this attribute in the RADIUS Access-Accept message | [optional] 
 **IpAssignmentMode** | Pointer to **string** | The client IP assignment mode (&#39;NAT mode&#39;, &#39;Bridge mode&#39;, &#39;Layer 3 roaming&#39;, &#39;Ethernet over GRE&#39;, &#39;Layer 3 roaming with a concentrator&#39;, &#39;VPN&#39; or &#39;Campus Gateway&#39;) | [optional] 
+**CampusGateway** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberCampusGateway**](NetworksNetworkIdWirelessSsidsNumberCampusGateway.md) |  | [optional] 
 **UseVlanTagging** | Pointer to **bool** | Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is &#39;Bridge mode&#39; or &#39;Layer 3 roaming&#39; | [optional] 
 **ConcentratorNetworkId** | Pointer to **string** | The concentrator to use when the ipAssignmentMode is &#39;Layer 3 roaming with a concentrator&#39; or &#39;VPN&#39;. | [optional] 
 **SecondaryConcentratorNetworkId** | Pointer to **string** | The secondary concentrator to use when the ipAssignmentMode is &#39;VPN&#39;. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. (&#39;disabled&#39; represents no secondary concentrator.) | [optional] 
@@ -913,6 +914,31 @@ SetIpAssignmentMode sets IpAssignmentMode field to given value.
 `func (o *InlineObject215) HasIpAssignmentMode() bool`
 
 HasIpAssignmentMode returns a boolean if a field has been set.
+
+### GetCampusGateway
+
+`func (o *InlineObject215) GetCampusGateway() NetworksNetworkIdWirelessSsidsNumberCampusGateway`
+
+GetCampusGateway returns the CampusGateway field if non-nil, zero value otherwise.
+
+### GetCampusGatewayOk
+
+`func (o *InlineObject215) GetCampusGatewayOk() (*NetworksNetworkIdWirelessSsidsNumberCampusGateway, bool)`
+
+GetCampusGatewayOk returns a tuple with the CampusGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCampusGateway
+
+`func (o *InlineObject215) SetCampusGateway(v NetworksNetworkIdWirelessSsidsNumberCampusGateway)`
+
+SetCampusGateway sets CampusGateway field to given value.
+
+### HasCampusGateway
+
+`func (o *InlineObject215) HasCampusGateway() bool`
+
+HasCampusGateway returns a boolean if a field has been set.
 
 ### GetUseVlanTagging
 

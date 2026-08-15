@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
-**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
-**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
-**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
+**DscpTagValue** | Pointer to **int32** | The DSCP tag value. | [optional] 
+**Description** | Pointer to **string** | The description of the DSCP tag. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200214WithDefaults instantiates a new InlineResponse200214 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIname
+### GetDscpTagValue
 
-`func (o *InlineResponse200214) GetIname() string`
+`func (o *InlineResponse200214) GetDscpTagValue() int32`
 
-GetIname returns the Iname field if non-nil, zero value otherwise.
+GetDscpTagValue returns the DscpTagValue field if non-nil, zero value otherwise.
 
-### GetInameOk
+### GetDscpTagValueOk
 
-`func (o *InlineResponse200214) GetInameOk() (*string, bool)`
+`func (o *InlineResponse200214) GetDscpTagValueOk() (*int32, bool)`
 
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+GetDscpTagValueOk returns a tuple with the DscpTagValue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIname
+### SetDscpTagValue
 
-`func (o *InlineResponse200214) SetIname(v string)`
+`func (o *InlineResponse200214) SetDscpTagValue(v int32)`
 
-SetIname sets Iname field to given value.
+SetDscpTagValue sets DscpTagValue field to given value.
 
-### HasIname
+### HasDscpTagValue
 
-`func (o *InlineResponse200214) HasIname() bool`
+`func (o *InlineResponse200214) HasDscpTagValue() bool`
 
-HasIname returns a boolean if a field has been set.
+HasDscpTagValue returns a boolean if a field has been set.
 
-### GetName
+### GetDescription
 
-`func (o *InlineResponse200214) GetName() string`
+`func (o *InlineResponse200214) GetDescription() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200214) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200214) GetDescriptionOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDescription
 
-`func (o *InlineResponse200214) SetName(v string)`
+`func (o *InlineResponse200214) SetDescription(v string)`
 
-SetName sets Name field to given value.
+SetDescription sets Description field to given value.
 
-### HasName
+### HasDescription
 
-`func (o *InlineResponse200214) HasName() bool`
+`func (o *InlineResponse200214) HasDescription() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetIsDefault
-
-`func (o *InlineResponse200214) GetIsDefault() bool`
-
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
-
-### GetIsDefaultOk
-
-`func (o *InlineResponse200214) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefault
-
-`func (o *InlineResponse200214) SetIsDefault(v bool)`
-
-SetIsDefault sets IsDefault field to given value.
-
-### HasIsDefault
-
-`func (o *InlineResponse200214) HasIsDefault() bool`
-
-HasIsDefault returns a boolean if a field has been set.
-
-### GetVlanNames
-
-`func (o *InlineResponse200214) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
-
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
-
-### GetVlanNamesOk
-
-`func (o *InlineResponse200214) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
-
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanNames
-
-`func (o *InlineResponse200214) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
-
-SetVlanNames sets VlanNames field to given value.
-
-### HasVlanNames
-
-`func (o *InlineResponse200214) HasVlanNames() bool`
-
-HasVlanNames returns a boolean if a field has been set.
-
-### GetVlanGroups
-
-`func (o *InlineResponse200214) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineResponse200214) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineResponse200214) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-### HasVlanGroups
-
-`func (o *InlineResponse200214) HasVlanGroups() bool`
-
-HasVlanGroups returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResponseCodeCounts** | Pointer to [**InlineResponse200269ResponseCodeCounts**](InlineResponse200269ResponseCodeCounts.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200269Items**](InlineResponse200269Items.md) | Pipeline summary with aggregated job and operation status counts | [optional] 
+**Meta** | Pointer to [**InlineResponse200268Meta**](InlineResponse200268Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200269WithDefaults instantiates a new InlineResponse200269 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResponseCodeCounts
+### GetItems
 
-`func (o *InlineResponse200269) GetResponseCodeCounts() InlineResponse200269ResponseCodeCounts`
+`func (o *InlineResponse200269) GetItems() []InlineResponse200269Items`
 
-GetResponseCodeCounts returns the ResponseCodeCounts field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetResponseCodeCountsOk
+### GetItemsOk
 
-`func (o *InlineResponse200269) GetResponseCodeCountsOk() (*InlineResponse200269ResponseCodeCounts, bool)`
+`func (o *InlineResponse200269) GetItemsOk() (*[]InlineResponse200269Items, bool)`
 
-GetResponseCodeCountsOk returns a tuple with the ResponseCodeCounts field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResponseCodeCounts
+### SetItems
 
-`func (o *InlineResponse200269) SetResponseCodeCounts(v InlineResponse200269ResponseCodeCounts)`
+`func (o *InlineResponse200269) SetItems(v []InlineResponse200269Items)`
 
-SetResponseCodeCounts sets ResponseCodeCounts field to given value.
+SetItems sets Items field to given value.
 
-### HasResponseCodeCounts
+### HasItems
 
-`func (o *InlineResponse200269) HasResponseCodeCounts() bool`
+`func (o *InlineResponse200269) HasItems() bool`
 
-HasResponseCodeCounts returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200269) GetMeta() InlineResponse200268Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200269) GetMetaOk() (*InlineResponse200268Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200269) SetMeta(v InlineResponse200268Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200269) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

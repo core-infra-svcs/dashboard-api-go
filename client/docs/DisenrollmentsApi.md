@@ -31,7 +31,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationWirelessZigbeeDisenrollment := *openapiclient.NewInlineObject356() // InlineObject356 |  (optional)
+    createOrganizationWirelessZigbeeDisenrollment := *openapiclient.NewInlineObject367() // InlineObject367 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationWirelessZigbeeDisenrollment** | [**InlineObject356**](InlineObject356.md) |  | 
+ **createOrganizationWirelessZigbeeDisenrollment** | [**InlineObject367**](InlineObject367.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeDisenrollment
 
-> InlineResponse200471 GetOrganizationWirelessZigbeeDisenrollment(ctx, organizationId, disenrollmentId).Execute()
+> InlineResponse200493 GetOrganizationWirelessZigbeeDisenrollment(ctx, organizationId, disenrollmentId).Execute()
 
 Return a disenrollment
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DisenrollmentsApi.GetOrganizationWirelessZigbeeDisenrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDisenrollment`: InlineResponse200471
+    // response from `GetOrganizationWirelessZigbeeDisenrollment`: InlineResponse200493
     fmt.Fprintf(os.Stdout, "Response from `DisenrollmentsApi.GetOrganizationWirelessZigbeeDisenrollment`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200471**](InlineResponse200471.md)
+[**InlineResponse200493**](InlineResponse200493.md)
 
 ### Authorization
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
 **Status** | Pointer to **string** | Status of the ARP table request. | [optional] 
 **Entries** | Pointer to [**[]InlineResponse20032Entries**](InlineResponse20032Entries.md) | The ARP table entries | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**Error** | Pointer to **NullableString** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -180,6 +180,16 @@ SetError sets Error field to given value.
 
 HasError returns a boolean if a field has been set.
 
+### SetErrorNil
+
+`func (o *InlineResponse20032) SetErrorNil(b bool)`
+
+ SetErrorNil sets the value for Error to be an explicit nil
+
+### UnsetError
+`func (o *InlineResponse20032) UnsetError()`
+
+UnsetError ensures that no value is present for Error, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
 **SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
-**Failover** | Pointer to [**InlineResponse200255Failover**](InlineResponse200255Failover.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200257Failover**](InlineResponse200257Failover.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasSplitTunnel returns a boolean if a field has been set.
 
 ### GetFailover
 
-`func (o *InlineObject228) GetFailover() InlineResponse200255Failover`
+`func (o *InlineObject228) GetFailover() InlineResponse200257Failover`
 
 GetFailover returns the Failover field if non-nil, zero value otherwise.
 
 ### GetFailoverOk
 
-`func (o *InlineObject228) GetFailoverOk() (*InlineResponse200255Failover, bool)`
+`func (o *InlineObject228) GetFailoverOk() (*InlineResponse200257Failover, bool)`
 
 GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFailover
 
-`func (o *InlineObject228) SetFailover(v InlineResponse200255Failover)`
+`func (o *InlineObject228) SetFailover(v InlineResponse200257Failover)`
 
 SetFailover sets Failover field to given value.
 

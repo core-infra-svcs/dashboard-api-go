@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Alert type | 
-**Title** | **string** | Alert type title | 
-**CategoryType** | **string** | Alert category type | 
-**Severities** | [**[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities**](OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities.md) | List of possible severities for the alert type | 
-**DeviceTypes** | **[]string** | List of possible device types for the alert type | 
+**Items** | [**[]InlineResponse200301Items**](InlineResponse200301Items.md) | Historical Severity Counts | 
+**Meta** | [**InlineResponse200301Meta**](InlineResponse200301Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200301
 
-`func NewInlineResponse200301(type_ string, title string, categoryType string, severities []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, deviceTypes []string, ) *InlineResponse200301`
+`func NewInlineResponse200301(items []InlineResponse200301Items, meta InlineResponse200301Meta, ) *InlineResponse200301`
 
 NewInlineResponse200301 instantiates a new InlineResponse200301 object
 This constructor will assign default values to properties that have it defined,
@@ -29,104 +26,44 @@ NewInlineResponse200301WithDefaults instantiates a new InlineResponse200301 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetItems
 
-`func (o *InlineResponse200301) GetType() string`
+`func (o *InlineResponse200301) GetItems() []InlineResponse200301Items`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetItemsOk
 
-`func (o *InlineResponse200301) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200301) GetItemsOk() (*[]InlineResponse200301Items, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetItems
 
-`func (o *InlineResponse200301) SetType(v string)`
+`func (o *InlineResponse200301) SetItems(v []InlineResponse200301Items)`
 
-SetType sets Type field to given value.
+SetItems sets Items field to given value.
 
 
-### GetTitle
+### GetMeta
 
-`func (o *InlineResponse200301) GetTitle() string`
+`func (o *InlineResponse200301) GetMeta() InlineResponse200301Meta`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetMetaOk
 
-`func (o *InlineResponse200301) GetTitleOk() (*string, bool)`
+`func (o *InlineResponse200301) GetMetaOk() (*InlineResponse200301Meta, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetMeta
 
-`func (o *InlineResponse200301) SetTitle(v string)`
+`func (o *InlineResponse200301) SetMeta(v InlineResponse200301Meta)`
 
-SetTitle sets Title field to given value.
-
-
-### GetCategoryType
-
-`func (o *InlineResponse200301) GetCategoryType() string`
-
-GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
-
-### GetCategoryTypeOk
-
-`func (o *InlineResponse200301) GetCategoryTypeOk() (*string, bool)`
-
-GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCategoryType
-
-`func (o *InlineResponse200301) SetCategoryType(v string)`
-
-SetCategoryType sets CategoryType field to given value.
-
-
-### GetSeverities
-
-`func (o *InlineResponse200301) GetSeverities() []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities`
-
-GetSeverities returns the Severities field if non-nil, zero value otherwise.
-
-### GetSeveritiesOk
-
-`func (o *InlineResponse200301) GetSeveritiesOk() (*[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, bool)`
-
-GetSeveritiesOk returns a tuple with the Severities field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeverities
-
-`func (o *InlineResponse200301) SetSeverities(v []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities)`
-
-SetSeverities sets Severities field to given value.
-
-
-### GetDeviceTypes
-
-`func (o *InlineResponse200301) GetDeviceTypes() []string`
-
-GetDeviceTypes returns the DeviceTypes field if non-nil, zero value otherwise.
-
-### GetDeviceTypesOk
-
-`func (o *InlineResponse200301) GetDeviceTypesOk() (*[]string, bool)`
-
-GetDeviceTypesOk returns a tuple with the DeviceTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceTypes
-
-`func (o *InlineResponse200301) SetDeviceTypes(v []string)`
-
-SetDeviceTypes sets DeviceTypes field to given value.
+SetMeta sets Meta field to given value.
 
 
 

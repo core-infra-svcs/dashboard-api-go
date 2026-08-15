@@ -4,14 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
-**Operator** | Pointer to [**InlineResponse200249Operator**](InlineResponse200249Operator.md) |  | [optional] 
-**Venue** | Pointer to [**InlineResponse200249Venue**](InlineResponse200249Venue.md) |  | [optional] 
-**NetworkAccessType** | Pointer to **string** | The network type of this SSID | [optional] 
-**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
-**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
-**MccMncs** | Pointer to [**[]InlineResponse200249MccMncs**](InlineResponse200249MccMncs.md) | An array of MCC/MNC pairs | [optional] 
-**NaiRealms** | Pointer to [**[]InlineResponse200249NaiRealms**](InlineResponse200249NaiRealms.md) | An array of NAI realms | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200249Rules**](InlineResponse200249Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allows wireless client access to local LAN (boolean value - true allows access and false denies access) | [optional] 
 
 ## Methods
 
@@ -32,205 +26,55 @@ NewInlineResponse200249WithDefaults instantiates a new InlineResponse200249 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRules
 
-`func (o *InlineResponse200249) GetEnabled() bool`
+`func (o *InlineResponse200249) GetRules() []InlineResponse200249Rules`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRulesOk
 
-`func (o *InlineResponse200249) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200249) GetRulesOk() (*[]InlineResponse200249Rules, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRules
 
-`func (o *InlineResponse200249) SetEnabled(v bool)`
+`func (o *InlineResponse200249) SetRules(v []InlineResponse200249Rules)`
 
-SetEnabled sets Enabled field to given value.
+SetRules sets Rules field to given value.
 
-### HasEnabled
+### HasRules
 
-`func (o *InlineResponse200249) HasEnabled() bool`
+`func (o *InlineResponse200249) HasRules() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetOperator
+### GetAllowLanAccess
 
-`func (o *InlineResponse200249) GetOperator() InlineResponse200249Operator`
+`func (o *InlineResponse200249) GetAllowLanAccess() bool`
 
-GetOperator returns the Operator field if non-nil, zero value otherwise.
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
 
-### GetOperatorOk
+### GetAllowLanAccessOk
 
-`func (o *InlineResponse200249) GetOperatorOk() (*InlineResponse200249Operator, bool)`
+`func (o *InlineResponse200249) GetAllowLanAccessOk() (*bool, bool)`
 
-GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOperator
+### SetAllowLanAccess
 
-`func (o *InlineResponse200249) SetOperator(v InlineResponse200249Operator)`
+`func (o *InlineResponse200249) SetAllowLanAccess(v bool)`
 
-SetOperator sets Operator field to given value.
+SetAllowLanAccess sets AllowLanAccess field to given value.
 
-### HasOperator
+### HasAllowLanAccess
 
-`func (o *InlineResponse200249) HasOperator() bool`
+`func (o *InlineResponse200249) HasAllowLanAccess() bool`
 
-HasOperator returns a boolean if a field has been set.
-
-### GetVenue
-
-`func (o *InlineResponse200249) GetVenue() InlineResponse200249Venue`
-
-GetVenue returns the Venue field if non-nil, zero value otherwise.
-
-### GetVenueOk
-
-`func (o *InlineResponse200249) GetVenueOk() (*InlineResponse200249Venue, bool)`
-
-GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVenue
-
-`func (o *InlineResponse200249) SetVenue(v InlineResponse200249Venue)`
-
-SetVenue sets Venue field to given value.
-
-### HasVenue
-
-`func (o *InlineResponse200249) HasVenue() bool`
-
-HasVenue returns a boolean if a field has been set.
-
-### GetNetworkAccessType
-
-`func (o *InlineResponse200249) GetNetworkAccessType() string`
-
-GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
-
-### GetNetworkAccessTypeOk
-
-`func (o *InlineResponse200249) GetNetworkAccessTypeOk() (*string, bool)`
-
-GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkAccessType
-
-`func (o *InlineResponse200249) SetNetworkAccessType(v string)`
-
-SetNetworkAccessType sets NetworkAccessType field to given value.
-
-### HasNetworkAccessType
-
-`func (o *InlineResponse200249) HasNetworkAccessType() bool`
-
-HasNetworkAccessType returns a boolean if a field has been set.
-
-### GetDomains
-
-`func (o *InlineResponse200249) GetDomains() []string`
-
-GetDomains returns the Domains field if non-nil, zero value otherwise.
-
-### GetDomainsOk
-
-`func (o *InlineResponse200249) GetDomainsOk() (*[]string, bool)`
-
-GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDomains
-
-`func (o *InlineResponse200249) SetDomains(v []string)`
-
-SetDomains sets Domains field to given value.
-
-### HasDomains
-
-`func (o *InlineResponse200249) HasDomains() bool`
-
-HasDomains returns a boolean if a field has been set.
-
-### GetRoamConsortOis
-
-`func (o *InlineResponse200249) GetRoamConsortOis() []string`
-
-GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
-
-### GetRoamConsortOisOk
-
-`func (o *InlineResponse200249) GetRoamConsortOisOk() (*[]string, bool)`
-
-GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRoamConsortOis
-
-`func (o *InlineResponse200249) SetRoamConsortOis(v []string)`
-
-SetRoamConsortOis sets RoamConsortOis field to given value.
-
-### HasRoamConsortOis
-
-`func (o *InlineResponse200249) HasRoamConsortOis() bool`
-
-HasRoamConsortOis returns a boolean if a field has been set.
-
-### GetMccMncs
-
-`func (o *InlineResponse200249) GetMccMncs() []InlineResponse200249MccMncs`
-
-GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
-
-### GetMccMncsOk
-
-`func (o *InlineResponse200249) GetMccMncsOk() (*[]InlineResponse200249MccMncs, bool)`
-
-GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMccMncs
-
-`func (o *InlineResponse200249) SetMccMncs(v []InlineResponse200249MccMncs)`
-
-SetMccMncs sets MccMncs field to given value.
-
-### HasMccMncs
-
-`func (o *InlineResponse200249) HasMccMncs() bool`
-
-HasMccMncs returns a boolean if a field has been set.
-
-### GetNaiRealms
-
-`func (o *InlineResponse200249) GetNaiRealms() []InlineResponse200249NaiRealms`
-
-GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
-
-### GetNaiRealmsOk
-
-`func (o *InlineResponse200249) GetNaiRealmsOk() (*[]InlineResponse200249NaiRealms, bool)`
-
-GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNaiRealms
-
-`func (o *InlineResponse200249) SetNaiRealms(v []InlineResponse200249NaiRealms)`
-
-SetNaiRealms sets NaiRealms field to given value.
-
-### HasNaiRealms
-
-`func (o *InlineResponse200249) HasNaiRealms() bool`
-
-HasNaiRealms returns a boolean if a field has been set.
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

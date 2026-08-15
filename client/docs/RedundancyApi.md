@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory
 
-> []InlineResponse200483 GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200505 GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the failover events of wireless LAN controllers in an organization
 
@@ -195,7 +195,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RedundancyApi.GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: []InlineResponse200483
+    // response from `GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: []InlineResponse200505
     fmt.Fprintf(os.Stdout, "Response from `RedundancyApi.GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: %v\n", resp)
 }
 ```
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200483**](InlineResponse200483.md)
+[**[]InlineResponse200505**](InlineResponse200505.md)
 
 ### Authorization
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesRedundancyStatuses
 
-> InlineResponse200484 GetOrganizationWirelessControllerDevicesRedundancyStatuses(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200506 GetOrganizationWirelessControllerDevicesRedundancyStatuses(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List redundancy details of wireless LAN controllers in an organization
 
@@ -276,7 +276,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RedundancyApi.GetOrganizationWirelessControllerDevicesRedundancyStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesRedundancyStatuses`: InlineResponse200484
+    // response from `GetOrganizationWirelessControllerDevicesRedundancyStatuses`: InlineResponse200506
     fmt.Fprintf(os.Stdout, "Response from `RedundancyApi.GetOrganizationWirelessControllerDevicesRedundancyStatuses`: %v\n", resp)
 }
 ```
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200484**](InlineResponse200484.md)
+[**InlineResponse200506**](InlineResponse200506.md)
 
 ### Authorization
 

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Mac** | Pointer to **string** | Optional parameter to filter MAC table entries by MAC address. Must be a colon-delimited six-octet MAC address, for example &#39;00:11:22:a0:b1:c2&#39;. Matching is case-insensitive. | [optional] 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
@@ -24,6 +25,31 @@ will change when the set of required properties is changed
 NewInlineObject22WithDefaults instantiates a new InlineObject22 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetMac
+
+`func (o *InlineObject22) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineObject22) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineObject22) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineObject22) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
 
 ### GetCallback
 

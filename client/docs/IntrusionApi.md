@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceSecurityIntrusion
 
-> InlineResponse200284 GetOrganizationApplianceSecurityIntrusion(ctx, organizationId).Execute()
+> InlineResponse200286 GetOrganizationApplianceSecurityIntrusion(ctx, organizationId).Execute()
 
 Returns all supported intrusion settings for an organization
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntrusionApi.GetOrganizationApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceSecurityIntrusion`: InlineResponse200284
+    // response from `GetOrganizationApplianceSecurityIntrusion`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `IntrusionApi.GetOrganizationApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200284**](InlineResponse200284.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceSecurityIntrusion
 
-> InlineResponse200284 UpdateOrganizationApplianceSecurityIntrusion(ctx, organizationId).UpdateOrganizationApplianceSecurityIntrusion(updateOrganizationApplianceSecurityIntrusion).Execute()
+> InlineResponse200286 UpdateOrganizationApplianceSecurityIntrusion(ctx, organizationId).UpdateOrganizationApplianceSecurityIntrusion(updateOrganizationApplianceSecurityIntrusion).Execute()
 
 Sets supported intrusion settings for an organization
 
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntrusionApi.UpdateOrganizationApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceSecurityIntrusion`: InlineResponse200284
+    // response from `UpdateOrganizationApplianceSecurityIntrusion`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `IntrusionApi.UpdateOrganizationApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200284**](InlineResponse200284.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 

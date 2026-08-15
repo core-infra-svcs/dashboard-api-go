@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationWirelessDevicesProvisioningDeployment
 
-> InlineResponse200455 CreateOrganizationWirelessDevicesProvisioningDeployment(ctx, organizationId).CreateOrganizationWirelessDevicesProvisioningDeployment(createOrganizationWirelessDevicesProvisioningDeployment).Execute()
+> InlineResponse200474 CreateOrganizationWirelessDevicesProvisioningDeployment(ctx, organizationId).CreateOrganizationWirelessDevicesProvisioningDeployment(createOrganizationWirelessDevicesProvisioningDeployment).Execute()
 
 Create a zero touch deployment for a wireless access point
 
@@ -36,7 +36,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationWirelessDevicesProvisioningDeployment := *openapiclient.NewInlineObject347([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject347 | 
+    createOrganizationWirelessDevicesProvisioningDeployment := *openapiclient.NewInlineObject354([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject354 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProvisioningApi.CreateOrganizationWirelessDevicesProvisioningDeployment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationWirelessDevicesProvisioningDeployment`: InlineResponse200455
+    // response from `CreateOrganizationWirelessDevicesProvisioningDeployment`: InlineResponse200474
     fmt.Fprintf(os.Stdout, "Response from `ProvisioningApi.CreateOrganizationWirelessDevicesProvisioningDeployment`: %v\n", resp)
 }
 ```
@@ -66,11 +66,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationWirelessDevicesProvisioningDeployment** | [**InlineObject347**](InlineObject347.md) |  | 
+ **createOrganizationWirelessDevicesProvisioningDeployment** | [**InlineObject354**](InlineObject354.md) |  | 
 
 ### Return type
 
-[**InlineResponse200455**](InlineResponse200455.md)
+[**InlineResponse200474**](InlineResponse200474.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRestProvisioningPipelinesJobs
 
-> InlineResponse200266 GetOrganizationApiRestProvisioningPipelinesJobs(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PipelineIds(pipelineIds).Status(status).Execute()
+> InlineResponse200268 GetOrganizationApiRestProvisioningPipelinesJobs(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PipelineIds(pipelineIds).Status(status).Execute()
 
 List pipeline jobs, with optional status filtering
 
@@ -192,7 +192,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProvisioningApi.GetOrganizationApiRestProvisioningPipelinesJobs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRestProvisioningPipelinesJobs`: InlineResponse200266
+    // response from `GetOrganizationApiRestProvisioningPipelinesJobs`: InlineResponse200268
     fmt.Fprintf(os.Stdout, "Response from `ProvisioningApi.GetOrganizationApiRestProvisioningPipelinesJobs`: %v\n", resp)
 }
 ```
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200266**](InlineResponse200266.md)
+[**InlineResponse200268**](InlineResponse200268.md)
 
 ### Authorization
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline
 
-> InlineResponse200267 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
+> InlineResponse200269 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
 
 Retrieves pipeline overviews with aggregated job status counts
 
@@ -268,7 +268,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProvisioningApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200267
+    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200269
     fmt.Fprintf(os.Stdout, "Response from `ProvisioningApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: %v\n", resp)
 }
 ```
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200267**](InlineResponse200267.md)
+[**InlineResponse200269**](InlineResponse200269.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesProvisioningStatuses
 
-> []InlineResponse200350 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200362 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the provisioning statuses information for devices in an organization.
 
@@ -348,7 +348,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProvisioningApi.GetOrganizationDevicesProvisioningStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200350
+    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200362
     fmt.Fprintf(os.Stdout, "Response from `ProvisioningApi.GetOrganizationDevicesProvisioningStatuses`: %v\n", resp)
 }
 ```
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200350**](InlineResponse200350.md)
+[**[]InlineResponse200362**](InlineResponse200362.md)
 
 ### Authorization
 
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesProvisioningDeployments
 
-> []InlineResponse200455 GetOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).SortBy(sortBy).SortOrder(sortOrder).DeploymentType(deploymentType).Execute()
+> []InlineResponse200474 GetOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).SortBy(sortBy).SortOrder(sortOrder).DeploymentType(deploymentType).Execute()
 
 List the zero touch deployments for wireless access points in an organization
 
@@ -434,7 +434,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProvisioningApi.GetOrganizationWirelessDevicesProvisioningDeployments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesProvisioningDeployments`: []InlineResponse200455
+    // response from `GetOrganizationWirelessDevicesProvisioningDeployments`: []InlineResponse200474
     fmt.Fprintf(os.Stdout, "Response from `ProvisioningApi.GetOrganizationWirelessDevicesProvisioningDeployments`: %v\n", resp)
 }
 ```
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200455**](InlineResponse200455.md)
+[**[]InlineResponse200474**](InlineResponse200474.md)
 
 ### Authorization
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessDevicesProvisioningDeployments
 
-> InlineResponse200455 UpdateOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).UpdateOrganizationWirelessDevicesProvisioningDeployments(updateOrganizationWirelessDevicesProvisioningDeployments).Execute()
+> InlineResponse200474 UpdateOrganizationWirelessDevicesProvisioningDeployments(ctx, organizationId).UpdateOrganizationWirelessDevicesProvisioningDeployments(updateOrganizationWirelessDevicesProvisioningDeployments).Execute()
 
 Update a zero touch deployment
 
@@ -503,7 +503,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationWirelessDevicesProvisioningDeployments := *openapiclient.NewInlineObject346([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject346 | 
+    updateOrganizationWirelessDevicesProvisioningDeployments := *openapiclient.NewInlineObject353([]openapiclient.OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1{*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1(*openapiclient.NewOrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsDevices1New()), "Status_example", "Type_example")}) // InlineObject353 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -512,7 +512,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProvisioningApi.UpdateOrganizationWirelessDevicesProvisioningDeployments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessDevicesProvisioningDeployments`: InlineResponse200455
+    // response from `UpdateOrganizationWirelessDevicesProvisioningDeployments`: InlineResponse200474
     fmt.Fprintf(os.Stdout, "Response from `ProvisioningApi.UpdateOrganizationWirelessDevicesProvisioningDeployments`: %v\n", resp)
 }
 ```
@@ -533,11 +533,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationWirelessDevicesProvisioningDeployments** | [**InlineObject346**](InlineObject346.md) |  | 
+ **updateOrganizationWirelessDevicesProvisioningDeployments** | [**InlineObject353**](InlineObject353.md) |  | 
 
 ### Return type
 
-[**InlineResponse200455**](InlineResponse200455.md)
+[**InlineResponse200474**](InlineResponse200474.md)
 
 ### Authorization
 

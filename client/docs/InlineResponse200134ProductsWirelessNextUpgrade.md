@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Time** | Pointer to **time.Time** | Timestamp of the next scheduled firmware upgrade | [optional] 
+**Strategy** | Pointer to **string** | The strategy that network devices will use to perform the upgrade. If unspecified, the scheduled upgrade will use the default strategy for the network. | [optional] 
 **Predownload** | Pointer to [**InlineResponse200134ProductsWirelessNextUpgradePredownload**](InlineResponse200134ProductsWirelessNextUpgradePredownload.md) |  | [optional] 
 **ToVersion** | Pointer to [**InlineResponse200134ProductsWirelessNextUpgradeToVersion**](InlineResponse200134ProductsWirelessNextUpgradeToVersion.md) |  | [optional] 
 
@@ -51,6 +52,31 @@ SetTime sets Time field to given value.
 `func (o *InlineResponse200134ProductsWirelessNextUpgrade) HasTime() bool`
 
 HasTime returns a boolean if a field has been set.
+
+### GetStrategy
+
+`func (o *InlineResponse200134ProductsWirelessNextUpgrade) GetStrategy() string`
+
+GetStrategy returns the Strategy field if non-nil, zero value otherwise.
+
+### GetStrategyOk
+
+`func (o *InlineResponse200134ProductsWirelessNextUpgrade) GetStrategyOk() (*string, bool)`
+
+GetStrategyOk returns a tuple with the Strategy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStrategy
+
+`func (o *InlineResponse200134ProductsWirelessNextUpgrade) SetStrategy(v string)`
+
+SetStrategy sets Strategy field to given value.
+
+### HasStrategy
+
+`func (o *InlineResponse200134ProductsWirelessNextUpgrade) HasStrategy() bool`
+
+HasStrategy returns a boolean if a field has been set.
 
 ### GetPredownload
 

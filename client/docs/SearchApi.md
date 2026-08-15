@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationClientsSearch
 
-> InlineResponse200324 GetOrganizationClientsSearch(ctx, organizationId).Mac(mac).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200336 GetOrganizationClientsSearch(ctx, organizationId).Mac(mac).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the client details in an organization
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SearchApi.GetOrganizationClientsSearch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsSearch`: InlineResponse200324
+    // response from `GetOrganizationClientsSearch`: InlineResponse200336
     fmt.Fprintf(os.Stdout, "Response from `SearchApi.GetOrganizationClientsSearch`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200324**](InlineResponse200324.md)
+[**InlineResponse200336**](InlineResponse200336.md)
 
 ### Authorization
 

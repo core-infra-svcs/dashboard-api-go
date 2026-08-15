@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## RemoveOrganizationSpacesIntegration
 
-> InlineResponse200418 RemoveOrganizationSpacesIntegration(ctx, organizationId).Execute()
+> InlineResponse200433 RemoveOrganizationSpacesIntegration(ctx, organizationId).Execute()
 
 Remove the Spaces integration from Meraki
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IntegrationApi.RemoveOrganizationSpacesIntegration``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RemoveOrganizationSpacesIntegration`: InlineResponse200418
+    // response from `RemoveOrganizationSpacesIntegration`: InlineResponse200433
     fmt.Fprintf(os.Stdout, "Response from `IntegrationApi.RemoveOrganizationSpacesIntegration`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200418**](InlineResponse200418.md)
+[**InlineResponse200433**](InlineResponse200433.md)
 
 ### Authorization
 

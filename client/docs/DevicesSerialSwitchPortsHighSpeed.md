@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | For C9500-32QC, whether or not the port is enabled for high speed. | [optional] 
+**Enabled** | Pointer to **bool** | Whether the high-speed logical port is enabled. | [optional] 
 
 ## Methods
 

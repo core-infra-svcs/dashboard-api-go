@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems**](OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems.md) | The top-level propery containing all status data. | [optional] 
-**Meta** | Pointer to [**InlineResponse200312Meta**](InlineResponse200312Meta.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
+**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200466WithDefaults instantiates a new InlineResponse200466 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetNetwork
 
-`func (o *InlineResponse200466) GetItems() []OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems`
+`func (o *InlineResponse200466) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNetworkOk
 
-`func (o *InlineResponse200466) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems, bool)`
+`func (o *InlineResponse200466) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetNetwork
 
-`func (o *InlineResponse200466) SetItems(v []OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems)`
+`func (o *InlineResponse200466) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
 
-SetItems sets Items field to given value.
+SetNetwork sets Network field to given value.
 
-### HasItems
+### HasNetwork
 
-`func (o *InlineResponse200466) HasItems() bool`
+`func (o *InlineResponse200466) HasNetwork() bool`
 
-HasItems returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetMeta
+### GetByBand
 
-`func (o *InlineResponse200466) GetMeta() InlineResponse200312Meta`
+`func (o *InlineResponse200466) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetByBand returns the ByBand field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetByBandOk
 
-`func (o *InlineResponse200466) GetMetaOk() (*InlineResponse200312Meta, bool)`
+`func (o *InlineResponse200466) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetByBand
 
-`func (o *InlineResponse200466) SetMeta(v InlineResponse200312Meta)`
+`func (o *InlineResponse200466) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
 
-SetMeta sets Meta field to given value.
+SetByBand sets ByBand field to given value.
 
-### HasMeta
+### HasByBand
 
-`func (o *InlineResponse200466) HasMeta() bool`
+`func (o *InlineResponse200466) HasByBand() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasByBand returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

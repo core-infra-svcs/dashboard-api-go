@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationApplianceDnsSplitProfile
 
-> InlineResponse200278 CreateOrganizationApplianceDnsSplitProfile(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfile(createOrganizationApplianceDnsSplitProfile).Execute()
+> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfile(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfile(createOrganizationApplianceDnsSplitProfile).Execute()
 
 Create a new split DNS profile
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplitApi.CreateOrganizationApplianceDnsSplitProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfile`: InlineResponse200278
+    // response from `CreateOrganizationApplianceDnsSplitProfile`: InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `SplitApi.CreateOrganizationApplianceDnsSplitProfile`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200278**](InlineResponse200278.md)
+[**InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate
 
-> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate).Execute()
+> InlineResponse200282 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate).Execute()
 
 Assign the split DNS profile to networks in the organization
 
@@ -117,7 +117,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplitApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: InlineResponse200280
+    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `SplitApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: %v\n", resp)
 }
 ```
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200280**](InlineResponse200280.md)
+[**InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete
 
-> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete).Execute()
+> InlineResponse200282 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete).Execute()
 
 Unassign the split DNS profile to networks in the organization
 
@@ -189,7 +189,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplitApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: InlineResponse200280
+    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `SplitApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: %v\n", resp)
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200280**](InlineResponse200280.md)
+[**InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsSplitProfiles
 
-> []InlineResponse200278 GetOrganizationApplianceDnsSplitProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
+> []InlineResponse200280 GetOrganizationApplianceDnsSplitProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
 
 Fetch the split DNS profiles used in the organization
 
@@ -332,7 +332,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplitApi.GetOrganizationApplianceDnsSplitProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsSplitProfiles`: []InlineResponse200278
+    // response from `GetOrganizationApplianceDnsSplitProfiles`: []InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `SplitApi.GetOrganizationApplianceDnsSplitProfiles`: %v\n", resp)
 }
 ```
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200278**](InlineResponse200278.md)
+[**[]InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsSplitProfilesAssignments
 
-> InlineResponse200279 GetOrganizationApplianceDnsSplitProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
+> InlineResponse200281 GetOrganizationApplianceDnsSplitProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
 
 Fetch the split DNS profile assignments in the organization
 
@@ -405,7 +405,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplitApi.GetOrganizationApplianceDnsSplitProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsSplitProfilesAssignments`: InlineResponse200279
+    // response from `GetOrganizationApplianceDnsSplitProfilesAssignments`: InlineResponse200281
     fmt.Fprintf(os.Stdout, "Response from `SplitApi.GetOrganizationApplianceDnsSplitProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200279**](InlineResponse200279.md)
+[**InlineResponse200281**](InlineResponse200281.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceDnsSplitProfile
 
-> InlineResponse200278 UpdateOrganizationApplianceDnsSplitProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsSplitProfile(updateOrganizationApplianceDnsSplitProfile).Execute()
+> InlineResponse200280 UpdateOrganizationApplianceDnsSplitProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsSplitProfile(updateOrganizationApplianceDnsSplitProfile).Execute()
 
 Update a split DNS profile
 
@@ -479,7 +479,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplitApi.UpdateOrganizationApplianceDnsSplitProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceDnsSplitProfile`: InlineResponse200278
+    // response from `UpdateOrganizationApplianceDnsSplitProfile`: InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `SplitApi.UpdateOrganizationApplianceDnsSplitProfile`: %v\n", resp)
 }
 ```
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200278**](InlineResponse200278.md)
+[**InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 

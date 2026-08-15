@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans
 
-> InlineResponse200317 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
+> InlineResponse200329 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
 
 The communication plans available for a given provider.
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CommunicationPlansApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200317
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200329
     fmt.Fprintf(os.Stdout, "Response from `CommunicationPlansApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200317**](InlineResponse200317.md)
+[**InlineResponse200329**](InlineResponse200329.md)
 
 ### Authorization
 

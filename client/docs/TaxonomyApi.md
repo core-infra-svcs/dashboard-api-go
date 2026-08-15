@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationAssuranceAlertsTaxonomyCategories
 
-> []InlineResponse200300 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
+> []InlineResponse200303 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
 
 Return a list of Category Types
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TaxonomyApi.GetOrganizationAssuranceAlertsTaxonomyCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200300
+    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200303
     fmt.Fprintf(os.Stdout, "Response from `TaxonomyApi.GetOrganizationAssuranceAlertsTaxonomyCategories`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200300**](InlineResponse200300.md)
+[**[]InlineResponse200303**](InlineResponse200303.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsTaxonomyTypes
 
-> []InlineResponse200301 GetOrganizationAssuranceAlertsTaxonomyTypes(ctx, organizationId).Execute()
+> []InlineResponse200304 GetOrganizationAssuranceAlertsTaxonomyTypes(ctx, organizationId).Execute()
 
 Return a list of alert types
 
@@ -109,7 +109,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TaxonomyApi.GetOrganizationAssuranceAlertsTaxonomyTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsTaxonomyTypes`: []InlineResponse200301
+    // response from `GetOrganizationAssuranceAlertsTaxonomyTypes`: []InlineResponse200304
     fmt.Fprintf(os.Stdout, "Response from `TaxonomyApi.GetOrganizationAssuranceAlertsTaxonomyTypes`: %v\n", resp)
 }
 ```
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200301**](InlineResponse200301.md)
+[**[]InlineResponse200304**](InlineResponse200304.md)
 
 ### Authorization
 

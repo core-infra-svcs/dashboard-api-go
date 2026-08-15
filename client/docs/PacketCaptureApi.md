@@ -41,7 +41,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkOrganizationDevicesPacketCaptureCapturesCreate := *openapiclient.NewInlineObject285([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices()}, "Name_example") // InlineObject285 | 
+    bulkOrganizationDevicesPacketCaptureCapturesCreate := *openapiclient.NewInlineObject288([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices()}, "Name_example") // InlineObject288 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -71,7 +71,7 @@ Other parameters are passed through a pointer to a apiBulkOrganizationDevicesPac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkOrganizationDevicesPacketCaptureCapturesCreate** | [**InlineObject285**](InlineObject285.md) |  | 
+ **bulkOrganizationDevicesPacketCaptureCapturesCreate** | [**InlineObject288**](InlineObject288.md) |  | 
 
 ### Return type
 
@@ -113,7 +113,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkOrganizationDevicesPacketCaptureCapturesDelete := *openapiclient.NewInlineObject286([]string{"CaptureIds_example"}) // InlineObject286 | 
+    bulkOrganizationDevicesPacketCaptureCapturesDelete := *openapiclient.NewInlineObject289([]string{"CaptureIds_example"}) // InlineObject289 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -141,7 +141,7 @@ Other parameters are passed through a pointer to a apiBulkOrganizationDevicesPac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkOrganizationDevicesPacketCaptureCapturesDelete** | [**InlineObject286**](InlineObject286.md) |  | 
+ **bulkOrganizationDevicesPacketCaptureCapturesDelete** | [**InlineObject289**](InlineObject289.md) |  | 
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationDevicesPacketCaptureCapture
 
-> InlineResponse200345Items CreateOrganizationDevicesPacketCaptureCapture(ctx, organizationId).CreateOrganizationDevicesPacketCaptureCapture(createOrganizationDevicesPacketCaptureCapture).Execute()
+> InlineResponse200357Items CreateOrganizationDevicesPacketCaptureCapture(ctx, organizationId).CreateOrganizationDevicesPacketCaptureCapture(createOrganizationDevicesPacketCaptureCapture).Execute()
 
 Perform a packet capture on a device and store in Meraki Cloud
 
@@ -183,7 +183,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject284([]string{"Serials_example"}, "Name_example") // InlineObject284 | 
+    createOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject287([]string{"Serials_example"}, "Name_example") // InlineObject287 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -192,7 +192,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.CreateOrganizationDevicesPacketCaptureCapture``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesPacketCaptureCapture`: InlineResponse200345Items
+    // response from `CreateOrganizationDevicesPacketCaptureCapture`: InlineResponse200357Items
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.CreateOrganizationDevicesPacketCaptureCapture`: %v\n", resp)
 }
 ```
@@ -213,11 +213,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesPacketCaptureCapture** | [**InlineObject284**](InlineObject284.md) |  | 
+ **createOrganizationDevicesPacketCaptureCapture** | [**InlineObject287**](InlineObject287.md) |  | 
 
 ### Return type
 
-[**InlineResponse200345Items**](InlineResponse200345Items.md)
+[**InlineResponse200357Items**](InlineResponse200357Items.md)
 
 ### Authorization
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationDevicesPacketCaptureSchedule
 
-> InlineResponse200347Items CreateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId).CreateOrganizationDevicesPacketCaptureSchedule(createOrganizationDevicesPacketCaptureSchedule).Execute()
+> InlineResponse200359Items CreateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId).CreateOrganizationDevicesPacketCaptureSchedule(createOrganizationDevicesPacketCaptureSchedule).Execute()
 
 Create a schedule for packet capture
 
@@ -255,7 +255,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject288([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject288 | 
+    createOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject291([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject291 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -264,7 +264,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.CreateOrganizationDevicesPacketCaptureSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200347Items
+    // response from `CreateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200359Items
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.CreateOrganizationDevicesPacketCaptureSchedule`: %v\n", resp)
 }
 ```
@@ -285,11 +285,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesPacketCaptureSchedule** | [**InlineObject288**](InlineObject288.md) |  | 
+ **createOrganizationDevicesPacketCaptureSchedule** | [**InlineObject291**](InlineObject291.md) |  | 
 
 ### Return type
 
-[**InlineResponse200347Items**](InlineResponse200347Items.md)
+[**InlineResponse200359Items**](InlineResponse200359Items.md)
 
 ### Authorization
 
@@ -399,7 +399,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     scheduleId := "scheduleId_example" // string | Schedule ID
-    deleteOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject291("ScheduleId_example") // InlineObject291 | 
+    deleteOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject294("ScheduleId_example") // InlineObject294 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **deleteOrganizationDevicesPacketCaptureSchedule** | [**InlineObject291**](InlineObject291.md) |  | 
+ **deleteOrganizationDevicesPacketCaptureSchedule** | [**InlineObject294**](InlineObject294.md) |  | 
 
 ### Return type
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ## GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl
 
-> InlineResponse200346 GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl(ctx, organizationId, captureId).Execute()
+> InlineResponse200358 GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl(ctx, organizationId, captureId).Execute()
 
 Get presigned download URL for given packet capture id
 
@@ -480,7 +480,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: InlineResponse200346
+    // response from `GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: InlineResponse200358
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: %v\n", resp)
 }
 ```
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200346**](InlineResponse200346.md)
+[**InlineResponse200358**](InlineResponse200358.md)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPacketCaptureCaptures
 
-> InlineResponse200345 GetOrganizationDevicesPacketCaptureCaptures(ctx, organizationId).CaptureIds(captureIds).NetworkIds(networkIds).Serials(serials).Process(process).CaptureStatus(captureStatus).Name(name).ClientMac(clientMac).Notes(notes).DeviceName(deviceName).AdminName(adminName).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).Execute()
+> InlineResponse200357 GetOrganizationDevicesPacketCaptureCaptures(ctx, organizationId).CaptureIds(captureIds).NetworkIds(networkIds).Serials(serials).Process(process).CaptureStatus(captureStatus).Name(name).ClientMac(clientMac).Notes(notes).DeviceName(deviceName).AdminName(adminName).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).Execute()
 
 List Packet Captures
 
@@ -569,7 +569,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.GetOrganizationDevicesPacketCaptureCaptures``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPacketCaptureCaptures`: InlineResponse200345
+    // response from `GetOrganizationDevicesPacketCaptureCaptures`: InlineResponse200357
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.GetOrganizationDevicesPacketCaptureCaptures`: %v\n", resp)
 }
 ```
@@ -610,7 +610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200345**](InlineResponse200345.md)
+[**InlineResponse200357**](InlineResponse200357.md)
 
 ### Authorization
 
@@ -628,7 +628,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPacketCaptureSchedules
 
-> InlineResponse200347 GetOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ScheduleIds(scheduleIds).NetworkIds(networkIds).DeviceIds(deviceIds).Execute()
+> InlineResponse200359 GetOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ScheduleIds(scheduleIds).NetworkIds(networkIds).DeviceIds(deviceIds).Execute()
 
 List the Packet Capture Schedules
 
@@ -659,7 +659,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.GetOrganizationDevicesPacketCaptureSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPacketCaptureSchedules`: InlineResponse200347
+    // response from `GetOrganizationDevicesPacketCaptureSchedules`: InlineResponse200359
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.GetOrganizationDevicesPacketCaptureSchedules`: %v\n", resp)
 }
 ```
@@ -686,7 +686,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200347**](InlineResponse200347.md)
+[**InlineResponse200359**](InlineResponse200359.md)
 
 ### Authorization
 
@@ -704,7 +704,7 @@ Name | Type | Description  | Notes
 
 ## ReorderOrganizationDevicesPacketCaptureSchedules
 
-> InlineResponse200348 ReorderOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ReorderOrganizationDevicesPacketCaptureSchedules(reorderOrganizationDevicesPacketCaptureSchedules).Execute()
+> InlineResponse200360 ReorderOrganizationDevicesPacketCaptureSchedules(ctx, organizationId).ReorderOrganizationDevicesPacketCaptureSchedules(reorderOrganizationDevicesPacketCaptureSchedules).Execute()
 
 Bulk update priorities of pcap schedules
 
@@ -724,7 +724,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    reorderOrganizationDevicesPacketCaptureSchedules := *openapiclient.NewInlineObject289([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder()}) // InlineObject289 | 
+    reorderOrganizationDevicesPacketCaptureSchedules := *openapiclient.NewInlineObject292([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder()}) // InlineObject292 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -733,7 +733,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.ReorderOrganizationDevicesPacketCaptureSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReorderOrganizationDevicesPacketCaptureSchedules`: InlineResponse200348
+    // response from `ReorderOrganizationDevicesPacketCaptureSchedules`: InlineResponse200360
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.ReorderOrganizationDevicesPacketCaptureSchedules`: %v\n", resp)
 }
 ```
@@ -754,11 +754,11 @@ Other parameters are passed through a pointer to a apiReorderOrganizationDevices
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **reorderOrganizationDevicesPacketCaptureSchedules** | [**InlineObject289**](InlineObject289.md) |  | 
+ **reorderOrganizationDevicesPacketCaptureSchedules** | [**InlineObject292**](InlineObject292.md) |  | 
 
 ### Return type
 
-[**InlineResponse200348**](InlineResponse200348.md)
+[**InlineResponse200360**](InlineResponse200360.md)
 
 ### Authorization
 
@@ -776,7 +776,7 @@ Name | Type | Description  | Notes
 
 ## StopOrganizationDevicesPacketCaptureCapture
 
-> InlineResponse200345Items StopOrganizationDevicesPacketCaptureCapture(ctx, organizationId, captureId).StopOrganizationDevicesPacketCaptureCapture(stopOrganizationDevicesPacketCaptureCapture).Execute()
+> InlineResponse200357Items StopOrganizationDevicesPacketCaptureCapture(ctx, organizationId, captureId).StopOrganizationDevicesPacketCaptureCapture(stopOrganizationDevicesPacketCaptureCapture).Execute()
 
 Stop a specific packet capture (not supported for Catalyst devices)
 
@@ -797,7 +797,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     captureId := "captureId_example" // string | Capture ID
-    stopOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject287([]string{"Serials_example"}) // InlineObject287 | 
+    stopOrganizationDevicesPacketCaptureCapture := *openapiclient.NewInlineObject290([]string{"Serials_example"}) // InlineObject290 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -806,7 +806,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.StopOrganizationDevicesPacketCaptureCapture``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `StopOrganizationDevicesPacketCaptureCapture`: InlineResponse200345Items
+    // response from `StopOrganizationDevicesPacketCaptureCapture`: InlineResponse200357Items
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.StopOrganizationDevicesPacketCaptureCapture`: %v\n", resp)
 }
 ```
@@ -829,11 +829,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **stopOrganizationDevicesPacketCaptureCapture** | [**InlineObject287**](InlineObject287.md) |  | 
+ **stopOrganizationDevicesPacketCaptureCapture** | [**InlineObject290**](InlineObject290.md) |  | 
 
 ### Return type
 
-[**InlineResponse200345Items**](InlineResponse200345Items.md)
+[**InlineResponse200357Items**](InlineResponse200357Items.md)
 
 ### Authorization
 
@@ -851,7 +851,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationDevicesPacketCaptureSchedule
 
-> InlineResponse200347Items UpdateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId, scheduleId).UpdateOrganizationDevicesPacketCaptureSchedule(updateOrganizationDevicesPacketCaptureSchedule).Execute()
+> InlineResponse200359Items UpdateOrganizationDevicesPacketCaptureSchedule(ctx, organizationId, scheduleId).UpdateOrganizationDevicesPacketCaptureSchedule(updateOrganizationDevicesPacketCaptureSchedule).Execute()
 
 Update a schedule for packet capture
 
@@ -872,7 +872,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     scheduleId := "scheduleId_example" // string | Schedule ID
-    updateOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject290([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject290 | 
+    updateOrganizationDevicesPacketCaptureSchedule := *openapiclient.NewInlineObject293([]openapiclient.OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices{*openapiclient.NewOrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices()}) // InlineObject293 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -881,7 +881,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketCaptureApi.UpdateOrganizationDevicesPacketCaptureSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200347Items
+    // response from `UpdateOrganizationDevicesPacketCaptureSchedule`: InlineResponse200359Items
     fmt.Fprintf(os.Stdout, "Response from `PacketCaptureApi.UpdateOrganizationDevicesPacketCaptureSchedule`: %v\n", resp)
 }
 ```
@@ -904,11 +904,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationDevicesPacketCaptureSchedule** | [**InlineObject290**](InlineObject290.md) |  | 
+ **updateOrganizationDevicesPacketCaptureSchedule** | [**InlineObject293**](InlineObject293.md) |  | 
 
 ### Return type
 
-[**InlineResponse200347Items**](InlineResponse200347Items.md)
+[**InlineResponse200359Items**](InlineResponse200359Items.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkTrafficShapingDscpTaggingOptions
 
-> []map[string]interface{} GetNetworkTrafficShapingDscpTaggingOptions(ctx, networkId).Execute()
+> []InlineResponse200214 GetNetworkTrafficShapingDscpTaggingOptions(ctx, networkId).Execute()
 
 Returns the available DSCP tagging options for your traffic shaping rules.
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DscpTaggingOptionsApi.GetNetworkTrafficShapingDscpTaggingOptions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkTrafficShapingDscpTaggingOptions`: []map[string]interface{}
+    // response from `GetNetworkTrafficShapingDscpTaggingOptions`: []InlineResponse200214
     fmt.Fprintf(os.Stdout, "Response from `DscpTaggingOptionsApi.GetNetworkTrafficShapingDscpTaggingOptions`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse200214**](InlineResponse200214.md)
 
 ### Authorization
 

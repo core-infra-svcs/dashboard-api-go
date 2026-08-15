@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationSplashTheme
 
-> InlineResponse200420 CreateOrganizationSplashTheme(ctx, organizationId).CreateOrganizationSplashTheme(createOrganizationSplashTheme).Execute()
+> InlineResponse200435 CreateOrganizationSplashTheme(ctx, organizationId).CreateOrganizationSplashTheme(createOrganizationSplashTheme).Execute()
 
 Create a Splash Theme
 
@@ -37,7 +37,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSplashTheme := *openapiclient.NewInlineObject343() // InlineObject343 |  (optional)
+    createOrganizationSplashTheme := *openapiclient.NewInlineObject350() // InlineObject350 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.CreateOrganizationSplashTheme``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSplashTheme`: InlineResponse200420
+    // response from `CreateOrganizationSplashTheme`: InlineResponse200435
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.CreateOrganizationSplashTheme`: %v\n", resp)
 }
 ```
@@ -67,11 +67,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSplashTh
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSplashTheme** | [**InlineObject343**](InlineObject343.md) |  | 
+ **createOrganizationSplashTheme** | [**InlineObject350**](InlineObject350.md) |  | 
 
 ### Return type
 
-[**InlineResponse200420**](InlineResponse200420.md)
+[**InlineResponse200435**](InlineResponse200435.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationSplashThemeAsset
 
-> InlineResponse200419 CreateOrganizationSplashThemeAsset(ctx, organizationId, themeIdentifier).CreateOrganizationSplashThemeAsset(createOrganizationSplashThemeAsset).Execute()
+> InlineResponse200434 CreateOrganizationSplashThemeAsset(ctx, organizationId, themeIdentifier).CreateOrganizationSplashThemeAsset(createOrganizationSplashThemeAsset).Execute()
 
 Create a Splash Theme Asset
 
@@ -110,7 +110,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     themeIdentifier := "themeIdentifier_example" // string | Theme identifier
-    createOrganizationSplashThemeAsset := *openapiclient.NewInlineObject344() // InlineObject344 |  (optional)
+    createOrganizationSplashThemeAsset := *openapiclient.NewInlineObject351() // InlineObject351 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -119,7 +119,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.CreateOrganizationSplashThemeAsset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSplashThemeAsset`: InlineResponse200419
+    // response from `CreateOrganizationSplashThemeAsset`: InlineResponse200434
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.CreateOrganizationSplashThemeAsset`: %v\n", resp)
 }
 ```
@@ -142,11 +142,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createOrganizationSplashThemeAsset** | [**InlineObject344**](InlineObject344.md) |  | 
+ **createOrganizationSplashThemeAsset** | [**InlineObject351**](InlineObject351.md) |  | 
 
 ### Return type
 
-[**InlineResponse200419**](InlineResponse200419.md)
+[**InlineResponse200434**](InlineResponse200434.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidSplashSettings
 
-> InlineResponse200253 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
+> InlineResponse200255 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
 
 Display the splash page settings for the given SSID
 
@@ -335,7 +335,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.GetNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse200253
+    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse200255
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.GetNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200253**](InlineResponse200253.md)
+[**InlineResponse200255**](InlineResponse200255.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSplashAsset
 
-> InlineResponse200419 GetOrganizationSplashAsset(ctx, organizationId, id).Execute()
+> InlineResponse200434 GetOrganizationSplashAsset(ctx, organizationId, id).Execute()
 
 Get a Splash Theme Asset
 
@@ -408,7 +408,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.GetOrganizationSplashAsset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSplashAsset`: InlineResponse200419
+    // response from `GetOrganizationSplashAsset`: InlineResponse200434
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.GetOrganizationSplashAsset`: %v\n", resp)
 }
 ```
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200419**](InlineResponse200419.md)
+[**InlineResponse200434**](InlineResponse200434.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSplashThemes
 
-> []InlineResponse200420 GetOrganizationSplashThemes(ctx, organizationId).Execute()
+> []InlineResponse200435 GetOrganizationSplashThemes(ctx, organizationId).Execute()
 
 List Splash Themes
 
@@ -480,7 +480,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.GetOrganizationSplashThemes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSplashThemes`: []InlineResponse200420
+    // response from `GetOrganizationSplashThemes`: []InlineResponse200435
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.GetOrganizationSplashThemes`: %v\n", resp)
 }
 ```
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200420**](InlineResponse200420.md)
+[**[]InlineResponse200435**](InlineResponse200435.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidSplashSettings
 
-> InlineResponse200253 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
+> InlineResponse200255 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
 
 Modify the splash page settings for the given SSID
 
@@ -552,7 +552,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.UpdateNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse200253
+    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse200255
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.UpdateNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200253**](InlineResponse200253.md)
+[**InlineResponse200255**](InlineResponse200255.md)
 
 ### Authorization
 

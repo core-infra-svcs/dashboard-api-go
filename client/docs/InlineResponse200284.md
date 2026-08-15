@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedRules** | Pointer to [**[]InlineResponse200284AllowedRules**](InlineResponse200284AllowedRules.md) | Sets a list of specific SNORT signatures to allow | [optional] 
+**Items** | Pointer to [**[]InlineResponse200284Items**](InlineResponse200284Items.md) | Packet counter overviews per Secure Router | [optional] 
+**Meta** | Pointer to [**InlineResponse200284Meta**](InlineResponse200284Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200284WithDefaults instantiates a new InlineResponse200284 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedRules
+### GetItems
 
-`func (o *InlineResponse200284) GetAllowedRules() []InlineResponse200284AllowedRules`
+`func (o *InlineResponse200284) GetItems() []InlineResponse200284Items`
 
-GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetAllowedRulesOk
+### GetItemsOk
 
-`func (o *InlineResponse200284) GetAllowedRulesOk() (*[]InlineResponse200284AllowedRules, bool)`
+`func (o *InlineResponse200284) GetItemsOk() (*[]InlineResponse200284Items, bool)`
 
-GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedRules
+### SetItems
 
-`func (o *InlineResponse200284) SetAllowedRules(v []InlineResponse200284AllowedRules)`
+`func (o *InlineResponse200284) SetItems(v []InlineResponse200284Items)`
 
-SetAllowedRules sets AllowedRules field to given value.
+SetItems sets Items field to given value.
 
-### HasAllowedRules
+### HasItems
 
-`func (o *InlineResponse200284) HasAllowedRules() bool`
+`func (o *InlineResponse200284) HasItems() bool`
 
-HasAllowedRules returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200284) GetMeta() InlineResponse200284Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200284) GetMetaOk() (*InlineResponse200284Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200284) SetMeta(v InlineResponse200284Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200284) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

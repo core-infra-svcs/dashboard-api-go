@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **UpgradeWindow** | Pointer to [**NetworksNetworkIdFirmwareUpgradesUpgradeWindow**](NetworksNetworkIdFirmwareUpgradesUpgradeWindow.md) |  | [optional] 
 **Timezone** | Pointer to **string** | The timezone for the network | [optional] 
 **Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
+**FeatureLossAcknowledgements** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements**](NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements.md) | Acknowledges the target version has removed certain features that the network is currently using. | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetProducts sets Products field to given value.
 `func (o *InlineObject116) HasProducts() bool`
 
 HasProducts returns a boolean if a field has been set.
+
+### GetFeatureLossAcknowledgements
+
+`func (o *InlineObject116) GetFeatureLossAcknowledgements() []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements`
+
+GetFeatureLossAcknowledgements returns the FeatureLossAcknowledgements field if non-nil, zero value otherwise.
+
+### GetFeatureLossAcknowledgementsOk
+
+`func (o *InlineObject116) GetFeatureLossAcknowledgementsOk() (*[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements, bool)`
+
+GetFeatureLossAcknowledgementsOk returns a tuple with the FeatureLossAcknowledgements field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFeatureLossAcknowledgements
+
+`func (o *InlineObject116) SetFeatureLossAcknowledgements(v []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements)`
+
+SetFeatureLossAcknowledgements sets FeatureLossAcknowledgements field to given value.
+
+### HasFeatureLossAcknowledgements
+
+`func (o *InlineObject116) HasFeatureLossAcknowledgements() bool`
+
+HasFeatureLossAcknowledgements returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

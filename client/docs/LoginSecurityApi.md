@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationLoginSecurity
 
-> InlineResponse200383 GetOrganizationLoginSecurity(ctx, organizationId).Execute()
+> InlineResponse200395 GetOrganizationLoginSecurity(ctx, organizationId).Execute()
 
 Returns the login security settings for an organization.
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LoginSecurityApi.GetOrganizationLoginSecurity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLoginSecurity`: InlineResponse200383
+    // response from `GetOrganizationLoginSecurity`: InlineResponse200395
     fmt.Fprintf(os.Stdout, "Response from `LoginSecurityApi.GetOrganizationLoginSecurity`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200383**](InlineResponse200383.md)
+[**InlineResponse200395**](InlineResponse200395.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationLoginSecurity
 
-> InlineResponse200383 UpdateOrganizationLoginSecurity(ctx, organizationId).UpdateOrganizationLoginSecurity(updateOrganizationLoginSecurity).Execute()
+> InlineResponse200395 UpdateOrganizationLoginSecurity(ctx, organizationId).UpdateOrganizationLoginSecurity(updateOrganizationLoginSecurity).Execute()
 
 Update the login security settings for an organization
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationLoginSecurity := *openapiclient.NewInlineObject309() // InlineObject309 |  (optional)
+    updateOrganizationLoginSecurity := *openapiclient.NewInlineObject312() // InlineObject312 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LoginSecurityApi.UpdateOrganizationLoginSecurity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationLoginSecurity`: InlineResponse200383
+    // response from `UpdateOrganizationLoginSecurity`: InlineResponse200395
     fmt.Fprintf(os.Stdout, "Response from `LoginSecurityApi.UpdateOrganizationLoginSecurity`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationLoginSec
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationLoginSecurity** | [**InlineObject309**](InlineObject309.md) |  | 
+ **updateOrganizationLoginSecurity** | [**InlineObject312**](InlineObject312.md) |  | 
 
 ### Return type
 
-[**InlineResponse200383**](InlineResponse200383.md)
+[**InlineResponse200395**](InlineResponse200395.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSmApnsCert
 
-> InlineResponse200412 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
+> InlineResponse200427 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
 
 Get the organization's APNS certificate
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApnsCertApi.GetOrganizationSmApnsCert``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmApnsCert`: InlineResponse200412
+    // response from `GetOrganizationSmApnsCert`: InlineResponse200427
     fmt.Fprintf(os.Stdout, "Response from `ApnsCertApi.GetOrganizationSmApnsCert`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200412**](InlineResponse200412.md)
+[**InlineResponse200427**](InlineResponse200427.md)
 
 ### Authorization
 

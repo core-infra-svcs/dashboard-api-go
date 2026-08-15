@@ -4,17 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Network** | Pointer to [**InlineResponse200473Network**](InlineResponse200473Network.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200486Counts**](InlineResponse200486Counts.md) |  | [optional] 
-**Redundancy** | Pointer to [**InlineResponse200486Redundancy**](InlineResponse200486Redundancy.md) |  | [optional] 
-**Firmware** | Pointer to [**InlineResponse200486Firmware**](InlineResponse200486Firmware.md) |  | [optional] 
+**EntryId** | **string** | The id of entry | 
+**CreatedAt** | Pointer to **string** | Created at timestamp for the adaptive policy group | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Updated at timestamp for the adaptive policy group | [optional] 
+**Description** | Pointer to **string** | The description of mac address | [optional] 
+**Client** | Pointer to [**InlineResponse200486Client**](InlineResponse200486Client.md) |  | [optional] 
+**Ssid** | Pointer to [**InlineResponse200486Ssid**](InlineResponse200486Ssid.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200486Network**](InlineResponse200486Network.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200486Items
 
-`func NewInlineResponse200486Items() *InlineResponse200486Items`
+`func NewInlineResponse200486Items(entryId string, ) *InlineResponse200486Items`
 
 NewInlineResponse200486Items instantiates a new InlineResponse200486Items object
 This constructor will assign default values to properties that have it defined,
@@ -29,47 +31,167 @@ NewInlineResponse200486ItemsWithDefaults instantiates a new InlineResponse200486
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetEntryId
 
-`func (o *InlineResponse200486Items) GetSerial() string`
+`func (o *InlineResponse200486Items) GetEntryId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEntryId returns the EntryId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEntryIdOk
 
-`func (o *InlineResponse200486Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200486Items) GetEntryIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEntryIdOk returns a tuple with the EntryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEntryId
 
-`func (o *InlineResponse200486Items) SetSerial(v string)`
+`func (o *InlineResponse200486Items) SetEntryId(v string)`
 
-SetSerial sets Serial field to given value.
+SetEntryId sets EntryId field to given value.
 
-### HasSerial
 
-`func (o *InlineResponse200486Items) HasSerial() bool`
+### GetCreatedAt
 
-HasSerial returns a boolean if a field has been set.
+`func (o *InlineResponse200486Items) GetCreatedAt() string`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200486Items) GetCreatedAtOk() (*string, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200486Items) SetCreatedAt(v string)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200486Items) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200486Items) GetLastUpdatedAt() string`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200486Items) GetLastUpdatedAtOk() (*string, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200486Items) SetLastUpdatedAt(v string)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200486Items) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200486Items) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200486Items) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200486Items) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200486Items) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetClient
+
+`func (o *InlineResponse200486Items) GetClient() InlineResponse200486Client`
+
+GetClient returns the Client field if non-nil, zero value otherwise.
+
+### GetClientOk
+
+`func (o *InlineResponse200486Items) GetClientOk() (*InlineResponse200486Client, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClient
+
+`func (o *InlineResponse200486Items) SetClient(v InlineResponse200486Client)`
+
+SetClient sets Client field to given value.
+
+### HasClient
+
+`func (o *InlineResponse200486Items) HasClient() bool`
+
+HasClient returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineResponse200486Items) GetSsid() InlineResponse200486Ssid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineResponse200486Items) GetSsidOk() (*InlineResponse200486Ssid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineResponse200486Items) SetSsid(v InlineResponse200486Ssid)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineResponse200486Items) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
 
 ### GetNetwork
 
-`func (o *InlineResponse200486Items) GetNetwork() InlineResponse200473Network`
+`func (o *InlineResponse200486Items) GetNetwork() InlineResponse200486Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200486Items) GetNetworkOk() (*InlineResponse200473Network, bool)`
+`func (o *InlineResponse200486Items) GetNetworkOk() (*InlineResponse200486Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200486Items) SetNetwork(v InlineResponse200473Network)`
+`func (o *InlineResponse200486Items) SetNetwork(v InlineResponse200486Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -78,81 +200,6 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200486Items) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200486Items) GetCounts() InlineResponse200486Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200486Items) GetCountsOk() (*InlineResponse200486Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200486Items) SetCounts(v InlineResponse200486Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200486Items) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
-
-### GetRedundancy
-
-`func (o *InlineResponse200486Items) GetRedundancy() InlineResponse200486Redundancy`
-
-GetRedundancy returns the Redundancy field if non-nil, zero value otherwise.
-
-### GetRedundancyOk
-
-`func (o *InlineResponse200486Items) GetRedundancyOk() (*InlineResponse200486Redundancy, bool)`
-
-GetRedundancyOk returns a tuple with the Redundancy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRedundancy
-
-`func (o *InlineResponse200486Items) SetRedundancy(v InlineResponse200486Redundancy)`
-
-SetRedundancy sets Redundancy field to given value.
-
-### HasRedundancy
-
-`func (o *InlineResponse200486Items) HasRedundancy() bool`
-
-HasRedundancy returns a boolean if a field has been set.
-
-### GetFirmware
-
-`func (o *InlineResponse200486Items) GetFirmware() InlineResponse200486Firmware`
-
-GetFirmware returns the Firmware field if non-nil, zero value otherwise.
-
-### GetFirmwareOk
-
-`func (o *InlineResponse200486Items) GetFirmwareOk() (*InlineResponse200486Firmware, bool)`
-
-GetFirmwareOk returns a tuple with the Firmware field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFirmware
-
-`func (o *InlineResponse200486Items) SetFirmware(v InlineResponse200486Firmware)`
-
-SetFirmware sets Firmware field to given value.
-
-### HasFirmware
-
-`func (o *InlineResponse200486Items) HasFirmware() bool`
-
-HasFirmware returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

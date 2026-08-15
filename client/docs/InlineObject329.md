@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
-**SpInitiated** | Pointer to [**InlineResponse200398SpInitiated**](InlineResponse200398SpInitiated.md) |  | [optional] 
+**RulesetId** | **string** | ID of the ruleset to assign | 
+**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
+**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
 
 ## Methods
 
 ### NewInlineObject329
 
-`func NewInlineObject329() *InlineObject329`
+`func NewInlineObject329(rulesetId string, policyId string, ) *InlineObject329`
 
 NewInlineObject329 instantiates a new InlineObject329 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,70 @@ NewInlineObject329WithDefaults instantiates a new InlineObject329 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRulesetId
 
-`func (o *InlineObject329) GetEnabled() bool`
+`func (o *InlineObject329) GetRulesetId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRulesetIdOk
 
-`func (o *InlineObject329) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject329) GetRulesetIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRulesetId
 
-`func (o *InlineObject329) SetEnabled(v bool)`
+`func (o *InlineObject329) SetRulesetId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetRulesetId sets RulesetId field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject329) HasEnabled() bool`
+### GetPolicyId
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject329) GetPolicyId() string`
 
-### GetSpInitiated
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject329) GetSpInitiated() InlineResponse200398SpInitiated`
+### GetPolicyIdOk
 
-GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+`func (o *InlineObject329) GetPolicyIdOk() (*string, bool)`
 
-### GetSpInitiatedOk
-
-`func (o *InlineObject329) GetSpInitiatedOk() (*InlineResponse200398SpInitiated, bool)`
-
-GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpInitiated
+### SetPolicyId
 
-`func (o *InlineObject329) SetSpInitiated(v InlineResponse200398SpInitiated)`
+`func (o *InlineObject329) SetPolicyId(v string)`
 
-SetSpInitiated sets SpInitiated field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasSpInitiated
 
-`func (o *InlineObject329) HasSpInitiated() bool`
+### GetPriority
 
-HasSpInitiated returns a boolean if a field has been set.
+`func (o *InlineObject329) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *InlineObject329) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *InlineObject329) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *InlineObject329) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

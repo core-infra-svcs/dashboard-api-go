@@ -664,7 +664,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkTrafficShapingDscpTaggingOptions
 
-> []map[string]interface{} GetNetworkTrafficShapingDscpTaggingOptions(ctx, networkId).Execute()
+> []InlineResponse200214 GetNetworkTrafficShapingDscpTaggingOptions(ctx, networkId).Execute()
 
 Returns the available DSCP tagging options for your traffic shaping rules.
 
@@ -692,7 +692,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkTrafficShapingDscpTaggingOptions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkTrafficShapingDscpTaggingOptions`: []map[string]interface{}
+    // response from `GetNetworkTrafficShapingDscpTaggingOptions`: []InlineResponse200214
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkTrafficShapingDscpTaggingOptions`: %v\n", resp)
 }
 ```
@@ -716,7 +716,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse200214**](InlineResponse200214.md)
 
 ### Authorization
 
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200254 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
+> InlineResponse200256 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
 
 Display the traffic shaping settings for a SSID on an MR network
 
@@ -763,7 +763,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200254
+    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200256
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -789,7 +789,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200254**](InlineResponse200254.md)
+[**InlineResponse200256**](InlineResponse200256.md)
 
 ### Authorization
 
@@ -807,7 +807,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> InlineResponse200285 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200287 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -839,7 +839,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200285
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200287
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -867,7 +867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200285**](InlineResponse200285.md)
+[**InlineResponse200287**](InlineResponse200287.md)
 
 ### Authorization
 
@@ -1320,7 +1320,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200254 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
+> InlineResponse200256 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
 
 Update the traffic shaping rules for an SSID on an MR network.
 
@@ -1350,7 +1350,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficShapingApi.UpdateNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200254
+    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200256
     fmt.Fprintf(os.Stdout, "Response from `TrafficShapingApi.UpdateNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -1377,7 +1377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200254**](InlineResponse200254.md)
+[**InlineResponse200256**](InlineResponse200256.md)
 
 ### Authorization
 

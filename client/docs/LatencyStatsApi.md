@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessClientLatencyStats
 
-> InlineResponse200226 GetNetworkWirelessClientLatencyStats(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
+> InlineResponse200227 GetNetworkWirelessClientLatencyStats(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
 
 Aggregated latency info for a given client on this network
 
@@ -137,7 +137,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LatencyStatsApi.GetNetworkWirelessClientLatencyStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientLatencyStats`: InlineResponse200226
+    // response from `GetNetworkWirelessClientLatencyStats`: InlineResponse200227
     fmt.Fprintf(os.Stdout, "Response from `LatencyStatsApi.GetNetworkWirelessClientLatencyStats`: %v\n", resp)
 }
 ```
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200226**](InlineResponse200226.md)
+[**InlineResponse200227**](InlineResponse200227.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessClientsLatencyStats
 
-> []InlineResponse200226 GetNetworkWirelessClientsLatencyStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
+> []InlineResponse200227 GetNetworkWirelessClientsLatencyStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
 
 Aggregated latency info for this network, grouped by clients
 
@@ -225,7 +225,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LatencyStatsApi.GetNetworkWirelessClientsLatencyStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientsLatencyStats`: []InlineResponse200226
+    // response from `GetNetworkWirelessClientsLatencyStats`: []InlineResponse200227
     fmt.Fprintf(os.Stdout, "Response from `LatencyStatsApi.GetNetworkWirelessClientsLatencyStats`: %v\n", resp)
 }
 ```
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200226**](InlineResponse200226.md)
+[**[]InlineResponse200227**](InlineResponse200227.md)
 
 ### Authorization
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessLatencyStats
 
-> InlineResponse200237 GetNetworkWirelessLatencyStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
+> InlineResponse200238 GetNetworkWirelessLatencyStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).ApTag(apTag).Vlan(vlan).Fields(fields).Execute()
 
 Aggregated latency info for this network
 
@@ -397,7 +397,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LatencyStatsApi.GetNetworkWirelessLatencyStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessLatencyStats`: InlineResponse200237
+    // response from `GetNetworkWirelessLatencyStats`: InlineResponse200238
     fmt.Fprintf(os.Stdout, "Response from `LatencyStatsApi.GetNetworkWirelessLatencyStats`: %v\n", resp)
 }
 ```
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200237**](InlineResponse200237.md)
+[**InlineResponse200238**](InlineResponse200238.md)
 
 ### Authorization
 

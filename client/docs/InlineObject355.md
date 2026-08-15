@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
 
 ## Methods
 
 ### NewInlineObject355
 
-`func NewInlineObject355(enrolled bool, ) *InlineObject355`
+`func NewInlineObject355() *InlineObject355`
 
 NewInlineObject355 instantiates a new InlineObject355 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject355WithDefaults instantiates a new InlineObject355 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetStatus
 
-`func (o *InlineObject355) GetEnrolled() bool`
+`func (o *InlineObject355) GetStatus() string`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetStatusOk
 
-`func (o *InlineObject355) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject355) GetStatusOk() (*string, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetStatus
 
-`func (o *InlineObject355) SetEnrolled(v bool)`
+`func (o *InlineObject355) SetStatus(v string)`
 
-SetEnrolled sets Enrolled field to given value.
+SetStatus sets Status field to given value.
 
+### HasStatus
 
-### GetChannel
+`func (o *InlineObject355) HasStatus() bool`
 
-`func (o *InlineObject355) GetChannel() string`
+HasStatus returns a boolean if a field has been set.
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+### GetCertificateAuthorityId
 
-### GetChannelOk
+`func (o *InlineObject355) GetCertificateAuthorityId() string`
 
-`func (o *InlineObject355) GetChannelOk() (*string, bool)`
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+### GetCertificateAuthorityIdOk
+
+`func (o *InlineObject355) GetCertificateAuthorityIdOk() (*string, bool)`
+
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetCertificateAuthorityId
 
-`func (o *InlineObject355) SetChannel(v string)`
+`func (o *InlineObject355) SetCertificateAuthorityId(v string)`
 
-SetChannel sets Channel field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasChannel
+### HasCertificateAuthorityId
 
-`func (o *InlineObject355) HasChannel() bool`
+`func (o *InlineObject355) HasCertificateAuthorityId() bool`
 
-HasChannel returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

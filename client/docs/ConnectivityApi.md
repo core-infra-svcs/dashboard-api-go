@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseSitesConnectivityHistoryBySite
 
-> InlineResponse200405 GetOrganizationSaseSitesConnectivityHistoryBySite(ctx, organizationId).SiteIds(siteIds).Timespan(timespan).Execute()
+> InlineResponse200420 GetOrganizationSaseSitesConnectivityHistoryBySite(ctx, organizationId).SiteIds(siteIds).Timespan(timespan).Execute()
 
 Get the connectivity history of SASE sites in this organization
 
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectivityApi.GetOrganizationSaseSitesConnectivityHistoryBySite``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseSitesConnectivityHistoryBySite`: InlineResponse200405
+    // response from `GetOrganizationSaseSitesConnectivityHistoryBySite`: InlineResponse200420
     fmt.Fprintf(os.Stdout, "Response from `ConnectivityApi.GetOrganizationSaseSitesConnectivityHistoryBySite`: %v\n", resp)
 }
 ```
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200405**](InlineResponse200405.md)
+[**InlineResponse200420**](InlineResponse200420.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseSitesConnectivityOverview
 
-> InlineResponse200406 GetOrganizationSaseSitesConnectivityOverview(ctx, organizationId).Execute()
+> InlineResponse200421 GetOrganizationSaseSitesConnectivityOverview(ctx, organizationId).Execute()
 
 List high-level SASE site statuses (healthy, degraded, offline)
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectivityApi.GetOrganizationSaseSitesConnectivityOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseSitesConnectivityOverview`: InlineResponse200406
+    // response from `GetOrganizationSaseSitesConnectivityOverview`: InlineResponse200421
     fmt.Fprintf(os.Stdout, "Response from `ConnectivityApi.GetOrganizationSaseSitesConnectivityOverview`: %v\n", resp)
 }
 ```
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200406**](InlineResponse200406.md)
+[**InlineResponse200421**](InlineResponse200421.md)
 
 ### Authorization
 

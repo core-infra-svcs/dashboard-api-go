@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessBilling
 
-> InlineResponse200221 GetNetworkWirelessBilling(ctx, networkId).Execute()
+> InlineResponse200222 GetNetworkWirelessBilling(ctx, networkId).Execute()
 
 Return the billing settings of this network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BillingApi.GetNetworkWirelessBilling``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessBilling`: InlineResponse200221
+    // response from `GetNetworkWirelessBilling`: InlineResponse200222
     fmt.Fprintf(os.Stdout, "Response from `BillingApi.GetNetworkWirelessBilling`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200221**](InlineResponse200221.md)
+[**InlineResponse200222**](InlineResponse200222.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessBilling
 
-> InlineResponse200221 UpdateNetworkWirelessBilling(ctx, networkId).UpdateNetworkWirelessBilling(updateNetworkWirelessBilling).Execute()
+> InlineResponse200222 UpdateNetworkWirelessBilling(ctx, networkId).UpdateNetworkWirelessBilling(updateNetworkWirelessBilling).Execute()
 
 Update the billing settings
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BillingApi.UpdateNetworkWirelessBilling``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessBilling`: InlineResponse200221
+    // response from `UpdateNetworkWirelessBilling`: InlineResponse200222
     fmt.Fprintf(os.Stdout, "Response from `BillingApi.UpdateNetworkWirelessBilling`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200221**](InlineResponse200221.md)
+[**InlineResponse200222**](InlineResponse200222.md)
 
 ### Authorization
 

@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
-**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
-**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy.md) |  | 
+**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to remove | 
 
 ## Methods
 
 ### NewInlineObject326
 
-`func NewInlineObject326(name string, ) *InlineObject326`
+`func NewInlineObject326(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject326`
 
 NewInlineObject326 instantiates a new InlineObject326 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +26,45 @@ NewInlineObject326WithDefaults instantiates a new InlineObject326 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPolicy
 
-`func (o *InlineObject326) GetName() string`
+`func (o *InlineObject326) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPolicyOk
 
-`func (o *InlineObject326) GetNameOk() (*string, bool)`
+`func (o *InlineObject326) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPolicy
 
-`func (o *InlineObject326) SetName(v string)`
+`func (o *InlineObject326) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy)`
 
-SetName sets Name field to given value.
+SetPolicy sets Policy field to given value.
 
 
-### GetCategory
+### GetAdaptivePolicyGroups
 
-`func (o *InlineObject326) GetCategory() string`
+`func (o *InlineObject326) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetAdaptivePolicyGroupsOk
 
-`func (o *InlineObject326) GetCategoryOk() (*string, bool)`
+`func (o *InlineObject326) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetAdaptivePolicyGroups
 
-`func (o *InlineObject326) SetCategory(v string)`
+`func (o *InlineObject326) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
 
-SetCategory sets Category field to given value.
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
 
-### HasCategory
-
-`func (o *InlineObject326) HasCategory() bool`
-
-HasCategory returns a boolean if a field has been set.
-
-### GetObjectIds
-
-`func (o *InlineObject326) GetObjectIds() []string`
-
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
-
-### GetObjectIdsOk
-
-`func (o *InlineObject326) GetObjectIdsOk() (*[]string, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetObjectIds
-
-`func (o *InlineObject326) SetObjectIds(v []string)`
-
-SetObjectIds sets ObjectIds field to given value.
-
-### HasObjectIds
-
-`func (o *InlineObject326) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

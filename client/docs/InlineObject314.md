@@ -4,20 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the firewall rule | 
-**RulesetId** | **string** | Firewall ruleset ID to associate the rule with | 
-**Policy** | **string** | Rule policy - allow or deny traffic | 
-**Enabled** | Pointer to **bool** | Whether the rule is enabled | [optional] 
-**Priority** | Pointer to **int32** | Rule priority (lower numbers &#x3D; higher priority) | [optional] 
-**Description** | Pointer to **string** | Description of the firewall rule | [optional] 
-**Sources** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources.md) |  | 
-**Destinations** | [**OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations.md) |  | 
+**Name** | **string** | The name of the combined network | 
+**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
 
 ## Methods
 
 ### NewInlineObject314
 
-`func NewInlineObject314(name string, rulesetId string, policy string, sources OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, destinations OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, ) *InlineObject314`
+`func NewInlineObject314(name string, networkIds []string, ) *InlineObject314`
 
 NewInlineObject314 instantiates a new InlineObject314 object
 This constructor will assign default values to properties that have it defined,
@@ -52,160 +47,50 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetRulesetId
+### GetNetworkIds
 
-`func (o *InlineObject314) GetRulesetId() string`
+`func (o *InlineObject314) GetNetworkIds() []string`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject314) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject314) GetNetworkIdsOk() (*[]string, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetNetworkIds
 
-`func (o *InlineObject314) SetRulesetId(v string)`
+`func (o *InlineObject314) SetNetworkIds(v []string)`
 
-SetRulesetId sets RulesetId field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
 
-### GetPolicy
+### GetEnrollmentString
 
-`func (o *InlineObject314) GetPolicy() string`
+`func (o *InlineObject314) GetEnrollmentString() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetEnrollmentStringOk
 
-`func (o *InlineObject314) GetPolicyOk() (*string, bool)`
+`func (o *InlineObject314) GetEnrollmentStringOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetEnrollmentString
 
-`func (o *InlineObject314) SetPolicy(v string)`
+`func (o *InlineObject314) SetEnrollmentString(v string)`
 
-SetPolicy sets Policy field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
+### HasEnrollmentString
 
-### GetEnabled
+`func (o *InlineObject314) HasEnrollmentString() bool`
 
-`func (o *InlineObject314) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineObject314) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineObject314) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineObject314) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetPriority
-
-`func (o *InlineObject314) GetPriority() int32`
-
-GetPriority returns the Priority field if non-nil, zero value otherwise.
-
-### GetPriorityOk
-
-`func (o *InlineObject314) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPriority
-
-`func (o *InlineObject314) SetPriority(v int32)`
-
-SetPriority sets Priority field to given value.
-
-### HasPriority
-
-`func (o *InlineObject314) HasPriority() bool`
-
-HasPriority returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineObject314) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject314) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject314) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject314) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetSources
-
-`func (o *InlineObject314) GetSources() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources`
-
-GetSources returns the Sources field if non-nil, zero value otherwise.
-
-### GetSourcesOk
-
-`func (o *InlineObject314) GetSourcesOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources, bool)`
-
-GetSourcesOk returns a tuple with the Sources field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSources
-
-`func (o *InlineObject314) SetSources(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources)`
-
-SetSources sets Sources field to given value.
-
-
-### GetDestinations
-
-`func (o *InlineObject314) GetDestinations() OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations`
-
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
-
-### GetDestinationsOk
-
-`func (o *InlineObject314) GetDestinationsOk() (*OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations, bool)`
-
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestinations
-
-`func (o *InlineObject314) SetDestinations(v OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations)`
-
-SetDestinations sets Destinations field to given value.
-
+HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

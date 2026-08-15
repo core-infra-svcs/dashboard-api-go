@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkMoves
 
-> InlineResponse200385 GetNetworkMoves(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).MoveIds(moveIds).Execute()
+> InlineResponse200400 GetNetworkMoves(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).MoveIds(moveIds).Execute()
 
 Return a list of network move operations in the organization
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MovesApi.GetNetworkMoves``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMoves`: InlineResponse200385
+    // response from `GetNetworkMoves`: InlineResponse200400
     fmt.Fprintf(os.Stdout, "Response from `MovesApi.GetNetworkMoves`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200385**](InlineResponse200385.md)
+[**InlineResponse200400**](InlineResponse200400.md)
 
 ### Authorization
 

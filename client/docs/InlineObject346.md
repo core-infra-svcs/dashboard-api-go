@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
-**Meta** | Pointer to [**InlineResponse200275Meta**](InlineResponse200275Meta.md) |  | [optional] 
+**Name** | **string** | The name of the Limited Access Role | 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
 ### NewInlineObject346
 
-`func NewInlineObject346(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject346`
+`func NewInlineObject346(name string, ) *InlineObject346`
 
 NewInlineObject346 instantiates a new InlineObject346 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,75 @@ NewInlineObject346WithDefaults instantiates a new InlineObject346 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject346) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
+`func (o *InlineObject346) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject346) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
+`func (o *InlineObject346) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject346) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
+`func (o *InlineObject346) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
 
-### GetMeta
+### GetScope
 
-`func (o *InlineObject346) GetMeta() InlineResponse200275Meta`
+`func (o *InlineObject346) GetScope() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetScopeOk
 
-`func (o *InlineObject346) GetMetaOk() (*InlineResponse200275Meta, bool)`
+`func (o *InlineObject346) GetScopeOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetScope
 
-`func (o *InlineObject346) SetMeta(v InlineResponse200275Meta)`
+`func (o *InlineObject346) SetScope(v string)`
 
-SetMeta sets Meta field to given value.
+SetScope sets Scope field to given value.
 
-### HasMeta
+### HasScope
 
-`func (o *InlineObject346) HasMeta() bool`
+`func (o *InlineObject346) HasScope() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject346) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject346) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject346) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject346) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

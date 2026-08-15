@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Counts** | Pointer to [**InlineResponse200273MetaCounts**](InlineResponse200273MetaCounts.md) |  | [optional] 
-**Units** | Pointer to [**InlineResponse200273MetaUnits**](InlineResponse200273MetaUnits.md) |  | [optional] 
 
 ## Methods
 
@@ -50,31 +49,6 @@ SetCounts sets Counts field to given value.
 `func (o *InlineResponse200273Meta) HasCounts() bool`
 
 HasCounts returns a boolean if a field has been set.
-
-### GetUnits
-
-`func (o *InlineResponse200273Meta) GetUnits() InlineResponse200273MetaUnits`
-
-GetUnits returns the Units field if non-nil, zero value otherwise.
-
-### GetUnitsOk
-
-`func (o *InlineResponse200273Meta) GetUnitsOk() (*InlineResponse200273MetaUnits, bool)`
-
-GetUnitsOk returns a tuple with the Units field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUnits
-
-`func (o *InlineResponse200273Meta) SetUnits(v InlineResponse200273MetaUnits)`
-
-SetUnits sets Units field to given value.
-
-### HasUnits
-
-`func (o *InlineResponse200273Meta) HasUnits() bool`
-
-HasUnits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

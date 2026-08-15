@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationDevicesCellularGeolocations
 
-> InlineResponse200339 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200351 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular geolocation telemetry for devices in an organization
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GeolocationsApi.GetOrganizationDevicesCellularGeolocations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200339
+    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200351
     fmt.Fprintf(os.Stdout, "Response from `GeolocationsApi.GetOrganizationDevicesCellularGeolocations`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200339**](InlineResponse200339.md)
+[**InlineResponse200351**](InlineResponse200351.md)
 
 ### Authorization
 

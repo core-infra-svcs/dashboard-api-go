@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFloorPlansAutoLocateDevices
 
-> []InlineResponse200362 GetOrganizationFloorPlansAutoLocateDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
+> []InlineResponse200374 GetOrganizationFloorPlansAutoLocateDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
 
 List auto locate details for each device in your organization
 
@@ -557,7 +557,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FloorPlansApi.GetOrganizationFloorPlansAutoLocateDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFloorPlansAutoLocateDevices`: []InlineResponse200362
+    // response from `GetOrganizationFloorPlansAutoLocateDevices`: []InlineResponse200374
     fmt.Fprintf(os.Stdout, "Response from `FloorPlansApi.GetOrganizationFloorPlansAutoLocateDevices`: %v\n", resp)
 }
 ```
@@ -586,7 +586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200362**](InlineResponse200362.md)
+[**[]InlineResponse200374**](InlineResponse200374.md)
 
 ### Authorization
 
@@ -604,7 +604,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFloorPlansAutoLocateStatuses
 
-> []InlineResponse200363 GetOrganizationFloorPlansAutoLocateStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
+> []InlineResponse200375 GetOrganizationFloorPlansAutoLocateStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
 
 List the status of auto locate for each floorplan in your organization
 
@@ -637,7 +637,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FloorPlansApi.GetOrganizationFloorPlansAutoLocateStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFloorPlansAutoLocateStatuses`: []InlineResponse200363
+    // response from `GetOrganizationFloorPlansAutoLocateStatuses`: []InlineResponse200375
     fmt.Fprintf(os.Stdout, "Response from `FloorPlansApi.GetOrganizationFloorPlansAutoLocateStatuses`: %v\n", resp)
 }
 ```
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200363**](InlineResponse200363.md)
+[**[]InlineResponse200375**](InlineResponse200375.md)
 
 ### Authorization
 

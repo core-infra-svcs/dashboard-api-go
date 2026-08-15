@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline
 
-> InlineResponse200267 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
+> InlineResponse200269 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
 
 Retrieves pipeline overviews with aggregated job status counts
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByPipelineApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200267
+    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200269
     fmt.Fprintf(os.Stdout, "Response from `ByPipelineApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200267**](InlineResponse200267.md)
+[**InlineResponse200269**](InlineResponse200269.md)
 
 ### Authorization
 

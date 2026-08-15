@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Serial** | Pointer to **string** | Camera serial number | [optional] 
-**Status** | Pointer to **string** | Onboarding status | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the status was last updated | [optional] 
+**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
+**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -78,55 +77,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetStatus
+### GetBoundaries
 
-`func (o *InlineResponse200308) GetStatus() string`
+`func (o *InlineResponse200308) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetBoundariesOk
 
-`func (o *InlineResponse200308) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200308) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetBoundaries
 
-`func (o *InlineResponse200308) SetStatus(v string)`
+`func (o *InlineResponse200308) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries)`
 
-SetStatus sets Status field to given value.
+SetBoundaries sets Boundaries field to given value.
 
-### HasStatus
+### HasBoundaries
 
-`func (o *InlineResponse200308) HasStatus() bool`
+`func (o *InlineResponse200308) HasBoundaries() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200308) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200308) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200308) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200308) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasBoundaries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

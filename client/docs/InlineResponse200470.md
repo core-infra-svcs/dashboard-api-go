@@ -4,14 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork**](OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork.md) |  | [optional] 
-**PanId** | Pointer to **string** | Unique id for the zigbee device node | [optional] 
-**Channel** | Pointer to **string** | Channel the zigbee node will communicate on either auto or between 11-25 | [optional] 
-**TransmitPowerLevel** | Pointer to **int32** | Power level for the zigbee devices will be a int between 10-20 | [optional] 
-**Enrolled** | Pointer to **bool** | Whether this zigbee node is enrolled or not | [optional] 
-**Status** | Pointer to **string** | The node status, either online or offline | [optional] 
-**Gateway** | Pointer to [**OrganizationsOrganizationIdWirelessZigbeeDevicesGateway**](OrganizationsOrganizationIdWirelessZigbeeDevicesGateway.md) |  | [optional] 
-**Counts** | Pointer to [**OrganizationsOrganizationIdWirelessZigbeeDevicesCounts**](OrganizationsOrganizationIdWirelessZigbeeDevicesCounts.md) |  | [optional] 
+**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
+**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
+**Client** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -32,22 +28,97 @@ NewInlineResponse200470WithDefaults instantiates a new InlineResponse200470 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetDownstream
+
+`func (o *InlineResponse200470) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse200470) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse200470) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse200470) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse200470) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse200470) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse200470) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse200470) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetClient
+
+`func (o *InlineResponse200470) GetClient() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient`
+
+GetClient returns the Client field if non-nil, zero value otherwise.
+
+### GetClientOk
+
+`func (o *InlineResponse200470) GetClientOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClient
+
+`func (o *InlineResponse200470) SetClient(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient)`
+
+SetClient sets Client field to given value.
+
+### HasClient
+
+`func (o *InlineResponse200470) HasClient() bool`
+
+HasClient returns a boolean if a field has been set.
+
 ### GetNetwork
 
-`func (o *InlineResponse200470) GetNetwork() OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork`
+`func (o *InlineResponse200470) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200470) GetNetworkOk() (*OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork, bool)`
+`func (o *InlineResponse200470) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200470) SetNetwork(v OrganizationsOrganizationIdWirelessZigbeeDevicesNetwork)`
+`func (o *InlineResponse200470) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
 
 SetNetwork sets Network field to given value.
 
@@ -56,181 +127,6 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200470) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
-
-### GetPanId
-
-`func (o *InlineResponse200470) GetPanId() string`
-
-GetPanId returns the PanId field if non-nil, zero value otherwise.
-
-### GetPanIdOk
-
-`func (o *InlineResponse200470) GetPanIdOk() (*string, bool)`
-
-GetPanIdOk returns a tuple with the PanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPanId
-
-`func (o *InlineResponse200470) SetPanId(v string)`
-
-SetPanId sets PanId field to given value.
-
-### HasPanId
-
-`func (o *InlineResponse200470) HasPanId() bool`
-
-HasPanId returns a boolean if a field has been set.
-
-### GetChannel
-
-`func (o *InlineResponse200470) GetChannel() string`
-
-GetChannel returns the Channel field if non-nil, zero value otherwise.
-
-### GetChannelOk
-
-`func (o *InlineResponse200470) GetChannelOk() (*string, bool)`
-
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetChannel
-
-`func (o *InlineResponse200470) SetChannel(v string)`
-
-SetChannel sets Channel field to given value.
-
-### HasChannel
-
-`func (o *InlineResponse200470) HasChannel() bool`
-
-HasChannel returns a boolean if a field has been set.
-
-### GetTransmitPowerLevel
-
-`func (o *InlineResponse200470) GetTransmitPowerLevel() int32`
-
-GetTransmitPowerLevel returns the TransmitPowerLevel field if non-nil, zero value otherwise.
-
-### GetTransmitPowerLevelOk
-
-`func (o *InlineResponse200470) GetTransmitPowerLevelOk() (*int32, bool)`
-
-GetTransmitPowerLevelOk returns a tuple with the TransmitPowerLevel field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTransmitPowerLevel
-
-`func (o *InlineResponse200470) SetTransmitPowerLevel(v int32)`
-
-SetTransmitPowerLevel sets TransmitPowerLevel field to given value.
-
-### HasTransmitPowerLevel
-
-`func (o *InlineResponse200470) HasTransmitPowerLevel() bool`
-
-HasTransmitPowerLevel returns a boolean if a field has been set.
-
-### GetEnrolled
-
-`func (o *InlineResponse200470) GetEnrolled() bool`
-
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
-
-### GetEnrolledOk
-
-`func (o *InlineResponse200470) GetEnrolledOk() (*bool, bool)`
-
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrolled
-
-`func (o *InlineResponse200470) SetEnrolled(v bool)`
-
-SetEnrolled sets Enrolled field to given value.
-
-### HasEnrolled
-
-`func (o *InlineResponse200470) HasEnrolled() bool`
-
-HasEnrolled returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200470) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200470) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200470) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200470) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetGateway
-
-`func (o *InlineResponse200470) GetGateway() OrganizationsOrganizationIdWirelessZigbeeDevicesGateway`
-
-GetGateway returns the Gateway field if non-nil, zero value otherwise.
-
-### GetGatewayOk
-
-`func (o *InlineResponse200470) GetGatewayOk() (*OrganizationsOrganizationIdWirelessZigbeeDevicesGateway, bool)`
-
-GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGateway
-
-`func (o *InlineResponse200470) SetGateway(v OrganizationsOrganizationIdWirelessZigbeeDevicesGateway)`
-
-SetGateway sets Gateway field to given value.
-
-### HasGateway
-
-`func (o *InlineResponse200470) HasGateway() bool`
-
-HasGateway returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200470) GetCounts() OrganizationsOrganizationIdWirelessZigbeeDevicesCounts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200470) GetCountsOk() (*OrganizationsOrganizationIdWirelessZigbeeDevicesCounts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200470) SetCounts(v OrganizationsOrganizationIdWirelessZigbeeDevicesCounts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200470) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

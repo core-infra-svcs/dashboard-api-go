@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Tag** | Pointer to **string** | Network tag | [optional] 
-**Id** | Pointer to **string** | Network id. | [optional] 
+**Id** | Pointer to **string** | Network ID. Legacy numeric IDs are also accepted. | [optional] 
 **PermissionScopeId** | **string** | Permission scope id | 
 
 ## Methods

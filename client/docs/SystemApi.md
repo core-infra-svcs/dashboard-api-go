@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationDevicesSystemMemoryUsageHistoryByInterval
 
-> InlineResponse200355 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
+> InlineResponse200367 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
 
 Return the memory utilization history in kB for devices in the organization.
 
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SystemApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200355
+    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200367
     fmt.Fprintf(os.Stdout, "Response from `SystemApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200355**](InlineResponse200355.md)
+[**InlineResponse200367**](InlineResponse200367.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval
 
-> InlineResponse200485 GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200507 GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List cpu utilization data of wireless LAN controllers in an organization
 
@@ -137,7 +137,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SystemApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: InlineResponse200485
+    // response from `GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: InlineResponse200507
     fmt.Fprintf(os.Stdout, "Response from `SystemApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200485**](InlineResponse200485.md)
+[**InlineResponse200507**](InlineResponse200507.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesSystemCpuLoadHistory
 
-> InlineResponse200459 GetOrganizationWirelessDevicesSystemCpuLoadHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+> InlineResponse200478 GetOrganizationWirelessDevicesSystemCpuLoadHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
 
 Return the CPU Load history for a list of wireless devices in the organization.
 
@@ -222,7 +222,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SystemApi.GetOrganizationWirelessDevicesSystemCpuLoadHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesSystemCpuLoadHistory`: InlineResponse200459
+    // response from `GetOrganizationWirelessDevicesSystemCpuLoadHistory`: InlineResponse200478
     fmt.Fprintf(os.Stdout, "Response from `SystemApi.GetOrganizationWirelessDevicesSystemCpuLoadHistory`: %v\n", resp)
 }
 ```
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200459**](InlineResponse200459.md)
+[**InlineResponse200478**](InlineResponse200478.md)
 
 ### Authorization
 

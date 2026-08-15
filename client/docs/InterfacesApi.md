@@ -994,7 +994,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDevicesInterfacesL3
 
-> InlineResponse200271 GetOrganizationApplianceDevicesInterfacesL3(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200273 GetOrganizationApplianceDevicesInterfacesL3(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List L3 interfaces across networks for the organization
 
@@ -1026,7 +1026,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationApplianceDevicesInterfacesL3``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDevicesInterfacesL3`: InlineResponse200271
+    // response from `GetOrganizationApplianceDevicesInterfacesL3`: InlineResponse200273
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationApplianceDevicesInterfacesL3`: %v\n", resp)
 }
 ```
@@ -1054,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200271**](InlineResponse200271.md)
+[**InlineResponse200273**](InlineResponse200273.md)
 
 ### Authorization
 
@@ -1072,7 +1072,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDevicesInterfacesPortsByDevice
 
-> InlineResponse200272 GetOrganizationApplianceDevicesInterfacesPortsByDevice(ctx, organizationId).Serials(serials).Numbers(numbers).Execute()
+> InlineResponse200274 GetOrganizationApplianceDevicesInterfacesPortsByDevice(ctx, organizationId).Serials(serials).Numbers(numbers).Execute()
 
 Returns port configurations for appliances in a given organization
 
@@ -1102,7 +1102,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDevicesInterfacesPortsByDevice`: InlineResponse200272
+    // response from `GetOrganizationApplianceDevicesInterfacesPortsByDevice`: InlineResponse200274
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice`: %v\n", resp)
 }
 ```
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200272**](InlineResponse200272.md)
+[**InlineResponse200274**](InlineResponse200274.md)
 
 ### Authorization
 
@@ -1146,7 +1146,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceInterfacesPacketsOverviewsByDevice
 
-> InlineResponse200282 GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+> InlineResponse200284 GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
 
 Returns packet counter overviews for all interfaces on Secure Routers in the organization, including totals and average rates by packet type over the requested timespan.
 
@@ -1182,7 +1182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: InlineResponse200282
+    // response from `GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: InlineResponse200284
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: %v\n", resp)
 }
 ```
@@ -1214,7 +1214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200282**](InlineResponse200282.md)
+[**InlineResponse200284**](InlineResponse200284.md)
 
 ### Authorization
 
@@ -1232,7 +1232,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice
 
-> InlineResponse200475 GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200497 GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces in an organization
 
@@ -1267,7 +1267,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: InlineResponse200475
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: InlineResponse200497
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: %v\n", resp)
 }
 ```
@@ -1298,7 +1298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200475**](InlineResponse200475.md)
+[**InlineResponse200497**](InlineResponse200497.md)
 
 ### Authorization
 
@@ -1316,7 +1316,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice
 
-> InlineResponse200476 GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200498 GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history status in an organization
 
@@ -1352,7 +1352,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: InlineResponse200476
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: InlineResponse200498
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -1384,7 +1384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200476**](InlineResponse200476.md)
+[**InlineResponse200498**](InlineResponse200498.md)
 
 ### Authorization
 
@@ -1402,7 +1402,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval
 
-> InlineResponse200477 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200499 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history usage in an organization
 
@@ -1437,7 +1437,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200477
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200499
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -1468,7 +1468,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200477**](InlineResponse200477.md)
+[**InlineResponse200499**](InlineResponse200499.md)
 
 ### Authorization
 
@@ -1486,7 +1486,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice
 
-> InlineResponse200478 GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200500 GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces in an organization
 
@@ -1521,7 +1521,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: InlineResponse200478
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: InlineResponse200500
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: %v\n", resp)
 }
 ```
@@ -1552,7 +1552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200478**](InlineResponse200478.md)
+[**InlineResponse200500**](InlineResponse200500.md)
 
 ### Authorization
 
@@ -1570,7 +1570,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice
 
-> InlineResponse200479 GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200501 GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history status in an organization
 
@@ -1606,7 +1606,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: InlineResponse200479
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: InlineResponse200501
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -1638,7 +1638,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200479**](InlineResponse200479.md)
+[**InlineResponse200501**](InlineResponse200501.md)
 
 ### Authorization
 
@@ -1656,7 +1656,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval
 
-> InlineResponse200480 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200502 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history usage in an organization
 
@@ -1691,7 +1691,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200480
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200502
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -1722,7 +1722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200480**](InlineResponse200480.md)
+[**InlineResponse200502**](InlineResponse200502.md)
 
 ### Authorization
 
@@ -1740,7 +1740,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice
 
-> InlineResponse200481 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200503 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the packet counters for the interfaces of a Wireless LAN controller
 
@@ -1776,7 +1776,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200481
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200503
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -1808,7 +1808,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200481**](InlineResponse200481.md)
+[**InlineResponse200503**](InlineResponse200503.md)
 
 ### Authorization
 
@@ -1826,7 +1826,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval
 
-> InlineResponse200482 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200504 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the traffic for the interfaces of a Wireless LAN controller
 
@@ -1862,7 +1862,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200482
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200504
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -1894,7 +1894,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200482**](InlineResponse200482.md)
+[**InlineResponse200504**](InlineResponse200504.md)
 
 ### Authorization
 

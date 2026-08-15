@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWirelessRfProfile
 
-> InlineResponse200241 CreateNetworkWirelessRfProfile(ctx, networkId).CreateNetworkWirelessRfProfile(createNetworkWirelessRfProfile).Execute()
+> InlineResponse200242 CreateNetworkWirelessRfProfile(ctx, networkId).CreateNetworkWirelessRfProfile(createNetworkWirelessRfProfile).Execute()
 
 Creates new RF profile for this network
 
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.CreateNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWirelessRfProfile`: InlineResponse200241
+    // response from `CreateNetworkWirelessRfProfile`: InlineResponse200242
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.CreateNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200241**](InlineResponse200241.md)
+[**InlineResponse200242**](InlineResponse200242.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessRfProfile
 
-> InlineResponse200241 GetNetworkWirelessRfProfile(ctx, networkId, rfProfileId).Execute()
+> InlineResponse200242 GetNetworkWirelessRfProfile(ctx, networkId, rfProfileId).Execute()
 
 Return a RF profile
 
@@ -478,7 +478,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessRfProfile`: InlineResponse200241
+    // response from `GetNetworkWirelessRfProfile`: InlineResponse200242
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200241**](InlineResponse200241.md)
+[**InlineResponse200242**](InlineResponse200242.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessRfProfiles
 
-> InlineResponse200241 GetNetworkWirelessRfProfiles(ctx, networkId).IncludeTemplateProfiles(includeTemplateProfiles).Execute()
+> InlineResponse200242 GetNetworkWirelessRfProfiles(ctx, networkId).IncludeTemplateProfiles(includeTemplateProfiles).Execute()
 
 List RF profiles for this network
 
@@ -551,7 +551,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkWirelessRfProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessRfProfiles`: InlineResponse200241
+    // response from `GetNetworkWirelessRfProfiles`: InlineResponse200242
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkWirelessRfProfiles`: %v\n", resp)
 }
 ```
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200241**](InlineResponse200241.md)
+[**InlineResponse200242**](InlineResponse200242.md)
 
 ### Authorization
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessRfProfilesAssignmentsByDevice
 
-> []InlineResponse200466 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
+> []InlineResponse200485 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
 
 List the RF profiles of an organization by device
 
@@ -634,7 +634,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200466
+    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200485
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -670,7 +670,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200466**](InlineResponse200466.md)
+[**[]InlineResponse200485**](InlineResponse200485.md)
 
 ### Authorization
 
@@ -763,7 +763,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessRfProfile
 
-> InlineResponse200241 UpdateNetworkWirelessRfProfile(ctx, networkId, rfProfileId).UpdateNetworkWirelessRfProfile(updateNetworkWirelessRfProfile).Execute()
+> InlineResponse200242 UpdateNetworkWirelessRfProfile(ctx, networkId, rfProfileId).UpdateNetworkWirelessRfProfile(updateNetworkWirelessRfProfile).Execute()
 
 Updates specified RF profile for this network
 
@@ -793,7 +793,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.UpdateNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessRfProfile`: InlineResponse200241
+    // response from `UpdateNetworkWirelessRfProfile`: InlineResponse200242
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.UpdateNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -820,7 +820,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200241**](InlineResponse200241.md)
+[**InlineResponse200242**](InlineResponse200242.md)
 
 ### Authorization
 

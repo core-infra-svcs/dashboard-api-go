@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
 **FiveGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
 **SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**InlineResponse200241Transmission**](InlineResponse200241Transmission.md) |  | [optional] 
+**Transmission** | Pointer to [**InlineResponse200242Transmission**](InlineResponse200242Transmission.md) |  | [optional] 
 **PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
 **FlexRadios** | Pointer to [**NetworksNetworkIdWirelessRfProfilesFlexRadios**](NetworksNetworkIdWirelessRfProfilesFlexRadios.md) |  | [optional] 
 
@@ -289,20 +289,20 @@ HasSixGhzSettings returns a boolean if a field has been set.
 
 ### GetTransmission
 
-`func (o *InlineObject213) GetTransmission() InlineResponse200241Transmission`
+`func (o *InlineObject213) GetTransmission() InlineResponse200242Transmission`
 
 GetTransmission returns the Transmission field if non-nil, zero value otherwise.
 
 ### GetTransmissionOk
 
-`func (o *InlineObject213) GetTransmissionOk() (*InlineResponse200241Transmission, bool)`
+`func (o *InlineObject213) GetTransmissionOk() (*InlineResponse200242Transmission, bool)`
 
 GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTransmission
 
-`func (o *InlineObject213) SetTransmission(v InlineResponse200241Transmission)`
+`func (o *InlineObject213) SetTransmission(v InlineResponse200242Transmission)`
 
 SetTransmission sets Transmission field to given value.
 

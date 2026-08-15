@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200462Network**](InlineResponse200462Network.md) |  | [optional] 
-**ReceiverId** | Pointer to **string** | Receiver ID | [optional] 
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**InlineResponse200462Radio**](InlineResponse200462Radio.md) |  | [optional] 
+**Network** | [**InlineResponse200316Network**](InlineResponse200316Network.md) |  | 
+**Clients** | [**InlineResponse200462Clients**](InlineResponse200462Clients.md) |  | 
+**Devices** | [**InlineResponse200462Devices**](InlineResponse200462Devices.md) |  | 
+**Usage** | [**InlineResponse200462Usage**](InlineResponse200462Usage.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200462Items
 
-`func NewInlineResponse200462Items() *InlineResponse200462Items`
+`func NewInlineResponse200462Items(network InlineResponse200316Network, clients InlineResponse200462Clients, devices InlineResponse200462Devices, usage InlineResponse200462Usage, ) *InlineResponse200462Items`
 
 NewInlineResponse200462Items instantiates a new InlineResponse200462Items object
 This constructor will assign default values to properties that have it defined,
@@ -31,128 +30,83 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNetwork
 
-`func (o *InlineResponse200462Items) GetNetwork() InlineResponse200462Network`
+`func (o *InlineResponse200462Items) GetNetwork() InlineResponse200316Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200462Items) GetNetworkOk() (*InlineResponse200462Network, bool)`
+`func (o *InlineResponse200462Items) GetNetworkOk() (*InlineResponse200316Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200462Items) SetNetwork(v InlineResponse200462Network)`
+`func (o *InlineResponse200462Items) SetNetwork(v InlineResponse200316Network)`
 
 SetNetwork sets Network field to given value.
 
-### HasNetwork
 
-`func (o *InlineResponse200462Items) HasNetwork() bool`
+### GetClients
 
-HasNetwork returns a boolean if a field has been set.
+`func (o *InlineResponse200462Items) GetClients() InlineResponse200462Clients`
 
-### GetReceiverId
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200462Items) GetReceiverId() string`
+### GetClientsOk
 
-GetReceiverId returns the ReceiverId field if non-nil, zero value otherwise.
+`func (o *InlineResponse200462Items) GetClientsOk() (*InlineResponse200462Clients, bool)`
 
-### GetReceiverIdOk
-
-`func (o *InlineResponse200462Items) GetReceiverIdOk() (*string, bool)`
-
-GetReceiverIdOk returns a tuple with the ReceiverId field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceiverId
+### SetClients
 
-`func (o *InlineResponse200462Items) SetReceiverId(v string)`
+`func (o *InlineResponse200462Items) SetClients(v InlineResponse200462Clients)`
 
-SetReceiverId sets ReceiverId field to given value.
+SetClients sets Clients field to given value.
 
-### HasReceiverId
 
-`func (o *InlineResponse200462Items) HasReceiverId() bool`
+### GetDevices
 
-HasReceiverId returns a boolean if a field has been set.
+`func (o *InlineResponse200462Items) GetDevices() InlineResponse200462Devices`
 
-### GetUrl
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200462Items) GetUrl() string`
+### GetDevicesOk
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+`func (o *InlineResponse200462Items) GetDevicesOk() (*InlineResponse200462Devices, bool)`
 
-### GetUrlOk
-
-`func (o *InlineResponse200462Items) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetDevices
 
-`func (o *InlineResponse200462Items) SetUrl(v string)`
+`func (o *InlineResponse200462Items) SetDevices(v InlineResponse200462Devices)`
 
-SetUrl sets Url field to given value.
+SetDevices sets Devices field to given value.
 
-### HasUrl
 
-`func (o *InlineResponse200462Items) HasUrl() bool`
+### GetUsage
 
-HasUrl returns a boolean if a field has been set.
+`func (o *InlineResponse200462Items) GetUsage() InlineResponse200462Usage`
 
-### GetVersion
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200462Items) GetVersion() string`
+### GetUsageOk
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+`func (o *InlineResponse200462Items) GetUsageOk() (*InlineResponse200462Usage, bool)`
 
-### GetVersionOk
-
-`func (o *InlineResponse200462Items) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetUsage
 
-`func (o *InlineResponse200462Items) SetVersion(v string)`
+`func (o *InlineResponse200462Items) SetUsage(v InlineResponse200462Usage)`
 
-SetVersion sets Version field to given value.
+SetUsage sets Usage field to given value.
 
-### HasVersion
-
-`func (o *InlineResponse200462Items) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
-### GetRadio
-
-`func (o *InlineResponse200462Items) GetRadio() InlineResponse200462Radio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineResponse200462Items) GetRadioOk() (*InlineResponse200462Radio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineResponse200462Items) SetRadio(v InlineResponse200462Radio)`
-
-SetRadio sets Radio field to given value.
-
-### HasRadio
-
-`func (o *InlineResponse200462Items) HasRadio() bool`
-
-HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

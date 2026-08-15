@@ -4,8 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse200478Interfaces**](InlineResponse200478Interfaces.md) | Layer 3 interfaces belongs to the wireless LAN controller | [optional] 
+**Serial** | Pointer to **string** | Unique serial number for the device | [optional] 
+**Model** | Pointer to **string** | Model of the device | [optional] 
+**Name** | Pointer to **string** | Name of the device | [optional] 
+**Mac** | Pointer to **string** | MAC address of the device | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device | [optional] 
+**Network** | Pointer to [**InlineResponse200367Network**](InlineResponse200367Network.md) |  | [optional] 
+**CpuCount** | Pointer to **int32** | Number of CPU cores on the device | [optional] 
+**Series** | Pointer to [**[]InlineResponse200478Series**](InlineResponse200478Series.md) | Series of cpu load average measurements on the device | [optional] 
 
 ## Methods
 
@@ -51,30 +57,180 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetModel
 
-`func (o *InlineResponse200478Items) GetInterfaces() []InlineResponse200478Interfaces`
+`func (o *InlineResponse200478Items) GetModel() string`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetModelOk
 
-`func (o *InlineResponse200478Items) GetInterfacesOk() (*[]InlineResponse200478Interfaces, bool)`
+`func (o *InlineResponse200478Items) GetModelOk() (*string, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetModel
 
-`func (o *InlineResponse200478Items) SetInterfaces(v []InlineResponse200478Interfaces)`
+`func (o *InlineResponse200478Items) SetModel(v string)`
 
-SetInterfaces sets Interfaces field to given value.
+SetModel sets Model field to given value.
 
-### HasInterfaces
+### HasModel
 
-`func (o *InlineResponse200478Items) HasInterfaces() bool`
+`func (o *InlineResponse200478Items) HasModel() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200478Items) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200478Items) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200478Items) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200478Items) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200478Items) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200478Items) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200478Items) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200478Items) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200478Items) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200478Items) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200478Items) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200478Items) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200478Items) GetNetwork() InlineResponse200367Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200478Items) GetNetworkOk() (*InlineResponse200367Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200478Items) SetNetwork(v InlineResponse200367Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200478Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetCpuCount
+
+`func (o *InlineResponse200478Items) GetCpuCount() int32`
+
+GetCpuCount returns the CpuCount field if non-nil, zero value otherwise.
+
+### GetCpuCountOk
+
+`func (o *InlineResponse200478Items) GetCpuCountOk() (*int32, bool)`
+
+GetCpuCountOk returns a tuple with the CpuCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCpuCount
+
+`func (o *InlineResponse200478Items) SetCpuCount(v int32)`
+
+SetCpuCount sets CpuCount field to given value.
+
+### HasCpuCount
+
+`func (o *InlineResponse200478Items) HasCpuCount() bool`
+
+HasCpuCount returns a boolean if a field has been set.
+
+### GetSeries
+
+`func (o *InlineResponse200478Items) GetSeries() []InlineResponse200478Series`
+
+GetSeries returns the Series field if non-nil, zero value otherwise.
+
+### GetSeriesOk
+
+`func (o *InlineResponse200478Items) GetSeriesOk() (*[]InlineResponse200478Series, bool)`
+
+GetSeriesOk returns a tuple with the Series field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeries
+
+`func (o *InlineResponse200478Items) SetSeries(v []InlineResponse200478Series)`
+
+SetSeries sets Series field to given value.
+
+### HasSeries
+
+`func (o *InlineResponse200478Items) HasSeries() bool`
+
+HasSeries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

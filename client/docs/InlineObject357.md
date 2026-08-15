@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Door lock name to update | [optional] 
+**Url** | Pointer to **string** | Receiver Url | [optional] 
+**Version** | Pointer to **string** | Scanning API Version | [optional] 
+**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineObject357WithDefaults instantiates a new InlineObject357 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetUrl
 
-`func (o *InlineObject357) GetName() string`
+`func (o *InlineObject357) GetUrl() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUrlOk
 
-`func (o *InlineObject357) GetNameOk() (*string, bool)`
+`func (o *InlineObject357) GetUrlOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUrl
 
-`func (o *InlineObject357) SetName(v string)`
+`func (o *InlineObject357) SetUrl(v string)`
 
-SetName sets Name field to given value.
+SetUrl sets Url field to given value.
 
-### HasName
+### HasUrl
 
-`func (o *InlineObject357) HasName() bool`
+`func (o *InlineObject357) HasUrl() bool`
 
-HasName returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetVersion
+
+`func (o *InlineObject357) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineObject357) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineObject357) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+### HasVersion
+
+`func (o *InlineObject357) HasVersion() bool`
+
+HasVersion returns a boolean if a field has been set.
+
+### GetRadio
+
+`func (o *InlineObject357) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineObject357) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineObject357) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
+
+SetRadio sets Radio field to given value.
+
+### HasRadio
+
+`func (o *InlineObject357) HasRadio() bool`
+
+HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

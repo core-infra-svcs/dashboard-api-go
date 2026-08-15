@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BackgroundTraffic** | Pointer to [**InlineResponse20063LatencyStatsBackgroundTraffic**](InlineResponse20063LatencyStatsBackgroundTraffic.md) |  | [optional] 
-**BestEffortTraffic** | Pointer to [**InlineResponse20063LatencyStatsBestEffortTraffic**](InlineResponse20063LatencyStatsBestEffortTraffic.md) |  | [optional] 
-**VideoTraffic** | Pointer to [**InlineResponse20063LatencyStatsVideoTraffic**](InlineResponse20063LatencyStatsVideoTraffic.md) |  | [optional] 
-**VoiceTraffic** | Pointer to [**InlineResponse20063LatencyStatsVoiceTraffic**](InlineResponse20063LatencyStatsVoiceTraffic.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200237WithDefaults instantiates a new InlineResponse200237 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBackgroundTraffic
+### GetStartTs
 
-`func (o *InlineResponse200237) GetBackgroundTraffic() InlineResponse20063LatencyStatsBackgroundTraffic`
+`func (o *InlineResponse200237) GetStartTs() time.Time`
 
-GetBackgroundTraffic returns the BackgroundTraffic field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetBackgroundTrafficOk
+### GetStartTsOk
 
-`func (o *InlineResponse200237) GetBackgroundTrafficOk() (*InlineResponse20063LatencyStatsBackgroundTraffic, bool)`
+`func (o *InlineResponse200237) GetStartTsOk() (*time.Time, bool)`
 
-GetBackgroundTrafficOk returns a tuple with the BackgroundTraffic field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBackgroundTraffic
+### SetStartTs
 
-`func (o *InlineResponse200237) SetBackgroundTraffic(v InlineResponse20063LatencyStatsBackgroundTraffic)`
+`func (o *InlineResponse200237) SetStartTs(v time.Time)`
 
-SetBackgroundTraffic sets BackgroundTraffic field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasBackgroundTraffic
+### HasStartTs
 
-`func (o *InlineResponse200237) HasBackgroundTraffic() bool`
+`func (o *InlineResponse200237) HasStartTs() bool`
 
-HasBackgroundTraffic returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetBestEffortTraffic
+### GetEndTs
 
-`func (o *InlineResponse200237) GetBestEffortTraffic() InlineResponse20063LatencyStatsBestEffortTraffic`
+`func (o *InlineResponse200237) GetEndTs() time.Time`
 
-GetBestEffortTraffic returns the BestEffortTraffic field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetBestEffortTrafficOk
+### GetEndTsOk
 
-`func (o *InlineResponse200237) GetBestEffortTrafficOk() (*InlineResponse20063LatencyStatsBestEffortTraffic, bool)`
+`func (o *InlineResponse200237) GetEndTsOk() (*time.Time, bool)`
 
-GetBestEffortTrafficOk returns a tuple with the BestEffortTraffic field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBestEffortTraffic
+### SetEndTs
 
-`func (o *InlineResponse200237) SetBestEffortTraffic(v InlineResponse20063LatencyStatsBestEffortTraffic)`
+`func (o *InlineResponse200237) SetEndTs(v time.Time)`
 
-SetBestEffortTraffic sets BestEffortTraffic field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasBestEffortTraffic
+### HasEndTs
 
-`func (o *InlineResponse200237) HasBestEffortTraffic() bool`
+`func (o *InlineResponse200237) HasEndTs() bool`
 
-HasBestEffortTraffic returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetVideoTraffic
+### GetAvgLatencyMs
 
-`func (o *InlineResponse200237) GetVideoTraffic() InlineResponse20063LatencyStatsVideoTraffic`
+`func (o *InlineResponse200237) GetAvgLatencyMs() int32`
 
-GetVideoTraffic returns the VideoTraffic field if non-nil, zero value otherwise.
+GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
 
-### GetVideoTrafficOk
+### GetAvgLatencyMsOk
 
-`func (o *InlineResponse200237) GetVideoTrafficOk() (*InlineResponse20063LatencyStatsVideoTraffic, bool)`
+`func (o *InlineResponse200237) GetAvgLatencyMsOk() (*int32, bool)`
 
-GetVideoTrafficOk returns a tuple with the VideoTraffic field if it's non-nil, zero value otherwise
+GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVideoTraffic
+### SetAvgLatencyMs
 
-`func (o *InlineResponse200237) SetVideoTraffic(v InlineResponse20063LatencyStatsVideoTraffic)`
+`func (o *InlineResponse200237) SetAvgLatencyMs(v int32)`
 
-SetVideoTraffic sets VideoTraffic field to given value.
+SetAvgLatencyMs sets AvgLatencyMs field to given value.
 
-### HasVideoTraffic
+### HasAvgLatencyMs
 
-`func (o *InlineResponse200237) HasVideoTraffic() bool`
+`func (o *InlineResponse200237) HasAvgLatencyMs() bool`
 
-HasVideoTraffic returns a boolean if a field has been set.
-
-### GetVoiceTraffic
-
-`func (o *InlineResponse200237) GetVoiceTraffic() InlineResponse20063LatencyStatsVoiceTraffic`
-
-GetVoiceTraffic returns the VoiceTraffic field if non-nil, zero value otherwise.
-
-### GetVoiceTrafficOk
-
-`func (o *InlineResponse200237) GetVoiceTrafficOk() (*InlineResponse20063LatencyStatsVoiceTraffic, bool)`
-
-GetVoiceTrafficOk returns a tuple with the VoiceTraffic field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVoiceTraffic
-
-`func (o *InlineResponse200237) SetVoiceTraffic(v InlineResponse20063LatencyStatsVoiceTraffic)`
-
-SetVoiceTraffic sets VoiceTraffic field to given value.
-
-### HasVoiceTraffic
-
-`func (o *InlineResponse200237) HasVoiceTraffic() bool`
-
-HasVoiceTraffic returns a boolean if a field has been set.
+HasAvgLatencyMs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

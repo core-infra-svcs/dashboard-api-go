@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWebhooksAlertTypes
 
-> []InlineResponse200440 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
+> []InlineResponse200455 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
 
 Return a list of alert types to be used with managing webhook alerts
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertTypesApi.GetOrganizationWebhooksAlertTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksAlertTypes`: []InlineResponse200440
+    // response from `GetOrganizationWebhooksAlertTypes`: []InlineResponse200455
     fmt.Fprintf(os.Stdout, "Response from `AlertTypesApi.GetOrganizationWebhooksAlertTypes`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200440**](InlineResponse200440.md)
+[**[]InlineResponse200455**](InlineResponse200455.md)
 
 ### Authorization
 

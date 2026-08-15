@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
-**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
-**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
+**Items** | Pointer to [**[]InlineResponse200346Items**](InlineResponse200346Items.md) | List of Cellular Data Management Profile device assignments. Maximum 1000 assignments per page. | [optional] 
+**Meta** | Pointer to [**InlineResponse200346Meta**](InlineResponse200346Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200346WithDefaults instantiates a new InlineResponse200346 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureId
+### GetItems
 
-`func (o *InlineResponse200346) GetCaptureId() string`
+`func (o *InlineResponse200346) GetItems() []InlineResponse200346Items`
 
-GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetCaptureIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200346) GetCaptureIdOk() (*string, bool)`
+`func (o *InlineResponse200346) GetItemsOk() (*[]InlineResponse200346Items, bool)`
 
-GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureId
+### SetItems
 
-`func (o *InlineResponse200346) SetCaptureId(v string)`
+`func (o *InlineResponse200346) SetItems(v []InlineResponse200346Items)`
 
-SetCaptureId sets CaptureId field to given value.
+SetItems sets Items field to given value.
 
-### HasCaptureId
+### HasItems
 
-`func (o *InlineResponse200346) HasCaptureId() bool`
+`func (o *InlineResponse200346) HasItems() bool`
 
-HasCaptureId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetDownloadUrl
+### GetMeta
 
-`func (o *InlineResponse200346) GetDownloadUrl() string`
+`func (o *InlineResponse200346) GetMeta() InlineResponse200346Meta`
 
-GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetDownloadUrlOk
+### GetMetaOk
 
-`func (o *InlineResponse200346) GetDownloadUrlOk() (*string, bool)`
+`func (o *InlineResponse200346) GetMetaOk() (*InlineResponse200346Meta, bool)`
 
-GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadUrl
+### SetMeta
 
-`func (o *InlineResponse200346) SetDownloadUrl(v string)`
+`func (o *InlineResponse200346) SetMeta(v InlineResponse200346Meta)`
 
-SetDownloadUrl sets DownloadUrl field to given value.
+SetMeta sets Meta field to given value.
 
-### HasDownloadUrl
+### HasMeta
 
-`func (o *InlineResponse200346) HasDownloadUrl() bool`
+`func (o *InlineResponse200346) HasMeta() bool`
 
-HasDownloadUrl returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200346) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200346) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200346) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200346) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Whether the operation was successful | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the SM seats to | [optional] 
+**LicenseId** | Pointer to **string** | The ID of the SM license to move the seats from | [optional] 
+**SeatCount** | Pointer to **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200391WithDefaults instantiates a new InlineResponse200391 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetDestOrganizationId
 
-`func (o *InlineResponse200391) GetSuccess() bool`
+`func (o *InlineResponse200391) GetDestOrganizationId() string`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200391) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200391) GetDestOrganizationIdOk() (*string, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetDestOrganizationId
 
-`func (o *InlineResponse200391) SetSuccess(v bool)`
+`func (o *InlineResponse200391) SetDestOrganizationId(v string)`
 
-SetSuccess sets Success field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasSuccess
+### HasDestOrganizationId
 
-`func (o *InlineResponse200391) HasSuccess() bool`
+`func (o *InlineResponse200391) HasDestOrganizationId() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
+
+### GetLicenseId
+
+`func (o *InlineResponse200391) GetLicenseId() string`
+
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+
+### GetLicenseIdOk
+
+`func (o *InlineResponse200391) GetLicenseIdOk() (*string, bool)`
+
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenseId
+
+`func (o *InlineResponse200391) SetLicenseId(v string)`
+
+SetLicenseId sets LicenseId field to given value.
+
+### HasLicenseId
+
+`func (o *InlineResponse200391) HasLicenseId() bool`
+
+HasLicenseId returns a boolean if a field has been set.
+
+### GetSeatCount
+
+`func (o *InlineResponse200391) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineResponse200391) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineResponse200391) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
+
+### HasSeatCount
+
+`func (o *InlineResponse200391) HasSeatCount() bool`
+
+HasSeatCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

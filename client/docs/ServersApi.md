@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesSyslogServersByNetwork
 
-> InlineResponse200353 GetOrganizationDevicesSyslogServersByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200365 GetOrganizationDevicesSyslogServersByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Returns syslog servers configured for the networks within an organization.
 
@@ -125,7 +125,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ServersApi.GetOrganizationDevicesSyslogServersByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesSyslogServersByNetwork`: InlineResponse200353
+    // response from `GetOrganizationDevicesSyslogServersByNetwork`: InlineResponse200365
     fmt.Fprintf(os.Stdout, "Response from `ServersApi.GetOrganizationDevicesSyslogServersByNetwork`: %v\n", resp)
 }
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200353**](InlineResponse200353.md)
+[**InlineResponse200365**](InlineResponse200365.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesSyslogServersRolesByNetwork
 
-> InlineResponse200354 GetOrganizationDevicesSyslogServersRolesByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200366 GetOrganizationDevicesSyslogServersRolesByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Returns roles that can be assigned to a syslog server for a given network.
 
@@ -203,7 +203,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ServersApi.GetOrganizationDevicesSyslogServersRolesByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesSyslogServersRolesByNetwork`: InlineResponse200354
+    // response from `GetOrganizationDevicesSyslogServersRolesByNetwork`: InlineResponse200366
     fmt.Fprintf(os.Stdout, "Response from `ServersApi.GetOrganizationDevicesSyslogServersRolesByNetwork`: %v\n", resp)
 }
 ```
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200354**](InlineResponse200354.md)
+[**InlineResponse200366**](InlineResponse200366.md)
 
 ### Authorization
 

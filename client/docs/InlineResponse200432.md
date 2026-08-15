@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
-**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**States** | Pointer to **[]string** | The set of different states on the spaces integration process | [optional] 
+**Email** | Pointer to **string** | The meraki user who attempts the spaces integration | [optional] 
+**AccountName** | Pointer to **string** | The spaces dashboard account name created in spaces integration | [optional] 
+**AccountType** | Pointer to **string** | The spaces dashboard account type created in spaces integration | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200432WithDefaults instantiates a new InlineResponse200432 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetStatus
 
-`func (o *InlineResponse200432) GetSourceSerial() string`
+`func (o *InlineResponse200432) GetStatus() bool`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetStatusOk
 
-`func (o *InlineResponse200432) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineResponse200432) GetStatusOk() (*bool, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetStatus
 
-`func (o *InlineResponse200432) SetSourceSerial(v string)`
+`func (o *InlineResponse200432) SetStatus(v bool)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetStatus sets Status field to given value.
 
-### HasSourceSerial
+### HasStatus
 
-`func (o *InlineResponse200432) HasSourceSerial() bool`
+`func (o *InlineResponse200432) HasStatus() bool`
 
-HasSourceSerial returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetTargetSerials
+### GetStates
 
-`func (o *InlineResponse200432) GetTargetSerials() []string`
+`func (o *InlineResponse200432) GetStates() []string`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetStates returns the States field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetStatesOk
 
-`func (o *InlineResponse200432) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200432) GetStatesOk() (*[]string, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetStates
 
-`func (o *InlineResponse200432) SetTargetSerials(v []string)`
+`func (o *InlineResponse200432) SetStates(v []string)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetStates sets States field to given value.
 
-### HasTargetSerials
+### HasStates
 
-`func (o *InlineResponse200432) HasTargetSerials() bool`
+`func (o *InlineResponse200432) HasStates() bool`
 
-HasTargetSerials returns a boolean if a field has been set.
+HasStates returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse200432) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse200432) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse200432) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse200432) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
+### GetAccountName
+
+`func (o *InlineResponse200432) GetAccountName() string`
+
+GetAccountName returns the AccountName field if non-nil, zero value otherwise.
+
+### GetAccountNameOk
+
+`func (o *InlineResponse200432) GetAccountNameOk() (*string, bool)`
+
+GetAccountNameOk returns a tuple with the AccountName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountName
+
+`func (o *InlineResponse200432) SetAccountName(v string)`
+
+SetAccountName sets AccountName field to given value.
+
+### HasAccountName
+
+`func (o *InlineResponse200432) HasAccountName() bool`
+
+HasAccountName returns a boolean if a field has been set.
+
+### GetAccountType
+
+`func (o *InlineResponse200432) GetAccountType() string`
+
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+
+### GetAccountTypeOk
+
+`func (o *InlineResponse200432) GetAccountTypeOk() (*string, bool)`
+
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountType
+
+`func (o *InlineResponse200432) SetAccountType(v string)`
+
+SetAccountType sets AccountType field to given value.
+
+### HasAccountType
+
+`func (o *InlineResponse200432) HasAccountType() bool`
+
+HasAccountType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

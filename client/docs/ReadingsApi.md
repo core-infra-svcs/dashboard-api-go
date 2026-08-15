@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice
 
-> InlineResponse200273 GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
+> InlineResponse200275 GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
 
 Return time-series digital optical monitoring (DOM) readings for ports on each DOM-enabled Catalyst appliance in an organization.
 
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ReadingsApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: InlineResponse200273
+    // response from `GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: InlineResponse200275
     fmt.Fprintf(os.Stdout, "Response from `ReadingsApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200273**](InlineResponse200273.md)
+[**InlineResponse200275**](InlineResponse200275.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsHistory
 
-> []InlineResponse200409 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200424 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return all reported readings from sensors in a given timespan, sorted by timestamp
 
@@ -139,7 +139,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ReadingsApi.GetOrganizationSensorReadingsHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200409
+    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200424
     fmt.Fprintf(os.Stdout, "Response from `ReadingsApi.GetOrganizationSensorReadingsHistory`: %v\n", resp)
 }
 ```
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200409**](InlineResponse200409.md)
+[**[]InlineResponse200424**](InlineResponse200424.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsLatest
 
-> []InlineResponse200410 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200425 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return the latest available reading for each metric from each sensor, sorted by sensor serial
 
@@ -224,7 +224,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ReadingsApi.GetOrganizationSensorReadingsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200410
+    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200425
     fmt.Fprintf(os.Stdout, "Response from `ReadingsApi.GetOrganizationSensorReadingsLatest`: %v\n", resp)
 }
 ```
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200410**](InlineResponse200410.md)
+[**[]InlineResponse200425**](InlineResponse200425.md)
 
 ### Authorization
 

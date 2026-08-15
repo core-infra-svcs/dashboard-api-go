@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpdatedPriorities** | Pointer to [**[]InlineResponse200348UpdatedPriorities**](InlineResponse200348UpdatedPriorities.md) | List of updated priorities | [optional] 
+**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
+**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
+**Description** | Pointer to **string** | The description of the profile. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200345Rules**](InlineResponse200345Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
 
 ## Methods
 
@@ -25,30 +29,130 @@ NewInlineResponse200348WithDefaults instantiates a new InlineResponse200348 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpdatedPriorities
+### GetProfileId
 
-`func (o *InlineResponse200348) GetUpdatedPriorities() []InlineResponse200348UpdatedPriorities`
+`func (o *InlineResponse200348) GetProfileId() string`
 
-GetUpdatedPriorities returns the UpdatedPriorities field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetUpdatedPrioritiesOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200348) GetUpdatedPrioritiesOk() (*[]InlineResponse200348UpdatedPriorities, bool)`
+`func (o *InlineResponse200348) GetProfileIdOk() (*string, bool)`
 
-GetUpdatedPrioritiesOk returns a tuple with the UpdatedPriorities field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedPriorities
+### SetProfileId
 
-`func (o *InlineResponse200348) SetUpdatedPriorities(v []InlineResponse200348UpdatedPriorities)`
+`func (o *InlineResponse200348) SetProfileId(v string)`
 
-SetUpdatedPriorities sets UpdatedPriorities field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasUpdatedPriorities
+### HasProfileId
 
-`func (o *InlineResponse200348) HasUpdatedPriorities() bool`
+`func (o *InlineResponse200348) HasProfileId() bool`
 
-HasUpdatedPriorities returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200348) GetLastUpdatedAt() string`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200348) GetLastUpdatedAtOk() (*string, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200348) SetLastUpdatedAt(v string)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200348) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200348) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200348) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200348) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200348) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200348) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200348) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200348) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200348) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200348) GetRules() []InlineResponse200345Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200348) GetRulesOk() (*[]InlineResponse200345Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200348) SetRules(v []InlineResponse200345Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200348) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
 
 ## Methods
 
 ### NewInlineObject348
 
-`func NewInlineObject348() *InlineObject348`
+`func NewInlineObject348(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject348`
 
 NewInlineObject348 instantiates a new InlineObject348 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject348WithDefaults instantiates a new InlineObject348 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetItems
 
-`func (o *InlineObject348) GetStatus() string`
+`func (o *InlineObject348) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetItemsOk
 
-`func (o *InlineObject348) GetStatusOk() (*string, bool)`
+`func (o *InlineObject348) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetItems
 
-`func (o *InlineObject348) SetStatus(v string)`
+`func (o *InlineObject348) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
 
-SetStatus sets Status field to given value.
+SetItems sets Items field to given value.
 
-### HasStatus
-
-`func (o *InlineObject348) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetCertificateAuthorityId
-
-`func (o *InlineObject348) GetCertificateAuthorityId() string`
-
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
-
-### GetCertificateAuthorityIdOk
-
-`func (o *InlineObject348) GetCertificateAuthorityIdOk() (*string, bool)`
-
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCertificateAuthorityId
-
-`func (o *InlineObject348) SetCertificateAuthorityId(v string)`
-
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
-
-### HasCertificateAuthorityId
-
-`func (o *InlineObject348) HasCertificateAuthorityId() bool`
-
-HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

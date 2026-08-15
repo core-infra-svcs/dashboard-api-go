@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSaseSitesAttachNetwork**](OrganizationsOrganizationIdSaseSitesAttachNetwork.md) |  | [optional] 
-**Region** | Pointer to [**OrganizationsOrganizationIdSaseSitesAttachRegion**](OrganizationsOrganizationIdSaseSitesAttachRegion.md) |  | [optional] 
+**Network** | [**OrganizationsOrganizationIdSaseSitesAttachNetwork**](OrganizationsOrganizationIdSaseSitesAttachNetwork.md) |  | 
+**Region** | [**OrganizationsOrganizationIdSaseSitesAttachRegion**](OrganizationsOrganizationIdSaseSitesAttachRegion.md) |  | 
 
 ## Methods
 
 ### NewOrganizationsOrganizationIdSaseSitesAttachItems
 
-`func NewOrganizationsOrganizationIdSaseSitesAttachItems() *OrganizationsOrganizationIdSaseSitesAttachItems`
+`func NewOrganizationsOrganizationIdSaseSitesAttachItems(network OrganizationsOrganizationIdSaseSitesAttachNetwork, region OrganizationsOrganizationIdSaseSitesAttachRegion, ) *OrganizationsOrganizationIdSaseSitesAttachItems`
 
 NewOrganizationsOrganizationIdSaseSitesAttachItems instantiates a new OrganizationsOrganizationIdSaseSitesAttachItems object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetNetwork sets Network field to given value.
 
-### HasNetwork
-
-`func (o *OrganizationsOrganizationIdSaseSitesAttachItems) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
 
 ### GetRegion
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetRegion sets Region field to given value.
 
-### HasRegion
-
-`func (o *OrganizationsOrganizationIdSaseSitesAttachItems) HasRegion() bool`
-
-HasRegion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

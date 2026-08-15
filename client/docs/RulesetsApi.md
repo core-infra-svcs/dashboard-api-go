@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationPoliciesGlobalFirewallRuleset
 
-> InlineResponse200388Items CreateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRuleset(createOrganizationPoliciesGlobalFirewallRuleset).Execute()
+> InlineResponse200403Items CreateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRuleset(createOrganizationPoliciesGlobalFirewallRuleset).Execute()
 
 Create an Organization-Wide Policy Firewall Ruleset
 
@@ -41,7 +41,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject313("Name_example") // InlineObject313 | 
+    createOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject320("Name_example") // InlineObject320 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.CreateOrganizationPoliciesGlobalFirewallRuleset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200388Items
+    // response from `CreateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200403Items
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.CreateOrganizationPoliciesGlobalFirewallRuleset`: %v\n", resp)
 }
 ```
@@ -71,11 +71,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject313**](InlineObject313.md) |  | 
+ **createOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject320**](InlineObject320.md) |  | 
 
 ### Return type
 
-[**InlineResponse200388Items**](InlineResponse200388Items.md)
+[**InlineResponse200403Items**](InlineResponse200403Items.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationPoliciesGlobalFirewallRulesetsRule
 
-> InlineResponse200389Items CreateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRulesetsRule(createOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
+> InlineResponse200404Items CreateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId).CreateOrganizationPoliciesGlobalFirewallRulesetsRule(createOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
 
 Create an Organization-Wide Policy Firewall Rule
 
@@ -113,7 +113,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject314("Name_example", "RulesetId_example", "Policy_example", *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources([]string{"MatchCriteria_example"}), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations([]string{"MatchCriteria_example"})) // InlineObject314 | 
+    createOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject321("Name_example", "RulesetId_example", "Policy_example", *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSources([]string{"MatchCriteria_example"}), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinations([]string{"MatchCriteria_example"})) // InlineObject321 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.CreateOrganizationPoliciesGlobalFirewallRulesetsRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200389Items
+    // response from `CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200404Items
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.CreateOrganizationPoliciesGlobalFirewallRulesetsRule`: %v\n", resp)
 }
 ```
@@ -143,11 +143,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject314**](InlineObject314.md) |  | 
+ **createOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject321**](InlineObject321.md) |  | 
 
 ### Return type
 
-[**InlineResponse200389Items**](InlineResponse200389Items.md)
+[**InlineResponse200404Items**](InlineResponse200404Items.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment
 
-> InlineResponse200395Items CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId).CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
+> InlineResponse200410Items CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId).CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
 
 Create an Organization-Wide Policy Ruleset Assignment
 
@@ -185,7 +185,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject322("RulesetId_example", "PolicyId_example") // InlineObject322 | 
+    createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject329("RulesetId_example", "PolicyId_example") // InlineObject329 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -194,7 +194,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200395Items
+    // response from `CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200410Items
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.CreateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: %v\n", resp)
 }
 ```
@@ -215,11 +215,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject322**](InlineObject322.md) |  | 
+ **createOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject329**](InlineObject329.md) |  | 
 
 ### Return type
 
-[**InlineResponse200395Items**](InlineResponse200395Items.md)
+[**InlineResponse200410Items**](InlineResponse200410Items.md)
 
 ### Authorization
 
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalFirewallRulesets
 
-> InlineResponse200388 GetOrganizationPoliciesGlobalFirewallRulesets(ctx, organizationId).RulesetIds(rulesetIds).Name(name).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200403 GetOrganizationPoliciesGlobalFirewallRulesets(ctx, organizationId).RulesetIds(rulesetIds).Name(name).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Firewall Rulesets
 
@@ -483,7 +483,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.GetOrganizationPoliciesGlobalFirewallRulesets``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalFirewallRulesets`: InlineResponse200388
+    // response from `GetOrganizationPoliciesGlobalFirewallRulesets`: InlineResponse200403
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.GetOrganizationPoliciesGlobalFirewallRulesets`: %v\n", resp)
 }
 ```
@@ -512,7 +512,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200388**](InlineResponse200388.md)
+[**InlineResponse200403**](InlineResponse200403.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalFirewallRulesetsRules
 
-> InlineResponse200389 GetOrganizationPoliciesGlobalFirewallRulesetsRules(ctx, organizationId).RulesetIds(rulesetIds).RuleIds(ruleIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200404 GetOrganizationPoliciesGlobalFirewallRulesetsRules(ctx, organizationId).RulesetIds(rulesetIds).RuleIds(ruleIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Firewall Rules
 
@@ -563,7 +563,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.GetOrganizationPoliciesGlobalFirewallRulesetsRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalFirewallRulesetsRules`: InlineResponse200389
+    // response from `GetOrganizationPoliciesGlobalFirewallRulesetsRules`: InlineResponse200404
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.GetOrganizationPoliciesGlobalFirewallRulesetsRules`: %v\n", resp)
 }
 ```
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200389**](InlineResponse200389.md)
+[**InlineResponse200404**](InlineResponse200404.md)
 
 ### Authorization
 
@@ -610,7 +610,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments
 
-> InlineResponse200395 GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments(ctx, organizationId).RulesetIds(rulesetIds).PolicyIds(policyIds).AssignmentIds(assignmentIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200410 GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments(ctx, organizationId).RulesetIds(rulesetIds).PolicyIds(policyIds).AssignmentIds(assignmentIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Organization-Wide Policy Ruleset Assignments
 
@@ -644,7 +644,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: InlineResponse200395
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: InlineResponse200410
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.GetOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignments`: %v\n", resp)
 }
 ```
@@ -674,7 +674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200395**](InlineResponse200395.md)
+[**InlineResponse200410**](InlineResponse200410.md)
 
 ### Authorization
 
@@ -692,7 +692,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalFirewallRuleset
 
-> InlineResponse200388Items UpdateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId, rulesetId).UpdateOrganizationPoliciesGlobalFirewallRuleset(updateOrganizationPoliciesGlobalFirewallRuleset).Execute()
+> InlineResponse200403Items UpdateOrganizationPoliciesGlobalFirewallRuleset(ctx, organizationId, rulesetId).UpdateOrganizationPoliciesGlobalFirewallRuleset(updateOrganizationPoliciesGlobalFirewallRuleset).Execute()
 
 Update an Organization-Wide Policy Firewall Ruleset
 
@@ -713,7 +713,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     rulesetId := "rulesetId_example" // string | Ruleset ID
-    updateOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject316() // InlineObject316 |  (optional)
+    updateOrganizationPoliciesGlobalFirewallRuleset := *openapiclient.NewInlineObject323() // InlineObject323 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -722,7 +722,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.UpdateOrganizationPoliciesGlobalFirewallRuleset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200388Items
+    // response from `UpdateOrganizationPoliciesGlobalFirewallRuleset`: InlineResponse200403Items
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.UpdateOrganizationPoliciesGlobalFirewallRuleset`: %v\n", resp)
 }
 ```
@@ -745,11 +745,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject316**](InlineObject316.md) |  | 
+ **updateOrganizationPoliciesGlobalFirewallRuleset** | [**InlineObject323**](InlineObject323.md) |  | 
 
 ### Return type
 
-[**InlineResponse200388Items**](InlineResponse200388Items.md)
+[**InlineResponse200403Items**](InlineResponse200403Items.md)
 
 ### Authorization
 
@@ -767,7 +767,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalFirewallRulesetsRule
 
-> InlineResponse200389Items UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId, ruleId).UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(updateOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
+> InlineResponse200404Items UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(ctx, organizationId, ruleId).UpdateOrganizationPoliciesGlobalFirewallRulesetsRule(updateOrganizationPoliciesGlobalFirewallRulesetsRule).Execute()
 
 Update an Organization-Wide Policy Firewall Rule
 
@@ -788,7 +788,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     ruleId := "ruleId_example" // string | Rule ID
-    updateOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject315() // InlineObject315 |  (optional)
+    updateOrganizationPoliciesGlobalFirewallRulesetsRule := *openapiclient.NewInlineObject322() // InlineObject322 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -797,7 +797,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.UpdateOrganizationPoliciesGlobalFirewallRulesetsRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200389Items
+    // response from `UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: InlineResponse200404Items
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.UpdateOrganizationPoliciesGlobalFirewallRulesetsRule`: %v\n", resp)
 }
 ```
@@ -820,11 +820,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject315**](InlineObject315.md) |  | 
+ **updateOrganizationPoliciesGlobalFirewallRulesetsRule** | [**InlineObject322**](InlineObject322.md) |  | 
 
 ### Return type
 
-[**InlineResponse200389Items**](InlineResponse200389Items.md)
+[**InlineResponse200404Items**](InlineResponse200404Items.md)
 
 ### Authorization
 
@@ -842,7 +842,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment
 
-> InlineResponse200395Items UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId, assignmentId).UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
+> InlineResponse200410Items UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(ctx, organizationId, assignmentId).UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment(updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment).Execute()
 
 Update an Organization-Wide Policy Ruleset Assignment
 
@@ -863,7 +863,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     assignmentId := "assignmentId_example" // string | Assignment ID
-    updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject323() // InlineObject323 |  (optional)
+    updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment := *openapiclient.NewInlineObject330() // InlineObject330 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -872,7 +872,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesetsApi.UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200395Items
+    // response from `UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: InlineResponse200410Items
     fmt.Fprintf(os.Stdout, "Response from `RulesetsApi.UpdateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment`: %v\n", resp)
 }
 ```
@@ -895,11 +895,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject323**](InlineObject323.md) |  | 
+ **updateOrganizationPoliciesGlobalGroupPoliciesFirewallRulesetsAssignment** | [**InlineObject330**](InlineObject330.md) |  | 
 
 ### Return type
 
-[**InlineResponse200395Items**](InlineResponse200395Items.md)
+[**InlineResponse200410Items**](InlineResponse200410Items.md)
 
 ### Authorization
 

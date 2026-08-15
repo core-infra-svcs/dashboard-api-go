@@ -7,10 +7,14 @@ Method | HTTP request | Description
 [**CreateDeviceLiveToolsPowerUsage**](UsageApi.md#CreateDeviceLiveToolsPowerUsage) | **Post** /devices/{serial}/liveTools/power/usage | Enqueues a live tool job that retrieves details about a device&#39;s overall power usage
 [**GetDeviceLiveToolsPowerUsage**](UsageApi.md#GetDeviceLiveToolsPowerUsage) | **Get** /devices/{serial}/liveTools/power/usage/{jobId} | Retrieve the status and results of a previously created live tool job fetching details about a device&#39;s overall power usage.
 [**GetOrganizationApplianceUplinksUsageByNetwork**](UsageApi.md#GetOrganizationApplianceUplinksUsageByNetwork) | **Get** /organizations/{organizationId}/appliance/uplinks/usage/byNetwork | Get the sent and received bytes for each uplink of all MX and Z networks within an organization
+[**GetOrganizationCampusGatewayClientsUsageByNetworkByCluster**](UsageApi.md#GetOrganizationCampusGatewayClientsUsageByNetworkByCluster) | **Get** /organizations/{organizationId}/campusGateway/clients/usage/byNetwork/byCluster | Returns client usage details for campus gateway clusters within an organization.
 [**GetOrganizationDevicesCellularDataUsageByDevice**](UsageApi.md#GetOrganizationDevicesCellularDataUsageByDevice) | **Get** /organizations/{organizationId}/devices/cellular/data/usage/byDevice | List current cellular data usage for devices in this organization
 [**GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval**](UsageApi.md#GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval) | **Get** /organizations/{organizationId}/devices/cellular/data/usage/history/byDevice/byInterval | List historical cellular data usage grouped by device and interval in this organization
 [**GetOrganizationDevicesSystemMemoryUsageHistoryByInterval**](UsageApi.md#GetOrganizationDevicesSystemMemoryUsageHistoryByInterval) | **Get** /organizations/{organizationId}/devices/system/memory/usage/history/byInterval | Return the memory utilization history in kB for devices in the organization.
 [**GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval**](UsageApi.md#GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval) | **Get** /organizations/{organizationId}/switch/ports/usage/history/byDevice/byInterval | List the historical usage and traffic data of switchports in an organization.
+[**GetOrganizationWirelessClientsUsageByNetwork**](UsageApi.md#GetOrganizationWirelessClientsUsageByNetwork) | **Get** /organizations/{organizationId}/wireless/clients/usage/byNetwork | Returns client usage details for wireless networks within an organization.
+[**GetOrganizationWirelessClientsUsageByNetworkBySsid**](UsageApi.md#GetOrganizationWirelessClientsUsageByNetworkBySsid) | **Get** /organizations/{organizationId}/wireless/clients/usage/byNetwork/bySsid | Returns client usage details for wireless network SSIDs within an organization.
+[**GetOrganizationWirelessClientsUsageBySsid**](UsageApi.md#GetOrganizationWirelessClientsUsageBySsid) | **Get** /organizations/{organizationId}/wireless/clients/usage/bySsid | Returns client usage details for SSIDs within an organization.
 [**GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval**](UsageApi.md#GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l2/usage/history/byInterval | List wireless LAN controller layer 2 interfaces history usage in an organization
 [**GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval**](UsageApi.md#GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l3/usage/history/byInterval | List wireless LAN controller layer 3 interfaces history usage in an organization
 [**GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval**](UsageApi.md#GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/usage/history/byInterval | Retrieve the traffic for the interfaces of a Wireless LAN controller
@@ -164,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200289 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200291 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -195,7 +199,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200289
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200291
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -222,7 +226,97 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200289**](InlineResponse200289.md)
+[**[]InlineResponse200291**](InlineResponse200291.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationCampusGatewayClientsUsageByNetworkByCluster
+
+> InlineResponse200316 GetOrganizationCampusGatewayClientsUsageByNetworkByCluster(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).ClusterIds(clusterIds).UsageUnits(usageUnits).Execute()
+
+Returns client usage details for campus gateway clusters within an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. (optional)
+    networkIds := []string{"Inner_example"} // []string | Filter results by a list of network IDs. (optional)
+    networkGroupIds := []string{"Inner_example"} // []string | Limit the results to clients that belong to one of the provided network groups. (optional)
+    clusterIds := []string{"Inner_example"} // []string | Filter results by a list of cluster IDs. (optional)
+    usageUnits := "usageUnits_example" // string | Usage units to use in the response. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UsageApi.GetOrganizationCampusGatewayClientsUsageByNetworkByCluster(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).ClusterIds(clusterIds).UsageUnits(usageUnits).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationCampusGatewayClientsUsageByNetworkByCluster``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationCampusGatewayClientsUsageByNetworkByCluster`: InlineResponse200316
+    fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationCampusGatewayClientsUsageByNetworkByCluster`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationCampusGatewayClientsUsageByNetworkByClusterRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. | 
+ **networkIds** | **[]string** | Filter results by a list of network IDs. | 
+ **networkGroupIds** | **[]string** | Limit the results to clients that belong to one of the provided network groups. | 
+ **clusterIds** | **[]string** | Filter results by a list of cluster IDs. | 
+ **usageUnits** | **string** | Usage units to use in the response. | 
+
+### Return type
+
+[**InlineResponse200316**](InlineResponse200316.md)
 
 ### Authorization
 
@@ -240,7 +334,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataUsageByDevice
 
-> InlineResponse200337 GetOrganizationDevicesCellularDataUsageByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200349 GetOrganizationDevicesCellularDataUsageByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List current cellular data usage for devices in this organization
 
@@ -272,7 +366,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationDevicesCellularDataUsageByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataUsageByDevice`: InlineResponse200337
+    // response from `GetOrganizationDevicesCellularDataUsageByDevice`: InlineResponse200349
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationDevicesCellularDataUsageByDevice`: %v\n", resp)
 }
 ```
@@ -300,7 +394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200337**](InlineResponse200337.md)
+[**InlineResponse200349**](InlineResponse200349.md)
 
 ### Authorization
 
@@ -318,7 +412,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval
 
-> InlineResponse200338 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> InlineResponse200350 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 List historical cellular data usage grouped by device and interval in this organization
 
@@ -354,7 +448,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200338
+    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200350
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -386,7 +480,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200338**](InlineResponse200338.md)
+[**InlineResponse200350**](InlineResponse200350.md)
 
 ### Authorization
 
@@ -404,7 +498,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesSystemMemoryUsageHistoryByInterval
 
-> InlineResponse200355 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
+> InlineResponse200367 GetOrganizationDevicesSystemMemoryUsageHistoryByInterval(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).ProductTypes(productTypes).Execute()
 
 Return the memory utilization history in kB for devices in the organization.
 
@@ -442,7 +536,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200355
+    // response from `GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: InlineResponse200367
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationDevicesSystemMemoryUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -476,7 +570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200355**](InlineResponse200355.md)
+[**InlineResponse200367**](InlineResponse200367.md)
 
 ### Authorization
 
@@ -494,7 +588,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval
 
-> InlineResponse200438 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200453 GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the historical usage and traffic data of switchports in an organization.
 
@@ -538,7 +632,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200438
+    // response from `GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: InlineResponse200453
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationSwitchPortsUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -577,7 +671,283 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200438**](InlineResponse200438.md)
+[**InlineResponse200453**](InlineResponse200453.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessClientsUsageByNetwork
+
+> InlineResponse200462 GetOrganizationWirelessClientsUsageByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).GatewayNetworkIds(gatewayNetworkIds).UsageUnits(usageUnits).Execute()
+
+Returns client usage details for wireless networks within an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. (optional)
+    networkIds := []string{"Inner_example"} // []string | Filter results by a list of network IDs. (optional)
+    networkGroupIds := []string{"Inner_example"} // []string | Filter results by a list of network group IDs. (optional)
+    gatewayNetworkIds := []string{"Inner_example"} // []string | Limit the results to clients tunneled to campus gateways in the provided networks. (optional)
+    usageUnits := "usageUnits_example" // string | Usage units to use in the response. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UsageApi.GetOrganizationWirelessClientsUsageByNetwork(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).GatewayNetworkIds(gatewayNetworkIds).UsageUnits(usageUnits).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationWirelessClientsUsageByNetwork``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessClientsUsageByNetwork`: InlineResponse200462
+    fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationWirelessClientsUsageByNetwork`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessClientsUsageByNetworkRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. | 
+ **networkIds** | **[]string** | Filter results by a list of network IDs. | 
+ **networkGroupIds** | **[]string** | Filter results by a list of network group IDs. | 
+ **gatewayNetworkIds** | **[]string** | Limit the results to clients tunneled to campus gateways in the provided networks. | 
+ **usageUnits** | **string** | Usage units to use in the response. | 
+
+### Return type
+
+[**InlineResponse200462**](InlineResponse200462.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessClientsUsageByNetworkBySsid
+
+> InlineResponse200463 GetOrganizationWirelessClientsUsageByNetworkBySsid(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).SsidIds(ssidIds).SsidNames(ssidNames).GatewayNetworkIds(gatewayNetworkIds).UsageUnits(usageUnits).Execute()
+
+Returns client usage details for wireless network SSIDs within an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. (optional)
+    networkIds := []string{"Inner_example"} // []string | Filter results by a list of network IDs. (optional)
+    networkGroupIds := []string{"Inner_example"} // []string | Filter results by a list of network group IDs. (optional)
+    ssidIds := []string{"Inner_example"} // []string | Filter results by a list of SSID IDs. (optional)
+    ssidNames := []string{"Inner_example"} // []string | Filter results by a list of SSID names. (optional)
+    gatewayNetworkIds := []string{"Inner_example"} // []string | Limit the results to clients tunneled to campus gateways in the provided networks. (optional)
+    usageUnits := "usageUnits_example" // string | Usage units to use in the response. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UsageApi.GetOrganizationWirelessClientsUsageByNetworkBySsid(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).SsidIds(ssidIds).SsidNames(ssidNames).GatewayNetworkIds(gatewayNetworkIds).UsageUnits(usageUnits).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationWirelessClientsUsageByNetworkBySsid``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessClientsUsageByNetworkBySsid`: InlineResponse200463
+    fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationWirelessClientsUsageByNetworkBySsid`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessClientsUsageByNetworkBySsidRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. | 
+ **networkIds** | **[]string** | Filter results by a list of network IDs. | 
+ **networkGroupIds** | **[]string** | Filter results by a list of network group IDs. | 
+ **ssidIds** | **[]string** | Filter results by a list of SSID IDs. | 
+ **ssidNames** | **[]string** | Filter results by a list of SSID names. | 
+ **gatewayNetworkIds** | **[]string** | Limit the results to clients tunneled to campus gateways in the provided networks. | 
+ **usageUnits** | **string** | Usage units to use in the response. | 
+
+### Return type
+
+[**InlineResponse200463**](InlineResponse200463.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessClientsUsageBySsid
+
+> InlineResponse200464 GetOrganizationWirelessClientsUsageBySsid(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).SsidNames(ssidNames).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).GatewayNetworkIds(gatewayNetworkIds).UsageUnits(usageUnits).Execute()
+
+Returns client usage details for SSIDs within an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. (optional)
+    ssidNames := []string{"Inner_example"} // []string | Filter results by a list of SSID names. (optional)
+    networkIds := []string{"Inner_example"} // []string | Limit the results to clients that belong to one of the provided networks. (optional)
+    networkGroupIds := []string{"Inner_example"} // []string | Limit the results to clients that belong to one of the provided network groups. (optional)
+    gatewayNetworkIds := []string{"Inner_example"} // []string | Limit the results to clients tunneled to campus gateways in the provided networks. (optional)
+    usageUnits := "usageUnits_example" // string | Usage units to use in the response. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UsageApi.GetOrganizationWirelessClientsUsageBySsid(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).SsidNames(ssidNames).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).GatewayNetworkIds(gatewayNetworkIds).UsageUnits(usageUnits).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationWirelessClientsUsageBySsid``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessClientsUsageBySsid`: InlineResponse200464
+    fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationWirelessClientsUsageBySsid`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessClientsUsageBySsidRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 8 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 7 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be greater than or equal to 1 hour and be less than or equal to 7 days. The default is 2 hours. | 
+ **ssidNames** | **[]string** | Filter results by a list of SSID names. | 
+ **networkIds** | **[]string** | Limit the results to clients that belong to one of the provided networks. | 
+ **networkGroupIds** | **[]string** | Limit the results to clients that belong to one of the provided network groups. | 
+ **gatewayNetworkIds** | **[]string** | Limit the results to clients tunneled to campus gateways in the provided networks. | 
+ **usageUnits** | **string** | Usage units to use in the response. | 
+
+### Return type
+
+[**InlineResponse200464**](InlineResponse200464.md)
 
 ### Authorization
 
@@ -595,7 +965,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval
 
-> InlineResponse200477 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200499 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 2 interfaces history usage in an organization
 
@@ -630,7 +1000,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200477
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200499
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -661,7 +1031,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200477**](InlineResponse200477.md)
+[**InlineResponse200499**](InlineResponse200499.md)
 
 ### Authorization
 
@@ -679,7 +1049,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval
 
-> InlineResponse200480 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200502 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless LAN controller layer 3 interfaces history usage in an organization
 
@@ -714,7 +1084,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200480
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200502
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -745,7 +1115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200480**](InlineResponse200480.md)
+[**InlineResponse200502**](InlineResponse200502.md)
 
 ### Authorization
 
@@ -763,7 +1133,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval
 
-> InlineResponse200482 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200504 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the traffic for the interfaces of a Wireless LAN controller
 
@@ -799,7 +1169,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200482
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200504
     fmt.Fprintf(os.Stdout, "Response from `UsageApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: %v\n", resp)
 }
 ```
@@ -831,7 +1201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200482**](InlineResponse200482.md)
+[**InlineResponse200504**](InlineResponse200504.md)
 
 ### Authorization
 

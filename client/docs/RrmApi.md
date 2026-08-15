@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessRadioRrmByNetwork
 
-> InlineResponse200465 GetOrganizationWirelessRadioRrmByNetwork(ctx, organizationId).NetworkIds(networkIds).StartingAfter(startingAfter).EndingBefore(endingBefore).PerPage(perPage).SortOrder(sortOrder).Execute()
+> InlineResponse200484 GetOrganizationWirelessRadioRrmByNetwork(ctx, organizationId).NetworkIds(networkIds).StartingAfter(startingAfter).EndingBefore(endingBefore).PerPage(perPage).SortOrder(sortOrder).Execute()
 
 List the AutoRF settings of an organization by network
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RrmApi.GetOrganizationWirelessRadioRrmByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRadioRrmByNetwork`: InlineResponse200465
+    // response from `GetOrganizationWirelessRadioRrmByNetwork`: InlineResponse200484
     fmt.Fprintf(os.Stdout, "Response from `RrmApi.GetOrganizationWirelessRadioRrmByNetwork`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200465**](InlineResponse200465.md)
+[**InlineResponse200484**](InlineResponse200484.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessRadioRrm
 
-> InlineResponse200240 UpdateNetworkWirelessRadioRrm(ctx, networkId).UpdateNetworkWirelessRadioRrm(updateNetworkWirelessRadioRrm).Execute()
+> InlineResponse200241 UpdateNetworkWirelessRadioRrm(ctx, networkId).UpdateNetworkWirelessRadioRrm(updateNetworkWirelessRadioRrm).Execute()
 
 Update the AutoRF settings for a wireless network
 
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RrmApi.UpdateNetworkWirelessRadioRrm``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessRadioRrm`: InlineResponse200240
+    // response from `UpdateNetworkWirelessRadioRrm`: InlineResponse200241
     fmt.Fprintf(os.Stdout, "Response from `RrmApi.UpdateNetworkWirelessRadioRrm`: %v\n", resp)
 }
 ```
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200240**](InlineResponse200240.md)
+[**InlineResponse200241**](InlineResponse200241.md)
 
 ### Authorization
 

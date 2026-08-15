@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApplianceUplinksNatByNetwork
 
-> []InlineResponse200287 GetOrganizationApplianceUplinksNatByNetwork(ctx, organizationId).NetworkIds(networkIds).Interfaces(interfaces).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200289 GetOrganizationApplianceUplinksNatByNetwork(ctx, organizationId).NetworkIds(networkIds).Interfaces(interfaces).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Fetch uplink NAT settings of each network in the organization
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NatApi.GetOrganizationApplianceUplinksNatByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksNatByNetwork`: []InlineResponse200287
+    // response from `GetOrganizationApplianceUplinksNatByNetwork`: []InlineResponse200289
     fmt.Fprintf(os.Stdout, "Response from `NatApi.GetOrganizationApplianceUplinksNatByNetwork`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200287**](InlineResponse200287.md)
+[**[]InlineResponse200289**](InlineResponse200289.md)
 
 ### Authorization
 

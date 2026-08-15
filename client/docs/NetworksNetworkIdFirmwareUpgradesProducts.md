@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **CellularGateway** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
 **Sensor** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
 **WirelessController** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
+**CampusGateway** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsCampusGateway**](NetworksNetworkIdFirmwareUpgradesProductsCampusGateway.md) |  | [optional] 
 **SecureConnect** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
 **SwitchCatalyst** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsAppliance**](NetworksNetworkIdFirmwareUpgradesProductsAppliance.md) |  | [optional] 
 
@@ -207,6 +208,31 @@ SetWirelessController sets WirelessController field to given value.
 `func (o *NetworksNetworkIdFirmwareUpgradesProducts) HasWirelessController() bool`
 
 HasWirelessController returns a boolean if a field has been set.
+
+### GetCampusGateway
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCampusGateway() NetworksNetworkIdFirmwareUpgradesProductsCampusGateway`
+
+GetCampusGateway returns the CampusGateway field if non-nil, zero value otherwise.
+
+### GetCampusGatewayOk
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetCampusGatewayOk() (*NetworksNetworkIdFirmwareUpgradesProductsCampusGateway, bool)`
+
+GetCampusGatewayOk returns a tuple with the CampusGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCampusGateway
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetCampusGateway(v NetworksNetworkIdFirmwareUpgradesProductsCampusGateway)`
+
+SetCampusGateway sets CampusGateway field to given value.
+
+### HasCampusGateway
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) HasCampusGateway() bool`
+
+HasCampusGateway returns a boolean if a field has been set.
 
 ### GetSecureConnect
 

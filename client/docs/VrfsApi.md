@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApplianceRoutingVrfsSettings
 
-> InlineResponse200283 GetOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).Execute()
+> InlineResponse200285 GetOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).Execute()
 
 Return the VRF setting for an organization.
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VrfsApi.GetOrganizationApplianceRoutingVrfsSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceRoutingVrfsSettings`: InlineResponse200283
+    // response from `GetOrganizationApplianceRoutingVrfsSettings`: InlineResponse200285
     fmt.Fprintf(os.Stdout, "Response from `VrfsApi.GetOrganizationApplianceRoutingVrfsSettings`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200283**](InlineResponse200283.md)
+[**InlineResponse200285**](InlineResponse200285.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceRoutingVrfsSettings
 
-> InlineResponse200283 UpdateOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).UpdateOrganizationApplianceRoutingVrfsSettings(updateOrganizationApplianceRoutingVrfsSettings).Execute()
+> InlineResponse200285 UpdateOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).UpdateOrganizationApplianceRoutingVrfsSettings(updateOrganizationApplianceRoutingVrfsSettings).Execute()
 
 Update the VRF setting for an organization.
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VrfsApi.UpdateOrganizationApplianceRoutingVrfsSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceRoutingVrfsSettings`: InlineResponse200283
+    // response from `UpdateOrganizationApplianceRoutingVrfsSettings`: InlineResponse200285
     fmt.Fprintf(os.Stdout, "Response from `VrfsApi.UpdateOrganizationApplianceRoutingVrfsSettings`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200283**](InlineResponse200283.md)
+[**InlineResponse200285**](InlineResponse200285.md)
 
 ### Authorization
 

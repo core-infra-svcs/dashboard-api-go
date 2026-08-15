@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200323Usage**](InlineResponse200323Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200323Counts**](InlineResponse200323Counts.md) |  | [optional] 
+**Items** | [**[]InlineResponse200323Items**](InlineResponse200323Items.md) | APs tunneling through the MCG clusters | 
+**Meta** | [**InlineResponse200320Meta**](InlineResponse200320Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200323
 
-`func NewInlineResponse200323() *InlineResponse200323`
+`func NewInlineResponse200323(items []InlineResponse200323Items, meta InlineResponse200320Meta, ) *InlineResponse200323`
 
 NewInlineResponse200323 instantiates a new InlineResponse200323 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineResponse200323WithDefaults instantiates a new InlineResponse200323 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetItems
 
-`func (o *InlineResponse200323) GetUsage() InlineResponse200323Usage`
+`func (o *InlineResponse200323) GetItems() []InlineResponse200323Items`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetItemsOk
 
-`func (o *InlineResponse200323) GetUsageOk() (*InlineResponse200323Usage, bool)`
+`func (o *InlineResponse200323) GetItemsOk() (*[]InlineResponse200323Items, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetItems
 
-`func (o *InlineResponse200323) SetUsage(v InlineResponse200323Usage)`
+`func (o *InlineResponse200323) SetItems(v []InlineResponse200323Items)`
 
-SetUsage sets Usage field to given value.
+SetItems sets Items field to given value.
 
-### HasUsage
 
-`func (o *InlineResponse200323) HasUsage() bool`
+### GetMeta
 
-HasUsage returns a boolean if a field has been set.
+`func (o *InlineResponse200323) GetMeta() InlineResponse200320Meta`
 
-### GetCounts
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200323) GetCounts() InlineResponse200323Counts`
+### GetMetaOk
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+`func (o *InlineResponse200323) GetMetaOk() (*InlineResponse200320Meta, bool)`
 
-### GetCountsOk
-
-`func (o *InlineResponse200323) GetCountsOk() (*InlineResponse200323Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetMeta
 
-`func (o *InlineResponse200323) SetCounts(v InlineResponse200323Counts)`
+`func (o *InlineResponse200323) SetMeta(v InlineResponse200320Meta)`
 
-SetCounts sets Counts field to given value.
+SetMeta sets Meta field to given value.
 
-### HasCounts
-
-`func (o *InlineResponse200323) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

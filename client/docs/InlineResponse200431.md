@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the switch | [optional] 
-**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
-**Model** | Pointer to **string** | Model of the switch | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
+**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
+**V2CommunityString** | Pointer to **string** | The community string for SNMP version 2c, if enabled. | [optional] 
+**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
+**V3User** | Pointer to **string** | The user for SNMP version 3, if enabled. | [optional] 
+**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
+**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
+**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
+**Hostname** | Pointer to **string** | The hostname of the SNMP server. | [optional] 
+**Port** | Pointer to **int32** | The port of the SNMP server. | [optional] 
 
 ## Methods
 
@@ -29,130 +33,230 @@ NewInlineResponse200431WithDefaults instantiates a new InlineResponse200431 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetV2cEnabled
 
-`func (o *InlineResponse200431) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200431) GetV2cEnabled() bool`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetV2cEnabledOk
 
-`func (o *InlineResponse200431) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200431) GetV2cEnabledOk() (*bool, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetV2cEnabled
 
-`func (o *InlineResponse200431) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200431) SetV2cEnabled(v bool)`
 
-SetNetwork sets Network field to given value.
+SetV2cEnabled sets V2cEnabled field to given value.
 
-### HasNetwork
+### HasV2cEnabled
 
-`func (o *InlineResponse200431) HasNetwork() bool`
+`func (o *InlineResponse200431) HasV2cEnabled() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasV2cEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetV2CommunityString
 
-`func (o *InlineResponse200431) GetName() string`
+`func (o *InlineResponse200431) GetV2CommunityString() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetV2CommunityString returns the V2CommunityString field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetV2CommunityStringOk
 
-`func (o *InlineResponse200431) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200431) GetV2CommunityStringOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetV2CommunityStringOk returns a tuple with the V2CommunityString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetV2CommunityString
 
-`func (o *InlineResponse200431) SetName(v string)`
+`func (o *InlineResponse200431) SetV2CommunityString(v string)`
 
-SetName sets Name field to given value.
+SetV2CommunityString sets V2CommunityString field to given value.
 
-### HasName
+### HasV2CommunityString
 
-`func (o *InlineResponse200431) HasName() bool`
+`func (o *InlineResponse200431) HasV2CommunityString() bool`
 
-HasName returns a boolean if a field has been set.
+HasV2CommunityString returns a boolean if a field has been set.
 
-### GetMac
+### GetV3Enabled
 
-`func (o *InlineResponse200431) GetMac() string`
+`func (o *InlineResponse200431) GetV3Enabled() bool`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetV3EnabledOk
 
-`func (o *InlineResponse200431) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200431) GetV3EnabledOk() (*bool, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetV3Enabled
 
-`func (o *InlineResponse200431) SetMac(v string)`
+`func (o *InlineResponse200431) SetV3Enabled(v bool)`
 
-SetMac sets Mac field to given value.
+SetV3Enabled sets V3Enabled field to given value.
 
-### HasMac
+### HasV3Enabled
 
-`func (o *InlineResponse200431) HasMac() bool`
+`func (o *InlineResponse200431) HasV3Enabled() bool`
 
-HasMac returns a boolean if a field has been set.
+HasV3Enabled returns a boolean if a field has been set.
 
-### GetModel
+### GetV3User
 
-`func (o *InlineResponse200431) GetModel() string`
+`func (o *InlineResponse200431) GetV3User() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetV3User returns the V3User field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetV3UserOk
 
-`func (o *InlineResponse200431) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200431) GetV3UserOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetV3UserOk returns a tuple with the V3User field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetV3User
 
-`func (o *InlineResponse200431) SetModel(v string)`
+`func (o *InlineResponse200431) SetV3User(v string)`
 
-SetModel sets Model field to given value.
+SetV3User sets V3User field to given value.
 
-### HasModel
+### HasV3User
 
-`func (o *InlineResponse200431) HasModel() bool`
+`func (o *InlineResponse200431) HasV3User() bool`
 
-HasModel returns a boolean if a field has been set.
+HasV3User returns a boolean if a field has been set.
 
-### GetUsage
+### GetV3AuthMode
 
-`func (o *InlineResponse200431) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
+`func (o *InlineResponse200431) GetV3AuthMode() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetV3AuthModeOk
 
-`func (o *InlineResponse200431) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
+`func (o *InlineResponse200431) GetV3AuthModeOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetV3AuthMode
 
-`func (o *InlineResponse200431) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
+`func (o *InlineResponse200431) SetV3AuthMode(v string)`
 
-SetUsage sets Usage field to given value.
+SetV3AuthMode sets V3AuthMode field to given value.
 
-### HasUsage
+### HasV3AuthMode
 
-`func (o *InlineResponse200431) HasUsage() bool`
+`func (o *InlineResponse200431) HasV3AuthMode() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasV3AuthMode returns a boolean if a field has been set.
+
+### GetV3PrivMode
+
+`func (o *InlineResponse200431) GetV3PrivMode() string`
+
+GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
+
+### GetV3PrivModeOk
+
+`func (o *InlineResponse200431) GetV3PrivModeOk() (*string, bool)`
+
+GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivMode
+
+`func (o *InlineResponse200431) SetV3PrivMode(v string)`
+
+SetV3PrivMode sets V3PrivMode field to given value.
+
+### HasV3PrivMode
+
+`func (o *InlineResponse200431) HasV3PrivMode() bool`
+
+HasV3PrivMode returns a boolean if a field has been set.
+
+### GetPeerIps
+
+`func (o *InlineResponse200431) GetPeerIps() []string`
+
+GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
+
+### GetPeerIpsOk
+
+`func (o *InlineResponse200431) GetPeerIpsOk() (*[]string, bool)`
+
+GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPeerIps
+
+`func (o *InlineResponse200431) SetPeerIps(v []string)`
+
+SetPeerIps sets PeerIps field to given value.
+
+### HasPeerIps
+
+`func (o *InlineResponse200431) HasPeerIps() bool`
+
+HasPeerIps returns a boolean if a field has been set.
+
+### GetHostname
+
+`func (o *InlineResponse200431) GetHostname() string`
+
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
+
+### GetHostnameOk
+
+`func (o *InlineResponse200431) GetHostnameOk() (*string, bool)`
+
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostname
+
+`func (o *InlineResponse200431) SetHostname(v string)`
+
+SetHostname sets Hostname field to given value.
+
+### HasHostname
+
+`func (o *InlineResponse200431) HasHostname() bool`
+
+HasHostname returns a boolean if a field has been set.
+
+### GetPort
+
+`func (o *InlineResponse200431) GetPort() int32`
+
+GetPort returns the Port field if non-nil, zero value otherwise.
+
+### GetPortOk
+
+`func (o *InlineResponse200431) GetPortOk() (*int32, bool)`
+
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPort
+
+`func (o *InlineResponse200431) SetPort(v int32)`
+
+SetPort sets Port field to given value.
+
+### HasPort
+
+`func (o *InlineResponse200431) HasPort() bool`
+
+HasPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

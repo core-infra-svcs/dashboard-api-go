@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesAssignmentsByClient
 
-> []InlineResponse200386 GetOrganizationPoliciesAssignmentsByClient(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).IncludeUndetectedClients(includeUndetectedClients).Execute()
+> []InlineResponse200401 GetOrganizationPoliciesAssignmentsByClient(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).IncludeUndetectedClients(includeUndetectedClients).Execute()
 
 Get policies for all clients with policies
 
@@ -127,7 +127,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByClientApi.GetOrganizationPoliciesAssignmentsByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesAssignmentsByClient`: []InlineResponse200386
+    // response from `GetOrganizationPoliciesAssignmentsByClient`: []InlineResponse200401
     fmt.Fprintf(os.Stdout, "Response from `ByClientApi.GetOrganizationPoliciesAssignmentsByClient`: %v\n", resp)
 }
 ```
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200386**](InlineResponse200386.md)
+[**[]InlineResponse200401**](InlineResponse200401.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByClient
 
-> []InlineResponse200451 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200470 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all clients in the organization.
 
@@ -214,7 +214,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByClientApi.GetOrganizationWirelessDevicesPacketLossByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200451
+    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200470
     fmt.Fprintf(os.Stdout, "Response from `ByClientApi.GetOrganizationWirelessDevicesPacketLossByClient`: %v\n", resp)
 }
 ```
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200451**](InlineResponse200451.md)
+[**[]InlineResponse200470**](InlineResponse200470.md)
 
 ### Authorization
 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems**](OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems.md) | List of connectors to delete (maximum 20 items) | [optional] 
 
 ## Methods
 
 ### NewInlineObject341
 
-`func NewInlineObject341(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject341`
+`func NewInlineObject341() *InlineObject341`
 
 NewInlineObject341 instantiates a new InlineObject341 object
 This constructor will assign default values to properties that have it defined,
@@ -27,23 +27,28 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineObject341) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
+`func (o *InlineObject341) GetItems() []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineObject341) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
+`func (o *InlineObject341) GetItemsOk() (*[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineObject341) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
+`func (o *InlineObject341) SetItems(v []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems)`
 
 SetItems sets Items field to given value.
 
+### HasItems
+
+`func (o *InlineObject341) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

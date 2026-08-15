@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Ip** | Pointer to **string** | The IP address of the ARP table entry | [optional] 
 **Mac** | Pointer to **string** | The MAC address of the ARP table entry | [optional] 
-**VlanId** | Pointer to **NullableInt32** | The VLAN ID of the ARP table entry. Null for Meraki wireless devices. | [optional] 
-**Interface** | Pointer to **string** | The interface name of the ARP table entry, such as Vlan1, Port-channel2, or GigabitEthernet1/0/1 | [optional] 
-**LastUpdatedAt** | Pointer to **NullableTime** | Time of the last update of the ARP table entry. Null for Meraki wireless devices. | [optional] 
+**VlanId** | Pointer to **NullableInt32** | The VLAN ID of the ARP table entry. This is null for Meraki wireless devices, or for ARP table entries that do not belong to a VLAN. | [optional] 
+**Interface** | Pointer to **NullableString** | The interface name of the ARP table entry, such as Vlan1, Port-channel2, or GigabitEthernet1/0/1. This is null for non-Catalyst switches as well as Meraki wireless devices. | [optional] 
+**LastUpdatedAt** | Pointer to **NullableTime** | Time of the last update of the ARP table entry. This is null for Meraki wireless devices. | [optional] 
 
 ## Methods
 
@@ -139,6 +139,16 @@ SetInterface sets Interface field to given value.
 
 HasInterface returns a boolean if a field has been set.
 
+### SetInterfaceNil
+
+`func (o *InlineResponse20032Entries) SetInterfaceNil(b bool)`
+
+ SetInterfaceNil sets the value for Interface to be an explicit nil
+
+### UnsetInterface
+`func (o *InlineResponse20032Entries) UnsetInterface()`
+
+UnsetInterface ensures that no value is present for Interface, not even an explicit nil
 ### GetLastUpdatedAt
 
 `func (o *InlineResponse20032Entries) GetLastUpdatedAt() time.Time`

@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsTaxonomyCategories
 
-> []InlineResponse200300 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
+> []InlineResponse200303 GetOrganizationAssuranceAlertsTaxonomyCategories(ctx, organizationId).Execute()
 
 Return a list of Category Types
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CategoriesApi.GetOrganizationAssuranceAlertsTaxonomyCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200300
+    // response from `GetOrganizationAssuranceAlertsTaxonomyCategories`: []InlineResponse200303
     fmt.Fprintf(os.Stdout, "Response from `CategoriesApi.GetOrganizationAssuranceAlertsTaxonomyCategories`: %v\n", resp)
 }
 ```
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200300**](InlineResponse200300.md)
+[**[]InlineResponse200303**](InlineResponse200303.md)
 
 ### Authorization
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopApplicationsCategoriesByUsage
 
-> []InlineResponse200424 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200439 GetOrganizationSummaryTopApplicationsCategoriesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).NetworkId(networkId).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top application categories sorted by data usage over given time range
 
@@ -189,7 +189,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CategoriesApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200424
+    // response from `GetOrganizationSummaryTopApplicationsCategoriesByUsage`: []InlineResponse200439
     fmt.Fprintf(os.Stdout, "Response from `CategoriesApi.GetOrganizationSummaryTopApplicationsCategoriesByUsage`: %v\n", resp)
 }
 ```
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200424**](InlineResponse200424.md)
+[**[]InlineResponse200439**](InlineResponse200439.md)
 
 ### Authorization
 

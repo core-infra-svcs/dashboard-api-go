@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinkStatuses
 
-> []InlineResponse200286 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200288 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX and Z series appliances in the organization
 
@@ -361,7 +361,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationApplianceUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200286
+    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200288
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationApplianceUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200286**](InlineResponse200286.md)
+[**[]InlineResponse200288**](InlineResponse200288.md)
 
 ### Authorization
 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksNatByNetwork
 
-> []InlineResponse200287 GetOrganizationApplianceUplinksNatByNetwork(ctx, organizationId).NetworkIds(networkIds).Interfaces(interfaces).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200289 GetOrganizationApplianceUplinksNatByNetwork(ctx, organizationId).NetworkIds(networkIds).Interfaces(interfaces).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Fetch uplink NAT settings of each network in the organization
 
@@ -442,7 +442,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationApplianceUplinksNatByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksNatByNetwork`: []InlineResponse200287
+    // response from `GetOrganizationApplianceUplinksNatByNetwork`: []InlineResponse200289
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationApplianceUplinksNatByNetwork`: %v\n", resp)
 }
 ```
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200287**](InlineResponse200287.md)
+[**[]InlineResponse200289**](InlineResponse200289.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksStatusesOverview
 
-> InlineResponse200288 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).NetworkIds(networkIds).Execute()
+> InlineResponse200290 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).NetworkIds(networkIds).Execute()
 
 Returns an overview of uplink statuses
 
@@ -518,7 +518,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationApplianceUplinksStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200288
+    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationApplianceUplinksStatusesOverview`: %v\n", resp)
 }
 ```
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200288**](InlineResponse200288.md)
+[**InlineResponse200290**](InlineResponse200290.md)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200289 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200291 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -592,7 +592,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200289
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200291
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200289**](InlineResponse200289.md)
+[**[]InlineResponse200291**](InlineResponse200291.md)
 
 ### Authorization
 
@@ -637,7 +637,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice
 
-> InlineResponse200313 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200325 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Uplink overrides configured locally on Campus Gateway devices in an organization.
 
@@ -669,7 +669,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200313
+    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200325
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: %v\n", resp)
 }
 ```
@@ -697,7 +697,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200313**](InlineResponse200313.md)
+[**InlineResponse200325**](InlineResponse200325.md)
 
 ### Authorization
 
@@ -715,7 +715,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularUplinksBandsByDevice
 
-> InlineResponse200340 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200352 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular uplink signal information for devices in an organization
 
@@ -747,7 +747,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationDevicesCellularUplinksBandsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200340
+    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200352
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationDevicesCellularUplinksBandsByDevice`: %v\n", resp)
 }
 ```
@@ -775,7 +775,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200340**](InlineResponse200340.md)
+[**InlineResponse200352**](InlineResponse200352.md)
 
 ### Authorization
 
@@ -793,7 +793,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularUplinksTowersByDevice
 
-> InlineResponse200341 GetOrganizationDevicesCellularUplinksTowersByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200353 GetOrganizationDevicesCellularUplinksTowersByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular tower information for devices in an organization
 
@@ -825,7 +825,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationDevicesCellularUplinksTowersByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularUplinksTowersByDevice`: InlineResponse200341
+    // response from `GetOrganizationDevicesCellularUplinksTowersByDevice`: InlineResponse200353
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationDevicesCellularUplinksTowersByDevice`: %v\n", resp)
 }
 ```
@@ -853,7 +853,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200341**](InlineResponse200341.md)
+[**InlineResponse200353**](InlineResponse200353.md)
 
 ### Authorization
 
@@ -871,7 +871,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksAddressesByDevice
 
-> []InlineResponse200356 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200368 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the current uplink addresses for devices in an organization.
 
@@ -907,7 +907,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationDevicesUplinksAddressesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200356
+    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200368
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationDevicesUplinksAddressesByDevice`: %v\n", resp)
 }
 ```
@@ -939,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200356**](InlineResponse200356.md)
+[**[]InlineResponse200368**](InlineResponse200368.md)
 
 ### Authorization
 
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksLossAndLatency
 
-> []InlineResponse200357 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
+> []InlineResponse200369 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
 
 Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 
@@ -990,7 +990,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationDevicesUplinksLossAndLatency``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200357
+    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200369
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationDevicesUplinksLossAndLatency`: %v\n", resp)
 }
 ```
@@ -1019,7 +1019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200357**](InlineResponse200357.md)
+[**[]InlineResponse200369**](InlineResponse200369.md)
 
 ### Authorization
 
@@ -1037,7 +1037,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationUplinksStatuses
 
-> []InlineResponse200439 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200454 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX, MG and Z series devices in the organization
 
@@ -1071,7 +1071,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationUplinksStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200439
+    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200454
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationUplinksStatuses`: %v\n", resp)
 }
 ```
@@ -1101,7 +1101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200439**](InlineResponse200439.md)
+[**[]InlineResponse200454**](InlineResponse200454.md)
 
 ### Authorization
 

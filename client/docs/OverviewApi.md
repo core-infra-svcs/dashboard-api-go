@@ -16,10 +16,12 @@ Method | HTTP request | Description
 [**GetOrganizationAssuranceAlertsOverviewByNetwork**](OverviewApi.md#GetOrganizationAssuranceAlertsOverviewByNetwork) | **Get** /organizations/{organizationId}/assurance/alerts/overview/byNetwork | Return a Summary of Alerts grouped by network and severity
 [**GetOrganizationAssuranceAlertsOverviewByType**](OverviewApi.md#GetOrganizationAssuranceAlertsOverviewByType) | **Get** /organizations/{organizationId}/assurance/alerts/overview/byType | Return a Summary of Alerts grouped by type and severity
 [**GetOrganizationAssuranceAlertsOverviewHistorical**](OverviewApi.md#GetOrganizationAssuranceAlertsOverviewHistorical) | **Get** /organizations/{organizationId}/assurance/alerts/overview/historical | Returns historical health alert overviews
+[**GetOrganizationCampusGatewayConnectionsOverview**](OverviewApi.md#GetOrganizationCampusGatewayConnectionsOverview) | **Get** /organizations/{organizationId}/campusGateway/connections/overview | List the count of connections(APs) with tunneling status up and down through the Campus Gateway clusters
 [**GetOrganizationClientsOverview**](OverviewApi.md#GetOrganizationClientsOverview) | **Get** /organizations/{organizationId}/clients/overview | Return summary information around client data usage (in kb) across the given organization.
 [**GetOrganizationDevicesOverviewByModel**](OverviewApi.md#GetOrganizationDevicesOverviewByModel) | **Get** /organizations/{organizationId}/devices/overview/byModel | Lists the count for each device model
 [**GetOrganizationDevicesStatusesOverview**](OverviewApi.md#GetOrganizationDevicesStatusesOverview) | **Get** /organizations/{organizationId}/devices/statuses/overview | Return an overview of current device statuses
 [**GetOrganizationLicensesOverview**](OverviewApi.md#GetOrganizationLicensesOverview) | **Get** /organizations/{organizationId}/licenses/overview | Return an overview of the license state for an organization
+[**GetOrganizationNetworksGroupsOverviewByGroup**](OverviewApi.md#GetOrganizationNetworksGroupsOverviewByGroup) | **Get** /organizations/{organizationId}/networks/groups/overview/byGroup | List the client and status overview information for the network groups in an organization
 [**GetOrganizationSaseSitesConnectivityOverview**](OverviewApi.md#GetOrganizationSaseSitesConnectivityOverview) | **Get** /organizations/{organizationId}/sase/sites/connectivity/overview | List high-level SASE site statuses (healthy, degraded, offline)
 [**GetOrganizationSwitchPortsClientsOverviewByDevice**](OverviewApi.md#GetOrganizationSwitchPortsClientsOverviewByDevice) | **Get** /organizations/{organizationId}/switch/ports/clients/overview/byDevice | List the number of clients for all switchports with at least one online client in an organization.
 [**GetOrganizationSwitchPortsOverview**](OverviewApi.md#GetOrganizationSwitchPortsOverview) | **Get** /organizations/{organizationId}/switch/ports/overview | Returns the counts of all active ports for the requested timespan, grouped by speed
@@ -336,7 +338,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyOverview
 
-> InlineResponse200261 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
+> InlineResponse200263 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
 
 Returns adaptive policy aggregate statistics for an organization
 
@@ -364,7 +366,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAdaptivePolicyOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200261
+    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200263
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAdaptivePolicyOverview`: %v\n", resp)
 }
 ```
@@ -388,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200261**](InlineResponse200261.md)
+[**InlineResponse200263**](InlineResponse200263.md)
 
 ### Authorization
 
@@ -406,7 +408,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverview
 
-> InlineResponse200269 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200271 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return an aggregated overview of API requests data
 
@@ -437,7 +439,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationApiRequestsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200269
+    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200271
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationApiRequestsOverview`: %v\n", resp)
 }
 ```
@@ -464,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200269**](InlineResponse200269.md)
+[**InlineResponse200271**](InlineResponse200271.md)
 
 ### Authorization
 
@@ -482,7 +484,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverviewResponseCodesByInterval
 
-> []InlineResponse200270 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
+> []InlineResponse200272 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
 
 Tracks organizations' API requests by response code across a given time period
 
@@ -519,7 +521,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200270
+    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200272
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval`: %v\n", resp)
 }
 ```
@@ -552,7 +554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200270**](InlineResponse200270.md)
+[**[]InlineResponse200272**](InlineResponse200272.md)
 
 ### Authorization
 
@@ -570,7 +572,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksStatusesOverview
 
-> InlineResponse200288 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).NetworkIds(networkIds).Execute()
+> InlineResponse200290 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).NetworkIds(networkIds).Execute()
 
 Returns an overview of uplink statuses
 
@@ -599,7 +601,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationApplianceUplinksStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200288
+    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationApplianceUplinksStatusesOverview`: %v\n", resp)
 }
 ```
@@ -624,7 +626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200288**](InlineResponse200288.md)
+[**InlineResponse200290**](InlineResponse200290.md)
 
 ### Authorization
 
@@ -642,7 +644,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverview
 
-> InlineResponse200296 GetOrganizationAssuranceAlertsOverview(ctx, organizationId).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200298 GetOrganizationAssuranceAlertsOverview(ctx, organizationId).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return overview of active health alerts for an organization
 
@@ -684,7 +686,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverview`: InlineResponse200296
+    // response from `GetOrganizationAssuranceAlertsOverview`: InlineResponse200298
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverview`: %v\n", resp)
 }
 ```
@@ -721,7 +723,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200296**](InlineResponse200296.md)
+[**InlineResponse200298**](InlineResponse200298.md)
 
 ### Authorization
 
@@ -739,7 +741,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverviewByNetwork
 
-> InlineResponse200297 GetOrganizationAssuranceAlertsOverviewByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200299 GetOrganizationAssuranceAlertsOverviewByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return a Summary of Alerts grouped by network and severity
 
@@ -785,7 +787,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverviewByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewByNetwork`: InlineResponse200297
+    // response from `GetOrganizationAssuranceAlertsOverviewByNetwork`: InlineResponse200299
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverviewByNetwork`: %v\n", resp)
 }
 ```
@@ -826,7 +828,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200297**](InlineResponse200297.md)
+[**InlineResponse200299**](InlineResponse200299.md)
 
 ### Authorization
 
@@ -844,7 +846,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverviewByType
 
-> InlineResponse200298 GetOrganizationAssuranceAlertsOverviewByType(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).IncludeDeviceTags(includeDeviceTags).IncludeNetworks(includeNetworks).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200300 GetOrganizationAssuranceAlertsOverviewByType(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).IncludeDeviceTags(includeDeviceTags).IncludeNetworks(includeNetworks).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return a Summary of Alerts grouped by type and severity
 
@@ -893,7 +895,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverviewByType``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewByType`: InlineResponse200298
+    // response from `GetOrganizationAssuranceAlertsOverviewByType`: InlineResponse200300
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverviewByType`: %v\n", resp)
 }
 ```
@@ -937,7 +939,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200298**](InlineResponse200298.md)
+[**InlineResponse200300**](InlineResponse200300.md)
 
 ### Authorization
 
@@ -955,7 +957,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverviewHistorical
 
-> InlineResponse200299 GetOrganizationAssuranceAlertsOverviewHistorical(ctx, organizationId).SegmentDuration(segmentDuration).TsStart(tsStart).NetworkId(networkId).Severity(severity).Types(types).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).Execute()
+> InlineResponse200301 GetOrganizationAssuranceAlertsOverviewHistorical(ctx, organizationId).SegmentDuration(segmentDuration).TsStart(tsStart).NetworkId(networkId).Severity(severity).Types(types).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).Execute()
 
 Returns historical health alert overviews
 
@@ -993,7 +995,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverviewHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewHistorical`: InlineResponse200299
+    // response from `GetOrganizationAssuranceAlertsOverviewHistorical`: InlineResponse200301
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverviewHistorical`: %v\n", resp)
 }
 ```
@@ -1026,7 +1028,93 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200299**](InlineResponse200299.md)
+[**InlineResponse200301**](InlineResponse200301.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationCampusGatewayConnectionsOverview
+
+> InlineResponse200324 GetOrganizationCampusGatewayConnectionsOverview(ctx, organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).Execute()
+
+List the count of connections(APs) with tunneling status up and down through the Campus Gateway clusters
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | Optional parameter to filter networks. This filter uses multiple exact matches. (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by its own serials. This filter uses multiple exact matches. (optional)
+    campusGatewaySerials := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by Campus Gateway serials. This filter uses multiple exact matches. (optional)
+    campusGatewayClusterIds := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by Campus Gateway cluster IDs. This filter uses multiple exact matches. (optional)
+    campusGatewayTunnelStatuses := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by tunnel statuses. This filter uses multiple exact matches. (optional)
+    search := "search_example" // string | Optional setting that lets you filter access points (APs) by name, serial number, MAC address, network name, or interface IP address. The filter matches partial text, not just exact values (uses ILIKE matching). (optional)
+    models := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by device model names. This filter uses multiple exact matches. (optional)
+    dataEncryptionStatuses := []string{"DataEncryptionStatuses_example"} // []string | Optional parameter to filter connections(APs) by data encryption status. This filter uses multiple exact matches. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewApi.GetOrganizationCampusGatewayConnectionsOverview(context.Background(), organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationCampusGatewayConnectionsOverview``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationCampusGatewayConnectionsOverview`: InlineResponse200324
+    fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationCampusGatewayConnectionsOverview`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationCampusGatewayConnectionsOverviewRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | Optional parameter to filter networks. This filter uses multiple exact matches. | 
+ **serials** | **[]string** | Optional parameter to filter connections(APs) by its own serials. This filter uses multiple exact matches. | 
+ **campusGatewaySerials** | **[]string** | Optional parameter to filter connections(APs) by Campus Gateway serials. This filter uses multiple exact matches. | 
+ **campusGatewayClusterIds** | **[]string** | Optional parameter to filter connections(APs) by Campus Gateway cluster IDs. This filter uses multiple exact matches. | 
+ **campusGatewayTunnelStatuses** | **[]string** | Optional parameter to filter connections(APs) by tunnel statuses. This filter uses multiple exact matches. | 
+ **search** | **string** | Optional setting that lets you filter access points (APs) by name, serial number, MAC address, network name, or interface IP address. The filter matches partial text, not just exact values (uses ILIKE matching). | 
+ **models** | **[]string** | Optional parameter to filter connections(APs) by device model names. This filter uses multiple exact matches. | 
+ **dataEncryptionStatuses** | **[]string** | Optional parameter to filter connections(APs) by data encryption status. This filter uses multiple exact matches. | 
+
+### Return type
+
+[**InlineResponse200324**](InlineResponse200324.md)
 
 ### Authorization
 
@@ -1044,7 +1132,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsOverview
 
-> InlineResponse200323 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200335 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return summary information around client data usage (in kb) across the given organization.
 
@@ -1075,7 +1163,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationClientsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsOverview`: InlineResponse200323
+    // response from `GetOrganizationClientsOverview`: InlineResponse200335
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationClientsOverview`: %v\n", resp)
 }
 ```
@@ -1102,7 +1190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200323**](InlineResponse200323.md)
+[**InlineResponse200335**](InlineResponse200335.md)
 
 ### Authorization
 
@@ -1120,7 +1208,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesOverviewByModel
 
-> InlineResponse200344 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
+> InlineResponse200356 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
 
 Lists the count for each device model
 
@@ -1151,7 +1239,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationDevicesOverviewByModel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200344
+    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200356
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationDevicesOverviewByModel`: %v\n", resp)
 }
 ```
@@ -1178,7 +1266,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200344**](InlineResponse200344.md)
+[**InlineResponse200356**](InlineResponse200356.md)
 
 ### Authorization
 
@@ -1196,7 +1284,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatusesOverview
 
-> InlineResponse200352 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
+> InlineResponse200364 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
 
 Return an overview of current device statuses
 
@@ -1226,7 +1314,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationDevicesStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200352
+    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200364
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationDevicesStatusesOverview`: %v\n", resp)
 }
 ```
@@ -1252,7 +1340,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200352**](InlineResponse200352.md)
+[**InlineResponse200364**](InlineResponse200364.md)
 
 ### Authorization
 
@@ -1270,7 +1358,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensesOverview
 
-> InlineResponse200380 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
+> InlineResponse200392 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
 
 Return an overview of the license state for an organization
 
@@ -1298,7 +1386,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationLicensesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensesOverview`: InlineResponse200380
+    // response from `GetOrganizationLicensesOverview`: InlineResponse200392
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationLicensesOverview`: %v\n", resp)
 }
 ```
@@ -1322,7 +1410,85 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200380**](InlineResponse200380.md)
+[**InlineResponse200392**](InlineResponse200392.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationNetworksGroupsOverviewByGroup
+
+> InlineResponse200398 GetOrganizationNetworksGroupsOverviewByGroup(ctx, organizationId).SortBy(sortBy).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List the client and status overview information for the network groups in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    sortBy := "sortBy_example" // string | Field by which to sort the results (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 5000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewApi.GetOrganizationNetworksGroupsOverviewByGroup(context.Background(), organizationId).SortBy(sortBy).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationNetworksGroupsOverviewByGroup``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationNetworksGroupsOverviewByGroup`: InlineResponse200398
+    fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationNetworksGroupsOverviewByGroup`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationNetworksGroupsOverviewByGroupRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **sortBy** | **string** | Field by which to sort the results | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 5000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200398**](InlineResponse200398.md)
 
 ### Authorization
 
@@ -1340,7 +1506,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseSitesConnectivityOverview
 
-> InlineResponse200406 GetOrganizationSaseSitesConnectivityOverview(ctx, organizationId).Execute()
+> InlineResponse200421 GetOrganizationSaseSitesConnectivityOverview(ctx, organizationId).Execute()
 
 List high-level SASE site statuses (healthy, degraded, offline)
 
@@ -1368,7 +1534,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationSaseSitesConnectivityOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseSitesConnectivityOverview`: InlineResponse200406
+    // response from `GetOrganizationSaseSitesConnectivityOverview`: InlineResponse200421
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationSaseSitesConnectivityOverview`: %v\n", resp)
 }
 ```
@@ -1392,7 +1558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200406**](InlineResponse200406.md)
+[**InlineResponse200421**](InlineResponse200421.md)
 
 ### Authorization
 
@@ -1410,7 +1576,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsClientsOverviewByDevice
 
-> InlineResponse200434 GetOrganizationSwitchPortsClientsOverviewByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200449 GetOrganizationSwitchPortsClientsOverviewByDevice(ctx, organizationId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the number of clients for all switchports with at least one online client in an organization.
 
@@ -1452,7 +1618,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationSwitchPortsClientsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsClientsOverviewByDevice`: InlineResponse200434
+    // response from `GetOrganizationSwitchPortsClientsOverviewByDevice`: InlineResponse200449
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationSwitchPortsClientsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -1489,7 +1655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200434**](InlineResponse200434.md)
+[**InlineResponse200449**](InlineResponse200449.md)
 
 ### Authorization
 
@@ -1507,7 +1673,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsOverview
 
-> InlineResponse200435 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200450 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the counts of all active ports for the requested timespan, grouped by speed
 
@@ -1538,7 +1704,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationSwitchPortsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200435
+    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200450
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationSwitchPortsOverview`: %v\n", resp)
 }
 ```
@@ -1565,7 +1731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200435**](InlineResponse200435.md)
+[**InlineResponse200450**](InlineResponse200450.md)
 
 ### Authorization
 
@@ -1583,7 +1749,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessClientsOverviewByDevice
 
-> InlineResponse200445 GetOrganizationWirelessClientsOverviewByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewayClusterIds(campusGatewayClusterIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200461 GetOrganizationWirelessClientsOverviewByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewayClusterIds(campusGatewayClusterIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List access point client count at the moment in an organization
 
@@ -1617,7 +1783,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationWirelessClientsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessClientsOverviewByDevice`: InlineResponse200445
+    // response from `GetOrganizationWirelessClientsOverviewByDevice`: InlineResponse200461
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationWirelessClientsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -1647,7 +1813,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200445**](InlineResponse200445.md)
+[**InlineResponse200461**](InlineResponse200461.md)
 
 ### Authorization
 
@@ -1665,7 +1831,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval
 
-> InlineResponse200473 GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Resolution(resolution).Execute()
+> InlineResponse200495 GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Resolution(resolution).Execute()
 
 List wireless client counts of wireless LAN controllers over time in an organization
 
@@ -1702,7 +1868,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval`: InlineResponse200473
+    // response from `GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval`: InlineResponse200495
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationWirelessControllerClientsOverviewHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -1735,7 +1901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200473**](InlineResponse200473.md)
+[**InlineResponse200495**](InlineResponse200495.md)
 
 ### Authorization
 
@@ -1753,7 +1919,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice
 
-> InlineResponse200481 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200503 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Retrieve the packet counters for the interfaces of a Wireless LAN controller
 
@@ -1789,7 +1955,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200481
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200503
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -1821,7 +1987,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200481**](InlineResponse200481.md)
+[**InlineResponse200503**](InlineResponse200503.md)
 
 ### Authorization
 
@@ -1839,7 +2005,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessControllerOverviewByDevice
 
-> InlineResponse200486 GetOrganizationWirelessControllerOverviewByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200508 GetOrganizationWirelessControllerOverviewByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the overview information of wireless LAN controllers in an organization and it is updated every minute.
 
@@ -1872,7 +2038,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationWirelessControllerOverviewByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerOverviewByDevice`: InlineResponse200486
+    // response from `GetOrganizationWirelessControllerOverviewByDevice`: InlineResponse200508
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationWirelessControllerOverviewByDevice`: %v\n", resp)
 }
 ```
@@ -1901,7 +2067,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200486**](InlineResponse200486.md)
+[**InlineResponse200508**](InlineResponse200508.md)
 
 ### Authorization
 

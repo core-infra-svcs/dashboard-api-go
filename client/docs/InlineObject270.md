@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | **string** | Service provider account ID | 
-**ApiKey** | **string** | Service provider account API key | 
-**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
-**Title** | **string** | Service provider account name | 
-**Username** | **string** | Service provider account username | 
+**Name** | Pointer to **string** | The name of the new role. Must be unique. | [optional] 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices1.md) | Device tag on which this specified permission is applied. | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1.md) | Network tag on which this specified permission is applied. | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide1.md) | Permissions to be applied org wide. | [optional] 
 
 ## Methods
 
 ### NewInlineObject270
 
-`func NewInlineObject270(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject270`
+`func NewInlineObject270() *InlineObject270`
 
 NewInlineObject270 instantiates a new InlineObject270 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +28,105 @@ NewInlineObject270WithDefaults instantiates a new InlineObject270 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccountId
+### GetName
 
-`func (o *InlineObject270) GetAccountId() string`
+`func (o *InlineObject270) GetName() string`
 
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAccountIdOk
+### GetNameOk
 
-`func (o *InlineObject270) GetAccountIdOk() (*string, bool)`
+`func (o *InlineObject270) GetNameOk() (*string, bool)`
 
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountId
+### SetName
 
-`func (o *InlineObject270) SetAccountId(v string)`
+`func (o *InlineObject270) SetName(v string)`
 
-SetAccountId sets AccountId field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetApiKey
+`func (o *InlineObject270) HasName() bool`
 
-`func (o *InlineObject270) GetApiKey() string`
+HasName returns a boolean if a field has been set.
 
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
+### GetAppliedOnDevices
 
-### GetApiKeyOk
+`func (o *InlineObject270) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1`
 
-`func (o *InlineObject270) GetApiKeyOk() (*string, bool)`
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
+### GetAppliedOnDevicesOk
+
+`func (o *InlineObject270) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1, bool)`
+
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApiKey
+### SetAppliedOnDevices
 
-`func (o *InlineObject270) SetApiKey(v string)`
+`func (o *InlineObject270) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1)`
 
-SetApiKey sets ApiKey field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
+### HasAppliedOnDevices
 
-### GetServiceProvider
+`func (o *InlineObject270) HasAppliedOnDevices() bool`
 
-`func (o *InlineObject270) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
+HasAppliedOnDevices returns a boolean if a field has been set.
 
-GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
+### GetAppliedOnNetworks
 
-### GetServiceProviderOk
+`func (o *InlineObject270) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1`
 
-`func (o *InlineObject270) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
 
-GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
+### GetAppliedOnNetworksOk
+
+`func (o *InlineObject270) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1, bool)`
+
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServiceProvider
+### SetAppliedOnNetworks
 
-`func (o *InlineObject270) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
+`func (o *InlineObject270) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1)`
 
-SetServiceProvider sets ServiceProvider field to given value.
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
 
+### HasAppliedOnNetworks
 
-### GetTitle
+`func (o *InlineObject270) HasAppliedOnNetworks() bool`
 
-`func (o *InlineObject270) GetTitle() string`
+HasAppliedOnNetworks returns a boolean if a field has been set.
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+### GetAppliedOrgWide
 
-### GetTitleOk
+`func (o *InlineObject270) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1`
 
-`func (o *InlineObject270) GetTitleOk() (*string, bool)`
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+### GetAppliedOrgWideOk
+
+`func (o *InlineObject270) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetAppliedOrgWide
 
-`func (o *InlineObject270) SetTitle(v string)`
+`func (o *InlineObject270) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1)`
 
-SetTitle sets Title field to given value.
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
 
+### HasAppliedOrgWide
 
-### GetUsername
+`func (o *InlineObject270) HasAppliedOrgWide() bool`
 
-`func (o *InlineObject270) GetUsername() string`
-
-GetUsername returns the Username field if non-nil, zero value otherwise.
-
-### GetUsernameOk
-
-`func (o *InlineObject270) GetUsernameOk() (*string, bool)`
-
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsername
-
-`func (o *InlineObject270) SetUsername(v string)`
-
-SetUsername sets Username field to given value.
-
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
-**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
+**Privacy** | Pointer to **map[string]interface{}** | Privacy-related settings for the organization. | [optional] 
 
 ## Methods
 
@@ -31,30 +32,30 @@ NewInlineResponse200259WithDefaults instantiates a new InlineResponse200259 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAclId
+### GetId
 
-`func (o *InlineResponse200259) GetAclId() string`
+`func (o *InlineResponse200259) GetId() string`
 
-GetAclId returns the AclId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAclIdOk
+### GetIdOk
 
-`func (o *InlineResponse200259) GetAclIdOk() (*string, bool)`
+`func (o *InlineResponse200259) GetIdOk() (*string, bool)`
 
-GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAclId
+### SetId
 
-`func (o *InlineResponse200259) SetAclId(v string)`
+`func (o *InlineResponse200259) SetId(v string)`
 
-SetAclId sets AclId field to given value.
+SetId sets Id field to given value.
 
-### HasAclId
+### HasId
 
-`func (o *InlineResponse200259) HasAclId() bool`
+`func (o *InlineResponse200259) HasId() bool`
 
-HasAclId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,130 +82,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetUrl
 
-`func (o *InlineResponse200259) GetDescription() string`
+`func (o *InlineResponse200259) GetUrl() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetUrlOk
 
-`func (o *InlineResponse200259) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200259) GetUrlOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetUrl
 
-`func (o *InlineResponse200259) SetDescription(v string)`
+`func (o *InlineResponse200259) SetUrl(v string)`
 
-SetDescription sets Description field to given value.
+SetUrl sets Url field to given value.
 
-### HasDescription
+### HasUrl
 
-`func (o *InlineResponse200259) HasDescription() bool`
+`func (o *InlineResponse200259) HasUrl() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetIpVersion
+### GetApi
 
-`func (o *InlineResponse200259) GetIpVersion() string`
+`func (o *InlineResponse200259) GetApi() OrganizationsApi`
 
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetIpVersionOk
+### GetApiOk
 
-`func (o *InlineResponse200259) GetIpVersionOk() (*string, bool)`
+`func (o *InlineResponse200259) GetApiOk() (*OrganizationsApi, bool)`
 
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVersion
+### SetApi
 
-`func (o *InlineResponse200259) SetIpVersion(v string)`
+`func (o *InlineResponse200259) SetApi(v OrganizationsApi)`
 
-SetIpVersion sets IpVersion field to given value.
+SetApi sets Api field to given value.
 
-### HasIpVersion
+### HasApi
 
-`func (o *InlineResponse200259) HasIpVersion() bool`
+`func (o *InlineResponse200259) HasApi() bool`
 
-HasIpVersion returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
-### GetRules
+### GetLicensing
 
-`func (o *InlineResponse200259) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+`func (o *InlineResponse200259) GetLicensing() OrganizationsLicensing`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetLicensingOk
 
-`func (o *InlineResponse200259) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+`func (o *InlineResponse200259) GetLicensingOk() (*OrganizationsLicensing, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetLicensing
 
-`func (o *InlineResponse200259) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+`func (o *InlineResponse200259) SetLicensing(v OrganizationsLicensing)`
 
-SetRules sets Rules field to given value.
+SetLicensing sets Licensing field to given value.
 
-### HasRules
+### HasLicensing
 
-`func (o *InlineResponse200259) HasRules() bool`
+`func (o *InlineResponse200259) HasLicensing() bool`
 
-HasRules returns a boolean if a field has been set.
+HasLicensing returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetCloud
 
-`func (o *InlineResponse200259) GetCreatedAt() time.Time`
+`func (o *InlineResponse200259) GetCloud() OrganizationsCloud`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetCloudOk
 
-`func (o *InlineResponse200259) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200259) GetCloudOk() (*OrganizationsCloud, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetCloud
 
-`func (o *InlineResponse200259) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200259) SetCloud(v OrganizationsCloud)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetCloud sets Cloud field to given value.
 
-### HasCreatedAt
+### HasCloud
 
-`func (o *InlineResponse200259) HasCreatedAt() bool`
+`func (o *InlineResponse200259) HasCloud() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasCloud returns a boolean if a field has been set.
 
-### GetUpdatedAt
+### GetManagement
 
-`func (o *InlineResponse200259) GetUpdatedAt() time.Time`
+`func (o *InlineResponse200259) GetManagement() OrganizationsManagement`
 
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetUpdatedAtOk
+### GetManagementOk
 
-`func (o *InlineResponse200259) GetUpdatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200259) GetManagementOk() (*OrganizationsManagement, bool)`
 
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedAt
+### SetManagement
 
-`func (o *InlineResponse200259) SetUpdatedAt(v time.Time)`
+`func (o *InlineResponse200259) SetManagement(v OrganizationsManagement)`
 
-SetUpdatedAt sets UpdatedAt field to given value.
+SetManagement sets Management field to given value.
 
-### HasUpdatedAt
+### HasManagement
 
-`func (o *InlineResponse200259) HasUpdatedAt() bool`
+`func (o *InlineResponse200259) HasManagement() bool`
 
-HasUpdatedAt returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
+
+### GetPrivacy
+
+`func (o *InlineResponse200259) GetPrivacy() map[string]interface{}`
+
+GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
+
+### GetPrivacyOk
+
+`func (o *InlineResponse200259) GetPrivacyOk() (*map[string]interface{}, bool)`
+
+GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrivacy
+
+`func (o *InlineResponse200259) SetPrivacy(v map[string]interface{})`
+
+SetPrivacy sets Privacy field to given value.
+
+### HasPrivacy
+
+`func (o *InlineResponse200259) HasPrivacy() bool`
+
+HasPrivacy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

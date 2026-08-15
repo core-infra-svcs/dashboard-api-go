@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularUplinksBandsByDevice
 
-> InlineResponse200340 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200352 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular uplink signal information for devices in an organization
 
@@ -115,7 +115,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BandsApi.GetOrganizationDevicesCellularUplinksBandsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200340
+    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200352
     fmt.Fprintf(os.Stdout, "Response from `BandsApi.GetOrganizationDevicesCellularUplinksBandsByDevice`: %v\n", resp)
 }
 ```
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200340**](InlineResponse200340.md)
+[**InlineResponse200352**](InlineResponse200352.md)
 
 ### Authorization
 

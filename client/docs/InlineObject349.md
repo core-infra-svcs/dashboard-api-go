@@ -4,17 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
-**Url** | **string** | Receiver Url | 
-**Version** | **string** | Scanning API Version | 
-**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
-**SharedSecret** | **string** | Secret Value for Receiver | 
+**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
+**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
+**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
+**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
+**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
+**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
+**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
 
 ## Methods
 
 ### NewInlineObject349
 
-`func NewInlineObject349(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject349`
+`func NewInlineObject349() *InlineObject349`
 
 NewInlineObject349 instantiates a new InlineObject349 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +31,180 @@ NewInlineObject349WithDefaults instantiates a new InlineObject349 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetV2cEnabled
 
-`func (o *InlineObject349) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
+`func (o *InlineObject349) GetV2cEnabled() bool`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetV2cEnabledOk
 
-`func (o *InlineObject349) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
+`func (o *InlineObject349) GetV2cEnabledOk() (*bool, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetV2cEnabled
 
-`func (o *InlineObject349) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
+`func (o *InlineObject349) SetV2cEnabled(v bool)`
 
-SetNetwork sets Network field to given value.
+SetV2cEnabled sets V2cEnabled field to given value.
 
+### HasV2cEnabled
 
-### GetUrl
+`func (o *InlineObject349) HasV2cEnabled() bool`
 
-`func (o *InlineObject349) GetUrl() string`
+HasV2cEnabled returns a boolean if a field has been set.
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+### GetV3Enabled
 
-### GetUrlOk
+`func (o *InlineObject349) GetV3Enabled() bool`
 
-`func (o *InlineObject349) GetUrlOk() (*string, bool)`
+GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+### GetV3EnabledOk
+
+`func (o *InlineObject349) GetV3EnabledOk() (*bool, bool)`
+
+GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetV3Enabled
 
-`func (o *InlineObject349) SetUrl(v string)`
+`func (o *InlineObject349) SetV3Enabled(v bool)`
 
-SetUrl sets Url field to given value.
+SetV3Enabled sets V3Enabled field to given value.
 
+### HasV3Enabled
 
-### GetVersion
+`func (o *InlineObject349) HasV3Enabled() bool`
 
-`func (o *InlineObject349) GetVersion() string`
+HasV3Enabled returns a boolean if a field has been set.
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+### GetV3AuthMode
 
-### GetVersionOk
+`func (o *InlineObject349) GetV3AuthMode() string`
 
-`func (o *InlineObject349) GetVersionOk() (*string, bool)`
+GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
 
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+### GetV3AuthModeOk
+
+`func (o *InlineObject349) GetV3AuthModeOk() (*string, bool)`
+
+GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetV3AuthMode
 
-`func (o *InlineObject349) SetVersion(v string)`
+`func (o *InlineObject349) SetV3AuthMode(v string)`
 
-SetVersion sets Version field to given value.
+SetV3AuthMode sets V3AuthMode field to given value.
 
+### HasV3AuthMode
 
-### GetRadio
+`func (o *InlineObject349) HasV3AuthMode() bool`
 
-`func (o *InlineObject349) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
+HasV3AuthMode returns a boolean if a field has been set.
 
-GetRadio returns the Radio field if non-nil, zero value otherwise.
+### GetV3AuthPass
 
-### GetRadioOk
+`func (o *InlineObject349) GetV3AuthPass() string`
 
-`func (o *InlineObject349) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
+GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
 
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+### GetV3AuthPassOk
+
+`func (o *InlineObject349) GetV3AuthPassOk() (*string, bool)`
+
+GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadio
+### SetV3AuthPass
 
-`func (o *InlineObject349) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
+`func (o *InlineObject349) SetV3AuthPass(v string)`
 
-SetRadio sets Radio field to given value.
+SetV3AuthPass sets V3AuthPass field to given value.
 
+### HasV3AuthPass
 
-### GetSharedSecret
+`func (o *InlineObject349) HasV3AuthPass() bool`
 
-`func (o *InlineObject349) GetSharedSecret() string`
+HasV3AuthPass returns a boolean if a field has been set.
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+### GetV3PrivMode
 
-### GetSharedSecretOk
+`func (o *InlineObject349) GetV3PrivMode() string`
 
-`func (o *InlineObject349) GetSharedSecretOk() (*string, bool)`
+GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+### GetV3PrivModeOk
+
+`func (o *InlineObject349) GetV3PrivModeOk() (*string, bool)`
+
+GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetV3PrivMode
 
-`func (o *InlineObject349) SetSharedSecret(v string)`
+`func (o *InlineObject349) SetV3PrivMode(v string)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetV3PrivMode sets V3PrivMode field to given value.
 
+### HasV3PrivMode
+
+`func (o *InlineObject349) HasV3PrivMode() bool`
+
+HasV3PrivMode returns a boolean if a field has been set.
+
+### GetV3PrivPass
+
+`func (o *InlineObject349) GetV3PrivPass() string`
+
+GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
+
+### GetV3PrivPassOk
+
+`func (o *InlineObject349) GetV3PrivPassOk() (*string, bool)`
+
+GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivPass
+
+`func (o *InlineObject349) SetV3PrivPass(v string)`
+
+SetV3PrivPass sets V3PrivPass field to given value.
+
+### HasV3PrivPass
+
+`func (o *InlineObject349) HasV3PrivPass() bool`
+
+HasV3PrivPass returns a boolean if a field has been set.
+
+### GetPeerIps
+
+`func (o *InlineObject349) GetPeerIps() []string`
+
+GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
+
+### GetPeerIpsOk
+
+`func (o *InlineObject349) GetPeerIpsOk() (*[]string, bool)`
+
+GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPeerIps
+
+`func (o *InlineObject349) SetPeerIps(v []string)`
+
+SetPeerIps sets PeerIps field to given value.
+
+### HasPeerIps
+
+`func (o *InlineObject349) HasPeerIps() bool`
+
+HasPeerIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

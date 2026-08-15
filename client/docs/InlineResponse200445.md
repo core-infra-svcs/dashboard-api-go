@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200445Items**](InlineResponse200445Items.md) | Access point client count | [optional] 
-**Meta** | Pointer to [**InlineResponse200275Meta**](InlineResponse200275Meta.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the SSID | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200445WithDefaults instantiates a new InlineResponse200445 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineResponse200445) GetItems() []InlineResponse200445Items`
+`func (o *InlineResponse200445) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineResponse200445) GetItemsOk() (*[]InlineResponse200445Items, bool)`
+`func (o *InlineResponse200445) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineResponse200445) SetItems(v []InlineResponse200445Items)`
+`func (o *InlineResponse200445) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
-### HasItems
+### HasName
 
-`func (o *InlineResponse200445) HasItems() bool`
+`func (o *InlineResponse200445) HasName() bool`
 
-HasItems returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMeta
+### GetUsage
 
-`func (o *InlineResponse200445) GetMeta() InlineResponse200275Meta`
+`func (o *InlineResponse200445) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetUsageOk
 
-`func (o *InlineResponse200445) GetMetaOk() (*InlineResponse200275Meta, bool)`
+`func (o *InlineResponse200445) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetUsage
 
-`func (o *InlineResponse200445) SetMeta(v InlineResponse200275Meta)`
+`func (o *InlineResponse200445) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
 
-SetMeta sets Meta field to given value.
+SetUsage sets Usage field to given value.
 
-### HasMeta
+### HasUsage
 
-`func (o *InlineResponse200445) HasMeta() bool`
+`func (o *InlineResponse200445) HasUsage() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
+
+### GetClients
+
+`func (o *InlineResponse200445) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
+
+GetClients returns the Clients field if non-nil, zero value otherwise.
+
+### GetClientsOk
+
+`func (o *InlineResponse200445) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
+
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClients
+
+`func (o *InlineResponse200445) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
+
+SetClients sets Clients field to given value.
+
+### HasClients
+
+`func (o *InlineResponse200445) HasClients() bool`
+
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

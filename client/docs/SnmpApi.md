@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSnmp
 
-> InlineResponse200416 GetOrganizationSnmp(ctx, organizationId).Execute()
+> InlineResponse200431 GetOrganizationSnmp(ctx, organizationId).Execute()
 
 Return the SNMP settings for an organization
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SnmpApi.GetOrganizationSnmp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSnmp`: InlineResponse200416
+    // response from `GetOrganizationSnmp`: InlineResponse200431
     fmt.Fprintf(os.Stdout, "Response from `SnmpApi.GetOrganizationSnmp`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200416**](InlineResponse200416.md)
+[**InlineResponse200431**](InlineResponse200431.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSnmp
 
-> InlineResponse200416 UpdateOrganizationSnmp(ctx, organizationId).UpdateOrganizationSnmp(updateOrganizationSnmp).Execute()
+> InlineResponse200431 UpdateOrganizationSnmp(ctx, organizationId).UpdateOrganizationSnmp(updateOrganizationSnmp).Execute()
 
 Update the SNMP settings for an organization
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSnmp := *openapiclient.NewInlineObject342() // InlineObject342 |  (optional)
+    updateOrganizationSnmp := *openapiclient.NewInlineObject349() // InlineObject349 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SnmpApi.UpdateOrganizationSnmp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSnmp`: InlineResponse200416
+    // response from `UpdateOrganizationSnmp`: InlineResponse200431
     fmt.Fprintf(os.Stdout, "Response from `SnmpApi.UpdateOrganizationSnmp`: %v\n", resp)
 }
 ```
@@ -275,11 +275,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSnmpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSnmp** | [**InlineObject342**](InlineObject342.md) |  | 
+ **updateOrganizationSnmp** | [**InlineObject349**](InlineObject349.md) |  | 
 
 ### Return type
 
-[**InlineResponse200416**](InlineResponse200416.md)
+[**InlineResponse200431**](InlineResponse200431.md)
 
 ### Authorization
 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
+**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks.md) | List containing the network ID and the product type to disable XDR on | 
 
 ## Methods
 
 ### NewInlineObject299
 
-`func NewInlineObject299(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject299`
+`func NewInlineObject299(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, ) *InlineObject299`
 
 NewInlineObject299 instantiates a new InlineObject299 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject299WithDefaults instantiates a new InlineObject299 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetNetworks
 
-`func (o *InlineObject299) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
+`func (o *InlineObject299) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetNetworksOk
 
-`func (o *InlineObject299) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
+`func (o *InlineObject299) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetNetworks
 
-`func (o *InlineObject299) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
+`func (o *InlineObject299) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks)`
 
-SetSwaps sets Swaps field to given value.
+SetNetworks sets Networks field to given value.
 
 
 

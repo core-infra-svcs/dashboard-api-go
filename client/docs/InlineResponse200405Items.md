@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | Pointer to **string** | Site ID | [optional] 
-**Name** | Pointer to **string** | Site name | [optional] 
-**History** | Pointer to [**[]InlineResponse200405History**](InlineResponse200405History.md) | Site level connectivity history | [optional] 
-**Devices** | Pointer to [**InlineResponse200405Devices**](InlineResponse200405Devices.md) |  | [optional] 
+**PolicyId** | Pointer to **string** | ID of the Policy | [optional] 
+**Name** | Pointer to **string** | Name of the Policy | [optional] 
+**Description** | Pointer to **string** | Description of the Policy | [optional] 
+**Group** | Pointer to [**InlineResponse200405Group**](InlineResponse200405Group.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Policy creation time | [optional] 
+**LastUpdatedAt** | Pointer to **time.Time** | Policy last update time | [optional] 
 
 ## Methods
 
@@ -28,30 +30,30 @@ NewInlineResponse200405ItemsWithDefaults instantiates a new InlineResponse200405
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetPolicyId
 
-`func (o *InlineResponse200405Items) GetSiteId() string`
+`func (o *InlineResponse200405Items) GetPolicyId() string`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetPolicyIdOk
 
-`func (o *InlineResponse200405Items) GetSiteIdOk() (*string, bool)`
+`func (o *InlineResponse200405Items) GetPolicyIdOk() (*string, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetPolicyId
 
-`func (o *InlineResponse200405Items) SetSiteId(v string)`
+`func (o *InlineResponse200405Items) SetPolicyId(v string)`
 
-SetSiteId sets SiteId field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasSiteId
+### HasPolicyId
 
-`func (o *InlineResponse200405Items) HasSiteId() bool`
+`func (o *InlineResponse200405Items) HasPolicyId() bool`
 
-HasSiteId returns a boolean if a field has been set.
+HasPolicyId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +80,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetHistory
+### GetDescription
 
-`func (o *InlineResponse200405Items) GetHistory() []InlineResponse200405History`
+`func (o *InlineResponse200405Items) GetDescription() string`
 
-GetHistory returns the History field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetHistoryOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200405Items) GetHistoryOk() (*[]InlineResponse200405History, bool)`
+`func (o *InlineResponse200405Items) GetDescriptionOk() (*string, bool)`
 
-GetHistoryOk returns a tuple with the History field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHistory
+### SetDescription
 
-`func (o *InlineResponse200405Items) SetHistory(v []InlineResponse200405History)`
+`func (o *InlineResponse200405Items) SetDescription(v string)`
 
-SetHistory sets History field to given value.
+SetDescription sets Description field to given value.
 
-### HasHistory
+### HasDescription
 
-`func (o *InlineResponse200405Items) HasHistory() bool`
+`func (o *InlineResponse200405Items) HasDescription() bool`
 
-HasHistory returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetDevices
+### GetGroup
 
-`func (o *InlineResponse200405Items) GetDevices() InlineResponse200405Devices`
+`func (o *InlineResponse200405Items) GetGroup() InlineResponse200405Group`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetGroupOk
 
-`func (o *InlineResponse200405Items) GetDevicesOk() (*InlineResponse200405Devices, bool)`
+`func (o *InlineResponse200405Items) GetGroupOk() (*InlineResponse200405Group, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetGroup
 
-`func (o *InlineResponse200405Items) SetDevices(v InlineResponse200405Devices)`
+`func (o *InlineResponse200405Items) SetGroup(v InlineResponse200405Group)`
 
-SetDevices sets Devices field to given value.
+SetGroup sets Group field to given value.
 
-### HasDevices
+### HasGroup
 
-`func (o *InlineResponse200405Items) HasDevices() bool`
+`func (o *InlineResponse200405Items) HasGroup() bool`
 
-HasDevices returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200405Items) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200405Items) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200405Items) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200405Items) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200405Items) GetLastUpdatedAt() time.Time`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200405Items) GetLastUpdatedAtOk() (*time.Time, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200405Items) SetLastUpdatedAt(v time.Time)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200405Items) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

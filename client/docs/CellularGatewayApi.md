@@ -53,7 +53,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject270("AccountId_example", "ApiKey_example", *openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1("Name_example"), "Title_example", "Username_example") // InlineObject270 | 
+    createOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject273("AccountId_example", "ApiKey_example", *openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1("Name_example"), "Title_example", "Username_example") // InlineObject273 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -83,7 +83,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCellular
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject270**](InlineObject270.md) |  | 
+ **createOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject273**](InlineObject273.md) |  | 
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationCellularGatewayEsimsSwap
 
-> InlineResponse200319 CreateOrganizationCellularGatewayEsimsSwap(ctx, organizationId).CreateOrganizationCellularGatewayEsimsSwap(createOrganizationCellularGatewayEsimsSwap).Execute()
+> InlineResponse200331 CreateOrganizationCellularGatewayEsimsSwap(ctx, organizationId).CreateOrganizationCellularGatewayEsimsSwap(createOrganizationCellularGatewayEsimsSwap).Execute()
 
 Swap which profile an eSIM uses.
 
@@ -125,7 +125,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCellularGatewayEsimsSwap := *openapiclient.NewInlineObject272([]openapiclient.OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps{*openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps("Eid_example")}) // InlineObject272 | 
+    createOrganizationCellularGatewayEsimsSwap := *openapiclient.NewInlineObject275([]openapiclient.OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps{*openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps("Eid_example")}) // InlineObject275 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -134,7 +134,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.CreateOrganizationCellularGatewayEsimsSwap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationCellularGatewayEsimsSwap`: InlineResponse200319
+    // response from `CreateOrganizationCellularGatewayEsimsSwap`: InlineResponse200331
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.CreateOrganizationCellularGatewayEsimsSwap`: %v\n", resp)
 }
 ```
@@ -155,11 +155,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCellular
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCellularGatewayEsimsSwap** | [**InlineObject272**](InlineObject272.md) |  | 
+ **createOrganizationCellularGatewayEsimsSwap** | [**InlineObject275**](InlineObject275.md) |  | 
 
 ### Return type
 
-[**InlineResponse200319**](InlineResponse200319.md)
+[**InlineResponse200331**](InlineResponse200331.md)
 
 ### Authorization
 
@@ -668,7 +668,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsInventory
 
-> InlineResponse200314 GetOrganizationCellularGatewayEsimsInventory(ctx, organizationId).Eids(eids).Execute()
+> InlineResponse200326 GetOrganizationCellularGatewayEsimsInventory(ctx, organizationId).Eids(eids).Execute()
 
 The eSIM inventory of a given organization.
 
@@ -697,7 +697,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsInventory`: InlineResponse200314
+    // response from `GetOrganizationCellularGatewayEsimsInventory`: InlineResponse200326
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsInventory`: %v\n", resp)
 }
 ```
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200314**](InlineResponse200314.md)
+[**InlineResponse200326**](InlineResponse200326.md)
 
 ### Authorization
 
@@ -740,7 +740,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProviders
 
-> InlineResponse200315 GetOrganizationCellularGatewayEsimsServiceProviders(ctx, organizationId).Execute()
+> InlineResponse200327 GetOrganizationCellularGatewayEsimsServiceProviders(ctx, organizationId).Execute()
 
 Service providers customers can add accounts for.
 
@@ -768,7 +768,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProviders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProviders`: InlineResponse200315
+    // response from `GetOrganizationCellularGatewayEsimsServiceProviders`: InlineResponse200327
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProviders`: %v\n", resp)
 }
 ```
@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200315**](InlineResponse200315.md)
+[**InlineResponse200327**](InlineResponse200327.md)
 
 ### Authorization
 
@@ -810,7 +810,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccounts
 
-> []InlineResponse200316 GetOrganizationCellularGatewayEsimsServiceProvidersAccounts(ctx, organizationId).AccountIds(accountIds).Execute()
+> []InlineResponse200328 GetOrganizationCellularGatewayEsimsServiceProvidersAccounts(ctx, organizationId).AccountIds(accountIds).Execute()
 
 Inventory of service provider accounts tied to the organization.
 
@@ -839,7 +839,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: []InlineResponse200316
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: []InlineResponse200328
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: %v\n", resp)
 }
 ```
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200316**](InlineResponse200316.md)
+[**[]InlineResponse200328**](InlineResponse200328.md)
 
 ### Authorization
 
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans
 
-> InlineResponse200317 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
+> InlineResponse200329 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
 
 The communication plans available for a given provider.
 
@@ -911,7 +911,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200317
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200329
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: %v\n", resp)
 }
 ```
@@ -936,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200317**](InlineResponse200317.md)
+[**InlineResponse200329**](InlineResponse200329.md)
 
 ### Authorization
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans
 
-> InlineResponse200318 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans(ctx, organizationId).AccountIds(accountIds).Execute()
+> InlineResponse200330 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans(ctx, organizationId).AccountIds(accountIds).Execute()
 
 The rate plans available for a given provider.
 
@@ -983,7 +983,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: InlineResponse200318
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: InlineResponse200330
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: %v\n", resp)
 }
 ```
@@ -1008,7 +1008,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200318**](InlineResponse200318.md)
+[**InlineResponse200330**](InlineResponse200330.md)
 
 ### Authorization
 
@@ -1026,7 +1026,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse200320 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200332 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -1060,7 +1060,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200320
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200332
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -1090,7 +1090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200320**](InlineResponse200320.md)
+[**[]InlineResponse200332**](InlineResponse200332.md)
 
 ### Authorization
 
@@ -1540,7 +1540,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationCellularGatewayEsimsInventory
 
-> InlineResponse200314Items UpdateOrganizationCellularGatewayEsimsInventory(ctx, organizationId, id).UpdateOrganizationCellularGatewayEsimsInventory(updateOrganizationCellularGatewayEsimsInventory).Execute()
+> InlineResponse200326Items UpdateOrganizationCellularGatewayEsimsInventory(ctx, organizationId, id).UpdateOrganizationCellularGatewayEsimsInventory(updateOrganizationCellularGatewayEsimsInventory).Execute()
 
 Toggle the status of an eSIM
 
@@ -1561,7 +1561,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationCellularGatewayEsimsInventory := *openapiclient.NewInlineObject269() // InlineObject269 |  (optional)
+    updateOrganizationCellularGatewayEsimsInventory := *openapiclient.NewInlineObject272() // InlineObject272 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1570,7 +1570,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsInventory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationCellularGatewayEsimsInventory`: InlineResponse200314Items
+    // response from `UpdateOrganizationCellularGatewayEsimsInventory`: InlineResponse200326Items
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsInventory`: %v\n", resp)
 }
 ```
@@ -1593,11 +1593,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCellularGatewayEsimsInventory** | [**InlineObject269**](InlineObject269.md) |  | 
+ **updateOrganizationCellularGatewayEsimsInventory** | [**InlineObject272**](InlineObject272.md) |  | 
 
 ### Return type
 
-[**InlineResponse200314Items**](InlineResponse200314Items.md)
+[**InlineResponse200326Items**](InlineResponse200326Items.md)
 
 ### Authorization
 
@@ -1636,7 +1636,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     accountId := "accountId_example" // string | Account ID
-    updateOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject271() // InlineObject271 |  (optional)
+    updateOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject274() // InlineObject274 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1668,7 +1668,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject271**](InlineObject271.md) |  | 
+ **updateOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject274**](InlineObject274.md) |  | 
 
 ### Return type
 
@@ -1690,7 +1690,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationCellularGatewayEsimsSwap
 
-> InlineResponse200319 UpdateOrganizationCellularGatewayEsimsSwap(ctx, id, organizationId).Execute()
+> InlineResponse200331 UpdateOrganizationCellularGatewayEsimsSwap(ctx, id, organizationId).Execute()
 
 Get the status of a profile swap.
 
@@ -1719,7 +1719,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsSwap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationCellularGatewayEsimsSwap`: InlineResponse200319
+    // response from `UpdateOrganizationCellularGatewayEsimsSwap`: InlineResponse200331
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateOrganizationCellularGatewayEsimsSwap`: %v\n", resp)
 }
 ```
@@ -1745,7 +1745,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200319**](InlineResponse200319.md)
+[**InlineResponse200331**](InlineResponse200331.md)
 
 ### Authorization
 

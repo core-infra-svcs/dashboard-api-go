@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Connector** | Pointer to [**InlineResponse200403Connector**](InlineResponse200403Connector.md) |  | [optional] 
-**Type** | Pointer to **string** | The region&#39;s type | [optional] 
-**Name** | Pointer to **string** | Region name | [optional] 
-**Slug** | Pointer to **string** | Region identifier | [optional] 
+**RulesetId** | Pointer to **string** | ID of the ruleset | [optional] 
+**Name** | Pointer to **string** | Name of the ruleset | [optional] 
+**Description** | Pointer to **string** | Description of the ruleset | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Ruleset creation time | [optional] 
+**LastUpdatedAt** | Pointer to **time.Time** | Ruleset last update time | [optional] 
 
 ## Methods
 
@@ -28,55 +29,30 @@ NewInlineResponse200403ItemsWithDefaults instantiates a new InlineResponse200403
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConnector
+### GetRulesetId
 
-`func (o *InlineResponse200403Items) GetConnector() InlineResponse200403Connector`
+`func (o *InlineResponse200403Items) GetRulesetId() string`
 
-GetConnector returns the Connector field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetConnectorOk
+### GetRulesetIdOk
 
-`func (o *InlineResponse200403Items) GetConnectorOk() (*InlineResponse200403Connector, bool)`
+`func (o *InlineResponse200403Items) GetRulesetIdOk() (*string, bool)`
 
-GetConnectorOk returns a tuple with the Connector field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnector
+### SetRulesetId
 
-`func (o *InlineResponse200403Items) SetConnector(v InlineResponse200403Connector)`
+`func (o *InlineResponse200403Items) SetRulesetId(v string)`
 
-SetConnector sets Connector field to given value.
+SetRulesetId sets RulesetId field to given value.
 
-### HasConnector
+### HasRulesetId
 
-`func (o *InlineResponse200403Items) HasConnector() bool`
+`func (o *InlineResponse200403Items) HasRulesetId() bool`
 
-HasConnector returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200403Items) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200403Items) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200403Items) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200403Items) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasRulesetId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -103,30 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSlug
+### GetDescription
 
-`func (o *InlineResponse200403Items) GetSlug() string`
+`func (o *InlineResponse200403Items) GetDescription() string`
 
-GetSlug returns the Slug field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetSlugOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200403Items) GetSlugOk() (*string, bool)`
+`func (o *InlineResponse200403Items) GetDescriptionOk() (*string, bool)`
 
-GetSlugOk returns a tuple with the Slug field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSlug
+### SetDescription
 
-`func (o *InlineResponse200403Items) SetSlug(v string)`
+`func (o *InlineResponse200403Items) SetDescription(v string)`
 
-SetSlug sets Slug field to given value.
+SetDescription sets Description field to given value.
 
-### HasSlug
+### HasDescription
 
-`func (o *InlineResponse200403Items) HasSlug() bool`
+`func (o *InlineResponse200403Items) HasDescription() bool`
 
-HasSlug returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200403Items) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200403Items) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200403Items) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200403Items) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200403Items) GetLastUpdatedAt() time.Time`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200403Items) GetLastUpdatedAtOk() (*time.Time, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200403Items) SetLastUpdatedAt(v time.Time)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200403Items) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

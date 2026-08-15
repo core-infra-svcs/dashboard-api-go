@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **CellularGateway** | Pointer to [**InlineResponse200134ProductsAppliance**](InlineResponse200134ProductsAppliance.md) |  | [optional] 
 **Sensor** | Pointer to [**InlineResponse200134ProductsAppliance**](InlineResponse200134ProductsAppliance.md) |  | [optional] 
 **WirelessController** | Pointer to [**InlineResponse200134ProductsAppliance**](InlineResponse200134ProductsAppliance.md) |  | [optional] 
+**CampusGateway** | Pointer to [**InlineResponse200134ProductsCampusGateway**](InlineResponse200134ProductsCampusGateway.md) |  | [optional] 
 **SecureConnect** | Pointer to [**InlineResponse200134ProductsAppliance**](InlineResponse200134ProductsAppliance.md) |  | [optional] 
 
 ## Methods
@@ -206,6 +207,31 @@ SetWirelessController sets WirelessController field to given value.
 `func (o *InlineResponse200134Products) HasWirelessController() bool`
 
 HasWirelessController returns a boolean if a field has been set.
+
+### GetCampusGateway
+
+`func (o *InlineResponse200134Products) GetCampusGateway() InlineResponse200134ProductsCampusGateway`
+
+GetCampusGateway returns the CampusGateway field if non-nil, zero value otherwise.
+
+### GetCampusGatewayOk
+
+`func (o *InlineResponse200134Products) GetCampusGatewayOk() (*InlineResponse200134ProductsCampusGateway, bool)`
+
+GetCampusGatewayOk returns a tuple with the CampusGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCampusGateway
+
+`func (o *InlineResponse200134Products) SetCampusGateway(v InlineResponse200134ProductsCampusGateway)`
+
+SetCampusGateway sets CampusGateway field to given value.
+
+### HasCampusGateway
+
+`func (o *InlineResponse200134Products) HasCampusGateway() bool`
+
+HasCampusGateway returns a boolean if a field has been set.
 
 ### GetSecureConnect
 

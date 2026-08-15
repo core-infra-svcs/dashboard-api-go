@@ -109,7 +109,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationWirelessZigbeeDisenrollment := *openapiclient.NewInlineObject356() // InlineObject356 |  (optional)
+    createOrganizationWirelessZigbeeDisenrollment := *openapiclient.NewInlineObject367() // InlineObject367 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -139,7 +139,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationWirelessZigbeeDisenrollment** | [**InlineObject356**](InlineObject356.md) |  | 
+ **createOrganizationWirelessZigbeeDisenrollment** | [**InlineObject367**](InlineObject367.md) |  | 
 
 ### Return type
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeDevices
 
-> []InlineResponse200470 GetOrganizationWirelessZigbeeDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IsEnrolled(isEnrolled).Search(search).Execute()
+> []InlineResponse200492 GetOrganizationWirelessZigbeeDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IsEnrolled(isEnrolled).Search(search).Execute()
 
 List the Zigbee wireless devices for an organization or the supplied network(s)
 
@@ -346,7 +346,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.GetOrganizationWirelessZigbeeDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDevices`: []InlineResponse200470
+    // response from `GetOrganizationWirelessZigbeeDevices`: []InlineResponse200492
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.GetOrganizationWirelessZigbeeDevices`: %v\n", resp)
 }
 ```
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200470**](InlineResponse200470.md)
+[**[]InlineResponse200492**](InlineResponse200492.md)
 
 ### Authorization
 
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessZigbeeDisenrollment
 
-> InlineResponse200471 GetOrganizationWirelessZigbeeDisenrollment(ctx, organizationId, disenrollmentId).Execute()
+> InlineResponse200493 GetOrganizationWirelessZigbeeDisenrollment(ctx, organizationId, disenrollmentId).Execute()
 
 Return a disenrollment
 
@@ -423,7 +423,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.GetOrganizationWirelessZigbeeDisenrollment``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDisenrollment`: InlineResponse200471
+    // response from `GetOrganizationWirelessZigbeeDisenrollment`: InlineResponse200493
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.GetOrganizationWirelessZigbeeDisenrollment`: %v\n", resp)
 }
 ```
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200471**](InlineResponse200471.md)
+[**InlineResponse200493**](InlineResponse200493.md)
 
 ### Authorization
 
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessZigbeeDevice
 
-> InlineResponse200470 UpdateOrganizationWirelessZigbeeDevice(ctx, organizationId, id).UpdateOrganizationWirelessZigbeeDevice(updateOrganizationWirelessZigbeeDevice).Execute()
+> InlineResponse200492 UpdateOrganizationWirelessZigbeeDevice(ctx, organizationId, id).UpdateOrganizationWirelessZigbeeDevice(updateOrganizationWirelessZigbeeDevice).Execute()
 
 Endpoint to update zigbee gateways
 
@@ -640,7 +640,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationWirelessZigbeeDevice := *openapiclient.NewInlineObject355(false) // InlineObject355 | 
+    updateOrganizationWirelessZigbeeDevice := *openapiclient.NewInlineObject366(false) // InlineObject366 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -649,7 +649,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ZigbeeApi.UpdateOrganizationWirelessZigbeeDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessZigbeeDevice`: InlineResponse200470
+    // response from `UpdateOrganizationWirelessZigbeeDevice`: InlineResponse200492
     fmt.Fprintf(os.Stdout, "Response from `ZigbeeApi.UpdateOrganizationWirelessZigbeeDevice`: %v\n", resp)
 }
 ```
@@ -672,11 +672,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessZigbeeDevice** | [**InlineObject355**](InlineObject355.md) |  | 
+ **updateOrganizationWirelessZigbeeDevice** | [**InlineObject366**](InlineObject366.md) |  | 
 
 ### Return type
 
-[**InlineResponse200470**](InlineResponse200470.md)
+[**InlineResponse200492**](InlineResponse200492.md)
 
 ### Authorization
 
@@ -715,7 +715,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     doorLockId := "doorLockId_example" // string | Door lock ID
-    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject357() // InlineObject357 |  (optional)
+    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject368() // InlineObject368 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -747,7 +747,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject357**](InlineObject357.md) |  | 
+ **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject368**](InlineObject368.md) |  | 
 
 ### Return type
 

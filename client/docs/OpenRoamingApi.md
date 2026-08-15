@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessSsidsOpenRoamingByNetwork
 
-> InlineResponse200468 GetOrganizationWirelessSsidsOpenRoamingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IncludeDisabledSsids(includeDisabledSsids).Execute()
+> InlineResponse200487 GetOrganizationWirelessSsidsOpenRoamingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).IncludeDisabledSsids(includeDisabledSsids).Execute()
 
 Returns an array of objects, each containing SSID OpenRoaming configs for the corresponding network
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OpenRoamingApi.GetOrganizationWirelessSsidsOpenRoamingByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessSsidsOpenRoamingByNetwork`: InlineResponse200468
+    // response from `GetOrganizationWirelessSsidsOpenRoamingByNetwork`: InlineResponse200487
     fmt.Fprintf(os.Stdout, "Response from `OpenRoamingApi.GetOrganizationWirelessSsidsOpenRoamingByNetwork`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200468**](InlineResponse200468.md)
+[**InlineResponse200487**](InlineResponse200487.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidOpenRoaming
 
-> InlineResponse200251 UpdateNetworkWirelessSsidOpenRoaming(ctx, networkId, number).UpdateNetworkWirelessSsidOpenRoaming(updateNetworkWirelessSsidOpenRoaming).Execute()
+> InlineResponse200253 UpdateNetworkWirelessSsidOpenRoaming(ctx, networkId, number).UpdateNetworkWirelessSsidOpenRoaming(updateNetworkWirelessSsidOpenRoaming).Execute()
 
 Update the OpenRoaming setting for the SSID
 
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OpenRoamingApi.UpdateNetworkWirelessSsidOpenRoaming``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidOpenRoaming`: InlineResponse200251
+    // response from `UpdateNetworkWirelessSsidOpenRoaming`: InlineResponse200253
     fmt.Fprintf(os.Stdout, "Response from `OpenRoamingApi.UpdateNetworkWirelessSsidOpenRoaming`: %v\n", resp)
 }
 ```
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200251**](InlineResponse200251.md)
+[**InlineResponse200253**](InlineResponse200253.md)
 
 ### Authorization
 

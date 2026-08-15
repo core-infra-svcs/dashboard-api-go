@@ -4,12 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the appliance | [optional] 
-**Mac** | Pointer to **string** | Mac address of the appliance | [optional] 
-**Serial** | Pointer to **string** | Serial number of the appliance | [optional] 
-**Model** | Pointer to **string** | Model of the appliance | [optional] 
-**Utilization** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization.md) |  | [optional] 
+**SiteId** | Pointer to **string** | Unique identifier for the enrolled site | [optional] 
+**Network** | Pointer to [**InlineResponse200419Network**](InlineResponse200419Network.md) |  | [optional] 
+**Type** | Pointer to **string** | The site&#39;s type | [optional] 
+**Name** | Pointer to **string** | Site name | [optional] 
+**Region** | Pointer to [**InlineResponse200419Region**](InlineResponse200419Region.md) |  | [optional] 
+**Model** | Pointer to **string** | Model of the network&#39;s primary MX device | [optional] 
+**Address** | Pointer to [**InlineResponse200417Address**](InlineResponse200417Address.md) |  | [optional] 
+**Vpn** | Pointer to [**InlineResponse200417Vpn**](InlineResponse200417Vpn.md) |  | [optional] 
+**Routing** | Pointer to [**InlineResponse200417Routing**](InlineResponse200417Routing.md) |  | [optional] 
 
 ## Methods
 
@@ -30,22 +33,47 @@ NewInlineResponse200422WithDefaults instantiates a new InlineResponse200422 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetSiteId
+
+`func (o *InlineResponse200422) GetSiteId() string`
+
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+
+### GetSiteIdOk
+
+`func (o *InlineResponse200422) GetSiteIdOk() (*string, bool)`
+
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSiteId
+
+`func (o *InlineResponse200422) SetSiteId(v string)`
+
+SetSiteId sets SiteId field to given value.
+
+### HasSiteId
+
+`func (o *InlineResponse200422) HasSiteId() bool`
+
+HasSiteId returns a boolean if a field has been set.
+
 ### GetNetwork
 
-`func (o *InlineResponse200422) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200422) GetNetwork() InlineResponse200419Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200422) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200422) GetNetworkOk() (*InlineResponse200419Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200422) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200422) SetNetwork(v InlineResponse200419Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -54,6 +82,31 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200422) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200422) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200422) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200422) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200422) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,55 +133,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetMac
+### GetRegion
 
-`func (o *InlineResponse200422) GetMac() string`
+`func (o *InlineResponse200422) GetRegion() InlineResponse200419Region`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetRegion returns the Region field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetRegionOk
 
-`func (o *InlineResponse200422) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200422) GetRegionOk() (*InlineResponse200419Region, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetRegionOk returns a tuple with the Region field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetRegion
 
-`func (o *InlineResponse200422) SetMac(v string)`
+`func (o *InlineResponse200422) SetRegion(v InlineResponse200419Region)`
 
-SetMac sets Mac field to given value.
+SetRegion sets Region field to given value.
 
-### HasMac
+### HasRegion
 
-`func (o *InlineResponse200422) HasMac() bool`
+`func (o *InlineResponse200422) HasRegion() bool`
 
-HasMac returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200422) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200422) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200422) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200422) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
+HasRegion returns a boolean if a field has been set.
 
 ### GetModel
 
@@ -155,30 +183,80 @@ SetModel sets Model field to given value.
 
 HasModel returns a boolean if a field has been set.
 
-### GetUtilization
+### GetAddress
 
-`func (o *InlineResponse200422) GetUtilization() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization`
+`func (o *InlineResponse200422) GetAddress() InlineResponse200417Address`
 
-GetUtilization returns the Utilization field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetUtilizationOk
+### GetAddressOk
 
-`func (o *InlineResponse200422) GetUtilizationOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization, bool)`
+`func (o *InlineResponse200422) GetAddressOk() (*InlineResponse200417Address, bool)`
 
-GetUtilizationOk returns a tuple with the Utilization field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilization
+### SetAddress
 
-`func (o *InlineResponse200422) SetUtilization(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization)`
+`func (o *InlineResponse200422) SetAddress(v InlineResponse200417Address)`
 
-SetUtilization sets Utilization field to given value.
+SetAddress sets Address field to given value.
 
-### HasUtilization
+### HasAddress
 
-`func (o *InlineResponse200422) HasUtilization() bool`
+`func (o *InlineResponse200422) HasAddress() bool`
 
-HasUtilization returns a boolean if a field has been set.
+HasAddress returns a boolean if a field has been set.
+
+### GetVpn
+
+`func (o *InlineResponse200422) GetVpn() InlineResponse200417Vpn`
+
+GetVpn returns the Vpn field if non-nil, zero value otherwise.
+
+### GetVpnOk
+
+`func (o *InlineResponse200422) GetVpnOk() (*InlineResponse200417Vpn, bool)`
+
+GetVpnOk returns a tuple with the Vpn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpn
+
+`func (o *InlineResponse200422) SetVpn(v InlineResponse200417Vpn)`
+
+SetVpn sets Vpn field to given value.
+
+### HasVpn
+
+`func (o *InlineResponse200422) HasVpn() bool`
+
+HasVpn returns a boolean if a field has been set.
+
+### GetRouting
+
+`func (o *InlineResponse200422) GetRouting() InlineResponse200417Routing`
+
+GetRouting returns the Routing field if non-nil, zero value otherwise.
+
+### GetRoutingOk
+
+`func (o *InlineResponse200422) GetRoutingOk() (*InlineResponse200417Routing, bool)`
+
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRouting
+
+`func (o *InlineResponse200422) SetRouting(v InlineResponse200417Routing)`
+
+SetRouting sets Routing field to given value.
+
+### HasRouting
+
+`func (o *InlineResponse200422) HasRouting() bool`
+
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

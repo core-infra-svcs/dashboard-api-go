@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks.md) | List containing the network ID and the product type to enable XDR on | 
+**Name** | **string** | The name of the VoIP provider | 
+**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
 
 ## Methods
 
 ### NewInlineObject297
 
-`func NewInlineObject297(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, ) *InlineObject297`
+`func NewInlineObject297(name string, address string, ) *InlineObject297`
 
 NewInlineObject297 instantiates a new InlineObject297 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,70 @@ NewInlineObject297WithDefaults instantiates a new InlineObject297 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworks
+### GetName
 
-`func (o *InlineObject297) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks`
+`func (o *InlineObject297) GetName() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetNameOk
 
-`func (o *InlineObject297) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, bool)`
+`func (o *InlineObject297) GetNameOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetName
 
-`func (o *InlineObject297) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks)`
+`func (o *InlineObject297) SetName(v string)`
 
-SetNetworks sets Networks field to given value.
+SetName sets Name field to given value.
 
+
+### GetAddress
+
+`func (o *InlineObject297) GetAddress() string`
+
+GetAddress returns the Address field if non-nil, zero value otherwise.
+
+### GetAddressOk
+
+`func (o *InlineObject297) GetAddressOk() (*string, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAddress
+
+`func (o *InlineObject297) SetAddress(v string)`
+
+SetAddress sets Address field to given value.
+
+
+### GetBestEffortMonitoringEnabled
+
+`func (o *InlineObject297) GetBestEffortMonitoringEnabled() bool`
+
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+
+### GetBestEffortMonitoringEnabledOk
+
+`func (o *InlineObject297) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBestEffortMonitoringEnabled
+
+`func (o *InlineObject297) SetBestEffortMonitoringEnabled(v bool)`
+
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+
+### HasBestEffortMonitoringEnabled
+
+`func (o *InlineObject297) HasBestEffortMonitoringEnabled() bool`
+
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## BulkUpdateOrganizationDevicesDetails
 
-> InlineResponse200343 BulkUpdateOrganizationDevicesDetails(ctx, organizationId).BulkUpdateOrganizationDevicesDetails(bulkUpdateOrganizationDevicesDetails).Execute()
+> InlineResponse200355 BulkUpdateOrganizationDevicesDetails(ctx, organizationId).BulkUpdateOrganizationDevicesDetails(bulkUpdateOrganizationDevicesDetails).Execute()
 
 Updating device details (currently only used for Catalyst devices)
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkUpdateOrganizationDevicesDetails := *openapiclient.NewInlineObject283([]string{"Serials_example"}, []openapiclient.NetworksNetworkIdDevicesClaimDetails{*openapiclient.NewNetworksNetworkIdDevicesClaimDetails("Name_example")}) // InlineObject283 | 
+    bulkUpdateOrganizationDevicesDetails := *openapiclient.NewInlineObject286([]string{"Serials_example"}, []openapiclient.NetworksNetworkIdDevicesClaimDetails{*openapiclient.NewNetworksNetworkIdDevicesClaimDetails("Name_example")}) // InlineObject286 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DetailsApi.BulkUpdateOrganizationDevicesDetails``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkUpdateOrganizationDevicesDetails`: InlineResponse200343
+    // response from `BulkUpdateOrganizationDevicesDetails`: InlineResponse200355
     fmt.Fprintf(os.Stdout, "Response from `DetailsApi.BulkUpdateOrganizationDevicesDetails`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiBulkUpdateOrganizationDevi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkUpdateOrganizationDevicesDetails** | [**InlineObject283**](InlineObject283.md) |  | 
+ **bulkUpdateOrganizationDevicesDetails** | [**InlineObject286**](InlineObject286.md) |  | 
 
 ### Return type
 
-[**InlineResponse200343**](InlineResponse200343.md)
+[**InlineResponse200355**](InlineResponse200355.md)
 
 ### Authorization
 

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200313Items**](InlineResponse200313Items.md) | List of Consilience entities | [optional] 
-**Meta** | Pointer to [**InlineResponse200312Meta**](InlineResponse200312Meta.md) |  | [optional] 
+**Success** | Pointer to **bool** | Whether the update succeeded | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200313WithDefaults instantiates a new InlineResponse200313 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSuccess
 
-`func (o *InlineResponse200313) GetItems() []InlineResponse200313Items`
+`func (o *InlineResponse200313) GetSuccess() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSuccessOk
 
-`func (o *InlineResponse200313) GetItemsOk() (*[]InlineResponse200313Items, bool)`
+`func (o *InlineResponse200313) GetSuccessOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSuccess
 
-`func (o *InlineResponse200313) SetItems(v []InlineResponse200313Items)`
+`func (o *InlineResponse200313) SetSuccess(v bool)`
 
-SetItems sets Items field to given value.
+SetSuccess sets Success field to given value.
 
-### HasItems
+### HasSuccess
 
-`func (o *InlineResponse200313) HasItems() bool`
+`func (o *InlineResponse200313) HasSuccess() bool`
 
-HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200313) GetMeta() InlineResponse200312Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200313) GetMetaOk() (*InlineResponse200312Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200313) SetMeta(v InlineResponse200312Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200313) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

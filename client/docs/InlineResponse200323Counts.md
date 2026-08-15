@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of clients with data usage in organization | [optional] 
+**Clients** | [**InlineResponse200323CountsClients**](InlineResponse200323CountsClients.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200323Counts
 
-`func NewInlineResponse200323Counts() *InlineResponse200323Counts`
+`func NewInlineResponse200323Counts(clients InlineResponse200323CountsClients, ) *InlineResponse200323Counts`
 
 NewInlineResponse200323Counts instantiates a new InlineResponse200323Counts object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineResponse200323CountsWithDefaults instantiates a new InlineResponse20032
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTotal
+### GetClients
 
-`func (o *InlineResponse200323Counts) GetTotal() int32`
+`func (o *InlineResponse200323Counts) GetClients() InlineResponse200323CountsClients`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetClientsOk
 
-`func (o *InlineResponse200323Counts) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200323Counts) GetClientsOk() (*InlineResponse200323CountsClients, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetClients
 
-`func (o *InlineResponse200323Counts) SetTotal(v int32)`
+`func (o *InlineResponse200323Counts) SetClients(v InlineResponse200323CountsClients)`
 
-SetTotal sets Total field to given value.
+SetClients sets Clients field to given value.
 
-### HasTotal
-
-`func (o *InlineResponse200323Counts) HasTotal() bool`
-
-HasTotal returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

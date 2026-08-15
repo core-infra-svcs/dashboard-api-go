@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200317Items**](InlineResponse200317Items.md) | List of Cellular Service Provider Communication Plans | [optional] 
+**Items** | Pointer to [**[]InlineResponse200317Items**](InlineResponse200317Items.md) | List of clusters | [optional] 
 **Meta** | Pointer to [**InlineResponse200317Meta**](InlineResponse200317Meta.md) |  | [optional] 
 
 ## Methods

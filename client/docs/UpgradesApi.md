@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationFirmwareUpgrades
 
-> []InlineResponse200360 GetOrganizationFirmwareUpgrades(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Status(status).ProductTypes(productTypes).Execute()
+> []InlineResponse200372 GetOrganizationFirmwareUpgrades(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Status(status).ProductTypes(productTypes).Execute()
 
 Get firmware upgrade information for an organization
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UpgradesApi.GetOrganizationFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse200360
+    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse200372
     fmt.Fprintf(os.Stdout, "Response from `UpgradesApi.GetOrganizationFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200360**](InlineResponse200360.md)
+[**[]InlineResponse200372**](InlineResponse200372.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFirmwareUpgradesByDevice
 
-> []InlineResponse200361 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).UpgradeStatuses(upgradeStatuses).CurrentUpgradesOnly(currentUpgradesOnly).LimitPerDevice(limitPerDevice).Execute()
+> []InlineResponse200373 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).UpgradeStatuses(upgradeStatuses).CurrentUpgradesOnly(currentUpgradesOnly).LimitPerDevice(limitPerDevice).Execute()
 
 Get firmware upgrade status for the filtered devices
 
@@ -129,7 +129,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UpgradesApi.GetOrganizationFirmwareUpgradesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200361
+    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200373
     fmt.Fprintf(os.Stdout, "Response from `UpgradesApi.GetOrganizationFirmwareUpgradesByDevice`: %v\n", resp)
 }
 ```
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200361**](InlineResponse200361.md)
+[**[]InlineResponse200373**](InlineResponse200373.md)
 
 ### Authorization
 

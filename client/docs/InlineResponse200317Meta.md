@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200317MetaCounts**](InlineResponse200317MetaCounts.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200275MetaCounts**](InlineResponse200275MetaCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCounts
 
-`func (o *InlineResponse200317Meta) GetCounts() InlineResponse200317MetaCounts`
+`func (o *InlineResponse200317Meta) GetCounts() InlineResponse200275MetaCounts`
 
 GetCounts returns the Counts field if non-nil, zero value otherwise.
 
 ### GetCountsOk
 
-`func (o *InlineResponse200317Meta) GetCountsOk() (*InlineResponse200317MetaCounts, bool)`
+`func (o *InlineResponse200317Meta) GetCountsOk() (*InlineResponse200275MetaCounts, bool)`
 
 GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCounts
 
-`func (o *InlineResponse200317Meta) SetCounts(v InlineResponse200317MetaCounts)`
+`func (o *InlineResponse200317Meta) SetCounts(v InlineResponse200275MetaCounts)`
 
 SetCounts sets Counts field to given value.
 

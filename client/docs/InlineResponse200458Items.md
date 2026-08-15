@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
-**Crl** | Pointer to **string** | The PEM encoded CRL for the Certificate Authority | [optional] 
+**Network** | Pointer to [**InlineResponse20121Network**](InlineResponse20121Network.md) |  | [optional] 
+**RuleId** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**Type** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Updated at timestamp | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Created at timestamp | [optional] 
+**Match** | Pointer to [**InlineResponse200458Match**](InlineResponse200458Match.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineResponse200458ItemsWithDefaults instantiates a new InlineResponse200458
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificateAuthorityId
+### GetNetwork
 
-`func (o *InlineResponse200458Items) GetCertificateAuthorityId() string`
+`func (o *InlineResponse200458Items) GetNetwork() InlineResponse20121Network`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200458Items) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineResponse200458Items) GetNetworkOk() (*InlineResponse20121Network, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetNetwork
 
-`func (o *InlineResponse200458Items) SetCertificateAuthorityId(v string)`
+`func (o *InlineResponse200458Items) SetNetwork(v InlineResponse20121Network)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasCertificateAuthorityId
+### HasNetwork
 
-`func (o *InlineResponse200458Items) HasCertificateAuthorityId() bool`
+`func (o *InlineResponse200458Items) HasNetwork() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetCrl
+### GetRuleId
 
-`func (o *InlineResponse200458Items) GetCrl() string`
+`func (o *InlineResponse200458Items) GetRuleId() string`
 
-GetCrl returns the Crl field if non-nil, zero value otherwise.
+GetRuleId returns the RuleId field if non-nil, zero value otherwise.
 
-### GetCrlOk
+### GetRuleIdOk
 
-`func (o *InlineResponse200458Items) GetCrlOk() (*string, bool)`
+`func (o *InlineResponse200458Items) GetRuleIdOk() (*string, bool)`
 
-GetCrlOk returns a tuple with the Crl field if it's non-nil, zero value otherwise
+GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCrl
+### SetRuleId
 
-`func (o *InlineResponse200458Items) SetCrl(v string)`
+`func (o *InlineResponse200458Items) SetRuleId(v string)`
 
-SetCrl sets Crl field to given value.
+SetRuleId sets RuleId field to given value.
 
-### HasCrl
+### HasRuleId
 
-`func (o *InlineResponse200458Items) HasCrl() bool`
+`func (o *InlineResponse200458Items) HasRuleId() bool`
 
-HasCrl returns a boolean if a field has been set.
+HasRuleId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200458Items) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200458Items) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200458Items) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200458Items) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200458Items) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200458Items) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200458Items) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200458Items) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200458Items) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200458Items) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200458Items) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200458Items) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetMatch
+
+`func (o *InlineResponse200458Items) GetMatch() InlineResponse200458Match`
+
+GetMatch returns the Match field if non-nil, zero value otherwise.
+
+### GetMatchOk
+
+`func (o *InlineResponse200458Items) GetMatchOk() (*InlineResponse200458Match, bool)`
+
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatch
+
+`func (o *InlineResponse200458Items) SetMatch(v InlineResponse200458Match)`
+
+SetMatch sets Match field to given value.
+
+### HasMatch
+
+`func (o *InlineResponse200458Items) HasMatch() bool`
+
+HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

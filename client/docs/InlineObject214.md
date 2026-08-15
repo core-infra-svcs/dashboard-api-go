@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
 **LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
 **UpgradeStrategy** | Pointer to **string** | The default strategy that network devices will use to perform an upgrade. Requires firmware version MR 26.8 or higher. | [optional] 
-**Upgrade** | Pointer to [**InlineResponse200242Upgrade**](InlineResponse200242Upgrade.md) |  | [optional] 
+**Upgrade** | Pointer to [**InlineResponse200243Upgrade**](InlineResponse200243Upgrade.md) |  | [optional] 
 **LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
-**MulticastToUnicastConversion** | Pointer to [**InlineResponse200242MulticastToUnicastConversion**](InlineResponse200242MulticastToUnicastConversion.md) |  | [optional] 
+**MulticastToUnicastConversion** | Pointer to [**InlineResponse200243MulticastToUnicastConversion**](InlineResponse200243MulticastToUnicastConversion.md) |  | [optional] 
 **NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSettingsNamedVlans**](NetworksNetworkIdWirelessSettingsNamedVlans.md) |  | [optional] 
 
 ## Methods
@@ -134,20 +134,20 @@ HasUpgradeStrategy returns a boolean if a field has been set.
 
 ### GetUpgrade
 
-`func (o *InlineObject214) GetUpgrade() InlineResponse200242Upgrade`
+`func (o *InlineObject214) GetUpgrade() InlineResponse200243Upgrade`
 
 GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
 
 ### GetUpgradeOk
 
-`func (o *InlineObject214) GetUpgradeOk() (*InlineResponse200242Upgrade, bool)`
+`func (o *InlineObject214) GetUpgradeOk() (*InlineResponse200243Upgrade, bool)`
 
 GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpgrade
 
-`func (o *InlineObject214) SetUpgrade(v InlineResponse200242Upgrade)`
+`func (o *InlineObject214) SetUpgrade(v InlineResponse200243Upgrade)`
 
 SetUpgrade sets Upgrade field to given value.
 
@@ -184,20 +184,20 @@ HasLedLightsOn returns a boolean if a field has been set.
 
 ### GetMulticastToUnicastConversion
 
-`func (o *InlineObject214) GetMulticastToUnicastConversion() InlineResponse200242MulticastToUnicastConversion`
+`func (o *InlineObject214) GetMulticastToUnicastConversion() InlineResponse200243MulticastToUnicastConversion`
 
 GetMulticastToUnicastConversion returns the MulticastToUnicastConversion field if non-nil, zero value otherwise.
 
 ### GetMulticastToUnicastConversionOk
 
-`func (o *InlineObject214) GetMulticastToUnicastConversionOk() (*InlineResponse200242MulticastToUnicastConversion, bool)`
+`func (o *InlineObject214) GetMulticastToUnicastConversionOk() (*InlineResponse200243MulticastToUnicastConversion, bool)`
 
 GetMulticastToUnicastConversionOk returns a tuple with the MulticastToUnicastConversion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMulticastToUnicastConversion
 
-`func (o *InlineObject214) SetMulticastToUnicastConversion(v InlineResponse200242MulticastToUnicastConversion)`
+`func (o *InlineObject214) SetMulticastToUnicastConversion(v InlineResponse200243MulticastToUnicastConversion)`
 
 SetMulticastToUnicastConversion sets MulticastToUnicastConversion field to given value.
 

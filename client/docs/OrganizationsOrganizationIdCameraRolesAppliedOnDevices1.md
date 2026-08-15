@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Tag** | Pointer to **string** | Device tag. | [optional] 
 **Id** | Pointer to **string** | Device id. | [optional] 
 **InNetworksWithTag** | Pointer to **string** | Network tag scope | [optional] 
-**InNetworksWithId** | Pointer to **string** | Network id scope | [optional] 
+**InNetworksWithId** | Pointer to **string** | Network ID scope. Legacy numeric IDs are also accepted. | [optional] 
 **PermissionScopeId** | **string** | Permission scope id | 
 
 ## Methods

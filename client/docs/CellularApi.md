@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 ## BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate
 
-> InlineResponse200335 BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(ctx, organizationId).BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(batchOrganizationDevicesCellularDataProfilesAssignmentsCreate).Execute()
+> InlineResponse200347 BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(ctx, organizationId).BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate(batchOrganizationDevicesCellularDataProfilesAssignmentsCreate).Execute()
 
 Assign devices to a Cellular Data Management Profile in batch
 
@@ -46,7 +46,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    batchOrganizationDevicesCellularDataProfilesAssignmentsCreate := *openapiclient.NewInlineObject279([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateDevice("Serial_example"))}) // InlineObject279 | 
+    batchOrganizationDevicesCellularDataProfilesAssignmentsCreate := *openapiclient.NewInlineObject282([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateDevice("Serial_example"))}) // InlineObject282 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -55,7 +55,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: InlineResponse200335
+    // response from `BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: InlineResponse200347
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.BatchOrganizationDevicesCellularDataProfilesAssignmentsCreate`: %v\n", resp)
 }
 ```
@@ -76,11 +76,11 @@ Other parameters are passed through a pointer to a apiBatchOrganizationDevicesCe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchOrganizationDevicesCellularDataProfilesAssignmentsCreate** | [**InlineObject279**](InlineObject279.md) |  | 
+ **batchOrganizationDevicesCellularDataProfilesAssignmentsCreate** | [**InlineObject282**](InlineObject282.md) |  | 
 
 ### Return type
 
-[**InlineResponse200335**](InlineResponse200335.md)
+[**InlineResponse200347**](InlineResponse200347.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete := *openapiclient.NewInlineObject280([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteDevice("Serial_example"))}) // InlineObject280 | 
+    bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete := *openapiclient.NewInlineObject283([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems(*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteProfile("Id_example"), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteDevice("Serial_example"))}) // InlineObject283 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -146,7 +146,7 @@ Other parameters are passed through a pointer to a apiBulkOrganizationDevicesCel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete** | [**InlineObject280**](InlineObject280.md) |  | 
+ **bulkOrganizationDevicesCellularDataProfilesAssignmentsDelete** | [**InlineObject283**](InlineObject283.md) |  | 
 
 ### Return type
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationDevicesCellularDataProfile
 
-> InlineResponse200333 CreateOrganizationDevicesCellularDataProfile(ctx, organizationId).CreateOrganizationDevicesCellularDataProfile(createOrganizationDevicesCellularDataProfile).Execute()
+> InlineResponse200345 CreateOrganizationDevicesCellularDataProfile(ctx, organizationId).CreateOrganizationDevicesCellularDataProfile(createOrganizationDevicesCellularDataProfile).Execute()
 
 Add a cellular data management profile to this organization
 
@@ -260,7 +260,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject278("Name_example", "Description_example", []openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject278 | 
+    createOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject281("Name_example", "Description_example", []openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject281 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -269,7 +269,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.CreateOrganizationDevicesCellularDataProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationDevicesCellularDataProfile`: InlineResponse200333
+    // response from `CreateOrganizationDevicesCellularDataProfile`: InlineResponse200345
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.CreateOrganizationDevicesCellularDataProfile`: %v\n", resp)
 }
 ```
@@ -290,11 +290,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationDevicesC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationDevicesCellularDataProfile** | [**InlineObject278**](InlineObject278.md) |  | 
+ **createOrganizationDevicesCellularDataProfile** | [**InlineObject281**](InlineObject281.md) |  | 
 
 ### Return type
 
-[**InlineResponse200333**](InlineResponse200333.md)
+[**InlineResponse200345**](InlineResponse200345.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataDevices
 
-> InlineResponse200331 GetOrganizationDevicesCellularDataDevices(ctx, organizationId).IncludeAssigned(includeAssigned).IncludedSerials(includedSerials).ExcludedSerials(excludedSerials).IncludedProfileIds(includedProfileIds).ExcludedProfileIds(excludedProfileIds).DeviceTypes(deviceTypes).Slots(slots).Name(name).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200343 GetOrganizationDevicesCellularDataDevices(ctx, organizationId).IncludeAssigned(includeAssigned).IncludedSerials(includedSerials).ExcludedSerials(excludedSerials).IncludedProfileIds(includedProfileIds).ExcludedProfileIds(excludedProfileIds).DeviceTypes(deviceTypes).Slots(slots).Name(name).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List devices eligible for Cellular Data Management profile assignment in this organization
 
@@ -493,7 +493,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularDataDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataDevices`: InlineResponse200331
+    // response from `GetOrganizationDevicesCellularDataDevices`: InlineResponse200343
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularDataDevices`: %v\n", resp)
 }
 ```
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200331**](InlineResponse200331.md)
+[**InlineResponse200343**](InlineResponse200343.md)
 
 ### Authorization
 
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataProfiles
 
-> InlineResponse200332 GetOrganizationDevicesCellularDataProfiles(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200344 GetOrganizationDevicesCellularDataProfiles(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List cellular data management profiles in this organization
 
@@ -580,7 +580,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularDataProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataProfiles`: InlineResponse200332
+    // response from `GetOrganizationDevicesCellularDataProfiles`: InlineResponse200344
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularDataProfiles`: %v\n", resp)
 }
 ```
@@ -609,7 +609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200332**](InlineResponse200332.md)
+[**InlineResponse200344**](InlineResponse200344.md)
 
 ### Authorization
 
@@ -627,7 +627,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataProfilesAssignments
 
-> InlineResponse200334 GetOrganizationDevicesCellularDataProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200346 GetOrganizationDevicesCellularDataProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Cellular Data Management Profile assignments in this organization
 
@@ -660,7 +660,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularDataProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataProfilesAssignments`: InlineResponse200334
+    // response from `GetOrganizationDevicesCellularDataProfilesAssignments`: InlineResponse200346
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularDataProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -689,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200334**](InlineResponse200334.md)
+[**InlineResponse200346**](InlineResponse200346.md)
 
 ### Authorization
 
@@ -707,7 +707,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataUsageByDevice
 
-> InlineResponse200337 GetOrganizationDevicesCellularDataUsageByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200349 GetOrganizationDevicesCellularDataUsageByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List current cellular data usage for devices in this organization
 
@@ -739,7 +739,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularDataUsageByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataUsageByDevice`: InlineResponse200337
+    // response from `GetOrganizationDevicesCellularDataUsageByDevice`: InlineResponse200349
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularDataUsageByDevice`: %v\n", resp)
 }
 ```
@@ -767,7 +767,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200337**](InlineResponse200337.md)
+[**InlineResponse200349**](InlineResponse200349.md)
 
 ### Authorization
 
@@ -785,7 +785,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval
 
-> InlineResponse200338 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> InlineResponse200350 GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 List historical cellular data usage grouped by device and interval in this organization
 
@@ -821,7 +821,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200338
+    // response from `GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: InlineResponse200350
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularDataUsageHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -853,7 +853,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200338**](InlineResponse200338.md)
+[**InlineResponse200350**](InlineResponse200350.md)
 
 ### Authorization
 
@@ -871,7 +871,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularGeolocations
 
-> InlineResponse200339 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200351 GetOrganizationDevicesCellularGeolocations(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular geolocation telemetry for devices in an organization
 
@@ -903,7 +903,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularGeolocations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200339
+    // response from `GetOrganizationDevicesCellularGeolocations`: InlineResponse200351
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularGeolocations`: %v\n", resp)
 }
 ```
@@ -931,7 +931,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200339**](InlineResponse200339.md)
+[**InlineResponse200351**](InlineResponse200351.md)
 
 ### Authorization
 
@@ -949,7 +949,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularUplinksBandsByDevice
 
-> InlineResponse200340 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200352 GetOrganizationDevicesCellularUplinksBandsByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular uplink signal information for devices in an organization
 
@@ -981,7 +981,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularUplinksBandsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200340
+    // response from `GetOrganizationDevicesCellularUplinksBandsByDevice`: InlineResponse200352
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularUplinksBandsByDevice`: %v\n", resp)
 }
 ```
@@ -1009,7 +1009,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200340**](InlineResponse200340.md)
+[**InlineResponse200352**](InlineResponse200352.md)
 
 ### Authorization
 
@@ -1027,7 +1027,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesCellularUplinksTowersByDevice
 
-> InlineResponse200341 GetOrganizationDevicesCellularUplinksTowersByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200353 GetOrganizationDevicesCellularUplinksTowersByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the latest cellular tower information for devices in an organization
 
@@ -1059,7 +1059,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetOrganizationDevicesCellularUplinksTowersByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesCellularUplinksTowersByDevice`: InlineResponse200341
+    // response from `GetOrganizationDevicesCellularUplinksTowersByDevice`: InlineResponse200353
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetOrganizationDevicesCellularUplinksTowersByDevice`: %v\n", resp)
 }
 ```
@@ -1087,7 +1087,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200341**](InlineResponse200341.md)
+[**InlineResponse200353**](InlineResponse200353.md)
 
 ### Authorization
 
@@ -1249,7 +1249,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationDevicesCellularDataProfile
 
-> InlineResponse200336 UpdateOrganizationDevicesCellularDataProfile(ctx, organizationId, profileId).UpdateOrganizationDevicesCellularDataProfile(updateOrganizationDevicesCellularDataProfile).Execute()
+> InlineResponse200348 UpdateOrganizationDevicesCellularDataProfile(ctx, organizationId, profileId).UpdateOrganizationDevicesCellularDataProfile(updateOrganizationDevicesCellularDataProfile).Execute()
 
 Update a Cellular Data Management Profile
 
@@ -1270,7 +1270,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     profileId := "profileId_example" // string | Profile ID
-    updateOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject281([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject281 | 
+    updateOrganizationDevicesCellularDataProfile := *openapiclient.NewInlineObject284([]openapiclient.OrganizationsOrganizationIdDevicesCellularDataProfilesRules{*openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesRules("Slot_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesUplink(int32(123), false), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCap(int32(123), *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTerm("Resets_example", *openapiclient.NewOrganizationsOrganizationIdDevicesCellularDataProfilesCapTermStarts())))}) // InlineObject284 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1279,7 +1279,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.UpdateOrganizationDevicesCellularDataProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationDevicesCellularDataProfile`: InlineResponse200336
+    // response from `UpdateOrganizationDevicesCellularDataProfile`: InlineResponse200348
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.UpdateOrganizationDevicesCellularDataProfile`: %v\n", resp)
 }
 ```
@@ -1302,11 +1302,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationDevicesCellularDataProfile** | [**InlineObject281**](InlineObject281.md) |  | 
+ **updateOrganizationDevicesCellularDataProfile** | [**InlineObject284**](InlineObject284.md) |  | 
 
 ### Return type
 
-[**InlineResponse200336**](InlineResponse200336.md)
+[**InlineResponse200348**](InlineResponse200348.md)
 
 ### Authorization
 

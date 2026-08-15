@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl
 
-> InlineResponse200346 GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl(ctx, organizationId, captureId).Execute()
+> InlineResponse200358 GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl(ctx, organizationId, captureId).Execute()
 
 Get presigned download URL for given packet capture id
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DownloadUrlApi.GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: InlineResponse200346
+    // response from `GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: InlineResponse200358
     fmt.Fprintf(os.Stdout, "Response from `DownloadUrlApi.GenerateOrganizationDevicesPacketCaptureCaptureDownloadUrl`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200346**](InlineResponse200346.md)
+[**InlineResponse200358**](InlineResponse200358.md)
 
 ### Authorization
 

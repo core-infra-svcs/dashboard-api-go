@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | 
-**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**RulesetId** | Pointer to **string** | ID of the ruleset to assign | [optional] 
+**PolicyId** | Pointer to **string** | ID of the policy to assign the ruleset to | [optional] 
+**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
 
 ## Methods
 
 ### NewInlineObject330
 
-`func NewInlineObject330(x509certSha1Fingerprint string, ) *InlineObject330`
+`func NewInlineObject330() *InlineObject330`
 
 NewInlineObject330 instantiates a new InlineObject330 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +27,80 @@ NewInlineObject330WithDefaults instantiates a new InlineObject330 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetRulesetId
 
-`func (o *InlineObject330) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject330) GetRulesetId() string`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetRulesetIdOk
 
-`func (o *InlineObject330) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject330) GetRulesetIdOk() (*string, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetRulesetId
 
-`func (o *InlineObject330) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject330) SetRulesetId(v string)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetRulesetId sets RulesetId field to given value.
 
+### HasRulesetId
 
-### GetSsoLoginUrl
+`func (o *InlineObject330) HasRulesetId() bool`
 
-`func (o *InlineObject330) GetSsoLoginUrl() string`
+HasRulesetId returns a boolean if a field has been set.
 
-GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
+### GetPolicyId
 
-### GetSsoLoginUrlOk
+`func (o *InlineObject330) GetPolicyId() string`
 
-`func (o *InlineObject330) GetSsoLoginUrlOk() (*string, bool)`
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
+### GetPolicyIdOk
+
+`func (o *InlineObject330) GetPolicyIdOk() (*string, bool)`
+
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsoLoginUrl
+### SetPolicyId
 
-`func (o *InlineObject330) SetSsoLoginUrl(v string)`
+`func (o *InlineObject330) SetPolicyId(v string)`
 
-SetSsoLoginUrl sets SsoLoginUrl field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasSsoLoginUrl
+### HasPolicyId
 
-`func (o *InlineObject330) HasSsoLoginUrl() bool`
+`func (o *InlineObject330) HasPolicyId() bool`
 
-HasSsoLoginUrl returns a boolean if a field has been set.
+HasPolicyId returns a boolean if a field has been set.
 
-### GetSloLogoutUrl
+### GetPriority
 
-`func (o *InlineObject330) GetSloLogoutUrl() string`
+`func (o *InlineObject330) GetPriority() int32`
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+GetPriority returns the Priority field if non-nil, zero value otherwise.
 
-### GetSloLogoutUrlOk
+### GetPriorityOk
 
-`func (o *InlineObject330) GetSloLogoutUrlOk() (*string, bool)`
+`func (o *InlineObject330) GetPriorityOk() (*int32, bool)`
 
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetPriority
 
-`func (o *InlineObject330) SetSloLogoutUrl(v string)`
+`func (o *InlineObject330) SetPriority(v int32)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetPriority sets Priority field to given value.
 
-### HasSloLogoutUrl
+### HasPriority
 
-`func (o *InlineObject330) HasSloLogoutUrl() bool`
+`func (o *InlineObject330) HasPriority() bool`
 
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasPriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

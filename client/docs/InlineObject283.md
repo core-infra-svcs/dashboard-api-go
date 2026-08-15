@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to update | 
-**Details** | [**[]NetworksNetworkIdDevicesClaimDetails**](NetworksNetworkIdDevicesClaimDetails.md) | An array of details | 
+**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems.md) | List of device-to-profile assignments to remove. | 
 
 ## Methods
 
 ### NewInlineObject283
 
-`func NewInlineObject283(serials []string, details []NetworksNetworkIdDevicesClaimDetails, ) *InlineObject283`
+`func NewInlineObject283(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, ) *InlineObject283`
 
 NewInlineObject283 instantiates a new InlineObject283 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject283WithDefaults instantiates a new InlineObject283 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetItems
 
-`func (o *InlineObject283) GetSerials() []string`
+`func (o *InlineObject283) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetItemsOk
 
-`func (o *InlineObject283) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject283) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetItems
 
-`func (o *InlineObject283) SetSerials(v []string)`
+`func (o *InlineObject283) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBulkDeleteItems)`
 
-SetSerials sets Serials field to given value.
-
-
-### GetDetails
-
-`func (o *InlineObject283) GetDetails() []NetworksNetworkIdDevicesClaimDetails`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineObject283) GetDetailsOk() (*[]NetworksNetworkIdDevicesClaimDetails, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineObject283) SetDetails(v []NetworksNetworkIdDevicesClaimDetails)`
-
-SetDetails sets Details field to given value.
+SetItems sets Items field to given value.
 
 
 

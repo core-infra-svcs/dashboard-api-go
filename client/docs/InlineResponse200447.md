@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
+**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200447WithDefaults instantiates a new InlineResponse200447 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetSourceSerial
 
-`func (o *InlineResponse200447) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200447) GetSourceSerial() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetSourceSerialOk
 
-`func (o *InlineResponse200447) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200447) GetSourceSerialOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetSourceSerial
 
-`func (o *InlineResponse200447) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200447) SetSourceSerial(v string)`
 
-SetNetwork sets Network field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
-### HasNetwork
+### HasSourceSerial
 
-`func (o *InlineResponse200447) HasNetwork() bool`
+`func (o *InlineResponse200447) HasSourceSerial() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasSourceSerial returns a boolean if a field has been set.
 
-### GetByBand
+### GetTargetSerials
 
-`func (o *InlineResponse200447) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200447) GetTargetSerials() []string`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetTargetSerialsOk
 
-`func (o *InlineResponse200447) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200447) GetTargetSerialsOk() (*[]string, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetTargetSerials
 
-`func (o *InlineResponse200447) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200447) SetTargetSerials(v []string)`
 
-SetByBand sets ByBand field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
-### HasByBand
+### HasTargetSerials
 
-`func (o *InlineResponse200447) HasByBand() bool`
+`func (o *InlineResponse200447) HasTargetSerials() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasTargetSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

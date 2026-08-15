@@ -4,18 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new network | 
-**ProductTypes** | **[]string** | The product type(s) of the new network. If more than one type is included, the network will be a combined network. | 
-**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network&#39;s type exactly. | [optional] 
-**Notes** | Pointer to **NullableString** | Add any notes or additional information about this network here. | [optional] 
+**DeviceSerial** | Pointer to **NullableString** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
 
 ## Methods
 
 ### NewInlineObject310
 
-`func NewInlineObject310(name string, productTypes []string, ) *InlineObject310`
+`func NewInlineObject310() *InlineObject310`
 
 NewInlineObject310 instantiates a new InlineObject310 object
 This constructor will assign default values to properties that have it defined,
@@ -30,156 +25,41 @@ NewInlineObject310WithDefaults instantiates a new InlineObject310 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDeviceSerial
 
-`func (o *InlineObject310) GetName() string`
+`func (o *InlineObject310) GetDeviceSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDeviceSerialOk
 
-`func (o *InlineObject310) GetNameOk() (*string, bool)`
+`func (o *InlineObject310) GetDeviceSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDeviceSerial
 
-`func (o *InlineObject310) SetName(v string)`
+`func (o *InlineObject310) SetDeviceSerial(v string)`
 
-SetName sets Name field to given value.
+SetDeviceSerial sets DeviceSerial field to given value.
 
+### HasDeviceSerial
 
-### GetProductTypes
+`func (o *InlineObject310) HasDeviceSerial() bool`
 
-`func (o *InlineObject310) GetProductTypes() []string`
+HasDeviceSerial returns a boolean if a field has been set.
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+### SetDeviceSerialNil
 
-### GetProductTypesOk
+`func (o *InlineObject310) SetDeviceSerialNil(b bool)`
 
-`func (o *InlineObject310) GetProductTypesOk() (*[]string, bool)`
+ SetDeviceSerialNil sets the value for DeviceSerial to be an explicit nil
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+### UnsetDeviceSerial
+`func (o *InlineObject310) UnsetDeviceSerial()`
 
-### SetProductTypes
-
-`func (o *InlineObject310) SetProductTypes(v []string)`
-
-SetProductTypes sets ProductTypes field to given value.
-
-
-### GetTags
-
-`func (o *InlineObject310) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject310) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject310) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject310) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineObject310) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineObject310) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineObject310) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineObject310) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
-
-### GetCopyFromNetworkId
-
-`func (o *InlineObject310) GetCopyFromNetworkId() string`
-
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
-
-### GetCopyFromNetworkIdOk
-
-`func (o *InlineObject310) GetCopyFromNetworkIdOk() (*string, bool)`
-
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCopyFromNetworkId
-
-`func (o *InlineObject310) SetCopyFromNetworkId(v string)`
-
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
-
-### HasCopyFromNetworkId
-
-`func (o *InlineObject310) HasCopyFromNetworkId() bool`
-
-HasCopyFromNetworkId returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject310) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject310) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject310) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject310) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### SetNotesNil
-
-`func (o *InlineObject310) SetNotesNil(b bool)`
-
- SetNotesNil sets the value for Notes to be an explicit nil
-
-### UnsetNotes
-`func (o *InlineObject310) UnsetNotes()`
-
-UnsetNotes ensures that no value is present for Notes, not even an explicit nil
+UnsetDeviceSerial ensures that no value is present for DeviceSerial, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

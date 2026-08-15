@@ -104,7 +104,7 @@ Method | HTTP request | Description
 [**GetOrganizationApplianceUplinksStatusesOverview**](ApplianceApi.md#GetOrganizationApplianceUplinksStatusesOverview) | **Get** /organizations/{organizationId}/appliance/uplinks/statuses/overview | Returns an overview of uplink statuses
 [**GetOrganizationApplianceUplinksUsageByNetwork**](ApplianceApi.md#GetOrganizationApplianceUplinksUsageByNetwork) | **Get** /organizations/{organizationId}/appliance/uplinks/usage/byNetwork | Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 [**GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas**](ApplianceApi.md#GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas) | **Get** /organizations/{organizationId}/appliance/vpn/siteToSite/ipsec/peers/slas | Get the list of available IPsec SLA policies for an organization
-[**GetOrganizationApplianceVpnStats**](ApplianceApi.md#GetOrganizationApplianceVpnStats) | **Get** /organizations/{organizationId}/appliance/vpn/stats | Show VPN history stat for networks in an organization
+[**GetOrganizationApplianceVpnStats**](ApplianceApi.md#GetOrganizationApplianceVpnStats) | **Get** /organizations/{organizationId}/appliance/vpn/stats | Show VPN history stats for networks in an organization
 [**GetOrganizationApplianceVpnStatuses**](ApplianceApi.md#GetOrganizationApplianceVpnStatuses) | **Get** /organizations/{organizationId}/appliance/vpn/statuses | Show VPN status for networks in an organization
 [**GetOrganizationApplianceVpnThirdPartyVPNPeers**](ApplianceApi.md#GetOrganizationApplianceVpnThirdPartyVPNPeers) | **Get** /organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers | Return the third party VPN peers for an organization
 [**GetOrganizationApplianceVpnVpnFirewallRules**](ApplianceApi.md#GetOrganizationApplianceVpnVpnFirewallRules) | **Get** /organizations/{organizationId}/appliance/vpn/vpnFirewallRules | Return the firewall rules for an organization&#39;s site-to-site VPN
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ## AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans
 
-> InlineResponse200391 AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(ctx, organizationId).AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(assignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans).Execute()
+> InlineResponse200406 AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(ctx, organizationId).AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(assignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans).Execute()
 
 Assign VLANs to a policy
 
@@ -258,7 +258,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    assignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans := *openapiclient.NewInlineObject320(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy("Id_example"), []openapiclient.OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans{*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans("InterfaceId_example")}) // InlineObject320 | 
+    assignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans := *openapiclient.NewInlineObject327(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy("Id_example"), []openapiclient.OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans{*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans("InterfaceId_example")}) // InlineObject327 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -267,7 +267,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans`: InlineResponse200391
+    // response from `AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans`: InlineResponse200406
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.AssignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans`: %v\n", resp)
 }
 ```
@@ -288,11 +288,11 @@ Other parameters are passed through a pointer to a apiAssignOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **assignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans** | [**InlineObject320**](InlineObject320.md) |  | 
+ **assignOrganizationPoliciesGlobalGroupPoliciesApplianceVlans** | [**InlineObject327**](InlineObject327.md) |  | 
 
 ### Return type
 
-[**InlineResponse200391**](InlineResponse200391.md)
+[**InlineResponse200406**](InlineResponse200406.md)
 
 ### Authorization
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate
 
-> InlineResponse200276 BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(ctx, organizationId).BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(bulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate).Execute()
+> InlineResponse200278 BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(ctx, organizationId).BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate(bulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate).Execute()
 
 Assign the local DNS profile to networks in the organization
 
@@ -339,7 +339,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: InlineResponse200276
+    // response from `BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.BulkOrganizationApplianceDnsLocalProfilesAssignmentsCreate`: %v\n", resp)
 }
 ```
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -1098,7 +1098,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsLocalProfile
 
-> InlineResponse200274 CreateOrganizationApplianceDnsLocalProfile(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfile(createOrganizationApplianceDnsLocalProfile).Execute()
+> InlineResponse200276 CreateOrganizationApplianceDnsLocalProfile(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfile(createOrganizationApplianceDnsLocalProfile).Execute()
 
 Create a new local DNS profile
 
@@ -1127,7 +1127,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateOrganizationApplianceDnsLocalProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsLocalProfile`: InlineResponse200274
+    // response from `CreateOrganizationApplianceDnsLocalProfile`: InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateOrganizationApplianceDnsLocalProfile`: %v\n", resp)
 }
 ```
@@ -1152,7 +1152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200274**](InlineResponse200274.md)
+[**InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -1170,7 +1170,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete
 
-> InlineResponse200276 CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete).Execute()
+> InlineResponse200278 CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete).Execute()
 
 Unassign the local DNS profile to networks in the organization
 
@@ -1199,7 +1199,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: InlineResponse200276
+    // response from `CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateOrganizationApplianceDnsLocalProfilesAssignmentsBulkDelete`: %v\n", resp)
 }
 ```
@@ -1224,7 +1224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -1242,7 +1242,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsLocalRecord
 
-> []InlineResponse200277 CreateOrganizationApplianceDnsLocalRecord(ctx, organizationId).CreateOrganizationApplianceDnsLocalRecord(createOrganizationApplianceDnsLocalRecord).Execute()
+> []InlineResponse200279 CreateOrganizationApplianceDnsLocalRecord(ctx, organizationId).CreateOrganizationApplianceDnsLocalRecord(createOrganizationApplianceDnsLocalRecord).Execute()
 
 Create a new local DNS record
 
@@ -1271,7 +1271,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateOrganizationApplianceDnsLocalRecord``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsLocalRecord`: []InlineResponse200277
+    // response from `CreateOrganizationApplianceDnsLocalRecord`: []InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateOrganizationApplianceDnsLocalRecord`: %v\n", resp)
 }
 ```
@@ -1296,7 +1296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200277**](InlineResponse200277.md)
+[**[]InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 
@@ -1314,7 +1314,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsSplitProfile
 
-> InlineResponse200278 CreateOrganizationApplianceDnsSplitProfile(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfile(createOrganizationApplianceDnsSplitProfile).Execute()
+> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfile(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfile(createOrganizationApplianceDnsSplitProfile).Execute()
 
 Create a new split DNS profile
 
@@ -1343,7 +1343,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateOrganizationApplianceDnsSplitProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfile`: InlineResponse200278
+    // response from `CreateOrganizationApplianceDnsSplitProfile`: InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateOrganizationApplianceDnsSplitProfile`: %v\n", resp)
 }
 ```
@@ -1368,7 +1368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200278**](InlineResponse200278.md)
+[**InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -1386,7 +1386,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate
 
-> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate).Execute()
+> InlineResponse200282 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate).Execute()
 
 Assign the split DNS profile to networks in the organization
 
@@ -1415,7 +1415,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: InlineResponse200280
+    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkCreate`: %v\n", resp)
 }
 ```
@@ -1440,7 +1440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200280**](InlineResponse200280.md)
+[**InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -1458,7 +1458,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete
 
-> InlineResponse200280 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete).Execute()
+> InlineResponse200282 CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(ctx, organizationId).CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete(createOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete).Execute()
 
 Unassign the split DNS profile to networks in the organization
 
@@ -1487,7 +1487,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: InlineResponse200280
+    // response from `CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateOrganizationApplianceDnsSplitProfilesAssignmentsBulkDelete`: %v\n", resp)
 }
 ```
@@ -1512,7 +1512,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200280**](InlineResponse200280.md)
+[**InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -5880,7 +5880,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDevicesInterfacesL3
 
-> InlineResponse200271 GetOrganizationApplianceDevicesInterfacesL3(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200273 GetOrganizationApplianceDevicesInterfacesL3(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List L3 interfaces across networks for the organization
 
@@ -5912,7 +5912,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDevicesInterfacesL3``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDevicesInterfacesL3`: InlineResponse200271
+    // response from `GetOrganizationApplianceDevicesInterfacesL3`: InlineResponse200273
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDevicesInterfacesL3`: %v\n", resp)
 }
 ```
@@ -5940,7 +5940,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200271**](InlineResponse200271.md)
+[**InlineResponse200273**](InlineResponse200273.md)
 
 ### Authorization
 
@@ -5958,7 +5958,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDevicesInterfacesPortsByDevice
 
-> InlineResponse200272 GetOrganizationApplianceDevicesInterfacesPortsByDevice(ctx, organizationId).Serials(serials).Numbers(numbers).Execute()
+> InlineResponse200274 GetOrganizationApplianceDevicesInterfacesPortsByDevice(ctx, organizationId).Serials(serials).Numbers(numbers).Execute()
 
 Returns port configurations for appliances in a given organization
 
@@ -5988,7 +5988,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDevicesInterfacesPortsByDevice`: InlineResponse200272
+    // response from `GetOrganizationApplianceDevicesInterfacesPortsByDevice`: InlineResponse200274
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDevicesInterfacesPortsByDevice`: %v\n", resp)
 }
 ```
@@ -6014,7 +6014,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200272**](InlineResponse200272.md)
+[**InlineResponse200274**](InlineResponse200274.md)
 
 ### Authorization
 
@@ -6032,7 +6032,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice
 
-> InlineResponse200273 GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
+> InlineResponse200275 GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).NetworkIds(networkIds).Serials(serials).PortIds(portIds).Execute()
 
 Return time-series digital optical monitoring (DOM) readings for ports on each DOM-enabled Catalyst appliance in an organization.
 
@@ -6070,7 +6070,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: InlineResponse200273
+    // response from `GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: InlineResponse200275
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDevicesPortsTransceiversReadingsHistoryByDevice`: %v\n", resp)
 }
 ```
@@ -6104,7 +6104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200273**](InlineResponse200273.md)
+[**InlineResponse200275**](InlineResponse200275.md)
 
 ### Authorization
 
@@ -6198,7 +6198,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsLocalProfiles
 
-> []InlineResponse200274 GetOrganizationApplianceDnsLocalProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
+> []InlineResponse200276 GetOrganizationApplianceDnsLocalProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
 
 Fetch the local DNS profiles used in the organization
 
@@ -6227,7 +6227,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDnsLocalProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsLocalProfiles`: []InlineResponse200274
+    // response from `GetOrganizationApplianceDnsLocalProfiles`: []InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDnsLocalProfiles`: %v\n", resp)
 }
 ```
@@ -6252,7 +6252,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200274**](InlineResponse200274.md)
+[**[]InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -6270,7 +6270,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsLocalProfilesAssignments
 
-> InlineResponse200275 GetOrganizationApplianceDnsLocalProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
+> InlineResponse200277 GetOrganizationApplianceDnsLocalProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
 
 Fetch the local DNS profile assignments in the organization
 
@@ -6300,7 +6300,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDnsLocalProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsLocalProfilesAssignments`: InlineResponse200275
+    // response from `GetOrganizationApplianceDnsLocalProfilesAssignments`: InlineResponse200277
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDnsLocalProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -6326,7 +6326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200275**](InlineResponse200275.md)
+[**InlineResponse200277**](InlineResponse200277.md)
 
 ### Authorization
 
@@ -6344,7 +6344,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsLocalRecords
 
-> []InlineResponse200277 GetOrganizationApplianceDnsLocalRecords(ctx, organizationId).ProfileIds(profileIds).Execute()
+> []InlineResponse200279 GetOrganizationApplianceDnsLocalRecords(ctx, organizationId).ProfileIds(profileIds).Execute()
 
 Fetch the DNS records used in local DNS profiles
 
@@ -6373,7 +6373,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDnsLocalRecords``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsLocalRecords`: []InlineResponse200277
+    // response from `GetOrganizationApplianceDnsLocalRecords`: []InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDnsLocalRecords`: %v\n", resp)
 }
 ```
@@ -6398,7 +6398,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200277**](InlineResponse200277.md)
+[**[]InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 
@@ -6416,7 +6416,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsSplitProfiles
 
-> []InlineResponse200278 GetOrganizationApplianceDnsSplitProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
+> []InlineResponse200280 GetOrganizationApplianceDnsSplitProfiles(ctx, organizationId).ProfileIds(profileIds).Execute()
 
 Fetch the split DNS profiles used in the organization
 
@@ -6445,7 +6445,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDnsSplitProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsSplitProfiles`: []InlineResponse200278
+    // response from `GetOrganizationApplianceDnsSplitProfiles`: []InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDnsSplitProfiles`: %v\n", resp)
 }
 ```
@@ -6470,7 +6470,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200278**](InlineResponse200278.md)
+[**[]InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -6488,7 +6488,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceDnsSplitProfilesAssignments
 
-> InlineResponse200279 GetOrganizationApplianceDnsSplitProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
+> InlineResponse200281 GetOrganizationApplianceDnsSplitProfilesAssignments(ctx, organizationId).ProfileIds(profileIds).NetworkIds(networkIds).Execute()
 
 Fetch the split DNS profile assignments in the organization
 
@@ -6518,7 +6518,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceDnsSplitProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceDnsSplitProfilesAssignments`: InlineResponse200279
+    // response from `GetOrganizationApplianceDnsSplitProfilesAssignments`: InlineResponse200281
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceDnsSplitProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -6544,7 +6544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200279**](InlineResponse200279.md)
+[**InlineResponse200281**](InlineResponse200281.md)
 
 ### Authorization
 
@@ -6562,7 +6562,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceFirewallMulticastForwardingByNetwork
 
-> InlineResponse200281 GetOrganizationApplianceFirewallMulticastForwardingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200283 GetOrganizationApplianceFirewallMulticastForwardingByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List Static Multicasting forwarding settings for MX networks
 
@@ -6594,7 +6594,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceFirewallMulticastForwardingByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: InlineResponse200281
+    // response from `GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: InlineResponse200283
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceFirewallMulticastForwardingByNetwork`: %v\n", resp)
 }
 ```
@@ -6622,7 +6622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200281**](InlineResponse200281.md)
+[**InlineResponse200283**](InlineResponse200283.md)
 
 ### Authorization
 
@@ -6640,7 +6640,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceInterfacesPacketsOverviewsByDevice
 
-> InlineResponse200282 GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+> InlineResponse200284 GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
 
 Returns packet counter overviews for all interfaces on Secure Routers in the organization, including totals and average rates by packet type over the requested timespan.
 
@@ -6676,7 +6676,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: InlineResponse200282
+    // response from `GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: InlineResponse200284
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: %v\n", resp)
 }
 ```
@@ -6708,7 +6708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200282**](InlineResponse200282.md)
+[**InlineResponse200284**](InlineResponse200284.md)
 
 ### Authorization
 
@@ -6726,7 +6726,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceRoutingVrfsSettings
 
-> InlineResponse200283 GetOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).Execute()
+> InlineResponse200285 GetOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).Execute()
 
 Return the VRF setting for an organization.
 
@@ -6754,7 +6754,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceRoutingVrfsSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceRoutingVrfsSettings`: InlineResponse200283
+    // response from `GetOrganizationApplianceRoutingVrfsSettings`: InlineResponse200285
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceRoutingVrfsSettings`: %v\n", resp)
 }
 ```
@@ -6778,7 +6778,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200283**](InlineResponse200283.md)
+[**InlineResponse200285**](InlineResponse200285.md)
 
 ### Authorization
 
@@ -6880,7 +6880,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceSecurityIntrusion
 
-> InlineResponse200284 GetOrganizationApplianceSecurityIntrusion(ctx, organizationId).Execute()
+> InlineResponse200286 GetOrganizationApplianceSecurityIntrusion(ctx, organizationId).Execute()
 
 Returns all supported intrusion settings for an organization
 
@@ -6908,7 +6908,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceSecurityIntrusion`: InlineResponse200284
+    // response from `GetOrganizationApplianceSecurityIntrusion`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -6932,7 +6932,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200284**](InlineResponse200284.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 
@@ -6950,7 +6950,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> InlineResponse200285 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200287 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -6982,7 +6982,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200285
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200287
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -7010,7 +7010,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200285**](InlineResponse200285.md)
+[**InlineResponse200287**](InlineResponse200287.md)
 
 ### Authorization
 
@@ -7028,7 +7028,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinkStatuses
 
-> []InlineResponse200286 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200288 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX and Z series appliances in the organization
 
@@ -7062,7 +7062,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200286
+    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200288
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -7092,7 +7092,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200286**](InlineResponse200286.md)
+[**[]InlineResponse200288**](InlineResponse200288.md)
 
 ### Authorization
 
@@ -7110,7 +7110,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksNatByNetwork
 
-> []InlineResponse200287 GetOrganizationApplianceUplinksNatByNetwork(ctx, organizationId).NetworkIds(networkIds).Interfaces(interfaces).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200289 GetOrganizationApplianceUplinksNatByNetwork(ctx, organizationId).NetworkIds(networkIds).Interfaces(interfaces).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Fetch uplink NAT settings of each network in the organization
 
@@ -7143,7 +7143,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinksNatByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksNatByNetwork`: []InlineResponse200287
+    // response from `GetOrganizationApplianceUplinksNatByNetwork`: []InlineResponse200289
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinksNatByNetwork`: %v\n", resp)
 }
 ```
@@ -7172,7 +7172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200287**](InlineResponse200287.md)
+[**[]InlineResponse200289**](InlineResponse200289.md)
 
 ### Authorization
 
@@ -7190,7 +7190,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksStatusesOverview
 
-> InlineResponse200288 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).NetworkIds(networkIds).Execute()
+> InlineResponse200290 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).NetworkIds(networkIds).Execute()
 
 Returns an overview of uplink statuses
 
@@ -7219,7 +7219,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinksStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200288
+    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinksStatusesOverview`: %v\n", resp)
 }
 ```
@@ -7244,7 +7244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200288**](InlineResponse200288.md)
+[**InlineResponse200290**](InlineResponse200290.md)
 
 ### Authorization
 
@@ -7262,7 +7262,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200289 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200291 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -7293,7 +7293,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200289
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200291
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -7320,7 +7320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200289**](InlineResponse200289.md)
+[**[]InlineResponse200291**](InlineResponse200291.md)
 
 ### Authorization
 
@@ -7338,7 +7338,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas
 
-> InlineResponse200290 GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).Execute()
+> InlineResponse200292 GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).Execute()
 
 Get the list of available IPsec SLA policies for an organization
 
@@ -7366,7 +7366,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200290
+    // response from `GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200292
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: %v\n", resp)
 }
 ```
@@ -7390,7 +7390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200290**](InlineResponse200290.md)
+[**InlineResponse200292**](InlineResponse200292.md)
 
 ### Authorization
 
@@ -7408,9 +7408,9 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnStats
 
-> []InlineResponse200292 GetOrganizationApplianceVpnStats(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200294 GetOrganizationApplianceVpnStats(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).T0(t0).T1(t1).Timespan(timespan).Execute()
 
-Show VPN history stat for networks in an organization
+Show VPN history stats for networks in an organization
 
 
 
@@ -7443,7 +7443,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnStats`: []InlineResponse200292
+    // response from `GetOrganizationApplianceVpnStats`: []InlineResponse200294
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnStats`: %v\n", resp)
 }
 ```
@@ -7474,7 +7474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200292**](InlineResponse200292.md)
+[**[]InlineResponse200294**](InlineResponse200294.md)
 
 ### Authorization
 
@@ -7492,7 +7492,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnStatuses
 
-> []InlineResponse200293 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200295 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Show VPN status for networks in an organization
 
@@ -7524,7 +7524,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnStatuses`: []InlineResponse200293
+    // response from `GetOrganizationApplianceVpnStatuses`: []InlineResponse200295
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnStatuses`: %v\n", resp)
 }
 ```
@@ -7552,7 +7552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200293**](InlineResponse200293.md)
+[**[]InlineResponse200295**](InlineResponse200295.md)
 
 ### Authorization
 
@@ -7570,7 +7570,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200294 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse200296 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -7598,7 +7598,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200294
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200296
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -7622,7 +7622,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200294**](InlineResponse200294.md)
+[**InlineResponse200296**](InlineResponse200296.md)
 
 ### Authorization
 
@@ -7710,7 +7710,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments
 
-> InlineResponse200393 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments(ctx, organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200408 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments(ctx, organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List appliance VLAN policy assignments
 
@@ -7744,7 +7744,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments`: InlineResponse200393
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments`: InlineResponse200408
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignments`: %v\n", resp)
 }
 ```
@@ -7774,7 +7774,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200393**](InlineResponse200393.md)
+[**InlineResponse200408**](InlineResponse200408.md)
 
 ### Authorization
 
@@ -7792,7 +7792,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan
 
-> InlineResponse200394 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan(ctx, organizationId).Search(search).VlanIds(vlanIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200409 GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan(ctx, organizationId).Search(search).VlanIds(vlanIds).InterfaceIds(interfaceIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List policies by appliance VLANs
 
@@ -7826,7 +7826,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan`: InlineResponse200394
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan`: InlineResponse200409
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationPoliciesGlobalGroupPoliciesApplianceVlansAssignmentsByVlan`: %v\n", resp)
 }
 ```
@@ -7856,7 +7856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200394**](InlineResponse200394.md)
+[**InlineResponse200409**](InlineResponse200409.md)
 
 ### Authorization
 
@@ -8016,7 +8016,7 @@ Name | Type | Description  | Notes
 
 ## RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans
 
-> InlineResponse200391 RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(ctx, organizationId).RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(removeOrganizationPoliciesGlobalGroupPoliciesApplianceVlans).Execute()
+> InlineResponse200406 RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(ctx, organizationId).RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans(removeOrganizationPoliciesGlobalGroupPoliciesApplianceVlans).Execute()
 
 Remove VLANs from a policy
 
@@ -8036,7 +8036,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    removeOrganizationPoliciesGlobalGroupPoliciesApplianceVlans := *openapiclient.NewInlineObject321(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy("Id_example"), []openapiclient.OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans{*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans("InterfaceId_example")}) // InlineObject321 | 
+    removeOrganizationPoliciesGlobalGroupPoliciesApplianceVlans := *openapiclient.NewInlineObject328(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy("Id_example"), []openapiclient.OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans{*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans("InterfaceId_example")}) // InlineObject328 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8045,7 +8045,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans`: InlineResponse200391
+    // response from `RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans`: InlineResponse200406
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.RemoveOrganizationPoliciesGlobalGroupPoliciesApplianceVlans`: %v\n", resp)
 }
 ```
@@ -8066,11 +8066,11 @@ Other parameters are passed through a pointer to a apiRemoveOrganizationPolicies
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **removeOrganizationPoliciesGlobalGroupPoliciesApplianceVlans** | [**InlineObject321**](InlineObject321.md) |  | 
+ **removeOrganizationPoliciesGlobalGroupPoliciesApplianceVlans** | [**InlineObject328**](InlineObject328.md) |  | 
 
 ### Return type
 
-[**InlineResponse200391**](InlineResponse200391.md)
+[**InlineResponse200406**](InlineResponse200406.md)
 
 ### Authorization
 
@@ -10993,7 +10993,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceDnsLocalProfile
 
-> InlineResponse200274 UpdateOrganizationApplianceDnsLocalProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsLocalProfile(updateOrganizationApplianceDnsLocalProfile).Execute()
+> InlineResponse200276 UpdateOrganizationApplianceDnsLocalProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsLocalProfile(updateOrganizationApplianceDnsLocalProfile).Execute()
 
 Update a local DNS profile
 
@@ -11023,7 +11023,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceDnsLocalProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceDnsLocalProfile`: InlineResponse200274
+    // response from `UpdateOrganizationApplianceDnsLocalProfile`: InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceDnsLocalProfile`: %v\n", resp)
 }
 ```
@@ -11050,7 +11050,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200274**](InlineResponse200274.md)
+[**InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -11068,7 +11068,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceDnsLocalRecord
 
-> InlineResponse200277 UpdateOrganizationApplianceDnsLocalRecord(ctx, organizationId, recordId).UpdateOrganizationApplianceDnsLocalRecord(updateOrganizationApplianceDnsLocalRecord).Execute()
+> InlineResponse200279 UpdateOrganizationApplianceDnsLocalRecord(ctx, organizationId, recordId).UpdateOrganizationApplianceDnsLocalRecord(updateOrganizationApplianceDnsLocalRecord).Execute()
 
 Updates a local DNS record
 
@@ -11098,7 +11098,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceDnsLocalRecord``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceDnsLocalRecord`: InlineResponse200277
+    // response from `UpdateOrganizationApplianceDnsLocalRecord`: InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceDnsLocalRecord`: %v\n", resp)
 }
 ```
@@ -11125,7 +11125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200277**](InlineResponse200277.md)
+[**InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 
@@ -11143,7 +11143,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceDnsSplitProfile
 
-> InlineResponse200278 UpdateOrganizationApplianceDnsSplitProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsSplitProfile(updateOrganizationApplianceDnsSplitProfile).Execute()
+> InlineResponse200280 UpdateOrganizationApplianceDnsSplitProfile(ctx, organizationId, profileId).UpdateOrganizationApplianceDnsSplitProfile(updateOrganizationApplianceDnsSplitProfile).Execute()
 
 Update a split DNS profile
 
@@ -11173,7 +11173,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceDnsSplitProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceDnsSplitProfile`: InlineResponse200278
+    // response from `UpdateOrganizationApplianceDnsSplitProfile`: InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceDnsSplitProfile`: %v\n", resp)
 }
 ```
@@ -11200,7 +11200,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200278**](InlineResponse200278.md)
+[**InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -11218,7 +11218,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceRoutingVrfsSettings
 
-> InlineResponse200283 UpdateOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).UpdateOrganizationApplianceRoutingVrfsSettings(updateOrganizationApplianceRoutingVrfsSettings).Execute()
+> InlineResponse200285 UpdateOrganizationApplianceRoutingVrfsSettings(ctx, organizationId).UpdateOrganizationApplianceRoutingVrfsSettings(updateOrganizationApplianceRoutingVrfsSettings).Execute()
 
 Update the VRF setting for an organization.
 
@@ -11247,7 +11247,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceRoutingVrfsSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceRoutingVrfsSettings`: InlineResponse200283
+    // response from `UpdateOrganizationApplianceRoutingVrfsSettings`: InlineResponse200285
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceRoutingVrfsSettings`: %v\n", resp)
 }
 ```
@@ -11272,7 +11272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200283**](InlineResponse200283.md)
+[**InlineResponse200285**](InlineResponse200285.md)
 
 ### Authorization
 
@@ -11290,7 +11290,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceSecurityIntrusion
 
-> InlineResponse200284 UpdateOrganizationApplianceSecurityIntrusion(ctx, organizationId).UpdateOrganizationApplianceSecurityIntrusion(updateOrganizationApplianceSecurityIntrusion).Execute()
+> InlineResponse200286 UpdateOrganizationApplianceSecurityIntrusion(ctx, organizationId).UpdateOrganizationApplianceSecurityIntrusion(updateOrganizationApplianceSecurityIntrusion).Execute()
 
 Sets supported intrusion settings for an organization
 
@@ -11319,7 +11319,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceSecurityIntrusion``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceSecurityIntrusion`: InlineResponse200284
+    // response from `UpdateOrganizationApplianceSecurityIntrusion`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceSecurityIntrusion`: %v\n", resp)
 }
 ```
@@ -11344,7 +11344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200284**](InlineResponse200284.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 
@@ -11362,7 +11362,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas
 
-> InlineResponse200291 UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(updateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas).Execute()
+> InlineResponse200293 UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(ctx, organizationId).UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas(updateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas).Execute()
 
 Update the IPsec SLA policies for an organization
 
@@ -11391,7 +11391,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200291
+    // response from `UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: InlineResponse200293
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceVpnSiteToSiteIpsecPeersSlas`: %v\n", resp)
 }
 ```
@@ -11416,7 +11416,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200291**](InlineResponse200291.md)
+[**InlineResponse200293**](InlineResponse200293.md)
 
 ### Authorization
 
@@ -11434,7 +11434,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200294 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse200296 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -11463,7 +11463,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200294
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200296
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -11488,7 +11488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200294**](InlineResponse200294.md)
+[**InlineResponse200296**](InlineResponse200296.md)
 
 ### Authorization
 

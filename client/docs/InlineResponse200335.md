@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200334Items**](InlineResponse200334Items.md) | List of created Cellular Data Management Profile device assignments | [optional] 
+**Usage** | Pointer to [**InlineResponse200335Usage**](InlineResponse200335Usage.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200335Counts**](InlineResponse200335Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200335WithDefaults instantiates a new InlineResponse200335 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetUsage
 
-`func (o *InlineResponse200335) GetItems() []InlineResponse200334Items`
+`func (o *InlineResponse200335) GetUsage() InlineResponse200335Usage`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetUsageOk
 
-`func (o *InlineResponse200335) GetItemsOk() (*[]InlineResponse200334Items, bool)`
+`func (o *InlineResponse200335) GetUsageOk() (*InlineResponse200335Usage, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetUsage
 
-`func (o *InlineResponse200335) SetItems(v []InlineResponse200334Items)`
+`func (o *InlineResponse200335) SetUsage(v InlineResponse200335Usage)`
 
-SetItems sets Items field to given value.
+SetUsage sets Usage field to given value.
 
-### HasItems
+### HasUsage
 
-`func (o *InlineResponse200335) HasItems() bool`
+`func (o *InlineResponse200335) HasUsage() bool`
 
-HasItems returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200335) GetCounts() InlineResponse200335Counts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200335) GetCountsOk() (*InlineResponse200335Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200335) SetCounts(v InlineResponse200335Counts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200335) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

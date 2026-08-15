@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **Mode** | Pointer to **string** | Uplink mode (public|virtual) | [optional] 
 **Interfaces** | Pointer to [**[]NetworksNetworkIdApplianceDevicesRedundancyUplinkInterfaces**](NetworksNetworkIdApplianceDevicesRedundancyUplinkInterfaces.md) | Interfaces to configure | [optional] 
 **Sharing** | Pointer to [**NetworksNetworkIdApplianceDevicesRedundancyUplinkSharing**](NetworksNetworkIdApplianceDevicesRedundancyUplinkSharing.md) |  | [optional] 
-**LoadBalancing** | Pointer to [**NetworksNetworkIdApplianceDevicesRedundancyUplinkLoadBalancing**](NetworksNetworkIdApplianceDevicesRedundancyUplinkLoadBalancing.md) |  | [optional] 
 
 ## Methods
 
@@ -102,31 +101,6 @@ SetSharing sets Sharing field to given value.
 `func (o *NetworksNetworkIdApplianceDevicesRedundancyUplink) HasSharing() bool`
 
 HasSharing returns a boolean if a field has been set.
-
-### GetLoadBalancing
-
-`func (o *NetworksNetworkIdApplianceDevicesRedundancyUplink) GetLoadBalancing() NetworksNetworkIdApplianceDevicesRedundancyUplinkLoadBalancing`
-
-GetLoadBalancing returns the LoadBalancing field if non-nil, zero value otherwise.
-
-### GetLoadBalancingOk
-
-`func (o *NetworksNetworkIdApplianceDevicesRedundancyUplink) GetLoadBalancingOk() (*NetworksNetworkIdApplianceDevicesRedundancyUplinkLoadBalancing, bool)`
-
-GetLoadBalancingOk returns a tuple with the LoadBalancing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLoadBalancing
-
-`func (o *NetworksNetworkIdApplianceDevicesRedundancyUplink) SetLoadBalancing(v NetworksNetworkIdApplianceDevicesRedundancyUplinkLoadBalancing)`
-
-SetLoadBalancing sets LoadBalancing field to given value.
-
-### HasLoadBalancing
-
-`func (o *NetworksNetworkIdApplianceDevicesRedundancyUplink) HasLoadBalancing() bool`
-
-HasLoadBalancing returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

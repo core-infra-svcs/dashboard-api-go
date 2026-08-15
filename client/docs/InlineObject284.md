@@ -4,22 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | The serial(s) of the device(s) | 
-**Name** | **string** | Name of packet capture file | 
-**OutputType** | Pointer to **string** | Output type of packet capture file. Possible values: text, pcap, cloudshark, or upload_to_cloud | [optional] 
-**Destination** | Pointer to **string** | Destination of packet capture file. Possible values: [upload_to_cloud] | [optional] 
-**Ports** | Pointer to **string** | Ports of packet capture file, comma-separated | [optional] 
-**Notes** | Pointer to **string** | Reason for taking the packet capture | [optional] 
-**Duration** | Pointer to **int32** | Duration in seconds of packet capture | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for packet capture | [optional] 
-**Interface** | Pointer to **string** | Interface of the device | [optional] 
-**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
+**Description** | Pointer to **string** | New description of the profile. | [optional] 
+**Rules** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules**](OrganizationsOrganizationIdDevicesCellularDataProfilesRules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | 
 
 ## Methods
 
 ### NewInlineObject284
 
-`func NewInlineObject284(serials []string, name string, ) *InlineObject284`
+`func NewInlineObject284(rules []OrganizationsOrganizationIdDevicesCellularDataProfilesRules, ) *InlineObject284`
 
 NewInlineObject284 instantiates a new InlineObject284 object
 This constructor will assign default values to properties that have it defined,
@@ -34,245 +27,75 @@ NewInlineObject284WithDefaults instantiates a new InlineObject284 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetProfileId
 
-`func (o *InlineObject284) GetSerials() []string`
+`func (o *InlineObject284) GetProfileId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetProfileIdOk
 
-`func (o *InlineObject284) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject284) GetProfileIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetProfileId
 
-`func (o *InlineObject284) SetSerials(v []string)`
+`func (o *InlineObject284) SetProfileId(v string)`
 
-SetSerials sets Serials field to given value.
+SetProfileId sets ProfileId field to given value.
 
+### HasProfileId
 
-### GetName
+`func (o *InlineObject284) HasProfileId() bool`
 
-`func (o *InlineObject284) GetName() string`
+HasProfileId returns a boolean if a field has been set.
 
-GetName returns the Name field if non-nil, zero value otherwise.
+### GetDescription
 
-### GetNameOk
+`func (o *InlineObject284) GetDescription() string`
 
-`func (o *InlineObject284) GetNameOk() (*string, bool)`
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+### GetDescriptionOk
+
+`func (o *InlineObject284) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDescription
 
-`func (o *InlineObject284) SetName(v string)`
+`func (o *InlineObject284) SetDescription(v string)`
 
-SetName sets Name field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
 
-### GetOutputType
+`func (o *InlineObject284) HasDescription() bool`
 
-`func (o *InlineObject284) GetOutputType() string`
+HasDescription returns a boolean if a field has been set.
 
-GetOutputType returns the OutputType field if non-nil, zero value otherwise.
+### GetRules
 
-### GetOutputTypeOk
+`func (o *InlineObject284) GetRules() []OrganizationsOrganizationIdDevicesCellularDataProfilesRules`
 
-`func (o *InlineObject284) GetOutputTypeOk() (*string, bool)`
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-GetOutputTypeOk returns a tuple with the OutputType field if it's non-nil, zero value otherwise
+### GetRulesOk
+
+`func (o *InlineObject284) GetRulesOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOutputType
+### SetRules
 
-`func (o *InlineObject284) SetOutputType(v string)`
+`func (o *InlineObject284) SetRules(v []OrganizationsOrganizationIdDevicesCellularDataProfilesRules)`
 
-SetOutputType sets OutputType field to given value.
+SetRules sets Rules field to given value.
 
-### HasOutputType
-
-`func (o *InlineObject284) HasOutputType() bool`
-
-HasOutputType returns a boolean if a field has been set.
-
-### GetDestination
-
-`func (o *InlineObject284) GetDestination() string`
-
-GetDestination returns the Destination field if non-nil, zero value otherwise.
-
-### GetDestinationOk
-
-`func (o *InlineObject284) GetDestinationOk() (*string, bool)`
-
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestination
-
-`func (o *InlineObject284) SetDestination(v string)`
-
-SetDestination sets Destination field to given value.
-
-### HasDestination
-
-`func (o *InlineObject284) HasDestination() bool`
-
-HasDestination returns a boolean if a field has been set.
-
-### GetPorts
-
-`func (o *InlineObject284) GetPorts() string`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineObject284) GetPortsOk() (*string, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineObject284) SetPorts(v string)`
-
-SetPorts sets Ports field to given value.
-
-### HasPorts
-
-`func (o *InlineObject284) HasPorts() bool`
-
-HasPorts returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject284) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject284) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject284) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject284) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetDuration
-
-`func (o *InlineObject284) GetDuration() int32`
-
-GetDuration returns the Duration field if non-nil, zero value otherwise.
-
-### GetDurationOk
-
-`func (o *InlineObject284) GetDurationOk() (*int32, bool)`
-
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDuration
-
-`func (o *InlineObject284) SetDuration(v int32)`
-
-SetDuration sets Duration field to given value.
-
-### HasDuration
-
-`func (o *InlineObject284) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
-
-### GetFilterExpression
-
-`func (o *InlineObject284) GetFilterExpression() string`
-
-GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
-
-### GetFilterExpressionOk
-
-`func (o *InlineObject284) GetFilterExpressionOk() (*string, bool)`
-
-GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFilterExpression
-
-`func (o *InlineObject284) SetFilterExpression(v string)`
-
-SetFilterExpression sets FilterExpression field to given value.
-
-### HasFilterExpression
-
-`func (o *InlineObject284) HasFilterExpression() bool`
-
-HasFilterExpression returns a boolean if a field has been set.
-
-### GetInterface
-
-`func (o *InlineObject284) GetInterface() string`
-
-GetInterface returns the Interface field if non-nil, zero value otherwise.
-
-### GetInterfaceOk
-
-`func (o *InlineObject284) GetInterfaceOk() (*string, bool)`
-
-GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterface
-
-`func (o *InlineObject284) SetInterface(v string)`
-
-SetInterface sets Interface field to given value.
-
-### HasInterface
-
-`func (o *InlineObject284) HasInterface() bool`
-
-HasInterface returns a boolean if a field has been set.
-
-### GetAdvanced
-
-`func (o *InlineObject284) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced`
-
-GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
-
-### GetAdvancedOk
-
-`func (o *InlineObject284) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced, bool)`
-
-GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvanced
-
-`func (o *InlineObject284) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced)`
-
-SetAdvanced sets Advanced field to given value.
-
-### HasAdvanced
-
-`func (o *InlineObject284) HasAdvanced() bool`
-
-HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

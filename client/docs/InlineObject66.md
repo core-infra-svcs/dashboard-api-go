@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
 **Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
 **AllowedVlans** | Pointer to **string** | Comma-delimited list of VLAN IDs (e.g. &#39;2,15&#39;) for all devices. Secure Routers also support VLAN ranges (e.g. &#39;2-10,15&#39;). Use &#39;all&#39; to permit all VLANs on the port. | [optional] 
-**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. Valid values are: &#39;open&#39;, &#39;8021x-radius&#39;, &#39;mac-radius&#39;, &#39;hybris-radius&#39; for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, &#39;open&#39; is the only valid value and &#39;open&#39; is the default value if the field is missing. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. Valid values are: &#39;open&#39;, &#39;8021x-radius&#39;, &#39;mac-radius&#39;, &#39;hybrid-radius&#39;, &#39;access-manager&#39; for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, &#39;open&#39; is the only valid value and &#39;open&#39; is the default value if the field is missing. | [optional] 
 **Sgt** | Pointer to [**NetworksNetworkIdAppliancePortsSgt**](NetworksNetworkIdAppliancePortsSgt.md) |  | [optional] 
 
 ## Methods

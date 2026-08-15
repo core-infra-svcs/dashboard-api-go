@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Category type | 
-**Title** | **string** | Category title | 
+**Items** | [**[]InlineResponse200300Items**](InlineResponse200300Items.md) | Organization Alert counts by type | 
+**Meta** | [**InlineResponse200299Meta**](InlineResponse200299Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200300
 
-`func NewInlineResponse200300(type_ string, title string, ) *InlineResponse200300`
+`func NewInlineResponse200300(items []InlineResponse200300Items, meta InlineResponse200299Meta, ) *InlineResponse200300`
 
 NewInlineResponse200300 instantiates a new InlineResponse200300 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +26,44 @@ NewInlineResponse200300WithDefaults instantiates a new InlineResponse200300 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetItems
 
-`func (o *InlineResponse200300) GetType() string`
+`func (o *InlineResponse200300) GetItems() []InlineResponse200300Items`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetItemsOk
 
-`func (o *InlineResponse200300) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200300) GetItemsOk() (*[]InlineResponse200300Items, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetItems
 
-`func (o *InlineResponse200300) SetType(v string)`
+`func (o *InlineResponse200300) SetItems(v []InlineResponse200300Items)`
 
-SetType sets Type field to given value.
+SetItems sets Items field to given value.
 
 
-### GetTitle
+### GetMeta
 
-`func (o *InlineResponse200300) GetTitle() string`
+`func (o *InlineResponse200300) GetMeta() InlineResponse200299Meta`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetMetaOk
 
-`func (o *InlineResponse200300) GetTitleOk() (*string, bool)`
+`func (o *InlineResponse200300) GetMetaOk() (*InlineResponse200299Meta, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetMeta
 
-`func (o *InlineResponse200300) SetTitle(v string)`
+`func (o *InlineResponse200300) SetMeta(v InlineResponse200299Meta)`
 
-SetTitle sets Title field to given value.
+SetMeta sets Meta field to given value.
 
 
 
