@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
-**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
+**ClaimId** | Pointer to **string** | The secure unique order claim number | [optional] 
+**Resolution** | Pointer to [**InlineResponse200390Resolution**](InlineResponse200390Resolution.md) |  | [optional] 
+**Number** | Pointer to **string** | Order Number | [optional] 
+**Shipping** | Pointer to [**InlineResponse200390Shipping**](InlineResponse200390Shipping.md) |  | [optional] 
+**Subscriptions** | Pointer to [**[]InlineResponse200389Subscriptions**](InlineResponse200389Subscriptions.md) | All subscriptions contained in this order | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200390WithDefaults instantiates a new InlineResponse200390 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetClaimId
 
-`func (o *InlineResponse200390) GetDestOrganizationId() string`
+`func (o *InlineResponse200390) GetClaimId() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetClaimIdOk
 
-`func (o *InlineResponse200390) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200390) GetClaimIdOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetClaimId
 
-`func (o *InlineResponse200390) SetDestOrganizationId(v string)`
+`func (o *InlineResponse200390) SetClaimId(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetClaimId sets ClaimId field to given value.
 
-### HasDestOrganizationId
+### HasClaimId
 
-`func (o *InlineResponse200390) HasDestOrganizationId() bool`
+`func (o *InlineResponse200390) HasClaimId() bool`
 
-HasDestOrganizationId returns a boolean if a field has been set.
+HasClaimId returns a boolean if a field has been set.
 
-### GetLicenseIds
+### GetResolution
 
-`func (o *InlineResponse200390) GetLicenseIds() []string`
+`func (o *InlineResponse200390) GetResolution() InlineResponse200390Resolution`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetResolution returns the Resolution field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetResolutionOk
 
-`func (o *InlineResponse200390) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200390) GetResolutionOk() (*InlineResponse200390Resolution, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetResolution
 
-`func (o *InlineResponse200390) SetLicenseIds(v []string)`
+`func (o *InlineResponse200390) SetResolution(v InlineResponse200390Resolution)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetResolution sets Resolution field to given value.
 
-### HasLicenseIds
+### HasResolution
 
-`func (o *InlineResponse200390) HasLicenseIds() bool`
+`func (o *InlineResponse200390) HasResolution() bool`
 
-HasLicenseIds returns a boolean if a field has been set.
+HasResolution returns a boolean if a field has been set.
+
+### GetNumber
+
+`func (o *InlineResponse200390) GetNumber() string`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse200390) GetNumberOk() (*string, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse200390) SetNumber(v string)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse200390) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
+
+### GetShipping
+
+`func (o *InlineResponse200390) GetShipping() InlineResponse200390Shipping`
+
+GetShipping returns the Shipping field if non-nil, zero value otherwise.
+
+### GetShippingOk
+
+`func (o *InlineResponse200390) GetShippingOk() (*InlineResponse200390Shipping, bool)`
+
+GetShippingOk returns a tuple with the Shipping field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetShipping
+
+`func (o *InlineResponse200390) SetShipping(v InlineResponse200390Shipping)`
+
+SetShipping sets Shipping field to given value.
+
+### HasShipping
+
+`func (o *InlineResponse200390) HasShipping() bool`
+
+HasShipping returns a boolean if a field has been set.
+
+### GetSubscriptions
+
+`func (o *InlineResponse200390) GetSubscriptions() []InlineResponse200389Subscriptions`
+
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+
+### GetSubscriptionsOk
+
+`func (o *InlineResponse200390) GetSubscriptionsOk() (*[]InlineResponse200389Subscriptions, bool)`
+
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubscriptions
+
+`func (o *InlineResponse200390) SetSubscriptions(v []InlineResponse200389Subscriptions)`
+
+SetSubscriptions sets Subscriptions field to given value.
+
+### HasSubscriptions
+
+`func (o *InlineResponse200390) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

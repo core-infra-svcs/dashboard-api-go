@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy**](NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy.md) |  | 
+**Domains** | **[]string** | Domain names to exclude from Umbrella DNS routing (e.g., &#39;example.com&#39;, &#39;corp.example.org&#39;). Standard FQDNs only — wildcards are not supported. Values are lowercased before saving. Each call replaces the full exclusion list. | 
 
 ## Methods
 
 ### NewInlineObject88
 
-`func NewInlineObject88(policy NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy, ) *InlineObject88`
+`func NewInlineObject88(domains []string, ) *InlineObject88`
 
 NewInlineObject88 instantiates a new InlineObject88 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject88WithDefaults instantiates a new InlineObject88 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetDomains
 
-`func (o *InlineObject88) GetPolicy() NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy`
+`func (o *InlineObject88) GetDomains() []string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetDomainsOk
 
-`func (o *InlineObject88) GetPolicyOk() (*NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy, bool)`
+`func (o *InlineObject88) GetDomainsOk() (*[]string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetDomains
 
-`func (o *InlineObject88) SetPolicy(v NetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy)`
+`func (o *InlineObject88) SetDomains(v []string)`
 
-SetPolicy sets Policy field to given value.
+SetDomains sets Domains field to given value.
 
 
 

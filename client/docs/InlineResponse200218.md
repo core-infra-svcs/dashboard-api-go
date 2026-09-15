@@ -4,12 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**Enabled** | Pointer to **bool** | Whether the HTTP server is enabled for webhooks. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the Device | [optional] 
+**Serial** | Pointer to **string** | Serial of the Device | [optional] 
+**Mac** | Pointer to **string** | MAC address of the device | [optional] 
+**ProductType** | Pointer to **string** | The product type | [optional] 
+**ConfigurationSource** | Pointer to **string** | Indicates whether the device configuration is managed by the cloud or the device | [optional] 
+**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile.md) |  | [optional] 
+**Stack** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack**](NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack.md) |  | [optional] 
 
 ## Methods
 
@@ -29,31 +30,6 @@ will change when the set of required properties is changed
 NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineResponse200218) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200218) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200218) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200218) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,105 +56,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetUrl
+### GetSerial
 
-`func (o *InlineResponse200218) GetUrl() string`
+`func (o *InlineResponse200218) GetSerial() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetSerialOk
 
-`func (o *InlineResponse200218) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200218) GetSerialOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSerial
 
-`func (o *InlineResponse200218) SetUrl(v string)`
+`func (o *InlineResponse200218) SetSerial(v string)`
 
-SetUrl sets Url field to given value.
+SetSerial sets Serial field to given value.
 
-### HasUrl
+### HasSerial
 
-`func (o *InlineResponse200218) HasUrl() bool`
+`func (o *InlineResponse200218) HasSerial() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetEnabled
+### GetMac
 
-`func (o *InlineResponse200218) GetEnabled() bool`
+`func (o *InlineResponse200218) GetMac() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetMacOk
 
-`func (o *InlineResponse200218) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200218) GetMacOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMac
 
-`func (o *InlineResponse200218) SetEnabled(v bool)`
+`func (o *InlineResponse200218) SetMac(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetMac sets Mac field to given value.
 
-### HasEnabled
+### HasMac
 
-`func (o *InlineResponse200218) HasEnabled() bool`
+`func (o *InlineResponse200218) HasMac() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetProductType
 
-`func (o *InlineResponse200218) GetNetworkId() string`
+`func (o *InlineResponse200218) GetProductType() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetProductTypeOk
 
-`func (o *InlineResponse200218) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200218) GetProductTypeOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetProductType
 
-`func (o *InlineResponse200218) SetNetworkId(v string)`
+`func (o *InlineResponse200218) SetProductType(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetProductType sets ProductType field to given value.
 
-### HasNetworkId
+### HasProductType
 
-`func (o *InlineResponse200218) HasNetworkId() bool`
+`func (o *InlineResponse200218) HasProductType() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasProductType returns a boolean if a field has been set.
 
-### GetPayloadTemplate
+### GetConfigurationSource
 
-`func (o *InlineResponse200218) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
+`func (o *InlineResponse200218) GetConfigurationSource() string`
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+GetConfigurationSource returns the ConfigurationSource field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateOk
+### GetConfigurationSourceOk
 
-`func (o *InlineResponse200218) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
+`func (o *InlineResponse200218) GetConfigurationSourceOk() (*string, bool)`
 
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetConfigurationSourceOk returns a tuple with the ConfigurationSource field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetConfigurationSource
 
-`func (o *InlineResponse200218) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
+`func (o *InlineResponse200218) SetConfigurationSource(v string)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetConfigurationSource sets ConfigurationSource field to given value.
 
-### HasPayloadTemplate
+### HasConfigurationSource
 
-`func (o *InlineResponse200218) HasPayloadTemplate() bool`
+`func (o *InlineResponse200218) HasConfigurationSource() bool`
 
-HasPayloadTemplate returns a boolean if a field has been set.
+HasConfigurationSource returns a boolean if a field has been set.
+
+### GetVlanProfile
+
+`func (o *InlineResponse200218) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile`
+
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+
+### GetVlanProfileOk
+
+`func (o *InlineResponse200218) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile, bool)`
+
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanProfile
+
+`func (o *InlineResponse200218) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile)`
+
+SetVlanProfile sets VlanProfile field to given value.
+
+### HasVlanProfile
+
+`func (o *InlineResponse200218) HasVlanProfile() bool`
+
+HasVlanProfile returns a boolean if a field has been set.
+
+### GetStack
+
+`func (o *InlineResponse200218) GetStack() NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack`
+
+GetStack returns the Stack field if non-nil, zero value otherwise.
+
+### GetStackOk
+
+`func (o *InlineResponse200218) GetStackOk() (*NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack, bool)`
+
+GetStackOk returns a tuple with the Stack field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStack
+
+`func (o *InlineResponse200218) SetStack(v NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack)`
+
+SetStack sets Stack field to given value.
+
+### HasStack
+
+`func (o *InlineResponse200218) HasStack() bool`
+
+HasStack returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

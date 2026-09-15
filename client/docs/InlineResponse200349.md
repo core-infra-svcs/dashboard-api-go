@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200349Items**](InlineResponse200349Items.md) | Devices with their current cellular data usage information. Maximum 1000 items per page. | [optional] 
-**Meta** | Pointer to [**InlineResponse200343Meta**](InlineResponse200343Meta.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
+**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
+**Description** | Pointer to **string** | The description of the profile that was set when it was created. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200349Rules**](InlineResponse200349Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200349WithDefaults instantiates a new InlineResponse200349 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetProfileId
 
-`func (o *InlineResponse200349) GetItems() []InlineResponse200349Items`
+`func (o *InlineResponse200349) GetProfileId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200349) GetItemsOk() (*[]InlineResponse200349Items, bool)`
+`func (o *InlineResponse200349) GetProfileIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetProfileId
 
-`func (o *InlineResponse200349) SetItems(v []InlineResponse200349Items)`
+`func (o *InlineResponse200349) SetProfileId(v string)`
 
-SetItems sets Items field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasItems
+### HasProfileId
 
-`func (o *InlineResponse200349) HasItems() bool`
+`func (o *InlineResponse200349) HasProfileId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetMeta
+### GetLastUpdatedAt
 
-`func (o *InlineResponse200349) GetMeta() InlineResponse200343Meta`
+`func (o *InlineResponse200349) GetLastUpdatedAt() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetLastUpdatedAtOk
 
-`func (o *InlineResponse200349) GetMetaOk() (*InlineResponse200343Meta, bool)`
+`func (o *InlineResponse200349) GetLastUpdatedAtOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetLastUpdatedAt
 
-`func (o *InlineResponse200349) SetMeta(v InlineResponse200343Meta)`
+`func (o *InlineResponse200349) SetLastUpdatedAt(v string)`
 
-SetMeta sets Meta field to given value.
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
 
-### HasMeta
+### HasLastUpdatedAt
 
-`func (o *InlineResponse200349) HasMeta() bool`
+`func (o *InlineResponse200349) HasLastUpdatedAt() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200349) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200349) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200349) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200349) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200349) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200349) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200349) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200349) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200349) GetRules() []InlineResponse200349Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200349) GetRulesOk() (*[]InlineResponse200349Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200349) SetRules(v []InlineResponse200349Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200349) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

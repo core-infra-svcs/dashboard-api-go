@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Destination** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsDestination**](DevicesSerialLiveToolsRoutingTableLookupsDestination.md) |  | [optional] 
 **NextHop** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsNextHop**](DevicesSerialLiveToolsRoutingTableLookupsNextHop.md) |  | [optional] 
 **Vpn** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsVpn**](DevicesSerialLiveToolsRoutingTableLookupsVpn.md) |  | [optional] 
+**Vrf** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsVrf**](DevicesSerialLiveToolsRoutingTableLookupsVrf.md) |  | [optional] 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
@@ -128,6 +129,31 @@ SetVpn sets Vpn field to given value.
 `func (o *InlineObject29) HasVpn() bool`
 
 HasVpn returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject29) GetVrf() DevicesSerialLiveToolsRoutingTableLookupsVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject29) GetVrfOk() (*DevicesSerialLiveToolsRoutingTableLookupsVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject29) SetVrf(v DevicesSerialLiveToolsRoutingTableLookupsVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject29) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 ### GetCallback
 

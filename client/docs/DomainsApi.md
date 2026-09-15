@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## ExclusionsNetworkApplianceUmbrellaDomains
 
-> InlineResponse200102 ExclusionsNetworkApplianceUmbrellaDomains(ctx, networkId).ExclusionsNetworkApplianceUmbrellaDomains(exclusionsNetworkApplianceUmbrellaDomains).Execute()
+> InlineResponse200103 ExclusionsNetworkApplianceUmbrellaDomains(ctx, networkId).ExclusionsNetworkApplianceUmbrellaDomains(exclusionsNetworkApplianceUmbrellaDomains).Execute()
 
 Specify one or more domain names to be excluded from being routed to Cisco Umbrella.
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    exclusionsNetworkApplianceUmbrellaDomains := *openapiclient.NewInlineObject87([]string{"Domains_example"}) // InlineObject87 | 
+    exclusionsNetworkApplianceUmbrellaDomains := *openapiclient.NewInlineObject88([]string{"Domains_example"}) // InlineObject88 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DomainsApi.ExclusionsNetworkApplianceUmbrellaDomains``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ExclusionsNetworkApplianceUmbrellaDomains`: InlineResponse200102
+    // response from `ExclusionsNetworkApplianceUmbrellaDomains`: InlineResponse200103
     fmt.Fprintf(os.Stdout, "Response from `DomainsApi.ExclusionsNetworkApplianceUmbrellaDomains`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiExclusionsNetworkAppliance
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **exclusionsNetworkApplianceUmbrellaDomains** | [**InlineObject87**](InlineObject87.md) |  | 
+ **exclusionsNetworkApplianceUmbrellaDomains** | [**InlineObject88**](InlineObject88.md) |  | 
 
 ### Return type
 
-[**InlineResponse200102**](InlineResponse200102.md)
+[**InlineResponse200103**](InlineResponse200103.md)
 
 ### Authorization
 

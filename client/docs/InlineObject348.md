@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
+**SiteId** | Pointer to **string** | Site ID of the site to update | [optional] 
+**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject348
 
-`func NewInlineObject348(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject348`
+`func NewInlineObject348() *InlineObject348`
 
 NewInlineObject348 instantiates a new InlineObject348 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject348WithDefaults instantiates a new InlineObject348 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSiteId
 
-`func (o *InlineObject348) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
+`func (o *InlineObject348) GetSiteId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSiteIdOk
 
-`func (o *InlineObject348) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
+`func (o *InlineObject348) GetSiteIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSiteId
 
-`func (o *InlineObject348) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
+`func (o *InlineObject348) SetSiteId(v string)`
 
-SetItems sets Items field to given value.
+SetSiteId sets SiteId field to given value.
 
+### HasSiteId
+
+`func (o *InlineObject348) HasSiteId() bool`
+
+HasSiteId returns a boolean if a field has been set.
+
+### GetRouting
+
+`func (o *InlineObject348) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
+
+GetRouting returns the Routing field if non-nil, zero value otherwise.
+
+### GetRoutingOk
+
+`func (o *InlineObject348) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
+
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRouting
+
+`func (o *InlineObject348) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
+
+SetRouting sets Routing field to given value.
+
+### HasRouting
+
+`func (o *InlineObject348) HasRouting() bool`
+
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

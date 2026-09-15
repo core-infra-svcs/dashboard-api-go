@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
-**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
-**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
-**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200258Rules**](InlineResponse200258Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject229WithDefaults instantiates a new InlineObject229 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject229) GetEnabled() bool`
+`func (o *InlineObject229) GetTrafficShapingEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject229) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject229) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject229) SetEnabled(v bool)`
+`func (o *InlineObject229) SetTrafficShapingEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasEnabled
+### HasTrafficShapingEnabled
 
-`func (o *InlineObject229) HasEnabled() bool`
+`func (o *InlineObject229) HasTrafficShapingEnabled() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetIotController
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject229) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
+`func (o *InlineObject229) GetDefaultRulesEnabled() bool`
 
-GetIotController returns the IotController field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetIotControllerOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject229) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
+`func (o *InlineObject229) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIotController
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject229) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
+`func (o *InlineObject229) SetDefaultRulesEnabled(v bool)`
 
-SetIotController sets IotController field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasIotController
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject229) HasIotController() bool`
+`func (o *InlineObject229) HasDefaultRulesEnabled() bool`
 
-HasIotController returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetLockManagement
+### GetRules
 
-`func (o *InlineObject229) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
+`func (o *InlineObject229) GetRules() []InlineResponse200258Rules`
 
-GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetLockManagementOk
+### GetRulesOk
 
-`func (o *InlineObject229) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
+`func (o *InlineObject229) GetRulesOk() (*[]InlineResponse200258Rules, bool)`
 
-GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLockManagement
+### SetRules
 
-`func (o *InlineObject229) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
+`func (o *InlineObject229) SetRules(v []InlineResponse200258Rules)`
 
-SetLockManagement sets LockManagement field to given value.
+SetRules sets Rules field to given value.
 
-### HasLockManagement
+### HasRules
 
-`func (o *InlineObject229) HasLockManagement() bool`
+`func (o *InlineObject229) HasRules() bool`
 
-HasLockManagement returns a boolean if a field has been set.
-
-### GetDefaults
-
-`func (o *InlineObject229) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
-
-GetDefaults returns the Defaults field if non-nil, zero value otherwise.
-
-### GetDefaultsOk
-
-`func (o *InlineObject229) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
-
-GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaults
-
-`func (o *InlineObject229) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
-
-SetDefaults sets Defaults field to given value.
-
-### HasDefaults
-
-`func (o *InlineObject229) HasDefaults() bool`
-
-HasDefaults returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **Tags** | **[]string** | The list of tags of the switch port. | 
 **Enabled** | **bool** | The status of the switch port. | 
 **PoeEnabled** | **bool** | The PoE status of the switch port. | 
+**PerpetualPoe** | [**DevicesSerialSwitchPortsPerpetualPoe**](DevicesSerialSwitchPortsPerpetualPoe.md) |  | 
+**FastPoe** | [**DevicesSerialSwitchPortsFastPoe**](DevicesSerialSwitchPortsFastPoe.md) |  | 
 **Type** | **string** | The type of the switch port (&#39;access&#39;, &#39;trunk&#39;, &#39;stack&#39;, &#39;routed&#39;, &#39;svl&#39; or &#39;dad&#39;). | 
 **Vlan** | **NullableInt32** | The VLAN of the switch port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | 
 **VoiceVlan** | **NullableInt32** | The voice VLAN of the switch port. Only applicable to access ports. | 
@@ -24,7 +26,7 @@ Name | Type | Description | Notes
 
 ### NewOrganizationsOrganizationIdSwitchPortsBySwitchPorts
 
-`func NewOrganizationsOrganizationIdSwitchPortsBySwitchPorts(portId string, name NullableString, tags []string, enabled bool, poeEnabled bool, type_ string, vlan NullableInt32, voiceVlan NullableInt32, allowedVlans string, rstpEnabled bool, stpGuard string, linkNegotiation string, accessPolicyType string, ) *OrganizationsOrganizationIdSwitchPortsBySwitchPorts`
+`func NewOrganizationsOrganizationIdSwitchPortsBySwitchPorts(portId string, name NullableString, tags []string, enabled bool, poeEnabled bool, perpetualPoe DevicesSerialSwitchPortsPerpetualPoe, fastPoe DevicesSerialSwitchPortsFastPoe, type_ string, vlan NullableInt32, voiceVlan NullableInt32, allowedVlans string, rstpEnabled bool, stpGuard string, linkNegotiation string, accessPolicyType string, ) *OrganizationsOrganizationIdSwitchPortsBySwitchPorts`
 
 NewOrganizationsOrganizationIdSwitchPortsBySwitchPorts instantiates a new OrganizationsOrganizationIdSwitchPortsBySwitchPorts object
 This constructor will assign default values to properties that have it defined,
@@ -147,6 +149,46 @@ and a boolean to check if the value has been set.
 `func (o *OrganizationsOrganizationIdSwitchPortsBySwitchPorts) SetPoeEnabled(v bool)`
 
 SetPoeEnabled sets PoeEnabled field to given value.
+
+
+### GetPerpetualPoe
+
+`func (o *OrganizationsOrganizationIdSwitchPortsBySwitchPorts) GetPerpetualPoe() DevicesSerialSwitchPortsPerpetualPoe`
+
+GetPerpetualPoe returns the PerpetualPoe field if non-nil, zero value otherwise.
+
+### GetPerpetualPoeOk
+
+`func (o *OrganizationsOrganizationIdSwitchPortsBySwitchPorts) GetPerpetualPoeOk() (*DevicesSerialSwitchPortsPerpetualPoe, bool)`
+
+GetPerpetualPoeOk returns a tuple with the PerpetualPoe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPerpetualPoe
+
+`func (o *OrganizationsOrganizationIdSwitchPortsBySwitchPorts) SetPerpetualPoe(v DevicesSerialSwitchPortsPerpetualPoe)`
+
+SetPerpetualPoe sets PerpetualPoe field to given value.
+
+
+### GetFastPoe
+
+`func (o *OrganizationsOrganizationIdSwitchPortsBySwitchPorts) GetFastPoe() DevicesSerialSwitchPortsFastPoe`
+
+GetFastPoe returns the FastPoe field if non-nil, zero value otherwise.
+
+### GetFastPoeOk
+
+`func (o *OrganizationsOrganizationIdSwitchPortsBySwitchPorts) GetFastPoeOk() (*DevicesSerialSwitchPortsFastPoe, bool)`
+
+GetFastPoeOk returns a tuple with the FastPoe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFastPoe
+
+`func (o *OrganizationsOrganizationIdSwitchPortsBySwitchPorts) SetFastPoe(v DevicesSerialSwitchPortsFastPoe)`
+
+SetFastPoe sets FastPoe field to given value.
 
 
 ### GetType

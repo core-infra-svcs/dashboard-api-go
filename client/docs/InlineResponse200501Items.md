@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse200501Interfaces**](InlineResponse200501Interfaces.md) | layer 3 interfaces belongs to the wireless LAN controller | [optional] 
+**Serial** | Pointer to **string** | Access points cloud ID | [optional] 
+**Controller** | Pointer to [**InlineResponse200501Controller**](InlineResponse200501Controller.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200501Network**](InlineResponse200501Network.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetController
 
-`func (o *InlineResponse200501Items) GetInterfaces() []InlineResponse200501Interfaces`
+`func (o *InlineResponse200501Items) GetController() InlineResponse200501Controller`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetController returns the Controller field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetControllerOk
 
-`func (o *InlineResponse200501Items) GetInterfacesOk() (*[]InlineResponse200501Interfaces, bool)`
+`func (o *InlineResponse200501Items) GetControllerOk() (*InlineResponse200501Controller, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetController
 
-`func (o *InlineResponse200501Items) SetInterfaces(v []InlineResponse200501Interfaces)`
+`func (o *InlineResponse200501Items) SetController(v InlineResponse200501Controller)`
 
-SetInterfaces sets Interfaces field to given value.
+SetController sets Controller field to given value.
 
-### HasInterfaces
+### HasController
 
-`func (o *InlineResponse200501Items) HasInterfaces() bool`
+`func (o *InlineResponse200501Items) HasController() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasController returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200501Items) GetNetwork() InlineResponse200501Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200501Items) GetNetworkOk() (*InlineResponse200501Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200501Items) SetNetwork(v InlineResponse200501Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200501Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

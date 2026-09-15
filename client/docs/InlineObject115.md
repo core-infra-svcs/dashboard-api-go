@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | [**[]NetworksNetworkIdDevicesSyslogServersServers**](NetworksNetworkIdDevicesSyslogServersServers.md) | A list of the syslog servers for this network; suggested maximum array size is 10 | 
+**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
 
 ## Methods
 
 ### NewInlineObject115
 
-`func NewInlineObject115(servers []NetworksNetworkIdDevicesSyslogServersServers, ) *InlineObject115`
+`func NewInlineObject115(size string, ) *InlineObject115`
 
 NewInlineObject115 instantiates a new InlineObject115 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject115WithDefaults instantiates a new InlineObject115 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetSize
 
-`func (o *InlineObject115) GetServers() []NetworksNetworkIdDevicesSyslogServersServers`
+`func (o *InlineObject115) GetSize() string`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetSize returns the Size field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetSizeOk
 
-`func (o *InlineObject115) GetServersOk() (*[]NetworksNetworkIdDevicesSyslogServersServers, bool)`
+`func (o *InlineObject115) GetSizeOk() (*string, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetSize
 
-`func (o *InlineObject115) SetServers(v []NetworksNetworkIdDevicesSyslogServersServers)`
+`func (o *InlineObject115) SetSize(v string)`
 
-SetServers sets Servers field to given value.
+SetSize sets Size field to given value.
 
 
 

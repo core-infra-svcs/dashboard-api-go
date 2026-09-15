@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200305Network**](InlineResponse200305Network.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200305Counts**](InlineResponse200305Counts.md) |  | [optional] 
+**Type** | **string** | Category type | 
+**Title** | **string** | Category title | 
 
 ## Methods
 
 ### NewInlineResponse200305
 
-`func NewInlineResponse200305() *InlineResponse200305`
+`func NewInlineResponse200305(type_ string, title string, ) *InlineResponse200305`
 
 NewInlineResponse200305 instantiates a new InlineResponse200305 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineResponse200305WithDefaults instantiates a new InlineResponse200305 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetType
 
-`func (o *InlineResponse200305) GetNetwork() InlineResponse200305Network`
+`func (o *InlineResponse200305) GetType() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetTypeOk
 
-`func (o *InlineResponse200305) GetNetworkOk() (*InlineResponse200305Network, bool)`
+`func (o *InlineResponse200305) GetTypeOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetType
 
-`func (o *InlineResponse200305) SetNetwork(v InlineResponse200305Network)`
+`func (o *InlineResponse200305) SetType(v string)`
 
-SetNetwork sets Network field to given value.
+SetType sets Type field to given value.
 
-### HasNetwork
 
-`func (o *InlineResponse200305) HasNetwork() bool`
+### GetTitle
 
-HasNetwork returns a boolean if a field has been set.
+`func (o *InlineResponse200305) GetTitle() string`
 
-### GetCounts
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200305) GetCounts() InlineResponse200305Counts`
+### GetTitleOk
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+`func (o *InlineResponse200305) GetTitleOk() (*string, bool)`
 
-### GetCountsOk
-
-`func (o *InlineResponse200305) GetCountsOk() (*InlineResponse200305Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetTitle
 
-`func (o *InlineResponse200305) SetCounts(v InlineResponse200305Counts)`
+`func (o *InlineResponse200305) SetTitle(v string)`
 
-SetCounts sets Counts field to given value.
+SetTitle sets Title field to given value.
 
-### HasCounts
-
-`func (o *InlineResponse200305) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

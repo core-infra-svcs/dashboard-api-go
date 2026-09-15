@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
-**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
-**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
-**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
+**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
+**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
+**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
+**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200124WithDefaults instantiates a new InlineResponse200124 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientId
+### GetTs
 
-`func (o *InlineResponse200124) GetClientId() string`
+`func (o *InlineResponse200124) GetTs() time.Time`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetTsOk
 
-`func (o *InlineResponse200124) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200124) GetTsOk() (*time.Time, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetTs
 
-`func (o *InlineResponse200124) SetClientId(v string)`
+`func (o *InlineResponse200124) SetTs(v time.Time)`
 
-SetClientId sets ClientId field to given value.
+SetTs sets Ts field to given value.
 
-### HasClientId
+### HasTs
 
-`func (o *InlineResponse200124) HasClientId() bool`
+`func (o *InlineResponse200124) HasTs() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetClientIp
+### GetTotal
 
-`func (o *InlineResponse200124) GetClientIp() string`
+`func (o *InlineResponse200124) GetTotal() float32`
 
-GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetClientIpOk
+### GetTotalOk
 
-`func (o *InlineResponse200124) GetClientIpOk() (*string, bool)`
+`func (o *InlineResponse200124) GetTotalOk() (*float32, bool)`
 
-GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientIp
+### SetTotal
 
-`func (o *InlineResponse200124) SetClientIp(v string)`
+`func (o *InlineResponse200124) SetTotal(v float32)`
 
-SetClientIp sets ClientIp field to given value.
+SetTotal sets Total field to given value.
 
-### HasClientIp
+### HasTotal
 
-`func (o *InlineResponse200124) HasClientIp() bool`
+`func (o *InlineResponse200124) HasTotal() bool`
 
-HasClientIp returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetClientMac
+### GetUpstream
 
-`func (o *InlineResponse200124) GetClientMac() string`
+`func (o *InlineResponse200124) GetUpstream() float32`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200124) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse200124) GetUpstreamOk() (*float32, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetUpstream
 
-`func (o *InlineResponse200124) SetClientMac(v string)`
+`func (o *InlineResponse200124) SetUpstream(v float32)`
 
-SetClientMac sets ClientMac field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasClientMac
+### HasUpstream
 
-`func (o *InlineResponse200124) HasClientMac() bool`
+`func (o *InlineResponse200124) HasUpstream() bool`
 
-HasClientMac returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetUsageHistory
+### GetDownstream
 
-`func (o *InlineResponse200124) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
+`func (o *InlineResponse200124) GetDownstream() float32`
 
-GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetUsageHistoryOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200124) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
+`func (o *InlineResponse200124) GetDownstreamOk() (*float32, bool)`
 
-GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsageHistory
+### SetDownstream
 
-`func (o *InlineResponse200124) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
+`func (o *InlineResponse200124) SetDownstream(v float32)`
 
-SetUsageHistory sets UsageHistory field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasUsageHistory
+### HasDownstream
 
-`func (o *InlineResponse200124) HasUsageHistory() bool`
+`func (o *InlineResponse200124) HasDownstream() bool`
 
-HasUsageHistory returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

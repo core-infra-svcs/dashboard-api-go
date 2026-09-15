@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**AccountId** | **string** | Service provider account ID | 
+**ApiKey** | **string** | Service provider account API key | 
+**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
+**Title** | **string** | Service provider account name | 
+**Username** | **string** | Service provider account username | 
 
 ## Methods
 
 ### NewInlineObject276
 
-`func NewInlineObject276() *InlineObject276`
+`func NewInlineObject276(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject276`
 
 NewInlineObject276 instantiates a new InlineObject276 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +29,105 @@ NewInlineObject276WithDefaults instantiates a new InlineObject276 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetAccountId
 
-`func (o *InlineObject276) GetOrders() []string`
+`func (o *InlineObject276) GetAccountId() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetAccountId returns the AccountId field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetAccountIdOk
 
-`func (o *InlineObject276) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject276) GetAccountIdOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetAccountId
 
-`func (o *InlineObject276) SetOrders(v []string)`
+`func (o *InlineObject276) SetAccountId(v string)`
 
-SetOrders sets Orders field to given value.
+SetAccountId sets AccountId field to given value.
 
-### HasOrders
 
-`func (o *InlineObject276) HasOrders() bool`
+### GetApiKey
 
-HasOrders returns a boolean if a field has been set.
+`func (o *InlineObject276) GetApiKey() string`
 
-### GetSerials
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-`func (o *InlineObject276) GetSerials() []string`
+### GetApiKeyOk
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+`func (o *InlineObject276) GetApiKeyOk() (*string, bool)`
 
-### GetSerialsOk
-
-`func (o *InlineObject276) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetApiKey
 
-`func (o *InlineObject276) SetSerials(v []string)`
+`func (o *InlineObject276) SetApiKey(v string)`
 
-SetSerials sets Serials field to given value.
+SetApiKey sets ApiKey field to given value.
 
-### HasSerials
 
-`func (o *InlineObject276) HasSerials() bool`
+### GetServiceProvider
 
-HasSerials returns a boolean if a field has been set.
+`func (o *InlineObject276) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
 
-### GetLicenses
+GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
 
-`func (o *InlineObject276) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
+### GetServiceProviderOk
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+`func (o *InlineObject276) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
 
-### GetLicensesOk
-
-`func (o *InlineObject276) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetServiceProvider
 
-`func (o *InlineObject276) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
+`func (o *InlineObject276) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
 
-SetLicenses sets Licenses field to given value.
+SetServiceProvider sets ServiceProvider field to given value.
 
-### HasLicenses
 
-`func (o *InlineObject276) HasLicenses() bool`
+### GetTitle
 
-HasLicenses returns a boolean if a field has been set.
+`func (o *InlineObject276) GetTitle() string`
+
+GetTitle returns the Title field if non-nil, zero value otherwise.
+
+### GetTitleOk
+
+`func (o *InlineObject276) GetTitleOk() (*string, bool)`
+
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTitle
+
+`func (o *InlineObject276) SetTitle(v string)`
+
+SetTitle sets Title field to given value.
+
+
+### GetUsername
+
+`func (o *InlineObject276) GetUsername() string`
+
+GetUsername returns the Username field if non-nil, zero value otherwise.
+
+### GetUsernameOk
+
+`func (o *InlineObject276) GetUsernameOk() (*string, bool)`
+
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsername
+
+`func (o *InlineObject276) SetUsername(v string)`
+
+SetUsername sets Username field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

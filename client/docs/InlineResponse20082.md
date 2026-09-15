@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20082Rules**](InlineResponse20082Rules.md) | An array of port forwarding rules | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20082Rules**](InlineResponse20082Rules.md) | An array of 1:1 nat rules | [optional] 
 
 ## Methods
 

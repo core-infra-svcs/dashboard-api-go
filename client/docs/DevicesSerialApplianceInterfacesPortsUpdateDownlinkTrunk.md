@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NativeVlan** | Pointer to **string** | The Native VLAN for the port. All untagged traffic that comes in on this port will be treated as if it belonged to this VLAN. This can also be set to 0 to drop untagged traffic. | [optional] 
-**AllowedVlans** | Pointer to **[]string** | The VLANs for which this port will accept and pass traffic in &#39;trunk&#39; mode. This must include the Native VLAN if one is set | [optional] 
+**AllowedVlans** | Pointer to **[]string** | The VLANs for which this port will accept and pass traffic in &#39;trunk&#39; mode. This must include the Native VLAN if one is set. For Secure Router Layer 2 trunk ports, [&#39;all&#39;] dynamically allows configured VLANs that are not reserved by Layer 3 VLAN/subinterface ports. | [optional] 
 **Sgt** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdateDownlinkTrunkSgt**](DevicesSerialApplianceInterfacesPortsUpdateDownlinkTrunkSgt.md) |  | [optional] 
 
 ## Methods

@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppIds** | **[]string** | ids of applications to be installed | 
-**Force** | Pointer to **bool** | By default, installation of an app which is believed to already be present on the device will be skipped. If you&#39;d like to force the installation of the app, set this parameter to true. | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be shutdown. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the endpoints to be shutdown. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the endpoints to be shutdown. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be shutdown. | [optional] 
 
 ## Methods
 
 ### NewInlineObject151
 
-`func NewInlineObject151(appIds []string, ) *InlineObject151`
+`func NewInlineObject151() *InlineObject151`
 
 NewInlineObject151 instantiates a new InlineObject151 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +28,105 @@ NewInlineObject151WithDefaults instantiates a new InlineObject151 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAppIds
+### GetWifiMacs
 
-`func (o *InlineObject151) GetAppIds() []string`
+`func (o *InlineObject151) GetWifiMacs() []string`
 
-GetAppIds returns the AppIds field if non-nil, zero value otherwise.
+GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
 
-### GetAppIdsOk
+### GetWifiMacsOk
 
-`func (o *InlineObject151) GetAppIdsOk() (*[]string, bool)`
+`func (o *InlineObject151) GetWifiMacsOk() (*[]string, bool)`
 
-GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
+GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppIds
+### SetWifiMacs
 
-`func (o *InlineObject151) SetAppIds(v []string)`
+`func (o *InlineObject151) SetWifiMacs(v []string)`
 
-SetAppIds sets AppIds field to given value.
+SetWifiMacs sets WifiMacs field to given value.
 
+### HasWifiMacs
 
-### GetForce
+`func (o *InlineObject151) HasWifiMacs() bool`
 
-`func (o *InlineObject151) GetForce() bool`
+HasWifiMacs returns a boolean if a field has been set.
 
-GetForce returns the Force field if non-nil, zero value otherwise.
+### GetIds
 
-### GetForceOk
+`func (o *InlineObject151) GetIds() []string`
 
-`func (o *InlineObject151) GetForceOk() (*bool, bool)`
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-GetForceOk returns a tuple with the Force field if it's non-nil, zero value otherwise
+### GetIdsOk
+
+`func (o *InlineObject151) GetIdsOk() (*[]string, bool)`
+
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetForce
+### SetIds
 
-`func (o *InlineObject151) SetForce(v bool)`
+`func (o *InlineObject151) SetIds(v []string)`
 
-SetForce sets Force field to given value.
+SetIds sets Ids field to given value.
 
-### HasForce
+### HasIds
 
-`func (o *InlineObject151) HasForce() bool`
+`func (o *InlineObject151) HasIds() bool`
 
-HasForce returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineObject151) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject151) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject151) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineObject151) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineObject151) GetScope() []string`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineObject151) GetScopeOk() (*[]string, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineObject151) SetScope(v []string)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineObject151) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

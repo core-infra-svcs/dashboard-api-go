@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems.md) | List of device-to-profile assignments to create. | 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
 
 ## Methods
 
 ### NewInlineObject282
 
-`func NewInlineObject282(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, ) *InlineObject282`
+`func NewInlineObject282() *InlineObject282`
 
 NewInlineObject282 instantiates a new InlineObject282 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject282WithDefaults instantiates a new InlineObject282 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject282) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems`
+`func (o *InlineObject282) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject282) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, bool)`
+`func (o *InlineObject282) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject282) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems)`
+`func (o *InlineObject282) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject282) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetTimeZone
+
+`func (o *InlineObject282) GetTimeZone() string`
+
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+
+### GetTimeZoneOk
+
+`func (o *InlineObject282) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeZone
+
+`func (o *InlineObject282) SetTimeZone(v string)`
+
+SetTimeZone sets TimeZone field to given value.
+
+### HasTimeZone
+
+`func (o *InlineObject282) HasTimeZone() bool`
+
+HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSaseRegions
 
-> InlineResponse200418 GetOrganizationSaseRegions(ctx, organizationId).Execute()
+> InlineResponse200422 GetOrganizationSaseRegions(ctx, organizationId).Execute()
 
 List regions
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RegionsApi.GetOrganizationSaseRegions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseRegions`: InlineResponse200418
+    // response from `GetOrganizationSaseRegions`: InlineResponse200422
     fmt.Fprintf(os.Stdout, "Response from `RegionsApi.GetOrganizationSaseRegions`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200418**](InlineResponse200418.md)
+[**InlineResponse200422**](InlineResponse200422.md)
 
 ### Authorization
 

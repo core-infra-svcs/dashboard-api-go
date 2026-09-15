@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | Pointer to **string** | Site ID | [optional] 
-**Name** | Pointer to **string** | Site name | [optional] 
-**History** | Pointer to [**[]InlineResponse200420History**](InlineResponse200420History.md) | Site level connectivity history | [optional] 
-**Devices** | Pointer to [**InlineResponse200420Devices**](InlineResponse200420Devices.md) |  | [optional] 
+**Id** | Pointer to **string** | Connector ID | [optional] 
+**Name** | Pointer to **string** | Connector name | [optional] 
+**Region** | Pointer to [**InlineResponse200420Region**](InlineResponse200420Region.md) |  | [optional] 
+**State** | Pointer to **string** | Connector state | [optional] 
+**Counts** | Pointer to [**InlineResponse200420Counts**](InlineResponse200420Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -28,30 +29,30 @@ NewInlineResponse200420ItemsWithDefaults instantiates a new InlineResponse200420
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetId
 
-`func (o *InlineResponse200420Items) GetSiteId() string`
+`func (o *InlineResponse200420Items) GetId() string`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetIdOk
 
-`func (o *InlineResponse200420Items) GetSiteIdOk() (*string, bool)`
+`func (o *InlineResponse200420Items) GetIdOk() (*string, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetId
 
-`func (o *InlineResponse200420Items) SetSiteId(v string)`
+`func (o *InlineResponse200420Items) SetId(v string)`
 
-SetSiteId sets SiteId field to given value.
+SetId sets Id field to given value.
 
-### HasSiteId
+### HasId
 
-`func (o *InlineResponse200420Items) HasSiteId() bool`
+`func (o *InlineResponse200420Items) HasId() bool`
 
-HasSiteId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetHistory
+### GetRegion
 
-`func (o *InlineResponse200420Items) GetHistory() []InlineResponse200420History`
+`func (o *InlineResponse200420Items) GetRegion() InlineResponse200420Region`
 
-GetHistory returns the History field if non-nil, zero value otherwise.
+GetRegion returns the Region field if non-nil, zero value otherwise.
 
-### GetHistoryOk
+### GetRegionOk
 
-`func (o *InlineResponse200420Items) GetHistoryOk() (*[]InlineResponse200420History, bool)`
+`func (o *InlineResponse200420Items) GetRegionOk() (*InlineResponse200420Region, bool)`
 
-GetHistoryOk returns a tuple with the History field if it's non-nil, zero value otherwise
+GetRegionOk returns a tuple with the Region field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHistory
+### SetRegion
 
-`func (o *InlineResponse200420Items) SetHistory(v []InlineResponse200420History)`
+`func (o *InlineResponse200420Items) SetRegion(v InlineResponse200420Region)`
 
-SetHistory sets History field to given value.
+SetRegion sets Region field to given value.
 
-### HasHistory
+### HasRegion
 
-`func (o *InlineResponse200420Items) HasHistory() bool`
+`func (o *InlineResponse200420Items) HasRegion() bool`
 
-HasHistory returns a boolean if a field has been set.
+HasRegion returns a boolean if a field has been set.
 
-### GetDevices
+### GetState
 
-`func (o *InlineResponse200420Items) GetDevices() InlineResponse200420Devices`
+`func (o *InlineResponse200420Items) GetState() string`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetState returns the State field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetStateOk
 
-`func (o *InlineResponse200420Items) GetDevicesOk() (*InlineResponse200420Devices, bool)`
+`func (o *InlineResponse200420Items) GetStateOk() (*string, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetStateOk returns a tuple with the State field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetState
 
-`func (o *InlineResponse200420Items) SetDevices(v InlineResponse200420Devices)`
+`func (o *InlineResponse200420Items) SetState(v string)`
 
-SetDevices sets Devices field to given value.
+SetState sets State field to given value.
 
-### HasDevices
+### HasState
 
-`func (o *InlineResponse200420Items) HasDevices() bool`
+`func (o *InlineResponse200420Items) HasState() bool`
 
-HasDevices returns a boolean if a field has been set.
+HasState returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200420Items) GetCounts() InlineResponse200420Counts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200420Items) GetCountsOk() (*InlineResponse200420Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200420Items) SetCounts(v InlineResponse200420Counts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200420Items) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

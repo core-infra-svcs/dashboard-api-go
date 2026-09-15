@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200322Items**](InlineResponse200322Items.md) | List of campus gateway clusters with their associated network information | [optional] 
-**Meta** | Pointer to [**InlineResponse200322Meta**](InlineResponse200322Meta.md) |  | [optional] 
+**Items** | [**[]InlineResponse200322Items**](InlineResponse200322Items.md) | List of networks tunneling through campus gateway clusters | 
+**Meta** | [**InlineResponse200322Meta**](InlineResponse200322Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200322
 
-`func NewInlineResponse200322() *InlineResponse200322`
+`func NewInlineResponse200322(items []InlineResponse200322Items, meta InlineResponse200322Meta, ) *InlineResponse200322`
 
 NewInlineResponse200322 instantiates a new InlineResponse200322 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetItems sets Items field to given value.
 
-### HasItems
-
-`func (o *InlineResponse200322) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetMeta sets Meta field to given value.
 
-### HasMeta
-
-`func (o *InlineResponse200322) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

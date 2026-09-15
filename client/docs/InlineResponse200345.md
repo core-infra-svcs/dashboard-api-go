@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
-**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
-**Description** | Pointer to **string** | The description of the profile that was set when it was created. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200345Rules**](InlineResponse200345Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
+**Mac** | Pointer to **string** | The device MAC address. | [optional] 
+**Name** | Pointer to **string** | The device name. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
+**ProductType** | Pointer to **string** | Device product type. | [optional] 
+**Serial** | Pointer to **string** | The device serial number. | [optional] 
+**Status** | Pointer to **string** | Status of the device. Possible values are: online, alerting, offline, dormant. | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
 
 ## Methods
 
@@ -29,55 +31,30 @@ NewInlineResponse200345WithDefaults instantiates a new InlineResponse200345 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetMac
 
-`func (o *InlineResponse200345) GetProfileId() string`
+`func (o *InlineResponse200345) GetMac() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetMacOk
 
-`func (o *InlineResponse200345) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200345) GetMacOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetMac
 
-`func (o *InlineResponse200345) SetProfileId(v string)`
+`func (o *InlineResponse200345) SetMac(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetMac sets Mac field to given value.
 
-### HasProfileId
+### HasMac
 
-`func (o *InlineResponse200345) HasProfileId() bool`
+`func (o *InlineResponse200345) HasMac() bool`
 
-HasProfileId returns a boolean if a field has been set.
-
-### GetLastUpdatedAt
-
-`func (o *InlineResponse200345) GetLastUpdatedAt() string`
-
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
-
-### GetLastUpdatedAtOk
-
-`func (o *InlineResponse200345) GetLastUpdatedAtOk() (*string, bool)`
-
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastUpdatedAt
-
-`func (o *InlineResponse200345) SetLastUpdatedAt(v string)`
-
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
-
-### HasLastUpdatedAt
-
-`func (o *InlineResponse200345) HasLastUpdatedAt() bool`
-
-HasLastUpdatedAt returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
 ### GetName
 
@@ -104,55 +81,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetNetwork
 
-`func (o *InlineResponse200345) GetDescription() string`
+`func (o *InlineResponse200345) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesNetwork`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetNetworkOk
 
-`func (o *InlineResponse200345) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200345) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesNetwork, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetNetwork
 
-`func (o *InlineResponse200345) SetDescription(v string)`
+`func (o *InlineResponse200345) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesNetwork)`
 
-SetDescription sets Description field to given value.
+SetNetwork sets Network field to given value.
 
-### HasDescription
+### HasNetwork
 
-`func (o *InlineResponse200345) HasDescription() bool`
+`func (o *InlineResponse200345) HasNetwork() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetRules
+### GetProductType
 
-`func (o *InlineResponse200345) GetRules() []InlineResponse200345Rules`
+`func (o *InlineResponse200345) GetProductType() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetProductTypeOk
 
-`func (o *InlineResponse200345) GetRulesOk() (*[]InlineResponse200345Rules, bool)`
+`func (o *InlineResponse200345) GetProductTypeOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetProductType
 
-`func (o *InlineResponse200345) SetRules(v []InlineResponse200345Rules)`
+`func (o *InlineResponse200345) SetProductType(v string)`
 
-SetRules sets Rules field to given value.
+SetProductType sets ProductType field to given value.
 
-### HasRules
+### HasProductType
 
-`func (o *InlineResponse200345) HasRules() bool`
+`func (o *InlineResponse200345) HasProductType() bool`
 
-HasRules returns a boolean if a field has been set.
+HasProductType returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse200345) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse200345) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse200345) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse200345) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse200345) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200345) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200345) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200345) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200345) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200345) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200345) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200345) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

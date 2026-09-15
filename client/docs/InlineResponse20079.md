@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**InlineResponse20079Network**](InlineResponse20079Network.md) |  | 
-**Rules** | [**[]NetworksNetworkIdApplianceFirewallMulticastForwardingRules**](NetworksNetworkIdApplianceFirewallMulticastForwardingRules.md) | Static multicast forwarding rules. | 
+**ApplicationCategories** | Pointer to [**[]InlineResponse20079ApplicationCategories**](InlineResponse20079ApplicationCategories.md) |  The L7 firewall application categories and their associated applications for an MX network | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20079
 
-`func NewInlineResponse20079(network InlineResponse20079Network, rules []NetworksNetworkIdApplianceFirewallMulticastForwardingRules, ) *InlineResponse20079`
+`func NewInlineResponse20079() *InlineResponse20079`
 
 NewInlineResponse20079 instantiates a new InlineResponse20079 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse20079WithDefaults instantiates a new InlineResponse20079 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetApplicationCategories
 
-`func (o *InlineResponse20079) GetNetwork() InlineResponse20079Network`
+`func (o *InlineResponse20079) GetApplicationCategories() []InlineResponse20079ApplicationCategories`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetApplicationCategories returns the ApplicationCategories field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetApplicationCategoriesOk
 
-`func (o *InlineResponse20079) GetNetworkOk() (*InlineResponse20079Network, bool)`
+`func (o *InlineResponse20079) GetApplicationCategoriesOk() (*[]InlineResponse20079ApplicationCategories, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetApplicationCategoriesOk returns a tuple with the ApplicationCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetApplicationCategories
 
-`func (o *InlineResponse20079) SetNetwork(v InlineResponse20079Network)`
+`func (o *InlineResponse20079) SetApplicationCategories(v []InlineResponse20079ApplicationCategories)`
 
-SetNetwork sets Network field to given value.
+SetApplicationCategories sets ApplicationCategories field to given value.
 
+### HasApplicationCategories
 
-### GetRules
+`func (o *InlineResponse20079) HasApplicationCategories() bool`
 
-`func (o *InlineResponse20079) GetRules() []NetworksNetworkIdApplianceFirewallMulticastForwardingRules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineResponse20079) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallMulticastForwardingRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineResponse20079) SetRules(v []NetworksNetworkIdApplianceFirewallMulticastForwardingRules)`
-
-SetRules sets Rules field to given value.
-
+HasApplicationCategories returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]InlineResponse200213CustomPieChartItems**](InlineResponse200213CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**Nodes** | Pointer to [**[]InlineResponse200213Nodes**](InlineResponse200213Nodes.md) | List of nodes in the network topology | [optional] 
+**Links** | Pointer to [**[]InlineResponse200213Links**](InlineResponse200213Links.md) | List of links between nodes | [optional] 
+**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200213WithDefaults instantiates a new InlineResponse200213 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetNodes
 
-`func (o *InlineResponse200213) GetMode() string`
+`func (o *InlineResponse200213) GetNodes() []InlineResponse200213Nodes`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetNodes returns the Nodes field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNodesOk
 
-`func (o *InlineResponse200213) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200213) GetNodesOk() (*[]InlineResponse200213Nodes, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetNodes
 
-`func (o *InlineResponse200213) SetMode(v string)`
+`func (o *InlineResponse200213) SetNodes(v []InlineResponse200213Nodes)`
 
-SetMode sets Mode field to given value.
+SetNodes sets Nodes field to given value.
 
-### HasMode
+### HasNodes
 
-`func (o *InlineResponse200213) HasMode() bool`
+`func (o *InlineResponse200213) HasNodes() bool`
 
-HasMode returns a boolean if a field has been set.
+HasNodes returns a boolean if a field has been set.
 
-### GetCustomPieChartItems
+### GetLinks
 
-`func (o *InlineResponse200213) GetCustomPieChartItems() []InlineResponse200213CustomPieChartItems`
+`func (o *InlineResponse200213) GetLinks() []InlineResponse200213Links`
 
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetCustomPieChartItemsOk
+### GetLinksOk
 
-`func (o *InlineResponse200213) GetCustomPieChartItemsOk() (*[]InlineResponse200213CustomPieChartItems, bool)`
+`func (o *InlineResponse200213) GetLinksOk() (*[]InlineResponse200213Links, bool)`
 
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPieChartItems
+### SetLinks
 
-`func (o *InlineResponse200213) SetCustomPieChartItems(v []InlineResponse200213CustomPieChartItems)`
+`func (o *InlineResponse200213) SetLinks(v []InlineResponse200213Links)`
 
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
+SetLinks sets Links field to given value.
 
-### HasCustomPieChartItems
+### HasLinks
 
-`func (o *InlineResponse200213) HasCustomPieChartItems() bool`
+`func (o *InlineResponse200213) HasLinks() bool`
 
-HasCustomPieChartItems returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
+
+### GetErrors
+
+`func (o *InlineResponse200213) GetErrors() []string`
+
+GetErrors returns the Errors field if non-nil, zero value otherwise.
+
+### GetErrorsOk
+
+`func (o *InlineResponse200213) GetErrorsOk() (*[]string, bool)`
+
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetErrors
+
+`func (o *InlineResponse200213) SetErrors(v []string)`
+
+SetErrors sets Errors field to given value.
+
+### HasErrors
+
+`func (o *InlineResponse200213) HasErrors() bool`
+
+HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

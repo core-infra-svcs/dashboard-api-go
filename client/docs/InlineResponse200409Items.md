@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200409Network**](InlineResponse200409Network.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the VLAN | [optional] 
-**Subnet** | Pointer to **string** | Subnet of the VLAN | [optional] 
-**InterfaceId** | Pointer to **string** | Interface ID assigned to the VLAN | [optional] 
-**VlanId** | Pointer to **string** | VLAN ID | [optional] 
-**Policy** | Pointer to [**InlineResponse200409Policy**](InlineResponse200409Policy.md) |  | [optional] 
+**PolicyId** | Pointer to **string** | ID of the Policy | [optional] 
+**Name** | Pointer to **string** | Name of the Policy | [optional] 
+**Description** | Pointer to **string** | Description of the Policy | [optional] 
+**Group** | Pointer to [**InlineResponse200409Group**](InlineResponse200409Group.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Policy creation time | [optional] 
+**LastUpdatedAt** | Pointer to **time.Time** | Policy last update time | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse200409ItemsWithDefaults instantiates a new InlineResponse200409
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetPolicyId
 
-`func (o *InlineResponse200409Items) GetNetwork() InlineResponse200409Network`
+`func (o *InlineResponse200409Items) GetPolicyId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetPolicyIdOk
 
-`func (o *InlineResponse200409Items) GetNetworkOk() (*InlineResponse200409Network, bool)`
+`func (o *InlineResponse200409Items) GetPolicyIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetPolicyId
 
-`func (o *InlineResponse200409Items) SetNetwork(v InlineResponse200409Network)`
+`func (o *InlineResponse200409Items) SetPolicyId(v string)`
 
-SetNetwork sets Network field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasNetwork
+### HasPolicyId
 
-`func (o *InlineResponse200409Items) HasNetwork() bool`
+`func (o *InlineResponse200409Items) HasPolicyId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasPolicyId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,105 +80,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSubnet
+### GetDescription
 
-`func (o *InlineResponse200409Items) GetSubnet() string`
+`func (o *InlineResponse200409Items) GetDescription() string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200409Items) GetSubnetOk() (*string, bool)`
+`func (o *InlineResponse200409Items) GetDescriptionOk() (*string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetDescription
 
-`func (o *InlineResponse200409Items) SetSubnet(v string)`
+`func (o *InlineResponse200409Items) SetDescription(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetDescription sets Description field to given value.
 
-### HasSubnet
+### HasDescription
 
-`func (o *InlineResponse200409Items) HasSubnet() bool`
+`func (o *InlineResponse200409Items) HasDescription() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetInterfaceId
+### GetGroup
 
-`func (o *InlineResponse200409Items) GetInterfaceId() string`
+`func (o *InlineResponse200409Items) GetGroup() InlineResponse200409Group`
 
-GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetInterfaceIdOk
+### GetGroupOk
 
-`func (o *InlineResponse200409Items) GetInterfaceIdOk() (*string, bool)`
+`func (o *InlineResponse200409Items) GetGroupOk() (*InlineResponse200409Group, bool)`
 
-GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceId
+### SetGroup
 
-`func (o *InlineResponse200409Items) SetInterfaceId(v string)`
+`func (o *InlineResponse200409Items) SetGroup(v InlineResponse200409Group)`
 
-SetInterfaceId sets InterfaceId field to given value.
+SetGroup sets Group field to given value.
 
-### HasInterfaceId
+### HasGroup
 
-`func (o *InlineResponse200409Items) HasInterfaceId() bool`
+`func (o *InlineResponse200409Items) HasGroup() bool`
 
-HasInterfaceId returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
 
-### GetVlanId
+### GetCreatedAt
 
-`func (o *InlineResponse200409Items) GetVlanId() string`
+`func (o *InlineResponse200409Items) GetCreatedAt() time.Time`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200409Items) GetVlanIdOk() (*string, bool)`
+`func (o *InlineResponse200409Items) GetCreatedAtOk() (*time.Time, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetCreatedAt
 
-`func (o *InlineResponse200409Items) SetVlanId(v string)`
+`func (o *InlineResponse200409Items) SetCreatedAt(v time.Time)`
 
-SetVlanId sets VlanId field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasVlanId
+### HasCreatedAt
 
-`func (o *InlineResponse200409Items) HasVlanId() bool`
+`func (o *InlineResponse200409Items) HasCreatedAt() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetPolicy
+### GetLastUpdatedAt
 
-`func (o *InlineResponse200409Items) GetPolicy() InlineResponse200409Policy`
+`func (o *InlineResponse200409Items) GetLastUpdatedAt() time.Time`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetLastUpdatedAtOk
 
-`func (o *InlineResponse200409Items) GetPolicyOk() (*InlineResponse200409Policy, bool)`
+`func (o *InlineResponse200409Items) GetLastUpdatedAtOk() (*time.Time, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetLastUpdatedAt
 
-`func (o *InlineResponse200409Items) SetPolicy(v InlineResponse200409Policy)`
+`func (o *InlineResponse200409Items) SetLastUpdatedAt(v time.Time)`
 
-SetPolicy sets Policy field to given value.
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
 
-### HasPolicy
+### HasLastUpdatedAt
 
-`func (o *InlineResponse200409Items) HasPolicy() bool`
+`func (o *InlineResponse200409Items) HasLastUpdatedAt() bool`
 
-HasPolicy returns a boolean if a field has been set.
+HasLastUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

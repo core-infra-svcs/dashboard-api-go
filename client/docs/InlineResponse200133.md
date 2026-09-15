@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Event category | [optional] 
-**Type** | Pointer to **string** | Event type | [optional] 
-**Description** | Pointer to **string** | Description of the event | [optional] 
+**Network** | [**InlineResponse200133Network**](InlineResponse200133Network.md) |  | 
+**Servers** | [**[]InlineResponse200133Servers**](InlineResponse200133Servers.md) | The list of syslog server configurations that are assigned to this network; suggested maximum array size is 10 | 
 
 ## Methods
 
 ### NewInlineResponse200133
 
-`func NewInlineResponse200133() *InlineResponse200133`
+`func NewInlineResponse200133(network InlineResponse200133Network, servers []InlineResponse200133Servers, ) *InlineResponse200133`
 
 NewInlineResponse200133 instantiates a new InlineResponse200133 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,45 @@ NewInlineResponse200133WithDefaults instantiates a new InlineResponse200133 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetNetwork
 
-`func (o *InlineResponse200133) GetCategory() string`
+`func (o *InlineResponse200133) GetNetwork() InlineResponse200133Network`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetNetworkOk
 
-`func (o *InlineResponse200133) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200133) GetNetworkOk() (*InlineResponse200133Network, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetNetwork
 
-`func (o *InlineResponse200133) SetCategory(v string)`
+`func (o *InlineResponse200133) SetNetwork(v InlineResponse200133Network)`
 
-SetCategory sets Category field to given value.
+SetNetwork sets Network field to given value.
 
-### HasCategory
 
-`func (o *InlineResponse200133) HasCategory() bool`
+### GetServers
 
-HasCategory returns a boolean if a field has been set.
+`func (o *InlineResponse200133) GetServers() []InlineResponse200133Servers`
 
-### GetType
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200133) GetType() string`
+### GetServersOk
 
-GetType returns the Type field if non-nil, zero value otherwise.
+`func (o *InlineResponse200133) GetServersOk() (*[]InlineResponse200133Servers, bool)`
 
-### GetTypeOk
-
-`func (o *InlineResponse200133) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetServers
 
-`func (o *InlineResponse200133) SetType(v string)`
+`func (o *InlineResponse200133) SetServers(v []InlineResponse200133Servers)`
 
-SetType sets Type field to given value.
+SetServers sets Servers field to given value.
 
-### HasType
-
-`func (o *InlineResponse200133) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200133) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200133) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200133) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200133) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

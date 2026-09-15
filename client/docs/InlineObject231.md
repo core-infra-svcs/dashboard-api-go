@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
-**Privacy** | Pointer to **map[string]interface{}** | Privacy-related settings for the organization. | [optional] 
+**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
+**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineObject231WithDefaults instantiates a new InlineObject231 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject231) GetName() string`
+`func (o *InlineObject231) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject231) GetNameOk() (*string, bool)`
+`func (o *InlineObject231) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject231) SetName(v string)`
+`func (o *InlineObject231) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject231) HasName() bool`
+`func (o *InlineObject231) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetManagement
+### GetIotController
 
-`func (o *InlineObject231) GetManagement() OrganizationsManagement1`
+`func (o *InlineObject231) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetIotController returns the IotController field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetIotControllerOk
 
-`func (o *InlineObject231) GetManagementOk() (*OrganizationsManagement1, bool)`
+`func (o *InlineObject231) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetIotController
 
-`func (o *InlineObject231) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject231) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
 
-SetManagement sets Management field to given value.
+SetIotController sets IotController field to given value.
 
-### HasManagement
+### HasIotController
 
-`func (o *InlineObject231) HasManagement() bool`
+`func (o *InlineObject231) HasIotController() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasIotController returns a boolean if a field has been set.
 
-### GetApi
+### GetLockManagement
 
-`func (o *InlineObject231) GetApi() OrganizationsOrganizationIdApi`
+`func (o *InlineObject231) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetLockManagementOk
 
-`func (o *InlineObject231) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+`func (o *InlineObject231) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetLockManagement
 
-`func (o *InlineObject231) SetApi(v OrganizationsOrganizationIdApi)`
+`func (o *InlineObject231) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
 
-SetApi sets Api field to given value.
+SetLockManagement sets LockManagement field to given value.
 
-### HasApi
+### HasLockManagement
 
-`func (o *InlineObject231) HasApi() bool`
+`func (o *InlineObject231) HasLockManagement() bool`
 
-HasApi returns a boolean if a field has been set.
+HasLockManagement returns a boolean if a field has been set.
 
-### GetPrivacy
+### GetDefaults
 
-`func (o *InlineObject231) GetPrivacy() map[string]interface{}`
+`func (o *InlineObject231) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
 
-GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
 
-### GetPrivacyOk
+### GetDefaultsOk
 
-`func (o *InlineObject231) GetPrivacyOk() (*map[string]interface{}, bool)`
+`func (o *InlineObject231) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
 
-GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrivacy
+### SetDefaults
 
-`func (o *InlineObject231) SetPrivacy(v map[string]interface{})`
+`func (o *InlineObject231) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
 
-SetPrivacy sets Privacy field to given value.
+SetDefaults sets Defaults field to given value.
 
-### HasPrivacy
+### HasDefaults
 
-`func (o *InlineObject231) HasPrivacy() bool`
+`func (o *InlineObject231) HasDefaults() bool`
 
-HasPrivacy returns a boolean if a field has been set.
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200482Items**](InlineResponse200482Items.md) | Paginated list of mqtt settings by network ID. | [optional] 
-**Meta** | Pointer to [**InlineResponse200277Meta**](InlineResponse200277Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200482Items**](InlineResponse200482Items.md) | The top-level property containing all cpu load data. | [optional] 
 
 ## Methods
 
@@ -50,31 +49,6 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200482) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200482) GetMeta() InlineResponse200277Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200482) GetMetaOk() (*InlineResponse200277Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200482) SetMeta(v InlineResponse200277Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200482) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

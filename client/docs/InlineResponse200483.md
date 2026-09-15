@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EstimatedCompletedAt** | Pointer to **string** | Estimated time of completion. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200483Items**](InlineResponse200483Items.md) | List of Catalyst access points information | [optional] 
+**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200483WithDefaults instantiates a new InlineResponse200483 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEstimatedCompletedAt
+### GetItems
 
-`func (o *InlineResponse200483) GetEstimatedCompletedAt() string`
+`func (o *InlineResponse200483) GetItems() []InlineResponse200483Items`
 
-GetEstimatedCompletedAt returns the EstimatedCompletedAt field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEstimatedCompletedAtOk
+### GetItemsOk
 
-`func (o *InlineResponse200483) GetEstimatedCompletedAtOk() (*string, bool)`
+`func (o *InlineResponse200483) GetItemsOk() (*[]InlineResponse200483Items, bool)`
 
-GetEstimatedCompletedAtOk returns a tuple with the EstimatedCompletedAt field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEstimatedCompletedAt
+### SetItems
 
-`func (o *InlineResponse200483) SetEstimatedCompletedAt(v string)`
+`func (o *InlineResponse200483) SetItems(v []InlineResponse200483Items)`
 
-SetEstimatedCompletedAt sets EstimatedCompletedAt field to given value.
+SetItems sets Items field to given value.
 
-### HasEstimatedCompletedAt
+### HasItems
 
-`func (o *InlineResponse200483) HasEstimatedCompletedAt() bool`
+`func (o *InlineResponse200483) HasItems() bool`
 
-HasEstimatedCompletedAt returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200483) GetMeta() InlineResponse200279Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200483) GetMetaOk() (*InlineResponse200279Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200483) SetMeta(v InlineResponse200279Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200483) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

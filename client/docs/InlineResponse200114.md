@@ -4,19 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique identifier for the quality retention profile | [optional] 
+**Id** | Pointer to **string** | ID of the client | [optional] 
+**Mac** | Pointer to **string** | MAC address of the client | [optional] 
 **NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Name** | Pointer to **string** | Name of the quality retention profile | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Whether restricted bandwidth mode is enabled | [optional] 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Whether motion-based retention is enabled | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether audio recording is enabled | [optional] 
-**CloudArchiveEnabled** | Pointer to **bool** | Whether cloud archive is enabled | [optional] 
-**MaxRetentionDays** | Pointer to **int32** | Maximum retention days | [optional] 
-**ScheduleId** | Pointer to **NullableString** | Schedule ID | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | Motion detector version | [optional] 
-**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention.md) |  | [optional] 
-**AxisVideoQuality** | Pointer to **string** | Video quality settings applied to all Axis cameras | [optional] 
-**VideoSettings** | Pointer to [**map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) | Video quality and resolution settings for camera models | [optional] 
+**Name** | Pointer to **string** | Name of the client | [optional] 
+**DeviceName** | Pointer to **string** | Bluetooth device name | [optional] 
+**Manufacturer** | Pointer to **string** | Name of the manufacturer | [optional] 
+**LastSeen** | Pointer to **int32** | Epoch timestamp of the device&#39;s last appearance | [optional] 
+**SeenByDeviceMac** | Pointer to **string** | Seen by device MAC | [optional] 
+**InSightAlert** | Pointer to **bool** | Device in sight alert | [optional] 
+**OutOfSightAlert** | Pointer to **bool** | Device out of sight alert | [optional] 
+**Tags** | Pointer to **[]string** | A list of tags applied to the device | [optional] 
 
 ## Methods
 
@@ -61,6 +59,31 @@ SetId sets Id field to given value.
 `func (o *InlineResponse200114) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200114) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200114) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200114) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200114) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
 
 ### GetNetworkId
 
@@ -112,265 +135,180 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetRestrictedBandwidthModeEnabled
+### GetDeviceName
 
-`func (o *InlineResponse200114) GetRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineResponse200114) GetDeviceName() string`
 
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
+GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
 
-### GetRestrictedBandwidthModeEnabledOk
+### GetDeviceNameOk
 
-`func (o *InlineResponse200114) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200114) GetDeviceNameOk() (*string, bool)`
 
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
+GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictedBandwidthModeEnabled
+### SetDeviceName
 
-`func (o *InlineResponse200114) SetRestrictedBandwidthModeEnabled(v bool)`
+`func (o *InlineResponse200114) SetDeviceName(v string)`
 
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
+SetDeviceName sets DeviceName field to given value.
 
-### HasRestrictedBandwidthModeEnabled
+### HasDeviceName
 
-`func (o *InlineResponse200114) HasRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineResponse200114) HasDeviceName() bool`
 
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
+HasDeviceName returns a boolean if a field has been set.
 
-### GetMotionBasedRetentionEnabled
+### GetManufacturer
 
-`func (o *InlineResponse200114) GetMotionBasedRetentionEnabled() bool`
+`func (o *InlineResponse200114) GetManufacturer() string`
 
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
 
-### GetMotionBasedRetentionEnabledOk
+### GetManufacturerOk
 
-`func (o *InlineResponse200114) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200114) GetManufacturerOk() (*string, bool)`
 
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionBasedRetentionEnabled
+### SetManufacturer
 
-`func (o *InlineResponse200114) SetMotionBasedRetentionEnabled(v bool)`
+`func (o *InlineResponse200114) SetManufacturer(v string)`
 
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
+SetManufacturer sets Manufacturer field to given value.
 
-### HasMotionBasedRetentionEnabled
+### HasManufacturer
 
-`func (o *InlineResponse200114) HasMotionBasedRetentionEnabled() bool`
+`func (o *InlineResponse200114) HasManufacturer() bool`
 
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
+HasManufacturer returns a boolean if a field has been set.
 
-### GetAudioRecordingEnabled
+### GetLastSeen
 
-`func (o *InlineResponse200114) GetAudioRecordingEnabled() bool`
+`func (o *InlineResponse200114) GetLastSeen() int32`
 
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
+GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
 
-### GetAudioRecordingEnabledOk
+### GetLastSeenOk
 
-`func (o *InlineResponse200114) GetAudioRecordingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200114) GetLastSeenOk() (*int32, bool)`
 
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
+GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioRecordingEnabled
+### SetLastSeen
 
-`func (o *InlineResponse200114) SetAudioRecordingEnabled(v bool)`
+`func (o *InlineResponse200114) SetLastSeen(v int32)`
 
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
+SetLastSeen sets LastSeen field to given value.
 
-### HasAudioRecordingEnabled
+### HasLastSeen
 
-`func (o *InlineResponse200114) HasAudioRecordingEnabled() bool`
+`func (o *InlineResponse200114) HasLastSeen() bool`
 
-HasAudioRecordingEnabled returns a boolean if a field has been set.
+HasLastSeen returns a boolean if a field has been set.
 
-### GetCloudArchiveEnabled
+### GetSeenByDeviceMac
 
-`func (o *InlineResponse200114) GetCloudArchiveEnabled() bool`
+`func (o *InlineResponse200114) GetSeenByDeviceMac() string`
 
-GetCloudArchiveEnabled returns the CloudArchiveEnabled field if non-nil, zero value otherwise.
+GetSeenByDeviceMac returns the SeenByDeviceMac field if non-nil, zero value otherwise.
 
-### GetCloudArchiveEnabledOk
+### GetSeenByDeviceMacOk
 
-`func (o *InlineResponse200114) GetCloudArchiveEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200114) GetSeenByDeviceMacOk() (*string, bool)`
 
-GetCloudArchiveEnabledOk returns a tuple with the CloudArchiveEnabled field if it's non-nil, zero value otherwise
+GetSeenByDeviceMacOk returns a tuple with the SeenByDeviceMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCloudArchiveEnabled
+### SetSeenByDeviceMac
 
-`func (o *InlineResponse200114) SetCloudArchiveEnabled(v bool)`
+`func (o *InlineResponse200114) SetSeenByDeviceMac(v string)`
 
-SetCloudArchiveEnabled sets CloudArchiveEnabled field to given value.
+SetSeenByDeviceMac sets SeenByDeviceMac field to given value.
 
-### HasCloudArchiveEnabled
+### HasSeenByDeviceMac
 
-`func (o *InlineResponse200114) HasCloudArchiveEnabled() bool`
+`func (o *InlineResponse200114) HasSeenByDeviceMac() bool`
 
-HasCloudArchiveEnabled returns a boolean if a field has been set.
+HasSeenByDeviceMac returns a boolean if a field has been set.
 
-### GetMaxRetentionDays
+### GetInSightAlert
 
-`func (o *InlineResponse200114) GetMaxRetentionDays() int32`
+`func (o *InlineResponse200114) GetInSightAlert() bool`
 
-GetMaxRetentionDays returns the MaxRetentionDays field if non-nil, zero value otherwise.
+GetInSightAlert returns the InSightAlert field if non-nil, zero value otherwise.
 
-### GetMaxRetentionDaysOk
+### GetInSightAlertOk
 
-`func (o *InlineResponse200114) GetMaxRetentionDaysOk() (*int32, bool)`
+`func (o *InlineResponse200114) GetInSightAlertOk() (*bool, bool)`
 
-GetMaxRetentionDaysOk returns a tuple with the MaxRetentionDays field if it's non-nil, zero value otherwise
+GetInSightAlertOk returns a tuple with the InSightAlert field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetentionDays
+### SetInSightAlert
 
-`func (o *InlineResponse200114) SetMaxRetentionDays(v int32)`
+`func (o *InlineResponse200114) SetInSightAlert(v bool)`
 
-SetMaxRetentionDays sets MaxRetentionDays field to given value.
+SetInSightAlert sets InSightAlert field to given value.
 
-### HasMaxRetentionDays
+### HasInSightAlert
 
-`func (o *InlineResponse200114) HasMaxRetentionDays() bool`
+`func (o *InlineResponse200114) HasInSightAlert() bool`
 
-HasMaxRetentionDays returns a boolean if a field has been set.
+HasInSightAlert returns a boolean if a field has been set.
 
-### GetScheduleId
+### GetOutOfSightAlert
 
-`func (o *InlineResponse200114) GetScheduleId() string`
+`func (o *InlineResponse200114) GetOutOfSightAlert() bool`
 
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+GetOutOfSightAlert returns the OutOfSightAlert field if non-nil, zero value otherwise.
 
-### GetScheduleIdOk
+### GetOutOfSightAlertOk
 
-`func (o *InlineResponse200114) GetScheduleIdOk() (*string, bool)`
+`func (o *InlineResponse200114) GetOutOfSightAlertOk() (*bool, bool)`
 
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+GetOutOfSightAlertOk returns a tuple with the OutOfSightAlert field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduleId
+### SetOutOfSightAlert
 
-`func (o *InlineResponse200114) SetScheduleId(v string)`
+`func (o *InlineResponse200114) SetOutOfSightAlert(v bool)`
 
-SetScheduleId sets ScheduleId field to given value.
+SetOutOfSightAlert sets OutOfSightAlert field to given value.
 
-### HasScheduleId
+### HasOutOfSightAlert
 
-`func (o *InlineResponse200114) HasScheduleId() bool`
+`func (o *InlineResponse200114) HasOutOfSightAlert() bool`
 
-HasScheduleId returns a boolean if a field has been set.
+HasOutOfSightAlert returns a boolean if a field has been set.
 
-### SetScheduleIdNil
+### GetTags
 
-`func (o *InlineResponse200114) SetScheduleIdNil(b bool)`
+`func (o *InlineResponse200114) GetTags() []string`
 
- SetScheduleIdNil sets the value for ScheduleId to be an explicit nil
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### UnsetScheduleId
-`func (o *InlineResponse200114) UnsetScheduleId()`
+### GetTagsOk
 
-UnsetScheduleId ensures that no value is present for ScheduleId, not even an explicit nil
-### GetMotionDetectorVersion
+`func (o *InlineResponse200114) GetTagsOk() (*[]string, bool)`
 
-`func (o *InlineResponse200114) GetMotionDetectorVersion() int32`
-
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
-
-### GetMotionDetectorVersionOk
-
-`func (o *InlineResponse200114) GetMotionDetectorVersionOk() (*int32, bool)`
-
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionDetectorVersion
+### SetTags
 
-`func (o *InlineResponse200114) SetMotionDetectorVersion(v int32)`
+`func (o *InlineResponse200114) SetTags(v []string)`
 
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
+SetTags sets Tags field to given value.
 
-### HasMotionDetectorVersion
+### HasTags
 
-`func (o *InlineResponse200114) HasMotionDetectorVersion() bool`
+`func (o *InlineResponse200114) HasTags() bool`
 
-HasMotionDetectorVersion returns a boolean if a field has been set.
-
-### GetSmartRetention
-
-`func (o *InlineResponse200114) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention`
-
-GetSmartRetention returns the SmartRetention field if non-nil, zero value otherwise.
-
-### GetSmartRetentionOk
-
-`func (o *InlineResponse200114) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention, bool)`
-
-GetSmartRetentionOk returns a tuple with the SmartRetention field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmartRetention
-
-`func (o *InlineResponse200114) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention)`
-
-SetSmartRetention sets SmartRetention field to given value.
-
-### HasSmartRetention
-
-`func (o *InlineResponse200114) HasSmartRetention() bool`
-
-HasSmartRetention returns a boolean if a field has been set.
-
-### GetAxisVideoQuality
-
-`func (o *InlineResponse200114) GetAxisVideoQuality() string`
-
-GetAxisVideoQuality returns the AxisVideoQuality field if non-nil, zero value otherwise.
-
-### GetAxisVideoQualityOk
-
-`func (o *InlineResponse200114) GetAxisVideoQualityOk() (*string, bool)`
-
-GetAxisVideoQualityOk returns a tuple with the AxisVideoQuality field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAxisVideoQuality
-
-`func (o *InlineResponse200114) SetAxisVideoQuality(v string)`
-
-SetAxisVideoQuality sets AxisVideoQuality field to given value.
-
-### HasAxisVideoQuality
-
-`func (o *InlineResponse200114) HasAxisVideoQuality() bool`
-
-HasAxisVideoQuality returns a boolean if a field has been set.
-
-### GetVideoSettings
-
-`func (o *InlineResponse200114) GetVideoSettings() map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings`
-
-GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
-
-### GetVideoSettingsOk
-
-`func (o *InlineResponse200114) GetVideoSettingsOk() (*map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings, bool)`
-
-GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVideoSettings
-
-`func (o *InlineResponse200114) SetVideoSettings(v map[string]NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings)`
-
-SetVideoSettings sets VideoSettings field to given value.
-
-### HasVideoSettings
-
-`func (o *InlineResponse200114) HasVideoSettings() bool`
-
-HasVideoSettings returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

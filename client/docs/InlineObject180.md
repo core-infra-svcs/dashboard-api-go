@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of the switch to be removed | 
+**Name** | Pointer to **string** | The name of the switch stack | [optional] 
+**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksSwitchStackIdMembers**](NetworksNetworkIdSwitchStacksSwitchStackIdMembers.md) | The complete list of switches that should be in the stack. Minimum 2 and maximum 8 members. Omitting this field leaves stack membership unchanged. | [optional] 
 
 ## Methods
 
 ### NewInlineObject180
 
-`func NewInlineObject180(serial string, ) *InlineObject180`
+`func NewInlineObject180() *InlineObject180`
 
 NewInlineObject180 instantiates a new InlineObject180 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject180WithDefaults instantiates a new InlineObject180 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetName
 
-`func (o *InlineObject180) GetSerial() string`
+`func (o *InlineObject180) GetName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNameOk
 
-`func (o *InlineObject180) GetSerialOk() (*string, bool)`
+`func (o *InlineObject180) GetNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetName
 
-`func (o *InlineObject180) SetSerial(v string)`
+`func (o *InlineObject180) SetName(v string)`
 
-SetSerial sets Serial field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject180) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetMembers
+
+`func (o *InlineObject180) GetMembers() []NetworksNetworkIdSwitchStacksSwitchStackIdMembers`
+
+GetMembers returns the Members field if non-nil, zero value otherwise.
+
+### GetMembersOk
+
+`func (o *InlineObject180) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksSwitchStackIdMembers, bool)`
+
+GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMembers
+
+`func (o *InlineObject180) SetMembers(v []NetworksNetworkIdSwitchStacksSwitchStackIdMembers)`
+
+SetMembers sets Members field to given value.
+
+### HasMembers
+
+`func (o *InlineObject180) HasMembers() bool`
+
+HasMembers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | **string** | Switch serial number | 
 **AlternateManagementIp** | **string** | Switch alternative management IP. To remove a prior IP setting, provide an empty string | 
-**SubnetMask** | Pointer to **string** | Switch subnet mask must be in IP format. Only and must be specified for Polaris switches | [optional] 
-**Gateway** | Pointer to **string** | Switch gateway must be in IP format. Only and must be specified for Polaris switches | [optional] 
+**SubnetMask** | Pointer to **string** | Switch subnet mask in IP format. Required for some switch models when configuring a static alternate management IP | [optional] 
+**Gateway** | Pointer to **string** | Switch gateway in IP format. Required for some switch models when configuring a static alternate management IP | [optional] 
 
 ## Methods
 

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse20097Rules**](InlineResponse20097Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
+**MaxLatency** | Pointer to **NullableInt32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **NullableInt32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **NullableInt32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
@@ -26,56 +28,136 @@ NewInlineObject82WithDefaults instantiates a new InlineObject82 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultRulesEnabled
+### GetName
 
-`func (o *InlineObject82) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject82) GetName() string`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetNameOk
 
-`func (o *InlineObject82) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject82) GetNameOk() (*string, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetName
 
-`func (o *InlineObject82) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject82) SetName(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultRulesEnabled
+### HasName
 
-`func (o *InlineObject82) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject82) HasName() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetMaxLatency
 
-`func (o *InlineObject82) GetRules() []InlineResponse20097Rules`
+`func (o *InlineObject82) GetMaxLatency() int32`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetMaxLatencyOk
 
-`func (o *InlineObject82) GetRulesOk() (*[]InlineResponse20097Rules, bool)`
+`func (o *InlineObject82) GetMaxLatencyOk() (*int32, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetMaxLatency
 
-`func (o *InlineObject82) SetRules(v []InlineResponse20097Rules)`
+`func (o *InlineObject82) SetMaxLatency(v int32)`
 
-SetRules sets Rules field to given value.
+SetMaxLatency sets MaxLatency field to given value.
 
-### HasRules
+### HasMaxLatency
 
-`func (o *InlineObject82) HasRules() bool`
+`func (o *InlineObject82) HasMaxLatency() bool`
 
-HasRules returns a boolean if a field has been set.
+HasMaxLatency returns a boolean if a field has been set.
 
+### SetMaxLatencyNil
+
+`func (o *InlineObject82) SetMaxLatencyNil(b bool)`
+
+ SetMaxLatencyNil sets the value for MaxLatency to be an explicit nil
+
+### UnsetMaxLatency
+`func (o *InlineObject82) UnsetMaxLatency()`
+
+UnsetMaxLatency ensures that no value is present for MaxLatency, not even an explicit nil
+### GetMaxJitter
+
+`func (o *InlineObject82) GetMaxJitter() int32`
+
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+
+### GetMaxJitterOk
+
+`func (o *InlineObject82) GetMaxJitterOk() (*int32, bool)`
+
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxJitter
+
+`func (o *InlineObject82) SetMaxJitter(v int32)`
+
+SetMaxJitter sets MaxJitter field to given value.
+
+### HasMaxJitter
+
+`func (o *InlineObject82) HasMaxJitter() bool`
+
+HasMaxJitter returns a boolean if a field has been set.
+
+### SetMaxJitterNil
+
+`func (o *InlineObject82) SetMaxJitterNil(b bool)`
+
+ SetMaxJitterNil sets the value for MaxJitter to be an explicit nil
+
+### UnsetMaxJitter
+`func (o *InlineObject82) UnsetMaxJitter()`
+
+UnsetMaxJitter ensures that no value is present for MaxJitter, not even an explicit nil
+### GetMaxLossPercentage
+
+`func (o *InlineObject82) GetMaxLossPercentage() int32`
+
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+
+### GetMaxLossPercentageOk
+
+`func (o *InlineObject82) GetMaxLossPercentageOk() (*int32, bool)`
+
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLossPercentage
+
+`func (o *InlineObject82) SetMaxLossPercentage(v int32)`
+
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
+
+### HasMaxLossPercentage
+
+`func (o *InlineObject82) HasMaxLossPercentage() bool`
+
+HasMaxLossPercentage returns a boolean if a field has been set.
+
+### SetMaxLossPercentageNil
+
+`func (o *InlineObject82) SetMaxLossPercentageNil(b bool)`
+
+ SetMaxLossPercentageNil sets the value for MaxLossPercentage to be an explicit nil
+
+### UnsetMaxLossPercentage
+`func (o *InlineObject82) UnsetMaxLossPercentage()`
+
+UnsetMaxLossPercentage ensures that no value is present for MaxLossPercentage, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

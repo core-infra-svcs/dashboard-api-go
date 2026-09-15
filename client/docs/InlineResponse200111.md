@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Is the warm spare enabled | [optional] 
-**PrimarySerial** | Pointer to **string** | Serial number of the primary appliance | [optional] 
-**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
-**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
-**Wan1** | Pointer to [**InlineResponse200111Wan1**](InlineResponse200111Wan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse200111Wan2**](InlineResponse200111Wan2.md) |  | [optional] 
+**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
+**Hubs** | Pointer to [**[]InlineResponse200111Hubs**](InlineResponse200111Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse200111Subnets**](InlineResponse200111Subnets.md) | The list of subnets and their VPN presence. | [optional] 
+**Sgt** | Pointer to [**InlineResponse200111Sgt**](InlineResponse200111Sgt.md) |  | [optional] 
+**Subnet** | Pointer to [**InlineResponse200111Subnet**](InlineResponse200111Subnet.md) |  | [optional] 
+**HostTranslations** | Pointer to [**[]InlineResponse200111HostTranslations**](InlineResponse200111HostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
 
 ## Methods
 
@@ -30,155 +30,155 @@ NewInlineResponse200111WithDefaults instantiates a new InlineResponse200111 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetMode
 
-`func (o *InlineResponse200111) GetEnabled() bool`
+`func (o *InlineResponse200111) GetMode() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetModeOk
 
-`func (o *InlineResponse200111) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200111) GetModeOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMode
 
-`func (o *InlineResponse200111) SetEnabled(v bool)`
+`func (o *InlineResponse200111) SetMode(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetMode sets Mode field to given value.
 
-### HasEnabled
+### HasMode
 
-`func (o *InlineResponse200111) HasEnabled() bool`
+`func (o *InlineResponse200111) HasMode() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetPrimarySerial
+### GetHubs
 
-`func (o *InlineResponse200111) GetPrimarySerial() string`
+`func (o *InlineResponse200111) GetHubs() []InlineResponse200111Hubs`
 
-GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetPrimarySerialOk
+### GetHubsOk
 
-`func (o *InlineResponse200111) GetPrimarySerialOk() (*string, bool)`
+`func (o *InlineResponse200111) GetHubsOk() (*[]InlineResponse200111Hubs, bool)`
 
-GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrimarySerial
+### SetHubs
 
-`func (o *InlineResponse200111) SetPrimarySerial(v string)`
+`func (o *InlineResponse200111) SetHubs(v []InlineResponse200111Hubs)`
 
-SetPrimarySerial sets PrimarySerial field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasPrimarySerial
+### HasHubs
 
-`func (o *InlineResponse200111) HasPrimarySerial() bool`
+`func (o *InlineResponse200111) HasHubs() bool`
 
-HasPrimarySerial returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetSpareSerial
+### GetSubnets
 
-`func (o *InlineResponse200111) GetSpareSerial() string`
+`func (o *InlineResponse200111) GetSubnets() []InlineResponse200111Subnets`
 
-GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetSpareSerialOk
+### GetSubnetsOk
 
-`func (o *InlineResponse200111) GetSpareSerialOk() (*string, bool)`
+`func (o *InlineResponse200111) GetSubnetsOk() (*[]InlineResponse200111Subnets, bool)`
 
-GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpareSerial
+### SetSubnets
 
-`func (o *InlineResponse200111) SetSpareSerial(v string)`
+`func (o *InlineResponse200111) SetSubnets(v []InlineResponse200111Subnets)`
 
-SetSpareSerial sets SpareSerial field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasSpareSerial
+### HasSubnets
 
-`func (o *InlineResponse200111) HasSpareSerial() bool`
+`func (o *InlineResponse200111) HasSubnets() bool`
 
-HasSpareSerial returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
-### GetUplinkMode
+### GetSgt
 
-`func (o *InlineResponse200111) GetUplinkMode() string`
+`func (o *InlineResponse200111) GetSgt() InlineResponse200111Sgt`
 
-GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-### GetUplinkModeOk
+### GetSgtOk
 
-`func (o *InlineResponse200111) GetUplinkModeOk() (*string, bool)`
+`func (o *InlineResponse200111) GetSgtOk() (*InlineResponse200111Sgt, bool)`
 
-GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkMode
+### SetSgt
 
-`func (o *InlineResponse200111) SetUplinkMode(v string)`
+`func (o *InlineResponse200111) SetSgt(v InlineResponse200111Sgt)`
 
-SetUplinkMode sets UplinkMode field to given value.
+SetSgt sets Sgt field to given value.
 
-### HasUplinkMode
+### HasSgt
 
-`func (o *InlineResponse200111) HasUplinkMode() bool`
+`func (o *InlineResponse200111) HasSgt() bool`
 
-HasUplinkMode returns a boolean if a field has been set.
+HasSgt returns a boolean if a field has been set.
 
-### GetWan1
+### GetSubnet
 
-`func (o *InlineResponse200111) GetWan1() InlineResponse200111Wan1`
+`func (o *InlineResponse200111) GetSubnet() InlineResponse200111Subnet`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetSubnetOk
 
-`func (o *InlineResponse200111) GetWan1Ok() (*InlineResponse200111Wan1, bool)`
+`func (o *InlineResponse200111) GetSubnetOk() (*InlineResponse200111Subnet, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetSubnet
 
-`func (o *InlineResponse200111) SetWan1(v InlineResponse200111Wan1)`
+`func (o *InlineResponse200111) SetSubnet(v InlineResponse200111Subnet)`
 
-SetWan1 sets Wan1 field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasWan1
+### HasSubnet
 
-`func (o *InlineResponse200111) HasWan1() bool`
+`func (o *InlineResponse200111) HasSubnet() bool`
 
-HasWan1 returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetWan2
+### GetHostTranslations
 
-`func (o *InlineResponse200111) GetWan2() InlineResponse200111Wan2`
+`func (o *InlineResponse200111) GetHostTranslations() []InlineResponse200111HostTranslations`
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
 
-### GetWan2Ok
+### GetHostTranslationsOk
 
-`func (o *InlineResponse200111) GetWan2Ok() (*InlineResponse200111Wan2, bool)`
+`func (o *InlineResponse200111) GetHostTranslationsOk() (*[]InlineResponse200111HostTranslations, bool)`
 
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetHostTranslations
 
-`func (o *InlineResponse200111) SetWan2(v InlineResponse200111Wan2)`
+`func (o *InlineResponse200111) SetHostTranslations(v []InlineResponse200111HostTranslations)`
 
-SetWan2 sets Wan2 field to given value.
+SetHostTranslations sets HostTranslations field to given value.
 
-### HasWan2
+### HasHostTranslations
 
-`func (o *InlineResponse200111) HasWan2() bool`
+`func (o *InlineResponse200111) HasHostTranslations() bool`
 
-HasWan2 returns a boolean if a field has been set.
+HasHostTranslations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

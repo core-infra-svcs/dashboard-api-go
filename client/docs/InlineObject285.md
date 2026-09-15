@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of Meraki Serials to migrate | 
-**Target** | **string** | The controller or management mode to which the devices will be migrated | 
+**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems.md) | List of device-to-profile assignments to create. | 
 
 ## Methods
 
 ### NewInlineObject285
 
-`func NewInlineObject285(serials []string, target string, ) *InlineObject285`
+`func NewInlineObject285(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, ) *InlineObject285`
 
 NewInlineObject285 instantiates a new InlineObject285 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject285WithDefaults instantiates a new InlineObject285 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetItems
 
-`func (o *InlineObject285) GetSerials() []string`
+`func (o *InlineObject285) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetItemsOk
 
-`func (o *InlineObject285) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject285) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetItems
 
-`func (o *InlineObject285) SetSerials(v []string)`
+`func (o *InlineObject285) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems)`
 
-SetSerials sets Serials field to given value.
-
-
-### GetTarget
-
-`func (o *InlineObject285) GetTarget() string`
-
-GetTarget returns the Target field if non-nil, zero value otherwise.
-
-### GetTargetOk
-
-`func (o *InlineObject285) GetTargetOk() (*string, bool)`
-
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTarget
-
-`func (o *InlineObject285) SetTarget(v string)`
-
-SetTarget sets Target field to given value.
+SetItems sets Items field to given value.
 
 
 

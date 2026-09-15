@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
-**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
-**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
-**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200215CustomPieChartItems**](InlineResponse200215CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200215WithDefaults instantiates a new InlineResponse200215 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIname
+### GetMode
 
-`func (o *InlineResponse200215) GetIname() string`
+`func (o *InlineResponse200215) GetMode() string`
 
-GetIname returns the Iname field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetInameOk
+### GetModeOk
 
-`func (o *InlineResponse200215) GetInameOk() (*string, bool)`
+`func (o *InlineResponse200215) GetModeOk() (*string, bool)`
 
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIname
+### SetMode
 
-`func (o *InlineResponse200215) SetIname(v string)`
+`func (o *InlineResponse200215) SetMode(v string)`
 
-SetIname sets Iname field to given value.
+SetMode sets Mode field to given value.
 
-### HasIname
+### HasMode
 
-`func (o *InlineResponse200215) HasIname() bool`
+`func (o *InlineResponse200215) HasMode() bool`
 
-HasIname returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetName
+### GetCustomPieChartItems
 
-`func (o *InlineResponse200215) GetName() string`
+`func (o *InlineResponse200215) GetCustomPieChartItems() []InlineResponse200215CustomPieChartItems`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineResponse200215) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200215) GetCustomPieChartItemsOk() (*[]InlineResponse200215CustomPieChartItems, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCustomPieChartItems
 
-`func (o *InlineResponse200215) SetName(v string)`
+`func (o *InlineResponse200215) SetCustomPieChartItems(v []InlineResponse200215CustomPieChartItems)`
 
-SetName sets Name field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
-### HasName
+### HasCustomPieChartItems
 
-`func (o *InlineResponse200215) HasName() bool`
+`func (o *InlineResponse200215) HasCustomPieChartItems() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetIsDefault
-
-`func (o *InlineResponse200215) GetIsDefault() bool`
-
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
-
-### GetIsDefaultOk
-
-`func (o *InlineResponse200215) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefault
-
-`func (o *InlineResponse200215) SetIsDefault(v bool)`
-
-SetIsDefault sets IsDefault field to given value.
-
-### HasIsDefault
-
-`func (o *InlineResponse200215) HasIsDefault() bool`
-
-HasIsDefault returns a boolean if a field has been set.
-
-### GetVlanNames
-
-`func (o *InlineResponse200215) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
-
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
-
-### GetVlanNamesOk
-
-`func (o *InlineResponse200215) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
-
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanNames
-
-`func (o *InlineResponse200215) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
-
-SetVlanNames sets VlanNames field to given value.
-
-### HasVlanNames
-
-`func (o *InlineResponse200215) HasVlanNames() bool`
-
-HasVlanNames returns a boolean if a field has been set.
-
-### GetVlanGroups
-
-`func (o *InlineResponse200215) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineResponse200215) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineResponse200215) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-### HasVlanGroups
-
-`func (o *InlineResponse200215) HasVlanGroups() bool`
-
-HasVlanGroups returns a boolean if a field has been set.
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

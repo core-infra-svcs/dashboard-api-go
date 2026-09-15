@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**ClaimId** | **string** | The unique order claim id | 
 
 ## Methods
 
 ### NewInlineObject307
 
-`func NewInlineObject307(destOrganizationId string, licenseIds []string, ) *InlineObject307`
+`func NewInlineObject307(claimId string, ) *InlineObject307`
 
 NewInlineObject307 instantiates a new InlineObject307 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject307WithDefaults instantiates a new InlineObject307 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetClaimId
 
-`func (o *InlineObject307) GetDestOrganizationId() string`
+`func (o *InlineObject307) GetClaimId() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetClaimIdOk
 
-`func (o *InlineObject307) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject307) GetClaimIdOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetClaimId
 
-`func (o *InlineObject307) SetDestOrganizationId(v string)`
+`func (o *InlineObject307) SetClaimId(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
-
-
-### GetLicenseIds
-
-`func (o *InlineObject307) GetLicenseIds() []string`
-
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
-
-### GetLicenseIdsOk
-
-`func (o *InlineObject307) GetLicenseIdsOk() (*[]string, bool)`
-
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseIds
-
-`func (o *InlineObject307) SetLicenseIds(v []string)`
-
-SetLicenseIds sets LicenseIds field to given value.
+SetClaimId sets ClaimId field to given value.
 
 
 

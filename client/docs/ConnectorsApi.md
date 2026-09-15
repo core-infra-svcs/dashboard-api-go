@@ -31,7 +31,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    batchOrganizationSaseConnectorsDelete := *openapiclient.NewInlineObject341() // InlineObject341 |  (optional)
+    batchOrganizationSaseConnectorsDelete := *openapiclient.NewInlineObject344() // InlineObject344 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiBatchOrganizationSaseConne
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchOrganizationSaseConnectorsDelete** | [**InlineObject341**](InlineObject341.md) |  | 
+ **batchOrganizationSaseConnectorsDelete** | [**InlineObject344**](InlineObject344.md) |  | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseConnectors
 
-> InlineResponse200416 GetOrganizationSaseConnectors(ctx, organizationId).Execute()
+> InlineResponse200420 GetOrganizationSaseConnectors(ctx, organizationId).Execute()
 
 List SSE Connectors for an organization
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectorsApi.GetOrganizationSaseConnectors``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseConnectors`: InlineResponse200416
+    // response from `GetOrganizationSaseConnectors`: InlineResponse200420
     fmt.Fprintf(os.Stdout, "Response from `ConnectorsApi.GetOrganizationSaseConnectors`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200416**](InlineResponse200416.md)
+[**InlineResponse200420**](InlineResponse200420.md)
 
 ### Authorization
 

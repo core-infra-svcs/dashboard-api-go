@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Overall** | Pointer to **string** | Overall status of network | [optional] 
-**ByProductType** | Pointer to [**[]InlineResponse200398StatusesByProductType**](InlineResponse200398StatusesByProductType.md) | List of status counts by product type | [optional] 
+**ByProductType** | Pointer to [**[]InlineResponse200402StatusesByProductType**](InlineResponse200402StatusesByProductType.md) | List of status counts by product type | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasOverall returns a boolean if a field has been set.
 
 ### GetByProductType
 
-`func (o *OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses) GetByProductType() []InlineResponse200398StatusesByProductType`
+`func (o *OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses) GetByProductType() []InlineResponse200402StatusesByProductType`
 
 GetByProductType returns the ByProductType field if non-nil, zero value otherwise.
 
 ### GetByProductTypeOk
 
-`func (o *OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses) GetByProductTypeOk() (*[]InlineResponse200398StatusesByProductType, bool)`
+`func (o *OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses) GetByProductTypeOk() (*[]InlineResponse200402StatusesByProductType, bool)`
 
 GetByProductTypeOk returns a tuple with the ByProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetByProductType
 
-`func (o *OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses) SetByProductType(v []InlineResponse200398StatusesByProductType)`
+`func (o *OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses) SetByProductType(v []InlineResponse200402StatusesByProductType)`
 
 SetByProductType sets ByProductType field to given value.
 

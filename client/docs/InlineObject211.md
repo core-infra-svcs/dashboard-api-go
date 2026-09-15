@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BusyHour** | Pointer to [**NetworksNetworkIdWirelessRadioRrmBusyHour**](NetworksNetworkIdWirelessRadioRrmBusyHour.md) |  | [optional] 
-**Channel** | Pointer to [**NetworksNetworkIdWirelessRadioRrmChannel**](NetworksNetworkIdWirelessRadioRrmChannel.md) |  | [optional] 
-**Fra** | Pointer to [**NetworksNetworkIdWirelessRadioRrmFra**](NetworksNetworkIdWirelessRadioRrmFra.md) |  | [optional] 
-**Ai** | Pointer to [**NetworksNetworkIdWirelessRadioRrmAi**](NetworksNetworkIdWirelessRadioRrmAi.md) |  | [optional] 
+**Name** | Pointer to **string** | AP port profile name | [optional] 
+**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts.md) | AP ports configuration | [optional] 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject211WithDefaults instantiates a new InlineObject211 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBusyHour
+### GetName
 
-`func (o *InlineObject211) GetBusyHour() NetworksNetworkIdWirelessRadioRrmBusyHour`
+`func (o *InlineObject211) GetName() string`
 
-GetBusyHour returns the BusyHour field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBusyHourOk
+### GetNameOk
 
-`func (o *InlineObject211) GetBusyHourOk() (*NetworksNetworkIdWirelessRadioRrmBusyHour, bool)`
+`func (o *InlineObject211) GetNameOk() (*string, bool)`
 
-GetBusyHourOk returns a tuple with the BusyHour field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBusyHour
+### SetName
 
-`func (o *InlineObject211) SetBusyHour(v NetworksNetworkIdWirelessRadioRrmBusyHour)`
+`func (o *InlineObject211) SetName(v string)`
 
-SetBusyHour sets BusyHour field to given value.
+SetName sets Name field to given value.
 
-### HasBusyHour
+### HasName
 
-`func (o *InlineObject211) HasBusyHour() bool`
+`func (o *InlineObject211) HasName() bool`
 
-HasBusyHour returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetChannel
+### GetPorts
 
-`func (o *InlineObject211) GetChannel() NetworksNetworkIdWirelessRadioRrmChannel`
+`func (o *InlineObject211) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetPortsOk
 
-`func (o *InlineObject211) GetChannelOk() (*NetworksNetworkIdWirelessRadioRrmChannel, bool)`
+`func (o *InlineObject211) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetPorts
 
-`func (o *InlineObject211) SetChannel(v NetworksNetworkIdWirelessRadioRrmChannel)`
+`func (o *InlineObject211) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts)`
 
-SetChannel sets Channel field to given value.
+SetPorts sets Ports field to given value.
 
-### HasChannel
+### HasPorts
 
-`func (o *InlineObject211) HasChannel() bool`
+`func (o *InlineObject211) HasPorts() bool`
 
-HasChannel returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
-### GetFra
+### GetUsbPorts
 
-`func (o *InlineObject211) GetFra() NetworksNetworkIdWirelessRadioRrmFra`
+`func (o *InlineObject211) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
 
-GetFra returns the Fra field if non-nil, zero value otherwise.
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
 
-### GetFraOk
+### GetUsbPortsOk
 
-`func (o *InlineObject211) GetFraOk() (*NetworksNetworkIdWirelessRadioRrmFra, bool)`
+`func (o *InlineObject211) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
 
-GetFraOk returns a tuple with the Fra field if it's non-nil, zero value otherwise
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFra
+### SetUsbPorts
 
-`func (o *InlineObject211) SetFra(v NetworksNetworkIdWirelessRadioRrmFra)`
+`func (o *InlineObject211) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
 
-SetFra sets Fra field to given value.
+SetUsbPorts sets UsbPorts field to given value.
 
-### HasFra
+### HasUsbPorts
 
-`func (o *InlineObject211) HasFra() bool`
+`func (o *InlineObject211) HasUsbPorts() bool`
 
-HasFra returns a boolean if a field has been set.
-
-### GetAi
-
-`func (o *InlineObject211) GetAi() NetworksNetworkIdWirelessRadioRrmAi`
-
-GetAi returns the Ai field if non-nil, zero value otherwise.
-
-### GetAiOk
-
-`func (o *InlineObject211) GetAiOk() (*NetworksNetworkIdWirelessRadioRrmAi, bool)`
-
-GetAiOk returns a tuple with the Ai field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAi
-
-`func (o *InlineObject211) SetAi(v NetworksNetworkIdWirelessRadioRrmAi)`
-
-SetAi sets Ai field to given value.
-
-### HasAi
-
-`func (o *InlineObject211) HasAi() bool`
-
-HasAi returns a boolean if a field has been set.
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

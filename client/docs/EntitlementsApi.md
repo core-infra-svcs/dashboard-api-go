@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetAdministeredLicensingSubscriptionEntitlements
 
-> InlineResponse2002 GetAdministeredLicensingSubscriptionEntitlements(ctx).Skus(skus).Execute()
+> InlineResponse2002 GetAdministeredLicensingSubscriptionEntitlements(ctx).Skus(skus).SubscriptionType(subscriptionType).Execute()
 
 Retrieve the list of purchasable entitlements
 
@@ -30,10 +30,11 @@ import (
 
 func main() {
     skus := []string{"Inner_example"} // []string | Filter to entitlements with the specified SKUs (optional)
+    subscriptionType := "subscriptionType_example" // string | Filter entitlements by subscription type (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.EntitlementsApi.GetAdministeredLicensingSubscriptionEntitlements(context.Background()).Skus(skus).Execute()
+    resp, r, err := apiClient.EntitlementsApi.GetAdministeredLicensingSubscriptionEntitlements(context.Background()).Skus(skus).SubscriptionType(subscriptionType).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.GetAdministeredLicensingSubscriptionEntitlements``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -55,6 +56,7 @@ Other parameters are passed through a pointer to a apiGetAdministeredLicensingSu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **skus** | **[]string** | Filter to entitlements with the specified SKUs | 
+ **subscriptionType** | **string** | Filter entitlements by subscription type | 
 
 ### Return type
 

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200346Items**](InlineResponse200346Items.md) | List of Cellular Data Management Profile device assignments. Maximum 1000 assignments per page. | [optional] 
-**Meta** | Pointer to [**InlineResponse200346Meta**](InlineResponse200346Meta.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
+**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200346WithDefaults instantiates a new InlineResponse200346 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetTs
 
-`func (o *InlineResponse200346) GetItems() []InlineResponse200346Items`
+`func (o *InlineResponse200346) GetTs() time.Time`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetTsOk
 
-`func (o *InlineResponse200346) GetItemsOk() (*[]InlineResponse200346Items, bool)`
+`func (o *InlineResponse200346) GetTsOk() (*time.Time, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetTs
 
-`func (o *InlineResponse200346) SetItems(v []InlineResponse200346Items)`
+`func (o *InlineResponse200346) SetTs(v time.Time)`
 
-SetItems sets Items field to given value.
+SetTs sets Ts field to given value.
 
-### HasItems
+### HasTs
 
-`func (o *InlineResponse200346) HasItems() bool`
+`func (o *InlineResponse200346) HasTs() bool`
 
-HasItems returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetMeta
+### GetDevice
 
-`func (o *InlineResponse200346) GetMeta() InlineResponse200346Meta`
+`func (o *InlineResponse200346) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetDeviceOk
 
-`func (o *InlineResponse200346) GetMetaOk() (*InlineResponse200346Meta, bool)`
+`func (o *InlineResponse200346) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetDevice
 
-`func (o *InlineResponse200346) SetMeta(v InlineResponse200346Meta)`
+`func (o *InlineResponse200346) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
 
-SetMeta sets Meta field to given value.
+SetDevice sets Device field to given value.
 
-### HasMeta
+### HasDevice
 
-`func (o *InlineResponse200346) HasMeta() bool`
+`func (o *InlineResponse200346) HasDevice() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
+
+### GetDetails
+
+`func (o *InlineResponse200346) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
+
+GetDetails returns the Details field if non-nil, zero value otherwise.
+
+### GetDetailsOk
+
+`func (o *InlineResponse200346) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
+
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetails
+
+`func (o *InlineResponse200346) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
+
+SetDetails sets Details field to given value.
+
+### HasDetails
+
+`func (o *InlineResponse200346) HasDetails() bool`
+
+HasDetails returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200346) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200346) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200346) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200346) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

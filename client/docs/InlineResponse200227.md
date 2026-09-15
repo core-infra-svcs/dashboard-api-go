@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**LatencyStats** | Pointer to [**NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats**](NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200227WithDefaults instantiates a new InlineResponse200227 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetStartTs
 
-`func (o *InlineResponse200227) GetMac() string`
+`func (o *InlineResponse200227) GetStartTs() time.Time`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetStartTsOk
 
-`func (o *InlineResponse200227) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200227) GetStartTsOk() (*time.Time, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetStartTs
 
-`func (o *InlineResponse200227) SetMac(v string)`
+`func (o *InlineResponse200227) SetStartTs(v time.Time)`
 
-SetMac sets Mac field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasMac
+### HasStartTs
 
-`func (o *InlineResponse200227) HasMac() bool`
+`func (o *InlineResponse200227) HasStartTs() bool`
 
-HasMac returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetLatencyStats
+### GetEndTs
 
-`func (o *InlineResponse200227) GetLatencyStats() NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats`
+`func (o *InlineResponse200227) GetEndTs() time.Time`
 
-GetLatencyStats returns the LatencyStats field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetLatencyStatsOk
+### GetEndTsOk
 
-`func (o *InlineResponse200227) GetLatencyStatsOk() (*NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats, bool)`
+`func (o *InlineResponse200227) GetEndTsOk() (*time.Time, bool)`
 
-GetLatencyStatsOk returns a tuple with the LatencyStats field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyStats
+### SetEndTs
 
-`func (o *InlineResponse200227) SetLatencyStats(v NetworksNetworkIdWirelessClientsLatencyStatsLatencyStats)`
+`func (o *InlineResponse200227) SetEndTs(v time.Time)`
 
-SetLatencyStats sets LatencyStats field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasLatencyStats
+### HasEndTs
 
-`func (o *InlineResponse200227) HasLatencyStats() bool`
+`func (o *InlineResponse200227) HasEndTs() bool`
 
-HasLatencyStats returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetClientCount
+
+`func (o *InlineResponse200227) GetClientCount() int32`
+
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+
+### GetClientCountOk
+
+`func (o *InlineResponse200227) GetClientCountOk() (*int32, bool)`
+
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientCount
+
+`func (o *InlineResponse200227) SetClientCount(v int32)`
+
+SetClientCount sets ClientCount field to given value.
+
+### HasClientCount
+
+`func (o *InlineResponse200227) HasClientCount() bool`
+
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of device | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200350Intervals**](InlineResponse200350Intervals.md) | Historical cellular data usage buckets for the device. Maximum 8928 intervals per device based on the 31-day timespan and 5-minute interval limits. | [optional] 
+**AssignmentId** | Pointer to **string** | Unique ID of the device assignment | [optional] 
+**Profile** | Pointer to [**InlineResponse200350Profile**](InlineResponse200350Profile.md) |  | [optional] 
+**Device** | Pointer to [**InlineResponse200350Device**](InlineResponse200350Device.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200350ItemsWithDefaults instantiates a new InlineResponse200350
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetAssignmentId
 
-`func (o *InlineResponse200350Items) GetSerial() string`
+`func (o *InlineResponse200350Items) GetAssignmentId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetAssignmentIdOk
 
-`func (o *InlineResponse200350Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200350Items) GetAssignmentIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetAssignmentId
 
-`func (o *InlineResponse200350Items) SetSerial(v string)`
+`func (o *InlineResponse200350Items) SetAssignmentId(v string)`
 
-SetSerial sets Serial field to given value.
+SetAssignmentId sets AssignmentId field to given value.
 
-### HasSerial
+### HasAssignmentId
 
-`func (o *InlineResponse200350Items) HasSerial() bool`
+`func (o *InlineResponse200350Items) HasAssignmentId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasAssignmentId returns a boolean if a field has been set.
 
-### GetIntervals
+### GetProfile
 
-`func (o *InlineResponse200350Items) GetIntervals() []InlineResponse200350Intervals`
+`func (o *InlineResponse200350Items) GetProfile() InlineResponse200350Profile`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetProfileOk
 
-`func (o *InlineResponse200350Items) GetIntervalsOk() (*[]InlineResponse200350Intervals, bool)`
+`func (o *InlineResponse200350Items) GetProfileOk() (*InlineResponse200350Profile, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetProfile
 
-`func (o *InlineResponse200350Items) SetIntervals(v []InlineResponse200350Intervals)`
+`func (o *InlineResponse200350Items) SetProfile(v InlineResponse200350Profile)`
 
-SetIntervals sets Intervals field to given value.
+SetProfile sets Profile field to given value.
 
-### HasIntervals
+### HasProfile
 
-`func (o *InlineResponse200350Items) HasIntervals() bool`
+`func (o *InlineResponse200350Items) HasProfile() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasProfile returns a boolean if a field has been set.
+
+### GetDevice
+
+`func (o *InlineResponse200350Items) GetDevice() InlineResponse200350Device`
+
+GetDevice returns the Device field if non-nil, zero value otherwise.
+
+### GetDeviceOk
+
+`func (o *InlineResponse200350Items) GetDeviceOk() (*InlineResponse200350Device, bool)`
+
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevice
+
+`func (o *InlineResponse200350Items) SetDevice(v InlineResponse200350Device)`
+
+SetDevice sets Device field to given value.
+
+### HasDevice
+
+`func (o *InlineResponse200350Items) HasDevice() bool`
+
+HasDevice returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

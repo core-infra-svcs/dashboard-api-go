@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial number | [optional] 
-**Connection** | Pointer to [**InlineResponse200353Connection**](InlineResponse200353Connection.md) |  | [optional] 
+**Serial** | Pointer to **string** | Serial of device | [optional] 
+**BySlot** | Pointer to [**[]InlineResponse200353BySlot**](InlineResponse200353BySlot.md) | Information about the supported SIM slots for the device. Maximum 3 entries. | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetConnection
+### GetBySlot
 
-`func (o *InlineResponse200353Items) GetConnection() InlineResponse200353Connection`
+`func (o *InlineResponse200353Items) GetBySlot() []InlineResponse200353BySlot`
 
-GetConnection returns the Connection field if non-nil, zero value otherwise.
+GetBySlot returns the BySlot field if non-nil, zero value otherwise.
 
-### GetConnectionOk
+### GetBySlotOk
 
-`func (o *InlineResponse200353Items) GetConnectionOk() (*InlineResponse200353Connection, bool)`
+`func (o *InlineResponse200353Items) GetBySlotOk() (*[]InlineResponse200353BySlot, bool)`
 
-GetConnectionOk returns a tuple with the Connection field if it's non-nil, zero value otherwise
+GetBySlotOk returns a tuple with the BySlot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnection
+### SetBySlot
 
-`func (o *InlineResponse200353Items) SetConnection(v InlineResponse200353Connection)`
+`func (o *InlineResponse200353Items) SetBySlot(v []InlineResponse200353BySlot)`
 
-SetConnection sets Connection field to given value.
+SetBySlot sets BySlot field to given value.
 
-### HasConnection
+### HasBySlot
 
-`func (o *InlineResponse200353Items) HasConnection() bool`
+`func (o *InlineResponse200353Items) HasBySlot() bool`
 
-HasConnection returns a boolean if a field has been set.
+HasBySlot returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

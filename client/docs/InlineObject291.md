@@ -4,19 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices.md) | device details | 
-**Name** | Pointer to **string** | Name of the packet capture file | [optional] 
+**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices.md) | Device details (maximum of 20 devices allowed) | 
 **Notes** | Pointer to **string** | Reason for capture | [optional] 
 **Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
 **FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
-**Enabled** | Pointer to **bool** | Enable or disable the schedule | [optional] 
-**Schedule** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule.md) |  | [optional] 
+**Name** | **string** | Name of packet capture file | 
+**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject291
 
-`func NewInlineObject291(devices []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices, ) *InlineObject291`
+`func NewInlineObject291(devices []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, name string, ) *InlineObject291`
 
 NewInlineObject291 instantiates a new InlineObject291 object
 This constructor will assign default values to properties that have it defined,
@@ -33,48 +32,23 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDevices
 
-`func (o *InlineObject291) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices`
+`func (o *InlineObject291) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices`
 
 GetDevices returns the Devices field if non-nil, zero value otherwise.
 
 ### GetDevicesOk
 
-`func (o *InlineObject291) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices, bool)`
+`func (o *InlineObject291) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, bool)`
 
 GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDevices
 
-`func (o *InlineObject291) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesDevices)`
+`func (o *InlineObject291) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices)`
 
 SetDevices sets Devices field to given value.
 
-
-### GetName
-
-`func (o *InlineObject291) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineObject291) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineObject291) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineObject291) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetNotes
 
@@ -151,55 +125,50 @@ SetFilterExpression sets FilterExpression field to given value.
 
 HasFilterExpression returns a boolean if a field has been set.
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject291) GetEnabled() bool`
+`func (o *InlineObject291) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject291) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject291) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject291) SetEnabled(v bool)`
+`func (o *InlineObject291) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject291) HasEnabled() bool`
+### GetAdvanced
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject291) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced`
 
-### GetSchedule
+GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
 
-`func (o *InlineObject291) GetSchedule() OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule`
+### GetAdvancedOk
 
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+`func (o *InlineObject291) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced, bool)`
 
-### GetScheduleOk
-
-`func (o *InlineObject291) GetScheduleOk() (*OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule, bool)`
-
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSchedule
+### SetAdvanced
 
-`func (o *InlineObject291) SetSchedule(v OrganizationsOrganizationIdDevicesPacketCaptureSchedulesSchedule)`
+`func (o *InlineObject291) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced)`
 
-SetSchedule sets Schedule field to given value.
+SetAdvanced sets Advanced field to given value.
 
-### HasSchedule
+### HasAdvanced
 
-`func (o *InlineObject291) HasSchedule() bool`
+`func (o *InlineObject291) HasAdvanced() bool`
 
-HasSchedule returns a boolean if a field has been set.
+HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

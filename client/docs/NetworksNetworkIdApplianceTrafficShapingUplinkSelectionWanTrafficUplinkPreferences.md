@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TrafficFilters** | [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionTrafficFilters**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionTrafficFilters.md) | Array of traffic filters for this uplink preference rule | 
 **PreferredUplink** | **string** | Preferred uplink for this uplink preference rule. Must be one of: &#39;wan1&#39; or &#39;wan2&#39;, or any other valid uplink(wanX) if it applies to the network | 
+**Vrf** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf.md) |  | [optional] 
 
 ## Methods
 
@@ -65,6 +66,31 @@ and a boolean to check if the value has been set.
 
 SetPreferredUplink sets PreferredUplink field to given value.
 
+
+### GetVrf
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences) GetVrf() NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences) GetVrfOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences) SetVrf(v NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

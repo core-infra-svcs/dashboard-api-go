@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Unique serial number for the Catalyst appliance | [optional] 
-**Ports** | Pointer to [**[]InlineResponse200275Ports**](InlineResponse200275Ports.md) | Ports associated with the given appliance | [optional] 
+**InterfaceId** | Pointer to **string** | Interface ID | [optional] 
+**Ipv4** | Pointer to [**InlineResponse20116Ipv4**](InlineResponse20116Ipv4.md) |  | [optional] 
 **Network** | Pointer to [**InlineResponse200275Network**](InlineResponse200275Network.md) |  | [optional] 
+**Port** | Pointer to [**InlineResponse20116Port**](InlineResponse20116Port.md) |  | [optional] 
 
 ## Methods
 
@@ -27,55 +28,55 @@ NewInlineResponse200275ItemsWithDefaults instantiates a new InlineResponse200275
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetInterfaceId
 
-`func (o *InlineResponse200275Items) GetSerial() string`
+`func (o *InlineResponse200275Items) GetInterfaceId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetInterfaceIdOk
 
-`func (o *InlineResponse200275Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200275Items) GetInterfaceIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetInterfaceId
 
-`func (o *InlineResponse200275Items) SetSerial(v string)`
+`func (o *InlineResponse200275Items) SetInterfaceId(v string)`
 
-SetSerial sets Serial field to given value.
+SetInterfaceId sets InterfaceId field to given value.
 
-### HasSerial
+### HasInterfaceId
 
-`func (o *InlineResponse200275Items) HasSerial() bool`
+`func (o *InlineResponse200275Items) HasInterfaceId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasInterfaceId returns a boolean if a field has been set.
 
-### GetPorts
+### GetIpv4
 
-`func (o *InlineResponse200275Items) GetPorts() []InlineResponse200275Ports`
+`func (o *InlineResponse200275Items) GetIpv4() InlineResponse20116Ipv4`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetIpv4Ok
 
-`func (o *InlineResponse200275Items) GetPortsOk() (*[]InlineResponse200275Ports, bool)`
+`func (o *InlineResponse200275Items) GetIpv4Ok() (*InlineResponse20116Ipv4, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetIpv4
 
-`func (o *InlineResponse200275Items) SetPorts(v []InlineResponse200275Ports)`
+`func (o *InlineResponse200275Items) SetIpv4(v InlineResponse20116Ipv4)`
 
-SetPorts sets Ports field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasPorts
+### HasIpv4
 
-`func (o *InlineResponse200275Items) HasPorts() bool`
+`func (o *InlineResponse200275Items) HasIpv4() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -101,6 +102,31 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200275Items) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
+
+### GetPort
+
+`func (o *InlineResponse200275Items) GetPort() InlineResponse20116Port`
+
+GetPort returns the Port field if non-nil, zero value otherwise.
+
+### GetPortOk
+
+`func (o *InlineResponse200275Items) GetPortOk() (*InlineResponse20116Port, bool)`
+
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPort
+
+`func (o *InlineResponse200275Items) SetPort(v InlineResponse20116Port)`
+
+SetPort sets Port field to given value.
+
+### HasPort
+
+`func (o *InlineResponse200275Items) HasPort() bool`
+
+HasPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**ConnectionStats** | Pointer to [**InlineResponse200228ConnectionStats**](InlineResponse200228ConnectionStats.md) |  | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**ConnectionStats** | Pointer to [**NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats**](NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasMac returns a boolean if a field has been set.
 
 ### GetConnectionStats
 
-`func (o *InlineResponse200228) GetConnectionStats() InlineResponse200228ConnectionStats`
+`func (o *InlineResponse200228) GetConnectionStats() NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats`
 
 GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
 ### GetConnectionStatsOk
 
-`func (o *InlineResponse200228) GetConnectionStatsOk() (*InlineResponse200228ConnectionStats, bool)`
+`func (o *InlineResponse200228) GetConnectionStatsOk() (*NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats, bool)`
 
 GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetConnectionStats
 
-`func (o *InlineResponse200228) SetConnectionStats(v InlineResponse200228ConnectionStats)`
+`func (o *InlineResponse200228) SetConnectionStats(v NetworksNetworkIdWirelessClientsConnectionStatsConnectionStats)`
 
 SetConnectionStats sets ConnectionStats field to given value.
 

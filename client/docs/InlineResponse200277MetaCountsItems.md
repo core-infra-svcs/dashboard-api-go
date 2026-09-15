@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of items in the dataset | [optional] 
-**Remaining** | Pointer to **int32** | The number of items in the dataset that are available on subsequent pages | [optional] 
+**Total** | Pointer to **int32** | The total number of serials. | [optional] 
+**Remaining** | Pointer to **int32** | The number of serials remaining based on current pagination location within the dataset. | [optional] 
 
 ## Methods
 

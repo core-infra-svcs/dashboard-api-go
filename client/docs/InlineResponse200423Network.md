@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the network. | 
-**Id** | **string** | The id of the network. | 
+**Id** | Pointer to **string** | Network ID, may not be unique in result set | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200423Network
 
-`func NewInlineResponse200423Network(name string, id string, ) *InlineResponse200423Network`
+`func NewInlineResponse200423Network() *InlineResponse200423Network`
 
 NewInlineResponse200423Network instantiates a new InlineResponse200423Network object
 This constructor will assign default values to properties that have it defined,
@@ -25,26 +24,6 @@ will change when the set of required properties is changed
 NewInlineResponse200423NetworkWithDefaults instantiates a new InlineResponse200423Network object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *InlineResponse200423Network) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200423Network) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200423Network) SetName(v string)`
-
-SetName sets Name field to given value.
-
 
 ### GetId
 
@@ -65,6 +44,11 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
+### HasId
+
+`func (o *InlineResponse200423Network) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

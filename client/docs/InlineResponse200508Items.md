@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Network** | Pointer to [**InlineResponse200495Network**](InlineResponse200495Network.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200508Counts**](InlineResponse200508Counts.md) |  | [optional] 
-**Redundancy** | Pointer to [**InlineResponse200508Redundancy**](InlineResponse200508Redundancy.md) |  | [optional] 
-**Firmware** | Pointer to [**InlineResponse200508Firmware**](InlineResponse200508Firmware.md) |  | [optional] 
+**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse200508Interfaces**](InlineResponse200508Interfaces.md) | Interfaces belongs to the wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -54,105 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetNetwork
+### GetInterfaces
 
-`func (o *InlineResponse200508Items) GetNetwork() InlineResponse200495Network`
+`func (o *InlineResponse200508Items) GetInterfaces() []InlineResponse200508Interfaces`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetInterfacesOk
 
-`func (o *InlineResponse200508Items) GetNetworkOk() (*InlineResponse200495Network, bool)`
+`func (o *InlineResponse200508Items) GetInterfacesOk() (*[]InlineResponse200508Interfaces, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetInterfaces
 
-`func (o *InlineResponse200508Items) SetNetwork(v InlineResponse200495Network)`
+`func (o *InlineResponse200508Items) SetInterfaces(v []InlineResponse200508Interfaces)`
 
-SetNetwork sets Network field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasNetwork
+### HasInterfaces
 
-`func (o *InlineResponse200508Items) HasNetwork() bool`
+`func (o *InlineResponse200508Items) HasInterfaces() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200508Items) GetCounts() InlineResponse200508Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200508Items) GetCountsOk() (*InlineResponse200508Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200508Items) SetCounts(v InlineResponse200508Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200508Items) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
-
-### GetRedundancy
-
-`func (o *InlineResponse200508Items) GetRedundancy() InlineResponse200508Redundancy`
-
-GetRedundancy returns the Redundancy field if non-nil, zero value otherwise.
-
-### GetRedundancyOk
-
-`func (o *InlineResponse200508Items) GetRedundancyOk() (*InlineResponse200508Redundancy, bool)`
-
-GetRedundancyOk returns a tuple with the Redundancy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRedundancy
-
-`func (o *InlineResponse200508Items) SetRedundancy(v InlineResponse200508Redundancy)`
-
-SetRedundancy sets Redundancy field to given value.
-
-### HasRedundancy
-
-`func (o *InlineResponse200508Items) HasRedundancy() bool`
-
-HasRedundancy returns a boolean if a field has been set.
-
-### GetFirmware
-
-`func (o *InlineResponse200508Items) GetFirmware() InlineResponse200508Firmware`
-
-GetFirmware returns the Firmware field if non-nil, zero value otherwise.
-
-### GetFirmwareOk
-
-`func (o *InlineResponse200508Items) GetFirmwareOk() (*InlineResponse200508Firmware, bool)`
-
-GetFirmwareOk returns a tuple with the Firmware field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFirmware
-
-`func (o *InlineResponse200508Items) SetFirmware(v InlineResponse200508Firmware)`
-
-SetFirmware sets Firmware field to given value.
-
-### HasFirmware
-
-`func (o *InlineResponse200508Items) HasFirmware() bool`
-
-HasFirmware returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

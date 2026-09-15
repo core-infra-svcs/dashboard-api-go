@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NextUpgrade** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgrade**](NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgrade.md) |  | [optional] 
+**NextUpgrade** | Pointer to **map[string]interface{}** | Settings for the next switch Catalyst upgrade | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNextUpgrade
 
-`func (o *NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalyst) GetNextUpgrade() NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgrade`
+`func (o *NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalyst) GetNextUpgrade() map[string]interface{}`
 
 GetNextUpgrade returns the NextUpgrade field if non-nil, zero value otherwise.
 
 ### GetNextUpgradeOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalyst) GetNextUpgradeOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgrade, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalyst) GetNextUpgradeOk() (*map[string]interface{}, bool)`
 
 GetNextUpgradeOk returns a tuple with the NextUpgrade field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNextUpgrade
 
-`func (o *NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalyst) SetNextUpgrade(v NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgrade)`
+`func (o *NetworksNetworkIdFirmwareUpgradesStagedEventsProductsSwitchCatalyst) SetNextUpgrade(v map[string]interface{})`
 
 SetNextUpgrade sets NextUpgrade field to given value.
 

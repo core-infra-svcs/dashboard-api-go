@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
-**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
+**RfProfile** | Pointer to [**DevicesSerialWirelessRadioOverridesRfProfile**](DevicesSerialWirelessRadioOverridesRfProfile.md) |  | [optional] 
+**Radios** | Pointer to [**[]DevicesSerialWirelessRadioOverridesRadios**](DevicesSerialWirelessRadioOverridesRadios.md) | Radio overrides. If omitted, existing per-radio override settings remain unchanged. If provided, only the radios included in the array are updated; the array does not replace the device&#39;s full existing set of radio overrides. Read-only response fields for each radio, such as &#39;band&#39;, may be included in the request body and are ignored. | [optional] 
 
 ## Methods
 
@@ -27,90 +26,55 @@ NewInlineObject47WithDefaults instantiates a new InlineObject47 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRfProfileId
+### GetRfProfile
 
-`func (o *InlineObject47) GetRfProfileId() string`
+`func (o *InlineObject47) GetRfProfile() DevicesSerialWirelessRadioOverridesRfProfile`
 
-GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
+GetRfProfile returns the RfProfile field if non-nil, zero value otherwise.
 
-### GetRfProfileIdOk
+### GetRfProfileOk
 
-`func (o *InlineObject47) GetRfProfileIdOk() (*string, bool)`
+`func (o *InlineObject47) GetRfProfileOk() (*DevicesSerialWirelessRadioOverridesRfProfile, bool)`
 
-GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
+GetRfProfileOk returns a tuple with the RfProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfileId
+### SetRfProfile
 
-`func (o *InlineObject47) SetRfProfileId(v string)`
+`func (o *InlineObject47) SetRfProfile(v DevicesSerialWirelessRadioOverridesRfProfile)`
 
-SetRfProfileId sets RfProfileId field to given value.
+SetRfProfile sets RfProfile field to given value.
 
-### HasRfProfileId
+### HasRfProfile
 
-`func (o *InlineObject47) HasRfProfileId() bool`
+`func (o *InlineObject47) HasRfProfile() bool`
 
-HasRfProfileId returns a boolean if a field has been set.
+HasRfProfile returns a boolean if a field has been set.
 
-### SetRfProfileIdNil
+### GetRadios
 
-`func (o *InlineObject47) SetRfProfileIdNil(b bool)`
+`func (o *InlineObject47) GetRadios() []DevicesSerialWirelessRadioOverridesRadios`
 
- SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
+GetRadios returns the Radios field if non-nil, zero value otherwise.
 
-### UnsetRfProfileId
-`func (o *InlineObject47) UnsetRfProfileId()`
+### GetRadiosOk
 
-UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
-### GetTwoFourGhzSettings
+`func (o *InlineObject47) GetRadiosOk() (*[]DevicesSerialWirelessRadioOverridesRadios, bool)`
 
-`func (o *InlineObject47) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject47) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetRadiosOk returns a tuple with the Radios field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetRadios
 
-`func (o *InlineObject47) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
+`func (o *InlineObject47) SetRadios(v []DevicesSerialWirelessRadioOverridesRadios)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetRadios sets Radios field to given value.
 
-### HasTwoFourGhzSettings
+### HasRadios
 
-`func (o *InlineObject47) HasTwoFourGhzSettings() bool`
+`func (o *InlineObject47) HasRadios() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
-
-### GetFiveGhzSettings
-
-`func (o *InlineObject47) GetFiveGhzSettings() DevicesSerialApplianceRadioSettingsFiveGhzSettings`
-
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
-
-### GetFiveGhzSettingsOk
-
-`func (o *InlineObject47) GetFiveGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsFiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFiveGhzSettings
-
-`func (o *InlineObject47) SetFiveGhzSettings(v DevicesSerialApplianceRadioSettingsFiveGhzSettings)`
-
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
-
-### HasFiveGhzSettings
-
-`func (o *InlineObject47) HasFiveGhzSettings() bool`
-
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasRadios returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

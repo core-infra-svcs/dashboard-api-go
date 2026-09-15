@@ -4,17 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClusterId** | **string** | The unique identifier of the campus gateway cluster | 
-**Name** | **string** | The name of the campus gateway cluster | 
-**Url** | **string** | Dashboard URL for campus gateway cluster settings for this row&#39;s campus gateway network | 
-**Network** | [**InlineResponse200322Network**](InlineResponse200322Network.md) |  | 
-**Source** | [**InlineResponse200322Source**](InlineResponse200322Source.md) |  | 
+**NetworkId** | **string** | Network identifier | 
+**Name** | **string** | Network name | 
+**Tunneling** | [**InlineResponse200322Tunneling**](InlineResponse200322Tunneling.md) |  | 
+**Site** | Pointer to [**InlineResponse200322Site**](InlineResponse200322Site.md) |  | [optional] 
+**Url** | **string** | Network management URL | 
+**Counts** | [**InlineResponse200322Counts**](InlineResponse200322Counts.md) |  | 
+**Cluster** | [**InlineResponse200322Cluster**](InlineResponse200322Cluster.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200322Items
 
-`func NewInlineResponse200322Items(clusterId string, name string, url string, network InlineResponse200322Network, source InlineResponse200322Source, ) *InlineResponse200322Items`
+`func NewInlineResponse200322Items(networkId string, name string, tunneling InlineResponse200322Tunneling, url string, counts InlineResponse200322Counts, cluster InlineResponse200322Cluster, ) *InlineResponse200322Items`
 
 NewInlineResponse200322Items instantiates a new InlineResponse200322Items object
 This constructor will assign default values to properties that have it defined,
@@ -29,24 +31,24 @@ NewInlineResponse200322ItemsWithDefaults instantiates a new InlineResponse200322
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClusterId
+### GetNetworkId
 
-`func (o *InlineResponse200322Items) GetClusterId() string`
+`func (o *InlineResponse200322Items) GetNetworkId() string`
 
-GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetClusterIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200322Items) GetClusterIdOk() (*string, bool)`
+`func (o *InlineResponse200322Items) GetNetworkIdOk() (*string, bool)`
 
-GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClusterId
+### SetNetworkId
 
-`func (o *InlineResponse200322Items) SetClusterId(v string)`
+`func (o *InlineResponse200322Items) SetNetworkId(v string)`
 
-SetClusterId sets ClusterId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
 
 ### GetName
@@ -69,6 +71,51 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
+### GetTunneling
+
+`func (o *InlineResponse200322Items) GetTunneling() InlineResponse200322Tunneling`
+
+GetTunneling returns the Tunneling field if non-nil, zero value otherwise.
+
+### GetTunnelingOk
+
+`func (o *InlineResponse200322Items) GetTunnelingOk() (*InlineResponse200322Tunneling, bool)`
+
+GetTunnelingOk returns a tuple with the Tunneling field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTunneling
+
+`func (o *InlineResponse200322Items) SetTunneling(v InlineResponse200322Tunneling)`
+
+SetTunneling sets Tunneling field to given value.
+
+
+### GetSite
+
+`func (o *InlineResponse200322Items) GetSite() InlineResponse200322Site`
+
+GetSite returns the Site field if non-nil, zero value otherwise.
+
+### GetSiteOk
+
+`func (o *InlineResponse200322Items) GetSiteOk() (*InlineResponse200322Site, bool)`
+
+GetSiteOk returns a tuple with the Site field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSite
+
+`func (o *InlineResponse200322Items) SetSite(v InlineResponse200322Site)`
+
+SetSite sets Site field to given value.
+
+### HasSite
+
+`func (o *InlineResponse200322Items) HasSite() bool`
+
+HasSite returns a boolean if a field has been set.
+
 ### GetUrl
 
 `func (o *InlineResponse200322Items) GetUrl() string`
@@ -89,44 +136,44 @@ and a boolean to check if the value has been set.
 SetUrl sets Url field to given value.
 
 
-### GetNetwork
+### GetCounts
 
-`func (o *InlineResponse200322Items) GetNetwork() InlineResponse200322Network`
+`func (o *InlineResponse200322Items) GetCounts() InlineResponse200322Counts`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetCountsOk
 
-`func (o *InlineResponse200322Items) GetNetworkOk() (*InlineResponse200322Network, bool)`
+`func (o *InlineResponse200322Items) GetCountsOk() (*InlineResponse200322Counts, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetCounts
 
-`func (o *InlineResponse200322Items) SetNetwork(v InlineResponse200322Network)`
+`func (o *InlineResponse200322Items) SetCounts(v InlineResponse200322Counts)`
 
-SetNetwork sets Network field to given value.
+SetCounts sets Counts field to given value.
 
 
-### GetSource
+### GetCluster
 
-`func (o *InlineResponse200322Items) GetSource() InlineResponse200322Source`
+`func (o *InlineResponse200322Items) GetCluster() InlineResponse200322Cluster`
 
-GetSource returns the Source field if non-nil, zero value otherwise.
+GetCluster returns the Cluster field if non-nil, zero value otherwise.
 
-### GetSourceOk
+### GetClusterOk
 
-`func (o *InlineResponse200322Items) GetSourceOk() (*InlineResponse200322Source, bool)`
+`func (o *InlineResponse200322Items) GetClusterOk() (*InlineResponse200322Cluster, bool)`
 
-GetSourceOk returns a tuple with the Source field if it's non-nil, zero value otherwise
+GetClusterOk returns a tuple with the Cluster field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSource
+### SetCluster
 
-`func (o *InlineResponse200322Items) SetSource(v InlineResponse200322Source)`
+`func (o *InlineResponse200322Items) SetCluster(v InlineResponse200322Cluster)`
 
-SetSource sets Source field to given value.
+SetCluster sets Cluster field to given value.
 
 
 

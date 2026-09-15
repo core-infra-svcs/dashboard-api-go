@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are allowed | [optional] 
-**BlockedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are blocked | [optional] 
-**BlockedUrlCategories** | Pointer to [**[]InlineResponse20070BlockedUrlCategories**](InlineResponse20070BlockedUrlCategories.md) | A list of URL categories to block | [optional] 
-**UrlCategoryListSize** | Pointer to **string** | URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39; | [optional] 
+**Destinations** | Pointer to [**[]InlineResponse20070Destinations**](InlineResponse20070Destinations.md) | The list of connectivity monitoring destinations | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse20070WithDefaults instantiates a new InlineResponse20070 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedUrlPatterns
+### GetDestinations
 
-`func (o *InlineResponse20070) GetAllowedUrlPatterns() []string`
+`func (o *InlineResponse20070) GetDestinations() []InlineResponse20070Destinations`
 
-GetAllowedUrlPatterns returns the AllowedUrlPatterns field if non-nil, zero value otherwise.
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
 
-### GetAllowedUrlPatternsOk
+### GetDestinationsOk
 
-`func (o *InlineResponse20070) GetAllowedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineResponse20070) GetDestinationsOk() (*[]InlineResponse20070Destinations, bool)`
 
-GetAllowedUrlPatternsOk returns a tuple with the AllowedUrlPatterns field if it's non-nil, zero value otherwise
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrlPatterns
+### SetDestinations
 
-`func (o *InlineResponse20070) SetAllowedUrlPatterns(v []string)`
+`func (o *InlineResponse20070) SetDestinations(v []InlineResponse20070Destinations)`
 
-SetAllowedUrlPatterns sets AllowedUrlPatterns field to given value.
+SetDestinations sets Destinations field to given value.
 
-### HasAllowedUrlPatterns
+### HasDestinations
 
-`func (o *InlineResponse20070) HasAllowedUrlPatterns() bool`
+`func (o *InlineResponse20070) HasDestinations() bool`
 
-HasAllowedUrlPatterns returns a boolean if a field has been set.
-
-### GetBlockedUrlPatterns
-
-`func (o *InlineResponse20070) GetBlockedUrlPatterns() []string`
-
-GetBlockedUrlPatterns returns the BlockedUrlPatterns field if non-nil, zero value otherwise.
-
-### GetBlockedUrlPatternsOk
-
-`func (o *InlineResponse20070) GetBlockedUrlPatternsOk() (*[]string, bool)`
-
-GetBlockedUrlPatternsOk returns a tuple with the BlockedUrlPatterns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBlockedUrlPatterns
-
-`func (o *InlineResponse20070) SetBlockedUrlPatterns(v []string)`
-
-SetBlockedUrlPatterns sets BlockedUrlPatterns field to given value.
-
-### HasBlockedUrlPatterns
-
-`func (o *InlineResponse20070) HasBlockedUrlPatterns() bool`
-
-HasBlockedUrlPatterns returns a boolean if a field has been set.
-
-### GetBlockedUrlCategories
-
-`func (o *InlineResponse20070) GetBlockedUrlCategories() []InlineResponse20070BlockedUrlCategories`
-
-GetBlockedUrlCategories returns the BlockedUrlCategories field if non-nil, zero value otherwise.
-
-### GetBlockedUrlCategoriesOk
-
-`func (o *InlineResponse20070) GetBlockedUrlCategoriesOk() (*[]InlineResponse20070BlockedUrlCategories, bool)`
-
-GetBlockedUrlCategoriesOk returns a tuple with the BlockedUrlCategories field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBlockedUrlCategories
-
-`func (o *InlineResponse20070) SetBlockedUrlCategories(v []InlineResponse20070BlockedUrlCategories)`
-
-SetBlockedUrlCategories sets BlockedUrlCategories field to given value.
-
-### HasBlockedUrlCategories
-
-`func (o *InlineResponse20070) HasBlockedUrlCategories() bool`
-
-HasBlockedUrlCategories returns a boolean if a field has been set.
-
-### GetUrlCategoryListSize
-
-`func (o *InlineResponse20070) GetUrlCategoryListSize() string`
-
-GetUrlCategoryListSize returns the UrlCategoryListSize field if non-nil, zero value otherwise.
-
-### GetUrlCategoryListSizeOk
-
-`func (o *InlineResponse20070) GetUrlCategoryListSizeOk() (*string, bool)`
-
-GetUrlCategoryListSizeOk returns a tuple with the UrlCategoryListSize field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrlCategoryListSize
-
-`func (o *InlineResponse20070) SetUrlCategoryListSize(v string)`
-
-SetUrlCategoryListSize sets UrlCategoryListSize field to given value.
-
-### HasUrlCategoryListSize
-
-`func (o *InlineResponse20070) HasUrlCategoryListSize() bool`
-
-HasUrlCategoryListSize returns a boolean if a field has been set.
+HasDestinations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

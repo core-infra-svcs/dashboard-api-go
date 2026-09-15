@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the SSID | 
+**Id** | Pointer to **string** | SSID ID. | [optional] 
+**Name** | Pointer to **string** | SSID name. | [optional] 
+**Number** | Pointer to **int32** | SSID number. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200464Ssid
 
-`func NewInlineResponse200464Ssid(name string, ) *InlineResponse200464Ssid`
+`func NewInlineResponse200464Ssid() *InlineResponse200464Ssid`
 
 NewInlineResponse200464Ssid instantiates a new InlineResponse200464Ssid object
 This constructor will assign default values to properties that have it defined,
@@ -24,6 +26,31 @@ will change when the set of required properties is changed
 NewInlineResponse200464SsidWithDefaults instantiates a new InlineResponse200464Ssid object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200464Ssid) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200464Ssid) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200464Ssid) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200464Ssid) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -44,6 +71,36 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineResponse200464Ssid) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetNumber
+
+`func (o *InlineResponse200464Ssid) GetNumber() int32`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse200464Ssid) GetNumberOk() (*int32, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse200464Ssid) SetNumber(v int32)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse200464Ssid) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

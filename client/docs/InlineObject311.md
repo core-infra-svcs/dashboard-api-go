@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
-**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
+**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
+**LicenseId** | **string** | The ID of the SM license to move the seats from | 
+**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject311
 
-`func NewInlineObject311(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject311`
+`func NewInlineObject311(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject311`
 
 NewInlineObject311 instantiates a new InlineObject311 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +27,64 @@ NewInlineObject311WithDefaults instantiates a new InlineObject311 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestination
+### GetDestOrganizationId
 
-`func (o *InlineObject311) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
+`func (o *InlineObject311) GetDestOrganizationId() string`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject311) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
+`func (o *InlineObject311) GetDestOrganizationIdOk() (*string, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetDestOrganizationId
 
-`func (o *InlineObject311) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
+`func (o *InlineObject311) SetDestOrganizationId(v string)`
 
-SetDestination sets Destination field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
 
-### GetLicenses
+### GetLicenseId
 
-`func (o *InlineObject311) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
+`func (o *InlineObject311) GetLicenseId() string`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetLicenseIdOk
 
-`func (o *InlineObject311) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
+`func (o *InlineObject311) GetLicenseIdOk() (*string, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetLicenseId
 
-`func (o *InlineObject311) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
+`func (o *InlineObject311) SetLicenseId(v string)`
 
-SetLicenses sets Licenses field to given value.
+SetLicenseId sets LicenseId field to given value.
+
+
+### GetSeatCount
+
+`func (o *InlineObject311) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineObject311) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineObject311) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
 
 
 

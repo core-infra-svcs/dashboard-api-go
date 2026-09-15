@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy.md) |  | 
-**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to remove | 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy.md) |  | 
+**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to assign | 
 
 ## Methods
 
 ### NewInlineObject328
 
-`func NewInlineObject328(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject328`
+`func NewInlineObject328(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject328`
 
 NewInlineObject328 instantiates a new InlineObject328 object
 This constructor will assign default values to properties that have it defined,
@@ -28,42 +28,42 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPolicy
 
-`func (o *InlineObject328) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy`
+`func (o *InlineObject328) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy`
 
 GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
 ### GetPolicyOk
 
-`func (o *InlineObject328) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, bool)`
+`func (o *InlineObject328) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, bool)`
 
 GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPolicy
 
-`func (o *InlineObject328) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy)`
+`func (o *InlineObject328) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy)`
 
 SetPolicy sets Policy field to given value.
 
 
-### GetVlans
+### GetAdaptivePolicyGroups
 
-`func (o *InlineObject328) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
+`func (o *InlineObject328) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
 
-GetVlans returns the Vlans field if non-nil, zero value otherwise.
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
 
-### GetVlansOk
+### GetAdaptivePolicyGroupsOk
 
-`func (o *InlineObject328) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
+`func (o *InlineObject328) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
 
-GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlans
+### SetAdaptivePolicyGroups
 
-`func (o *InlineObject328) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
+`func (o *InlineObject328) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
 
-SetVlans sets Vlans field to given value.
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
 
 
 

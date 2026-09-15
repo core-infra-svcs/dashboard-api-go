@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
-**AllowedUrls** | Pointer to [**[]InlineResponse20090AllowedUrls**](InlineResponse20090AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
-**AllowedFiles** | Pointer to [**[]InlineResponse20090AllowedFiles**](InlineResponse20090AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
+**Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
+**IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
+**ProtectedNetworks** | Pointer to [**InlineResponse20089ProtectedNetworks**](InlineResponse20089ProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
@@ -52,55 +52,55 @@ SetMode sets Mode field to given value.
 
 HasMode returns a boolean if a field has been set.
 
-### GetAllowedUrls
+### GetIdsRulesets
 
-`func (o *InlineResponse20090) GetAllowedUrls() []InlineResponse20090AllowedUrls`
+`func (o *InlineResponse20090) GetIdsRulesets() string`
 
-GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
+GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
 
-### GetAllowedUrlsOk
+### GetIdsRulesetsOk
 
-`func (o *InlineResponse20090) GetAllowedUrlsOk() (*[]InlineResponse20090AllowedUrls, bool)`
+`func (o *InlineResponse20090) GetIdsRulesetsOk() (*string, bool)`
 
-GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
+GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrls
+### SetIdsRulesets
 
-`func (o *InlineResponse20090) SetAllowedUrls(v []InlineResponse20090AllowedUrls)`
+`func (o *InlineResponse20090) SetIdsRulesets(v string)`
 
-SetAllowedUrls sets AllowedUrls field to given value.
+SetIdsRulesets sets IdsRulesets field to given value.
 
-### HasAllowedUrls
+### HasIdsRulesets
 
-`func (o *InlineResponse20090) HasAllowedUrls() bool`
+`func (o *InlineResponse20090) HasIdsRulesets() bool`
 
-HasAllowedUrls returns a boolean if a field has been set.
+HasIdsRulesets returns a boolean if a field has been set.
 
-### GetAllowedFiles
+### GetProtectedNetworks
 
-`func (o *InlineResponse20090) GetAllowedFiles() []InlineResponse20090AllowedFiles`
+`func (o *InlineResponse20090) GetProtectedNetworks() InlineResponse20089ProtectedNetworks`
 
-GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
+GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
 
-### GetAllowedFilesOk
+### GetProtectedNetworksOk
 
-`func (o *InlineResponse20090) GetAllowedFilesOk() (*[]InlineResponse20090AllowedFiles, bool)`
+`func (o *InlineResponse20090) GetProtectedNetworksOk() (*InlineResponse20089ProtectedNetworks, bool)`
 
-GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
+GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedFiles
+### SetProtectedNetworks
 
-`func (o *InlineResponse20090) SetAllowedFiles(v []InlineResponse20090AllowedFiles)`
+`func (o *InlineResponse20090) SetProtectedNetworks(v InlineResponse20089ProtectedNetworks)`
 
-SetAllowedFiles sets AllowedFiles field to given value.
+SetProtectedNetworks sets ProtectedNetworks field to given value.
 
-### HasAllowedFiles
+### HasProtectedNetworks
 
-`func (o *InlineResponse20090) HasAllowedFiles() bool`
+`func (o *InlineResponse20090) HasProtectedNetworks() bool`
 
-HasAllowedFiles returns a boolean if a field has been set.
+HasProtectedNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

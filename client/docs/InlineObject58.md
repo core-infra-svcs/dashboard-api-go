@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20077Rules**](InlineResponse20077Rules.md) | An ordered array of the MX L7 firewall rules. Each rule is an object with &#39;policy&#39;, &#39;type&#39;, and &#39;value&#39;. The &#39;value&#39; shape depends on &#39;type&#39;: object for application/applicationCategory, string for host/port/ipRange, and an array of 2-letter ISO 3166-1 alpha-2 country codes for allowedCountries/blockedCountries. For backward compatibility, request types also accept whitelistedCountries/blacklistedCountries. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules**](NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -27,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetRules
 
-`func (o *InlineObject58) GetRules() []InlineResponse20077Rules`
+`func (o *InlineObject58) GetRules() []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject58) GetRulesOk() (*[]InlineResponse20077Rules, bool)`
+`func (o *InlineObject58) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject58) SetRules(v []InlineResponse20077Rules)`
+`func (o *InlineObject58) SetRules(v []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules)`
 
 SetRules sets Rules field to given value.
 
@@ -49,6 +50,31 @@ SetRules sets Rules field to given value.
 `func (o *InlineObject58) HasRules() bool`
 
 HasRules returns a boolean if a field has been set.
+
+### GetSyslogDefaultRule
+
+`func (o *InlineObject58) GetSyslogDefaultRule() bool`
+
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+
+### GetSyslogDefaultRuleOk
+
+`func (o *InlineObject58) GetSyslogDefaultRuleOk() (*bool, bool)`
+
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSyslogDefaultRule
+
+`func (o *InlineObject58) SetSyslogDefaultRule(v bool)`
+
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+
+### HasSyslogDefaultRule
+
+`func (o *InlineObject58) HasSyslogDefaultRule() bool`
+
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

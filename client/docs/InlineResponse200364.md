@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200364Counts**](InlineResponse200364Counts.md) |  | [optional] 
+**UpdatedPriorities** | Pointer to [**[]InlineResponse200364UpdatedPriorities**](InlineResponse200364UpdatedPriorities.md) | List of updated priorities | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200364WithDefaults instantiates a new InlineResponse200364 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetUpdatedPriorities
 
-`func (o *InlineResponse200364) GetCounts() InlineResponse200364Counts`
+`func (o *InlineResponse200364) GetUpdatedPriorities() []InlineResponse200364UpdatedPriorities`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetUpdatedPriorities returns the UpdatedPriorities field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetUpdatedPrioritiesOk
 
-`func (o *InlineResponse200364) GetCountsOk() (*InlineResponse200364Counts, bool)`
+`func (o *InlineResponse200364) GetUpdatedPrioritiesOk() (*[]InlineResponse200364UpdatedPriorities, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetUpdatedPrioritiesOk returns a tuple with the UpdatedPriorities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetUpdatedPriorities
 
-`func (o *InlineResponse200364) SetCounts(v InlineResponse200364Counts)`
+`func (o *InlineResponse200364) SetUpdatedPriorities(v []InlineResponse200364UpdatedPriorities)`
 
-SetCounts sets Counts field to given value.
+SetUpdatedPriorities sets UpdatedPriorities field to given value.
 
-### HasCounts
+### HasUpdatedPriorities
 
-`func (o *InlineResponse200364) HasCounts() bool`
+`func (o *InlineResponse200364) HasUpdatedPriorities() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasUpdatedPriorities returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

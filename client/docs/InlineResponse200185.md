@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
-**CommunityString** | Pointer to **string** | SNMP community string if access is &#39;community&#39;. | [optional] 
-**Users** | Pointer to [**[]InlineResponse200185Users**](InlineResponse200185Users.md) | SNMP settings if access is &#39;users&#39;. | [optional] 
-**Authentication** | Pointer to [**InlineResponse200185Authentication**](InlineResponse200185Authentication.md) |  | [optional] 
-**Privacy** | Pointer to [**InlineResponse200185Privacy**](InlineResponse200185Privacy.md) |  | [optional] 
+**Id** | Pointer to **string** | device ID | [optional] 
+**Name** | Pointer to **string** | device name | [optional] 
+**SystemType** | Pointer to **string** | system type | [optional] 
+**Mac** | Pointer to **string** | mac address | [optional] 
+**Username** | Pointer to **string** | username | [optional] 
+**Email** | Pointer to **string** | user email | [optional] 
+**Tags** | Pointer to **[]string** | device tags | [optional] 
+**TrustedAccessConnections** | Pointer to [**[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections**](NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections.md) | Array of trusted access configs | [optional] 
 
 ## Methods
 
@@ -29,130 +32,205 @@ NewInlineResponse200185WithDefaults instantiates a new InlineResponse200185 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccess
+### GetId
 
-`func (o *InlineResponse200185) GetAccess() string`
+`func (o *InlineResponse200185) GetId() string`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetIdOk
 
-`func (o *InlineResponse200185) GetAccessOk() (*string, bool)`
+`func (o *InlineResponse200185) GetIdOk() (*string, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetId
 
-`func (o *InlineResponse200185) SetAccess(v string)`
+`func (o *InlineResponse200185) SetId(v string)`
 
-SetAccess sets Access field to given value.
+SetId sets Id field to given value.
 
-### HasAccess
+### HasId
 
-`func (o *InlineResponse200185) HasAccess() bool`
+`func (o *InlineResponse200185) HasId() bool`
 
-HasAccess returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCommunityString
+### GetName
 
-`func (o *InlineResponse200185) GetCommunityString() string`
+`func (o *InlineResponse200185) GetName() string`
 
-GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCommunityStringOk
+### GetNameOk
 
-`func (o *InlineResponse200185) GetCommunityStringOk() (*string, bool)`
+`func (o *InlineResponse200185) GetNameOk() (*string, bool)`
 
-GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCommunityString
+### SetName
 
-`func (o *InlineResponse200185) SetCommunityString(v string)`
+`func (o *InlineResponse200185) SetName(v string)`
 
-SetCommunityString sets CommunityString field to given value.
+SetName sets Name field to given value.
 
-### HasCommunityString
+### HasName
 
-`func (o *InlineResponse200185) HasCommunityString() bool`
+`func (o *InlineResponse200185) HasName() bool`
 
-HasCommunityString returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUsers
+### GetSystemType
 
-`func (o *InlineResponse200185) GetUsers() []InlineResponse200185Users`
+`func (o *InlineResponse200185) GetSystemType() string`
 
-GetUsers returns the Users field if non-nil, zero value otherwise.
+GetSystemType returns the SystemType field if non-nil, zero value otherwise.
 
-### GetUsersOk
+### GetSystemTypeOk
 
-`func (o *InlineResponse200185) GetUsersOk() (*[]InlineResponse200185Users, bool)`
+`func (o *InlineResponse200185) GetSystemTypeOk() (*string, bool)`
 
-GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
+GetSystemTypeOk returns a tuple with the SystemType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsers
+### SetSystemType
 
-`func (o *InlineResponse200185) SetUsers(v []InlineResponse200185Users)`
+`func (o *InlineResponse200185) SetSystemType(v string)`
 
-SetUsers sets Users field to given value.
+SetSystemType sets SystemType field to given value.
 
-### HasUsers
+### HasSystemType
 
-`func (o *InlineResponse200185) HasUsers() bool`
+`func (o *InlineResponse200185) HasSystemType() bool`
 
-HasUsers returns a boolean if a field has been set.
+HasSystemType returns a boolean if a field has been set.
 
-### GetAuthentication
+### GetMac
 
-`func (o *InlineResponse200185) GetAuthentication() InlineResponse200185Authentication`
+`func (o *InlineResponse200185) GetMac() string`
 
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetAuthenticationOk
+### GetMacOk
 
-`func (o *InlineResponse200185) GetAuthenticationOk() (*InlineResponse200185Authentication, bool)`
+`func (o *InlineResponse200185) GetMacOk() (*string, bool)`
 
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthentication
+### SetMac
 
-`func (o *InlineResponse200185) SetAuthentication(v InlineResponse200185Authentication)`
+`func (o *InlineResponse200185) SetMac(v string)`
 
-SetAuthentication sets Authentication field to given value.
+SetMac sets Mac field to given value.
 
-### HasAuthentication
+### HasMac
 
-`func (o *InlineResponse200185) HasAuthentication() bool`
+`func (o *InlineResponse200185) HasMac() bool`
 
-HasAuthentication returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetPrivacy
+### GetUsername
 
-`func (o *InlineResponse200185) GetPrivacy() InlineResponse200185Privacy`
+`func (o *InlineResponse200185) GetUsername() string`
 
-GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
+GetUsername returns the Username field if non-nil, zero value otherwise.
 
-### GetPrivacyOk
+### GetUsernameOk
 
-`func (o *InlineResponse200185) GetPrivacyOk() (*InlineResponse200185Privacy, bool)`
+`func (o *InlineResponse200185) GetUsernameOk() (*string, bool)`
 
-GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrivacy
+### SetUsername
 
-`func (o *InlineResponse200185) SetPrivacy(v InlineResponse200185Privacy)`
+`func (o *InlineResponse200185) SetUsername(v string)`
 
-SetPrivacy sets Privacy field to given value.
+SetUsername sets Username field to given value.
 
-### HasPrivacy
+### HasUsername
 
-`func (o *InlineResponse200185) HasPrivacy() bool`
+`func (o *InlineResponse200185) HasUsername() bool`
 
-HasPrivacy returns a boolean if a field has been set.
+HasUsername returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse200185) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse200185) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse200185) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse200185) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200185) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200185) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200185) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200185) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetTrustedAccessConnections
+
+`func (o *InlineResponse200185) GetTrustedAccessConnections() []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections`
+
+GetTrustedAccessConnections returns the TrustedAccessConnections field if non-nil, zero value otherwise.
+
+### GetTrustedAccessConnectionsOk
+
+`func (o *InlineResponse200185) GetTrustedAccessConnectionsOk() (*[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections, bool)`
+
+GetTrustedAccessConnectionsOk returns a tuple with the TrustedAccessConnections field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTrustedAccessConnections
+
+`func (o *InlineResponse200185) SetTrustedAccessConnections(v []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections)`
+
+SetTrustedAccessConnections sets TrustedAccessConnections field to given value.
+
+### HasTrustedAccessConnections
+
+`func (o *InlineResponse200185) HasTrustedAccessConnections() bool`
+
+HasTrustedAccessConnections returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

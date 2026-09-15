@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TrafficFilters** | [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionTrafficFilters1**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionTrafficFilters1.md) | Array of traffic filters for this uplink preference rule | 
 **PreferredUplink** | **string** | Preferred uplink for this uplink preference rule. Must be one of: &#39;wan1&#39;, &#39;wan2&#39;, &#39;bestForVoIP&#39;, &#39;loadBalancing&#39;, &#39;defaultUplink&#39; or &#39;cellular&#39;, or any other valid uplink(wanX) if it applies to the network | 
+**Vrf** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf.md) |  | [optional] 
 **FailOverCriterion** | Pointer to **string** | Fail over criterion for this uplink preference rule. Must be one of: &#39;poorPerformance&#39; or &#39;uplinkDown&#39; | [optional] 
 **PerformanceClass** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionPerformanceClass**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionPerformanceClass.md) |  | [optional] 
 
@@ -67,6 +68,31 @@ and a boolean to check if the value has been set.
 
 SetPreferredUplink sets PreferredUplink field to given value.
 
+
+### GetVrf
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences) GetVrf() NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences) GetVrfOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences) SetVrf(v NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 ### GetFailOverCriterion
 

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
-**PoliciesBySsid** | Pointer to [**[]InlineResponse200126PoliciesBySsid**](InlineResponse200126PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
+**ClientId** | Pointer to **string** | The identifier of the client | [optional] 
+**ClientIp** | Pointer to **string** | The IP address of the client | [optional] 
+**ClientMac** | Pointer to **string** | The MAC address of the client | [optional] 
+**UsageHistory** | Pointer to [**[]NetworksNetworkIdClientsUsageHistoriesUsageHistory**](NetworksNetworkIdClientsUsageHistoriesUsageHistory.md) | An array of usage history records for the client | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200126WithDefaults instantiates a new InlineResponse200126 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetClientId
 
-`func (o *InlineResponse200126) GetMac() string`
+`func (o *InlineResponse200126) GetClientId() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetClientIdOk
 
-`func (o *InlineResponse200126) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200126) GetClientIdOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetClientId
 
-`func (o *InlineResponse200126) SetMac(v string)`
+`func (o *InlineResponse200126) SetClientId(v string)`
 
-SetMac sets Mac field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasMac
+### HasClientId
 
-`func (o *InlineResponse200126) HasMac() bool`
+`func (o *InlineResponse200126) HasClientId() bool`
 
-HasMac returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetDevicePolicy
+### GetClientIp
 
-`func (o *InlineResponse200126) GetDevicePolicy() string`
+`func (o *InlineResponse200126) GetClientIp() string`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetClientIp returns the ClientIp field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetClientIpOk
 
-`func (o *InlineResponse200126) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineResponse200126) GetClientIpOk() (*string, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetClientIpOk returns a tuple with the ClientIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetClientIp
 
-`func (o *InlineResponse200126) SetDevicePolicy(v string)`
+`func (o *InlineResponse200126) SetClientIp(v string)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetClientIp sets ClientIp field to given value.
 
-### HasDevicePolicy
+### HasClientIp
 
-`func (o *InlineResponse200126) HasDevicePolicy() bool`
+`func (o *InlineResponse200126) HasClientIp() bool`
 
-HasDevicePolicy returns a boolean if a field has been set.
+HasClientIp returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetClientMac
 
-`func (o *InlineResponse200126) GetGroupPolicyId() string`
+`func (o *InlineResponse200126) GetClientMac() string`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetClientMacOk
 
-`func (o *InlineResponse200126) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200126) GetClientMacOk() (*string, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetClientMac
 
-`func (o *InlineResponse200126) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200126) SetClientMac(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetClientMac sets ClientMac field to given value.
 
-### HasGroupPolicyId
+### HasClientMac
 
-`func (o *InlineResponse200126) HasGroupPolicyId() bool`
+`func (o *InlineResponse200126) HasClientMac() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasClientMac returns a boolean if a field has been set.
 
-### GetPoliciesBySsid
+### GetUsageHistory
 
-`func (o *InlineResponse200126) GetPoliciesBySsid() []InlineResponse200126PoliciesBySsid`
+`func (o *InlineResponse200126) GetUsageHistory() []NetworksNetworkIdClientsUsageHistoriesUsageHistory`
 
-GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+GetUsageHistory returns the UsageHistory field if non-nil, zero value otherwise.
 
-### GetPoliciesBySsidOk
+### GetUsageHistoryOk
 
-`func (o *InlineResponse200126) GetPoliciesBySsidOk() (*[]InlineResponse200126PoliciesBySsid, bool)`
+`func (o *InlineResponse200126) GetUsageHistoryOk() (*[]NetworksNetworkIdClientsUsageHistoriesUsageHistory, bool)`
 
-GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+GetUsageHistoryOk returns a tuple with the UsageHistory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPoliciesBySsid
+### SetUsageHistory
 
-`func (o *InlineResponse200126) SetPoliciesBySsid(v []InlineResponse200126PoliciesBySsid)`
+`func (o *InlineResponse200126) SetUsageHistory(v []NetworksNetworkIdClientsUsageHistoriesUsageHistory)`
 
-SetPoliciesBySsid sets PoliciesBySsid field to given value.
+SetUsageHistory sets UsageHistory field to given value.
 
-### HasPoliciesBySsid
+### HasUsageHistory
 
-`func (o *InlineResponse200126) HasPoliciesBySsid() bool`
+`func (o *InlineResponse200126) HasUsageHistory() bool`
 
-HasPoliciesBySsid returns a boolean if a field has been set.
+HasUsageHistory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

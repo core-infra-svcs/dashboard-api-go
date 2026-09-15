@@ -4,12 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Serial** | Pointer to **string** | The uplink serial | [optional] 
-**Model** | Pointer to **string** | The uplink model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**HighAvailability** | Pointer to [**OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability**](OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability.md) |  | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks**](OrganizationsOrganizationIdApplianceUplinkStatusesUplinks.md) | Uplinks | [optional] 
+**AllowedRules** | Pointer to [**[]InlineResponse200288AllowedRules**](InlineResponse200288AllowedRules.md) | Sets a list of specific SNORT signatures to allow | [optional] 
 
 ## Methods
 
@@ -30,155 +25,30 @@ NewInlineResponse200288WithDefaults instantiates a new InlineResponse200288 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetAllowedRules
 
-`func (o *InlineResponse200288) GetNetworkId() string`
+`func (o *InlineResponse200288) GetAllowedRules() []InlineResponse200288AllowedRules`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetAllowedRulesOk
 
-`func (o *InlineResponse200288) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200288) GetAllowedRulesOk() (*[]InlineResponse200288AllowedRules, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetAllowedRules
 
-`func (o *InlineResponse200288) SetNetworkId(v string)`
+`func (o *InlineResponse200288) SetAllowedRules(v []InlineResponse200288AllowedRules)`
 
-SetNetworkId sets NetworkId field to given value.
+SetAllowedRules sets AllowedRules field to given value.
 
-### HasNetworkId
+### HasAllowedRules
 
-`func (o *InlineResponse200288) HasNetworkId() bool`
+`func (o *InlineResponse200288) HasAllowedRules() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200288) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200288) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200288) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200288) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200288) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200288) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200288) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200288) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse200288) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse200288) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse200288) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse200288) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetHighAvailability
-
-`func (o *InlineResponse200288) GetHighAvailability() OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability`
-
-GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
-
-### GetHighAvailabilityOk
-
-`func (o *InlineResponse200288) GetHighAvailabilityOk() (*OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability, bool)`
-
-GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHighAvailability
-
-`func (o *InlineResponse200288) SetHighAvailability(v OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability)`
-
-SetHighAvailability sets HighAvailability field to given value.
-
-### HasHighAvailability
-
-`func (o *InlineResponse200288) HasHighAvailability() bool`
-
-HasHighAvailability returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200288) GetUplinks() []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200288) GetUplinksOk() (*[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200288) SetUplinks(v []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200288) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasAllowedRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

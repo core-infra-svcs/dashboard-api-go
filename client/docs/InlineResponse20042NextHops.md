@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Number** | Pointer to **int32** | The priority of the next hop starting from 0. Lower numbers indicate higher priority. | [optional] 
 **Address** | Pointer to **string** | The IP address of the next hop | [optional] 
+**Vlan** | Pointer to [**InlineResponse20042Vlan**](InlineResponse20042Vlan.md) |  | [optional] 
 **Vpn** | Pointer to [**InlineResponse20042Vpn**](InlineResponse20042Vpn.md) |  | [optional] 
 
 ## Methods
@@ -76,6 +77,31 @@ SetAddress sets Address field to given value.
 `func (o *InlineResponse20042NextHops) HasAddress() bool`
 
 HasAddress returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse20042NextHops) GetVlan() InlineResponse20042Vlan`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse20042NextHops) GetVlanOk() (*InlineResponse20042Vlan, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse20042NextHops) SetVlan(v InlineResponse20042Vlan)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse20042NextHops) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
 
 ### GetVpn
 

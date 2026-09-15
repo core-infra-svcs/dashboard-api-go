@@ -8,7 +8,8 @@ Name | Type | Description | Notes
 **MinPower** | Pointer to **int32** | Sets min power (dBm) of 2.4Ghz band. Can be integer between 2 and 30. | [optional] 
 **MinBitrate** | Pointer to **float32** | Sets min bitrate (Mbps) of 2.4Ghz band. Can be one of &#39;1&#39;, &#39;2&#39;, &#39;5.5&#39;, &#39;6&#39;, &#39;9&#39;, &#39;11&#39;, &#39;12&#39;, &#39;18&#39;, &#39;24&#39;, &#39;36&#39;, &#39;48&#39; or &#39;54&#39;. | [optional] 
 **ValidAutoChannels** | Pointer to **[]int32** | Sets valid auto channels for 2.4Ghz band. Can be one of &#39;1&#39;, &#39;6&#39; or &#39;11&#39;. | [optional] 
-**AxEnabled** | Pointer to **bool** | Determines whether ax radio on 2.4Ghz band is on or off. Can be either true or false. If false, we highly recommend disabling band steering. | [optional] 
+**AxEnabled** | Pointer to **bool** | Determines whether IEEE 802.11ax (Wi-Fi 6) on the 2.4 GHz band is enabled. Can be either true or false. If false, we highly recommend disabling band steering. Deprecated; use dot11ax.enabled instead. | [optional] 
+**Dot11ax** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettingsDot11ax**](NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettingsDot11ax.md) |  | [optional] 
 **Rxsop** | Pointer to **NullableInt32** | The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default. | [optional] 
 
 ## Methods
@@ -154,6 +155,31 @@ SetAxEnabled sets AxEnabled field to given value.
 `func (o *NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings) HasAxEnabled() bool`
 
 HasAxEnabled returns a boolean if a field has been set.
+
+### GetDot11ax
+
+`func (o *NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings) GetDot11ax() NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettingsDot11ax`
+
+GetDot11ax returns the Dot11ax field if non-nil, zero value otherwise.
+
+### GetDot11axOk
+
+`func (o *NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings) GetDot11axOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettingsDot11ax, bool)`
+
+GetDot11axOk returns a tuple with the Dot11ax field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDot11ax
+
+`func (o *NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings) SetDot11ax(v NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettingsDot11ax)`
+
+SetDot11ax sets Dot11ax field to given value.
+
+### HasDot11ax
+
+`func (o *NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings) HasDot11ax() bool`
+
+HasDot11ax returns a boolean if a field has been set.
 
 ### GetRxsop
 

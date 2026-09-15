@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**Name** | Pointer to **string** | The name of the organization | [optional] 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Privacy** | Pointer to **map[string]interface{}** | Privacy-related settings for the organization. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject233WithDefaults instantiates a new InlineObject233 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetName
 
-`func (o *InlineObject233) GetConfirmed() bool`
+`func (o *InlineObject233) GetName() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetNameOk
 
-`func (o *InlineObject233) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject233) GetNameOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetName
 
-`func (o *InlineObject233) SetConfirmed(v bool)`
+`func (o *InlineObject233) SetName(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetName sets Name field to given value.
 
-### HasConfirmed
+### HasName
 
-`func (o *InlineObject233) HasConfirmed() bool`
+`func (o *InlineObject233) HasName() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetManagement
 
-`func (o *InlineObject233) GetSynchronous() bool`
+`func (o *InlineObject233) GetManagement() OrganizationsManagement1`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetManagementOk
 
-`func (o *InlineObject233) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject233) GetManagementOk() (*OrganizationsManagement1, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetManagement
 
-`func (o *InlineObject233) SetSynchronous(v bool)`
+`func (o *InlineObject233) SetManagement(v OrganizationsManagement1)`
 
-SetSynchronous sets Synchronous field to given value.
+SetManagement sets Management field to given value.
 
-### HasSynchronous
+### HasManagement
 
-`func (o *InlineObject233) HasSynchronous() bool`
+`func (o *InlineObject233) HasManagement() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
+
+### GetApi
+
+`func (o *InlineObject233) GetApi() OrganizationsOrganizationIdApi`
+
+GetApi returns the Api field if non-nil, zero value otherwise.
+
+### GetApiOk
+
+`func (o *InlineObject233) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApi
+
+`func (o *InlineObject233) SetApi(v OrganizationsOrganizationIdApi)`
+
+SetApi sets Api field to given value.
+
+### HasApi
+
+`func (o *InlineObject233) HasApi() bool`
+
+HasApi returns a boolean if a field has been set.
+
+### GetPrivacy
+
+`func (o *InlineObject233) GetPrivacy() map[string]interface{}`
+
+GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
+
+### GetPrivacyOk
+
+`func (o *InlineObject233) GetPrivacyOk() (*map[string]interface{}, bool)`
+
+GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrivacy
+
+`func (o *InlineObject233) SetPrivacy(v map[string]interface{})`
+
+SetPrivacy sets Privacy field to given value.
+
+### HasPrivacy
+
+`func (o *InlineObject233) HasPrivacy() bool`
+
+HasPrivacy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

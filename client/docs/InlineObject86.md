@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Api** | [**NetworksNetworkIdApplianceUmbrellaAccountConnectApi**](NetworksNetworkIdApplianceUmbrellaAccountConnectApi.md) |  | 
+**Custom** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom.md) | Custom VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
+**MajorApplications** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications.md) | Major Application based VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
 
 ## Methods
 
 ### NewInlineObject86
 
-`func NewInlineObject86(api NetworksNetworkIdApplianceUmbrellaAccountConnectApi, ) *InlineObject86`
+`func NewInlineObject86() *InlineObject86`
 
 NewInlineObject86 instantiates a new InlineObject86 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject86WithDefaults instantiates a new InlineObject86 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApi
+### GetCustom
 
-`func (o *InlineObject86) GetApi() NetworksNetworkIdApplianceUmbrellaAccountConnectApi`
+`func (o *InlineObject86) GetCustom() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetCustom returns the Custom field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetCustomOk
 
-`func (o *InlineObject86) GetApiOk() (*NetworksNetworkIdApplianceUmbrellaAccountConnectApi, bool)`
+`func (o *InlineObject86) GetCustomOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetCustom
 
-`func (o *InlineObject86) SetApi(v NetworksNetworkIdApplianceUmbrellaAccountConnectApi)`
+`func (o *InlineObject86) SetCustom(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom)`
 
-SetApi sets Api field to given value.
+SetCustom sets Custom field to given value.
 
+### HasCustom
+
+`func (o *InlineObject86) HasCustom() bool`
+
+HasCustom returns a boolean if a field has been set.
+
+### GetMajorApplications
+
+`func (o *InlineObject86) GetMajorApplications() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications`
+
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+
+### GetMajorApplicationsOk
+
+`func (o *InlineObject86) GetMajorApplicationsOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications, bool)`
+
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorApplications
+
+`func (o *InlineObject86) SetMajorApplications(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications)`
+
+SetMajorApplications sets MajorApplications field to given value.
+
+### HasMajorApplications
+
+`func (o *InlineObject86) HasMajorApplications() bool`
+
+HasMajorApplications returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Domains** | Pointer to **[]string** | Domain names currently excluded from Umbrella DNS routing | [optional] 
+**Umbrella** | Pointer to [**InlineResponse200102Umbrella**](InlineResponse200102Umbrella.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDomains
+### GetUmbrella
 
-`func (o *InlineResponse200102) GetDomains() []string`
+`func (o *InlineResponse200102) GetUmbrella() InlineResponse200102Umbrella`
 
-GetDomains returns the Domains field if non-nil, zero value otherwise.
+GetUmbrella returns the Umbrella field if non-nil, zero value otherwise.
 
-### GetDomainsOk
+### GetUmbrellaOk
 
-`func (o *InlineResponse200102) GetDomainsOk() (*[]string, bool)`
+`func (o *InlineResponse200102) GetUmbrellaOk() (*InlineResponse200102Umbrella, bool)`
 
-GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
+GetUmbrellaOk returns a tuple with the Umbrella field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDomains
+### SetUmbrella
 
-`func (o *InlineResponse200102) SetDomains(v []string)`
+`func (o *InlineResponse200102) SetUmbrella(v InlineResponse200102Umbrella)`
 
-SetDomains sets Domains field to given value.
+SetUmbrella sets Umbrella field to given value.
 
-### HasDomains
+### HasUmbrella
 
-`func (o *InlineResponse200102) HasDomains() bool`
+`func (o *InlineResponse200102) HasUmbrella() bool`
 
-HasDomains returns a boolean if a field has been set.
+HasUmbrella returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

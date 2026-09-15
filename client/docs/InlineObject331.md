@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the policy | [optional] 
-**Description** | Pointer to **string** | Description of the policy | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy.md) |  | 
+**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to remove | 
 
 ## Methods
 
 ### NewInlineObject331
 
-`func NewInlineObject331() *InlineObject331`
+`func NewInlineObject331(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject331`
 
 NewInlineObject331 instantiates a new InlineObject331 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject331WithDefaults instantiates a new InlineObject331 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPolicy
 
-`func (o *InlineObject331) GetName() string`
+`func (o *InlineObject331) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPolicyOk
 
-`func (o *InlineObject331) GetNameOk() (*string, bool)`
+`func (o *InlineObject331) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPolicy
 
-`func (o *InlineObject331) SetName(v string)`
+`func (o *InlineObject331) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy)`
 
-SetName sets Name field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasName
 
-`func (o *InlineObject331) HasName() bool`
+### GetVlans
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject331) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
 
-### GetDescription
+GetVlans returns the Vlans field if non-nil, zero value otherwise.
 
-`func (o *InlineObject331) GetDescription() string`
+### GetVlansOk
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+`func (o *InlineObject331) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
 
-### GetDescriptionOk
-
-`func (o *InlineObject331) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetVlans
 
-`func (o *InlineObject331) SetDescription(v string)`
+`func (o *InlineObject331) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
 
-SetDescription sets Description field to given value.
+SetVlans sets Vlans field to given value.
 
-### HasDescription
-
-`func (o *InlineObject331) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

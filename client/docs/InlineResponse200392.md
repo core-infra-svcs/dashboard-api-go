@@ -4,13 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | License status (Co-termination licensing only) | [optional] 
-**ExpirationDate** | Pointer to **string** | License expiration date (Co-termination licensing only) | [optional] 
-**LicensedDeviceCounts** | Pointer to **map[string]int32** | License counts (Co-termination licensing only) | [optional] 
-**LicenseCount** | Pointer to **int32** | Total number of licenses (Per-device licensing only) | [optional] 
-**States** | Pointer to [**InlineResponse200392States**](InlineResponse200392States.md) |  | [optional] 
-**LicenseTypes** | Pointer to [**[]InlineResponse200392LicenseTypes**](InlineResponse200392LicenseTypes.md) | Data by license type (Per-device licensing only) | [optional] 
-**SystemsManager** | Pointer to [**InlineResponse200392SystemsManager**](InlineResponse200392SystemsManager.md) |  | [optional] 
+**Id** | Pointer to **string** | License ID | [optional] 
+**LicenseType** | Pointer to **string** | License type | [optional] 
+**LicenseKey** | Pointer to **string** | License key | [optional] 
+**OrderNumber** | Pointer to **string** | Order number | [optional] 
+**DeviceSerial** | Pointer to **string** | Serial number of the device the license is assigned to | [optional] 
+**NetworkId** | Pointer to **string** | ID of the network the license is assigned to | [optional] 
+**State** | Pointer to **string** | The state of the license. All queued licenses have a status of &#x60;recentlyQueued&#x60;. | [optional] 
+**SeatCount** | Pointer to **int32** | The number of seats of the license. Only applicable to SM licenses. | [optional] 
+**TotalDurationInDays** | Pointer to **int32** | The duration of the license plus all permanently queued licenses associated with it | [optional] 
+**DurationInDays** | Pointer to **int32** | The duration of the individual license | [optional] 
+**PermanentlyQueuedLicenses** | Pointer to [**[]OrganizationsOrganizationIdLicensesPermanentlyQueuedLicenses**](OrganizationsOrganizationIdLicensesPermanentlyQueuedLicenses.md) | DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial&#x3D; to retrieved queued licenses for a given device. | [optional] 
+**ClaimDate** | Pointer to **string** | The date the license was claimed into the organization | [optional] 
+**ActivationDate** | Pointer to **string** | The date the license started burning | [optional] 
+**ExpirationDate** | Pointer to **string** | The date the license will expire | [optional] 
+**HeadLicenseId** | Pointer to **string** | The id of the head license this license is queued behind. If there is no head license, it returns nil. | [optional] 
 
 ## Methods
 
@@ -31,30 +39,330 @@ NewInlineResponse200392WithDefaults instantiates a new InlineResponse200392 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetId
 
-`func (o *InlineResponse200392) GetStatus() string`
+`func (o *InlineResponse200392) GetId() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetIdOk
 
-`func (o *InlineResponse200392) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200392) GetIdOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetId
 
-`func (o *InlineResponse200392) SetStatus(v string)`
+`func (o *InlineResponse200392) SetId(v string)`
 
-SetStatus sets Status field to given value.
+SetId sets Id field to given value.
 
-### HasStatus
+### HasId
 
-`func (o *InlineResponse200392) HasStatus() bool`
+`func (o *InlineResponse200392) HasId() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetLicenseType
+
+`func (o *InlineResponse200392) GetLicenseType() string`
+
+GetLicenseType returns the LicenseType field if non-nil, zero value otherwise.
+
+### GetLicenseTypeOk
+
+`func (o *InlineResponse200392) GetLicenseTypeOk() (*string, bool)`
+
+GetLicenseTypeOk returns a tuple with the LicenseType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenseType
+
+`func (o *InlineResponse200392) SetLicenseType(v string)`
+
+SetLicenseType sets LicenseType field to given value.
+
+### HasLicenseType
+
+`func (o *InlineResponse200392) HasLicenseType() bool`
+
+HasLicenseType returns a boolean if a field has been set.
+
+### GetLicenseKey
+
+`func (o *InlineResponse200392) GetLicenseKey() string`
+
+GetLicenseKey returns the LicenseKey field if non-nil, zero value otherwise.
+
+### GetLicenseKeyOk
+
+`func (o *InlineResponse200392) GetLicenseKeyOk() (*string, bool)`
+
+GetLicenseKeyOk returns a tuple with the LicenseKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenseKey
+
+`func (o *InlineResponse200392) SetLicenseKey(v string)`
+
+SetLicenseKey sets LicenseKey field to given value.
+
+### HasLicenseKey
+
+`func (o *InlineResponse200392) HasLicenseKey() bool`
+
+HasLicenseKey returns a boolean if a field has been set.
+
+### GetOrderNumber
+
+`func (o *InlineResponse200392) GetOrderNumber() string`
+
+GetOrderNumber returns the OrderNumber field if non-nil, zero value otherwise.
+
+### GetOrderNumberOk
+
+`func (o *InlineResponse200392) GetOrderNumberOk() (*string, bool)`
+
+GetOrderNumberOk returns a tuple with the OrderNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrderNumber
+
+`func (o *InlineResponse200392) SetOrderNumber(v string)`
+
+SetOrderNumber sets OrderNumber field to given value.
+
+### HasOrderNumber
+
+`func (o *InlineResponse200392) HasOrderNumber() bool`
+
+HasOrderNumber returns a boolean if a field has been set.
+
+### GetDeviceSerial
+
+`func (o *InlineResponse200392) GetDeviceSerial() string`
+
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+
+### GetDeviceSerialOk
+
+`func (o *InlineResponse200392) GetDeviceSerialOk() (*string, bool)`
+
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceSerial
+
+`func (o *InlineResponse200392) SetDeviceSerial(v string)`
+
+SetDeviceSerial sets DeviceSerial field to given value.
+
+### HasDeviceSerial
+
+`func (o *InlineResponse200392) HasDeviceSerial() bool`
+
+HasDeviceSerial returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse200392) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200392) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200392) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200392) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetState
+
+`func (o *InlineResponse200392) GetState() string`
+
+GetState returns the State field if non-nil, zero value otherwise.
+
+### GetStateOk
+
+`func (o *InlineResponse200392) GetStateOk() (*string, bool)`
+
+GetStateOk returns a tuple with the State field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetState
+
+`func (o *InlineResponse200392) SetState(v string)`
+
+SetState sets State field to given value.
+
+### HasState
+
+`func (o *InlineResponse200392) HasState() bool`
+
+HasState returns a boolean if a field has been set.
+
+### GetSeatCount
+
+`func (o *InlineResponse200392) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineResponse200392) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineResponse200392) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
+
+### HasSeatCount
+
+`func (o *InlineResponse200392) HasSeatCount() bool`
+
+HasSeatCount returns a boolean if a field has been set.
+
+### GetTotalDurationInDays
+
+`func (o *InlineResponse200392) GetTotalDurationInDays() int32`
+
+GetTotalDurationInDays returns the TotalDurationInDays field if non-nil, zero value otherwise.
+
+### GetTotalDurationInDaysOk
+
+`func (o *InlineResponse200392) GetTotalDurationInDaysOk() (*int32, bool)`
+
+GetTotalDurationInDaysOk returns a tuple with the TotalDurationInDays field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTotalDurationInDays
+
+`func (o *InlineResponse200392) SetTotalDurationInDays(v int32)`
+
+SetTotalDurationInDays sets TotalDurationInDays field to given value.
+
+### HasTotalDurationInDays
+
+`func (o *InlineResponse200392) HasTotalDurationInDays() bool`
+
+HasTotalDurationInDays returns a boolean if a field has been set.
+
+### GetDurationInDays
+
+`func (o *InlineResponse200392) GetDurationInDays() int32`
+
+GetDurationInDays returns the DurationInDays field if non-nil, zero value otherwise.
+
+### GetDurationInDaysOk
+
+`func (o *InlineResponse200392) GetDurationInDaysOk() (*int32, bool)`
+
+GetDurationInDaysOk returns a tuple with the DurationInDays field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDurationInDays
+
+`func (o *InlineResponse200392) SetDurationInDays(v int32)`
+
+SetDurationInDays sets DurationInDays field to given value.
+
+### HasDurationInDays
+
+`func (o *InlineResponse200392) HasDurationInDays() bool`
+
+HasDurationInDays returns a boolean if a field has been set.
+
+### GetPermanentlyQueuedLicenses
+
+`func (o *InlineResponse200392) GetPermanentlyQueuedLicenses() []OrganizationsOrganizationIdLicensesPermanentlyQueuedLicenses`
+
+GetPermanentlyQueuedLicenses returns the PermanentlyQueuedLicenses field if non-nil, zero value otherwise.
+
+### GetPermanentlyQueuedLicensesOk
+
+`func (o *InlineResponse200392) GetPermanentlyQueuedLicensesOk() (*[]OrganizationsOrganizationIdLicensesPermanentlyQueuedLicenses, bool)`
+
+GetPermanentlyQueuedLicensesOk returns a tuple with the PermanentlyQueuedLicenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPermanentlyQueuedLicenses
+
+`func (o *InlineResponse200392) SetPermanentlyQueuedLicenses(v []OrganizationsOrganizationIdLicensesPermanentlyQueuedLicenses)`
+
+SetPermanentlyQueuedLicenses sets PermanentlyQueuedLicenses field to given value.
+
+### HasPermanentlyQueuedLicenses
+
+`func (o *InlineResponse200392) HasPermanentlyQueuedLicenses() bool`
+
+HasPermanentlyQueuedLicenses returns a boolean if a field has been set.
+
+### GetClaimDate
+
+`func (o *InlineResponse200392) GetClaimDate() string`
+
+GetClaimDate returns the ClaimDate field if non-nil, zero value otherwise.
+
+### GetClaimDateOk
+
+`func (o *InlineResponse200392) GetClaimDateOk() (*string, bool)`
+
+GetClaimDateOk returns a tuple with the ClaimDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClaimDate
+
+`func (o *InlineResponse200392) SetClaimDate(v string)`
+
+SetClaimDate sets ClaimDate field to given value.
+
+### HasClaimDate
+
+`func (o *InlineResponse200392) HasClaimDate() bool`
+
+HasClaimDate returns a boolean if a field has been set.
+
+### GetActivationDate
+
+`func (o *InlineResponse200392) GetActivationDate() string`
+
+GetActivationDate returns the ActivationDate field if non-nil, zero value otherwise.
+
+### GetActivationDateOk
+
+`func (o *InlineResponse200392) GetActivationDateOk() (*string, bool)`
+
+GetActivationDateOk returns a tuple with the ActivationDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActivationDate
+
+`func (o *InlineResponse200392) SetActivationDate(v string)`
+
+SetActivationDate sets ActivationDate field to given value.
+
+### HasActivationDate
+
+`func (o *InlineResponse200392) HasActivationDate() bool`
+
+HasActivationDate returns a boolean if a field has been set.
 
 ### GetExpirationDate
 
@@ -81,130 +389,30 @@ SetExpirationDate sets ExpirationDate field to given value.
 
 HasExpirationDate returns a boolean if a field has been set.
 
-### GetLicensedDeviceCounts
+### GetHeadLicenseId
 
-`func (o *InlineResponse200392) GetLicensedDeviceCounts() map[string]int32`
+`func (o *InlineResponse200392) GetHeadLicenseId() string`
 
-GetLicensedDeviceCounts returns the LicensedDeviceCounts field if non-nil, zero value otherwise.
+GetHeadLicenseId returns the HeadLicenseId field if non-nil, zero value otherwise.
 
-### GetLicensedDeviceCountsOk
+### GetHeadLicenseIdOk
 
-`func (o *InlineResponse200392) GetLicensedDeviceCountsOk() (*map[string]int32, bool)`
+`func (o *InlineResponse200392) GetHeadLicenseIdOk() (*string, bool)`
 
-GetLicensedDeviceCountsOk returns a tuple with the LicensedDeviceCounts field if it's non-nil, zero value otherwise
+GetHeadLicenseIdOk returns a tuple with the HeadLicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicensedDeviceCounts
+### SetHeadLicenseId
 
-`func (o *InlineResponse200392) SetLicensedDeviceCounts(v map[string]int32)`
+`func (o *InlineResponse200392) SetHeadLicenseId(v string)`
 
-SetLicensedDeviceCounts sets LicensedDeviceCounts field to given value.
+SetHeadLicenseId sets HeadLicenseId field to given value.
 
-### HasLicensedDeviceCounts
+### HasHeadLicenseId
 
-`func (o *InlineResponse200392) HasLicensedDeviceCounts() bool`
+`func (o *InlineResponse200392) HasHeadLicenseId() bool`
 
-HasLicensedDeviceCounts returns a boolean if a field has been set.
-
-### GetLicenseCount
-
-`func (o *InlineResponse200392) GetLicenseCount() int32`
-
-GetLicenseCount returns the LicenseCount field if non-nil, zero value otherwise.
-
-### GetLicenseCountOk
-
-`func (o *InlineResponse200392) GetLicenseCountOk() (*int32, bool)`
-
-GetLicenseCountOk returns a tuple with the LicenseCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseCount
-
-`func (o *InlineResponse200392) SetLicenseCount(v int32)`
-
-SetLicenseCount sets LicenseCount field to given value.
-
-### HasLicenseCount
-
-`func (o *InlineResponse200392) HasLicenseCount() bool`
-
-HasLicenseCount returns a boolean if a field has been set.
-
-### GetStates
-
-`func (o *InlineResponse200392) GetStates() InlineResponse200392States`
-
-GetStates returns the States field if non-nil, zero value otherwise.
-
-### GetStatesOk
-
-`func (o *InlineResponse200392) GetStatesOk() (*InlineResponse200392States, bool)`
-
-GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStates
-
-`func (o *InlineResponse200392) SetStates(v InlineResponse200392States)`
-
-SetStates sets States field to given value.
-
-### HasStates
-
-`func (o *InlineResponse200392) HasStates() bool`
-
-HasStates returns a boolean if a field has been set.
-
-### GetLicenseTypes
-
-`func (o *InlineResponse200392) GetLicenseTypes() []InlineResponse200392LicenseTypes`
-
-GetLicenseTypes returns the LicenseTypes field if non-nil, zero value otherwise.
-
-### GetLicenseTypesOk
-
-`func (o *InlineResponse200392) GetLicenseTypesOk() (*[]InlineResponse200392LicenseTypes, bool)`
-
-GetLicenseTypesOk returns a tuple with the LicenseTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseTypes
-
-`func (o *InlineResponse200392) SetLicenseTypes(v []InlineResponse200392LicenseTypes)`
-
-SetLicenseTypes sets LicenseTypes field to given value.
-
-### HasLicenseTypes
-
-`func (o *InlineResponse200392) HasLicenseTypes() bool`
-
-HasLicenseTypes returns a boolean if a field has been set.
-
-### GetSystemsManager
-
-`func (o *InlineResponse200392) GetSystemsManager() InlineResponse200392SystemsManager`
-
-GetSystemsManager returns the SystemsManager field if non-nil, zero value otherwise.
-
-### GetSystemsManagerOk
-
-`func (o *InlineResponse200392) GetSystemsManagerOk() (*InlineResponse200392SystemsManager, bool)`
-
-GetSystemsManagerOk returns a tuple with the SystemsManager field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSystemsManager
-
-`func (o *InlineResponse200392) SetSystemsManager(v InlineResponse200392SystemsManager)`
-
-SetSystemsManager sets SystemsManager field to given value.
-
-### HasSystemsManager
-
-`func (o *InlineResponse200392) HasSystemsManager() bool`
-
-HasSystemsManager returns a boolean if a field has been set.
+HasHeadLicenseId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

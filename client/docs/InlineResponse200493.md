@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20129Request**](InlineResponse20129Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
-**DoorLocks** | Pointer to [**[]InlineResponse200493DoorLocks**](InlineResponse200493DoorLocks.md) | Door locks | [optional] 
+**Id** | Pointer to **string** | Unique identifier of the SSID profile | [optional] 
+**Name** | Pointer to **string** | Name of the SSID profile | [optional] 
+**Precedence** | Pointer to [**InlineResponse200493Precedence**](InlineResponse200493Precedence.md) |  | [optional] 
+**Ssid** | Pointer to [**InlineResponse200493Ssid**](InlineResponse200493Ssid.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200493WithDefaults instantiates a new InlineResponse200493 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetId
 
-`func (o *InlineResponse200493) GetDisenrollmentId() string`
+`func (o *InlineResponse200493) GetId() string`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetIdOk
 
-`func (o *InlineResponse200493) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse200493) GetIdOk() (*string, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetId
 
-`func (o *InlineResponse200493) SetDisenrollmentId(v string)`
+`func (o *InlineResponse200493) SetId(v string)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetId sets Id field to given value.
 
-### HasDisenrollmentId
+### HasId
 
-`func (o *InlineResponse200493) HasDisenrollmentId() bool`
+`func (o *InlineResponse200493) HasId() bool`
 
-HasDisenrollmentId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUrl
+### GetName
 
-`func (o *InlineResponse200493) GetUrl() string`
+`func (o *InlineResponse200493) GetName() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetNameOk
 
-`func (o *InlineResponse200493) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200493) GetNameOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetName
 
-`func (o *InlineResponse200493) SetUrl(v string)`
+`func (o *InlineResponse200493) SetName(v string)`
 
-SetUrl sets Url field to given value.
+SetName sets Name field to given value.
 
-### HasUrl
+### HasName
 
-`func (o *InlineResponse200493) HasUrl() bool`
+`func (o *InlineResponse200493) HasName() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRequest
+### GetPrecedence
 
-`func (o *InlineResponse200493) GetRequest() InlineResponse20129Request`
+`func (o *InlineResponse200493) GetPrecedence() InlineResponse200493Precedence`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetPrecedence returns the Precedence field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetPrecedenceOk
 
-`func (o *InlineResponse200493) GetRequestOk() (*InlineResponse20129Request, bool)`
+`func (o *InlineResponse200493) GetPrecedenceOk() (*InlineResponse200493Precedence, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetPrecedenceOk returns a tuple with the Precedence field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetPrecedence
 
-`func (o *InlineResponse200493) SetRequest(v InlineResponse20129Request)`
+`func (o *InlineResponse200493) SetPrecedence(v InlineResponse200493Precedence)`
 
-SetRequest sets Request field to given value.
+SetPrecedence sets Precedence field to given value.
 
-### HasRequest
+### HasPrecedence
 
-`func (o *InlineResponse200493) HasRequest() bool`
+`func (o *InlineResponse200493) HasPrecedence() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasPrecedence returns a boolean if a field has been set.
 
-### GetStatus
+### GetSsid
 
-`func (o *InlineResponse200493) GetStatus() string`
+`func (o *InlineResponse200493) GetSsid() InlineResponse200493Ssid`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSsidOk
 
-`func (o *InlineResponse200493) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200493) GetSsidOk() (*InlineResponse200493Ssid, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSsid
 
-`func (o *InlineResponse200493) SetStatus(v string)`
+`func (o *InlineResponse200493) SetSsid(v InlineResponse200493Ssid)`
 
-SetStatus sets Status field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasStatus
+### HasSsid
 
-`func (o *InlineResponse200493) HasStatus() bool`
+`func (o *InlineResponse200493) HasSsid() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetDoorLocks
-
-`func (o *InlineResponse200493) GetDoorLocks() []InlineResponse200493DoorLocks`
-
-GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
-
-### GetDoorLocksOk
-
-`func (o *InlineResponse200493) GetDoorLocksOk() (*[]InlineResponse200493DoorLocks, bool)`
-
-GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDoorLocks
-
-`func (o *InlineResponse200493) SetDoorLocks(v []InlineResponse200493DoorLocks)`
-
-SetDoorLocks sets DoorLocks field to given value.
-
-### HasDoorLocks
-
-`func (o *InlineResponse200493) HasDoorLocks() bool`
-
-HasDoorLocks returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

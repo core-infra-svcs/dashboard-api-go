@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of profile | 
+**Type** | **string** | The alert type | 
+**AlertCondition** | [**OrganizationsOrganizationIdAlertsProfilesAlertCondition1**](OrganizationsOrganizationIdAlertsProfilesAlertCondition1.md) |  | 
+**Recipients** | [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | 
+**NetworkTags** | **[]string** | Networks with these tags will be monitored for the alert | 
+**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
 
 ## Methods
 
 ### NewInlineObject245
 
-`func NewInlineObject245(name string, ) *InlineObject245`
+`func NewInlineObject245(type_ string, alertCondition OrganizationsOrganizationIdAlertsProfilesAlertCondition1, recipients OrganizationsOrganizationIdAlertsProfilesRecipients, networkTags []string, ) *InlineObject245`
 
 NewInlineObject245 instantiates a new InlineObject245 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +29,110 @@ NewInlineObject245WithDefaults instantiates a new InlineObject245 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetType
 
-`func (o *InlineObject245) GetName() string`
+`func (o *InlineObject245) GetType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTypeOk
 
-`func (o *InlineObject245) GetNameOk() (*string, bool)`
+`func (o *InlineObject245) GetTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetType
 
-`func (o *InlineObject245) SetName(v string)`
+`func (o *InlineObject245) SetType(v string)`
 
-SetName sets Name field to given value.
+SetType sets Type field to given value.
 
+
+### GetAlertCondition
+
+`func (o *InlineObject245) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition1`
+
+GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+
+### GetAlertConditionOk
+
+`func (o *InlineObject245) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition1, bool)`
+
+GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertCondition
+
+`func (o *InlineObject245) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition1)`
+
+SetAlertCondition sets AlertCondition field to given value.
+
+
+### GetRecipients
+
+`func (o *InlineObject245) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineObject245) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineObject245) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+
+### GetNetworkTags
+
+`func (o *InlineObject245) GetNetworkTags() []string`
+
+GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+
+### GetNetworkTagsOk
+
+`func (o *InlineObject245) GetNetworkTagsOk() (*[]string, bool)`
+
+GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkTags
+
+`func (o *InlineObject245) SetNetworkTags(v []string)`
+
+SetNetworkTags sets NetworkTags field to given value.
+
+
+### GetDescription
+
+`func (o *InlineObject245) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject245) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject245) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject245) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

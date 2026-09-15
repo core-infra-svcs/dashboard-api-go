@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
-**Address** | Pointer to **string** | IP for the DNS record | [optional] 
-**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
+**Name** | **string** | Name of profile | 
 
 ## Methods
 
 ### NewInlineObject250
 
-`func NewInlineObject250() *InlineObject250`
+`func NewInlineObject250(name string, ) *InlineObject250`
 
 NewInlineObject250 instantiates a new InlineObject250 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +25,25 @@ NewInlineObject250WithDefaults instantiates a new InlineObject250 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetName
 
-`func (o *InlineObject250) GetHostname() string`
+`func (o *InlineObject250) GetName() string`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetNameOk
 
-`func (o *InlineObject250) GetHostnameOk() (*string, bool)`
+`func (o *InlineObject250) GetNameOk() (*string, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetName
 
-`func (o *InlineObject250) SetHostname(v string)`
+`func (o *InlineObject250) SetName(v string)`
 
-SetHostname sets Hostname field to given value.
+SetName sets Name field to given value.
 
-### HasHostname
-
-`func (o *InlineObject250) HasHostname() bool`
-
-HasHostname returns a boolean if a field has been set.
-
-### GetAddress
-
-`func (o *InlineObject250) GetAddress() string`
-
-GetAddress returns the Address field if non-nil, zero value otherwise.
-
-### GetAddressOk
-
-`func (o *InlineObject250) GetAddressOk() (*string, bool)`
-
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAddress
-
-`func (o *InlineObject250) SetAddress(v string)`
-
-SetAddress sets Address field to given value.
-
-### HasAddress
-
-`func (o *InlineObject250) HasAddress() bool`
-
-HasAddress returns a boolean if a field has been set.
-
-### GetProfile
-
-`func (o *InlineObject250) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
-
-GetProfile returns the Profile field if non-nil, zero value otherwise.
-
-### GetProfileOk
-
-`func (o *InlineObject250) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
-
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfile
-
-`func (o *InlineObject250) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
-
-SetProfile sets Profile field to given value.
-
-### HasProfile
-
-`func (o *InlineObject250) HasProfile() bool`
-
-HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

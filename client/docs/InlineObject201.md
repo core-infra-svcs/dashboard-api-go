@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultPolicy** | **string** | Allows clients to access rogue networks. Blocked by default. | 
+**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
+**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
 
 ## Methods
 
 ### NewInlineObject201
 
-`func NewInlineObject201(defaultPolicy string, ) *InlineObject201`
+`func NewInlineObject201(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject201`
 
 NewInlineObject201 instantiates a new InlineObject201 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +26,44 @@ NewInlineObject201WithDefaults instantiates a new InlineObject201 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultPolicy
+### GetType
 
-`func (o *InlineObject201) GetDefaultPolicy() string`
+`func (o *InlineObject201) GetType() string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetTypeOk
 
-`func (o *InlineObject201) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject201) GetTypeOk() (*string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetType
 
-`func (o *InlineObject201) SetDefaultPolicy(v string)`
+`func (o *InlineObject201) SetType(v string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetType sets Type field to given value.
+
+
+### GetMatch
+
+`func (o *InlineObject201) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
+
+GetMatch returns the Match field if non-nil, zero value otherwise.
+
+### GetMatchOk
+
+`func (o *InlineObject201) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
+
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatch
+
+`func (o *InlineObject201) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
+
+SetMatch sets Match field to given value.
 
 
 

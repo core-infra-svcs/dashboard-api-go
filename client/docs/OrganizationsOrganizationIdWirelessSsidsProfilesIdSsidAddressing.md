@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BonjourForwarding** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidAddressingBonjourForwarding**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidAddressingBonjourForwarding.md) |  | [optional] 
-**Mdns** | Pointer to [**InlineResponse200488SsidAddressingMdns**](InlineResponse200488SsidAddressingMdns.md) |  | [optional] 
-**Radius** | Pointer to [**InlineResponse200488SsidAddressingRadius**](InlineResponse200488SsidAddressingRadius.md) |  | [optional] 
+**Mdns** | Pointer to [**InlineResponse200493SsidAddressingMdns**](InlineResponse200493SsidAddressingMdns.md) |  | [optional] 
+**Radius** | Pointer to [**InlineResponse200493SsidAddressingRadius**](InlineResponse200493SsidAddressingRadius.md) |  | [optional] 
 
 ## Methods
 
@@ -54,20 +54,20 @@ HasBonjourForwarding returns a boolean if a field has been set.
 
 ### GetMdns
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetMdns() InlineResponse200488SsidAddressingMdns`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetMdns() InlineResponse200493SsidAddressingMdns`
 
 GetMdns returns the Mdns field if non-nil, zero value otherwise.
 
 ### GetMdnsOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetMdnsOk() (*InlineResponse200488SsidAddressingMdns, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetMdnsOk() (*InlineResponse200493SsidAddressingMdns, bool)`
 
 GetMdnsOk returns a tuple with the Mdns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMdns
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) SetMdns(v InlineResponse200488SsidAddressingMdns)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) SetMdns(v InlineResponse200493SsidAddressingMdns)`
 
 SetMdns sets Mdns field to given value.
 
@@ -79,20 +79,20 @@ HasMdns returns a boolean if a field has been set.
 
 ### GetRadius
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetRadius() InlineResponse200488SsidAddressingRadius`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetRadius() InlineResponse200493SsidAddressingRadius`
 
 GetRadius returns the Radius field if non-nil, zero value otherwise.
 
 ### GetRadiusOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetRadiusOk() (*InlineResponse200488SsidAddressingRadius, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) GetRadiusOk() (*InlineResponse200493SsidAddressingRadius, bool)`
 
 GetRadiusOk returns a tuple with the Radius field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRadius
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) SetRadius(v InlineResponse200488SsidAddressingRadius)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing) SetRadius(v InlineResponse200493SsidAddressingRadius)`
 
 SetRadius sets Radius field to given value.
 

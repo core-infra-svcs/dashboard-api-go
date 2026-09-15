@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy.md) |  | 
-**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to remove | 
+**Name** | Pointer to **string** | Name of the firewall ruleset | [optional] 
+**Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
 
 ## Methods
 
 ### NewInlineObject326
 
-`func NewInlineObject326(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject326`
+`func NewInlineObject326() *InlineObject326`
 
 NewInlineObject326 instantiates a new InlineObject326 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject326WithDefaults instantiates a new InlineObject326 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetName
 
-`func (o *InlineObject326) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy`
+`func (o *InlineObject326) GetName() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNameOk
 
-`func (o *InlineObject326) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, bool)`
+`func (o *InlineObject326) GetNameOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetName
 
-`func (o *InlineObject326) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy)`
+`func (o *InlineObject326) SetName(v string)`
 
-SetPolicy sets Policy field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetAdaptivePolicyGroups
+`func (o *InlineObject326) HasName() bool`
 
-`func (o *InlineObject326) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
+HasName returns a boolean if a field has been set.
 
-GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
+### GetDescription
 
-### GetAdaptivePolicyGroupsOk
+`func (o *InlineObject326) GetDescription() string`
 
-`func (o *InlineObject326) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
+### GetDescriptionOk
+
+`func (o *InlineObject326) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyGroups
+### SetDescription
 
-`func (o *InlineObject326) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
+`func (o *InlineObject326) SetDescription(v string)`
 
-SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
+
+`func (o *InlineObject326) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

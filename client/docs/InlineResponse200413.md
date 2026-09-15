@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
-**SpInitiated** | Pointer to [**InlineResponse200413SpInitiated**](InlineResponse200413SpInitiated.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200413Items**](InlineResponse200413Items.md) | List of Appliance VLAN Assignments | [optional] 
+**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200413WithDefaults instantiates a new InlineResponse200413 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetItems
 
-`func (o *InlineResponse200413) GetEnabled() bool`
+`func (o *InlineResponse200413) GetItems() []InlineResponse200413Items`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetItemsOk
 
-`func (o *InlineResponse200413) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200413) GetItemsOk() (*[]InlineResponse200413Items, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetItems
 
-`func (o *InlineResponse200413) SetEnabled(v bool)`
+`func (o *InlineResponse200413) SetItems(v []InlineResponse200413Items)`
 
-SetEnabled sets Enabled field to given value.
+SetItems sets Items field to given value.
 
-### HasEnabled
+### HasItems
 
-`func (o *InlineResponse200413) HasEnabled() bool`
+`func (o *InlineResponse200413) HasItems() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetSpInitiated
+### GetMeta
 
-`func (o *InlineResponse200413) GetSpInitiated() InlineResponse200413SpInitiated`
+`func (o *InlineResponse200413) GetMeta() InlineResponse200279Meta`
 
-GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetSpInitiatedOk
+### GetMetaOk
 
-`func (o *InlineResponse200413) GetSpInitiatedOk() (*InlineResponse200413SpInitiated, bool)`
+`func (o *InlineResponse200413) GetMetaOk() (*InlineResponse200279Meta, bool)`
 
-GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpInitiated
+### SetMeta
 
-`func (o *InlineResponse200413) SetSpInitiated(v InlineResponse200413SpInitiated)`
+`func (o *InlineResponse200413) SetMeta(v InlineResponse200279Meta)`
 
-SetSpInitiated sets SpInitiated field to given value.
+SetMeta sets Meta field to given value.
 
-### HasSpInitiated
+### HasMeta
 
-`func (o *InlineResponse200413) HasSpInitiated() bool`
+`func (o *InlineResponse200413) HasMeta() bool`
 
-HasSpInitiated returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

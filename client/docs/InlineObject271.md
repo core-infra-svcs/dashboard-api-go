@@ -4,22 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClusterId** | **string** | ID of the cluster to be provisioned | 
-**Network** | [**OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork**](OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork.md) |  | 
-**Name** | **string** | Name of the new cluster | 
-**Uplinks** | [**[]NetworksNetworkIdCampusGatewayClustersUplinks**](NetworksNetworkIdCampusGatewayClustersUplinks.md) | Uplink interface settings of the cluster | 
-**Tunnels** | [**[]NetworksNetworkIdCampusGatewayClustersTunnels**](NetworksNetworkIdCampusGatewayClustersTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | 
-**Nameservers** | [**NetworksNetworkIdCampusGatewayClustersNameservers**](NetworksNetworkIdCampusGatewayClustersNameservers.md) |  | 
-**PortChannels** | [**[]OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels**](OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels.md) | Port channel settings of the cluster | 
-**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersDevices**](NetworksNetworkIdCampusGatewayClustersDevices.md) | Devices to be added to the cluster | [optional] 
-**Failover** | Pointer to [**OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover**](OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover.md) |  | [optional] 
-**Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
+**Name** | **string** | The name of the new role. Must be unique. This parameter is required. | 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices1.md) | Device tag on which this specified permission is applied. | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1.md) | Network tag on which this specified permission is applied. | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide1.md) | Permissions to be applied org wide. | [optional] 
 
 ## Methods
 
 ### NewInlineObject271
 
-`func NewInlineObject271(clusterId string, network OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork, name string, uplinks []NetworksNetworkIdCampusGatewayClustersUplinks, tunnels []NetworksNetworkIdCampusGatewayClustersTunnels, nameservers NetworksNetworkIdCampusGatewayClustersNameservers, portChannels []OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels, ) *InlineObject271`
+`func NewInlineObject271(name string, ) *InlineObject271`
 
 NewInlineObject271 instantiates a new InlineObject271 object
 This constructor will assign default values to properties that have it defined,
@@ -33,46 +27,6 @@ will change when the set of required properties is changed
 NewInlineObject271WithDefaults instantiates a new InlineObject271 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetClusterId
-
-`func (o *InlineObject271) GetClusterId() string`
-
-GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
-
-### GetClusterIdOk
-
-`func (o *InlineObject271) GetClusterIdOk() (*string, bool)`
-
-GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClusterId
-
-`func (o *InlineObject271) SetClusterId(v string)`
-
-SetClusterId sets ClusterId field to given value.
-
-
-### GetNetwork
-
-`func (o *InlineObject271) GetNetwork() OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineObject271) GetNetworkOk() (*OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineObject271) SetNetwork(v OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork)`
-
-SetNetwork sets Network field to given value.
-
 
 ### GetName
 
@@ -94,160 +48,80 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetUplinks
+### GetAppliedOnDevices
 
-`func (o *InlineObject271) GetUplinks() []NetworksNetworkIdCampusGatewayClustersUplinks`
+`func (o *InlineObject271) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetAppliedOnDevicesOk
 
-`func (o *InlineObject271) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersUplinks, bool)`
+`func (o *InlineObject271) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetAppliedOnDevices
 
-`func (o *InlineObject271) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersUplinks)`
+`func (o *InlineObject271) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1)`
 
-SetUplinks sets Uplinks field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
+### HasAppliedOnDevices
 
-### GetTunnels
+`func (o *InlineObject271) HasAppliedOnDevices() bool`
 
-`func (o *InlineObject271) GetTunnels() []NetworksNetworkIdCampusGatewayClustersTunnels`
+HasAppliedOnDevices returns a boolean if a field has been set.
 
-GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
+### GetAppliedOnNetworks
 
-### GetTunnelsOk
+`func (o *InlineObject271) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1`
 
-`func (o *InlineObject271) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersTunnels, bool)`
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
 
-GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
+### GetAppliedOnNetworksOk
+
+`func (o *InlineObject271) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1, bool)`
+
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTunnels
+### SetAppliedOnNetworks
 
-`func (o *InlineObject271) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersTunnels)`
+`func (o *InlineObject271) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1)`
 
-SetTunnels sets Tunnels field to given value.
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
 
+### HasAppliedOnNetworks
 
-### GetNameservers
+`func (o *InlineObject271) HasAppliedOnNetworks() bool`
 
-`func (o *InlineObject271) GetNameservers() NetworksNetworkIdCampusGatewayClustersNameservers`
+HasAppliedOnNetworks returns a boolean if a field has been set.
 
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+### GetAppliedOrgWide
 
-### GetNameserversOk
+`func (o *InlineObject271) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1`
 
-`func (o *InlineObject271) GetNameserversOk() (*NetworksNetworkIdCampusGatewayClustersNameservers, bool)`
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
 
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+### GetAppliedOrgWideOk
+
+`func (o *InlineObject271) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNameservers
+### SetAppliedOrgWide
 
-`func (o *InlineObject271) SetNameservers(v NetworksNetworkIdCampusGatewayClustersNameservers)`
+`func (o *InlineObject271) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1)`
 
-SetNameservers sets Nameservers field to given value.
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
 
+### HasAppliedOrgWide
 
-### GetPortChannels
+`func (o *InlineObject271) HasAppliedOrgWide() bool`
 
-`func (o *InlineObject271) GetPortChannels() []OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels`
-
-GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
-
-### GetPortChannelsOk
-
-`func (o *InlineObject271) GetPortChannelsOk() (*[]OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels, bool)`
-
-GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPortChannels
-
-`func (o *InlineObject271) SetPortChannels(v []OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels)`
-
-SetPortChannels sets PortChannels field to given value.
-
-
-### GetDevices
-
-`func (o *InlineObject271) GetDevices() []NetworksNetworkIdCampusGatewayClustersDevices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineObject271) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersDevices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineObject271) SetDevices(v []NetworksNetworkIdCampusGatewayClustersDevices)`
-
-SetDevices sets Devices field to given value.
-
-### HasDevices
-
-`func (o *InlineObject271) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
-
-### GetFailover
-
-`func (o *InlineObject271) GetFailover() OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover`
-
-GetFailover returns the Failover field if non-nil, zero value otherwise.
-
-### GetFailoverOk
-
-`func (o *InlineObject271) GetFailoverOk() (*OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover, bool)`
-
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailover
-
-`func (o *InlineObject271) SetFailover(v OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover)`
-
-SetFailover sets Failover field to given value.
-
-### HasFailover
-
-`func (o *InlineObject271) HasFailover() bool`
-
-HasFailover returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject271) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject271) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject271) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject271) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

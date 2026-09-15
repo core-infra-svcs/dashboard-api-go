@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Mode** | Pointer to **string** | Intrusion detection mode | [optional] 
 **IdsRulesets** | Pointer to **string** | Intrusion detection ruleset | [optional] 
-**ProtectedNetworks** | Pointer to [**InlineResponse20088ProtectedNetworks**](InlineResponse20088ProtectedNetworks.md) |  | [optional] 
+**ProtectedNetworks** | Pointer to [**InlineResponse20089ProtectedNetworks**](InlineResponse20089ProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasIdsRulesets returns a boolean if a field has been set.
 
 ### GetProtectedNetworks
 
-`func (o *InlineResponse20089) GetProtectedNetworks() InlineResponse20088ProtectedNetworks`
+`func (o *InlineResponse20089) GetProtectedNetworks() InlineResponse20089ProtectedNetworks`
 
 GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
 
 ### GetProtectedNetworksOk
 
-`func (o *InlineResponse20089) GetProtectedNetworksOk() (*InlineResponse20088ProtectedNetworks, bool)`
+`func (o *InlineResponse20089) GetProtectedNetworksOk() (*InlineResponse20089ProtectedNetworks, bool)`
 
 GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProtectedNetworks
 
-`func (o *InlineResponse20089) SetProtectedNetworks(v InlineResponse20088ProtectedNetworks)`
+`func (o *InlineResponse20089) SetProtectedNetworks(v InlineResponse20089ProtectedNetworks)`
 
 SetProtectedNetworks sets ProtectedNetworks field to given value.
 

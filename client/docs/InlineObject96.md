@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
-**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
-**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
-**Sgt** | Pointer to [**InlineResponse200110Sgt**](InlineResponse200110Sgt.md) |  | [optional] 
-**Subnet** | Pointer to [**InlineResponse200110Subnet**](InlineResponse200110Subnet.md) |  | [optional] 
-**HostTranslations** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations.md) | The list of VPN host translations. Host translations are supported starting from MX firmware version 26.1.2 | [optional] 
+**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
+**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain and is only configurable for Auto VPN BGP networks. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
+**RouterId** | Pointer to **NullableString** | The router ID of the appliance | [optional] 
+**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
 
 ## Methods
 
 ### NewInlineObject96
 
-`func NewInlineObject96(mode string, ) *InlineObject96`
+`func NewInlineObject96(enabled bool, ) *InlineObject96`
 
 NewInlineObject96 instantiates a new InlineObject96 object
 This constructor will assign default values to properties that have it defined,
@@ -30,150 +29,135 @@ NewInlineObject96WithDefaults instantiates a new InlineObject96 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetEnabled
 
-`func (o *InlineObject96) GetMode() string`
+`func (o *InlineObject96) GetEnabled() bool`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetEnabledOk
 
-`func (o *InlineObject96) GetModeOk() (*string, bool)`
+`func (o *InlineObject96) GetEnabledOk() (*bool, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetEnabled
 
-`func (o *InlineObject96) SetMode(v string)`
+`func (o *InlineObject96) SetEnabled(v bool)`
 
-SetMode sets Mode field to given value.
+SetEnabled sets Enabled field to given value.
 
 
-### GetHubs
+### GetAsNumber
 
-`func (o *InlineObject96) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
+`func (o *InlineObject96) GetAsNumber() int32`
 
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetHubsOk
+### GetAsNumberOk
 
-`func (o *InlineObject96) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
+`func (o *InlineObject96) GetAsNumberOk() (*int32, bool)`
 
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHubs
+### SetAsNumber
 
-`func (o *InlineObject96) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
+`func (o *InlineObject96) SetAsNumber(v int32)`
 
-SetHubs sets Hubs field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasHubs
+### HasAsNumber
 
-`func (o *InlineObject96) HasHubs() bool`
+`func (o *InlineObject96) HasAsNumber() bool`
 
-HasHubs returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetSubnets
+### GetIbgpHoldTimer
 
-`func (o *InlineObject96) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
+`func (o *InlineObject96) GetIbgpHoldTimer() int32`
 
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetSubnetsOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineObject96) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
+`func (o *InlineObject96) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnets
+### SetIbgpHoldTimer
 
-`func (o *InlineObject96) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
+`func (o *InlineObject96) SetIbgpHoldTimer(v int32)`
 
-SetSubnets sets Subnets field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasSubnets
+### HasIbgpHoldTimer
 
-`func (o *InlineObject96) HasSubnets() bool`
+`func (o *InlineObject96) HasIbgpHoldTimer() bool`
 
-HasSubnets returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
 
-### GetSgt
+### GetRouterId
 
-`func (o *InlineObject96) GetSgt() InlineResponse200110Sgt`
+`func (o *InlineObject96) GetRouterId() string`
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+GetRouterId returns the RouterId field if non-nil, zero value otherwise.
 
-### GetSgtOk
+### GetRouterIdOk
 
-`func (o *InlineObject96) GetSgtOk() (*InlineResponse200110Sgt, bool)`
+`func (o *InlineObject96) GetRouterIdOk() (*string, bool)`
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+GetRouterIdOk returns a tuple with the RouterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetRouterId
 
-`func (o *InlineObject96) SetSgt(v InlineResponse200110Sgt)`
+`func (o *InlineObject96) SetRouterId(v string)`
 
-SetSgt sets Sgt field to given value.
+SetRouterId sets RouterId field to given value.
 
-### HasSgt
+### HasRouterId
 
-`func (o *InlineObject96) HasSgt() bool`
+`func (o *InlineObject96) HasRouterId() bool`
 
-HasSgt returns a boolean if a field has been set.
+HasRouterId returns a boolean if a field has been set.
 
-### GetSubnet
+### SetRouterIdNil
 
-`func (o *InlineObject96) GetSubnet() InlineResponse200110Subnet`
+`func (o *InlineObject96) SetRouterIdNil(b bool)`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+ SetRouterIdNil sets the value for RouterId to be an explicit nil
 
-### GetSubnetOk
+### UnsetRouterId
+`func (o *InlineObject96) UnsetRouterId()`
 
-`func (o *InlineObject96) GetSubnetOk() (*InlineResponse200110Subnet, bool)`
+UnsetRouterId ensures that no value is present for RouterId, not even an explicit nil
+### GetNeighbors
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+`func (o *InlineObject96) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
+
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+
+### GetNeighborsOk
+
+`func (o *InlineObject96) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
+
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetNeighbors
 
-`func (o *InlineObject96) SetSubnet(v InlineResponse200110Subnet)`
+`func (o *InlineObject96) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
 
-SetSubnet sets Subnet field to given value.
+SetNeighbors sets Neighbors field to given value.
 
-### HasSubnet
+### HasNeighbors
 
-`func (o *InlineObject96) HasSubnet() bool`
+`func (o *InlineObject96) HasNeighbors() bool`
 
-HasSubnet returns a boolean if a field has been set.
-
-### GetHostTranslations
-
-`func (o *InlineObject96) GetHostTranslations() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations`
-
-GetHostTranslations returns the HostTranslations field if non-nil, zero value otherwise.
-
-### GetHostTranslationsOk
-
-`func (o *InlineObject96) GetHostTranslationsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations, bool)`
-
-GetHostTranslationsOk returns a tuple with the HostTranslations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHostTranslations
-
-`func (o *InlineObject96) SetHostTranslations(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHostTranslations)`
-
-SetHostTranslations sets HostTranslations field to given value.
-
-### HasHostTranslations
-
-`func (o *InlineObject96) HasHostTranslations() bool`
-
-HasHostTranslations returns a boolean if a field has been set.
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

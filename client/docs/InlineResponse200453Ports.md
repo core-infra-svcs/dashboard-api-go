@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PortId** | Pointer to **string** | The string identifier of this port on the switch. This is commonly just the port number but may contain additional identifying information such as the slot and module-type if the port is located on a port module. | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200453Intervals**](InlineResponse200453Intervals.md) | An array of intervals for a port with bandwidth, traffic, and power usage data. | [optional] 
+**Counts** | Pointer to [**InlineResponse200453Counts**](InlineResponse200453Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetPortId sets PortId field to given value.
 
 HasPortId returns a boolean if a field has been set.
 
-### GetIntervals
+### GetCounts
 
-`func (o *InlineResponse200453Ports) GetIntervals() []InlineResponse200453Intervals`
+`func (o *InlineResponse200453Ports) GetCounts() InlineResponse200453Counts`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetCountsOk
 
-`func (o *InlineResponse200453Ports) GetIntervalsOk() (*[]InlineResponse200453Intervals, bool)`
+`func (o *InlineResponse200453Ports) GetCountsOk() (*InlineResponse200453Counts, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetCounts
 
-`func (o *InlineResponse200453Ports) SetIntervals(v []InlineResponse200453Intervals)`
+`func (o *InlineResponse200453Ports) SetCounts(v InlineResponse200453Counts)`
 
-SetIntervals sets Intervals field to given value.
+SetCounts sets Counts field to given value.
 
-### HasIntervals
+### HasCounts
 
-`func (o *InlineResponse200453Ports) HasIntervals() bool`
+`func (o *InlineResponse200453Ports) HasCounts() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

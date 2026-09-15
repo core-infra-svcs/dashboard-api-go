@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20081Rules**](InlineResponse20081Rules.md) | An array of 1:1 nat rules | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20081Rules**](InlineResponse20081Rules.md) | An array of 1:Many nat rules | [optional] 
 
 ## Methods
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Enable or disable the interface. | [optional] 
 **VlanTagging** | Pointer to [**InlineResponse20013InterfacesWan1VlanTagging**](InlineResponse20013InterfacesWan1VlanTagging.md) |  | [optional] 
-**Svis** | Pointer to [**InlineResponse20013InterfacesWan1Svis**](InlineResponse20013InterfacesWan1Svis.md) |  | [optional] 
+**Svis** | Pointer to [**DevicesSerialApplianceUplinksSettingsInterfacesWan1Svis**](DevicesSerialApplianceUplinksSettingsInterfacesWan1Svis.md) |  | [optional] 
 **Pppoe** | Pointer to [**DevicesSerialApplianceUplinksSettingsInterfacesWan1Pppoe**](DevicesSerialApplianceUplinksSettingsInterfacesWan1Pppoe.md) |  | [optional] 
 
 ## Methods
@@ -80,20 +80,20 @@ HasVlanTagging returns a boolean if a field has been set.
 
 ### GetSvis
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvis() InlineResponse20013InterfacesWan1Svis`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvis() DevicesSerialApplianceUplinksSettingsInterfacesWan1Svis`
 
 GetSvis returns the Svis field if non-nil, zero value otherwise.
 
 ### GetSvisOk
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvisOk() (*InlineResponse20013InterfacesWan1Svis, bool)`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetSvisOk() (*DevicesSerialApplianceUplinksSettingsInterfacesWan1Svis, bool)`
 
 GetSvisOk returns a tuple with the Svis field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSvis
 
-`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) SetSvis(v InlineResponse20013InterfacesWan1Svis)`
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) SetSvis(v DevicesSerialApplianceUplinksSettingsInterfacesWan1Svis)`
 
 SetSvis sets Svis field to given value.
 

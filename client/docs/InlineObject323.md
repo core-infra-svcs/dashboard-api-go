@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the firewall ruleset | [optional] 
+**Name** | **string** | Name of the firewall ruleset | 
 **Description** | Pointer to **string** | Description of the firewall ruleset | [optional] 
 
 ## Methods
 
 ### NewInlineObject323
 
-`func NewInlineObject323() *InlineObject323`
+`func NewInlineObject323(name string, ) *InlineObject323`
 
 NewInlineObject323 instantiates a new InlineObject323 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject323) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetDescription
 

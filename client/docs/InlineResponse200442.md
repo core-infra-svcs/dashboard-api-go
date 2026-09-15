@@ -4,14 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Mac** | Pointer to **string** | Mac address of the device | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageClients**](OrganizationsOrganizationIdSummaryTopDevicesByUsageClients.md) |  | [optional] 
+**Application** | Pointer to **string** | Name of the Application | [optional] 
+**Total** | Pointer to **float32** | Total usage of the Application, in megabytes | [optional] 
+**Downstream** | Pointer to **float32** | Downstream usage of the Application, in megabytes | [optional] 
+**Upstream** | Pointer to **float32** | Upstream usage of the Application, in megabytes | [optional] 
+**Percentage** | Pointer to **float32** | Percent usage of the Application | [optional] 
 
 ## Methods
 
@@ -32,205 +29,130 @@ NewInlineResponse200442WithDefaults instantiates a new InlineResponse200442 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetApplication
 
-`func (o *InlineResponse200442) GetName() string`
+`func (o *InlineResponse200442) GetApplication() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetApplication returns the Application field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetApplicationOk
 
-`func (o *InlineResponse200442) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200442) GetApplicationOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetApplication
 
-`func (o *InlineResponse200442) SetName(v string)`
+`func (o *InlineResponse200442) SetApplication(v string)`
 
-SetName sets Name field to given value.
+SetApplication sets Application field to given value.
 
-### HasName
+### HasApplication
 
-`func (o *InlineResponse200442) HasName() bool`
+`func (o *InlineResponse200442) HasApplication() bool`
 
-HasName returns a boolean if a field has been set.
+HasApplication returns a boolean if a field has been set.
 
-### GetModel
+### GetTotal
 
-`func (o *InlineResponse200442) GetModel() string`
+`func (o *InlineResponse200442) GetTotal() float32`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetTotalOk
 
-`func (o *InlineResponse200442) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200442) GetTotalOk() (*float32, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetTotal
 
-`func (o *InlineResponse200442) SetModel(v string)`
+`func (o *InlineResponse200442) SetTotal(v float32)`
 
-SetModel sets Model field to given value.
+SetTotal sets Total field to given value.
 
-### HasModel
+### HasTotal
 
-`func (o *InlineResponse200442) HasModel() bool`
+`func (o *InlineResponse200442) HasTotal() bool`
 
-HasModel returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetSerial
+### GetDownstream
 
-`func (o *InlineResponse200442) GetSerial() string`
+`func (o *InlineResponse200442) GetDownstream() float32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200442) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200442) GetDownstreamOk() (*float32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetDownstream
 
-`func (o *InlineResponse200442) SetSerial(v string)`
+`func (o *InlineResponse200442) SetDownstream(v float32)`
 
-SetSerial sets Serial field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasSerial
+### HasDownstream
 
-`func (o *InlineResponse200442) HasSerial() bool`
+`func (o *InlineResponse200442) HasDownstream() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
-### GetMac
+### GetUpstream
 
-`func (o *InlineResponse200442) GetMac() string`
+`func (o *InlineResponse200442) GetUpstream() float32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200442) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200442) GetUpstreamOk() (*float32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetUpstream
 
-`func (o *InlineResponse200442) SetMac(v string)`
+`func (o *InlineResponse200442) SetUpstream(v float32)`
 
-SetMac sets Mac field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasMac
+### HasUpstream
 
-`func (o *InlineResponse200442) HasMac() bool`
+`func (o *InlineResponse200442) HasUpstream() bool`
 
-HasMac returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetProductType
+### GetPercentage
 
-`func (o *InlineResponse200442) GetProductType() string`
+`func (o *InlineResponse200442) GetPercentage() float32`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetPercentage returns the Percentage field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetPercentageOk
 
-`func (o *InlineResponse200442) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse200442) GetPercentageOk() (*float32, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetPercentage
 
-`func (o *InlineResponse200442) SetProductType(v string)`
+`func (o *InlineResponse200442) SetPercentage(v float32)`
 
-SetProductType sets ProductType field to given value.
+SetPercentage sets Percentage field to given value.
 
-### HasProductType
+### HasPercentage
 
-`func (o *InlineResponse200442) HasProductType() bool`
+`func (o *InlineResponse200442) HasPercentage() bool`
 
-HasProductType returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200442) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200442) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200442) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200442) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200442) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200442) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200442) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200442) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200442) GetClients() OrganizationsOrganizationIdSummaryTopDevicesByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200442) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200442) SetClients(v OrganizationsOrganizationIdSummaryTopDevicesByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200442) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
+HasPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A name for easy reference to the HTTP server | 
-**Url** | **string** | The URL of the HTTP server. Once set, cannot be updated. | 
-**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate1**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate1.md) |  | [optional] 
+**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
+**Serials** | **[]string** | Array of Device Serials | 
+**StackIds** | **[]string** | Array of Switch Stack IDs | 
 
 ## Methods
 
 ### NewInlineObject194
 
-`func NewInlineObject194(name string, url string, ) *InlineObject194`
+`func NewInlineObject194(serials []string, stackIds []string, ) *InlineObject194`
 
 NewInlineObject194 instantiates a new InlineObject194 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,70 @@ NewInlineObject194WithDefaults instantiates a new InlineObject194 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetVlanProfile
 
-`func (o *InlineObject194) GetName() string`
+`func (o *InlineObject194) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetVlanProfileOk
 
-`func (o *InlineObject194) GetNameOk() (*string, bool)`
+`func (o *InlineObject194) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetVlanProfile
 
-`func (o *InlineObject194) SetName(v string)`
+`func (o *InlineObject194) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
 
-SetName sets Name field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
+### HasVlanProfile
 
-### GetUrl
+`func (o *InlineObject194) HasVlanProfile() bool`
 
-`func (o *InlineObject194) GetUrl() string`
+HasVlanProfile returns a boolean if a field has been set.
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+### GetSerials
 
-### GetUrlOk
+`func (o *InlineObject194) GetSerials() []string`
 
-`func (o *InlineObject194) GetUrlOk() (*string, bool)`
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+### GetSerialsOk
+
+`func (o *InlineObject194) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSerials
 
-`func (o *InlineObject194) SetUrl(v string)`
+`func (o *InlineObject194) SetSerials(v []string)`
 
-SetUrl sets Url field to given value.
+SetSerials sets Serials field to given value.
 
 
-### GetSharedSecret
+### GetStackIds
 
-`func (o *InlineObject194) GetSharedSecret() string`
+`func (o *InlineObject194) GetStackIds() []string`
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
 
-### GetSharedSecretOk
+### GetStackIdsOk
 
-`func (o *InlineObject194) GetSharedSecretOk() (*string, bool)`
+`func (o *InlineObject194) GetStackIdsOk() (*[]string, bool)`
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetStackIds
 
-`func (o *InlineObject194) SetSharedSecret(v string)`
+`func (o *InlineObject194) SetStackIds(v []string)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetStackIds sets StackIds field to given value.
 
-### HasSharedSecret
-
-`func (o *InlineObject194) HasSharedSecret() bool`
-
-HasSharedSecret returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineObject194) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate1`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineObject194) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate1, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineObject194) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate1)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineObject194) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

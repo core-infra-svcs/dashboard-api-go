@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse200503Interfaces**](InlineResponse200503Interfaces.md) | Interfaces belongs to the wireless LAN controller | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse200503Interfaces**](InlineResponse200503Interfaces.md) | layer 2 interfaces belongs to the wireless LAN controller | [optional] 
 
 ## Methods
 

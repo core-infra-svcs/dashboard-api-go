@@ -4,17 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | **string** | Service provider account ID | 
-**ApiKey** | **string** | Service provider account API key | 
-**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
-**Title** | **string** | Service provider account name | 
-**Username** | **string** | Service provider account username | 
+**ClusterId** | **string** | ID of the cluster to be provisioned | 
+**Network** | [**OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork**](OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork.md) |  | 
+**Name** | **string** | Name of the new cluster | 
+**Uplinks** | [**[]NetworksNetworkIdCampusGatewayClustersUplinks**](NetworksNetworkIdCampusGatewayClustersUplinks.md) | Uplink interface settings of the cluster | 
+**Tunnels** | [**[]NetworksNetworkIdCampusGatewayClustersTunnels**](NetworksNetworkIdCampusGatewayClustersTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | 
+**Nameservers** | [**NetworksNetworkIdCampusGatewayClustersNameservers**](NetworksNetworkIdCampusGatewayClustersNameservers.md) |  | 
+**PortChannels** | [**[]OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels**](OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels.md) | Port channel settings of the cluster | 
+**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersDevices**](NetworksNetworkIdCampusGatewayClustersDevices.md) | Devices to be added to the cluster | [optional] 
+**Failover** | Pointer to [**OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover**](OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover.md) |  | [optional] 
+**Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
 
 ## Methods
 
 ### NewInlineObject273
 
-`func NewInlineObject273(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject273`
+`func NewInlineObject273(clusterId string, network OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork, name string, uplinks []NetworksNetworkIdCampusGatewayClustersUplinks, tunnels []NetworksNetworkIdCampusGatewayClustersTunnels, nameservers NetworksNetworkIdCampusGatewayClustersNameservers, portChannels []OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels, ) *InlineObject273`
 
 NewInlineObject273 instantiates a new InlineObject273 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +34,220 @@ NewInlineObject273WithDefaults instantiates a new InlineObject273 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccountId
+### GetClusterId
 
-`func (o *InlineObject273) GetAccountId() string`
+`func (o *InlineObject273) GetClusterId() string`
 
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
 
-### GetAccountIdOk
+### GetClusterIdOk
 
-`func (o *InlineObject273) GetAccountIdOk() (*string, bool)`
+`func (o *InlineObject273) GetClusterIdOk() (*string, bool)`
 
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountId
+### SetClusterId
 
-`func (o *InlineObject273) SetAccountId(v string)`
+`func (o *InlineObject273) SetClusterId(v string)`
 
-SetAccountId sets AccountId field to given value.
+SetClusterId sets ClusterId field to given value.
 
 
-### GetApiKey
+### GetNetwork
 
-`func (o *InlineObject273) GetApiKey() string`
+`func (o *InlineObject273) GetNetwork() OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork`
 
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetApiKeyOk
+### GetNetworkOk
 
-`func (o *InlineObject273) GetApiKeyOk() (*string, bool)`
+`func (o *InlineObject273) GetNetworkOk() (*OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork, bool)`
 
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApiKey
+### SetNetwork
 
-`func (o *InlineObject273) SetApiKey(v string)`
+`func (o *InlineObject273) SetNetwork(v OrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork)`
 
-SetApiKey sets ApiKey field to given value.
+SetNetwork sets Network field to given value.
 
 
-### GetServiceProvider
+### GetName
 
-`func (o *InlineObject273) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
+`func (o *InlineObject273) GetName() string`
 
-GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetServiceProviderOk
+### GetNameOk
 
-`func (o *InlineObject273) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
+`func (o *InlineObject273) GetNameOk() (*string, bool)`
 
-GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServiceProvider
+### SetName
 
-`func (o *InlineObject273) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
+`func (o *InlineObject273) SetName(v string)`
 
-SetServiceProvider sets ServiceProvider field to given value.
+SetName sets Name field to given value.
 
 
-### GetTitle
+### GetUplinks
 
-`func (o *InlineObject273) GetTitle() string`
+`func (o *InlineObject273) GetUplinks() []NetworksNetworkIdCampusGatewayClustersUplinks`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetUplinksOk
 
-`func (o *InlineObject273) GetTitleOk() (*string, bool)`
+`func (o *InlineObject273) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersUplinks, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetUplinks
 
-`func (o *InlineObject273) SetTitle(v string)`
+`func (o *InlineObject273) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersUplinks)`
 
-SetTitle sets Title field to given value.
+SetUplinks sets Uplinks field to given value.
 
 
-### GetUsername
+### GetTunnels
 
-`func (o *InlineObject273) GetUsername() string`
+`func (o *InlineObject273) GetTunnels() []NetworksNetworkIdCampusGatewayClustersTunnels`
 
-GetUsername returns the Username field if non-nil, zero value otherwise.
+GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
 
-### GetUsernameOk
+### GetTunnelsOk
 
-`func (o *InlineObject273) GetUsernameOk() (*string, bool)`
+`func (o *InlineObject273) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersTunnels, bool)`
 
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsername
+### SetTunnels
 
-`func (o *InlineObject273) SetUsername(v string)`
+`func (o *InlineObject273) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersTunnels)`
 
-SetUsername sets Username field to given value.
+SetTunnels sets Tunnels field to given value.
 
+
+### GetNameservers
+
+`func (o *InlineObject273) GetNameservers() NetworksNetworkIdCampusGatewayClustersNameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject273) GetNameserversOk() (*NetworksNetworkIdCampusGatewayClustersNameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject273) SetNameservers(v NetworksNetworkIdCampusGatewayClustersNameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+
+### GetPortChannels
+
+`func (o *InlineObject273) GetPortChannels() []OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels`
+
+GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
+
+### GetPortChannelsOk
+
+`func (o *InlineObject273) GetPortChannelsOk() (*[]OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels, bool)`
+
+GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannels
+
+`func (o *InlineObject273) SetPortChannels(v []OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels)`
+
+SetPortChannels sets PortChannels field to given value.
+
+
+### GetDevices
+
+`func (o *InlineObject273) GetDevices() []NetworksNetworkIdCampusGatewayClustersDevices`
+
+GetDevices returns the Devices field if non-nil, zero value otherwise.
+
+### GetDevicesOk
+
+`func (o *InlineObject273) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersDevices, bool)`
+
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevices
+
+`func (o *InlineObject273) SetDevices(v []NetworksNetworkIdCampusGatewayClustersDevices)`
+
+SetDevices sets Devices field to given value.
+
+### HasDevices
+
+`func (o *InlineObject273) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
+
+### GetFailover
+
+`func (o *InlineObject273) GetFailover() OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover`
+
+GetFailover returns the Failover field if non-nil, zero value otherwise.
+
+### GetFailoverOk
+
+`func (o *InlineObject273) GetFailoverOk() (*OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover, bool)`
+
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailover
+
+`func (o *InlineObject273) SetFailover(v OrganizationsOrganizationIdCampusGatewayClustersProvisionFailover)`
+
+SetFailover sets Failover field to given value.
+
+### HasFailover
+
+`func (o *InlineObject273) HasFailover() bool`
+
+HasFailover returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject273) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject273) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject273) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject273) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

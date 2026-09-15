@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Number** | **int32** | SSID number | 
-**SsidId** | **string** | SSID identifier | 
-**Name** | **string** | SSID name | 
-**Url** | **string** | SSID management URL | 
-**Network** | [**InlineResponse200321Network**](InlineResponse200321Network.md) |  | 
-**Cluster** | [**InlineResponse200320Cluster**](InlineResponse200320Cluster.md) |  | 
+**ClusterId** | Pointer to **string** | ID of the primary cluster | [optional] 
+**Name** | Pointer to **string** | Name of the primary cluster | [optional] 
+**Network** | Pointer to [**InlineResponse200321Network**](InlineResponse200321Network.md) |  | [optional] 
+**Model** | Pointer to **string** | Device model of the primary cluster | [optional] 
+**Available** | Pointer to [**[]InlineResponse200321Available**](InlineResponse200321Available.md) | Available backup cluster targets for this primary cluster | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200321Items
 
-`func NewInlineResponse200321Items(number int32, ssidId string, name string, url string, network InlineResponse200321Network, cluster InlineResponse200320Cluster, ) *InlineResponse200321Items`
+`func NewInlineResponse200321Items() *InlineResponse200321Items`
 
 NewInlineResponse200321Items instantiates a new InlineResponse200321Items object
 This constructor will assign default values to properties that have it defined,
@@ -30,45 +29,30 @@ NewInlineResponse200321ItemsWithDefaults instantiates a new InlineResponse200321
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNumber
+### GetClusterId
 
-`func (o *InlineResponse200321Items) GetNumber() int32`
+`func (o *InlineResponse200321Items) GetClusterId() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetClusterIdOk
 
-`func (o *InlineResponse200321Items) GetNumberOk() (*int32, bool)`
+`func (o *InlineResponse200321Items) GetClusterIdOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetClusterId
 
-`func (o *InlineResponse200321Items) SetNumber(v int32)`
+`func (o *InlineResponse200321Items) SetClusterId(v string)`
 
-SetNumber sets Number field to given value.
+SetClusterId sets ClusterId field to given value.
 
+### HasClusterId
 
-### GetSsidId
+`func (o *InlineResponse200321Items) HasClusterId() bool`
 
-`func (o *InlineResponse200321Items) GetSsidId() string`
-
-GetSsidId returns the SsidId field if non-nil, zero value otherwise.
-
-### GetSsidIdOk
-
-`func (o *InlineResponse200321Items) GetSsidIdOk() (*string, bool)`
-
-GetSsidIdOk returns a tuple with the SsidId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsidId
-
-`func (o *InlineResponse200321Items) SetSsidId(v string)`
-
-SetSsidId sets SsidId field to given value.
-
+HasClusterId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -89,26 +73,11 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetUrl
+`func (o *InlineResponse200321Items) HasName() bool`
 
-`func (o *InlineResponse200321Items) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200321Items) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200321Items) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
+HasName returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -129,26 +98,61 @@ and a boolean to check if the value has been set.
 
 SetNetwork sets Network field to given value.
 
+### HasNetwork
 
-### GetCluster
+`func (o *InlineResponse200321Items) HasNetwork() bool`
 
-`func (o *InlineResponse200321Items) GetCluster() InlineResponse200320Cluster`
+HasNetwork returns a boolean if a field has been set.
 
-GetCluster returns the Cluster field if non-nil, zero value otherwise.
+### GetModel
 
-### GetClusterOk
+`func (o *InlineResponse200321Items) GetModel() string`
 
-`func (o *InlineResponse200321Items) GetClusterOk() (*InlineResponse200320Cluster, bool)`
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-GetClusterOk returns a tuple with the Cluster field if it's non-nil, zero value otherwise
+### GetModelOk
+
+`func (o *InlineResponse200321Items) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCluster
+### SetModel
 
-`func (o *InlineResponse200321Items) SetCluster(v InlineResponse200320Cluster)`
+`func (o *InlineResponse200321Items) SetModel(v string)`
 
-SetCluster sets Cluster field to given value.
+SetModel sets Model field to given value.
 
+### HasModel
+
+`func (o *InlineResponse200321Items) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetAvailable
+
+`func (o *InlineResponse200321Items) GetAvailable() []InlineResponse200321Available`
+
+GetAvailable returns the Available field if non-nil, zero value otherwise.
+
+### GetAvailableOk
+
+`func (o *InlineResponse200321Items) GetAvailableOk() (*[]InlineResponse200321Available, bool)`
+
+GetAvailableOk returns a tuple with the Available field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAvailable
+
+`func (o *InlineResponse200321Items) SetAvailable(v []InlineResponse200321Available)`
+
+SetAvailable sets Available field to given value.
+
+### HasAvailable
+
+`func (o *InlineResponse200321Items) HasAvailable() bool`
+
+HasAvailable returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

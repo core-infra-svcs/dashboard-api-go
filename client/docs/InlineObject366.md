@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**Profile** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile.md) |  | 
+**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid.md) |  | 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject366
 
-`func NewInlineObject366(enrolled bool, ) *InlineObject366`
+`func NewInlineObject366(profile OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, ssid OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, ) *InlineObject366`
 
 NewInlineObject366 instantiates a new InlineObject366 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,70 @@ NewInlineObject366WithDefaults instantiates a new InlineObject366 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetProfile
 
-`func (o *InlineObject366) GetEnrolled() bool`
+`func (o *InlineObject366) GetProfile() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetProfileOk
 
-`func (o *InlineObject366) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject366) GetProfileOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetProfile
 
-`func (o *InlineObject366) SetEnrolled(v bool)`
+`func (o *InlineObject366) SetProfile(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile)`
 
-SetEnrolled sets Enrolled field to given value.
+SetProfile sets Profile field to given value.
 
 
-### GetChannel
+### GetSsid
 
-`func (o *InlineObject366) GetChannel() string`
+`func (o *InlineObject366) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetSsidOk
 
-`func (o *InlineObject366) GetChannelOk() (*string, bool)`
+`func (o *InlineObject366) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetSsid
 
-`func (o *InlineObject366) SetChannel(v string)`
+`func (o *InlineObject366) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid)`
 
-SetChannel sets Channel field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasChannel
 
-`func (o *InlineObject366) HasChannel() bool`
+### GetNetwork
 
-HasChannel returns a boolean if a field has been set.
+`func (o *InlineObject366) GetNetwork() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineObject366) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineObject366) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineObject366) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

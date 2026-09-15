@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200403Items**](InlineResponse200403Items.md) | List of Firewall Rulesets | [optional] 
-**Meta** | Pointer to [**InlineResponse200277Meta**](InlineResponse200277Meta.md) |  | [optional] 
+**NetworkIds** | Pointer to **[]string** | The network IDs that were added to the network group | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200403WithDefaults instantiates a new InlineResponse200403 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetNetworkIds
 
-`func (o *InlineResponse200403) GetItems() []InlineResponse200403Items`
+`func (o *InlineResponse200403) GetNetworkIds() []string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNetworkIdsOk
 
-`func (o *InlineResponse200403) GetItemsOk() (*[]InlineResponse200403Items, bool)`
+`func (o *InlineResponse200403) GetNetworkIdsOk() (*[]string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetNetworkIds
 
-`func (o *InlineResponse200403) SetItems(v []InlineResponse200403Items)`
+`func (o *InlineResponse200403) SetNetworkIds(v []string)`
 
-SetItems sets Items field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
-### HasItems
+### HasNetworkIds
 
-`func (o *InlineResponse200403) HasItems() bool`
+`func (o *InlineResponse200403) HasNetworkIds() bool`
 
-HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200403) GetMeta() InlineResponse200277Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200403) GetMetaOk() (*InlineResponse200277Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200403) SetMeta(v InlineResponse200277Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200403) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

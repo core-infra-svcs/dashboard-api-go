@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessZigbeeDoorLocks
 
-> []InlineResponse20065DoorLocks GetOrganizationWirelessZigbeeDoorLocks(ctx, organizationId).NetworkIds(networkIds).Serial(serial).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20066DoorLocks GetOrganizationWirelessZigbeeDoorLocks(ctx, organizationId).NetworkIds(networkIds).Serial(serial).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the list of door locks for a network
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DoorLocksApi.GetOrganizationWirelessZigbeeDoorLocks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessZigbeeDoorLocks`: []InlineResponse20065DoorLocks
+    // response from `GetOrganizationWirelessZigbeeDoorLocks`: []InlineResponse20066DoorLocks
     fmt.Fprintf(os.Stdout, "Response from `DoorLocksApi.GetOrganizationWirelessZigbeeDoorLocks`: %v\n", resp)
 }
 ```
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20065DoorLocks**](InlineResponse20065DoorLocks.md)
+[**[]InlineResponse20066DoorLocks**](InlineResponse20066DoorLocks.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessZigbeeDoorLock
 
-> InlineResponse20065DoorLocks UpdateOrganizationWirelessZigbeeDoorLock(ctx, organizationId, doorLockId).UpdateOrganizationWirelessZigbeeDoorLock(updateOrganizationWirelessZigbeeDoorLock).Execute()
+> InlineResponse20066DoorLocks UpdateOrganizationWirelessZigbeeDoorLock(ctx, organizationId, doorLockId).UpdateOrganizationWirelessZigbeeDoorLock(updateOrganizationWirelessZigbeeDoorLock).Execute()
 
 Endpoint to batch update door locks params
 
@@ -112,7 +112,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     doorLockId := "doorLockId_example" // string | Door lock ID
-    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject368() // InlineObject368 |  (optional)
+    updateOrganizationWirelessZigbeeDoorLock := *openapiclient.NewInlineObject371() // InlineObject371 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DoorLocksApi.UpdateOrganizationWirelessZigbeeDoorLock``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessZigbeeDoorLock`: InlineResponse20065DoorLocks
+    // response from `UpdateOrganizationWirelessZigbeeDoorLock`: InlineResponse20066DoorLocks
     fmt.Fprintf(os.Stdout, "Response from `DoorLocksApi.UpdateOrganizationWirelessZigbeeDoorLock`: %v\n", resp)
 }
 ```
@@ -144,11 +144,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject368**](InlineObject368.md) |  | 
+ **updateOrganizationWirelessZigbeeDoorLock** | [**InlineObject371**](InlineObject371.md) |  | 
 
 ### Return type
 
-[**InlineResponse20065DoorLocks**](InlineResponse20065DoorLocks.md)
+[**InlineResponse20066DoorLocks**](InlineResponse20066DoorLocks.md)
 
 ### Authorization
 

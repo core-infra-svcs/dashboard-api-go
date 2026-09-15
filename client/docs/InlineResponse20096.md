@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**CustomPerformanceClassId** | Pointer to **string** | ID of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**GlobalBandwidthLimits** | [**InlineResponse20096GlobalBandwidthLimits**](InlineResponse20096GlobalBandwidthLimits.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse20096
 
-`func NewInlineResponse20096() *InlineResponse20096`
+`func NewInlineResponse20096(globalBandwidthLimits InlineResponse20096GlobalBandwidthLimits, ) *InlineResponse20096`
 
 NewInlineResponse20096 instantiates a new InlineResponse20096 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +25,25 @@ NewInlineResponse20096WithDefaults instantiates a new InlineResponse20096 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetGlobalBandwidthLimits
 
-`func (o *InlineResponse20096) GetName() string`
+`func (o *InlineResponse20096) GetGlobalBandwidthLimits() InlineResponse20096GlobalBandwidthLimits`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetGlobalBandwidthLimitsOk
 
-`func (o *InlineResponse20096) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20096) GetGlobalBandwidthLimitsOk() (*InlineResponse20096GlobalBandwidthLimits, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetGlobalBandwidthLimits
 
-`func (o *InlineResponse20096) SetName(v string)`
+`func (o *InlineResponse20096) SetGlobalBandwidthLimits(v InlineResponse20096GlobalBandwidthLimits)`
 
-SetName sets Name field to given value.
+SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
 
-### HasName
-
-`func (o *InlineResponse20096) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetCustomPerformanceClassId
-
-`func (o *InlineResponse20096) GetCustomPerformanceClassId() string`
-
-GetCustomPerformanceClassId returns the CustomPerformanceClassId field if non-nil, zero value otherwise.
-
-### GetCustomPerformanceClassIdOk
-
-`func (o *InlineResponse20096) GetCustomPerformanceClassIdOk() (*string, bool)`
-
-GetCustomPerformanceClassIdOk returns a tuple with the CustomPerformanceClassId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomPerformanceClassId
-
-`func (o *InlineResponse20096) SetCustomPerformanceClassId(v string)`
-
-SetCustomPerformanceClassId sets CustomPerformanceClassId field to given value.
-
-### HasCustomPerformanceClassId
-
-`func (o *InlineResponse20096) HasCustomPerformanceClassId() bool`
-
-HasCustomPerformanceClassId returns a boolean if a field has been set.
-
-### GetMaxLatency
-
-`func (o *InlineResponse20096) GetMaxLatency() int32`
-
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
-
-### GetMaxLatencyOk
-
-`func (o *InlineResponse20096) GetMaxLatencyOk() (*int32, bool)`
-
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxLatency
-
-`func (o *InlineResponse20096) SetMaxLatency(v int32)`
-
-SetMaxLatency sets MaxLatency field to given value.
-
-### HasMaxLatency
-
-`func (o *InlineResponse20096) HasMaxLatency() bool`
-
-HasMaxLatency returns a boolean if a field has been set.
-
-### GetMaxJitter
-
-`func (o *InlineResponse20096) GetMaxJitter() int32`
-
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
-
-### GetMaxJitterOk
-
-`func (o *InlineResponse20096) GetMaxJitterOk() (*int32, bool)`
-
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxJitter
-
-`func (o *InlineResponse20096) SetMaxJitter(v int32)`
-
-SetMaxJitter sets MaxJitter field to given value.
-
-### HasMaxJitter
-
-`func (o *InlineResponse20096) HasMaxJitter() bool`
-
-HasMaxJitter returns a boolean if a field has been set.
-
-### GetMaxLossPercentage
-
-`func (o *InlineResponse20096) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineResponse20096) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxLossPercentage
-
-`func (o *InlineResponse20096) SetMaxLossPercentage(v int32)`
-
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
-
-### HasMaxLossPercentage
-
-`func (o *InlineResponse20096) HasMaxLossPercentage() bool`
-
-HasMaxLossPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200350Items**](InlineResponse200350Items.md) | Historical cellular data usage grouped by device and interval. Maximum 10 devices per page. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200350Items**](InlineResponse200350Items.md) | List of Cellular Data Management Profile device assignments. Maximum 1000 assignments per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200350Meta**](InlineResponse200350Meta.md) |  | [optional] 
 
 ## Methods

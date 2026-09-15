@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200249Rules**](InlineResponse200249Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
-**AllowLanAccess** | Pointer to **bool** | Allows wireless client access to local LAN (boolean value - true allows access and false denies access) | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
+**DeviceTypePolicies** | Pointer to [**[]InlineResponse200249DeviceTypePolicies**](InlineResponse200249DeviceTypePolicies.md) | List of device type policies. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200249WithDefaults instantiates a new InlineResponse200249 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetEnabled
 
-`func (o *InlineResponse200249) GetRules() []InlineResponse200249Rules`
+`func (o *InlineResponse200249) GetEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetEnabledOk
 
-`func (o *InlineResponse200249) GetRulesOk() (*[]InlineResponse200249Rules, bool)`
+`func (o *InlineResponse200249) GetEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetEnabled
 
-`func (o *InlineResponse200249) SetRules(v []InlineResponse200249Rules)`
+`func (o *InlineResponse200249) SetEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRules
+### HasEnabled
 
-`func (o *InlineResponse200249) HasRules() bool`
+`func (o *InlineResponse200249) HasEnabled() bool`
 
-HasRules returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetAllowLanAccess
+### GetDeviceTypePolicies
 
-`func (o *InlineResponse200249) GetAllowLanAccess() bool`
+`func (o *InlineResponse200249) GetDeviceTypePolicies() []InlineResponse200249DeviceTypePolicies`
 
-GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
+GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
 
-### GetAllowLanAccessOk
+### GetDeviceTypePoliciesOk
 
-`func (o *InlineResponse200249) GetAllowLanAccessOk() (*bool, bool)`
+`func (o *InlineResponse200249) GetDeviceTypePoliciesOk() (*[]InlineResponse200249DeviceTypePolicies, bool)`
 
-GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
+GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowLanAccess
+### SetDeviceTypePolicies
 
-`func (o *InlineResponse200249) SetAllowLanAccess(v bool)`
+`func (o *InlineResponse200249) SetDeviceTypePolicies(v []InlineResponse200249DeviceTypePolicies)`
 
-SetAllowLanAccess sets AllowLanAccess field to given value.
+SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
 
-### HasAllowLanAccess
+### HasDeviceTypePolicies
 
-`func (o *InlineResponse200249) HasAllowLanAccess() bool`
+`func (o *InlineResponse200249) HasDeviceTypePolicies() bool`
 
-HasAllowLanAccess returns a boolean if a field has been set.
+HasDeviceTypePolicies returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

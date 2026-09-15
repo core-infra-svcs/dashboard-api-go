@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Uplinks** | Pointer to [**[]InlineResponse200106Uplinks**](InlineResponse200106Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
 
 ## Methods
 
@@ -52,55 +51,30 @@ SetNetworkId sets NetworkId field to given value.
 
 HasNetworkId returns a boolean if a field has been set.
 
-### GetName
+### GetUplinks
 
-`func (o *InlineResponse200291) GetName() string`
+`func (o *InlineResponse200291) GetUplinks() []InlineResponse200106Uplinks`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUplinksOk
 
-`func (o *InlineResponse200291) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200291) GetUplinksOk() (*[]InlineResponse200106Uplinks, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUplinks
 
-`func (o *InlineResponse200291) SetName(v string)`
+`func (o *InlineResponse200291) SetUplinks(v []InlineResponse200106Uplinks)`
 
-SetName sets Name field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasName
+### HasUplinks
 
-`func (o *InlineResponse200291) HasName() bool`
+`func (o *InlineResponse200291) HasUplinks() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetByUplink
-
-`func (o *InlineResponse200291) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
-
-GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
-
-### GetByUplinkOk
-
-`func (o *InlineResponse200291) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
-
-GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByUplink
-
-`func (o *InlineResponse200291) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
-
-SetByUplink sets ByUplink field to given value.
-
-### HasByUplink
-
-`func (o *InlineResponse200291) HasByUplink() bool`
-
-HasByUplink returns a boolean if a field has been set.
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

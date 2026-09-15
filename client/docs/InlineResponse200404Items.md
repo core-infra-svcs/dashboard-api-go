@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleId** | Pointer to **string** | ID of the firewall rule | [optional] 
-**Name** | Pointer to **string** | Name of the firewall rule | [optional] 
-**RulesetId** | Pointer to **string** | Firewall ruleset ID | [optional] 
-**Policy** | Pointer to **string** | Rule policy (allow or deny) | [optional] 
-**Enabled** | Pointer to **bool** | Whether the rule is enabled | [optional] 
-**Priority** | Pointer to **int32** | Rule priority | [optional] 
-**Description** | Pointer to **string** | Description of the firewall rule | [optional] 
-**Sources** | Pointer to [**InlineResponse200404Sources**](InlineResponse200404Sources.md) |  | [optional] 
-**Destinations** | Pointer to [**InlineResponse200404Destinations**](InlineResponse200404Destinations.md) |  | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Rule creation time | [optional] 
-**LastUpdatedAt** | Pointer to **time.Time** | Rule last update time | [optional] 
+**MoveId** | Pointer to **string** | ID of the network move operation | [optional] 
+**Initiator** | Pointer to [**InlineResponse200404Initiator**](InlineResponse200404Initiator.md) |  | [optional] 
+**Organizations** | Pointer to [**InlineResponse200404Organizations**](InlineResponse200404Organizations.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200404Network**](InlineResponse200404Network.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Timestamp when the network move initiated | [optional] 
+**LastUpdatedAt** | Pointer to **time.Time** | Timestamp when the network move status last changed | [optional] 
+**Result** | Pointer to [**InlineResponse200404Result**](InlineResponse200404Result.md) |  | [optional] 
 
 ## Methods
 
@@ -35,230 +31,105 @@ NewInlineResponse200404ItemsWithDefaults instantiates a new InlineResponse200404
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRuleId
+### GetMoveId
 
-`func (o *InlineResponse200404Items) GetRuleId() string`
+`func (o *InlineResponse200404Items) GetMoveId() string`
 
-GetRuleId returns the RuleId field if non-nil, zero value otherwise.
+GetMoveId returns the MoveId field if non-nil, zero value otherwise.
 
-### GetRuleIdOk
+### GetMoveIdOk
 
-`func (o *InlineResponse200404Items) GetRuleIdOk() (*string, bool)`
+`func (o *InlineResponse200404Items) GetMoveIdOk() (*string, bool)`
 
-GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
+GetMoveIdOk returns a tuple with the MoveId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleId
+### SetMoveId
 
-`func (o *InlineResponse200404Items) SetRuleId(v string)`
+`func (o *InlineResponse200404Items) SetMoveId(v string)`
 
-SetRuleId sets RuleId field to given value.
+SetMoveId sets MoveId field to given value.
 
-### HasRuleId
+### HasMoveId
 
-`func (o *InlineResponse200404Items) HasRuleId() bool`
+`func (o *InlineResponse200404Items) HasMoveId() bool`
 
-HasRuleId returns a boolean if a field has been set.
+HasMoveId returns a boolean if a field has been set.
 
-### GetName
+### GetInitiator
 
-`func (o *InlineResponse200404Items) GetName() string`
+`func (o *InlineResponse200404Items) GetInitiator() InlineResponse200404Initiator`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetInitiator returns the Initiator field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetInitiatorOk
 
-`func (o *InlineResponse200404Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200404Items) GetInitiatorOk() (*InlineResponse200404Initiator, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetInitiatorOk returns a tuple with the Initiator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetInitiator
 
-`func (o *InlineResponse200404Items) SetName(v string)`
+`func (o *InlineResponse200404Items) SetInitiator(v InlineResponse200404Initiator)`
 
-SetName sets Name field to given value.
+SetInitiator sets Initiator field to given value.
 
-### HasName
+### HasInitiator
 
-`func (o *InlineResponse200404Items) HasName() bool`
+`func (o *InlineResponse200404Items) HasInitiator() bool`
 
-HasName returns a boolean if a field has been set.
+HasInitiator returns a boolean if a field has been set.
 
-### GetRulesetId
+### GetOrganizations
 
-`func (o *InlineResponse200404Items) GetRulesetId() string`
+`func (o *InlineResponse200404Items) GetOrganizations() InlineResponse200404Organizations`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetOrganizationsOk
 
-`func (o *InlineResponse200404Items) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineResponse200404Items) GetOrganizationsOk() (*InlineResponse200404Organizations, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetOrganizations
 
-`func (o *InlineResponse200404Items) SetRulesetId(v string)`
+`func (o *InlineResponse200404Items) SetOrganizations(v InlineResponse200404Organizations)`
 
-SetRulesetId sets RulesetId field to given value.
+SetOrganizations sets Organizations field to given value.
 
-### HasRulesetId
+### HasOrganizations
 
-`func (o *InlineResponse200404Items) HasRulesetId() bool`
+`func (o *InlineResponse200404Items) HasOrganizations() bool`
 
-HasRulesetId returns a boolean if a field has been set.
+HasOrganizations returns a boolean if a field has been set.
 
-### GetPolicy
+### GetNetwork
 
-`func (o *InlineResponse200404Items) GetPolicy() string`
+`func (o *InlineResponse200404Items) GetNetwork() InlineResponse200404Network`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNetworkOk
 
-`func (o *InlineResponse200404Items) GetPolicyOk() (*string, bool)`
+`func (o *InlineResponse200404Items) GetNetworkOk() (*InlineResponse200404Network, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetNetwork
 
-`func (o *InlineResponse200404Items) SetPolicy(v string)`
+`func (o *InlineResponse200404Items) SetNetwork(v InlineResponse200404Network)`
 
-SetPolicy sets Policy field to given value.
+SetNetwork sets Network field to given value.
 
-### HasPolicy
+### HasNetwork
 
-`func (o *InlineResponse200404Items) HasPolicy() bool`
+`func (o *InlineResponse200404Items) HasNetwork() bool`
 
-HasPolicy returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineResponse200404Items) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineResponse200404Items) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineResponse200404Items) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineResponse200404Items) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetPriority
-
-`func (o *InlineResponse200404Items) GetPriority() int32`
-
-GetPriority returns the Priority field if non-nil, zero value otherwise.
-
-### GetPriorityOk
-
-`func (o *InlineResponse200404Items) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPriority
-
-`func (o *InlineResponse200404Items) SetPriority(v int32)`
-
-SetPriority sets Priority field to given value.
-
-### HasPriority
-
-`func (o *InlineResponse200404Items) HasPriority() bool`
-
-HasPriority returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200404Items) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200404Items) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200404Items) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200404Items) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetSources
-
-`func (o *InlineResponse200404Items) GetSources() InlineResponse200404Sources`
-
-GetSources returns the Sources field if non-nil, zero value otherwise.
-
-### GetSourcesOk
-
-`func (o *InlineResponse200404Items) GetSourcesOk() (*InlineResponse200404Sources, bool)`
-
-GetSourcesOk returns a tuple with the Sources field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSources
-
-`func (o *InlineResponse200404Items) SetSources(v InlineResponse200404Sources)`
-
-SetSources sets Sources field to given value.
-
-### HasSources
-
-`func (o *InlineResponse200404Items) HasSources() bool`
-
-HasSources returns a boolean if a field has been set.
-
-### GetDestinations
-
-`func (o *InlineResponse200404Items) GetDestinations() InlineResponse200404Destinations`
-
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
-
-### GetDestinationsOk
-
-`func (o *InlineResponse200404Items) GetDestinationsOk() (*InlineResponse200404Destinations, bool)`
-
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestinations
-
-`func (o *InlineResponse200404Items) SetDestinations(v InlineResponse200404Destinations)`
-
-SetDestinations sets Destinations field to given value.
-
-### HasDestinations
-
-`func (o *InlineResponse200404Items) HasDestinations() bool`
-
-HasDestinations returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 ### GetCreatedAt
 
@@ -309,6 +180,31 @@ SetLastUpdatedAt sets LastUpdatedAt field to given value.
 `func (o *InlineResponse200404Items) HasLastUpdatedAt() bool`
 
 HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetResult
+
+`func (o *InlineResponse200404Items) GetResult() InlineResponse200404Result`
+
+GetResult returns the Result field if non-nil, zero value otherwise.
+
+### GetResultOk
+
+`func (o *InlineResponse200404Items) GetResultOk() (*InlineResponse200404Result, bool)`
+
+GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResult
+
+`func (o *InlineResponse200404Items) SetResult(v InlineResponse200404Result)`
+
+SetResult sets Result field to given value.
+
+### HasResult
+
+`func (o *InlineResponse200404Items) HasResult() bool`
+
+HasResult returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

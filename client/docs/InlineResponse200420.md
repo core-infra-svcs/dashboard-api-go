@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200420Items**](InlineResponse200420Items.md) | Collection of site connectivity payloads | [optional] 
+**Items** | Pointer to [**[]InlineResponse200420Items**](InlineResponse200420Items.md) | List of connectors | [optional] 
 
 ## Methods
 

@@ -4,8 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
-**Counts** | Pointer to [**InlineResponse200154Counts**](InlineResponse200154Counts.md) |  | [optional] 
+**Id** | Pointer to **string** | The network or organization identifier | [optional] 
+**OrganizationWide** | Pointer to **bool** | If the data returned is organization-wide. False indicates the data is network-wide. | [optional] 
+**NetworkId** | Pointer to **string** | The network identifier | [optional] 
+**Type** | Pointer to **string** | The type of PII request | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the PII request | [optional] 
+**Datasets** | Pointer to **string** | The stringified array of datasets related to the provided key that should be deleted. | [optional] 
+**Status** | Pointer to **string** | The status of the PII request | [optional] 
+**CreatedAt** | Pointer to **int32** | The request&#39;s creation time | [optional] 
+**CompletedAt** | Pointer to **int32** | The request&#39;s completion time | [optional] 
 
 ## Methods
 
@@ -26,55 +33,230 @@ NewInlineResponse200154WithDefaults instantiates a new InlineResponse200154 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSupportedMetrics
+### GetId
 
-`func (o *InlineResponse200154) GetSupportedMetrics() []string`
+`func (o *InlineResponse200154) GetId() string`
 
-GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSupportedMetricsOk
+### GetIdOk
 
-`func (o *InlineResponse200154) GetSupportedMetricsOk() (*[]string, bool)`
+`func (o *InlineResponse200154) GetIdOk() (*string, bool)`
 
-GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportedMetrics
+### SetId
 
-`func (o *InlineResponse200154) SetSupportedMetrics(v []string)`
+`func (o *InlineResponse200154) SetId(v string)`
 
-SetSupportedMetrics sets SupportedMetrics field to given value.
+SetId sets Id field to given value.
 
-### HasSupportedMetrics
+### HasId
 
-`func (o *InlineResponse200154) HasSupportedMetrics() bool`
+`func (o *InlineResponse200154) HasId() bool`
 
-HasSupportedMetrics returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCounts
+### GetOrganizationWide
 
-`func (o *InlineResponse200154) GetCounts() InlineResponse200154Counts`
+`func (o *InlineResponse200154) GetOrganizationWide() bool`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetOrganizationWide returns the OrganizationWide field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetOrganizationWideOk
 
-`func (o *InlineResponse200154) GetCountsOk() (*InlineResponse200154Counts, bool)`
+`func (o *InlineResponse200154) GetOrganizationWideOk() (*bool, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetOrganizationWideOk returns a tuple with the OrganizationWide field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetOrganizationWide
 
-`func (o *InlineResponse200154) SetCounts(v InlineResponse200154Counts)`
+`func (o *InlineResponse200154) SetOrganizationWide(v bool)`
 
-SetCounts sets Counts field to given value.
+SetOrganizationWide sets OrganizationWide field to given value.
 
-### HasCounts
+### HasOrganizationWide
 
-`func (o *InlineResponse200154) HasCounts() bool`
+`func (o *InlineResponse200154) HasOrganizationWide() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasOrganizationWide returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse200154) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200154) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200154) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200154) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200154) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200154) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200154) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200154) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200154) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200154) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200154) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200154) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetDatasets
+
+`func (o *InlineResponse200154) GetDatasets() string`
+
+GetDatasets returns the Datasets field if non-nil, zero value otherwise.
+
+### GetDatasetsOk
+
+`func (o *InlineResponse200154) GetDatasetsOk() (*string, bool)`
+
+GetDatasetsOk returns a tuple with the Datasets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDatasets
+
+`func (o *InlineResponse200154) SetDatasets(v string)`
+
+SetDatasets sets Datasets field to given value.
+
+### HasDatasets
+
+`func (o *InlineResponse200154) HasDatasets() bool`
+
+HasDatasets returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse200154) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200154) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200154) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200154) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200154) GetCreatedAt() int32`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200154) GetCreatedAtOk() (*int32, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200154) SetCreatedAt(v int32)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200154) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetCompletedAt
+
+`func (o *InlineResponse200154) GetCompletedAt() int32`
+
+GetCompletedAt returns the CompletedAt field if non-nil, zero value otherwise.
+
+### GetCompletedAtOk
+
+`func (o *InlineResponse200154) GetCompletedAtOk() (*int32, bool)`
+
+GetCompletedAtOk returns a tuple with the CompletedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCompletedAt
+
+`func (o *InlineResponse200154) SetCompletedAt(v int32)`
+
+SetCompletedAt sets CompletedAt field to given value.
+
+### HasCompletedAt
+
+`func (o *InlineResponse200154) HasCompletedAt() bool`
+
+HasCompletedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

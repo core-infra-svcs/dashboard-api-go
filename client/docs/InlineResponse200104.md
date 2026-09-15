@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Umbrella** | Pointer to [**InlineResponse200104Umbrella**](InlineResponse200104Umbrella.md) |  | [optional] 
-**Enabled** | Pointer to **bool** | Whether Umbrella protection is enabled | [optional] 
+**Network** | Pointer to [**InlineResponse200104Network**](InlineResponse200104Network.md) |  | [optional] 
+**Policies** | Pointer to [**[]InlineResponse200104Policies**](InlineResponse200104Policies.md) | Umbrella policies applied to the network. The maximum number of policies is determined by Cisco Umbrella account limits. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200104WithDefaults instantiates a new InlineResponse200104 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUmbrella
+### GetNetwork
 
-`func (o *InlineResponse200104) GetUmbrella() InlineResponse200104Umbrella`
+`func (o *InlineResponse200104) GetNetwork() InlineResponse200104Network`
 
-GetUmbrella returns the Umbrella field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetUmbrellaOk
+### GetNetworkOk
 
-`func (o *InlineResponse200104) GetUmbrellaOk() (*InlineResponse200104Umbrella, bool)`
+`func (o *InlineResponse200104) GetNetworkOk() (*InlineResponse200104Network, bool)`
 
-GetUmbrellaOk returns a tuple with the Umbrella field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUmbrella
+### SetNetwork
 
-`func (o *InlineResponse200104) SetUmbrella(v InlineResponse200104Umbrella)`
+`func (o *InlineResponse200104) SetNetwork(v InlineResponse200104Network)`
 
-SetUmbrella sets Umbrella field to given value.
+SetNetwork sets Network field to given value.
 
-### HasUmbrella
+### HasNetwork
 
-`func (o *InlineResponse200104) HasUmbrella() bool`
+`func (o *InlineResponse200104) HasNetwork() bool`
 
-HasUmbrella returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetEnabled
+### GetPolicies
 
-`func (o *InlineResponse200104) GetEnabled() bool`
+`func (o *InlineResponse200104) GetPolicies() []InlineResponse200104Policies`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetPolicies returns the Policies field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetPoliciesOk
 
-`func (o *InlineResponse200104) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200104) GetPoliciesOk() (*[]InlineResponse200104Policies, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetPoliciesOk returns a tuple with the Policies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetPolicies
 
-`func (o *InlineResponse200104) SetEnabled(v bool)`
+`func (o *InlineResponse200104) SetPolicies(v []InlineResponse200104Policies)`
 
-SetEnabled sets Enabled field to given value.
+SetPolicies sets Policies field to given value.
 
-### HasEnabled
+### HasPolicies
 
-`func (o *InlineResponse200104) HasEnabled() bool`
+`func (o *InlineResponse200104) HasPolicies() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasPolicies returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

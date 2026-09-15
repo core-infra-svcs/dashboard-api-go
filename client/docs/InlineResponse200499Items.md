@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200499Readings**](InlineResponse200499Readings.md) | The usages of layer 2 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
+**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
+**Changes** | Pointer to [**[]InlineResponse200499Changes**](InlineResponse200499Changes.md) | Connectivity information of a wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetReadings
+### GetChanges
 
-`func (o *InlineResponse200499Items) GetReadings() []InlineResponse200499Readings`
+`func (o *InlineResponse200499Items) GetChanges() []InlineResponse200499Changes`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetChanges returns the Changes field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetChangesOk
 
-`func (o *InlineResponse200499Items) GetReadingsOk() (*[]InlineResponse200499Readings, bool)`
+`func (o *InlineResponse200499Items) GetChangesOk() (*[]InlineResponse200499Changes, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetChanges
 
-`func (o *InlineResponse200499Items) SetReadings(v []InlineResponse200499Readings)`
+`func (o *InlineResponse200499Items) SetChanges(v []InlineResponse200499Changes)`
 
-SetReadings sets Readings field to given value.
+SetChanges sets Changes field to given value.
 
-### HasReadings
+### HasChanges
 
-`func (o *InlineResponse200499Items) HasReadings() bool`
+`func (o *InlineResponse200499Items) HasChanges() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasChanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

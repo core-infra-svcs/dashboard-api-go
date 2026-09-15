@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable warm spare | 
-**Mode** | Pointer to **string** | HA mode (disabled|active-passive|active-active) | [optional] 
-**Designations** | Pointer to [**[]NetworksNetworkIdApplianceDevicesRedundancyDesignations**](NetworksNetworkIdApplianceDevicesRedundancyDesignations.md) | Ordered warm spare roles | [optional] 
-**Uplink** | Pointer to [**NetworksNetworkIdApplianceDevicesRedundancyUplink**](NetworksNetworkIdApplianceDevicesRedundancyUplink.md) |  | [optional] 
+**AllowedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are allowed | [optional] 
+**BlockedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are blocked | [optional] 
+**BlockedUrlCategories** | Pointer to **[]string** | A list of URL categories to block | [optional] 
+**UrlCategoryListSize** | Pointer to **string** | URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineObject52
 
-`func NewInlineObject52(enabled bool, ) *InlineObject52`
+`func NewInlineObject52() *InlineObject52`
 
 NewInlineObject52 instantiates a new InlineObject52 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +28,105 @@ NewInlineObject52WithDefaults instantiates a new InlineObject52 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetAllowedUrlPatterns
 
-`func (o *InlineObject52) GetEnabled() bool`
+`func (o *InlineObject52) GetAllowedUrlPatterns() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetAllowedUrlPatterns returns the AllowedUrlPatterns field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetAllowedUrlPatternsOk
 
-`func (o *InlineObject52) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject52) GetAllowedUrlPatternsOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetAllowedUrlPatternsOk returns a tuple with the AllowedUrlPatterns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetAllowedUrlPatterns
 
-`func (o *InlineObject52) SetEnabled(v bool)`
+`func (o *InlineObject52) SetAllowedUrlPatterns(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetAllowedUrlPatterns sets AllowedUrlPatterns field to given value.
 
+### HasAllowedUrlPatterns
 
-### GetMode
+`func (o *InlineObject52) HasAllowedUrlPatterns() bool`
 
-`func (o *InlineObject52) GetMode() string`
+HasAllowedUrlPatterns returns a boolean if a field has been set.
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+### GetBlockedUrlPatterns
 
-### GetModeOk
+`func (o *InlineObject52) GetBlockedUrlPatterns() []string`
 
-`func (o *InlineObject52) GetModeOk() (*string, bool)`
+GetBlockedUrlPatterns returns the BlockedUrlPatterns field if non-nil, zero value otherwise.
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+### GetBlockedUrlPatternsOk
+
+`func (o *InlineObject52) GetBlockedUrlPatternsOk() (*[]string, bool)`
+
+GetBlockedUrlPatternsOk returns a tuple with the BlockedUrlPatterns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetBlockedUrlPatterns
 
-`func (o *InlineObject52) SetMode(v string)`
+`func (o *InlineObject52) SetBlockedUrlPatterns(v []string)`
 
-SetMode sets Mode field to given value.
+SetBlockedUrlPatterns sets BlockedUrlPatterns field to given value.
 
-### HasMode
+### HasBlockedUrlPatterns
 
-`func (o *InlineObject52) HasMode() bool`
+`func (o *InlineObject52) HasBlockedUrlPatterns() bool`
 
-HasMode returns a boolean if a field has been set.
+HasBlockedUrlPatterns returns a boolean if a field has been set.
 
-### GetDesignations
+### GetBlockedUrlCategories
 
-`func (o *InlineObject52) GetDesignations() []NetworksNetworkIdApplianceDevicesRedundancyDesignations`
+`func (o *InlineObject52) GetBlockedUrlCategories() []string`
 
-GetDesignations returns the Designations field if non-nil, zero value otherwise.
+GetBlockedUrlCategories returns the BlockedUrlCategories field if non-nil, zero value otherwise.
 
-### GetDesignationsOk
+### GetBlockedUrlCategoriesOk
 
-`func (o *InlineObject52) GetDesignationsOk() (*[]NetworksNetworkIdApplianceDevicesRedundancyDesignations, bool)`
+`func (o *InlineObject52) GetBlockedUrlCategoriesOk() (*[]string, bool)`
 
-GetDesignationsOk returns a tuple with the Designations field if it's non-nil, zero value otherwise
+GetBlockedUrlCategoriesOk returns a tuple with the BlockedUrlCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDesignations
+### SetBlockedUrlCategories
 
-`func (o *InlineObject52) SetDesignations(v []NetworksNetworkIdApplianceDevicesRedundancyDesignations)`
+`func (o *InlineObject52) SetBlockedUrlCategories(v []string)`
 
-SetDesignations sets Designations field to given value.
+SetBlockedUrlCategories sets BlockedUrlCategories field to given value.
 
-### HasDesignations
+### HasBlockedUrlCategories
 
-`func (o *InlineObject52) HasDesignations() bool`
+`func (o *InlineObject52) HasBlockedUrlCategories() bool`
 
-HasDesignations returns a boolean if a field has been set.
+HasBlockedUrlCategories returns a boolean if a field has been set.
 
-### GetUplink
+### GetUrlCategoryListSize
 
-`func (o *InlineObject52) GetUplink() NetworksNetworkIdApplianceDevicesRedundancyUplink`
+`func (o *InlineObject52) GetUrlCategoryListSize() string`
 
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
+GetUrlCategoryListSize returns the UrlCategoryListSize field if non-nil, zero value otherwise.
 
-### GetUplinkOk
+### GetUrlCategoryListSizeOk
 
-`func (o *InlineObject52) GetUplinkOk() (*NetworksNetworkIdApplianceDevicesRedundancyUplink, bool)`
+`func (o *InlineObject52) GetUrlCategoryListSizeOk() (*string, bool)`
 
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+GetUrlCategoryListSizeOk returns a tuple with the UrlCategoryListSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplink
+### SetUrlCategoryListSize
 
-`func (o *InlineObject52) SetUplink(v NetworksNetworkIdApplianceDevicesRedundancyUplink)`
+`func (o *InlineObject52) SetUrlCategoryListSize(v string)`
 
-SetUplink sets Uplink field to given value.
+SetUrlCategoryListSize sets UrlCategoryListSize field to given value.
 
-### HasUplink
+### HasUrlCategoryListSize
 
-`func (o *InlineObject52) HasUplink() bool`
+`func (o *InlineObject52) HasUrlCategoryListSize() bool`
 
-HasUplink returns a boolean if a field has been set.
+HasUrlCategoryListSize returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

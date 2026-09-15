@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationIntegrationsDeployable
 
-> InlineResponse200378 GetOrganizationIntegrationsDeployable(ctx, organizationId).Execute()
+> InlineResponse200382 GetOrganizationIntegrationsDeployable(ctx, organizationId).Execute()
 
 Provides a list of integrations that can be enabled for an Organization.
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DeployableApi.GetOrganizationIntegrationsDeployable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationIntegrationsDeployable`: InlineResponse200378
+    // response from `GetOrganizationIntegrationsDeployable`: InlineResponse200382
     fmt.Fprintf(os.Stdout, "Response from `DeployableApi.GetOrganizationIntegrationsDeployable`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200378**](InlineResponse200378.md)
+[**InlineResponse200382**](InlineResponse200382.md)
 
 ### Authorization
 

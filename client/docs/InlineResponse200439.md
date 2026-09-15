@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Name of the Application Category | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
+**Id** | Pointer to **string** | theme id | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**IsSystemTheme** | Pointer to **bool** | is a Meraki provided theme | [optional] 
+**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200439WithDefaults instantiates a new InlineResponse200439 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetId
 
-`func (o *InlineResponse200439) GetCategory() string`
+`func (o *InlineResponse200439) GetId() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetIdOk
 
-`func (o *InlineResponse200439) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200439) GetIdOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetId
 
-`func (o *InlineResponse200439) SetCategory(v string)`
+`func (o *InlineResponse200439) SetId(v string)`
 
-SetCategory sets Category field to given value.
+SetId sets Id field to given value.
 
-### HasCategory
+### HasId
 
-`func (o *InlineResponse200439) HasCategory() bool`
+`func (o *InlineResponse200439) HasId() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetTotal
+### GetName
 
-`func (o *InlineResponse200439) GetTotal() float32`
+`func (o *InlineResponse200439) GetName() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetNameOk
 
-`func (o *InlineResponse200439) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200439) GetNameOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetName
 
-`func (o *InlineResponse200439) SetTotal(v float32)`
+`func (o *InlineResponse200439) SetName(v string)`
 
-SetTotal sets Total field to given value.
+SetName sets Name field to given value.
 
-### HasTotal
+### HasName
 
-`func (o *InlineResponse200439) HasTotal() bool`
+`func (o *InlineResponse200439) HasName() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDownstream
+### GetIsSystemTheme
 
-`func (o *InlineResponse200439) GetDownstream() float32`
+`func (o *InlineResponse200439) GetIsSystemTheme() bool`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetIsSystemTheme returns the IsSystemTheme field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetIsSystemThemeOk
 
-`func (o *InlineResponse200439) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200439) GetIsSystemThemeOk() (*bool, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetIsSystemThemeOk returns a tuple with the IsSystemTheme field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetIsSystemTheme
 
-`func (o *InlineResponse200439) SetDownstream(v float32)`
+`func (o *InlineResponse200439) SetIsSystemTheme(v bool)`
 
-SetDownstream sets Downstream field to given value.
+SetIsSystemTheme sets IsSystemTheme field to given value.
 
-### HasDownstream
+### HasIsSystemTheme
 
-`func (o *InlineResponse200439) HasDownstream() bool`
+`func (o *InlineResponse200439) HasIsSystemTheme() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasIsSystemTheme returns a boolean if a field has been set.
 
-### GetUpstream
+### GetThemeAssets
 
-`func (o *InlineResponse200439) GetUpstream() float32`
+`func (o *InlineResponse200439) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetThemeAssetsOk
 
-`func (o *InlineResponse200439) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse200439) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetThemeAssets
 
-`func (o *InlineResponse200439) SetUpstream(v float32)`
+`func (o *InlineResponse200439) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
 
-SetUpstream sets Upstream field to given value.
+SetThemeAssets sets ThemeAssets field to given value.
 
-### HasUpstream
+### HasThemeAssets
 
-`func (o *InlineResponse200439) HasUpstream() bool`
+`func (o *InlineResponse200439) HasThemeAssets() bool`
 
-HasUpstream returns a boolean if a field has been set.
-
-### GetPercentage
-
-`func (o *InlineResponse200439) GetPercentage() float32`
-
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
-
-### GetPercentageOk
-
-`func (o *InlineResponse200439) GetPercentageOk() (*float32, bool)`
-
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPercentage
-
-`func (o *InlineResponse200439) SetPercentage(v float32)`
-
-SetPercentage sets Percentage field to given value.
-
-### HasPercentage
-
-`func (o *InlineResponse200439) HasPercentage() bool`
-
-HasPercentage returns a boolean if a field has been set.
+HasThemeAssets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

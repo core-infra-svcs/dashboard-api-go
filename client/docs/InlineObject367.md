@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
+**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1.md) |  | 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject367
 
-`func NewInlineObject367() *InlineObject367`
+`func NewInlineObject367(ssid OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1, ) *InlineObject367`
 
 NewInlineObject367 instantiates a new InlineObject367 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,50 @@ NewInlineObject367WithDefaults instantiates a new InlineObject367 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDoorLockIds
+### GetSsid
 
-`func (o *InlineObject367) GetDoorLockIds() []string`
+`func (o *InlineObject367) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1`
 
-GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetDoorLockIdsOk
+### GetSsidOk
 
-`func (o *InlineObject367) GetDoorLockIdsOk() (*[]string, bool)`
+`func (o *InlineObject367) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1, bool)`
 
-GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLockIds
+### SetSsid
 
-`func (o *InlineObject367) SetDoorLockIds(v []string)`
+`func (o *InlineObject367) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1)`
 
-SetDoorLockIds sets DoorLockIds field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasDoorLockIds
 
-`func (o *InlineObject367) HasDoorLockIds() bool`
+### GetNetwork
 
-HasDoorLockIds returns a boolean if a field has been set.
+`func (o *InlineObject367) GetNetwork() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineObject367) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineObject367) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineObject367) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

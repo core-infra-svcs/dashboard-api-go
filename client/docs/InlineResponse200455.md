@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**OrganizationsOrganizationIdWebhooksAlertTypesExample**](OrganizationsOrganizationIdWebhooksAlertTypesExample.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200455Items**](InlineResponse200455Items.md) | Switches | [optional] 
+**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200455WithDefaults instantiates a new InlineResponse200455 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetItems
 
-`func (o *InlineResponse200455) GetAlertTypeId() string`
+`func (o *InlineResponse200455) GetItems() []InlineResponse200455Items`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200455) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200455) GetItemsOk() (*[]InlineResponse200455Items, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetItems
 
-`func (o *InlineResponse200455) SetAlertTypeId(v string)`
+`func (o *InlineResponse200455) SetItems(v []InlineResponse200455Items)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetItems sets Items field to given value.
 
-### HasAlertTypeId
+### HasItems
 
-`func (o *InlineResponse200455) HasAlertTypeId() bool`
+`func (o *InlineResponse200455) HasItems() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetAlertType
+### GetMeta
 
-`func (o *InlineResponse200455) GetAlertType() string`
+`func (o *InlineResponse200455) GetMeta() InlineResponse200279Meta`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetMetaOk
 
-`func (o *InlineResponse200455) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200455) GetMetaOk() (*InlineResponse200279Meta, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetMeta
 
-`func (o *InlineResponse200455) SetAlertType(v string)`
+`func (o *InlineResponse200455) SetMeta(v InlineResponse200279Meta)`
 
-SetAlertType sets AlertType field to given value.
+SetMeta sets Meta field to given value.
 
-### HasAlertType
+### HasMeta
 
-`func (o *InlineResponse200455) HasAlertType() bool`
+`func (o *InlineResponse200455) HasMeta() bool`
 
-HasAlertType returns a boolean if a field has been set.
-
-### GetExample
-
-`func (o *InlineResponse200455) GetExample() OrganizationsOrganizationIdWebhooksAlertTypesExample`
-
-GetExample returns the Example field if non-nil, zero value otherwise.
-
-### GetExampleOk
-
-`func (o *InlineResponse200455) GetExampleOk() (*OrganizationsOrganizationIdWebhooksAlertTypesExample, bool)`
-
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExample
-
-`func (o *InlineResponse200455) SetExample(v OrganizationsOrganizationIdWebhooksAlertTypesExample)`
-
-SetExample sets Example field to given value.
-
-### HasExample
-
-`func (o *InlineResponse200455) HasExample() bool`
-
-HasExample returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200357Items**](InlineResponse200357Items.md) | List of packet capture files | [optional] 
+**Items** | Pointer to [**[]InlineResponse200357Items**](InlineResponse200357Items.md) | List of cellular tower information for devices in the organization. Maximum 100 devices per page by default and 1000 maximum per page. | [optional] 
 **Meta** | Pointer to [**InlineResponse200357Meta**](InlineResponse200357Meta.md) |  | [optional] 
 
 ## Methods

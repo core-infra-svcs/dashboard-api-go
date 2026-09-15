@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200103Network**](InlineResponse200103Network.md) |  | [optional] 
-**Policies** | Pointer to [**[]InlineResponse200103Policies**](InlineResponse200103Policies.md) | Umbrella policies applied to the network. The maximum number of policies is determined by Cisco Umbrella account limits. | [optional] 
+**Domains** | Pointer to **[]string** | Domain names currently excluded from Umbrella DNS routing | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200103WithDefaults instantiates a new InlineResponse200103 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetDomains
 
-`func (o *InlineResponse200103) GetNetwork() InlineResponse200103Network`
+`func (o *InlineResponse200103) GetDomains() []string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetDomainsOk
 
-`func (o *InlineResponse200103) GetNetworkOk() (*InlineResponse200103Network, bool)`
+`func (o *InlineResponse200103) GetDomainsOk() (*[]string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetDomains
 
-`func (o *InlineResponse200103) SetNetwork(v InlineResponse200103Network)`
+`func (o *InlineResponse200103) SetDomains(v []string)`
 
-SetNetwork sets Network field to given value.
+SetDomains sets Domains field to given value.
 
-### HasNetwork
+### HasDomains
 
-`func (o *InlineResponse200103) HasNetwork() bool`
+`func (o *InlineResponse200103) HasDomains() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetPolicies
-
-`func (o *InlineResponse200103) GetPolicies() []InlineResponse200103Policies`
-
-GetPolicies returns the Policies field if non-nil, zero value otherwise.
-
-### GetPoliciesOk
-
-`func (o *InlineResponse200103) GetPoliciesOk() (*[]InlineResponse200103Policies, bool)`
-
-GetPoliciesOk returns a tuple with the Policies field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicies
-
-`func (o *InlineResponse200103) SetPolicies(v []InlineResponse200103Policies)`
-
-SetPolicies sets Policies field to given value.
-
-### HasPolicies
-
-`func (o *InlineResponse200103) HasPolicies() bool`
-
-HasPolicies returns a boolean if a field has been set.
+HasDomains returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

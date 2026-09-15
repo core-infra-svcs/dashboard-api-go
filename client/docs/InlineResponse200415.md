@@ -4,12 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
-**Camera** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesCamera**](OrganizationsOrganizationIdSamlRolesCamera.md) | The list of camera access privileges for SAML administrator | [optional] 
+**Id** | Pointer to **string** | Policy object ID | [optional] 
+**Name** | Pointer to **string** | Name of policy object (alphanumeric, space, dash, or underscore characters only). | [optional] 
+**Category** | Pointer to **string** | Category of a policy object (one of: adaptivePolicy, network) | [optional] 
+**Type** | Pointer to **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to. | [optional] 
+**NetworkIds** | Pointer to **[]string** | The IDs of the networks that use the policy object. | [optional] 
 
 ## Methods
 
@@ -55,130 +58,205 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetRole
+### GetName
 
-`func (o *InlineResponse200415) GetRole() string`
+`func (o *InlineResponse200415) GetName() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetNameOk
 
-`func (o *InlineResponse200415) GetRoleOk() (*string, bool)`
+`func (o *InlineResponse200415) GetNameOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetName
 
-`func (o *InlineResponse200415) SetRole(v string)`
+`func (o *InlineResponse200415) SetName(v string)`
 
-SetRole sets Role field to given value.
+SetName sets Name field to given value.
 
-### HasRole
+### HasName
 
-`func (o *InlineResponse200415) HasRole() bool`
+`func (o *InlineResponse200415) HasName() bool`
 
-HasRole returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetCategory
 
-`func (o *InlineResponse200415) GetOrgAccess() string`
+`func (o *InlineResponse200415) GetCategory() string`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetCategoryOk
 
-`func (o *InlineResponse200415) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineResponse200415) GetCategoryOk() (*string, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetCategory
 
-`func (o *InlineResponse200415) SetOrgAccess(v string)`
+`func (o *InlineResponse200415) SetCategory(v string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetCategory sets Category field to given value.
 
-### HasOrgAccess
+### HasCategory
 
-`func (o *InlineResponse200415) HasOrgAccess() bool`
+`func (o *InlineResponse200415) HasCategory() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetNetworks
+### GetType
 
-`func (o *InlineResponse200415) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
+`func (o *InlineResponse200415) GetType() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetTypeOk
 
-`func (o *InlineResponse200415) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
+`func (o *InlineResponse200415) GetTypeOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetType
 
-`func (o *InlineResponse200415) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
+`func (o *InlineResponse200415) SetType(v string)`
 
-SetNetworks sets Networks field to given value.
+SetType sets Type field to given value.
 
-### HasNetworks
+### HasType
 
-`func (o *InlineResponse200415) HasNetworks() bool`
+`func (o *InlineResponse200415) HasType() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetTags
+### GetCidr
 
-`func (o *InlineResponse200415) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
+`func (o *InlineResponse200415) GetCidr() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetCidrOk
 
-`func (o *InlineResponse200415) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
+`func (o *InlineResponse200415) GetCidrOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetCidr
 
-`func (o *InlineResponse200415) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
+`func (o *InlineResponse200415) SetCidr(v string)`
 
-SetTags sets Tags field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasTags
+### HasCidr
 
-`func (o *InlineResponse200415) HasTags() bool`
+`func (o *InlineResponse200415) HasCidr() bool`
 
-HasTags returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetCamera
+### GetCreatedAt
 
-`func (o *InlineResponse200415) GetCamera() []OrganizationsOrganizationIdSamlRolesCamera`
+`func (o *InlineResponse200415) GetCreatedAt() time.Time`
 
-GetCamera returns the Camera field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetCameraOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200415) GetCameraOk() (*[]OrganizationsOrganizationIdSamlRolesCamera, bool)`
+`func (o *InlineResponse200415) GetCreatedAtOk() (*time.Time, bool)`
 
-GetCameraOk returns a tuple with the Camera field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCamera
+### SetCreatedAt
 
-`func (o *InlineResponse200415) SetCamera(v []OrganizationsOrganizationIdSamlRolesCamera)`
+`func (o *InlineResponse200415) SetCreatedAt(v time.Time)`
 
-SetCamera sets Camera field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasCamera
+### HasCreatedAt
 
-`func (o *InlineResponse200415) HasCamera() bool`
+`func (o *InlineResponse200415) HasCreatedAt() bool`
 
-HasCamera returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200415) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200415) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200415) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200415) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineResponse200415) GetGroupIds() []string`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineResponse200415) GetGroupIdsOk() (*[]string, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineResponse200415) SetGroupIds(v []string)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineResponse200415) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
+
+### GetNetworkIds
+
+`func (o *InlineResponse200415) GetNetworkIds() []string`
+
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+
+### GetNetworkIdsOk
+
+`func (o *InlineResponse200415) GetNetworkIdsOk() (*[]string, bool)`
+
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkIds
+
+`func (o *InlineResponse200415) SetNetworkIds(v []string)`
+
+SetNetworkIds sets NetworkIds field to given value.
+
+### HasNetworkIds
+
+`func (o *InlineResponse200415) HasNetworkIds() bool`
+
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

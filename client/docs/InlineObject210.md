@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Collect location and scanning analytics | [optional] 
-**Api** | Pointer to [**NetworksNetworkIdWirelessLocationScanningApi**](NetworksNetworkIdWirelessLocationScanningApi.md) |  | [optional] 
+**ProfileId** | **NullableString** | AP profile ID | 
 
 ## Methods
 
 ### NewInlineObject210
 
-`func NewInlineObject210() *InlineObject210`
+`func NewInlineObject210(profileId NullableString, ) *InlineObject210`
 
 NewInlineObject210 instantiates a new InlineObject210 object
 This constructor will assign default values to properties that have it defined,
@@ -26,56 +25,36 @@ NewInlineObject210WithDefaults instantiates a new InlineObject210 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetProfileId
 
-`func (o *InlineObject210) GetEnabled() bool`
+`func (o *InlineObject210) GetProfileId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetProfileIdOk
 
-`func (o *InlineObject210) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject210) GetProfileIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetProfileId
 
-`func (o *InlineObject210) SetEnabled(v bool)`
+`func (o *InlineObject210) SetProfileId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject210) HasEnabled() bool`
+### SetProfileIdNil
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject210) SetProfileIdNil(b bool)`
 
-### GetApi
+ SetProfileIdNil sets the value for ProfileId to be an explicit nil
 
-`func (o *InlineObject210) GetApi() NetworksNetworkIdWirelessLocationScanningApi`
+### UnsetProfileId
+`func (o *InlineObject210) UnsetProfileId()`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
-
-### GetApiOk
-
-`func (o *InlineObject210) GetApiOk() (*NetworksNetworkIdWirelessLocationScanningApi, bool)`
-
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApi
-
-`func (o *InlineObject210) SetApi(v NetworksNetworkIdWirelessLocationScanningApi)`
-
-SetApi sets Api field to given value.
-
-### HasApi
-
-`func (o *InlineObject210) HasApi() bool`
-
-HasApi returns a boolean if a field has been set.
-
+UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

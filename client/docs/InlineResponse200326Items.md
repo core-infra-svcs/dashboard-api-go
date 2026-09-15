@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Device** | Pointer to [**InlineResponse200326Device**](InlineResponse200326Device.md) |  | [optional] 
-**Active** | Pointer to **bool** | Whether eSIM is currently active SIM on Device | [optional] 
-**Eid** | Pointer to **string** | eSIM EID | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Last update of eSIM | [optional] 
-**Network** | Pointer to [**InlineResponse200326Network**](InlineResponse200326Network.md) |  | [optional] 
-**Profiles** | Pointer to [**[]InlineResponse200326Profiles**](InlineResponse200326Profiles.md) | eSIM Profile Information | [optional] 
+**Cluster** | [**InlineResponse200326Cluster**](InlineResponse200326Cluster.md) |  | 
+**Network** | [**InlineResponse200326Network**](InlineResponse200326Network.md) |  | 
+**Data** | [**InlineResponse200326Data**](InlineResponse200326Data.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200326Items
 
-`func NewInlineResponse200326Items() *InlineResponse200326Items`
+`func NewInlineResponse200326Items(cluster InlineResponse200326Cluster, network InlineResponse200326Network, data InlineResponse200326Data, ) *InlineResponse200326Items`
 
 NewInlineResponse200326Items instantiates a new InlineResponse200326Items object
 This constructor will assign default values to properties that have it defined,
@@ -30,105 +27,25 @@ NewInlineResponse200326ItemsWithDefaults instantiates a new InlineResponse200326
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevice
+### GetCluster
 
-`func (o *InlineResponse200326Items) GetDevice() InlineResponse200326Device`
+`func (o *InlineResponse200326Items) GetCluster() InlineResponse200326Cluster`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetCluster returns the Cluster field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetClusterOk
 
-`func (o *InlineResponse200326Items) GetDeviceOk() (*InlineResponse200326Device, bool)`
+`func (o *InlineResponse200326Items) GetClusterOk() (*InlineResponse200326Cluster, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetClusterOk returns a tuple with the Cluster field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetCluster
 
-`func (o *InlineResponse200326Items) SetDevice(v InlineResponse200326Device)`
+`func (o *InlineResponse200326Items) SetCluster(v InlineResponse200326Cluster)`
 
-SetDevice sets Device field to given value.
+SetCluster sets Cluster field to given value.
 
-### HasDevice
-
-`func (o *InlineResponse200326Items) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
-
-### GetActive
-
-`func (o *InlineResponse200326Items) GetActive() bool`
-
-GetActive returns the Active field if non-nil, zero value otherwise.
-
-### GetActiveOk
-
-`func (o *InlineResponse200326Items) GetActiveOk() (*bool, bool)`
-
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActive
-
-`func (o *InlineResponse200326Items) SetActive(v bool)`
-
-SetActive sets Active field to given value.
-
-### HasActive
-
-`func (o *InlineResponse200326Items) HasActive() bool`
-
-HasActive returns a boolean if a field has been set.
-
-### GetEid
-
-`func (o *InlineResponse200326Items) GetEid() string`
-
-GetEid returns the Eid field if non-nil, zero value otherwise.
-
-### GetEidOk
-
-`func (o *InlineResponse200326Items) GetEidOk() (*string, bool)`
-
-GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEid
-
-`func (o *InlineResponse200326Items) SetEid(v string)`
-
-SetEid sets Eid field to given value.
-
-### HasEid
-
-`func (o *InlineResponse200326Items) HasEid() bool`
-
-HasEid returns a boolean if a field has been set.
-
-### GetLastUpdatedAt
-
-`func (o *InlineResponse200326Items) GetLastUpdatedAt() string`
-
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
-
-### GetLastUpdatedAtOk
-
-`func (o *InlineResponse200326Items) GetLastUpdatedAtOk() (*string, bool)`
-
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastUpdatedAt
-
-`func (o *InlineResponse200326Items) SetLastUpdatedAt(v string)`
-
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
-
-### HasLastUpdatedAt
-
-`func (o *InlineResponse200326Items) HasLastUpdatedAt() bool`
-
-HasLastUpdatedAt returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -149,36 +66,26 @@ and a boolean to check if the value has been set.
 
 SetNetwork sets Network field to given value.
 
-### HasNetwork
 
-`func (o *InlineResponse200326Items) HasNetwork() bool`
+### GetData
 
-HasNetwork returns a boolean if a field has been set.
+`func (o *InlineResponse200326Items) GetData() InlineResponse200326Data`
 
-### GetProfiles
+GetData returns the Data field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200326Items) GetProfiles() []InlineResponse200326Profiles`
+### GetDataOk
 
-GetProfiles returns the Profiles field if non-nil, zero value otherwise.
+`func (o *InlineResponse200326Items) GetDataOk() (*InlineResponse200326Data, bool)`
 
-### GetProfilesOk
-
-`func (o *InlineResponse200326Items) GetProfilesOk() (*[]InlineResponse200326Profiles, bool)`
-
-GetProfilesOk returns a tuple with the Profiles field if it's non-nil, zero value otherwise
+GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfiles
+### SetData
 
-`func (o *InlineResponse200326Items) SetProfiles(v []InlineResponse200326Profiles)`
+`func (o *InlineResponse200326Items) SetData(v InlineResponse200326Data)`
 
-SetProfiles sets Profiles field to given value.
+SetData sets Data field to given value.
 
-### HasProfiles
-
-`func (o *InlineResponse200326Items) HasProfiles() bool`
-
-HasProfiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

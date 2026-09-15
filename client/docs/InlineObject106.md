@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. Possible values are &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. Possible values are: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
+**Enabled** | Pointer to **bool** | If true, mDNS gateway is enabled for this SSID and cluster. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules**](NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules.md) | List of mDNS forwarding rules. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject106WithDefaults instantiates a new InlineObject106 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetEnabled
 
-`func (o *InlineObject106) GetDhcpLeaseTime() string`
+`func (o *InlineObject106) GetEnabled() bool`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetEnabledOk
 
-`func (o *InlineObject106) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineObject106) GetEnabledOk() (*bool, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetEnabled
 
-`func (o *InlineObject106) SetDhcpLeaseTime(v string)`
+`func (o *InlineObject106) SetEnabled(v bool)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasDhcpLeaseTime
+### HasEnabled
 
-`func (o *InlineObject106) HasDhcpLeaseTime() bool`
+`func (o *InlineObject106) HasEnabled() bool`
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDnsNameservers
+### GetRules
 
-`func (o *InlineObject106) GetDnsNameservers() string`
+`func (o *InlineObject106) GetRules() []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules`
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetDnsNameserversOk
+### GetRulesOk
 
-`func (o *InlineObject106) GetDnsNameserversOk() (*string, bool)`
+`func (o *InlineObject106) GetRulesOk() (*[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules, bool)`
 
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetRules
 
-`func (o *InlineObject106) SetDnsNameservers(v string)`
+`func (o *InlineObject106) SetRules(v []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetRules sets Rules field to given value.
 
-### HasDnsNameservers
+### HasRules
 
-`func (o *InlineObject106) HasDnsNameservers() bool`
+`func (o *InlineObject106) HasRules() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
-
-### GetDnsCustomNameservers
-
-`func (o *InlineObject106) GetDnsCustomNameservers() []string`
-
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
-
-### GetDnsCustomNameserversOk
-
-`func (o *InlineObject106) GetDnsCustomNameserversOk() (*[]string, bool)`
-
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDnsCustomNameservers
-
-`func (o *InlineObject106) SetDnsCustomNameservers(v []string)`
-
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
-
-### HasDnsCustomNameservers
-
-`func (o *InlineObject106) HasDnsCustomNameservers() bool`
-
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

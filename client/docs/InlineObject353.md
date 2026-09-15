@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
-**Meta** | Pointer to [**InlineResponse200277Meta**](InlineResponse200277Meta.md) |  | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
 
 ## Methods
 
 ### NewInlineObject353
 
-`func NewInlineObject353(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject353`
+`func NewInlineObject353() *InlineObject353`
 
 NewInlineObject353 instantiates a new InlineObject353 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject353WithDefaults instantiates a new InlineObject353 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject353) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
+`func (o *InlineObject353) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject353) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
+`func (o *InlineObject353) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject353) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
+`func (o *InlineObject353) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetMeta
+`func (o *InlineObject353) HasName() bool`
 
-`func (o *InlineObject353) GetMeta() InlineResponse200277Meta`
+HasName returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetBaseTheme
 
-### GetMetaOk
+`func (o *InlineObject353) GetBaseTheme() string`
 
-`func (o *InlineObject353) GetMetaOk() (*InlineResponse200277Meta, bool)`
+GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetBaseThemeOk
+
+`func (o *InlineObject353) GetBaseThemeOk() (*string, bool)`
+
+GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetBaseTheme
 
-`func (o *InlineObject353) SetMeta(v InlineResponse200277Meta)`
+`func (o *InlineObject353) SetBaseTheme(v string)`
 
-SetMeta sets Meta field to given value.
+SetBaseTheme sets BaseTheme field to given value.
 
-### HasMeta
+### HasBaseTheme
 
-`func (o *InlineObject353) HasMeta() bool`
+`func (o *InlineObject353) HasBaseTheme() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasBaseTheme returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

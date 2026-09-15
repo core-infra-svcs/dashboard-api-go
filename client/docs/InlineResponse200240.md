@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
-**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
+**BackgroundTraffic** | Pointer to [**InlineResponse20063LatencyStatsBackgroundTraffic**](InlineResponse20063LatencyStatsBackgroundTraffic.md) |  | [optional] 
+**BestEffortTraffic** | Pointer to [**InlineResponse20063LatencyStatsBestEffortTraffic**](InlineResponse20063LatencyStatsBestEffortTraffic.md) |  | [optional] 
+**VideoTraffic** | Pointer to [**InlineResponse20063LatencyStatsVideoTraffic**](InlineResponse20063LatencyStatsVideoTraffic.md) |  | [optional] 
+**VoiceTraffic** | Pointer to [**InlineResponse20063LatencyStatsVoiceTraffic**](InlineResponse20063LatencyStatsVoiceTraffic.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200240WithDefaults instantiates a new InlineResponse200240 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetBackgroundTraffic
 
-`func (o *InlineResponse200240) GetSerial() string`
+`func (o *InlineResponse200240) GetBackgroundTraffic() InlineResponse20063LatencyStatsBackgroundTraffic`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetBackgroundTraffic returns the BackgroundTraffic field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetBackgroundTrafficOk
 
-`func (o *InlineResponse200240) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200240) GetBackgroundTrafficOk() (*InlineResponse20063LatencyStatsBackgroundTraffic, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetBackgroundTrafficOk returns a tuple with the BackgroundTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetBackgroundTraffic
 
-`func (o *InlineResponse200240) SetSerial(v string)`
+`func (o *InlineResponse200240) SetBackgroundTraffic(v InlineResponse20063LatencyStatsBackgroundTraffic)`
 
-SetSerial sets Serial field to given value.
+SetBackgroundTraffic sets BackgroundTraffic field to given value.
 
-### HasSerial
+### HasBackgroundTraffic
 
-`func (o *InlineResponse200240) HasSerial() bool`
+`func (o *InlineResponse200240) HasBackgroundTraffic() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasBackgroundTraffic returns a boolean if a field has been set.
 
-### GetMeshRoute
+### GetBestEffortTraffic
 
-`func (o *InlineResponse200240) GetMeshRoute() []string`
+`func (o *InlineResponse200240) GetBestEffortTraffic() InlineResponse20063LatencyStatsBestEffortTraffic`
 
-GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
+GetBestEffortTraffic returns the BestEffortTraffic field if non-nil, zero value otherwise.
 
-### GetMeshRouteOk
+### GetBestEffortTrafficOk
 
-`func (o *InlineResponse200240) GetMeshRouteOk() (*[]string, bool)`
+`func (o *InlineResponse200240) GetBestEffortTrafficOk() (*InlineResponse20063LatencyStatsBestEffortTraffic, bool)`
 
-GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
+GetBestEffortTrafficOk returns a tuple with the BestEffortTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshRoute
+### SetBestEffortTraffic
 
-`func (o *InlineResponse200240) SetMeshRoute(v []string)`
+`func (o *InlineResponse200240) SetBestEffortTraffic(v InlineResponse20063LatencyStatsBestEffortTraffic)`
 
-SetMeshRoute sets MeshRoute field to given value.
+SetBestEffortTraffic sets BestEffortTraffic field to given value.
 
-### HasMeshRoute
+### HasBestEffortTraffic
 
-`func (o *InlineResponse200240) HasMeshRoute() bool`
+`func (o *InlineResponse200240) HasBestEffortTraffic() bool`
 
-HasMeshRoute returns a boolean if a field has been set.
+HasBestEffortTraffic returns a boolean if a field has been set.
 
-### GetLatestMeshPerformance
+### GetVideoTraffic
 
-`func (o *InlineResponse200240) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
+`func (o *InlineResponse200240) GetVideoTraffic() InlineResponse20063LatencyStatsVideoTraffic`
 
-GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
+GetVideoTraffic returns the VideoTraffic field if non-nil, zero value otherwise.
 
-### GetLatestMeshPerformanceOk
+### GetVideoTrafficOk
 
-`func (o *InlineResponse200240) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
+`func (o *InlineResponse200240) GetVideoTrafficOk() (*InlineResponse20063LatencyStatsVideoTraffic, bool)`
 
-GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
+GetVideoTrafficOk returns a tuple with the VideoTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatestMeshPerformance
+### SetVideoTraffic
 
-`func (o *InlineResponse200240) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
+`func (o *InlineResponse200240) SetVideoTraffic(v InlineResponse20063LatencyStatsVideoTraffic)`
 
-SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
+SetVideoTraffic sets VideoTraffic field to given value.
 
-### HasLatestMeshPerformance
+### HasVideoTraffic
 
-`func (o *InlineResponse200240) HasLatestMeshPerformance() bool`
+`func (o *InlineResponse200240) HasVideoTraffic() bool`
 
-HasLatestMeshPerformance returns a boolean if a field has been set.
+HasVideoTraffic returns a boolean if a field has been set.
+
+### GetVoiceTraffic
+
+`func (o *InlineResponse200240) GetVoiceTraffic() InlineResponse20063LatencyStatsVoiceTraffic`
+
+GetVoiceTraffic returns the VoiceTraffic field if non-nil, zero value otherwise.
+
+### GetVoiceTrafficOk
+
+`func (o *InlineResponse200240) GetVoiceTrafficOk() (*InlineResponse20063LatencyStatsVoiceTraffic, bool)`
+
+GetVoiceTrafficOk returns a tuple with the VoiceTraffic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoiceTraffic
+
+`func (o *InlineResponse200240) SetVoiceTraffic(v InlineResponse20063LatencyStatsVoiceTraffic)`
+
+SetVoiceTraffic sets VoiceTraffic field to given value.
+
+### HasVoiceTraffic
+
+`func (o *InlineResponse200240) HasVoiceTraffic() bool`
+
+HasVoiceTraffic returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

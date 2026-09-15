@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Strategy** | Pointer to **string** | The strategy that network devices will use to perform the upgrade. If unspecified, the scheduled upgrade will use the default strategy for the network. | [optional] 
-**Predownload** | Pointer to [**InlineResponse200134ProductsWirelessNextUpgradePredownload**](InlineResponse200134ProductsWirelessNextUpgradePredownload.md) |  | [optional] 
+**Predownload** | Pointer to [**InlineResponse200136ProductsWirelessNextUpgradePredownload**](InlineResponse200136ProductsWirelessNextUpgradePredownload.md) |  | [optional] 
 **Time** | Pointer to **string** | The time of the last successful upgrade | [optional] 
 **ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgradeToVersion**](NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgradeToVersion.md) |  | [optional] 
 
@@ -55,20 +55,20 @@ HasStrategy returns a boolean if a field has been set.
 
 ### GetPredownload
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownload() InlineResponse200134ProductsWirelessNextUpgradePredownload`
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownload() InlineResponse200136ProductsWirelessNextUpgradePredownload`
 
 GetPredownload returns the Predownload field if non-nil, zero value otherwise.
 
 ### GetPredownloadOk
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownloadOk() (*InlineResponse200134ProductsWirelessNextUpgradePredownload, bool)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) GetPredownloadOk() (*InlineResponse200136ProductsWirelessNextUpgradePredownload, bool)`
 
 GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPredownload
 
-`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) SetPredownload(v InlineResponse200134ProductsWirelessNextUpgradePredownload)`
+`func (o *NetworksNetworkIdFirmwareUpgradesProductsWirelessNextUpgrade) SetPredownload(v InlineResponse200136ProductsWirelessNextUpgradePredownload)`
 
 SetPredownload sets Predownload field to given value.
 

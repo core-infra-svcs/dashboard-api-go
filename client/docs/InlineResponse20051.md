@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **Tags** | Pointer to **[]string** | The list of tags of the switch port. | [optional] 
 **Enabled** | Pointer to **bool** | The status of the switch port. | [optional] 
 **PoeEnabled** | Pointer to **bool** | The PoE status of the switch port. | [optional] 
+**PerpetualPoe** | Pointer to [**DevicesSerialSwitchPortsPerpetualPoe**](DevicesSerialSwitchPortsPerpetualPoe.md) |  | [optional] 
+**FastPoe** | Pointer to [**DevicesSerialSwitchPortsFastPoe**](DevicesSerialSwitchPortsFastPoe.md) |  | [optional] 
 **Type** | Pointer to **string** | The type of the switch port (&#39;access&#39;, &#39;trunk&#39;, &#39;stack&#39;, &#39;routed&#39;, &#39;svl&#39; or &#39;dad&#39;). | [optional] 
 **Vlan** | Pointer to **int32** | The VLAN of the switch port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
 **VoiceVlan** | Pointer to **int32** | The voice VLAN of the switch port. Only applicable to access ports. | [optional] 
@@ -183,6 +185,56 @@ SetPoeEnabled sets PoeEnabled field to given value.
 `func (o *InlineResponse20051) HasPoeEnabled() bool`
 
 HasPoeEnabled returns a boolean if a field has been set.
+
+### GetPerpetualPoe
+
+`func (o *InlineResponse20051) GetPerpetualPoe() DevicesSerialSwitchPortsPerpetualPoe`
+
+GetPerpetualPoe returns the PerpetualPoe field if non-nil, zero value otherwise.
+
+### GetPerpetualPoeOk
+
+`func (o *InlineResponse20051) GetPerpetualPoeOk() (*DevicesSerialSwitchPortsPerpetualPoe, bool)`
+
+GetPerpetualPoeOk returns a tuple with the PerpetualPoe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPerpetualPoe
+
+`func (o *InlineResponse20051) SetPerpetualPoe(v DevicesSerialSwitchPortsPerpetualPoe)`
+
+SetPerpetualPoe sets PerpetualPoe field to given value.
+
+### HasPerpetualPoe
+
+`func (o *InlineResponse20051) HasPerpetualPoe() bool`
+
+HasPerpetualPoe returns a boolean if a field has been set.
+
+### GetFastPoe
+
+`func (o *InlineResponse20051) GetFastPoe() DevicesSerialSwitchPortsFastPoe`
+
+GetFastPoe returns the FastPoe field if non-nil, zero value otherwise.
+
+### GetFastPoeOk
+
+`func (o *InlineResponse20051) GetFastPoeOk() (*DevicesSerialSwitchPortsFastPoe, bool)`
+
+GetFastPoeOk returns a tuple with the FastPoe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFastPoe
+
+`func (o *InlineResponse20051) SetFastPoe(v DevicesSerialSwitchPortsFastPoe)`
+
+SetFastPoe sets FastPoe field to given value.
+
+### HasFastPoe
+
+`func (o *InlineResponse20051) HasFastPoe() bool`
+
+HasFastPoe returns a boolean if a field has been set.
 
 ### GetType
 

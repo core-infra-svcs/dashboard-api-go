@@ -5,11 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | SSID name | [optional] 
-**Advertisement** | Pointer to [**InlineResponse200488SsidAdvertisement**](InlineResponse200488SsidAdvertisement.md) |  | [optional] 
+**Advertisement** | Pointer to [**InlineResponse200493SsidAdvertisement**](InlineResponse200493SsidAdvertisement.md) |  | [optional] 
 **Security** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidSecurity**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidSecurity.md) |  | [optional] 
 **Radius** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius.md) |  | [optional] 
 **Addressing** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing**](OrganizationsOrganizationIdWirelessSsidsProfilesIdSsidAddressing.md) |  | [optional] 
-**Splash** | Pointer to [**InlineResponse200488SsidSplash**](InlineResponse200488SsidSplash.md) |  | [optional] 
+**Splash** | Pointer to [**InlineResponse200493SsidSplash**](InlineResponse200493SsidSplash.md) |  | [optional] 
 
 ## Methods
 
@@ -57,20 +57,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetAdvertisement
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetAdvertisement() InlineResponse200488SsidAdvertisement`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetAdvertisement() InlineResponse200493SsidAdvertisement`
 
 GetAdvertisement returns the Advertisement field if non-nil, zero value otherwise.
 
 ### GetAdvertisementOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetAdvertisementOk() (*InlineResponse200488SsidAdvertisement, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetAdvertisementOk() (*InlineResponse200493SsidAdvertisement, bool)`
 
 GetAdvertisementOk returns a tuple with the Advertisement field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAdvertisement
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) SetAdvertisement(v InlineResponse200488SsidAdvertisement)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) SetAdvertisement(v InlineResponse200493SsidAdvertisement)`
 
 SetAdvertisement sets Advertisement field to given value.
 
@@ -157,20 +157,20 @@ HasAddressing returns a boolean if a field has been set.
 
 ### GetSplash
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetSplash() InlineResponse200488SsidSplash`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetSplash() InlineResponse200493SsidSplash`
 
 GetSplash returns the Splash field if non-nil, zero value otherwise.
 
 ### GetSplashOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetSplashOk() (*InlineResponse200488SsidSplash, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) GetSplashOk() (*InlineResponse200493SsidSplash, bool)`
 
 GetSplashOk returns a tuple with the Splash field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSplash
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) SetSplash(v InlineResponse200488SsidSplash)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid) SetSplash(v InlineResponse200493SsidSplash)`
 
 SetSplash sets Splash field to given value.
 

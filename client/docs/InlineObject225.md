@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]InlineResponse200254Ranges**](InlineResponse200254Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]InlineResponse200254RangesInSeconds**](InlineResponse200254RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**ExpiresAt** | Pointer to **NullableTime** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
@@ -27,81 +28,116 @@ NewInlineObject225WithDefaults instantiates a new InlineObject225 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject225) GetEnabled() bool`
+`func (o *InlineObject225) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject225) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject225) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject225) SetEnabled(v bool)`
+`func (o *InlineObject225) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineObject225) HasEnabled() bool`
+`func (o *InlineObject225) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRanges
+### GetPassphrase
 
-`func (o *InlineObject225) GetRanges() []InlineResponse200254Ranges`
+`func (o *InlineObject225) GetPassphrase() string`
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetRangesOk
+### GetPassphraseOk
 
-`func (o *InlineObject225) GetRangesOk() (*[]InlineResponse200254Ranges, bool)`
+`func (o *InlineObject225) GetPassphraseOk() (*string, bool)`
 
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetPassphrase
 
-`func (o *InlineObject225) SetRanges(v []InlineResponse200254Ranges)`
+`func (o *InlineObject225) SetPassphrase(v string)`
 
-SetRanges sets Ranges field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasRanges
+### HasPassphrase
 
-`func (o *InlineObject225) HasRanges() bool`
+`func (o *InlineObject225) HasPassphrase() bool`
 
-HasRanges returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetRangesInSeconds
+### GetGroupPolicyId
 
-`func (o *InlineObject225) GetRangesInSeconds() []InlineResponse200254RangesInSeconds`
+`func (o *InlineObject225) GetGroupPolicyId() string`
 
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetRangesInSecondsOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject225) GetRangesInSecondsOk() (*[]InlineResponse200254RangesInSeconds, bool)`
+`func (o *InlineObject225) GetGroupPolicyIdOk() (*string, bool)`
 
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRangesInSeconds
+### SetGroupPolicyId
 
-`func (o *InlineObject225) SetRangesInSeconds(v []InlineResponse200254RangesInSeconds)`
+`func (o *InlineObject225) SetGroupPolicyId(v string)`
 
-SetRangesInSeconds sets RangesInSeconds field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasRangesInSeconds
+### HasGroupPolicyId
 
-`func (o *InlineObject225) HasRangesInSeconds() bool`
+`func (o *InlineObject225) HasGroupPolicyId() bool`
 
-HasRangesInSeconds returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
+### GetExpiresAt
+
+`func (o *InlineObject225) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject225) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject225) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject225) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
+
+### SetExpiresAtNil
+
+`func (o *InlineObject225) SetExpiresAtNil(b bool)`
+
+ SetExpiresAtNil sets the value for ExpiresAt to be an explicit nil
+
+### UnsetExpiresAt
+`func (o *InlineObject225) UnsetExpiresAt()`
+
+UnsetExpiresAt ensures that no value is present for ExpiresAt, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

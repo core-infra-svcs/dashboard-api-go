@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
-**Crl** | Pointer to **string** | The PEM encoded CRL for the Certificate Authority | [optional] 
+**Serial** | Pointer to **string** | Unique serial number for the device | [optional] 
+**Model** | Pointer to **string** | Model of the device | [optional] 
+**Name** | Pointer to **string** | Name of the device | [optional] 
+**Mac** | Pointer to **string** | MAC address of the device | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device | [optional] 
+**Network** | Pointer to [**InlineResponse200371Network**](InlineResponse200371Network.md) |  | [optional] 
+**Events** | Pointer to [**[]InlineResponse200477Events**](InlineResponse200477Events.md) | Events indicating power mode changes for the device | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineResponse200477ItemsWithDefaults instantiates a new InlineResponse200477
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificateAuthorityId
+### GetSerial
 
-`func (o *InlineResponse200477Items) GetCertificateAuthorityId() string`
+`func (o *InlineResponse200477Items) GetSerial() string`
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetCertificateAuthorityIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200477Items) GetCertificateAuthorityIdOk() (*string, bool)`
+`func (o *InlineResponse200477Items) GetSerialOk() (*string, bool)`
 
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetSerial
 
-`func (o *InlineResponse200477Items) SetCertificateAuthorityId(v string)`
+`func (o *InlineResponse200477Items) SetSerial(v string)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasCertificateAuthorityId
+### HasSerial
 
-`func (o *InlineResponse200477Items) HasCertificateAuthorityId() bool`
+`func (o *InlineResponse200477Items) HasSerial() bool`
 
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetCrl
+### GetModel
 
-`func (o *InlineResponse200477Items) GetCrl() string`
+`func (o *InlineResponse200477Items) GetModel() string`
 
-GetCrl returns the Crl field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetCrlOk
+### GetModelOk
 
-`func (o *InlineResponse200477Items) GetCrlOk() (*string, bool)`
+`func (o *InlineResponse200477Items) GetModelOk() (*string, bool)`
 
-GetCrlOk returns a tuple with the Crl field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCrl
+### SetModel
 
-`func (o *InlineResponse200477Items) SetCrl(v string)`
+`func (o *InlineResponse200477Items) SetModel(v string)`
 
-SetCrl sets Crl field to given value.
+SetModel sets Model field to given value.
 
-### HasCrl
+### HasModel
 
-`func (o *InlineResponse200477Items) HasCrl() bool`
+`func (o *InlineResponse200477Items) HasModel() bool`
 
-HasCrl returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200477Items) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200477Items) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200477Items) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200477Items) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200477Items) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200477Items) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200477Items) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200477Items) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200477Items) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200477Items) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200477Items) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200477Items) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200477Items) GetNetwork() InlineResponse200371Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200477Items) GetNetworkOk() (*InlineResponse200371Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200477Items) SetNetwork(v InlineResponse200371Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200477Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetEvents
+
+`func (o *InlineResponse200477Items) GetEvents() []InlineResponse200477Events`
+
+GetEvents returns the Events field if non-nil, zero value otherwise.
+
+### GetEventsOk
+
+`func (o *InlineResponse200477Items) GetEventsOk() (*[]InlineResponse200477Events, bool)`
+
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEvents
+
+`func (o *InlineResponse200477Items) SetEvents(v []InlineResponse200477Events)`
+
+SetEvents sets Events field to given value.
+
+### HasEvents
+
+`func (o *InlineResponse200477Items) HasEvents() bool`
+
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

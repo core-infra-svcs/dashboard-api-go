@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
 
 ## Methods
 
 ### NewInlineObject295
 
-`func NewInlineObject295(shortName string, ) *InlineObject295`
+`func NewInlineObject295(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject295`
 
 NewInlineObject295 instantiates a new InlineObject295 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,25 @@ NewInlineObject295WithDefaults instantiates a new InlineObject295 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetOrder
 
-`func (o *InlineObject295) GetShortName() string`
+`func (o *InlineObject295) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetOrder returns the Order field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetOrderOk
 
-`func (o *InlineObject295) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject295) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetOrder
 
-`func (o *InlineObject295) SetShortName(v string)`
+`func (o *InlineObject295) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
 
-SetShortName sets ShortName field to given value.
+SetOrder sets Order field to given value.
 
-
-### GetLimitScopeToNetworks
-
-`func (o *InlineObject295) GetLimitScopeToNetworks() []string`
-
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
-
-### GetLimitScopeToNetworksOk
-
-`func (o *InlineObject295) GetLimitScopeToNetworksOk() (*[]string, bool)`
-
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLimitScopeToNetworks
-
-`func (o *InlineObject295) SetLimitScopeToNetworks(v []string)`
-
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
-
-### HasLimitScopeToNetworks
-
-`func (o *InlineObject295) HasLimitScopeToNetworks() bool`
-
-HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

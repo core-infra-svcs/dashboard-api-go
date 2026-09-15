@@ -4,14 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Organization name | [optional] 
-**Url** | Pointer to **string** | Organization URL | [optional] 
-**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
-**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
-**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
-**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
-**Privacy** | Pointer to **map[string]interface{}** | Privacy-related settings for the organization. | [optional] 
+**Concentrator** | Pointer to [**InlineResponse200259Concentrator**](InlineResponse200259Concentrator.md) |  | [optional] 
+**Failover** | Pointer to [**InlineResponse200259Failover**](InlineResponse200259Failover.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**InlineResponse200259SplitTunnel**](InlineResponse200259SplitTunnel.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +27,80 @@ NewInlineResponse200259WithDefaults instantiates a new InlineResponse200259 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetConcentrator
 
-`func (o *InlineResponse200259) GetId() string`
+`func (o *InlineResponse200259) GetConcentrator() InlineResponse200259Concentrator`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetConcentratorOk
 
-`func (o *InlineResponse200259) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200259) GetConcentratorOk() (*InlineResponse200259Concentrator, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetConcentrator
 
-`func (o *InlineResponse200259) SetId(v string)`
+`func (o *InlineResponse200259) SetConcentrator(v InlineResponse200259Concentrator)`
 
-SetId sets Id field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasId
+### HasConcentrator
 
-`func (o *InlineResponse200259) HasId() bool`
+`func (o *InlineResponse200259) HasConcentrator() bool`
 
-HasId returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetName
+### GetFailover
 
-`func (o *InlineResponse200259) GetName() string`
+`func (o *InlineResponse200259) GetFailover() InlineResponse200259Failover`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetFailoverOk
 
-`func (o *InlineResponse200259) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200259) GetFailoverOk() (*InlineResponse200259Failover, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetFailover
 
-`func (o *InlineResponse200259) SetName(v string)`
+`func (o *InlineResponse200259) SetFailover(v InlineResponse200259Failover)`
 
-SetName sets Name field to given value.
+SetFailover sets Failover field to given value.
 
-### HasName
+### HasFailover
 
-`func (o *InlineResponse200259) HasName() bool`
+`func (o *InlineResponse200259) HasFailover() bool`
 
-HasName returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
-### GetUrl
+### GetSplitTunnel
 
-`func (o *InlineResponse200259) GetUrl() string`
+`func (o *InlineResponse200259) GetSplitTunnel() InlineResponse200259SplitTunnel`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetSplitTunnelOk
 
-`func (o *InlineResponse200259) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200259) GetSplitTunnelOk() (*InlineResponse200259SplitTunnel, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSplitTunnel
 
-`func (o *InlineResponse200259) SetUrl(v string)`
+`func (o *InlineResponse200259) SetSplitTunnel(v InlineResponse200259SplitTunnel)`
 
-SetUrl sets Url field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasUrl
+### HasSplitTunnel
 
-`func (o *InlineResponse200259) HasUrl() bool`
+`func (o *InlineResponse200259) HasSplitTunnel() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetApi
-
-`func (o *InlineResponse200259) GetApi() OrganizationsApi`
-
-GetApi returns the Api field if non-nil, zero value otherwise.
-
-### GetApiOk
-
-`func (o *InlineResponse200259) GetApiOk() (*OrganizationsApi, bool)`
-
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApi
-
-`func (o *InlineResponse200259) SetApi(v OrganizationsApi)`
-
-SetApi sets Api field to given value.
-
-### HasApi
-
-`func (o *InlineResponse200259) HasApi() bool`
-
-HasApi returns a boolean if a field has been set.
-
-### GetLicensing
-
-`func (o *InlineResponse200259) GetLicensing() OrganizationsLicensing`
-
-GetLicensing returns the Licensing field if non-nil, zero value otherwise.
-
-### GetLicensingOk
-
-`func (o *InlineResponse200259) GetLicensingOk() (*OrganizationsLicensing, bool)`
-
-GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicensing
-
-`func (o *InlineResponse200259) SetLicensing(v OrganizationsLicensing)`
-
-SetLicensing sets Licensing field to given value.
-
-### HasLicensing
-
-`func (o *InlineResponse200259) HasLicensing() bool`
-
-HasLicensing returns a boolean if a field has been set.
-
-### GetCloud
-
-`func (o *InlineResponse200259) GetCloud() OrganizationsCloud`
-
-GetCloud returns the Cloud field if non-nil, zero value otherwise.
-
-### GetCloudOk
-
-`func (o *InlineResponse200259) GetCloudOk() (*OrganizationsCloud, bool)`
-
-GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCloud
-
-`func (o *InlineResponse200259) SetCloud(v OrganizationsCloud)`
-
-SetCloud sets Cloud field to given value.
-
-### HasCloud
-
-`func (o *InlineResponse200259) HasCloud() bool`
-
-HasCloud returns a boolean if a field has been set.
-
-### GetManagement
-
-`func (o *InlineResponse200259) GetManagement() OrganizationsManagement`
-
-GetManagement returns the Management field if non-nil, zero value otherwise.
-
-### GetManagementOk
-
-`func (o *InlineResponse200259) GetManagementOk() (*OrganizationsManagement, bool)`
-
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetManagement
-
-`func (o *InlineResponse200259) SetManagement(v OrganizationsManagement)`
-
-SetManagement sets Management field to given value.
-
-### HasManagement
-
-`func (o *InlineResponse200259) HasManagement() bool`
-
-HasManagement returns a boolean if a field has been set.
-
-### GetPrivacy
-
-`func (o *InlineResponse200259) GetPrivacy() map[string]interface{}`
-
-GetPrivacy returns the Privacy field if non-nil, zero value otherwise.
-
-### GetPrivacyOk
-
-`func (o *InlineResponse200259) GetPrivacyOk() (*map[string]interface{}, bool)`
-
-GetPrivacyOk returns a tuple with the Privacy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrivacy
-
-`func (o *InlineResponse200259) SetPrivacy(v map[string]interface{})`
-
-SetPrivacy sets Privacy field to given value.
-
-### HasPrivacy
-
-`func (o *InlineResponse200259) HasPrivacy() bool`
-
-HasPrivacy returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

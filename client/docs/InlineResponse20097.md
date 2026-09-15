@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse20097Rules**](InlineResponse20097Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
+**CustomPerformanceClassId** | Pointer to **string** | ID of the custom performance class | [optional] 
+**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20097WithDefaults instantiates a new InlineResponse20097 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultRulesEnabled
+### GetName
 
-`func (o *InlineResponse20097) GetDefaultRulesEnabled() bool`
+`func (o *InlineResponse20097) GetName() string`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetNameOk
 
-`func (o *InlineResponse20097) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20097) GetNameOk() (*string, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetName
 
-`func (o *InlineResponse20097) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineResponse20097) SetName(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultRulesEnabled
+### HasName
 
-`func (o *InlineResponse20097) HasDefaultRulesEnabled() bool`
+`func (o *InlineResponse20097) HasName() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetCustomPerformanceClassId
 
-`func (o *InlineResponse20097) GetRules() []InlineResponse20097Rules`
+`func (o *InlineResponse20097) GetCustomPerformanceClassId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetCustomPerformanceClassId returns the CustomPerformanceClassId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetCustomPerformanceClassIdOk
 
-`func (o *InlineResponse20097) GetRulesOk() (*[]InlineResponse20097Rules, bool)`
+`func (o *InlineResponse20097) GetCustomPerformanceClassIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetCustomPerformanceClassIdOk returns a tuple with the CustomPerformanceClassId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetCustomPerformanceClassId
 
-`func (o *InlineResponse20097) SetRules(v []InlineResponse20097Rules)`
+`func (o *InlineResponse20097) SetCustomPerformanceClassId(v string)`
 
-SetRules sets Rules field to given value.
+SetCustomPerformanceClassId sets CustomPerformanceClassId field to given value.
 
-### HasRules
+### HasCustomPerformanceClassId
 
-`func (o *InlineResponse20097) HasRules() bool`
+`func (o *InlineResponse20097) HasCustomPerformanceClassId() bool`
 
-HasRules returns a boolean if a field has been set.
+HasCustomPerformanceClassId returns a boolean if a field has been set.
+
+### GetMaxLatency
+
+`func (o *InlineResponse20097) GetMaxLatency() int32`
+
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+
+### GetMaxLatencyOk
+
+`func (o *InlineResponse20097) GetMaxLatencyOk() (*int32, bool)`
+
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLatency
+
+`func (o *InlineResponse20097) SetMaxLatency(v int32)`
+
+SetMaxLatency sets MaxLatency field to given value.
+
+### HasMaxLatency
+
+`func (o *InlineResponse20097) HasMaxLatency() bool`
+
+HasMaxLatency returns a boolean if a field has been set.
+
+### GetMaxJitter
+
+`func (o *InlineResponse20097) GetMaxJitter() int32`
+
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+
+### GetMaxJitterOk
+
+`func (o *InlineResponse20097) GetMaxJitterOk() (*int32, bool)`
+
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxJitter
+
+`func (o *InlineResponse20097) SetMaxJitter(v int32)`
+
+SetMaxJitter sets MaxJitter field to given value.
+
+### HasMaxJitter
+
+`func (o *InlineResponse20097) HasMaxJitter() bool`
+
+HasMaxJitter returns a boolean if a field has been set.
+
+### GetMaxLossPercentage
+
+`func (o *InlineResponse20097) GetMaxLossPercentage() int32`
+
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+
+### GetMaxLossPercentageOk
+
+`func (o *InlineResponse20097) GetMaxLossPercentageOk() (*int32, bool)`
+
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLossPercentage
+
+`func (o *InlineResponse20097) SetMaxLossPercentage(v int32)`
+
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
+
+### HasMaxLossPercentage
+
+`func (o *InlineResponse20097) HasMaxLossPercentage() bool`
+
+HasMaxLossPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

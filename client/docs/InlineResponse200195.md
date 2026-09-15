@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mappings** | Pointer to [**[]InlineResponse200195Mappings**](InlineResponse200195Mappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | [optional] 
+**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
+**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
+**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineResponse200195WithDefaults instantiates a new InlineResponse200195 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMappings
+### GetTrustedServerId
 
-`func (o *InlineResponse200195) GetMappings() []InlineResponse200195Mappings`
+`func (o *InlineResponse200195) GetTrustedServerId() string`
 
-GetMappings returns the Mappings field if non-nil, zero value otherwise.
+GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
 
-### GetMappingsOk
+### GetTrustedServerIdOk
 
-`func (o *InlineResponse200195) GetMappingsOk() (*[]InlineResponse200195Mappings, bool)`
+`func (o *InlineResponse200195) GetTrustedServerIdOk() (*string, bool)`
 
-GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
+GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMappings
+### SetTrustedServerId
 
-`func (o *InlineResponse200195) SetMappings(v []InlineResponse200195Mappings)`
+`func (o *InlineResponse200195) SetTrustedServerId(v string)`
 
-SetMappings sets Mappings field to given value.
+SetTrustedServerId sets TrustedServerId field to given value.
 
-### HasMappings
+### HasTrustedServerId
 
-`func (o *InlineResponse200195) HasMappings() bool`
+`func (o *InlineResponse200195) HasTrustedServerId() bool`
 
-HasMappings returns a boolean if a field has been set.
+HasTrustedServerId returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200195) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200195) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200195) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200195) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse200195) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse200195) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse200195) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse200195) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetIpv4
+
+`func (o *InlineResponse200195) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineResponse200195) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv4
+
+`func (o *InlineResponse200195) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
+
+SetIpv4 sets Ipv4 field to given value.
+
+### HasIpv4
+
+`func (o *InlineResponse200195) HasIpv4() bool`
+
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

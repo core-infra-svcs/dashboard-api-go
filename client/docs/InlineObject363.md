@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Profile** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid.md) |  | 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork.md) |  | [optional] 
+**Description** | Pointer to **string** | The description of mac address | [optional] 
+**Client** | [**InlineResponse200491Client**](InlineResponse200491Client.md) |  | 
+**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
+**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
 
 ## Methods
 
 ### NewInlineObject363
 
-`func NewInlineObject363(profile OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, ssid OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, ) *InlineObject363`
+`func NewInlineObject363(client InlineResponse200491Client, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject363`
 
 NewInlineObject363 instantiates a new InlineObject363 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +28,90 @@ NewInlineObject363WithDefaults instantiates a new InlineObject363 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfile
+### GetDescription
 
-`func (o *InlineObject363) GetProfile() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile`
+`func (o *InlineObject363) GetDescription() string`
 
-GetProfile returns the Profile field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetProfileOk
+### GetDescriptionOk
 
-`func (o *InlineObject363) GetProfileOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, bool)`
+`func (o *InlineObject363) GetDescriptionOk() (*string, bool)`
 
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfile
+### SetDescription
 
-`func (o *InlineObject363) SetProfile(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile)`
+`func (o *InlineObject363) SetDescription(v string)`
 
-SetProfile sets Profile field to given value.
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject363) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetClient
+
+`func (o *InlineObject363) GetClient() InlineResponse200491Client`
+
+GetClient returns the Client field if non-nil, zero value otherwise.
+
+### GetClientOk
+
+`func (o *InlineObject363) GetClientOk() (*InlineResponse200491Client, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClient
+
+`func (o *InlineObject363) SetClient(v InlineResponse200491Client)`
+
+SetClient sets Client field to given value.
 
 
 ### GetSsid
 
-`func (o *InlineObject363) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid`
+`func (o *InlineObject363) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
 
 GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
 ### GetSsidOk
 
-`func (o *InlineObject363) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, bool)`
+`func (o *InlineObject363) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
 
 GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSsid
 
-`func (o *InlineObject363) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid)`
+`func (o *InlineObject363) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
 
 SetSsid sets Ssid field to given value.
 
 
 ### GetNetwork
 
-`func (o *InlineObject363) GetNetwork() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork`
+`func (o *InlineObject363) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineObject363) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork, bool)`
+`func (o *InlineObject363) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineObject363) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork)`
+`func (o *InlineObject363) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
 
 SetNetwork sets Network field to given value.
 
-### HasNetwork
-
-`func (o *InlineObject363) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

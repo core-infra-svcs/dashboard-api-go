@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular.md) |  | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. Possible values are &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
+**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. Possible values are: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineObject108WithDefaults instantiates a new InlineObject108 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBandwidthLimits
+### GetDhcpLeaseTime
 
-`func (o *InlineObject108) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular`
+`func (o *InlineObject108) GetDhcpLeaseTime() string`
 
-GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetBandwidthLimitsOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineObject108) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular, bool)`
+`func (o *InlineObject108) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidthLimits
+### SetDhcpLeaseTime
 
-`func (o *InlineObject108) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular)`
+`func (o *InlineObject108) SetDhcpLeaseTime(v string)`
 
-SetBandwidthLimits sets BandwidthLimits field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
-### HasBandwidthLimits
+### HasDhcpLeaseTime
 
-`func (o *InlineObject108) HasBandwidthLimits() bool`
+`func (o *InlineObject108) HasDhcpLeaseTime() bool`
 
-HasBandwidthLimits returns a boolean if a field has been set.
+HasDhcpLeaseTime returns a boolean if a field has been set.
+
+### GetDnsNameservers
+
+`func (o *InlineObject108) GetDnsNameservers() string`
+
+GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+
+### GetDnsNameserversOk
+
+`func (o *InlineObject108) GetDnsNameserversOk() (*string, bool)`
+
+GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsNameservers
+
+`func (o *InlineObject108) SetDnsNameservers(v string)`
+
+SetDnsNameservers sets DnsNameservers field to given value.
+
+### HasDnsNameservers
+
+`func (o *InlineObject108) HasDnsNameservers() bool`
+
+HasDnsNameservers returns a boolean if a field has been set.
+
+### GetDnsCustomNameservers
+
+`func (o *InlineObject108) GetDnsCustomNameservers() []string`
+
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+
+### GetDnsCustomNameserversOk
+
+`func (o *InlineObject108) GetDnsCustomNameserversOk() (*[]string, bool)`
+
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsCustomNameservers
+
+`func (o *InlineObject108) SetDnsCustomNameservers(v []string)`
+
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+
+### HasDnsCustomNameservers
+
+`func (o *InlineObject108) HasDnsCustomNameservers() bool`
+
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

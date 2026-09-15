@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RulesetId** | **string** | ID of the ruleset to assign | 
-**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
-**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy.md) |  | 
+**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups.md) | Adaptive policy groups to remove | 
 
 ## Methods
 
 ### NewInlineObject329
 
-`func NewInlineObject329(rulesetId string, policyId string, ) *InlineObject329`
+`func NewInlineObject329(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, ) *InlineObject329`
 
 NewInlineObject329 instantiates a new InlineObject329 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,45 @@ NewInlineObject329WithDefaults instantiates a new InlineObject329 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRulesetId
+### GetPolicy
 
-`func (o *InlineObject329) GetRulesetId() string`
+`func (o *InlineObject329) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy`
 
-GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetRulesetIdOk
+### GetPolicyOk
 
-`func (o *InlineObject329) GetRulesetIdOk() (*string, bool)`
+`func (o *InlineObject329) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy, bool)`
 
-GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRulesetId
+### SetPolicy
 
-`func (o *InlineObject329) SetRulesetId(v string)`
+`func (o *InlineObject329) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsRemovePolicy)`
 
-SetRulesetId sets RulesetId field to given value.
+SetPolicy sets Policy field to given value.
 
 
-### GetPolicyId
+### GetAdaptivePolicyGroups
 
-`func (o *InlineObject329) GetPolicyId() string`
+`func (o *InlineObject329) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups`
 
-GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
 
-### GetPolicyIdOk
+### GetAdaptivePolicyGroupsOk
 
-`func (o *InlineObject329) GetPolicyIdOk() (*string, bool)`
+`func (o *InlineObject329) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups, bool)`
 
-GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyId
+### SetAdaptivePolicyGroups
 
-`func (o *InlineObject329) SetPolicyId(v string)`
+`func (o *InlineObject329) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignAdaptivePolicyGroups)`
 
-SetPolicyId sets PolicyId field to given value.
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
 
-
-### GetPriority
-
-`func (o *InlineObject329) GetPriority() int32`
-
-GetPriority returns the Priority field if non-nil, zero value otherwise.
-
-### GetPriorityOk
-
-`func (o *InlineObject329) GetPriorityOk() (*int32, bool)`
-
-GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPriority
-
-`func (o *InlineObject329) SetPriority(v int32)`
-
-SetPriority sets Priority field to given value.
-
-### HasPriority
-
-`func (o *InlineObject329) HasPriority() bool`
-
-HasPriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

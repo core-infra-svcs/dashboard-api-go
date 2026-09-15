@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureIds** | **[]string** | Delete the packet captures of the specified capture ids | 
+**Serials** | **[]string** | A list of serials of devices to update | 
+**Details** | [**[]NetworksNetworkIdDevicesClaimDetails**](NetworksNetworkIdDevicesClaimDetails.md) | An array of details | 
 
 ## Methods
 
 ### NewInlineObject289
 
-`func NewInlineObject289(captureIds []string, ) *InlineObject289`
+`func NewInlineObject289(serials []string, details []NetworksNetworkIdDevicesClaimDetails, ) *InlineObject289`
 
 NewInlineObject289 instantiates a new InlineObject289 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +26,44 @@ NewInlineObject289WithDefaults instantiates a new InlineObject289 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureIds
+### GetSerials
 
-`func (o *InlineObject289) GetCaptureIds() []string`
+`func (o *InlineObject289) GetSerials() []string`
 
-GetCaptureIds returns the CaptureIds field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetCaptureIdsOk
+### GetSerialsOk
 
-`func (o *InlineObject289) GetCaptureIdsOk() (*[]string, bool)`
+`func (o *InlineObject289) GetSerialsOk() (*[]string, bool)`
 
-GetCaptureIdsOk returns a tuple with the CaptureIds field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureIds
+### SetSerials
 
-`func (o *InlineObject289) SetCaptureIds(v []string)`
+`func (o *InlineObject289) SetSerials(v []string)`
 
-SetCaptureIds sets CaptureIds field to given value.
+SetSerials sets Serials field to given value.
+
+
+### GetDetails
+
+`func (o *InlineObject289) GetDetails() []NetworksNetworkIdDevicesClaimDetails`
+
+GetDetails returns the Details field if non-nil, zero value otherwise.
+
+### GetDetailsOk
+
+`func (o *InlineObject289) GetDetailsOk() (*[]NetworksNetworkIdDevicesClaimDetails, bool)`
+
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetails
+
+`func (o *InlineObject289) SetDetails(v []NetworksNetworkIdDevicesClaimDetails)`
+
+SetDetails sets Details field to given value.
 
 
 

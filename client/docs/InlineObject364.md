@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1.md) |  | 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork.md) |  | [optional] 
+**Description** | Pointer to **string** | The description of mac address | [optional] 
+**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject364
 
-`func NewInlineObject364(ssid OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1, ) *InlineObject364`
+`func NewInlineObject364() *InlineObject364`
 
 NewInlineObject364 instantiates a new InlineObject364 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject364WithDefaults instantiates a new InlineObject364 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsid
+### GetDescription
 
-`func (o *InlineObject364) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1`
+`func (o *InlineObject364) GetDescription() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetDescriptionOk
 
-`func (o *InlineObject364) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1, bool)`
+`func (o *InlineObject364) GetDescriptionOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetDescription
 
-`func (o *InlineObject364) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1)`
+`func (o *InlineObject364) SetDescription(v string)`
 
-SetSsid sets Ssid field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
 
-### GetNetwork
+`func (o *InlineObject364) HasDescription() bool`
 
-`func (o *InlineObject364) GetNetwork() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork`
+HasDescription returns a boolean if a field has been set.
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+### GetClient
 
-### GetNetworkOk
+`func (o *InlineObject364) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
 
-`func (o *InlineObject364) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork, bool)`
+GetClient returns the Client field if non-nil, zero value otherwise.
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+### GetClientOk
+
+`func (o *InlineObject364) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetClient
 
-`func (o *InlineObject364) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork)`
+`func (o *InlineObject364) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
 
-SetNetwork sets Network field to given value.
+SetClient sets Client field to given value.
 
-### HasNetwork
+### HasClient
 
-`func (o *InlineObject364) HasNetwork() bool`
+`func (o *InlineObject364) HasClient() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasClient returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

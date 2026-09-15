@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
-**Api** | Pointer to [**InlineResponse200239Api**](InlineResponse200239Api.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200239WithDefaults instantiates a new InlineResponse200239 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetStartTs
 
-`func (o *InlineResponse200239) GetEnabled() bool`
+`func (o *InlineResponse200239) GetStartTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse200239) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200239) GetStartTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetStartTs
 
-`func (o *InlineResponse200239) SetEnabled(v bool)`
+`func (o *InlineResponse200239) SetStartTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasEnabled
+### HasStartTs
 
-`func (o *InlineResponse200239) HasEnabled() bool`
+`func (o *InlineResponse200239) HasStartTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetApi
+### GetEndTs
 
-`func (o *InlineResponse200239) GetApi() InlineResponse200239Api`
+`func (o *InlineResponse200239) GetEndTs() time.Time`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetEndTsOk
 
-`func (o *InlineResponse200239) GetApiOk() (*InlineResponse200239Api, bool)`
+`func (o *InlineResponse200239) GetEndTsOk() (*time.Time, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetEndTs
 
-`func (o *InlineResponse200239) SetApi(v InlineResponse200239Api)`
+`func (o *InlineResponse200239) SetEndTs(v time.Time)`
 
-SetApi sets Api field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasApi
+### HasEndTs
 
-`func (o *InlineResponse200239) HasApi() bool`
+`func (o *InlineResponse200239) HasEndTs() bool`
 
-HasApi returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetAvgLatencyMs
+
+`func (o *InlineResponse200239) GetAvgLatencyMs() int32`
+
+GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
+
+### GetAvgLatencyMsOk
+
+`func (o *InlineResponse200239) GetAvgLatencyMsOk() (*int32, bool)`
+
+GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAvgLatencyMs
+
+`func (o *InlineResponse200239) SetAvgLatencyMs(v int32)`
+
+SetAvgLatencyMs sets AvgLatencyMs field to given value.
+
+### HasAvgLatencyMs
+
+`func (o *InlineResponse200239) HasAvgLatencyMs() bool`
+
+HasAvgLatencyMs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesDetachItems**](OrganizationsOrganizationIdSaseSitesDetachItems.md) | List of Secure Access sites to be detached. | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems**](OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems.md) | List of connectors to delete (maximum 20 items) | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineObject344) GetItems() []OrganizationsOrganizationIdSaseSitesDetachItems`
+`func (o *InlineObject344) GetItems() []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineObject344) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesDetachItems, bool)`
+`func (o *InlineObject344) GetItemsOk() (*[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineObject344) SetItems(v []OrganizationsOrganizationIdSaseSitesDetachItems)`
+`func (o *InlineObject344) SetItems(v []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems)`
 
 SetItems sets Items field to given value.
 

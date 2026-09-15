@@ -7,10 +7,10 @@ Name | Type | Description | Notes
 **Servers** | Pointer to [**[]OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusServers**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusServers.md) | Organization RADIUS servers, ordered by priority | [optional] 
 **Accounting** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusAccounting**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusAccounting.md) |  | [optional] 
 **Policies** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies.md) |  | [optional] 
-**Proxy** | Pointer to [**InlineResponse200488SsidRadiusProxy**](InlineResponse200488SsidRadiusProxy.md) |  | [optional] 
-**Testing** | Pointer to [**InlineResponse200488SsidRadiusTesting**](InlineResponse200488SsidRadiusTesting.md) |  | [optional] 
-**Identifiers** | Pointer to [**InlineResponse200488SsidRadiusIdentifiers**](InlineResponse200488SsidRadiusIdentifiers.md) |  | [optional] 
-**Das** | Pointer to [**InlineResponse200488SsidRadiusDas**](InlineResponse200488SsidRadiusDas.md) |  | [optional] 
+**Proxy** | Pointer to [**InlineResponse200493SsidRadiusProxy**](InlineResponse200493SsidRadiusProxy.md) |  | [optional] 
+**Testing** | Pointer to [**InlineResponse200493SsidRadiusTesting**](InlineResponse200493SsidRadiusTesting.md) |  | [optional] 
+**Identifiers** | Pointer to [**InlineResponse200493SsidRadiusIdentifiers**](InlineResponse200493SsidRadiusIdentifiers.md) |  | [optional] 
+**Das** | Pointer to [**InlineResponse200493SsidRadiusDas**](InlineResponse200493SsidRadiusDas.md) |  | [optional] 
 **EapTimers** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers.md) |  | [optional] 
 
 ## Methods
@@ -109,20 +109,20 @@ HasPolicies returns a boolean if a field has been set.
 
 ### GetProxy
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetProxy() InlineResponse200488SsidRadiusProxy`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetProxy() InlineResponse200493SsidRadiusProxy`
 
 GetProxy returns the Proxy field if non-nil, zero value otherwise.
 
 ### GetProxyOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetProxyOk() (*InlineResponse200488SsidRadiusProxy, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetProxyOk() (*InlineResponse200493SsidRadiusProxy, bool)`
 
 GetProxyOk returns a tuple with the Proxy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProxy
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetProxy(v InlineResponse200488SsidRadiusProxy)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetProxy(v InlineResponse200493SsidRadiusProxy)`
 
 SetProxy sets Proxy field to given value.
 
@@ -134,20 +134,20 @@ HasProxy returns a boolean if a field has been set.
 
 ### GetTesting
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetTesting() InlineResponse200488SsidRadiusTesting`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetTesting() InlineResponse200493SsidRadiusTesting`
 
 GetTesting returns the Testing field if non-nil, zero value otherwise.
 
 ### GetTestingOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetTestingOk() (*InlineResponse200488SsidRadiusTesting, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetTestingOk() (*InlineResponse200493SsidRadiusTesting, bool)`
 
 GetTestingOk returns a tuple with the Testing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTesting
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetTesting(v InlineResponse200488SsidRadiusTesting)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetTesting(v InlineResponse200493SsidRadiusTesting)`
 
 SetTesting sets Testing field to given value.
 
@@ -159,20 +159,20 @@ HasTesting returns a boolean if a field has been set.
 
 ### GetIdentifiers
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetIdentifiers() InlineResponse200488SsidRadiusIdentifiers`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetIdentifiers() InlineResponse200493SsidRadiusIdentifiers`
 
 GetIdentifiers returns the Identifiers field if non-nil, zero value otherwise.
 
 ### GetIdentifiersOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetIdentifiersOk() (*InlineResponse200488SsidRadiusIdentifiers, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetIdentifiersOk() (*InlineResponse200493SsidRadiusIdentifiers, bool)`
 
 GetIdentifiersOk returns a tuple with the Identifiers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIdentifiers
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetIdentifiers(v InlineResponse200488SsidRadiusIdentifiers)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetIdentifiers(v InlineResponse200493SsidRadiusIdentifiers)`
 
 SetIdentifiers sets Identifiers field to given value.
 
@@ -184,20 +184,20 @@ HasIdentifiers returns a boolean if a field has been set.
 
 ### GetDas
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetDas() InlineResponse200488SsidRadiusDas`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetDas() InlineResponse200493SsidRadiusDas`
 
 GetDas returns the Das field if non-nil, zero value otherwise.
 
 ### GetDasOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetDasOk() (*InlineResponse200488SsidRadiusDas, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) GetDasOk() (*InlineResponse200493SsidRadiusDas, bool)`
 
 GetDasOk returns a tuple with the Das field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDas
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetDas(v InlineResponse200488SsidRadiusDas)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadius) SetDas(v InlineResponse200493SsidRadiusDas)`
 
 SetDas sets Das field to given value.
 

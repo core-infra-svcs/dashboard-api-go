@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network IDs to remove from the network group | 
+**Name** | **string** | The name of the network group | 
 
 ## Methods
 
 ### NewInlineObject318
 
-`func NewInlineObject318(networkIds []string, ) *InlineObject318`
+`func NewInlineObject318(name string, ) *InlineObject318`
 
 NewInlineObject318 instantiates a new InlineObject318 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject318WithDefaults instantiates a new InlineObject318 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetName
 
-`func (o *InlineObject318) GetNetworkIds() []string`
+`func (o *InlineObject318) GetName() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetNameOk
 
-`func (o *InlineObject318) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject318) GetNameOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetName
 
-`func (o *InlineObject318) SetNetworkIds(v []string)`
+`func (o *InlineObject318) SetName(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetName sets Name field to given value.
 
 
 

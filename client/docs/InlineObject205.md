@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
-**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject205WithDefaults instantiates a new InlineObject205 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetCurrency
 
-`func (o *InlineObject205) GetHostname() string`
+`func (o *InlineObject205) GetCurrency() string`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetCurrencyOk
 
-`func (o *InlineObject205) GetHostnameOk() (*string, bool)`
+`func (o *InlineObject205) GetCurrencyOk() (*string, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetCurrency
 
-`func (o *InlineObject205) SetHostname(v string)`
+`func (o *InlineObject205) SetCurrency(v string)`
 
-SetHostname sets Hostname field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasHostname
+### HasCurrency
 
-`func (o *InlineObject205) HasHostname() bool`
+`func (o *InlineObject205) HasCurrency() bool`
 
-HasHostname returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
 
-### GetEnabled
+### GetPlans
 
-`func (o *InlineObject205) GetEnabled() bool`
+`func (o *InlineObject205) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetPlansOk
 
-`func (o *InlineObject205) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject205) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetPlans
 
-`func (o *InlineObject205) SetEnabled(v bool)`
+`func (o *InlineObject205) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
 
-SetEnabled sets Enabled field to given value.
+SetPlans sets Plans field to given value.
 
-### HasEnabled
+### HasPlans
 
-`func (o *InlineObject205) HasEnabled() bool`
+`func (o *InlineObject205) HasPlans() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetMode
-
-`func (o *InlineObject205) GetMode() string`
-
-GetMode returns the Mode field if non-nil, zero value otherwise.
-
-### GetModeOk
-
-`func (o *InlineObject205) GetModeOk() (*string, bool)`
-
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMode
-
-`func (o *InlineObject205) SetMode(v string)`
-
-SetMode sets Mode field to given value.
-
-### HasMode
-
-`func (o *InlineObject205) HasMode() bool`
-
-HasMode returns a boolean if a field has been set.
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

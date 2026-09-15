@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs in this organization to dismiss. Missing or inaccessible alert IDs return 404. | 
+**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
 
 ## Methods
 
 ### NewInlineObject260
 
-`func NewInlineObject260(alertIds []string, ) *InlineObject260`
+`func NewInlineObject260(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject260`
 
 NewInlineObject260 instantiates a new InlineObject260 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject260WithDefaults instantiates a new InlineObject260 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetPeers
 
-`func (o *InlineObject260) GetAlertIds() []string`
+`func (o *InlineObject260) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetPeersOk
 
-`func (o *InlineObject260) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject260) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetPeers
 
-`func (o *InlineObject260) SetAlertIds(v []string)`
+`func (o *InlineObject260) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
 
-SetAlertIds sets AlertIds field to given value.
+SetPeers sets Peers field to given value.
 
 
 

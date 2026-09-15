@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Access points cloud ID | [optional] 
-**Controller** | Pointer to [**InlineResponse200496Controller**](InlineResponse200496Controller.md) |  | [optional] 
+**Serial** | Pointer to **string** | Unique serial number for device. | [optional] 
+**Name** | Pointer to **string** | Name of device. | [optional] 
 **Network** | Pointer to [**InlineResponse200496Network**](InlineResponse200496Network.md) |  | [optional] 
+**BasicServiceSets** | Pointer to [**[]InlineResponse200496BasicServiceSets**](InlineResponse200496BasicServiceSets.md) | Status information for wireless access points. | [optional] 
 
 ## Methods
 
@@ -52,30 +53,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetController
+### GetName
 
-`func (o *InlineResponse200496Items) GetController() InlineResponse200496Controller`
+`func (o *InlineResponse200496Items) GetName() string`
 
-GetController returns the Controller field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetControllerOk
+### GetNameOk
 
-`func (o *InlineResponse200496Items) GetControllerOk() (*InlineResponse200496Controller, bool)`
+`func (o *InlineResponse200496Items) GetNameOk() (*string, bool)`
 
-GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetController
+### SetName
 
-`func (o *InlineResponse200496Items) SetController(v InlineResponse200496Controller)`
+`func (o *InlineResponse200496Items) SetName(v string)`
 
-SetController sets Controller field to given value.
+SetName sets Name field to given value.
 
-### HasController
+### HasName
 
-`func (o *InlineResponse200496Items) HasController() bool`
+`func (o *InlineResponse200496Items) HasName() bool`
 
-HasController returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -101,6 +102,31 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200496Items) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
+
+### GetBasicServiceSets
+
+`func (o *InlineResponse200496Items) GetBasicServiceSets() []InlineResponse200496BasicServiceSets`
+
+GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
+
+### GetBasicServiceSetsOk
+
+`func (o *InlineResponse200496Items) GetBasicServiceSetsOk() (*[]InlineResponse200496BasicServiceSets, bool)`
+
+GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBasicServiceSets
+
+`func (o *InlineResponse200496Items) SetBasicServiceSets(v []InlineResponse200496BasicServiceSets)`
+
+SetBasicServiceSets sets BasicServiceSets field to given value.
+
+### HasBasicServiceSets
+
+`func (o *InlineResponse200496Items) HasBasicServiceSets() bool`
+
+HasBasicServiceSets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

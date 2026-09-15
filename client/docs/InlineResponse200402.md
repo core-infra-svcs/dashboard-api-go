@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique identifier for the application category | [optional] 
-**Name** | Pointer to **string** | Name of the application category | [optional] 
-**Applications** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications**](OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications.md) | List of applications in this category | [optional] 
+**Items** | Pointer to [**[]InlineResponse200402Items**](InlineResponse200402Items.md) | List the network group summaries in an organization | [optional] 
+**Meta** | Pointer to [**InlineResponse200402Meta**](InlineResponse200402Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200402WithDefaults instantiates a new InlineResponse200402 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetItems
 
-`func (o *InlineResponse200402) GetId() string`
+`func (o *InlineResponse200402) GetItems() []InlineResponse200402Items`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200402) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200402) GetItemsOk() (*[]InlineResponse200402Items, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetItems
 
-`func (o *InlineResponse200402) SetId(v string)`
+`func (o *InlineResponse200402) SetItems(v []InlineResponse200402Items)`
 
-SetId sets Id field to given value.
+SetItems sets Items field to given value.
 
-### HasId
+### HasItems
 
-`func (o *InlineResponse200402) HasId() bool`
+`func (o *InlineResponse200402) HasItems() bool`
 
-HasId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetName
+### GetMeta
 
-`func (o *InlineResponse200402) GetName() string`
+`func (o *InlineResponse200402) GetMeta() InlineResponse200402Meta`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200402) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200402) GetMetaOk() (*InlineResponse200402Meta, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200402) SetName(v string)`
+`func (o *InlineResponse200402) SetMeta(v InlineResponse200402Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200402) HasName() bool`
+`func (o *InlineResponse200402) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetApplications
-
-`func (o *InlineResponse200402) GetApplications() []OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications`
-
-GetApplications returns the Applications field if non-nil, zero value otherwise.
-
-### GetApplicationsOk
-
-`func (o *InlineResponse200402) GetApplicationsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications, bool)`
-
-GetApplicationsOk returns a tuple with the Applications field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApplications
-
-`func (o *InlineResponse200402) SetApplications(v []OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications)`
-
-SetApplications sets Applications field to given value.
-
-### HasApplications
-
-`func (o *InlineResponse200402) HasApplications() bool`
-
-HasApplications returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

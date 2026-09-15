@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingLicenses** | Pointer to [**[]InlineResponse200388**](InlineResponse200388.md) | Resulting licenses from the move | [optional] 
+**ClaimId** | Pointer to **string** | The order claim id | [optional] 
+**Number** | Pointer to **string** | Order Number | [optional] 
+**Serials** | Pointer to **[]string** | All devices claimed in this order | [optional] 
+**Subscriptions** | Pointer to [**[]InlineResponse200389Subscriptions**](InlineResponse200389Subscriptions.md) | Details for subscriptions claimed in this order | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineResponse200389WithDefaults instantiates a new InlineResponse200389 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingLicenses
+### GetClaimId
 
-`func (o *InlineResponse200389) GetResultingLicenses() []InlineResponse200388`
+`func (o *InlineResponse200389) GetClaimId() string`
 
-GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetResultingLicensesOk
+### GetClaimIdOk
 
-`func (o *InlineResponse200389) GetResultingLicensesOk() (*[]InlineResponse200388, bool)`
+`func (o *InlineResponse200389) GetClaimIdOk() (*string, bool)`
 
-GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingLicenses
+### SetClaimId
 
-`func (o *InlineResponse200389) SetResultingLicenses(v []InlineResponse200388)`
+`func (o *InlineResponse200389) SetClaimId(v string)`
 
-SetResultingLicenses sets ResultingLicenses field to given value.
+SetClaimId sets ClaimId field to given value.
 
-### HasResultingLicenses
+### HasClaimId
 
-`func (o *InlineResponse200389) HasResultingLicenses() bool`
+`func (o *InlineResponse200389) HasClaimId() bool`
 
-HasResultingLicenses returns a boolean if a field has been set.
+HasClaimId returns a boolean if a field has been set.
+
+### GetNumber
+
+`func (o *InlineResponse200389) GetNumber() string`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse200389) GetNumberOk() (*string, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse200389) SetNumber(v string)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse200389) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200389) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200389) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200389) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200389) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetSubscriptions
+
+`func (o *InlineResponse200389) GetSubscriptions() []InlineResponse200389Subscriptions`
+
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+
+### GetSubscriptionsOk
+
+`func (o *InlineResponse200389) GetSubscriptionsOk() (*[]InlineResponse200389Subscriptions, bool)`
+
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubscriptions
+
+`func (o *InlineResponse200389) SetSubscriptions(v []InlineResponse200389Subscriptions)`
+
+SetSubscriptions sets Subscriptions field to given value.
+
+### HasSubscriptions
+
+`func (o *InlineResponse200389) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationCampusGatewayClustersTunnelable
 
-> InlineResponse200322 GetOrganizationCampusGatewayClustersTunnelable(ctx, organizationId).FromNetworkIds(fromNetworkIds).ExcludeSsidNumbers(excludeSsidNumbers).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200324 GetOrganizationCampusGatewayClustersTunnelable(ctx, organizationId).FromNetworkIds(fromNetworkIds).ExcludeSsidNumbers(excludeSsidNumbers).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List available campus gateway clusters that can be used for wireless network tunneling
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TunnelableApi.GetOrganizationCampusGatewayClustersTunnelable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersTunnelable`: InlineResponse200322
+    // response from `GetOrganizationCampusGatewayClustersTunnelable`: InlineResponse200324
     fmt.Fprintf(os.Stdout, "Response from `TunnelableApi.GetOrganizationCampusGatewayClustersTunnelable`: %v\n", resp)
 }
 ```
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200322**](InlineResponse200322.md)
+[**InlineResponse200324**](InlineResponse200324.md)
 
 ### Authorization
 

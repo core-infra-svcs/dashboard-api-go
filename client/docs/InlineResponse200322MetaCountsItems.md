@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of campus gateway clusters | [optional] 
-**Remaining** | Pointer to **int32** | The number of campus gateway clusters remaining based on current pagination location | [optional] 
+**Total** | **int32** | Total | 
+**Remaining** | **int32** | Remaining | 
 
 ## Methods
 
 ### NewInlineResponse200322MetaCountsItems
 
-`func NewInlineResponse200322MetaCountsItems() *InlineResponse200322MetaCountsItems`
+`func NewInlineResponse200322MetaCountsItems(total int32, remaining int32, ) *InlineResponse200322MetaCountsItems`
 
 NewInlineResponse200322MetaCountsItems instantiates a new InlineResponse200322MetaCountsItems object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetTotal sets Total field to given value.
 
-### HasTotal
-
-`func (o *InlineResponse200322MetaCountsItems) HasTotal() bool`
-
-HasTotal returns a boolean if a field has been set.
 
 ### GetRemaining
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetRemaining sets Remaining field to given value.
 
-### HasRemaining
-
-`func (o *InlineResponse200322MetaCountsItems) HasRemaining() bool`
-
-HasRemaining returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

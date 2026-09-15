@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | **[]string** | The ids of the devices to attempt activation lock bypass. | 
+**Enabled** | **bool** | Set to true to enable MQTT broker for sensor network | 
 
 ## Methods
 
 ### NewInlineObject142
 
-`func NewInlineObject142(ids []string, ) *InlineObject142`
+`func NewInlineObject142(enabled bool, ) *InlineObject142`
 
 NewInlineObject142 instantiates a new InlineObject142 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject142WithDefaults instantiates a new InlineObject142 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetEnabled
 
-`func (o *InlineObject142) GetIds() []string`
+`func (o *InlineObject142) GetEnabled() bool`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetEnabledOk
 
-`func (o *InlineObject142) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject142) GetEnabledOk() (*bool, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetEnabled
 
-`func (o *InlineObject142) SetIds(v []string)`
+`func (o *InlineObject142) SetEnabled(v bool)`
 
-SetIds sets Ids field to given value.
+SetEnabled sets Enabled field to given value.
 
 
 

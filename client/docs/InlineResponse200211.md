@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Nodes** | Pointer to [**[]InlineResponse200211Nodes**](InlineResponse200211Nodes.md) | List of nodes in the network topology | [optional] 
-**Links** | Pointer to [**[]InlineResponse200211Links**](InlineResponse200211Links.md) | List of links between nodes | [optional] 
-**Errors** | Pointer to **[]string** | List of errors encountered while building the topology | [optional] 
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]InlineResponse200211StpBridgePriority**](InlineResponse200211StpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200211WithDefaults instantiates a new InlineResponse200211 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNodes
+### GetRstpEnabled
 
-`func (o *InlineResponse200211) GetNodes() []InlineResponse200211Nodes`
+`func (o *InlineResponse200211) GetRstpEnabled() bool`
 
-GetNodes returns the Nodes field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetNodesOk
+### GetRstpEnabledOk
 
-`func (o *InlineResponse200211) GetNodesOk() (*[]InlineResponse200211Nodes, bool)`
+`func (o *InlineResponse200211) GetRstpEnabledOk() (*bool, bool)`
 
-GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNodes
+### SetRstpEnabled
 
-`func (o *InlineResponse200211) SetNodes(v []InlineResponse200211Nodes)`
+`func (o *InlineResponse200211) SetRstpEnabled(v bool)`
 
-SetNodes sets Nodes field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
-### HasNodes
+### HasRstpEnabled
 
-`func (o *InlineResponse200211) HasNodes() bool`
+`func (o *InlineResponse200211) HasRstpEnabled() bool`
 
-HasNodes returns a boolean if a field has been set.
+HasRstpEnabled returns a boolean if a field has been set.
 
-### GetLinks
+### GetStpBridgePriority
 
-`func (o *InlineResponse200211) GetLinks() []InlineResponse200211Links`
+`func (o *InlineResponse200211) GetStpBridgePriority() []InlineResponse200211StpBridgePriority`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetStpBridgePriorityOk
 
-`func (o *InlineResponse200211) GetLinksOk() (*[]InlineResponse200211Links, bool)`
+`func (o *InlineResponse200211) GetStpBridgePriorityOk() (*[]InlineResponse200211StpBridgePriority, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetStpBridgePriority
 
-`func (o *InlineResponse200211) SetLinks(v []InlineResponse200211Links)`
+`func (o *InlineResponse200211) SetStpBridgePriority(v []InlineResponse200211StpBridgePriority)`
 
-SetLinks sets Links field to given value.
+SetStpBridgePriority sets StpBridgePriority field to given value.
 
-### HasLinks
+### HasStpBridgePriority
 
-`func (o *InlineResponse200211) HasLinks() bool`
+`func (o *InlineResponse200211) HasStpBridgePriority() bool`
 
-HasLinks returns a boolean if a field has been set.
-
-### GetErrors
-
-`func (o *InlineResponse200211) GetErrors() []string`
-
-GetErrors returns the Errors field if non-nil, zero value otherwise.
-
-### GetErrorsOk
-
-`func (o *InlineResponse200211) GetErrorsOk() (*[]string, bool)`
-
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetErrors
-
-`func (o *InlineResponse200211) SetErrors(v []string)`
-
-SetErrors sets Errors field to given value.
-
-### HasErrors
-
-`func (o *InlineResponse200211) HasErrors() bool`
-
-HasErrors returns a boolean if a field has been set.
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

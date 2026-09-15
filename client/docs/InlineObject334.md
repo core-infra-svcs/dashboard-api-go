@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
-**ObjectIds** | Pointer to **[]string** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**Name** | Pointer to **string** | Name of the policy | [optional] 
+**Description** | Pointer to **string** | Description of the policy | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetObjectIds
+### GetDescription
 
-`func (o *InlineObject334) GetObjectIds() []string`
+`func (o *InlineObject334) GetDescription() string`
 
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetObjectIdsOk
+### GetDescriptionOk
 
-`func (o *InlineObject334) GetObjectIdsOk() (*[]string, bool)`
+`func (o *InlineObject334) GetDescriptionOk() (*string, bool)`
 
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetObjectIds
+### SetDescription
 
-`func (o *InlineObject334) SetObjectIds(v []string)`
+`func (o *InlineObject334) SetDescription(v string)`
 
-SetObjectIds sets ObjectIds field to given value.
+SetDescription sets Description field to given value.
 
-### HasObjectIds
+### HasDescription
 
-`func (o *InlineObject334) HasObjectIds() bool`
+`func (o *InlineObject334) HasDescription() bool`
 
-HasObjectIds returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

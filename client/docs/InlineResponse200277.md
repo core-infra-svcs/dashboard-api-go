@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200277Items**](InlineResponse200277Items.md) | List of local DNS profile assignment | [optional] 
+**Items** | Pointer to [**[]InlineResponse200277Items**](InlineResponse200277Items.md) | The top-level propery containing all digital optical monitorting data. | [optional] 
 **Meta** | Pointer to [**InlineResponse200277Meta**](InlineResponse200277Meta.md) |  | [optional] 
 
 ## Methods

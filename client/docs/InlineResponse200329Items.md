@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | Pointer to **string** | Account ID of plans to be fetched | [optional] 
-**Apns** | Pointer to [**[]InlineResponse200329Apns**](InlineResponse200329Apns.md) | Available APNs | [optional] 
-**Name** | Pointer to **string** | Communication plan name | [optional] 
+**Serial** | Pointer to **string** | Serial number | [optional] 
+**Uplink** | Pointer to [**InlineResponse200329Uplink**](InlineResponse200329Uplink.md) |  | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20118Nameservers**](InlineResponse20118Nameservers.md) |  | [optional] 
+**Sgt** | Pointer to **int32** | Infra Security Group Tag(sgt) value for Trustsec | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200329ItemsWithDefaults instantiates a new InlineResponse200329
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccountId
+### GetSerial
 
-`func (o *InlineResponse200329Items) GetAccountId() string`
+`func (o *InlineResponse200329Items) GetSerial() string`
 
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetAccountIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200329Items) GetAccountIdOk() (*string, bool)`
+`func (o *InlineResponse200329Items) GetSerialOk() (*string, bool)`
 
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountId
+### SetSerial
 
-`func (o *InlineResponse200329Items) SetAccountId(v string)`
+`func (o *InlineResponse200329Items) SetSerial(v string)`
 
-SetAccountId sets AccountId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasAccountId
+### HasSerial
 
-`func (o *InlineResponse200329Items) HasAccountId() bool`
+`func (o *InlineResponse200329Items) HasSerial() bool`
 
-HasAccountId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetApns
+### GetUplink
 
-`func (o *InlineResponse200329Items) GetApns() []InlineResponse200329Apns`
+`func (o *InlineResponse200329Items) GetUplink() InlineResponse200329Uplink`
 
-GetApns returns the Apns field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetApnsOk
+### GetUplinkOk
 
-`func (o *InlineResponse200329Items) GetApnsOk() (*[]InlineResponse200329Apns, bool)`
+`func (o *InlineResponse200329Items) GetUplinkOk() (*InlineResponse200329Uplink, bool)`
 
-GetApnsOk returns a tuple with the Apns field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApns
+### SetUplink
 
-`func (o *InlineResponse200329Items) SetApns(v []InlineResponse200329Apns)`
+`func (o *InlineResponse200329Items) SetUplink(v InlineResponse200329Uplink)`
 
-SetApns sets Apns field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasApns
+### HasUplink
 
-`func (o *InlineResponse200329Items) HasApns() bool`
+`func (o *InlineResponse200329Items) HasUplink() bool`
 
-HasApns returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
 
-### GetName
+### GetNameservers
 
-`func (o *InlineResponse200329Items) GetName() string`
+`func (o *InlineResponse200329Items) GetNameservers() InlineResponse20118Nameservers`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNameserversOk
 
-`func (o *InlineResponse200329Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200329Items) GetNameserversOk() (*InlineResponse20118Nameservers, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNameservers
 
-`func (o *InlineResponse200329Items) SetName(v string)`
+`func (o *InlineResponse200329Items) SetNameservers(v InlineResponse20118Nameservers)`
 
-SetName sets Name field to given value.
+SetNameservers sets Nameservers field to given value.
 
-### HasName
+### HasNameservers
 
-`func (o *InlineResponse200329Items) HasName() bool`
+`func (o *InlineResponse200329Items) HasNameservers() bool`
 
-HasName returns a boolean if a field has been set.
+HasNameservers returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineResponse200329Items) GetSgt() int32`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineResponse200329Items) GetSgtOk() (*int32, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineResponse200329Items) SetSgt(v int32)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineResponse200329Items) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

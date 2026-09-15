@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Changes** | Pointer to [**[]InlineResponse200494Changes**](InlineResponse200494Changes.md) | Connectivity information of a wireless LAN controller | [optional] 
+**Ssid** | Pointer to [**InlineResponse200494Ssid**](InlineResponse200494Ssid.md) |  | [optional] 
+**Profile** | Pointer to [**InlineResponse200494Profile**](InlineResponse200494Profile.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200494Network**](InlineResponse200494Network.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200494ItemsWithDefaults instantiates a new InlineResponse200494
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetSsid
 
-`func (o *InlineResponse200494Items) GetSerial() string`
+`func (o *InlineResponse200494Items) GetSsid() InlineResponse200494Ssid`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSsidOk
 
-`func (o *InlineResponse200494Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200494Items) GetSsidOk() (*InlineResponse200494Ssid, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSsid
 
-`func (o *InlineResponse200494Items) SetSerial(v string)`
+`func (o *InlineResponse200494Items) SetSsid(v InlineResponse200494Ssid)`
 
-SetSerial sets Serial field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasSerial
+### HasSsid
 
-`func (o *InlineResponse200494Items) HasSerial() bool`
+`func (o *InlineResponse200494Items) HasSsid() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasSsid returns a boolean if a field has been set.
 
-### GetChanges
+### GetProfile
 
-`func (o *InlineResponse200494Items) GetChanges() []InlineResponse200494Changes`
+`func (o *InlineResponse200494Items) GetProfile() InlineResponse200494Profile`
 
-GetChanges returns the Changes field if non-nil, zero value otherwise.
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-### GetChangesOk
+### GetProfileOk
 
-`func (o *InlineResponse200494Items) GetChangesOk() (*[]InlineResponse200494Changes, bool)`
+`func (o *InlineResponse200494Items) GetProfileOk() (*InlineResponse200494Profile, bool)`
 
-GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChanges
+### SetProfile
 
-`func (o *InlineResponse200494Items) SetChanges(v []InlineResponse200494Changes)`
+`func (o *InlineResponse200494Items) SetProfile(v InlineResponse200494Profile)`
 
-SetChanges sets Changes field to given value.
+SetProfile sets Profile field to given value.
 
-### HasChanges
+### HasProfile
 
-`func (o *InlineResponse200494Items) HasChanges() bool`
+`func (o *InlineResponse200494Items) HasProfile() bool`
 
-HasChanges returns a boolean if a field has been set.
+HasProfile returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200494Items) GetNetwork() InlineResponse200494Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200494Items) GetNetworkOk() (*InlineResponse200494Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200494Items) SetNetwork(v InlineResponse200494Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200494Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

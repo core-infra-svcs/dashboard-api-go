@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | Pointer to **string** | Account ID of plans to be fetched | [optional] 
-**Name** | Pointer to **string** | Rate plan name | [optional] 
+**Device** | Pointer to [**InlineResponse200330Device**](InlineResponse200330Device.md) |  | [optional] 
+**Active** | Pointer to **bool** | Whether eSIM is currently active SIM on Device | [optional] 
+**Eid** | Pointer to **string** | eSIM EID | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Last update of eSIM | [optional] 
+**Network** | Pointer to [**InlineResponse200330Network**](InlineResponse200330Network.md) |  | [optional] 
+**Profiles** | Pointer to [**[]InlineResponse200330Profiles**](InlineResponse200330Profiles.md) | eSIM Profile Information | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineResponse200330ItemsWithDefaults instantiates a new InlineResponse200330
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccountId
+### GetDevice
 
-`func (o *InlineResponse200330Items) GetAccountId() string`
+`func (o *InlineResponse200330Items) GetDevice() InlineResponse200330Device`
 
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetAccountIdOk
+### GetDeviceOk
 
-`func (o *InlineResponse200330Items) GetAccountIdOk() (*string, bool)`
+`func (o *InlineResponse200330Items) GetDeviceOk() (*InlineResponse200330Device, bool)`
 
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountId
+### SetDevice
 
-`func (o *InlineResponse200330Items) SetAccountId(v string)`
+`func (o *InlineResponse200330Items) SetDevice(v InlineResponse200330Device)`
 
-SetAccountId sets AccountId field to given value.
+SetDevice sets Device field to given value.
 
-### HasAccountId
+### HasDevice
 
-`func (o *InlineResponse200330Items) HasAccountId() bool`
+`func (o *InlineResponse200330Items) HasDevice() bool`
 
-HasAccountId returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetName
+### GetActive
 
-`func (o *InlineResponse200330Items) GetName() string`
+`func (o *InlineResponse200330Items) GetActive() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetActive returns the Active field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetActiveOk
 
-`func (o *InlineResponse200330Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200330Items) GetActiveOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetActive
 
-`func (o *InlineResponse200330Items) SetName(v string)`
+`func (o *InlineResponse200330Items) SetActive(v bool)`
 
-SetName sets Name field to given value.
+SetActive sets Active field to given value.
 
-### HasName
+### HasActive
 
-`func (o *InlineResponse200330Items) HasName() bool`
+`func (o *InlineResponse200330Items) HasActive() bool`
 
-HasName returns a boolean if a field has been set.
+HasActive returns a boolean if a field has been set.
+
+### GetEid
+
+`func (o *InlineResponse200330Items) GetEid() string`
+
+GetEid returns the Eid field if non-nil, zero value otherwise.
+
+### GetEidOk
+
+`func (o *InlineResponse200330Items) GetEidOk() (*string, bool)`
+
+GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEid
+
+`func (o *InlineResponse200330Items) SetEid(v string)`
+
+SetEid sets Eid field to given value.
+
+### HasEid
+
+`func (o *InlineResponse200330Items) HasEid() bool`
+
+HasEid returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200330Items) GetLastUpdatedAt() string`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200330Items) GetLastUpdatedAtOk() (*string, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200330Items) SetLastUpdatedAt(v string)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200330Items) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200330Items) GetNetwork() InlineResponse200330Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200330Items) GetNetworkOk() (*InlineResponse200330Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200330Items) SetNetwork(v InlineResponse200330Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200330Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetProfiles
+
+`func (o *InlineResponse200330Items) GetProfiles() []InlineResponse200330Profiles`
+
+GetProfiles returns the Profiles field if non-nil, zero value otherwise.
+
+### GetProfilesOk
+
+`func (o *InlineResponse200330Items) GetProfilesOk() (*[]InlineResponse200330Profiles, bool)`
+
+GetProfilesOk returns a tuple with the Profiles field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfiles
+
+`func (o *InlineResponse200330Items) SetProfiles(v []InlineResponse200330Profiles)`
+
+SetProfiles sets Profiles field to given value.
+
+### HasProfiles
+
+`func (o *InlineResponse200330Items) HasProfiles() bool`
+
+HasProfiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

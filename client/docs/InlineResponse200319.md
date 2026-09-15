@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200319Items**](InlineResponse200319Items.md) | List of clusters with their backup cluster targets | [optional] 
+**Items** | Pointer to [**[]InlineResponse200319Items**](InlineResponse200319Items.md) | List of clusters | [optional] 
 **Meta** | Pointer to [**InlineResponse200319Meta**](InlineResponse200319Meta.md) |  | [optional] 
 
 ## Methods

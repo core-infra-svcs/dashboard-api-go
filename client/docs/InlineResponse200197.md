@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse200197Overrides**](InlineResponse200197Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
+**Mappings** | Pointer to [**[]InlineResponse200197Mappings**](InlineResponse200197Mappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200197WithDefaults instantiates a new InlineResponse200197 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultMtuSize
+### GetMappings
 
-`func (o *InlineResponse200197) GetDefaultMtuSize() int32`
+`func (o *InlineResponse200197) GetMappings() []InlineResponse200197Mappings`
 
-GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
+GetMappings returns the Mappings field if non-nil, zero value otherwise.
 
-### GetDefaultMtuSizeOk
+### GetMappingsOk
 
-`func (o *InlineResponse200197) GetDefaultMtuSizeOk() (*int32, bool)`
+`func (o *InlineResponse200197) GetMappingsOk() (*[]InlineResponse200197Mappings, bool)`
 
-GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
+GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultMtuSize
+### SetMappings
 
-`func (o *InlineResponse200197) SetDefaultMtuSize(v int32)`
+`func (o *InlineResponse200197) SetMappings(v []InlineResponse200197Mappings)`
 
-SetDefaultMtuSize sets DefaultMtuSize field to given value.
+SetMappings sets Mappings field to given value.
 
-### HasDefaultMtuSize
+### HasMappings
 
-`func (o *InlineResponse200197) HasDefaultMtuSize() bool`
+`func (o *InlineResponse200197) HasMappings() bool`
 
-HasDefaultMtuSize returns a boolean if a field has been set.
-
-### GetOverrides
-
-`func (o *InlineResponse200197) GetOverrides() []InlineResponse200197Overrides`
-
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
-
-### GetOverridesOk
-
-`func (o *InlineResponse200197) GetOverridesOk() (*[]InlineResponse200197Overrides, bool)`
-
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOverrides
-
-`func (o *InlineResponse200197) SetOverrides(v []InlineResponse200197Overrides)`
-
-SetOverrides sets Overrides field to given value.
-
-### HasOverrides
-
-`func (o *InlineResponse200197) HasOverrides() bool`
-
-HasOverrides returns a boolean if a field has been set.
+HasMappings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

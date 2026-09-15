@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
-**Errors** | Pointer to [**[]InlineResponse200129Errors**](InlineResponse200129Errors.md) | Errors for devices that were not added | [optional] 
+**Ssids** | Pointer to [**InlineResponse200129Ssids**](InlineResponse200129Ssids.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200129WithDefaults instantiates a new InlineResponse200129 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetSsids
 
-`func (o *InlineResponse200129) GetSerials() []string`
+`func (o *InlineResponse200129) GetSsids() InlineResponse200129Ssids`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSsids returns the Ssids field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSsidsOk
 
-`func (o *InlineResponse200129) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200129) GetSsidsOk() (*InlineResponse200129Ssids, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSsids
 
-`func (o *InlineResponse200129) SetSerials(v []string)`
+`func (o *InlineResponse200129) SetSsids(v InlineResponse200129Ssids)`
 
-SetSerials sets Serials field to given value.
+SetSsids sets Ssids field to given value.
 
-### HasSerials
+### HasSsids
 
-`func (o *InlineResponse200129) HasSerials() bool`
+`func (o *InlineResponse200129) HasSsids() bool`
 
-HasSerials returns a boolean if a field has been set.
-
-### GetErrors
-
-`func (o *InlineResponse200129) GetErrors() []InlineResponse200129Errors`
-
-GetErrors returns the Errors field if non-nil, zero value otherwise.
-
-### GetErrorsOk
-
-`func (o *InlineResponse200129) GetErrorsOk() (*[]InlineResponse200129Errors, bool)`
-
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetErrors
-
-`func (o *InlineResponse200129) SetErrors(v []InlineResponse200129Errors)`
-
-SetErrors sets Errors field to given value.
-
-### HasErrors
-
-`func (o *InlineResponse200129) HasErrors() bool`
-
-HasErrors returns a boolean if a field has been set.
+HasSsids returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

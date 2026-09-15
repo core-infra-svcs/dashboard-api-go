@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Slot** | **string** | The logical SIM identifier that the rule is applied to. One of: &#39;sim1&#39;, &#39;sim2&#39;, or &#39;esim&#39;. Devices included in this group must have an active card/profile with the defined SIM slot in order to use this rule. | 
 **Uplink** | [**OrganizationsOrganizationIdDevicesCellularDataProfilesUplink**](OrganizationsOrganizationIdDevicesCellularDataProfilesUplink.md) |  | 
 **Cap** | [**OrganizationsOrganizationIdDevicesCellularDataProfilesCap**](OrganizationsOrganizationIdDevicesCellularDataProfilesCap.md) |  | 
-**Actions** | Pointer to [**[]InlineResponse200344Actions**](InlineResponse200344Actions.md) | The defined actions that will occur when the profile rule is triggered. No more than two actions may be defined for a rule. | [optional] 
+**Actions** | Pointer to [**[]InlineResponse200348Actions**](InlineResponse200348Actions.md) | The defined actions that will occur when the profile rule is triggered. No more than two actions may be defined for a rule. | [optional] 
 
 ## Methods
 
@@ -90,20 +90,20 @@ SetCap sets Cap field to given value.
 
 ### GetActions
 
-`func (o *OrganizationsOrganizationIdDevicesCellularDataProfilesRules) GetActions() []InlineResponse200344Actions`
+`func (o *OrganizationsOrganizationIdDevicesCellularDataProfilesRules) GetActions() []InlineResponse200348Actions`
 
 GetActions returns the Actions field if non-nil, zero value otherwise.
 
 ### GetActionsOk
 
-`func (o *OrganizationsOrganizationIdDevicesCellularDataProfilesRules) GetActionsOk() (*[]InlineResponse200344Actions, bool)`
+`func (o *OrganizationsOrganizationIdDevicesCellularDataProfilesRules) GetActionsOk() (*[]InlineResponse200348Actions, bool)`
 
 GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActions
 
-`func (o *OrganizationsOrganizationIdDevicesCellularDataProfilesRules) SetActions(v []InlineResponse200344Actions)`
+`func (o *OrganizationsOrganizationIdDevicesCellularDataProfilesRules) SetActions(v []InlineResponse200348Actions)`
 
 SetActions sets Actions field to given value.
 

@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices.md) | Device details (maximum of 20 devices allowed) | 
-**Notes** | Pointer to **string** | Reason for capture | [optional] 
-**Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
-**Name** | **string** | Name of packet capture file | 
-**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced.md) |  | [optional] 
+**Serials** | **[]string** | A list of Meraki Serials to migrate | 
+**Target** | **string** | The controller or management mode to which the devices will be migrated | 
 
 ## Methods
 
 ### NewInlineObject288
 
-`func NewInlineObject288(devices []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, name string, ) *InlineObject288`
+`func NewInlineObject288(serials []string, target string, ) *InlineObject288`
 
 NewInlineObject288 instantiates a new InlineObject288 object
 This constructor will assign default values to properties that have it defined,
@@ -30,145 +26,45 @@ NewInlineObject288WithDefaults instantiates a new InlineObject288 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetSerials
 
-`func (o *InlineObject288) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices`
+`func (o *InlineObject288) GetSerials() []string`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetSerialsOk
 
-`func (o *InlineObject288) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, bool)`
+`func (o *InlineObject288) GetSerialsOk() (*[]string, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetSerials
 
-`func (o *InlineObject288) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices)`
+`func (o *InlineObject288) SetSerials(v []string)`
 
-SetDevices sets Devices field to given value.
+SetSerials sets Serials field to given value.
 
 
-### GetNotes
+### GetTarget
 
-`func (o *InlineObject288) GetNotes() string`
+`func (o *InlineObject288) GetTarget() string`
 
-GetNotes returns the Notes field if non-nil, zero value otherwise.
+GetTarget returns the Target field if non-nil, zero value otherwise.
 
-### GetNotesOk
+### GetTargetOk
 
-`func (o *InlineObject288) GetNotesOk() (*string, bool)`
+`func (o *InlineObject288) GetTargetOk() (*string, bool)`
 
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotes
+### SetTarget
 
-`func (o *InlineObject288) SetNotes(v string)`
+`func (o *InlineObject288) SetTarget(v string)`
 
-SetNotes sets Notes field to given value.
+SetTarget sets Target field to given value.
 
-### HasNotes
-
-`func (o *InlineObject288) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetDuration
-
-`func (o *InlineObject288) GetDuration() int32`
-
-GetDuration returns the Duration field if non-nil, zero value otherwise.
-
-### GetDurationOk
-
-`func (o *InlineObject288) GetDurationOk() (*int32, bool)`
-
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDuration
-
-`func (o *InlineObject288) SetDuration(v int32)`
-
-SetDuration sets Duration field to given value.
-
-### HasDuration
-
-`func (o *InlineObject288) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
-
-### GetFilterExpression
-
-`func (o *InlineObject288) GetFilterExpression() string`
-
-GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
-
-### GetFilterExpressionOk
-
-`func (o *InlineObject288) GetFilterExpressionOk() (*string, bool)`
-
-GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFilterExpression
-
-`func (o *InlineObject288) SetFilterExpression(v string)`
-
-SetFilterExpression sets FilterExpression field to given value.
-
-### HasFilterExpression
-
-`func (o *InlineObject288) HasFilterExpression() bool`
-
-HasFilterExpression returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineObject288) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineObject288) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineObject288) SetName(v string)`
-
-SetName sets Name field to given value.
-
-
-### GetAdvanced
-
-`func (o *InlineObject288) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced`
-
-GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
-
-### GetAdvancedOk
-
-`func (o *InlineObject288) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced, bool)`
-
-GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvanced
-
-`func (o *InlineObject288) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced)`
-
-SetAdvanced sets Advanced field to given value.
-
-### HasAdvanced
-
-`func (o *InlineObject288) HasAdvanced() bool`
-
-HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
+**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
+**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
+**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200338WithDefaults instantiates a new InlineResponse200338 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetTs
 
-`func (o *InlineResponse200338) GetSwitchProfileId() string`
+`func (o *InlineResponse200338) GetTs() time.Time`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetTsOk
 
-`func (o *InlineResponse200338) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200338) GetTsOk() (*time.Time, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetTs
 
-`func (o *InlineResponse200338) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200338) SetTs(v time.Time)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetTs sets Ts field to given value.
 
-### HasSwitchProfileId
+### HasTs
 
-`func (o *InlineResponse200338) HasSwitchProfileId() bool`
+`func (o *InlineResponse200338) HasTs() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetName
+### GetTotal
 
-`func (o *InlineResponse200338) GetName() string`
+`func (o *InlineResponse200338) GetTotal() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTotalOk
 
-`func (o *InlineResponse200338) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200338) GetTotalOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTotal
 
-`func (o *InlineResponse200338) SetName(v string)`
+`func (o *InlineResponse200338) SetTotal(v int32)`
 
-SetName sets Name field to given value.
+SetTotal sets Total field to given value.
 
-### HasName
+### HasTotal
 
-`func (o *InlineResponse200338) HasName() bool`
+`func (o *InlineResponse200338) HasTotal() bool`
 
-HasName returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetModel
+### GetUpstream
 
-`func (o *InlineResponse200338) GetModel() string`
+`func (o *InlineResponse200338) GetUpstream() int32`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200338) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200338) GetUpstreamOk() (*int32, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetUpstream
 
-`func (o *InlineResponse200338) SetModel(v string)`
+`func (o *InlineResponse200338) SetUpstream(v int32)`
 
-SetModel sets Model field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasModel
+### HasUpstream
 
-`func (o *InlineResponse200338) HasModel() bool`
+`func (o *InlineResponse200338) HasUpstream() bool`
 
-HasModel returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
+
+### GetDownstream
+
+`func (o *InlineResponse200338) GetDownstream() int32`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse200338) GetDownstreamOk() (*int32, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse200338) SetDownstream(v int32)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse200338) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

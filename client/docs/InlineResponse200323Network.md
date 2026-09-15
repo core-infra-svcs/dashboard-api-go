@@ -5,14 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** | Network ID | 
-**Name** | **string** | Network name | 
-**Url** | **string** | Network URL | 
 
 ## Methods
 
 ### NewInlineResponse200323Network
 
-`func NewInlineResponse200323Network(id string, name string, url string, ) *InlineResponse200323Network`
+`func NewInlineResponse200323Network(id string, ) *InlineResponse200323Network`
 
 NewInlineResponse200323Network instantiates a new InlineResponse200323Network object
 This constructor will assign default values to properties that have it defined,
@@ -45,46 +43,6 @@ and a boolean to check if the value has been set.
 `func (o *InlineResponse200323Network) SetId(v string)`
 
 SetId sets Id field to given value.
-
-
-### GetName
-
-`func (o *InlineResponse200323Network) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200323Network) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200323Network) SetName(v string)`
-
-SetName sets Name field to given value.
-
-
-### GetUrl
-
-`func (o *InlineResponse200323Network) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200323Network) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200323Network) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
 
 
 

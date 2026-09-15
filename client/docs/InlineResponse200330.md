@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200330Items**](InlineResponse200330Items.md) | List of Cellular Service Provider Rate Plans | [optional] 
+**Items** | Pointer to [**[]InlineResponse200330Items**](InlineResponse200330Items.md) | List of eSIM Devices | [optional] 
 **Meta** | Pointer to [**InlineResponse200330Meta**](InlineResponse200330Meta.md) |  | [optional] 
 
 ## Methods

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Network ID where the primary cluster belongs | [optional] 
+**Id** | Pointer to **string** | Network ID | [optional] 
 
 ## Methods
 

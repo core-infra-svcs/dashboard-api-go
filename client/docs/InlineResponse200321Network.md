@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | Network ID | 
+**Id** | Pointer to **string** | Network ID where the primary cluster belongs | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200321Network
 
-`func NewInlineResponse200321Network(id string, ) *InlineResponse200321Network`
+`func NewInlineResponse200321Network() *InlineResponse200321Network`
 
 NewInlineResponse200321Network instantiates a new InlineResponse200321Network object
 This constructor will assign default values to properties that have it defined,
@@ -44,6 +44,11 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
+### HasId
+
+`func (o *InlineResponse200321Network) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

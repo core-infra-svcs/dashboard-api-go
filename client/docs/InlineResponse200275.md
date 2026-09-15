@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200275Items**](InlineResponse200275Items.md) | The top-level propery containing all digital optical monitorting data. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200275Items**](InlineResponse200275Items.md) | L3 interfaces | [optional] 
 **Meta** | Pointer to [**InlineResponse200275Meta**](InlineResponse200275Meta.md) |  | [optional] 
 
 ## Methods

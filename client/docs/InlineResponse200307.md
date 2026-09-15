@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
+**Network** | Pointer to [**InlineResponse200307Network**](InlineResponse200307Network.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200307Counts**](InlineResponse200307Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200307WithDefaults instantiates a new InlineResponse200307 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetNetwork
 
-`func (o *InlineResponse200307) GetBrandingPolicyIds() []string`
+`func (o *InlineResponse200307) GetNetwork() InlineResponse200307Network`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetNetworkOk
 
-`func (o *InlineResponse200307) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200307) GetNetworkOk() (*InlineResponse200307Network, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetNetwork
 
-`func (o *InlineResponse200307) SetBrandingPolicyIds(v []string)`
+`func (o *InlineResponse200307) SetNetwork(v InlineResponse200307Network)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetNetwork sets Network field to given value.
 
-### HasBrandingPolicyIds
+### HasNetwork
 
-`func (o *InlineResponse200307) HasBrandingPolicyIds() bool`
+`func (o *InlineResponse200307) HasNetwork() bool`
 
-HasBrandingPolicyIds returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200307) GetCounts() InlineResponse200307Counts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200307) GetCountsOk() (*InlineResponse200307Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200307) SetCounts(v InlineResponse200307Counts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200307) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

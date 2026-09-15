@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | Pointer to [**[]InlineResponse200105Uplinks**](InlineResponse200105Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
+**Umbrella** | Pointer to [**InlineResponse200105Umbrella**](InlineResponse200105Umbrella.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Whether Umbrella protection is enabled | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetUmbrella
 
-`func (o *InlineResponse200105) GetUplinks() []InlineResponse200105Uplinks`
+`func (o *InlineResponse200105) GetUmbrella() InlineResponse200105Umbrella`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetUmbrella returns the Umbrella field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetUmbrellaOk
 
-`func (o *InlineResponse200105) GetUplinksOk() (*[]InlineResponse200105Uplinks, bool)`
+`func (o *InlineResponse200105) GetUmbrellaOk() (*InlineResponse200105Umbrella, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetUmbrellaOk returns a tuple with the Umbrella field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetUmbrella
 
-`func (o *InlineResponse200105) SetUplinks(v []InlineResponse200105Uplinks)`
+`func (o *InlineResponse200105) SetUmbrella(v InlineResponse200105Umbrella)`
 
-SetUplinks sets Uplinks field to given value.
+SetUmbrella sets Umbrella field to given value.
 
-### HasUplinks
+### HasUmbrella
 
-`func (o *InlineResponse200105) HasUplinks() bool`
+`func (o *InlineResponse200105) HasUmbrella() bool`
 
-HasUplinks returns a boolean if a field has been set.
+HasUmbrella returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse200105) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200105) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200105) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200105) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

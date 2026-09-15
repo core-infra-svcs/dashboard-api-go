@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200277Items**](InlineResponse200277Items.md) | List of split DNS profile assignment | [optional] 
-**Meta** | Pointer to [**InlineResponse200277Meta**](InlineResponse200277Meta.md) |  | [optional] 
+**RecordId** | Pointer to **string** | Record ID | [optional] 
+**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
+**Address** | Pointer to **string** | IP for the DNS record | [optional] 
+**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200281WithDefaults instantiates a new InlineResponse200281 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetRecordId
 
-`func (o *InlineResponse200281) GetItems() []InlineResponse200277Items`
+`func (o *InlineResponse200281) GetRecordId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetRecordId returns the RecordId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetRecordIdOk
 
-`func (o *InlineResponse200281) GetItemsOk() (*[]InlineResponse200277Items, bool)`
+`func (o *InlineResponse200281) GetRecordIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetRecordIdOk returns a tuple with the RecordId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetRecordId
 
-`func (o *InlineResponse200281) SetItems(v []InlineResponse200277Items)`
+`func (o *InlineResponse200281) SetRecordId(v string)`
 
-SetItems sets Items field to given value.
+SetRecordId sets RecordId field to given value.
 
-### HasItems
+### HasRecordId
 
-`func (o *InlineResponse200281) HasItems() bool`
+`func (o *InlineResponse200281) HasRecordId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasRecordId returns a boolean if a field has been set.
 
-### GetMeta
+### GetHostname
 
-`func (o *InlineResponse200281) GetMeta() InlineResponse200277Meta`
+`func (o *InlineResponse200281) GetHostname() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetHostnameOk
 
-`func (o *InlineResponse200281) GetMetaOk() (*InlineResponse200277Meta, bool)`
+`func (o *InlineResponse200281) GetHostnameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetHostname
 
-`func (o *InlineResponse200281) SetMeta(v InlineResponse200277Meta)`
+`func (o *InlineResponse200281) SetHostname(v string)`
 
-SetMeta sets Meta field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasMeta
+### HasHostname
 
-`func (o *InlineResponse200281) HasMeta() bool`
+`func (o *InlineResponse200281) HasHostname() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
+
+### GetAddress
+
+`func (o *InlineResponse200281) GetAddress() string`
+
+GetAddress returns the Address field if non-nil, zero value otherwise.
+
+### GetAddressOk
+
+`func (o *InlineResponse200281) GetAddressOk() (*string, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAddress
+
+`func (o *InlineResponse200281) SetAddress(v string)`
+
+SetAddress sets Address field to given value.
+
+### HasAddress
+
+`func (o *InlineResponse200281) HasAddress() bool`
+
+HasAddress returns a boolean if a field has been set.
+
+### GetProfile
+
+`func (o *InlineResponse200281) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
+
+GetProfile returns the Profile field if non-nil, zero value otherwise.
+
+### GetProfileOk
+
+`func (o *InlineResponse200281) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfile
+
+`func (o *InlineResponse200281) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
+
+SetProfile sets Profile field to given value.
+
+### HasProfile
+
+`func (o *InlineResponse200281) HasProfile() bool`
+
+HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
