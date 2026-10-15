@@ -7,6 +7,10 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
 **AsNumber** | Pointer to **int32** | Organization-specific number of the Autonomous System to which the appliance belongs | [optional] 
 **IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
+**Ipv6** | Pointer to [**InlineResponse200110Ipv6**](InlineResponse200110Ipv6.md) |  | [optional] 
+**TunnelDownTermination** | Pointer to [**InlineResponse200110TunnelDownTermination**](InlineResponse200110TunnelDownTermination.md) |  | [optional] 
+**LocalAsNumber** | Pointer to **NullableInt32** | Network-specific local Autonomous System Number (ASN) to which the appliance belongs. | [optional] 
+**PriorityRoute** | Pointer to **NullableString** | Sets the priority route between eBGP and Auto VPN. | [optional] 
 **RouterId** | Pointer to **string** | The router ID of the appliance | [optional] 
 **Neighbors** | Pointer to [**[]InlineResponse200110Neighbors**](InlineResponse200110Neighbors.md) | List of eBGP neighbor configurations | [optional] 
 
@@ -104,6 +108,126 @@ SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
 HasIbgpHoldTimer returns a boolean if a field has been set.
 
+### GetIpv6
+
+`func (o *InlineResponse200110) GetIpv6() InlineResponse200110Ipv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineResponse200110) GetIpv6Ok() (*InlineResponse200110Ipv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineResponse200110) SetIpv6(v InlineResponse200110Ipv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineResponse200110) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
+
+### GetTunnelDownTermination
+
+`func (o *InlineResponse200110) GetTunnelDownTermination() InlineResponse200110TunnelDownTermination`
+
+GetTunnelDownTermination returns the TunnelDownTermination field if non-nil, zero value otherwise.
+
+### GetTunnelDownTerminationOk
+
+`func (o *InlineResponse200110) GetTunnelDownTerminationOk() (*InlineResponse200110TunnelDownTermination, bool)`
+
+GetTunnelDownTerminationOk returns a tuple with the TunnelDownTermination field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTunnelDownTermination
+
+`func (o *InlineResponse200110) SetTunnelDownTermination(v InlineResponse200110TunnelDownTermination)`
+
+SetTunnelDownTermination sets TunnelDownTermination field to given value.
+
+### HasTunnelDownTermination
+
+`func (o *InlineResponse200110) HasTunnelDownTermination() bool`
+
+HasTunnelDownTermination returns a boolean if a field has been set.
+
+### GetLocalAsNumber
+
+`func (o *InlineResponse200110) GetLocalAsNumber() int32`
+
+GetLocalAsNumber returns the LocalAsNumber field if non-nil, zero value otherwise.
+
+### GetLocalAsNumberOk
+
+`func (o *InlineResponse200110) GetLocalAsNumberOk() (*int32, bool)`
+
+GetLocalAsNumberOk returns a tuple with the LocalAsNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocalAsNumber
+
+`func (o *InlineResponse200110) SetLocalAsNumber(v int32)`
+
+SetLocalAsNumber sets LocalAsNumber field to given value.
+
+### HasLocalAsNumber
+
+`func (o *InlineResponse200110) HasLocalAsNumber() bool`
+
+HasLocalAsNumber returns a boolean if a field has been set.
+
+### SetLocalAsNumberNil
+
+`func (o *InlineResponse200110) SetLocalAsNumberNil(b bool)`
+
+ SetLocalAsNumberNil sets the value for LocalAsNumber to be an explicit nil
+
+### UnsetLocalAsNumber
+`func (o *InlineResponse200110) UnsetLocalAsNumber()`
+
+UnsetLocalAsNumber ensures that no value is present for LocalAsNumber, not even an explicit nil
+### GetPriorityRoute
+
+`func (o *InlineResponse200110) GetPriorityRoute() string`
+
+GetPriorityRoute returns the PriorityRoute field if non-nil, zero value otherwise.
+
+### GetPriorityRouteOk
+
+`func (o *InlineResponse200110) GetPriorityRouteOk() (*string, bool)`
+
+GetPriorityRouteOk returns a tuple with the PriorityRoute field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriorityRoute
+
+`func (o *InlineResponse200110) SetPriorityRoute(v string)`
+
+SetPriorityRoute sets PriorityRoute field to given value.
+
+### HasPriorityRoute
+
+`func (o *InlineResponse200110) HasPriorityRoute() bool`
+
+HasPriorityRoute returns a boolean if a field has been set.
+
+### SetPriorityRouteNil
+
+`func (o *InlineResponse200110) SetPriorityRouteNil(b bool)`
+
+ SetPriorityRouteNil sets the value for PriorityRoute to be an explicit nil
+
+### UnsetPriorityRoute
+`func (o *InlineResponse200110) UnsetPriorityRoute()`
+
+UnsetPriorityRoute ensures that no value is present for PriorityRoute, not even an explicit nil
 ### GetRouterId
 
 `func (o *InlineResponse200110) GetRouterId() string`

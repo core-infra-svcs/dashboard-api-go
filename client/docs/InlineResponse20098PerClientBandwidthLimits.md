@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Settings** | Pointer to **string** | How bandwidth limits are applied by your rule. Can be one of &#39;network default&#39;, &#39;ignore&#39; or &#39;custom&#39;. | [optional] 
+**Settings** | Pointer to **string** |     How bandwidth limits are applied by your rule. Can be one of &#39;network default&#39;, &#39;ignore&#39; or &#39;custom&#39;.     Secure Router networks support only the &#39;ignore&#39; setting.  | [optional] 
 **BandwidthLimits** | Pointer to [**InlineResponse20098PerClientBandwidthLimitsBandwidthLimits**](InlineResponse20098PerClientBandwidthLimitsBandwidthLimits.md) |  | [optional] 
 
 ## Methods

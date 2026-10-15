@@ -48,7 +48,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceSensorCommand := *openapiclient.NewInlineObject34("Operation_example") // InlineObject34 | 
+    createDeviceSensorCommand := *openapiclient.NewInlineObject35("Operation_example") // InlineObject35 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -78,7 +78,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceSensorCommandR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceSensorCommand** | [**InlineObject34**](InlineObject34.md) |  | 
+ **createDeviceSensorCommand** | [**InlineObject35**](InlineObject35.md) |  | 
 
 ### Return type
 
@@ -120,7 +120,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSensorAlertsProfile := *openapiclient.NewInlineObject140("Name_example", []openapiclient.NetworksNetworkIdSensorAlertsProfilesConditions{*openapiclient.NewNetworksNetworkIdSensorAlertsProfilesConditions("Metric_example", *openapiclient.NewNetworksNetworkIdSensorAlertsProfilesThreshold())}) // InlineObject140 | 
+    createNetworkSensorAlertsProfile := *openapiclient.NewInlineObject141("Name_example", []openapiclient.NetworksNetworkIdSensorAlertsProfilesConditions{*openapiclient.NewNetworksNetworkIdSensorAlertsProfilesConditions("Metric_example", *openapiclient.NewNetworksNetworkIdSensorAlertsProfilesThreshold())}) // InlineObject141 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -150,7 +150,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSensorAlertsP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSensorAlertsProfile** | [**InlineObject140**](InlineObject140.md) |  | 
+ **createNetworkSensorAlertsProfile** | [**InlineObject141**](InlineObject141.md) |  | 
 
 ### Return type
 
@@ -976,7 +976,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorGatewaysConnectionsLatest
 
-> InlineResponse200427 GetOrganizationSensorGatewaysConnectionsLatest(ctx, organizationId).SensorSerials(sensorSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200444 GetOrganizationSensorGatewaysConnectionsLatest(ctx, organizationId).SensorSerials(sensorSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns latest sensor-gateway connectivity data.
 
@@ -1008,7 +1008,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetOrganizationSensorGatewaysConnectionsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorGatewaysConnectionsLatest`: InlineResponse200427
+    // response from `GetOrganizationSensorGatewaysConnectionsLatest`: InlineResponse200444
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetOrganizationSensorGatewaysConnectionsLatest`: %v\n", resp)
 }
 ```
@@ -1036,7 +1036,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200427**](InlineResponse200427.md)
+[**InlineResponse200444**](InlineResponse200444.md)
 
 ### Authorization
 
@@ -1054,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsHistory
 
-> []InlineResponse200428 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200445 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return all reported readings from sensors in a given timespan, sorted by timestamp
 
@@ -1091,7 +1091,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetOrganizationSensorReadingsHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200428
+    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200445
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetOrganizationSensorReadingsHistory`: %v\n", resp)
 }
 ```
@@ -1124,7 +1124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200428**](InlineResponse200428.md)
+[**[]InlineResponse200445**](InlineResponse200445.md)
 
 ### Authorization
 
@@ -1142,7 +1142,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsLatest
 
-> []InlineResponse200429 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200446 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return the latest available reading for each metric from each sensor, sorted by sensor serial
 
@@ -1176,7 +1176,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetOrganizationSensorReadingsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200429
+    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200446
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetOrganizationSensorReadingsLatest`: %v\n", resp)
 }
 ```
@@ -1206,7 +1206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200429**](InlineResponse200429.md)
+[**[]InlineResponse200446**](InlineResponse200446.md)
 
 ### Authorization
 
@@ -1244,7 +1244,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceSensorRelationships := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
+    updateDeviceSensorRelationships := *openapiclient.NewInlineObject36() // InlineObject36 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1274,7 +1274,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceSensorRelation
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceSensorRelationships** | [**InlineObject35**](InlineObject35.md) |  | 
+ **updateDeviceSensorRelationships** | [**InlineObject36**](InlineObject36.md) |  | 
 
 ### Return type
 
@@ -1317,7 +1317,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     id := "id_example" // string | ID
-    updateNetworkSensorAlertsProfile := *openapiclient.NewInlineObject141() // InlineObject141 |  (optional)
+    updateNetworkSensorAlertsProfile := *openapiclient.NewInlineObject142() // InlineObject142 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1349,7 +1349,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSensorAlertsProfile** | [**InlineObject141**](InlineObject141.md) |  | 
+ **updateNetworkSensorAlertsProfile** | [**InlineObject142**](InlineObject142.md) |  | 
 
 ### Return type
 
@@ -1392,7 +1392,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
-    updateNetworkSensorMqttBroker := *openapiclient.NewInlineObject142(false) // InlineObject142 | 
+    updateNetworkSensorMqttBroker := *openapiclient.NewInlineObject143(false) // InlineObject143 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1424,7 +1424,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSensorMqttBroker** | [**InlineObject142**](InlineObject142.md) |  | 
+ **updateNetworkSensorMqttBroker** | [**InlineObject143**](InlineObject143.md) |  | 
 
 ### Return type
 

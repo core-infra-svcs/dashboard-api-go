@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200407Items**](InlineResponse200407Items.md) | List of Firewall Rulesets | [optional] 
-**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
+**ResultingLicenses** | Pointer to [**[]InlineResponse200406**](InlineResponse200406.md) | Resulting licenses from the move | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200407WithDefaults instantiates a new InlineResponse200407 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetResultingLicenses
 
-`func (o *InlineResponse200407) GetItems() []InlineResponse200407Items`
+`func (o *InlineResponse200407) GetResultingLicenses() []InlineResponse200406`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetResultingLicensesOk
 
-`func (o *InlineResponse200407) GetItemsOk() (*[]InlineResponse200407Items, bool)`
+`func (o *InlineResponse200407) GetResultingLicensesOk() (*[]InlineResponse200406, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetResultingLicenses
 
-`func (o *InlineResponse200407) SetItems(v []InlineResponse200407Items)`
+`func (o *InlineResponse200407) SetResultingLicenses(v []InlineResponse200406)`
 
-SetItems sets Items field to given value.
+SetResultingLicenses sets ResultingLicenses field to given value.
 
-### HasItems
+### HasResultingLicenses
 
-`func (o *InlineResponse200407) HasItems() bool`
+`func (o *InlineResponse200407) HasResultingLicenses() bool`
 
-HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200407) GetMeta() InlineResponse200279Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200407) GetMetaOk() (*InlineResponse200279Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200407) SetMeta(v InlineResponse200279Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200407) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
+HasResultingLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

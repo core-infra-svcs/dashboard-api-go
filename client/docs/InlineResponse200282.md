@@ -6,8 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ProfileId** | Pointer to **string** | Profile ID | [optional] 
 **Name** | Pointer to **string** | Name of profile | [optional] 
-**Hostnames** | Pointer to **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | [optional] 
-**Nameservers** | Pointer to [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers.md) |  | [optional] 
 
 ## Methods
 
@@ -77,56 +75,6 @@ SetName sets Name field to given value.
 `func (o *InlineResponse200282) HasName() bool`
 
 HasName returns a boolean if a field has been set.
-
-### GetHostnames
-
-`func (o *InlineResponse200282) GetHostnames() []string`
-
-GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
-
-### GetHostnamesOk
-
-`func (o *InlineResponse200282) GetHostnamesOk() (*[]string, bool)`
-
-GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHostnames
-
-`func (o *InlineResponse200282) SetHostnames(v []string)`
-
-SetHostnames sets Hostnames field to given value.
-
-### HasHostnames
-
-`func (o *InlineResponse200282) HasHostnames() bool`
-
-HasHostnames returns a boolean if a field has been set.
-
-### GetNameservers
-
-`func (o *InlineResponse200282) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers`
-
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
-
-### GetNameserversOk
-
-`func (o *InlineResponse200282) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, bool)`
-
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNameservers
-
-`func (o *InlineResponse200282) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers)`
-
-SetNameservers sets Nameservers field to given value.
-
-### HasNameservers
-
-`func (o *InlineResponse200282) HasNameservers() bool`
-
-HasNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Slot** | **string** | Required parameter for the SIM slot to update the cellular band mask for | 
-**Type** | **string** | Required parameter for the signal type to update the cellular band mask for | 
-**Masked** | **[]string** | Required parameter for the band identifiers to mask for the given SIM slot and signal type. For LTE use bands identifiers like &#39;30&#39;, for 5G use band identifiers like &#39;n30&#39;, or use &#39;all&#39; to mask all bands for that signal type. Maximum 256 bands. | 
+**Sims** | Pointer to [**[]DevicesSerialCellularSimsSims**](DevicesSerialCellularSimsSims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
+**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. Use the raw eSIM slot value for the device, such as &#39;sim2&#39; or &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
+**SimFailover** | Pointer to [**DevicesSerialCellularSimsSimFailover**](DevicesSerialCellularSimsSimFailover.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject16
 
-`func NewInlineObject16(slot string, type_ string, masked []string, ) *InlineObject16`
+`func NewInlineObject16() *InlineObject16`
 
 NewInlineObject16 instantiates a new InlineObject16 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +27,80 @@ NewInlineObject16WithDefaults instantiates a new InlineObject16 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSlot
+### GetSims
 
-`func (o *InlineObject16) GetSlot() string`
+`func (o *InlineObject16) GetSims() []DevicesSerialCellularSimsSims`
 
-GetSlot returns the Slot field if non-nil, zero value otherwise.
+GetSims returns the Sims field if non-nil, zero value otherwise.
 
-### GetSlotOk
+### GetSimsOk
 
-`func (o *InlineObject16) GetSlotOk() (*string, bool)`
+`func (o *InlineObject16) GetSimsOk() (*[]DevicesSerialCellularSimsSims, bool)`
 
-GetSlotOk returns a tuple with the Slot field if it's non-nil, zero value otherwise
+GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSlot
+### SetSims
 
-`func (o *InlineObject16) SetSlot(v string)`
+`func (o *InlineObject16) SetSims(v []DevicesSerialCellularSimsSims)`
 
-SetSlot sets Slot field to given value.
+SetSims sets Sims field to given value.
 
+### HasSims
 
-### GetType
+`func (o *InlineObject16) HasSims() bool`
 
-`func (o *InlineObject16) GetType() string`
+HasSims returns a boolean if a field has been set.
 
-GetType returns the Type field if non-nil, zero value otherwise.
+### GetSimOrdering
 
-### GetTypeOk
+`func (o *InlineObject16) GetSimOrdering() []string`
 
-`func (o *InlineObject16) GetTypeOk() (*string, bool)`
+GetSimOrdering returns the SimOrdering field if non-nil, zero value otherwise.
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+### GetSimOrderingOk
+
+`func (o *InlineObject16) GetSimOrderingOk() (*[]string, bool)`
+
+GetSimOrderingOk returns a tuple with the SimOrdering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetSimOrdering
 
-`func (o *InlineObject16) SetType(v string)`
+`func (o *InlineObject16) SetSimOrdering(v []string)`
 
-SetType sets Type field to given value.
+SetSimOrdering sets SimOrdering field to given value.
 
+### HasSimOrdering
 
-### GetMasked
+`func (o *InlineObject16) HasSimOrdering() bool`
 
-`func (o *InlineObject16) GetMasked() []string`
+HasSimOrdering returns a boolean if a field has been set.
 
-GetMasked returns the Masked field if non-nil, zero value otherwise.
+### GetSimFailover
 
-### GetMaskedOk
+`func (o *InlineObject16) GetSimFailover() DevicesSerialCellularSimsSimFailover`
 
-`func (o *InlineObject16) GetMaskedOk() (*[]string, bool)`
+GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
 
-GetMaskedOk returns a tuple with the Masked field if it's non-nil, zero value otherwise
+### GetSimFailoverOk
+
+`func (o *InlineObject16) GetSimFailoverOk() (*DevicesSerialCellularSimsSimFailover, bool)`
+
+GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMasked
+### SetSimFailover
 
-`func (o *InlineObject16) SetMasked(v []string)`
+`func (o *InlineObject16) SetSimFailover(v DevicesSerialCellularSimsSimFailover)`
 
-SetMasked sets Masked field to given value.
+SetSimFailover sets SimFailover field to given value.
 
+### HasSimFailover
+
+`func (o *InlineObject16) HasSimFailover() bool`
+
+HasSimFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

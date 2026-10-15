@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject364WithDefaults instantiates a new InlineObject364 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetName
 
-`func (o *InlineObject364) GetDescription() string`
+`func (o *InlineObject364) GetName() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetNameOk
 
-`func (o *InlineObject364) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject364) GetNameOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetName
 
-`func (o *InlineObject364) SetDescription(v string)`
+`func (o *InlineObject364) SetName(v string)`
 
-SetDescription sets Description field to given value.
+SetName sets Name field to given value.
 
-### HasDescription
+### HasName
 
-`func (o *InlineObject364) HasDescription() bool`
+`func (o *InlineObject364) HasName() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetClient
+### GetScope
 
-`func (o *InlineObject364) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient`
+`func (o *InlineObject364) GetScope() string`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetScopeOk
 
-`func (o *InlineObject364) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient, bool)`
+`func (o *InlineObject364) GetScopeOk() (*string, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetScope
 
-`func (o *InlineObject364) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesEntryIdClient)`
+`func (o *InlineObject364) SetScope(v string)`
 
-SetClient sets Client field to given value.
+SetScope sets Scope field to given value.
 
-### HasClient
+### HasScope
 
-`func (o *InlineObject364) HasClient() bool`
+`func (o *InlineObject364) HasScope() bool`
 
-HasClient returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject364) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject364) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject364) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject364) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio.md) |  | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdSaseSitesAttachItems**](OrganizationsOrganizationIdSaseSitesAttachItems.md) | List of Meraki SD-WAN sites with the associated regions to be attached. | 
 
 ## Methods
 
 ### NewInlineObject360
 
-`func NewInlineObject360() *InlineObject360`
+`func NewInlineObject360(items []OrganizationsOrganizationIdSaseSitesAttachItems, ) *InlineObject360`
 
 NewInlineObject360 instantiates a new InlineObject360 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +25,25 @@ NewInlineObject360WithDefaults instantiates a new InlineObject360 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetItems
 
-`func (o *InlineObject360) GetUrl() string`
+`func (o *InlineObject360) GetItems() []OrganizationsOrganizationIdSaseSitesAttachItems`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetItemsOk
 
-`func (o *InlineObject360) GetUrlOk() (*string, bool)`
+`func (o *InlineObject360) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesAttachItems, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetItems
 
-`func (o *InlineObject360) SetUrl(v string)`
+`func (o *InlineObject360) SetItems(v []OrganizationsOrganizationIdSaseSitesAttachItems)`
 
-SetUrl sets Url field to given value.
+SetItems sets Items field to given value.
 
-### HasUrl
-
-`func (o *InlineObject360) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetVersion
-
-`func (o *InlineObject360) GetVersion() string`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineObject360) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineObject360) SetVersion(v string)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *InlineObject360) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
-### GetRadio
-
-`func (o *InlineObject360) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject360) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject360) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversReceiverIdRadio)`
-
-SetRadio sets Radio field to given value.
-
-### HasRadio
-
-`func (o *InlineObject360) HasRadio() bool`
-
-HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

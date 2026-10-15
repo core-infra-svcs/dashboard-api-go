@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
 **Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf**](DevicesSerialSwitchRoutingInterfacesVrf.md) |  | [optional] 
 **Loopback** | Pointer to **map[string]interface{}** | Loopback Interface settings | [optional] 
+**BidirectionalForwardingDetection** | Pointer to [**DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection**](DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection.md) |  | [optional] 
 **DefaultGateway** | Pointer to **string** | IPv4 default gateway | [optional] 
 
 ## Methods
@@ -466,6 +467,31 @@ SetLoopback sets Loopback field to given value.
 `func (o *InlineResponse20055) HasLoopback() bool`
 
 HasLoopback returns a boolean if a field has been set.
+
+### GetBidirectionalForwardingDetection
+
+`func (o *InlineResponse20055) GetBidirectionalForwardingDetection() DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection`
+
+GetBidirectionalForwardingDetection returns the BidirectionalForwardingDetection field if non-nil, zero value otherwise.
+
+### GetBidirectionalForwardingDetectionOk
+
+`func (o *InlineResponse20055) GetBidirectionalForwardingDetectionOk() (*DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection, bool)`
+
+GetBidirectionalForwardingDetectionOk returns a tuple with the BidirectionalForwardingDetection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBidirectionalForwardingDetection
+
+`func (o *InlineResponse20055) SetBidirectionalForwardingDetection(v DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection)`
+
+SetBidirectionalForwardingDetection sets BidirectionalForwardingDetection field to given value.
+
+### HasBidirectionalForwardingDetection
+
+`func (o *InlineResponse20055) HasBidirectionalForwardingDetection() bool`
+
+HasBidirectionalForwardingDetection returns a boolean if a field has been set.
 
 ### GetDefaultGateway
 

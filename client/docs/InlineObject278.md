@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
+**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
 
 ## Methods
 
 ### NewInlineObject278
 
-`func NewInlineObject278(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject278`
+`func NewInlineObject278() *InlineObject278`
 
 NewInlineObject278 instantiates a new InlineObject278 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject278WithDefaults instantiates a new InlineObject278 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetBrandingPolicyIds
 
-`func (o *InlineObject278) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
+`func (o *InlineObject278) GetBrandingPolicyIds() []string`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetBrandingPolicyIdsOk
 
-`func (o *InlineObject278) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
+`func (o *InlineObject278) GetBrandingPolicyIdsOk() (*[]string, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetBrandingPolicyIds
 
-`func (o *InlineObject278) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
+`func (o *InlineObject278) SetBrandingPolicyIds(v []string)`
 
-SetSwaps sets Swaps field to given value.
+SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
 
+### HasBrandingPolicyIds
+
+`func (o *InlineObject278) HasBrandingPolicyIds() bool`
+
+HasBrandingPolicyIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

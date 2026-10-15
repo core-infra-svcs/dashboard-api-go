@@ -4,15 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Profile** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid.md) |  | 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork.md) |  | [optional] 
+**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
+**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
+**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be one of &#39;SHA&#39;, &#39;MD5&#39;, &#39;SHA256&#39;, &#39;SHA384&#39;, or &#39;SHA512&#39;. MD5 is not supported in the Cisco Meraki US Government Region. | [optional] 
+**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
+**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
+**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
+**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
 
 ## Methods
 
 ### NewInlineObject366
 
-`func NewInlineObject366(profile OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, ssid OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, ) *InlineObject366`
+`func NewInlineObject366() *InlineObject366`
 
 NewInlineObject366 instantiates a new InlineObject366 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +31,180 @@ NewInlineObject366WithDefaults instantiates a new InlineObject366 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfile
+### GetV2cEnabled
 
-`func (o *InlineObject366) GetProfile() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile`
+`func (o *InlineObject366) GetV2cEnabled() bool`
 
-GetProfile returns the Profile field if non-nil, zero value otherwise.
+GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
 
-### GetProfileOk
+### GetV2cEnabledOk
 
-`func (o *InlineObject366) GetProfileOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile, bool)`
+`func (o *InlineObject366) GetV2cEnabledOk() (*bool, bool)`
 
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfile
+### SetV2cEnabled
 
-`func (o *InlineObject366) SetProfile(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsProfile)`
+`func (o *InlineObject366) SetV2cEnabled(v bool)`
 
-SetProfile sets Profile field to given value.
+SetV2cEnabled sets V2cEnabled field to given value.
 
+### HasV2cEnabled
 
-### GetSsid
+`func (o *InlineObject366) HasV2cEnabled() bool`
 
-`func (o *InlineObject366) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid`
+HasV2cEnabled returns a boolean if a field has been set.
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+### GetV3Enabled
 
-### GetSsidOk
+`func (o *InlineObject366) GetV3Enabled() bool`
 
-`func (o *InlineObject366) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid, bool)`
+GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+### GetV3EnabledOk
+
+`func (o *InlineObject366) GetV3EnabledOk() (*bool, bool)`
+
+GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetV3Enabled
 
-`func (o *InlineObject366) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid)`
+`func (o *InlineObject366) SetV3Enabled(v bool)`
 
-SetSsid sets Ssid field to given value.
+SetV3Enabled sets V3Enabled field to given value.
 
+### HasV3Enabled
 
-### GetNetwork
+`func (o *InlineObject366) HasV3Enabled() bool`
 
-`func (o *InlineObject366) GetNetwork() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork`
+HasV3Enabled returns a boolean if a field has been set.
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+### GetV3AuthMode
 
-### GetNetworkOk
+`func (o *InlineObject366) GetV3AuthMode() string`
 
-`func (o *InlineObject366) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork, bool)`
+GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+### GetV3AuthModeOk
+
+`func (o *InlineObject366) GetV3AuthModeOk() (*string, bool)`
+
+GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetV3AuthMode
 
-`func (o *InlineObject366) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork)`
+`func (o *InlineObject366) SetV3AuthMode(v string)`
 
-SetNetwork sets Network field to given value.
+SetV3AuthMode sets V3AuthMode field to given value.
 
-### HasNetwork
+### HasV3AuthMode
 
-`func (o *InlineObject366) HasNetwork() bool`
+`func (o *InlineObject366) HasV3AuthMode() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasV3AuthMode returns a boolean if a field has been set.
+
+### GetV3AuthPass
+
+`func (o *InlineObject366) GetV3AuthPass() string`
+
+GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
+
+### GetV3AuthPassOk
+
+`func (o *InlineObject366) GetV3AuthPassOk() (*string, bool)`
+
+GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3AuthPass
+
+`func (o *InlineObject366) SetV3AuthPass(v string)`
+
+SetV3AuthPass sets V3AuthPass field to given value.
+
+### HasV3AuthPass
+
+`func (o *InlineObject366) HasV3AuthPass() bool`
+
+HasV3AuthPass returns a boolean if a field has been set.
+
+### GetV3PrivMode
+
+`func (o *InlineObject366) GetV3PrivMode() string`
+
+GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
+
+### GetV3PrivModeOk
+
+`func (o *InlineObject366) GetV3PrivModeOk() (*string, bool)`
+
+GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivMode
+
+`func (o *InlineObject366) SetV3PrivMode(v string)`
+
+SetV3PrivMode sets V3PrivMode field to given value.
+
+### HasV3PrivMode
+
+`func (o *InlineObject366) HasV3PrivMode() bool`
+
+HasV3PrivMode returns a boolean if a field has been set.
+
+### GetV3PrivPass
+
+`func (o *InlineObject366) GetV3PrivPass() string`
+
+GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
+
+### GetV3PrivPassOk
+
+`func (o *InlineObject366) GetV3PrivPassOk() (*string, bool)`
+
+GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3PrivPass
+
+`func (o *InlineObject366) SetV3PrivPass(v string)`
+
+SetV3PrivPass sets V3PrivPass field to given value.
+
+### HasV3PrivPass
+
+`func (o *InlineObject366) HasV3PrivPass() bool`
+
+HasV3PrivPass returns a boolean if a field has been set.
+
+### GetPeerIps
+
+`func (o *InlineObject366) GetPeerIps() []string`
+
+GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
+
+### GetPeerIpsOk
+
+`func (o *InlineObject366) GetPeerIpsOk() (*[]string, bool)`
+
+GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPeerIps
+
+`func (o *InlineObject366) SetPeerIps(v []string)`
+
+SetPeerIps sets PeerIps field to given value.
+
+### HasPeerIps
+
+`func (o *InlineObject366) HasPeerIps() bool`
+
+HasPeerIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

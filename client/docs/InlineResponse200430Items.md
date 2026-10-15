@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RoleId** | Pointer to **string** | The Id of the limited access role | [optional] 
-**Name** | Pointer to **string** | The name of the limited access role | [optional] 
-**Scope** | Pointer to **string** | The scope of the limited access role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the limited access role | [optional] 
+**AssignmentId** | **string** | ID of the network enforcement target policy assignment | 
+**Policy** | [**InlineResponse200430Policy**](InlineResponse200430Policy.md) |  | 
+**Network** | [**InlineResponse200429Network**](InlineResponse200429Network.md) |  | 
+**Firewall** | [**InlineResponse200429Firewall**](InlineResponse200429Firewall.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200430Items
 
-`func NewInlineResponse200430Items() *InlineResponse200430Items`
+`func NewInlineResponse200430Items(assignmentId string, policy InlineResponse200430Policy, network InlineResponse200429Network, firewall InlineResponse200429Firewall, ) *InlineResponse200430Items`
 
 NewInlineResponse200430Items instantiates a new InlineResponse200430Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,85 @@ NewInlineResponse200430ItemsWithDefaults instantiates a new InlineResponse200430
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRoleId
+### GetAssignmentId
 
-`func (o *InlineResponse200430Items) GetRoleId() string`
+`func (o *InlineResponse200430Items) GetAssignmentId() string`
 
-GetRoleId returns the RoleId field if non-nil, zero value otherwise.
+GetAssignmentId returns the AssignmentId field if non-nil, zero value otherwise.
 
-### GetRoleIdOk
+### GetAssignmentIdOk
 
-`func (o *InlineResponse200430Items) GetRoleIdOk() (*string, bool)`
+`func (o *InlineResponse200430Items) GetAssignmentIdOk() (*string, bool)`
 
-GetRoleIdOk returns a tuple with the RoleId field if it's non-nil, zero value otherwise
+GetAssignmentIdOk returns a tuple with the AssignmentId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRoleId
+### SetAssignmentId
 
-`func (o *InlineResponse200430Items) SetRoleId(v string)`
+`func (o *InlineResponse200430Items) SetAssignmentId(v string)`
 
-SetRoleId sets RoleId field to given value.
+SetAssignmentId sets AssignmentId field to given value.
 
-### HasRoleId
 
-`func (o *InlineResponse200430Items) HasRoleId() bool`
+### GetPolicy
 
-HasRoleId returns a boolean if a field has been set.
+`func (o *InlineResponse200430Items) GetPolicy() InlineResponse200430Policy`
 
-### GetName
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200430Items) GetName() string`
+### GetPolicyOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200430Items) GetPolicyOk() (*InlineResponse200430Policy, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200430Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPolicy
 
-`func (o *InlineResponse200430Items) SetName(v string)`
+`func (o *InlineResponse200430Items) SetPolicy(v InlineResponse200430Policy)`
 
-SetName sets Name field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasName
 
-`func (o *InlineResponse200430Items) HasName() bool`
+### GetNetwork
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse200430Items) GetNetwork() InlineResponse200429Network`
 
-### GetScope
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200430Items) GetScope() string`
+### GetNetworkOk
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+`func (o *InlineResponse200430Items) GetNetworkOk() (*InlineResponse200429Network, bool)`
 
-### GetScopeOk
-
-`func (o *InlineResponse200430Items) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetNetwork
 
-`func (o *InlineResponse200430Items) SetScope(v string)`
+`func (o *InlineResponse200430Items) SetNetwork(v InlineResponse200429Network)`
 
-SetScope sets Scope field to given value.
+SetNetwork sets Network field to given value.
 
-### HasScope
 
-`func (o *InlineResponse200430Items) HasScope() bool`
+### GetFirewall
 
-HasScope returns a boolean if a field has been set.
+`func (o *InlineResponse200430Items) GetFirewall() InlineResponse200429Firewall`
 
-### GetTags
+GetFirewall returns the Firewall field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200430Items) GetTags() []string`
+### GetFirewallOk
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+`func (o *InlineResponse200430Items) GetFirewallOk() (*InlineResponse200429Firewall, bool)`
 
-### GetTagsOk
-
-`func (o *InlineResponse200430Items) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetFirewallOk returns a tuple with the Firewall field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetFirewall
 
-`func (o *InlineResponse200430Items) SetTags(v []string)`
+`func (o *InlineResponse200430Items) SetFirewall(v InlineResponse200429Firewall)`
 
-SetTags sets Tags field to given value.
+SetFirewall sets Firewall field to given value.
 
-### HasTags
-
-`func (o *InlineResponse200430Items) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

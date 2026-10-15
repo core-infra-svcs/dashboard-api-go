@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **PrivateSubnets** | **[]string** | The list of the private subnets of the VPN peer | 
 **LocalId** | Pointer to **string** | [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to. | [optional] 
 **RemoteId** | Pointer to **string** | [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN. | [optional] 
-**IpsecPolicies** | Pointer to [**InlineResponse200298IpsecPolicies**](InlineResponse200298IpsecPolicies.md) |  | [optional] 
+**IpsecPolicies** | Pointer to [**InlineResponse200311IpsecPolicies**](InlineResponse200311IpsecPolicies.md) |  | [optional] 
 **IpsecPoliciesPreset** | Pointer to **string** | One of the following available presets: &#39;default&#39;, &#39;aws&#39;, &#39;azure&#39;, &#39;umbrella&#39;, &#39;umbrella_short_lived&#39;, &#39;secure&#39;, &#39;zscaler&#39;. If this is provided, the &#39;ipsecPolicies&#39; parameter is ignored. Note that &#39;umbrella_short_lived&#39; maps to the Dashboard UI label &#39;Umbrella&#39;, while &#39;umbrella&#39; maps to the Dashboard UI label &#39;Umbrella (Deprecated)&#39;. | [optional] 
-**SlaPolicy** | Pointer to [**InlineResponse200298SlaPolicy**](InlineResponse200298SlaPolicy.md) |  | [optional] 
+**SlaPolicy** | Pointer to [**InlineResponse200311SlaPolicy**](InlineResponse200311SlaPolicy.md) |  | [optional] 
 **Secret** | **string** | The shared secret with the VPN peer | 
 **IkeVersion** | Pointer to **string** | [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to &#39;1&#39; when omitted. | [optional] [default to "1"]
 **NetworkTags** | Pointer to **[]string** | A list of network tags that will connect with this peer. Use [&#39;all&#39;] for all networks. Use [&#39;none&#39;] for no networks. If not included, the default is [&#39;all&#39;]. | [optional] 
@@ -210,20 +210,20 @@ HasRemoteId returns a boolean if a field has been set.
 
 ### GetIpsecPolicies
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPolicies() InlineResponse200298IpsecPolicies`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPolicies() InlineResponse200311IpsecPolicies`
 
 GetIpsecPolicies returns the IpsecPolicies field if non-nil, zero value otherwise.
 
 ### GetIpsecPoliciesOk
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPoliciesOk() (*InlineResponse200298IpsecPolicies, bool)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPoliciesOk() (*InlineResponse200311IpsecPolicies, bool)`
 
 GetIpsecPoliciesOk returns a tuple with the IpsecPolicies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpsecPolicies
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetIpsecPolicies(v InlineResponse200298IpsecPolicies)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetIpsecPolicies(v InlineResponse200311IpsecPolicies)`
 
 SetIpsecPolicies sets IpsecPolicies field to given value.
 
@@ -260,20 +260,20 @@ HasIpsecPoliciesPreset returns a boolean if a field has been set.
 
 ### GetSlaPolicy
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicy() InlineResponse200298SlaPolicy`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicy() InlineResponse200311SlaPolicy`
 
 GetSlaPolicy returns the SlaPolicy field if non-nil, zero value otherwise.
 
 ### GetSlaPolicyOk
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicyOk() (*InlineResponse200298SlaPolicy, bool)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetSlaPolicyOk() (*InlineResponse200311SlaPolicy, bool)`
 
 GetSlaPolicyOk returns a tuple with the SlaPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSlaPolicy
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetSlaPolicy(v InlineResponse200298SlaPolicy)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetSlaPolicy(v InlineResponse200311SlaPolicy)`
 
 SetSlaPolicy sets SlaPolicy field to given value.
 

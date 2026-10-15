@@ -4,15 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
-**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
+**Serials** | **[]string** | The serial(s) of the device(s) | 
+**Name** | **string** | Name of packet capture file | 
+**OutputType** | Pointer to **string** | Output type of packet capture file. Possible values: text, pcap, cloudshark, or upload_to_cloud | [optional] 
+**Destination** | Pointer to **string** | Destination of packet capture file. Possible values: [upload_to_cloud] | [optional] 
+**Ports** | Pointer to **string** | Ports of packet capture file, comma-separated | [optional] 
+**Notes** | Pointer to **string** | Reason for taking the packet capture | [optional] 
+**Duration** | Pointer to **int32** | Duration in seconds of packet capture | [optional] 
+**FilterExpression** | Pointer to **string** | Filter expression for packet capture | [optional] 
+**Interface** | Pointer to **string** | Interface of the device | [optional] 
+**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject301
 
-`func NewInlineObject301() *InlineObject301`
+`func NewInlineObject301(serials []string, name string, ) *InlineObject301`
 
 NewInlineObject301 instantiates a new InlineObject301 object
 This constructor will assign default values to properties that have it defined,
@@ -26,6 +33,26 @@ will change when the set of required properties is changed
 NewInlineObject301WithDefaults instantiates a new InlineObject301 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetSerials
+
+`func (o *InlineObject301) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject301) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject301) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
 
 ### GetName
 
@@ -46,61 +73,206 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject301) HasName() bool`
+### GetOutputType
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject301) GetOutputType() string`
 
-### GetAddress
+GetOutputType returns the OutputType field if non-nil, zero value otherwise.
 
-`func (o *InlineObject301) GetAddress() string`
+### GetOutputTypeOk
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+`func (o *InlineObject301) GetOutputTypeOk() (*string, bool)`
 
-### GetAddressOk
-
-`func (o *InlineObject301) GetAddressOk() (*string, bool)`
-
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetOutputTypeOk returns a tuple with the OutputType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetOutputType
 
-`func (o *InlineObject301) SetAddress(v string)`
+`func (o *InlineObject301) SetOutputType(v string)`
 
-SetAddress sets Address field to given value.
+SetOutputType sets OutputType field to given value.
 
-### HasAddress
+### HasOutputType
 
-`func (o *InlineObject301) HasAddress() bool`
+`func (o *InlineObject301) HasOutputType() bool`
 
-HasAddress returns a boolean if a field has been set.
+HasOutputType returns a boolean if a field has been set.
 
-### GetBestEffortMonitoringEnabled
+### GetDestination
 
-`func (o *InlineObject301) GetBestEffortMonitoringEnabled() bool`
+`func (o *InlineObject301) GetDestination() string`
 
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetBestEffortMonitoringEnabledOk
+### GetDestinationOk
 
-`func (o *InlineObject301) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+`func (o *InlineObject301) GetDestinationOk() (*string, bool)`
 
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBestEffortMonitoringEnabled
+### SetDestination
 
-`func (o *InlineObject301) SetBestEffortMonitoringEnabled(v bool)`
+`func (o *InlineObject301) SetDestination(v string)`
 
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+SetDestination sets Destination field to given value.
 
-### HasBestEffortMonitoringEnabled
+### HasDestination
 
-`func (o *InlineObject301) HasBestEffortMonitoringEnabled() bool`
+`func (o *InlineObject301) HasDestination() bool`
 
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasDestination returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineObject301) GetPorts() string`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineObject301) GetPortsOk() (*string, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineObject301) SetPorts(v string)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineObject301) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject301) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject301) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject301) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject301) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetDuration
+
+`func (o *InlineObject301) GetDuration() int32`
+
+GetDuration returns the Duration field if non-nil, zero value otherwise.
+
+### GetDurationOk
+
+`func (o *InlineObject301) GetDurationOk() (*int32, bool)`
+
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDuration
+
+`func (o *InlineObject301) SetDuration(v int32)`
+
+SetDuration sets Duration field to given value.
+
+### HasDuration
+
+`func (o *InlineObject301) HasDuration() bool`
+
+HasDuration returns a boolean if a field has been set.
+
+### GetFilterExpression
+
+`func (o *InlineObject301) GetFilterExpression() string`
+
+GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
+
+### GetFilterExpressionOk
+
+`func (o *InlineObject301) GetFilterExpressionOk() (*string, bool)`
+
+GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilterExpression
+
+`func (o *InlineObject301) SetFilterExpression(v string)`
+
+SetFilterExpression sets FilterExpression field to given value.
+
+### HasFilterExpression
+
+`func (o *InlineObject301) HasFilterExpression() bool`
+
+HasFilterExpression returns a boolean if a field has been set.
+
+### GetInterface
+
+`func (o *InlineObject301) GetInterface() string`
+
+GetInterface returns the Interface field if non-nil, zero value otherwise.
+
+### GetInterfaceOk
+
+`func (o *InlineObject301) GetInterfaceOk() (*string, bool)`
+
+GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterface
+
+`func (o *InlineObject301) SetInterface(v string)`
+
+SetInterface sets Interface field to given value.
+
+### HasInterface
+
+`func (o *InlineObject301) HasInterface() bool`
+
+HasInterface returns a boolean if a field has been set.
+
+### GetAdvanced
+
+`func (o *InlineObject301) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced`
+
+GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
+
+### GetAdvancedOk
+
+`func (o *InlineObject301) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced, bool)`
+
+GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvanced
+
+`func (o *InlineObject301) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesAdvanced)`
+
+SetAdvanced sets Advanced field to given value.
+
+### HasAdvanced
+
+`func (o *InlineObject301) HasAdvanced() bool`
+
+HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

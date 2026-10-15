@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | **int32** | Total Alerts | 
+**Items** | Pointer to [**InlineResponse200301MetaCountsItems**](InlineResponse200301MetaCountsItems.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200301MetaCounts
 
-`func NewInlineResponse200301MetaCounts(items int32, ) *InlineResponse200301MetaCounts`
+`func NewInlineResponse200301MetaCounts() *InlineResponse200301MetaCounts`
 
 NewInlineResponse200301MetaCounts instantiates a new InlineResponse200301MetaCounts object
 This constructor will assign default values to properties that have it defined,
@@ -27,23 +27,28 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200301MetaCounts) GetItems() int32`
+`func (o *InlineResponse200301MetaCounts) GetItems() InlineResponse200301MetaCountsItems`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200301MetaCounts) GetItemsOk() (*int32, bool)`
+`func (o *InlineResponse200301MetaCounts) GetItemsOk() (*InlineResponse200301MetaCountsItems, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200301MetaCounts) SetItems(v int32)`
+`func (o *InlineResponse200301MetaCounts) SetItems(v InlineResponse200301MetaCountsItems)`
 
 SetItems sets Items field to given value.
 
+### HasItems
+
+`func (o *InlineResponse200301MetaCounts) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

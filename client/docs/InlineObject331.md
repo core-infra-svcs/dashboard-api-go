@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy.md) |  | 
-**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to remove | 
+**NetworkIds** | **[]string** | A list of network IDs to add to the network group | 
 
 ## Methods
 
 ### NewInlineObject331
 
-`func NewInlineObject331(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject331`
+`func NewInlineObject331(networkIds []string, ) *InlineObject331`
 
 NewInlineObject331 instantiates a new InlineObject331 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject331WithDefaults instantiates a new InlineObject331 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetNetworkIds
 
-`func (o *InlineObject331) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy`
+`func (o *InlineObject331) GetNetworkIds() []string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject331) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy, bool)`
+`func (o *InlineObject331) GetNetworkIdsOk() (*[]string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetNetworkIds
 
-`func (o *InlineObject331) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansRemovePolicy)`
+`func (o *InlineObject331) SetNetworkIds(v []string)`
 
-SetPolicy sets Policy field to given value.
-
-
-### GetVlans
-
-`func (o *InlineObject331) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
-
-GetVlans returns the Vlans field if non-nil, zero value otherwise.
-
-### GetVlansOk
-
-`func (o *InlineObject331) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
-
-GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlans
-
-`func (o *InlineObject331) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
-
-SetVlans sets Vlans field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
 
 

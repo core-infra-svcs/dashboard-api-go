@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A name for easy reference to the HTTP server | 
-**Url** | **string** | The URL of the HTTP server. Once set, cannot be updated. | 
-**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate1**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate1.md) |  | [optional] 
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**ActiveVlans** | Pointer to **string** | The active VLANs for the VLAN profile. Only applicable to trunk ports. The given range must be inclusive of all named VLANs. | [optional] 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
 
 ## Methods
 
 ### NewInlineObject196
 
-`func NewInlineObject196(name string, url string, ) *InlineObject196`
+`func NewInlineObject196(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, ) *InlineObject196`
 
 NewInlineObject196 instantiates a new InlineObject196 object
 This constructor will assign default values to properties that have it defined,
@@ -48,75 +48,70 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetUrl
+### GetActiveVlans
 
-`func (o *InlineObject196) GetUrl() string`
+`func (o *InlineObject196) GetActiveVlans() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetActiveVlans returns the ActiveVlans field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetActiveVlansOk
 
-`func (o *InlineObject196) GetUrlOk() (*string, bool)`
+`func (o *InlineObject196) GetActiveVlansOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetActiveVlansOk returns a tuple with the ActiveVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetActiveVlans
 
-`func (o *InlineObject196) SetUrl(v string)`
+`func (o *InlineObject196) SetActiveVlans(v string)`
 
-SetUrl sets Url field to given value.
+SetActiveVlans sets ActiveVlans field to given value.
 
+### HasActiveVlans
 
-### GetSharedSecret
+`func (o *InlineObject196) HasActiveVlans() bool`
 
-`func (o *InlineObject196) GetSharedSecret() string`
+HasActiveVlans returns a boolean if a field has been set.
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+### GetVlanNames
 
-### GetSharedSecretOk
+`func (o *InlineObject196) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-`func (o *InlineObject196) GetSharedSecretOk() (*string, bool)`
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+### GetVlanNamesOk
+
+`func (o *InlineObject196) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
+
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetVlanNames
 
-`func (o *InlineObject196) SetSharedSecret(v string)`
+`func (o *InlineObject196) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasSharedSecret
 
-`func (o *InlineObject196) HasSharedSecret() bool`
+### GetVlanGroups
 
-HasSharedSecret returns a boolean if a field has been set.
+`func (o *InlineObject196) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
 
-### GetPayloadTemplate
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject196) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate1`
+### GetVlanGroupsOk
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+`func (o *InlineObject196) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
 
-### GetPayloadTemplateOk
-
-`func (o *InlineObject196) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate1, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetVlanGroups
 
-`func (o *InlineObject196) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate1)`
+`func (o *InlineObject196) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasPayloadTemplate
-
-`func (o *InlineObject196) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

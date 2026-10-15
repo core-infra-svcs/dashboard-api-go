@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | theme name | [optional] 
-**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**SpInitiated** | Pointer to [**InlineResponse200434SpInitiated**](InlineResponse200434SpInitiated.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject353WithDefaults instantiates a new InlineObject353 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject353) GetName() string`
+`func (o *InlineObject353) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject353) GetNameOk() (*string, bool)`
+`func (o *InlineObject353) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject353) SetName(v string)`
+`func (o *InlineObject353) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject353) HasName() bool`
+`func (o *InlineObject353) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetBaseTheme
+### GetSpInitiated
 
-`func (o *InlineObject353) GetBaseTheme() string`
+`func (o *InlineObject353) GetSpInitiated() InlineResponse200434SpInitiated`
 
-GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
+GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
 
-### GetBaseThemeOk
+### GetSpInitiatedOk
 
-`func (o *InlineObject353) GetBaseThemeOk() (*string, bool)`
+`func (o *InlineObject353) GetSpInitiatedOk() (*InlineResponse200434SpInitiated, bool)`
 
-GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
+GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBaseTheme
+### SetSpInitiated
 
-`func (o *InlineObject353) SetBaseTheme(v string)`
+`func (o *InlineObject353) SetSpInitiated(v InlineResponse200434SpInitiated)`
 
-SetBaseTheme sets BaseTheme field to given value.
+SetSpInitiated sets SpInitiated field to given value.
 
-### HasBaseTheme
+### HasSpInitiated
 
-`func (o *InlineObject353) HasBaseTheme() bool`
+`func (o *InlineObject353) HasSpInitiated() bool`
 
-HasBaseTheme returns a boolean if a field has been set.
+HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

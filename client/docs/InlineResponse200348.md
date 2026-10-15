@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200348Items**](InlineResponse200348Items.md) | List of Cellular Data Management Profiles | [optional] 
+**Items** | Pointer to [**[]InlineResponse200348Items**](InlineResponse200348Items.md) | List of Cellular Service Provider Rate Plans | [optional] 
 **Meta** | Pointer to [**InlineResponse200348Meta**](InlineResponse200348Meta.md) |  | [optional] 
 
 ## Methods

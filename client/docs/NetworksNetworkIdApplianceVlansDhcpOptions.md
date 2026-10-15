@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | **string** | The code for the DHCP option. This should be an integer between 2 and 254. | 
+**Code** | **string** | The code for the DHCP option. This should be an integer between 2 and 254, excluding reserved DHCP protocol options such as option 53. | 
 **Type** | **string** | The type for the DHCP option. One of: &#39;text&#39;, &#39;ip&#39;, &#39;hex&#39; or &#39;integer&#39; | 
 **Value** | **string** | The value for the DHCP option | 
 

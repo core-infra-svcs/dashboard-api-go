@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | [**[]NetworksNetworkIdDevicesSyslogServersServers**](NetworksNetworkIdDevicesSyslogServersServers.md) | A list of the syslog servers for this network; suggested maximum array size is 10 | 
+**Serial** | **string** | The serial of a device | 
 
 ## Methods
 
 ### NewInlineObject117
 
-`func NewInlineObject117(servers []NetworksNetworkIdDevicesSyslogServersServers, ) *InlineObject117`
+`func NewInlineObject117(serial string, ) *InlineObject117`
 
 NewInlineObject117 instantiates a new InlineObject117 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject117WithDefaults instantiates a new InlineObject117 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetSerial
 
-`func (o *InlineObject117) GetServers() []NetworksNetworkIdDevicesSyslogServersServers`
+`func (o *InlineObject117) GetSerial() string`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetSerialOk
 
-`func (o *InlineObject117) GetServersOk() (*[]NetworksNetworkIdDevicesSyslogServersServers, bool)`
+`func (o *InlineObject117) GetSerialOk() (*string, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetSerial
 
-`func (o *InlineObject117) SetServers(v []NetworksNetworkIdDevicesSyslogServersServers)`
+`func (o *InlineObject117) SetSerial(v string)`
 
-SetServers sets Servers field to given value.
+SetSerial sets Serial field to given value.
 
 
 

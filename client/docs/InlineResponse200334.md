@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200334Items**](InlineResponse200334Items.md) | List of Cellular Service Provider Rate Plans | [optional] 
+**Items** | Pointer to [**[]InlineResponse200334Items**](InlineResponse200334Items.md) | List of clusters with their backup cluster targets | [optional] 
 **Meta** | Pointer to [**InlineResponse200334Meta**](InlineResponse200334Meta.md) |  | [optional] 
 
 ## Methods

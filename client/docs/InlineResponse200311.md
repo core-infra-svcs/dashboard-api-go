@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
-**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
-**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries.md) |  | [optional] 
+**Peers** | Pointer to [**[]InlineResponse200311Peers**](InlineResponse200311Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200311WithDefaults instantiates a new InlineResponse200311 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetPeers
 
-`func (o *InlineResponse200311) GetNetworkId() string`
+`func (o *InlineResponse200311) GetPeers() []InlineResponse200311Peers`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetPeersOk
 
-`func (o *InlineResponse200311) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200311) GetPeersOk() (*[]InlineResponse200311Peers, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetPeers
 
-`func (o *InlineResponse200311) SetNetworkId(v string)`
+`func (o *InlineResponse200311) SetPeers(v []InlineResponse200311Peers)`
 
-SetNetworkId sets NetworkId field to given value.
+SetPeers sets Peers field to given value.
 
-### HasNetworkId
+### HasPeers
 
-`func (o *InlineResponse200311) HasNetworkId() bool`
+`func (o *InlineResponse200311) HasPeers() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200311) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200311) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200311) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200311) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetBoundaries
-
-`func (o *InlineResponse200311) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries`
-
-GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
-
-### GetBoundariesOk
-
-`func (o *InlineResponse200311) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries, bool)`
-
-GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBoundaries
-
-`func (o *InlineResponse200311) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries)`
-
-SetBoundaries sets Boundaries field to given value.
-
-### HasBoundaries
-
-`func (o *InlineResponse200311) HasBoundaries() bool`
-
-HasBoundaries returns a boolean if a field has been set.
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

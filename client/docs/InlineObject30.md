@@ -4,6 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Type** | Pointer to **string** | The type of route defined | [optional] 
+**Destination** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsDestination**](DevicesSerialLiveToolsRoutingTableLookupsDestination.md) |  | [optional] 
+**NextHop** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsNextHop**](DevicesSerialLiveToolsRoutingTableLookupsNextHop.md) |  | [optional] 
+**Vpn** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsVpn**](DevicesSerialLiveToolsRoutingTableLookupsVpn.md) |  | [optional] 
+**Vrf** | Pointer to [**DevicesSerialLiveToolsRoutingTableLookupsVrf**](DevicesSerialLiveToolsRoutingTableLookupsVrf.md) |  | [optional] 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
@@ -24,6 +29,131 @@ will change when the set of required properties is changed
 NewInlineObject30WithDefaults instantiates a new InlineObject30 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetType
+
+`func (o *InlineObject30) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineObject30) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineObject30) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineObject30) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetDestination
+
+`func (o *InlineObject30) GetDestination() DevicesSerialLiveToolsRoutingTableLookupsDestination`
+
+GetDestination returns the Destination field if non-nil, zero value otherwise.
+
+### GetDestinationOk
+
+`func (o *InlineObject30) GetDestinationOk() (*DevicesSerialLiveToolsRoutingTableLookupsDestination, bool)`
+
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestination
+
+`func (o *InlineObject30) SetDestination(v DevicesSerialLiveToolsRoutingTableLookupsDestination)`
+
+SetDestination sets Destination field to given value.
+
+### HasDestination
+
+`func (o *InlineObject30) HasDestination() bool`
+
+HasDestination returns a boolean if a field has been set.
+
+### GetNextHop
+
+`func (o *InlineObject30) GetNextHop() DevicesSerialLiveToolsRoutingTableLookupsNextHop`
+
+GetNextHop returns the NextHop field if non-nil, zero value otherwise.
+
+### GetNextHopOk
+
+`func (o *InlineObject30) GetNextHopOk() (*DevicesSerialLiveToolsRoutingTableLookupsNextHop, bool)`
+
+GetNextHopOk returns a tuple with the NextHop field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNextHop
+
+`func (o *InlineObject30) SetNextHop(v DevicesSerialLiveToolsRoutingTableLookupsNextHop)`
+
+SetNextHop sets NextHop field to given value.
+
+### HasNextHop
+
+`func (o *InlineObject30) HasNextHop() bool`
+
+HasNextHop returns a boolean if a field has been set.
+
+### GetVpn
+
+`func (o *InlineObject30) GetVpn() DevicesSerialLiveToolsRoutingTableLookupsVpn`
+
+GetVpn returns the Vpn field if non-nil, zero value otherwise.
+
+### GetVpnOk
+
+`func (o *InlineObject30) GetVpnOk() (*DevicesSerialLiveToolsRoutingTableLookupsVpn, bool)`
+
+GetVpnOk returns a tuple with the Vpn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpn
+
+`func (o *InlineObject30) SetVpn(v DevicesSerialLiveToolsRoutingTableLookupsVpn)`
+
+SetVpn sets Vpn field to given value.
+
+### HasVpn
+
+`func (o *InlineObject30) HasVpn() bool`
+
+HasVpn returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject30) GetVrf() DevicesSerialLiveToolsRoutingTableLookupsVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject30) GetVrfOk() (*DevicesSerialLiveToolsRoutingTableLookupsVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject30) SetVrf(v DevicesSerialLiveToolsRoutingTableLookupsVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject30) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 ### GetCallback
 

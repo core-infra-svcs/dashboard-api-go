@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Personality** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdatePersonality**](DevicesSerialApplianceInterfacesPortsUpdatePersonality.md) |  | [optional] 
 **Uplink** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdateUplink**](DevicesSerialApplianceInterfacesPortsUpdateUplink.md) |  | [optional] 
 **Downlink** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdateDownlink**](DevicesSerialApplianceInterfacesPortsUpdateDownlink.md) |  | [optional] 
+**Profile** | Pointer to [**DevicesSerialApplianceInterfacesPortsUpdateProfile**](DevicesSerialApplianceInterfacesPortsUpdateProfile.md) |  | [optional] 
 
 ## Methods
 
@@ -153,6 +154,31 @@ SetDownlink sets Downlink field to given value.
 `func (o *InlineObject4) HasDownlink() bool`
 
 HasDownlink returns a boolean if a field has been set.
+
+### GetProfile
+
+`func (o *InlineObject4) GetProfile() DevicesSerialApplianceInterfacesPortsUpdateProfile`
+
+GetProfile returns the Profile field if non-nil, zero value otherwise.
+
+### GetProfileOk
+
+`func (o *InlineObject4) GetProfileOk() (*DevicesSerialApplianceInterfacesPortsUpdateProfile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfile
+
+`func (o *InlineObject4) SetProfile(v DevicesSerialApplianceInterfacesPortsUpdateProfile)`
+
+SetProfile sets Profile field to given value.
+
+### HasProfile
+
+`func (o *InlineObject4) HasProfile() bool`
+
+HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

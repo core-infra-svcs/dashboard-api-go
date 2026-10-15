@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | [optional] 
+**Name** | **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | 
+**Mode** | Pointer to **string** | L3 Interface mode, can be one of &#39;vlan&#39;, &#39;routed&#39;, &#39;loopback&#39;, or &#39;oob_management&#39;. Default is &#39;vlan&#39;. IOS XE firmware 17.18 or higher is required for &#39;routed&#39; mode; IOS XE firmware 26.1.2 or higher is required for &#39;oob_management&#39; mode. | [optional] 
 **Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
 **SwitchPortId** | Pointer to **NullableString** | Switch Port ID when in Routed mode (IOS XE firmware 17.18 or higher required) | [optional] 
 **InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
@@ -16,12 +17,13 @@ Name | Type | Description | Notes
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
 **Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf1**](DevicesSerialSwitchRoutingInterfacesVrf1.md) |  | [optional] 
 **Loopback** | Pointer to **map[string]interface{}** | The loopback settings of the interface. | [optional] 
+**BidirectionalForwardingDetection** | Pointer to [**DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection**](DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject39
 
-`func NewInlineObject39() *InlineObject39`
+`func NewInlineObject39(name string, ) *InlineObject39`
 
 NewInlineObject39 instantiates a new InlineObject39 object
 This constructor will assign default values to properties that have it defined,
@@ -55,11 +57,31 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject39) HasName() bool`
+### GetMode
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject39) GetMode() string`
+
+GetMode returns the Mode field if non-nil, zero value otherwise.
+
+### GetModeOk
+
+`func (o *InlineObject39) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMode
+
+`func (o *InlineObject39) SetMode(v string)`
+
+SetMode sets Mode field to given value.
+
+### HasMode
+
+`func (o *InlineObject39) HasMode() bool`
+
+HasMode returns a boolean if a field has been set.
 
 ### GetSubnet
 
@@ -385,6 +407,31 @@ SetLoopback sets Loopback field to given value.
 `func (o *InlineObject39) HasLoopback() bool`
 
 HasLoopback returns a boolean if a field has been set.
+
+### GetBidirectionalForwardingDetection
+
+`func (o *InlineObject39) GetBidirectionalForwardingDetection() DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection`
+
+GetBidirectionalForwardingDetection returns the BidirectionalForwardingDetection field if non-nil, zero value otherwise.
+
+### GetBidirectionalForwardingDetectionOk
+
+`func (o *InlineObject39) GetBidirectionalForwardingDetectionOk() (*DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection, bool)`
+
+GetBidirectionalForwardingDetectionOk returns a tuple with the BidirectionalForwardingDetection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBidirectionalForwardingDetection
+
+`func (o *InlineObject39) SetBidirectionalForwardingDetection(v DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection)`
+
+SetBidirectionalForwardingDetection sets BidirectionalForwardingDetection field to given value.
+
+### HasBidirectionalForwardingDetection
+
+`func (o *InlineObject39) HasBidirectionalForwardingDetection() bool`
+
+HasBidirectionalForwardingDetection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

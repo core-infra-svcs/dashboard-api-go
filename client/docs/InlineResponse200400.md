@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingNetwork** | Pointer to [**InlineResponse200400ResultingNetwork**](InlineResponse200400ResultingNetwork.md) |  | [optional] 
+**Networks** | Pointer to [**[]InlineResponse200398Items**](InlineResponse200398Items.md) | List of networks that have XDR enabled | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200400WithDefaults instantiates a new InlineResponse200400 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingNetwork
+### GetNetworks
 
-`func (o *InlineResponse200400) GetResultingNetwork() InlineResponse200400ResultingNetwork`
+`func (o *InlineResponse200400) GetNetworks() []InlineResponse200398Items`
 
-GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetResultingNetworkOk
+### GetNetworksOk
 
-`func (o *InlineResponse200400) GetResultingNetworkOk() (*InlineResponse200400ResultingNetwork, bool)`
+`func (o *InlineResponse200400) GetNetworksOk() (*[]InlineResponse200398Items, bool)`
 
-GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingNetwork
+### SetNetworks
 
-`func (o *InlineResponse200400) SetResultingNetwork(v InlineResponse200400ResultingNetwork)`
+`func (o *InlineResponse200400) SetNetworks(v []InlineResponse200398Items)`
 
-SetResultingNetwork sets ResultingNetwork field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasResultingNetwork
+### HasNetworks
 
-`func (o *InlineResponse200400) HasResultingNetwork() bool`
+`func (o *InlineResponse200400) HasNetworks() bool`
 
-HasResultingNetwork returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

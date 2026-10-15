@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique identifier of the SSID profile | [optional] 
-**Name** | Pointer to **string** | Name of the SSID profile | [optional] 
-**Precedence** | Pointer to [**InlineResponse200493Precedence**](InlineResponse200493Precedence.md) |  | [optional] 
-**Ssid** | Pointer to [**InlineResponse200493Ssid**](InlineResponse200493Ssid.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
+**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse200493WithDefaults instantiates a new InlineResponse200493 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetNetwork
 
-`func (o *InlineResponse200493) GetId() string`
+`func (o *InlineResponse200493) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200493) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200493) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetNetwork
 
-`func (o *InlineResponse200493) SetId(v string)`
+`func (o *InlineResponse200493) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
 
-SetId sets Id field to given value.
+SetNetwork sets Network field to given value.
 
-### HasId
+### HasNetwork
 
-`func (o *InlineResponse200493) HasId() bool`
+`func (o *InlineResponse200493) HasNetwork() bool`
 
-HasId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetName
+### GetByBand
 
-`func (o *InlineResponse200493) GetName() string`
+`func (o *InlineResponse200493) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetByBand returns the ByBand field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetByBandOk
 
-`func (o *InlineResponse200493) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200493) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetByBand
 
-`func (o *InlineResponse200493) SetName(v string)`
+`func (o *InlineResponse200493) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
 
-SetName sets Name field to given value.
+SetByBand sets ByBand field to given value.
 
-### HasName
+### HasByBand
 
-`func (o *InlineResponse200493) HasName() bool`
+`func (o *InlineResponse200493) HasByBand() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetPrecedence
-
-`func (o *InlineResponse200493) GetPrecedence() InlineResponse200493Precedence`
-
-GetPrecedence returns the Precedence field if non-nil, zero value otherwise.
-
-### GetPrecedenceOk
-
-`func (o *InlineResponse200493) GetPrecedenceOk() (*InlineResponse200493Precedence, bool)`
-
-GetPrecedenceOk returns a tuple with the Precedence field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrecedence
-
-`func (o *InlineResponse200493) SetPrecedence(v InlineResponse200493Precedence)`
-
-SetPrecedence sets Precedence field to given value.
-
-### HasPrecedence
-
-`func (o *InlineResponse200493) HasPrecedence() bool`
-
-HasPrecedence returns a boolean if a field has been set.
-
-### GetSsid
-
-`func (o *InlineResponse200493) GetSsid() InlineResponse200493Ssid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineResponse200493) GetSsidOk() (*InlineResponse200493Ssid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineResponse200493) SetSsid(v InlineResponse200493Ssid)`
-
-SetSsid sets Ssid field to given value.
-
-### HasSsid
-
-`func (o *InlineResponse200493) HasSsid() bool`
-
-HasSsid returns a boolean if a field has been set.
+HasByBand returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -5,14 +5,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | AP usb port name | 
-**Enabled** | Pointer to **bool** | AP usb port enabled | [optional] 
+**Enabled** | **bool** | AP usb port enabled | 
 **Ssid** | Pointer to **NullableInt32** | AP usb port ssid number | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1
 
-`func NewNetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1(name string, ) *NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+`func NewNetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1(name string, enabled bool, ) *NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
 
 NewNetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1 instantiates a new NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1 object
 This constructor will assign default values to properties that have it defined,
@@ -66,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
-
-`func (o *NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 ### GetSsid
 

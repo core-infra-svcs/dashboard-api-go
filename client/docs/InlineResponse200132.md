@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **Firmware** | Pointer to **string** | Firmware version of the device | [optional] 
 **ProductType** | Pointer to **string** | Product type of the device | [optional] 
 **Details** | Pointer to [**[]InlineResponse2006Details**](InlineResponse2006Details.md) | Additional device information | [optional] 
+**ConfigurationUpdatedAt** | Pointer to **time.Time** | Time at which network configuration is updated (ISO 8601 UTC format) | [optional] 
 
 ## Methods
 
@@ -413,6 +414,31 @@ SetDetails sets Details field to given value.
 `func (o *InlineResponse200132) HasDetails() bool`
 
 HasDetails returns a boolean if a field has been set.
+
+### GetConfigurationUpdatedAt
+
+`func (o *InlineResponse200132) GetConfigurationUpdatedAt() time.Time`
+
+GetConfigurationUpdatedAt returns the ConfigurationUpdatedAt field if non-nil, zero value otherwise.
+
+### GetConfigurationUpdatedAtOk
+
+`func (o *InlineResponse200132) GetConfigurationUpdatedAtOk() (*time.Time, bool)`
+
+GetConfigurationUpdatedAtOk returns a tuple with the ConfigurationUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfigurationUpdatedAt
+
+`func (o *InlineResponse200132) SetConfigurationUpdatedAt(v time.Time)`
+
+SetConfigurationUpdatedAt sets ConfigurationUpdatedAt field to given value.
+
+### HasConfigurationUpdatedAt
+
+`func (o *InlineResponse200132) HasConfigurationUpdatedAt() bool`
+
+HasConfigurationUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

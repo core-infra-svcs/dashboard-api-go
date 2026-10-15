@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether Perpetual PoE is enabled. This field is returned for all physical switch ports, but can only be enabled on ports that support PoE HA. | [optional] 
+**Enabled** | Pointer to **bool** | Whether Perpetual PoE is enabled on the switch port. Perpetual PoE can only be enabled on ports that support PoE HA. | [optional] 
 
 ## Methods
 

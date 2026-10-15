@@ -30,7 +30,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    exclusionsNetworkApplianceUmbrellaDomains := *openapiclient.NewInlineObject88([]string{"Domains_example"}) // InlineObject88 | 
+    exclusionsNetworkApplianceUmbrellaDomains := *openapiclient.NewInlineObject89([]string{"Domains_example"}) // InlineObject89 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -60,7 +60,7 @@ Other parameters are passed through a pointer to a apiExclusionsNetworkAppliance
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **exclusionsNetworkApplianceUmbrellaDomains** | [**InlineObject88**](InlineObject88.md) |  | 
+ **exclusionsNetworkApplianceUmbrellaDomains** | [**InlineObject89**](InlineObject89.md) |  | 
 
 ### Return type
 

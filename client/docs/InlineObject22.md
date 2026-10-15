@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | Optional parameter to filter MAC table entries by MAC address. Must be a colon-delimited six-octet MAC address, for example &#39;00:11:22:a0:b1:c2&#39;. Matching is case-insensitive. | [optional] 
+**Duration** | **int32** | The duration in seconds to blink LEDs. | 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject22
 
-`func NewInlineObject22() *InlineObject22`
+`func NewInlineObject22(duration int32, ) *InlineObject22`
 
 NewInlineObject22 instantiates a new InlineObject22 object
 This constructor will assign default values to properties that have it defined,
@@ -26,30 +26,25 @@ NewInlineObject22WithDefaults instantiates a new InlineObject22 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetDuration
 
-`func (o *InlineObject22) GetMac() string`
+`func (o *InlineObject22) GetDuration() int32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetDuration returns the Duration field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetDurationOk
 
-`func (o *InlineObject22) GetMacOk() (*string, bool)`
+`func (o *InlineObject22) GetDurationOk() (*int32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetDuration
 
-`func (o *InlineObject22) SetMac(v string)`
+`func (o *InlineObject22) SetDuration(v int32)`
 
-SetMac sets Mac field to given value.
+SetDuration sets Duration field to given value.
 
-### HasMac
-
-`func (o *InlineObject22) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
 
 ### GetCallback
 

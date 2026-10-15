@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
-**Url** | **string** | Receiver Url | 
-**Version** | **string** | Scanning API Version | 
-**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
-**SharedSecret** | **string** | Secret Value for Receiver | 
+**Api** | [**OrganizationsOrganizationIdSaseIntegrationsApi**](OrganizationsOrganizationIdSaseIntegrationsApi.md) |  | 
 
 ## Methods
 
 ### NewInlineObject359
 
-`func NewInlineObject359(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject359`
+`func NewInlineObject359(api OrganizationsOrganizationIdSaseIntegrationsApi, ) *InlineObject359`
 
 NewInlineObject359 instantiates a new InlineObject359 object
 This constructor will assign default values to properties that have it defined,
@@ -29,104 +25,24 @@ NewInlineObject359WithDefaults instantiates a new InlineObject359 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetApi
 
-`func (o *InlineObject359) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
+`func (o *InlineObject359) GetApi() OrganizationsOrganizationIdSaseIntegrationsApi`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetApiOk
 
-`func (o *InlineObject359) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
+`func (o *InlineObject359) GetApiOk() (*OrganizationsOrganizationIdSaseIntegrationsApi, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetApi
 
-`func (o *InlineObject359) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
+`func (o *InlineObject359) SetApi(v OrganizationsOrganizationIdSaseIntegrationsApi)`
 
-SetNetwork sets Network field to given value.
-
-
-### GetUrl
-
-`func (o *InlineObject359) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineObject359) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineObject359) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-
-### GetVersion
-
-`func (o *InlineObject359) GetVersion() string`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineObject359) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineObject359) SetVersion(v string)`
-
-SetVersion sets Version field to given value.
-
-
-### GetRadio
-
-`func (o *InlineObject359) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject359) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject359) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
-
-SetRadio sets Radio field to given value.
-
-
-### GetSharedSecret
-
-`func (o *InlineObject359) GetSharedSecret() string`
-
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
-
-### GetSharedSecretOk
-
-`func (o *InlineObject359) GetSharedSecretOk() (*string, bool)`
-
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharedSecret
-
-`func (o *InlineObject359) SetSharedSecret(v string)`
-
-SetSharedSecret sets SharedSecret field to given value.
+SetApi sets Api field to given value.
 
 
 

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | Pointer to [**[]InlineResponse200298Peers**](InlineResponse200298Peers.md) | The list of VPN peers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200295Items**](InlineResponse200295Items.md) | Rule group overrides collection | [optional] 
+**Meta** | Pointer to [**InlineResponse200298Meta**](InlineResponse200298Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200298WithDefaults instantiates a new InlineResponse200298 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetItems
 
-`func (o *InlineResponse200298) GetPeers() []InlineResponse200298Peers`
+`func (o *InlineResponse200298) GetItems() []InlineResponse200295Items`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetItemsOk
 
-`func (o *InlineResponse200298) GetPeersOk() (*[]InlineResponse200298Peers, bool)`
+`func (o *InlineResponse200298) GetItemsOk() (*[]InlineResponse200295Items, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetItems
 
-`func (o *InlineResponse200298) SetPeers(v []InlineResponse200298Peers)`
+`func (o *InlineResponse200298) SetItems(v []InlineResponse200295Items)`
 
-SetPeers sets Peers field to given value.
+SetItems sets Items field to given value.
 
-### HasPeers
+### HasItems
 
-`func (o *InlineResponse200298) HasPeers() bool`
+`func (o *InlineResponse200298) HasItems() bool`
 
-HasPeers returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200298) GetMeta() InlineResponse200298Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200298) GetMetaOk() (*InlineResponse200298Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200298) SetMeta(v InlineResponse200298Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200298) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

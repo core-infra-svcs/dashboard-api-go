@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of Meraki Serials to migrate | 
-**Target** | **string** | The controller or management mode to which the devices will be migrated | 
+**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
+**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
 
 ## Methods
 
 ### NewInlineObject288
 
-`func NewInlineObject288(serials []string, target string, ) *InlineObject288`
+`func NewInlineObject288() *InlineObject288`
 
 NewInlineObject288 instantiates a new InlineObject288 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject288WithDefaults instantiates a new InlineObject288 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetTitle
 
-`func (o *InlineObject288) GetSerials() []string`
+`func (o *InlineObject288) GetTitle() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetTitleOk
 
-`func (o *InlineObject288) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject288) GetTitleOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetTitle
 
-`func (o *InlineObject288) SetSerials(v []string)`
+`func (o *InlineObject288) SetTitle(v string)`
 
-SetSerials sets Serials field to given value.
+SetTitle sets Title field to given value.
 
+### HasTitle
 
-### GetTarget
+`func (o *InlineObject288) HasTitle() bool`
 
-`func (o *InlineObject288) GetTarget() string`
+HasTitle returns a boolean if a field has been set.
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+### GetApiKey
 
-### GetTargetOk
+`func (o *InlineObject288) GetApiKey() string`
 
-`func (o *InlineObject288) GetTargetOk() (*string, bool)`
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+### GetApiKeyOk
+
+`func (o *InlineObject288) GetApiKeyOk() (*string, bool)`
+
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetApiKey
 
-`func (o *InlineObject288) SetTarget(v string)`
+`func (o *InlineObject288) SetApiKey(v string)`
 
-SetTarget sets Target field to given value.
+SetApiKey sets ApiKey field to given value.
 
+### HasApiKey
+
+`func (o *InlineObject288) HasApiKey() bool`
+
+HasApiKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

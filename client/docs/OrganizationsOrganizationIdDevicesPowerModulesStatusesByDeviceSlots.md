@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **Serial** | Pointer to **string** | The power supply unit serial number. | [optional] 
 **Model** | Pointer to **string** | The power supply unit model. | [optional] 
 **Status** | Pointer to **string** | Status of the power supply unit. Possible values are: connected, not connected, powering. | [optional] 
+**Poe** | Pointer to **map[string]interface{}** | Power over Ethernet (PoE) information for this power supply slot. | [optional] 
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetStatus sets Status field to given value.
 `func (o *OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
+
+### GetPoe
+
+`func (o *OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots) GetPoe() map[string]interface{}`
+
+GetPoe returns the Poe field if non-nil, zero value otherwise.
+
+### GetPoeOk
+
+`func (o *OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots) GetPoeOk() (*map[string]interface{}, bool)`
+
+GetPoeOk returns a tuple with the Poe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoe
+
+`func (o *OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots) SetPoe(v map[string]interface{})`
+
+SetPoe sets Poe field to given value.
+
+### HasPoe
+
+`func (o *OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots) HasPoe() bool`
+
+HasPoe returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

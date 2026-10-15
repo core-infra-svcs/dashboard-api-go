@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the SSID profile | 
-**Precedence** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence**](OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence.md) |  | [optional] 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesSsid**](OrganizationsOrganizationIdWirelessSsidsProfilesSsid.md) |  | 
+**Items** | [**[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems**](OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems.md) | Sentry Group Policies for the Organization keyed by Network Id | 
 
 ## Methods
 
 ### NewInlineObject365
 
-`func NewInlineObject365(name string, ssid OrganizationsOrganizationIdWirelessSsidsProfilesSsid, ) *InlineObject365`
+`func NewInlineObject365(items []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, ) *InlineObject365`
 
 NewInlineObject365 instantiates a new InlineObject365 object
 This constructor will assign default values to properties that have it defined,
@@ -27,69 +25,24 @@ NewInlineObject365WithDefaults instantiates a new InlineObject365 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetItems
 
-`func (o *InlineObject365) GetName() string`
+`func (o *InlineObject365) GetItems() []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetItemsOk
 
-`func (o *InlineObject365) GetNameOk() (*string, bool)`
+`func (o *InlineObject365) GetItemsOk() (*[]OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetItems
 
-`func (o *InlineObject365) SetName(v string)`
+`func (o *InlineObject365) SetItems(v []OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems)`
 
-SetName sets Name field to given value.
-
-
-### GetPrecedence
-
-`func (o *InlineObject365) GetPrecedence() OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence`
-
-GetPrecedence returns the Precedence field if non-nil, zero value otherwise.
-
-### GetPrecedenceOk
-
-`func (o *InlineObject365) GetPrecedenceOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence, bool)`
-
-GetPrecedenceOk returns a tuple with the Precedence field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrecedence
-
-`func (o *InlineObject365) SetPrecedence(v OrganizationsOrganizationIdWirelessSsidsProfilesPrecedence)`
-
-SetPrecedence sets Precedence field to given value.
-
-### HasPrecedence
-
-`func (o *InlineObject365) HasPrecedence() bool`
-
-HasPrecedence returns a boolean if a field has been set.
-
-### GetSsid
-
-`func (o *InlineObject365) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesSsid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineObject365) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesSsid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineObject365) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesSsid)`
-
-SetSsid sets Ssid field to given value.
+SetItems sets Items field to given value.
 
 
 

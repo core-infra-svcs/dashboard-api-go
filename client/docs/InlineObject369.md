@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enrolled** | **bool** | Parameter to enroll or unenroll the zigbee devices | 
-**Channel** | Pointer to **string** | The new channel for the zigbee device | [optional] 
+**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
+**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
 
 ## Methods
 
 ### NewInlineObject369
 
-`func NewInlineObject369(enrolled bool, ) *InlineObject369`
+`func NewInlineObject369(sourceSerial string, targetSerials []string, ) *InlineObject369`
 
 NewInlineObject369 instantiates a new InlineObject369 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,45 @@ NewInlineObject369WithDefaults instantiates a new InlineObject369 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnrolled
+### GetSourceSerial
 
-`func (o *InlineObject369) GetEnrolled() bool`
+`func (o *InlineObject369) GetSourceSerial() string`
 
-GetEnrolled returns the Enrolled field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetEnrolledOk
+### GetSourceSerialOk
 
-`func (o *InlineObject369) GetEnrolledOk() (*bool, bool)`
+`func (o *InlineObject369) GetSourceSerialOk() (*string, bool)`
 
-GetEnrolledOk returns a tuple with the Enrolled field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrolled
+### SetSourceSerial
 
-`func (o *InlineObject369) SetEnrolled(v bool)`
+`func (o *InlineObject369) SetSourceSerial(v string)`
 
-SetEnrolled sets Enrolled field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
 
-### GetChannel
+### GetTargetSerials
 
-`func (o *InlineObject369) GetChannel() string`
+`func (o *InlineObject369) GetTargetSerials() []string`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetTargetSerialsOk
 
-`func (o *InlineObject369) GetChannelOk() (*string, bool)`
+`func (o *InlineObject369) GetTargetSerialsOk() (*[]string, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetTargetSerials
 
-`func (o *InlineObject369) SetChannel(v string)`
+`func (o *InlineObject369) SetTargetSerials(v []string)`
 
-SetChannel sets Channel field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
-### HasChannel
-
-`func (o *InlineObject369) HasChannel() bool`
-
-HasChannel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

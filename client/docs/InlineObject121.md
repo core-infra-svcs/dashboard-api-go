@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1**](NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1.md) |  | [optional] 
+**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedEventsProducts**](NetworksNetworkIdFirmwareUpgradesStagedEventsProducts.md) |  | [optional] 
 **Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetProducts
 
-`func (o *InlineObject121) GetProducts() NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1`
+`func (o *InlineObject121) GetProducts() NetworksNetworkIdFirmwareUpgradesStagedEventsProducts`
 
 GetProducts returns the Products field if non-nil, zero value otherwise.
 
 ### GetProductsOk
 
-`func (o *InlineObject121) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1, bool)`
+`func (o *InlineObject121) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesStagedEventsProducts, bool)`
 
 GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProducts
 
-`func (o *InlineObject121) SetProducts(v NetworksNetworkIdFirmwareUpgradesStagedEventsProducts1)`
+`func (o *InlineObject121) SetProducts(v NetworksNetworkIdFirmwareUpgradesStagedEventsProducts)`
 
 SetProducts sets Products field to given value.
 

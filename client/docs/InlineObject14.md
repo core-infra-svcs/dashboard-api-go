@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Required parameter for the state to update the geolocation settings to (true to enable, false to disable) | 
+**Ids** | [**DevicesSerialCameraWirelessProfilesIds**](DevicesSerialCameraWirelessProfilesIds.md) |  | 
 
 ## Methods
 
 ### NewInlineObject14
 
-`func NewInlineObject14(enabled bool, ) *InlineObject14`
+`func NewInlineObject14(ids DevicesSerialCameraWirelessProfilesIds, ) *InlineObject14`
 
 NewInlineObject14 instantiates a new InlineObject14 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject14WithDefaults instantiates a new InlineObject14 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetIds
 
-`func (o *InlineObject14) GetEnabled() bool`
+`func (o *InlineObject14) GetIds() DevicesSerialCameraWirelessProfilesIds`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetIdsOk
 
-`func (o *InlineObject14) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject14) GetIdsOk() (*DevicesSerialCameraWirelessProfilesIds, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetIds
 
-`func (o *InlineObject14) SetEnabled(v bool)`
+`func (o *InlineObject14) SetIds(v DevicesSerialCameraWirelessProfilesIds)`
 
-SetEnabled sets Enabled field to given value.
+SetIds sets Ids field to given value.
 
 
 

@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularSims := *openapiclient.NewInlineObject15() // InlineObject15 |  (optional)
+    updateDeviceCellularSims := *openapiclient.NewInlineObject16() // InlineObject16 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularSimsRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularSims** | [**InlineObject15**](InlineObject15.md) |  | 
+ **updateDeviceCellularSims** | [**InlineObject16**](InlineObject16.md) |  | 
 
 ### Return type
 

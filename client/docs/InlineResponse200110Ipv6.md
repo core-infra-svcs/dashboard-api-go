@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Address** | Pointer to **string** | The IPv6 address of the neighbor | [optional] 
+**SinglePeering** | Pointer to [**InlineResponse200110Ipv6SinglePeering**](InlineResponse200110Ipv6SinglePeering.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200110Ipv6WithDefaults instantiates a new InlineResponse200110I
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAddress
+### GetSinglePeering
 
-`func (o *InlineResponse200110Ipv6) GetAddress() string`
+`func (o *InlineResponse200110Ipv6) GetSinglePeering() InlineResponse200110Ipv6SinglePeering`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetSinglePeering returns the SinglePeering field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetSinglePeeringOk
 
-`func (o *InlineResponse200110Ipv6) GetAddressOk() (*string, bool)`
+`func (o *InlineResponse200110Ipv6) GetSinglePeeringOk() (*InlineResponse200110Ipv6SinglePeering, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetSinglePeeringOk returns a tuple with the SinglePeering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetSinglePeering
 
-`func (o *InlineResponse200110Ipv6) SetAddress(v string)`
+`func (o *InlineResponse200110Ipv6) SetSinglePeering(v InlineResponse200110Ipv6SinglePeering)`
 
-SetAddress sets Address field to given value.
+SetSinglePeering sets SinglePeering field to given value.
 
-### HasAddress
+### HasSinglePeering
 
-`func (o *InlineResponse200110Ipv6) HasAddress() bool`
+`func (o *InlineResponse200110Ipv6) HasSinglePeering() bool`
 
-HasAddress returns a boolean if a field has been set.
+HasSinglePeering returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

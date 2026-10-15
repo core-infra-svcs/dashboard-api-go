@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DoorLockIds** | Pointer to **[]string** | A list of Meraki door lock ids to disenroll from the device | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1**](OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1.md) | List of zero touch deployments to create | 
+**Meta** | Pointer to [**InlineResponse200283Meta**](InlineResponse200283Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject370
 
-`func NewInlineObject370() *InlineObject370`
+`func NewInlineObject370(items []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, ) *InlineObject370`
 
 NewInlineObject370 instantiates a new InlineObject370 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,50 @@ NewInlineObject370WithDefaults instantiates a new InlineObject370 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDoorLockIds
+### GetItems
 
-`func (o *InlineObject370) GetDoorLockIds() []string`
+`func (o *InlineObject370) GetItems() []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1`
 
-GetDoorLockIds returns the DoorLockIds field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetDoorLockIdsOk
+### GetItemsOk
 
-`func (o *InlineObject370) GetDoorLockIdsOk() (*[]string, bool)`
+`func (o *InlineObject370) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1, bool)`
 
-GetDoorLockIdsOk returns a tuple with the DoorLockIds field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDoorLockIds
+### SetItems
 
-`func (o *InlineObject370) SetDoorLockIds(v []string)`
+`func (o *InlineObject370) SetItems(v []OrganizationsOrganizationIdWirelessDevicesProvisioningDeploymentsItems1)`
 
-SetDoorLockIds sets DoorLockIds field to given value.
+SetItems sets Items field to given value.
 
-### HasDoorLockIds
 
-`func (o *InlineObject370) HasDoorLockIds() bool`
+### GetMeta
 
-HasDoorLockIds returns a boolean if a field has been set.
+`func (o *InlineObject370) GetMeta() InlineResponse200283Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineObject370) GetMetaOk() (*InlineResponse200283Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineObject370) SetMeta(v InlineResponse200283Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineObject370) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
 **Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf**](DevicesSerialSwitchRoutingInterfacesVrf.md) |  | [optional] 
 **Loopback** | Pointer to **map[string]interface{}** | Loopback Interface settings | [optional] 
+**BidirectionalForwardingDetection** | Pointer to [**DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection**](DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection.md) |  | [optional] 
 
 ## Methods
 
@@ -465,6 +466,31 @@ SetLoopback sets Loopback field to given value.
 `func (o *InlineResponse200209) HasLoopback() bool`
 
 HasLoopback returns a boolean if a field has been set.
+
+### GetBidirectionalForwardingDetection
+
+`func (o *InlineResponse200209) GetBidirectionalForwardingDetection() DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection`
+
+GetBidirectionalForwardingDetection returns the BidirectionalForwardingDetection field if non-nil, zero value otherwise.
+
+### GetBidirectionalForwardingDetectionOk
+
+`func (o *InlineResponse200209) GetBidirectionalForwardingDetectionOk() (*DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection, bool)`
+
+GetBidirectionalForwardingDetectionOk returns a tuple with the BidirectionalForwardingDetection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBidirectionalForwardingDetection
+
+`func (o *InlineResponse200209) SetBidirectionalForwardingDetection(v DevicesSerialSwitchRoutingInterfacesBidirectionalForwardingDetection)`
+
+SetBidirectionalForwardingDetection sets BidirectionalForwardingDetection field to given value.
+
+### HasBidirectionalForwardingDetection
+
+`func (o *InlineResponse200209) HasBidirectionalForwardingDetection() bool`
+
+HasBidirectionalForwardingDetection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

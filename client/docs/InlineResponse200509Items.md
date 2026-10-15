@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200509Intervals**](InlineResponse200509Intervals.md) | Time interval snapshots of interfaces usage data of the wireless LAN controller | [optional] 
+**Network** | Pointer to [**InlineResponse200509Network**](InlineResponse200509Network.md) |  | [optional] 
+**Mqtt** | Pointer to [**InlineResponse200509Mqtt**](InlineResponse200509Mqtt.md) |  | [optional] 
+**Ble** | Pointer to [**InlineResponse200509Ble**](InlineResponse200509Ble.md) |  | [optional] 
+**Wifi** | Pointer to [**InlineResponse200509Wifi**](InlineResponse200509Wifi.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200509ItemsWithDefaults instantiates a new InlineResponse200509
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetNetwork
 
-`func (o *InlineResponse200509Items) GetSerial() string`
+`func (o *InlineResponse200509Items) GetNetwork() InlineResponse200509Network`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkOk
 
-`func (o *InlineResponse200509Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200509Items) GetNetworkOk() (*InlineResponse200509Network, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetwork
 
-`func (o *InlineResponse200509Items) SetSerial(v string)`
+`func (o *InlineResponse200509Items) SetNetwork(v InlineResponse200509Network)`
 
-SetSerial sets Serial field to given value.
+SetNetwork sets Network field to given value.
 
-### HasSerial
+### HasNetwork
 
-`func (o *InlineResponse200509Items) HasSerial() bool`
+`func (o *InlineResponse200509Items) HasNetwork() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetIntervals
+### GetMqtt
 
-`func (o *InlineResponse200509Items) GetIntervals() []InlineResponse200509Intervals`
+`func (o *InlineResponse200509Items) GetMqtt() InlineResponse200509Mqtt`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetMqtt returns the Mqtt field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetMqttOk
 
-`func (o *InlineResponse200509Items) GetIntervalsOk() (*[]InlineResponse200509Intervals, bool)`
+`func (o *InlineResponse200509Items) GetMqttOk() (*InlineResponse200509Mqtt, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetMqttOk returns a tuple with the Mqtt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetMqtt
 
-`func (o *InlineResponse200509Items) SetIntervals(v []InlineResponse200509Intervals)`
+`func (o *InlineResponse200509Items) SetMqtt(v InlineResponse200509Mqtt)`
 
-SetIntervals sets Intervals field to given value.
+SetMqtt sets Mqtt field to given value.
 
-### HasIntervals
+### HasMqtt
 
-`func (o *InlineResponse200509Items) HasIntervals() bool`
+`func (o *InlineResponse200509Items) HasMqtt() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasMqtt returns a boolean if a field has been set.
+
+### GetBle
+
+`func (o *InlineResponse200509Items) GetBle() InlineResponse200509Ble`
+
+GetBle returns the Ble field if non-nil, zero value otherwise.
+
+### GetBleOk
+
+`func (o *InlineResponse200509Items) GetBleOk() (*InlineResponse200509Ble, bool)`
+
+GetBleOk returns a tuple with the Ble field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBle
+
+`func (o *InlineResponse200509Items) SetBle(v InlineResponse200509Ble)`
+
+SetBle sets Ble field to given value.
+
+### HasBle
+
+`func (o *InlineResponse200509Items) HasBle() bool`
+
+HasBle returns a boolean if a field has been set.
+
+### GetWifi
+
+`func (o *InlineResponse200509Items) GetWifi() InlineResponse200509Wifi`
+
+GetWifi returns the Wifi field if non-nil, zero value otherwise.
+
+### GetWifiOk
+
+`func (o *InlineResponse200509Items) GetWifiOk() (*InlineResponse200509Wifi, bool)`
+
+GetWifiOk returns a tuple with the Wifi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi
+
+`func (o *InlineResponse200509Items) SetWifi(v InlineResponse200509Wifi)`
+
+SetWifi sets Wifi field to given value.
+
+### HasWifi
+
+`func (o *InlineResponse200509Items) HasWifi() bool`
+
+HasWifi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

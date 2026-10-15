@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice**](OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice.md) |  | [optional] 
+**Name** | **string** | The name of the switch. | 
+**Serial** | **string** | The serial number of the switch. | 
+**Mac** | **string** | The MAC address of the switch. | 
+**Network** | [**OrganizationsOrganizationIdSwitchPortsBySwitchNetwork**](OrganizationsOrganizationIdSwitchPortsBySwitchNetwork.md) |  | 
+**Model** | **string** | The model of the switch. | 
+**Ports** | [**[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts**](OrganizationsOrganizationIdSwitchPortsBySwitchPorts.md) | Ports belonging to the switch | 
 
 ## Methods
 
 ### NewInlineResponse200475
 
-`func NewInlineResponse200475() *InlineResponse200475`
+`func NewInlineResponse200475(name string, serial string, mac string, network OrganizationsOrganizationIdSwitchPortsBySwitchNetwork, model string, ports []OrganizationsOrganizationIdSwitchPortsBySwitchPorts, ) *InlineResponse200475`
 
 NewInlineResponse200475 instantiates a new InlineResponse200475 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +30,125 @@ NewInlineResponse200475WithDefaults instantiates a new InlineResponse200475 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetName
 
-`func (o *InlineResponse200475) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200475) GetName() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetNameOk
 
-`func (o *InlineResponse200475) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200475) GetNameOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetName
 
-`func (o *InlineResponse200475) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200475) SetName(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetName sets Name field to given value.
 
-### HasDownstream
 
-`func (o *InlineResponse200475) HasDownstream() bool`
+### GetSerial
 
-HasDownstream returns a boolean if a field has been set.
+`func (o *InlineResponse200475) GetSerial() string`
 
-### GetUpstream
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200475) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+### GetSerialOk
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+`func (o *InlineResponse200475) GetSerialOk() (*string, bool)`
 
-### GetUpstreamOk
-
-`func (o *InlineResponse200475) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
-
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetSerial
 
-`func (o *InlineResponse200475) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200475) SetSerial(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetSerial sets Serial field to given value.
 
-### HasUpstream
 
-`func (o *InlineResponse200475) HasUpstream() bool`
+### GetMac
 
-HasUpstream returns a boolean if a field has been set.
+`func (o *InlineResponse200475) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200475) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200475) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
 
 ### GetNetwork
 
-`func (o *InlineResponse200475) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200475) GetNetwork() OrganizationsOrganizationIdSwitchPortsBySwitchNetwork`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200475) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200475) GetNetworkOk() (*OrganizationsOrganizationIdSwitchPortsBySwitchNetwork, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200475) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200475) SetNetwork(v OrganizationsOrganizationIdSwitchPortsBySwitchNetwork)`
 
 SetNetwork sets Network field to given value.
 
-### HasNetwork
 
-`func (o *InlineResponse200475) HasNetwork() bool`
+### GetModel
 
-HasNetwork returns a boolean if a field has been set.
+`func (o *InlineResponse200475) GetModel() string`
 
-### GetDevice
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200475) GetDevice() OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice`
+### GetModelOk
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+`func (o *InlineResponse200475) GetModelOk() (*string, bool)`
 
-### GetDeviceOk
-
-`func (o *InlineResponse200475) GetDeviceOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetModel
 
-`func (o *InlineResponse200475) SetDevice(v OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice)`
+`func (o *InlineResponse200475) SetModel(v string)`
 
-SetDevice sets Device field to given value.
+SetModel sets Model field to given value.
 
-### HasDevice
 
-`func (o *InlineResponse200475) HasDevice() bool`
+### GetPorts
 
-HasDevice returns a boolean if a field has been set.
+`func (o *InlineResponse200475) GetPorts() []OrganizationsOrganizationIdSwitchPortsBySwitchPorts`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineResponse200475) GetPortsOk() (*[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineResponse200475) SetPorts(v []OrganizationsOrganizationIdSwitchPortsBySwitchPorts)`
+
+SetPorts sets Ports field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

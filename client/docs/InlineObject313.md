@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceSerial** | Pointer to **NullableString** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
+**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks.md) | List containing the network ID and the product type to disable XDR on | 
 
 ## Methods
 
 ### NewInlineObject313
 
-`func NewInlineObject313() *InlineObject313`
+`func NewInlineObject313(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, ) *InlineObject313`
 
 NewInlineObject313 instantiates a new InlineObject313 object
 This constructor will assign default values to properties that have it defined,
@@ -25,41 +25,26 @@ NewInlineObject313WithDefaults instantiates a new InlineObject313 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceSerial
+### GetNetworks
 
-`func (o *InlineObject313) GetDeviceSerial() string`
+`func (o *InlineObject313) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks`
 
-GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetDeviceSerialOk
+### GetNetworksOk
 
-`func (o *InlineObject313) GetDeviceSerialOk() (*string, bool)`
+`func (o *InlineObject313) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, bool)`
 
-GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSerial
+### SetNetworks
 
-`func (o *InlineObject313) SetDeviceSerial(v string)`
+`func (o *InlineObject313) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks)`
 
-SetDeviceSerial sets DeviceSerial field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasDeviceSerial
 
-`func (o *InlineObject313) HasDeviceSerial() bool`
-
-HasDeviceSerial returns a boolean if a field has been set.
-
-### SetDeviceSerialNil
-
-`func (o *InlineObject313) SetDeviceSerialNil(b bool)`
-
- SetDeviceSerialNil sets the value for DeviceSerial to be an explicit nil
-
-### UnsetDeviceSerial
-`func (o *InlineObject313) UnsetDeviceSerial()`
-
-UnsetDeviceSerial ensures that no value is present for DeviceSerial, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -33,7 +33,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPortsStatus := *openapiclient.NewInlineObject27() // InlineObject27 |  (optional)
+    createDeviceLiveToolsPortsStatus := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -63,7 +63,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPorts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPortsStatus** | [**InlineObject27**](InlineObject27.md) |  | 
+ **createDeviceLiveToolsPortsStatus** | [**InlineObject28**](InlineObject28.md) |  | 
 
 ### Return type
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSpacesIntegrateStatus
 
-> InlineResponse200436 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
+> InlineResponse200453 GetOrganizationSpacesIntegrateStatus(ctx, organizationId).Execute()
 
 Get the status of the Spaces integration in Meraki
 
@@ -256,7 +256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusApi.GetOrganizationSpacesIntegrateStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200436
+    // response from `GetOrganizationSpacesIntegrateStatus`: InlineResponse200453
     fmt.Fprintf(os.Stdout, "Response from `StatusApi.GetOrganizationSpacesIntegrateStatus`: %v\n", resp)
 }
 ```
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200436**](InlineResponse200436.md)
+[**InlineResponse200453**](InlineResponse200453.md)
 
 ### Authorization
 

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **VlanTagging** | Pointer to [**InlineResponse20013InterfacesWan1VlanTagging**](InlineResponse20013InterfacesWan1VlanTagging.md) |  | [optional] 
 **Svis** | Pointer to [**DevicesSerialApplianceUplinksSettingsInterfacesWan1Svis**](DevicesSerialApplianceUplinksSettingsInterfacesWan1Svis.md) |  | [optional] 
 **Pppoe** | Pointer to [**DevicesSerialApplianceUplinksSettingsInterfacesWan1Pppoe**](DevicesSerialApplianceUplinksSettingsInterfacesWan1Pppoe.md) |  | [optional] 
+**Transition** | Pointer to [**DevicesSerialApplianceUplinksSettingsInterfacesWan1Transition**](DevicesSerialApplianceUplinksSettingsInterfacesWan1Transition.md) |  | [optional] 
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetPppoe sets Pppoe field to given value.
 `func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) HasPppoe() bool`
 
 HasPppoe returns a boolean if a field has been set.
+
+### GetTransition
+
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetTransition() DevicesSerialApplianceUplinksSettingsInterfacesWan1Transition`
+
+GetTransition returns the Transition field if non-nil, zero value otherwise.
+
+### GetTransitionOk
+
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) GetTransitionOk() (*DevicesSerialApplianceUplinksSettingsInterfacesWan1Transition, bool)`
+
+GetTransitionOk returns a tuple with the Transition field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTransition
+
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) SetTransition(v DevicesSerialApplianceUplinksSettingsInterfacesWan1Transition)`
+
+SetTransition sets Transition field to given value.
+
+### HasTransition
+
+`func (o *DevicesSerialApplianceUplinksSettingsInterfacesWan1) HasTransition() bool`
+
+HasTransition returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

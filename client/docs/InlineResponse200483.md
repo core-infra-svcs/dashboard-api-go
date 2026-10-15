@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200483Items**](InlineResponse200483Items.md) | List of Catalyst access points information | [optional] 
-**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
+**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
+**Status** | Pointer to **string** | The status of the callback | [optional] 
+**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
+**CreatedBy** | Pointer to [**InlineResponse200483CreatedBy**](InlineResponse200483CreatedBy.md) |  | [optional] 
+**Webhook** | Pointer to [**InlineResponse200483Webhook**](InlineResponse200483Webhook.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200483WithDefaults instantiates a new InlineResponse200483 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetCallbackId
 
-`func (o *InlineResponse200483) GetItems() []InlineResponse200483Items`
+`func (o *InlineResponse200483) GetCallbackId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetCallbackIdOk
 
-`func (o *InlineResponse200483) GetItemsOk() (*[]InlineResponse200483Items, bool)`
+`func (o *InlineResponse200483) GetCallbackIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetCallbackId
 
-`func (o *InlineResponse200483) SetItems(v []InlineResponse200483Items)`
+`func (o *InlineResponse200483) SetCallbackId(v string)`
 
-SetItems sets Items field to given value.
+SetCallbackId sets CallbackId field to given value.
 
-### HasItems
+### HasCallbackId
 
-`func (o *InlineResponse200483) HasItems() bool`
+`func (o *InlineResponse200483) HasCallbackId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasCallbackId returns a boolean if a field has been set.
 
-### GetMeta
+### GetStatus
 
-`func (o *InlineResponse200483) GetMeta() InlineResponse200279Meta`
+`func (o *InlineResponse200483) GetStatus() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetStatusOk
 
-`func (o *InlineResponse200483) GetMetaOk() (*InlineResponse200279Meta, bool)`
+`func (o *InlineResponse200483) GetStatusOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetStatus
 
-`func (o *InlineResponse200483) SetMeta(v InlineResponse200279Meta)`
+`func (o *InlineResponse200483) SetStatus(v string)`
 
-SetMeta sets Meta field to given value.
+SetStatus sets Status field to given value.
 
-### HasMeta
+### HasStatus
 
-`func (o *InlineResponse200483) HasMeta() bool`
+`func (o *InlineResponse200483) HasStatus() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetErrors
+
+`func (o *InlineResponse200483) GetErrors() []string`
+
+GetErrors returns the Errors field if non-nil, zero value otherwise.
+
+### GetErrorsOk
+
+`func (o *InlineResponse200483) GetErrorsOk() (*[]string, bool)`
+
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetErrors
+
+`func (o *InlineResponse200483) SetErrors(v []string)`
+
+SetErrors sets Errors field to given value.
+
+### HasErrors
+
+`func (o *InlineResponse200483) HasErrors() bool`
+
+HasErrors returns a boolean if a field has been set.
+
+### GetCreatedBy
+
+`func (o *InlineResponse200483) GetCreatedBy() InlineResponse200483CreatedBy`
+
+GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
+
+### GetCreatedByOk
+
+`func (o *InlineResponse200483) GetCreatedByOk() (*InlineResponse200483CreatedBy, bool)`
+
+GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedBy
+
+`func (o *InlineResponse200483) SetCreatedBy(v InlineResponse200483CreatedBy)`
+
+SetCreatedBy sets CreatedBy field to given value.
+
+### HasCreatedBy
+
+`func (o *InlineResponse200483) HasCreatedBy() bool`
+
+HasCreatedBy returns a boolean if a field has been set.
+
+### GetWebhook
+
+`func (o *InlineResponse200483) GetWebhook() InlineResponse200483Webhook`
+
+GetWebhook returns the Webhook field if non-nil, zero value otherwise.
+
+### GetWebhookOk
+
+`func (o *InlineResponse200483) GetWebhookOk() (*InlineResponse200483Webhook, bool)`
+
+GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWebhook
+
+`func (o *InlineResponse200483) SetWebhook(v InlineResponse200483Webhook)`
+
+SetWebhook sets Webhook field to given value.
+
+### HasWebhook
+
+`func (o *InlineResponse200483) HasWebhook() bool`
+
+HasWebhook returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

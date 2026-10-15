@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | **[]string** | A list of ports to cycle. For Catalyst switches, IOS interface names are also supported, such as \&quot;GigabitEthernet1/0/8\&quot;, \&quot;Gi1/0/8\&quot;, or even \&quot;1/0/8\&quot;. | 
+**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject26
 
-`func NewInlineObject26(ports []string, ) *InlineObject26`
+`func NewInlineObject26() *InlineObject26`
 
 NewInlineObject26 instantiates a new InlineObject26 object
 This constructor will assign default values to properties that have it defined,
@@ -26,25 +26,30 @@ NewInlineObject26WithDefaults instantiates a new InlineObject26 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetCount
 
-`func (o *InlineObject26) GetPorts() []string`
+`func (o *InlineObject26) GetCount() int32`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetCountOk
 
-`func (o *InlineObject26) GetPortsOk() (*[]string, bool)`
+`func (o *InlineObject26) GetCountOk() (*int32, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetCount
 
-`func (o *InlineObject26) SetPorts(v []string)`
+`func (o *InlineObject26) SetCount(v int32)`
 
-SetPorts sets Ports field to given value.
+SetCount sets Count field to given value.
 
+### HasCount
+
+`func (o *InlineObject26) HasCount() bool`
+
+HasCount returns a boolean if a field has been set.
 
 ### GetCallback
 

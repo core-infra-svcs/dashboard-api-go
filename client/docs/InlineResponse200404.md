@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200404Items**](InlineResponse200404Items.md) | Array of network move operations | [optional] 
-**Meta** | Pointer to [**InlineResponse200404Meta**](InlineResponse200404Meta.md) |  | [optional] 
+**ClaimId** | Pointer to **string** | The secure unique order claim number | [optional] 
+**Resolution** | Pointer to [**InlineResponse200404Resolution**](InlineResponse200404Resolution.md) |  | [optional] 
+**Number** | Pointer to **string** | Order Number | [optional] 
+**Shipping** | Pointer to [**InlineResponse200404Shipping**](InlineResponse200404Shipping.md) |  | [optional] 
+**Subscriptions** | Pointer to [**[]InlineResponse200403Subscriptions**](InlineResponse200403Subscriptions.md) | All subscriptions contained in this order | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200404WithDefaults instantiates a new InlineResponse200404 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetClaimId
 
-`func (o *InlineResponse200404) GetItems() []InlineResponse200404Items`
+`func (o *InlineResponse200404) GetClaimId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetClaimIdOk
 
-`func (o *InlineResponse200404) GetItemsOk() (*[]InlineResponse200404Items, bool)`
+`func (o *InlineResponse200404) GetClaimIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetClaimId
 
-`func (o *InlineResponse200404) SetItems(v []InlineResponse200404Items)`
+`func (o *InlineResponse200404) SetClaimId(v string)`
 
-SetItems sets Items field to given value.
+SetClaimId sets ClaimId field to given value.
 
-### HasItems
+### HasClaimId
 
-`func (o *InlineResponse200404) HasItems() bool`
+`func (o *InlineResponse200404) HasClaimId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasClaimId returns a boolean if a field has been set.
 
-### GetMeta
+### GetResolution
 
-`func (o *InlineResponse200404) GetMeta() InlineResponse200404Meta`
+`func (o *InlineResponse200404) GetResolution() InlineResponse200404Resolution`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetResolution returns the Resolution field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetResolutionOk
 
-`func (o *InlineResponse200404) GetMetaOk() (*InlineResponse200404Meta, bool)`
+`func (o *InlineResponse200404) GetResolutionOk() (*InlineResponse200404Resolution, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetResolution
 
-`func (o *InlineResponse200404) SetMeta(v InlineResponse200404Meta)`
+`func (o *InlineResponse200404) SetResolution(v InlineResponse200404Resolution)`
 
-SetMeta sets Meta field to given value.
+SetResolution sets Resolution field to given value.
 
-### HasMeta
+### HasResolution
 
-`func (o *InlineResponse200404) HasMeta() bool`
+`func (o *InlineResponse200404) HasResolution() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasResolution returns a boolean if a field has been set.
+
+### GetNumber
+
+`func (o *InlineResponse200404) GetNumber() string`
+
+GetNumber returns the Number field if non-nil, zero value otherwise.
+
+### GetNumberOk
+
+`func (o *InlineResponse200404) GetNumberOk() (*string, bool)`
+
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumber
+
+`func (o *InlineResponse200404) SetNumber(v string)`
+
+SetNumber sets Number field to given value.
+
+### HasNumber
+
+`func (o *InlineResponse200404) HasNumber() bool`
+
+HasNumber returns a boolean if a field has been set.
+
+### GetShipping
+
+`func (o *InlineResponse200404) GetShipping() InlineResponse200404Shipping`
+
+GetShipping returns the Shipping field if non-nil, zero value otherwise.
+
+### GetShippingOk
+
+`func (o *InlineResponse200404) GetShippingOk() (*InlineResponse200404Shipping, bool)`
+
+GetShippingOk returns a tuple with the Shipping field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetShipping
+
+`func (o *InlineResponse200404) SetShipping(v InlineResponse200404Shipping)`
+
+SetShipping sets Shipping field to given value.
+
+### HasShipping
+
+`func (o *InlineResponse200404) HasShipping() bool`
+
+HasShipping returns a boolean if a field has been set.
+
+### GetSubscriptions
+
+`func (o *InlineResponse200404) GetSubscriptions() []InlineResponse200403Subscriptions`
+
+GetSubscriptions returns the Subscriptions field if non-nil, zero value otherwise.
+
+### GetSubscriptionsOk
+
+`func (o *InlineResponse200404) GetSubscriptionsOk() (*[]InlineResponse200403Subscriptions, bool)`
+
+GetSubscriptionsOk returns a tuple with the Subscriptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubscriptions
+
+`func (o *InlineResponse200404) SetSubscriptions(v []InlineResponse200403Subscriptions)`
+
+SetSubscriptions sets Subscriptions field to given value.
+
+### HasSubscriptions
+
+`func (o *InlineResponse200404) HasSubscriptions() bool`
+
+HasSubscriptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

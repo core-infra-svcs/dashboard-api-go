@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of packet capture files | [optional] 
-**Remaining** | Pointer to **int32** | Remaining number of packet capture files | [optional] 
+**Total** | Pointer to **int32** | Total number of devices available | [optional] 
+**Remaining** | Pointer to **int32** | Remaining number of devices (for paginated response) | [optional] 
 
 ## Methods
 

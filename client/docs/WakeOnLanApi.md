@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject32(int32(123), "Mac_example") // InlineObject32 | 
+    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject33(int32(123), "Mac_example") // InlineObject33 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsWakeO
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsWakeOnLan** | [**InlineObject32**](InlineObject32.md) |  | 
+ **createDeviceLiveToolsWakeOnLan** | [**InlineObject33**](InlineObject33.md) |  | 
 
 ### Return type
 

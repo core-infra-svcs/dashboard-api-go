@@ -6,8 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ServerId** | Pointer to **string** | Unique ID of the RADIUS server | [optional] 
 **OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. This value will be empty if this RADIUS server is not an organization wide RADIUS server | [optional] 
-**Host** | Pointer to **string** | Public IP address of the RADIUS server | [optional] 
-**Port** | Pointer to **int32** | UDP port that the RADIUS server listens on for access requests | [optional] 
+**Host** | Pointer to **string** | Public IP address or fully-qualified domain name of the RADIUS server | [optional] 
+**Port** | Pointer to **int32** | Port that the RADIUS server listens on for access requests | [optional] 
+**Radsec** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadsec**](NetworksNetworkIdSwitchAccessPoliciesRadsec.md) |  | [optional] 
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetPort sets Port field to given value.
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers) HasPort() bool`
 
 HasPort returns a boolean if a field has been set.
+
+### GetRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers) GetRadsec() NetworksNetworkIdSwitchAccessPoliciesRadsec`
+
+GetRadsec returns the Radsec field if non-nil, zero value otherwise.
+
+### GetRadsecOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers) GetRadsecOk() (*NetworksNetworkIdSwitchAccessPoliciesRadsec, bool)`
+
+GetRadsecOk returns a tuple with the Radsec field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers) SetRadsec(v NetworksNetworkIdSwitchAccessPoliciesRadsec)`
+
+SetRadsec sets Radsec field to given value.
+
+### HasRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers) HasRadsec() bool`
+
+HasRadsec returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

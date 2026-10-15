@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable or disable umbrella protection | 
+**Policy** | [**NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy**](NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy.md) |  | 
 
 ## Methods
 
 ### NewInlineObject91
 
-`func NewInlineObject91(enabled bool, ) *InlineObject91`
+`func NewInlineObject91(policy NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy, ) *InlineObject91`
 
 NewInlineObject91 instantiates a new InlineObject91 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject91WithDefaults instantiates a new InlineObject91 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetPolicy
 
-`func (o *InlineObject91) GetEnabled() bool`
+`func (o *InlineObject91) GetPolicy() NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetPolicyOk
 
-`func (o *InlineObject91) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject91) GetPolicyOk() (*NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetPolicy
 
-`func (o *InlineObject91) SetEnabled(v bool)`
+`func (o *InlineObject91) SetPolicy(v NetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy)`
 
-SetEnabled sets Enabled field to given value.
+SetPolicy sets Policy field to given value.
 
 
 

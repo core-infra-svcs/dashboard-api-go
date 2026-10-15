@@ -103,7 +103,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceCellularUplinksBandsMasksUpdate := *openapiclient.NewInlineObject16("Slot_example", "Type_example", []string{"Masked_example"}) // InlineObject16 | 
+    createDeviceCellularUplinksBandsMasksUpdate := *openapiclient.NewInlineObject17("Slot_example", "Type_example", []string{"Masked_example"}) // InlineObject17 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -133,7 +133,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceCellularUplink
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceCellularUplinksBandsMasksUpdate** | [**InlineObject16**](InlineObject16.md) |  | 
+ **createDeviceCellularUplinksBandsMasksUpdate** | [**InlineObject17**](InlineObject17.md) |  | 
 
 ### Return type
 

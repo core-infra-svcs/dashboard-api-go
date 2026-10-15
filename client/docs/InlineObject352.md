@@ -4,13 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
-**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
-**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
-**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
-**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
-**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
-**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
+**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
+**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
+**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;). Used only with deprecated &#x60;type&#x3D;ipAndMask&#x60;. | [optional] 
+**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;). Used only with deprecated &#x60;type&#x3D;ipAndMask&#x60;. | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to | [optional] 
 
 ## Methods
 
@@ -31,180 +30,155 @@ NewInlineObject352WithDefaults instantiates a new InlineObject352 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetV2cEnabled
+### GetName
 
-`func (o *InlineObject352) GetV2cEnabled() bool`
+`func (o *InlineObject352) GetName() string`
 
-GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetV2cEnabledOk
+### GetNameOk
 
-`func (o *InlineObject352) GetV2cEnabledOk() (*bool, bool)`
+`func (o *InlineObject352) GetNameOk() (*string, bool)`
 
-GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV2cEnabled
+### SetName
 
-`func (o *InlineObject352) SetV2cEnabled(v bool)`
+`func (o *InlineObject352) SetName(v string)`
 
-SetV2cEnabled sets V2cEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasV2cEnabled
+### HasName
 
-`func (o *InlineObject352) HasV2cEnabled() bool`
+`func (o *InlineObject352) HasName() bool`
 
-HasV2cEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetV3Enabled
+### GetCidr
 
-`func (o *InlineObject352) GetV3Enabled() bool`
+`func (o *InlineObject352) GetCidr() string`
 
-GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetV3EnabledOk
+### GetCidrOk
 
-`func (o *InlineObject352) GetV3EnabledOk() (*bool, bool)`
+`func (o *InlineObject352) GetCidrOk() (*string, bool)`
 
-GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3Enabled
+### SetCidr
 
-`func (o *InlineObject352) SetV3Enabled(v bool)`
+`func (o *InlineObject352) SetCidr(v string)`
 
-SetV3Enabled sets V3Enabled field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasV3Enabled
+### HasCidr
 
-`func (o *InlineObject352) HasV3Enabled() bool`
+`func (o *InlineObject352) HasCidr() bool`
 
-HasV3Enabled returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetV3AuthMode
+### GetFqdn
 
-`func (o *InlineObject352) GetV3AuthMode() string`
+`func (o *InlineObject352) GetFqdn() string`
 
-GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
+GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
 
-### GetV3AuthModeOk
+### GetFqdnOk
 
-`func (o *InlineObject352) GetV3AuthModeOk() (*string, bool)`
+`func (o *InlineObject352) GetFqdnOk() (*string, bool)`
 
-GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
+GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3AuthMode
+### SetFqdn
 
-`func (o *InlineObject352) SetV3AuthMode(v string)`
+`func (o *InlineObject352) SetFqdn(v string)`
 
-SetV3AuthMode sets V3AuthMode field to given value.
+SetFqdn sets Fqdn field to given value.
 
-### HasV3AuthMode
+### HasFqdn
 
-`func (o *InlineObject352) HasV3AuthMode() bool`
+`func (o *InlineObject352) HasFqdn() bool`
 
-HasV3AuthMode returns a boolean if a field has been set.
+HasFqdn returns a boolean if a field has been set.
 
-### GetV3AuthPass
+### GetMask
 
-`func (o *InlineObject352) GetV3AuthPass() string`
+`func (o *InlineObject352) GetMask() string`
 
-GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetV3AuthPassOk
+### GetMaskOk
 
-`func (o *InlineObject352) GetV3AuthPassOk() (*string, bool)`
+`func (o *InlineObject352) GetMaskOk() (*string, bool)`
 
-GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3AuthPass
+### SetMask
 
-`func (o *InlineObject352) SetV3AuthPass(v string)`
+`func (o *InlineObject352) SetMask(v string)`
 
-SetV3AuthPass sets V3AuthPass field to given value.
+SetMask sets Mask field to given value.
 
-### HasV3AuthPass
+### HasMask
 
-`func (o *InlineObject352) HasV3AuthPass() bool`
+`func (o *InlineObject352) HasMask() bool`
 
-HasV3AuthPass returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
 
-### GetV3PrivMode
+### GetIp
 
-`func (o *InlineObject352) GetV3PrivMode() string`
+`func (o *InlineObject352) GetIp() string`
 
-GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetV3PrivModeOk
+### GetIpOk
 
-`func (o *InlineObject352) GetV3PrivModeOk() (*string, bool)`
+`func (o *InlineObject352) GetIpOk() (*string, bool)`
 
-GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3PrivMode
+### SetIp
 
-`func (o *InlineObject352) SetV3PrivMode(v string)`
+`func (o *InlineObject352) SetIp(v string)`
 
-SetV3PrivMode sets V3PrivMode field to given value.
+SetIp sets Ip field to given value.
 
-### HasV3PrivMode
+### HasIp
 
-`func (o *InlineObject352) HasV3PrivMode() bool`
+`func (o *InlineObject352) HasIp() bool`
 
-HasV3PrivMode returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
 
-### GetV3PrivPass
+### GetGroupIds
 
-`func (o *InlineObject352) GetV3PrivPass() string`
+`func (o *InlineObject352) GetGroupIds() []string`
 
-GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
 
-### GetV3PrivPassOk
+### GetGroupIdsOk
 
-`func (o *InlineObject352) GetV3PrivPassOk() (*string, bool)`
+`func (o *InlineObject352) GetGroupIdsOk() (*[]string, bool)`
 
-GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3PrivPass
+### SetGroupIds
 
-`func (o *InlineObject352) SetV3PrivPass(v string)`
+`func (o *InlineObject352) SetGroupIds(v []string)`
 
-SetV3PrivPass sets V3PrivPass field to given value.
+SetGroupIds sets GroupIds field to given value.
 
-### HasV3PrivPass
+### HasGroupIds
 
-`func (o *InlineObject352) HasV3PrivPass() bool`
+`func (o *InlineObject352) HasGroupIds() bool`
 
-HasV3PrivPass returns a boolean if a field has been set.
-
-### GetPeerIps
-
-`func (o *InlineObject352) GetPeerIps() []string`
-
-GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
-
-### GetPeerIpsOk
-
-`func (o *InlineObject352) GetPeerIpsOk() (*[]string, bool)`
-
-GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPeerIps
-
-`func (o *InlineObject352) SetPeerIps(v []string)`
-
-SetPeerIps sets PeerIps field to given value.
-
-### HasPeerIps
-
-`func (o *InlineObject352) HasPeerIps() bool`
-
-HasPeerIps returns a boolean if a field has been set.
+HasGroupIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

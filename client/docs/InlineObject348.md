@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SiteId** | Pointer to **string** | Site ID of the site to update | [optional] 
-**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the policy | [optional] 
+**Description** | Pointer to **string** | Description of the policy | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject348WithDefaults instantiates a new InlineObject348 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSiteId
+### GetName
 
-`func (o *InlineObject348) GetSiteId() string`
+`func (o *InlineObject348) GetName() string`
 
-GetSiteId returns the SiteId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSiteIdOk
+### GetNameOk
 
-`func (o *InlineObject348) GetSiteIdOk() (*string, bool)`
+`func (o *InlineObject348) GetNameOk() (*string, bool)`
 
-GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSiteId
+### SetName
 
-`func (o *InlineObject348) SetSiteId(v string)`
+`func (o *InlineObject348) SetName(v string)`
 
-SetSiteId sets SiteId field to given value.
+SetName sets Name field to given value.
 
-### HasSiteId
+### HasName
 
-`func (o *InlineObject348) HasSiteId() bool`
+`func (o *InlineObject348) HasName() bool`
 
-HasSiteId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRouting
+### GetDescription
 
-`func (o *InlineObject348) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
+`func (o *InlineObject348) GetDescription() string`
 
-GetRouting returns the Routing field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetRoutingOk
+### GetDescriptionOk
 
-`func (o *InlineObject348) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
+`func (o *InlineObject348) GetDescriptionOk() (*string, bool)`
 
-GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRouting
+### SetDescription
 
-`func (o *InlineObject348) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
+`func (o *InlineObject348) SetDescription(v string)`
 
-SetRouting sets Routing field to given value.
+SetDescription sets Description field to given value.
 
-### HasRouting
+### HasDescription
 
-`func (o *InlineObject348) HasRouting() bool`
+`func (o *InlineObject348) HasDescription() bool`
 
-HasRouting returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

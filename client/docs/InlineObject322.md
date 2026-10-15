@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdNetworksMovesNetwork**](OrganizationsOrganizationIdNetworksMovesNetwork.md) |  | 
-**Organizations** | [**OrganizationsOrganizationIdNetworksMovesOrganizations**](OrganizationsOrganizationIdNetworksMovesOrganizations.md) |  | 
-**Simulate** | Pointer to **bool** | If true, simulates the network move and validates the operation without committing changes. The network will remain in the source organization. | [optional] 
+**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
+**LicenseId** | **string** | The ID of the SM license to move the seats from | 
+**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject322
 
-`func NewInlineObject322(network OrganizationsOrganizationIdNetworksMovesNetwork, organizations OrganizationsOrganizationIdNetworksMovesOrganizations, ) *InlineObject322`
+`func NewInlineObject322(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject322`
 
 NewInlineObject322 instantiates a new InlineObject322 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +27,65 @@ NewInlineObject322WithDefaults instantiates a new InlineObject322 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetDestOrganizationId
 
-`func (o *InlineObject322) GetNetwork() OrganizationsOrganizationIdNetworksMovesNetwork`
+`func (o *InlineObject322) GetDestOrganizationId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject322) GetNetworkOk() (*OrganizationsOrganizationIdNetworksMovesNetwork, bool)`
+`func (o *InlineObject322) GetDestOrganizationIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetDestOrganizationId
 
-`func (o *InlineObject322) SetNetwork(v OrganizationsOrganizationIdNetworksMovesNetwork)`
+`func (o *InlineObject322) SetDestOrganizationId(v string)`
 
-SetNetwork sets Network field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
 
-### GetOrganizations
+### GetLicenseId
 
-`func (o *InlineObject322) GetOrganizations() OrganizationsOrganizationIdNetworksMovesOrganizations`
+`func (o *InlineObject322) GetLicenseId() string`
 
-GetOrganizations returns the Organizations field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetOrganizationsOk
+### GetLicenseIdOk
 
-`func (o *InlineObject322) GetOrganizationsOk() (*OrganizationsOrganizationIdNetworksMovesOrganizations, bool)`
+`func (o *InlineObject322) GetLicenseIdOk() (*string, bool)`
 
-GetOrganizationsOk returns a tuple with the Organizations field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizations
+### SetLicenseId
 
-`func (o *InlineObject322) SetOrganizations(v OrganizationsOrganizationIdNetworksMovesOrganizations)`
+`func (o *InlineObject322) SetLicenseId(v string)`
 
-SetOrganizations sets Organizations field to given value.
+SetLicenseId sets LicenseId field to given value.
 
 
-### GetSimulate
+### GetSeatCount
 
-`func (o *InlineObject322) GetSimulate() bool`
+`func (o *InlineObject322) GetSeatCount() int32`
 
-GetSimulate returns the Simulate field if non-nil, zero value otherwise.
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
 
-### GetSimulateOk
+### GetSeatCountOk
 
-`func (o *InlineObject322) GetSimulateOk() (*bool, bool)`
+`func (o *InlineObject322) GetSeatCountOk() (*int32, bool)`
 
-GetSimulateOk returns a tuple with the Simulate field if it's non-nil, zero value otherwise
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimulate
+### SetSeatCount
 
-`func (o *InlineObject322) SetSimulate(v bool)`
+`func (o *InlineObject322) SetSeatCount(v int32)`
 
-SetSimulate sets Simulate field to given value.
+SetSeatCount sets SeatCount field to given value.
 
-### HasSimulate
-
-`func (o *InlineObject322) HasSimulate() bool`
-
-HasSimulate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

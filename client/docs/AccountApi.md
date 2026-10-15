@@ -31,7 +31,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    connectNetworkApplianceUmbrellaAccount := *openapiclient.NewInlineObject87(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaAccountConnectApi("Key_example", "Secret_example")) // InlineObject87 | 
+    connectNetworkApplianceUmbrellaAccount := *openapiclient.NewInlineObject88(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaAccountConnectApi("Key_example", "Secret_example")) // InlineObject88 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiConnectNetworkApplianceUmb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **connectNetworkApplianceUmbrellaAccount** | [**InlineObject87**](InlineObject87.md) |  | 
+ **connectNetworkApplianceUmbrellaAccount** | [**InlineObject88**](InlineObject88.md) |  | 
 
 ### Return type
 

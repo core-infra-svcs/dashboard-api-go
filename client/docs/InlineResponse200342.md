@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**Items** | [**[]InlineResponse200342Items**](InlineResponse200342Items.md) | Latest CPU load data by Campus Gateway device | 
+**Meta** | [**InlineResponse200342Meta**](InlineResponse200342Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200342
 
-`func NewInlineResponse200342() *InlineResponse200342`
+`func NewInlineResponse200342(items []InlineResponse200342Items, meta InlineResponse200342Meta, ) *InlineResponse200342`
 
 NewInlineResponse200342 instantiates a new InlineResponse200342 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,45 @@ NewInlineResponse200342WithDefaults instantiates a new InlineResponse200342 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetItems
 
-`func (o *InlineResponse200342) GetSwitchProfileId() string`
+`func (o *InlineResponse200342) GetItems() []InlineResponse200342Items`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200342) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200342) GetItemsOk() (*[]InlineResponse200342Items, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetItems
 
-`func (o *InlineResponse200342) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200342) SetItems(v []InlineResponse200342Items)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetItems sets Items field to given value.
 
-### HasSwitchProfileId
 
-`func (o *InlineResponse200342) HasSwitchProfileId() bool`
+### GetMeta
 
-HasSwitchProfileId returns a boolean if a field has been set.
+`func (o *InlineResponse200342) GetMeta() InlineResponse200342Meta`
 
-### GetName
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200342) GetName() string`
+### GetMetaOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200342) GetMetaOk() (*InlineResponse200342Meta, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200342) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200342) SetName(v string)`
+`func (o *InlineResponse200342) SetMeta(v InlineResponse200342Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
-
-`func (o *InlineResponse200342) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200342) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200342) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200342) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200342) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

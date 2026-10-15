@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Interfaces** | [**DevicesSerialApplianceUplinksSettingsInterfaces**](DevicesSerialApplianceUplinksSettingsInterfaces.md) |  | 
+**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
+**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject6
 
-`func NewInlineObject6(interfaces DevicesSerialApplianceUplinksSettingsInterfaces, ) *InlineObject6`
+`func NewInlineObject6() *InlineObject6`
 
 NewInlineObject6 instantiates a new InlineObject6 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,90 @@ NewInlineObject6WithDefaults instantiates a new InlineObject6 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaces
+### GetRfProfileId
 
-`func (o *InlineObject6) GetInterfaces() DevicesSerialApplianceUplinksSettingsInterfaces`
+`func (o *InlineObject6) GetRfProfileId() string`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetRfProfileIdOk
 
-`func (o *InlineObject6) GetInterfacesOk() (*DevicesSerialApplianceUplinksSettingsInterfaces, bool)`
+`func (o *InlineObject6) GetRfProfileIdOk() (*string, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetRfProfileId
 
-`func (o *InlineObject6) SetInterfaces(v DevicesSerialApplianceUplinksSettingsInterfaces)`
+`func (o *InlineObject6) SetRfProfileId(v string)`
 
-SetInterfaces sets Interfaces field to given value.
+SetRfProfileId sets RfProfileId field to given value.
 
+### HasRfProfileId
+
+`func (o *InlineObject6) HasRfProfileId() bool`
+
+HasRfProfileId returns a boolean if a field has been set.
+
+### SetRfProfileIdNil
+
+`func (o *InlineObject6) SetRfProfileIdNil(b bool)`
+
+ SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
+
+### UnsetRfProfileId
+`func (o *InlineObject6) UnsetRfProfileId()`
+
+UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
+### GetTwoFourGhzSettings
+
+`func (o *InlineObject6) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
+
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+
+### GetTwoFourGhzSettingsOk
+
+`func (o *InlineObject6) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
+
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTwoFourGhzSettings
+
+`func (o *InlineObject6) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
+
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+
+### HasTwoFourGhzSettings
+
+`func (o *InlineObject6) HasTwoFourGhzSettings() bool`
+
+HasTwoFourGhzSettings returns a boolean if a field has been set.
+
+### GetFiveGhzSettings
+
+`func (o *InlineObject6) GetFiveGhzSettings() DevicesSerialApplianceRadioSettingsFiveGhzSettings`
+
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+
+### GetFiveGhzSettingsOk
+
+`func (o *InlineObject6) GetFiveGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsFiveGhzSettings, bool)`
+
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFiveGhzSettings
+
+`func (o *InlineObject6) SetFiveGhzSettings(v DevicesSerialApplianceRadioSettingsFiveGhzSettings)`
+
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
+
+### HasFiveGhzSettings
+
+`func (o *InlineObject6) HasFiveGhzSettings() bool`
+
+HasFiveGhzSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

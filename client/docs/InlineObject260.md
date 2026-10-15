@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
+**Enabled** | **bool** | Boolean indicating whether VRFs are enabled for the organization. | 
 
 ## Methods
 
 ### NewInlineObject260
 
-`func NewInlineObject260(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject260`
+`func NewInlineObject260(enabled bool, ) *InlineObject260`
 
 NewInlineObject260 instantiates a new InlineObject260 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject260WithDefaults instantiates a new InlineObject260 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetEnabled
 
-`func (o *InlineObject260) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
+`func (o *InlineObject260) GetEnabled() bool`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetEnabledOk
 
-`func (o *InlineObject260) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
+`func (o *InlineObject260) GetEnabledOk() (*bool, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetEnabled
 
-`func (o *InlineObject260) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
+`func (o *InlineObject260) SetEnabled(v bool)`
 
-SetPeers sets Peers field to given value.
+SetEnabled sets Enabled field to given value.
 
 
 

@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
-**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
-**Reasons** | [**[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons**](NetworksNetworkIdFirmwareUpgradesRollbacksReasons.md) | Reasons for the rollback | 
-**ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksToVersion**](NetworksNetworkIdFirmwareUpgradesRollbacksToVersion.md) |  | [optional] 
-**Predownload** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksPredownload**](NetworksNetworkIdFirmwareUpgradesRollbacksPredownload.md) |  | [optional] 
+**UpgradeWindow** | Pointer to [**NetworksNetworkIdFirmwareUpgradesUpgradeWindow**](NetworksNetworkIdFirmwareUpgradesUpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
+**FeatureLossAcknowledgements** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements**](NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements.md) | Acknowledges the target version has removed certain features that the network is currently using. | [optional] 
 
 ## Methods
 
 ### NewInlineObject119
 
-`func NewInlineObject119(reasons []NetworksNetworkIdFirmwareUpgradesRollbacksReasons, ) *InlineObject119`
+`func NewInlineObject119() *InlineObject119`
 
 NewInlineObject119 instantiates a new InlineObject119 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +28,105 @@ NewInlineObject119WithDefaults instantiates a new InlineObject119 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProduct
+### GetUpgradeWindow
 
-`func (o *InlineObject119) GetProduct() string`
+`func (o *InlineObject119) GetUpgradeWindow() NetworksNetworkIdFirmwareUpgradesUpgradeWindow`
 
-GetProduct returns the Product field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetProductOk
+### GetUpgradeWindowOk
 
-`func (o *InlineObject119) GetProductOk() (*string, bool)`
+`func (o *InlineObject119) GetUpgradeWindowOk() (*NetworksNetworkIdFirmwareUpgradesUpgradeWindow, bool)`
 
-GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProduct
+### SetUpgradeWindow
 
-`func (o *InlineObject119) SetProduct(v string)`
+`func (o *InlineObject119) SetUpgradeWindow(v NetworksNetworkIdFirmwareUpgradesUpgradeWindow)`
 
-SetProduct sets Product field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasProduct
+### HasUpgradeWindow
 
-`func (o *InlineObject119) HasProduct() bool`
+`func (o *InlineObject119) HasUpgradeWindow() bool`
 
-HasProduct returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetTime
+### GetTimezone
 
-`func (o *InlineObject119) GetTime() time.Time`
+`func (o *InlineObject119) GetTimezone() string`
 
-GetTime returns the Time field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetTimeOk
+### GetTimezoneOk
 
-`func (o *InlineObject119) GetTimeOk() (*time.Time, bool)`
+`func (o *InlineObject119) GetTimezoneOk() (*string, bool)`
 
-GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTime
+### SetTimezone
 
-`func (o *InlineObject119) SetTime(v time.Time)`
+`func (o *InlineObject119) SetTimezone(v string)`
 
-SetTime sets Time field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasTime
+### HasTimezone
 
-`func (o *InlineObject119) HasTime() bool`
+`func (o *InlineObject119) HasTimezone() bool`
 
-HasTime returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetReasons
+### GetProducts
 
-`func (o *InlineObject119) GetReasons() []NetworksNetworkIdFirmwareUpgradesRollbacksReasons`
+`func (o *InlineObject119) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
 
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetReasonsOk
+### GetProductsOk
 
-`func (o *InlineObject119) GetReasonsOk() (*[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons, bool)`
+`func (o *InlineObject119) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
 
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReasons
+### SetProducts
 
-`func (o *InlineObject119) SetReasons(v []NetworksNetworkIdFirmwareUpgradesRollbacksReasons)`
+`func (o *InlineObject119) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
 
-SetReasons sets Reasons field to given value.
+SetProducts sets Products field to given value.
 
+### HasProducts
 
-### GetToVersion
+`func (o *InlineObject119) HasProducts() bool`
 
-`func (o *InlineObject119) GetToVersion() NetworksNetworkIdFirmwareUpgradesRollbacksToVersion`
+HasProducts returns a boolean if a field has been set.
 
-GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
+### GetFeatureLossAcknowledgements
 
-### GetToVersionOk
+`func (o *InlineObject119) GetFeatureLossAcknowledgements() []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements`
 
-`func (o *InlineObject119) GetToVersionOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksToVersion, bool)`
+GetFeatureLossAcknowledgements returns the FeatureLossAcknowledgements field if non-nil, zero value otherwise.
 
-GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
+### GetFeatureLossAcknowledgementsOk
+
+`func (o *InlineObject119) GetFeatureLossAcknowledgementsOk() (*[]NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements, bool)`
+
+GetFeatureLossAcknowledgementsOk returns a tuple with the FeatureLossAcknowledgements field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetToVersion
+### SetFeatureLossAcknowledgements
 
-`func (o *InlineObject119) SetToVersion(v NetworksNetworkIdFirmwareUpgradesRollbacksToVersion)`
+`func (o *InlineObject119) SetFeatureLossAcknowledgements(v []NetworksNetworkIdFirmwareUpgradesFeatureLossAcknowledgements)`
 
-SetToVersion sets ToVersion field to given value.
+SetFeatureLossAcknowledgements sets FeatureLossAcknowledgements field to given value.
 
-### HasToVersion
+### HasFeatureLossAcknowledgements
 
-`func (o *InlineObject119) HasToVersion() bool`
+`func (o *InlineObject119) HasFeatureLossAcknowledgements() bool`
 
-HasToVersion returns a boolean if a field has been set.
-
-### GetPredownload
-
-`func (o *InlineObject119) GetPredownload() NetworksNetworkIdFirmwareUpgradesRollbacksPredownload`
-
-GetPredownload returns the Predownload field if non-nil, zero value otherwise.
-
-### GetPredownloadOk
-
-`func (o *InlineObject119) GetPredownloadOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksPredownload, bool)`
-
-GetPredownloadOk returns a tuple with the Predownload field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPredownload
-
-`func (o *InlineObject119) SetPredownload(v NetworksNetworkIdFirmwareUpgradesRollbacksPredownload)`
-
-SetPredownload sets Predownload field to given value.
-
-### HasPredownload
-
-`func (o *InlineObject119) HasPredownload() bool`
-
-HasPredownload returns a boolean if a field has been set.
+HasFeatureLossAcknowledgements returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
-**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
+**Name** | **string** | Name of the Dashboard branding policy. | 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**Appearance** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAppearance**](OrganizationsOrganizationIdBrandingPoliciesAppearance.md) |  | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo1**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject277
 
-`func NewInlineObject277() *InlineObject277`
+`func NewInlineObject277(name string, ) *InlineObject277`
 
 NewInlineObject277 instantiates a new InlineObject277 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +30,150 @@ NewInlineObject277WithDefaults instantiates a new InlineObject277 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTitle
+### GetName
 
-`func (o *InlineObject277) GetTitle() string`
+`func (o *InlineObject277) GetName() string`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetNameOk
 
-`func (o *InlineObject277) GetTitleOk() (*string, bool)`
+`func (o *InlineObject277) GetNameOk() (*string, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetName
 
-`func (o *InlineObject277) SetTitle(v string)`
+`func (o *InlineObject277) SetName(v string)`
 
-SetTitle sets Title field to given value.
+SetName sets Name field to given value.
 
-### HasTitle
 
-`func (o *InlineObject277) HasTitle() bool`
+### GetEnabled
 
-HasTitle returns a boolean if a field has been set.
+`func (o *InlineObject277) GetEnabled() bool`
 
-### GetApiKey
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-`func (o *InlineObject277) GetApiKey() string`
+### GetEnabledOk
 
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
+`func (o *InlineObject277) GetEnabledOk() (*bool, bool)`
 
-### GetApiKeyOk
-
-`func (o *InlineObject277) GetApiKeyOk() (*string, bool)`
-
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApiKey
+### SetEnabled
 
-`func (o *InlineObject277) SetApiKey(v string)`
+`func (o *InlineObject277) SetEnabled(v bool)`
 
-SetApiKey sets ApiKey field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasApiKey
+### HasEnabled
 
-`func (o *InlineObject277) HasApiKey() bool`
+`func (o *InlineObject277) HasEnabled() bool`
 
-HasApiKey returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetAppearance
+
+`func (o *InlineObject277) GetAppearance() OrganizationsOrganizationIdBrandingPoliciesAppearance`
+
+GetAppearance returns the Appearance field if non-nil, zero value otherwise.
+
+### GetAppearanceOk
+
+`func (o *InlineObject277) GetAppearanceOk() (*OrganizationsOrganizationIdBrandingPoliciesAppearance, bool)`
+
+GetAppearanceOk returns a tuple with the Appearance field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppearance
+
+`func (o *InlineObject277) SetAppearance(v OrganizationsOrganizationIdBrandingPoliciesAppearance)`
+
+SetAppearance sets Appearance field to given value.
+
+### HasAppearance
+
+`func (o *InlineObject277) HasAppearance() bool`
+
+HasAppearance returns a boolean if a field has been set.
+
+### GetAdminSettings
+
+`func (o *InlineObject277) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+
+### GetAdminSettingsOk
+
+`func (o *InlineObject277) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdminSettings
+
+`func (o *InlineObject277) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+
+SetAdminSettings sets AdminSettings field to given value.
+
+### HasAdminSettings
+
+`func (o *InlineObject277) HasAdminSettings() bool`
+
+HasAdminSettings returns a boolean if a field has been set.
+
+### GetHelpSettings
+
+`func (o *InlineObject277) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings1`
+
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+
+### GetHelpSettingsOk
+
+`func (o *InlineObject277) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings1, bool)`
+
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpSettings
+
+`func (o *InlineObject277) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings1)`
+
+SetHelpSettings sets HelpSettings field to given value.
+
+### HasHelpSettings
+
+`func (o *InlineObject277) HasHelpSettings() bool`
+
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineObject277) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo1`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineObject277) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo1, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineObject277) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo1)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineObject277) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

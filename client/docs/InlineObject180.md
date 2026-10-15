@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the switch stack | [optional] 
-**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksSwitchStackIdMembers**](NetworksNetworkIdSwitchStacksSwitchStackIdMembers.md) | The complete list of switches that should be in the stack. Minimum 2 and maximum 8 members. Omitting this field leaves stack membership unchanged. | [optional] 
+**Name** | **string** | The name of the new stack | 
+**Serials** | **[]string** | An array of switch serials to be added into the new stack | 
 
 ## Methods
 
 ### NewInlineObject180
 
-`func NewInlineObject180() *InlineObject180`
+`func NewInlineObject180(name string, serials []string, ) *InlineObject180`
 
 NewInlineObject180 instantiates a new InlineObject180 object
 This constructor will assign default values to properties that have it defined,
@@ -45,36 +45,26 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject180) HasName() bool`
+### GetSerials
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject180) GetSerials() []string`
 
-### GetMembers
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-`func (o *InlineObject180) GetMembers() []NetworksNetworkIdSwitchStacksSwitchStackIdMembers`
+### GetSerialsOk
 
-GetMembers returns the Members field if non-nil, zero value otherwise.
+`func (o *InlineObject180) GetSerialsOk() (*[]string, bool)`
 
-### GetMembersOk
-
-`func (o *InlineObject180) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksSwitchStackIdMembers, bool)`
-
-GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMembers
+### SetSerials
 
-`func (o *InlineObject180) SetMembers(v []NetworksNetworkIdSwitchStacksSwitchStackIdMembers)`
+`func (o *InlineObject180) SetSerials(v []string)`
 
-SetMembers sets Members field to given value.
+SetSerials sets Serials field to given value.
 
-### HasMembers
-
-`func (o *InlineObject180) HasMembers() bool`
-
-HasMembers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

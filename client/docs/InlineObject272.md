@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new role. Must be unique. | [optional] 
-**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices1.md) | Device tag on which this specified permission is applied. | [optional] 
-**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1.md) | Network tag on which this specified permission is applied. | [optional] 
-**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide1.md) | Permissions to be applied org wide. | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject272WithDefaults instantiates a new InlineObject272 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject272) GetName() string`
+`func (o *InlineObject272) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject272) GetNameOk() (*string, bool)`
+`func (o *InlineObject272) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject272) SetName(v string)`
+`func (o *InlineObject272) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
-### HasName
+### HasRules
 
-`func (o *InlineObject272) HasName() bool`
+`func (o *InlineObject272) HasRules() bool`
 
-HasName returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetAppliedOnDevices
+### GetSyslogDefaultRule
 
-`func (o *InlineObject272) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1`
+`func (o *InlineObject272) GetSyslogDefaultRule() bool`
 
-GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
 
-### GetAppliedOnDevicesOk
+### GetSyslogDefaultRuleOk
 
-`func (o *InlineObject272) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices1, bool)`
+`func (o *InlineObject272) GetSyslogDefaultRuleOk() (*bool, bool)`
 
-GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedOnDevices
+### SetSyslogDefaultRule
 
-`func (o *InlineObject272) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices1)`
+`func (o *InlineObject272) SetSyslogDefaultRule(v bool)`
 
-SetAppliedOnDevices sets AppliedOnDevices field to given value.
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
 
-### HasAppliedOnDevices
+### HasSyslogDefaultRule
 
-`func (o *InlineObject272) HasAppliedOnDevices() bool`
+`func (o *InlineObject272) HasSyslogDefaultRule() bool`
 
-HasAppliedOnDevices returns a boolean if a field has been set.
-
-### GetAppliedOnNetworks
-
-`func (o *InlineObject272) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1`
-
-GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
-
-### GetAppliedOnNetworksOk
-
-`func (o *InlineObject272) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1, bool)`
-
-GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAppliedOnNetworks
-
-`func (o *InlineObject272) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks1)`
-
-SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
-
-### HasAppliedOnNetworks
-
-`func (o *InlineObject272) HasAppliedOnNetworks() bool`
-
-HasAppliedOnNetworks returns a boolean if a field has been set.
-
-### GetAppliedOrgWide
-
-`func (o *InlineObject272) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1`
-
-GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
-
-### GetAppliedOrgWideOk
-
-`func (o *InlineObject272) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide1, bool)`
-
-GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAppliedOrgWide
-
-`func (o *InlineObject272) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide1)`
-
-SetAppliedOrgWide sets AppliedOrgWide field to given value.
-
-### HasAppliedOrgWide
-
-`func (o *InlineObject272) HasAppliedOrgWide() bool`
-
-HasAppliedOrgWide returns a boolean if a field has been set.
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

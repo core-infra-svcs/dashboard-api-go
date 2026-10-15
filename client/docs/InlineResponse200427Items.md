@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LastReportedAt** | **time.Time** | Time, in ISO8601 format, when RSSI was last reported for the sensor and gateway pair. | 
-**LastConnectedAt** | Pointer to **time.Time** | Time, in ISO8601 format, when the sensor and gateway pair last connected. | [optional] 
-**Rssi** | **int32** | Last reported RSSI value. | 
-**Network** | [**InlineResponse200427Network**](InlineResponse200427Network.md) |  | 
-**Sensor** | [**InlineResponse200427Sensor**](InlineResponse200427Sensor.md) |  | 
-**Gateway** | [**InlineResponse200427Gateway**](InlineResponse200427Gateway.md) |  | 
+**Network** | Pointer to [**InlineResponse200427Network**](InlineResponse200427Network.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the VLAN | [optional] 
+**Subnet** | Pointer to **string** | Subnet of the VLAN | [optional] 
+**InterfaceId** | Pointer to **string** | Interface ID assigned to the VLAN | [optional] 
+**VlanId** | Pointer to **string** | VLAN ID | [optional] 
+**Policy** | Pointer to [**InlineResponse200427Policy**](InlineResponse200427Policy.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200427Items
 
-`func NewInlineResponse200427Items(lastReportedAt time.Time, rssi int32, network InlineResponse200427Network, sensor InlineResponse200427Sensor, gateway InlineResponse200427Gateway, ) *InlineResponse200427Items`
+`func NewInlineResponse200427Items() *InlineResponse200427Items`
 
 NewInlineResponse200427Items instantiates a new InlineResponse200427Items object
 This constructor will assign default values to properties that have it defined,
@@ -29,71 +29,6 @@ will change when the set of required properties is changed
 NewInlineResponse200427ItemsWithDefaults instantiates a new InlineResponse200427Items object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetLastReportedAt
-
-`func (o *InlineResponse200427Items) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse200427Items) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse200427Items) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-
-### GetLastConnectedAt
-
-`func (o *InlineResponse200427Items) GetLastConnectedAt() time.Time`
-
-GetLastConnectedAt returns the LastConnectedAt field if non-nil, zero value otherwise.
-
-### GetLastConnectedAtOk
-
-`func (o *InlineResponse200427Items) GetLastConnectedAtOk() (*time.Time, bool)`
-
-GetLastConnectedAtOk returns a tuple with the LastConnectedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastConnectedAt
-
-`func (o *InlineResponse200427Items) SetLastConnectedAt(v time.Time)`
-
-SetLastConnectedAt sets LastConnectedAt field to given value.
-
-### HasLastConnectedAt
-
-`func (o *InlineResponse200427Items) HasLastConnectedAt() bool`
-
-HasLastConnectedAt returns a boolean if a field has been set.
-
-### GetRssi
-
-`func (o *InlineResponse200427Items) GetRssi() int32`
-
-GetRssi returns the Rssi field if non-nil, zero value otherwise.
-
-### GetRssiOk
-
-`func (o *InlineResponse200427Items) GetRssiOk() (*int32, bool)`
-
-GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRssi
-
-`func (o *InlineResponse200427Items) SetRssi(v int32)`
-
-SetRssi sets Rssi field to given value.
-
 
 ### GetNetwork
 
@@ -114,46 +49,136 @@ and a boolean to check if the value has been set.
 
 SetNetwork sets Network field to given value.
 
+### HasNetwork
 
-### GetSensor
+`func (o *InlineResponse200427Items) HasNetwork() bool`
 
-`func (o *InlineResponse200427Items) GetSensor() InlineResponse200427Sensor`
+HasNetwork returns a boolean if a field has been set.
 
-GetSensor returns the Sensor field if non-nil, zero value otherwise.
+### GetName
 
-### GetSensorOk
+`func (o *InlineResponse200427Items) GetName() string`
 
-`func (o *InlineResponse200427Items) GetSensorOk() (*InlineResponse200427Sensor, bool)`
+GetName returns the Name field if non-nil, zero value otherwise.
 
-GetSensorOk returns a tuple with the Sensor field if it's non-nil, zero value otherwise
+### GetNameOk
+
+`func (o *InlineResponse200427Items) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSensor
+### SetName
 
-`func (o *InlineResponse200427Items) SetSensor(v InlineResponse200427Sensor)`
+`func (o *InlineResponse200427Items) SetName(v string)`
 
-SetSensor sets Sensor field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetGateway
+`func (o *InlineResponse200427Items) HasName() bool`
 
-`func (o *InlineResponse200427Items) GetGateway() InlineResponse200427Gateway`
+HasName returns a boolean if a field has been set.
 
-GetGateway returns the Gateway field if non-nil, zero value otherwise.
+### GetSubnet
 
-### GetGatewayOk
+`func (o *InlineResponse200427Items) GetSubnet() string`
 
-`func (o *InlineResponse200427Items) GetGatewayOk() (*InlineResponse200427Gateway, bool)`
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
+### GetSubnetOk
+
+`func (o *InlineResponse200427Items) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGateway
+### SetSubnet
 
-`func (o *InlineResponse200427Items) SetGateway(v InlineResponse200427Gateway)`
+`func (o *InlineResponse200427Items) SetSubnet(v string)`
 
-SetGateway sets Gateway field to given value.
+SetSubnet sets Subnet field to given value.
 
+### HasSubnet
+
+`func (o *InlineResponse200427Items) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### GetInterfaceId
+
+`func (o *InlineResponse200427Items) GetInterfaceId() string`
+
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
+
+### GetInterfaceIdOk
+
+`func (o *InlineResponse200427Items) GetInterfaceIdOk() (*string, bool)`
+
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterfaceId
+
+`func (o *InlineResponse200427Items) SetInterfaceId(v string)`
+
+SetInterfaceId sets InterfaceId field to given value.
+
+### HasInterfaceId
+
+`func (o *InlineResponse200427Items) HasInterfaceId() bool`
+
+HasInterfaceId returns a boolean if a field has been set.
+
+### GetVlanId
+
+`func (o *InlineResponse200427Items) GetVlanId() string`
+
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+
+### GetVlanIdOk
+
+`func (o *InlineResponse200427Items) GetVlanIdOk() (*string, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanId
+
+`func (o *InlineResponse200427Items) SetVlanId(v string)`
+
+SetVlanId sets VlanId field to given value.
+
+### HasVlanId
+
+`func (o *InlineResponse200427Items) HasVlanId() bool`
+
+HasVlanId returns a boolean if a field has been set.
+
+### GetPolicy
+
+`func (o *InlineResponse200427Items) GetPolicy() InlineResponse200427Policy`
+
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
+
+### GetPolicyOk
+
+`func (o *InlineResponse200427Items) GetPolicyOk() (*InlineResponse200427Policy, bool)`
+
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicy
+
+`func (o *InlineResponse200427Items) SetPolicy(v InlineResponse200427Policy)`
+
+SetPolicy sets Policy field to given value.
+
+### HasPolicy
+
+`func (o *InlineResponse200427Items) HasPolicy() bool`
+
+HasPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

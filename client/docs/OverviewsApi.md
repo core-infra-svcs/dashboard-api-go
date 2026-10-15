@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline**](OverviewsApi.md#GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline) | **Get** /organizations/{organizationId}/api/rest/provisioning/pipelines/jobs/overviews/byPipeline | Retrieves pipeline overviews with aggregated job status counts
 [**GetOrganizationApplianceInterfacesPacketsOverviewsByDevice**](OverviewsApi.md#GetOrganizationApplianceInterfacesPacketsOverviewsByDevice) | **Get** /organizations/{organizationId}/appliance/interfaces/packets/overviews/byDevice | Returns packet counter overviews for all interfaces on Secure Routers in the organization, including totals and average rates by packet type over the requested timespan.
+[**GetOrganizationApplianceSecurityIntrusionPoliciesOverviews**](OverviewsApi.md#GetOrganizationApplianceSecurityIntrusionPoliciesOverviews) | **Get** /organizations/{organizationId}/appliance/security/intrusion/policies/overviews | List counts for the intrusion and base policies configured for an organization.
+[**GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews**](OverviewsApi.md#GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews) | **Get** /organizations/{organizationId}/appliance/security/intrusion/ruleGroups/overviews | List counts for the child rule groups and rules for each rule group in a security policy.
 [**GetOrganizationCampusGatewayClustersNetworksOverviews**](OverviewsApi.md#GetOrganizationCampusGatewayClustersNetworksOverviews) | **Get** /organizations/{organizationId}/campusGateway/clusters/networks/overviews | List networks tunneling through Campus Gateway clusters with their AP, ssids and client counts
 [**GetOrganizationWirelessSsidsProfilesOverviews**](OverviewsApi.md#GetOrganizationWirelessSsidsProfilesOverviews) | **Get** /organizations/{organizationId}/wireless/ssids/profiles/overviews | Returns the SSID profiles&#39; overview information for an organization
 
@@ -13,7 +15,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline
 
-> InlineResponse200271 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
+> InlineResponse200274 GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline(ctx, organizationId).PipelineIds(pipelineIds).Execute()
 
 Retrieves pipeline overviews with aggregated job status counts
 
@@ -42,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewsApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200271
+    // response from `GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: InlineResponse200274
     fmt.Fprintf(os.Stdout, "Response from `OverviewsApi.GetOrganizationApiRestProvisioningPipelinesJobsOverviewsByPipeline`: %v\n", resp)
 }
 ```
@@ -67,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200271**](InlineResponse200271.md)
+[**InlineResponse200274**](InlineResponse200274.md)
 
 ### Authorization
 
@@ -85,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceInterfacesPacketsOverviewsByDevice
 
-> InlineResponse200286 GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
+> InlineResponse200290 GetOrganizationApplianceInterfacesPacketsOverviewsByDevice(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Execute()
 
 Returns packet counter overviews for all interfaces on Secure Routers in the organization, including totals and average rates by packet type over the requested timespan.
 
@@ -121,7 +123,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewsApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: InlineResponse200286
+    // response from `GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `OverviewsApi.GetOrganizationApplianceInterfacesPacketsOverviewsByDevice`: %v\n", resp)
 }
 ```
@@ -153,7 +155,169 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200286**](InlineResponse200286.md)
+[**InlineResponse200290**](InlineResponse200290.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceSecurityIntrusionPoliciesOverviews
+
+> InlineResponse200294 GetOrganizationApplianceSecurityIntrusionPoliciesOverviews(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PolicyIds(policyIds).Search(search).Execute()
+
+List counts for the intrusion and base policies configured for an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 100. Default is 25. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    policyIds := []string{"Inner_example"} // []string | Identifiers of policies to filter (optional)
+    search := "search_example" // string | Filter policy overviews by case-insensitive partial match on policy name or description. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewsApi.GetOrganizationApplianceSecurityIntrusionPoliciesOverviews(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PolicyIds(policyIds).Search(search).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewsApi.GetOrganizationApplianceSecurityIntrusionPoliciesOverviews``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceSecurityIntrusionPoliciesOverviews`: InlineResponse200294
+    fmt.Fprintf(os.Stdout, "Response from `OverviewsApi.GetOrganizationApplianceSecurityIntrusionPoliciesOverviews`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceSecurityIntrusionPoliciesOverviewsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 100. Default is 25. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **policyIds** | **[]string** | Identifiers of policies to filter | 
+ **search** | **string** | Filter policy overviews by case-insensitive partial match on policy name or description. | 
+
+### Return type
+
+[**InlineResponse200294**](InlineResponse200294.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews
+
+> InlineResponse200299 GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PolicyIds(policyIds).ParentRuleGroupIds(parentRuleGroupIds).Search(search).Execute()
+
+List counts for the child rule groups and rules for each rule group in a security policy.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 500. Default is 50. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    policyIds := []string{"Inner_example"} // []string | Collection of base or intrusion policy identifiers to filter results by (optional)
+    parentRuleGroupIds := []string{"Inner_example"} // []string | Filter results to rule groups whose parent matches any of the provided identifiers (optional)
+    search := "search_example" // string | Case-insensitive text filter applied to rule group name and description (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewsApi.GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).PolicyIds(policyIds).ParentRuleGroupIds(parentRuleGroupIds).Search(search).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewsApi.GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews`: InlineResponse200299
+    fmt.Fprintf(os.Stdout, "Response from `OverviewsApi.GetOrganizationApplianceSecurityIntrusionRuleGroupsOverviews`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationApplianceSecurityIntrusionRuleGroupsOverviewsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 500. Default is 50. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **policyIds** | **[]string** | Collection of base or intrusion policy identifiers to filter results by | 
+ **parentRuleGroupIds** | **[]string** | Filter results to rule groups whose parent matches any of the provided identifiers | 
+ **search** | **string** | Case-insensitive text filter applied to rule group name and description | 
+
+### Return type
+
+[**InlineResponse200299**](InlineResponse200299.md)
 
 ### Authorization
 
@@ -171,7 +335,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersNetworksOverviews
 
-> InlineResponse200322 GetOrganizationCampusGatewayClustersNetworksOverviews(ctx, organizationId).ClusterIds(clusterIds).SiteIds(siteIds).NetworkIds(networkIds).TunnelingSources(tunnelingSources).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200335 GetOrganizationCampusGatewayClustersNetworksOverviews(ctx, organizationId).ClusterIds(clusterIds).SiteIds(siteIds).NetworkIds(networkIds).TunnelingSources(tunnelingSources).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List networks tunneling through Campus Gateway clusters with their AP, ssids and client counts
 
@@ -209,7 +373,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewsApi.GetOrganizationCampusGatewayClustersNetworksOverviews``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersNetworksOverviews`: InlineResponse200322
+    // response from `GetOrganizationCampusGatewayClustersNetworksOverviews`: InlineResponse200335
     fmt.Fprintf(os.Stdout, "Response from `OverviewsApi.GetOrganizationCampusGatewayClustersNetworksOverviews`: %v\n", resp)
 }
 ```
@@ -243,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200322**](InlineResponse200322.md)
+[**InlineResponse200335**](InlineResponse200335.md)
 
 ### Authorization
 
@@ -261,7 +425,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessSsidsProfilesOverviews
 
-> InlineResponse200493 GetOrganizationWirelessSsidsProfilesOverviews(ctx, organizationId).Name(name).SortBy(sortBy).SortOrder(sortOrder).ProfileIds(profileIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200520 GetOrganizationWirelessSsidsProfilesOverviews(ctx, organizationId).Name(name).SortBy(sortBy).SortOrder(sortOrder).ProfileIds(profileIds).NetworkIds(networkIds).SsidNumbers(ssidNumbers).Attachable(attachable).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the SSID profiles' overview information for an organization
 
@@ -282,21 +446,24 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     name := "name_example" // string | (Optional) Filter results by name. Case insensitive substring match. (optional)
-    sortBy := "sortBy_example" // string | Column to sort results by. Default is `name`. (optional)
-    sortOrder := "sortOrder_example" // string | Direction to sort results by. Default is `asc`. (optional)
+    sortBy := "sortBy_example" // string | Sort by `name` or `attached`. Default is `name`. For `attached`, provide `networkIds` and `ssidNumbers`. With `sortOrder=asc`, attached profile is first. With `sortOrder=desc`, it is last. (optional)
+    sortOrder := "sortOrder_example" // string | Sort direction for either `sortBy` mode. Default is `asc`. (optional)
     profileIds := []int32{int32(123)} // []int32 | (Optional) Filter results by a list of SSID profile IDs. (optional)
+    networkIds := []string{"Inner_example"} // []string | (Optional) Network ID for the selected SSID. Provide one value. Required when `attachable` is true. (optional)
+    ssidNumbers := []int32{int32(123)} // []int32 | (Optional) SSID number (0-14) for the selected SSID. Provide one value. Required when `attachable` is true. (optional)
+    attachable := true // bool | (Optional) When true, returns profiles not assigned to another SSID in the selected network. Includes the currently attached profile. Requires `networkIds` and `ssidNumbers`. (optional)
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.OverviewsApi.GetOrganizationWirelessSsidsProfilesOverviews(context.Background(), organizationId).Name(name).SortBy(sortBy).SortOrder(sortOrder).ProfileIds(profileIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    resp, r, err := apiClient.OverviewsApi.GetOrganizationWirelessSsidsProfilesOverviews(context.Background(), organizationId).Name(name).SortBy(sortBy).SortOrder(sortOrder).ProfileIds(profileIds).NetworkIds(networkIds).SsidNumbers(ssidNumbers).Attachable(attachable).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewsApi.GetOrganizationWirelessSsidsProfilesOverviews``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessSsidsProfilesOverviews`: InlineResponse200493
+    // response from `GetOrganizationWirelessSsidsProfilesOverviews`: InlineResponse200520
     fmt.Fprintf(os.Stdout, "Response from `OverviewsApi.GetOrganizationWirelessSsidsProfilesOverviews`: %v\n", resp)
 }
 ```
@@ -318,16 +485,19 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
  **name** | **string** | (Optional) Filter results by name. Case insensitive substring match. | 
- **sortBy** | **string** | Column to sort results by. Default is &#x60;name&#x60;. | 
- **sortOrder** | **string** | Direction to sort results by. Default is &#x60;asc&#x60;. | 
+ **sortBy** | **string** | Sort by &#x60;name&#x60; or &#x60;attached&#x60;. Default is &#x60;name&#x60;. For &#x60;attached&#x60;, provide &#x60;networkIds&#x60; and &#x60;ssidNumbers&#x60;. With &#x60;sortOrder&#x3D;asc&#x60;, attached profile is first. With &#x60;sortOrder&#x3D;desc&#x60;, it is last. | 
+ **sortOrder** | **string** | Sort direction for either &#x60;sortBy&#x60; mode. Default is &#x60;asc&#x60;. | 
  **profileIds** | **[]int32** | (Optional) Filter results by a list of SSID profile IDs. | 
+ **networkIds** | **[]string** | (Optional) Network ID for the selected SSID. Provide one value. Required when &#x60;attachable&#x60; is true. | 
+ **ssidNumbers** | **[]int32** | (Optional) SSID number (0-14) for the selected SSID. Provide one value. Required when &#x60;attachable&#x60; is true. | 
+ **attachable** | **bool** | (Optional) When true, returns profiles not assigned to another SSID in the selected network. Includes the currently attached profile. Requires &#x60;networkIds&#x60; and &#x60;ssidNumbers&#x60;. | 
  **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
 
 ### Return type
 
-[**InlineResponse200493**](InlineResponse200493.md)
+[**InlineResponse200520**](InlineResponse200520.md)
 
 ### Authorization
 

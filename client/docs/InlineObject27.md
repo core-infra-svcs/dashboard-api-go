@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Ports** | **[]string** | A list of ports to cycle. For Catalyst switches, IOS interface names are also supported, such as \&quot;GigabitEthernet1/0/8\&quot;, \&quot;Gi1/0/8\&quot;, or even \&quot;1/0/8\&quot;. | 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject27
 
-`func NewInlineObject27() *InlineObject27`
+`func NewInlineObject27(ports []string, ) *InlineObject27`
 
 NewInlineObject27 instantiates a new InlineObject27 object
 This constructor will assign default values to properties that have it defined,
@@ -24,6 +25,26 @@ will change when the set of required properties is changed
 NewInlineObject27WithDefaults instantiates a new InlineObject27 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetPorts
+
+`func (o *InlineObject27) GetPorts() []string`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineObject27) GetPortsOk() (*[]string, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineObject27) SetPorts(v []string)`
+
+SetPorts sets Ports field to given value.
+
 
 ### GetCallback
 

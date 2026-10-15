@@ -4,18 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices.md) | Device details (maximum of 20 devices allowed) | 
-**Notes** | Pointer to **string** | Reason for capture | [optional] 
-**Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
-**Name** | **string** | Name of packet capture file | 
-**Advanced** | Pointer to [**OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced.md) |  | [optional] 
+**Name** | **string** | The name of the new organization | 
 
 ## Methods
 
 ### NewInlineObject291
 
-`func NewInlineObject291(devices []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, name string, ) *InlineObject291`
+`func NewInlineObject291(name string, ) *InlineObject291`
 
 NewInlineObject291 instantiates a new InlineObject291 object
 This constructor will assign default values to properties that have it defined,
@@ -29,101 +24,6 @@ will change when the set of required properties is changed
 NewInlineObject291WithDefaults instantiates a new InlineObject291 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetDevices
-
-`func (o *InlineObject291) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineObject291) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineObject291) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices)`
-
-SetDevices sets Devices field to given value.
-
-
-### GetNotes
-
-`func (o *InlineObject291) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject291) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject291) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject291) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetDuration
-
-`func (o *InlineObject291) GetDuration() int32`
-
-GetDuration returns the Duration field if non-nil, zero value otherwise.
-
-### GetDurationOk
-
-`func (o *InlineObject291) GetDurationOk() (*int32, bool)`
-
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDuration
-
-`func (o *InlineObject291) SetDuration(v int32)`
-
-SetDuration sets Duration field to given value.
-
-### HasDuration
-
-`func (o *InlineObject291) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
-
-### GetFilterExpression
-
-`func (o *InlineObject291) GetFilterExpression() string`
-
-GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
-
-### GetFilterExpressionOk
-
-`func (o *InlineObject291) GetFilterExpressionOk() (*string, bool)`
-
-GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFilterExpression
-
-`func (o *InlineObject291) SetFilterExpression(v string)`
-
-SetFilterExpression sets FilterExpression field to given value.
-
-### HasFilterExpression
-
-`func (o *InlineObject291) HasFilterExpression() bool`
-
-HasFilterExpression returns a boolean if a field has been set.
 
 ### GetName
 
@@ -144,31 +44,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-
-### GetAdvanced
-
-`func (o *InlineObject291) GetAdvanced() OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced`
-
-GetAdvanced returns the Advanced field if non-nil, zero value otherwise.
-
-### GetAdvancedOk
-
-`func (o *InlineObject291) GetAdvancedOk() (*OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced, bool)`
-
-GetAdvancedOk returns a tuple with the Advanced field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvanced
-
-`func (o *InlineObject291) SetAdvanced(v OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateAdvanced)`
-
-SetAdvanced sets Advanced field to given value.
-
-### HasAdvanced
-
-`func (o *InlineObject291) HasAdvanced() bool`
-
-HasAdvanced returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

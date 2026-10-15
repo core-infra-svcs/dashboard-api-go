@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of Rate Plans | [optional] 
-**Remaining** | Pointer to **int32** | Remaining number of Rate Plans | [optional] 
+**Total** | Pointer to **int32** | The total number of clusters | [optional] 
+**Remaining** | Pointer to **int32** | The number of clusters remaining based on current pagination location within the dataset | [optional] 
 
 ## Methods
 

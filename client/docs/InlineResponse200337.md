@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
-**Licenses** | Pointer to [**[]InlineResponse200337Licenses**](InlineResponse200337Licenses.md) | The licenses claimed | [optional] 
+**Items** | Pointer to [**[]InlineResponse200337Items**](InlineResponse200337Items.md) | List of campus gateway clusters with their associated network information | [optional] 
+**Meta** | Pointer to [**InlineResponse200337Meta**](InlineResponse200337Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200337WithDefaults instantiates a new InlineResponse200337 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetItems
 
-`func (o *InlineResponse200337) GetOrders() []string`
+`func (o *InlineResponse200337) GetItems() []InlineResponse200337Items`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetItemsOk
 
-`func (o *InlineResponse200337) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineResponse200337) GetItemsOk() (*[]InlineResponse200337Items, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetItems
 
-`func (o *InlineResponse200337) SetOrders(v []string)`
+`func (o *InlineResponse200337) SetItems(v []InlineResponse200337Items)`
 
-SetOrders sets Orders field to given value.
+SetItems sets Items field to given value.
 
-### HasOrders
+### HasItems
 
-`func (o *InlineResponse200337) HasOrders() bool`
+`func (o *InlineResponse200337) HasItems() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetSerials
+### GetMeta
 
-`func (o *InlineResponse200337) GetSerials() []string`
+`func (o *InlineResponse200337) GetMeta() InlineResponse200337Meta`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetMetaOk
 
-`func (o *InlineResponse200337) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200337) GetMetaOk() (*InlineResponse200337Meta, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetMeta
 
-`func (o *InlineResponse200337) SetSerials(v []string)`
+`func (o *InlineResponse200337) SetMeta(v InlineResponse200337Meta)`
 
-SetSerials sets Serials field to given value.
+SetMeta sets Meta field to given value.
 
-### HasSerials
+### HasMeta
 
-`func (o *InlineResponse200337) HasSerials() bool`
+`func (o *InlineResponse200337) HasMeta() bool`
 
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineResponse200337) GetLicenses() []InlineResponse200337Licenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineResponse200337) GetLicensesOk() (*[]InlineResponse200337Licenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineResponse200337) SetLicenses(v []InlineResponse200337Licenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineResponse200337) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

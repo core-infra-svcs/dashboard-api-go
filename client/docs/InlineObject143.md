@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to true) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**NetworksNetworkIdSettingsLocalStatusPage**](NetworksNetworkIdSettingsLocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse200161SecurePort**](InlineResponse200161SecurePort.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse200161NamedVlans**](InlineResponse200161NamedVlans.md) |  | [optional] 
+**Enabled** | **bool** | Set to true to enable MQTT broker for sensor network | 
 
 ## Methods
 
 ### NewInlineObject143
 
-`func NewInlineObject143() *InlineObject143`
+`func NewInlineObject143(enabled bool, ) *InlineObject143`
 
 NewInlineObject143 instantiates a new InlineObject143 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +25,25 @@ NewInlineObject143WithDefaults instantiates a new InlineObject143 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetEnabled
 
-`func (o *InlineObject143) GetLocalStatusPageEnabled() bool`
+`func (o *InlineObject143) GetEnabled() bool`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject143) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineObject143) GetEnabledOk() (*bool, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetEnabled
 
-`func (o *InlineObject143) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineObject143) SetEnabled(v bool)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasLocalStatusPageEnabled
-
-`func (o *InlineObject143) HasLocalStatusPageEnabled() bool`
-
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
-
-### GetRemoteStatusPageEnabled
-
-`func (o *InlineObject143) GetRemoteStatusPageEnabled() bool`
-
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
-
-### GetRemoteStatusPageEnabledOk
-
-`func (o *InlineObject143) GetRemoteStatusPageEnabledOk() (*bool, bool)`
-
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRemoteStatusPageEnabled
-
-`func (o *InlineObject143) SetRemoteStatusPageEnabled(v bool)`
-
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
-
-### HasRemoteStatusPageEnabled
-
-`func (o *InlineObject143) HasRemoteStatusPageEnabled() bool`
-
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
-
-### GetLocalStatusPage
-
-`func (o *InlineObject143) GetLocalStatusPage() NetworksNetworkIdSettingsLocalStatusPage`
-
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
-
-### GetLocalStatusPageOk
-
-`func (o *InlineObject143) GetLocalStatusPageOk() (*NetworksNetworkIdSettingsLocalStatusPage, bool)`
-
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocalStatusPage
-
-`func (o *InlineObject143) SetLocalStatusPage(v NetworksNetworkIdSettingsLocalStatusPage)`
-
-SetLocalStatusPage sets LocalStatusPage field to given value.
-
-### HasLocalStatusPage
-
-`func (o *InlineObject143) HasLocalStatusPage() bool`
-
-HasLocalStatusPage returns a boolean if a field has been set.
-
-### GetSecurePort
-
-`func (o *InlineObject143) GetSecurePort() InlineResponse200161SecurePort`
-
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
-
-### GetSecurePortOk
-
-`func (o *InlineObject143) GetSecurePortOk() (*InlineResponse200161SecurePort, bool)`
-
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecurePort
-
-`func (o *InlineObject143) SetSecurePort(v InlineResponse200161SecurePort)`
-
-SetSecurePort sets SecurePort field to given value.
-
-### HasSecurePort
-
-`func (o *InlineObject143) HasSecurePort() bool`
-
-HasSecurePort returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineObject143) GetNamedVlans() InlineResponse200161NamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineObject143) GetNamedVlansOk() (*InlineResponse200161NamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineObject143) SetNamedVlans(v InlineResponse200161NamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineObject143) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

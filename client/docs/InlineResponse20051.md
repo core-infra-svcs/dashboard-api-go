@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PortId** | Pointer to **string** | The identifier of the switch port. | [optional] 
-**Name** | Pointer to **string** | The name of the switch port. | [optional] 
+**Name** | Pointer to **string** | The name of the switch port. Dashboard displays this value as the port description. For Cisco Catalyst switches running IOS XE, it corresponds to the configured interface description. | [optional] 
 **Tags** | Pointer to **[]string** | The list of tags of the switch port. | [optional] 
 **Enabled** | Pointer to **bool** | The status of the switch port. | [optional] 
 **PoeEnabled** | Pointer to **bool** | The PoE status of the switch port. | [optional] 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Boolean indicating whether VRFs are enabled for the organization. | 
+**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems.md) | List containing the network ID and Profile ID | 
 
 ## Methods
 
 ### NewInlineObject257
 
-`func NewInlineObject257(enabled bool, ) *InlineObject257`
+`func NewInlineObject257(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, ) *InlineObject257`
 
 NewInlineObject257 instantiates a new InlineObject257 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject257WithDefaults instantiates a new InlineObject257 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetItems
 
-`func (o *InlineObject257) GetEnabled() bool`
+`func (o *InlineObject257) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetItemsOk
 
-`func (o *InlineObject257) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject257) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetItems
 
-`func (o *InlineObject257) SetEnabled(v bool)`
+`func (o *InlineObject257) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems)`
 
-SetEnabled sets Enabled field to given value.
+SetItems sets Items field to given value.
 
 
 

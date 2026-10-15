@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceVpnSiteToSiteVpn := *openapiclient.NewInlineObject97("Mode_example") // InlineObject97 | 
+    updateNetworkApplianceVpnSiteToSiteVpn := *openapiclient.NewInlineObject98("Mode_example") // InlineObject98 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceVpnS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceVpnSiteToSiteVpn** | [**InlineObject97**](InlineObject97.md) |  | 
+ **updateNetworkApplianceVpnSiteToSiteVpn** | [**InlineObject98**](InlineObject98.md) |  | 
 
 ### Return type
 

@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Name of the Application Category | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
+**SiteId** | Pointer to **string** | Unique identifier for the enrolled site | [optional] 
+**Network** | Pointer to [**InlineResponse200440Network**](InlineResponse200440Network.md) |  | [optional] 
+**Type** | Pointer to **string** | The site&#39;s type | [optional] 
+**Name** | Pointer to **string** | Site name | [optional] 
+**Region** | Pointer to [**InlineResponse200440Region**](InlineResponse200440Region.md) |  | [optional] 
+**Model** | Pointer to **string** | Model of the network&#39;s primary MX device | [optional] 
+**Address** | Pointer to [**InlineResponse200438Address**](InlineResponse200438Address.md) |  | [optional] 
+**Vpn** | Pointer to [**InlineResponse200438Vpn**](InlineResponse200438Vpn.md) |  | [optional] 
+**Routing** | Pointer to [**InlineResponse200438Routing**](InlineResponse200438Routing.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +33,230 @@ NewInlineResponse200443WithDefaults instantiates a new InlineResponse200443 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetSiteId
 
-`func (o *InlineResponse200443) GetCategory() string`
+`func (o *InlineResponse200443) GetSiteId() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetSiteIdOk
 
-`func (o *InlineResponse200443) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200443) GetSiteIdOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetSiteId
 
-`func (o *InlineResponse200443) SetCategory(v string)`
+`func (o *InlineResponse200443) SetSiteId(v string)`
 
-SetCategory sets Category field to given value.
+SetSiteId sets SiteId field to given value.
 
-### HasCategory
+### HasSiteId
 
-`func (o *InlineResponse200443) HasCategory() bool`
+`func (o *InlineResponse200443) HasSiteId() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasSiteId returns a boolean if a field has been set.
 
-### GetTotal
+### GetNetwork
 
-`func (o *InlineResponse200443) GetTotal() float32`
+`func (o *InlineResponse200443) GetNetwork() InlineResponse200440Network`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetNetworkOk
 
-`func (o *InlineResponse200443) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200443) GetNetworkOk() (*InlineResponse200440Network, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetNetwork
 
-`func (o *InlineResponse200443) SetTotal(v float32)`
+`func (o *InlineResponse200443) SetNetwork(v InlineResponse200440Network)`
 
-SetTotal sets Total field to given value.
+SetNetwork sets Network field to given value.
 
-### HasTotal
+### HasNetwork
 
-`func (o *InlineResponse200443) HasTotal() bool`
+`func (o *InlineResponse200443) HasNetwork() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetDownstream
+### GetType
 
-`func (o *InlineResponse200443) GetDownstream() float32`
+`func (o *InlineResponse200443) GetType() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetTypeOk
 
-`func (o *InlineResponse200443) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200443) GetTypeOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetType
 
-`func (o *InlineResponse200443) SetDownstream(v float32)`
+`func (o *InlineResponse200443) SetType(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetType sets Type field to given value.
 
-### HasDownstream
+### HasType
 
-`func (o *InlineResponse200443) HasDownstream() bool`
+`func (o *InlineResponse200443) HasType() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetUpstream
+### GetName
 
-`func (o *InlineResponse200443) GetUpstream() float32`
+`func (o *InlineResponse200443) GetName() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetNameOk
 
-`func (o *InlineResponse200443) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse200443) GetNameOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetName
 
-`func (o *InlineResponse200443) SetUpstream(v float32)`
+`func (o *InlineResponse200443) SetName(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetName sets Name field to given value.
 
-### HasUpstream
+### HasName
 
-`func (o *InlineResponse200443) HasUpstream() bool`
+`func (o *InlineResponse200443) HasName() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetPercentage
+### GetRegion
 
-`func (o *InlineResponse200443) GetPercentage() float32`
+`func (o *InlineResponse200443) GetRegion() InlineResponse200440Region`
 
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
+GetRegion returns the Region field if non-nil, zero value otherwise.
 
-### GetPercentageOk
+### GetRegionOk
 
-`func (o *InlineResponse200443) GetPercentageOk() (*float32, bool)`
+`func (o *InlineResponse200443) GetRegionOk() (*InlineResponse200440Region, bool)`
 
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
+GetRegionOk returns a tuple with the Region field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPercentage
+### SetRegion
 
-`func (o *InlineResponse200443) SetPercentage(v float32)`
+`func (o *InlineResponse200443) SetRegion(v InlineResponse200440Region)`
 
-SetPercentage sets Percentage field to given value.
+SetRegion sets Region field to given value.
 
-### HasPercentage
+### HasRegion
 
-`func (o *InlineResponse200443) HasPercentage() bool`
+`func (o *InlineResponse200443) HasRegion() bool`
 
-HasPercentage returns a boolean if a field has been set.
+HasRegion returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200443) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200443) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200443) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200443) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetAddress
+
+`func (o *InlineResponse200443) GetAddress() InlineResponse200438Address`
+
+GetAddress returns the Address field if non-nil, zero value otherwise.
+
+### GetAddressOk
+
+`func (o *InlineResponse200443) GetAddressOk() (*InlineResponse200438Address, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAddress
+
+`func (o *InlineResponse200443) SetAddress(v InlineResponse200438Address)`
+
+SetAddress sets Address field to given value.
+
+### HasAddress
+
+`func (o *InlineResponse200443) HasAddress() bool`
+
+HasAddress returns a boolean if a field has been set.
+
+### GetVpn
+
+`func (o *InlineResponse200443) GetVpn() InlineResponse200438Vpn`
+
+GetVpn returns the Vpn field if non-nil, zero value otherwise.
+
+### GetVpnOk
+
+`func (o *InlineResponse200443) GetVpnOk() (*InlineResponse200438Vpn, bool)`
+
+GetVpnOk returns a tuple with the Vpn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpn
+
+`func (o *InlineResponse200443) SetVpn(v InlineResponse200438Vpn)`
+
+SetVpn sets Vpn field to given value.
+
+### HasVpn
+
+`func (o *InlineResponse200443) HasVpn() bool`
+
+HasVpn returns a boolean if a field has been set.
+
+### GetRouting
+
+`func (o *InlineResponse200443) GetRouting() InlineResponse200438Routing`
+
+GetRouting returns the Routing field if non-nil, zero value otherwise.
+
+### GetRoutingOk
+
+`func (o *InlineResponse200443) GetRoutingOk() (*InlineResponse200438Routing, bool)`
+
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRouting
+
+`func (o *InlineResponse200443) SetRouting(v InlineResponse200438Routing)`
+
+SetRouting sets Routing field to given value.
+
+### HasRouting
+
+`func (o *InlineResponse200443) HasRouting() bool`
+
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

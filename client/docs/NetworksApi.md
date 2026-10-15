@@ -9,6 +9,8 @@ Method | HTTP request | Description
 [**BindNetwork**](NetworksApi.md#BindNetwork) | **Post** /networks/{networkId}/bind | Bind a network to a template.
 [**BulkOrganizationNetworksGroupAssign**](NetworksApi.md#BulkOrganizationNetworksGroupAssign) | **Post** /organizations/{organizationId}/networks/groups/{groupId}/bulkAssign | Add networks to a network group
 [**BulkOrganizationNetworksGroupUnassign**](NetworksApi.md#BulkOrganizationNetworksGroupUnassign) | **Post** /organizations/{organizationId}/networks/groups/{groupId}/bulkUnassign | Remove networks from a network group
+[**BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign**](NetworksApi.md#BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign) | **Post** /organizations/{organizationId}/policies/global/group/policies/networks/assignments/bulkAssign | Assign Network Enforcement Targets to an Organization-Wide Policy
+[**BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete**](NetworksApi.md#BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete) | **Post** /organizations/{organizationId}/policies/global/group/policies/networks/assignments/bulkDelete | Remove Network Enforcement Targets from an Organization-Wide Policy
 [**CancelNetworkFloorPlansAutoLocateJob**](NetworksApi.md#CancelNetworkFloorPlansAutoLocateJob) | **Post** /networks/{networkId}/floorPlans/autoLocate/jobs/{jobId}/cancel | Cancel a scheduled or running auto locate job
 [**ClaimNetworkDevices**](NetworksApi.md#ClaimNetworkDevices) | **Post** /networks/{networkId}/devices/claim | Claim devices into a network. (Note: for recently claimed devices, it may take a few minutes for API requests against that device to succeed)
 [**CombineOrganizationNetworks**](NetworksApi.md#CombineOrganizationNetworks) | **Post** /organizations/{organizationId}/networks/combine | Combine multiple networks into a single network
@@ -104,7 +106,12 @@ Method | HTTP request | Description
 [**GetOrganizationNetworks**](NetworksApi.md#GetOrganizationNetworks) | **Get** /organizations/{organizationId}/networks | List the networks that the user has privileges on in an organization
 [**GetOrganizationNetworksGroups**](NetworksApi.md#GetOrganizationNetworksGroups) | **Get** /organizations/{organizationId}/networks/groups | List the network groups in an organization
 [**GetOrganizationNetworksGroupsOverviewByGroup**](NetworksApi.md#GetOrganizationNetworksGroupsOverviewByGroup) | **Get** /organizations/{organizationId}/networks/groups/overview/byGroup | List the client and status overview information for the network groups in an organization
+[**GetOrganizationPoliciesGlobalGroupPoliciesNetworks**](NetworksApi.md#GetOrganizationPoliciesGlobalGroupPoliciesNetworks) | **Get** /organizations/{organizationId}/policies/global/group/policies/networks | List all available Network Enforcement Targets for an Organization and their associated Organization-Wide Policies if applicable
+[**GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments**](NetworksApi.md#GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments) | **Get** /organizations/{organizationId}/policies/global/group/policies/networks/assignments | List Network Enforcement Target Assignments for Organization-Wide policies for the specified organization
 [**GetOrganizationSaseNetworksEligible**](NetworksApi.md#GetOrganizationSaseNetworksEligible) | **Get** /organizations/{organizationId}/sase/networks/eligible | List of MX networks or templates that can be enrolled into Secure Access
+[**GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks**](NetworksApi.md#GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks) | **Get** /organizations/{organizationId}/summary/sustainability/dailyConsumerMetrics/networks | Lists daily consumer metrics for networks.
+[**GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks**](NetworksApi.md#GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks) | **Get** /organizations/{organizationId}/summary/sustainability/summaryConsumerMetrics/networks | Lists summary consumer metrics for networks.
+[**GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated**](NetworksApi.md#GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated) | **Get** /organizations/{organizationId}/summary/sustainability/summaryConsumerMetrics/networks/aggregated | Returns aggregated consumer metrics for all networks in the organization
 [**GetOrganizationSummaryTopNetworksByStatus**](NetworksApi.md#GetOrganizationSummaryTopNetworksByStatus) | **Get** /organizations/{organizationId}/summary/top/networks/byStatus | List the client and status overview information for the networks in an organization
 [**ProvisionNetworkClients**](NetworksApi.md#ProvisionNetworkClients) | **Post** /networks/{networkId}/clients/provision | Provisions a client with a name and policy
 [**PublishNetworkFloorPlansAutoLocateJob**](NetworksApi.md#PublishNetworkFloorPlansAutoLocateJob) | **Post** /networks/{networkId}/floorPlans/autoLocate/jobs/{jobId}/publish | Update the status of a finished auto locate job to be published, and update device locations
@@ -162,7 +169,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    batchNetworkFloorPlansAutoLocateJobs := *openapiclient.NewInlineObject127([]openapiclient.NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs{*openapiclient.NewNetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs("FloorPlanId_example")}) // InlineObject127 | 
+    batchNetworkFloorPlansAutoLocateJobs := *openapiclient.NewInlineObject128([]openapiclient.NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs{*openapiclient.NewNetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs("FloorPlanId_example")}) // InlineObject128 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -192,7 +199,7 @@ Other parameters are passed through a pointer to a apiBatchNetworkFloorPlansAuto
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchNetworkFloorPlansAutoLocateJobs** | [**InlineObject127**](InlineObject127.md) |  | 
+ **batchNetworkFloorPlansAutoLocateJobs** | [**InlineObject128**](InlineObject128.md) |  | 
 
 ### Return type
 
@@ -234,7 +241,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    batchNetworkFloorPlansDevicesUpdate := *openapiclient.NewInlineObject130([]openapiclient.NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments{*openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments("Serial_example", *openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan("Id_example"))}) // InlineObject130 | 
+    batchNetworkFloorPlansDevicesUpdate := *openapiclient.NewInlineObject131([]openapiclient.NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments{*openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments("Serial_example", *openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan("Id_example"))}) // InlineObject131 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -264,7 +271,7 @@ Other parameters are passed through a pointer to a apiBatchNetworkFloorPlansDevi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchNetworkFloorPlansDevicesUpdate** | [**InlineObject130**](InlineObject130.md) |  | 
+ **batchNetworkFloorPlansDevicesUpdate** | [**InlineObject131**](InlineObject131.md) |  | 
 
 ### Return type
 
@@ -306,7 +313,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    bindNetwork := *openapiclient.NewInlineObject99("ConfigTemplateId_example") // InlineObject99 | 
+    bindNetwork := *openapiclient.NewInlineObject100("ConfigTemplateId_example") // InlineObject100 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -336,7 +343,7 @@ Other parameters are passed through a pointer to a apiBindNetworkRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bindNetwork** | [**InlineObject99**](InlineObject99.md) |  | 
+ **bindNetwork** | [**InlineObject100**](InlineObject100.md) |  | 
 
 ### Return type
 
@@ -358,7 +365,7 @@ Name | Type | Description  | Notes
 
 ## BulkOrganizationNetworksGroupAssign
 
-> InlineResponse200403 BulkOrganizationNetworksGroupAssign(ctx, organizationId, groupId).BulkOrganizationNetworksGroupAssign(bulkOrganizationNetworksGroupAssign).Execute()
+> InlineResponse200417 BulkOrganizationNetworksGroupAssign(ctx, organizationId, groupId).BulkOrganizationNetworksGroupAssign(bulkOrganizationNetworksGroupAssign).Execute()
 
 Add networks to a network group
 
@@ -379,7 +386,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     groupId := "groupId_example" // string | Group ID
-    bulkOrganizationNetworksGroupAssign := *openapiclient.NewInlineObject320([]string{"NetworkIds_example"}) // InlineObject320 | 
+    bulkOrganizationNetworksGroupAssign := *openapiclient.NewInlineObject331([]string{"NetworkIds_example"}) // InlineObject331 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -388,7 +395,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.BulkOrganizationNetworksGroupAssign``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkOrganizationNetworksGroupAssign`: InlineResponse200403
+    // response from `BulkOrganizationNetworksGroupAssign`: InlineResponse200417
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.BulkOrganizationNetworksGroupAssign`: %v\n", resp)
 }
 ```
@@ -411,11 +418,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **bulkOrganizationNetworksGroupAssign** | [**InlineObject320**](InlineObject320.md) |  | 
+ **bulkOrganizationNetworksGroupAssign** | [**InlineObject331**](InlineObject331.md) |  | 
 
 ### Return type
 
-[**InlineResponse200403**](InlineResponse200403.md)
+[**InlineResponse200417**](InlineResponse200417.md)
 
 ### Authorization
 
@@ -454,7 +461,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     groupId := "groupId_example" // string | Group ID
-    bulkOrganizationNetworksGroupUnassign := *openapiclient.NewInlineObject321([]string{"NetworkIds_example"}) // InlineObject321 | 
+    bulkOrganizationNetworksGroupUnassign := *openapiclient.NewInlineObject332([]string{"NetworkIds_example"}) // InlineObject332 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -484,7 +491,149 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **bulkOrganizationNetworksGroupUnassign** | [**InlineObject321**](InlineObject321.md) |  | 
+ **bulkOrganizationNetworksGroupUnassign** | [**InlineObject332**](InlineObject332.md) |  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign
+
+> InlineResponse200431 BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign(ctx, organizationId).BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign(bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign).Execute()
+
+Assign Network Enforcement Targets to an Organization-Wide Policy
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign := *openapiclient.NewInlineObject346(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignPolicy("Id_example"), []openapiclient.OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets{*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignTargets(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkAssignFirewall("Type_example"))}) // InlineObject346 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.NetworksApi.BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign(context.Background(), organizationId).BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign(bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign`: InlineResponse200431
+    fmt.Fprintf(os.Stdout, "Response from `NetworksApi.BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssignRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsAssign** | [**InlineObject346**](InlineObject346.md) |  | 
+
+### Return type
+
+[**InlineResponse200431**](InlineResponse200431.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete
+
+> BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete(ctx, organizationId).BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete(bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete).Execute()
+
+Remove Network Enforcement Targets from an Organization-Wide Policy
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete := *openapiclient.NewInlineObject347(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy("Id_example"), []openapiclient.OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets{*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets(*openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteFirewall("Type_example"))}) // InlineObject347 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.NetworksApi.BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete(context.Background(), organizationId).BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete(bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.BulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDeleteRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **bulkOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsDelete** | [**InlineObject347**](InlineObject347.md) |  | 
 
 ### Return type
 
@@ -597,7 +746,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    claimNetworkDevices := *openapiclient.NewInlineObject114([]string{"Serials_example"}) // InlineObject114 | 
+    claimNetworkDevices := *openapiclient.NewInlineObject115([]string{"Serials_example"}) // InlineObject115 | 
     addAtomically := true // bool | Whether to claim devices atomically. If true, all devices will be claimed or none will be claimed. Default is true. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -628,7 +777,7 @@ Other parameters are passed through a pointer to a apiClaimNetworkDevicesRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimNetworkDevices** | [**InlineObject114**](InlineObject114.md) |  | 
+ **claimNetworkDevices** | [**InlineObject115**](InlineObject115.md) |  | 
  **addAtomically** | **bool** | Whether to claim devices atomically. If true, all devices will be claimed or none will be claimed. Default is true. | 
 
 ### Return type
@@ -651,7 +800,7 @@ Name | Type | Description  | Notes
 
 ## CombineOrganizationNetworks
 
-> InlineResponse200400 CombineOrganizationNetworks(ctx, organizationId).CombineOrganizationNetworks(combineOrganizationNetworks).Execute()
+> InlineResponse200414 CombineOrganizationNetworks(ctx, organizationId).CombineOrganizationNetworks(combineOrganizationNetworks).Execute()
 
 Combine multiple networks into a single network
 
@@ -671,7 +820,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    combineOrganizationNetworks := *openapiclient.NewInlineObject317("Name_example", []string{"NetworkIds_example"}) // InlineObject317 | 
+    combineOrganizationNetworks := *openapiclient.NewInlineObject328("Name_example", []string{"NetworkIds_example"}) // InlineObject328 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -680,7 +829,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CombineOrganizationNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CombineOrganizationNetworks`: InlineResponse200400
+    // response from `CombineOrganizationNetworks`: InlineResponse200414
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CombineOrganizationNetworks`: %v\n", resp)
 }
 ```
@@ -701,11 +850,11 @@ Other parameters are passed through a pointer to a apiCombineOrganizationNetwork
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **combineOrganizationNetworks** | [**InlineObject317**](InlineObject317.md) |  | 
+ **combineOrganizationNetworks** | [**InlineObject328**](InlineObject328.md) |  | 
 
 ### Return type
 
-[**InlineResponse200400**](InlineResponse200400.md)
+[**InlineResponse200414**](InlineResponse200414.md)
 
 ### Authorization
 
@@ -743,7 +892,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesRollback := *openapiclient.NewInlineObject119([]openapiclient.NetworksNetworkIdFirmwareUpgradesRollbacksReasons{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesRollbacksReasons("Category_example", "Comment_example")}) // InlineObject119 | 
+    createNetworkFirmwareUpgradesRollback := *openapiclient.NewInlineObject120([]openapiclient.NetworksNetworkIdFirmwareUpgradesRollbacksReasons{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesRollbacksReasons("Category_example", "Comment_example")}) // InlineObject120 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -773,7 +922,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesRollback** | [**InlineObject119**](InlineObject119.md) |  | 
+ **createNetworkFirmwareUpgradesRollback** | [**InlineObject120**](InlineObject120.md) |  | 
 
 ### Return type
 
@@ -815,7 +964,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesStagedEvent := *openapiclient.NewInlineObject121([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject121 | 
+    createNetworkFirmwareUpgradesStagedEvent := *openapiclient.NewInlineObject122([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject122 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -845,7 +994,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesStagedEvent** | [**InlineObject121**](InlineObject121.md) |  | 
+ **createNetworkFirmwareUpgradesStagedEvent** | [**InlineObject122**](InlineObject122.md) |  | 
 
 ### Return type
 
@@ -887,7 +1036,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject123("Name_example", false) // InlineObject123 | 
+    createNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject124("Name_example", false) // InlineObject124 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -917,7 +1066,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesStagedGroup** | [**InlineObject123**](InlineObject123.md) |  | 
+ **createNetworkFirmwareUpgradesStagedGroup** | [**InlineObject124**](InlineObject124.md) |  | 
 
 ### Return type
 
@@ -959,7 +1108,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFloorPlan := *openapiclient.NewInlineObject126("Name_example", "ImageContents_example") // InlineObject126 | 
+    createNetworkFloorPlan := *openapiclient.NewInlineObject127("Name_example", "ImageContents_example") // InlineObject127 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -989,7 +1138,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkFloorPlanRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFloorPlan** | [**InlineObject126**](InlineObject126.md) |  | 
+ **createNetworkFloorPlan** | [**InlineObject127**](InlineObject127.md) |  | 
 
 ### Return type
 
@@ -1031,7 +1180,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkGroupPolicy := *openapiclient.NewInlineObject132("Name_example") // InlineObject132 | 
+    createNetworkGroupPolicy := *openapiclient.NewInlineObject133("Name_example") // InlineObject133 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1061,7 +1210,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkGroupPolicyRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkGroupPolicy** | [**InlineObject132**](InlineObject132.md) |  | 
+ **createNetworkGroupPolicy** | [**InlineObject133**](InlineObject133.md) |  | 
 
 ### Return type
 
@@ -1103,7 +1252,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject134("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations1{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations1()}) // InlineObject134 | 
+    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject135("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations1{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations1()}) // InlineObject135 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1133,7 +1282,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkMerakiAuthUse
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMerakiAuthUser** | [**InlineObject134**](InlineObject134.md) |  | 
+ **createNetworkMerakiAuthUser** | [**InlineObject135**](InlineObject135.md) |  | 
 
 ### Return type
 
@@ -1155,7 +1304,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkMove
 
-> InlineResponse200404Items CreateNetworkMove(ctx, organizationId).CreateNetworkMove(createNetworkMove).Execute()
+> InlineResponse200418Items CreateNetworkMove(ctx, organizationId).CreateNetworkMove(createNetworkMove).Execute()
 
 Move networks from one organization to another
 
@@ -1175,7 +1324,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createNetworkMove := *openapiclient.NewInlineObject322(*openapiclient.NewOrganizationsOrganizationIdNetworksMovesNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdNetworksMovesOrganizations(*openapiclient.NewOrganizationsOrganizationIdNetworksMovesOrganizationsTarget("Id_example"))) // InlineObject322 | 
+    createNetworkMove := *openapiclient.NewInlineObject333(*openapiclient.NewOrganizationsOrganizationIdNetworksMovesNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdNetworksMovesOrganizations(*openapiclient.NewOrganizationsOrganizationIdNetworksMovesOrganizationsTarget("Id_example"))) // InlineObject333 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1184,7 +1333,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkMove``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkMove`: InlineResponse200404Items
+    // response from `CreateNetworkMove`: InlineResponse200418Items
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkMove`: %v\n", resp)
 }
 ```
@@ -1205,11 +1354,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkMoveRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMove** | [**InlineObject322**](InlineObject322.md) |  | 
+ **createNetworkMove** | [**InlineObject333**](InlineObject333.md) |  | 
 
 ### Return type
 
-[**InlineResponse200404Items**](InlineResponse200404Items.md)
+[**InlineResponse200418Items**](InlineResponse200418Items.md)
 
 ### Authorization
 
@@ -1247,7 +1396,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkMqttBroker := *openapiclient.NewInlineObject136("Name_example", "Host_example", int32(123)) // InlineObject136 | 
+    createNetworkMqttBroker := *openapiclient.NewInlineObject137("Name_example", "Host_example", int32(123)) // InlineObject137 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1277,7 +1426,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkMqttBrokerReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMqttBroker** | [**InlineObject136**](InlineObject136.md) |  | 
+ **createNetworkMqttBroker** | [**InlineObject137**](InlineObject137.md) |  | 
 
 ### Return type
 
@@ -1319,7 +1468,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkPiiRequest := *openapiclient.NewInlineObject139() // InlineObject139 |  (optional)
+    createNetworkPiiRequest := *openapiclient.NewInlineObject140() // InlineObject140 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1349,7 +1498,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkPiiRequestReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkPiiRequest** | [**InlineObject139**](InlineObject139.md) |  | 
+ **createNetworkPiiRequest** | [**InlineObject140**](InlineObject140.md) |  | 
 
 ### Return type
 
@@ -1391,7 +1540,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkVlanProfile := *openapiclient.NewInlineObject193("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}, "Iname_example") // InlineObject193 | 
+    createNetworkVlanProfile := *openapiclient.NewInlineObject194("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}, "Iname_example") // InlineObject194 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1421,7 +1570,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkVlanProfileRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkVlanProfile** | [**InlineObject193**](InlineObject193.md) |  | 
+ **createNetworkVlanProfile** | [**InlineObject194**](InlineObject194.md) |  | 
 
 ### Return type
 
@@ -1463,7 +1612,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject196("Name_example", "Url_example") // InlineObject196 | 
+    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject197("Name_example", "Url_example") // InlineObject197 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1493,7 +1642,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksHttpS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksHttpServer** | [**InlineObject196**](InlineObject196.md) |  | 
+ **createNetworkWebhooksHttpServer** | [**InlineObject197**](InlineObject197.md) |  | 
 
 ### Return type
 
@@ -1535,7 +1684,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject198("Name_example") // InlineObject198 | 
+    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject199("Name_example") // InlineObject199 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1565,7 +1714,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksPaylo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksPayloadTemplate** | [**InlineObject198**](InlineObject198.md) |  | 
+ **createNetworkWebhooksPayloadTemplate** | [**InlineObject199**](InlineObject199.md) |  | 
 
 ### Return type
 
@@ -1607,7 +1756,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject200("Url_example") // InlineObject200 | 
+    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject201("Url_example") // InlineObject201 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1637,7 +1786,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksWebho
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksWebhookTest** | [**InlineObject200**](InlineObject200.md) |  | 
+ **createNetworkWebhooksWebhookTest** | [**InlineObject201**](InlineObject201.md) |  | 
 
 ### Return type
 
@@ -1679,7 +1828,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationNetwork := *openapiclient.NewInlineObject316("Name_example", []string{"ProductTypes_example"}) // InlineObject316 | 
+    createOrganizationNetwork := *openapiclient.NewInlineObject327("Name_example", []string{"ProductTypes_example"}) // InlineObject327 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1709,7 +1858,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationNetworkR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationNetwork** | [**InlineObject316**](InlineObject316.md) |  | 
+ **createOrganizationNetwork** | [**InlineObject327**](InlineObject327.md) |  | 
 
 ### Return type
 
@@ -1731,7 +1880,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationNetworksGroup
 
-> InlineResponse200401Items CreateOrganizationNetworksGroup(ctx, organizationId).CreateOrganizationNetworksGroup(createOrganizationNetworksGroup).Execute()
+> InlineResponse200415Items CreateOrganizationNetworksGroup(ctx, organizationId).CreateOrganizationNetworksGroup(createOrganizationNetworksGroup).Execute()
 
 Create a network group
 
@@ -1751,7 +1900,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationNetworksGroup := *openapiclient.NewInlineObject318("Name_example") // InlineObject318 | 
+    createOrganizationNetworksGroup := *openapiclient.NewInlineObject329("Name_example") // InlineObject329 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1760,7 +1909,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateOrganizationNetworksGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationNetworksGroup`: InlineResponse200401Items
+    // response from `CreateOrganizationNetworksGroup`: InlineResponse200415Items
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateOrganizationNetworksGroup`: %v\n", resp)
 }
 ```
@@ -1781,11 +1930,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationNetworks
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationNetworksGroup** | [**InlineObject318**](InlineObject318.md) |  | 
+ **createOrganizationNetworksGroup** | [**InlineObject329**](InlineObject329.md) |  | 
 
 ### Return type
 
-[**InlineResponse200401Items**](InlineResponse200401Items.md)
+[**InlineResponse200415Items**](InlineResponse200415Items.md)
 
 ### Authorization
 
@@ -2657,7 +2806,7 @@ Name | Type | Description  | Notes
 
 ## DisableOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200385 DisableOrganizationIntegrationsXdrNetworks(ctx, organizationId).DisableOrganizationIntegrationsXdrNetworks(disableOrganizationIntegrationsXdrNetworks).Execute()
+> InlineResponse200399 DisableOrganizationIntegrationsXdrNetworks(ctx, organizationId).DisableOrganizationIntegrationsXdrNetworks(disableOrganizationIntegrationsXdrNetworks).Execute()
 
 Disable XDR on networks
 
@@ -2677,7 +2826,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    disableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject302([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject302 | 
+    disableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject313([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject313 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2686,7 +2835,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.DisableOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DisableOrganizationIntegrationsXdrNetworks`: InlineResponse200385
+    // response from `DisableOrganizationIntegrationsXdrNetworks`: InlineResponse200399
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.DisableOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -2707,11 +2856,11 @@ Other parameters are passed through a pointer to a apiDisableOrganizationIntegra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **disableOrganizationIntegrationsXdrNetworks** | [**InlineObject302**](InlineObject302.md) |  | 
+ **disableOrganizationIntegrationsXdrNetworks** | [**InlineObject313**](InlineObject313.md) |  | 
 
 ### Return type
 
-[**InlineResponse200385**](InlineResponse200385.md)
+[**InlineResponse200399**](InlineResponse200399.md)
 
 ### Authorization
 
@@ -2729,7 +2878,7 @@ Name | Type | Description  | Notes
 
 ## EnableOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200386 EnableOrganizationIntegrationsXdrNetworks(ctx, organizationId).EnableOrganizationIntegrationsXdrNetworks(enableOrganizationIntegrationsXdrNetworks).Execute()
+> InlineResponse200400 EnableOrganizationIntegrationsXdrNetworks(ctx, organizationId).EnableOrganizationIntegrationsXdrNetworks(enableOrganizationIntegrationsXdrNetworks).Execute()
 
 Enable XDR on networks
 
@@ -2749,7 +2898,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    enableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject303([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject303 | 
+    enableOrganizationIntegrationsXdrNetworks := *openapiclient.NewInlineObject314([]openapiclient.OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks{*openapiclient.NewOrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks("NetworkId_example", []string{"ProductTypes_example"})}) // InlineObject314 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2758,7 +2907,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.EnableOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `EnableOrganizationIntegrationsXdrNetworks`: InlineResponse200386
+    // response from `EnableOrganizationIntegrationsXdrNetworks`: InlineResponse200400
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.EnableOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -2779,11 +2928,11 @@ Other parameters are passed through a pointer to a apiEnableOrganizationIntegrat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **enableOrganizationIntegrationsXdrNetworks** | [**InlineObject303**](InlineObject303.md) |  | 
+ **enableOrganizationIntegrationsXdrNetworks** | [**InlineObject314**](InlineObject314.md) |  | 
 
 ### Return type
 
-[**InlineResponse200386**](InlineResponse200386.md)
+[**InlineResponse200400**](InlineResponse200400.md)
 
 ### Authorization
 
@@ -5077,7 +5226,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkMoves
 
-> InlineResponse200404 GetNetworkMoves(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).MoveIds(moveIds).Execute()
+> InlineResponse200418 GetNetworkMoves(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).MoveIds(moveIds).Execute()
 
 Return a list of network move operations in the organization
 
@@ -5109,7 +5258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkMoves``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMoves`: InlineResponse200404
+    // response from `GetNetworkMoves`: InlineResponse200418
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkMoves`: %v\n", resp)
 }
 ```
@@ -5137,7 +5286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200404**](InlineResponse200404.md)
+[**InlineResponse200418**](InlineResponse200418.md)
 
 ### Authorization
 
@@ -7147,7 +7296,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersNetworksOverviews
 
-> InlineResponse200322 GetOrganizationCampusGatewayClustersNetworksOverviews(ctx, organizationId).ClusterIds(clusterIds).SiteIds(siteIds).NetworkIds(networkIds).TunnelingSources(tunnelingSources).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200335 GetOrganizationCampusGatewayClustersNetworksOverviews(ctx, organizationId).ClusterIds(clusterIds).SiteIds(siteIds).NetworkIds(networkIds).TunnelingSources(tunnelingSources).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List networks tunneling through Campus Gateway clusters with their AP, ssids and client counts
 
@@ -7185,7 +7334,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationCampusGatewayClustersNetworksOverviews``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersNetworksOverviews`: InlineResponse200322
+    // response from `GetOrganizationCampusGatewayClustersNetworksOverviews`: InlineResponse200335
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationCampusGatewayClustersNetworksOverviews`: %v\n", resp)
 }
 ```
@@ -7219,7 +7368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200322**](InlineResponse200322.md)
+[**InlineResponse200335**](InlineResponse200335.md)
 
 ### Authorization
 
@@ -7237,7 +7386,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationIntegrationsXdrNetworks
 
-> InlineResponse200384 GetOrganizationIntegrationsXdrNetworks(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200398 GetOrganizationIntegrationsXdrNetworks(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the networks in the organization that have XDR enabled
 
@@ -7269,7 +7418,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationIntegrationsXdrNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationIntegrationsXdrNetworks`: InlineResponse200384
+    // response from `GetOrganizationIntegrationsXdrNetworks`: InlineResponse200398
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationIntegrationsXdrNetworks`: %v\n", resp)
 }
 ```
@@ -7297,7 +7446,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200384**](InlineResponse200384.md)
+[**InlineResponse200398**](InlineResponse200398.md)
 
 ### Authorization
 
@@ -7401,7 +7550,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationNetworksGroups
 
-> InlineResponse200401 GetOrganizationNetworksGroups(ctx, organizationId).GroupIds(groupIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200415 GetOrganizationNetworksGroups(ctx, organizationId).GroupIds(groupIds).Search(search).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the network groups in an organization
 
@@ -7422,18 +7571,19 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     groupIds := []string{"Inner_example"} // []string | Optional parameter to filter network groups by ID (optional)
+    search := "search_example" // string | Optional parameter to filter network groups by a case-insensitive partial group name match (optional)
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.NetworksApi.GetOrganizationNetworksGroups(context.Background(), organizationId).GroupIds(groupIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    resp, r, err := apiClient.NetworksApi.GetOrganizationNetworksGroups(context.Background(), organizationId).GroupIds(groupIds).Search(search).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationNetworksGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationNetworksGroups`: InlineResponse200401
+    // response from `GetOrganizationNetworksGroups`: InlineResponse200415
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationNetworksGroups`: %v\n", resp)
 }
 ```
@@ -7455,13 +7605,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
  **groupIds** | **[]string** | Optional parameter to filter network groups by ID | 
+ **search** | **string** | Optional parameter to filter network groups by a case-insensitive partial group name match | 
  **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
 
 ### Return type
 
-[**InlineResponse200401**](InlineResponse200401.md)
+[**InlineResponse200415**](InlineResponse200415.md)
 
 ### Authorization
 
@@ -7479,7 +7630,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationNetworksGroupsOverviewByGroup
 
-> InlineResponse200402 GetOrganizationNetworksGroupsOverviewByGroup(ctx, organizationId).SortBy(sortBy).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200416 GetOrganizationNetworksGroupsOverviewByGroup(ctx, organizationId).SortBy(sortBy).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the client and status overview information for the network groups in an organization
 
@@ -7511,7 +7662,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationNetworksGroupsOverviewByGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationNetworksGroupsOverviewByGroup`: InlineResponse200402
+    // response from `GetOrganizationNetworksGroupsOverviewByGroup`: InlineResponse200416
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationNetworksGroupsOverviewByGroup`: %v\n", resp)
 }
 ```
@@ -7539,7 +7690,175 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200402**](InlineResponse200402.md)
+[**InlineResponse200416**](InlineResponse200416.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationPoliciesGlobalGroupPoliciesNetworks
+
+> InlineResponse200429 GetOrganizationPoliciesGlobalGroupPoliciesNetworks(ctx, organizationId).PolicyIds(policyIds).NetworkIds(networkIds).FirewallTypes(firewallTypes).Name(name).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List all available Network Enforcement Targets for an Organization and their associated Organization-Wide Policies if applicable
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    policyIds := []string{"Inner_example"} // []string | Filter network enforcement targets by policy IDs (optional)
+    networkIds := []string{"Inner_example"} // []string | Filter network enforcement targets by network IDs (optional)
+    firewallTypes := []string{"FirewallTypes_example"} // []string | Filter network enforcement targets by firewall enforcement types for a network (optional)
+    name := "name_example" // string | Filter network enforcement targets by network name with support for partial matches. Case insensitive. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.NetworksApi.GetOrganizationPoliciesGlobalGroupPoliciesNetworks(context.Background(), organizationId).PolicyIds(policyIds).NetworkIds(networkIds).FirewallTypes(firewallTypes).Name(name).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationPoliciesGlobalGroupPoliciesNetworks``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesNetworks`: InlineResponse200429
+    fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationPoliciesGlobalGroupPoliciesNetworks`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationPoliciesGlobalGroupPoliciesNetworksRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **policyIds** | **[]string** | Filter network enforcement targets by policy IDs | 
+ **networkIds** | **[]string** | Filter network enforcement targets by network IDs | 
+ **firewallTypes** | **[]string** | Filter network enforcement targets by firewall enforcement types for a network | 
+ **name** | **string** | Filter network enforcement targets by network name with support for partial matches. Case insensitive. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200429**](InlineResponse200429.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments
+
+> InlineResponse200430 GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments(ctx, organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).NetworkIds(networkIds).FirewallTypes(firewallTypes).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List Network Enforcement Target Assignments for Organization-Wide policies for the specified organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    assignmentIds := []string{"Inner_example"} // []string | Filter network enforcement target assignments by assignment IDs (optional)
+    policyIds := []string{"Inner_example"} // []string | Filter network enforcement target assignments by policy IDs (optional)
+    networkIds := []string{"Inner_example"} // []string | Filter network enforcement target assignments by network IDs (optional)
+    firewallTypes := []string{"FirewallTypes_example"} // []string | Filter network enforcement target assignments by firewall enforcement types for a network (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.NetworksApi.GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments(context.Background(), organizationId).AssignmentIds(assignmentIds).PolicyIds(policyIds).NetworkIds(networkIds).FirewallTypes(firewallTypes).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments`: InlineResponse200430
+    fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignments`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationPoliciesGlobalGroupPoliciesNetworksAssignmentsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **assignmentIds** | **[]string** | Filter network enforcement target assignments by assignment IDs | 
+ **policyIds** | **[]string** | Filter network enforcement target assignments by policy IDs | 
+ **networkIds** | **[]string** | Filter network enforcement target assignments by network IDs | 
+ **firewallTypes** | **[]string** | Filter network enforcement target assignments by firewall enforcement types for a network | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 100. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200430**](InlineResponse200430.md)
 
 ### Authorization
 
@@ -7557,7 +7876,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaseNetworksEligible
 
-> InlineResponse200421 GetOrganizationSaseNetworksEligible(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).Execute()
+> InlineResponse200438 GetOrganizationSaseNetworksEligible(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Search(search).Execute()
 
 List of MX networks or templates that can be enrolled into Secure Access
 
@@ -7589,7 +7908,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationSaseNetworksEligible``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseNetworksEligible`: InlineResponse200421
+    // response from `GetOrganizationSaseNetworksEligible`: InlineResponse200438
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationSaseNetworksEligible`: %v\n", resp)
 }
 ```
@@ -7617,7 +7936,235 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200421**](InlineResponse200421.md)
+[**InlineResponse200438**](InlineResponse200438.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks
+
+> InlineResponse200457 GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+
+Lists daily consumer metrics for networks.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 730 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 32 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 32 days. The default is 30 days. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.NetworksApi.GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks(context.Background(), organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks`: InlineResponse200457
+    fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationSummarySustainabilityDailyConsumerMetricsNetworks`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationSummarySustainabilityDailyConsumerMetricsNetworksRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 730 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 32 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 32 days. The default is 30 days. | 
+
+### Return type
+
+[**InlineResponse200457**](InlineResponse200457.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks
+
+> InlineResponse200461 GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+
+Lists summary consumer metrics for networks.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 730 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 32 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 32 days. The default is 30 days. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.NetworksApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks(context.Background(), organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks`: InlineResponse200461
+    fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworks`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 730 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 32 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 32 days. The default is 30 days. | 
+
+### Return type
+
+[**InlineResponse200461**](InlineResponse200461.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated
+
+> InlineResponse200462 GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+
+Returns aggregated consumer metrics for all networks in the organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 730 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 32 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 32 days. The default is 30 days. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.NetworksApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated(context.Background(), organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated`: InlineResponse200462
+    fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregated`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationSummarySustainabilitySummaryConsumerMetricsNetworksAggregatedRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 730 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 32 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 32 days. The default is 30 days. | 
+
+### Return type
+
+[**InlineResponse200462**](InlineResponse200462.md)
 
 ### Authorization
 
@@ -7635,7 +8182,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopNetworksByStatus
 
-> []InlineResponse200448 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200471 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the client and status overview information for the networks in an organization
 
@@ -7671,7 +8218,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationSummaryTopNetworksByStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200448
+    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200471
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationSummaryTopNetworksByStatus`: %v\n", resp)
 }
 ```
@@ -7703,7 +8250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200448**](InlineResponse200448.md)
+[**[]InlineResponse200471**](InlineResponse200471.md)
 
 ### Authorization
 
@@ -7741,7 +8288,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    provisionNetworkClients := *openapiclient.NewInlineObject111([]openapiclient.NetworksNetworkIdClientsProvisionClients{*openapiclient.NewNetworksNetworkIdClientsProvisionClients("Mac_example")}, "DevicePolicy_example") // InlineObject111 | 
+    provisionNetworkClients := *openapiclient.NewInlineObject112([]openapiclient.NetworksNetworkIdClientsProvisionClients{*openapiclient.NewNetworksNetworkIdClientsProvisionClients("Mac_example")}, "DevicePolicy_example") // InlineObject112 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7771,7 +8318,7 @@ Other parameters are passed through a pointer to a apiProvisionNetworkClientsReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **provisionNetworkClients** | [**InlineObject111**](InlineObject111.md) |  | 
+ **provisionNetworkClients** | [**InlineObject112**](InlineObject112.md) |  | 
 
 ### Return type
 
@@ -7814,7 +8361,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     jobId := "jobId_example" // string | Job ID
-    publishNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject128() // InlineObject128 |  (optional)
+    publishNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject129() // InlineObject129 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7846,7 +8393,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **publishNetworkFloorPlansAutoLocateJob** | [**InlineObject128**](InlineObject128.md) |  | 
+ **publishNetworkFloorPlansAutoLocateJob** | [**InlineObject129**](InlineObject129.md) |  | 
 
 ### Return type
 
@@ -7888,7 +8435,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject194([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject194 | 
+    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject195([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject195 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7918,7 +8465,7 @@ Other parameters are passed through a pointer to a apiReassignNetworkVlanProfile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **reassignNetworkVlanProfilesAssignments** | [**InlineObject194**](InlineObject194.md) |  | 
+ **reassignNetworkVlanProfilesAssignments** | [**InlineObject195**](InlineObject195.md) |  | 
 
 ### Return type
 
@@ -7961,7 +8508,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     jobId := "jobId_example" // string | Job ID
-    recalculateNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject129() // InlineObject129 |  (optional)
+    recalculateNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject130() // InlineObject130 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7993,7 +8540,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **recalculateNetworkFloorPlansAutoLocateJob** | [**InlineObject129**](InlineObject129.md) |  | 
+ **recalculateNetworkFloorPlansAutoLocateJob** | [**InlineObject130**](InlineObject130.md) |  | 
 
 ### Return type
 
@@ -8035,7 +8582,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    removeNetworkDevices := *openapiclient.NewInlineObject116("Serial_example") // InlineObject116 | 
+    removeNetworkDevices := *openapiclient.NewInlineObject117("Serial_example") // InlineObject117 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8063,7 +8610,7 @@ Other parameters are passed through a pointer to a apiRemoveNetworkDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **removeNetworkDevices** | [**InlineObject116**](InlineObject116.md) |  | 
+ **removeNetworkDevices** | [**InlineObject117**](InlineObject117.md) |  | 
 
 ### Return type
 
@@ -8105,7 +8652,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    rollbacksNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject122([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject122 | 
+    rollbacksNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject123([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject123 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8135,7 +8682,7 @@ Other parameters are passed through a pointer to a apiRollbacksNetworkFirmwareUp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **rollbacksNetworkFirmwareUpgradesStagedEvents** | [**InlineObject122**](InlineObject122.md) |  | 
+ **rollbacksNetworkFirmwareUpgradesStagedEvents** | [**InlineObject123**](InlineObject123.md) |  | 
 
 ### Return type
 
@@ -8247,7 +8794,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    unbindNetwork := *openapiclient.NewInlineObject192() // InlineObject192 |  (optional)
+    unbindNetwork := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8277,7 +8824,7 @@ Other parameters are passed through a pointer to a apiUnbindNetworkRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **unbindNetwork** | [**InlineObject192**](InlineObject192.md) |  | 
+ **unbindNetwork** | [**InlineObject193**](InlineObject193.md) |  | 
 
 ### Return type
 
@@ -8319,7 +8866,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetwork := *openapiclient.NewInlineObject49() // InlineObject49 |  (optional)
+    updateNetwork := *openapiclient.NewInlineObject50() // InlineObject50 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8349,7 +8896,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetwork** | [**InlineObject49**](InlineObject49.md) |  | 
+ **updateNetwork** | [**InlineObject50**](InlineObject50.md) |  | 
 
 ### Return type
 
@@ -8391,7 +8938,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkAlertsSettings := *openapiclient.NewInlineObject50() // InlineObject50 |  (optional)
+    updateNetworkAlertsSettings := *openapiclient.NewInlineObject51() // InlineObject51 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8421,7 +8968,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkAlertsSetting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkAlertsSettings** | [**InlineObject50**](InlineObject50.md) |  | 
+ **updateNetworkAlertsSettings** | [**InlineObject51**](InlineObject51.md) |  | 
 
 ### Return type
 
@@ -8464,7 +9011,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientPolicy := *openapiclient.NewInlineObject112("DevicePolicy_example") // InlineObject112 | 
+    updateNetworkClientPolicy := *openapiclient.NewInlineObject113("DevicePolicy_example") // InlineObject113 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8496,7 +9043,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientPolicy** | [**InlineObject112**](InlineObject112.md) |  | 
+ **updateNetworkClientPolicy** | [**InlineObject113**](InlineObject113.md) |  | 
 
 ### Return type
 
@@ -8539,7 +9086,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject113(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject113 | 
+    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject114(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject114 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8571,7 +9118,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject113**](InlineObject113.md) |  | 
+ **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject114**](InlineObject114.md) |  | 
 
 ### Return type
 
@@ -8613,7 +9160,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkDevicesSyslogServers := *openapiclient.NewInlineObject117([]openapiclient.NetworksNetworkIdDevicesSyslogServersServers{*openapiclient.NewNetworksNetworkIdDevicesSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject117 | 
+    updateNetworkDevicesSyslogServers := *openapiclient.NewInlineObject118([]openapiclient.NetworksNetworkIdDevicesSyslogServersServers{*openapiclient.NewNetworksNetworkIdDevicesSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject118 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8643,7 +9190,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkDevicesSyslog
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkDevicesSyslogServers** | [**InlineObject117**](InlineObject117.md) |  | 
+ **updateNetworkDevicesSyslogServers** | [**InlineObject118**](InlineObject118.md) |  | 
 
 ### Return type
 
@@ -8685,7 +9232,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgrades := *openapiclient.NewInlineObject118() // InlineObject118 |  (optional)
+    updateNetworkFirmwareUpgrades := *openapiclient.NewInlineObject119() // InlineObject119 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8715,7 +9262,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgrades** | [**InlineObject118**](InlineObject118.md) |  | 
+ **updateNetworkFirmwareUpgrades** | [**InlineObject119**](InlineObject119.md) |  | 
 
 ### Return type
 
@@ -8757,7 +9304,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject120([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject120 | 
+    updateNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject121([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject121 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8787,7 +9334,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgradesStagedEvents** | [**InlineObject120**](InlineObject120.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedEvents** | [**InlineObject121**](InlineObject121.md) |  | 
 
 ### Return type
 
@@ -8830,7 +9377,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     groupId := "groupId_example" // string | Group ID
-    updateNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject124("Name_example", false) // InlineObject124 | 
+    updateNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject125("Name_example", false) // InlineObject125 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8862,7 +9409,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkFirmwareUpgradesStagedGroup** | [**InlineObject124**](InlineObject124.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedGroup** | [**InlineObject125**](InlineObject125.md) |  | 
 
 ### Return type
 
@@ -8904,7 +9451,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgradesStagedStages := *openapiclient.NewInlineObject125() // InlineObject125 |  (optional)
+    updateNetworkFirmwareUpgradesStagedStages := *openapiclient.NewInlineObject126() // InlineObject126 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8934,7 +9481,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgradesStagedStages** | [**InlineObject125**](InlineObject125.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedStages** | [**InlineObject126**](InlineObject126.md) |  | 
 
 ### Return type
 
@@ -8977,7 +9524,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     floorPlanId := "floorPlanId_example" // string | Floor plan ID
-    updateNetworkFloorPlan := *openapiclient.NewInlineObject131() // InlineObject131 |  (optional)
+    updateNetworkFloorPlan := *openapiclient.NewInlineObject132() // InlineObject132 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9009,7 +9556,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkFloorPlan** | [**InlineObject131**](InlineObject131.md) |  | 
+ **updateNetworkFloorPlan** | [**InlineObject132**](InlineObject132.md) |  | 
 
 ### Return type
 
@@ -9052,7 +9599,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     groupPolicyId := "groupPolicyId_example" // string | Group policy ID
-    updateNetworkGroupPolicy := *openapiclient.NewInlineObject133() // InlineObject133 |  (optional)
+    updateNetworkGroupPolicy := *openapiclient.NewInlineObject134() // InlineObject134 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9084,7 +9631,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkGroupPolicy** | [**InlineObject133**](InlineObject133.md) |  | 
+ **updateNetworkGroupPolicy** | [**InlineObject134**](InlineObject134.md) |  | 
 
 ### Return type
 
@@ -9127,7 +9674,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     merakiAuthUserId := "merakiAuthUserId_example" // string | Meraki auth user ID
-    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject135() // InlineObject135 |  (optional)
+    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject136() // InlineObject136 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9159,7 +9706,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMerakiAuthUser** | [**InlineObject135**](InlineObject135.md) |  | 
+ **updateNetworkMerakiAuthUser** | [**InlineObject136**](InlineObject136.md) |  | 
 
 ### Return type
 
@@ -9202,7 +9749,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
-    updateNetworkMqttBroker := *openapiclient.NewInlineObject137() // InlineObject137 |  (optional)
+    updateNetworkMqttBroker := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9234,7 +9781,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMqttBroker** | [**InlineObject137**](InlineObject137.md) |  | 
+ **updateNetworkMqttBroker** | [**InlineObject138**](InlineObject138.md) |  | 
 
 ### Return type
 
@@ -9276,7 +9823,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkNetflow := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
+    updateNetworkNetflow := *openapiclient.NewInlineObject139() // InlineObject139 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9306,7 +9853,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkNetflowReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkNetflow** | [**InlineObject138**](InlineObject138.md) |  | 
+ **updateNetworkNetflow** | [**InlineObject139**](InlineObject139.md) |  | 
 
 ### Return type
 
@@ -9348,7 +9895,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSettings := *openapiclient.NewInlineObject143() // InlineObject143 |  (optional)
+    updateNetworkSettings := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9378,7 +9925,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSettingsReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSettings** | [**InlineObject143**](InlineObject143.md) |  | 
+ **updateNetworkSettings** | [**InlineObject144**](InlineObject144.md) |  | 
 
 ### Return type
 
@@ -9420,7 +9967,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSnmp := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
+    updateNetworkSnmp := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9450,7 +9997,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSnmpRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSnmp** | [**InlineObject157**](InlineObject157.md) |  | 
+ **updateNetworkSnmp** | [**InlineObject158**](InlineObject158.md) |  | 
 
 ### Return type
 
@@ -9492,7 +10039,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSyslogServers := *openapiclient.NewInlineObject190([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject190 | 
+    updateNetworkSyslogServers := *openapiclient.NewInlineObject191([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject191 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9522,7 +10069,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSyslogServers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSyslogServers** | [**InlineObject190**](InlineObject190.md) |  | 
+ **updateNetworkSyslogServers** | [**InlineObject191**](InlineObject191.md) |  | 
 
 ### Return type
 
@@ -9564,7 +10111,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject191() // InlineObject191 |  (optional)
+    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject192() // InlineObject192 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9594,7 +10141,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkTrafficAnalys
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkTrafficAnalysis** | [**InlineObject191**](InlineObject191.md) |  | 
+ **updateNetworkTrafficAnalysis** | [**InlineObject192**](InlineObject192.md) |  | 
 
 ### Return type
 
@@ -9637,7 +10184,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     iname := "iname_example" // string | Iname
-    updateNetworkVlanProfile := *openapiclient.NewInlineObject195("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}) // InlineObject195 | 
+    updateNetworkVlanProfile := *openapiclient.NewInlineObject196("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}) // InlineObject196 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9669,7 +10216,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkVlanProfile** | [**InlineObject195**](InlineObject195.md) |  | 
+ **updateNetworkVlanProfile** | [**InlineObject196**](InlineObject196.md) |  | 
 
 ### Return type
 
@@ -9712,7 +10259,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     httpServerId := "httpServerId_example" // string | Http server ID
-    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject197() // InlineObject197 |  (optional)
+    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9744,7 +10291,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksHttpServer** | [**InlineObject197**](InlineObject197.md) |  | 
+ **updateNetworkWebhooksHttpServer** | [**InlineObject198**](InlineObject198.md) |  | 
 
 ### Return type
 
@@ -9787,7 +10334,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     payloadTemplateId := "payloadTemplateId_example" // string | Payload template ID
-    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject199() // InlineObject199 |  (optional)
+    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject200() // InlineObject200 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9819,7 +10366,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksPayloadTemplate** | [**InlineObject199**](InlineObject199.md) |  | 
+ **updateNetworkWebhooksPayloadTemplate** | [**InlineObject200**](InlineObject200.md) |  | 
 
 ### Return type
 
@@ -9841,7 +10388,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationNetworksGroup
 
-> InlineResponse200401Items UpdateOrganizationNetworksGroup(ctx, organizationId, groupId).UpdateOrganizationNetworksGroup(updateOrganizationNetworksGroup).Execute()
+> InlineResponse200415Items UpdateOrganizationNetworksGroup(ctx, organizationId, groupId).UpdateOrganizationNetworksGroup(updateOrganizationNetworksGroup).Execute()
 
 Update a network group
 
@@ -9862,7 +10409,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     groupId := "groupId_example" // string | Group ID
-    updateOrganizationNetworksGroup := *openapiclient.NewInlineObject319("Name_example") // InlineObject319 | 
+    updateOrganizationNetworksGroup := *openapiclient.NewInlineObject330("Name_example") // InlineObject330 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9871,7 +10418,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateOrganizationNetworksGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationNetworksGroup`: InlineResponse200401Items
+    // response from `UpdateOrganizationNetworksGroup`: InlineResponse200415Items
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateOrganizationNetworksGroup`: %v\n", resp)
 }
 ```
@@ -9894,11 +10441,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationNetworksGroup** | [**InlineObject319**](InlineObject319.md) |  | 
+ **updateOrganizationNetworksGroup** | [**InlineObject330**](InlineObject330.md) |  | 
 
 ### Return type
 
-[**InlineResponse200401Items**](InlineResponse200401Items.md)
+[**InlineResponse200415Items**](InlineResponse200415Items.md)
 
 ### Authorization
 
@@ -9936,7 +10483,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject115("Size_example") // InlineObject115 | 
+    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject116("Size_example") // InlineObject116 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9966,7 +10513,7 @@ Other parameters are passed through a pointer to a apiVmxNetworkDevicesClaimRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **vmxNetworkDevicesClaim** | [**InlineObject115**](InlineObject115.md) |  | 
+ **vmxNetworkDevicesClaim** | [**InlineObject116**](InlineObject116.md) |  | 
 
 ### Return type
 

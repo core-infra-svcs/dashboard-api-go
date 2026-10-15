@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200307Network**](InlineResponse200307Network.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200307Counts**](InlineResponse200307Counts.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200307Items**](InlineResponse200307Items.md) | List of the IPSec SLA policies for an organization | [optional] 
+**Meta** | Pointer to [**InlineResponse200307Meta**](InlineResponse200307Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200307WithDefaults instantiates a new InlineResponse200307 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetItems
 
-`func (o *InlineResponse200307) GetNetwork() InlineResponse200307Network`
+`func (o *InlineResponse200307) GetItems() []InlineResponse200307Items`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetItemsOk
 
-`func (o *InlineResponse200307) GetNetworkOk() (*InlineResponse200307Network, bool)`
+`func (o *InlineResponse200307) GetItemsOk() (*[]InlineResponse200307Items, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetItems
 
-`func (o *InlineResponse200307) SetNetwork(v InlineResponse200307Network)`
+`func (o *InlineResponse200307) SetItems(v []InlineResponse200307Items)`
 
-SetNetwork sets Network field to given value.
+SetItems sets Items field to given value.
 
-### HasNetwork
+### HasItems
 
-`func (o *InlineResponse200307) HasNetwork() bool`
+`func (o *InlineResponse200307) HasItems() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetCounts
+### GetMeta
 
-`func (o *InlineResponse200307) GetCounts() InlineResponse200307Counts`
+`func (o *InlineResponse200307) GetMeta() InlineResponse200307Meta`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetMetaOk
 
-`func (o *InlineResponse200307) GetCountsOk() (*InlineResponse200307Counts, bool)`
+`func (o *InlineResponse200307) GetMetaOk() (*InlineResponse200307Meta, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetMeta
 
-`func (o *InlineResponse200307) SetCounts(v InlineResponse200307Counts)`
+`func (o *InlineResponse200307) SetMeta(v InlineResponse200307Meta)`
 
-SetCounts sets Counts field to given value.
+SetMeta sets Meta field to given value.
 
-### HasCounts
+### HasMeta
 
-`func (o *InlineResponse200307) HasCounts() bool`
+`func (o *InlineResponse200307) HasMeta() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

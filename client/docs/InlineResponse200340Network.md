@@ -4,22 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The network identifier | [optional] 
-**OrganizationId** | Pointer to **string** | The organization identifier | [optional] 
-**Name** | Pointer to **string** | The network name | [optional] 
-**ProductTypes** | Pointer to **[]string** |  | [optional] 
-**TimeZone** | Pointer to **string** | The network&#39;s timezone | [optional] 
-**Tags** | Pointer to **[]string** | The network tags | [optional] 
-**EnrollmentString** | Pointer to **string** | The network enrollment string | [optional] 
-**Url** | Pointer to **string** | The network URL | [optional] 
-**Notes** | Pointer to **string** | The notes for the network | [optional] 
-**IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
+**Id** | **string** | Network ID | 
+**Name** | **string** | Network name | 
+**Url** | **string** | Network URL | 
 
 ## Methods
 
 ### NewInlineResponse200340Network
 
-`func NewInlineResponse200340Network() *InlineResponse200340Network`
+`func NewInlineResponse200340Network(id string, name string, url string, ) *InlineResponse200340Network`
 
 NewInlineResponse200340Network instantiates a new InlineResponse200340Network object
 This constructor will assign default values to properties that have it defined,
@@ -53,36 +46,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *InlineResponse200340Network) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetOrganizationId
-
-`func (o *InlineResponse200340Network) GetOrganizationId() string`
-
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
-
-### GetOrganizationIdOk
-
-`func (o *InlineResponse200340Network) GetOrganizationIdOk() (*string, bool)`
-
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrganizationId
-
-`func (o *InlineResponse200340Network) SetOrganizationId(v string)`
-
-SetOrganizationId sets OrganizationId field to given value.
-
-### HasOrganizationId
-
-`func (o *InlineResponse200340Network) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -103,111 +66,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineResponse200340Network) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetProductTypes
-
-`func (o *InlineResponse200340Network) GetProductTypes() []string`
-
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
-
-### GetProductTypesOk
-
-`func (o *InlineResponse200340Network) GetProductTypesOk() (*[]string, bool)`
-
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductTypes
-
-`func (o *InlineResponse200340Network) SetProductTypes(v []string)`
-
-SetProductTypes sets ProductTypes field to given value.
-
-### HasProductTypes
-
-`func (o *InlineResponse200340Network) HasProductTypes() bool`
-
-HasProductTypes returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineResponse200340Network) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineResponse200340Network) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineResponse200340Network) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineResponse200340Network) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200340Network) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200340Network) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200340Network) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200340Network) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetEnrollmentString
-
-`func (o *InlineResponse200340Network) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineResponse200340Network) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineResponse200340Network) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineResponse200340Network) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -228,61 +86,6 @@ and a boolean to check if the value has been set.
 
 SetUrl sets Url field to given value.
 
-### HasUrl
-
-`func (o *InlineResponse200340Network) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineResponse200340Network) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineResponse200340Network) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineResponse200340Network) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineResponse200340Network) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetIsBoundToConfigTemplate
-
-`func (o *InlineResponse200340Network) GetIsBoundToConfigTemplate() bool`
-
-GetIsBoundToConfigTemplate returns the IsBoundToConfigTemplate field if non-nil, zero value otherwise.
-
-### GetIsBoundToConfigTemplateOk
-
-`func (o *InlineResponse200340Network) GetIsBoundToConfigTemplateOk() (*bool, bool)`
-
-GetIsBoundToConfigTemplateOk returns a tuple with the IsBoundToConfigTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsBoundToConfigTemplate
-
-`func (o *InlineResponse200340Network) SetIsBoundToConfigTemplate(v bool)`
-
-SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
-
-### HasIsBoundToConfigTemplate
-
-`func (o *InlineResponse200340Network) HasIsBoundToConfigTemplate() bool`
-
-HasIsBoundToConfigTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

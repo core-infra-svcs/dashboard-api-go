@@ -4,14 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID, may not be unique in result set | [optional] 
-**Type** | Pointer to **string** | The site&#39;s type (one of: &#39;Meraki spoke&#39;, &#39;Meraki hub&#39;, &#39;Meraki template&#39;) | [optional] 
-**Name** | Pointer to **string** | Site name | [optional] 
-**Region** | Pointer to [**InlineResponse200421Region**](InlineResponse200421Region.md) |  | [optional] 
-**Device** | Pointer to [**InlineResponse200421Device**](InlineResponse200421Device.md) |  | [optional] 
-**Address** | Pointer to [**InlineResponse200421Address**](InlineResponse200421Address.md) |  | [optional] 
-**Vpn** | Pointer to [**InlineResponse200421Vpn**](InlineResponse200421Vpn.md) |  | [optional] 
-**Routing** | Pointer to [**InlineResponse200421Routing**](InlineResponse200421Routing.md) |  | [optional] 
+**RulesetId** | Pointer to **string** | ID of the ruleset | [optional] 
+**Name** | Pointer to **string** | Name of the ruleset | [optional] 
+**Description** | Pointer to **string** | Description of the ruleset | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Ruleset creation time | [optional] 
+**LastUpdatedAt** | Pointer to **time.Time** | Ruleset last update time | [optional] 
 
 ## Methods
 
@@ -32,55 +29,30 @@ NewInlineResponse200421ItemsWithDefaults instantiates a new InlineResponse200421
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetRulesetId
 
-`func (o *InlineResponse200421Items) GetNetworkId() string`
+`func (o *InlineResponse200421Items) GetRulesetId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetRulesetIdOk
 
-`func (o *InlineResponse200421Items) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200421Items) GetRulesetIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetRulesetId
 
-`func (o *InlineResponse200421Items) SetNetworkId(v string)`
+`func (o *InlineResponse200421Items) SetRulesetId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetRulesetId sets RulesetId field to given value.
 
-### HasNetworkId
+### HasRulesetId
 
-`func (o *InlineResponse200421Items) HasNetworkId() bool`
+`func (o *InlineResponse200421Items) HasRulesetId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200421Items) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200421Items) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200421Items) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200421Items) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasRulesetId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -107,130 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetRegion
+### GetDescription
 
-`func (o *InlineResponse200421Items) GetRegion() InlineResponse200421Region`
+`func (o *InlineResponse200421Items) GetDescription() string`
 
-GetRegion returns the Region field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetRegionOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200421Items) GetRegionOk() (*InlineResponse200421Region, bool)`
+`func (o *InlineResponse200421Items) GetDescriptionOk() (*string, bool)`
 
-GetRegionOk returns a tuple with the Region field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRegion
+### SetDescription
 
-`func (o *InlineResponse200421Items) SetRegion(v InlineResponse200421Region)`
+`func (o *InlineResponse200421Items) SetDescription(v string)`
 
-SetRegion sets Region field to given value.
+SetDescription sets Description field to given value.
 
-### HasRegion
+### HasDescription
 
-`func (o *InlineResponse200421Items) HasRegion() bool`
+`func (o *InlineResponse200421Items) HasDescription() bool`
 
-HasRegion returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetDevice
+### GetCreatedAt
 
-`func (o *InlineResponse200421Items) GetDevice() InlineResponse200421Device`
+`func (o *InlineResponse200421Items) GetCreatedAt() time.Time`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200421Items) GetDeviceOk() (*InlineResponse200421Device, bool)`
+`func (o *InlineResponse200421Items) GetCreatedAtOk() (*time.Time, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetCreatedAt
 
-`func (o *InlineResponse200421Items) SetDevice(v InlineResponse200421Device)`
+`func (o *InlineResponse200421Items) SetCreatedAt(v time.Time)`
 
-SetDevice sets Device field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasDevice
+### HasCreatedAt
 
-`func (o *InlineResponse200421Items) HasDevice() bool`
+`func (o *InlineResponse200421Items) HasCreatedAt() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetAddress
+### GetLastUpdatedAt
 
-`func (o *InlineResponse200421Items) GetAddress() InlineResponse200421Address`
+`func (o *InlineResponse200421Items) GetLastUpdatedAt() time.Time`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetLastUpdatedAtOk
 
-`func (o *InlineResponse200421Items) GetAddressOk() (*InlineResponse200421Address, bool)`
+`func (o *InlineResponse200421Items) GetLastUpdatedAtOk() (*time.Time, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetLastUpdatedAt
 
-`func (o *InlineResponse200421Items) SetAddress(v InlineResponse200421Address)`
+`func (o *InlineResponse200421Items) SetLastUpdatedAt(v time.Time)`
 
-SetAddress sets Address field to given value.
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
 
-### HasAddress
+### HasLastUpdatedAt
 
-`func (o *InlineResponse200421Items) HasAddress() bool`
+`func (o *InlineResponse200421Items) HasLastUpdatedAt() bool`
 
-HasAddress returns a boolean if a field has been set.
-
-### GetVpn
-
-`func (o *InlineResponse200421Items) GetVpn() InlineResponse200421Vpn`
-
-GetVpn returns the Vpn field if non-nil, zero value otherwise.
-
-### GetVpnOk
-
-`func (o *InlineResponse200421Items) GetVpnOk() (*InlineResponse200421Vpn, bool)`
-
-GetVpnOk returns a tuple with the Vpn field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVpn
-
-`func (o *InlineResponse200421Items) SetVpn(v InlineResponse200421Vpn)`
-
-SetVpn sets Vpn field to given value.
-
-### HasVpn
-
-`func (o *InlineResponse200421Items) HasVpn() bool`
-
-HasVpn returns a boolean if a field has been set.
-
-### GetRouting
-
-`func (o *InlineResponse200421Items) GetRouting() InlineResponse200421Routing`
-
-GetRouting returns the Routing field if non-nil, zero value otherwise.
-
-### GetRoutingOk
-
-`func (o *InlineResponse200421Items) GetRoutingOk() (*InlineResponse200421Routing, bool)`
-
-GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRouting
-
-`func (o *InlineResponse200421Items) SetRouting(v InlineResponse200421Routing)`
-
-SetRouting sets Routing field to given value.
-
-### HasRouting
-
-`func (o *InlineResponse200421Items) HasRouting() bool`
-
-HasRouting returns a boolean if a field has been set.
+HasLastUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**InlineResponse200133Network**](InlineResponse200133Network.md) |  | 
-**Available** | [**[]InlineResponse200370Available**](InlineResponse200370Available.md) | The list of roles that can be assigned to a syslog server for this network | 
+**Serial** | Pointer to **string** | Device serial number | [optional] 
+**BySlot** | Pointer to [**[]InlineResponse200370BySlot**](InlineResponse200370BySlot.md) | SIMs associated with the device. Maximum 3 SIM slots per device. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200370Items
 
-`func NewInlineResponse200370Items(network InlineResponse200133Network, available []InlineResponse200370Available, ) *InlineResponse200370Items`
+`func NewInlineResponse200370Items() *InlineResponse200370Items`
 
 NewInlineResponse200370Items instantiates a new InlineResponse200370Items object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineResponse200370ItemsWithDefaults instantiates a new InlineResponse200370
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetSerial
 
-`func (o *InlineResponse200370Items) GetNetwork() InlineResponse200133Network`
+`func (o *InlineResponse200370Items) GetSerial() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetSerialOk
 
-`func (o *InlineResponse200370Items) GetNetworkOk() (*InlineResponse200133Network, bool)`
+`func (o *InlineResponse200370Items) GetSerialOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetSerial
 
-`func (o *InlineResponse200370Items) SetNetwork(v InlineResponse200133Network)`
+`func (o *InlineResponse200370Items) SetSerial(v string)`
 
-SetNetwork sets Network field to given value.
+SetSerial sets Serial field to given value.
 
+### HasSerial
 
-### GetAvailable
+`func (o *InlineResponse200370Items) HasSerial() bool`
 
-`func (o *InlineResponse200370Items) GetAvailable() []InlineResponse200370Available`
+HasSerial returns a boolean if a field has been set.
 
-GetAvailable returns the Available field if non-nil, zero value otherwise.
+### GetBySlot
 
-### GetAvailableOk
+`func (o *InlineResponse200370Items) GetBySlot() []InlineResponse200370BySlot`
 
-`func (o *InlineResponse200370Items) GetAvailableOk() (*[]InlineResponse200370Available, bool)`
+GetBySlot returns the BySlot field if non-nil, zero value otherwise.
 
-GetAvailableOk returns a tuple with the Available field if it's non-nil, zero value otherwise
+### GetBySlotOk
+
+`func (o *InlineResponse200370Items) GetBySlotOk() (*[]InlineResponse200370BySlot, bool)`
+
+GetBySlotOk returns a tuple with the BySlot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAvailable
+### SetBySlot
 
-`func (o *InlineResponse200370Items) SetAvailable(v []InlineResponse200370Available)`
+`func (o *InlineResponse200370Items) SetBySlot(v []InlineResponse200370BySlot)`
 
-SetAvailable sets Available field to given value.
+SetBySlot sets BySlot field to given value.
 
+### HasBySlot
+
+`func (o *InlineResponse200370Items) HasBySlot() bool`
+
+HasBySlot returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

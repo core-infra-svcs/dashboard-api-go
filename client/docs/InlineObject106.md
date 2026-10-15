@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, mDNS gateway is enabled for this SSID and cluster. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules**](NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules.md) | List of mDNS forwarding rules. | [optional] 
+**Name** | Pointer to **string** | Name of the cluster | [optional] 
+**Uplinks** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks**](NetworksNetworkIdCampusGatewayClustersClusterIdUplinks.md) | Uplink interface settings of the cluster | [optional] 
+**Tunnels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels**](NetworksNetworkIdCampusGatewayClustersClusterIdTunnels.md) | Tunnel interface settings of the cluster: Reuse uplink or specify tunnel interface | [optional] 
+**Nameservers** | Pointer to [**InlineResponse20118Nameservers**](InlineResponse20118Nameservers.md) |  | [optional] 
+**PortChannels** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels**](NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels.md) | Port channel settings of the cluster | [optional] 
+**Devices** | Pointer to [**[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices**](NetworksNetworkIdCampusGatewayClustersClusterIdDevices.md) | Devices in the cluster | [optional] 
+**Notes** | Pointer to **string** | Notes about cluster with max size of 511 characters allowed | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineObject106WithDefaults instantiates a new InlineObject106 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject106) GetEnabled() bool`
+`func (o *InlineObject106) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject106) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject106) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject106) SetEnabled(v bool)`
+`func (o *InlineObject106) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineObject106) HasEnabled() bool`
+`func (o *InlineObject106) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetUplinks
 
-`func (o *InlineObject106) GetRules() []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules`
+`func (o *InlineObject106) GetUplinks() []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetUplinksOk
 
-`func (o *InlineObject106) GetRulesOk() (*[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules, bool)`
+`func (o *InlineObject106) GetUplinksOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdUplinks, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetUplinks
 
-`func (o *InlineObject106) SetRules(v []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules)`
+`func (o *InlineObject106) SetUplinks(v []NetworksNetworkIdCampusGatewayClustersClusterIdUplinks)`
 
-SetRules sets Rules field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasRules
+### HasUplinks
 
-`func (o *InlineObject106) HasRules() bool`
+`func (o *InlineObject106) HasUplinks() bool`
 
-HasRules returns a boolean if a field has been set.
+HasUplinks returns a boolean if a field has been set.
+
+### GetTunnels
+
+`func (o *InlineObject106) GetTunnels() []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels`
+
+GetTunnels returns the Tunnels field if non-nil, zero value otherwise.
+
+### GetTunnelsOk
+
+`func (o *InlineObject106) GetTunnelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdTunnels, bool)`
+
+GetTunnelsOk returns a tuple with the Tunnels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTunnels
+
+`func (o *InlineObject106) SetTunnels(v []NetworksNetworkIdCampusGatewayClustersClusterIdTunnels)`
+
+SetTunnels sets Tunnels field to given value.
+
+### HasTunnels
+
+`func (o *InlineObject106) HasTunnels() bool`
+
+HasTunnels returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *InlineObject106) GetNameservers() InlineResponse20118Nameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject106) GetNameserversOk() (*InlineResponse20118Nameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject106) SetNameservers(v InlineResponse20118Nameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *InlineObject106) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
+
+### GetPortChannels
+
+`func (o *InlineObject106) GetPortChannels() []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels`
+
+GetPortChannels returns the PortChannels field if non-nil, zero value otherwise.
+
+### GetPortChannelsOk
+
+`func (o *InlineObject106) GetPortChannelsOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels, bool)`
+
+GetPortChannelsOk returns a tuple with the PortChannels field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortChannels
+
+`func (o *InlineObject106) SetPortChannels(v []NetworksNetworkIdCampusGatewayClustersClusterIdPortChannels)`
+
+SetPortChannels sets PortChannels field to given value.
+
+### HasPortChannels
+
+`func (o *InlineObject106) HasPortChannels() bool`
+
+HasPortChannels returns a boolean if a field has been set.
+
+### GetDevices
+
+`func (o *InlineObject106) GetDevices() []NetworksNetworkIdCampusGatewayClustersClusterIdDevices`
+
+GetDevices returns the Devices field if non-nil, zero value otherwise.
+
+### GetDevicesOk
+
+`func (o *InlineObject106) GetDevicesOk() (*[]NetworksNetworkIdCampusGatewayClustersClusterIdDevices, bool)`
+
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevices
+
+`func (o *InlineObject106) SetDevices(v []NetworksNetworkIdCampusGatewayClustersClusterIdDevices)`
+
+SetDevices sets Devices field to given value.
+
+### HasDevices
+
+`func (o *InlineObject106) HasDevices() bool`
+
+HasDevices returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject106) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject106) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject106) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject106) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

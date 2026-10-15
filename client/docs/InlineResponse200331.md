@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200331Items**](InlineResponse200331Items.md) | List Cellular Service Providers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200331Items**](InlineResponse200331Items.md) | List of campus gateway clusters, along with details about client usage | [optional] 
 **Meta** | Pointer to [**InlineResponse200331Meta**](InlineResponse200331Meta.md) |  | [optional] 
 
 ## Methods

@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
+**Items** | Pointer to [**[]InlineResponse200274Items**](InlineResponse200274Items.md) | Pipeline summary with aggregated job and operation status counts | [optional] 
+**Meta** | Pointer to [**InlineResponse200272Meta**](InlineResponse200272Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200274WithDefaults instantiates a new InlineResponse200274 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetItems
 
-`func (o *InlineResponse200274) GetStartTs() time.Time`
+`func (o *InlineResponse200274) GetItems() []InlineResponse200274Items`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetItemsOk
 
-`func (o *InlineResponse200274) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200274) GetItemsOk() (*[]InlineResponse200274Items, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetItems
 
-`func (o *InlineResponse200274) SetStartTs(v time.Time)`
+`func (o *InlineResponse200274) SetItems(v []InlineResponse200274Items)`
 
-SetStartTs sets StartTs field to given value.
+SetItems sets Items field to given value.
 
-### HasStartTs
+### HasItems
 
-`func (o *InlineResponse200274) HasStartTs() bool`
+`func (o *InlineResponse200274) HasItems() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMeta
 
-`func (o *InlineResponse200274) GetEndTs() time.Time`
+`func (o *InlineResponse200274) GetMeta() InlineResponse200272Meta`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMetaOk
 
-`func (o *InlineResponse200274) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200274) GetMetaOk() (*InlineResponse200272Meta, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMeta
 
-`func (o *InlineResponse200274) SetEndTs(v time.Time)`
+`func (o *InlineResponse200274) SetMeta(v InlineResponse200272Meta)`
 
-SetEndTs sets EndTs field to given value.
+SetMeta sets Meta field to given value.
 
-### HasEndTs
+### HasMeta
 
-`func (o *InlineResponse200274) HasEndTs() bool`
+`func (o *InlineResponse200274) HasMeta() bool`
 
-HasEndTs returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200274) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200274) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200274) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200274) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

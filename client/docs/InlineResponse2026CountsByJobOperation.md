@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Pipeline job operation display name. Values are registered operation names and may grow additively. | [optional] 
 **Total** | Pointer to **int32** | Total jobs for this operation | [optional] 
-**ByStatus** | Pointer to [**InlineResponse200271CountsJobsByStatus**](InlineResponse200271CountsJobsByStatus.md) |  | [optional] 
+**ByStatus** | Pointer to [**InlineResponse200274CountsJobsByStatus**](InlineResponse200274CountsJobsByStatus.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasTotal returns a boolean if a field has been set.
 
 ### GetByStatus
 
-`func (o *InlineResponse2026CountsByJobOperation) GetByStatus() InlineResponse200271CountsJobsByStatus`
+`func (o *InlineResponse2026CountsByJobOperation) GetByStatus() InlineResponse200274CountsJobsByStatus`
 
 GetByStatus returns the ByStatus field if non-nil, zero value otherwise.
 
 ### GetByStatusOk
 
-`func (o *InlineResponse2026CountsByJobOperation) GetByStatusOk() (*InlineResponse200271CountsJobsByStatus, bool)`
+`func (o *InlineResponse2026CountsByJobOperation) GetByStatusOk() (*InlineResponse200274CountsJobsByStatus, bool)`
 
 GetByStatusOk returns a tuple with the ByStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetByStatus
 
-`func (o *InlineResponse2026CountsByJobOperation) SetByStatus(v InlineResponse200271CountsJobsByStatus)`
+`func (o *InlineResponse2026CountsByJobOperation) SetByStatus(v InlineResponse200274CountsJobsByStatus)`
 
 SetByStatus sets ByStatus field to given value.
 

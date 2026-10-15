@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | **string** | Service provider account ID | 
-**ApiKey** | **string** | Service provider account API key | 
-**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
-**Title** | **string** | Service provider account name | 
-**Username** | **string** | Service provider account username | 
+**AlertIds** | **[]string** | Array of alert IDs in this organization to restore. Missing or inaccessible alert IDs return 404. | 
 
 ## Methods
 
 ### NewInlineObject276
 
-`func NewInlineObject276(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject276`
+`func NewInlineObject276(alertIds []string, ) *InlineObject276`
 
 NewInlineObject276 instantiates a new InlineObject276 object
 This constructor will assign default values to properties that have it defined,
@@ -29,104 +25,24 @@ NewInlineObject276WithDefaults instantiates a new InlineObject276 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccountId
+### GetAlertIds
 
-`func (o *InlineObject276) GetAccountId() string`
+`func (o *InlineObject276) GetAlertIds() []string`
 
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
 
-### GetAccountIdOk
+### GetAlertIdsOk
 
-`func (o *InlineObject276) GetAccountIdOk() (*string, bool)`
+`func (o *InlineObject276) GetAlertIdsOk() (*[]string, bool)`
 
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountId
+### SetAlertIds
 
-`func (o *InlineObject276) SetAccountId(v string)`
+`func (o *InlineObject276) SetAlertIds(v []string)`
 
-SetAccountId sets AccountId field to given value.
-
-
-### GetApiKey
-
-`func (o *InlineObject276) GetApiKey() string`
-
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
-
-### GetApiKeyOk
-
-`func (o *InlineObject276) GetApiKeyOk() (*string, bool)`
-
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApiKey
-
-`func (o *InlineObject276) SetApiKey(v string)`
-
-SetApiKey sets ApiKey field to given value.
-
-
-### GetServiceProvider
-
-`func (o *InlineObject276) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
-
-GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
-
-### GetServiceProviderOk
-
-`func (o *InlineObject276) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
-
-GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetServiceProvider
-
-`func (o *InlineObject276) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
-
-SetServiceProvider sets ServiceProvider field to given value.
-
-
-### GetTitle
-
-`func (o *InlineObject276) GetTitle() string`
-
-GetTitle returns the Title field if non-nil, zero value otherwise.
-
-### GetTitleOk
-
-`func (o *InlineObject276) GetTitleOk() (*string, bool)`
-
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTitle
-
-`func (o *InlineObject276) SetTitle(v string)`
-
-SetTitle sets Title field to given value.
-
-
-### GetUsername
-
-`func (o *InlineObject276) GetUsername() string`
-
-GetUsername returns the Username field if non-nil, zero value otherwise.
-
-### GetUsernameOk
-
-`func (o *InlineObject276) GetUsernameOk() (*string, bool)`
-
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsername
-
-`func (o *InlineObject276) SetUsername(v string)`
-
-SetUsername sets Username field to given value.
+SetAlertIds sets AlertIds field to given value.
 
 
 

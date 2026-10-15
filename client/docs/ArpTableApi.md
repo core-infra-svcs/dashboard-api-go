@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsArpTable := *openapiclient.NewInlineObject19() // InlineObject19 |  (optional)
+    createDeviceLiveToolsArpTable := *openapiclient.NewInlineObject20() // InlineObject20 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsArpTa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsArpTable** | [**InlineObject19**](InlineObject19.md) |  | 
+ **createDeviceLiveToolsArpTable** | [**InlineObject20**](InlineObject20.md) |  | 
 
 ### Return type
 

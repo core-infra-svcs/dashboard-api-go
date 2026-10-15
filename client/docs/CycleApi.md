@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject26([]string{"Ports_example"}) // InlineObject26 | 
+    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject27([]string{"Ports_example"}) // InlineObject27 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPorts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPortsCycle** | [**InlineObject26**](InlineObject26.md) |  | 
+ **createDeviceLiveToolsPortsCycle** | [**InlineObject27**](InlineObject27.md) |  | 
 
 ### Return type
 

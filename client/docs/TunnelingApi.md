@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## BatchOrganizationCampusGatewayClustersTunnelingUpdate
 
-> InlineResponse200325 BatchOrganizationCampusGatewayClustersTunnelingUpdate(ctx, organizationId).BatchOrganizationCampusGatewayClustersTunnelingUpdate(batchOrganizationCampusGatewayClustersTunnelingUpdate).Execute()
+> InlineResponse200338 BatchOrganizationCampusGatewayClustersTunnelingUpdate(ctx, organizationId).BatchOrganizationCampusGatewayClustersTunnelingUpdate(batchOrganizationCampusGatewayClustersTunnelingUpdate).Execute()
 
 Update MCG cluster-network tunnel settings for multiple networks
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    batchOrganizationCampusGatewayClustersTunnelingUpdate := *openapiclient.NewInlineObject274([]openapiclient.OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems{*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateDataEncryption(false)))}) // InlineObject274 | 
+    batchOrganizationCampusGatewayClustersTunnelingUpdate := *openapiclient.NewInlineObject285([]openapiclient.OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems{*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateDataEncryption(false)))}) // InlineObject285 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TunnelingApi.BatchOrganizationCampusGatewayClustersTunnelingUpdate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchOrganizationCampusGatewayClustersTunnelingUpdate`: InlineResponse200325
+    // response from `BatchOrganizationCampusGatewayClustersTunnelingUpdate`: InlineResponse200338
     fmt.Fprintf(os.Stdout, "Response from `TunnelingApi.BatchOrganizationCampusGatewayClustersTunnelingUpdate`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiBatchOrganizationCampusGat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchOrganizationCampusGatewayClustersTunnelingUpdate** | [**InlineObject274**](InlineObject274.md) |  | 
+ **batchOrganizationCampusGatewayClustersTunnelingUpdate** | [**InlineObject285**](InlineObject285.md) |  | 
 
 ### Return type
 
-[**InlineResponse200325**](InlineResponse200325.md)
+[**InlineResponse200338**](InlineResponse200338.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork
 
-> InlineResponse200326 GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork(ctx, organizationId).ClusterIds(clusterIds).DataEncryptionEnabled(dataEncryptionEnabled).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200339 GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork(ctx, organizationId).ClusterIds(clusterIds).DataEncryptionEnabled(dataEncryptionEnabled).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List all the MCG cluster-network tunnel settings
 
@@ -117,7 +117,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TunnelingApi.GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork`: InlineResponse200326
+    // response from `GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork`: InlineResponse200339
     fmt.Fprintf(os.Stdout, "Response from `TunnelingApi.GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork`: %v\n", resp)
 }
 ```
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200326**](InlineResponse200326.md)
+[**InlineResponse200339**](InlineResponse200339.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200424Items**](InlineResponse200424Items.md) | Collection of site connectivity payloads | [optional] 
+**Success** | Pointer to **bool** | Whether the operation was successful | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200424WithDefaults instantiates a new InlineResponse200424 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSuccess
 
-`func (o *InlineResponse200424) GetItems() []InlineResponse200424Items`
+`func (o *InlineResponse200424) GetSuccess() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSuccessOk
 
-`func (o *InlineResponse200424) GetItemsOk() (*[]InlineResponse200424Items, bool)`
+`func (o *InlineResponse200424) GetSuccessOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSuccess
 
-`func (o *InlineResponse200424) SetItems(v []InlineResponse200424Items)`
+`func (o *InlineResponse200424) SetSuccess(v bool)`
 
-SetItems sets Items field to given value.
+SetSuccess sets Success field to given value.
 
-### HasItems
+### HasSuccess
 
-`func (o *InlineResponse200424) HasItems() bool`
+`func (o *InlineResponse200424) HasSuccess() bool`
 
-HasItems returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

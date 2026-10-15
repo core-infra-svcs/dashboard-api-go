@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200101**](InlineResponse200101.md) | VPN exclusion rules by network | [optional] 
+**Items** | Pointer to [**[]InlineResponse20080**](InlineResponse20080.md) | List of networks with multicast static forwarding rules | [optional] 
+**Meta** | Pointer to [**InlineResponse200283Meta**](InlineResponse200283Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200289) GetItems() []InlineResponse200101`
+`func (o *InlineResponse200289) GetItems() []InlineResponse20080`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200289) GetItemsOk() (*[]InlineResponse200101, bool)`
+`func (o *InlineResponse200289) GetItemsOk() (*[]InlineResponse20080, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200289) SetItems(v []InlineResponse200101)`
+`func (o *InlineResponse200289) SetItems(v []InlineResponse20080)`
 
 SetItems sets Items field to given value.
 
@@ -49,6 +50,31 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200289) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200289) GetMeta() InlineResponse200283Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200289) GetMetaOk() (*InlineResponse200283Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200289) SetMeta(v InlineResponse200283Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200289) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
-**Serials** | **[]string** | Array of Device Serials | 
-**StackIds** | **[]string** | Array of Switch Stack IDs | 
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**ActiveVlans** | Pointer to **string** | The active VLANs for the VLAN profile. Only applicable to trunk ports. The given range must be inclusive of all named VLANs. | [optional] 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
+**Iname** | **string** | IName of the profile | 
 
 ## Methods
 
 ### NewInlineObject194
 
-`func NewInlineObject194(serials []string, stackIds []string, ) *InlineObject194`
+`func NewInlineObject194(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, iname string, ) *InlineObject194`
 
 NewInlineObject194 instantiates a new InlineObject194 object
 This constructor will assign default values to properties that have it defined,
@@ -27,69 +29,109 @@ NewInlineObject194WithDefaults instantiates a new InlineObject194 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetName
 
-`func (o *InlineObject194) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
+`func (o *InlineObject194) GetName() string`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetNameOk
 
-`func (o *InlineObject194) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
+`func (o *InlineObject194) GetNameOk() (*string, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetName
 
-`func (o *InlineObject194) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
+`func (o *InlineObject194) SetName(v string)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetName sets Name field to given value.
 
-### HasVlanProfile
 
-`func (o *InlineObject194) HasVlanProfile() bool`
+### GetActiveVlans
 
-HasVlanProfile returns a boolean if a field has been set.
+`func (o *InlineObject194) GetActiveVlans() string`
 
-### GetSerials
+GetActiveVlans returns the ActiveVlans field if non-nil, zero value otherwise.
 
-`func (o *InlineObject194) GetSerials() []string`
+### GetActiveVlansOk
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+`func (o *InlineObject194) GetActiveVlansOk() (*string, bool)`
 
-### GetSerialsOk
-
-`func (o *InlineObject194) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetActiveVlansOk returns a tuple with the ActiveVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetActiveVlans
 
-`func (o *InlineObject194) SetSerials(v []string)`
+`func (o *InlineObject194) SetActiveVlans(v string)`
 
-SetSerials sets Serials field to given value.
+SetActiveVlans sets ActiveVlans field to given value.
 
+### HasActiveVlans
 
-### GetStackIds
+`func (o *InlineObject194) HasActiveVlans() bool`
 
-`func (o *InlineObject194) GetStackIds() []string`
+HasActiveVlans returns a boolean if a field has been set.
 
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
+### GetVlanNames
 
-### GetStackIdsOk
+`func (o *InlineObject194) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-`func (o *InlineObject194) GetStackIdsOk() (*[]string, bool)`
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
+### GetVlanNamesOk
+
+`func (o *InlineObject194) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
+
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStackIds
+### SetVlanNames
 
-`func (o *InlineObject194) SetStackIds(v []string)`
+`func (o *InlineObject194) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetStackIds sets StackIds field to given value.
+SetVlanNames sets VlanNames field to given value.
+
+
+### GetVlanGroups
+
+`func (o *InlineObject194) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
+
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
+
+### GetVlanGroupsOk
+
+`func (o *InlineObject194) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
+
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanGroups
+
+`func (o *InlineObject194) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
+
+SetVlanGroups sets VlanGroups field to given value.
+
+
+### GetIname
+
+`func (o *InlineObject194) GetIname() string`
+
+GetIname returns the Iname field if non-nil, zero value otherwise.
+
+### GetInameOk
+
+`func (o *InlineObject194) GetInameOk() (*string, bool)`
+
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIname
+
+`func (o *InlineObject194) SetIname(v string)`
+
+SetIname sets Iname field to given value.
 
 
 

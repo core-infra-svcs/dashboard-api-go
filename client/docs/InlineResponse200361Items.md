@@ -4,25 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
+**Serial** | Pointer to **string** | Serial of device | [optional] 
+**Name** | Pointer to **string** | Name of device | [optional] 
+**Url** | Pointer to **string** | Dashboard URL for the device | [optional] 
+**Model** | Pointer to **string** | Product type of device | [optional] 
+**Software** | Pointer to [**InlineResponse200361Software**](InlineResponse200361Software.md) |  | [optional] 
+**Modems** | Pointer to [**[]InlineResponse200361Modems**](InlineResponse200361Modems.md) | Information about the available modems and SIMs for the device. Maximum 1 modem. | [optional] 
+**Profile** | Pointer to [**InlineResponse200361Profile**](InlineResponse200361Profile.md) |  | [optional] 
 **Network** | Pointer to [**InlineResponse200361Network**](InlineResponse200361Network.md) |  | [optional] 
-**Devices** | Pointer to **[]map[string]interface{}** | Device(s) of the packet capture file | [optional] 
-**Device** | Pointer to [**InlineResponse200361Device**](InlineResponse200361Device.md) |  | [optional] 
-**Admin** | Pointer to [**InlineResponse200361Admin**](InlineResponse200361Admin.md) |  | [optional] 
-**Client** | Pointer to [**InlineResponse200361Client**](InlineResponse200361Client.md) |  | [optional] 
-**Details** | Pointer to [**[]InlineResponse200361Details**](InlineResponse200361Details.md) | Array of device specific details | [optional] 
-**Name** | Pointer to **string** | Name of packet capture file | [optional] 
-**StartTs** | Pointer to **string** | Start time of creation of packet capture file | [optional] 
-**Ports** | Pointer to **string** | Ports of packet capture file | [optional] 
-**Status** | Pointer to **string** | Status of packet capture file | [optional] 
-**ErrorMessage** | Pointer to **string** | Error log of packet capture file | [optional] 
-**Destination** | Pointer to **string** | Destination of packet capture file | [optional] 
-**Process** | Pointer to **string** | Source of packet capture file | [optional] 
-**File** | Pointer to [**InlineResponse200361File**](InlineResponse200361File.md) |  | [optional] 
-**Duration** | Pointer to **int32** | Duration of packet capture file | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for the packet capture | [optional] 
-**Counts** | Pointer to [**InlineResponse200361Counts**](InlineResponse200361Counts.md) |  | [optional] 
-**Interface** | Pointer to **string** | Interface of the packet capture | [optional] 
 
 ## Methods
 
@@ -43,180 +32,30 @@ NewInlineResponse200361ItemsWithDefaults instantiates a new InlineResponse200361
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureId
+### GetSerial
 
-`func (o *InlineResponse200361Items) GetCaptureId() string`
+`func (o *InlineResponse200361Items) GetSerial() string`
 
-GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetCaptureIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200361Items) GetCaptureIdOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetSerialOk() (*string, bool)`
 
-GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureId
+### SetSerial
 
-`func (o *InlineResponse200361Items) SetCaptureId(v string)`
+`func (o *InlineResponse200361Items) SetSerial(v string)`
 
-SetCaptureId sets CaptureId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasCaptureId
+### HasSerial
 
-`func (o *InlineResponse200361Items) HasCaptureId() bool`
+`func (o *InlineResponse200361Items) HasSerial() bool`
 
-HasCaptureId returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200361Items) GetNetwork() InlineResponse200361Network`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200361Items) GetNetworkOk() (*InlineResponse200361Network, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200361Items) SetNetwork(v InlineResponse200361Network)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200361Items) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetDevices
-
-`func (o *InlineResponse200361Items) GetDevices() []map[string]interface{}`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineResponse200361Items) GetDevicesOk() (*[]map[string]interface{}, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineResponse200361Items) SetDevices(v []map[string]interface{})`
-
-SetDevices sets Devices field to given value.
-
-### HasDevices
-
-`func (o *InlineResponse200361Items) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
-
-### GetDevice
-
-`func (o *InlineResponse200361Items) GetDevice() InlineResponse200361Device`
-
-GetDevice returns the Device field if non-nil, zero value otherwise.
-
-### GetDeviceOk
-
-`func (o *InlineResponse200361Items) GetDeviceOk() (*InlineResponse200361Device, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevice
-
-`func (o *InlineResponse200361Items) SetDevice(v InlineResponse200361Device)`
-
-SetDevice sets Device field to given value.
-
-### HasDevice
-
-`func (o *InlineResponse200361Items) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
-
-### GetAdmin
-
-`func (o *InlineResponse200361Items) GetAdmin() InlineResponse200361Admin`
-
-GetAdmin returns the Admin field if non-nil, zero value otherwise.
-
-### GetAdminOk
-
-`func (o *InlineResponse200361Items) GetAdminOk() (*InlineResponse200361Admin, bool)`
-
-GetAdminOk returns a tuple with the Admin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdmin
-
-`func (o *InlineResponse200361Items) SetAdmin(v InlineResponse200361Admin)`
-
-SetAdmin sets Admin field to given value.
-
-### HasAdmin
-
-`func (o *InlineResponse200361Items) HasAdmin() bool`
-
-HasAdmin returns a boolean if a field has been set.
-
-### GetClient
-
-`func (o *InlineResponse200361Items) GetClient() InlineResponse200361Client`
-
-GetClient returns the Client field if non-nil, zero value otherwise.
-
-### GetClientOk
-
-`func (o *InlineResponse200361Items) GetClientOk() (*InlineResponse200361Client, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClient
-
-`func (o *InlineResponse200361Items) SetClient(v InlineResponse200361Client)`
-
-SetClient sets Client field to given value.
-
-### HasClient
-
-`func (o *InlineResponse200361Items) HasClient() bool`
-
-HasClient returns a boolean if a field has been set.
-
-### GetDetails
-
-`func (o *InlineResponse200361Items) GetDetails() []InlineResponse200361Details`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineResponse200361Items) GetDetailsOk() (*[]InlineResponse200361Details, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineResponse200361Items) SetDetails(v []InlineResponse200361Details)`
-
-SetDetails sets Details field to given value.
-
-### HasDetails
-
-`func (o *InlineResponse200361Items) HasDetails() bool`
-
-HasDetails returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
 ### GetName
 
@@ -243,280 +82,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetStartTs
+### GetUrl
 
-`func (o *InlineResponse200361Items) GetStartTs() string`
+`func (o *InlineResponse200361Items) GetUrl() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetUrlOk
 
-`func (o *InlineResponse200361Items) GetStartTsOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetUrlOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetUrl
 
-`func (o *InlineResponse200361Items) SetStartTs(v string)`
+`func (o *InlineResponse200361Items) SetUrl(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetUrl sets Url field to given value.
 
-### HasStartTs
+### HasUrl
 
-`func (o *InlineResponse200361Items) HasStartTs() bool`
+`func (o *InlineResponse200361Items) HasUrl() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetPorts
+### GetModel
 
-`func (o *InlineResponse200361Items) GetPorts() string`
+`func (o *InlineResponse200361Items) GetModel() string`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetModelOk
 
-`func (o *InlineResponse200361Items) GetPortsOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetModelOk() (*string, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetModel
 
-`func (o *InlineResponse200361Items) SetPorts(v string)`
+`func (o *InlineResponse200361Items) SetModel(v string)`
 
-SetPorts sets Ports field to given value.
+SetModel sets Model field to given value.
 
-### HasPorts
+### HasModel
 
-`func (o *InlineResponse200361Items) HasPorts() bool`
+`func (o *InlineResponse200361Items) HasModel() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetStatus
+### GetSoftware
 
-`func (o *InlineResponse200361Items) GetStatus() string`
+`func (o *InlineResponse200361Items) GetSoftware() InlineResponse200361Software`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSoftware returns the Software field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSoftwareOk
 
-`func (o *InlineResponse200361Items) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetSoftwareOk() (*InlineResponse200361Software, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSoftwareOk returns a tuple with the Software field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSoftware
 
-`func (o *InlineResponse200361Items) SetStatus(v string)`
+`func (o *InlineResponse200361Items) SetSoftware(v InlineResponse200361Software)`
 
-SetStatus sets Status field to given value.
+SetSoftware sets Software field to given value.
 
-### HasStatus
+### HasSoftware
 
-`func (o *InlineResponse200361Items) HasStatus() bool`
+`func (o *InlineResponse200361Items) HasSoftware() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasSoftware returns a boolean if a field has been set.
 
-### GetErrorMessage
+### GetModems
 
-`func (o *InlineResponse200361Items) GetErrorMessage() string`
+`func (o *InlineResponse200361Items) GetModems() []InlineResponse200361Modems`
 
-GetErrorMessage returns the ErrorMessage field if non-nil, zero value otherwise.
+GetModems returns the Modems field if non-nil, zero value otherwise.
 
-### GetErrorMessageOk
+### GetModemsOk
 
-`func (o *InlineResponse200361Items) GetErrorMessageOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetModemsOk() (*[]InlineResponse200361Modems, bool)`
 
-GetErrorMessageOk returns a tuple with the ErrorMessage field if it's non-nil, zero value otherwise
+GetModemsOk returns a tuple with the Modems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrorMessage
+### SetModems
 
-`func (o *InlineResponse200361Items) SetErrorMessage(v string)`
+`func (o *InlineResponse200361Items) SetModems(v []InlineResponse200361Modems)`
 
-SetErrorMessage sets ErrorMessage field to given value.
+SetModems sets Modems field to given value.
 
-### HasErrorMessage
+### HasModems
 
-`func (o *InlineResponse200361Items) HasErrorMessage() bool`
+`func (o *InlineResponse200361Items) HasModems() bool`
 
-HasErrorMessage returns a boolean if a field has been set.
+HasModems returns a boolean if a field has been set.
 
-### GetDestination
+### GetProfile
 
-`func (o *InlineResponse200361Items) GetDestination() string`
+`func (o *InlineResponse200361Items) GetProfile() InlineResponse200361Profile`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetProfileOk
 
-`func (o *InlineResponse200361Items) GetDestinationOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetProfileOk() (*InlineResponse200361Profile, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetProfile
 
-`func (o *InlineResponse200361Items) SetDestination(v string)`
+`func (o *InlineResponse200361Items) SetProfile(v InlineResponse200361Profile)`
 
-SetDestination sets Destination field to given value.
+SetProfile sets Profile field to given value.
 
-### HasDestination
+### HasProfile
 
-`func (o *InlineResponse200361Items) HasDestination() bool`
+`func (o *InlineResponse200361Items) HasProfile() bool`
 
-HasDestination returns a boolean if a field has been set.
+HasProfile returns a boolean if a field has been set.
 
-### GetProcess
+### GetNetwork
 
-`func (o *InlineResponse200361Items) GetProcess() string`
+`func (o *InlineResponse200361Items) GetNetwork() InlineResponse200361Network`
 
-GetProcess returns the Process field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetProcessOk
+### GetNetworkOk
 
-`func (o *InlineResponse200361Items) GetProcessOk() (*string, bool)`
+`func (o *InlineResponse200361Items) GetNetworkOk() (*InlineResponse200361Network, bool)`
 
-GetProcessOk returns a tuple with the Process field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProcess
+### SetNetwork
 
-`func (o *InlineResponse200361Items) SetProcess(v string)`
+`func (o *InlineResponse200361Items) SetNetwork(v InlineResponse200361Network)`
 
-SetProcess sets Process field to given value.
+SetNetwork sets Network field to given value.
 
-### HasProcess
+### HasNetwork
 
-`func (o *InlineResponse200361Items) HasProcess() bool`
+`func (o *InlineResponse200361Items) HasNetwork() bool`
 
-HasProcess returns a boolean if a field has been set.
-
-### GetFile
-
-`func (o *InlineResponse200361Items) GetFile() InlineResponse200361File`
-
-GetFile returns the File field if non-nil, zero value otherwise.
-
-### GetFileOk
-
-`func (o *InlineResponse200361Items) GetFileOk() (*InlineResponse200361File, bool)`
-
-GetFileOk returns a tuple with the File field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFile
-
-`func (o *InlineResponse200361Items) SetFile(v InlineResponse200361File)`
-
-SetFile sets File field to given value.
-
-### HasFile
-
-`func (o *InlineResponse200361Items) HasFile() bool`
-
-HasFile returns a boolean if a field has been set.
-
-### GetDuration
-
-`func (o *InlineResponse200361Items) GetDuration() int32`
-
-GetDuration returns the Duration field if non-nil, zero value otherwise.
-
-### GetDurationOk
-
-`func (o *InlineResponse200361Items) GetDurationOk() (*int32, bool)`
-
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDuration
-
-`func (o *InlineResponse200361Items) SetDuration(v int32)`
-
-SetDuration sets Duration field to given value.
-
-### HasDuration
-
-`func (o *InlineResponse200361Items) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
-
-### GetFilterExpression
-
-`func (o *InlineResponse200361Items) GetFilterExpression() string`
-
-GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
-
-### GetFilterExpressionOk
-
-`func (o *InlineResponse200361Items) GetFilterExpressionOk() (*string, bool)`
-
-GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFilterExpression
-
-`func (o *InlineResponse200361Items) SetFilterExpression(v string)`
-
-SetFilterExpression sets FilterExpression field to given value.
-
-### HasFilterExpression
-
-`func (o *InlineResponse200361Items) HasFilterExpression() bool`
-
-HasFilterExpression returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200361Items) GetCounts() InlineResponse200361Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200361Items) GetCountsOk() (*InlineResponse200361Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200361Items) SetCounts(v InlineResponse200361Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200361Items) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
-
-### GetInterface
-
-`func (o *InlineResponse200361Items) GetInterface() string`
-
-GetInterface returns the Interface field if non-nil, zero value otherwise.
-
-### GetInterfaceOk
-
-`func (o *InlineResponse200361Items) GetInterfaceOk() (*string, bool)`
-
-GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterface
-
-`func (o *InlineResponse200361Items) SetInterface(v string)`
-
-SetInterface sets Interface field to given value.
-
-### HasInterface
-
-`func (o *InlineResponse200361Items) HasInterface() bool`
-
-HasInterface returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

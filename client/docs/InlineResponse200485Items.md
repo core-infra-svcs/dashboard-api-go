@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200485Network**](InlineResponse200485Network.md) |  | [optional] 
-**ReceiverId** | Pointer to **string** | Receiver ID | [optional] 
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**InlineResponse200485Radio**](InlineResponse200485Radio.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse20121Network**](InlineResponse20121Network.md) |  | [optional] 
+**RuleId** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**Type** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Updated at timestamp | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Created at timestamp | [optional] 
+**Match** | Pointer to [**InlineResponse200485Match**](InlineResponse200485Match.md) |  | [optional] 
 
 ## Methods
 
@@ -31,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNetwork
 
-`func (o *InlineResponse200485Items) GetNetwork() InlineResponse200485Network`
+`func (o *InlineResponse200485Items) GetNetwork() InlineResponse20121Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200485Items) GetNetworkOk() (*InlineResponse200485Network, bool)`
+`func (o *InlineResponse200485Items) GetNetworkOk() (*InlineResponse20121Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200485Items) SetNetwork(v InlineResponse200485Network)`
+`func (o *InlineResponse200485Items) SetNetwork(v InlineResponse20121Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -54,105 +55,130 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetReceiverId
+### GetRuleId
 
-`func (o *InlineResponse200485Items) GetReceiverId() string`
+`func (o *InlineResponse200485Items) GetRuleId() string`
 
-GetReceiverId returns the ReceiverId field if non-nil, zero value otherwise.
+GetRuleId returns the RuleId field if non-nil, zero value otherwise.
 
-### GetReceiverIdOk
+### GetRuleIdOk
 
-`func (o *InlineResponse200485Items) GetReceiverIdOk() (*string, bool)`
+`func (o *InlineResponse200485Items) GetRuleIdOk() (*string, bool)`
 
-GetReceiverIdOk returns a tuple with the ReceiverId field if it's non-nil, zero value otherwise
+GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceiverId
+### SetRuleId
 
-`func (o *InlineResponse200485Items) SetReceiverId(v string)`
+`func (o *InlineResponse200485Items) SetRuleId(v string)`
 
-SetReceiverId sets ReceiverId field to given value.
+SetRuleId sets RuleId field to given value.
 
-### HasReceiverId
+### HasRuleId
 
-`func (o *InlineResponse200485Items) HasReceiverId() bool`
+`func (o *InlineResponse200485Items) HasRuleId() bool`
 
-HasReceiverId returns a boolean if a field has been set.
+HasRuleId returns a boolean if a field has been set.
 
-### GetUrl
+### GetType
 
-`func (o *InlineResponse200485Items) GetUrl() string`
+`func (o *InlineResponse200485Items) GetType() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetTypeOk
 
-`func (o *InlineResponse200485Items) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200485Items) GetTypeOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetType
 
-`func (o *InlineResponse200485Items) SetUrl(v string)`
+`func (o *InlineResponse200485Items) SetType(v string)`
 
-SetUrl sets Url field to given value.
+SetType sets Type field to given value.
 
-### HasUrl
+### HasType
 
-`func (o *InlineResponse200485Items) HasUrl() bool`
+`func (o *InlineResponse200485Items) HasType() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetVersion
+### GetUpdatedAt
 
-`func (o *InlineResponse200485Items) GetVersion() string`
+`func (o *InlineResponse200485Items) GetUpdatedAt() time.Time`
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
-### GetVersionOk
+### GetUpdatedAtOk
 
-`func (o *InlineResponse200485Items) GetVersionOk() (*string, bool)`
+`func (o *InlineResponse200485Items) GetUpdatedAtOk() (*time.Time, bool)`
 
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetUpdatedAt
 
-`func (o *InlineResponse200485Items) SetVersion(v string)`
+`func (o *InlineResponse200485Items) SetUpdatedAt(v time.Time)`
 
-SetVersion sets Version field to given value.
+SetUpdatedAt sets UpdatedAt field to given value.
 
-### HasVersion
+### HasUpdatedAt
 
-`func (o *InlineResponse200485Items) HasVersion() bool`
+`func (o *InlineResponse200485Items) HasUpdatedAt() bool`
 
-HasVersion returns a boolean if a field has been set.
+HasUpdatedAt returns a boolean if a field has been set.
 
-### GetRadio
+### GetCreatedAt
 
-`func (o *InlineResponse200485Items) GetRadio() InlineResponse200485Radio`
+`func (o *InlineResponse200485Items) GetCreatedAt() time.Time`
 
-GetRadio returns the Radio field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetRadioOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200485Items) GetRadioOk() (*InlineResponse200485Radio, bool)`
+`func (o *InlineResponse200485Items) GetCreatedAtOk() (*time.Time, bool)`
 
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadio
+### SetCreatedAt
 
-`func (o *InlineResponse200485Items) SetRadio(v InlineResponse200485Radio)`
+`func (o *InlineResponse200485Items) SetCreatedAt(v time.Time)`
 
-SetRadio sets Radio field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasRadio
+### HasCreatedAt
 
-`func (o *InlineResponse200485Items) HasRadio() bool`
+`func (o *InlineResponse200485Items) HasCreatedAt() bool`
 
-HasRadio returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetMatch
+
+`func (o *InlineResponse200485Items) GetMatch() InlineResponse200485Match`
+
+GetMatch returns the Match field if non-nil, zero value otherwise.
+
+### GetMatchOk
+
+`func (o *InlineResponse200485Items) GetMatchOk() (*InlineResponse200485Match, bool)`
+
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatch
+
+`func (o *InlineResponse200485Items) SetMatch(v InlineResponse200485Match)`
+
+SetMatch sets Match field to given value.
+
+### HasMatch
+
+`func (o *InlineResponse200485Items) HasMatch() bool`
+
+HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

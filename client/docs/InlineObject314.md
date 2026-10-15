@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
-**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
+**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks.md) | List containing the network ID and the product type to enable XDR on | 
 
 ## Methods
 
 ### NewInlineObject314
 
-`func NewInlineObject314(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject314`
+`func NewInlineObject314(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, ) *InlineObject314`
 
 NewInlineObject314 instantiates a new InlineObject314 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject314WithDefaults instantiates a new InlineObject314 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestination
+### GetNetworks
 
-`func (o *InlineObject314) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
+`func (o *InlineObject314) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetNetworksOk
 
-`func (o *InlineObject314) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
+`func (o *InlineObject314) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetNetworks
 
-`func (o *InlineObject314) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
+`func (o *InlineObject314) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks)`
 
-SetDestination sets Destination field to given value.
-
-
-### GetLicenses
-
-`func (o *InlineObject314) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject314) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject314) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
-
-SetLicenses sets Licenses field to given value.
+SetNetworks sets Networks field to given value.
 
 
 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the network group | 
+**ClaimId** | **string** | The unique order claim id | 
 
 ## Methods
 
 ### NewInlineObject318
 
-`func NewInlineObject318(name string, ) *InlineObject318`
+`func NewInlineObject318(claimId string, ) *InlineObject318`
 
 NewInlineObject318 instantiates a new InlineObject318 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject318WithDefaults instantiates a new InlineObject318 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetClaimId
 
-`func (o *InlineObject318) GetName() string`
+`func (o *InlineObject318) GetClaimId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetClaimId returns the ClaimId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClaimIdOk
 
-`func (o *InlineObject318) GetNameOk() (*string, bool)`
+`func (o *InlineObject318) GetClaimIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetClaimIdOk returns a tuple with the ClaimId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetClaimId
 
-`func (o *InlineObject318) SetName(v string)`
+`func (o *InlineObject318) SetClaimId(v string)`
 
-SetName sets Name field to given value.
+SetClaimId sets ClaimId field to given value.
 
 
 

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Channel** | Pointer to **string** | Desired ESL channel for the device, or &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
+**Uuid** | Pointer to **NullableString** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s           automatically generated value. | [optional] 
+**Major** | Pointer to **NullableInt32** | Desired major value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **NullableInt32** | Desired minor value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -26,56 +27,111 @@ NewInlineObject46WithDefaults instantiates a new InlineObject46 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetChannel
+### GetUuid
 
-`func (o *InlineObject46) GetChannel() string`
+`func (o *InlineObject46) GetUuid() string`
 
-GetChannel returns the Channel field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetChannelOk
+### GetUuidOk
 
-`func (o *InlineObject46) GetChannelOk() (*string, bool)`
+`func (o *InlineObject46) GetUuidOk() (*string, bool)`
 
-GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetChannel
+### SetUuid
 
-`func (o *InlineObject46) SetChannel(v string)`
+`func (o *InlineObject46) SetUuid(v string)`
 
-SetChannel sets Channel field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasChannel
+### HasUuid
 
-`func (o *InlineObject46) HasChannel() bool`
+`func (o *InlineObject46) HasUuid() bool`
 
-HasChannel returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetEnabled
+### SetUuidNil
 
-`func (o *InlineObject46) GetEnabled() bool`
+`func (o *InlineObject46) SetUuidNil(b bool)`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+ SetUuidNil sets the value for Uuid to be an explicit nil
 
-### GetEnabledOk
+### UnsetUuid
+`func (o *InlineObject46) UnsetUuid()`
 
-`func (o *InlineObject46) GetEnabledOk() (*bool, bool)`
+UnsetUuid ensures that no value is present for Uuid, not even an explicit nil
+### GetMajor
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+`func (o *InlineObject46) GetMajor() int32`
+
+GetMajor returns the Major field if non-nil, zero value otherwise.
+
+### GetMajorOk
+
+`func (o *InlineObject46) GetMajorOk() (*int32, bool)`
+
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMajor
 
-`func (o *InlineObject46) SetEnabled(v bool)`
+`func (o *InlineObject46) SetMajor(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetMajor sets Major field to given value.
 
-### HasEnabled
+### HasMajor
 
-`func (o *InlineObject46) HasEnabled() bool`
+`func (o *InlineObject46) HasMajor() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
+### SetMajorNil
+
+`func (o *InlineObject46) SetMajorNil(b bool)`
+
+ SetMajorNil sets the value for Major to be an explicit nil
+
+### UnsetMajor
+`func (o *InlineObject46) UnsetMajor()`
+
+UnsetMajor ensures that no value is present for Major, not even an explicit nil
+### GetMinor
+
+`func (o *InlineObject46) GetMinor() int32`
+
+GetMinor returns the Minor field if non-nil, zero value otherwise.
+
+### GetMinorOk
+
+`func (o *InlineObject46) GetMinorOk() (*int32, bool)`
+
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMinor
+
+`func (o *InlineObject46) SetMinor(v int32)`
+
+SetMinor sets Minor field to given value.
+
+### HasMinor
+
+`func (o *InlineObject46) HasMinor() bool`
+
+HasMinor returns a boolean if a field has been set.
+
+### SetMinorNil
+
+`func (o *InlineObject46) SetMinorNil(b bool)`
+
+ SetMinorNil sets the value for Minor to be an explicit nil
+
+### UnsetMinor
+`func (o *InlineObject46) UnsetMinor()`
+
+UnsetMinor ensures that no value is present for Minor, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

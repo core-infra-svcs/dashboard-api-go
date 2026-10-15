@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
-**Exception** | Pointer to [**InlineResponse200248Exception**](InlineResponse200248Exception.md) |  | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200248Rules**](InlineResponse200248Rules.md) | Bonjour forwarding rules | [optional] 
+**Items** | Pointer to [**[]InlineResponse200248Items**](InlineResponse200248Items.md) | The network with its OWE transition pairs | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200248WithDefaults instantiates a new InlineResponse200248 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetItems
 
-`func (o *InlineResponse200248) GetEnabled() bool`
+`func (o *InlineResponse200248) GetItems() []InlineResponse200248Items`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetItemsOk
 
-`func (o *InlineResponse200248) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200248) GetItemsOk() (*[]InlineResponse200248Items, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetItems
 
-`func (o *InlineResponse200248) SetEnabled(v bool)`
+`func (o *InlineResponse200248) SetItems(v []InlineResponse200248Items)`
 
-SetEnabled sets Enabled field to given value.
+SetItems sets Items field to given value.
 
-### HasEnabled
+### HasItems
 
-`func (o *InlineResponse200248) HasEnabled() bool`
+`func (o *InlineResponse200248) HasItems() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetException
-
-`func (o *InlineResponse200248) GetException() InlineResponse200248Exception`
-
-GetException returns the Exception field if non-nil, zero value otherwise.
-
-### GetExceptionOk
-
-`func (o *InlineResponse200248) GetExceptionOk() (*InlineResponse200248Exception, bool)`
-
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetException
-
-`func (o *InlineResponse200248) SetException(v InlineResponse200248Exception)`
-
-SetException sets Exception field to given value.
-
-### HasException
-
-`func (o *InlineResponse200248) HasException() bool`
-
-HasException returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineResponse200248) GetRules() []InlineResponse200248Rules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineResponse200248) GetRulesOk() (*[]InlineResponse200248Rules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineResponse200248) SetRules(v []InlineResponse200248Rules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineResponse200248) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

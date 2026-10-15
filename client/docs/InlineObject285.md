@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems**](OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems.md) | List of device-to-profile assignments to create. | 
+**Items** | [**[]OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems**](OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems.md) | MCG cluster-network tunnel settings | 
 
 ## Methods
 
 ### NewInlineObject285
 
-`func NewInlineObject285(items []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, ) *InlineObject285`
+`func NewInlineObject285(items []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems, ) *InlineObject285`
 
 NewInlineObject285 instantiates a new InlineObject285 object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineObject285) GetItems() []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems`
+`func (o *InlineObject285) GetItems() []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineObject285) GetItemsOk() (*[]OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems, bool)`
+`func (o *InlineObject285) GetItemsOk() (*[]OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineObject285) SetItems(v []OrganizationsOrganizationIdDevicesCellularDataProfilesAssignmentsBatchCreateItems)`
+`func (o *InlineObject285) SetItems(v []OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems)`
 
 SetItems sets Items field to given value.
 

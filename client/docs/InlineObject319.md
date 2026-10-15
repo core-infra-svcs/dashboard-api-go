@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The new name of the network group | 
+**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
 
 ## Methods
 
 ### NewInlineObject319
 
-`func NewInlineObject319(name string, ) *InlineObject319`
+`func NewInlineObject319() *InlineObject319`
 
 NewInlineObject319 instantiates a new InlineObject319 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject319WithDefaults instantiates a new InlineObject319 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSerials
 
-`func (o *InlineObject319) GetName() string`
+`func (o *InlineObject319) GetSerials() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialsOk
 
-`func (o *InlineObject319) GetNameOk() (*string, bool)`
+`func (o *InlineObject319) GetSerialsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerials
 
-`func (o *InlineObject319) SetName(v string)`
+`func (o *InlineObject319) SetSerials(v []string)`
 
-SetName sets Name field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
+
+`func (o *InlineObject319) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

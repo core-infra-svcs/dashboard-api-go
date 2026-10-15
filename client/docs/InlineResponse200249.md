@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
-**DeviceTypePolicies** | Pointer to [**[]InlineResponse200249DeviceTypePolicies**](InlineResponse200249DeviceTypePolicies.md) | List of device type policies. | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
+**Exception** | Pointer to [**InlineResponse200249Exception**](InlineResponse200249Exception.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200249Rules**](InlineResponse200249Rules.md) | Bonjour forwarding rules | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetDeviceTypePolicies
+### GetException
 
-`func (o *InlineResponse200249) GetDeviceTypePolicies() []InlineResponse200249DeviceTypePolicies`
+`func (o *InlineResponse200249) GetException() InlineResponse200249Exception`
 
-GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
+GetException returns the Exception field if non-nil, zero value otherwise.
 
-### GetDeviceTypePoliciesOk
+### GetExceptionOk
 
-`func (o *InlineResponse200249) GetDeviceTypePoliciesOk() (*[]InlineResponse200249DeviceTypePolicies, bool)`
+`func (o *InlineResponse200249) GetExceptionOk() (*InlineResponse200249Exception, bool)`
 
-GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceTypePolicies
+### SetException
 
-`func (o *InlineResponse200249) SetDeviceTypePolicies(v []InlineResponse200249DeviceTypePolicies)`
+`func (o *InlineResponse200249) SetException(v InlineResponse200249Exception)`
 
-SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
+SetException sets Exception field to given value.
 
-### HasDeviceTypePolicies
+### HasException
 
-`func (o *InlineResponse200249) HasDeviceTypePolicies() bool`
+`func (o *InlineResponse200249) HasException() bool`
 
-HasDeviceTypePolicies returns a boolean if a field has been set.
+HasException returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200249) GetRules() []InlineResponse200249Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200249) GetRulesOk() (*[]InlineResponse200249Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200249) SetRules(v []InlineResponse200249Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200249) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

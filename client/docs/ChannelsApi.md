@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## RecalculateOrganizationWirelessRadioAutoRfChannels
 
-> InlineResponse200487 RecalculateOrganizationWirelessRadioAutoRfChannels(ctx, organizationId).RecalculateOrganizationWirelessRadioAutoRfChannels(recalculateOrganizationWirelessRadioAutoRfChannels).Execute()
+> InlineResponse200510 RecalculateOrganizationWirelessRadioAutoRfChannels(ctx, organizationId).RecalculateOrganizationWirelessRadioAutoRfChannels(recalculateOrganizationWirelessRadioAutoRfChannels).Execute()
 
 Recalculates automatically assigned channels for every AP within specified the specified network(s)
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    recalculateOrganizationWirelessRadioAutoRfChannels := *openapiclient.NewInlineObject362([]string{"NetworkIds_example"}) // InlineObject362 | 
+    recalculateOrganizationWirelessRadioAutoRfChannels := *openapiclient.NewInlineObject376([]string{"NetworkIds_example"}) // InlineObject376 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ChannelsApi.RecalculateOrganizationWirelessRadioAutoRfChannels``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RecalculateOrganizationWirelessRadioAutoRfChannels`: InlineResponse200487
+    // response from `RecalculateOrganizationWirelessRadioAutoRfChannels`: InlineResponse200510
     fmt.Fprintf(os.Stdout, "Response from `ChannelsApi.RecalculateOrganizationWirelessRadioAutoRfChannels`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiRecalculateOrganizationWir
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **recalculateOrganizationWirelessRadioAutoRfChannels** | [**InlineObject362**](InlineObject362.md) |  | 
+ **recalculateOrganizationWirelessRadioAutoRfChannels** | [**InlineObject376**](InlineObject376.md) |  | 
 
 ### Return type
 
-[**InlineResponse200487**](InlineResponse200487.md)
+[**InlineResponse200510**](InlineResponse200510.md)
 
 ### Authorization
 

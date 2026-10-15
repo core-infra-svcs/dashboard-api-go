@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200513Items**](InlineResponse200513Items.md) | Wireless LAN controller overview | [optional] 
-**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems**](OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems.md) | The top-level propery containing all status data. | [optional] 
+**Meta** | Pointer to [**InlineResponse200332Meta**](InlineResponse200332Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200513) GetItems() []InlineResponse200513Items`
+`func (o *InlineResponse200513) GetItems() []OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200513) GetItemsOk() (*[]InlineResponse200513Items, bool)`
+`func (o *InlineResponse200513) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200513) SetItems(v []InlineResponse200513Items)`
+`func (o *InlineResponse200513) SetItems(v []OrganizationsOrganizationIdWirelessRfProfilesAssignmentsByDeviceItems)`
 
 SetItems sets Items field to given value.
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200513) GetMeta() InlineResponse200279Meta`
+`func (o *InlineResponse200513) GetMeta() InlineResponse200332Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200513) GetMetaOk() (*InlineResponse200279Meta, bool)`
+`func (o *InlineResponse200513) GetMetaOk() (*InlineResponse200332Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200513) SetMeta(v InlineResponse200279Meta)`
+`func (o *InlineResponse200513) SetMeta(v InlineResponse200332Meta)`
 
 SetMeta sets Meta field to given value.
 

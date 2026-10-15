@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClusterId** | Pointer to **string** | ID of the primary cluster | [optional] 
-**Network** | Pointer to [**InlineResponse200319Network**](InlineResponse200319Network.md) |  | [optional] 
-**Failover** | Pointer to [**OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover**](OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200320Network**](InlineResponse200320Network.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200320Counts**](InlineResponse200320Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,47 +26,22 @@ NewInlineResponse200320WithDefaults instantiates a new InlineResponse200320 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClusterId
-
-`func (o *InlineResponse200320) GetClusterId() string`
-
-GetClusterId returns the ClusterId field if non-nil, zero value otherwise.
-
-### GetClusterIdOk
-
-`func (o *InlineResponse200320) GetClusterIdOk() (*string, bool)`
-
-GetClusterIdOk returns a tuple with the ClusterId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClusterId
-
-`func (o *InlineResponse200320) SetClusterId(v string)`
-
-SetClusterId sets ClusterId field to given value.
-
-### HasClusterId
-
-`func (o *InlineResponse200320) HasClusterId() bool`
-
-HasClusterId returns a boolean if a field has been set.
-
 ### GetNetwork
 
-`func (o *InlineResponse200320) GetNetwork() InlineResponse200319Network`
+`func (o *InlineResponse200320) GetNetwork() InlineResponse200320Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200320) GetNetworkOk() (*InlineResponse200319Network, bool)`
+`func (o *InlineResponse200320) GetNetworkOk() (*InlineResponse200320Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200320) SetNetwork(v InlineResponse200319Network)`
+`func (o *InlineResponse200320) SetNetwork(v InlineResponse200320Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -77,30 +51,30 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetFailover
+### GetCounts
 
-`func (o *InlineResponse200320) GetFailover() OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover`
+`func (o *InlineResponse200320) GetCounts() InlineResponse200320Counts`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetCountsOk
 
-`func (o *InlineResponse200320) GetFailoverOk() (*OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover, bool)`
+`func (o *InlineResponse200320) GetCountsOk() (*InlineResponse200320Counts, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetCounts
 
-`func (o *InlineResponse200320) SetFailover(v OrganizationsOrganizationIdCampusGatewayClustersFailoverTargetsFailover)`
+`func (o *InlineResponse200320) SetCounts(v InlineResponse200320Counts)`
 
-SetFailover sets Failover field to given value.
+SetCounts sets Counts field to given value.
 
-### HasFailover
+### HasCounts
 
-`func (o *InlineResponse200320) HasFailover() bool`
+`func (o *InlineResponse200320) HasCounts() bool`
 
-HasFailover returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

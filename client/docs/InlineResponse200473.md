@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number of the AP | [optional] 
-**Name** | Pointer to **string** | The name of the AP | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork.md) |  | [optional] 
-**Power** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower.md) |  | [optional] 
-**Ports** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts.md) | List of port details | [optional] 
-**Aggregation** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the switch | [optional] 
+**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
+**Model** | Pointer to **string** | Model of the switch | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -30,30 +29,30 @@ NewInlineResponse200473WithDefaults instantiates a new InlineResponse200473 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetNetwork
 
-`func (o *InlineResponse200473) GetSerial() string`
+`func (o *InlineResponse200473) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkOk
 
-`func (o *InlineResponse200473) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200473) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetwork
 
-`func (o *InlineResponse200473) SetSerial(v string)`
+`func (o *InlineResponse200473) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
 
-SetSerial sets Serial field to given value.
+SetNetwork sets Network field to given value.
 
-### HasSerial
+### HasNetwork
 
-`func (o *InlineResponse200473) HasSerial() bool`
+`func (o *InlineResponse200473) HasNetwork() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,105 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetMac
 
-`func (o *InlineResponse200473) GetNetwork() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork`
+`func (o *InlineResponse200473) GetMac() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetMacOk
 
-`func (o *InlineResponse200473) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork, bool)`
+`func (o *InlineResponse200473) GetMacOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetMac
 
-`func (o *InlineResponse200473) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork)`
+`func (o *InlineResponse200473) SetMac(v string)`
 
-SetNetwork sets Network field to given value.
+SetMac sets Mac field to given value.
 
-### HasNetwork
+### HasMac
 
-`func (o *InlineResponse200473) HasNetwork() bool`
+`func (o *InlineResponse200473) HasMac() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetPower
+### GetModel
 
-`func (o *InlineResponse200473) GetPower() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower`
+`func (o *InlineResponse200473) GetModel() string`
 
-GetPower returns the Power field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetPowerOk
+### GetModelOk
 
-`func (o *InlineResponse200473) GetPowerOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower, bool)`
+`func (o *InlineResponse200473) GetModelOk() (*string, bool)`
 
-GetPowerOk returns a tuple with the Power field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPower
+### SetModel
 
-`func (o *InlineResponse200473) SetPower(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower)`
+`func (o *InlineResponse200473) SetModel(v string)`
 
-SetPower sets Power field to given value.
+SetModel sets Model field to given value.
 
-### HasPower
+### HasModel
 
-`func (o *InlineResponse200473) HasPower() bool`
+`func (o *InlineResponse200473) HasModel() bool`
 
-HasPower returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetPorts
+### GetUsage
 
-`func (o *InlineResponse200473) GetPorts() []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts`
+`func (o *InlineResponse200473) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetUsageOk
 
-`func (o *InlineResponse200473) GetPortsOk() (*[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts, bool)`
+`func (o *InlineResponse200473) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetUsage
 
-`func (o *InlineResponse200473) SetPorts(v []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts)`
+`func (o *InlineResponse200473) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
 
-SetPorts sets Ports field to given value.
+SetUsage sets Usage field to given value.
 
-### HasPorts
+### HasUsage
 
-`func (o *InlineResponse200473) HasPorts() bool`
+`func (o *InlineResponse200473) HasUsage() bool`
 
-HasPorts returns a boolean if a field has been set.
-
-### GetAggregation
-
-`func (o *InlineResponse200473) GetAggregation() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation`
-
-GetAggregation returns the Aggregation field if non-nil, zero value otherwise.
-
-### GetAggregationOk
-
-`func (o *InlineResponse200473) GetAggregationOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation, bool)`
-
-GetAggregationOk returns a tuple with the Aggregation field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAggregation
-
-`func (o *InlineResponse200473) SetAggregation(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation)`
-
-SetAggregation sets Aggregation field to given value.
-
-### HasAggregation
-
-`func (o *InlineResponse200473) HasAggregation() bool`
-
-HasAggregation returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

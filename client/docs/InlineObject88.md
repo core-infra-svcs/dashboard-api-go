@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Domains** | **[]string** | Domain names to exclude from Umbrella DNS routing (e.g., &#39;example.com&#39;, &#39;corp.example.org&#39;). Standard FQDNs only — wildcards are not supported. Values are lowercased before saving. Each call replaces the full exclusion list. | 
+**Api** | [**NetworksNetworkIdApplianceUmbrellaAccountConnectApi**](NetworksNetworkIdApplianceUmbrellaAccountConnectApi.md) |  | 
 
 ## Methods
 
 ### NewInlineObject88
 
-`func NewInlineObject88(domains []string, ) *InlineObject88`
+`func NewInlineObject88(api NetworksNetworkIdApplianceUmbrellaAccountConnectApi, ) *InlineObject88`
 
 NewInlineObject88 instantiates a new InlineObject88 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject88WithDefaults instantiates a new InlineObject88 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDomains
+### GetApi
 
-`func (o *InlineObject88) GetDomains() []string`
+`func (o *InlineObject88) GetApi() NetworksNetworkIdApplianceUmbrellaAccountConnectApi`
 
-GetDomains returns the Domains field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetDomainsOk
+### GetApiOk
 
-`func (o *InlineObject88) GetDomainsOk() (*[]string, bool)`
+`func (o *InlineObject88) GetApiOk() (*NetworksNetworkIdApplianceUmbrellaAccountConnectApi, bool)`
 
-GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDomains
+### SetApi
 
-`func (o *InlineObject88) SetDomains(v []string)`
+`func (o *InlineObject88) SetApi(v NetworksNetworkIdApplianceUmbrellaAccountConnectApi)`
 
-SetDomains sets Domains field to given value.
+SetApi sets Api field to given value.
 
 
 

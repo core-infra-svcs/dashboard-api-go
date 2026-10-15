@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of profile | 
+**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
 
 ## Methods
 
 ### NewInlineObject247
 
-`func NewInlineObject247(name string, ) *InlineObject247`
+`func NewInlineObject247() *InlineObject247`
 
 NewInlineObject247 instantiates a new InlineObject247 object
 This constructor will assign default values to properties that have it defined,
@@ -44,6 +47,86 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject247) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetOrgAccess
+
+`func (o *InlineObject247) GetOrgAccess() string`
+
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+
+### GetOrgAccessOk
+
+`func (o *InlineObject247) GetOrgAccessOk() (*string, bool)`
+
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrgAccess
+
+`func (o *InlineObject247) SetOrgAccess(v string)`
+
+SetOrgAccess sets OrgAccess field to given value.
+
+### HasOrgAccess
+
+`func (o *InlineObject247) HasOrgAccess() bool`
+
+HasOrgAccess returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject247) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject247) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject247) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject247) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineObject247) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineObject247) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineObject247) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineObject247) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

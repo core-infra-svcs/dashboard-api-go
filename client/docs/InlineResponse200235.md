@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
 **Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
 **Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
-**Sepioo** | Pointer to [**InlineResponse200235Sepioo**](InlineResponse200235Sepioo.md) |  | [optional] 
 
 ## Methods
 
@@ -102,31 +101,6 @@ SetMode sets Mode field to given value.
 `func (o *InlineResponse200235) HasMode() bool`
 
 HasMode returns a boolean if a field has been set.
-
-### GetSepioo
-
-`func (o *InlineResponse200235) GetSepioo() InlineResponse200235Sepioo`
-
-GetSepioo returns the Sepioo field if non-nil, zero value otherwise.
-
-### GetSepiooOk
-
-`func (o *InlineResponse200235) GetSepiooOk() (*InlineResponse200235Sepioo, bool)`
-
-GetSepiooOk returns a tuple with the Sepioo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSepioo
-
-`func (o *InlineResponse200235) SetSepioo(v InlineResponse200235Sepioo)`
-
-SetSepioo sets Sepioo field to given value.
-
-### HasSepioo
-
-`func (o *InlineResponse200235) HasSepioo() bool`
-
-HasSepioo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

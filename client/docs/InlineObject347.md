@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseSitesDetachItems**](OrganizationsOrganizationIdSaseSitesDetachItems.md) | List of Secure Access sites to be detached. | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy.md) |  | 
+**Targets** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets.md) | Network enforcement targets to remove for the specified policy. Maximum 1000 per request. | 
 
 ## Methods
 
 ### NewInlineObject347
 
-`func NewInlineObject347() *InlineObject347`
+`func NewInlineObject347(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy, targets []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets, ) *InlineObject347`
 
 NewInlineObject347 instantiates a new InlineObject347 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineObject347WithDefaults instantiates a new InlineObject347 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetPolicy
 
-`func (o *InlineObject347) GetItems() []OrganizationsOrganizationIdSaseSitesDetachItems`
+`func (o *InlineObject347) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetPolicyOk
 
-`func (o *InlineObject347) GetItemsOk() (*[]OrganizationsOrganizationIdSaseSitesDetachItems, bool)`
+`func (o *InlineObject347) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetPolicy
 
-`func (o *InlineObject347) SetItems(v []OrganizationsOrganizationIdSaseSitesDetachItems)`
+`func (o *InlineObject347) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeletePolicy)`
 
-SetItems sets Items field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasItems
 
-`func (o *InlineObject347) HasItems() bool`
+### GetTargets
 
-HasItems returns a boolean if a field has been set.
+`func (o *InlineObject347) GetTargets() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets`
+
+GetTargets returns the Targets field if non-nil, zero value otherwise.
+
+### GetTargetsOk
+
+`func (o *InlineObject347) GetTargetsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets, bool)`
+
+GetTargetsOk returns a tuple with the Targets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTargets
+
+`func (o *InlineObject347) SetTargets(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesNetworksAssignmentsBulkDeleteTargets)`
+
+SetTargets sets Targets field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

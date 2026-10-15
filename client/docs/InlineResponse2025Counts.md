@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Jobs** | Pointer to [**InlineResponse200271CountsJobs**](InlineResponse200271CountsJobs.md) |  | [optional] 
+**Jobs** | Pointer to [**InlineResponse200274CountsJobs**](InlineResponse200274CountsJobs.md) |  | [optional] 
 **ByJobOperation** | Pointer to [**[]InlineResponse2025CountsByJobOperation**](InlineResponse2025CountsByJobOperation.md) | Job count breakdown by pipeline job operation. Contains at most one entry per pipeline job operation with matching jobs. New registered operations may add entries over time. | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetJobs
 
-`func (o *InlineResponse2025Counts) GetJobs() InlineResponse200271CountsJobs`
+`func (o *InlineResponse2025Counts) GetJobs() InlineResponse200274CountsJobs`
 
 GetJobs returns the Jobs field if non-nil, zero value otherwise.
 
 ### GetJobsOk
 
-`func (o *InlineResponse2025Counts) GetJobsOk() (*InlineResponse200271CountsJobs, bool)`
+`func (o *InlineResponse2025Counts) GetJobsOk() (*InlineResponse200274CountsJobs, bool)`
 
 GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetJobs
 
-`func (o *InlineResponse2025Counts) SetJobs(v InlineResponse200271CountsJobs)`
+`func (o *InlineResponse2025Counts) SetJobs(v InlineResponse200274CountsJobs)`
 
 SetJobs sets Jobs field to given value.
 

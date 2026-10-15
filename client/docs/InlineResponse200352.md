@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
-**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
-**Description** | Pointer to **string** | The description of the profile. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200349Rules**](InlineResponse200349Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
+**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
+**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
+**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200352WithDefaults instantiates a new InlineResponse200352 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetTs
 
-`func (o *InlineResponse200352) GetProfileId() string`
+`func (o *InlineResponse200352) GetTs() time.Time`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetTsOk
 
-`func (o *InlineResponse200352) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200352) GetTsOk() (*time.Time, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetTs
 
-`func (o *InlineResponse200352) SetProfileId(v string)`
+`func (o *InlineResponse200352) SetTs(v time.Time)`
 
-SetProfileId sets ProfileId field to given value.
+SetTs sets Ts field to given value.
 
-### HasProfileId
+### HasTs
 
-`func (o *InlineResponse200352) HasProfileId() bool`
+`func (o *InlineResponse200352) HasTs() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetLastUpdatedAt
+### GetTotal
 
-`func (o *InlineResponse200352) GetLastUpdatedAt() string`
+`func (o *InlineResponse200352) GetTotal() int32`
 
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetLastUpdatedAtOk
+### GetTotalOk
 
-`func (o *InlineResponse200352) GetLastUpdatedAtOk() (*string, bool)`
+`func (o *InlineResponse200352) GetTotalOk() (*int32, bool)`
 
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUpdatedAt
+### SetTotal
 
-`func (o *InlineResponse200352) SetLastUpdatedAt(v string)`
+`func (o *InlineResponse200352) SetTotal(v int32)`
 
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
+SetTotal sets Total field to given value.
 
-### HasLastUpdatedAt
+### HasTotal
 
-`func (o *InlineResponse200352) HasLastUpdatedAt() bool`
+`func (o *InlineResponse200352) HasTotal() bool`
 
-HasLastUpdatedAt returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetName
+### GetUpstream
 
-`func (o *InlineResponse200352) GetName() string`
+`func (o *InlineResponse200352) GetUpstream() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200352) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200352) GetUpstreamOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUpstream
 
-`func (o *InlineResponse200352) SetName(v string)`
+`func (o *InlineResponse200352) SetUpstream(v int32)`
 
-SetName sets Name field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasName
+### HasUpstream
 
-`func (o *InlineResponse200352) HasName() bool`
+`func (o *InlineResponse200352) HasUpstream() bool`
 
-HasName returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetDescription
+### GetDownstream
 
-`func (o *InlineResponse200352) GetDescription() string`
+`func (o *InlineResponse200352) GetDownstream() int32`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200352) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200352) GetDownstreamOk() (*int32, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetDownstream
 
-`func (o *InlineResponse200352) SetDescription(v string)`
+`func (o *InlineResponse200352) SetDownstream(v int32)`
 
-SetDescription sets Description field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasDescription
+### HasDownstream
 
-`func (o *InlineResponse200352) HasDescription() bool`
+`func (o *InlineResponse200352) HasDownstream() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineResponse200352) GetRules() []InlineResponse200349Rules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineResponse200352) GetRulesOk() (*[]InlineResponse200349Rules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineResponse200352) SetRules(v []InlineResponse200349Rules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineResponse200352) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

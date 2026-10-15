@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
-**SpInitiated** | Pointer to [**InlineResponse200417SpInitiated**](InlineResponse200417SpInitiated.md) |  | [optional] 
+**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy.md) |  | 
+**AdaptivePolicyGroups** | [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups.md) | Adaptive policy groups to assign | 
 
 ## Methods
 
 ### NewInlineObject339
 
-`func NewInlineObject339() *InlineObject339`
+`func NewInlineObject339(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, adaptivePolicyGroups []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups, ) *InlineObject339`
 
 NewInlineObject339 instantiates a new InlineObject339 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject339WithDefaults instantiates a new InlineObject339 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetPolicy
 
-`func (o *InlineObject339) GetEnabled() bool`
+`func (o *InlineObject339) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetPolicyOk
 
-`func (o *InlineObject339) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject339) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetPolicy
 
-`func (o *InlineObject339) SetEnabled(v bool)`
+`func (o *InlineObject339) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesAdaptivePolicyGroupsAssignPolicy)`
 
-SetEnabled sets Enabled field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject339) HasEnabled() bool`
+### GetAdaptivePolicyGroups
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject339) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups`
 
-### GetSpInitiated
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject339) GetSpInitiated() InlineResponse200417SpInitiated`
+### GetAdaptivePolicyGroupsOk
 
-GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
+`func (o *InlineObject339) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups, bool)`
 
-### GetSpInitiatedOk
-
-`func (o *InlineObject339) GetSpInitiatedOk() (*InlineResponse200417SpInitiated, bool)`
-
-GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpInitiated
+### SetAdaptivePolicyGroups
 
-`func (o *InlineObject339) SetSpInitiated(v InlineResponse200417SpInitiated)`
+`func (o *InlineObject339) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups)`
 
-SetSpInitiated sets SpInitiated field to given value.
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
 
-### HasSpInitiated
-
-`func (o *InlineObject339) HasSpInitiated() bool`
-
-HasSpInitiated returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

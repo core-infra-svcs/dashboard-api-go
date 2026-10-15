@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPing := *openapiclient.NewInlineObject24("Target_example") // InlineObject24 | 
+    createDeviceLiveToolsPing := *openapiclient.NewInlineObject25("Target_example") // InlineObject25 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPing** | [**InlineObject24**](InlineObject24.md) |  | 
+ **createDeviceLiveToolsPing** | [**InlineObject25**](InlineObject25.md) |  | 
 
 ### Return type
 

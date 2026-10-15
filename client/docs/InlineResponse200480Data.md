@@ -1,0 +1,56 @@
+# InlineResponse200480Data
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Usage** | Pointer to [**InlineResponse200480DataUsage**](InlineResponse200480DataUsage.md) |  | [optional] 
+
+## Methods
+
+### NewInlineResponse200480Data
+
+`func NewInlineResponse200480Data() *InlineResponse200480Data`
+
+NewInlineResponse200480Data instantiates a new InlineResponse200480Data object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewInlineResponse200480DataWithDefaults
+
+`func NewInlineResponse200480DataWithDefaults() *InlineResponse200480Data`
+
+NewInlineResponse200480DataWithDefaults instantiates a new InlineResponse200480Data object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetUsage
+
+`func (o *InlineResponse200480Data) GetUsage() InlineResponse200480DataUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200480Data) GetUsageOk() (*InlineResponse200480DataUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200480Data) SetUsage(v InlineResponse200480DataUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200480Data) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

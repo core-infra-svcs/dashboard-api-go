@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork**](CampusGatewayApi.md#GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork) | **Get** /organizations/{organizationId}/campusGateway/clusters/tunneling/byCluster/byNetwork | List all the MCG cluster-network tunnel settings
 [**GetOrganizationCampusGatewayConnections**](CampusGatewayApi.md#GetOrganizationCampusGatewayConnections) | **Get** /organizations/{organizationId}/campusGateway/connections | List the details of APs tunneling through the Campus Gateway clusters
 [**GetOrganizationCampusGatewayConnectionsOverview**](CampusGatewayApi.md#GetOrganizationCampusGatewayConnectionsOverview) | **Get** /organizations/{organizationId}/campusGateway/connections/overview | List the count of connections(APs) with tunneling status up and down through the Campus Gateway clusters
+[**GetOrganizationCampusGatewayDevicesSystemCpuLoad**](CampusGatewayApi.md#GetOrganizationCampusGatewayDevicesSystemCpuLoad) | **Get** /organizations/{organizationId}/campusGateway/devices/system/cpu/load | Return the latest CPU load averages reported by Campus Gateway devices.
 [**GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice**](CampusGatewayApi.md#GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice) | **Get** /organizations/{organizationId}/campusGateway/devices/uplinks/localOverrides/byDevice | Uplink overrides configured locally on Campus Gateway devices in an organization.
 [**ProvisionOrganizationCampusGatewayClusters**](CampusGatewayApi.md#ProvisionOrganizationCampusGatewayClusters) | **Post** /organizations/{organizationId}/campusGateway/clusters/provision | Provisions a cluster,adds campus gateways to it and associate/dissociate failover targets.
 [**UpdateNetworkCampusGatewayCluster**](CampusGatewayApi.md#UpdateNetworkCampusGatewayCluster) | **Put** /networks/{networkId}/campusGateway/clusters/{clusterId} | Update a cluster and add/remove campus gateways to/from it
@@ -26,7 +27,7 @@ Method | HTTP request | Description
 
 ## BatchOrganizationCampusGatewayClustersTunnelingUpdate
 
-> InlineResponse200325 BatchOrganizationCampusGatewayClustersTunnelingUpdate(ctx, organizationId).BatchOrganizationCampusGatewayClustersTunnelingUpdate(batchOrganizationCampusGatewayClustersTunnelingUpdate).Execute()
+> InlineResponse200338 BatchOrganizationCampusGatewayClustersTunnelingUpdate(ctx, organizationId).BatchOrganizationCampusGatewayClustersTunnelingUpdate(batchOrganizationCampusGatewayClustersTunnelingUpdate).Execute()
 
 Update MCG cluster-network tunnel settings for multiple networks
 
@@ -46,7 +47,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    batchOrganizationCampusGatewayClustersTunnelingUpdate := *openapiclient.NewInlineObject274([]openapiclient.OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems{*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateDataEncryption(false)))}) // InlineObject274 | 
+    batchOrganizationCampusGatewayClustersTunnelingUpdate := *openapiclient.NewInlineObject285([]openapiclient.OrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems{*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateItems(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateCluster("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateNetwork("Id_example"), *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateData(*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersTunnelingBatchUpdateDataEncryption(false)))}) // InlineObject285 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -55,7 +56,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.BatchOrganizationCampusGatewayClustersTunnelingUpdate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchOrganizationCampusGatewayClustersTunnelingUpdate`: InlineResponse200325
+    // response from `BatchOrganizationCampusGatewayClustersTunnelingUpdate`: InlineResponse200338
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.BatchOrganizationCampusGatewayClustersTunnelingUpdate`: %v\n", resp)
 }
 ```
@@ -76,11 +77,11 @@ Other parameters are passed through a pointer to a apiBatchOrganizationCampusGat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchOrganizationCampusGatewayClustersTunnelingUpdate** | [**InlineObject274**](InlineObject274.md) |  | 
+ **batchOrganizationCampusGatewayClustersTunnelingUpdate** | [**InlineObject285**](InlineObject285.md) |  | 
 
 ### Return type
 
-[**InlineResponse200325**](InlineResponse200325.md)
+[**InlineResponse200338**](InlineResponse200338.md)
 
 ### Authorization
 
@@ -118,7 +119,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkCampusGatewayCluster := *openapiclient.NewInlineObject104("Name_example", []openapiclient.NetworksNetworkIdCampusGatewayClustersUplinks{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersUplinks("Interface_example", int32(123), []openapiclient.NetworksNetworkIdCampusGatewayClustersAddresses{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersAddresses("AssignmentMode_example")})}, []openapiclient.NetworksNetworkIdCampusGatewayClustersTunnels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersTunnels()}, *openapiclient.NewNetworksNetworkIdCampusGatewayClustersNameservers([]string{"Addresses_example"}), []openapiclient.NetworksNetworkIdCampusGatewayClustersPortChannels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersPortChannels("Name_example", int32(123), "AllowedVlans_example")}) // InlineObject104 | 
+    createNetworkCampusGatewayCluster := *openapiclient.NewInlineObject105("Name_example", []openapiclient.NetworksNetworkIdCampusGatewayClustersUplinks{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersUplinks("Interface_example", int32(123), []openapiclient.NetworksNetworkIdCampusGatewayClustersAddresses{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersAddresses("AssignmentMode_example")})}, []openapiclient.NetworksNetworkIdCampusGatewayClustersTunnels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersTunnels()}, *openapiclient.NewNetworksNetworkIdCampusGatewayClustersNameservers([]string{"Addresses_example"}), []openapiclient.NetworksNetworkIdCampusGatewayClustersPortChannels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersPortChannels("Name_example", int32(123), "AllowedVlans_example")}) // InlineObject105 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -148,7 +149,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkCampusGateway
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCampusGatewayCluster** | [**InlineObject104**](InlineObject104.md) |  | 
+ **createNetworkCampusGatewayCluster** | [**InlineObject105**](InlineObject105.md) |  | 
 
 ### Return type
 
@@ -241,7 +242,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClientsUsageByNetworkByCluster
 
-> InlineResponse200318 GetOrganizationCampusGatewayClientsUsageByNetworkByCluster(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).ClusterIds(clusterIds).UsageUnits(usageUnits).Execute()
+> InlineResponse200331 GetOrganizationCampusGatewayClientsUsageByNetworkByCluster(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).NetworkGroupIds(networkGroupIds).ClusterIds(clusterIds).UsageUnits(usageUnits).Execute()
 
 Returns client usage details for campus gateway clusters within an organization.
 
@@ -279,7 +280,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClientsUsageByNetworkByCluster``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClientsUsageByNetworkByCluster`: InlineResponse200318
+    // response from `GetOrganizationCampusGatewayClientsUsageByNetworkByCluster`: InlineResponse200331
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClientsUsageByNetworkByCluster`: %v\n", resp)
 }
 ```
@@ -313,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200318**](InlineResponse200318.md)
+[**InlineResponse200331**](InlineResponse200331.md)
 
 ### Authorization
 
@@ -331,7 +332,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClusters
 
-> InlineResponse200319 GetOrganizationCampusGatewayClusters(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200332 GetOrganizationCampusGatewayClusters(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Get the details of campus gateway clusters
 
@@ -363,7 +364,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClusters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClusters`: InlineResponse200319
+    // response from `GetOrganizationCampusGatewayClusters`: InlineResponse200332
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClusters`: %v\n", resp)
 }
 ```
@@ -391,7 +392,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200319**](InlineResponse200319.md)
+[**InlineResponse200332**](InlineResponse200332.md)
 
 ### Authorization
 
@@ -409,7 +410,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersFailoverTargets
 
-> []InlineResponse200320 GetOrganizationCampusGatewayClustersFailoverTargets(ctx, organizationId).NetworkIds(networkIds).ClusterIds(clusterIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200333 GetOrganizationCampusGatewayClustersFailoverTargets(ctx, organizationId).NetworkIds(networkIds).ClusterIds(clusterIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the details of a Failover Targets for a Campus Gateway cluster
 
@@ -442,7 +443,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClustersFailoverTargets``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersFailoverTargets`: []InlineResponse200320
+    // response from `GetOrganizationCampusGatewayClustersFailoverTargets`: []InlineResponse200333
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClustersFailoverTargets`: %v\n", resp)
 }
 ```
@@ -471,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200320**](InlineResponse200320.md)
+[**[]InlineResponse200333**](InlineResponse200333.md)
 
 ### Authorization
 
@@ -489,7 +490,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersFailoverTargetsByCluster
 
-> InlineResponse200321 GetOrganizationCampusGatewayClustersFailoverTargetsByCluster(ctx, organizationId).NetworkIds(networkIds).ClusterIds(clusterIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200334 GetOrganizationCampusGatewayClustersFailoverTargetsByCluster(ctx, organizationId).NetworkIds(networkIds).ClusterIds(clusterIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Get available backup cluster targets for campus gateway failover configuration
 
@@ -522,7 +523,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClustersFailoverTargetsByCluster``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersFailoverTargetsByCluster`: InlineResponse200321
+    // response from `GetOrganizationCampusGatewayClustersFailoverTargetsByCluster`: InlineResponse200334
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClustersFailoverTargetsByCluster`: %v\n", resp)
 }
 ```
@@ -551,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200321**](InlineResponse200321.md)
+[**InlineResponse200334**](InlineResponse200334.md)
 
 ### Authorization
 
@@ -569,7 +570,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersNetworksOverviews
 
-> InlineResponse200322 GetOrganizationCampusGatewayClustersNetworksOverviews(ctx, organizationId).ClusterIds(clusterIds).SiteIds(siteIds).NetworkIds(networkIds).TunnelingSources(tunnelingSources).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200335 GetOrganizationCampusGatewayClustersNetworksOverviews(ctx, organizationId).ClusterIds(clusterIds).SiteIds(siteIds).NetworkIds(networkIds).TunnelingSources(tunnelingSources).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List networks tunneling through Campus Gateway clusters with their AP, ssids and client counts
 
@@ -607,7 +608,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClustersNetworksOverviews``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersNetworksOverviews`: InlineResponse200322
+    // response from `GetOrganizationCampusGatewayClustersNetworksOverviews`: InlineResponse200335
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClustersNetworksOverviews`: %v\n", resp)
 }
 ```
@@ -641,7 +642,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200322**](InlineResponse200322.md)
+[**InlineResponse200335**](InlineResponse200335.md)
 
 ### Authorization
 
@@ -659,7 +660,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersSsids
 
-> InlineResponse200323 GetOrganizationCampusGatewayClustersSsids(ctx, organizationId).ClusterIds(clusterIds).NetworkIds(networkIds).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200336 GetOrganizationCampusGatewayClustersSsids(ctx, organizationId).ClusterIds(clusterIds).NetworkIds(networkIds).Search(search).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List SSIDs tunneling through Campus Gateway clusters
 
@@ -695,7 +696,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClustersSsids``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersSsids`: InlineResponse200323
+    // response from `GetOrganizationCampusGatewayClustersSsids`: InlineResponse200336
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClustersSsids`: %v\n", resp)
 }
 ```
@@ -727,7 +728,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200323**](InlineResponse200323.md)
+[**InlineResponse200336**](InlineResponse200336.md)
 
 ### Authorization
 
@@ -745,7 +746,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersTunnelable
 
-> InlineResponse200324 GetOrganizationCampusGatewayClustersTunnelable(ctx, organizationId).FromNetworkIds(fromNetworkIds).ExcludeSsidNumbers(excludeSsidNumbers).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200337 GetOrganizationCampusGatewayClustersTunnelable(ctx, organizationId).FromNetworkIds(fromNetworkIds).ExcludeSsidNumbers(excludeSsidNumbers).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List available campus gateway clusters that can be used for wireless network tunneling
 
@@ -778,7 +779,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClustersTunnelable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersTunnelable`: InlineResponse200324
+    // response from `GetOrganizationCampusGatewayClustersTunnelable`: InlineResponse200337
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClustersTunnelable`: %v\n", resp)
 }
 ```
@@ -807,7 +808,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200324**](InlineResponse200324.md)
+[**InlineResponse200337**](InlineResponse200337.md)
 
 ### Authorization
 
@@ -825,7 +826,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork
 
-> InlineResponse200326 GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork(ctx, organizationId).ClusterIds(clusterIds).DataEncryptionEnabled(dataEncryptionEnabled).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200339 GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork(ctx, organizationId).ClusterIds(clusterIds).DataEncryptionEnabled(dataEncryptionEnabled).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List all the MCG cluster-network tunnel settings
 
@@ -859,7 +860,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork`: InlineResponse200326
+    // response from `GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork`: InlineResponse200339
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayClustersTunnelingByClusterByNetwork`: %v\n", resp)
 }
 ```
@@ -889,7 +890,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200326**](InlineResponse200326.md)
+[**InlineResponse200339**](InlineResponse200339.md)
 
 ### Authorization
 
@@ -907,7 +908,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayConnections
 
-> InlineResponse200327 GetOrganizationCampusGatewayConnections(ctx, organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200340 GetOrganizationCampusGatewayConnections(ctx, organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).CampusGatewayPriorities(campusGatewayPriorities).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the details of APs tunneling through the Campus Gateway clusters
 
@@ -932,6 +933,7 @@ func main() {
     campusGatewaySerials := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by MCG serials. This filter uses multiple exact matches. (optional)
     campusGatewayClusterIds := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by MCG cluster IDs. This filter uses multiple exact matches. (optional)
     campusGatewayTunnelStatuses := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by tunnel statuses. This filter uses multiple exact matches. (optional)
+    campusGatewayPriorities := []int32{int32(123)} // []int32 | Optional parameter to filter connections(APs) by Campus Gateway tunnel priority. Use 0 for primary or 1 for backup. This filter uses multiple exact matches. (optional)
     search := "search_example" // string | Optional parameter to filter connections(APs) on AP name, serial, MAC address, network name, or interface IP address. This filter uses partial string matching (ILIKE). (optional)
     models := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by device model names. This filter uses multiple exact matches. (optional)
     dataEncryptionStatuses := []string{"DataEncryptionStatuses_example"} // []string | Optional parameter to filter connections(APs) by data encryption status. This filter uses multiple exact matches. (optional)
@@ -943,12 +945,12 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.CampusGatewayApi.GetOrganizationCampusGatewayConnections(context.Background(), organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    resp, r, err := apiClient.CampusGatewayApi.GetOrganizationCampusGatewayConnections(context.Background(), organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).CampusGatewayPriorities(campusGatewayPriorities).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).SortBy(sortBy).SortOrder(sortOrder).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayConnections``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayConnections`: InlineResponse200327
+    // response from `GetOrganizationCampusGatewayConnections`: InlineResponse200340
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayConnections`: %v\n", resp)
 }
 ```
@@ -974,6 +976,7 @@ Name | Type | Description  | Notes
  **campusGatewaySerials** | **[]string** | Optional parameter to filter connections(APs) by MCG serials. This filter uses multiple exact matches. | 
  **campusGatewayClusterIds** | **[]string** | Optional parameter to filter connections(APs) by MCG cluster IDs. This filter uses multiple exact matches. | 
  **campusGatewayTunnelStatuses** | **[]string** | Optional parameter to filter connections(APs) by tunnel statuses. This filter uses multiple exact matches. | 
+ **campusGatewayPriorities** | **[]int32** | Optional parameter to filter connections(APs) by Campus Gateway tunnel priority. Use 0 for primary or 1 for backup. This filter uses multiple exact matches. | 
  **search** | **string** | Optional parameter to filter connections(APs) on AP name, serial, MAC address, network name, or interface IP address. This filter uses partial string matching (ILIKE). | 
  **models** | **[]string** | Optional parameter to filter connections(APs) by device model names. This filter uses multiple exact matches. | 
  **dataEncryptionStatuses** | **[]string** | Optional parameter to filter connections(APs) by data encryption status. This filter uses multiple exact matches. | 
@@ -985,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200327**](InlineResponse200327.md)
+[**InlineResponse200340**](InlineResponse200340.md)
 
 ### Authorization
 
@@ -1003,7 +1006,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayConnectionsOverview
 
-> InlineResponse200328 GetOrganizationCampusGatewayConnectionsOverview(ctx, organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).Execute()
+> InlineResponse200341 GetOrganizationCampusGatewayConnectionsOverview(ctx, organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).CampusGatewayPriorities(campusGatewayPriorities).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).Execute()
 
 List the count of connections(APs) with tunneling status up and down through the Campus Gateway clusters
 
@@ -1028,18 +1031,19 @@ func main() {
     campusGatewaySerials := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by Campus Gateway serials. This filter uses multiple exact matches. (optional)
     campusGatewayClusterIds := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by Campus Gateway cluster IDs. This filter uses multiple exact matches. (optional)
     campusGatewayTunnelStatuses := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by tunnel statuses. This filter uses multiple exact matches. (optional)
+    campusGatewayPriorities := []int32{int32(123)} // []int32 | Optional parameter to filter connections(APs) by Campus Gateway tunnel priority. Use 0 for primary or 1 for backup. This filter uses multiple exact matches. (optional)
     search := "search_example" // string | Optional setting that lets you filter access points (APs) by name, serial number, MAC address, network name, or interface IP address. The filter matches partial text, not just exact values (uses ILIKE matching). (optional)
     models := []string{"Inner_example"} // []string | Optional parameter to filter connections(APs) by device model names. This filter uses multiple exact matches. (optional)
     dataEncryptionStatuses := []string{"DataEncryptionStatuses_example"} // []string | Optional parameter to filter connections(APs) by data encryption status. This filter uses multiple exact matches. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.CampusGatewayApi.GetOrganizationCampusGatewayConnectionsOverview(context.Background(), organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).Execute()
+    resp, r, err := apiClient.CampusGatewayApi.GetOrganizationCampusGatewayConnectionsOverview(context.Background(), organizationId).NetworkIds(networkIds).Serials(serials).CampusGatewaySerials(campusGatewaySerials).CampusGatewayClusterIds(campusGatewayClusterIds).CampusGatewayTunnelStatuses(campusGatewayTunnelStatuses).CampusGatewayPriorities(campusGatewayPriorities).Search(search).Models(models).DataEncryptionStatuses(dataEncryptionStatuses).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayConnectionsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayConnectionsOverview`: InlineResponse200328
+    // response from `GetOrganizationCampusGatewayConnectionsOverview`: InlineResponse200341
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayConnectionsOverview`: %v\n", resp)
 }
 ```
@@ -1065,13 +1069,94 @@ Name | Type | Description  | Notes
  **campusGatewaySerials** | **[]string** | Optional parameter to filter connections(APs) by Campus Gateway serials. This filter uses multiple exact matches. | 
  **campusGatewayClusterIds** | **[]string** | Optional parameter to filter connections(APs) by Campus Gateway cluster IDs. This filter uses multiple exact matches. | 
  **campusGatewayTunnelStatuses** | **[]string** | Optional parameter to filter connections(APs) by tunnel statuses. This filter uses multiple exact matches. | 
+ **campusGatewayPriorities** | **[]int32** | Optional parameter to filter connections(APs) by Campus Gateway tunnel priority. Use 0 for primary or 1 for backup. This filter uses multiple exact matches. | 
  **search** | **string** | Optional setting that lets you filter access points (APs) by name, serial number, MAC address, network name, or interface IP address. The filter matches partial text, not just exact values (uses ILIKE matching). | 
  **models** | **[]string** | Optional parameter to filter connections(APs) by device model names. This filter uses multiple exact matches. | 
  **dataEncryptionStatuses** | **[]string** | Optional parameter to filter connections(APs) by data encryption status. This filter uses multiple exact matches. | 
 
 ### Return type
 
-[**InlineResponse200328**](InlineResponse200328.md)
+[**InlineResponse200341**](InlineResponse200341.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationCampusGatewayDevicesSystemCpuLoad
+
+> InlineResponse200342 GetOrganizationCampusGatewayDevicesSystemCpuLoad(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+Return the latest CPU load averages reported by Campus Gateway devices.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | Optional exact-match network filters. Accepts both node group (N_) and locale (L_) network IDs. (optional)
+    serials := []string{"Inner_example"} // []string | Optional exact-match Campus Gateway serial filters. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CampusGatewayApi.GetOrganizationCampusGatewayDevicesSystemCpuLoad(context.Background(), organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayDevicesSystemCpuLoad``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationCampusGatewayDevicesSystemCpuLoad`: InlineResponse200342
+    fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayDevicesSystemCpuLoad`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationCampusGatewayDevicesSystemCpuLoadRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | Optional exact-match network filters. Accepts both node group (N_) and locale (L_) network IDs. | 
+ **serials** | **[]string** | Optional exact-match Campus Gateway serial filters. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200342**](InlineResponse200342.md)
 
 ### Authorization
 
@@ -1089,7 +1174,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice
 
-> InlineResponse200329 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200343 GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Uplink overrides configured locally on Campus Gateway devices in an organization.
 
@@ -1121,7 +1206,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CampusGatewayApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200329
+    // response from `GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: InlineResponse200343
     fmt.Fprintf(os.Stdout, "Response from `CampusGatewayApi.GetOrganizationCampusGatewayDevicesUplinksLocalOverridesByDevice`: %v\n", resp)
 }
 ```
@@ -1149,7 +1234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200329**](InlineResponse200329.md)
+[**InlineResponse200343**](InlineResponse200343.md)
 
 ### Authorization
 
@@ -1187,7 +1272,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    provisionOrganizationCampusGatewayClusters := *openapiclient.NewInlineObject273("ClusterId_example", *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork("Id_example"), "Name_example", []openapiclient.NetworksNetworkIdCampusGatewayClustersUplinks{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersUplinks("Interface_example", int32(123), []openapiclient.NetworksNetworkIdCampusGatewayClustersAddresses{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersAddresses("AssignmentMode_example")})}, []openapiclient.NetworksNetworkIdCampusGatewayClustersTunnels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersTunnels()}, *openapiclient.NewNetworksNetworkIdCampusGatewayClustersNameservers([]string{"Addresses_example"}), []openapiclient.OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels{*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels("Name_example", int32(123), "AllowedVlans_example")}) // InlineObject273 | 
+    provisionOrganizationCampusGatewayClusters := *openapiclient.NewInlineObject284("ClusterId_example", *openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersProvisionNetwork("Id_example"), "Name_example", []openapiclient.NetworksNetworkIdCampusGatewayClustersUplinks{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersUplinks("Interface_example", int32(123), []openapiclient.NetworksNetworkIdCampusGatewayClustersAddresses{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersAddresses("AssignmentMode_example")})}, []openapiclient.NetworksNetworkIdCampusGatewayClustersTunnels{*openapiclient.NewNetworksNetworkIdCampusGatewayClustersTunnels()}, *openapiclient.NewNetworksNetworkIdCampusGatewayClustersNameservers([]string{"Addresses_example"}), []openapiclient.OrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels{*openapiclient.NewOrganizationsOrganizationIdCampusGatewayClustersProvisionPortChannels("Name_example", int32(123), "AllowedVlans_example")}) // InlineObject284 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1217,7 +1302,7 @@ Other parameters are passed through a pointer to a apiProvisionOrganizationCampu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **provisionOrganizationCampusGatewayClusters** | [**InlineObject273**](InlineObject273.md) |  | 
+ **provisionOrganizationCampusGatewayClusters** | [**InlineObject284**](InlineObject284.md) |  | 
 
 ### Return type
 
@@ -1260,7 +1345,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clusterId := "clusterId_example" // string | Cluster ID
-    updateNetworkCampusGatewayCluster := *openapiclient.NewInlineObject105() // InlineObject105 |  (optional)
+    updateNetworkCampusGatewayCluster := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1292,7 +1377,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCampusGatewayCluster** | [**InlineObject105**](InlineObject105.md) |  | 
+ **updateNetworkCampusGatewayCluster** | [**InlineObject106**](InlineObject106.md) |  | 
 
 ### Return type
 
@@ -1335,7 +1420,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkCampusGatewaySsidMdns := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
+    updateNetworkCampusGatewaySsidMdns := *openapiclient.NewInlineObject107() // InlineObject107 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1367,7 +1452,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCampusGatewaySsidMdns** | [**InlineObject106**](InlineObject106.md) |  | 
+ **updateNetworkCampusGatewaySsidMdns** | [**InlineObject107**](InlineObject107.md) |  | 
 
 ### Return type
 

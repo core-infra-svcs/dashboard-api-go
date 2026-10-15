@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ServerId** | Pointer to **string** | Unique ID of the RADIUS accounting server. When provided, the existing RADIUS server will be updated instead of creating a new one | [optional] 
-**OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. If this field is provided, the host, port and secret field will be ignored | [optional] 
-**Host** | Pointer to **string** | Public IP address of the RADIUS accounting server | [optional] 
-**Port** | Pointer to **int32** | UDP port that the RADIUS Accounting server listens on for access requests | [optional] 
+**ServerId** | Pointer to **string** | Unique ID of the RADIUS accounting server to update | [optional] 
+**OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. Omit host, port and secret when this field is provided. If supplied, host and port must match the organization-wide server; secret is ignored | [optional] 
+**Host** | Pointer to **string** | Public IP address or fully-qualified domain name of the RADIUS accounting server | [optional] 
+**Port** | Pointer to **int32** | Port that the RADIUS Accounting server listens on for access requests | [optional] 
 **Secret** | Pointer to **string** | RADIUS client shared secret | [optional] 
+**Radsec** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadsec1**](NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadsec1.md) |  | [optional] 
 
 ## Methods
 
@@ -153,6 +154,31 @@ SetSecret sets Secret field to given value.
 `func (o *NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers) HasSecret() bool`
 
 HasSecret returns a boolean if a field has been set.
+
+### GetRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers) GetRadsec() NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadsec1`
+
+GetRadsec returns the Radsec field if non-nil, zero value otherwise.
+
+### GetRadsecOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers) GetRadsecOk() (*NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadsec1, bool)`
+
+GetRadsecOk returns a tuple with the Radsec field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers) SetRadsec(v NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadsec1)`
+
+SetRadsec sets Radsec field to given value.
+
+### HasRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesAccessPolicyNumberRadiusAccountingServers) HasRadsec() bool`
+
+HasRadsec returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

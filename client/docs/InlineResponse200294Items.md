@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | SLA policy ID | [optional] 
-**Name** | Pointer to **string** | SLA policy name | [optional] 
-**Uri** | Pointer to **string** | Endpoint for testing SLA | [optional] 
-**Ipsec** | Pointer to [**InlineResponse200294Ipsec**](InlineResponse200294Ipsec.md) |  | [optional] 
+**PolicyId** | Pointer to **NullableString** | Identifier for the policy (present for default base policies). | [optional] 
+**Counts** | Pointer to [**InlineResponse200294Counts**](InlineResponse200294Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,65 @@ NewInlineResponse200294ItemsWithDefaults instantiates a new InlineResponse200294
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetPolicyId
 
-`func (o *InlineResponse200294Items) GetId() string`
+`func (o *InlineResponse200294Items) GetPolicyId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetPolicyIdOk
 
-`func (o *InlineResponse200294Items) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200294Items) GetPolicyIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetPolicyId
 
-`func (o *InlineResponse200294Items) SetId(v string)`
+`func (o *InlineResponse200294Items) SetPolicyId(v string)`
 
-SetId sets Id field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasId
+### HasPolicyId
 
-`func (o *InlineResponse200294Items) HasId() bool`
+`func (o *InlineResponse200294Items) HasPolicyId() bool`
 
-HasId returns a boolean if a field has been set.
+HasPolicyId returns a boolean if a field has been set.
 
-### GetName
+### SetPolicyIdNil
 
-`func (o *InlineResponse200294Items) GetName() string`
+`func (o *InlineResponse200294Items) SetPolicyIdNil(b bool)`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+ SetPolicyIdNil sets the value for PolicyId to be an explicit nil
 
-### GetNameOk
+### UnsetPolicyId
+`func (o *InlineResponse200294Items) UnsetPolicyId()`
 
-`func (o *InlineResponse200294Items) GetNameOk() (*string, bool)`
+UnsetPolicyId ensures that no value is present for PolicyId, not even an explicit nil
+### GetCounts
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+`func (o *InlineResponse200294Items) GetCounts() InlineResponse200294Counts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200294Items) GetCountsOk() (*InlineResponse200294Counts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCounts
 
-`func (o *InlineResponse200294Items) SetName(v string)`
+`func (o *InlineResponse200294Items) SetCounts(v InlineResponse200294Counts)`
 
-SetName sets Name field to given value.
+SetCounts sets Counts field to given value.
 
-### HasName
+### HasCounts
 
-`func (o *InlineResponse200294Items) HasName() bool`
+`func (o *InlineResponse200294Items) HasCounts() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetUri
-
-`func (o *InlineResponse200294Items) GetUri() string`
-
-GetUri returns the Uri field if non-nil, zero value otherwise.
-
-### GetUriOk
-
-`func (o *InlineResponse200294Items) GetUriOk() (*string, bool)`
-
-GetUriOk returns a tuple with the Uri field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUri
-
-`func (o *InlineResponse200294Items) SetUri(v string)`
-
-SetUri sets Uri field to given value.
-
-### HasUri
-
-`func (o *InlineResponse200294Items) HasUri() bool`
-
-HasUri returns a boolean if a field has been set.
-
-### GetIpsec
-
-`func (o *InlineResponse200294Items) GetIpsec() InlineResponse200294Ipsec`
-
-GetIpsec returns the Ipsec field if non-nil, zero value otherwise.
-
-### GetIpsecOk
-
-`func (o *InlineResponse200294Items) GetIpsecOk() (*InlineResponse200294Ipsec, bool)`
-
-GetIpsecOk returns a tuple with the Ipsec field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpsec
-
-`func (o *InlineResponse200294Items) SetIpsec(v InlineResponse200294Ipsec)`
-
-SetIpsec sets Ipsec field to given value.
-
-### HasIpsec
-
-`func (o *InlineResponse200294Items) HasIpsec() bool`
-
-HasIpsec returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

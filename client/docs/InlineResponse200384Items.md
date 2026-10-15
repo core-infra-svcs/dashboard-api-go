@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**ProductTypes** | Pointer to **[]string** | List of products that have XDR enabled | [optional] 
-**Name** | Pointer to **string** | The name of the network | [optional] 
-**Enabled** | Pointer to **bool** | Represents whether XDR is enabled for the network | [optional] 
-**IsEligible** | Pointer to **bool** | Represents whether the network is eligible for XDR | [optional] 
+**Network** | [**InlineResponse200133Network**](InlineResponse200133Network.md) |  | 
+**Available** | [**[]InlineResponse200384Available**](InlineResponse200384Available.md) | The list of roles that can be assigned to a syslog server for this network | 
 
 ## Methods
 
 ### NewInlineResponse200384Items
 
-`func NewInlineResponse200384Items() *InlineResponse200384Items`
+`func NewInlineResponse200384Items(network InlineResponse200133Network, available []InlineResponse200384Available, ) *InlineResponse200384Items`
 
 NewInlineResponse200384Items instantiates a new InlineResponse200384Items object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +26,45 @@ NewInlineResponse200384ItemsWithDefaults instantiates a new InlineResponse200384
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetNetwork
 
-`func (o *InlineResponse200384Items) GetNetworkId() string`
+`func (o *InlineResponse200384Items) GetNetwork() InlineResponse200133Network`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200384Items) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200384Items) GetNetworkOk() (*InlineResponse200133Network, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetNetwork
 
-`func (o *InlineResponse200384Items) SetNetworkId(v string)`
+`func (o *InlineResponse200384Items) SetNetwork(v InlineResponse200133Network)`
 
-SetNetworkId sets NetworkId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasNetworkId
 
-`func (o *InlineResponse200384Items) HasNetworkId() bool`
+### GetAvailable
 
-HasNetworkId returns a boolean if a field has been set.
+`func (o *InlineResponse200384Items) GetAvailable() []InlineResponse200384Available`
 
-### GetProductTypes
+GetAvailable returns the Available field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200384Items) GetProductTypes() []string`
+### GetAvailableOk
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+`func (o *InlineResponse200384Items) GetAvailableOk() (*[]InlineResponse200384Available, bool)`
 
-### GetProductTypesOk
-
-`func (o *InlineResponse200384Items) GetProductTypesOk() (*[]string, bool)`
-
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+GetAvailableOk returns a tuple with the Available field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetAvailable
 
-`func (o *InlineResponse200384Items) SetProductTypes(v []string)`
+`func (o *InlineResponse200384Items) SetAvailable(v []InlineResponse200384Available)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetAvailable sets Available field to given value.
 
-### HasProductTypes
-
-`func (o *InlineResponse200384Items) HasProductTypes() bool`
-
-HasProductTypes returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200384Items) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200384Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200384Items) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200384Items) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineResponse200384Items) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineResponse200384Items) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineResponse200384Items) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineResponse200384Items) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetIsEligible
-
-`func (o *InlineResponse200384Items) GetIsEligible() bool`
-
-GetIsEligible returns the IsEligible field if non-nil, zero value otherwise.
-
-### GetIsEligibleOk
-
-`func (o *InlineResponse200384Items) GetIsEligibleOk() (*bool, bool)`
-
-GetIsEligibleOk returns a tuple with the IsEligible field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsEligible
-
-`func (o *InlineResponse200384Items) SetIsEligible(v bool)`
-
-SetIsEligible sets IsEligible field to given value.
-
-### HasIsEligible
-
-`func (o *InlineResponse200384Items) HasIsEligible() bool`
-
-HasIsEligible returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

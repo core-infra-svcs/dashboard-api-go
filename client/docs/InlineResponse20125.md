@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
 **Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**Appearance** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAppearance**](OrganizationsOrganizationIdBrandingPoliciesAppearance.md) |  | [optional] 
 **AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
 **HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
 **CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
@@ -78,6 +79,31 @@ SetEnabled sets Enabled field to given value.
 `func (o *InlineResponse20125) HasEnabled() bool`
 
 HasEnabled returns a boolean if a field has been set.
+
+### GetAppearance
+
+`func (o *InlineResponse20125) GetAppearance() OrganizationsOrganizationIdBrandingPoliciesAppearance`
+
+GetAppearance returns the Appearance field if non-nil, zero value otherwise.
+
+### GetAppearanceOk
+
+`func (o *InlineResponse20125) GetAppearanceOk() (*OrganizationsOrganizationIdBrandingPoliciesAppearance, bool)`
+
+GetAppearanceOk returns a tuple with the Appearance field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppearance
+
+`func (o *InlineResponse20125) SetAppearance(v OrganizationsOrganizationIdBrandingPoliciesAppearance)`
+
+SetAppearance sets Appearance field to given value.
+
+### HasAppearance
+
+`func (o *InlineResponse20125) HasAppearance() bool`
+
+HasAppearance returns a boolean if a field has been set.
 
 ### GetAdminSettings
 

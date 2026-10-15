@@ -32,7 +32,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceSensorCommand := *openapiclient.NewInlineObject34("Operation_example") // InlineObject34 | 
+    createDeviceSensorCommand := *openapiclient.NewInlineObject35("Operation_example") // InlineObject35 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -62,7 +62,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceSensorCommandR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceSensorCommand** | [**InlineObject34**](InlineObject34.md) |  | 
+ **createDeviceSensorCommand** | [**InlineObject35**](InlineObject35.md) |  | 
 
 ### Return type
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Ip** | Pointer to **string** | The IPv4 address of the neighbor | [optional] 
-**Ipv6** | Pointer to [**InlineResponse200110Ipv6**](InlineResponse200110Ipv6.md) |  | [optional] 
+**Ipv6** | Pointer to [**InlineResponse200110Ipv61**](InlineResponse200110Ipv61.md) |  | [optional] 
 **RemoteAsNumber** | Pointer to **int32** | Remote AS number of the neighbor | [optional] 
 **ReceiveLimit** | Pointer to **int32** | The maximum number of routes that the appliance can receive from the neighbor | [optional] 
 **AllowTransit** | Pointer to **bool** | Whether the appliance will advertise routes learned from other Autonomous Systems | [optional] 
@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **Weight** | Pointer to **int32** | Local weight for routes received from the neighbor | [optional] 
 **FilterIn** | Pointer to **[]string** | Filters routes received from an eBGP neighbor. Each entry must be an IPv4 CIDR string (e.g., &#39;10.0.0.0/8&#39; or &#39;10.0.0.5/32&#39;). | [optional] 
 **CommunityOut** | Pointer to **[]string** | List of BGP communities tagged to the routes advertised to an eBGP neighbor. | [optional] 
+**Filter** | Pointer to [**InlineResponse200110Filter**](InlineResponse200110Filter.md) |  | [optional] 
+**ExplicitOutboundRouteAdvertisement** | Pointer to [**NullableInlineResponse200110ExplicitOutboundRouteAdvertisement**](InlineResponse200110ExplicitOutboundRouteAdvertisement.md) |  | [optional] 
 **Vrf** | Pointer to [**InlineResponse200110Vrf**](InlineResponse200110Vrf.md) |  | [optional] 
 
 ## Methods
@@ -68,20 +70,20 @@ HasIp returns a boolean if a field has been set.
 
 ### GetIpv6
 
-`func (o *InlineResponse200110Neighbors) GetIpv6() InlineResponse200110Ipv6`
+`func (o *InlineResponse200110Neighbors) GetIpv6() InlineResponse200110Ipv61`
 
 GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
 ### GetIpv6Ok
 
-`func (o *InlineResponse200110Neighbors) GetIpv6Ok() (*InlineResponse200110Ipv6, bool)`
+`func (o *InlineResponse200110Neighbors) GetIpv6Ok() (*InlineResponse200110Ipv61, bool)`
 
 GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpv6
 
-`func (o *InlineResponse200110Neighbors) SetIpv6(v InlineResponse200110Ipv6)`
+`func (o *InlineResponse200110Neighbors) SetIpv6(v InlineResponse200110Ipv61)`
 
 SetIpv6 sets Ipv6 field to given value.
 
@@ -441,6 +443,66 @@ SetCommunityOut sets CommunityOut field to given value.
 
 HasCommunityOut returns a boolean if a field has been set.
 
+### GetFilter
+
+`func (o *InlineResponse200110Neighbors) GetFilter() InlineResponse200110Filter`
+
+GetFilter returns the Filter field if non-nil, zero value otherwise.
+
+### GetFilterOk
+
+`func (o *InlineResponse200110Neighbors) GetFilterOk() (*InlineResponse200110Filter, bool)`
+
+GetFilterOk returns a tuple with the Filter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilter
+
+`func (o *InlineResponse200110Neighbors) SetFilter(v InlineResponse200110Filter)`
+
+SetFilter sets Filter field to given value.
+
+### HasFilter
+
+`func (o *InlineResponse200110Neighbors) HasFilter() bool`
+
+HasFilter returns a boolean if a field has been set.
+
+### GetExplicitOutboundRouteAdvertisement
+
+`func (o *InlineResponse200110Neighbors) GetExplicitOutboundRouteAdvertisement() InlineResponse200110ExplicitOutboundRouteAdvertisement`
+
+GetExplicitOutboundRouteAdvertisement returns the ExplicitOutboundRouteAdvertisement field if non-nil, zero value otherwise.
+
+### GetExplicitOutboundRouteAdvertisementOk
+
+`func (o *InlineResponse200110Neighbors) GetExplicitOutboundRouteAdvertisementOk() (*InlineResponse200110ExplicitOutboundRouteAdvertisement, bool)`
+
+GetExplicitOutboundRouteAdvertisementOk returns a tuple with the ExplicitOutboundRouteAdvertisement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExplicitOutboundRouteAdvertisement
+
+`func (o *InlineResponse200110Neighbors) SetExplicitOutboundRouteAdvertisement(v InlineResponse200110ExplicitOutboundRouteAdvertisement)`
+
+SetExplicitOutboundRouteAdvertisement sets ExplicitOutboundRouteAdvertisement field to given value.
+
+### HasExplicitOutboundRouteAdvertisement
+
+`func (o *InlineResponse200110Neighbors) HasExplicitOutboundRouteAdvertisement() bool`
+
+HasExplicitOutboundRouteAdvertisement returns a boolean if a field has been set.
+
+### SetExplicitOutboundRouteAdvertisementNil
+
+`func (o *InlineResponse200110Neighbors) SetExplicitOutboundRouteAdvertisementNil(b bool)`
+
+ SetExplicitOutboundRouteAdvertisementNil sets the value for ExplicitOutboundRouteAdvertisement to be an explicit nil
+
+### UnsetExplicitOutboundRouteAdvertisement
+`func (o *InlineResponse200110Neighbors) UnsetExplicitOutboundRouteAdvertisement()`
+
+UnsetExplicitOutboundRouteAdvertisement ensures that no value is present for ExplicitOutboundRouteAdvertisement, not even an explicit nil
 ### GetVrf
 
 `func (o *InlineResponse200110Neighbors) GetVrf() InlineResponse200110Vrf`

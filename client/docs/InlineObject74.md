@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | **string** | Set mode to &#39;enabled&#39; to enable malware prevention, otherwise &#39;disabled&#39; | 
-**AllowedUrls** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls**](NetworksNetworkIdApplianceSecurityMalwareAllowedUrls.md) | The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
-**AllowedFiles** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles**](NetworksNetworkIdApplianceSecurityMalwareAllowedFiles.md) | The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
+**Mode** | Pointer to **string** | Set mode to &#39;disabled&#39;/&#39;detection&#39;/&#39;prevention&#39; (optional - omitting will leave current config unchanged) | [optional] 
+**IdsRulesets** | Pointer to **string** | Set the detection ruleset &#39;connectivity&#39;/&#39;balanced&#39;/&#39;security&#39; (optional - omitting will leave current config unchanged). Default value is &#39;balanced&#39; if none currently saved | [optional] 
+**Policy** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionPolicy**](NetworksNetworkIdApplianceSecurityIntrusionPolicy.md) |  | [optional] 
+**ProtectedNetworks** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks**](NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject74
 
-`func NewInlineObject74(mode string, ) *InlineObject74`
+`func NewInlineObject74() *InlineObject74`
 
 NewInlineObject74 instantiates a new InlineObject74 object
 This constructor will assign default values to properties that have it defined,
@@ -46,56 +47,86 @@ and a boolean to check if the value has been set.
 
 SetMode sets Mode field to given value.
 
+### HasMode
 
-### GetAllowedUrls
+`func (o *InlineObject74) HasMode() bool`
 
-`func (o *InlineObject74) GetAllowedUrls() []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls`
+HasMode returns a boolean if a field has been set.
 
-GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
+### GetIdsRulesets
 
-### GetAllowedUrlsOk
+`func (o *InlineObject74) GetIdsRulesets() string`
 
-`func (o *InlineObject74) GetAllowedUrlsOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls, bool)`
+GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
 
-GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
+### GetIdsRulesetsOk
+
+`func (o *InlineObject74) GetIdsRulesetsOk() (*string, bool)`
+
+GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrls
+### SetIdsRulesets
 
-`func (o *InlineObject74) SetAllowedUrls(v []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls)`
+`func (o *InlineObject74) SetIdsRulesets(v string)`
 
-SetAllowedUrls sets AllowedUrls field to given value.
+SetIdsRulesets sets IdsRulesets field to given value.
 
-### HasAllowedUrls
+### HasIdsRulesets
 
-`func (o *InlineObject74) HasAllowedUrls() bool`
+`func (o *InlineObject74) HasIdsRulesets() bool`
 
-HasAllowedUrls returns a boolean if a field has been set.
+HasIdsRulesets returns a boolean if a field has been set.
 
-### GetAllowedFiles
+### GetPolicy
 
-`func (o *InlineObject74) GetAllowedFiles() []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles`
+`func (o *InlineObject74) GetPolicy() NetworksNetworkIdApplianceSecurityIntrusionPolicy`
 
-GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-### GetAllowedFilesOk
+### GetPolicyOk
 
-`func (o *InlineObject74) GetAllowedFilesOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles, bool)`
+`func (o *InlineObject74) GetPolicyOk() (*NetworksNetworkIdApplianceSecurityIntrusionPolicy, bool)`
 
-GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedFiles
+### SetPolicy
 
-`func (o *InlineObject74) SetAllowedFiles(v []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles)`
+`func (o *InlineObject74) SetPolicy(v NetworksNetworkIdApplianceSecurityIntrusionPolicy)`
 
-SetAllowedFiles sets AllowedFiles field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasAllowedFiles
+### HasPolicy
 
-`func (o *InlineObject74) HasAllowedFiles() bool`
+`func (o *InlineObject74) HasPolicy() bool`
 
-HasAllowedFiles returns a boolean if a field has been set.
+HasPolicy returns a boolean if a field has been set.
+
+### GetProtectedNetworks
+
+`func (o *InlineObject74) GetProtectedNetworks() NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks`
+
+GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
+
+### GetProtectedNetworksOk
+
+`func (o *InlineObject74) GetProtectedNetworksOk() (*NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks, bool)`
+
+GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtectedNetworks
+
+`func (o *InlineObject74) SetProtectedNetworks(v NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks)`
+
+SetProtectedNetworks sets ProtectedNetworks field to given value.
+
+### HasProtectedNetworks
+
+`func (o *InlineObject74) HasProtectedNetworks() bool`
+
+HasProtectedNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

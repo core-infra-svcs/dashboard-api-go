@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems**](OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems.md) | List of connectors to delete (maximum 20 items) | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineObject358WithDefaults instantiates a new InlineObject358 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetItems
 
-`func (o *InlineObject358) GetStatus() string`
+`func (o *InlineObject358) GetItems() []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetItemsOk
 
-`func (o *InlineObject358) GetStatusOk() (*string, bool)`
+`func (o *InlineObject358) GetItemsOk() (*[]OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetItems
 
-`func (o *InlineObject358) SetStatus(v string)`
+`func (o *InlineObject358) SetItems(v []OrganizationsOrganizationIdSaseConnectorsBatchDeleteItems)`
 
-SetStatus sets Status field to given value.
+SetItems sets Items field to given value.
 
-### HasStatus
+### HasItems
 
-`func (o *InlineObject358) HasStatus() bool`
+`func (o *InlineObject358) HasItems() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetCertificateAuthorityId
-
-`func (o *InlineObject358) GetCertificateAuthorityId() string`
-
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
-
-### GetCertificateAuthorityIdOk
-
-`func (o *InlineObject358) GetCertificateAuthorityIdOk() (*string, bool)`
-
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCertificateAuthorityId
-
-`func (o *InlineObject358) SetCertificateAuthorityId(v string)`
-
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
-
-### HasCertificateAuthorityId
-
-`func (o *InlineObject358) HasCertificateAuthorityId() bool`
-
-HasCertificateAuthorityId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

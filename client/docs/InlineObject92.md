@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uplinks** | [**[]NetworksNetworkIdApplianceUplinksNatUplinks**](NetworksNetworkIdApplianceUplinksNatUplinks.md) | Per-uplink NAT exception configuration on the network. | 
+**Enabled** | **bool** | Enable or disable umbrella protection | 
 
 ## Methods
 
 ### NewInlineObject92
 
-`func NewInlineObject92(uplinks []NetworksNetworkIdApplianceUplinksNatUplinks, ) *InlineObject92`
+`func NewInlineObject92(enabled bool, ) *InlineObject92`
 
 NewInlineObject92 instantiates a new InlineObject92 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject92WithDefaults instantiates a new InlineObject92 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUplinks
+### GetEnabled
 
-`func (o *InlineObject92) GetUplinks() []NetworksNetworkIdApplianceUplinksNatUplinks`
+`func (o *InlineObject92) GetEnabled() bool`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetEnabledOk
 
-`func (o *InlineObject92) GetUplinksOk() (*[]NetworksNetworkIdApplianceUplinksNatUplinks, bool)`
+`func (o *InlineObject92) GetEnabledOk() (*bool, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetEnabled
 
-`func (o *InlineObject92) SetUplinks(v []NetworksNetworkIdApplianceUplinksNatUplinks)`
+`func (o *InlineObject92) SetEnabled(v bool)`
 
-SetUplinks sets Uplinks field to given value.
+SetEnabled sets Enabled field to given value.
 
 
 

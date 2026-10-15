@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200292Counts**](InlineResponse200292Counts.md) |  | [optional] 
+**AllowedRules** | Pointer to [**[]InlineResponse200292AllowedRules**](InlineResponse200292AllowedRules.md) | Sets a list of specific SNORT signatures to allow | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200292WithDefaults instantiates a new InlineResponse200292 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetAllowedRules
 
-`func (o *InlineResponse200292) GetCounts() InlineResponse200292Counts`
+`func (o *InlineResponse200292) GetAllowedRules() []InlineResponse200292AllowedRules`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetAllowedRulesOk
 
-`func (o *InlineResponse200292) GetCountsOk() (*InlineResponse200292Counts, bool)`
+`func (o *InlineResponse200292) GetAllowedRulesOk() (*[]InlineResponse200292AllowedRules, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetAllowedRules
 
-`func (o *InlineResponse200292) SetCounts(v InlineResponse200292Counts)`
+`func (o *InlineResponse200292) SetAllowedRules(v []InlineResponse200292AllowedRules)`
 
-SetCounts sets Counts field to given value.
+SetAllowedRules sets AllowedRules field to given value.
 
-### HasCounts
+### HasAllowedRules
 
-`func (o *InlineResponse200292) HasCounts() bool`
+`func (o *InlineResponse200292) HasAllowedRules() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasAllowedRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the alert profile | 
-**NetworkIds** | **[]string** | Networks associated with this alert profile | 
-**AlertTypes** | **[]string** | Alert types associated with this alert profile | 
-**AlertScheduleId** | Pointer to **NullableString** | ID of the alert schedule associated with this profile | [optional] 
-**Configuration** | [**OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration**](OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration.md) |  | 
+**Mode** | Pointer to **string** | Controls how the configuration payload in the request body is applied to the resource. This parameter dictates the declarative mode:  * **&#x60;complete&#x60;**: The request body represents the entire desired configuration for this resource. Any existing configurations that are not included in the payload will be removed. * **&#x60;partial&#x60; (default)**: The request body contains only the configurations to be created or modified. Existing configurations that are not specified in the payload will be preserved.  | [optional] 
+**Recursive** | Pointer to **bool** | Controls how the configuration payload in the request body applies to the rule group hierarchy. When true, the API applies each declared override to the rule group itself and its descendants unless the payload explicitly sets a descendant override. When false (default), the API applies overrides only to the rule groups listed in the payload.  | [optional] 
+**Items** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems**](OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems.md) | Desired overrides state | 
 
 ## Methods
 
 ### NewInlineObject264
 
-`func NewInlineObject264(name string, networkIds []string, alertTypes []string, configuration OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration, ) *InlineObject264`
+`func NewInlineObject264(items []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems, ) *InlineObject264`
 
 NewInlineObject264 instantiates a new InlineObject264 object
 This constructor will assign default values to properties that have it defined,
@@ -29,119 +27,74 @@ NewInlineObject264WithDefaults instantiates a new InlineObject264 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMode
 
-`func (o *InlineObject264) GetName() string`
+`func (o *InlineObject264) GetMode() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetModeOk
 
-`func (o *InlineObject264) GetNameOk() (*string, bool)`
+`func (o *InlineObject264) GetModeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMode
 
-`func (o *InlineObject264) SetName(v string)`
+`func (o *InlineObject264) SetMode(v string)`
 
-SetName sets Name field to given value.
+SetMode sets Mode field to given value.
 
+### HasMode
 
-### GetNetworkIds
+`func (o *InlineObject264) HasMode() bool`
 
-`func (o *InlineObject264) GetNetworkIds() []string`
+HasMode returns a boolean if a field has been set.
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+### GetRecursive
 
-### GetNetworkIdsOk
+`func (o *InlineObject264) GetRecursive() bool`
 
-`func (o *InlineObject264) GetNetworkIdsOk() (*[]string, bool)`
+GetRecursive returns the Recursive field if non-nil, zero value otherwise.
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+### GetRecursiveOk
+
+`func (o *InlineObject264) GetRecursiveOk() (*bool, bool)`
+
+GetRecursiveOk returns a tuple with the Recursive field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetRecursive
 
-`func (o *InlineObject264) SetNetworkIds(v []string)`
+`func (o *InlineObject264) SetRecursive(v bool)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetRecursive sets Recursive field to given value.
 
+### HasRecursive
 
-### GetAlertTypes
+`func (o *InlineObject264) HasRecursive() bool`
 
-`func (o *InlineObject264) GetAlertTypes() []string`
+HasRecursive returns a boolean if a field has been set.
 
-GetAlertTypes returns the AlertTypes field if non-nil, zero value otherwise.
+### GetItems
 
-### GetAlertTypesOk
+`func (o *InlineObject264) GetItems() []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems`
 
-`func (o *InlineObject264) GetAlertTypesOk() (*[]string, bool)`
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-GetAlertTypesOk returns a tuple with the AlertTypes field if it's non-nil, zero value otherwise
+### GetItemsOk
+
+`func (o *InlineObject264) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems, bool)`
+
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypes
+### SetItems
 
-`func (o *InlineObject264) SetAlertTypes(v []string)`
+`func (o *InlineObject264) SetItems(v []OrganizationsOrganizationIdApplianceSecurityIntrusionPoliciesPolicyIdRuleGroupsOverridesDeclareItems)`
 
-SetAlertTypes sets AlertTypes field to given value.
-
-
-### GetAlertScheduleId
-
-`func (o *InlineObject264) GetAlertScheduleId() string`
-
-GetAlertScheduleId returns the AlertScheduleId field if non-nil, zero value otherwise.
-
-### GetAlertScheduleIdOk
-
-`func (o *InlineObject264) GetAlertScheduleIdOk() (*string, bool)`
-
-GetAlertScheduleIdOk returns a tuple with the AlertScheduleId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertScheduleId
-
-`func (o *InlineObject264) SetAlertScheduleId(v string)`
-
-SetAlertScheduleId sets AlertScheduleId field to given value.
-
-### HasAlertScheduleId
-
-`func (o *InlineObject264) HasAlertScheduleId() bool`
-
-HasAlertScheduleId returns a boolean if a field has been set.
-
-### SetAlertScheduleIdNil
-
-`func (o *InlineObject264) SetAlertScheduleIdNil(b bool)`
-
- SetAlertScheduleIdNil sets the value for AlertScheduleId to be an explicit nil
-
-### UnsetAlertScheduleId
-`func (o *InlineObject264) UnsetAlertScheduleId()`
-
-UnsetAlertScheduleId ensures that no value is present for AlertScheduleId, not even an explicit nil
-### GetConfiguration
-
-`func (o *InlineObject264) GetConfiguration() OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration`
-
-GetConfiguration returns the Configuration field if non-nil, zero value otherwise.
-
-### GetConfigurationOk
-
-`func (o *InlineObject264) GetConfigurationOk() (*OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration, bool)`
-
-GetConfigurationOk returns a tuple with the Configuration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetConfiguration
-
-`func (o *InlineObject264) SetConfiguration(v OrganizationsOrganizationIdAssuranceAlertsProfilesConfiguration)`
-
-SetConfiguration sets Configuration field to given value.
+SetItems sets Items field to given value.
 
 
 

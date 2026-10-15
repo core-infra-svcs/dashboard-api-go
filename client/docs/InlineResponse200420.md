@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200420Items**](InlineResponse200420Items.md) | List of connectors | [optional] 
+**Id** | Pointer to **string** | Unique identifier for the application category | [optional] 
+**Name** | Pointer to **string** | Name of the application category | [optional] 
+**Applications** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications**](OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications.md) | List of applications in this category | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200420WithDefaults instantiates a new InlineResponse200420 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200420) GetItems() []InlineResponse200420Items`
+`func (o *InlineResponse200420) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200420) GetItemsOk() (*[]InlineResponse200420Items, bool)`
+`func (o *InlineResponse200420) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200420) SetItems(v []InlineResponse200420Items)`
+`func (o *InlineResponse200420) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
-### HasItems
+### HasId
 
-`func (o *InlineResponse200420) HasItems() bool`
+`func (o *InlineResponse200420) HasId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200420) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200420) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200420) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200420) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetApplications
+
+`func (o *InlineResponse200420) GetApplications() []OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications`
+
+GetApplications returns the Applications field if non-nil, zero value otherwise.
+
+### GetApplicationsOk
+
+`func (o *InlineResponse200420) GetApplicationsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications, bool)`
+
+GetApplicationsOk returns a tuple with the Applications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplications
+
+`func (o *InlineResponse200420) SetApplications(v []OrganizationsOrganizationIdPoliciesGlobalFirewallApplicationCategoriesApplications)`
+
+SetApplications sets Applications field to given value.
+
+### HasApplications
+
+`func (o *InlineResponse200420) HasApplications() bool`
+
+HasApplications returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

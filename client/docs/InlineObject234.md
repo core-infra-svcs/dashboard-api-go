@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | To enable/disable Zigbee on the network | [optional] 
+**IotController** | Pointer to [**NetworksNetworkIdWirelessZigbeeIotController**](NetworksNetworkIdWirelessZigbeeIotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**NetworksNetworkIdWirelessZigbeeLockManagement**](NetworksNetworkIdWirelessZigbeeLockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**NetworksNetworkIdWirelessZigbeeDefaults**](NetworksNetworkIdWirelessZigbeeDefaults.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject234
 
-`func NewInlineObject234(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject234`
+`func NewInlineObject234() *InlineObject234`
 
 NewInlineObject234 instantiates a new InlineObject234 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +28,105 @@ NewInlineObject234WithDefaults instantiates a new InlineObject234 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetEnabled
 
-`func (o *InlineObject234) GetConfirmed() bool`
+`func (o *InlineObject234) GetEnabled() bool`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetEnabledOk
 
-`func (o *InlineObject234) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject234) GetEnabledOk() (*bool, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetEnabled
 
-`func (o *InlineObject234) SetConfirmed(v bool)`
+`func (o *InlineObject234) SetEnabled(v bool)`
 
-SetConfirmed sets Confirmed field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConfirmed
+### HasEnabled
 
-`func (o *InlineObject234) HasConfirmed() bool`
+`func (o *InlineObject234) HasEnabled() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetIotController
 
-`func (o *InlineObject234) GetSynchronous() bool`
+`func (o *InlineObject234) GetIotController() NetworksNetworkIdWirelessZigbeeIotController`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetIotController returns the IotController field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetIotControllerOk
 
-`func (o *InlineObject234) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject234) GetIotControllerOk() (*NetworksNetworkIdWirelessZigbeeIotController, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetIotController
 
-`func (o *InlineObject234) SetSynchronous(v bool)`
+`func (o *InlineObject234) SetIotController(v NetworksNetworkIdWirelessZigbeeIotController)`
 
-SetSynchronous sets Synchronous field to given value.
+SetIotController sets IotController field to given value.
 
-### HasSynchronous
+### HasIotController
 
-`func (o *InlineObject234) HasSynchronous() bool`
+`func (o *InlineObject234) HasIotController() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasIotController returns a boolean if a field has been set.
 
-### GetActions
+### GetLockManagement
 
-`func (o *InlineObject234) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
+`func (o *InlineObject234) GetLockManagement() NetworksNetworkIdWirelessZigbeeLockManagement`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetLockManagementOk
 
-`func (o *InlineObject234) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
+`func (o *InlineObject234) GetLockManagementOk() (*NetworksNetworkIdWirelessZigbeeLockManagement, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetLockManagement
 
-`func (o *InlineObject234) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
+`func (o *InlineObject234) SetLockManagement(v NetworksNetworkIdWirelessZigbeeLockManagement)`
 
-SetActions sets Actions field to given value.
+SetLockManagement sets LockManagement field to given value.
 
+### HasLockManagement
 
-### GetCallback
+`func (o *InlineObject234) HasLockManagement() bool`
 
-`func (o *InlineObject234) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+HasLockManagement returns a boolean if a field has been set.
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+### GetDefaults
 
-### GetCallbackOk
+`func (o *InlineObject234) GetDefaults() NetworksNetworkIdWirelessZigbeeDefaults`
 
-`func (o *InlineObject234) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+### GetDefaultsOk
+
+`func (o *InlineObject234) GetDefaultsOk() (*NetworksNetworkIdWirelessZigbeeDefaults, bool)`
+
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetDefaults
 
-`func (o *InlineObject234) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+`func (o *InlineObject234) SetDefaults(v NetworksNetworkIdWirelessZigbeeDefaults)`
 
-SetCallback sets Callback field to given value.
+SetDefaults sets Defaults field to given value.
 
-### HasCallback
+### HasDefaults
 
-`func (o *InlineObject234) HasCallback() bool`
+`func (o *InlineObject234) HasDefaults() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

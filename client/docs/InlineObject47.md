@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfile** | Pointer to [**DevicesSerialWirelessRadioOverridesRfProfile**](DevicesSerialWirelessRadioOverridesRfProfile.md) |  | [optional] 
-**Radios** | Pointer to [**[]DevicesSerialWirelessRadioOverridesRadios**](DevicesSerialWirelessRadioOverridesRadios.md) | Radio overrides. If omitted, existing per-radio override settings remain unchanged. If provided, only the radios included in the array are updated; the array does not replace the device&#39;s full existing set of radio overrides. Read-only response fields for each radio, such as &#39;band&#39;, may be included in the request body and are ignored. | [optional] 
+**Channel** | Pointer to **string** | Desired ESL channel for the device. Only configurable for devices assigned the High frequency ESL or sepioo IIoT role. Use &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject47WithDefaults instantiates a new InlineObject47 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRfProfile
+### GetChannel
 
-`func (o *InlineObject47) GetRfProfile() DevicesSerialWirelessRadioOverridesRfProfile`
+`func (o *InlineObject47) GetChannel() string`
 
-GetRfProfile returns the RfProfile field if non-nil, zero value otherwise.
+GetChannel returns the Channel field if non-nil, zero value otherwise.
 
-### GetRfProfileOk
+### GetChannelOk
 
-`func (o *InlineObject47) GetRfProfileOk() (*DevicesSerialWirelessRadioOverridesRfProfile, bool)`
+`func (o *InlineObject47) GetChannelOk() (*string, bool)`
 
-GetRfProfileOk returns a tuple with the RfProfile field if it's non-nil, zero value otherwise
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfile
+### SetChannel
 
-`func (o *InlineObject47) SetRfProfile(v DevicesSerialWirelessRadioOverridesRfProfile)`
+`func (o *InlineObject47) SetChannel(v string)`
 
-SetRfProfile sets RfProfile field to given value.
+SetChannel sets Channel field to given value.
 
-### HasRfProfile
+### HasChannel
 
-`func (o *InlineObject47) HasRfProfile() bool`
+`func (o *InlineObject47) HasChannel() bool`
 
-HasRfProfile returns a boolean if a field has been set.
+HasChannel returns a boolean if a field has been set.
 
-### GetRadios
+### GetEnabled
 
-`func (o *InlineObject47) GetRadios() []DevicesSerialWirelessRadioOverridesRadios`
+`func (o *InlineObject47) GetEnabled() bool`
 
-GetRadios returns the Radios field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRadiosOk
+### GetEnabledOk
 
-`func (o *InlineObject47) GetRadiosOk() (*[]DevicesSerialWirelessRadioOverridesRadios, bool)`
+`func (o *InlineObject47) GetEnabledOk() (*bool, bool)`
 
-GetRadiosOk returns a tuple with the Radios field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadios
+### SetEnabled
 
-`func (o *InlineObject47) SetRadios(v []DevicesSerialWirelessRadioOverridesRadios)`
+`func (o *InlineObject47) SetEnabled(v bool)`
 
-SetRadios sets Radios field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRadios
+### HasEnabled
 
-`func (o *InlineObject47) HasRadios() bool`
+`func (o *InlineObject47) HasEnabled() bool`
 
-HasRadios returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

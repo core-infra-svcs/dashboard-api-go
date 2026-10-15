@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200453Items**](InlineResponse200453Items.md) | Switches | [optional] 
-**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
+**Status** | Pointer to **bool** | The success or failure status of the API | [optional] 
+**States** | Pointer to **[]string** | The set of different states on the spaces integration process | [optional] 
+**Email** | Pointer to **string** | The meraki user who attempts the spaces integration | [optional] 
+**AccountName** | Pointer to **string** | The spaces dashboard account name created in spaces integration | [optional] 
+**AccountType** | Pointer to **string** | The spaces dashboard account type created in spaces integration | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200453WithDefaults instantiates a new InlineResponse200453 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetStatus
 
-`func (o *InlineResponse200453) GetItems() []InlineResponse200453Items`
+`func (o *InlineResponse200453) GetStatus() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetStatusOk
 
-`func (o *InlineResponse200453) GetItemsOk() (*[]InlineResponse200453Items, bool)`
+`func (o *InlineResponse200453) GetStatusOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetStatus
 
-`func (o *InlineResponse200453) SetItems(v []InlineResponse200453Items)`
+`func (o *InlineResponse200453) SetStatus(v bool)`
 
-SetItems sets Items field to given value.
+SetStatus sets Status field to given value.
 
-### HasItems
+### HasStatus
 
-`func (o *InlineResponse200453) HasItems() bool`
+`func (o *InlineResponse200453) HasStatus() bool`
 
-HasItems returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetMeta
+### GetStates
 
-`func (o *InlineResponse200453) GetMeta() InlineResponse200279Meta`
+`func (o *InlineResponse200453) GetStates() []string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetStates returns the States field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetStatesOk
 
-`func (o *InlineResponse200453) GetMetaOk() (*InlineResponse200279Meta, bool)`
+`func (o *InlineResponse200453) GetStatesOk() (*[]string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetStates
 
-`func (o *InlineResponse200453) SetMeta(v InlineResponse200279Meta)`
+`func (o *InlineResponse200453) SetStates(v []string)`
 
-SetMeta sets Meta field to given value.
+SetStates sets States field to given value.
 
-### HasMeta
+### HasStates
 
-`func (o *InlineResponse200453) HasMeta() bool`
+`func (o *InlineResponse200453) HasStates() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasStates returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse200453) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse200453) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse200453) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse200453) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
+### GetAccountName
+
+`func (o *InlineResponse200453) GetAccountName() string`
+
+GetAccountName returns the AccountName field if non-nil, zero value otherwise.
+
+### GetAccountNameOk
+
+`func (o *InlineResponse200453) GetAccountNameOk() (*string, bool)`
+
+GetAccountNameOk returns a tuple with the AccountName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountName
+
+`func (o *InlineResponse200453) SetAccountName(v string)`
+
+SetAccountName sets AccountName field to given value.
+
+### HasAccountName
+
+`func (o *InlineResponse200453) HasAccountName() bool`
+
+HasAccountName returns a boolean if a field has been set.
+
+### GetAccountType
+
+`func (o *InlineResponse200453) GetAccountType() string`
+
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+
+### GetAccountTypeOk
+
+`func (o *InlineResponse200453) GetAccountTypeOk() (*string, bool)`
+
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountType
+
+`func (o *InlineResponse200453) SetAccountType(v string)`
+
+SetAccountType sets AccountType field to given value.
+
+### HasAccountType
+
+`func (o *InlineResponse200453) HasAccountType() bool`
+
+HasAccountType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

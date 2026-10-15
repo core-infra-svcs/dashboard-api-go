@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the network. | 
-**Id** | **string** | The id of the network. | 
+**Id** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200427Network
 
-`func NewInlineResponse200427Network(name string, id string, ) *InlineResponse200427Network`
+`func NewInlineResponse200427Network() *InlineResponse200427Network`
 
 NewInlineResponse200427Network instantiates a new InlineResponse200427Network object
 This constructor will assign default values to properties that have it defined,
@@ -25,26 +25,6 @@ will change when the set of required properties is changed
 NewInlineResponse200427NetworkWithDefaults instantiates a new InlineResponse200427Network object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *InlineResponse200427Network) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200427Network) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200427Network) SetName(v string)`
-
-SetName sets Name field to given value.
-
 
 ### GetId
 
@@ -65,6 +45,36 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
+### HasId
+
+`func (o *InlineResponse200427Network) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200427Network) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200427Network) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200427Network) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200427Network) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

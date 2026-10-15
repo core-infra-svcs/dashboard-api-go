@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
+    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject24() // InlineObject24 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsMulti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsMulticastRouting** | [**InlineObject23**](InlineObject23.md) |  | 
+ **createDeviceLiveToolsMulticastRouting** | [**InlineObject24**](InlineObject24.md) |  | 
 
 ### Return type
 

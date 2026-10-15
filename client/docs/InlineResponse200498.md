@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DisenrollmentId** | Pointer to **string** | Id to check the status of your disenrollment | [optional] 
-**Url** | Pointer to **string** | Url to check the status of your disenrollment | [optional] 
-**Request** | Pointer to [**InlineResponse20129Request**](InlineResponse20129Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the disenrollment | [optional] 
-**DoorLocks** | Pointer to [**[]InlineResponse200498DoorLocks**](InlineResponse200498DoorLocks.md) | Door locks | [optional] 
+**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
+**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice**](OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200498WithDefaults instantiates a new InlineResponse200498 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDisenrollmentId
+### GetDownstream
 
-`func (o *InlineResponse200498) GetDisenrollmentId() string`
+`func (o *InlineResponse200498) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
 
-GetDisenrollmentId returns the DisenrollmentId field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetDisenrollmentIdOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200498) GetDisenrollmentIdOk() (*string, bool)`
+`func (o *InlineResponse200498) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
 
-GetDisenrollmentIdOk returns a tuple with the DisenrollmentId field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisenrollmentId
+### SetDownstream
 
-`func (o *InlineResponse200498) SetDisenrollmentId(v string)`
+`func (o *InlineResponse200498) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
 
-SetDisenrollmentId sets DisenrollmentId field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasDisenrollmentId
+### HasDownstream
 
-`func (o *InlineResponse200498) HasDisenrollmentId() bool`
+`func (o *InlineResponse200498) HasDownstream() bool`
 
-HasDisenrollmentId returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
-### GetUrl
+### GetUpstream
 
-`func (o *InlineResponse200498) GetUrl() string`
+`func (o *InlineResponse200498) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200498) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200498) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetUpstream
 
-`func (o *InlineResponse200498) SetUrl(v string)`
+`func (o *InlineResponse200498) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
 
-SetUrl sets Url field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasUrl
+### HasUpstream
 
-`func (o *InlineResponse200498) HasUrl() bool`
+`func (o *InlineResponse200498) HasUpstream() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetRequest
+### GetNetwork
 
-`func (o *InlineResponse200498) GetRequest() InlineResponse20129Request`
+`func (o *InlineResponse200498) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetNetworkOk
 
-`func (o *InlineResponse200498) GetRequestOk() (*InlineResponse20129Request, bool)`
+`func (o *InlineResponse200498) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetNetwork
 
-`func (o *InlineResponse200498) SetRequest(v InlineResponse20129Request)`
+`func (o *InlineResponse200498) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
 
-SetRequest sets Request field to given value.
+SetNetwork sets Network field to given value.
 
-### HasRequest
+### HasNetwork
 
-`func (o *InlineResponse200498) HasRequest() bool`
+`func (o *InlineResponse200498) HasNetwork() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetStatus
+### GetDevice
 
-`func (o *InlineResponse200498) GetStatus() string`
+`func (o *InlineResponse200498) GetDevice() OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetDeviceOk
 
-`func (o *InlineResponse200498) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200498) GetDeviceOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetDevice
 
-`func (o *InlineResponse200498) SetStatus(v string)`
+`func (o *InlineResponse200498) SetDevice(v OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice)`
 
-SetStatus sets Status field to given value.
+SetDevice sets Device field to given value.
 
-### HasStatus
+### HasDevice
 
-`func (o *InlineResponse200498) HasStatus() bool`
+`func (o *InlineResponse200498) HasDevice() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetDoorLocks
-
-`func (o *InlineResponse200498) GetDoorLocks() []InlineResponse200498DoorLocks`
-
-GetDoorLocks returns the DoorLocks field if non-nil, zero value otherwise.
-
-### GetDoorLocksOk
-
-`func (o *InlineResponse200498) GetDoorLocksOk() (*[]InlineResponse200498DoorLocks, bool)`
-
-GetDoorLocksOk returns a tuple with the DoorLocks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDoorLocks
-
-`func (o *InlineResponse200498) SetDoorLocks(v []InlineResponse200498DoorLocks)`
-
-SetDoorLocks sets DoorLocks field to given value.
-
-### HasDoorLocks
-
-`func (o *InlineResponse200498) HasDoorLocks() bool`
-
-HasDoorLocks returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1.md) |  | 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork**](OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork.md) |  | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
 
 ## Methods
 
 ### NewInlineObject367
 
-`func NewInlineObject367(ssid OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1, ) *InlineObject367`
+`func NewInlineObject367() *InlineObject367`
 
 NewInlineObject367 instantiates a new InlineObject367 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject367WithDefaults instantiates a new InlineObject367 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsid
+### GetName
 
-`func (o *InlineObject367) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1`
+`func (o *InlineObject367) GetName() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetNameOk
 
-`func (o *InlineObject367) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1, bool)`
+`func (o *InlineObject367) GetNameOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetName
 
-`func (o *InlineObject367) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsSsid1)`
+`func (o *InlineObject367) SetName(v string)`
 
-SetSsid sets Ssid field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetNetwork
+`func (o *InlineObject367) HasName() bool`
 
-`func (o *InlineObject367) GetNetwork() OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork`
+HasName returns a boolean if a field has been set.
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+### GetBaseTheme
 
-### GetNetworkOk
+`func (o *InlineObject367) GetBaseTheme() string`
 
-`func (o *InlineObject367) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork, bool)`
+GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+### GetBaseThemeOk
+
+`func (o *InlineObject367) GetBaseThemeOk() (*string, bool)`
+
+GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetBaseTheme
 
-`func (o *InlineObject367) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsProfilesAssignmentsNetwork)`
+`func (o *InlineObject367) SetBaseTheme(v string)`
 
-SetNetwork sets Network field to given value.
+SetBaseTheme sets BaseTheme field to given value.
 
-### HasNetwork
+### HasBaseTheme
 
-`func (o *InlineObject367) HasNetwork() bool`
+`func (o *InlineObject367) HasBaseTheme() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasBaseTheme returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

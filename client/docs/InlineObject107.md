@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destinations** | Pointer to [**[]NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations**](NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations.md) | The list of connectivity monitoring destinations | [optional] 
+**Enabled** | Pointer to **bool** | If true, mDNS gateway is enabled for this SSID and cluster. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules**](NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules.md) | List of mDNS forwarding rules. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject107WithDefaults instantiates a new InlineObject107 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestinations
+### GetEnabled
 
-`func (o *InlineObject107) GetDestinations() []NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations`
+`func (o *InlineObject107) GetEnabled() bool`
 
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetDestinationsOk
+### GetEnabledOk
 
-`func (o *InlineObject107) GetDestinationsOk() (*[]NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations, bool)`
+`func (o *InlineObject107) GetEnabledOk() (*bool, bool)`
 
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinations
+### SetEnabled
 
-`func (o *InlineObject107) SetDestinations(v []NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations)`
+`func (o *InlineObject107) SetEnabled(v bool)`
 
-SetDestinations sets Destinations field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasDestinations
+### HasEnabled
 
-`func (o *InlineObject107) HasDestinations() bool`
+`func (o *InlineObject107) HasEnabled() bool`
 
-HasDestinations returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject107) GetRules() []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject107) GetRulesOk() (*[]NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject107) SetRules(v []NetworksNetworkIdCampusGatewaySsidsNumberMdnsRules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineObject107) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

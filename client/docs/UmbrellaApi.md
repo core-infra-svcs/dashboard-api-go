@@ -35,7 +35,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    addNetworkApplianceUmbrellaPolicies := *openapiclient.NewInlineObject89(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy("Id_example")) // InlineObject89 | 
+    addNetworkApplianceUmbrellaPolicies := *openapiclient.NewInlineObject90(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaPoliciesAddPolicy("Id_example")) // InlineObject90 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -65,7 +65,7 @@ Other parameters are passed through a pointer to a apiAddNetworkApplianceUmbrell
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **addNetworkApplianceUmbrellaPolicies** | [**InlineObject89**](InlineObject89.md) |  | 
+ **addNetworkApplianceUmbrellaPolicies** | [**InlineObject90**](InlineObject90.md) |  | 
 
 ### Return type
 
@@ -107,7 +107,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    connectNetworkApplianceUmbrellaAccount := *openapiclient.NewInlineObject87(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaAccountConnectApi("Key_example", "Secret_example")) // InlineObject87 | 
+    connectNetworkApplianceUmbrellaAccount := *openapiclient.NewInlineObject88(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaAccountConnectApi("Key_example", "Secret_example")) // InlineObject88 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -137,7 +137,7 @@ Other parameters are passed through a pointer to a apiConnectNetworkApplianceUmb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **connectNetworkApplianceUmbrellaAccount** | [**InlineObject87**](InlineObject87.md) |  | 
+ **connectNetworkApplianceUmbrellaAccount** | [**InlineObject88**](InlineObject88.md) |  | 
 
 ### Return type
 
@@ -247,7 +247,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    exclusionsNetworkApplianceUmbrellaDomains := *openapiclient.NewInlineObject88([]string{"Domains_example"}) // InlineObject88 | 
+    exclusionsNetworkApplianceUmbrellaDomains := *openapiclient.NewInlineObject89([]string{"Domains_example"}) // InlineObject89 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -277,7 +277,7 @@ Other parameters are passed through a pointer to a apiExclusionsNetworkAppliance
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **exclusionsNetworkApplianceUmbrellaDomains** | [**InlineObject88**](InlineObject88.md) |  | 
+ **exclusionsNetworkApplianceUmbrellaDomains** | [**InlineObject89**](InlineObject89.md) |  | 
 
 ### Return type
 
@@ -319,7 +319,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    protectionNetworkApplianceUmbrella := *openapiclient.NewInlineObject91(false) // InlineObject91 | 
+    protectionNetworkApplianceUmbrella := *openapiclient.NewInlineObject92(false) // InlineObject92 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -349,7 +349,7 @@ Other parameters are passed through a pointer to a apiProtectionNetworkAppliance
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **protectionNetworkApplianceUmbrella** | [**InlineObject91**](InlineObject91.md) |  | 
+ **protectionNetworkApplianceUmbrella** | [**InlineObject92**](InlineObject92.md) |  | 
 
 ### Return type
 
@@ -391,7 +391,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    removeNetworkApplianceUmbrellaPolicies := *openapiclient.NewInlineObject90(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy("Id_example")) // InlineObject90 | 
+    removeNetworkApplianceUmbrellaPolicies := *openapiclient.NewInlineObject91(*openapiclient.NewNetworksNetworkIdApplianceUmbrellaPoliciesRemovePolicy("Id_example")) // InlineObject91 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -419,7 +419,7 @@ Other parameters are passed through a pointer to a apiRemoveNetworkApplianceUmbr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **removeNetworkApplianceUmbrellaPolicies** | [**InlineObject90**](InlineObject90.md) |  | 
+ **removeNetworkApplianceUmbrellaPolicies** | [**InlineObject91**](InlineObject91.md) |  | 
 
 ### Return type
 

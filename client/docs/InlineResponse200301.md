@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200301Items**](InlineResponse200301Items.md) | Alert Counts by Network | 
-**Meta** | [**InlineResponse200301Meta**](InlineResponse200301Meta.md) |  | 
+**Items** | Pointer to [**[]InlineResponse200296Items**](InlineResponse200296Items.md) | Rule overrides collection | [optional] 
+**Meta** | Pointer to [**InlineResponse200301Meta**](InlineResponse200301Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200301
 
-`func NewInlineResponse200301(items []InlineResponse200301Items, meta InlineResponse200301Meta, ) *InlineResponse200301`
+`func NewInlineResponse200301() *InlineResponse200301`
 
 NewInlineResponse200301 instantiates a new InlineResponse200301 object
 This constructor will assign default values to properties that have it defined,
@@ -28,23 +28,28 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200301) GetItems() []InlineResponse200301Items`
+`func (o *InlineResponse200301) GetItems() []InlineResponse200296Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200301) GetItemsOk() (*[]InlineResponse200301Items, bool)`
+`func (o *InlineResponse200301) GetItemsOk() (*[]InlineResponse200296Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200301) SetItems(v []InlineResponse200301Items)`
+`func (o *InlineResponse200301) SetItems(v []InlineResponse200296Items)`
 
 SetItems sets Items field to given value.
 
+### HasItems
+
+`func (o *InlineResponse200301) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
@@ -65,6 +70,11 @@ and a boolean to check if the value has been set.
 
 SetMeta sets Meta field to given value.
 
+### HasMeta
+
+`func (o *InlineResponse200301) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

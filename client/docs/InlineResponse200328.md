@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | [**InlineResponse200328Counts**](InlineResponse200328Counts.md) |  | 
+**Success** | Pointer to **bool** | Whether the update succeeded | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200328
 
-`func NewInlineResponse200328(counts InlineResponse200328Counts, ) *InlineResponse200328`
+`func NewInlineResponse200328() *InlineResponse200328`
 
 NewInlineResponse200328 instantiates a new InlineResponse200328 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineResponse200328WithDefaults instantiates a new InlineResponse200328 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetSuccess
 
-`func (o *InlineResponse200328) GetCounts() InlineResponse200328Counts`
+`func (o *InlineResponse200328) GetSuccess() bool`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetSuccessOk
 
-`func (o *InlineResponse200328) GetCountsOk() (*InlineResponse200328Counts, bool)`
+`func (o *InlineResponse200328) GetSuccessOk() (*bool, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetSuccess
 
-`func (o *InlineResponse200328) SetCounts(v InlineResponse200328Counts)`
+`func (o *InlineResponse200328) SetSuccess(v bool)`
 
-SetCounts sets Counts field to given value.
+SetSuccess sets Success field to given value.
 
+### HasSuccess
+
+`func (o *InlineResponse200328) HasSuccess() bool`
+
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

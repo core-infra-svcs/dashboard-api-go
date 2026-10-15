@@ -1,0 +1,56 @@
+# InlineResponse200344Meta
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Counts** | Pointer to [**InlineResponse200344MetaCounts**](InlineResponse200344MetaCounts.md) |  | [optional] 
+
+## Methods
+
+### NewInlineResponse200344Meta
+
+`func NewInlineResponse200344Meta() *InlineResponse200344Meta`
+
+NewInlineResponse200344Meta instantiates a new InlineResponse200344Meta object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewInlineResponse200344MetaWithDefaults
+
+`func NewInlineResponse200344MetaWithDefaults() *InlineResponse200344Meta`
+
+NewInlineResponse200344MetaWithDefaults instantiates a new InlineResponse200344Meta object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
+
+### GetCounts
+
+`func (o *InlineResponse200344Meta) GetCounts() InlineResponse200344MetaCounts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200344Meta) GetCountsOk() (*InlineResponse200344MetaCounts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200344Meta) SetCounts(v InlineResponse200344MetaCounts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200344Meta) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
+
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

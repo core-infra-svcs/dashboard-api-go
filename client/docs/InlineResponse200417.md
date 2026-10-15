@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
-**SpInitiated** | Pointer to [**InlineResponse200417SpInitiated**](InlineResponse200417SpInitiated.md) |  | [optional] 
+**NetworkIds** | Pointer to **[]string** | The network IDs that were added to the network group | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200417WithDefaults instantiates a new InlineResponse200417 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetNetworkIds
 
-`func (o *InlineResponse200417) GetEnabled() bool`
+`func (o *InlineResponse200417) GetNetworkIds() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNetworkIdsOk
 
-`func (o *InlineResponse200417) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200417) GetNetworkIdsOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetNetworkIds
 
-`func (o *InlineResponse200417) SetEnabled(v bool)`
+`func (o *InlineResponse200417) SetNetworkIds(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
-### HasEnabled
+### HasNetworkIds
 
-`func (o *InlineResponse200417) HasEnabled() bool`
+`func (o *InlineResponse200417) HasNetworkIds() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetSpInitiated
-
-`func (o *InlineResponse200417) GetSpInitiated() InlineResponse200417SpInitiated`
-
-GetSpInitiated returns the SpInitiated field if non-nil, zero value otherwise.
-
-### GetSpInitiatedOk
-
-`func (o *InlineResponse200417) GetSpInitiatedOk() (*InlineResponse200417SpInitiated, bool)`
-
-GetSpInitiatedOk returns a tuple with the SpInitiated field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSpInitiated
-
-`func (o *InlineResponse200417) SetSpInitiated(v InlineResponse200417SpInitiated)`
-
-SetSpInitiated sets SpInitiated field to given value.
-
-### HasSpInitiated
-
-`func (o *InlineResponse200417) HasSpInitiated() bool`
-
-HasSpInitiated returns a boolean if a field has been set.
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SenseEnabled** | Pointer to **bool** | Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera | [optional] 
-**MqttBrokerId** | Pointer to **NullableString** | The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera | [optional] 
-**AudioDetection** | Pointer to [**DevicesSerialCameraSenseAudioDetection**](DevicesSerialCameraSenseAudioDetection.md) |  | [optional] 
-**DetectionModelId** | Pointer to **string** | The ID of the object detection model | [optional] 
+**ProfileId** | Pointer to **NullableString** | The ID of a quality and retention profile to assign to the camera. The profile&#39;s settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera. | [optional] 
+**MotionBasedRetentionEnabled** | Pointer to **bool** | Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera. | [optional] 
+**AudioRecordingEnabled** | Pointer to **bool** | Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera | [optional] 
+**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras. | [optional] 
+**Quality** | Pointer to **string** | Quality of the camera. Can be one of &#39;Standard&#39;, &#39;High&#39;, &#39;Enhanced&#39; or &#39;Ultra&#39;. Not all qualities are supported by every camera model. | [optional] 
+**Resolution** | Pointer to **string** | Resolution of the camera. Can be one of &#39;1280x720&#39;, &#39;1920x1080&#39;, &#39;1080x1080&#39;, &#39;2112x2112&#39;, &#39;2880x2880&#39;, &#39;2688x1512&#39; or &#39;3840x2160&#39;.Not all resolutions are supported by every camera model. | [optional] 
+**MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
 
 ## Methods
 
@@ -28,115 +31,190 @@ NewInlineObject11WithDefaults instantiates a new InlineObject11 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSenseEnabled
+### GetProfileId
 
-`func (o *InlineObject11) GetSenseEnabled() bool`
+`func (o *InlineObject11) GetProfileId() string`
 
-GetSenseEnabled returns the SenseEnabled field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetSenseEnabledOk
+### GetProfileIdOk
 
-`func (o *InlineObject11) GetSenseEnabledOk() (*bool, bool)`
+`func (o *InlineObject11) GetProfileIdOk() (*string, bool)`
 
-GetSenseEnabledOk returns a tuple with the SenseEnabled field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSenseEnabled
+### SetProfileId
 
-`func (o *InlineObject11) SetSenseEnabled(v bool)`
+`func (o *InlineObject11) SetProfileId(v string)`
 
-SetSenseEnabled sets SenseEnabled field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasSenseEnabled
+### HasProfileId
 
-`func (o *InlineObject11) HasSenseEnabled() bool`
+`func (o *InlineObject11) HasProfileId() bool`
 
-HasSenseEnabled returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetMqttBrokerId
+### SetProfileIdNil
 
-`func (o *InlineObject11) GetMqttBrokerId() string`
+`func (o *InlineObject11) SetProfileIdNil(b bool)`
 
-GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+ SetProfileIdNil sets the value for ProfileId to be an explicit nil
 
-### GetMqttBrokerIdOk
+### UnsetProfileId
+`func (o *InlineObject11) UnsetProfileId()`
 
-`func (o *InlineObject11) GetMqttBrokerIdOk() (*string, bool)`
+UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
+### GetMotionBasedRetentionEnabled
 
-GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+`func (o *InlineObject11) GetMotionBasedRetentionEnabled() bool`
+
+GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
+
+### GetMotionBasedRetentionEnabledOk
+
+`func (o *InlineObject11) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+
+GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttBrokerId
+### SetMotionBasedRetentionEnabled
 
-`func (o *InlineObject11) SetMqttBrokerId(v string)`
+`func (o *InlineObject11) SetMotionBasedRetentionEnabled(v bool)`
 
-SetMqttBrokerId sets MqttBrokerId field to given value.
+SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
 
-### HasMqttBrokerId
+### HasMotionBasedRetentionEnabled
 
-`func (o *InlineObject11) HasMqttBrokerId() bool`
+`func (o *InlineObject11) HasMotionBasedRetentionEnabled() bool`
 
-HasMqttBrokerId returns a boolean if a field has been set.
+HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
 
-### SetMqttBrokerIdNil
+### GetAudioRecordingEnabled
 
-`func (o *InlineObject11) SetMqttBrokerIdNil(b bool)`
+`func (o *InlineObject11) GetAudioRecordingEnabled() bool`
 
- SetMqttBrokerIdNil sets the value for MqttBrokerId to be an explicit nil
+GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
 
-### UnsetMqttBrokerId
-`func (o *InlineObject11) UnsetMqttBrokerId()`
+### GetAudioRecordingEnabledOk
 
-UnsetMqttBrokerId ensures that no value is present for MqttBrokerId, not even an explicit nil
-### GetAudioDetection
+`func (o *InlineObject11) GetAudioRecordingEnabledOk() (*bool, bool)`
 
-`func (o *InlineObject11) GetAudioDetection() DevicesSerialCameraSenseAudioDetection`
-
-GetAudioDetection returns the AudioDetection field if non-nil, zero value otherwise.
-
-### GetAudioDetectionOk
-
-`func (o *InlineObject11) GetAudioDetectionOk() (*DevicesSerialCameraSenseAudioDetection, bool)`
-
-GetAudioDetectionOk returns a tuple with the AudioDetection field if it's non-nil, zero value otherwise
+GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioDetection
+### SetAudioRecordingEnabled
 
-`func (o *InlineObject11) SetAudioDetection(v DevicesSerialCameraSenseAudioDetection)`
+`func (o *InlineObject11) SetAudioRecordingEnabled(v bool)`
 
-SetAudioDetection sets AudioDetection field to given value.
+SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
 
-### HasAudioDetection
+### HasAudioRecordingEnabled
 
-`func (o *InlineObject11) HasAudioDetection() bool`
+`func (o *InlineObject11) HasAudioRecordingEnabled() bool`
 
-HasAudioDetection returns a boolean if a field has been set.
+HasAudioRecordingEnabled returns a boolean if a field has been set.
 
-### GetDetectionModelId
+### GetRestrictedBandwidthModeEnabled
 
-`func (o *InlineObject11) GetDetectionModelId() string`
+`func (o *InlineObject11) GetRestrictedBandwidthModeEnabled() bool`
 
-GetDetectionModelId returns the DetectionModelId field if non-nil, zero value otherwise.
+GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
 
-### GetDetectionModelIdOk
+### GetRestrictedBandwidthModeEnabledOk
 
-`func (o *InlineObject11) GetDetectionModelIdOk() (*string, bool)`
+`func (o *InlineObject11) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
 
-GetDetectionModelIdOk returns a tuple with the DetectionModelId field if it's non-nil, zero value otherwise
+GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetectionModelId
+### SetRestrictedBandwidthModeEnabled
 
-`func (o *InlineObject11) SetDetectionModelId(v string)`
+`func (o *InlineObject11) SetRestrictedBandwidthModeEnabled(v bool)`
 
-SetDetectionModelId sets DetectionModelId field to given value.
+SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
 
-### HasDetectionModelId
+### HasRestrictedBandwidthModeEnabled
 
-`func (o *InlineObject11) HasDetectionModelId() bool`
+`func (o *InlineObject11) HasRestrictedBandwidthModeEnabled() bool`
 
-HasDetectionModelId returns a boolean if a field has been set.
+HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
+
+### GetQuality
+
+`func (o *InlineObject11) GetQuality() string`
+
+GetQuality returns the Quality field if non-nil, zero value otherwise.
+
+### GetQualityOk
+
+`func (o *InlineObject11) GetQualityOk() (*string, bool)`
+
+GetQualityOk returns a tuple with the Quality field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuality
+
+`func (o *InlineObject11) SetQuality(v string)`
+
+SetQuality sets Quality field to given value.
+
+### HasQuality
+
+`func (o *InlineObject11) HasQuality() bool`
+
+HasQuality returns a boolean if a field has been set.
+
+### GetResolution
+
+`func (o *InlineObject11) GetResolution() string`
+
+GetResolution returns the Resolution field if non-nil, zero value otherwise.
+
+### GetResolutionOk
+
+`func (o *InlineObject11) GetResolutionOk() (*string, bool)`
+
+GetResolutionOk returns a tuple with the Resolution field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResolution
+
+`func (o *InlineObject11) SetResolution(v string)`
+
+SetResolution sets Resolution field to given value.
+
+### HasResolution
+
+`func (o *InlineObject11) HasResolution() bool`
+
+HasResolution returns a boolean if a field has been set.
+
+### GetMotionDetectorVersion
+
+`func (o *InlineObject11) GetMotionDetectorVersion() int32`
+
+GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
+
+### GetMotionDetectorVersionOk
+
+`func (o *InlineObject11) GetMotionDetectorVersionOk() (*int32, bool)`
+
+GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMotionDetectorVersion
+
+`func (o *InlineObject11) SetMotionDetectorVersion(v int32)`
+
+SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
+
+### HasMotionDetectorVersion
+
+`func (o *InlineObject11) HasMotionDetectorVersion() bool`
+
+HasMotionDetectorVersion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

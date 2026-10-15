@@ -4,9 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**InlineResponse200259Concentrator**](InlineResponse200259Concentrator.md) |  | [optional] 
-**Failover** | Pointer to [**InlineResponse200259Failover**](InlineResponse200259Failover.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**InlineResponse200259SplitTunnel**](InlineResponse200259SplitTunnel.md) |  | [optional] 
+**SsidNumber** | Pointer to **int32** | SSID number | [optional] 
+**SplashPage** | Pointer to **string** | The type of splash page for this SSID | [optional] 
+**UseSplashUrl** | Pointer to **bool** | Boolean indicating whether the users will be redirected to the custom splash url | [optional] 
+**SplashUrl** | Pointer to **string** | The custom splash URL of the click-through splash page. | [optional] 
+**SplashTimeout** | Pointer to **int32** | Splash timeout in minutes. | [optional] 
+**RedirectUrl** | Pointer to **string** | The custom redirect URL where the users will go after the splash page. | [optional] 
+**UseRedirectUrl** | Pointer to **bool** | The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page. | [optional] 
+**WelcomeMessage** | Pointer to **string** | The welcome message for the users on the splash page. | [optional] 
+**UserConsent** | Pointer to [**InlineResponse200259UserConsent**](InlineResponse200259UserConsent.md) |  | [optional] 
+**ThemeId** | Pointer to **string** | The id of the selected splash theme. | [optional] 
+**SplashLogo** | Pointer to [**InlineResponse200259SplashLogo**](InlineResponse200259SplashLogo.md) |  | [optional] 
+**SplashImage** | Pointer to [**InlineResponse200259SplashImage**](InlineResponse200259SplashImage.md) |  | [optional] 
+**SplashPrepaidFront** | Pointer to [**InlineResponse200259SplashPrepaidFront**](InlineResponse200259SplashPrepaidFront.md) |  | [optional] 
+**GuestSponsorship** | Pointer to [**InlineResponse200259GuestSponsorship**](InlineResponse200259GuestSponsorship.md) |  | [optional] 
+**BlockAllTrafficBeforeSignOn** | Pointer to **bool** | How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged. | [optional] 
+**ControllerDisconnectionBehavior** | Pointer to **string** | How login attempts should be handled when the controller is unreachable. | [optional] 
+**AllowSimultaneousLogins** | Pointer to **bool** | Whether or not to allow simultaneous logins from different devices. | [optional] 
+**Billing** | Pointer to [**InlineResponse200259Billing**](InlineResponse200259Billing.md) |  | [optional] 
+**SentryEnrollment** | Pointer to [**InlineResponse200259SentryEnrollment**](InlineResponse200259SentryEnrollment.md) |  | [optional] 
+**SelfRegistration** | Pointer to [**InlineResponse200259SelfRegistration**](InlineResponse200259SelfRegistration.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +44,505 @@ NewInlineResponse200259WithDefaults instantiates a new InlineResponse200259 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetSsidNumber
 
-`func (o *InlineResponse200259) GetConcentrator() InlineResponse200259Concentrator`
+`func (o *InlineResponse200259) GetSsidNumber() int32`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetSsidNumberOk
 
-`func (o *InlineResponse200259) GetConcentratorOk() (*InlineResponse200259Concentrator, bool)`
+`func (o *InlineResponse200259) GetSsidNumberOk() (*int32, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetSsidNumber
 
-`func (o *InlineResponse200259) SetConcentrator(v InlineResponse200259Concentrator)`
+`func (o *InlineResponse200259) SetSsidNumber(v int32)`
 
-SetConcentrator sets Concentrator field to given value.
+SetSsidNumber sets SsidNumber field to given value.
 
-### HasConcentrator
+### HasSsidNumber
 
-`func (o *InlineResponse200259) HasConcentrator() bool`
+`func (o *InlineResponse200259) HasSsidNumber() bool`
 
-HasConcentrator returns a boolean if a field has been set.
+HasSsidNumber returns a boolean if a field has been set.
 
-### GetFailover
+### GetSplashPage
 
-`func (o *InlineResponse200259) GetFailover() InlineResponse200259Failover`
+`func (o *InlineResponse200259) GetSplashPage() string`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetSplashPage returns the SplashPage field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetSplashPageOk
 
-`func (o *InlineResponse200259) GetFailoverOk() (*InlineResponse200259Failover, bool)`
+`func (o *InlineResponse200259) GetSplashPageOk() (*string, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetSplashPageOk returns a tuple with the SplashPage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetSplashPage
 
-`func (o *InlineResponse200259) SetFailover(v InlineResponse200259Failover)`
+`func (o *InlineResponse200259) SetSplashPage(v string)`
 
-SetFailover sets Failover field to given value.
+SetSplashPage sets SplashPage field to given value.
 
-### HasFailover
+### HasSplashPage
 
-`func (o *InlineResponse200259) HasFailover() bool`
+`func (o *InlineResponse200259) HasSplashPage() bool`
 
-HasFailover returns a boolean if a field has been set.
+HasSplashPage returns a boolean if a field has been set.
 
-### GetSplitTunnel
+### GetUseSplashUrl
 
-`func (o *InlineResponse200259) GetSplitTunnel() InlineResponse200259SplitTunnel`
+`func (o *InlineResponse200259) GetUseSplashUrl() bool`
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+GetUseSplashUrl returns the UseSplashUrl field if non-nil, zero value otherwise.
 
-### GetSplitTunnelOk
+### GetUseSplashUrlOk
 
-`func (o *InlineResponse200259) GetSplitTunnelOk() (*InlineResponse200259SplitTunnel, bool)`
+`func (o *InlineResponse200259) GetUseSplashUrlOk() (*bool, bool)`
 
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetUseSplashUrlOk returns a tuple with the UseSplashUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetUseSplashUrl
 
-`func (o *InlineResponse200259) SetSplitTunnel(v InlineResponse200259SplitTunnel)`
+`func (o *InlineResponse200259) SetUseSplashUrl(v bool)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetUseSplashUrl sets UseSplashUrl field to given value.
 
-### HasSplitTunnel
+### HasUseSplashUrl
 
-`func (o *InlineResponse200259) HasSplitTunnel() bool`
+`func (o *InlineResponse200259) HasUseSplashUrl() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
+HasUseSplashUrl returns a boolean if a field has been set.
+
+### GetSplashUrl
+
+`func (o *InlineResponse200259) GetSplashUrl() string`
+
+GetSplashUrl returns the SplashUrl field if non-nil, zero value otherwise.
+
+### GetSplashUrlOk
+
+`func (o *InlineResponse200259) GetSplashUrlOk() (*string, bool)`
+
+GetSplashUrlOk returns a tuple with the SplashUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashUrl
+
+`func (o *InlineResponse200259) SetSplashUrl(v string)`
+
+SetSplashUrl sets SplashUrl field to given value.
+
+### HasSplashUrl
+
+`func (o *InlineResponse200259) HasSplashUrl() bool`
+
+HasSplashUrl returns a boolean if a field has been set.
+
+### GetSplashTimeout
+
+`func (o *InlineResponse200259) GetSplashTimeout() int32`
+
+GetSplashTimeout returns the SplashTimeout field if non-nil, zero value otherwise.
+
+### GetSplashTimeoutOk
+
+`func (o *InlineResponse200259) GetSplashTimeoutOk() (*int32, bool)`
+
+GetSplashTimeoutOk returns a tuple with the SplashTimeout field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashTimeout
+
+`func (o *InlineResponse200259) SetSplashTimeout(v int32)`
+
+SetSplashTimeout sets SplashTimeout field to given value.
+
+### HasSplashTimeout
+
+`func (o *InlineResponse200259) HasSplashTimeout() bool`
+
+HasSplashTimeout returns a boolean if a field has been set.
+
+### GetRedirectUrl
+
+`func (o *InlineResponse200259) GetRedirectUrl() string`
+
+GetRedirectUrl returns the RedirectUrl field if non-nil, zero value otherwise.
+
+### GetRedirectUrlOk
+
+`func (o *InlineResponse200259) GetRedirectUrlOk() (*string, bool)`
+
+GetRedirectUrlOk returns a tuple with the RedirectUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRedirectUrl
+
+`func (o *InlineResponse200259) SetRedirectUrl(v string)`
+
+SetRedirectUrl sets RedirectUrl field to given value.
+
+### HasRedirectUrl
+
+`func (o *InlineResponse200259) HasRedirectUrl() bool`
+
+HasRedirectUrl returns a boolean if a field has been set.
+
+### GetUseRedirectUrl
+
+`func (o *InlineResponse200259) GetUseRedirectUrl() bool`
+
+GetUseRedirectUrl returns the UseRedirectUrl field if non-nil, zero value otherwise.
+
+### GetUseRedirectUrlOk
+
+`func (o *InlineResponse200259) GetUseRedirectUrlOk() (*bool, bool)`
+
+GetUseRedirectUrlOk returns a tuple with the UseRedirectUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUseRedirectUrl
+
+`func (o *InlineResponse200259) SetUseRedirectUrl(v bool)`
+
+SetUseRedirectUrl sets UseRedirectUrl field to given value.
+
+### HasUseRedirectUrl
+
+`func (o *InlineResponse200259) HasUseRedirectUrl() bool`
+
+HasUseRedirectUrl returns a boolean if a field has been set.
+
+### GetWelcomeMessage
+
+`func (o *InlineResponse200259) GetWelcomeMessage() string`
+
+GetWelcomeMessage returns the WelcomeMessage field if non-nil, zero value otherwise.
+
+### GetWelcomeMessageOk
+
+`func (o *InlineResponse200259) GetWelcomeMessageOk() (*string, bool)`
+
+GetWelcomeMessageOk returns a tuple with the WelcomeMessage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWelcomeMessage
+
+`func (o *InlineResponse200259) SetWelcomeMessage(v string)`
+
+SetWelcomeMessage sets WelcomeMessage field to given value.
+
+### HasWelcomeMessage
+
+`func (o *InlineResponse200259) HasWelcomeMessage() bool`
+
+HasWelcomeMessage returns a boolean if a field has been set.
+
+### GetUserConsent
+
+`func (o *InlineResponse200259) GetUserConsent() InlineResponse200259UserConsent`
+
+GetUserConsent returns the UserConsent field if non-nil, zero value otherwise.
+
+### GetUserConsentOk
+
+`func (o *InlineResponse200259) GetUserConsentOk() (*InlineResponse200259UserConsent, bool)`
+
+GetUserConsentOk returns a tuple with the UserConsent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUserConsent
+
+`func (o *InlineResponse200259) SetUserConsent(v InlineResponse200259UserConsent)`
+
+SetUserConsent sets UserConsent field to given value.
+
+### HasUserConsent
+
+`func (o *InlineResponse200259) HasUserConsent() bool`
+
+HasUserConsent returns a boolean if a field has been set.
+
+### GetThemeId
+
+`func (o *InlineResponse200259) GetThemeId() string`
+
+GetThemeId returns the ThemeId field if non-nil, zero value otherwise.
+
+### GetThemeIdOk
+
+`func (o *InlineResponse200259) GetThemeIdOk() (*string, bool)`
+
+GetThemeIdOk returns a tuple with the ThemeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetThemeId
+
+`func (o *InlineResponse200259) SetThemeId(v string)`
+
+SetThemeId sets ThemeId field to given value.
+
+### HasThemeId
+
+`func (o *InlineResponse200259) HasThemeId() bool`
+
+HasThemeId returns a boolean if a field has been set.
+
+### GetSplashLogo
+
+`func (o *InlineResponse200259) GetSplashLogo() InlineResponse200259SplashLogo`
+
+GetSplashLogo returns the SplashLogo field if non-nil, zero value otherwise.
+
+### GetSplashLogoOk
+
+`func (o *InlineResponse200259) GetSplashLogoOk() (*InlineResponse200259SplashLogo, bool)`
+
+GetSplashLogoOk returns a tuple with the SplashLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashLogo
+
+`func (o *InlineResponse200259) SetSplashLogo(v InlineResponse200259SplashLogo)`
+
+SetSplashLogo sets SplashLogo field to given value.
+
+### HasSplashLogo
+
+`func (o *InlineResponse200259) HasSplashLogo() bool`
+
+HasSplashLogo returns a boolean if a field has been set.
+
+### GetSplashImage
+
+`func (o *InlineResponse200259) GetSplashImage() InlineResponse200259SplashImage`
+
+GetSplashImage returns the SplashImage field if non-nil, zero value otherwise.
+
+### GetSplashImageOk
+
+`func (o *InlineResponse200259) GetSplashImageOk() (*InlineResponse200259SplashImage, bool)`
+
+GetSplashImageOk returns a tuple with the SplashImage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashImage
+
+`func (o *InlineResponse200259) SetSplashImage(v InlineResponse200259SplashImage)`
+
+SetSplashImage sets SplashImage field to given value.
+
+### HasSplashImage
+
+`func (o *InlineResponse200259) HasSplashImage() bool`
+
+HasSplashImage returns a boolean if a field has been set.
+
+### GetSplashPrepaidFront
+
+`func (o *InlineResponse200259) GetSplashPrepaidFront() InlineResponse200259SplashPrepaidFront`
+
+GetSplashPrepaidFront returns the SplashPrepaidFront field if non-nil, zero value otherwise.
+
+### GetSplashPrepaidFrontOk
+
+`func (o *InlineResponse200259) GetSplashPrepaidFrontOk() (*InlineResponse200259SplashPrepaidFront, bool)`
+
+GetSplashPrepaidFrontOk returns a tuple with the SplashPrepaidFront field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashPrepaidFront
+
+`func (o *InlineResponse200259) SetSplashPrepaidFront(v InlineResponse200259SplashPrepaidFront)`
+
+SetSplashPrepaidFront sets SplashPrepaidFront field to given value.
+
+### HasSplashPrepaidFront
+
+`func (o *InlineResponse200259) HasSplashPrepaidFront() bool`
+
+HasSplashPrepaidFront returns a boolean if a field has been set.
+
+### GetGuestSponsorship
+
+`func (o *InlineResponse200259) GetGuestSponsorship() InlineResponse200259GuestSponsorship`
+
+GetGuestSponsorship returns the GuestSponsorship field if non-nil, zero value otherwise.
+
+### GetGuestSponsorshipOk
+
+`func (o *InlineResponse200259) GetGuestSponsorshipOk() (*InlineResponse200259GuestSponsorship, bool)`
+
+GetGuestSponsorshipOk returns a tuple with the GuestSponsorship field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGuestSponsorship
+
+`func (o *InlineResponse200259) SetGuestSponsorship(v InlineResponse200259GuestSponsorship)`
+
+SetGuestSponsorship sets GuestSponsorship field to given value.
+
+### HasGuestSponsorship
+
+`func (o *InlineResponse200259) HasGuestSponsorship() bool`
+
+HasGuestSponsorship returns a boolean if a field has been set.
+
+### GetBlockAllTrafficBeforeSignOn
+
+`func (o *InlineResponse200259) GetBlockAllTrafficBeforeSignOn() bool`
+
+GetBlockAllTrafficBeforeSignOn returns the BlockAllTrafficBeforeSignOn field if non-nil, zero value otherwise.
+
+### GetBlockAllTrafficBeforeSignOnOk
+
+`func (o *InlineResponse200259) GetBlockAllTrafficBeforeSignOnOk() (*bool, bool)`
+
+GetBlockAllTrafficBeforeSignOnOk returns a tuple with the BlockAllTrafficBeforeSignOn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBlockAllTrafficBeforeSignOn
+
+`func (o *InlineResponse200259) SetBlockAllTrafficBeforeSignOn(v bool)`
+
+SetBlockAllTrafficBeforeSignOn sets BlockAllTrafficBeforeSignOn field to given value.
+
+### HasBlockAllTrafficBeforeSignOn
+
+`func (o *InlineResponse200259) HasBlockAllTrafficBeforeSignOn() bool`
+
+HasBlockAllTrafficBeforeSignOn returns a boolean if a field has been set.
+
+### GetControllerDisconnectionBehavior
+
+`func (o *InlineResponse200259) GetControllerDisconnectionBehavior() string`
+
+GetControllerDisconnectionBehavior returns the ControllerDisconnectionBehavior field if non-nil, zero value otherwise.
+
+### GetControllerDisconnectionBehaviorOk
+
+`func (o *InlineResponse200259) GetControllerDisconnectionBehaviorOk() (*string, bool)`
+
+GetControllerDisconnectionBehaviorOk returns a tuple with the ControllerDisconnectionBehavior field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetControllerDisconnectionBehavior
+
+`func (o *InlineResponse200259) SetControllerDisconnectionBehavior(v string)`
+
+SetControllerDisconnectionBehavior sets ControllerDisconnectionBehavior field to given value.
+
+### HasControllerDisconnectionBehavior
+
+`func (o *InlineResponse200259) HasControllerDisconnectionBehavior() bool`
+
+HasControllerDisconnectionBehavior returns a boolean if a field has been set.
+
+### GetAllowSimultaneousLogins
+
+`func (o *InlineResponse200259) GetAllowSimultaneousLogins() bool`
+
+GetAllowSimultaneousLogins returns the AllowSimultaneousLogins field if non-nil, zero value otherwise.
+
+### GetAllowSimultaneousLoginsOk
+
+`func (o *InlineResponse200259) GetAllowSimultaneousLoginsOk() (*bool, bool)`
+
+GetAllowSimultaneousLoginsOk returns a tuple with the AllowSimultaneousLogins field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowSimultaneousLogins
+
+`func (o *InlineResponse200259) SetAllowSimultaneousLogins(v bool)`
+
+SetAllowSimultaneousLogins sets AllowSimultaneousLogins field to given value.
+
+### HasAllowSimultaneousLogins
+
+`func (o *InlineResponse200259) HasAllowSimultaneousLogins() bool`
+
+HasAllowSimultaneousLogins returns a boolean if a field has been set.
+
+### GetBilling
+
+`func (o *InlineResponse200259) GetBilling() InlineResponse200259Billing`
+
+GetBilling returns the Billing field if non-nil, zero value otherwise.
+
+### GetBillingOk
+
+`func (o *InlineResponse200259) GetBillingOk() (*InlineResponse200259Billing, bool)`
+
+GetBillingOk returns a tuple with the Billing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBilling
+
+`func (o *InlineResponse200259) SetBilling(v InlineResponse200259Billing)`
+
+SetBilling sets Billing field to given value.
+
+### HasBilling
+
+`func (o *InlineResponse200259) HasBilling() bool`
+
+HasBilling returns a boolean if a field has been set.
+
+### GetSentryEnrollment
+
+`func (o *InlineResponse200259) GetSentryEnrollment() InlineResponse200259SentryEnrollment`
+
+GetSentryEnrollment returns the SentryEnrollment field if non-nil, zero value otherwise.
+
+### GetSentryEnrollmentOk
+
+`func (o *InlineResponse200259) GetSentryEnrollmentOk() (*InlineResponse200259SentryEnrollment, bool)`
+
+GetSentryEnrollmentOk returns a tuple with the SentryEnrollment field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSentryEnrollment
+
+`func (o *InlineResponse200259) SetSentryEnrollment(v InlineResponse200259SentryEnrollment)`
+
+SetSentryEnrollment sets SentryEnrollment field to given value.
+
+### HasSentryEnrollment
+
+`func (o *InlineResponse200259) HasSentryEnrollment() bool`
+
+HasSentryEnrollment returns a boolean if a field has been set.
+
+### GetSelfRegistration
+
+`func (o *InlineResponse200259) GetSelfRegistration() InlineResponse200259SelfRegistration`
+
+GetSelfRegistration returns the SelfRegistration field if non-nil, zero value otherwise.
+
+### GetSelfRegistrationOk
+
+`func (o *InlineResponse200259) GetSelfRegistrationOk() (*InlineResponse200259SelfRegistration, bool)`
+
+GetSelfRegistrationOk returns a tuple with the SelfRegistration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSelfRegistration
+
+`func (o *InlineResponse200259) SetSelfRegistration(v InlineResponse200259SelfRegistration)`
+
+SetSelfRegistration sets SelfRegistration field to given value.
+
+### HasSelfRegistration
+
+`func (o *InlineResponse200259) HasSelfRegistration() bool`
+
+HasSelfRegistration returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

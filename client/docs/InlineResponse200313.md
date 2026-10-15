@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
-**Type** | Pointer to **string** | The boundary type | [optional] 
-**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
+**Counts** | [**InlineResponse200313Counts**](InlineResponse200313Counts.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200313
 
-`func NewInlineResponse200313() *InlineResponse200313`
+`func NewInlineResponse200313(counts InlineResponse200313Counts, ) *InlineResponse200313`
 
 NewInlineResponse200313 instantiates a new InlineResponse200313 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +25,25 @@ NewInlineResponse200313WithDefaults instantiates a new InlineResponse200313 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBoundaryId
+### GetCounts
 
-`func (o *InlineResponse200313) GetBoundaryId() string`
+`func (o *InlineResponse200313) GetCounts() InlineResponse200313Counts`
 
-GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetBoundaryIdOk
+### GetCountsOk
 
-`func (o *InlineResponse200313) GetBoundaryIdOk() (*string, bool)`
+`func (o *InlineResponse200313) GetCountsOk() (*InlineResponse200313Counts, bool)`
 
-GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaryId
+### SetCounts
 
-`func (o *InlineResponse200313) SetBoundaryId(v string)`
+`func (o *InlineResponse200313) SetCounts(v InlineResponse200313Counts)`
 
-SetBoundaryId sets BoundaryId field to given value.
+SetCounts sets Counts field to given value.
 
-### HasBoundaryId
-
-`func (o *InlineResponse200313) HasBoundaryId() bool`
-
-HasBoundaryId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200313) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200313) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200313) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200313) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetResults
-
-`func (o *InlineResponse200313) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
-
-GetResults returns the Results field if non-nil, zero value otherwise.
-
-### GetResultsOk
-
-`func (o *InlineResponse200313) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
-
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResults
-
-`func (o *InlineResponse200313) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
-
-SetResults sets Results field to given value.
-
-### HasResults
-
-`func (o *InlineResponse200313) HasResults() bool`
-
-HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

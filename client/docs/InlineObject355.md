@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
-**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SsoLoginUrl** | Pointer to **string** | Dashboard will redirect users to this URL to log in again when their sessions expire. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
 ### NewInlineObject355
 
-`func NewInlineObject355(sourceSerial string, targetSerials []string, ) *InlineObject355`
+`func NewInlineObject355() *InlineObject355`
 
 NewInlineObject355 instantiates a new InlineObject355 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,80 @@ NewInlineObject355WithDefaults instantiates a new InlineObject355 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetX509certSha1Fingerprint
 
-`func (o *InlineObject355) GetSourceSerial() string`
+`func (o *InlineObject355) GetX509certSha1Fingerprint() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineObject355) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineObject355) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetX509certSha1Fingerprint
 
-`func (o *InlineObject355) SetSourceSerial(v string)`
+`func (o *InlineObject355) SetX509certSha1Fingerprint(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
+### HasX509certSha1Fingerprint
 
-### GetTargetSerials
+`func (o *InlineObject355) HasX509certSha1Fingerprint() bool`
 
-`func (o *InlineObject355) GetTargetSerials() []string`
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+### GetSsoLoginUrl
 
-### GetTargetSerialsOk
+`func (o *InlineObject355) GetSsoLoginUrl() string`
 
-`func (o *InlineObject355) GetTargetSerialsOk() (*[]string, bool)`
+GetSsoLoginUrl returns the SsoLoginUrl field if non-nil, zero value otherwise.
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+### GetSsoLoginUrlOk
+
+`func (o *InlineObject355) GetSsoLoginUrlOk() (*string, bool)`
+
+GetSsoLoginUrlOk returns a tuple with the SsoLoginUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetSsoLoginUrl
 
-`func (o *InlineObject355) SetTargetSerials(v []string)`
+`func (o *InlineObject355) SetSsoLoginUrl(v string)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetSsoLoginUrl sets SsoLoginUrl field to given value.
 
+### HasSsoLoginUrl
+
+`func (o *InlineObject355) HasSsoLoginUrl() bool`
+
+HasSsoLoginUrl returns a boolean if a field has been set.
+
+### GetSloLogoutUrl
+
+`func (o *InlineObject355) GetSloLogoutUrl() string`
+
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+
+### GetSloLogoutUrlOk
+
+`func (o *InlineObject355) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSloLogoutUrl
+
+`func (o *InlineObject355) SetSloLogoutUrl(v string)`
+
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
+
+### HasSloLogoutUrl
+
+`func (o *InlineObject355) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

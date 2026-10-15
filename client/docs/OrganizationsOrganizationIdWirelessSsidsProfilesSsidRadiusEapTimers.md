@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Timeout** | Pointer to **int32** | General EAP timeout in seconds | [optional] 
 **Identity** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimersIdentity**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimersIdentity.md) |  | [optional] 
 **MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200493SsidRadiusEapTimersEapolKey**](InlineResponse200493SsidRadiusEapTimersEapolKey.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200517SsidRadiusEapTimersEapolKey**](InlineResponse200517SsidRadiusEapTimersEapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -105,20 +105,20 @@ HasMaxRetries returns a boolean if a field has been set.
 
 ### GetEapolKey
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers) GetEapolKey() InlineResponse200493SsidRadiusEapTimersEapolKey`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers) GetEapolKey() InlineResponse200517SsidRadiusEapTimersEapolKey`
 
 GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
 ### GetEapolKeyOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers) GetEapolKeyOk() (*InlineResponse200493SsidRadiusEapTimersEapolKey, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers) GetEapolKeyOk() (*InlineResponse200517SsidRadiusEapTimersEapolKey, bool)`
 
 GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEapolKey
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers) SetEapolKey(v InlineResponse200493SsidRadiusEapTimersEapolKey)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusEapTimers) SetEapolKey(v InlineResponse200517SsidRadiusEapTimersEapolKey)`
 
 SetEapolKey sets EapolKey field to given value.
 

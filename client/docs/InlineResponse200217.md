@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
 **Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
 **IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
+**ActiveVlans** | Pointer to **string** | The active VLANs for the VLAN profile. Given range must be inclusive of all named VLANs. | [optional] 
 **VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
 **VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
 
@@ -103,6 +104,31 @@ SetIsDefault sets IsDefault field to given value.
 `func (o *InlineResponse200217) HasIsDefault() bool`
 
 HasIsDefault returns a boolean if a field has been set.
+
+### GetActiveVlans
+
+`func (o *InlineResponse200217) GetActiveVlans() string`
+
+GetActiveVlans returns the ActiveVlans field if non-nil, zero value otherwise.
+
+### GetActiveVlansOk
+
+`func (o *InlineResponse200217) GetActiveVlansOk() (*string, bool)`
+
+GetActiveVlansOk returns a tuple with the ActiveVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActiveVlans
+
+`func (o *InlineResponse200217) SetActiveVlans(v string)`
+
+SetActiveVlans sets ActiveVlans field to given value.
+
+### HasActiveVlans
+
+`func (o *InlineResponse200217) HasActiveVlans() bool`
+
+HasActiveVlans returns a boolean if a field has been set.
 
 ### GetVlanNames
 

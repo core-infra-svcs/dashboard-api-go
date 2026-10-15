@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200409Items**](InlineResponse200409Items.md) | List of Policies | [optional] 
-**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the SM seats to | [optional] 
+**LicenseId** | Pointer to **string** | The ID of the SM license to move the seats from | [optional] 
+**SeatCount** | Pointer to **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200409WithDefaults instantiates a new InlineResponse200409 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetDestOrganizationId
 
-`func (o *InlineResponse200409) GetItems() []InlineResponse200409Items`
+`func (o *InlineResponse200409) GetDestOrganizationId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200409) GetItemsOk() (*[]InlineResponse200409Items, bool)`
+`func (o *InlineResponse200409) GetDestOrganizationIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetDestOrganizationId
 
-`func (o *InlineResponse200409) SetItems(v []InlineResponse200409Items)`
+`func (o *InlineResponse200409) SetDestOrganizationId(v string)`
 
-SetItems sets Items field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasItems
+### HasDestOrganizationId
 
-`func (o *InlineResponse200409) HasItems() bool`
+`func (o *InlineResponse200409) HasDestOrganizationId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
 
-### GetMeta
+### GetLicenseId
 
-`func (o *InlineResponse200409) GetMeta() InlineResponse200279Meta`
+`func (o *InlineResponse200409) GetLicenseId() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetLicenseIdOk
 
-`func (o *InlineResponse200409) GetMetaOk() (*InlineResponse200279Meta, bool)`
+`func (o *InlineResponse200409) GetLicenseIdOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetLicenseId
 
-`func (o *InlineResponse200409) SetMeta(v InlineResponse200279Meta)`
+`func (o *InlineResponse200409) SetLicenseId(v string)`
 
-SetMeta sets Meta field to given value.
+SetLicenseId sets LicenseId field to given value.
 
-### HasMeta
+### HasLicenseId
 
-`func (o *InlineResponse200409) HasMeta() bool`
+`func (o *InlineResponse200409) HasLicenseId() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasLicenseId returns a boolean if a field has been set.
+
+### GetSeatCount
+
+`func (o *InlineResponse200409) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineResponse200409) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineResponse200409) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
+
+### HasSeatCount
+
+`func (o *InlineResponse200409) HasSeatCount() bool`
+
+HasSeatCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

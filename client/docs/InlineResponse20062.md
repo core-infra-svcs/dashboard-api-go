@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApEslId** | Pointer to **int32** | An identifier for the device used by the ESL system | [optional] 
 **Serial** | Pointer to **string** | The serial number of the device | [optional] 
-**Channel** | Pointer to **string** | Desired ESL channel for the device, or &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
+**Channel** | Pointer to **string** | Desired ESL channel for the device. Only configurable for devices assigned the High frequency ESL or sepioo IIoT role. Use &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
 **Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
 **NetworkId** | Pointer to **string** | The identifier for the device&#39;s network | [optional] 
 **Hostname** | Pointer to **string** | Hostname of the ESL management service | [optional] 

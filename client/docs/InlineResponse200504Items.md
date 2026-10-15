@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200504Readings**](InlineResponse200504Readings.md) | The usages of layer 2 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
+**Crl** | Pointer to **string** | The PEM encoded CRL for the Certificate Authority | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200504ItemsWithDefaults instantiates a new InlineResponse200504
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetCertificateAuthorityId
 
-`func (o *InlineResponse200504Items) GetSerial() string`
+`func (o *InlineResponse200504Items) GetCertificateAuthorityId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineResponse200504Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200504Items) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetCertificateAuthorityId
 
-`func (o *InlineResponse200504Items) SetSerial(v string)`
+`func (o *InlineResponse200504Items) SetCertificateAuthorityId(v string)`
 
-SetSerial sets Serial field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasSerial
+### HasCertificateAuthorityId
 
-`func (o *InlineResponse200504Items) HasSerial() bool`
+`func (o *InlineResponse200504Items) HasCertificateAuthorityId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
-### GetReadings
+### GetCrl
 
-`func (o *InlineResponse200504Items) GetReadings() []InlineResponse200504Readings`
+`func (o *InlineResponse200504Items) GetCrl() string`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetCrl returns the Crl field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetCrlOk
 
-`func (o *InlineResponse200504Items) GetReadingsOk() (*[]InlineResponse200504Readings, bool)`
+`func (o *InlineResponse200504Items) GetCrlOk() (*string, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetCrlOk returns a tuple with the Crl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetCrl
 
-`func (o *InlineResponse200504Items) SetReadings(v []InlineResponse200504Readings)`
+`func (o *InlineResponse200504Items) SetCrl(v string)`
 
-SetReadings sets Readings field to given value.
+SetCrl sets Crl field to given value.
 
-### HasReadings
+### HasCrl
 
-`func (o *InlineResponse200504Items) HasReadings() bool`
+`func (o *InlineResponse200504Items) HasCrl() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasCrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

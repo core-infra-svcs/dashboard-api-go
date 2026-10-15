@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject21(int32(123)) // InlineObject21 | 
+    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject22(int32(123)) // InlineObject22 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsLedsB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsLedsBlink** | [**InlineObject21**](InlineObject21.md) |  | 
+ **createDeviceLiveToolsLedsBlink** | [**InlineObject22**](InlineObject22.md) |  | 
 
 ### Return type
 

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks.md) | List containing the network ID and the product type to enable XDR on | 
+**CaptureIds** | **[]string** | Delete the packet captures of the specified capture ids | 
 
 ## Methods
 
 ### NewInlineObject303
 
-`func NewInlineObject303(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, ) *InlineObject303`
+`func NewInlineObject303(captureIds []string, ) *InlineObject303`
 
 NewInlineObject303 instantiates a new InlineObject303 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject303WithDefaults instantiates a new InlineObject303 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworks
+### GetCaptureIds
 
-`func (o *InlineObject303) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks`
+`func (o *InlineObject303) GetCaptureIds() []string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetCaptureIds returns the CaptureIds field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetCaptureIdsOk
 
-`func (o *InlineObject303) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, bool)`
+`func (o *InlineObject303) GetCaptureIdsOk() (*[]string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetCaptureIdsOk returns a tuple with the CaptureIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetCaptureIds
 
-`func (o *InlineObject303) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks)`
+`func (o *InlineObject303) SetCaptureIds(v []string)`
 
-SetNetworks sets Networks field to given value.
+SetCaptureIds sets CaptureIds field to given value.
 
 
 

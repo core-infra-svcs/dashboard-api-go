@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**OrganizationsOrganizationIdWebhooksAlertTypesExample**](OrganizationsOrganizationIdWebhooksAlertTypesExample.md) |  | [optional] 
+**PageIndex** | Pointer to **int32** | Current page index | [optional] 
+**PageItems** | Pointer to **int32** | Number of items in the page | [optional] 
+**TotalItems** | Pointer to **int32** | Total number of items | [optional] 
+**HasNext** | Pointer to **bool** | Is there more data to load | [optional] 
+**HasPrevious** | Pointer to **bool** | Is there previous data to load | [optional] 
+**Contents** | Pointer to [**[]InlineResponse200459Contents**](InlineResponse200459Contents.md) | Metrics content | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200459WithDefaults instantiates a new InlineResponse200459 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetPageIndex
 
-`func (o *InlineResponse200459) GetAlertTypeId() string`
+`func (o *InlineResponse200459) GetPageIndex() int32`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetPageIndex returns the PageIndex field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetPageIndexOk
 
-`func (o *InlineResponse200459) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200459) GetPageIndexOk() (*int32, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetPageIndexOk returns a tuple with the PageIndex field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetPageIndex
 
-`func (o *InlineResponse200459) SetAlertTypeId(v string)`
+`func (o *InlineResponse200459) SetPageIndex(v int32)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetPageIndex sets PageIndex field to given value.
 
-### HasAlertTypeId
+### HasPageIndex
 
-`func (o *InlineResponse200459) HasAlertTypeId() bool`
+`func (o *InlineResponse200459) HasPageIndex() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasPageIndex returns a boolean if a field has been set.
 
-### GetAlertType
+### GetPageItems
 
-`func (o *InlineResponse200459) GetAlertType() string`
+`func (o *InlineResponse200459) GetPageItems() int32`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetPageItems returns the PageItems field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetPageItemsOk
 
-`func (o *InlineResponse200459) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200459) GetPageItemsOk() (*int32, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetPageItemsOk returns a tuple with the PageItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetPageItems
 
-`func (o *InlineResponse200459) SetAlertType(v string)`
+`func (o *InlineResponse200459) SetPageItems(v int32)`
 
-SetAlertType sets AlertType field to given value.
+SetPageItems sets PageItems field to given value.
 
-### HasAlertType
+### HasPageItems
 
-`func (o *InlineResponse200459) HasAlertType() bool`
+`func (o *InlineResponse200459) HasPageItems() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasPageItems returns a boolean if a field has been set.
 
-### GetExample
+### GetTotalItems
 
-`func (o *InlineResponse200459) GetExample() OrganizationsOrganizationIdWebhooksAlertTypesExample`
+`func (o *InlineResponse200459) GetTotalItems() int32`
 
-GetExample returns the Example field if non-nil, zero value otherwise.
+GetTotalItems returns the TotalItems field if non-nil, zero value otherwise.
 
-### GetExampleOk
+### GetTotalItemsOk
 
-`func (o *InlineResponse200459) GetExampleOk() (*OrganizationsOrganizationIdWebhooksAlertTypesExample, bool)`
+`func (o *InlineResponse200459) GetTotalItemsOk() (*int32, bool)`
 
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+GetTotalItemsOk returns a tuple with the TotalItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExample
+### SetTotalItems
 
-`func (o *InlineResponse200459) SetExample(v OrganizationsOrganizationIdWebhooksAlertTypesExample)`
+`func (o *InlineResponse200459) SetTotalItems(v int32)`
 
-SetExample sets Example field to given value.
+SetTotalItems sets TotalItems field to given value.
 
-### HasExample
+### HasTotalItems
 
-`func (o *InlineResponse200459) HasExample() bool`
+`func (o *InlineResponse200459) HasTotalItems() bool`
 
-HasExample returns a boolean if a field has been set.
+HasTotalItems returns a boolean if a field has been set.
+
+### GetHasNext
+
+`func (o *InlineResponse200459) GetHasNext() bool`
+
+GetHasNext returns the HasNext field if non-nil, zero value otherwise.
+
+### GetHasNextOk
+
+`func (o *InlineResponse200459) GetHasNextOk() (*bool, bool)`
+
+GetHasNextOk returns a tuple with the HasNext field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasNext
+
+`func (o *InlineResponse200459) SetHasNext(v bool)`
+
+SetHasNext sets HasNext field to given value.
+
+### HasHasNext
+
+`func (o *InlineResponse200459) HasHasNext() bool`
+
+HasHasNext returns a boolean if a field has been set.
+
+### GetHasPrevious
+
+`func (o *InlineResponse200459) GetHasPrevious() bool`
+
+GetHasPrevious returns the HasPrevious field if non-nil, zero value otherwise.
+
+### GetHasPreviousOk
+
+`func (o *InlineResponse200459) GetHasPreviousOk() (*bool, bool)`
+
+GetHasPreviousOk returns a tuple with the HasPrevious field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasPrevious
+
+`func (o *InlineResponse200459) SetHasPrevious(v bool)`
+
+SetHasPrevious sets HasPrevious field to given value.
+
+### HasHasPrevious
+
+`func (o *InlineResponse200459) HasHasPrevious() bool`
+
+HasHasPrevious returns a boolean if a field has been set.
+
+### GetContents
+
+`func (o *InlineResponse200459) GetContents() []InlineResponse200459Contents`
+
+GetContents returns the Contents field if non-nil, zero value otherwise.
+
+### GetContentsOk
+
+`func (o *InlineResponse200459) GetContentsOk() (*[]InlineResponse200459Contents, bool)`
+
+GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContents
+
+`func (o *InlineResponse200459) SetContents(v []InlineResponse200459Contents)`
+
+SetContents sets Contents field to given value.
+
+### HasContents
+
+`func (o *InlineResponse200459) HasContents() bool`
+
+HasContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

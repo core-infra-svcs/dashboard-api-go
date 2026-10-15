@@ -60,7 +60,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    blinkDeviceLeds := *openapiclient.NewInlineObject7() // InlineObject7 |  (optional)
+    blinkDeviceLeds := *openapiclient.NewInlineObject8() // InlineObject8 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -90,7 +90,7 @@ Other parameters are passed through a pointer to a apiBlinkDeviceLedsRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **blinkDeviceLeds** | [**InlineObject7**](InlineObject7.md) |  | 
+ **blinkDeviceLeds** | [**InlineObject8**](InlineObject8.md) |  | 
 
 ### Return type
 
@@ -132,7 +132,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsArpTable := *openapiclient.NewInlineObject19() // InlineObject19 |  (optional)
+    createDeviceLiveToolsArpTable := *openapiclient.NewInlineObject20() // InlineObject20 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -162,7 +162,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsArpTa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsArpTable** | [**InlineObject19**](InlineObject19.md) |  | 
+ **createDeviceLiveToolsArpTable** | [**InlineObject20**](InlineObject20.md) |  | 
 
 ### Return type
 
@@ -204,7 +204,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsCableTest := *openapiclient.NewInlineObject20([]string{"Ports_example"}) // InlineObject20 | 
+    createDeviceLiveToolsCableTest := *openapiclient.NewInlineObject21([]string{"Ports_example"}) // InlineObject21 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -234,7 +234,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsCable
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsCableTest** | [**InlineObject20**](InlineObject20.md) |  | 
+ **createDeviceLiveToolsCableTest** | [**InlineObject21**](InlineObject21.md) |  | 
 
 ### Return type
 
@@ -276,7 +276,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject21(int32(123)) // InlineObject21 | 
+    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject22(int32(123)) // InlineObject22 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -306,7 +306,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsLedsB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsLedsBlink** | [**InlineObject21**](InlineObject21.md) |  | 
+ **createDeviceLiveToolsLedsBlink** | [**InlineObject22**](InlineObject22.md) |  | 
 
 ### Return type
 
@@ -348,7 +348,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsMacTable := *openapiclient.NewInlineObject22() // InlineObject22 |  (optional)
+    createDeviceLiveToolsMacTable := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -378,7 +378,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsMacTa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsMacTable** | [**InlineObject22**](InlineObject22.md) |  | 
+ **createDeviceLiveToolsMacTable** | [**InlineObject23**](InlineObject23.md) |  | 
 
 ### Return type
 
@@ -420,7 +420,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
+    createDeviceLiveToolsMulticastRouting := *openapiclient.NewInlineObject24() // InlineObject24 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -450,7 +450,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsMulti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsMulticastRouting** | [**InlineObject23**](InlineObject23.md) |  | 
+ **createDeviceLiveToolsMulticastRouting** | [**InlineObject24**](InlineObject24.md) |  | 
 
 ### Return type
 
@@ -492,7 +492,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPing := *openapiclient.NewInlineObject24("Target_example") // InlineObject24 | 
+    createDeviceLiveToolsPing := *openapiclient.NewInlineObject25("Target_example") // InlineObject25 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -522,7 +522,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPing** | [**InlineObject24**](InlineObject24.md) |  | 
+ **createDeviceLiveToolsPing** | [**InlineObject25**](InlineObject25.md) |  | 
 
 ### Return type
 
@@ -564,7 +564,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject25() // InlineObject25 |  (optional)
+    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject26() // InlineObject26 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -594,7 +594,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingD
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPingDevice** | [**InlineObject25**](InlineObject25.md) |  | 
+ **createDeviceLiveToolsPingDevice** | [**InlineObject26**](InlineObject26.md) |  | 
 
 ### Return type
 
@@ -636,7 +636,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject26([]string{"Ports_example"}) // InlineObject26 | 
+    createDeviceLiveToolsPortsCycle := *openapiclient.NewInlineObject27([]string{"Ports_example"}) // InlineObject27 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -666,7 +666,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPorts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPortsCycle** | [**InlineObject26**](InlineObject26.md) |  | 
+ **createDeviceLiveToolsPortsCycle** | [**InlineObject27**](InlineObject27.md) |  | 
 
 ### Return type
 
@@ -708,7 +708,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPortsStatus := *openapiclient.NewInlineObject27() // InlineObject27 |  (optional)
+    createDeviceLiveToolsPortsStatus := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -738,7 +738,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPorts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPortsStatus** | [**InlineObject27**](InlineObject27.md) |  | 
+ **createDeviceLiveToolsPortsStatus** | [**InlineObject28**](InlineObject28.md) |  | 
 
 ### Return type
 
@@ -780,7 +780,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPowerUsage := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
+    createDeviceLiveToolsPowerUsage := *openapiclient.NewInlineObject29() // InlineObject29 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -810,7 +810,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPower
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPowerUsage** | [**InlineObject28**](InlineObject28.md) |  | 
+ **createDeviceLiveToolsPowerUsage** | [**InlineObject29**](InlineObject29.md) |  | 
 
 ### Return type
 
@@ -852,7 +852,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsRoutingTableLookup := *openapiclient.NewInlineObject29() // InlineObject29 |  (optional)
+    createDeviceLiveToolsRoutingTableLookup := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -882,7 +882,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsRouti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsRoutingTableLookup** | [**InlineObject29**](InlineObject29.md) |  | 
+ **createDeviceLiveToolsRoutingTableLookup** | [**InlineObject30**](InlineObject30.md) |  | 
 
 ### Return type
 
@@ -924,7 +924,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsRoutingTableSummary := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
+    createDeviceLiveToolsRoutingTableSummary := *openapiclient.NewInlineObject31() // InlineObject31 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -954,7 +954,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsRouti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsRoutingTableSummary** | [**InlineObject30**](InlineObject30.md) |  | 
+ **createDeviceLiveToolsRoutingTableSummary** | [**InlineObject31**](InlineObject31.md) |  | 
 
 ### Return type
 
@@ -996,7 +996,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject31() // InlineObject31 |  (optional)
+    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1026,7 +1026,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsThrou
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsThroughputTest** | [**InlineObject31**](InlineObject31.md) |  | 
+ **createDeviceLiveToolsThroughputTest** | [**InlineObject32**](InlineObject32.md) |  | 
 
 ### Return type
 
@@ -1068,7 +1068,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject32(int32(123), "Mac_example") // InlineObject32 | 
+    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject33(int32(123), "Mac_example") // InlineObject33 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1098,7 +1098,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsWakeO
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsWakeOnLan** | [**InlineObject32**](InlineObject32.md) |  | 
+ **createDeviceLiveToolsWakeOnLan** | [**InlineObject33**](InlineObject33.md) |  | 
 
 ### Return type
 
@@ -1140,7 +1140,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject36([]string{"Ports_example"}) // InlineObject36 | 
+    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject37([]string{"Ports_example"}) // InlineObject37 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1170,7 +1170,7 @@ Other parameters are passed through a pointer to a apiCycleDeviceSwitchPortsRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cycleDeviceSwitchPorts** | [**InlineObject36**](InlineObject36.md) |  | 
+ **cycleDeviceSwitchPorts** | [**InlineObject37**](InlineObject37.md) |  | 
 
 ### Return type
 

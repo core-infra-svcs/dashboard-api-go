@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Avoidance** | Pointer to [**NetworksNetworkIdWirelessRadioRrmChannelAvoidance**](NetworksNetworkIdWirelessRadioRrmChannelAvoidance.md) |  | [optional] 
+**Selection** | Pointer to [**NetworksNetworkIdWirelessRadioRrmChannelSelection**](NetworksNetworkIdWirelessRadioRrmChannelSelection.md) |  | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetAvoidance sets Avoidance field to given value.
 `func (o *NetworksNetworkIdWirelessRadioRrmChannel) HasAvoidance() bool`
 
 HasAvoidance returns a boolean if a field has been set.
+
+### GetSelection
+
+`func (o *NetworksNetworkIdWirelessRadioRrmChannel) GetSelection() NetworksNetworkIdWirelessRadioRrmChannelSelection`
+
+GetSelection returns the Selection field if non-nil, zero value otherwise.
+
+### GetSelectionOk
+
+`func (o *NetworksNetworkIdWirelessRadioRrmChannel) GetSelectionOk() (*NetworksNetworkIdWirelessRadioRrmChannelSelection, bool)`
+
+GetSelectionOk returns a tuple with the Selection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSelection
+
+`func (o *NetworksNetworkIdWirelessRadioRrmChannel) SetSelection(v NetworksNetworkIdWirelessRadioRrmChannelSelection)`
+
+SetSelection sets Selection field to given value.
+
+### HasSelection
+
+`func (o *NetworksNetworkIdWirelessRadioRrmChannel) HasSelection() bool`
+
+HasSelection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

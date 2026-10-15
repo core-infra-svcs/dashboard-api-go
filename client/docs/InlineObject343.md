@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; or a custom role in the format custom-role:ID:NAME. | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**RulesetId** | **string** | ID of the ruleset to assign | 
+**PolicyId** | **string** | ID of the policy to assign the ruleset to | 
+**Priority** | Pointer to **int32** | Priority of the ruleset assignment (lower numbers &#x3D; higher priority) | [optional] 
+**Staged** | Pointer to **bool** | Stage an assignment without applying it immediately to the policy | [optional] 
 
 ## Methods
 
 ### NewInlineObject343
 
-`func NewInlineObject343() *InlineObject343`
+`func NewInlineObject343(rulesetId string, policyId string, ) *InlineObject343`
 
 NewInlineObject343 instantiates a new InlineObject343 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,95 @@ NewInlineObject343WithDefaults instantiates a new InlineObject343 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetRulesetId
 
-`func (o *InlineObject343) GetRole() string`
+`func (o *InlineObject343) GetRulesetId() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetRulesetId returns the RulesetId field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetRulesetIdOk
 
-`func (o *InlineObject343) GetRoleOk() (*string, bool)`
+`func (o *InlineObject343) GetRulesetIdOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetRulesetIdOk returns a tuple with the RulesetId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetRulesetId
 
-`func (o *InlineObject343) SetRole(v string)`
+`func (o *InlineObject343) SetRulesetId(v string)`
 
-SetRole sets Role field to given value.
+SetRulesetId sets RulesetId field to given value.
 
-### HasRole
 
-`func (o *InlineObject343) HasRole() bool`
+### GetPolicyId
 
-HasRole returns a boolean if a field has been set.
+`func (o *InlineObject343) GetPolicyId() string`
 
-### GetOrgAccess
+GetPolicyId returns the PolicyId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject343) GetOrgAccess() string`
+### GetPolicyIdOk
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+`func (o *InlineObject343) GetPolicyIdOk() (*string, bool)`
 
-### GetOrgAccessOk
-
-`func (o *InlineObject343) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetPolicyIdOk returns a tuple with the PolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetPolicyId
 
-`func (o *InlineObject343) SetOrgAccess(v string)`
+`func (o *InlineObject343) SetPolicyId(v string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetPolicyId sets PolicyId field to given value.
 
-### HasOrgAccess
 
-`func (o *InlineObject343) HasOrgAccess() bool`
+### GetPriority
 
-HasOrgAccess returns a boolean if a field has been set.
+`func (o *InlineObject343) GetPriority() int32`
 
-### GetTags
+GetPriority returns the Priority field if non-nil, zero value otherwise.
 
-`func (o *InlineObject343) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
+### GetPriorityOk
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+`func (o *InlineObject343) GetPriorityOk() (*int32, bool)`
 
-### GetTagsOk
-
-`func (o *InlineObject343) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetPriority
 
-`func (o *InlineObject343) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
+`func (o *InlineObject343) SetPriority(v int32)`
 
-SetTags sets Tags field to given value.
+SetPriority sets Priority field to given value.
 
-### HasTags
+### HasPriority
 
-`func (o *InlineObject343) HasTags() bool`
+`func (o *InlineObject343) HasPriority() bool`
 
-HasTags returns a boolean if a field has been set.
+HasPriority returns a boolean if a field has been set.
 
-### GetNetworks
+### GetStaged
 
-`func (o *InlineObject343) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
+`func (o *InlineObject343) GetStaged() bool`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetStaged returns the Staged field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetStagedOk
 
-`func (o *InlineObject343) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
+`func (o *InlineObject343) GetStagedOk() (*bool, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetStagedOk returns a tuple with the Staged field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetStaged
 
-`func (o *InlineObject343) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
+`func (o *InlineObject343) SetStaged(v bool)`
 
-SetNetworks sets Networks field to given value.
+SetStaged sets Staged field to given value.
 
-### HasNetworks
+### HasStaged
 
-`func (o *InlineObject343) HasNetworks() bool`
+`func (o *InlineObject343) HasStaged() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasStaged returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

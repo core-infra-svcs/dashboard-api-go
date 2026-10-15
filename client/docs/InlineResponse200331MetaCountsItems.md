@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of Service Providers | [optional] 
-**Remaining** | Pointer to **int32** | Remaining number of Service Providers | [optional] 
+**Total** | Pointer to **int32** | The total number of items in the dataset | [optional] 
+**Remaining** | Pointer to **int32** | The number of items in the dataset that are available on subsequent pages | [optional] 
 
 ## Methods
 

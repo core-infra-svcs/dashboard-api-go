@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether Fast PoE is enabled. Fast PoE requires Perpetual PoE to be enabled. This field is returned for all physical switch ports, but can only be enabled on ports that support PoE HA. | [optional] 
+**Enabled** | Pointer to **bool** | Whether Fast PoE is enabled on the switch port. Fast PoE requires Perpetual PoE and can only be enabled on ports that support PoE HA. | [optional] 
 
 ## Methods
 

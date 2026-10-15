@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200455Items**](InlineResponse200455Items.md) | Switches | [optional] 
-**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
+**Id** | Pointer to **string** | Splash theme asset id | [optional] 
+**Name** | Pointer to **string** | Splash theme asset name | [optional] 
+**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200455WithDefaults instantiates a new InlineResponse200455 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetId
 
-`func (o *InlineResponse200455) GetItems() []InlineResponse200455Items`
+`func (o *InlineResponse200455) GetId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetIdOk
 
-`func (o *InlineResponse200455) GetItemsOk() (*[]InlineResponse200455Items, bool)`
+`func (o *InlineResponse200455) GetIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetId
 
-`func (o *InlineResponse200455) SetItems(v []InlineResponse200455Items)`
+`func (o *InlineResponse200455) SetId(v string)`
 
-SetItems sets Items field to given value.
+SetId sets Id field to given value.
 
-### HasItems
+### HasId
 
-`func (o *InlineResponse200455) HasItems() bool`
+`func (o *InlineResponse200455) HasId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMeta
+### GetName
 
-`func (o *InlineResponse200455) GetMeta() InlineResponse200279Meta`
+`func (o *InlineResponse200455) GetName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetNameOk
 
-`func (o *InlineResponse200455) GetMetaOk() (*InlineResponse200279Meta, bool)`
+`func (o *InlineResponse200455) GetNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200455) SetMeta(v InlineResponse200279Meta)`
+`func (o *InlineResponse200455) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
-### HasMeta
+### HasName
 
-`func (o *InlineResponse200455) HasMeta() bool`
+`func (o *InlineResponse200455) HasName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetFileData
+
+`func (o *InlineResponse200455) GetFileData() string`
+
+GetFileData returns the FileData field if non-nil, zero value otherwise.
+
+### GetFileDataOk
+
+`func (o *InlineResponse200455) GetFileDataOk() (*string, bool)`
+
+GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFileData
+
+`func (o *InlineResponse200455) SetFileData(v string)`
+
+SetFileData sets FileData field to given value.
+
+### HasFileData
+
+`func (o *InlineResponse200455) HasFileData() bool`
+
+HasFileData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

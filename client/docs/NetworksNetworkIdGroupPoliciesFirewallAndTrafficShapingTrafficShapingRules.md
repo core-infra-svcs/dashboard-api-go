@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Definitions** | [**[]InlineResponse20098Definitions**](InlineResponse20098Definitions.md) |     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.  | 
-**PerClientBandwidthLimits** | Pointer to [**InlineResponse20098PerClientBandwidthLimits**](InlineResponse20098PerClientBandwidthLimits.md) |  | [optional] 
+**Definitions** | [**[]NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingDefinitions**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingDefinitions.md) |     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.  | 
+**PerClientBandwidthLimits** | Pointer to [**NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits.md) |  | [optional] 
 **DscpTagValue** | Pointer to **NullableInt32** |     The DSCP tag applied by your rule. null means &#39;Do not change DSCP tag&#39;.     For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.  | [optional] 
 **PcpTagValue** | Pointer to **NullableInt32** |     The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).     null means &#39;Do not set PCP tag&#39;.  | [optional] 
 **Priority** | Pointer to **string** |     A string, indicating the priority level for packets bound to your rule.     Can be &#39;low&#39;, &#39;normal&#39; or &#39;high&#39;.  | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewNetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules
 
-`func NewNetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules(definitions []InlineResponse20098Definitions, ) *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules`
+`func NewNetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules(definitions []NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingDefinitions, ) *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules`
 
 NewNetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules instantiates a new NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules object
 This constructor will assign default values to properties that have it defined,
@@ -31,40 +31,40 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDefinitions
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetDefinitions() []InlineResponse20098Definitions`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetDefinitions() []NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingDefinitions`
 
 GetDefinitions returns the Definitions field if non-nil, zero value otherwise.
 
 ### GetDefinitionsOk
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetDefinitionsOk() (*[]InlineResponse20098Definitions, bool)`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetDefinitionsOk() (*[]NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingDefinitions, bool)`
 
 GetDefinitionsOk returns a tuple with the Definitions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefinitions
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) SetDefinitions(v []InlineResponse20098Definitions)`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) SetDefinitions(v []NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingDefinitions)`
 
 SetDefinitions sets Definitions field to given value.
 
 
 ### GetPerClientBandwidthLimits
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetPerClientBandwidthLimits() InlineResponse20098PerClientBandwidthLimits`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetPerClientBandwidthLimits() NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits`
 
 GetPerClientBandwidthLimits returns the PerClientBandwidthLimits field if non-nil, zero value otherwise.
 
 ### GetPerClientBandwidthLimitsOk
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetPerClientBandwidthLimitsOk() (*InlineResponse20098PerClientBandwidthLimits, bool)`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) GetPerClientBandwidthLimitsOk() (*NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits, bool)`
 
 GetPerClientBandwidthLimitsOk returns a tuple with the PerClientBandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPerClientBandwidthLimits
 
-`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) SetPerClientBandwidthLimits(v InlineResponse20098PerClientBandwidthLimits)`
+`func (o *NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingTrafficShapingRules) SetPerClientBandwidthLimits(v NetworksNetworkIdGroupPoliciesFirewallAndTrafficShapingPerClientBandwidthLimits)`
 
 SetPerClientBandwidthLimits sets PerClientBandwidthLimits field to given value.
 

@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200258Rules**](InlineResponse200258Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**CcxNameIeEnabled** | Pointer to **bool** | When true, enables CCX name IE, which allows the AP to broadcast its device name as part of its beacon (as defined by the network admin in the Dashboard). | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject229WithDefaults instantiates a new InlineObject229 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetCcxNameIeEnabled
 
-`func (o *InlineObject229) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject229) GetCcxNameIeEnabled() bool`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetCcxNameIeEnabled returns the CcxNameIeEnabled field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetCcxNameIeEnabledOk
 
-`func (o *InlineObject229) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject229) GetCcxNameIeEnabledOk() (*bool, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetCcxNameIeEnabledOk returns a tuple with the CcxNameIeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetCcxNameIeEnabled
 
-`func (o *InlineObject229) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject229) SetCcxNameIeEnabled(v bool)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetCcxNameIeEnabled sets CcxNameIeEnabled field to given value.
 
-### HasTrafficShapingEnabled
+### HasCcxNameIeEnabled
 
-`func (o *InlineObject229) HasTrafficShapingEnabled() bool`
+`func (o *InlineObject229) HasCcxNameIeEnabled() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
-
-### GetDefaultRulesEnabled
-
-`func (o *InlineObject229) GetDefaultRulesEnabled() bool`
-
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
-
-### GetDefaultRulesEnabledOk
-
-`func (o *InlineObject229) GetDefaultRulesEnabledOk() (*bool, bool)`
-
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaultRulesEnabled
-
-`func (o *InlineObject229) SetDefaultRulesEnabled(v bool)`
-
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
-
-### HasDefaultRulesEnabled
-
-`func (o *InlineObject229) HasDefaultRulesEnabled() bool`
-
-HasDefaultRulesEnabled returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineObject229) GetRules() []InlineResponse200258Rules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineObject229) GetRulesOk() (*[]InlineResponse200258Rules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineObject229) SetRules(v []InlineResponse200258Rules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineObject229) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
+HasCcxNameIeEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

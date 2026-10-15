@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the profile. | [optional] 
-**LastUpdatedAt** | Pointer to **string** | Time the profile was last updated in ISO8601Z. | [optional] 
-**Name** | Pointer to **string** | Name of the profile (names should be unique for all profiles defined for the org). | [optional] 
-**Description** | Pointer to **string** | The description of the profile that was set when it was created. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200349Rules**](InlineResponse200349Rules.md) | The rules associated with this profile. At least one rule and no more than two rules may be defined for a profile. | [optional] 
+**Eid** | **string** | eSIM EID | 
+**Iccid** | **string** | eSIM ICCID | 
+**Status** | **string** | Swap status | 
 
 ## Methods
 
 ### NewInlineResponse200349
 
-`func NewInlineResponse200349() *InlineResponse200349`
+`func NewInlineResponse200349(eid string, iccid string, status string, ) *InlineResponse200349`
 
 NewInlineResponse200349 instantiates a new InlineResponse200349 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +27,65 @@ NewInlineResponse200349WithDefaults instantiates a new InlineResponse200349 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetEid
 
-`func (o *InlineResponse200349) GetProfileId() string`
+`func (o *InlineResponse200349) GetEid() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetEid returns the Eid field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetEidOk
 
-`func (o *InlineResponse200349) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200349) GetEidOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetEid
 
-`func (o *InlineResponse200349) SetProfileId(v string)`
+`func (o *InlineResponse200349) SetEid(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetEid sets Eid field to given value.
 
-### HasProfileId
 
-`func (o *InlineResponse200349) HasProfileId() bool`
+### GetIccid
 
-HasProfileId returns a boolean if a field has been set.
+`func (o *InlineResponse200349) GetIccid() string`
 
-### GetLastUpdatedAt
+GetIccid returns the Iccid field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200349) GetLastUpdatedAt() string`
+### GetIccidOk
 
-GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+`func (o *InlineResponse200349) GetIccidOk() (*string, bool)`
 
-### GetLastUpdatedAtOk
-
-`func (o *InlineResponse200349) GetLastUpdatedAtOk() (*string, bool)`
-
-GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+GetIccidOk returns a tuple with the Iccid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastUpdatedAt
+### SetIccid
 
-`func (o *InlineResponse200349) SetLastUpdatedAt(v string)`
+`func (o *InlineResponse200349) SetIccid(v string)`
 
-SetLastUpdatedAt sets LastUpdatedAt field to given value.
+SetIccid sets Iccid field to given value.
 
-### HasLastUpdatedAt
 
-`func (o *InlineResponse200349) HasLastUpdatedAt() bool`
+### GetStatus
 
-HasLastUpdatedAt returns a boolean if a field has been set.
+`func (o *InlineResponse200349) GetStatus() string`
 
-### GetName
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200349) GetName() string`
+### GetStatusOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200349) GetStatusOk() (*string, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200349) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStatus
 
-`func (o *InlineResponse200349) SetName(v string)`
+`func (o *InlineResponse200349) SetStatus(v string)`
 
-SetName sets Name field to given value.
+SetStatus sets Status field to given value.
 
-### HasName
-
-`func (o *InlineResponse200349) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200349) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200349) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200349) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200349) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineResponse200349) GetRules() []InlineResponse200349Rules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineResponse200349) GetRulesOk() (*[]InlineResponse200349Rules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineResponse200349) SetRules(v []InlineResponse200349Rules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineResponse200349) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

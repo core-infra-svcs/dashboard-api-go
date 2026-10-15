@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Failover** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPoliciesFailover**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPoliciesFailover.md) |  | [optional] 
 **LoadBalancing** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPoliciesLoadBalancing**](OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPoliciesLoadBalancing.md) |  | [optional] 
-**Fallback** | Pointer to [**InlineResponse200493SsidRadiusPoliciesFallback**](InlineResponse200493SsidRadiusPoliciesFallback.md) |  | [optional] 
+**Fallback** | Pointer to [**InlineResponse200517SsidRadiusPoliciesFallback**](InlineResponse200517SsidRadiusPoliciesFallback.md) |  | [optional] 
 **Attribute** | Pointer to **string** | RADIUS attribute for policies | [optional] 
 
 ## Methods
@@ -80,20 +80,20 @@ HasLoadBalancing returns a boolean if a field has been set.
 
 ### GetFallback
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies) GetFallback() InlineResponse200493SsidRadiusPoliciesFallback`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies) GetFallback() InlineResponse200517SsidRadiusPoliciesFallback`
 
 GetFallback returns the Fallback field if non-nil, zero value otherwise.
 
 ### GetFallbackOk
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies) GetFallbackOk() (*InlineResponse200493SsidRadiusPoliciesFallback, bool)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies) GetFallbackOk() (*InlineResponse200517SsidRadiusPoliciesFallback, bool)`
 
 GetFallbackOk returns a tuple with the Fallback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFallback
 
-`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies) SetFallback(v InlineResponse200493SsidRadiusPoliciesFallback)`
+`func (o *OrganizationsOrganizationIdWirelessSsidsProfilesSsidRadiusPolicies) SetFallback(v InlineResponse200517SsidRadiusPoliciesFallback)`
 
 SetFallback sets Fallback field to given value.
 

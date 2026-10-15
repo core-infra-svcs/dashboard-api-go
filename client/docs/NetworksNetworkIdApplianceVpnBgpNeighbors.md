@@ -19,7 +19,9 @@ Name | Type | Description | Notes
 **PathPrepend** | Pointer to **[]int32** | Prepends the AS_PATH BGP Attribute associated with routes received from the remote peer. Configurable value of ASNs to prepend. Length of the array may not exceed 10, and each ASN in the array must be an integer between 1 and 4294967295. AS_PATH is 4th in the decision tree when identical routes from multiple peers exist. | [optional] 
 **Weight** | Pointer to **int32** | Sets the local weight for routes received from the remote peer. Routes from peers with higher weights will be preferred. Must be an integer between 0 and 49 for Secure Appliance or between 0 and 65535 for Secure Router. | [optional] 
 **FilterIn** | Pointer to **[]string** | Filters routes received from an eBGP neighbor. Each entry must be an IPv4 CIDR string (e.g., &#39;10.0.0.0/8&#39; or &#39;10.0.0.5/32&#39;). | [optional] 
+**Filter** | Pointer to [**InlineResponse200110Filter**](InlineResponse200110Filter.md) |  | [optional] 
 **CommunityOut** | Pointer to **[]string** | List of BGP communities tagged to the routes advertised to an eBGP neighbor. | [optional] 
+**ExplicitOutboundRouteAdvertisement** | Pointer to [**NullableInlineResponse200110ExplicitOutboundRouteAdvertisement**](InlineResponse200110ExplicitOutboundRouteAdvertisement.md) |  | [optional] 
 
 ## Methods
 
@@ -400,6 +402,31 @@ SetFilterIn sets FilterIn field to given value.
 
 HasFilterIn returns a boolean if a field has been set.
 
+### GetFilter
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilter() InlineResponse200110Filter`
+
+GetFilter returns the Filter field if non-nil, zero value otherwise.
+
+### GetFilterOk
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetFilterOk() (*InlineResponse200110Filter, bool)`
+
+GetFilterOk returns a tuple with the Filter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilter
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetFilter(v InlineResponse200110Filter)`
+
+SetFilter sets Filter field to given value.
+
+### HasFilter
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasFilter() bool`
+
+HasFilter returns a boolean if a field has been set.
+
 ### GetCommunityOut
 
 `func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetCommunityOut() []string`
@@ -425,6 +452,41 @@ SetCommunityOut sets CommunityOut field to given value.
 
 HasCommunityOut returns a boolean if a field has been set.
 
+### GetExplicitOutboundRouteAdvertisement
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetExplicitOutboundRouteAdvertisement() InlineResponse200110ExplicitOutboundRouteAdvertisement`
+
+GetExplicitOutboundRouteAdvertisement returns the ExplicitOutboundRouteAdvertisement field if non-nil, zero value otherwise.
+
+### GetExplicitOutboundRouteAdvertisementOk
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetExplicitOutboundRouteAdvertisementOk() (*InlineResponse200110ExplicitOutboundRouteAdvertisement, bool)`
+
+GetExplicitOutboundRouteAdvertisementOk returns a tuple with the ExplicitOutboundRouteAdvertisement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExplicitOutboundRouteAdvertisement
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetExplicitOutboundRouteAdvertisement(v InlineResponse200110ExplicitOutboundRouteAdvertisement)`
+
+SetExplicitOutboundRouteAdvertisement sets ExplicitOutboundRouteAdvertisement field to given value.
+
+### HasExplicitOutboundRouteAdvertisement
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasExplicitOutboundRouteAdvertisement() bool`
+
+HasExplicitOutboundRouteAdvertisement returns a boolean if a field has been set.
+
+### SetExplicitOutboundRouteAdvertisementNil
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetExplicitOutboundRouteAdvertisementNil(b bool)`
+
+ SetExplicitOutboundRouteAdvertisementNil sets the value for ExplicitOutboundRouteAdvertisement to be an explicit nil
+
+### UnsetExplicitOutboundRouteAdvertisement
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) UnsetExplicitOutboundRouteAdvertisement()`
+
+UnsetExplicitOutboundRouteAdvertisement ensures that no value is present for ExplicitOutboundRouteAdvertisement, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

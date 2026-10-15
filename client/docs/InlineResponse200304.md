@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200304Items**](InlineResponse200304Items.md) | Profiles for this organization | 
-**Meta** | [**InlineResponse200304Meta**](InlineResponse200304Meta.md) |  | 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Uplinks** | Pointer to [**[]InlineResponse200106Uplinks**](InlineResponse200106Uplinks.md) | Per-uplink NAT exception configuration on the network. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200304
 
-`func NewInlineResponse200304(items []InlineResponse200304Items, meta InlineResponse200304Meta, ) *InlineResponse200304`
+`func NewInlineResponse200304() *InlineResponse200304`
 
 NewInlineResponse200304 instantiates a new InlineResponse200304 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineResponse200304WithDefaults instantiates a new InlineResponse200304 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetNetworkId
 
-`func (o *InlineResponse200304) GetItems() []InlineResponse200304Items`
+`func (o *InlineResponse200304) GetNetworkId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200304) GetItemsOk() (*[]InlineResponse200304Items, bool)`
+`func (o *InlineResponse200304) GetNetworkIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetNetworkId
 
-`func (o *InlineResponse200304) SetItems(v []InlineResponse200304Items)`
+`func (o *InlineResponse200304) SetNetworkId(v string)`
 
-SetItems sets Items field to given value.
+SetNetworkId sets NetworkId field to given value.
 
+### HasNetworkId
 
-### GetMeta
+`func (o *InlineResponse200304) HasNetworkId() bool`
 
-`func (o *InlineResponse200304) GetMeta() InlineResponse200304Meta`
+HasNetworkId returns a boolean if a field has been set.
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+### GetUplinks
 
-### GetMetaOk
+`func (o *InlineResponse200304) GetUplinks() []InlineResponse200106Uplinks`
 
-`func (o *InlineResponse200304) GetMetaOk() (*InlineResponse200304Meta, bool)`
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+### GetUplinksOk
+
+`func (o *InlineResponse200304) GetUplinksOk() (*[]InlineResponse200106Uplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetUplinks
 
-`func (o *InlineResponse200304) SetMeta(v InlineResponse200304Meta)`
+`func (o *InlineResponse200304) SetUplinks(v []InlineResponse200106Uplinks)`
 
-SetMeta sets Meta field to given value.
+SetUplinks sets Uplinks field to given value.
 
+### HasUplinks
+
+`func (o *InlineResponse200304) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

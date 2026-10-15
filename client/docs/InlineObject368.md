@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the SSID profile | [optional] 
-**Ssid** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid**](OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid.md) |  | [optional] 
+**Name** | Pointer to **string** | File name. Will overwrite files with same name. | [optional] 
+**Content** | Pointer to **string** | a file containing the asset content | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSsid
+### GetContent
 
-`func (o *InlineObject368) GetSsid() OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid`
+`func (o *InlineObject368) GetContent() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetContent returns the Content field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetContentOk
 
-`func (o *InlineObject368) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid, bool)`
+`func (o *InlineObject368) GetContentOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetContentOk returns a tuple with the Content field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetContent
 
-`func (o *InlineObject368) SetSsid(v OrganizationsOrganizationIdWirelessSsidsProfilesIdSsid)`
+`func (o *InlineObject368) SetContent(v string)`
 
-SetSsid sets Ssid field to given value.
+SetContent sets Content field to given value.
 
-### HasSsid
+### HasContent
 
-`func (o *InlineObject368) HasSsid() bool`
+`func (o *InlineObject368) HasContent() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasContent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

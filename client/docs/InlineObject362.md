@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
+**SiteId** | Pointer to **string** | Site ID of the site to update | [optional] 
+**Routing** | Pointer to [**OrganizationsOrganizationIdSaseSitesSiteIdRouting**](OrganizationsOrganizationIdSaseSitesSiteIdRouting.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject362
 
-`func NewInlineObject362(networkIds []string, ) *InlineObject362`
+`func NewInlineObject362() *InlineObject362`
 
 NewInlineObject362 instantiates a new InlineObject362 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject362WithDefaults instantiates a new InlineObject362 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetSiteId
 
-`func (o *InlineObject362) GetNetworkIds() []string`
+`func (o *InlineObject362) GetSiteId() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetSiteId returns the SiteId field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetSiteIdOk
 
-`func (o *InlineObject362) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject362) GetSiteIdOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetSiteIdOk returns a tuple with the SiteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetSiteId
 
-`func (o *InlineObject362) SetNetworkIds(v []string)`
+`func (o *InlineObject362) SetSiteId(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetSiteId sets SiteId field to given value.
 
+### HasSiteId
+
+`func (o *InlineObject362) HasSiteId() bool`
+
+HasSiteId returns a boolean if a field has been set.
+
+### GetRouting
+
+`func (o *InlineObject362) GetRouting() OrganizationsOrganizationIdSaseSitesSiteIdRouting`
+
+GetRouting returns the Routing field if non-nil, zero value otherwise.
+
+### GetRoutingOk
+
+`func (o *InlineObject362) GetRoutingOk() (*OrganizationsOrganizationIdSaseSitesSiteIdRouting, bool)`
+
+GetRoutingOk returns a tuple with the Routing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRouting
+
+`func (o *InlineObject362) SetRouting(v OrganizationsOrganizationIdSaseSitesSiteIdRouting)`
+
+SetRouting sets Routing field to given value.
+
+### HasRouting
+
+`func (o *InlineObject362) HasRouting() bool`
+
+HasRouting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

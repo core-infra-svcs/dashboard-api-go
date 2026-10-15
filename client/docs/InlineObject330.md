@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | [**OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy.md) |  | 
-**Vlans** | [**[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans**](OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans.md) | VLANs to assign | 
+**Name** | **string** | The new name of the network group | 
 
 ## Methods
 
 ### NewInlineObject330
 
-`func NewInlineObject330(policy OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, vlans []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, ) *InlineObject330`
+`func NewInlineObject330(name string, ) *InlineObject330`
 
 NewInlineObject330 instantiates a new InlineObject330 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject330WithDefaults instantiates a new InlineObject330 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetName
 
-`func (o *InlineObject330) GetPolicy() OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy`
+`func (o *InlineObject330) GetName() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetNameOk
 
-`func (o *InlineObject330) GetPolicyOk() (*OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy, bool)`
+`func (o *InlineObject330) GetNameOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetName
 
-`func (o *InlineObject330) SetPolicy(v OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignPolicy)`
+`func (o *InlineObject330) SetName(v string)`
 
-SetPolicy sets Policy field to given value.
-
-
-### GetVlans
-
-`func (o *InlineObject330) GetVlans() []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans`
-
-GetVlans returns the Vlans field if non-nil, zero value otherwise.
-
-### GetVlansOk
-
-`func (o *InlineObject330) GetVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans, bool)`
-
-GetVlansOk returns a tuple with the Vlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlans
-
-`func (o *InlineObject330) SetVlans(v []OrganizationsOrganizationIdPoliciesGlobalGroupPoliciesApplianceVlansAssignVlans)`
-
-SetVlans sets Vlans field to given value.
+SetName sets Name field to given value.
 
 
 

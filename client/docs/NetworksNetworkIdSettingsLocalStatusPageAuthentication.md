@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Enables / disables the authentication on Local Status page(s). | [optional] 
-**Username** | Pointer to **NullableString** | The username used for Local Status Page(s). Setting this to null or empty string will clear the value, allowing you to use the default of &#39;admin&#39; | [optional] 
+**Enabled** | Pointer to **bool** | Enables / disables the authentication on Local Status page(s). Beta: For networks with a Catalyst router, authentication cannot be disabled and must be enabled when localStatusPageEnabled is true. | [optional] 
+**Username** | Pointer to **NullableString** | The username used for Local Status Page(s). Setting this to null or empty string will clear the value, allowing you to use the default of &#39;admin&#39;. Beta: For networks with a Catalyst router, only &#39;admin&#39; or null is accepted. | [optional] 
 **Password** | Pointer to **NullableString** | The password used for Local Status Page(s). Set this to null to clear the password. | [optional] 
 
 ## Methods

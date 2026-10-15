@@ -4,19 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the route | [optional] 
-**Subnet** | Pointer to **string** | Subnet of the route | [optional] 
-**GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
-**GatewayVlanId** | Pointer to **NullableInt32** | Gateway VLAN ID | [optional] 
-**Enabled** | Pointer to **bool** | Whether the route should be enabled or not | [optional] 
-**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
-**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
+**Name** | **string** | Name of the route | 
+**Subnet** | **string** | Subnet of the route | 
+**GatewayIp** | **string** | Gateway IP address (next hop) | 
+**GatewayVlanId** | Pointer to **int32** | Gateway VLAN ID | [optional] 
+**Enabled** | Pointer to **bool** | Enable/disable the static route | [optional] 
+**Vrf** | Pointer to [**NetworksNetworkIdApplianceStaticRoutesVrf1**](NetworksNetworkIdApplianceStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject79
 
-`func NewInlineObject79() *InlineObject79`
+`func NewInlineObject79(name string, subnet string, gatewayIp string, ) *InlineObject79`
 
 NewInlineObject79 instantiates a new InlineObject79 object
 This constructor will assign default values to properties that have it defined,
@@ -50,11 +49,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject79) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetSubnet
 
@@ -75,11 +69,6 @@ and a boolean to check if the value has been set.
 
 SetSubnet sets Subnet field to given value.
 
-### HasSubnet
-
-`func (o *InlineObject79) HasSubnet() bool`
-
-HasSubnet returns a boolean if a field has been set.
 
 ### GetGatewayIp
 
@@ -100,11 +89,6 @@ and a boolean to check if the value has been set.
 
 SetGatewayIp sets GatewayIp field to given value.
 
-### HasGatewayIp
-
-`func (o *InlineObject79) HasGatewayIp() bool`
-
-HasGatewayIp returns a boolean if a field has been set.
 
 ### GetGatewayVlanId
 
@@ -131,16 +115,6 @@ SetGatewayVlanId sets GatewayVlanId field to given value.
 
 HasGatewayVlanId returns a boolean if a field has been set.
 
-### SetGatewayVlanIdNil
-
-`func (o *InlineObject79) SetGatewayVlanIdNil(b bool)`
-
- SetGatewayVlanIdNil sets the value for GatewayVlanId to be an explicit nil
-
-### UnsetGatewayVlanId
-`func (o *InlineObject79) UnsetGatewayVlanId()`
-
-UnsetGatewayVlanId ensures that no value is present for GatewayVlanId, not even an explicit nil
 ### GetEnabled
 
 `func (o *InlineObject79) GetEnabled() bool`
@@ -166,55 +140,30 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetFixedIpAssignments
+### GetVrf
 
-`func (o *InlineObject79) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments`
+`func (o *InlineObject79) GetVrf() NetworksNetworkIdApplianceStaticRoutesVrf1`
 
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
 
-### GetFixedIpAssignmentsOk
+### GetVrfOk
 
-`func (o *InlineObject79) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments, bool)`
+`func (o *InlineObject79) GetVrfOk() (*NetworksNetworkIdApplianceStaticRoutesVrf1, bool)`
 
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFixedIpAssignments
+### SetVrf
 
-`func (o *InlineObject79) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdFixedIpAssignments)`
+`func (o *InlineObject79) SetVrf(v NetworksNetworkIdApplianceStaticRoutesVrf1)`
 
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
+SetVrf sets Vrf field to given value.
 
-### HasFixedIpAssignments
+### HasVrf
 
-`func (o *InlineObject79) HasFixedIpAssignments() bool`
+`func (o *InlineObject79) HasVrf() bool`
 
-HasFixedIpAssignments returns a boolean if a field has been set.
-
-### GetReservedIpRanges
-
-`func (o *InlineObject79) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
-
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
-
-### GetReservedIpRangesOk
-
-`func (o *InlineObject79) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
-
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReservedIpRanges
-
-`func (o *InlineObject79) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
-
-SetReservedIpRanges sets ReservedIpRanges field to given value.
-
-### HasReservedIpRanges
-
-`func (o *InlineObject79) HasReservedIpRanges() bool`
-
-HasReservedIpRanges returns a boolean if a field has been set.
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

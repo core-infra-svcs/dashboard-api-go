@@ -37,7 +37,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkMqttBroker := *openapiclient.NewInlineObject136("Name_example", "Host_example", int32(123)) // InlineObject136 | 
+    createNetworkMqttBroker := *openapiclient.NewInlineObject137("Name_example", "Host_example", int32(123)) // InlineObject137 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -67,7 +67,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkMqttBrokerReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMqttBroker** | [**InlineObject136**](InlineObject136.md) |  | 
+ **createNetworkMqttBroker** | [**InlineObject137**](InlineObject137.md) |  | 
 
 ### Return type
 
@@ -467,7 +467,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
-    updateNetworkMqttBroker := *openapiclient.NewInlineObject137() // InlineObject137 |  (optional)
+    updateNetworkMqttBroker := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMqttBroker** | [**InlineObject137**](InlineObject137.md) |  | 
+ **updateNetworkMqttBroker** | [**InlineObject138**](InlineObject138.md) |  | 
 
 ### Return type
 
@@ -542,7 +542,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
-    updateNetworkSensorMqttBroker := *openapiclient.NewInlineObject142(false) // InlineObject142 | 
+    updateNetworkSensorMqttBroker := *openapiclient.NewInlineObject143(false) // InlineObject143 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -574,7 +574,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSensorMqttBroker** | [**InlineObject142**](InlineObject142.md) |  | 
+ **updateNetworkSensorMqttBroker** | [**InlineObject143**](InlineObject143.md) |  | 
 
 ### Return type
 

@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **DhcpOptions** | Pointer to [**[]InlineResponse20056DhcpOptions**](InlineResponse20056DhcpOptions.md) | Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface | [optional] 
 **ReservedIpRanges** | Pointer to [**[]InlineResponse20056ReservedIpRanges**](InlineResponse20056ReservedIpRanges.md) | Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface | [optional] 
 **FixedIpAssignments** | Pointer to [**[]InlineResponse20056FixedIpAssignments**](InlineResponse20056FixedIpAssignments.md) | Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface | [optional] 
+**DhcpDefaultRouterIps** | Pointer to **string** | The DHCP default router IPs for the DHCP server running on the switch stack interface | [optional] 
+**DhcpDomainName** | Pointer to **NullableString** | The DHCP domain name for the DHCP server running on the switch stack interface | [optional] 
 
 ## Methods
 
@@ -310,6 +312,66 @@ SetFixedIpAssignments sets FixedIpAssignments field to given value.
 
 HasFixedIpAssignments returns a boolean if a field has been set.
 
+### GetDhcpDefaultRouterIps
+
+`func (o *InlineResponse20056) GetDhcpDefaultRouterIps() string`
+
+GetDhcpDefaultRouterIps returns the DhcpDefaultRouterIps field if non-nil, zero value otherwise.
+
+### GetDhcpDefaultRouterIpsOk
+
+`func (o *InlineResponse20056) GetDhcpDefaultRouterIpsOk() (*string, bool)`
+
+GetDhcpDefaultRouterIpsOk returns a tuple with the DhcpDefaultRouterIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpDefaultRouterIps
+
+`func (o *InlineResponse20056) SetDhcpDefaultRouterIps(v string)`
+
+SetDhcpDefaultRouterIps sets DhcpDefaultRouterIps field to given value.
+
+### HasDhcpDefaultRouterIps
+
+`func (o *InlineResponse20056) HasDhcpDefaultRouterIps() bool`
+
+HasDhcpDefaultRouterIps returns a boolean if a field has been set.
+
+### GetDhcpDomainName
+
+`func (o *InlineResponse20056) GetDhcpDomainName() string`
+
+GetDhcpDomainName returns the DhcpDomainName field if non-nil, zero value otherwise.
+
+### GetDhcpDomainNameOk
+
+`func (o *InlineResponse20056) GetDhcpDomainNameOk() (*string, bool)`
+
+GetDhcpDomainNameOk returns a tuple with the DhcpDomainName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpDomainName
+
+`func (o *InlineResponse20056) SetDhcpDomainName(v string)`
+
+SetDhcpDomainName sets DhcpDomainName field to given value.
+
+### HasDhcpDomainName
+
+`func (o *InlineResponse20056) HasDhcpDomainName() bool`
+
+HasDhcpDomainName returns a boolean if a field has been set.
+
+### SetDhcpDomainNameNil
+
+`func (o *InlineResponse20056) SetDhcpDomainNameNil(b bool)`
+
+ SetDhcpDomainNameNil sets the value for DhcpDomainName to be an explicit nil
+
+### UnsetDhcpDomainName
+`func (o *InlineResponse20056) UnsetDhcpDomainName()`
+
+UnsetDhcpDomainName ensures that no value is present for DhcpDomainName, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

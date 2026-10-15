@@ -11,7 +11,11 @@ Name | Type | Description | Notes
 **Applications** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaApplications**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaApplications.md) | Applications | [optional] 
 **PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaPolicyObjects**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaPolicyObjects.md) | Policy objects | [optional] 
 **PolicyObjectGroups** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaPolicyObjectGroups**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaPolicyObjectGroups.md) | Policy object groups | [optional] 
+**AdaptivePolicyGroups** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups.md) | Adaptive policy groups | [optional] 
 **ApplianceVlans** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaApplianceVlans**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaApplianceVlans.md) | Appliance VLANs | [optional] 
+**Countries** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaCountries**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaCountries.md) | Countries | [optional] 
+**Fqdns** | Pointer to **[]string** | Fully qualified domain names or wildcard patterns. | [optional] 
+**SiteSpecificVlans** | Pointer to [**[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaSiteSpecificVlans**](OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaSiteSpecificVlans.md) | Site-specific VLANs with address offset configuration. | [optional] 
 
 ## Methods
 
@@ -207,6 +211,31 @@ SetPolicyObjectGroups sets PolicyObjectGroups field to given value.
 
 HasPolicyObjectGroups returns a boolean if a field has been set.
 
+### GetAdaptivePolicyGroups
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetAdaptivePolicyGroups() []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups`
+
+GetAdaptivePolicyGroups returns the AdaptivePolicyGroups field if non-nil, zero value otherwise.
+
+### GetAdaptivePolicyGroupsOk
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetAdaptivePolicyGroupsOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups, bool)`
+
+GetAdaptivePolicyGroupsOk returns a tuple with the AdaptivePolicyGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdaptivePolicyGroups
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) SetAdaptivePolicyGroups(v []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaAdaptivePolicyGroups)`
+
+SetAdaptivePolicyGroups sets AdaptivePolicyGroups field to given value.
+
+### HasAdaptivePolicyGroups
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) HasAdaptivePolicyGroups() bool`
+
+HasAdaptivePolicyGroups returns a boolean if a field has been set.
+
 ### GetApplianceVlans
 
 `func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetApplianceVlans() []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaApplianceVlans`
@@ -231,6 +260,81 @@ SetApplianceVlans sets ApplianceVlans field to given value.
 `func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) HasApplianceVlans() bool`
 
 HasApplianceVlans returns a boolean if a field has been set.
+
+### GetCountries
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetCountries() []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaCountries`
+
+GetCountries returns the Countries field if non-nil, zero value otherwise.
+
+### GetCountriesOk
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetCountriesOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaCountries, bool)`
+
+GetCountriesOk returns a tuple with the Countries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCountries
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) SetCountries(v []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteriaCountries)`
+
+SetCountries sets Countries field to given value.
+
+### HasCountries
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) HasCountries() bool`
+
+HasCountries returns a boolean if a field has been set.
+
+### GetFqdns
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetFqdns() []string`
+
+GetFqdns returns the Fqdns field if non-nil, zero value otherwise.
+
+### GetFqdnsOk
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetFqdnsOk() (*[]string, bool)`
+
+GetFqdnsOk returns a tuple with the Fqdns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFqdns
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) SetFqdns(v []string)`
+
+SetFqdns sets Fqdns field to given value.
+
+### HasFqdns
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) HasFqdns() bool`
+
+HasFqdns returns a boolean if a field has been set.
+
+### GetSiteSpecificVlans
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetSiteSpecificVlans() []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaSiteSpecificVlans`
+
+GetSiteSpecificVlans returns the SiteSpecificVlans field if non-nil, zero value otherwise.
+
+### GetSiteSpecificVlansOk
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) GetSiteSpecificVlansOk() (*[]OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaSiteSpecificVlans, bool)`
+
+GetSiteSpecificVlansOk returns a tuple with the SiteSpecificVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSiteSpecificVlans
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) SetSiteSpecificVlans(v []OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesSourcesCriteriaSiteSpecificVlans)`
+
+SetSiteSpecificVlans sets SiteSpecificVlans field to given value.
+
+### HasSiteSpecificVlans
+
+`func (o *OrganizationsOrganizationIdPoliciesGlobalFirewallRulesetsRulesDestinationsCriteria) HasSiteSpecificVlans() bool`
+
+HasSiteSpecificVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

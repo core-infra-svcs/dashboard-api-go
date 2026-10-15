@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSaseSitesConnectivityHistoryBySite
 
-> InlineResponse200424 GetOrganizationSaseSitesConnectivityHistoryBySite(ctx, organizationId).SiteIds(siteIds).Timespan(timespan).Execute()
+> InlineResponse200441 GetOrganizationSaseSitesConnectivityHistoryBySite(ctx, organizationId).SiteIds(siteIds).Timespan(timespan).Execute()
 
 Get the connectivity history of SASE sites in this organization
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BySiteApi.GetOrganizationSaseSitesConnectivityHistoryBySite``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaseSitesConnectivityHistoryBySite`: InlineResponse200424
+    // response from `GetOrganizationSaseSitesConnectivityHistoryBySite`: InlineResponse200441
     fmt.Fprintf(os.Stdout, "Response from `BySiteApi.GetOrganizationSaseSitesConnectivityHistoryBySite`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200424**](InlineResponse200424.md)
+[**InlineResponse200441**](InlineResponse200441.md)
 
 ### Authorization
 

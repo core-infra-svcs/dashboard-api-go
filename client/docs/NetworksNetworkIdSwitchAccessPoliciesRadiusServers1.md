@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. If this field is provided, the host, port and secret field will be ignored | [optional] 
-**Host** | Pointer to **string** | Public IP address of the RADIUS server | [optional] 
-**Port** | Pointer to **int32** | UDP port that the RADIUS server listens on for access requests | [optional] 
+**ServerId** | Pointer to **string** | Unique ID of an existing Access Policy authentication server to copy | [optional] 
+**OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. Omit host, port and secret when this field is provided. If supplied, host and port must match the organization-wide server; secret is ignored | [optional] 
+**Host** | Pointer to **string** | Public IP address or fully-qualified domain name of the RADIUS server | [optional] 
+**Port** | Pointer to **int32** | Port that the RADIUS server listens on for access requests | [optional] 
 **Secret** | Pointer to **string** | RADIUS client shared secret | [optional] 
+**Radsec** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadsec2**](NetworksNetworkIdSwitchAccessPoliciesRadsec2.md) |  | [optional] 
 
 ## Methods
 
@@ -27,6 +29,31 @@ will change when the set of required properties is changed
 NewNetworksNetworkIdSwitchAccessPoliciesRadiusServers1WithDefaults instantiates a new NetworksNetworkIdSwitchAccessPoliciesRadiusServers1 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) GetServerId() string`
+
+GetServerId returns the ServerId field if non-nil, zero value otherwise.
+
+### GetServerIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) GetServerIdOk() (*string, bool)`
+
+GetServerIdOk returns a tuple with the ServerId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) SetServerId(v string)`
+
+SetServerId sets ServerId field to given value.
+
+### HasServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) HasServerId() bool`
+
+HasServerId returns a boolean if a field has been set.
 
 ### GetOrganizationRadiusServerId
 
@@ -127,6 +154,31 @@ SetSecret sets Secret field to given value.
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) HasSecret() bool`
 
 HasSecret returns a boolean if a field has been set.
+
+### GetRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) GetRadsec() NetworksNetworkIdSwitchAccessPoliciesRadsec2`
+
+GetRadsec returns the Radsec field if non-nil, zero value otherwise.
+
+### GetRadsecOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) GetRadsecOk() (*NetworksNetworkIdSwitchAccessPoliciesRadsec2, bool)`
+
+GetRadsecOk returns a tuple with the Radsec field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) SetRadsec(v NetworksNetworkIdSwitchAccessPoliciesRadsec2)`
+
+SetRadsec sets Radsec field to given value.
+
+### HasRadsec
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusServers1) HasRadsec() bool`
+
+HasRadsec returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

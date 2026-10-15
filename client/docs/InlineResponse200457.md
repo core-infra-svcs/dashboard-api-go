@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200457Items**](InlineResponse200457Items.md) | Switches | [optional] 
-**Meta** | Pointer to [**InlineResponse200279Meta**](InlineResponse200279Meta.md) |  | [optional] 
+**PageItems** | Pointer to **int32** | Number of items in the page | [optional] 
+**Contents** | Pointer to [**[]InlineResponse200457Contents**](InlineResponse200457Contents.md) | Array of daily metrics | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200457WithDefaults instantiates a new InlineResponse200457 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetPageItems
 
-`func (o *InlineResponse200457) GetItems() []InlineResponse200457Items`
+`func (o *InlineResponse200457) GetPageItems() int32`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetPageItems returns the PageItems field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetPageItemsOk
 
-`func (o *InlineResponse200457) GetItemsOk() (*[]InlineResponse200457Items, bool)`
+`func (o *InlineResponse200457) GetPageItemsOk() (*int32, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetPageItemsOk returns a tuple with the PageItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetPageItems
 
-`func (o *InlineResponse200457) SetItems(v []InlineResponse200457Items)`
+`func (o *InlineResponse200457) SetPageItems(v int32)`
 
-SetItems sets Items field to given value.
+SetPageItems sets PageItems field to given value.
 
-### HasItems
+### HasPageItems
 
-`func (o *InlineResponse200457) HasItems() bool`
+`func (o *InlineResponse200457) HasPageItems() bool`
 
-HasItems returns a boolean if a field has been set.
+HasPageItems returns a boolean if a field has been set.
 
-### GetMeta
+### GetContents
 
-`func (o *InlineResponse200457) GetMeta() InlineResponse200279Meta`
+`func (o *InlineResponse200457) GetContents() []InlineResponse200457Contents`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetContents returns the Contents field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetContentsOk
 
-`func (o *InlineResponse200457) GetMetaOk() (*InlineResponse200279Meta, bool)`
+`func (o *InlineResponse200457) GetContentsOk() (*[]InlineResponse200457Contents, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetContents
 
-`func (o *InlineResponse200457) SetMeta(v InlineResponse200279Meta)`
+`func (o *InlineResponse200457) SetContents(v []InlineResponse200457Contents)`
 
-SetMeta sets Meta field to given value.
+SetContents sets Contents field to given value.
 
-### HasMeta
+### HasContents
 
-`func (o *InlineResponse200457) HasMeta() bool`
+`func (o *InlineResponse200457) HasContents() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
